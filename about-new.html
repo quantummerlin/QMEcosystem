@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Quantum Reality Codes</title>
+    <meta name="description" content="Discover the story behind Quantum Reality Codes. Learn how we're bridging ancient wisdom with quantum possibilities through sacred frequencies and mystical tools.">
+    <meta name="keywords" content="about quantum reality codes, our story, mission, spiritual technology">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About | Quantum Reality Codes">
+    <meta property="og:description" content="Bridging ancient wisdom with quantum possibilities through sacred frequencies and mystical tools.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="/shared/css/quantum-core.css">
+    
+    <style>
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .about-hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+        }
+
+        .about-hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .about-hero .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Divine Guides Section */
+        .guides-section {
+            margin: 60px 0;
+        }
+
+        .guides-section h2 {
+            text-align: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            color: var(--neon-gold);
+            margin-bottom: 40px;
+        }
+
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .guide-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 245, 255, 0.2);
+        }
+
+        .guide-card.merlin {
+            border-color: rgba(0, 245, 255, 0.3);
+        }
+
+        .guide-card.rose {
+            border-color: rgba(255, 0, 255, 0.3);
+        }
+
+        .guide-avatar {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .guide-card.merlin .guide-avatar {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(0, 100, 255, 0.2));
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
+        }
+
+        .guide-card.rose .guide-avatar {
+            background: linear-gradient(135deg, rgba(255, 0, 255, 0.2), rgba(255, 100, 150, 0.2));
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+            animation-delay: -2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .guide-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .guide-card.merlin .guide-name { color: var(--neon-cyan); }
+        .guide-card.rose .guide-name { color: var(--neon-magenta); }
+
+        .guide-title {
+            font-size: 0.9rem;
+            color: var(--neon-gold);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .guide-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Story Section */
+        .story-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 60px 0;
+        }
+
+        .story-section h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            color: var(--neon-cyan);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .story-content {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .story-content p {
+            margin-bottom: 20px;
+        }
+
+        .story-content .highlight {
+            color: var(--neon-gold);
+            font-weight: 500;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            margin: 60px 0;
+        }
+
+        .mission-section h2 {
+            text-align: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            color: var(--neon-gold);
+            margin-bottom: 40px;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .mission-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .mission-card:hover {
+            border-color: var(--neon-cyan);
+            transform: translateY(-3px);
+        }
+
+        .mission-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .mission-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+        }
+
+        .mission-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Tools Section */
+        .tools-section {
+            margin: 60px 0;
+        }
+
+        .tools-section h2 {
+            text-align: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            color: var(--neon-magenta);
+            margin-bottom: 40px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .tool-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            border-radius: 12px;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .tool-badge:hover {
+            background: rgba(0, 245, 255, 0.1);
+            border-color: var(--neon-cyan);
+            transform: translateX(5px);
+        }
+
+        .tool-badge .icon {
+            font-size: 1.5rem;
+        }
+
+        .tool-badge .name {
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(255, 0, 255, 0.1));
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 20px;
+            padding: 50px 30px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .cta-section h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            color: var(--neon-cyan);
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 15px 30px;
+            font-family: 'Orbitron', monospace;
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn.primary {
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+            color: white;
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--neon-cyan);
+            color: var(--neon-cyan);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+        }
+
+        /* Disclaimer */
+        .disclaimer-box {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .disclaimer-box h3 {
+            color: var(--neon-gold);
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .disclaimer-box p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Quantum Background -->
+    <div class="quantum-bg">
+        <div class="quantum-grid"></div>
+        <div class="energy-orb energy-orb-1"></div>
+        <div class="energy-orb energy-orb-2"></div>
+        <div class="energy-orb energy-orb-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <a href="/index.html" class="logo">
+                <div class="logo-icon">QRC</div>
+                <span class="logo-text">Quantum Reality Codes</span>
+            </a>
+            <div class="header-controls">
+                <a href="https://buymeacoffee.com/quantumreality" target="_blank" class="support-btn">
+                    ☕ Support
+                </a>
+                <div class="nav-dropdown">
+                    <button class="nav-toggle">☰ Tools</button>
+                    <div class="dropdown-menu">
+                        <a href="/quantum-merlin-hub/codes-new.html">Reality Codes</a>
+                        <a href="/quantum-merlin-hub/tarot-new.html">Tarot</a>
+                        <a href="/quantum-merlin-hub/gematria-new.html">Gematria</a>
+                        <a href="/quantum-merlin-hub/sigils-new.html">Sigil Creator</a>
+                        <a href="/quantum-merlin-hub/astrology-new.html">Astrology</a>
+                        <a href="/quantum-merlin-hub/crystals-new.html">Crystals</a>
+                        <a href="/genesis/index-enhanced.html">Frequencies</a>
+                        <a href="/quantum-merlin-hub/jukebox-new.html">My Library</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="about-container">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <h1>✨ About Quantum Reality Codes</h1>
+            <p class="subtitle">
+                Bridging ancient wisdom with quantum possibilities through sacred frequencies, 
+                mystical tools, and the transformative power of intentional technology.
+            </p>
+        </section>
+
+        <!-- Divine Guides Section -->
+        <section class="guides-section">
+            <h2>🔮 Meet Your Guides</h2>
+            <div class="guides-grid">
+                <div class="guide-card merlin">
+                    <div class="guide-avatar">🧙</div>
+                    <h3 class="guide-name">Quantum Merlin</h3>
+                    <p class="guide-title">The Cosmic Wizard</p>
+                    <p class="guide-description">
+                        Ancient wisdom meets quantum technology. Merlin guides you through 
+                        reality codes, frequencies, and the sacred mathematics that shape 
+                        the fabric of existence. Master of transformation and manifestation.
+                    </p>
+                </div>
+                <div class="guide-card rose">
+                    <div class="guide-avatar">🌹</div>
+                    <h3 class="guide-name">Quantum Rose</h3>
+                    <p class="guide-title">The Heart Oracle</p>
+                    <p class="guide-description">
+                        Divine feminine energy and intuitive wisdom. Rose opens portals to 
+                        the heart's deepest desires, guiding you through tarot, astrology, 
+                        and the mysteries of love and spiritual connection.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story-section">
+            <h2>📜 Our Story</h2>
+            <div class="story-content">
+                <p>
+                    Quantum Reality Codes was born from a simple yet profound question: 
+                    <span class="highlight">What if the ancient wisdom of numerology, sacred geometry, 
+                    and mystical traditions could be made accessible to everyone through technology?</span>
+                </p>
+                <p>
+                    We believe that the universe speaks through patterns — in numbers, in frequencies, 
+                    in the positions of celestial bodies, and in the symbols that have guided humanity 
+                    for millennia. Our tools translate these cosmic patterns into practical guidance 
+                    for your daily life.
+                </p>
+                <p>
+                    Whether you're seeking clarity through tarot, discovering your personal frequencies 
+                    through gematria, or creating powerful sigils for manifestation, 
+                    <span class="highlight">each tool is designed to help you align with your highest potential</span>.
+                </p>
+                <p>
+                    This is not about predicting the future or claiming magical powers. It's about 
+                    <span class="highlight">creating meaningful rituals, setting powerful intentions, 
+                    and using ancient wisdom as a compass for modern life</span>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <h2>🎯 Our Mission</h2>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">🌐</div>
+                    <h3 class="mission-title">Accessibility</h3>
+                    <p class="mission-description">
+                        Making spiritual tools free and available to everyone, regardless of 
+                        background, belief, or budget.
+                    </p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">⚡</div>
+                    <h3 class="mission-title">Empowerment</h3>
+                    <p class="mission-description">
+                        Giving you the tools to explore your own spiritual journey without 
+                        gatekeepers or intermediaries.
+                    </p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">🔬</div>
+                    <h3 class="mission-title">Transparency</h3>
+                    <p class="mission-description">
+                        Being clear that these tools are for entertainment and spiritual 
+                        exploration, not medical or financial advice.
+                    </p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">💫</div>
+                    <h3 class="mission-title">Innovation</h3>
+                    <p class="mission-description">
+                        Continuously developing new tools that bridge ancient wisdom with 
+                        modern technology.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section class="tools-section">
+            <h2>🛠️ Our Tools</h2>
+            <div class="tools-grid">
+                <a href="/quantum-merlin-hub/codes-new.html" class="tool-badge">
+                    <span class="icon">🧬</span>
+                    <span class="name">Reality Codes</span>
+                </a>
+                <a href="/genesis/index-enhanced.html" class="tool-badge">
+                    <span class="icon">🎵</span>
+                    <span class="name">Frequency Generator</span>
+                </a>
+                <a href="/quantum-merlin-hub/tarot-new.html" class="tool-badge">
+                    <span class="icon">🃏</span>
+                    <span class="name">Tarot Reading</span>
+                </a>
+                <a href="/quantum-merlin-hub/gematria-new.html" class="tool-badge">
+                    <span class="icon">🔢</span>
+                    <span class="name">Gematria</span>
+                </a>
+                <a href="/quantum-merlin-hub/sigils-new.html" class="tool-badge">
+                    <span class="icon">✒️</span>
+                    <span class="name">Sigil Creator</span>
+                </a>
+                <a href="/quantum-sigil-generator-new.html" class="tool-badge">
+                    <span class="icon">✨</span>
+                    <span class="name">Birth Sigil</span>
+                </a>
+                <a href="/quantum-merlin-hub/astrology-new.html" class="tool-badge">
+                    <span class="icon">⭐</span>
+                    <span class="name">Astrology</span>
+                </a>
+                <a href="/quantum-merlin-hub/chinese-new.html" class="tool-badge">
+                    <span class="icon">🐉</span>
+                    <span class="name">Chinese Zodiac</span>
+                </a>
+                <a href="/quantum-merlin-hub/crystals-new.html" class="tool-badge">
+                    <span class="icon">💎</span>
+                    <span class="name">Crystal Guide</span>
+                </a>
+                <a href="/quantum-merlin-hub/water-new.html" class="tool-badge">
+                    <span class="icon">💧</span>
+                    <span class="name">Water Charging</span>
+                </a>
+                <a href="/quantum-merlin-hub/forecasts-new.html" class="tool-badge">
+                    <span class="icon">🌙</span>
+                    <span class="name">Cosmic Forecasts</span>
+                </a>
+                <a href="/angel-number-calculator-new.html" class="tool-badge">
+                    <span class="icon">👼</span>
+                    <span class="name">Angel Numbers</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer-box">
+            <h3>⚠️ Important Disclaimer</h3>
+            <p>
+                Quantum Reality Codes provides tools for entertainment, relaxation, and spiritual exploration only. 
+                Our content is not intended as medical, psychological, financial, or professional advice. 
+                Always consult qualified professionals for serious life decisions. 
+                These tools are meant to inspire reflection and personal growth, not to replace professional guidance.
+            </p>
+        </div>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Begin Your Journey</h2>
+            <p>Ready to explore the quantum realm? Start with any of our free tools and discover what resonates with your soul.</p>
+            <div class="cta-buttons">
+                <a href="/index.html" class="cta-btn primary">Explore Tools</a>
+                <a href="https://buymeacoffee.com/quantumreality" target="_blank" class="cta-btn secondary">☕ Support Us</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Quantum Reality Codes</h4>
+                    <p>Bridging ancient wisdom with quantum possibilities through sacred frequencies and mystical tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="/quantum-merlin-hub/codes-new.html">Reality Codes</a></li>
+                        <li><a href="/quantum-merlin-hub/tarot-new.html">Tarot Reading</a></li>
+                        <li><a href="/quantum-merlin-hub/sigils-new.html">Sigil Creator</a></li>
+                        <li><a href="/genesis/index-enhanced.html">Frequencies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/quantum-merlin-hub/crystals-new.html">Crystals</a></li>
+                        <li><a href="/quantum-merlin-hub/astrology-new.html">Astrology</a></li>
+                        <li><a href="/angel-number-calculator-new.html">Angel Numbers</a></li>
+                        <li><a href="/quantum-merlin-hub/jukebox-new.html">My Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="https://buymeacoffee.com/quantumreality" target="_blank">Buy Me a Coffee</a></li>
+                        <li><a href="/about-new.html">About</a></li>
+                        <li><a href="/contact-new.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Quantum Reality Codes. For entertainment and spiritual exploration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/shared/js/quantum-core.js"></script>
+    <script src="/shared/js/quantum-analytics.js"></script>
+</body>
+</html>

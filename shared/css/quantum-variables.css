@@ -1,0 +1,211 @@
+/**
+ * Quantum Reality Codes - CSS Variables & Design Tokens
+ * Synthwave/Tron Aesthetic with Neon Glow Effects
+ * 
+ * Usage: @import url('./quantum-variables.css');
+ */
+
+:root {
+  /* ═══════════════════════════════════════════════════════════════════════
+     PRIMARY COLORS - Neon Synthwave Palette
+     ═══════════════════════════════════════════════════════════════════════ */
+  --neon-cyan: #00f5ff;
+  --neon-magenta: #ff00ff;
+  --neon-pink: #ff1493;
+  --neon-purple: #9d00ff;
+  --neon-gold: #ffd700;
+  --neon-blue: #00a8ff;
+  --neon-orange: #ff8c00;
+  --neon-red: #ff4444;
+  
+  /* RGB Values for rgba() usage */
+  --neon-cyan-rgb: 0, 245, 255;
+  --neon-magenta-rgb: 255, 0, 255;
+  --neon-pink-rgb: 255, 20, 147;
+  --neon-purple-rgb: 157, 0, 255;
+  --neon-gold-rgb: 255, 215, 0;
+  --neon-blue-rgb: 0, 168, 255;
+  
+  /* ═══════════════════════════════════════════════════════════════════════
+     BACKGROUND COLORS
+     ═══════════════════════════════════════════════════════════════════════ */
+  --bg-dark: #0a0a0f;
+  --bg-darker: #050508;
+  --bg-surface: rgba(20, 20, 35, 0.95);
+  --bg-card: rgba(30, 30, 50, 0.85);
+  --bg-elevated: rgba(40, 40, 60, 0.9);
+  --bg-overlay: rgba(0, 245, 255, 0.03);
+  --bg-hover: rgba(0, 245, 255, 0.08);
+  
+  /* ═══════════════════════════════════════════════════════════════════════
+     TEXT COLORS
+     ═══════════════════════════════════════════════════════════════════════ */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --text-disabled: rgba(255, 255, 255, 0.3);
+  
+  /* ═══════════════════════════════════════════════════════════════════════
+     GLOW EFFECTS
+     ═══════════════════════════════════════════════════════════════════════ */
+  --glow-cyan: 0 0 20px rgba(0, 245, 255, 0.5), 0 0 40px rgba(0, 245, 255, 0.3);
+  --glow-cyan-intense: 0 0 20px rgba(0, 245, 255, 0.8), 0 0 40px rgba(0, 245, 255, 0.5), 0 0 60px rgba(0, 245, 255, 0.3);
+  --glow-magenta: 0 0 20px rgba(255, 0, 255, 0.5), 0 0 40px rgba(255, 0, 255, 0.3);
+  --glow-magenta-intense: 0 0 20px rgba(255, 0, 255, 0.8), 0 0 40px rgba(255, 0, 255, 0.5), 0 0 60px rgba(255, 0, 255, 0.3);
+  --glow-gold: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.3);
+  --glow-gold-intense: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.5), 0 0 60px rgba(255, 215, 0, 0.3);
+  --glow-purple: 0 0 20px rgba(157, 0, 255, 0.5), 0 0 40px rgba(157, 0, 255, 0.3);
+  --glow-blue: 0 0 20px rgba(0, 168, 255, 0.5), 0 0 40px rgba(0, 168, 255, 0.3);
+  
+  /* Text Glows */
+  --text-glow-cyan: 0 0 10px rgba(0, 245, 255, 0.8), 0 0 20px rgba(0, 245, 255, 0.4);
+  --text-glow-magenta: 0 0 10px rgba(255, 0, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.4);
+  --text-glow-gold: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.4);
+  
+  /* ═══════════════════════════════════════════════════════════════════════
+     GRADIENTS
+     ═══════════════════════════════════════════════════════════════════════ */
+  --gradient-primary: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-magenta) 100%);
+  --gradient-primary-reverse: linear-gradient(135deg, var(--neon-magenta) 0%, var(--neon-cyan) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--neon-purple) 0%, var(--neon-pink) 100%);
+  --gradient-gold: linear-gradient(135deg, var(--neon-gold) 0%, var(--neon-orange) 100%);
+  --gradient-blue: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-cyan) 100%);
+  --gradient-background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 50%, #0a0a0f 100%);
+  --gradient-radial-cyan: radial-gradient(circle, rgba(0, 245, 255, 0.15) 0%, transparent 70%);
+  --gradient-radial-magenta: radial-gradient(circle, rgba(255, 0, 255, 0.15) 0%, transparent 70%);
+  
+  /* Card Gradients */
+  --gradient-card-cyan: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(157, 0, 255, 0.1));
+  --gradient-card-magenta: linear-gradient(135deg, rgba(255, 0, 255, 0.15), rgba(0, 245, 255, 0.1));
+  --gradient-card-gold: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 140, 0, 0.1));
+  
+  /* ═══════════════════════════════════════════════════════════════════════
+     BORDERS
+     ═══════════════════════════════════════════════════════════════════════ */
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.1);
+  --border-cyan: 1px solid rgba(0, 245, 255, 0.3);
+  --border-cyan-bright: 2px solid rgba(0, 245, 255, 0.6);
+  --border-magenta: 1px solid rgba(255, 0, 255, 0.3);
+  --border-gold: 1px solid rgba(255, 215, 0, 0.3);
+  --border-gold-bright: 2px solid rgba(255, 215, 0, 0.6);
+  --border-purple: 1px solid rgba(157, 0, 255, 0.3);
+  
+  /* ═══════════════════════════════════════════════════════════════════════
+     TYPOGRAPHY
+     ═══════════════════════════════════════════════════════════════════════ */
+  --font-display: 'Orbitron', 'Segoe UI', sans-serif;
+  --font-body: 'Exo 2', 'Segoe UI', sans-serif;
+  
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3rem;
+  --text-6xl: 4rem;
+  
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  
+  /* Line Heights */
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+  
+  /* Letter Spacing */
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+  
+  /* ═══════════════════════════════════════════════════════════════════════
+     SPACING
+     ═══════════════════════════════════════════════════════════════════════ */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  
+  /* ═══════════════════════════════════════════════════════════════════════
+     BORDER RADIUS
+     ═══════════════════════════════════════════════════════════════════════ */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-full: 9999px;
+  
+  /* ═══════════════════════════════════════════════════════════════════════
+     SHADOWS
+     ═══════════════════════════════════════════════════════════════════════ */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
+  --shadow-inner: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  
+  /* ═══════════════════════════════════════════════════════════════════════
+     TRANSITIONS
+     ═══════════════════════════════════════════════════════════════════════ */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-smooth: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* ═══════════════════════════════════════════════════════════════════════
+     Z-INDEX SCALE
+     ═══════════════════════════════════════════════════════════════════════ */
+  --z-background: -1;
+  --z-base: 0;
+  --z-content: 10;
+  --z-overlay: 100;
+  --z-dropdown: 200;
+  --z-sticky: 300;
+  --z-modal: 400;
+  --z-popover: 500;
+  --z-tooltip: 600;
+  --z-toast: 700;
+  
+  /* ═══════════════════════════════════════════════════════════════════════
+     BREAKPOINTS (for reference in JS)
+     ═══════════════════════════════════════════════════════════════════════ */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* ═══════════════════════════════════════════════════════════════════════
+     PERSONA COLORS
+     ═══════════════════════════════════════════════════════════════════════ */
+  --persona-merlin: var(--neon-cyan);
+  --persona-rose: var(--neon-magenta);
+  --persona-trinity: var(--neon-gold);
+  --persona-light: var(--neon-cyan);
+  --persona-shadow: var(--neon-magenta);
+  --persona-meta: var(--neon-purple);
+  --persona-quantum: var(--neon-blue);
+}

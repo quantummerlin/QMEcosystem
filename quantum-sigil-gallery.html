@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigil Gallery | Quantum Merlin</title>
+    <meta name="description" content="View your saved cosmic birth sigils. Each sigil is a unique celestial signature based on lunar phase and stellar alignment.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --neon-cyan: #00f5ff;
+            --neon-magenta: #ff00ff;
+            --neon-gold: #ffd700;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0f;
+            color: #fff;
+            font-family: 'Exo 2', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding-top: 100px;
+        }
+
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(0, 245, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(157, 0, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(255, 0, 255, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Header */
+        .qrc-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 18px 40px;
+            background: rgba(10, 10, 15, 0.92);
+            backdrop-filter: blur(25px);
+            border-bottom: 1px solid rgba(0, 245, 255, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .qrc-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .qrc-logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+        }
+
+        .qrc-logo-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #00f5ff 0%, #9d00ff 100%);
+            border-radius: 14px;
+            font-size: 1.8rem;
+            box-shadow: 0 0 25px rgba(0, 245, 255, 0.5);
+        }
+
+        .qrc-logo-text {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00f5ff 0%, #ff00ff 50%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .qrc-logo-text span {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 400;
+            font-family: 'Exo 2', sans-serif;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 2px;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(157, 0, 255, 0.1));
+            border: 2px solid rgba(0, 245, 255, 0.4);
+            border-radius: 12px;
+            color: #00f5ff;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.25), rgba(157, 0, 255, 0.2));
+            border-color: rgba(0, 245, 255, 0.7);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 245, 255, 0.3);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 30px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00f5ff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 30px rgba(0, 245, 255, 0.5));
+        }
+
+        .page-header p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.1rem;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(0, 245, 255, 0.2);
+            border-radius: 20px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(255, 0, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-item:hover {
+            border-color: rgba(0, 245, 255, 0.6);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.3);
+        }
+
+        .gallery-canvas-wrapper {
+            width: 100%;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            background: radial-gradient(circle at center, rgba(20, 20, 50, 1), rgba(10, 10, 25, 1));
+            overflow: hidden;
+        }
+
+        .gallery-canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .gallery-info {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .gallery-date {
+            font-family: 'Orbitron', monospace;
+            font-size: 1rem;
+            color: #00f5ff;
+            margin-bottom: 6px;
+        }
+
+        .gallery-location {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 10px;
+        }
+
+        .gallery-style {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(255, 0, 255, 0.2);
+            border: 1px solid rgba(255, 0, 255, 0.4);
+            border-radius: 15px;
+            font-size: 0.75rem;
+            color: #ff00ff;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .gallery-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+
+        .gallery-btn {
+            padding: 8px 16px;
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            background: rgba(0, 245, 255, 0.1);
+            border-radius: 8px;
+            color: #00f5ff;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .gallery-btn:hover {
+            background: rgba(0, 245, 255, 0.2);
+            border-color: rgba(0, 245, 255, 0.6);
+        }
+
+        .gallery-btn.delete {
+            border-color: rgba(255, 100, 100, 0.3);
+            background: rgba(255, 100, 100, 0.1);
+            color: #ff6464;
+        }
+
+        .gallery-btn.delete:hover {
+            background: rgba(255, 100, 100, 0.2);
+            border-color: rgba(255, 100, 100, 0.6);
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 80px 40px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+        }
+
+        .empty-state .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 15px;
+        }
+
+        .empty-state p {
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 25px;
+        }
+
+        .create-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(157, 0, 255, 0.15));
+            border: 2px solid rgba(0, 245, 255, 0.5);
+            border-radius: 15px;
+            color: #00f5ff;
+            font-family: 'Orbitron', monospace;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .create-btn:hover {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.3), rgba(157, 0, 255, 0.25));
+            border-color: rgba(0, 245, 255, 0.8);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0, 245, 255, 0.4);
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 15px 25px;
+            background: rgba(10, 10, 20, 0.95);
+            border: 1px solid rgba(0, 245, 255, 0.4);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 0.95rem;
+            z-index: 2000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(20px);
+        }
+
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .notification.success {
+            border-color: rgba(16, 185, 129, 0.6);
+        }
+
+        .notification.error {
+            border-color: rgba(239, 68, 68, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(0, 245, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #00f5ff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .qrc-header {
+                padding: 15px 20px;
+            }
+
+            .qrc-logo-text {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 30px 15px;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="qrc-header">
+        <div class="qrc-header-inner">
+            <a href="/birth-sigil" class="qrc-logo">
+                <div class="qrc-logo-icon">🧙‍♂️</div>
+                <div class="qrc-logo-text">
+                    QUANTUM MERLIN
+                    <span>COSMIC TOOLS</span>
+                </div>
+            </a>
+            <a href="/birth-sigil" class="back-btn">
+                ← Back to Generator
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="page-header">
+            <h1>🎨 Your Sigil Gallery</h1>
+            <p>Your saved cosmic birth sigils, stored locally on this device</p>
+        </div>
+
+        <div id="galleryGrid" class="gallery-grid"></div>
+        
+        <div id="emptyState" class="empty-state" style="display: none;">
+            <div class="icon">🌙</div>
+            <h3>No Sigils Yet</h3>
+            <p>Generate your first cosmic birth sigil to start your collection</p>
+            <a href="/birth-sigil" class="create-btn">
+                ✨ Create Your First Sigil
+            </a>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Quantum Merlin • <a href="/birth-sigil">Birth Sigil Generator</a></p>
+    </footer>
+
+    <script>
+        // Seeded random for consistent sigil generation
+        function seededRandom(seed) {
+            const x = Math.sin(seed * 9999) * 10000;
+            return x - Math.floor(x);
+        }
+
+        // Extract seeds from birth datetime
+        function extractSeeds(birthDateTime) {
+            const timestamp = birthDateTime.getTime();
+            const year = birthDateTime.getFullYear();
+            const month = birthDateTime.getMonth() + 1;
+            const day = birthDateTime.getDate();
+            const hour = birthDateTime.getHours();
+            const minute = birthDateTime.getMinutes();
+            
+            const seed1 = ((year * 31 + month * 17 + day * 7) % 1000) / 1000;
+            const seed2 = ((hour * 23 + minute * 13 + day * 11) % 1000) / 1000;
+            const seed3 = ((timestamp % 100000) / 100000);
+            const seed4 = Math.sin(timestamp * 0.0001) * 0.5 + 0.5;
+            const seed5 = ((year + month * day + hour * minute) % 360) / 360;
+            const seed6 = ((day * hour + minute * month + year % 100) % 1000) / 1000;
+            const seed7 = Math.abs(Math.sin(year * 0.1) * Math.cos(month * day * 0.2)) * 0.5 + 0.25;
+            const seed8 = ((year % 12 + month + day % 7 + hour % 6) % 30) / 30;
+            
+            return {
+                primary: seed1,
+                secondary: seed2,
+                complexity: seed3,
+                rotation: seed4,
+                symmetry: Math.floor(seed5 * 6) + 3,
+                density: seed6,
+                colorShift: seed7,
+                pattern: Math.floor(seed8 * 5)
+            };
+        }
+
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `notification ${type} show`;
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        function loadGallery() {
+            const gallery = JSON.parse(localStorage.getItem('sigilGallery') || '[]');
+            const galleryGrid = document.getElementById('galleryGrid');
+            const emptyState = document.getElementById('emptyState');
+            
+            if (gallery.length === 0) {
+                galleryGrid.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+            
+            galleryGrid.style.display = 'grid';
+            emptyState.style.display = 'none';
+            
+            galleryGrid.innerHTML = gallery.slice().reverse().map((item, index) => {
+                const actualIndex = gallery.length - 1 - index;
+                const date = new Date(item.dateTime);
+                const dateStr = date.toLocaleDateString('en-US', { 
+                    weekday: 'short',
+                    month: 'short', 
+                    day: 'numeric', 
+                    year: 'numeric',
+                    hour: 'numeric',
+                    minute: '2-digit'
+                });
+                
+                return `<div class="gallery-item">
+                    <div class="gallery-canvas-wrapper">
+                        <canvas class="gallery-canvas" id="galleryCanvas${index}" width="400" height="400"></canvas>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-date">${dateStr}</div>
+                        <div class="gallery-location">${item.location.city}</div>
+                        <span class="gallery-style">${item.style}</span>
+                    </div>
+                    <div class="gallery-actions">
+                        <button class="gallery-btn" onclick="viewSigil(${actualIndex})">View Full</button>
+                        <button class="gallery-btn delete" onclick="deleteSigil(${actualIndex})">Delete</button>
+                    </div>
+                </div>`;
+            }).join('');
+            
+            // Draw sigils on canvases
+            setTimeout(() => {
+                gallery.slice().reverse().forEach((item, index) => {
+                    const canvas = document.getElementById(`galleryCanvas${index}`);
+                    if (canvas) {
+                        const ctx = canvas.getContext('2d');
+                        const centerX = 200;
+                        const centerY = 200;
+                        
+                        // Draw background
+                        const bgGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, 200);
+                        bgGradient.addColorStop(0, 'rgba(20, 20, 50, 1)');
+                        bgGradient.addColorStop(1, 'rgba(10, 10, 25, 1)');
+                        ctx.fillStyle = bgGradient;
+                        ctx.fillRect(0, 0, 400, 400);
+                        
+                        // Scale down for preview
+                        ctx.save();
+                        ctx.translate(centerX, centerY);
+                        ctx.scale(0.9, 0.9);
+                        ctx.translate(-centerX, -centerY);
+                        
+                        const birthDateTime = new Date(item.dateTime);
+                        const seeds = extractSeeds(birthDateTime);
+                        
+                        switch(item.style) {
+                            case 'cosmic': 
+                                drawCosmicStyle(ctx, centerX, centerY, item.moonPhase, item.starDensity, item.quadrant, seeds); 
+                                break;
+                            case 'organic': 
+                                drawOrganicStyle(ctx, centerX, centerY, item.moonPhase, item.starDensity, item.quadrant, seeds); 
+                                break;
+                            case 'geometric': 
+                                drawGeometricStyle(ctx, centerX, centerY, item.moonPhase, item.starDensity, item.quadrant, seeds); 
+                                break;
+                            case 'mystical': 
+                                drawMysticalStyle(ctx, centerX, centerY, item.moonPhase, item.starDensity, item.quadrant, seeds); 
+                                break;
+                        }
+                        
+                        ctx.restore();
+                    }
+                });
+            }, 100);
+        }
+
+        function viewSigil(index) {
+            // Navigate to main page with sigil loaded
+            sessionStorage.setItem('loadSigilIndex', index);
+            window.location.href = '/birth-sigil';
+        }
+
+        function deleteSigil(index) {
+            if (confirm('Are you sure you want to delete this sigil?')) {
+                const gallery = JSON.parse(localStorage.getItem('sigilGallery') || '[]');
+                gallery.splice(index, 1);
+                localStorage.setItem('sigilGallery', JSON.stringify(gallery));
+                loadGallery();
+                showNotification('Sigil deleted', 'success');
+            }
+        }
+
+        // Simplified draw functions for gallery previews
+        function drawCosmicStyle(ctx, centerX, centerY, moonPhase, starDensity, quadrant, seeds) {
+            seeds = seeds || { primary: 0.5, secondary: 0.5, complexity: 0.5, rotation: 0.5, symmetry: 6, density: 0.5, colorShift: 0.5, pattern: 0 };
+            
+            const moonRadius = 30 + (moonPhase * 5) + (seeds.primary * 15);
+            const rotationOffset = seeds.rotation * Math.PI * 2;
+            const symmetryOrder = seeds.symmetry;
+            const baseLineWidth = 3 + seeds.complexity * 1.5;
+            
+            const hue = 200 + seeds.colorShift * 40;
+            const color1 = `hsl(${hue}, 70%, 50%)`;
+            const color2 = `hsl(${hue + 30}, 60%, 65%)`;
+            const colorGlow = `hsl(${hue + 15}, 65%, 75%)`;
+            
+            // Outer ring
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 140 + seeds.primary * 20, 0, 2 * Math.PI);
+            ctx.strokeStyle = colorGlow + '60';
+            ctx.lineWidth = 6 + seeds.complexity * 4;
+            ctx.stroke();
+            
+            // Center circle
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, moonRadius, 0, 2 * Math.PI);
+            ctx.fillStyle = color1 + '80';
+            ctx.fill();
+            ctx.strokeStyle = color2;
+            ctx.lineWidth = baseLineWidth;
+            ctx.stroke();
+            
+            // Stars
+            const starCount = Math.floor(starDensity * 2 + seeds.density * 8 + 4);
+            for (let i = 0; i < starCount; i++) {
+                const seedAngle = seededRandom(seeds.primary * 1000 + i) * 2 * Math.PI;
+                const angle = seedAngle + rotationOffset;
+                const distance = 70 + seededRandom(seeds.secondary * 1000 + i) * 50;
+                const x = centerX + Math.cos(angle) * distance;
+                const y = centerY + Math.sin(angle) * distance;
+                const starSize = 3 + seededRandom(seeds.complexity * 1000 + i) * 4;
+                
+                ctx.beginPath();
+                ctx.arc(x, y, starSize, 0, 2 * Math.PI);
+                ctx.fillStyle = colorGlow;
+                ctx.fill();
+            }
+            
+            // Directional lines
+            for (let i = 0; i < symmetryOrder; i++) {
+                const angle = rotationOffset + (i * 2 * Math.PI / symmetryOrder);
+                const innerR = moonRadius + 10;
+                const outerR = innerR + 80 + seeds.primary * 40;
+                
+                ctx.beginPath();
+                ctx.moveTo(centerX + Math.cos(angle) * innerR, centerY + Math.sin(angle) * innerR);
+                ctx.lineTo(centerX + Math.cos(angle) * outerR, centerY + Math.sin(angle) * outerR);
+                ctx.strokeStyle = color2;
+                ctx.lineWidth = baseLineWidth;
+                ctx.stroke();
+            }
+        }
+
+        function drawOrganicStyle(ctx, centerX, centerY, moonPhase, starDensity, quadrant, seeds) {
+            seeds = seeds || { primary: 0.5, secondary: 0.5, complexity: 0.5, rotation: 0.5, symmetry: 6, density: 0.5, colorShift: 0.5, pattern: 0 };
+            
+            const moonRadius = 30 + (moonPhase * 5) + (seeds.primary * 12);
+            const rotationOffset = seeds.rotation * Math.PI * 2;
+            const hue = 145 + seeds.colorShift * 60;
+            const color1 = `hsl(${hue}, 70%, 40%)`;
+            const color2 = `hsl(${hue + 15}, 65%, 55%)`;
+            
+            // Flowing center
+            ctx.beginPath();
+            for (let i = 0; i <= 360; i += 5) {
+                const angle = (i / 180) * Math.PI + rotationOffset;
+                const waveFreq = 3 + Math.floor(seeds.primary * 5);
+                const radius = moonRadius + Math.sin(angle * waveFreq) * 15 + Math.cos(angle * 2) * 10;
+                const x = centerX + Math.cos(angle) * radius;
+                const y = centerY + Math.sin(angle) * radius;
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+            ctx.fillStyle = color1 + '50';
+            ctx.fill();
+            ctx.strokeStyle = color2;
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            
+            // Branches
+            const branches = Math.floor(seeds.density * 6) + 4;
+            for (let i = 0; i < branches; i++) {
+                const startAngle = (i / branches) * 2 * Math.PI + rotationOffset;
+                const length = 50 + seededRandom(seeds.primary * 1000 + i) * 50;
+                
+                ctx.beginPath();
+                ctx.moveTo(
+                    centerX + Math.cos(startAngle) * moonRadius,
+                    centerY + Math.sin(startAngle) * moonRadius
+                );
+                const endX = centerX + Math.cos(startAngle) * (moonRadius + length);
+                const endY = centerY + Math.sin(startAngle) * (moonRadius + length);
+                ctx.lineTo(endX, endY);
+                ctx.strokeStyle = color2;
+                ctx.lineWidth = 2.5;
+                ctx.stroke();
+                
+                ctx.beginPath();
+                ctx.arc(endX, endY, 5, 0, 2 * Math.PI);
+                ctx.fillStyle = color1;
+                ctx.fill();
+            }
+        }
+
+        function drawGeometricStyle(ctx, centerX, centerY, moonPhase, starDensity, quadrant, seeds) {
+            seeds = seeds || { primary: 0.5, secondary: 0.5, complexity: 0.5, rotation: 0.5, symmetry: 6, density: 0.5, colorShift: 0.5, pattern: 0 };
+            
+            const moonRadius = 30 + (moonPhase * 5) + (seeds.primary * 10);
+            const rotationOffset = seeds.rotation * Math.PI * 2;
+            const polygonSides = seeds.symmetry;
+            const hue = 210 + seeds.colorShift * 50;
+            const color1 = `hsl(${hue}, 65%, 50%)`;
+            const color2 = `hsl(${hue + 20}, 60%, 65%)`;
+            
+            // Central polygon
+            ctx.beginPath();
+            for (let i = 0; i < polygonSides; i++) {
+                const angle = (i / polygonSides) * 2 * Math.PI - Math.PI/2 + rotationOffset;
+                const x = centerX + Math.cos(angle) * moonRadius;
+                const y = centerY + Math.sin(angle) * moonRadius;
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+            ctx.fillStyle = color1 + '40';
+            ctx.fill();
+            ctx.strokeStyle = color2;
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            
+            // Outer connections
+            const outerRadius = 110 + seeds.primary * 20;
+            for (let i = 0; i < polygonSides; i++) {
+                const angle = (i / polygonSides) * 2 * Math.PI + rotationOffset;
+                ctx.beginPath();
+                ctx.moveTo(centerX + Math.cos(angle) * moonRadius, centerY + Math.sin(angle) * moonRadius);
+                ctx.lineTo(centerX + Math.cos(angle) * outerRadius, centerY + Math.sin(angle) * outerRadius);
+                ctx.strokeStyle = color2 + '80';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+            
+            // Concentric rings
+            for (let r = moonRadius + 25; r < 130; r += 30) {
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, r, 0, 2 * Math.PI);
+                ctx.strokeStyle = color2 + '30';
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+            }
+        }
+
+        function drawMysticalStyle(ctx, centerX, centerY, moonPhase, starDensity, quadrant, seeds) {
+            seeds = seeds || { primary: 0.5, secondary: 0.5, complexity: 0.5, rotation: 0.5, symmetry: 6, density: 0.5, colorShift: 0.5, pattern: 0 };
+            
+            const moonRadius = 30 + (moonPhase * 5) + (seeds.primary * 10);
+            const rotationOffset = seeds.rotation * Math.PI * 2;
+            const hue = 270 + seeds.colorShift * 60;
+            const color1 = `hsl(${hue}, 60%, 45%)`;
+            const color2 = `hsl(${hue + 20}, 55%, 65%)`;
+            
+            const centralSides = 3 + Math.floor(seeds.pattern * 2);
+            
+            // Central shape
+            ctx.beginPath();
+            for (let i = 0; i < centralSides; i++) {
+                const angle = (i / centralSides) * 2 * Math.PI - Math.PI/2 + rotationOffset;
+                const x = centerX + Math.cos(angle) * moonRadius;
+                const y = centerY + Math.sin(angle) * moonRadius;
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+            ctx.fillStyle = color1 + '40';
+            ctx.fill();
+            ctx.strokeStyle = color2;
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            
+            // Inverted shape
+            ctx.beginPath();
+            for (let i = 0; i < centralSides; i++) {
+                const angle = (i / centralSides) * 2 * Math.PI + Math.PI/2 + rotationOffset;
+                const x = centerX + Math.cos(angle) * (moonRadius + 15);
+                const y = centerY + Math.sin(angle) * (moonRadius + 15);
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+            ctx.strokeStyle = color2 + '80';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            
+            // Outer ring
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 120 + seeds.primary * 20, 0, 2 * Math.PI);
+            ctx.strokeStyle = color2 + '50';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            
+            // Center eye
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 8, 0, 2 * Math.PI);
+            ctx.fillStyle = color2;
+            ctx.fill();
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', loadGallery);
+    </script>
+</body>
+</html>

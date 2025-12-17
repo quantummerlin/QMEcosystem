@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Merlin Community Forum | Connect with Spiritual Explorers</title>
+    <meta name="description" content="Join our spiritual community! Share sigil interpretations, discuss frequency healing, explore numerology, tarot, astrology, and connect with like-minded seekers on their spiritual journey.">
+    <meta name="keywords" content="spiritual forum, sigil discussion, frequency healing community, numerology forum, tarot discussion, astrology community, quantum merlin">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a001a 0%, #1a0033 50%, #2d0052 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+            background: rgba(255, 215, 0, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .subtitle {
+            color: #c4b5fd;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .forum-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .forum-stat {
+            text-align: center;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .forum-stat:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #cccccc;
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-tab {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 25px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .nav-tab:hover, .nav-tab.active {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            transform: scale(1.05);
+        }
+
+        .forum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .forum-category {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .forum-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+            border-color: #FFD700;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .category-title {
+            font-size: 1.3rem;
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        .category-description {
+            color: #cccccc;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .category-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #c4b5fd;
+        }
+
+        .recent-threads {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+
+        .recent-threads h2 {
+            color: #FFD700;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .thread-item {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background 0.2s ease;
+        }
+
+        .thread-item:hover {
+            background: rgba(255, 215, 0, 0.05);
+        }
+
+        .thread-item:last-child {
+            border-bottom: none;
+        }
+
+        .thread-title {
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-decoration: none;
+        }
+
+        .thread-title:hover {
+            color: #FFD700;
+        }
+
+        .thread-meta {
+            font-size: 0.85rem;
+            color: #c4b5fd;
+        }
+
+        .join-community {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .join-community h2 {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .join-community p {
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .join-btn {
+            background: #000;
+            color: #FFD700;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .join-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .back-to-tools {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-to-tools a {
+            color: #c4b5fd;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+        }
+
+        .back-to-tools a:hover {
+            color: #FFD700;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .forum-stats {
+                gap: 15px;
+            }
+
+            .forum-stat {
+                padding: 10px 15px;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+            }
+
+            .forum-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-tabs {
+                gap: 5px;
+            }
+
+            .nav-tab {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌟 Quantum Merlin Community Forum</h1>
+            <p class="subtitle">Connect with spiritual explorers from around the world</p>
+            
+            <div class="forum-stats">
+                <div class="forum-stat">
+                    <div class="stat-number">2,847</div>
+                    <div class="stat-label">Members</div>
+                </div>
+                <div class="forum-stat">
+                    <div class="stat-number">156</div>
+                    <div class="stat-label">Active Discussions</div>
+                </div>
+                <div class="forum-stat">
+                    <div class="stat-number">4.9/5</div>
+                    <div class="stat-label">Community Rating</div>
+                </div>
+                <div class="forum-stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="nav-tabs">
+            <a href="#all" class="nav-tab active">All Categories</a>
+            <a href="#sigils" class="nav-tab">🌟 Sigils</a>
+            <a href="#frequencies" class="nav-tab">🎵 Frequencies</a>
+            <a href="#numerology" class="nav-tab">🔢 Numerology</a>
+            <a href="#tarot" class="nav-tab">🃏 Tarot</a>
+            <a href="#astrology" class="nav-tab">🌙 Astrology</a>
+            <a href="#general" class="nav-tab">💬 General</a>
+        </div>
+
+        <div class="forum-grid">
+            <div class="forum-category" onclick="openCategory('sigils')">
+                <div class="category-header">
+                    <div class="category-icon">🌟</div>
+                    <div class="category-title">Cosmic Sigils</div>
+                </div>
+                <p class="category-description">Share your birth sigils, get interpretations, discuss sacred geometry, and explore the cosmic patterns in your life.</p>
+                <div class="category-stats">
+                    <span>🧵 48 Threads</span>
+                    <span>💬 342 Posts</span>
+                    <span>🔥 Active</span>
+                </div>
+            </div>
+
+            <div class="forum-category" onclick="openCategory('frequencies')">
+                <div class="category-header">
+                    <div class="category-icon">🎵</div>
+                    <div class="category-title">Frequency Healing</div>
+                </div>
+                <p class="category-description">Discuss sound healing, share frequency experiences, ask about specific tones, and connect with other frequency enthusiasts.</p>
+                <div class="category-stats">
+                    <span>🧵 62 Threads</span>
+                    <span>💬 518 Posts</span>
+                    <span>🔥 Active</span>
+                </div>
+            </div>
+
+            <div class="forum-category" onclick="openCategory('gematria')">
+                <div class="category-header">
+                    <div class="category-icon">🔢</div>
+                    <div class="category-title">Quantum Gematria</div>
+                </div>
+                <p class="category-description">Explore numerology, life path numbers, destiny calculations, and discover the hidden meanings in numbers and names.</p>
+                <div class="category-stats">
+                    <span>🧵 35 Threads</span>
+                    <span>💬 227 Posts</span>
+                    <span>🔥 Active</span>
+                </div>
+            </div>
+
+            <div class="forum-category" onclick="openCategory('tarot')">
+                <div class="category-header">
+                    <div class="category-icon">🃏</div>
+                    <div class="category-title">Quantum Tarot</div>
+                </div>
+                <p class="category-description">Share card readings, interpret spreads, discuss tarot symbolism, and get guidance from the quantum tarot community.</p>
+                <div class="category-stats">
+                    <span>🧵 41 Threads</span>
+                    <span>💬 289 Posts</span>
+                    <span>🔥 Active</span>
+                </div>
+            </div>
+
+            <div class="forum-category" onclick="openCategory('astrology')">
+                <div class="category-header">
+                    <div class="category-icon">🌙</div>
+                    <div class="category-title">Astrology & Zodiac</div>
+                </div>
+                <p class="category-description">Western and Chinese astrology, birth charts, zodiac forecasts, compatibility readings, and celestial discussions.</p>
+                <div class="category-stats">
+                    <span>🧵 53 Threads</span>
+                    <span>💬 412 Posts</span>
+                    <span>🔥 Active</span>
+                </div>
+            </div>
+
+            <div class="forum-category" onclick="openCategory('crystals')">
+                <div class="category-header">
+                    <div class="category-icon">💎</div>
+                    <div class="category-title">Quantum Crystals</div>
+                </div>
+                <p class="category-description">Crystal healing, stone recommendations, energy work, and connecting with the crystalline consciousness of minerals.</p>
+                <div class="category-stats">
+                    <span>🧵 28 Threads</span>
+                    <span>💬 156 Posts</span>
+                    <span>🔥 Active</span>
+                </div>
+            </div>
+
+            <div class="forum-category" onclick="openCategory('manifestation')">
+                <div class="category-header">
+                    <div class="category-icon">✨</div>
+                    <div class="category-title">Reality Codes</div>
+                </div>
+                <p class="category-description">Quantum manifestation techniques, reality creation, law of attraction, and sharing success stories with the community.</p>
+                <div class="category-stats">
+                    <span>🧵 37 Threads</span>
+                    <span>💬 268 Posts</span>
+                    <span>🔥 Active</span>
+                </div>
+            </div>
+
+            <div class="forum-category" onclick="openCategory('water')">
+                <div class="category-header">
+                    <div class="category-icon">💧</div>
+                    <div class="category-title">Water Charging</div>
+                </div>
+                <p class="category-description">Water alchemy, charging techniques, structured water, and discussing the consciousness of water and memory.</p>
+                <div class="category-stats">
+                    <span>🧵 19 Threads</span>
+                    <span>💬 94 Posts</span>
+                    <span>🔥 Active</span>
+                </div>
+            </div>
+
+            <div class="forum-category" onclick="openCategory('general')">
+                <div class="category-header">
+                    <div class="category-icon">💬</div>
+                    <div class="category-title">General Discussion</div>
+                </div>
+                <p class="category-description">Open discussions about spirituality, consciousness, quantum physics, personal growth, and community announcements.</p>
+                <div class="category-stats">
+                    <span>🧵 84 Threads</span>
+                    <span>💬 623 Posts</span>
+                    <span>🔥 Active</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-threads">
+            <h2>🔥 Hot Discussions This Week</h2>
+            
+            <div class="thread-item">
+                <a href="#" class="thread-title">My Full Moon sigil revealed exactly what I needed to hear!</a>
+                <div class="thread-meta">👤 CosmicSeeker • 🌟 Sigils • ⏰ 2 hours ago • 💬 23 replies</div>
+            </div>
+
+            <div class="thread-item">
+                <a href="#" class="thread-title">528Hz frequency helped me sleep through the night for first time in years</a>
+                <div class="thread-meta">👤 HarmonySeeker • 🎵 Frequencies • ⏰ 5 hours ago • 💬 18 replies</div>
+            </div>
+
+            <div class="thread-item">
+                <a href="#" class="thread-title">Life Path 11 here! Anyone else struggle with their purpose?</a>
+                <div class="thread-meta">👤 NumberWanderer • 🔢 Numerology • ⏰ 8 hours ago • 💬 31 replies</div>
+            </div>
+
+            <div class="thread-item">
+                <a href="#" class="thread-title">Just had my first Quantum Tarot reading - mind blown! 🤯</a>
+                <div class="thread-meta">👤 TarotNewbie • 🃏 Tarot • ⏰ 12 hours ago • 💬 15 replies</div>
+            </div>
+
+            <div class="thread-item">
+                <a href="#" class="thread-title">Saturn in Pisces transit - who else feeling the intensity?</a>
+                <div class="thread-meta">👤 AstroLogic • 🌙 Astrology • ⏰ 1 day ago • 💬 42 replies</div>
+            </div>
+        </div>
+
+        <div class="join-community">
+            <h2>🌟 Ready to Join Our Cosmic Family?</h2>
+            <p>Connect with thousands of spiritual seekers, share your journey, and get support from our amazing community!</p>
+            <a href="#" class="join-btn" onclick="joinForum()">Join the Forum</a>
+        </div>
+
+        <div class="back-to-tools">
+            <a href="quantum-sigil-generator.html">← Back to Sigil Generator</a> |
+            <a href="main-hub.html">← Quantum Merlin Hub</a>
+        </div>
+    </div>
+
+    <script>
+        function openCategory(category) {
+            // This would typically navigate to the specific category
+            console.log(`Opening category: ${category}`);
+            showMessage(`Opening ${category} discussions...`);
+            
+            // In a real implementation, this would navigate to the category page
+            // For now, we'll show a message
+            setTimeout(() => {
+                alert(`Forum category "${category}" would open here with full discussions, threads, and commenting features.\n\nThis is where users would:\n• Start new discussions\n• Reply to threads\n• Share experiences\n• Ask questions\n• Connect with others\n\nIntegration with Giscus or Commento would provide the actual commenting functionality.`);
+            }, 500);
+        }
+        
+        function joinForum() {
+            showMessage('Welcome to the Quantum Merlin Community! 🌟');
+            
+            // In a real implementation, this would handle user registration/login
+            setTimeout(() => {
+                const username = prompt('Choose your cosmic username:');
+                if (username) {
+                    alert(`Welcome ${username}! 🌟\n\nYou're now part of our spiritual community!\n\nNext steps:\n• Introduce yourself in General Discussion\n• Share your first sigil or experience\n• Join ongoing conversations\n• Ask questions and help others\n\nYour journey with like-minded seekers begins now! ✨`);
+                }
+            }, 1000);
+        }
+        
+        function showMessage(message) {
+            console.log(message);
+        }
+        
+        // Add some interactivity to the nav tabs
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all tabs
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Filter categories based on selected tab
+                const filter = this.textContent.toLowerCase().includes('all') ? 'all' : 
+                              this.textContent.toLowerCase().includes('sigils') ? 'sigils' :
+                              this.textContent.toLowerCase().includes('frequencies') ? 'frequencies' :
+                              this.textContent.toLowerCase().includes('numerology') ? 'gematria' :
+                              this.textContent.toLowerCase().includes('tarot') ? 'tarot' :
+                              this.textContent.toLowerCase().includes('astrology') ? 'astrology' :
+                              'general';
+                
+                if (filter !== 'all') {
+                    showMessage(`Filtering to show ${filter} discussions...`);
+                }
+            });
+        });
+        
+        // Add hover effects and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate stats on load
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach((stat, index) => {
+                setTimeout(() => {
+                    stat.style.animation = 'pulse 2s ease-in-out';
+                }, index * 200);
+            });
+            
+            // Add some dynamic activity simulation
+            setInterval(() => {
+                const memberCount = document.querySelector('.stat-number');
+                if (memberCount && Math.random() > 0.7) {
+                    const currentCount = parseInt(memberCount.textContent);
+                    memberCount.textContent = currentCount + 1;
+                    setTimeout(() => {
+                        memberCount.textContent = currentCount;
+                    }, 3000);
+                }
+            }, 10000);
+        });
+    </script>
+</body>
+</html>

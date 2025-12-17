@@ -1,0 +1,306 @@
+/**
+ * Quantum Reality Codes - Background Effects
+ * Synthwave Grid, Quantum Sun, Floating Particles
+ */
+
+/* ═══════════════════════════════════════════════════════════════════════
+   QUANTUM BACKGROUND CONTAINER
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.quantum-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: var(--z-background);
+  background: var(--gradient-background);
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RETRO GRID FLOOR (TRON STYLE)
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.grid-floor {
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  width: 200%;
+  height: 60%;
+  background: 
+    linear-gradient(90deg, rgba(0, 245, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(rgba(0, 245, 255, 0.15) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform: perspective(500px) rotateX(65deg);
+  transform-origin: center top;
+  animation: gridMove 20s linear infinite;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+/* Alternative flat grid */
+.quantum-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 245, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMoveHorizontal 30s linear infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   QUANTUM SUN / HORIZON
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.quantum-sun {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, 
+    rgba(255, 0, 255, 0.6) 0%, 
+    rgba(255, 0, 255, 0.3) 30%, 
+    rgba(157, 0, 255, 0.1) 50%,
+    transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.6;
+  animation: sunPulse 8s ease-in-out infinite;
+}
+
+/* Sun with rays */
+.quantum-sun-rays {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+}
+
+.quantum-sun-rays::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, 
+    rgba(255, 215, 0, 0.3) 0%, 
+    rgba(255, 140, 0, 0.1) 40%,
+    transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: sunPulse 6s ease-in-out infinite;
+}
+
+/* Horizontal glow line (horizon) */
+.horizon-glow {
+  position: absolute;
+  bottom: 35%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 0, 255, 0.5) 20%,
+    rgba(0, 245, 255, 0.8) 50%,
+    rgba(255, 0, 255, 0.5) 80%,
+    transparent 100%);
+  box-shadow: 
+    0 0 20px rgba(0, 245, 255, 0.5),
+    0 0 40px rgba(255, 0, 255, 0.3),
+    0 0 60px rgba(0, 245, 255, 0.2);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   FLOATING PARTICLES
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.particles-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--neon-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  animation: floatUp linear infinite;
+  opacity: 0;
+}
+
+/* Particle variations */
+.particle.magenta {
+  background: var(--neon-magenta);
+}
+
+.particle.gold {
+  background: var(--neon-gold);
+}
+
+.particle.small {
+  width: 2px;
+  height: 2px;
+}
+
+.particle.large {
+  width: 6px;
+  height: 6px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   STAR FIELD
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.starfield {
+  position: absolute;
+  inset: 0;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: pulseSoft 3s ease-in-out infinite;
+}
+
+.star.bright {
+  width: 3px;
+  height: 3px;
+  box-shadow: 0 0 6px white, 0 0 12px white;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RADIAL GLOW EFFECTS
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.glow-orb.cyan {
+  background: var(--neon-cyan);
+}
+
+.glow-orb.magenta {
+  background: var(--neon-magenta);
+}
+
+.glow-orb.purple {
+  background: var(--neon-purple);
+}
+
+/* Top right glow (default) */
+.glow-orb-tr {
+  top: -10%;
+  right: -10%;
+  width: 40vw;
+  height: 40vw;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+/* Bottom left glow */
+.glow-orb-bl {
+  bottom: -10%;
+  left: -10%;
+  width: 35vw;
+  height: 35vw;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   AURORA EFFECT
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.aurora {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 50%;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 245, 255, 0) 0%,
+    rgba(0, 245, 255, 0.1) 25%,
+    rgba(255, 0, 255, 0.1) 50%,
+    rgba(157, 0, 255, 0.1) 75%,
+    rgba(0, 245, 255, 0) 100%
+  );
+  background-size: 400% 400%;
+  animation: aurora 20s ease infinite;
+  filter: blur(40px);
+  opacity: 0.5;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SCANLINES (RETRO CRT EFFECT)
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1) 0px,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   VIGNETTE
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 40%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   PRESET BACKGROUNDS
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Full Synthwave (grid + sun + particles) */
+.bg-synthwave .quantum-bg {
+  display: block;
+}
+
+/* Minimal (just gradient + subtle grid) */
+.bg-minimal .quantum-bg .quantum-sun,
+.bg-minimal .quantum-bg .grid-floor,
+.bg-minimal .quantum-bg .particles-container {
+  display: none;
+}
+
+/* Space (stars + aurora) */
+.bg-space .quantum-bg .grid-floor,
+.bg-space .quantum-bg .quantum-sun {
+  display: none;
+}

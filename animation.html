@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Quantum Merlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            background: #000;
+            overflow: hidden;
+            font-family: 'Orbitron', sans-serif;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        #intro-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s ease;
+        }
+
+        #intro-container.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Canvas for lines only */
+        #lines-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* Emoji container */
+        .emoji-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .emoji {
+            position: absolute;
+            font-size: 60px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-origin: center;
+            will-change: transform, opacity;
+            opacity: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #quantum {
+            color: #FFD700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+        }
+
+        #wizard {
+            color: #00F0FF;
+            text-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+        }
+
+        #rose {
+            color: #FF0066;
+            text-shadow: 0 0 20px rgba(255, 0, 102, 0.8);
+        }
+
+        /* Singularity dot */
+        #singularity {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, #FFD700, #00F0FF, #FF0066);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            z-index: 3;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+        }
+
+        /* Title text */
+        #title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 1px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00F0FF 0%, #FFD700 50%, #FF0066 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            white-space: nowrap;
+            opacity: 0;
+            z-index: 4;
+            letter-spacing: 0.1em;
+        }
+
+        /* App content (hidden initially) */
+        #app-content {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #app-content.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="intro-container">
+        <canvas id="lines-canvas"></canvas>
+        
+        <div class="emoji-layer">
+            <div class="emoji" id="quantum">⚛️</div>
+            <div class="emoji" id="wizard">🧙‍♂️</div>
+            <div class="emoji" id="rose">🌹</div>
+        </div>
+
+        <div id="singularity"></div>
+        <div id="title">QUANTUM MERLIN</div>
+    </div>
+
+    <div id="app-content">
+        <!-- Your actual app content goes here -->
+    </div>
+
+    <script>
+        // ============================================
+        // QUANTUM MERLIN INTRO — PRODUCTION VERSION
+        // ============================================
+
+        const canvas = document.getElementById('lines-canvas');
+        const ctx = canvas.getContext('2d', { alpha: true });
+        const container = document.getElementById('intro-container');
+        const appContent = document.getElementById('app-content');
+
+        const quantum = document.getElementById('quantum');
+        const wizard = document.getElementById('wizard');
+        const rose = document.getElementById('rose');
+        const singularity = document.getElementById('singularity');
+        const title = document.getElementById('title');
+
+        let width, height, centerX, centerY;
+        let time = 0;
+        let isRunning = true;
+        let wizardOrbitStart = 0;
+        let roseOrbitStart = Math.PI;
+
+        // Cap DPR for performance
+        const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            centerX = width / 2;
+            centerY = height / 2;
+
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            canvas.style.width = width + 'px';
+            canvas.style.height = height + 'px';
+            ctx.scale(dpr, dpr);
+        }
+
+        // Easing function
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function clamp(value, min, max) {
+            return Math.max(min, Math.min(max, value));
+        }
+
+        // Timeline controller
+        function updateAnimation() {
+            const t = time / 60; // Convert frames to seconds (60fps)
+
+            // Clear canvas
+            ctx.clearRect(0, 0, width, height);
+
+            // ==========================================
+            // PHASE 1: Quantum Emergence (0-1s)
+            // ==========================================
+            if (t < 1) {
+                const progress = clamp(t / 1, 0, 1);
+                const ease = easeInOutCubic(progress);
+                
+                quantum.style.left = centerX + 'px';
+                quantum.style.top = centerY + 'px';
+                quantum.style.transform = `translate(-50%, -50%) scale(${ease})`;
+                quantum.style.opacity = ease;
+                
+                wizard.style.opacity = 0;
+                rose.style.opacity = 0;
+            }
+
+            // ==========================================
+            // PHASE 2: Wizard & Rose Arrival (1-2s)
+            // ==========================================
+            else if (t < 2) {
+                const progress = clamp((t - 1) / 1, 0, 1);
+                const ease = easeInOutCubic(progress);
+                
+                // Quantum stays centered
+                quantum.style.left = centerX + 'px';
+                quantum.style.top = centerY + 'px';
+                quantum.style.transform = 'translate(-50%, -50%) scale(1)';
+                quantum.style.opacity = 1;
+                
+                // Wizard enters from left
+                const wizardX = ease * (centerX - 80);
+                wizard.style.left = wizardX + 'px';
+                wizard.style.top = centerY + 'px';
+                wizard.style.transform = 'translate(-50%, -50%) scale(1)';
+                wizard.style.opacity = ease;
+                
+                // Rose enters from right
+                const roseX = width - ease * (width - centerX - 80);
+                rose.style.left = roseX + 'px';
+                rose.style.top = centerY + 'px';
+                rose.style.transform = 'translate(-50%, -50%) scale(1)';
+                rose.style.opacity = ease;
+            }
+
+            // ==========================================
+            // PHASE 3: Quiet Float (2-3s)
+            // ==========================================
+            else if (t < 3) {
+                // All emojis hold position
+                quantum.style.left = centerX + 'px';
+                quantum.style.top = centerY + 'px';
+                quantum.style.transform = 'translate(-50%, -50%) scale(1)';
+                
+                wizard.style.left = (centerX - 80) + 'px';
+                wizard.style.top = centerY + 'px';
+                wizard.style.transform = 'translate(-50%, -50%) scale(1)';
+                
+                rose.style.left = (centerX + 80) + 'px';
+                rose.style.top = centerY + 'px';
+                rose.style.transform = 'translate(-50%, -50%) scale(1)';
+            }
+
+            // ==========================================
+            // PHASE 4: Lines Emerge (3-4.5s)
+            // ==========================================
+            else if (t < 4.5) {
+                const progress = clamp((t - 3) / 1.5, 0, 1);
+                const rotation = progress * Math.PI * 2 * 0.5; // Slow spin
+                
+                // Draw three thin rings
+                ctx.strokeStyle = 'rgba(0, 240, 255, ' + (progress * 0.6) + ')';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 80, rotation, rotation + Math.PI);
+                ctx.stroke();
+                
+                ctx.strokeStyle = 'rgba(255, 0, 255, ' + (progress * 0.6) + ')';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 80, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
+                ctx.stroke();
+                
+                ctx.strokeStyle = 'rgba(157, 0, 255, ' + (progress * 0.6) + ')';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 80, rotation + Math.PI, rotation + Math.PI * 2);
+                ctx.stroke();
+                
+                // Calculate starting orbit positions for smooth transition
+                if (t < 4.51) {
+                    wizardOrbitStart = Math.PI;
+                    roseOrbitStart = 0;
+                }
+            }
+
+            // ==========================================
+            // PHASE 5: Acceleration + Orbit (4.5-6.5s)
+            // ==========================================
+            else if (t < 6.5) {
+                const progress = clamp((t - 4.5) / 2, 0, 1);
+                const speedMultiplier = 1 + progress * 8; // Speed up significantly
+                const rotation = ((t - 3) * speedMultiplier) * Math.PI * 2 * 0.5;
+                
+                // Draw spinning rings (faster)
+                ctx.strokeStyle = 'rgba(0, 240, 255, 0.6)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 80, rotation, rotation + Math.PI);
+                ctx.stroke();
+                
+                ctx.strokeStyle = 'rgba(255, 0, 255, 0.6)';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 80, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
+                ctx.stroke();
+                
+                ctx.strokeStyle = 'rgba(157, 0, 255, 0.6)';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 80, rotation + Math.PI, rotation + Math.PI * 2);
+                ctx.stroke();
+                
+                // Quantum stays centered
+                quantum.style.left = centerX + 'px';
+                quantum.style.top = centerY + 'px';
+                quantum.style.transform = 'translate(-50%, -50%) scale(1)';
+                
+                // Wizard and Rose orbit around Quantum (smooth continuation)
+                const orbitProgress = (t - 4.5) * speedMultiplier * 0.5;
+                const orbitRadius = 80;
+                
+                const wizardAngle = wizardOrbitStart + orbitProgress * Math.PI * 2;
+                const wizardX = centerX + Math.cos(wizardAngle) * orbitRadius;
+                const wizardY = centerY + Math.sin(wizardAngle) * orbitRadius;
+                wizard.style.left = wizardX + 'px';
+                wizard.style.top = wizardY + 'px';
+                wizard.style.transform = 'translate(-50%, -50%) scale(1)';
+                
+                const roseAngle = roseOrbitStart + orbitProgress * Math.PI * 2;
+                const roseX = centerX + Math.cos(roseAngle) * orbitRadius;
+                const roseY = centerY + Math.sin(roseAngle) * orbitRadius;
+                rose.style.left = roseX + 'px';
+                rose.style.top = roseY + 'px';
+                rose.style.transform = 'translate(-50%, -50%) scale(1)';
+            }
+
+            // ==========================================
+            // PHASE 6: Quantum Collapse (6.5-7.5s)
+            // Everything collapses INTO the Quantum emoji
+            // ==========================================
+            else if (t < 7.5) {
+                const progress = clamp((t - 6.5) / 1, 0, 1);
+                const ease = easeInOutCubic(progress);
+                
+                // Lines collapse inward and fade
+                const rotation = ((t - 3) * 9) * Math.PI * 2 * 0.5;
+                const lineOpacity = 0.6 * (1 - ease);
+                const lineRadius = 80 * (1 - ease);
+                
+                ctx.strokeStyle = 'rgba(0, 240, 255, ' + lineOpacity + ')';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, lineRadius, rotation, rotation + Math.PI);
+                ctx.stroke();
+                
+                ctx.strokeStyle = 'rgba(255, 0, 255, ' + lineOpacity + ')';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, lineRadius, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
+                ctx.stroke();
+                
+                // Continue orbit but collapse inward toward Quantum
+                const orbitProgress = (t - 4.5) * 9 * 0.5;
+                const orbitRadius = 80 * (1 - ease);
+                
+                const wizardAngle = wizardOrbitStart + orbitProgress * Math.PI * 2;
+                const wizardX = centerX + Math.cos(wizardAngle) * orbitRadius;
+                const wizardY = centerY + Math.sin(wizardAngle) * orbitRadius;
+                
+                const roseAngle = roseOrbitStart + orbitProgress * Math.PI * 2;
+                const roseX = centerX + Math.cos(roseAngle) * orbitRadius;
+                const roseY = centerY + Math.sin(roseAngle) * orbitRadius;
+                
+                // Wizard and Rose shrink as they collapse
+                const emojiScale = 1 - ease * 0.9;
+                
+                wizard.style.left = wizardX + 'px';
+                wizard.style.top = wizardY + 'px';
+                wizard.style.transform = `translate(-50%, -50%) scale(${emojiScale})`;
+                wizard.style.opacity = 1 - ease;
+                
+                rose.style.left = roseX + 'px';
+                rose.style.top = roseY + 'px';
+                rose.style.transform = `translate(-50%, -50%) scale(${emojiScale})`;
+                rose.style.opacity = 1 - ease;
+                
+                // Quantum absorbs everything - grows slightly then shrinks to dot
+                const quantumScale = 1 + (ease < 0.3 ? ease * 0.5 : (1 - ease) * 1.5);
+                quantum.style.left = centerX + 'px';
+                quantum.style.top = centerY + 'px';
+                quantum.style.transform = `translate(-50%, -50%) scale(${quantumScale})`;
+                quantum.style.opacity = 1 - ease;
+                
+                // Singularity dot appears as Quantum collapses
+                singularity.style.transform = `translate(-50%, -50%) scale(${ease})`;
+                singularity.style.opacity = ease;
+            }
+
+            // ==========================================
+            // PHASE 7: Singularity Pause (7.5-8s)
+            // ==========================================
+            else if (t < 8) {
+                quantum.style.opacity = 0;
+                wizard.style.opacity = 0;
+                rose.style.opacity = 0;
+                
+                // Pulsing 4px dot
+                const pulse = Math.sin((t - 7.5) * Math.PI * 4) * 0.2 + 1;
+                singularity.style.transform = `translate(-50%, -50%) scale(${pulse})`;
+                singularity.style.opacity = 1;
+            }
+
+            // ==========================================
+            // PHASE 8: Title Reveal (8-10s)
+            // Dot stays fixed, text expands from it
+            // ==========================================
+            else if (t < 10) {
+                const progress = clamp((t - 8) / 2, 0, 1);
+                const ease = easeInOutCubic(progress);
+                
+                // Singularity dot fades out (doesn't expand)
+                singularity.style.transform = `translate(-50%, -50%) scale(1)`;
+                singularity.style.opacity = 1 - ease;
+                
+                // Title expands from dot position
+                const maxFontSize = Math.min(width * 0.12, 48);
+                const fontSize = ease * maxFontSize;
+                
+                title.style.fontSize = fontSize + 'px';
+                title.style.transform = `translate(-50%, -50%)`;
+                title.style.opacity = ease;
+            }
+
+            // ==========================================
+            // PHASE 9: Hold & Fade Out (10-11s)
+            // ==========================================
+            else if (t < 11) {
+                // Dot is gone
+                singularity.style.opacity = 0;
+                
+                // Title holds at full size
+                const maxFontSize = Math.min(width * 0.12, 48);
+                title.style.fontSize = maxFontSize + 'px';
+                title.style.opacity = 1;
+                
+                // Start fading entire container at 10.5s
+                if (t > 10.5) {
+                    const fadeProgress = (t - 10.5) / 0.5;
+                    container.style.opacity = 1 - fadeProgress;
+                }
+            }
+
+            // ==========================================
+            // PHASE 10: Complete (11s+)
+            // ==========================================
+            else if (t >= 11) {
+                if (isRunning) {
+                    isRunning = false;
+                    complete();
+                }
+            }
+
+            time++;
+            if (isRunning) {
+                requestAnimationFrame(updateAnimation);
+            }
+        }
+
+        function complete() {
+            container.classList.add('fade-out');
+            setTimeout(() => {
+                container.style.display = 'none';
+                appContent.classList.add('visible');
+            }, 100);
+        }
+
+        // Initialize
+        resize();
+        window.addEventListener('resize', resize);
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                updateAnimation();
+            }, 100);
+        });
+    </script>
+</body>
+</html>

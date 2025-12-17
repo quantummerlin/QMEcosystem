@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Tarot - Divine Guidance | Quantum Merlin</title>
+    <meta name="description" content="Receive divine guidance with Quantum Tarot readings. Single card, three-card, and weekly spreads with frequency alignments.">
+    <meta name="keywords" content="quantum tarot, tarot reading, divination, spiritual guidance, quantum merlin">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum Tarot - Divine Guidance">
+    <meta property="og:description" content="Receive divine guidance with Quantum Tarot readings.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tarot.quantummerlin.com">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #000014 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Quantum Grid Background */
+        .quantum-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Quantum Sun */
+        .quantum-sun {
+            position: fixed;
+            top: 10%;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, rgba(255, 165, 0, 0.1) 40%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: pulse 4s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .nav-toggle {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.8), rgba(75, 0, 130, 0.8));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .nav-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: linear-gradient(135deg, rgba(25, 0, 51, 0.95), rgba(10, 0, 25, 0.95));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            min-width: 200px;
+            display: none;
+            backdrop-filter: blur(20px);
+        }
+
+        .nav-dropdown.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-dropdown a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        .nav-dropdown a:hover {
+            background: rgba(138, 43, 226, 0.3);
+            transform: translateX(5px);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title {
+            font-size: 3em;
+            background: linear-gradient(135deg, #ffd700, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .subtitle {
+            color: #b8b8b8;
+            font-size: 1.2em;
+        }
+
+        /* Reading Selection */
+        .reading-selection {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .reading-type {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            padding: 20px 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .reading-type:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+            border-color: #ffd700;
+        }
+
+        .reading-type.active {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(138, 43, 226, 0.3));
+            border-color: #ffd700;
+        }
+
+        .reading-type h3 {
+            color: #ffd700;
+            margin-bottom: 8px;
+        }
+
+        .reading-type p {
+            color: #b8b8b8;
+            font-size: 0.9em;
+        }
+
+        /* Question Input */
+        .question-section {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .question-input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 16px;
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .question-input:focus {
+            outline: none;
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .shuffle-btn {
+            background: linear-gradient(135deg, #ffd700, #ff6b6b);
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            color: #000;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .shuffle-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Cards Display */
+        .cards-display {
+            display: none;
+            margin-top: 40px;
+        }
+
+        .cards-display.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .tarot-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.2));
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            min-width: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tarot-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.5);
+        }
+
+        .tarot-card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-position {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 215, 0, 0.2);
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 0.8em;
+            color: #ffd700;
+        }
+
+        .card-name {
+            font-size: 1.4em;
+            color: #ffd700;
+            margin: 15px 0;
+        }
+
+        .card-suit {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .card-meaning {
+            color: #e0e0e0;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .card-quantum {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .card-quantum h4 {
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+
+        .card-frequencies {
+            background: rgba(78, 205, 196, 0.1);
+            border: 1px solid rgba(78, 205, 196, 0.3);
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .card-frequencies h4 {
+            color: #4ecdc4;
+            margin-bottom: 5px;
+        }
+
+        .save-btn {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .save-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+        }
+
+        /* Reading Interpretation */
+        .reading-interpretation {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            margin-top: 30px;
+        }
+
+        .interpretation-title {
+            font-size: 1.8em;
+            color: #ffd700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .interpretation-text {
+            color: #e0e0e0;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .quantum-guidance {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .quantum-guidance h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .frequency-harmony {
+            background: rgba(78, 205, 196, 0.1);
+            border: 1px solid rgba(78, 205, 196, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .frequency-harmony h4 {
+            color: #4ecdc4;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .cards-container {
+                gap: 20px;
+            }
+            
+            .tarot-card {
+                min-width: 150px;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="quantum-grid"></div>
+    <div class="quantum-sun"></div>
+    
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+        <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+        <div class="nav-dropdown" id="navDropdown">
+            <a href="https://quantummerlin.com">🏠 Home</a>
+            <a href="https://frequency.quantummerlin.com">🎵 Frequency Generator</a>
+            <a href="https://jukebox.quantummerlin.com">📚 Quantum Jukebox</a>
+            <a href="https://gematria.quantummerlin.com">🔢 Quantum Gematria</a>
+            <a href="https://tarot.quantummerlin.com">🃏 Quantum Tarot</a>
+            <a href="https://sigils.quantummerlin.com">✨ Sigil Creator</a>
+            <a href="https://astrology.quantummerlin.com">⭐ Western Astrology</a>
+            <a href="https://chinese.quantummerlin.com">🐲 Chinese Zodiac</a>
+            <a href="https://forecasts.quantummerlin.com">🔮 Zodiac Forecasts</a>
+            <a href="https://codes.quantummerlin.com">💫 Reality Codes</a>
+            <a href="https://crystals.quantummerlin.com">💎 Quantum Crystals</a>
+            <a href="https://water.quantummerlin.com">💧 Water Charging</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title">Quantum Tarot</h1>
+            <p class="subtitle">Divine guidance through quantum card interpretations</p>
+        </div>
+
+        <!-- Reading Selection -->
+        <div class="reading-selection">
+            <div class="reading-type active" onclick="selectReadingType('single', this)">
+                <h3>Single Card</h3>
+                <p>Quick guidance for today</p>
+            </div>
+            <div class="reading-type" onclick="selectReadingType('three', this)">
+                <h3>Three Cards</h3>
+                <p>Past, Present, Future</p>
+            </div>
+            <div class="reading-type" onclick="selectReadingType('weekly', this)">
+                <h3>Weekly Spread</h3>
+                <p>7-day journey ahead</p>
+            </div>
+        </div>
+
+        <!-- Question Input -->
+        <div class="question-section">
+            <h3 style="color: #ffd700; margin-bottom: 15px;">Your Question or Intention</h3>
+            <textarea class="question-input" id="questionInput" placeholder="What guidance do you seek? Enter your question or focus on your intention..."></textarea>
+            <button class="shuffle-btn" onclick="shuffleCards()">🔮 Shuffle and Draw Cards</button>
+        </div>
+
+        <!-- Cards Display -->
+        <div class="cards-display" id="cardsDisplay">
+            <div class="cards-container" id="cardsContainer">
+                <!-- Cards will be dynamically added here -->
+            </div>
+
+            <!-- Reading Interpretation -->
+            <div class="reading-interpretation">
+                <h3 class="interpretation-title">Quantum Reading Interpretation</h3>
+                <div class="interpretation-text" id="interpretationText">
+                    The quantum interpretation of your reading...
+                </div>
+                
+                <div class="quantum-guidance">
+                    <h4>✨ Quantum Guidance</h4>
+                    <p id="quantumGuidance">The deeper quantum meaning and guidance...</p>
+                </div>
+                
+                <div class="frequency-harmony">
+                    <h4>🎵 Frequency Harmony</h4>
+                    <p id="frequencyHarmony">The harmonic frequencies that align with your reading...</p>
+                    <button class="save-btn" onclick="saveReadingToFrequencies()">Save Reading Frequencies to Jukebox</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation toggle
+        function toggleNav() {
+            const dropdown = document.getElementById('navDropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdown = document.getElementById('navDropdown');
+            
+            if (!navMenu.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Reading type selection
+        let selectedReadingType = 'single';
+
+        function selectReadingType(type, element) {
+            selectedReadingType = type;
+            
+            // Update active state
+            document.querySelectorAll('.reading-type').forEach(el => {
+                el.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+
+        // Tarot Card Database
+        const tarotCards = {
+            major: [
+                { name: "The Fool", suit: "🃏", element: "Air", meaning: "New beginnings, innocence, spontaneous leap of faith", quantum: "Quantum potential and infinite possibilities", frequencies: "417 Hz - New Beginnings" },
+                { name: "The Magician", suit: "🃏", element: "Fire", meaning: "Manifestation, resourcefulness, power", quantum: "Conscious creation and manifestation", frequencies: "528 Hz - DNA Repair & Transformation" },
+                { name: "The High Priestess", suit: "🃏", element: "Water", meaning: "Intuition, sacred knowledge, divine feminine", quantum: "Intuitive wisdom and inner knowing", frequencies: "741 Hz - Awakening Intuition" },
+                { name: "The Empress", suit: "🃏", element: "Earth", meaning: "Femininity, beauty, nature, abundance", quantum: "Creative abundance and nurturing energy", frequencies: "639 Hz - Harmonizing Relationships" },
+                { name: "The Emperor", suit: "🃏", element: "Fire", meaning: "Authority, structure, control, father figure", quantum: "Structural authority and leadership", frequencies: "174 Hz - Stability & Grounding" },
+                { name: "The Hierophant", suit: "🃏", element: "Earth", meaning: "Spiritual wisdom, religious beliefs, conformity", quantum: "Sacred knowledge and spiritual guidance", frequencies: "963 Hz - Divine Connection" },
+                { name: "The Lovers", suit: "🃏", element: "Air", meaning: "Love, harmony, relationships, choices", quantum: "Harmonic resonance and soul connections", frequencies: "639 Hz - Connecting Relationships" },
+                { name: "The Chariot", suit: "🃏", element: "Water", meaning: "Control, willpower, success, determination", quantum: "Directed will and focused intention", frequencies: "285 Hz - Healing & Structure" },
+                { name: "Strength", suit: "🃏", element: "Fire", meaning: "Inner strength, courage, patience, control", quantum: "Inner power and gentle strength", frequencies: "396 Hz - Liberating Fear" },
+                { name: "The Hermit", suit: "🃏", element: "Earth", meaning: "Soul searching, introspection, inner guidance", quantum: "Inner wisdom and spiritual solitude", frequencies: "741 Hz - Intuitive Awareness" },
+                { name: "Wheel of Fortune", suit: "🃏", element: "Fire", meaning: "Good luck, karma, life cycles, destiny", quantum: "Cyclical patterns and synchronicity", frequencies: "528 Hz - Transformation & Luck" },
+                { name: "Justice", suit: "🃏", element: "Air", meaning: "Fairness, truth, law, cause and effect", quantum: "Divine justice and karmic balance", frequencies: "417 Hz - Balance & Harmony" },
+                { name: "The Hanged Man", suit: "🃏", element: "Water", meaning: "Suspension, surrender, new perspectives", quantum: "Quantum perspective shifts and surrender", frequencies: "852 Hz - Spiritual Order" },
+                { name: "Death", suit: "🃏", element: "Water", meaning: "Endings, change, transformation, transition", quantum: "Quantum transformation and rebirth", frequencies: "528 Hz - Deep Transformation" },
+                { name: "Temperance", suit: "🃏", element: "Fire", meaning: "Balance, moderation, patience, purpose", quantum: "Quantum harmony and balance", frequencies: "639 Hz - Harmonic Balance" },
+                { name: "The Devil", suit: "🃏", element: "Earth", meaning: "Bondage, addiction, materialism, ignorance", quantum: "Shadow work and liberation", frequencies: "396 Hz - Liberating Limitations" },
+                { name: "The Tower", suit: "🃏", element: "Fire", meaning: "Sudden change, upheaval, chaos, revelation", quantum: "Quantum breakthrough and liberation", frequencies: "417 Hz - Breakthrough & Change" },
+                { name: "The Star", suit: "🃏", element: "Air", meaning: "Hope, faith, purpose, rejuvenation", quantum: "Divine guidance and cosmic connection", frequencies: "963 Hz - Divine Connection" },
+                { name: "The Moon", suit: "🃏", element: "Water", meaning: "Illusion, fear, anxiety, subconscious", quantum: "Intuitive dreams and subconscious wisdom", frequencies: "741 Hz - Subconscious Awareness" },
+                { name: "The Sun", suit: "🃏", element: "Fire", meaning: "Joy, success, celebration, positivity", quantum: "Radiant joy and divine light", frequencies: "528 Hz - Joy & Success" },
+                { name: "Judgment", suit: "🃏", element: "Fire", meaning: "Reflection, reckoning, awakening, absolution", quantum: "Spiritual awakening and rebirth", frequencies: "963 Hz - Divine Awakening" },
+                { name: "The World", suit: "🃏", element: "Earth", meaning: "Completion, integration, accomplishment, travel", quantum: "Quantum completion and wholeness", frequencies: "174 Hz - Grounded Completion" }
+            ],
+            minor: {
+                wands: [
+                    { name: "Ace of Wands", suit: "🔥", element: "Fire", meaning: "Inspiration, new opportunities, growth, potential", quantum: "Creative spark and divine inspiration", frequencies: "528 Hz - Creative Inspiration" },
+                    { name: "Two of Wands", suit: "🔥", element: "Fire", meaning: "Planning, progress, decisions, discovery", quantum: "Future planning and vision", frequencies: "417 Hz - Future Vision" },
+                    { name: "Three of Wands", suit: "🔥", element: "Fire", meaning: "Progress, expansion, forward movement", quantum: "Expansion and forward momentum", frequencies: "528 Hz - Expansion" },
+                    { name: "Four of Wands", suit: "🔥", element: "Fire", meaning: "Celebration, harmony, marriage, home", quantum: "Harmonious celebration and unity", frequencies: "639 Hz - Harmony" },
+                    { name: "Five of Wands", suit: "🔥", element: "Fire", meaning: "Conflict, competition, tension, disagreement", quantum: "Healthy competition and growth", frequencies: "396 Hz - Conflict Resolution" },
+                    { name: "Six of Wands", suit: "🔥", element: "Fire", meaning: "Victory, success, public recognition, progress", quantum: "Triumphant energy and recognition", frequencies: "528 Hz - Success" },
+                    { name: "Seven of Wands", suit: "🔥", element: "Fire", meaning: "Challenge, competition, perseverance, defense", quantum: "Standing strong and defending truth", frequencies: "285 Hz - Strength" },
+                    { name: "Eight of Wands", suit: "🔥", element: "Fire", meaning: "Speed, action, movement, communication", quantum: "Rapid manifestation and communication", frequencies: "741 Hz - Quick Communication" },
+                    { name: "Nine of Wands", suit: "🔥", element: "Fire", meaning: "Resilience, courage, persistence, grit", quantum: "Enduring strength and resilience", frequencies: "174 Hz - Endurance" },
+                    { name: "Ten of Wands", suit: "🔥", element: "Fire", meaning: "Burden, responsibility, stress, completion", quantum: "Completion of cycles and release", frequencies: "396 Hz - Release" },
+                    { name: "Page of Wands", suit: "🔥", element: "Fire", meaning: "Exploration, excitement, freedom, risk-taking", quantum: "Youthful exploration and adventure", frequencies: "417 Hz - Adventure" },
+                    { name: "Knight of Wands", suit: "🔥", element: "Fire", meaning: "Action, adventure, passion, impulsivity", quantum: "Dynamic action and passion", frequencies: "528 Hz - Passion" },
+                    { name: "Queen of Wands", suit: "🔥", element: "Fire", meaning: "Vitality, confidence, independence, social", quantum: "Radiant confidence and vitality", frequencies: "639 Hz - Social Harmony" },
+                    { name: "King of Wands", suit: "🔥", element: "Fire", meaning: "Visionary, leadership, determination, action", quantum: "Natural leadership and vision", frequencies: "174 Hz - Leadership" }
+                ],
+                cups: [
+                    { name: "Ace of Cups", suit: "💙", element: "Water", meaning: "Love, compassion, creativity, new emotions", quantum: "Divine love and emotional flow", frequencies: "639 Hz - Love & Compassion" },
+                    { name: "Two of Cups", suit: "💙", element: "Water", meaning: "Partnership, unity, connection, relationships", quantum: "Soul connections and partnerships", frequencies: "639 Hz - Soul Connection" },
+                    { name: "Three of Cups", suit: "💙", element: "Water", meaning: "Friendship, community, celebration, creativity", quantum: "Joyful community and friendship", frequencies: "528 Hz - Joyful Community" },
+                    { name: "Four of Cups", suit: "💙", element: "Water", meaning: "Apathy, contemplation, discontent, boredom", quantum: "Inner reflection and contemplation", frequencies: "741 Hz - Inner Reflection" },
+                    { name: "Five of Cups", suit: "💙", element: "Water", meaning: "Loss, regret, disappointment, sadness", quantum: "Healing from loss and regret", frequencies: "396 Hz - Emotional Healing" },
+                    { name: "Six of Cups", suit: "💙", element: "Water", meaning: "Nostalgia, childhood, memories, reunion", quantum: "Healing memories and childhood", frequencies: "417 Hz - Memory Healing" },
+                    { name: "Seven of Cups", suit: "💙", element: "Water", meaning: "Choices, fantasy, illusion, wishful thinking", quantum: "Clarity in choices and dreams", frequencies: "741 Hz - Dream Clarity" },
+                    { name: "Eight of Cups", suit: "💙", element: "Water", meaning: "Disappointment, abandonment, withdrawal, escape", quantum: "Spiritual withdrawal and growth", frequencies: "852 Hz - Spiritual Growth" },
+                    { name: "Nine of Cups", suit: "💙", element: "Water", meaning: "Wish fulfillment, satisfaction, emotional stability", quantum: "Emotional fulfillment and joy", frequencies: "528 Hz - Wish Fulfillment" },
+                    { name: "Ten of Cups", suit: "💙", element: "Water", meaning: "Divine love, bliss, harmony, marriage", quantum: "Divine bliss and harmony", frequencies: "639 Hz - Divine Harmony" },
+                    { name: "Page of Cups", suit: "💙", element: "Water", meaning: "Intuition, creativity, curiosity, sensitivity", quantum: "Creative intuition and sensitivity", frequencies: "741 Hz - Creative Intuition" },
+                    { name: "Knight of Cups", suit: "💙", element: "Water", meaning: "Romance, charm, imagination, persuasion", quantum: "Romantic charm and imagination", frequencies: "639 Hz - Romance" },
+                    { name: "Queen of Cups", suit: "💙", element: "Water", meaning: "Intuition, compassion, emotional security, healing", quantum: "Intuitive compassion and healing", frequencies: "741 Hz - Healing Intuition" },
+                    { name: "King of Cups", suit: "💙", element: "Water", meaning: "Emotional balance, control, compassion", quantum: "Emotional mastery and compassion", frequencies: "639 Hz - Emotional Balance" }
+                ],
+                swords: [
+                    { name: "Ace of Swords", suit: "⚔️", element: "Air", meaning: "Breakthrough, clarity, truth, new ideas", quantum: "Mental clarity and breakthrough", frequencies: "741 Hz - Mental Clarity" },
+                    { name: "Two of Swords", suit: "⚔️", element: "Air", meaning: "Indecision, choices, stalemate, blocked emotions", quantum: "Decision making and clarity", frequencies: "417 Hz - Decision Clarity" },
+                    { name: "Three of Swords", suit: "⚔️", element: "Air", meaning: "Heartbreak, sorrow, pain, grief", quantum: "Heart healing and release", frequencies: "396 Hz - Heart Healing" },
+                    { name: "Four of Swords", suit: "⚔️", element: "Air", meaning: "Rest, restoration, contemplation, meditation", quantum: "Rest and restoration", frequencies: "174 Hz - Deep Rest" },
+                    { name: "Five of Swords", suit: "⚔️", element: "Air", meaning: "Conflict, tension, loss, defeat", quantum: "Conflict resolution and peace", frequencies: "396 Hz - Peace" },
+                    { name: "Six of Swords", suit: "⚔️", element: "Air", meaning: "Transition, journey, rite of passage", quantum: "Smooth transitions and journeys", frequencies: "417 Hz - Transition" },
+                    { name: "Seven of Swords", suit: "⚔️", element: "Air", meaning: "Deception, strategy, cunning, escape", quantum: "Strategic thinking and truth", frequencies: "741 Hz - Strategic Truth" },
+                    { name: "Eight of Swords", suit: "⚔️", element: "Air", meaning: "Isolation, restriction, imprisonment", quantum: "Freedom from limitations", frequencies: "417 Hz - Freedom" },
+                    { name: "Nine of Swords", suit: "⚔️", element: "Air", meaning: "Anxiety, fear, depression, nightmares", quantum: "Overcoming anxiety and fear", frequencies: "396 Hz - Fear Release" },
+                    { name: "Ten of Swords", suit: "⚔️", element: "Air", meaning: "Backstabbing, betrayal, endings, ruin", quantum: "Complete endings and rebirth", frequencies: "528 Hz - Rebirth" },
+                    { name: "Page of Swords", suit: "⚔️", element: "Air", meaning: "Curiosity, restlessness, ideas, communication", quantum: "Mental curiosity and ideas", frequencies: "741 Hz - Mental Ideas" },
+                    { name: "Knight of Swords", suit: "⚔️", element: "Air", meaning: "Ambition, action, change, competition", quantum: "Ambitious action and change", frequencies: "528 Hz - Ambitious Action" },
+                    { name: "Queen of Swords", suit: "⚔️", element: "Air", meaning: "Independence, intelligence, sharp tongue", quantum: "Sharp intelligence and truth", frequencies: "741 Hz - Sharp Intelligence" },
+                    { name: "King of Swords", suit: "⚔️", element: "Air", meaning: "Intellectual power, authority, truth", quantum: "Truth and intellectual authority", frequencies: "174 Hz - Truth" }
+                ],
+                pentacles: [
+                    { name: "Ace of Pentacles", suit: "🪙", element: "Earth", meaning: "New opportunity, prosperity, manifestation", quantum: "Material manifestation and abundance", frequencies: "528 Hz - Material Abundance" },
+                    { name: "Two of Pentacles", suit: "🪙", element: "Earth", meaning: "Balance, adaptability, time management", quantum: "Life balance and adaptation", frequencies: "639 Hz - Life Balance" },
+                    { name: "Three of Pentacles", suit: "🪙", element: "Earth", meaning: "Teamwork, collaboration, mastery", quantum: "Collaborative mastery and success", frequencies: "417 Hz - Team Success" },
+                    { name: "Four of Pentacles", suit: "🪙", element: "Earth", meaning: "Security, stability, conservation, possession", quantum: "Material security and stability", frequencies: "174 Hz - Material Security" },
+                    { name: "Five of Pentacles", suit: "🪙", element: "Earth", meaning: "Hardship, poverty, isolation, worry", quantum: "Overcoming hardship and poverty", frequencies: "396 Hz - Hardship Relief" },
+                    { name: "Six of Pentacles", suit: "🪙", element: "Earth", meaning: "Charity, generosity, sharing, wealth", quantum: "Generous giving and receiving", frequencies: "528 Hz - Generosity Flow" },
+                    { name: "Seven of Pentacles", suit: "🪙", element: "Earth", meaning: "Patience, long-term view, perseverance", quantum: "Patience and long-term growth", frequencies: "285 Hz - Patient Growth" },
+                    { name: "Eight of Pentacles", suit: "🪙", element: "Earth", meaning: "Apprenticeship, skill, mastery, craftsmanship", quantum: "Skill mastery and craftsmanship", frequencies: "417 Hz - Skill Development" },
+                    { name: "Nine of Pentacles", suit: "🪙", element: "Earth", meaning: "Abundance, luxury, independence, sophistication", quantum: "Abundant independence and luxury", frequencies: "528 Hz - Abundance" },
+                    { name: "Ten of Pentacles", suit: "🪙", element: "Earth", meaning: "Wealth, inheritance, family, retirement", quantum: "Family wealth and legacy", frequencies: "174 Hz - Family Legacy" },
+                    { name: "Page of Pentacles", suit: "🪙", element: "Earth", meaning: "Study, learning, manifestation, opportunity", quantum: "Learning and manifestation", frequencies: "741 Hz - Learning" },
+                    { name: "Knight of Pentacles", suit: "🪙", element: "Earth", meaning: "Hard work, routine, patience, reliability", quantum: "Reliable hard work and patience", frequencies: "285 Hz - Reliability" },
+                    { name: "Queen of Pentacles", suit: "🪙", element: "Earth", meaning: "Nurturing, practicality, comfort, security", quantum: "Nurturing abundance and comfort", frequencies: "639 Hz - Nurturing Comfort" },
+                    { name: "King of Pentacles", suit: "🪙", element: "Earth", meaning: "Prosperity, abundance, security, leadership", quantum: "Prosperous leadership and abundance", frequencies: "174 Hz - Prosperity" }
+                ]
+            }
+        };
+
+        // Shuffle and draw cards
+        function shuffleCards() {
+            const question = document.getElementById('questionInput').value;
+            
+            let numberOfCards = 1;
+            let positions = ['Present'];
+            
+            if (selectedReadingType === 'three') {
+                numberOfCards = 3;
+                positions = ['Past', 'Present', 'Future'];
+            } else if (selectedReadingType === 'weekly') {
+                numberOfCards = 7;
+                positions = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+            }
+            
+            // Draw random cards
+            const drawnCards = [];
+            const allCards = [...tarotCards.major, ...Object.values(tarotCards.minor).flat()];
+            
+            for (let i = 0; i < numberOfCards; i++) {
+                const randomIndex = Math.floor(Math.random() * allCards.length);
+                drawnCards.push({
+                    ...allCards[randomIndex],
+                    position: positions[i]
+                });
+            }
+            
+            displayCards(drawnCards, question);
+        }
+
+        // Display drawn cards
+        function displayCards(cards, question) {
+            const container = document.getElementById('cardsContainer');
+            container.innerHTML = '';
+            
+            cards.forEach((card, index) => {
+                const cardElement = createCardElement(card, index);
+                container.appendChild(cardElement);
+            });
+            
+            // Show results
+            document.getElementById('cardsDisplay').classList.add('active');
+            
+            // Generate interpretation
+            generateInterpretation(cards, question);
+            
+            // Scroll to results
+            document.getElementById('cardsDisplay').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Create card element
+        function createCardElement(card, index) {
+            const cardDiv = document.createElement('div');
+            cardDiv.className = 'tarot-card';
+            cardDiv.style.animationDelay = `${index * 0.1}s`;
+            
+            cardDiv.innerHTML = `
+                <div class="card-position">${card.position}</div>
+                <div class="card-suit">${card.suit}</div>
+                <div class="card-name">${card.name}</div>
+                <div class="card-meaning">${card.meaning}</div>
+                <div class="card-quantum">
+                    <h4>✨ Quantum Meaning</h4>
+                    <p>${card.quantum}</p>
+                </div>
+                <div class="card-frequencies">
+                    <h4>🎵 Frequency</h4>
+                    <p>${card.frequencies}</p>
+                </div>
+                <button class="save-btn" onclick="saveCardToFrequencies('${card.name}', '${card.frequencies}')">Save to Jukebox</button>
+            `;
+            
+            return cardDiv;
+        }
+
+        // Generate interpretation
+        function generateInterpretation(cards, question) {
+            const interpretationText = document.getElementById('interpretationText');
+            const quantumGuidance = document.getElementById('quantumGuidance');
+            const frequencyHarmony = document.getElementById('frequencyHarmony');
+            
+            let interpretation = `Based on your ${cards.length}-card reading`;
+            if (question) {
+                interpretation += ` regarding: "${question}"`;
+            }
+            interpretation += `:\n\n`;
+            
+            cards.forEach((card, index) => {
+                interpretation += `**${card.position}:** ${card.name} - ${card.meaning}\n\n`;
+            });
+            
+            interpretation += '\nThe cards reveal a journey of transformation and growth. Trust in the divine timing and allow the quantum energies to guide your path.';
+            
+            const guidance = 'The quantum field responds to your intentions and energy. These cards reflect the potential paths available to you. By aligning with the frequencies shown, you can enhance your connection to these quantum possibilities and accelerate your manifestation.';
+            
+            const frequencies = cards.map(card => card.frequencies).join(' | ');
+            const harmony = `The harmonic frequencies that align with your reading create a powerful quantum field. These frequencies work together to amplify the messages and support your journey. Listen to them in meditation or while working with these energies.`;
+            
+            interpretationText.textContent = interpretation;
+            quantumGuidance.textContent = guidance;
+            frequencyHarmony.innerHTML = `<p>${harmony}</p><p><strong>Recommended Frequencies:</strong> ${frequencies}</p>`;
+        }
+
+        // Save individual card to frequencies
+        function saveCardToFrequencies(cardName, frequencies) {
+            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            
+            const newItem = {
+                id: Date.now(),
+                type: 'frequency',
+                name: `Tarot Card: ${cardName}`,
+                description: frequencies,
+                data: {
+                    frequency: frequencies.split(' - ')[0] || frequencies,
+                    type: 'tarot',
+                    cardName: cardName
+                },
+                savedAt: new Date().toISOString()
+            };
+            
+            savedItems.push(newItem);
+            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
+            
+            // Show confirmation
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = '✓ Saved to Jukebox';
+            btn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+            
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+            }, 2000);
+        }
+
+        // Save full reading to frequencies
+        function saveReadingToFrequencies() {
+            const question = document.getElementById('questionInput').value || 'General Reading';
+            const cards = document.querySelectorAll('.tarot-card');
+            const frequencies = Array.from(cards).map(card => {
+                const freqText = card.querySelector('.card-frequencies p').textContent;
+                return freqText.split(' - ')[0] || freqText;
+            }).join(' | ');
+            
+            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            
+            const newItem = {
+                id: Date.now(),
+                type: 'frequency',
+                name: `Tarot Reading: ${selectedReadingType} Cards`,
+                description: frequencies,
+                data: {
+                    frequency: frequencies.split(' | ')[0] || frequencies,
+                    type: 'tarot_reading',
+                    question: question,
+                    readingType: selectedReadingType
+                },
+                savedAt: new Date().toISOString()
+            };
+            
+            savedItems.push(newItem);
+            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
+            
+            // Show confirmation
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = '✓ Reading Saved to Jukebox';
+            btn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+            
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

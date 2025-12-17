@@ -1,0 +1,104 @@
+{
+  "name": "Quantum Reality Codes",
+  "short_name": "QRC",
+  "description": "Transform your intentions into reality through sacred mathematics. Free manifestation tools including Reality Codes, Frequency Generator, Tarot, Gematria, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#00f5ff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["lifestyle", "entertainment", "health", "utilities"],
+  "icons": [
+    {
+      "src": "/shared/images/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/shared/images/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/shared/images/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/shared/images/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/shared/images/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/shared/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/shared/images/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/shared/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/shared/images/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Quantum Reality Codes Dashboard"
+    },
+    {
+      "src": "/shared/images/screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Reality Codes Generator"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Reality Codes",
+      "short_name": "Codes",
+      "description": "Generate manifestation codes",
+      "url": "/quantum-merlin-hub/codes.html",
+      "icons": [{"src": "/shared/images/shortcut-codes.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Frequency Generator",
+      "short_name": "Frequencies",
+      "description": "674 healing frequencies",
+      "url": "/genesis/index-enhanced.html",
+      "icons": [{"src": "/shared/images/shortcut-freq.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Quantum Tarot",
+      "short_name": "Tarot",
+      "description": "Daily tarot readings",
+      "url": "/quantum-merlin-hub/tarot.html",
+      "icons": [{"src": "/shared/images/shortcut-tarot.png", "sizes": "96x96"}]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Quantum Reality Codes</title>
+    <meta name="description" content="Get in touch with Quantum Reality Codes. We'd love to hear your feedback, suggestions, or questions about our spiritual technology tools.">
+    <meta name="keywords" content="contact quantum reality codes, support, feedback, questions">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact | Quantum Reality Codes">
+    <meta property="og:description" content="Get in touch with us. We'd love to hear your feedback about our spiritual technology tools.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="/shared/css/quantum-core.css">
+    
+    <style>
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .contact-hero {
+            text-align: center;
+            padding: 80px 20px 50px;
+        }
+
+        .contact-hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .contact-hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Contact Methods Grid */
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+
+        .contact-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .contact-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(0, 245, 255, 0.1);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 10px;
+            color: var(--neon-cyan);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: rgba(0, 245, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+        }
+
+        .contact-form-section h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: var(--neon-gold);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            color: var(--neon-cyan);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-group select option {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px 30px;
+            font-family: 'Orbitron', monospace;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+            border: none;
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 50px 0;
+        }
+
+        .faq-section h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: var(--neon-magenta);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .faq-item {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 25px;
+            background: transparent;
+            border: none;
+            color: var(--neon-cyan);
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(0, 245, 255, 0.05);
+        }
+
+        .faq-question .icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question .icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-content {
+            padding: 0 25px 20px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Support Section */
+        .support-cta {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 150, 0, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .support-cta h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: var(--neon-gold);
+            margin-bottom: 15px;
+        }
+
+        .support-cta p {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .support-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--neon-gold), #ff9500);
+            border-radius: 12px;
+            color: #000;
+            text-decoration: none;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .support-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            padding: 15px 25px;
+            border-radius: 12px;
+            z-index: 10000;
+            animation: slideInRight 0.3s ease;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .notification.success {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.9), rgba(0, 200, 255, 0.9));
+            color: #000;
+        }
+
+        .notification.error {
+            background: linear-gradient(135deg, rgba(255, 50, 100, 0.9), rgba(200, 0, 80, 0.9));
+            color: white;
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Quantum Background -->
+    <div class="quantum-bg">
+        <div class="quantum-grid"></div>
+        <div class="energy-orb energy-orb-1"></div>
+        <div class="energy-orb energy-orb-2"></div>
+        <div class="energy-orb energy-orb-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <a href="/index.html" class="logo">
+                <div class="logo-icon">QRC</div>
+                <span class="logo-text">Quantum Reality Codes</span>
+            </a>
+            <div class="header-controls">
+                <a href="https://buymeacoffee.com/quantumreality" target="_blank" class="support-btn" style="background: linear-gradient(135deg, var(--neon-gold), #ff9500); color: #000; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-size: 0.9rem;">
+                    ☕ Support
+                </a>
+                <div class="nav-dropdown">
+                    <button class="nav-toggle">☰ Tools</button>
+                    <div class="dropdown-menu">
+                        <a href="/quantum-merlin-hub/codes-new.html">Reality Codes</a>
+                        <a href="/quantum-merlin-hub/tarot-new.html">Tarot</a>
+                        <a href="/quantum-merlin-hub/gematria-new.html">Gematria</a>
+                        <a href="/quantum-merlin-hub/sigils-new.html">Sigil Creator</a>
+                        <a href="/quantum-merlin-hub/astrology-new.html">Astrology</a>
+                        <a href="/quantum-merlin-hub/crystals-new.html">Crystals</a>
+                        <a href="/genesis/index-enhanced.html">Frequencies</a>
+                        <a href="/quantum-merlin-hub/jukebox-new.html">My Library</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="contact-container">
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <h1>📬 Get in Touch</h1>
+            <p class="subtitle">
+                We'd love to hear from you! Whether you have feedback, suggestions, or questions about our tools.
+            </p>
+        </section>
+
+        <!-- Contact Methods -->
+        <section class="contact-methods">
+            <div class="contact-card">
+                <div class="contact-icon">💬</div>
+                <h3>General Inquiries</h3>
+                <p>Questions about our tools, features, or how to get started.</p>
+                <a href="mailto:hello@quantummerlin.com" class="contact-link">hello@quantummerlin.com</a>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">🐛</div>
+                <h3>Report an Issue</h3>
+                <p>Found a bug or something not working? Let us know so we can fix it.</p>
+                <a href="mailto:support@quantummerlin.com" class="contact-link">support@quantummerlin.com</a>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">💡</div>
+                <h3>Feature Requests</h3>
+                <p>Have an idea for a new tool or feature? We're always listening!</p>
+                <a href="mailto:ideas@quantummerlin.com" class="contact-link">ideas@quantummerlin.com</a>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section">
+            <h2>✉️ Send a Message</h2>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a topic...</option>
+                        <option value="general">General Question</option>
+                        <option value="feedback">Feedback / Suggestion</option>
+                        <option value="bug">Bug Report</option>
+                        <option value="feature">Feature Request</option>
+                        <option value="partnership">Partnership / Collaboration</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    ✨ Send Message
+                </button>
+            </form>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>❓ Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Are all the tools really free?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! All our tools are completely free to use. We believe spiritual technology should be accessible to everyone. We sustain the project through optional donations and will never put core features behind a paywall.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Is my data private and secure?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Absolutely. We store everything locally in your browser using localStorage. Your readings, saved items, and personal data never leave your device. We only use anonymous analytics to improve the tools.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Can I use these tools offline?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Quantum Reality Codes is a Progressive Web App (PWA). Once you've visited a page, it's cached for offline use. You can even install it on your phone's home screen for a native app experience.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How can I support the project?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        The best ways to support us are: 1) Buy us a coffee through our donation link, 2) Share the tools with friends who might enjoy them, 3) Send us feedback and suggestions. Every bit of support helps us keep the servers running and develop new features!
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Are these tools scientifically proven?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Our tools are designed for entertainment, spiritual exploration, and personal reflection. They are based on ancient traditions like numerology, tarot, and astrology rather than scientific research. They're meant to inspire thought and self-discovery, not replace professional advice.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support CTA -->
+        <section class="support-cta">
+            <h2>☕ Love What We Do?</h2>
+            <p>Your support helps us keep the servers running and develop new mystical tools for the community.</p>
+            <a href="https://buymeacoffee.com/quantumreality" target="_blank" class="support-btn">
+                ☕ Buy Us a Coffee
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Quantum Reality Codes</h4>
+                    <p>Bridging ancient wisdom with quantum possibilities through sacred frequencies and mystical tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="/quantum-merlin-hub/codes-new.html">Reality Codes</a></li>
+                        <li><a href="/quantum-merlin-hub/tarot-new.html">Tarot Reading</a></li>
+                        <li><a href="/quantum-merlin-hub/sigils-new.html">Sigil Creator</a></li>
+                        <li><a href="/genesis/index-enhanced.html">Frequencies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/quantum-merlin-hub/crystals-new.html">Crystals</a></li>
+                        <li><a href="/quantum-merlin-hub/astrology-new.html">Astrology</a></li>
+                        <li><a href="/angel-number-calculator-new.html">Angel Numbers</a></li>
+                        <li><a href="/quantum-merlin-hub/jukebox-new.html">My Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="https://buymeacoffee.com/quantumreality" target="_blank">Buy Me a Coffee</a></li>
+                        <li><a href="/about-new.html">About</a></li>
+                        <li><a href="/contact-new.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Quantum Reality Codes. For entertainment and spiritual exploration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/shared/js/quantum-core.js"></script>
+    <script src="/shared/js/quantum-analytics.js"></script>
+    
+    <script>
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const item = button.closest('.faq-item');
+            const isActive = item.classList.contains('active');
+            
+            // Close all FAQs
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                faq.classList.remove('active');
+            });
+            
+            // Open clicked one if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.textContent;
+            
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.textContent = '⏳ Sending...';
+            
+            // Simulate form submission (replace with actual endpoint)
+            setTimeout(() => {
+                // Show success notification
+                showNotification('✨ Message sent! We\'ll get back to you soon.', 'success');
+                
+                // Reset form
+                form.reset();
+                
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }, 1500);
+        }
+
+        // Notification system
+        function showNotification(message, type = 'success') {
+            const existing = document.querySelector('.notification');
+            if (existing) existing.remove();
+
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => notification.remove(), 4000);
+        }
+    </script>
+</body>
+</html>

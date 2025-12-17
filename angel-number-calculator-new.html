@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Number Calculator - Discover Divine Messages | Quantum Reality Codes</title>
+    <meta name="description" content="Calculate angel numbers and discover their divine meanings. Enter any number to receive instant spiritual guidance and messages from the universe.">
+    <meta name="keywords" content="angel numbers, numerology, spiritual guidance, divine messages, number meanings, quantum reality codes">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/shared/images/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/shared/images/logo.svg">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Angel Number Calculator - Divine Messages">
+    <meta property="og:description" content="Calculate angel numbers and discover their divine meanings.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://angels.quantummerlin.com">
+    <meta property="og:image" content="/shared/images/og-angels.jpg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="/shared/css/quantum-core.css">
+    
+    <style>
+        /* Page-Specific Styles */
+        .calculator-section {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.05), rgba(157, 0, 255, 0.05));
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 1.3em;
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+        }
+
+        .section-desc {
+            color: #b8b8b8;
+            margin-bottom: 20px;
+        }
+
+        .quick-numbers {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .quick-number {
+            padding: 10px 18px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 25px;
+            color: var(--neon-gold);
+            font-family: var(--font-display);
+            font-size: 0.95em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quick-number:hover {
+            background: rgba(0, 245, 255, 0.1);
+            border-color: var(--neon-cyan);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 245, 255, 0.3);
+        }
+
+        .input-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .input-group input[type="number"] {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 15px;
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input[type="number"]:focus {
+            outline: none;
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+        }
+
+        .input-group input[type="number"]::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .calculate-btn {
+            padding: 15px 35px;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+            border: none;
+            border-radius: 15px;
+            color: #000;
+            font-family: var(--font-display);
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.4);
+        }
+
+        /* Result Section */
+        .result-section {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.05), rgba(157, 0, 255, 0.05));
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            display: none;
+        }
+
+        .result-section.active {
+            display: block;
+            animation: fadeSlideUp 0.5s ease;
+        }
+
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .number-display {
+            font-family: var(--font-display);
+            font-size: 4em;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+        }
+
+        .meaning-section {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            border-left: 4px solid var(--neon-cyan);
+        }
+
+        .meaning-title {
+            font-family: var(--font-display);
+            font-size: 1.1em;
+            color: var(--neon-gold);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .meaning-text {
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+
+        .save-reading-btn {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 25px auto 0;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--neon-magenta), var(--neon-purple));
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            font-family: var(--font-display);
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .save-reading-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 0, 255, 0.4);
+        }
+
+        /* Education Section */
+        .education-section {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.03), rgba(157, 0, 255, 0.03));
+            border: 1px solid rgba(0, 245, 255, 0.15);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .education-section h2 {
+            font-family: var(--font-display);
+            font-size: 1.5em;
+            color: var(--neon-cyan);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .education-section p {
+            color: #e0e0e0;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .education-section p strong {
+            color: var(--neon-gold);
+            font-family: var(--font-display);
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.9), rgba(157, 0, 255, 0.9));
+            color: #000;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            z-index: 10000;
+            transform: translateX(150%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .number-display {
+                font-size: 3em;
+            }
+
+            .quick-numbers {
+                justify-content: center;
+            }
+
+            .input-group {
+                flex-direction: column;
+            }
+
+            .calculate-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Quantum Background -->
+    <div class="quantum-bg">
+        <div class="quantum-grid"></div>
+        <div class="energy-orb energy-orb-1"></div>
+        <div class="energy-orb energy-orb-2"></div>
+        <div class="energy-orb energy-orb-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/shared/images/logo.svg" alt="QRC" class="logo-img">
+                <span class="logo-text">Quantum Reality Codes</span>
+            </a>
+            
+            <div class="header-actions">
+                <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="support-btn">
+                    <span>☕</span> Support
+                </a>
+                
+                <div class="nav-menu">
+                    <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+                    <div class="nav-dropdown" id="navDropdown">
+                        <a href="/">🏠 Home</a>
+                        <a href="/genesis/">🎵 Frequency Generator</a>
+                        <a href="/quantum-merlin-hub/jukebox.html">📚 Quantum Jukebox</a>
+                        <a href="/quantum-merlin-hub/gematria.html">🔢 Quantum Gematria</a>
+                        <a href="/quantum-merlin-hub/tarot.html">🃏 Quantum Tarot</a>
+                        <a href="/quantum-merlin-hub/sigils.html">✨ Sigil Creator</a>
+                        <a href="/quantum-merlin-hub/astrology.html">⭐ Western Astrology</a>
+                        <a href="/quantum-merlin-hub/chinese.html">🐲 Chinese Zodiac</a>
+                        <a href="/quantum-merlin-hub/forecasts.html">🔮 Zodiac Forecasts</a>
+                        <a href="/quantum-merlin-hub/codes.html">💫 Reality Codes</a>
+                        <a href="/quantum-merlin-hub/crystals.html">💎 Quantum Crystals</a>
+                        <a href="/quantum-merlin-hub/water.html">💧 Water Charging</a>
+                        <a href="/angel-number-calculator.html" class="active">👼 Angel Numbers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">
+                    <span class="title-icon">👼</span>
+                    Angel Number Calculator
+                </h1>
+                <p class="page-subtitle">Discover the divine messages hidden in numbers</p>
+            </div>
+
+            <!-- Calculator Section -->
+            <section class="calculator-section">
+                <h2 class="section-title">Enter Your Angel Number</h2>
+                <p class="section-desc">Enter any number you keep seeing to reveal its spiritual meaning</p>
+                
+                <div class="quick-numbers">
+                    <div class="quick-number" onclick="calculateAngelNumber('111')">111</div>
+                    <div class="quick-number" onclick="calculateAngelNumber('222')">222</div>
+                    <div class="quick-number" onclick="calculateAngelNumber('333')">333</div>
+                    <div class="quick-number" onclick="calculateAngelNumber('444')">444</div>
+                    <div class="quick-number" onclick="calculateAngelNumber('555')">555</div>
+                    <div class="quick-number" onclick="calculateAngelNumber('666')">666</div>
+                    <div class="quick-number" onclick="calculateAngelNumber('777')">777</div>
+                    <div class="quick-number" onclick="calculateAngelNumber('888')">888</div>
+                    <div class="quick-number" onclick="calculateAngelNumber('999')">999</div>
+                    <div class="quick-number" onclick="calculateAngelNumber('1234')">1234</div>
+                </div>
+                
+                <div class="input-group">
+                    <input type="number" id="angelNumber" placeholder="Enter any number..." min="1" max="999999">
+                    <button class="calculate-btn" onclick="calculateAngelNumber()">✨ Calculate</button>
+                </div>
+            </section>
+
+            <!-- Result Section -->
+            <section id="resultSection" class="result-section">
+                <div class="number-display" id="numberDisplay">000</div>
+                
+                <div class="meaning-section">
+                    <h3 class="meaning-title">✨ Spiritual Message</h3>
+                    <p class="meaning-text" id="spiritualMessage"></p>
+                </div>
+                
+                <div class="meaning-section">
+                    <h3 class="meaning-title">🙏 Divine Guidance</h3>
+                    <p class="meaning-text" id="divineGuidance"></p>
+                </div>
+                
+                <div class="meaning-section">
+                    <h3 class="meaning-title">🎵 Frequency Connection</h3>
+                    <p class="meaning-text" id="frequencyConnection"></p>
+                </div>
+                
+                <button class="save-reading-btn" onclick="saveToJukebox()">💾 Save to Jukebox</button>
+            </section>
+
+            <!-- Education Section -->
+            <section class="education-section">
+                <h2>Understanding Angel Numbers</h2>
+                
+                <p><strong>What Are Angel Numbers?</strong></p>
+                <p>Angel numbers are sequences of numbers that carry divine guidance and spiritual meaning. When you repeatedly encounter specific number patterns, it's believed that the universe, angels, or your higher consciousness is trying to communicate with you through the universal language of mathematics and numerology.</p>
+                
+                <p><strong>How Angel Numbers Work</strong></p>
+                <p>Every number vibrates at its own unique frequency, just like musical notes create different sounds. In numerology, each number from 1 to 9 carries specific energetic properties and meanings. When these numbers appear in sequences or patterns, their energies combine to create powerful messages tailored to your current life situation and spiritual journey.</p>
+                
+                <p><strong>Why You Keep Seeing Specific Numbers</strong></p>
+                <p>The phenomenon of repeatedly seeing certain numbers is often called synchronicity - meaningful coincidences that reveal deeper patterns in your life. This happens because your consciousness is attuned to specific vibrational frequencies that match your current needs, questions, or spiritual growth opportunities.</p>
+                
+                <p><strong>Trust Your Intuition</strong></p>
+                <p>While these interpretations provide guidance, always trust your personal connection to the numbers you encounter. The most meaningful interpretation is the one that resonates with your inner wisdom and current life situation. Angel numbers are invitations to deepen your awareness and trust in the guidance that surrounds you.</p>
+            </section>
+
+            <!-- Ad Placeholder -->
+            <div class="ad-placeholder">
+                <span>Advertisement</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Quantum Reality Codes</h4>
+                    <p>Unlock the frequencies of transformation and manifest your highest potential through sacred mathematics and quantum resonance.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="/genesis/">Frequency Generator</a></li>
+                        <li><a href="/quantum-merlin-hub/gematria.html">Gematria Calculator</a></li>
+                        <li><a href="/quantum-merlin-hub/tarot.html">Quantum Tarot</a></li>
+                        <li><a href="/quantum-merlin-hub/sigils.html">Sigil Creator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/quantum-merlin-hub/astrology.html">Western Astrology</a></li>
+                        <li><a href="/quantum-merlin-hub/chinese.html">Chinese Zodiac</a></li>
+                        <li><a href="/quantum-merlin-hub/crystals.html">Crystal Guide</a></li>
+                        <li><a href="/quantum-merlin-hub/water.html">Water Charging</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="https://buymeacoffee.com/quantummerlin" target="_blank">Buy Me a Coffee</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Quantum Reality Codes. All rights reserved.</p>
+                <p class="footer-links">
+                    <a href="/genesis/privacy.html">Privacy Policy</a> | 
+                    <a href="/genesis/terms.html">Terms of Service</a> | 
+                    <a href="/genesis/disclaimer.html">Disclaimer</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <!-- Scripts -->
+    <script src="/shared/js/quantum-analytics.js"></script>
+    
+    <script>
+        // Navigation toggle
+        function toggleNav() {
+            const dropdown = document.getElementById('navDropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdown = document.getElementById('navDropdown');
+            
+            if (navMenu && !navMenu.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Show notification
+        function showNotification(message, duration = 3000) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, duration);
+        }
+
+        // Current reading for saving
+        let currentReading = null;
+
+        // Angel Number Meanings Database
+        const angelNumberMeanings = {
+            1: {
+                spiritual: "New beginnings, leadership, and individuality. The universe is supporting your fresh start.",
+                guidance: "Take initiative and trust your unique path. You have the power to create your reality.",
+                frequency: "Resonates with 396 Hz - releasing fear and embracing new opportunities."
+            },
+            2: {
+                spiritual: "Partnership, balance, and divine timing. Trust that everything is unfolding perfectly.",
+                guidance: "Cooperate with others and maintain faith. Your patience will be rewarded.",
+                frequency: "Connects with 417 Hz - facilitating change and positive transformation."
+            },
+            3: {
+                spiritual: "Creativity, communication, and spiritual expansion. Your guides are near.",
+                guidance: "Express yourself authentically and share your unique gifts with the world.",
+                frequency: "Aligns with 528 Hz - transformation and miracles (love frequency)."
+            },
+            4: {
+                spiritual: "Stability, foundation, and practical wisdom. Build your dreams on solid ground.",
+                guidance: "Stay disciplined and organized. Your hard work creates lasting results.",
+                frequency: "Works with 639 Hz - healing relationships and creating harmony."
+            },
+            5: {
+                spiritual: "Change, freedom, and adventure. Major life transformations are coming.",
+                guidance: "Embrace new experiences and release what no longer serves you.",
+                frequency: "Resonates with 741 Hz - awakening intuition and problem-solving."
+            },
+            6: {
+                spiritual: "Love, family, and responsibility. Nurture your connections and serve others.",
+                guidance: "Balance giving and receiving. Your compassion heals yourself and others.",
+                frequency: "Connects with 396 Hz - releasing guilt and fear."
+            },
+            7: {
+                spiritual: "Spiritual awakening, intuition, and inner wisdom. Divine knowledge is flowing.",
+                guidance: "Trust your inner voice and seek deeper understanding. You're on the right path.",
+                frequency: "Aligns with 852 Hz - returning to spiritual order and intuition."
+            },
+            8: {
+                spiritual: "Abundance, success, and infinite potential. Prosperity is your birthright.",
+                guidance: "Claim your power and embrace financial and spiritual abundance.",
+                frequency: "Works with 963 Hz - connection to higher consciousness and oneness."
+            },
+            9: {
+                spiritual: "Completion, wisdom, and humanitarian service. A cycle is ending.",
+                guidance: "Share your knowledge and serve humanity. Your purpose unfolds.",
+                frequency: "Resonates with 417 Hz - facilitating completion and new beginnings."
+            },
+            11: {
+                spiritual: "Master number of intuition and spiritual insight. Portal to higher consciousness.",
+                guidance: "Trust your psychic abilities and serve as a lightworker. You're a bridge between worlds.",
+                frequency: "Connects with 528 Hz - activating DNA and spiritual awakening."
+            },
+            22: {
+                spiritual: "Master builder number. Your dreams can manifest in physical reality.",
+                guidance: "Build your vision with practical steps. You have unlimited creative potential.",
+                frequency: "Aligns with 741 Hz - manifesting dreams into physical form."
+            },
+            33: {
+                spiritual: "Master teacher number. Compassionate healing and universal love.",
+                guidance: "Share your wisdom and heal others. You're a channel for divine love.",
+                frequency: "Works with 639 Hz - universal love and emotional healing."
+            },
+            111: {
+                spiritual: "Powerful manifestation portal. Your thoughts are creating reality rapidly.",
+                guidance: "Monitor your thoughts carefully. Focus only on what you want to create.",
+                frequency: "Aligns with 528 Hz - rapid manifestation and miracle creation."
+            },
+            222: {
+                spiritual: "Divine timing and partnership. Trust the process and maintain faith.",
+                guidance: "Keep believing in your dreams. Everything is unfolding perfectly.",
+                frequency: "Works with 417 Hz - aligning with divine timing and flow."
+            },
+            333: {
+                spiritual: "Ascended masters are with you. Divine protection and guidance.",
+                guidance: "You're surrounded by love and support. Call on spiritual helpers.",
+                frequency: "Resonates with 528 Hz - connection to ascended master energy."
+            },
+            444: {
+                spiritual: "Angels surround you completely. Divine protection and support.",
+                guidance: "You're safe and protected. Trust the journey and ask for help.",
+                frequency: "Connects with 396 Hz - angelic protection and safety frequency."
+            },
+            555: {
+                spiritual: "Major positive changes coming. Release the old and embrace the new.",
+                guidance: "Big transformations are happening. Trust the process of change.",
+                frequency: "Aligns with 417 Hz - embracing positive life changes."
+            },
+            666: {
+                spiritual: "Balance between spiritual and material. Refocus on spiritual truth.",
+                guidance: "Shift from material worries to spiritual awareness. Trust in divine provision.",
+                frequency: "Works with 639 Hz - balancing material and spiritual harmony."
+            },
+            777: {
+                spiritual: "Profound spiritual blessings and miracles. Divine intervention.",
+                guidance: "You're on the right path. Amazing synchronicities and blessings flow.",
+                frequency: "Resonates with 852 Hz - profound spiritual awakening and blessings."
+            },
+            888: {
+                spiritual: "Infinite abundance and prosperity. Financial and spiritual wealth.",
+                guidance: "Prosperity is flowing to you. Open your heart and mind to receive.",
+                frequency: "Connects with 963 Hz - infinite abundance and prosperity consciousness."
+            },
+            999: {
+                spiritual: "Completion and new beginnings. Humanitarian mission activating.",
+                guidance: "Your life purpose involves serving humanity. Step into your power.",
+                frequency: "Aligns with 528 Hz - soul mission activation and service."
+            },
+            1234: {
+                spiritual: "Sequential progression and divine order. Everything falling into place.",
+                guidance: "Trust the process of unfolding. Each step leads perfectly to the next.",
+                frequency: "Works with 741 Hz - divine order and perfect timing."
+            },
+            1010: {
+                spiritual: "New spiritual beginnings and enlightenment. Awakening to higher truth.",
+                guidance: "Your spiritual journey is accelerating. Embrace your awakening.",
+                frequency: "Connects with 963 Hz - spiritual awakening and enlightenment."
+            },
+            1212: {
+                spiritual: "Staying positive and maintaining faith. Universe is supporting you.",
+                guidance: "Keep your thoughts positive. Faith activates divine support.",
+                frequency: "Aligns with 528 Hz - faith-based manifestation and support."
+            }
+        };
+
+        // Calculate digital root for numbers not in database
+        function getDigitalRoot(number) {
+            let num = number;
+            while (num > 9) {
+                num = num.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+            }
+            return num;
+        }
+
+        function calculateAngelNumber(inputNumber) {
+            const number = inputNumber || document.getElementById('angelNumber').value;
+            
+            if (!number || number < 1) {
+                showNotification('⚠️ Please enter a valid positive number');
+                return;
+            }
+
+            const resultSection = document.getElementById('resultSection');
+            const numberDisplay = document.getElementById('numberDisplay');
+            const spiritualMessage = document.getElementById('spiritualMessage');
+            const divineGuidance = document.getElementById('divineGuidance');
+            const frequencyConnection = document.getElementById('frequencyConnection');
+
+            // Display the number
+            numberDisplay.textContent = number;
+
+            // Get meaning from database or calculate based on patterns
+            let meaning = angelNumberMeanings[number];
+            
+            if (!meaning) {
+                // Calculate meaning based on number patterns
+                const numStr = number.toString();
+                const digits = numStr.split('');
+                const digitSum = digits.reduce((a, b) => parseInt(a) + parseInt(b), 0);
+                const digitalRoot = getDigitalRoot(number);
+                
+                // Create meaning based on number composition
+                let spiritual = `Number ${number} combines the energies of ${digits.join(', ')}. `;
+                spiritual += `The digital root is ${digitalRoot}, giving this number the foundational energy of ${digitalRoot} - ${angelNumberMeanings[digitalRoot].spiritual.toLowerCase()}`;
+                
+                let guidance = `The sequence ${number} amplifies the qualities of its individual digits. `;
+                guidance += `Trust that this number appears with perfect timing for your current situation. `;
+                guidance += `Meditate on the individual meanings of each digit to deeper understand the message.`;
+                
+                let frequency = `This number vibrates with combined energy harmonizing with ${angelNumberMeanings[digitalRoot].frequency.toLowerCase()}`;
+                
+                meaning = {
+                    spiritual: spiritual,
+                    guidance: guidance,
+                    frequency: frequency
+                };
+            }
+
+            // Store current reading
+            currentReading = {
+                number: number,
+                spiritual: meaning.spiritual,
+                guidance: meaning.guidance,
+                frequency: meaning.frequency
+            };
+
+            // Display results
+            spiritualMessage.textContent = meaning.spiritual;
+            divineGuidance.textContent = meaning.guidance;
+            frequencyConnection.textContent = meaning.frequency;
+
+            // Show result section with animation
+            resultSection.classList.add('active');
+            resultSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // Track event
+            if (typeof trackEvent === 'function') {
+                trackEvent('angel_number_calculated', { number: number });
+            }
+        }
+
+        function saveToJukebox() {
+            if (!currentReading) {
+                showNotification('⚠️ Please calculate a number first');
+                return;
+            }
+            
+            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            
+            const newItem = {
+                id: Date.now(),
+                type: 'gematria',
+                name: `Angel Number: ${currentReading.number}`,
+                description: currentReading.spiritual.substring(0, 100) + '...',
+                data: {
+                    number: currentReading.number,
+                    spiritual: currentReading.spiritual,
+                    guidance: currentReading.guidance,
+                    frequency: currentReading.frequency
+                },
+                savedAt: new Date().toISOString()
+            };
+            
+            savedItems.push(newItem);
+            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
+            
+            showNotification(`✨ Angel Number ${currentReading.number} saved to Jukebox!`);
+            
+            // Track event
+            if (typeof trackEvent === 'function') {
+                trackEvent('angel_number_saved', { number: currentReading.number });
+            }
+        }
+
+        // Handle Enter key in input
+        document.getElementById('angelNumber').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calculateAngelNumber();
+            }
+        });
+
+        // Auto-calculate if number is passed in URL
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const number = urlParams.get('number');
+            if (number) {
+                document.getElementById('angelNumber').value = number;
+                calculateAngelNumber(number);
+            }
+        };
+    </script>
+</body>
+</html>

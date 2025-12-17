@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Water Charging - Ritual Assistant | Quantum Merlin</title>
+    <meta name="description" content="Master the art of water charging with our quantum ritual assistant. Timer, animations, and frequency guidance included.">
+    <meta name="keywords" content="water charging, quantum water, ritual assistant, water blessing, quantum merlin">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum Water Charging - Ritual Assistant">
+    <meta property="og:description" content="Master the art of water charging with our quantum ritual assistant.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://water.quantummerlin.com">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #000014 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Quantum Grid Background */
+        .quantum-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Quantum Sun */
+        .quantum-sun {
+            position: fixed;
+            top: 10%;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, rgba(255, 165, 0, 0.1) 40%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: pulse 4s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .nav-toggle {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.8), rgba(75, 0, 130, 0.8));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .nav-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: linear-gradient(135deg, rgba(25, 0, 51, 0.95), rgba(10, 0, 25, 0.95));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            min-width: 200px;
+            display: none;
+            backdrop-filter: blur(20px);
+        }
+
+        .nav-dropdown.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-dropdown a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        .nav-dropdown a:hover {
+            background: rgba(138, 43, 226, 0.3);
+            transform: translateX(5px);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title {
+            font-size: 3em;
+            background: linear-gradient(135deg, #ffd700, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .subtitle {
+            color: #b8b8b8;
+            font-size: 1.2em;
+        }
+
+        /* Water Charging Setup */
+        .charging-setup {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .setup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ffd700;
+            font-weight: 500;
+        }
+
+        .input-group select, .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .input-group select:focus, .input-group input:focus, .input-group textarea:focus {
+            outline: none;
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .input-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .create-ritual-btn {
+            background: linear-gradient(135deg, #ffd700, #ff6b6b);
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            color: #000;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .create-ritual-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Ritual Display */
+        .ritual-display {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .ritual-display.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .ritual-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+
+        .ritual-title {
+            font-size: 2em;
+            color: #ffd700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .ritual-summary {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .summary-title {
+            color: #ffd700;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .summary-item {
+            color: #e0e0e0;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .summary-label {
+            color: #4ecdc4;
+            font-weight: bold;
+            margin-right: 10px;
+            min-width: 120px;
+        }
+
+        /* Timer Section */
+        .timer-section {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .timer-display {
+            font-size: 4em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 20px 0;
+        }
+
+        .timer-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .timer-btn {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .timer-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+        }
+
+        .timer-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Charging Animation */
+        .charging-animation {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .animation-title {
+            color: #ffd700;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .charge-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 20px auto;
+            max-width: 300px;
+        }
+
+        .charge-node {
+            width: 50px;
+            height: 50px;
+            background: rgba(78, 205, 196, 0.2);
+            border: 2px solid rgba(78, 205, 196, 0.4);
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .charge-node.active {
+            background: rgba(78, 205, 196, 0.6);
+            border-color: #4ecdc4;
+            box-shadow: 0 0 20px rgba(78, 205, 196, 0.6);
+            animation: pulse 2s infinite;
+        }
+
+        /* Step Instructions */
+        .step-instructions {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+
+        .steps-list {
+            margin-top: 20px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .step-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #ffd700, #ff6b6b);
+            color: #000;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            color: #e0e0e0;
+            line-height: 1.5;
+        }
+
+        /* Mantra Section */
+        .mantra-section {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .mantra-text {
+            font-size: 1.3em;
+            color: #4ecdc4;
+            font-style: italic;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .frequency-info {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .frequency-info h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .save-btn {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .save-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .setup-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timer-display {
+                font-size: 3em;
+            }
+            
+            .charge-grid {
+                grid-template-columns: repeat(4, 1fr);
+                max-width: 240px;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="quantum-grid"></div>
+    <div class="quantum-sun"></div>
+    
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+        <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+        <div class="nav-dropdown" id="navDropdown">
+            <a href="https://quantummerlin.com">🏠 Home</a>
+            <a href="https://frequency.quantummerlin.com">🎵 Frequency Generator</a>
+            <a href="https://jukebox.quantummerlin.com">📚 Quantum Jukebox</a>
+            <a href="https://gematria.quantummerlin.com">🔢 Quantum Gematria</a>
+            <a href="https://tarot.quantummerlin.com">🃏 Quantum Tarot</a>
+            <a href="https://sigils.quantummerlin.com">✨ Sigil Creator</a>
+            <a href="https://astrology.quantummerlin.com">⭐ Western Astrology</a>
+            <a href="https://chinese.quantummerlin.com">🐲 Chinese Zodiac</a>
+            <a href="https://forecasts.quantummerlin.com">🔮 Zodiac Forecasts</a>
+            <a href="https://codes.quantummerlin.com">💫 Reality Codes</a>
+            <a href="https://crystals.quantummerlin.com">💎 Quantum Crystals</a>
+            <a href="https://water.quantummerlin.com">💧 Water Charging</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title">Quantum Water Charging</h1>
+            <p class="subtitle">Sacred water ritual assistant and timer</p>
+        </div>
+
+        <!-- Water Charging Setup -->
+        <div class="charging-setup">
+            <h3 style="color: #ffd700; margin-bottom: 20px;">🧪 Create Your Water Charging Ritual</h3>
+            <div class="setup-grid">
+                <div class="input-group">
+                    <label for="intention">Intention</label>
+                    <select id="intention">
+                        <option value="">Select intention...</option>
+                        <option value="healing">Healing & Health</option>
+                        <option value="abundance">Abundance & Prosperity</option>
+                        <option value="love">Love & Relationships</option>
+                        <option value="clarity">Clarity & Focus</option>
+                        <option value="peace">Peace & Calm</option>
+                        <option value="protection">Protection & Safety</option>
+                        <option value="energy">Energy & Vitality</option>
+                        <option value="spiritual">Spiritual Connection</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="frequency">Frequency</label>
+                    <select id="frequency">
+                        <option value="">Select frequency...</option>
+                        <option value="174">174 Hz - Foundation & Security</option>
+                        <option value="285">285 Hz - Healing & Structure</option>
+                        <option value="396">396 Hz - Liberation & Courage</option>
+                        <option value="417">417 Hz - Change & Transformation</option>
+                        <option value="528">528 Hz - DNA Repair & Love</option>
+                        <option value="639">639 Hz - Harmony & Relationships</option>
+                        <option value="741">741 Hz - Intuition & Clarity</option>
+                        <option value="852">852 Hz - Spiritual Order</option>
+                        <option value="963">963 Hz - Divine Connection</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="crystal">Crystal (Optional)</label>
+                    <select id="crystal">
+                        <option value="">No crystal</option>
+                        <option value="clear-quartz">Clear Quartz - Amplifier</option>
+                        <option value="amethyst">Amethyst - Spiritual</option>
+                        <option value="rose-quartz">Rose Quartz - Love</option>
+                        <option value="citrine">Citrine - Abundance</option>
+                        <option value="black-tourmaline">Black Tourmaline - Protection</option>
+                        <option value="selenite">Selenite - Cleansing</option>
+                        <option value="carnelian">Carnelian - Creativity</option>
+                        <option value="lapis-lazuli">Lapis Lazuli - Wisdom</option>
+                        <option value="green-aventurine">Green Aventurine - Luck</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="duration">Duration (minutes)</label>
+                    <select id="duration">
+                        <option value="5">5 minutes - Quick charge</option>
+                        <option value="10">10 minutes - Standard charge</option>
+                        <option value="15">15 minutes - Deep charge</option>
+                        <option value="20">20 minutes - Master charge</option>
+                        <option value="30">30 minutes - Ultimate charge</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="container">Container Type</label>
+                    <select id="container">
+                        <option value="glass">Glass - Best for charging</option>
+                        <option value="ceramic">Ceramic - Good alternative</option>
+                        <option value="copper">Copper - Conductive</option>
+                        <option value="silver">Silver - Purifying</option>
+                        <option value="plastic">Plastic - Not recommended</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="moon-phase">Moon Phase (Optional)</label>
+                    <select id="moon-phase">
+                        <option value="">Not relevant</option>
+                        <option value="new">New Moon - New beginnings</option>
+                        <option value="waxing">Waxing Crescent - Growth</option>
+                        <option value="first">First Quarter - Action</option>
+                        <option value="waxing-gibbous">Waxing Gibbous - Refinement</option>
+                        <option value="full">Full Moon - Peak Power</option>
+                        <option value="waning-gibbous">Waning Gibbous - Release</option>
+                        <option value="last">Last Quarter - Balance</option>
+                        <option value="waning">Waning Crescent - Rest</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="custom-intention">Custom Intention (Optional)</label>
+                <textarea id="custom-intention" placeholder="Write your personal intention for the water..."></textarea>
+            </div>
+            
+            <button class="create-ritual-btn" onclick="createRitual()">💧 Create Water Charging Ritual</button>
+        </div>
+
+        <!-- Ritual Display -->
+        <div class="ritual-display" id="ritualDisplay">
+            <!-- Ritual content will be dynamically added here -->
+        </div>
+    </div>
+
+    <script>
+        // Navigation toggle
+        function toggleNav() {
+            const dropdown = document.getElementById('navDropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdown = document.getElementById('navDropdown');
+            
+            if (!navMenu.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Global timer variables
+        let timerInterval = null;
+        let remainingTime = 0;
+        let isRunning = false;
+
+        // Ritual data
+        const ritualData = {
+            intentions: {
+                'healing': {
+                    mantra: 'This water carries the essence of healing, restoring my body, mind, and spirit to perfect health and vitality.',
+                    frequency: '285 Hz',
+                    recommendedCrystals: ['Clear Quartz', 'Amethyst', 'Rose Quartz'],
+                    color: 'Green'
+                },
+                'abundance': {
+                    mantra: 'This water flows with infinite abundance, attracting prosperity, success, and unlimited possibilities into my life.',
+                    frequency: '528 Hz',
+                    recommendedCrystals: ['Citrine', 'Pyrite', 'Green Aventurine'],
+                    color: 'Gold'
+                },
+                'love': {
+                    mantra: 'This water radiates unconditional love, opening my heart to give and receive love in all its forms.',
+                    frequency: '639 Hz',
+                    recommendedCrystals: ['Rose Quartz', 'Pink Calcite', 'Rhodonite'],
+                    color: 'Pink'
+                },
+                'clarity': {
+                    mantra: 'This water brings crystal clear clarity to my mind, illuminating my path and revealing perfect solutions.',
+                    frequency: '741 Hz',
+                    recommendedCrystals: ['Clear Quartz', 'Fluorite', 'Lapis Lazuli'],
+                    color: 'Blue'
+                },
+                'peace': {
+                    mantra: 'This water carries deep peace and tranquility, calming my mind and soothing my soul with serenity.',
+                    frequency: '174 Hz',
+                    recommendedCrystals: ['Amethyst', 'Blue Lace Agate', 'Selenite'],
+                    color: 'Light Blue'
+                },
+                'protection': {
+                    mantra: 'This water creates a powerful shield of protection, surrounding me with divine light and keeping me safe and secure.',
+                    frequency: '396 Hz',
+                    recommendedCrystals: ['Black Tourmaline', 'Hematite', 'Smoky Quartz'],
+                    color: 'Black'
+                },
+                'energy': {
+                    mantra: 'This water vibrates with vital life force energy, revitalizing my body and awakening my unlimited potential.',
+                    frequency: '417 Hz',
+                    recommendedCrystals: ['Carnelian', 'Red Jasper', 'Bloodstone'],
+                    color: 'Red'
+                },
+                'spiritual': {
+                    mantra: 'This water connects me to divine consciousness, opening channels to higher wisdom and spiritual truth.',
+                    frequency: '963 Hz',
+                    recommendedCrystals: ['Amethyst', 'Clear Quartz', 'Selenite'],
+                    color: 'Purple'
+                }
+            },
+            crystals: {
+                'clear-quartz': {
+                    safety: 'Water Safe',
+                    properties: 'Amplifies intentions and frequencies',
+                    enhancement: 'Increases charging power by 50%'
+                },
+                'amethyst': {
+                    safety: 'Water Safe',
+                    properties: 'Spiritual connection and intuition',
+                    enhancement: 'Adds spiritual wisdom'
+                },
+                'rose-quartz': {
+                    safety: 'Water Safe',
+                    properties: 'Unconditional love and compassion',
+                    enhancement: 'Infuses loving energy'
+                },
+                'citrine': {
+                    safety: 'Not Water Safe - Place outside container',
+                    properties: 'Abundance and manifestation',
+                    enhancement: 'Attracts prosperity energy'
+                },
+                'black-tourmaline': {
+                    safety: 'Not Water Safe - Place outside container',
+                    properties: 'Protection and grounding',
+                    enhancement: 'Creates protective shield'
+                },
+                'selenite': {
+                    safety: 'Not Water Safe - Place outside container',
+                    properties: 'Cleansing and purification',
+                    enhancement: 'Cleanses negative energy'
+                },
+                'carnelian': {
+                    safety: 'Water Safe',
+                    properties: 'Creativity and vitality',
+                    enhancement: 'Boosts life force energy'
+                },
+                'lapis-lazuli': {
+                    safety: 'Not Water Safe - Place outside container',
+                    properties: 'Wisdom and truth',
+                    enhancement: 'Enhances spiritual insight'
+                },
+                'green-aventurine': {
+                    safety: 'Water Safe',
+                    properties: 'Luck and opportunity',
+                    enhancement: 'Attracts synchronicities'
+                }
+            }
+        };
+
+        function createRitual() {
+            const intention = document.getElementById('intention').value;
+            const frequency = document.getElementById('frequency').value;
+            const crystal = document.getElementById('crystal').value;
+            const duration = parseInt(document.getElementById('duration').value);
+            const container = document.getElementById('container').value;
+            const moonPhase = document.getElementById('moon-phase').value;
+            const customIntention = document.getElementById('custom-intention').value;
+            
+            if (!intention || !frequency || !duration) {
+                alert('Please select intention, frequency, and duration');
+                return;
+            }
+            
+            // Get ritual details
+            const intentionData = ritualData.intentions[intention];
+            const crystalData = crystal ? ritualData.crystals[crystal] : null;
+            
+            // Display ritual
+            displayRitual(intention, frequency, crystal, duration, container, moonPhase, customIntention, intentionData, crystalData);
+        }
+
+        function displayRitual(intention, frequency, crystal, duration, container, moonPhase, customIntention, intentionData, crystalData) {
+            const ritualDisplay = document.getElementById('ritualDisplay');
+            
+            // Create ritual HTML
+            let ritualHTML = `
+                <div class="ritual-card">
+                    <h2 class="ritual-title">💧 Your Quantum Water Charging Ritual</h2>
+                    
+                    <div class="ritual-summary">
+                        <h3 class="summary-title">📋 Ritual Summary</h3>
+                        <div class="summary-item">
+                            <span class="summary-label">Intention:</span>
+                            <span>${intention.charAt(0).toUpperCase() + intention.slice(1)}</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Frequency:</span>
+                            <span>${frequency} Hz</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Duration:</span>
+                            <span>${duration} minutes</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Container:</span>
+                            <span>${container.charAt(0).toUpperCase() + container.slice(1)}</span>
+                        </div>
+                        ${crystal ? `
+                        <div class="summary-item">
+                            <span class="summary-label">Crystal:</span>
+                            <span>${crystal.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')} (${crystalData.safety})</span>
+                        </div>
+                        ` : ''}
+                        ${moonPhase ? `
+                        <div class="summary-item">
+                            <span class="summary-label">Moon Phase:</span>
+                            <span>${moonPhase.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</span>
+                        </div>
+                        ` : ''}
+                        ${customIntention ? `
+                        <div class="summary-item">
+                            <span class="summary-label">Custom:</span>
+                            <span>${customIntention}</span>
+                        </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+            
+            // Add timer section
+            ritualHTML += `
+                <div class="timer-section">
+                    <h3 style="color: #ffd700; margin-bottom: 20px;">⏱️ Charging Timer</h3>
+                    <div class="timer-display" id="timerDisplay">${formatTime(duration * 60)}</div>
+                    <div class="timer-controls">
+                        <button class="timer-btn" onclick="startTimer(${duration * 60})">Start Charging</button>
+                        <button class="timer-btn" id="pauseBtn" onclick="pauseTimer()" disabled>Pause</button>
+                        <button class="timer-btn" onclick="resetTimer(${duration * 60})">Reset</button>
+                    </div>
+                </div>
+            `;
+            
+            // Add charging animation
+            ritualHTML += `
+                <div class="charging-animation">
+                    <h3 class="animation-title">🌊 Quantum Charging Grid</h3>
+                    <div class="charge-grid" id="chargeGrid">
+                        ${generateChargeGrid()}
+                    </div>
+                    <p style="color: #e0e0e0; margin-top: 15px;">Watch the energy nodes activate as your water charges</p>
+                </div>
+            `;
+            
+            // Add step instructions
+            ritualHTML += `
+                <div class="step-instructions">
+                    <h3 style="color: #ffd700; margin-bottom: 20px;">📿 Step-by-Step Instructions</h3>
+                    <div class="steps-list">
+                        ${generateSteps(intention, frequency, crystal, container, moonPhase, crystalData)}
+                    </div>
+                </div>
+            `;
+            
+            // Add mantra section
+            const mantra = customIntention || intentionData.mantra;
+            ritualHTML += `
+                <div class="mantra-section">
+                    <h3 style="color: #ffd700; margin-bottom: 20px;">🙏 Charging Mantra</h3>
+                    <div class="mantra-text">"${mantra}"</div>
+                    
+                    <div class="frequency-info">
+                        <h4>🎵 Frequency Information</h4>
+                        <p>Primary: ${frequency} Hz</p>
+                        <p>Recommended: ${intentionData.frequency}</p>
+                        <button class="save-btn" onclick="saveFrequencyToJukebox('${frequency} Hz', '${intention} Water Charging')">Save to Jukebox</button>
+                    </div>
+                </div>
+            `;
+            
+            ritualDisplay.innerHTML = ritualHTML;
+            ritualDisplay.classList.add('active');
+            
+            // Scroll to ritual
+            ritualDisplay.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function generateChargeGrid() {
+            let grid = '';
+            for (let i = 0; i < 20; i++) {
+                grid += `<div class="charge-node" id="node-${i}"></div>`;
+            }
+            return grid;
+        }
+
+        function generateSteps(intention, frequency, crystal, container, moonPhase, crystalData) {
+            let steps = `
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <strong>Prepare Your Space:</strong> Choose a quiet, clean area where you won't be disturbed. Cleanse the space with sage or palo santo if desired.
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <strong>Prepare Your Container:</strong> Use a ${container} container and fill it with fresh, clean water. Glass is ideal for optimal energy transfer.
+                    </div>
+                </div>
+            `;
+            
+            if (crystal) {
+                const placement = crystalData.safety === 'Water Safe' ? 'directly in the water' : 'around the outside of the container';
+                steps += `
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Add Crystal Energy:</strong> Place your ${crystal.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')} ${placement}. ${crystalData.enhancement}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            steps += `
+                <div class="step-item">
+                    <div class="step-number">${crystal ? '4' : '3'}</div>
+                    <div class="step-content">
+                        <strong>Set Your Intention:</strong> Hold your hands over the water and speak your intention aloud or silently. Focus on sending love and positive energy into the water.
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">${crystal ? '5' : '4'}</div>
+                    <div class="step-content">
+                        <strong>Begin Frequency Play:</strong> Play the ${frequency} Hz frequency at a comfortable volume. Position your speakers or headphones near the water.
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">${crystal ? '6' : '5'}</div>
+                    <div class="step-content">
+                        <strong>Start the Timer:</strong> Click "Start Charging" and meditate or focus on your intention. Repeat your mantra as many times as feels right.
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">${crystal ? '7' : '6'}</div>
+                    <div class="step-content">
+                        <strong>Complete the Ritual:</strong> When the timer completes, thank the water, crystals, and universal energy. Your water is now charged and ready!
+                    </div>
+                </div>
+            `;
+            
+            return steps;
+        }
+
+        // Timer functions
+        function startTimer(totalSeconds) {
+            if (isRunning) return;
+            
+            remainingTime = totalSeconds;
+            isRunning = true;
+            
+            // Update UI
+            document.querySelector('.timer-btn').disabled = true;
+            document.getElementById('pauseBtn').disabled = false;
+            
+            // Start charging animation
+            startChargingAnimation();
+            
+            timerInterval = setInterval(() => {
+                remainingTime--;
+                updateTimerDisplay();
+                
+                if (remainingTime <= 0) {
+                    completeCharging();
+                }
+            }, 1000);
+        }
+
+        function pauseTimer() {
+            if (!isRunning) return;
+            
+            clearInterval(timerInterval);
+            isRunning = false;
+            
+            document.querySelector('.timer-btn').disabled = false;
+            document.getElementById('pauseBtn').disabled = true;
+            document.getElementById('pauseBtn').textContent = 'Resume';
+            
+            stopChargingAnimation();
+        }
+
+        function resetTimer(totalSeconds) {
+            clearInterval(timerInterval);
+            isRunning = false;
+            remainingTime = totalSeconds;
+            
+            updateTimerDisplay();
+            
+            document.querySelector('.timer-btn').disabled = false;
+            document.getElementById('pauseBtn').disabled = true;
+            document.getElementById('pauseBtn').textContent = 'Pause';
+            
+            resetChargingAnimation();
+        }
+
+        function updateTimerDisplay() {
+            document.getElementById('timerDisplay').textContent = formatTime(remainingTime);
+        }
+
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        function completeCharging() {
+            clearInterval(timerInterval);
+            isRunning = false;
+            
+            document.querySelector('.timer-btn').disabled = false;
+            document.getElementById('pauseBtn').disabled = true;
+            
+            // Show completion message
+            alert('🎉 Water charging complete! Your water is now infused with quantum energy and ready to use.');
+            
+            resetChargingAnimation();
+        }
+
+        // Charging animation functions
+        let animationInterval = null;
+
+        function startChargingAnimation() {
+            resetChargingAnimation();
+            let currentNode = 0;
+            
+            animationInterval = setInterval(() => {
+                // Activate current node
+                const node = document.getElementById(`node-${currentNode}`);
+                if (node) {
+                    node.classList.add('active');
+                }
+                
+                // Deactivate previous node
+                const prevNode = document.getElementById(`node-${currentNode - 1}`);
+                if (prevNode) {
+                    prevNode.classList.remove('active');
+                }
+                
+                currentNode = (currentNode + 1) % 20;
+            }, 500);
+        }
+
+        function stopChargingAnimation() {
+            if (animationInterval) {
+                clearInterval(animationInterval);
+                animationInterval = null;
+            }
+        }
+
+        function resetChargingAnimation() {
+            stopChargingAnimation();
+            
+            // Deactivate all nodes
+            for (let i = 0; i < 20; i++) {
+                const node = document.getElementById(`node-${i}`);
+                if (node) {
+                    node.classList.remove('active');
+                }
+            }
+        }
+
+        function saveFrequencyToJukebox(frequency, purpose) {
+            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            
+            const newItem = {
+                id: Date.now(),
+                type: 'frequency',
+                name: `Water Charging: ${frequency}`,
+                description: purpose,
+                data: {
+                    frequency: frequency,
+                    type: 'water_charging',
+                    purpose: purpose
+                },
+                savedAt: new Date().toISOString()
+            };
+            
+            savedItems.push(newItem);
+            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
+            
+            // Show confirmation
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = '✓ Saved to Jukebox';
+            btn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+            
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+            }, 2000);
+        }
+
+        // Initialize on load
+        window.addEventListener('load', function() {
+            // Set default values
+            document.getElementById('duration').value = '10';
+            document.getElementById('container').value = 'glass';
+        });
+    </script>
+</body>
+</html>
