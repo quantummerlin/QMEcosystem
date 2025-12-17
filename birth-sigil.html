@@ -5293,7 +5293,8 @@
                     singularity.style.transform = `translate(-50%, -50%) scale(1)`;
                     singularity.style.opacity = 1 - ease;
                     
-                    const maxFontSize = Math.min(width * 0.12, 48);
+                    // Responsive font size: fits within 90% of screen width
+                    const maxFontSize = Math.min(width * 0.065, 42);
                     const fontSize = ease * maxFontSize;
                     
                     introTitle.style.fontSize = fontSize + 'px';
@@ -5305,7 +5306,8 @@
                 else if (t < 11) {
                     singularity.style.opacity = 0;
                     
-                    const maxFontSize = Math.min(width * 0.12, 48);
+                    // Responsive font size: fits within 90% of screen width
+                    const maxFontSize = Math.min(width * 0.065, 42);
                     introTitle.style.fontSize = maxFontSize + 'px';
                     introTitle.style.opacity = 1;
                     
