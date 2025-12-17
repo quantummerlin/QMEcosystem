@@ -1629,9 +1629,9 @@
             
             <div class="input-group">
                 <label>Birth Date</label>
-                <div class="input-row" style="display: grid; grid-template-columns: 70px 1fr 90px; gap: 10px; max-width: 350px; margin: 0 auto;">
-                    <input type="number" id="day" min="1" max="31" placeholder="Day" style="width: 100%; text-align: center;">
-                    <select id="month" style="width: 100%;">
+                <div class="input-row" style="display: flex; gap: 10px; max-width: 360px; margin: 0 auto; justify-content: center;">
+                    <input type="number" id="day" min="1" max="31" placeholder="Day" style="width: 70px; text-align: center; flex-shrink: 0;">
+                    <select id="month" style="flex: 1; min-width: 100px;">
                         <option value="">Month</option>
                         <option value="1">January</option>
                         <option value="2">February</option>
@@ -1646,17 +1646,17 @@
                         <option value="11">November</option>
                         <option value="12">December</option>
                     </select>
-                    <input type="number" id="year" min="1900" max="2025" placeholder="Year" style="width: 100%; text-align: center;">
+                    <input type="number" id="year" min="1900" max="2025" placeholder="Year" style="width: 85px; text-align: center; flex-shrink: 0;">
                 </div>
             </div>
             
             <div class="input-group">
                 <label>Birth Time (optional)</label>
-                <div class="input-row" style="display: grid; grid-template-columns: 60px 20px 60px 70px; gap: 8px; max-width: 250px; margin: 0 auto; align-items: center; justify-content: center;">
-                    <input type="number" id="hour" min="1" max="12" placeholder="Hr" style="width: 100%; text-align: center;">
-                    <span style="color: var(--text-secondary); font-size: 1.2rem; text-align: center;">:</span>
-                    <input type="number" id="minute" min="0" max="59" placeholder="Min" style="width: 100%; text-align: center;">
-                    <select id="ampm" style="width: 100%;">
+                <div class="input-row" style="display: flex; gap: 8px; max-width: 280px; margin: 0 auto; align-items: center; justify-content: center;">
+                    <input type="number" id="hour" min="1" max="12" placeholder="Hr" style="width: 60px; text-align: center; flex-shrink: 0;">
+                    <span style="color: var(--text-secondary); font-size: 1.2rem;">:</span>
+                    <input type="number" id="minute" min="0" max="59" placeholder="Min" style="width: 60px; text-align: center; flex-shrink: 0;">
+                    <select id="ampm" style="width: 75px; flex-shrink: 0;">
                         <option value="AM">AM</option>
                         <option value="PM" selected>PM</option>
                     </select>
@@ -1665,7 +1665,7 @@
             
             <div class="input-group">
                 <label>Location (optional)</label>
-                <div id="locationInput" style="max-width: 350px; margin: 0 auto;">
+                <div id="locationInput" style="max-width: 360px; margin: 0 auto;">
                     <input type="text" id="locationSearch" placeholder="Start typing city name" autocomplete="off" style="width: 100%;">
                     <div id="suggestions"></div>
                 </div>
