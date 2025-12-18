@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>My Library | Quantum Merlin</title>
+    <meta name="description" content="Your personal collection of birth sigils, tarot readings, affirmations, and saved mystical items.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        html {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+        
+        body {
+            background: #0a0a0f;
+            color: #fff;
+            overflow-x: hidden;
+            max-width: 100vw;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        /* Header */
+        .qm-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 18px 40px;
+            background: rgba(10, 10, 15, 0.92);
+            backdrop-filter: blur(25px) saturate(180%);
+            border-bottom: 1px solid rgba(0, 245, 255, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .qm-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .qm-logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+        }
+
+        .qm-logo-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #00f5ff 0%, #9d00ff 100%);
+            border-radius: 14px;
+            font-size: 1.8rem;
+            box-shadow: 0 0 25px rgba(0, 245, 255, 0.5);
+            animation: logoGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes logoGlow {
+            0%, 100% { box-shadow: 0 0 25px rgba(0, 245, 255, 0.5); }
+            50% { box-shadow: 0 0 35px rgba(0, 245, 255, 0.7); }
+        }
+
+        .qm-logo-text {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00f5ff 0%, #ff00ff 50%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .qm-coffee-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #FFDD00, #FFA500);
+            color: #000;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 221, 0, 0.3);
+        }
+
+        .qm-coffee-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255, 221, 0, 0.5);
+            background: linear-gradient(135deg, #FFE44D, #FFB84D);
+        }
+
+        /* Main Content */
+        main {
+            padding: 120px 20px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            text-align: center;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffd700, #00f5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 50px;
+            font-size: 1.2rem;
+        }
+
+        /* Filter Buttons */
+        .filter-bar {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            padding: 10px 24px;
+            background: rgba(20, 20, 30, 0.8);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 25px;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: 'Orbitron', monospace;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(135deg, #00f5ff, #9d00ff);
+            border-color: #00f5ff;
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 245, 255, 0.4);
+        }
+
+        /* Library Grid */
+        .library-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .library-item {
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid rgba(0, 245, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .library-item:hover {
+            transform: translateY(-4px);
+            border-color: #00f5ff;
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+        }
+
+        .library-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .library-item-type {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(0, 245, 255, 0.2);
+            color: #00f5ff;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .delete-btn {
+            background: rgba(255, 50, 50, 0.2);
+            border: 1px solid rgba(255, 50, 50, 0.4);
+            color: #ff5555;
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .delete-btn:hover {
+            background: rgba(255, 50, 50, 0.4);
+            border-color: #ff5555;
+        }
+
+        .library-item-content {
+            margin: 20px 0;
+        }
+
+        .library-item-content h3 {
+            font-family: 'Orbitron', monospace;
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .library-item-content p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .library-item-date {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+
+        /* Sigil Display */
+        .sigil-container {
+            width: 100%;
+            height: 200px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .sigil-svg {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .empty-state-icon {
+            font-size: 6rem;
+            margin-bottom: 30px;
+            opacity: 0.5;
+        }
+
+        .empty-state h2 {
+            font-family: 'Orbitron', monospace;
+            color: #00f5ff;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .empty-state p {
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(135deg, #00f5ff, #9d00ff);
+            color: #fff;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.3);
+        }
+
+        .explore-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 245, 255, 0.5);
+        }
+
+        /* Stats */
+        .stats-bar {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            color: #00f5ff;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .qm-header {
+                padding: 15px 20px;
+            }
+
+            .qm-logo-text {
+                font-size: 1.1rem;
+            }
+
+            .qm-coffee-btn span:last-child {
+                display: none;
+            }
+
+            .library-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-bar {
+                gap: 8px;
+            }
+
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="qm-header">
+        <div class="qm-header-inner">
+            <a href="/" class="qm-logo">
+                <div class="qm-logo-icon">🧙‍♂️</div>
+                <div class="qm-logo-text">Quantum Merlin</div>
+            </a>
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="qm-coffee-btn">
+                <span style="font-size: 1.2rem;">☕</span>
+                <span>Buy Me a Coffee</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>📚 My Library</h1>
+        <p class="subtitle">Your personal collection of saved mystical items</p>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar" id="stats-bar">
+            <div class="stat">
+                <div class="stat-number" id="total-items">0</div>
+                <div class="stat-label">Total Items</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="total-tools">0</div>
+                <div class="stat-label">Tools Used</div>
+            </div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="birth-sigil">🌙 Birth Sigils</button>
+            <button class="filter-btn" data-filter="tarot">🃏 Tarot</button>
+            <button class="filter-btn" data-filter="affirmation">🔮 Affirmations</button>
+            <button class="filter-btn" data-filter="astrology">⭐ Astrology</button>
+            <button class="filter-btn" data-filter="gematria">🔢 Gematria</button>
+            <button class="filter-btn" data-filter="angel">👼 Angel Numbers</button>
+        </div>
+
+        <!-- Library Grid -->
+        <div class="library-grid" id="library-grid">
+            <!-- Items will be dynamically inserted here -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="empty-state" style="display: none;">
+            <div class="empty-state-icon">📖</div>
+            <h2>Your library is empty</h2>
+            <p>Start exploring our tools and save your favorite items to build your personal collection</p>
+            <a href="/hub.html" class="explore-btn">Explore Tools ✨</a>
+        </div>
+    </main>
+
+    <script>
+        // Library Management
+        class LibraryManager {
+            constructor() {
+                this.storageKey = 'quantumJukebox';
+                this.currentFilter = 'all';
+                this.init();
+            }
+
+            init() {
+                this.loadLibrary();
+                this.setupFilters();
+            }
+
+            getLibraryData() {
+                try {
+                    const data = localStorage.getItem(this.storageKey);
+                    return data ? JSON.parse(data) : [];
+                } catch (error) {
+                    console.error('Error loading library:', error);
+                    return [];
+                }
+            }
+
+            saveLibraryData(data) {
+                try {
+                    localStorage.setItem(this.storageKey, JSON.stringify(data));
+                } catch (error) {
+                    console.error('Error saving library:', error);
+                }
+            }
+
+            loadLibrary() {
+                const library = this.getLibraryData();
+                this.renderLibrary(library);
+                this.updateStats(library);
+            }
+
+            renderLibrary(items) {
+                const grid = document.getElementById('library-grid');
+                const emptyState = document.getElementById('empty-state');
+                
+                // Filter items
+                const filteredItems = this.currentFilter === 'all' 
+                    ? items 
+                    : items.filter(item => item.type === this.currentFilter);
+
+                // Show empty state if no items
+                if (filteredItems.length === 0) {
+                    grid.style.display = 'none';
+                    emptyState.style.display = 'block';
+                    return;
+                }
+
+                grid.style.display = 'grid';
+                emptyState.style.display = 'none';
+                
+                // Sort by date (newest first)
+                filteredItems.sort((a, b) => b.timestamp - a.timestamp);
+
+                // Render items
+                grid.innerHTML = filteredItems.map((item, index) => this.renderItem(item, index)).join('');
+            }
+
+            renderItem(item, index) {
+                const date = new Date(item.timestamp).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+
+                const typeLabels = {
+                    'birth-sigil': '🌙 Birth Sigil',
+                    'tarot': '🃏 Tarot',
+                    'affirmation': '🔮 Affirmation',
+                    'astrology': '⭐ Astrology',
+                    'gematria': '🔢 Gematria',
+                    'angel': '👼 Angel Number'
+                };
+
+                let contentHTML = '';
+                
+                // Render based on type
+                if (item.type === 'birth-sigil' && item.sigil) {
+                    contentHTML = `
+                        <div class="sigil-container">
+                            ${item.sigil}
+                        </div>
+                        <h3>${item.name || 'Birth Sigil'}</h3>
+                        ${item.birthDate ? `<p>Born: ${item.birthDate}</p>` : ''}
+                    `;
+                } else if (item.type === 'affirmation') {
+                    contentHTML = `
+                        <h3>${item.title || 'Affirmation'}</h3>
+                        <p>${item.content || item.affirmation || ''}</p>
+                    `;
+                } else if (item.type === 'tarot') {
+                    contentHTML = `
+                        <h3>${item.spread || 'Tarot Reading'}</h3>
+                        <p>${item.cards ? item.cards.join(', ') : ''}</p>
+                    `;
+                } else {
+                    contentHTML = `
+                        <h3>${item.title || item.name || 'Saved Item'}</h3>
+                        <p>${item.content || item.description || ''}</p>
+                    `;
+                }
+
+                return `
+                    <div class="library-item" data-type="${item.type}">
+                        <div class="library-item-header">
+                            <span class="library-item-type">${typeLabels[item.type] || item.type}</span>
+                            <button class="delete-btn" onclick="libraryManager.deleteItem(${index})">Delete</button>
+                        </div>
+                        <div class="library-item-content">
+                            ${contentHTML}
+                        </div>
+                        <div class="library-item-date">Saved on ${date}</div>
+                    </div>
+                `;
+            }
+
+            deleteItem(index) {
+                if (!confirm('Are you sure you want to delete this item?')) return;
+
+                const library = this.getLibraryData();
+                
+                // Filter items based on current filter
+                const filteredItems = this.currentFilter === 'all' 
+                    ? library 
+                    : library.filter(item => item.type === this.currentFilter);
+                
+                // Get the actual item to delete
+                const itemToDelete = filteredItems[index];
+                
+                // Remove from main library
+                const newLibrary = library.filter(item => item.timestamp !== itemToDelete.timestamp);
+                
+                this.saveLibraryData(newLibrary);
+                this.loadLibrary();
+            }
+
+            setupFilters() {
+                const filterBtns = document.querySelectorAll('.filter-btn');
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        this.currentFilter = btn.dataset.filter;
+                        this.loadLibrary();
+                    });
+                });
+            }
+
+            updateStats(library) {
+                const totalItems = library.length;
+                const uniqueTools = new Set(library.map(item => item.type)).size;
+
+                document.getElementById('total-items').textContent = totalItems;
+                document.getElementById('total-tools').textContent = uniqueTools;
+            }
+        }
+
+        // Initialize Library
+        const libraryManager = new LibraryManager();
+    </script>
+</body>
+</html>
