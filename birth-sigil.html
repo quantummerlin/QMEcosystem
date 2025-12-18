@@ -78,12 +78,14 @@
         .qrc-logo-icon {
             width: 48px;
             height: 48px;
+            min-width: 48px;
+            min-height: 48px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, #00f5ff 0%, #9d00ff 100%);
             border-radius: 14px;
-            font-size: 1.8rem;
+            font-size: 2rem;
             box-shadow: 0 0 25px rgba(0, 245, 255, 0.5), 0 0 50px rgba(157, 0, 255, 0.3);
             animation: logoGlow 3s ease-in-out infinite;
         }
@@ -1542,38 +1544,37 @@
             <p>Enter your birth details to generate your unique celestial signature</p>
             
             <div class="input-group">
-                <label>Birth Date</label>
-                <div class="input-row" style="display: flex; gap: 10px; max-width: 360px; margin: 0 auto; justify-content: center;">
-                    <input type="number" id="day" min="1" max="31" placeholder="Day" style="width: 70px; text-align: center; flex-shrink: 0;">
-                    <select id="month" style="flex: 1; min-width: 100px;">
-                        <option value="">Month</option>
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                        <option value="4">April</option>
-                        <option value="5">May</option>
-                        <option value="6">June</option>
-                        <option value="7">July</option>
-                        <option value="8">August</option>
-                        <option value="9">September</option>
-                        <option value="10">October</option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
-                    </select>
-                    <input type="number" id="year" min="1900" max="2025" placeholder="Year" style="width: 85px; text-align: center; flex-shrink: 0;">
-                </div>
-            </div>
-            
-            <div class="input-group">
-                <label>Birth Time (optional)</label>
-                <div class="input-row" style="display: flex; gap: 8px; max-width: 280px; margin: 0 auto; align-items: center; justify-content: center;">
-                    <input type="number" id="hour" min="1" max="12" placeholder="Hr" style="width: 60px; text-align: center; flex-shrink: 0;">
-                    <span style="color: var(--text-secondary); font-size: 1.2rem;">:</span>
-                    <input type="number" id="minute" min="0" max="59" placeholder="Min" style="width: 60px; text-align: center; flex-shrink: 0;">
-                    <select id="ampm" style="width: 75px; flex-shrink: 0;">
-                        <option value="AM">AM</option>
-                        <option value="PM" selected>PM</option>
-                    </select>
+                <label>Birth Date & Time</label>
+                <div class="input-row" style="display: flex; flex-direction: column; gap: 12px; max-width: 400px; margin: 0 auto;">
+                    <div style="display: flex; gap: 8px; justify-content: center;">
+                        <input type="number" id="day" min="1" max="31" placeholder="Day" style="width: 65px; text-align: center; padding: 12px 8px; font-size: 1rem;">
+                        <select id="month" style="flex: 1; max-width: 140px; padding: 12px 8px; font-size: 1rem;">
+                            <option value="">Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <input type="number" id="year" min="1900" max="2025" placeholder="Year" style="width: 80px; text-align: center; padding: 12px 8px; font-size: 1rem;">
+                    </div>
+                    <div style="display: flex; gap: 8px; align-items: center; justify-content: center;">
+                        <span style="color: var(--text-secondary); font-size: 0.9rem; margin-right: 8px;">Time:</span>
+                        <input type="number" id="hour" min="1" max="12" placeholder="Hr" style="width: 55px; text-align: center; padding: 12px 8px; font-size: 1rem;">
+                        <span style="color: var(--text-secondary); font-size: 1.2rem;">:</span>
+                        <input type="number" id="minute" min="0" max="59" placeholder="Min" style="width: 55px; text-align: center; padding: 12px 8px; font-size: 1rem;">
+                        <select id="ampm" style="width: 70px; padding: 12px 8px; font-size: 1rem;">
+                            <option value="AM">AM</option>
+                            <option value="PM" selected>PM</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             
@@ -2564,24 +2565,28 @@
                         background: rgba(0, 0, 0, 0.3);
                         border: 1px solid rgba(157, 0, 255, 0.3);
                         border-radius: 15px;
-                        padding: 15px 10px;
+                        padding: 18px 16px;
                         margin-top: 20px;
                         text-align: left;
                         width: 100%;
+                        max-width: 100%;
                         box-sizing: border-box;
                     }
                     
                     .reading-section h3 {
                         font-family: 'Orbitron', monospace;
                         color: var(--neon-purple);
-                        margin-bottom: 15px;
-                        font-size: 1.2rem;
+                        margin-bottom: 12px;
+                        font-size: 1.15rem;
+                        word-wrap: break-word;
                     }
                     
                     .reading-section p {
-                        margin-bottom: 12px;
-                        line-height: 1.7;
+                        margin-bottom: 14px;
+                        line-height: 1.65;
                         color: var(--text-secondary);
+                        word-wrap: break-word;
+                        overflow-wrap: break-word;
                     }
                     
                     .reading-section strong {
