@@ -2564,7 +2564,7 @@
                         background: rgba(0, 0, 0, 0.3);
                         border: 1px solid rgba(157, 0, 255, 0.3);
                         border-radius: 15px;
-                        padding: 0;
+                        padding: 25px;
                         margin-top: 20px;
                         text-align: left;
                         width: 100%;
@@ -2805,7 +2805,7 @@
                     .grimoire-card {
                         background: rgba(20, 20, 20, 0.9);
                         border: 1px solid #333;
-                        padding: 12px;
+                        padding: 15px;
                         margin-bottom: 16px;
                         border-radius: 16px;
                         position: relative;
@@ -2814,6 +2814,9 @@
                         overflow-wrap: break-word;
                         width: 100%;
                         box-sizing: border-box;
+                    }
+                    .grimoire-card p {
+                        color: #e0e0e0;
                     }
                     .grimoire-card.glow {
                         box-shadow: 0 0 20px rgba(0, 245, 255, 0.15);
@@ -2844,7 +2847,7 @@
                     .cosmic-tension-box .label {
                         text-transform: uppercase;
                         font-size: 0.7rem;
-                        color: #666;
+                        color: #999;
                         letter-spacing: 2px;
                         margin-bottom: 10px;
                     }
@@ -2870,7 +2873,7 @@
                     }
                     .decode-item p {
                         font-size: 0.85rem;
-                        color: #aaa;
+                        color: #d0d0d0;
                         line-height: 1.5;
                     }
                     .mantra-section {
@@ -2904,7 +2907,7 @@
                     }
                     .archive-id {
                         font-size: 0.6rem;
-                        color: #555;
+                        color: #999;
                         letter-spacing: 1px;
                         margin-bottom: 10px;
                         word-wrap: break-word;
@@ -2938,7 +2941,7 @@
                             gap: 10px;
                         }
                     }
-                    .data-row .label { color: #666; font-size: 0.85rem; }
+                    .data-row .label { color: #999; font-size: 0.85rem; }
                     .data-row .value { color: #fff; font-size: 0.9rem; word-wrap: break-word; }
                 </style>
                 
@@ -2994,24 +2997,22 @@
                 <!-- SECTION 2: THE LUNAR DEPTH -->
                 <div class="grimoire-card" style="border-color: #444;">
                     <h2 class="grimoire-silver">🌑 The Lunar Texture 🌑</h2>
-                    <p style="text-align: center; margin-bottom: 10px;"><strong>${moonInfo.name}</strong></p>
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                        <div style="flex: 1; min-width: 0;">
-                            <p><strong>Phase:</strong> ${moonInfo.name} (${moonIllumination}% Illumination)<br>
-                            <strong>Archetype:</strong> ${archetype.name} — ${archetype.desc}</p>
-                            
-                            <p>${isDaytime ? 
-                                `While the Sun was ${sunAltitude > 45 ? 'high and brilliant' : 'present in the sky'}, your Moon was in its ${moonInfo.name} phase. This creates a dynamic tension between your visible, external self and your hidden, internal depths.` :
-                                `Born under the cover of night with a ${moonInfo.name} moon, your soul resonates with the mysteries of the dark. You are naturally attuned to the unseen currents that flow beneath the surface of everyday life.`
-                            }</p>
-                            
-                            <p><strong>Lunar Gift:</strong> ${moonInfo.meaning}. This phase infuses your being with ${moonIllumination > 50 ? 'the energy of manifestation and visibility. What you create tends to be seen and recognized.' : 'the wisdom of the inner world. You possess insight that comes from contemplation rather than action.'}</p>
-                        </div>
-                        <div class="cosmic-tension-box" style="flex: 1; min-width: 0; margin-top: 0;">
-                            <div class="label">Cosmic Tension</div>
-                            <p style="font-style: italic; color: #ddd; margin-bottom: 15px;">"${isDaytime ? 'The Sun illuminates, but the Moon knows.' : 'In darkness, the soul remembers what daylight forgets.'}"</p>
-                            <p style="color: #aaa;">Your challenge is to honor both ${isDaytime ? 'your visible accomplishments and your private wisdom' : 'your nocturnal insights and your need to share them with the waking world'}.</p>
-                        </div>
+                    <p style="text-align: center; margin-bottom: 15px; color: #fff;"><strong>${moonInfo.name}</strong></p>
+                    
+                    <p style="color: #e0e0e0;"><strong>Phase:</strong> ${moonInfo.name} (${moonIllumination}% Illumination)<br>
+                    <strong>Archetype:</strong> ${archetype.name} — ${archetype.desc}</p>
+                    
+                    <p style="color: #e0e0e0;">${isDaytime ? 
+                        `While the Sun was ${sunAltitude > 45 ? 'high and brilliant' : 'present in the sky'}, your Moon was in its ${moonInfo.name} phase. This creates a dynamic tension between your visible, external self and your hidden, internal depths.` :
+                        `Born under the cover of night with a ${moonInfo.name} moon, your soul resonates with the mysteries of the dark. You are naturally attuned to the unseen currents that flow beneath the surface of everyday life.`
+                    }</p>
+                    
+                    <p style="color: #e0e0e0;"><strong>Lunar Gift:</strong> ${moonInfo.meaning}. This phase infuses your being with ${moonIllumination > 50 ? 'the energy of manifestation and visibility. What you create tends to be seen and recognized.' : 'the wisdom of the inner world. You possess insight that comes from contemplation rather than action.'}</p>
+                    
+                    <div class="cosmic-tension-box" style="margin-top: 15px;">
+                        <div class="label">Cosmic Tension</div>
+                        <p style="font-style: italic; color: #e0e0e0; margin-bottom: 15px;">"${isDaytime ? 'The Sun illuminates, but the Moon knows.' : 'In darkness, the soul remembers what daylight forgets.'}"</p>
+                        <p style="color: #e0e0e0;">Your challenge is to honor both ${isDaytime ? 'your visible accomplishments and your private wisdom' : 'your nocturnal insights and your need to share them with the waking world'}.</p>
                     </div>
                 </div>
                 
@@ -3034,7 +3035,7 @@
                 <!-- SECTION 4: SIGIL DECODED -->
                 <div class="grimoire-card">
                     <h2 style="color: #fff; text-align: center; border: none; font-size: 1.1rem; margin-bottom: 20px;">🔮 YOUR QUANTUM SIGNATURE DECODED 🔮</h2>
-                    <p style="text-align: center; color: #888; margin-bottom: 30px;">This sigil is not random art. It is a data visualization of your cosmic moment.</p>
+                    <p style="text-align: center; color: #d0d0d0; margin-bottom: 30px;">This sigil is not random art. It is a data visualization of your cosmic moment.</p>
                     
                     <div class="sigil-decoded-grid">
                         <div class="decode-item">
@@ -3068,16 +3069,17 @@
                     <div style="position: absolute; top: 0; right: 0; background: #800000; color: #fff; font-size: 0.65rem; padding: 3px 8px; letter-spacing: 1px;">SYSTEM WARNING</div>
                     
                     <h2 style="color: #ff4444; border-bottom: 1px solid #333;">⚠️ The Shadow Frequency ⚠️</h2>
-                    <p style="text-align: center; margin-bottom: 10px;"><strong>${getShadowName(moonInfo.age, quadrant)}</strong></p>
+                    <p style="text-align: center; margin-bottom: 15px; color: #fff;"><strong>${getShadowName(moonInfo.age, quadrant)}</strong></p>
                     
-                    <div style="display: flex; gap: 15px; align-items: flex-start; flex-wrap: wrap;">
-                        <div style="font-size: 3rem; opacity: 0.3; min-width: 60px; text-align: center;">${getShadowIcon(moonInfo.age)}</div>
-                        <div style="flex: 1; min-width: 0;">
-                            <p>Every cosmic gift carries a shadow. With your <strong>${moonInfo.name}</strong> moon and <strong>${quadrant}</strong> quadrant alignment, your greatest challenge is <strong>${getShadowChallenge(moonInfo.age, quadrant)}</strong>.</p>
-                            
-                            <p>${getShadowDescription(moonInfo.age, starDensity, isDaytime)}</p>
-                            
-                            <p style="color: #ff8888; font-style: italic;">"${getShadowQuote(moonInfo.age)}"</p>
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <div style="font-size: 4rem; opacity: 0.3;">${getShadowIcon(moonInfo.age)}</div>
+                    </div>
+                    <div>
+                        <p style="color: #e0e0e0;">Every cosmic gift carries a shadow. With your <strong>${moonInfo.name}</strong> moon and <strong>${quadrant}</strong> quadrant alignment, your greatest challenge is <strong>${getShadowChallenge(moonInfo.age, quadrant)}</strong>.</p>
+                        
+                        <p style="color: #e0e0e0;">${getShadowDescription(moonInfo.age, starDensity, isDaytime)}</p>
+                        
+                        <p style="color: #ff8888; font-style: italic;">"${getShadowQuote(moonInfo.age)}"</p>
                             
                             <p><strong>The Antidote:</strong> ${getShadowAntidote(moonInfo.age, isDaytime, quadrant)}</p>
                         </div>
@@ -3089,49 +3091,49 @@
                     
                     <!-- Sun Sign -->
                     <div class="grimoire-card" style="text-align: center; border-top: 3px solid #ff6b4a; padding: 20px;">
-                        <div style="font-size: 0.75rem; color: #666; letter-spacing: 2px; margin-bottom: 10px;">SUN SIGN</div>
+                        <div style="font-size: 0.75rem; color: #999; letter-spacing: 2px; margin-bottom: 10px;">SUN SIGN</div>
                         <h3 style="color: #ff6b4a; margin: 0;">${zodiac.name}</h3>
                         <div style="font-size: 2.5rem; margin: 15px 0;">${zodiac.symbol}</div>
-                        <p style="font-size: 0.85rem; line-height: 1.5; color: #aaa;">${zodiac.element} Element • Your core identity and life force expression.</p>
+                        <p style="font-size: 0.85rem; line-height: 1.5; color: #d0d0d0;">${zodiac.element} Element • Your core identity and life force expression.</p>
                     </div>
                     
                     <!-- Personal Year -->
                     <div class="grimoire-card" style="text-align: center; border-top: 3px solid #9370DB; padding: 20px;">
-                        <div style="font-size: 0.75rem; color: #666; letter-spacing: 2px; margin-bottom: 10px;">PERSONAL YEAR ${new Date().getFullYear()}</div>
+                        <div style="font-size: 0.75rem; color: #999; letter-spacing: 2px; margin-bottom: 10px;">PERSONAL YEAR ${new Date().getFullYear()}</div>
                         <h3 style="color: #9370DB; margin: 0;">${personalYearInfo.theme}</h3>
                         <div style="font-size: 2.5rem; margin: 15px 0;">${personalYear}</div>
-                        <p style="font-size: 0.85rem; line-height: 1.5; color: #aaa;">${personalYearInfo.desc}</p>
+                        <p style="font-size: 0.85rem; line-height: 1.5; color: #d0d0d0;">${personalYearInfo.desc}</p>
                     </div>
                     
                     <!-- Tarot Card -->
                     <div class="grimoire-card" style="text-align: center; border-top: 3px solid #D4AF37; padding: 20px;">
-                        <div style="font-size: 0.75rem; color: #666; letter-spacing: 2px; margin-bottom: 10px;">TAROT CORRESPONDENCE</div>
+                        <div style="font-size: 0.75rem; color: #999; letter-spacing: 2px; margin-bottom: 10px;">TAROT CORRESPONDENCE</div>
                         <h3 class="grimoire-gold" style="margin: 0;">${getTarotCard(moonInfo.age, quadrant).name}</h3>
                         <div style="font-size: 2.5rem; margin: 15px 0;">${getTarotCard(moonInfo.age, quadrant).symbol}</div>
-                        <p style="font-size: 0.85rem; line-height: 1.5; color: #aaa;">${getTarotCard(moonInfo.age, quadrant).meaning}</p>
+                        <p style="font-size: 0.85rem; line-height: 1.5; color: #d0d0d0;">${getTarotCard(moonInfo.age, quadrant).meaning}</p>
                     </div>
                     
                     <!-- Life Path -->
                     <div class="grimoire-card" style="text-align: center; border-top: 3px solid #50C878; padding: 20px;">
-                        <div style="font-size: 0.75rem; color: #666; letter-spacing: 2px; margin-bottom: 10px;">NUMEROLOGY</div>
+                        <div style="font-size: 0.75rem; color: #999; letter-spacing: 2px; margin-bottom: 10px;">NUMEROLOGY</div>
                         <h3 class="grimoire-emerald" style="margin: 0;">Life Path ${getLifePathNumber(dateTime)}</h3>
                         <div style="font-size: 2.5rem; margin: 15px 0;">${getLifePathSymbol(getLifePathNumber(dateTime))}</div>
-                        <p style="font-size: 0.85rem; line-height: 1.5; color: #aaa;">${getLifePathMeaning(getLifePathNumber(dateTime))}</p>
+                        <p style="font-size: 0.85rem; line-height: 1.5; color: #d0d0d0;">${getLifePathMeaning(getLifePathNumber(dateTime))}</p>
                     </div>
                     
                     <!-- Element Balance -->
                     <div class="grimoire-card" style="text-align: center; border-top: 3px solid #A0A0A0; padding: 20px;">
-                        <div style="font-size: 0.75rem; color: #666; letter-spacing: 2px; margin-bottom: 10px;">ELEMENTAL DOMINANCE</div>
+                        <div style="font-size: 0.75rem; color: #999; letter-spacing: 2px; margin-bottom: 10px;">ELEMENTAL DOMINANCE</div>
                         <h3 style="color: #fff; margin: 0;">${elementalDom.dominant} / ${elementalDom.secondary}</h3>
                         <div style="font-size: 2.5rem; margin: 15px 0;">${elementalDom.dominant === 'Fire' ? '🔥' : elementalDom.dominant === 'Earth' ? '⛰️' : elementalDom.dominant === 'Air' ? '💨' : '💧'}</div>
-                        <p style="font-size: 0.85rem; line-height: 1.5; color: #aaa;">Combined from ${zodiac.name} (${zodiac.element}), ${moonInfo.name} moon, and ${quadrant} quadrant.</p>
+                        <p style="font-size: 0.85rem; line-height: 1.5; color: #d0d0d0;">Combined from ${zodiac.name} (${zodiac.element}), ${moonInfo.name} moon, and ${quadrant} quadrant.</p>
                     </div>
                 </div>
                 
                 <!-- SECTION 7: ACTIVATION RITUAL -->
                 <div class="grimoire-card" style="background: linear-gradient(180deg, rgba(20,20,20,0) 0%, rgba(20,40,30,0.5) 100%); border-radius: 20px;">
                     <h2 style="text-align: center; font-family: 'Cinzel', serif; margin-bottom: 10px;">⚡ SIGIL ACTIVATION PROTOCOL ⚡</h2>
-                    <p style="text-align: center; color: #888; max-width: 600px; margin: 0 auto 30px auto;">
+                    <p style="text-align: center; color: #d0d0d0; max-width: 600px; margin: 0 auto 30px auto;">
                         Your sigil is a capacitor. It holds energy until you choose to release it.
                         Based on your <strong>${moonInfo.name}</strong> signature, use this method:
                     </p>
@@ -3140,7 +3142,7 @@
                         <div style="background: #50C878; color: #000; min-width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; font-size: 1.1rem; flex-shrink: 0;">1</div>
                         <div style="flex: 1; min-width: 0;">
                             <strong class="grimoire-emerald">The Grounding (${getActivationElement(quadrant)})</strong>
-                            <p style="margin-top: 8px; color: #ccc;">${getActivationStep1(quadrant, isDaytime)}</p>
+                            <p style="margin-top: 8px; color: #e0e0e0;">${getActivationStep1(quadrant, isDaytime)}</p>
                         </div>
                     </div>
                     
@@ -3148,7 +3150,7 @@
                         <div style="background: #50C878; color: #000; min-width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; font-size: 1.1rem; flex-shrink: 0;">2</div>
                         <div style="flex: 1; min-width: 0;">
                             <strong class="grimoire-emerald">The Visual Trace (Focus)</strong>
-                            <p style="margin-top: 8px; color: #ccc;">${getActivationStep2(moonInfo.age, style)}</p>
+                            <p style="margin-top: 8px; color: #e0e0e0;">${getActivationStep2(moonInfo.age, style)}</p>
                         </div>
                     </div>
                     
@@ -3156,7 +3158,7 @@
                         <div style="background: #50C878; color: #000; min-width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; font-size: 1.1rem; flex-shrink: 0;">3</div>
                         <div style="flex: 1; min-width: 0;">
                             <strong class="grimoire-emerald">The Sonic Key (Vibration)</strong>
-                            <p style="margin-top: 8px; color: #ccc;">${getActivationStep3(moonInfo.age)}</p>
+                            <p style="margin-top: 8px; color: #e0e0e0;">${getActivationStep3(moonInfo.age)}</p>
                         </div>
                     </div>
                 </div>
@@ -3166,23 +3168,23 @@
                 
                 <!-- SECTION 9: ALCHEMICAL SIGNATURE -->
                 <div class="grimoire-card" style="text-align: center; margin-top: 40px;">
-                    <div style="font-size: 0.75rem; color: #666; letter-spacing: 3px; margin-bottom: 20px;">ALCHEMICAL LOADOUT</div>
+                    <div style="font-size: 0.75rem; color: #999; letter-spacing: 3px; margin-bottom: 20px;">ALCHEMICAL LOADOUT</div>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; max-width: 700px; margin: 0 auto; padding: 0 8px;">
                         <div>
                             <span class="grimoire-gold">✦ Metal:</span> ${getAlchemicalMetal(quadrant)}
-                            <div style="font-size: 0.75rem; color: #666; margin-top: 5px;">(${getAlchemicalMetalMeaning(quadrant)})</div>
+                            <div style="font-size: 0.75rem; color: #999; margin-top: 5px;">(${getAlchemicalMetalMeaning(quadrant)})</div>
                         </div>
                         <div>
                             <span class="grimoire-emerald">✦ Stone:</span> ${getAlchemicalStone(moonInfo.age)}
-                            <div style="font-size: 0.75rem; color: #666; margin-top: 5px;">(${getAlchemicalStoneMeaning(moonInfo.age)})</div>
+                            <div style="font-size: 0.75rem; color: #999; margin-top: 5px;">(${getAlchemicalStoneMeaning(moonInfo.age)})</div>
                         </div>
                         <div>
                             <span style="color: #fff;">✦ Direction:</span> ${quadrant.charAt(0).toUpperCase() + quadrant.slice(1)}
-                            <div style="font-size: 0.75rem; color: #666; margin-top: 5px;">(${quadrantInfo.meaning.split(',')[0]})</div>
+                            <div style="font-size: 0.75rem; color: #999; margin-top: 5px;">(${quadrantInfo.meaning.split(',')[0]})</div>
                         </div>
                         <div>
                             <span class="grimoire-cyan">✦ Power Hour:</span> ${timeStr}
-                            <div style="font-size: 0.75rem; color: #666; margin-top: 5px;">(${isDaytime ? 'Solar Zenith' : 'Lunar Depth'})</div>
+                            <div style="font-size: 0.75rem; color: #999; margin-top: 5px;">(${isDaytime ? 'Solar Zenith' : 'Lunar Depth'})</div>
                         </div>
                     </div>
                 </div>
@@ -3191,7 +3193,7 @@
                 <div class="mantra-section">
                     <div class="label">YOUR COSMIC MANTRA</div>
                     <p class="mantra-text">"${mantra}"</p>
-                    <div style="margin-top: 30px; color: #555; font-size: 0.85rem;">
+                    <div style="margin-top: 30px; color: #999; font-size: 0.85rem;">
                         — Generated from ${moonInfo.name} × ${quadrant.charAt(0).toUpperCase() + quadrant.slice(1)} Quadrant —
                     </div>
                 </div>
@@ -3421,27 +3423,18 @@
             }
             
             return `
-                <div class="grimoire-card" style="border-top: 1px solid #333; margin-top: 40px; padding-top: 40px;">
-                    <h2 style="text-align: right; font-size: 1.2rem; color: #666; margin-bottom: 0;">⏳ TEMPORAL COORDINATES: THE NOW</h2>
+                <div class="grimoire-card" style="margin-top: 25px;">
+                    <h2 class="grimoire-emerald" style="text-align: center; border-bottom: 1px solid #333; padding-bottom: 12px;">⏳ Your Current Life Phase ⏳</h2>
                     
-                    <div style="display: flex; gap: 40px; align-items: center; margin-top: 30px; flex-wrap: wrap;">
-                        <div style="flex: 1; min-width: 280px;">
-                            <h3 class="grimoire-emerald" style="font-size: 1.5rem;">${transitName}</h3>
-                            <p style="color: #aaa; margin-bottom: 15px;">Current Age: <strong>${age}</strong> • Status: <span style="color: #50C878;">ACTIVE</span></p>
-                            
-                            <p>${transitDescription}</p>
-                            
-                            <div style="background: #111; padding: 15px; border-left: 3px solid #50C878; margin-top: 20px;">
-                                <p style="font-style: italic; margin: 0;">"${transitQuote}"</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Timeline Visual -->
-                        <div style="flex: 0 0 100px; height: 200px; position: relative; display: flex; align-items: center; justify-content: center;">
-                            <div style="width: 2px; height: 100%; background: linear-gradient(to bottom, #333, #50C878, #333);"></div>
-                            <div style="position: absolute; width: 16px; height: 16px; background: #50C878; border-radius: 50%; box-shadow: 0 0 15px #50C878;"></div>
-                            <div style="position: absolute; left: 25px; font-size: 0.8rem; color: #50C878; white-space: nowrap;">YOU ARE HERE</div>
-                        </div>
+                    <div style="text-align: center; margin: 20px 0;">
+                        <h3 class="grimoire-emerald" style="font-size: 1.4rem; margin-bottom: 10px;">${transitName}</h3>
+                        <p style="color: #e0e0e0; margin-bottom: 10px;">Current Age: <strong>${age}</strong> • Status: <span style="color: #50C878;">⚡ ACTIVE</span></p>
+                    </div>
+                    
+                    <p style="color: #e0e0e0; text-align: center; margin-bottom: 20px;">${transitDescription}</p>
+                    
+                    <div style="background: #111; padding: 15px; border-left: 3px solid #50C878; margin-top: 20px;">
+                        <p style="font-style: italic; margin: 0; color: #e0e0e0; text-align: center;">"${transitQuote}"</p>
                     </div>
                 </div>
             `;
