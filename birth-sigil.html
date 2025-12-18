@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Quantum Birth Sigil Generator | Quantum Merlin</title>
     <meta name="description" content="Generate a unique quantum birth sigil based on your exact birth date, time, and location. Discover your cosmic signature through lunar phase and stellar alignment.">
     <meta name="keywords" content="lunar sigil, star date sigil, moon phase art, celestial signature, astrology art, birth sigil, tattoo design">
@@ -24,11 +24,20 @@
     
     <style>
         /* Page-Specific Quantum Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        html {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
         body {
             background: #0a0a0f;
             color: #fff;
             overflow-x: hidden;
             padding-top: 90px;
+            max-width: 100vw;
+            width: 100%;
         }
 
         /* World-Class Header Styling */
@@ -284,6 +293,12 @@
             font-family: 'Exo 2', sans-serif;
         }
 
+        .qrc-coffee-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255, 221, 0, 0.5) !important;
+            background: linear-gradient(135deg, #FFE44D, #FFB84D) !important;
+        }
+
         @media (max-width: 1024px) {
             .qrc-logo-text {
                 display: none;
@@ -313,7 +328,8 @@
                 padding-top: 75px;
             }
             .generator-container {
-                padding: 10px;
+                padding: 8px;
+                max-width: 100%;
             }
             .page-header h1 {
                 font-size: 1.8rem;
@@ -1486,111 +1502,10 @@
                 </div>
             </a>
             <nav class="qrc-nav-actions">
-                <div class="qrc-nav-menu">
-                    <button class="qrc-nav-toggle" onclick="toggleNav()">
-                        <span class="qrc-nav-toggle-icon">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                        <span>Tools</span>
-                    </button>
-                    <div class="qrc-nav-dropdown" id="navDropdown">
-                        <div class="qrc-nav-grid">
-                            <a href="/frequencies" class="qrc-nav-link">
-                                <span class="nav-icon">🎵</span>
-                                <div class="nav-content">
-                                    <div class="nav-title">Genesis</div>
-                                    <div class="nav-desc">Sacred Frequencies</div>
-                                </div>
-                            </a>
-                            <a href="/codes" class="qrc-nav-link">
-                                <span class="nav-icon">🔮</span>
-                                <div class="nav-content">
-                                    <div class="nav-title">Reality Codes</div>
-                                    <div class="nav-desc">Quantum Affirmations</div>
-                                </div>
-                            </a>
-                            <a href="/tarot" class="qrc-nav-link">
-                                <span class="nav-icon">🃏</span>
-                                <div class="nav-content">
-                                    <div class="nav-title">Tarot</div>
-                                    <div class="nav-desc">Divine Guidance</div>
-                                </div>
-                            </a>
-                            <a href="/gematria" class="qrc-nav-link">
-                                <span class="nav-icon">🔢</span>
-                                <div class="nav-content">
-                                    <div class="nav-title">Gematria</div>
-                                    <div class="nav-desc">Sacred Numbers</div>
-                                </div>
-                            </a>
-                            <a href="/sigils" class="qrc-nav-link">
-                                <span class="nav-icon">🔯</span>
-                                <div class="nav-content">
-                                    <div class="nav-title">Sigil Creator</div>
-                                    <div class="nav-desc">Intention Symbols</div>
-                                </div>
-                            </a>
-                            <a href="/birth-sigil" class="qrc-nav-link active">
-                                <span class="nav-icon">🌙</span>
-                                <div class="nav-content">
-                                    <div class="nav-title">Birth Sigil</div>
-                                    <div class="nav-desc">Cosmic Signatures</div>
-                                </div>
-                            </a>
-                            <a href="/astrology" class="qrc-nav-link">
-                                <span class="nav-icon">⭐</span>
-                                <div class="nav-content">
-                                    <div class="nav-title">Astrology</div>
-                                    <div class="nav-desc">Birth Charts</div>
-                                </div>
-                            </a>
-                            <a href="/chinese-zodiac" class="qrc-nav-link">
-                                <span class="nav-icon">🐉</span>
-                                <div class="nav-content">
-                                    <div class="nav-title">Chinese Zodiac</div>
-                                    <div class="nav-desc">Eastern Wisdom</div>
-                                </div>
-                            </a>
-                            <a href="/crystals" class="qrc-nav-link">
-                                <span class="nav-icon">💎</span>
-                                <div class="nav-content">
-                                    <div class="nav-title">Crystals</div>
-                                    <div class="nav-desc">Healing Stones</div>
-                                </div>
-                            </a>
-                            <a href="/water" class="qrc-nav-link">
-                                <span class="nav-icon">💧</span>
-                                <div class="nav-content">
-                                    <div class="nav-title">Water Charging</div>
-                                    <div class="nav-desc">Energize Water</div>
-                                </div>
-                            </a>
-                            <a href="/forecasts" class="qrc-nav-link">
-                                <span class="nav-icon">🌌</span>
-                                <div class="nav-content">
-                                    <div class="nav-title">Forecasts</div>
-                                    <div class="nav-desc">Daily Insights</div>
-                                </div>
-                            </a>
-                            <a href="/angels" class="qrc-nav-link">
-                                <span class="nav-icon">👼</span>
-                                <div class="nav-content">
-                                    <div class="nav-title">Angel Numbers</div>
-                                    <div class="nav-desc">Divine Messages</div>
-                                </div>
-                            </a>
-                            <a href="/library" class="qrc-nav-link">
-                                <span class="nav-icon">📚</span>
-                                <div class="nav-content">
-                                    <div class="nav-title">My Library</div>
-                                    <div class="nav-desc">Saved Collection</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="qrc-coffee-btn" style="display: flex; align-items: center; gap: 8px; padding: 10px 20px; background: linear-gradient(135deg, #FFDD00, #FFA500); color: #000; font-family: 'Orbitron', sans-serif; font-weight: 600; border-radius: 20px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 221, 0, 0.3);">
+                    <span style="font-size: 1.2rem;">☕</span>
+                    <span>Buy Me a Coffee</span>
+                </a>
             </nav>
         </div>
     </header>
@@ -2574,9 +2489,11 @@
                         background: rgba(0, 0, 0, 0.3);
                         border: 1px solid rgba(157, 0, 255, 0.3);
                         border-radius: 15px;
-                        padding: 25px;
-                        margin-top: 25px;
+                        padding: 15px 10px;
+                        margin-top: 20px;
                         text-align: left;
+                        width: 100%;
+                        box-sizing: border-box;
                     }
                     
                     .reading-section h3 {
@@ -2805,13 +2722,15 @@
                     .grimoire-card {
                         background: rgba(20, 20, 20, 0.9);
                         border: 1px solid #333;
-                        padding: 20px;
-                        margin-bottom: 20px;
+                        padding: 16px;
+                        margin-bottom: 16px;
                         border-radius: 16px;
                         position: relative;
                         overflow: hidden;
                         word-wrap: break-word;
                         overflow-wrap: break-word;
+                        width: 100%;
+                        box-sizing: border-box;
                     }
                     .grimoire-card.glow {
                         box-shadow: 0 0 20px rgba(0, 245, 255, 0.15);
@@ -2819,11 +2738,12 @@
                     .grimoire-card h2 {
                         border-bottom: 1px solid #333;
                         padding-bottom: 12px;
-                        margin-bottom: 20px;
+                        margin-bottom: 16px;
                         text-transform: uppercase;
                         letter-spacing: 1px;
-                        font-size: 1rem;
+                        font-size: 0.9rem;
                         word-wrap: break-word;
+                        text-align: center;
                     }
                     .grimoire-gold { color: #D4AF37; }
                     .grimoire-cyan { color: #00f5ff; }
@@ -2831,10 +2751,10 @@
                     .grimoire-silver { color: #A0A0A0; }
                     .cosmic-tension-box {
                         background: #111;
-                        padding: 15px;
+                        padding: 12px;
                         border-radius: 12px;
                         border: 1px dashed #444;
-                        margin-top: 15px;
+                        margin-top: 12px;
                     }
                     .cosmic-tension-box .label {
                         text-transform: uppercase;
@@ -2846,54 +2766,53 @@
                     .sigil-decoded-grid {
                         display: grid;
                         grid-template-columns: 1fr;
-                        gap: 20px;
-                        margin-top: 20px;
+                        gap: 16px;
+                        margin-top: 16px;
                     }
                     @media (min-width: 600px) {
                         .sigil-decoded-grid {
                             grid-template-columns: repeat(2, 1fr);
                         }
                     }
-                    }
                     .decode-item h3 {
-                        font-size: 1rem;
+                        font-size: 0.95rem;
                         margin-bottom: 8px;
                     }
                     .decode-item p {
-                        font-size: 0.9rem;
+                        font-size: 0.85rem;
                         color: #aaa;
-                        line-height: 1.6;
+                        line-height: 1.5;
                     }
                     .mantra-section {
                         text-align: center;
-                        padding: 40px 20px;
+                        padding: 30px 15px;
                         border-top: 1px solid #222;
-                        margin-top: 40px;
+                        margin-top: 30px;
                     }
                     .mantra-section .label {
-                        font-size: 0.8rem;
+                        font-size: 0.75rem;
                         letter-spacing: 3px;
                         color: #666;
-                        margin-bottom: 20px;
+                        margin-bottom: 15px;
                     }
                     .mantra-text {
-                        font-size: 1.4rem;
-                        line-height: 1.6;
+                        font-size: 1.2rem;
+                        line-height: 1.5;
                         color: #e0e0e0;
                         font-style: italic;
-                        max-width: 600px;
+                        max-width: 100%;
                         margin: 0 auto;
                     }
                     .archive-header {
                         text-align: center;
-                        margin-bottom: 30px;
-                        padding: 20px 15px;
+                        margin-bottom: 20px;
+                        padding: 16px 12px;
                         border-bottom: 1px solid #222;
                         background: rgba(20, 20, 20, 0.9);
                         border-radius: 16px;
                     }
                     .archive-id {
-                        font-size: 0.65rem;
+                        font-size: 0.6rem;
                         color: #555;
                         letter-spacing: 1px;
                         margin-bottom: 12px;
@@ -2930,14 +2849,14 @@
                 <!-- ARCHIVE HEADER -->
                 <div class="archive-header">
                     <div class="archive-id">QUANTUM ARCHIVE // RECORD #${recordId}</div>
-                    <h1 class="archive-title">🏛 THE CHRONICLE OF ORIGIN</h1>
+                    <h1 class="archive-title">🏛 THE CHRONICLE OF ORIGIN 🏛</h1>
                     <div class="archive-subtitle grimoire-gold">${dateStr} • ${timeStr} • ${location.city}</div>
                 </div>
                 
                 <!-- SECTION 1: THE COSMIC EVENT -->
                 <div class="grimoire-card glow">
-                    <h2 class="grimoire-cyan">🌌 The Sky Architecture: Your Cosmic Moment</h2>
-                    <p>At the precise moment of <strong>${timeStr}</strong> on <strong>${dateStr}</strong>, the celestial bodies aligned in a unique configuration that would never repeat in exactly the same way.</p>
+                    <h2 class="grimoire-cyan">🌌 The Sky Architecture 🌌</h2>
+                    <p style="text-align: center; margin-bottom: 15px;">At the precise moment of <strong>${timeStr}</strong> on <strong>${dateStr}</strong>, the celestial bodies aligned in a unique configuration that would never repeat in exactly the same way.</p>
                     
                     <div style="margin-top: 20px;">
                         <div class="data-row">
@@ -2978,7 +2897,8 @@
                 
                 <!-- SECTION 2: THE LUNAR DEPTH -->
                 <div class="grimoire-card" style="border-color: #444;">
-                    <h2 class="grimoire-silver">🌑 The Lunar Texture: ${moonInfo.name}</h2>
+                    <h2 class="grimoire-silver">🌑 The Lunar Texture 🌑</h2>
+                    <p style="text-align: center; margin-bottom: 10px;"><strong>${moonInfo.name}</strong></p>
                     <div style="display: flex; gap: 25px; flex-wrap: wrap;">
                         <div style="flex: 1; min-width: 280px;">
                             <p><strong>Phase:</strong> ${moonInfo.name} (${moonIllumination}% Illumination)<br>
@@ -3001,7 +2921,8 @@
                 
                 <!-- SECTION 3: THE CELESTIAL ALIGNMENT -->
                 <div class="grimoire-card glow" style="background: linear-gradient(135deg, rgba(20,20,20,0.95), rgba(10,30,30,0.95));">
-                    <h2 class="grimoire-gold">✨ The Celestial Quadrant: ${quadrant.charAt(0).toUpperCase() + quadrant.slice(1)}</h2>
+                    <h2 class="grimoire-gold">✨ The Celestial Quadrant ✨</h2>
+                    <p style="text-align: center; margin-bottom: 10px;"><strong>${quadrant.charAt(0).toUpperCase() + quadrant.slice(1)}</strong></p>
                     <p>Your birth moment was anchored in the <strong>${quadrant.toUpperCase()}</strong> quadrant of the celestial sphere, a direction that carries profound meaning across cultures and traditions.</p>
                     
                     <p><strong>Quadrant Meaning:</strong> ${quadrantInfo.meaning}. This directional energy influences the way you naturally approach challenges, relationships, and personal growth.</p>
@@ -3016,7 +2937,7 @@
                 
                 <!-- SECTION 4: SIGIL DECODED -->
                 <div class="grimoire-card">
-                    <h2 style="color: #fff; text-align: center; border: none; font-size: 1.3rem; margin-bottom: 30px;">🔮 YOUR QUANTUM SIGNATURE DECODED</h2>
+                    <h2 style="color: #fff; text-align: center; border: none; font-size: 1.1rem; margin-bottom: 20px;">🔮 YOUR QUANTUM SIGNATURE DECODED 🔮</h2>
                     <p style="text-align: center; color: #888; margin-bottom: 30px;">This sigil is not random art. It is a data visualization of your cosmic moment.</p>
                     
                     <div class="sigil-decoded-grid">
@@ -3048,9 +2969,10 @@
                 
                 <!-- SECTION 5: THE SHADOW PROTOCOL -->
                 <div class="grimoire-card" style="background: #0a0a0a; border: 1px solid #800000; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; right: 0; background: #800000; color: #fff; font-size: 0.7rem; padding: 3px 10px; letter-spacing: 1px;">SYSTEM WARNING</div>
+                    <div style="position: absolute; top: 0; right: 0; background: #800000; color: #fff; font-size: 0.65rem; padding: 3px 8px; letter-spacing: 1px;">SYSTEM WARNING</div>
                     
-                    <h2 style="color: #ff4444; border-bottom: 1px solid #333;">⚠️ The Shadow Frequency: The ${getShadowName(moonInfo.age, quadrant)}</h2>
+                    <h2 style="color: #ff4444; border-bottom: 1px solid #333;">⚠️ The Shadow Frequency ⚠️</h2>
+                    <p style="text-align: center; margin-bottom: 10px;"><strong>${getShadowName(moonInfo.age, quadrant)}</strong></p>
                     
                     <div style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap;">
                         <div style="font-size: 4rem; opacity: 0.3; min-width: 80px; text-align: center;">${getShadowIcon(moonInfo.age)}</div>
@@ -3112,7 +3034,7 @@
                 
                 <!-- SECTION 7: ACTIVATION RITUAL -->
                 <div class="grimoire-card" style="background: linear-gradient(180deg, rgba(20,20,20,0) 0%, rgba(20,40,30,0.5) 100%); border-radius: 20px;">
-                    <h2 style="text-align: center; font-family: 'Cinzel', serif; margin-bottom: 10px;">⚡ SIGIL ACTIVATION PROTOCOL</h2>
+                    <h2 style="text-align: center; font-family: 'Cinzel', serif; margin-bottom: 10px;">⚡ SIGIL ACTIVATION PROTOCOL ⚡</h2>
                     <p style="text-align: center; color: #888; max-width: 600px; margin: 0 auto 30px auto;">
                         Your sigil is a capacitor. It holds energy until you choose to release it.
                         Based on your <strong>${moonInfo.name}</strong> signature, use this method:
