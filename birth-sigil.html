@@ -1891,6 +1891,65 @@
             checkGalleryExists();
             loadSavedSigils();
             
+            // Auto-fill form with saved profile data
+            if (window.QuantumMerlinProfile) {
+                const personal = QuantumMerlinProfile.getPersonalInfo();
+                
+                // Auto-fill birth date if available
+                if (personal.birthDate) {
+                    const dateParts = personal.birthDate.split('-');
+                    if (dateParts.length === 3) {
+                        const yearInput = document.getElementById('year');
+                        const monthInput = document.getElementById('month');
+                        const dayInput = document.getElementById('day');
+                        
+                        if (yearInput && !yearInput.value) yearInput.value = dateParts[0];
+                        if (monthInput && !monthInput.value) monthInput.value = parseInt(dateParts[1]);
+                        if (dayInput && !dayInput.value) dayInput.value = parseInt(dateParts[2]);
+                    }
+                }
+                
+                // Auto-fill birth time if available
+                if (personal.birthTime) {
+                    const timeParts = personal.birthTime.split(':');
+                    if (timeParts.length === 2) {
+                        let hour = parseInt(timeParts[0]);
+                        const minute = timeParts[1];
+                        
+                        const hourInput = document.getElementById('hour');
+                        const minuteInput = document.getElementById('minute');
+                        const ampmSelect = document.getElementById('ampm');
+                        
+                        // Convert 24-hour to 12-hour format
+                        let ampm = 'AM';
+                        if (hour >= 12) {
+                            ampm = 'PM';
+                            if (hour > 12) hour -= 12;
+                        }
+                        if (hour === 0) hour = 12;
+                        
+                        if (hourInput && !hourInput.value) hourInput.value = hour;
+                        if (minuteInput && !minuteInput.value) minuteInput.value = minute;
+                        if (ampmSelect && !ampmSelect.value) ampmSelect.value = ampm;
+                    }
+                }
+                
+                // Auto-fill location if available
+                if (personal.birthPlace && personal.latitude && personal.longitude) {
+                    selectedLocation = {
+                        city: personal.birthPlace,
+                        lat: personal.latitude,
+                        lon: personal.longitude
+                    };
+                    const locationInput = document.getElementById('locationSearchInput');
+                    if (locationInput && !locationInput.value) {
+                        locationInput.value = personal.birthPlace;
+                    }
+                }
+                
+                console.log('✨ Auto-filled form with saved profile data');
+            }
+            
             // Check if loading sigil from gallery page
             const loadIndex = sessionStorage.getItem('loadSigilIndex');
             if (loadIndex !== null) {
@@ -2310,6 +2369,23 @@
             if (!day || !month || !year) {
                 showNotification('Please enter your complete birth date', 'error');
                 return;
+            }
+            
+            // Save user's birth data to profile for cross-tool usage
+            if (window.QuantumMerlinProfile) {
+                const birthDate = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                const birthTime = `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
+                
+                QuantumMerlinProfile.updateProfile({
+                    personal: {
+                        birthDate: birthDate,
+                        birthTime: birthTime,
+                        birthPlace: selectedLocation ? selectedLocation.city : 'London, UK',
+                        latitude: selectedLocation ? selectedLocation.lat : 51.5074,
+                        longitude: selectedLocation ? selectedLocation.lon : -0.1278
+                    }
+                });
+                console.log('✨ Birth data saved to profile for cross-tool usage');
             }
             
             // Use default location if none selected (London, UK)
@@ -5270,6 +5346,9 @@
             });
         })();
     </script>
+
+    <!-- Quantum Profile System -->
+    <script src="./shared/js/quantum-profile.js"></script>
 
     <!-- Service Worker Registration -->
     <script>
