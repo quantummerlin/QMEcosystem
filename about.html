@@ -502,9 +502,24 @@
             }
         }
     </style>
+    <!-- Quantum Intro Animation -->
+    <link rel="stylesheet" href="shared/css/quantum-intro.css">
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
+    <!-- Quantum Intro Animation -->
+    <div id="intro-container">
+        <canvas id="lines-canvas"></canvas>
+        <div class="emoji-layer">
+            <div class="intro-emoji" data-symbol="⚛️"></div>
+            <div class="intro-emoji" data-symbol="🧙‍♂️"></div>
+            <div class="intro-emoji" data-symbol="🌹"></div>
+        </div>
+        <div id="singularity"></div>
+        <div id="intro-title">Quantum Merlin</div>
+    </div>
+    
+    <div id="app-content">
     <!-- Quantum Effects -->
     <div class="quantum-grid"></div>
     <div class="quantum-sun"></div>
@@ -710,5 +725,7 @@
             });
         });
     </script>
+    </div><!-- End app-content -->
+    <script src="shared/js/quantum-intro-animation.js"></script>
 </body>
 </html>

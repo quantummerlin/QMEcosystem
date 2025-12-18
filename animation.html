@@ -122,7 +122,8 @@
             white-space: nowrap;
             opacity: 0;
             z-index: 4;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
+            max-width: 95vw;
         }
 
         /* App content (hidden initially) */
@@ -439,7 +440,7 @@
                 singularity.style.opacity = 1 - ease;
                 
                 // Title expands from dot position
-                const maxFontSize = Math.min(width * 0.12, 48);
+                const maxFontSize = Math.min(width * 0.065, 42);
                 const fontSize = ease * maxFontSize;
                 
                 title.style.fontSize = fontSize + 'px';
@@ -455,7 +456,7 @@
                 singularity.style.opacity = 0;
                 
                 // Title holds at full size
-                const maxFontSize = Math.min(width * 0.12, 48);
+                const maxFontSize = Math.min(width * 0.065, 42);
                 title.style.fontSize = maxFontSize + 'px';
                 title.style.opacity = 1;
                 
