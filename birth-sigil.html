@@ -5147,14 +5147,17 @@
                     quantum.style.left = centerX + 'px';
                     quantum.style.top = centerY + 'px';
                     quantum.style.transform = 'translate(-50%, -50%) scale(1)';
+                    quantum.style.opacity = 1;
                     
                     wizard.style.left = (centerX - 80) + 'px';
                     wizard.style.top = centerY + 'px';
                     wizard.style.transform = 'translate(-50%, -50%) scale(1)';
+                    wizard.style.opacity = 1;
                     
                     rose.style.left = (centerX + 80) + 'px';
                     rose.style.top = centerY + 'px';
                     rose.style.transform = 'translate(-50%, -50%) scale(1)';
+                    rose.style.opacity = 1;
                 }
 
                 // PHASE 4: Lines Emerge (3-4.5s)
@@ -5177,6 +5180,22 @@
                     ctx.beginPath();
                     ctx.arc(centerX, centerY, 80, rotation + Math.PI, rotation + Math.PI * 2);
                     ctx.stroke();
+                    
+                    // Keep emojis visible and positioned
+                    quantum.style.left = centerX + 'px';
+                    quantum.style.top = centerY + 'px';
+                    quantum.style.transform = 'translate(-50%, -50%) scale(1)';
+                    quantum.style.opacity = 1;
+                    
+                    wizard.style.left = (centerX - 80) + 'px';
+                    wizard.style.top = centerY + 'px';
+                    wizard.style.transform = 'translate(-50%, -50%) scale(1)';
+                    wizard.style.opacity = 1;
+                    
+                    rose.style.left = (centerX + 80) + 'px';
+                    rose.style.top = centerY + 'px';
+                    rose.style.transform = 'translate(-50%, -50%) scale(1)';
+                    rose.style.opacity = 1;
                     
                     if (t < 4.51) {
                         wizardOrbitStart = Math.PI;
@@ -5209,6 +5228,7 @@
                     quantum.style.left = centerX + 'px';
                     quantum.style.top = centerY + 'px';
                     quantum.style.transform = 'translate(-50%, -50%) scale(1)';
+                    quantum.style.opacity = 1;
                     
                     const orbitProgress = (t - 4.5) * speedMultiplier * 0.5;
                     const orbitRadius = 80;
@@ -5219,6 +5239,7 @@
                     wizard.style.left = wizardX + 'px';
                     wizard.style.top = wizardY + 'px';
                     wizard.style.transform = 'translate(-50%, -50%) scale(1)';
+                    wizard.style.opacity = 1;
                     
                     const roseAngle = roseOrbitStart + orbitProgress * Math.PI * 2;
                     const roseX = centerX + Math.cos(roseAngle) * orbitRadius;
@@ -5226,6 +5247,7 @@
                     rose.style.left = roseX + 'px';
                     rose.style.top = roseY + 'px';
                     rose.style.transform = 'translate(-50%, -50%) scale(1)';
+                    rose.style.opacity = 1;
                 }
 
                 // PHASE 6: Quantum Collapse (6.5-7.5s)
