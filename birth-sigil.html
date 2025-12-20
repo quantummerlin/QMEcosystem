@@ -376,13 +376,6 @@
             .page-header h1 {
                 font-size: 1.6rem;
             }
-            .header-stats {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .stat-item {
-                width: 100%;
-            }
         }
 
         .generator-container {
@@ -520,33 +513,6 @@
             font-size: 1.1rem;
             max-width: 600px;
             margin: 0 auto 20px;
-        }
-
-        .header-stats {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .stat-item {
-            background: rgba(0, 245, 255, 0.1);
-            border: 2px solid rgba(0, 245, 255, 0.4);
-            padding: 12px 24px;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #00f5ff;
-            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3), inset 0 0 15px rgba(0, 245, 255, 0.1);
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .stat-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 30px rgba(0, 245, 255, 0.5), inset 0 0 20px rgba(0, 245, 255, 0.2);
-            border-color: rgba(0, 245, 255, 0.7);
         }
 
         /* Quantum Generator Section */
@@ -898,15 +864,6 @@
 
             .input-group input[type="number"] {
                 width: 100%;
-            }
-
-            .header-stats {
-                gap: 10px;
-            }
-
-            .stat-item {
-                font-size: 0.8rem;
-                padding: 6px 12px;
             }
         }
 
@@ -1262,95 +1219,7 @@
             color: var(--text-secondary);
         }
 
-        /* Quantum Testimonials Section */
-        .testimonials-section {
-            background: linear-gradient(135deg, rgba(255, 0, 255, 0.1) 0%, rgba(157, 0, 255, 0.1) 100%);
-            backdrop-filter: blur(30px);
-            border: 2px solid rgba(255, 0, 255, 0.4);
-            border-radius: 25px;
-            padding: 50px 35px;
-            margin: 50px 0;
-            box-shadow: 0 10px 40px rgba(255, 0, 255, 0.3), inset 0 0 60px rgba(255, 0, 255, 0.05);
-        }
-
-        .testimonials-section h2 {
-            font-family: 'Orbitron', monospace;
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #ff00ff, #ff66ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-align: center;
-            margin-bottom: 40px;
-            filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.7));
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .testimonial-card {
-            background: rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(255, 0, 255, 0.3);
-            border-radius: 18px;
-            padding: 28px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonial-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at top right, rgba(255, 0, 255, 0.1), transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            border-color: #ff00ff;
-            background: rgba(255, 0, 255, 0.1);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(255, 0, 255, 0.4), inset 0 0 30px rgba(255, 0, 255, 0.1);
-        }
-
-        .testimonial-card:hover::before {
-            opacity: 1;
-        }
-
-        .testimonial-text {
-            color: rgba(255, 255, 255, 0.85);
-            font-style: italic;
-            line-height: 1.7;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-author {
-            font-family: 'Orbitron', monospace;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #00f5ff;
-            text-shadow: 0 0 10px rgba(0, 245, 255, 0.6);
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-stars {
-            color: #ffd700;
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6));
-            position: relative;
-            z-index: 1;
-        }
-            margin-bottom: 5px;
-        }
+        /* Testimonials styles removed */
 
         /* ==========================================
            QUANTUM MERLIN INTRO ANIMATION
@@ -1517,11 +1386,6 @@
         <div class="page-header">
             <h1>✨ Quantum Birth Sigil Generator</h1>
             <p class="subtitle">Create a unique sigil for any date, time, and place based on lunar and stellar alignment</p>
-            <div class="header-stats">
-                <span class="stat-item">🌍 195+ Countries</span>
-                <span class="stat-item">🌟 15,847 Sigils Created</span>
-                <span class="stat-item">⭐ 4.9/5 Rating</span>
-            </div>
         </div>
 
         <!-- About Section -->
@@ -1702,28 +1566,6 @@
                     <div class="cross-tool-name">My Library</div>
                     <div class="cross-tool-desc">View all your saved sigils</div>
                 </a>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials-section">
-            <h2>What People Are Saying</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"The level of detail is incredible! Seeing my birth moon phase and star alignment visualized was profound. I use my sigil in daily meditation now."</p>
-                    <div class="testimonial-author">— Sarah M.</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"I've generated sigils for my entire family. Each one is unique and meaningful. The geometric style is my favorite—it's like pure mathematical art."</p>
-                    <div class="testimonial-author">— David L.</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"As someone interested in astrology and sacred geometry, this tool is perfect. The fact that it uses real astronomical data makes it even more special."</p>
-                    <div class="testimonial-author">— Amara K.</div>
-                </div>
             </div>
         </section>
 
