@@ -613,6 +613,329 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* ========================================
+           PHASE 2: Enhanced Forecast Styles
+           ======================================== */
+
+        /* Cosmic Timing Section */
+        .cosmic-timing-section {
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.15) 0%, rgba(255, 0, 102, 0.15) 100%);
+            border: 2px solid var(--neon-purple);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .cosmic-timing-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: var(--neon-purple);
+            margin-bottom: 20px;
+        }
+
+        .timing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .timing-item {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(157, 0, 255, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .timing-item strong {
+            display: block;
+            color: var(--neon-gold);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .timing-item p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .timing-item em {
+            color: var(--neon-cyan);
+            font-style: normal;
+        }
+
+        /* Cross-Reference Sections */
+        .cross-reference-section {
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .cross-reference-section.agreement {
+            background: linear-gradient(135deg, rgba(0, 255, 100, 0.1) 0%, rgba(0, 245, 255, 0.1) 100%);
+            border: 2px solid rgba(0, 255, 100, 0.4);
+        }
+
+        .cross-reference-section.tension {
+            background: linear-gradient(135deg, rgba(255, 100, 0, 0.1) 0%, rgba(255, 0, 102, 0.1) 100%);
+            border: 2px solid rgba(255, 100, 0, 0.4);
+        }
+
+        .cross-reference-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .cross-reference-section.agreement h3 {
+            color: #00ff64;
+        }
+
+        .cross-reference-section.tension h3 {
+            color: #ff6400;
+        }
+
+        .cross-item {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .cross-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .system-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .system-badges .badge {
+            background: rgba(0, 245, 255, 0.2);
+            border: 1px solid rgba(0, 245, 255, 0.5);
+            color: var(--neon-cyan);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .system-badges .badge.tension {
+            background: rgba(255, 100, 0, 0.2);
+            border-color: rgba(255, 100, 0, 0.5);
+            color: #ff9040;
+        }
+
+        /* Weekly/Monthly/Yearly Breakdowns */
+        .weekly-breakdown,
+        .monthly-breakdown,
+        .yearly-breakdown {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .weekly-breakdown h3,
+        .monthly-breakdown h3,
+        .yearly-breakdown h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            color: var(--neon-cyan);
+            margin-bottom: 25px;
+        }
+
+        .days-grid,
+        .weeks-grid,
+        .quarters-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .days-grid {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+
+        .weeks-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .quarters-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .day-item,
+        .week-item,
+        .quarter-item {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .day-item:hover,
+        .week-item:hover,
+        .quarter-item:hover {
+            border-color: rgba(0, 245, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .day-item.today {
+            border-color: var(--neon-gold);
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .day-item h4,
+        .week-item h4,
+        .quarter-item h4 {
+            color: var(--neon-gold);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .day-item p,
+        .week-item p,
+        .quarter-item p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        /* Key Dates Section */
+        .key-dates-section {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(157, 0, 255, 0.1) 100%);
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .key-dates-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            color: var(--neon-gold);
+            margin-bottom: 20px;
+        }
+
+        .key-dates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .key-date-item {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .key-date-item h4 {
+            color: var(--neon-cyan);
+            margin-bottom: 12px;
+        }
+
+        .key-date-item p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Major Transits Section */
+        .major-transits-section {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(157, 0, 255, 0.4);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .major-transits-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            color: var(--neon-purple);
+            margin-bottom: 20px;
+        }
+
+        .transit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .transit-item {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(157, 0, 255, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .transit-item h4 {
+            color: var(--neon-gold);
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .transit-item p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Enhanced Action Items */
+        .action-item.cosmic-timing {
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.2) 0%, rgba(0, 245, 255, 0.2) 100%);
+            border-left: 4px solid var(--neon-purple);
+        }
+
+        .action-item.challenge {
+            background: linear-gradient(135deg, rgba(255, 100, 0, 0.2) 0%, rgba(255, 0, 102, 0.2) 100%);
+            border-left: 4px solid #ff6400;
+        }
+
+        .action-item.moon-ritual {
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.15) 0%, rgba(0, 0, 80, 0.3) 100%);
+            border-left: 4px solid #9d00ff;
+        }
+
+        /* Mobile Responsive Enhancements */
+        @media (max-width: 768px) {
+            .timing-grid,
+            .days-grid,
+            .weeks-grid,
+            .quarters-grid,
+            .transit-grid,
+            .key-dates-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cosmic-timing-section,
+            .cross-reference-section,
+            .weekly-breakdown,
+            .monthly-breakdown,
+            .yearly-breakdown,
+            .key-dates-section,
+            .major-transits-section {
+                padding: 20px;
+            }
+
+            .system-badges {
+                flex-direction: column;
+            }
+
+            .day-item,
+            .week-item,
+            .quarter-item,
+            .timing-item,
+            .transit-item,
+            .key-date-item {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -916,6 +1239,211 @@
             return sum;
         }
 
+        // PHASE 2: Rising Sign Calculator (based on birth time)
+        function getRisingSign(birthDate, birthTime) {
+            if (!birthTime) return null;
+            const birth = new Date(birthDate);
+            const month = birth.getMonth() + 1;
+            const day = birth.getDate();
+            const sunSign = getZodiacSign(month, day);
+            const sunSignIndex = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 
+                                  'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'].indexOf(sunSign.name);
+            
+            // Parse birth time
+            const [hours, minutes] = birthTime.split(':').map(Number);
+            const totalMinutes = hours * 60 + minutes;
+            
+            // Rising sign changes approximately every 2 hours (120 minutes)
+            // 6 AM = Ascendant aligns with Sun sign
+            const sunriseMinutes = 6 * 60; // 6 AM baseline
+            const minutesSinceSunrise = (totalMinutes - sunriseMinutes + 1440) % 1440;
+            const risingOffset = Math.floor(minutesSinceSunrise / 120);
+            const risingIndex = (sunSignIndex + risingOffset) % 12;
+            
+            const signs = [
+                { name: 'Aries', symbol: '♈' },
+                { name: 'Taurus', symbol: '♉' },
+                { name: 'Gemini', symbol: '♊' },
+                { name: 'Cancer', symbol: '♋' },
+                { name: 'Leo', symbol: '♌' },
+                { name: 'Virgo', symbol: '♍' },
+                { name: 'Libra', symbol: '♎' },
+                { name: 'Scorpio', symbol: '♏' },
+                { name: 'Sagittarius', symbol: '♐' },
+                { name: 'Capricorn', symbol: '♑' },
+                { name: 'Aquarius', symbol: '♒' },
+                { name: 'Pisces', symbol: '♓' }
+            ];
+            return signs[risingIndex];
+        }
+
+        // PHASE 2: Moon Sign Calculator
+        function getMoonSign(birthDate) {
+            const birth = new Date(birthDate);
+            // Moon moves through all 12 signs in ~29.5 days = ~2.46 days per sign
+            const epoch = new Date('2000-01-06'); // New Moon in Capricorn reference
+            const daysSinceEpoch = Math.floor((birth - epoch) / (1000 * 60 * 60 * 24));
+            const moonCyclePosition = daysSinceEpoch % 29.5;
+            const moonSignIndex = Math.floor((moonCyclePosition / 29.5) * 12) % 12;
+            
+            const signs = [
+                { name: 'Capricorn', symbol: '♑', element: 'Earth' },
+                { name: 'Aquarius', symbol: '♒', element: 'Air' },
+                { name: 'Pisces', symbol: '♓', element: 'Water' },
+                { name: 'Aries', symbol: '♈', element: 'Fire' },
+                { name: 'Taurus', symbol: '♉', element: 'Earth' },
+                { name: 'Gemini', symbol: '♊', element: 'Air' },
+                { name: 'Cancer', symbol: '♋', element: 'Water' },
+                { name: 'Leo', symbol: '♌', element: 'Fire' },
+                { name: 'Virgo', symbol: '♍', element: 'Earth' },
+                { name: 'Libra', symbol: '♎', element: 'Air' },
+                { name: 'Scorpio', symbol: '♏', element: 'Water' },
+                { name: 'Sagittarius', symbol: '♐', element: 'Fire' }
+            ];
+            return signs[moonSignIndex];
+        }
+
+        // PHASE 2: Planetary Hour Calculator
+        function getPlanetaryHour() {
+            const now = new Date();
+            const dayOfWeek = now.getDay(); // 0=Sunday, 1=Monday...
+            const hour = now.getHours();
+            
+            // Chaldean order of planets
+            const planets = ['Saturn', 'Jupiter', 'Mars', 'Sun', 'Venus', 'Mercury', 'Moon'];
+            // Day rulers
+            const dayRulers = ['Sun', 'Moon', 'Mars', 'Mercury', 'Jupiter', 'Venus', 'Saturn'];
+            
+            const dayRulerIndex = planets.indexOf(dayRulers[dayOfWeek]);
+            // Sunrise assumed at 6 AM for simplicity
+            const hoursFromSunrise = (hour - 6 + 24) % 24;
+            const planetaryHourIndex = (dayRulerIndex + hoursFromSunrise) % 7;
+            
+            const planetData = {
+                'Saturn': { symbol: '♄', energy: 'discipline, structure, karmic lessons', color: 'Black/Gray', activity: 'organization, boundary-setting, long-term planning' },
+                'Jupiter': { symbol: '♃', energy: 'expansion, luck, wisdom', color: 'Blue/Purple', activity: 'learning, travel planning, abundance work' },
+                'Mars': { symbol: '♂', energy: 'action, courage, initiative', color: 'Red', activity: 'physical exercise, assertive conversations, starting projects' },
+                'Sun': { symbol: '☉', energy: 'vitality, creativity, self-expression', color: 'Gold/Yellow', activity: 'creative work, leadership, visibility' },
+                'Venus': { symbol: '♀', energy: 'love, beauty, harmony', color: 'Green/Pink', activity: 'art, relationships, self-care, beautification' },
+                'Mercury': { symbol: '☿', energy: 'communication, intellect, travel', color: 'Orange', activity: 'writing, studying, conversations, commerce' },
+                'Moon': { symbol: '☽', energy: 'intuition, emotions, nurturing', color: 'Silver/White', activity: 'rest, reflection, family, psychic work' }
+            };
+            
+            return { planet: planets[planetaryHourIndex], ...planetData[planets[planetaryHourIndex]] };
+        }
+
+        // PHASE 2: Cross-System Analysis
+        function getCrossSystemAnalysis(zodiac, rising, moon, chinese, lifePath, personalYear) {
+            let agreements = [];
+            let tensions = [];
+            let badges = [];
+            
+            // Element mapping for Western signs
+            const fireSignals = ['Aries', 'Leo', 'Sagittarius'];
+            const earthSigns = ['Taurus', 'Virgo', 'Capricorn'];
+            const airSigns = ['Gemini', 'Libra', 'Aquarius'];
+            const waterSigns = ['Cancer', 'Scorpio', 'Pisces'];
+            
+            function getWesternElement(sign) {
+                if (fireSignals.includes(sign)) return 'Fire';
+                if (earthSigns.includes(sign)) return 'Earth';
+                if (airSigns.includes(sign)) return 'Air';
+                if (waterSigns.includes(sign)) return 'Water';
+                return 'Unknown';
+            }
+            
+            const sunElement = getWesternElement(zodiac.name);
+            const moonElement = moon ? getWesternElement(moon.name) : null;
+            const risingElement = rising ? getWesternElement(rising.name) : null;
+            
+            // Chinese element compatibility with Western element
+            const elementHarmony = {
+                'Fire': ['Fire', 'Wood'],
+                'Earth': ['Earth', 'Metal'],
+                'Air': ['Metal', 'Water'],
+                'Water': ['Water', 'Wood']
+            };
+            
+            // Check Western-Chinese element harmony
+            if (elementHarmony[sunElement] && elementHarmony[sunElement].includes(chinese.element)) {
+                agreements.push({
+                    systems: ['Western Astrology', 'Chinese Zodiac'],
+                    insight: `Your ${zodiac.name} ${sunElement} energy harmonizes beautifully with your ${chinese.element} ${chinese.animal}. Both systems point toward ${sunElement === 'Fire' ? 'passionate action and leadership' : sunElement === 'Earth' ? 'stability and manifestation' : sunElement === 'Air' ? 'intellectual pursuits and communication' : 'emotional depth and intuition'}.`
+                });
+                badges.push('⭐🐉');
+            } else {
+                tensions.push({
+                    systems: ['Western Astrology', 'Chinese Zodiac'],
+                    insight: `Your ${zodiac.name} ${sunElement} energy creates dynamic tension with your ${chinese.element} ${chinese.animal}. This isn't negative—it provides depth and complexity, pushing you to integrate seemingly opposing forces.`
+                });
+            }
+            
+            // Life Path alignment with Sun Sign
+            const leaderPaths = [1, 8];
+            const creativePaths = [3, 6];
+            const seekerPaths = [7, 11];
+            const builderPaths = [4, 22];
+            
+            const leaderSigns = ['Aries', 'Leo', 'Capricorn'];
+            const creativeSigns = ['Taurus', 'Leo', 'Libra', 'Pisces'];
+            const seekerSigns = ['Sagittarius', 'Aquarius', 'Pisces', 'Scorpio'];
+            const builderSigns = ['Taurus', 'Virgo', 'Capricorn'];
+            
+            if ((leaderPaths.includes(lifePath) && leaderSigns.includes(zodiac.name)) ||
+                (creativePaths.includes(lifePath) && creativeSigns.includes(zodiac.name)) ||
+                (seekerPaths.includes(lifePath) && seekerSigns.includes(zodiac.name)) ||
+                (builderPaths.includes(lifePath) && builderSigns.includes(zodiac.name))) {
+                agreements.push({
+                    systems: ['Western Astrology', 'Numerology'],
+                    insight: `Your Life Path ${lifePath} amplifies your ${zodiac.name} nature—both systems confirm your core purpose. This alignment gives you natural confidence in your path.`
+                });
+                badges.push('⭐🔢');
+            }
+            
+            // Moon and Chinese element harmony (emotional depth)
+            if (moon && moonElement) {
+                if ((moonElement === 'Water' && ['Water', 'Wood'].includes(chinese.element)) ||
+                    (moonElement === 'Fire' && ['Fire', 'Wood'].includes(chinese.element)) ||
+                    (moonElement === 'Earth' && ['Earth', 'Metal'].includes(chinese.element)) ||
+                    (moonElement === 'Air' && ['Metal', 'Water'].includes(chinese.element))) {
+                    agreements.push({
+                        systems: ['Moon Sign', 'Chinese Zodiac'],
+                        insight: `Your ${moon.name} Moon resonates with your ${chinese.element} element, suggesting deep emotional alignment with your ancestral wisdom. Your intuitive responses are trustworthy.`
+                    });
+                }
+            }
+            
+            // Personal Year and Chinese Year harmony
+            const currentYear = new Date().getFullYear();
+            const currentChinese = getChineseZodiac(currentYear);
+            if (chinese.element === currentChinese.element) {
+                agreements.push({
+                    systems: ['Chinese Zodiac', 'Temporal'],
+                    insight: `This is your element year! Your ${chinese.element} energy is amplified by the current ${currentChinese.element} ${currentChinese.animal} year—opportunities align more easily.`
+                });
+                badges.push('🐉⏰');
+            }
+            
+            return { agreements, tensions, badges };
+        }
+
+        // PHASE 2: Moon Phase Calculator
+        function getCurrentMoonPhase() {
+            const now = new Date();
+            const epoch = new Date('2000-01-06'); // Known new moon
+            const daysSince = (now - epoch) / (1000 * 60 * 60 * 24);
+            const lunation = daysSince % 29.53;
+            
+            if (lunation < 1.85) return { phase: 'New Moon', symbol: '🌑', energy: 'New beginnings, setting intentions, planting seeds', action: 'Meditate on new goals and write detailed intentions' };
+            if (lunation < 7.38) return { phase: 'Waxing Crescent', symbol: '🌒', energy: 'Taking first steps, courage, commitment', action: 'Take the first concrete action toward your intentions' };
+            if (lunation < 9.23) return { phase: 'First Quarter', symbol: '🌓', energy: 'Decision time, overcoming obstacles, momentum', action: 'Push through resistance and commit to your path' };
+            if (lunation < 14.77) return { phase: 'Waxing Gibbous', symbol: '🌔', energy: 'Refinement, patience, trust the process', action: 'Fine-tune your approach and stay the course' };
+            if (lunation < 16.62) return { phase: 'Full Moon', symbol: '🌕', energy: 'Manifestation, clarity, celebration, release', action: 'Celebrate progress and release what no longer serves' };
+            if (lunation < 22.15) return { phase: 'Waning Gibbous', symbol: '🌖', energy: 'Gratitude, sharing wisdom, giving back', action: 'Share what you\'ve learned and express gratitude' };
+            if (lunation < 23.99) return { phase: 'Last Quarter', symbol: '🌗', energy: 'Release, forgiveness, letting go', action: 'Release old patterns and forgive past mistakes' };
+            return { phase: 'Waning Crescent', symbol: '🌘', energy: 'Rest, surrender, preparation for renewal', action: 'Rest deeply and prepare for the new cycle' };
+        }
+
         // Generate forecast
         document.getElementById('generateBtn').addEventListener('click', function() {
             const birthDate = document.getElementById('birthDate').value;
@@ -962,38 +1490,110 @@
             const fullName = [firstName, middleName, lastName].filter(n => n).join(' ');
             const gematria = calculateGematria(fullName);
             
+            // PHASE 2: Advanced calculations
+            const risingSign = getRisingSign(birthDate, birthTime);
+            const moonSign = getMoonSign(birthDate);
+            const planetaryHour = getPlanetaryHour();
+            const moonPhase = getCurrentMoonPhase();
+            const crossAnalysis = getCrossSystemAnalysis(zodiac, risingSign, moonSign, chinese, lifePath, personalYear);
+            
             // Get today's date
             const today = new Date();
             const todayStr = today.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
             
-            // Generate forecast content
-            let forecastHTML = `
+            // Generate forecast content based on timeframe
+            let forecastHTML = '';
+            
+            if (timeframe === 'daily') {
+                forecastHTML = generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
+                    gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
+                    focus, challenge, birth, todayStr);
+            } else if (timeframe === 'weekly') {
+                forecastHTML = generateWeeklyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
+                    gematria, fullName, birthTime, moonPhase, crossAnalysis, focus, challenge, birth);
+            } else if (timeframe === 'monthly') {
+                forecastHTML = generateMonthlyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
+                    gematria, fullName, crossAnalysis, focus, challenge, birth);
+            } else {
+                forecastHTML = generateYearlyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
+                    gematria, fullName, crossAnalysis, focus, challenge, birth);
+            }
+            
+            document.getElementById('forecastOutput').innerHTML = forecastHTML;
+        }
+
+        // PHASE 2: Daily Forecast Generator
+        function generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
+            gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
+            focus, challenge, birth, todayStr) {
+            
+            return `
                 <div class="forecast-header">
                     <h2>YOUR QUANTUM FORECAST</h2>
                     <div class="forecast-meta">
                         <p>Generated for: ${fullName || 'Seeker'}</p>
-                        <p>Birth: ${birth.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} | ${zodiac.name} ${zodiac.symbol}</p>
-                        ${birthTime ? `<p>Birth Time: ${birthTime}</p>` : ''}
-                        <p>Timeframe: ${timeframe.charAt(0).toUpperCase() + timeframe.slice(1)}</p>
+                        <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''} ${moonSign ? `| ☽ Moon: ${moonSign.name} ${moonSign.symbol}` : ''}</p>
+                        <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
+                        <p>Timeframe: Daily | ${todayStr}</p>
                     </div>
                 </div>
+
+                <div class="cosmic-timing-section">
+                    <h3>⏰ COSMIC TIMING - Right Now</h3>
+                    <div class="timing-grid">
+                        <div class="timing-item">
+                            <strong>${moonPhase.symbol} ${moonPhase.phase}</strong>
+                            <p>${moonPhase.energy}</p>
+                            <p><em>Action: ${moonPhase.action}</em></p>
+                        </div>
+                        <div class="timing-item">
+                            <strong>${planetaryHour.symbol} Hour of ${planetaryHour.planet}</strong>
+                            <p>Energy: ${planetaryHour.energy}</p>
+                            <p><em>Best for: ${planetaryHour.activity}</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                ${crossAnalysis.agreements.length > 0 ? `
+                <div class="cross-reference-section agreement">
+                    <h3>✨ SYSTEM AGREEMENTS - Where Your Cosmic DNA Aligns</h3>
+                    ${crossAnalysis.agreements.map(a => `
+                        <div class="cross-item">
+                            <div class="system-badges">${a.systems.map(s => `<span class="badge">${s}</span>`).join(' + ')}</div>
+                            <p>${a.insight}</p>
+                        </div>
+                    `).join('')}
+                </div>
+                ` : ''}
+
+                ${crossAnalysis.tensions.length > 0 ? `
+                <div class="cross-reference-section tension">
+                    <h3>⚡ DYNAMIC TENSIONS - Your Growth Edges</h3>
+                    ${crossAnalysis.tensions.map(t => `
+                        <div class="cross-item">
+                            <div class="system-badges">${t.systems.map(s => `<span class="badge tension">${s}</span>`).join(' ⟷ ')}</div>
+                            <p>${t.insight}</p>
+                        </div>
+                    `).join('')}
+                </div>
+                ` : ''}
 
                 <div class="overview-section">
-                    <h3>🌟 OVERVIEW - ${todayStr}</h3>
+                    <h3>🌟 TODAY'S OVERVIEW</h3>
                     <div class="overview-content">
-                        <p><strong>Today's Energy:</strong> ${getOverviewEnergy(zodiac, chinese, personalYear)}</p>
-                        <p><strong>Focus:</strong> ${getOverviewFocus(lifePath, personalYear, focus)}</p>
-                        <p><strong>Caution:</strong> ${getOverviewCaution(zodiac, chinese)}</p>
+                        <p><strong>Core Energy:</strong> ${getEnhancedOverviewEnergy(zodiac, risingSign, moonSign, chinese, personalYear, moonPhase)}</p>
+                        <p><strong>Primary Focus:</strong> ${getEnhancedOverviewFocus(lifePath, personalYear, focus, moonPhase)}</p>
+                        <p><strong>Shadow Work:</strong> ${getEnhancedOverviewCaution(zodiac, moonSign, chinese)}</p>
                     </div>
                 </div>
 
-                <div class="system-section">
+                <div class="system-section expanded">
                     <div class="system-header" onclick="toggleSystem(this)">
                         <h3>⭐ WESTERN ASTROLOGY</h3>
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        ${getWesternAstrologyForecast(zodiac, birthTime, birthLocation)}
+                        ${getEnhancedWesternAstrologyForecast(zodiac, risingSign, moonSign, birthTime, birthLocation, moonPhase)}
                     </div>
                 </div>
 
@@ -1003,7 +1603,7 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        ${getChineseZodiacForecast(chinese)}
+                        ${getEnhancedChineseZodiacForecast(chinese, moonPhase)}
                     </div>
                 </div>
 
@@ -1013,7 +1613,7 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        ${getNumerologyForecast(lifePath, personalYear, birthDate)}
+                        ${getEnhancedNumerologyForecast(lifePath, personalYear, birth)}
                     </div>
                 </div>
 
@@ -1024,21 +1624,321 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        ${getGematriaForecast(fullName, gematria, birthDate)}
+                        ${getEnhancedGematriaForecast(fullName, gematria, birth)}
                     </div>
                 </div>
                 ` : ''}
 
                 <div class="action-section">
-                    <h3>💡 TODAY'S ACTION ITEMS</h3>
-                    ${getActionItems(zodiac, chinese, lifePath, personalYear, focus, challenge)}
+                    <h3>💡 YOUR DAILY ACTION PLAN</h3>
+                    ${getEnhancedActionItems(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, planetaryHour, moonPhase, focus, challenge)}
                 </div>
 
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
                 <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
             `;
+        }
+
+        // PHASE 2: Weekly Forecast Generator
+        function generateWeeklyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
+            gematria, fullName, birthTime, moonPhase, crossAnalysis, focus, challenge, birth) {
             
-            document.getElementById('forecastOutput').innerHTML = forecastHTML;
+            const today = new Date();
+            const weekStart = new Date(today);
+            weekStart.setDate(today.getDate() - today.getDay());
+            const weekEnd = new Date(weekStart);
+            weekEnd.setDate(weekStart.getDate() + 6);
+            
+            const weekStartStr = weekStart.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            const weekEndStr = weekEnd.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            
+            // Generate 7-day breakdown
+            let dailyBreakdown = '';
+            const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const dayEnergies = ['reflection & rest', 'initiative & new beginnings', 'assertive action', 'communication & learning', 'expansion & opportunity', 'love & harmony', 'discipline & structure'];
+            const planetRulers = ['Sun', 'Moon', 'Mars', 'Mercury', 'Jupiter', 'Venus', 'Saturn'];
+            
+            for (let i = 0; i < 7; i++) {
+                const dayDate = new Date(weekStart);
+                dayDate.setDate(weekStart.getDate() + i);
+                const isToday = dayDate.toDateString() === today.toDateString();
+                
+                dailyBreakdown += `
+                    <div class="day-item ${isToday ? 'today' : ''}">
+                        <h4>${dayNames[i]}${isToday ? ' (Today)' : ''} - ${dayDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</h4>
+                        <p><strong>Ruler:</strong> ${planetRulers[i]} | <strong>Energy:</strong> ${dayEnergies[i]}</p>
+                        <p>${getDaySpecificGuidance(zodiac, chinese, lifePath, i, focus)}</p>
+                    </div>
+                `;
+            }
+            
+            return `
+                <div class="forecast-header">
+                    <h2>YOUR WEEKLY QUANTUM FORECAST</h2>
+                    <div class="forecast-meta">
+                        <p>Generated for: ${fullName || 'Seeker'}</p>
+                        <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
+                        <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
+                        <p>Week: ${weekStartStr} - ${weekEndStr}</p>
+                    </div>
+                </div>
+
+                <div class="overview-section">
+                    <h3>🌟 WEEK AT A GLANCE</h3>
+                    <div class="overview-content">
+                        <p><strong>Theme:</strong> ${getWeeklyTheme(zodiac, chinese, personalYear, moonPhase)}</p>
+                        <p><strong>Opportunity:</strong> ${getWeeklyOpportunity(lifePath, personalYear, focus)}</p>
+                        <p><strong>Challenge:</strong> ${getWeeklyChallenge(zodiac, chinese, challenge)}</p>
+                        <p><strong>Key Day:</strong> ${getKeyDayOfWeek(zodiac, lifePath)}</p>
+                    </div>
+                </div>
+
+                ${crossAnalysis.agreements.length > 0 ? `
+                <div class="cross-reference-section agreement">
+                    <h3>✨ THIS WEEK'S COSMIC ALIGNMENTS</h3>
+                    ${crossAnalysis.agreements.slice(0, 2).map(a => `
+                        <div class="cross-item">
+                            <div class="system-badges">${a.systems.map(s => `<span class="badge">${s}</span>`).join(' + ')}</div>
+                            <p>${a.insight}</p>
+                        </div>
+                    `).join('')}
+                </div>
+                ` : ''}
+
+                <div class="weekly-breakdown">
+                    <h3>📅 7-DAY BREAKDOWN</h3>
+                    <div class="days-grid">
+                        ${dailyBreakdown}
+                    </div>
+                </div>
+
+                <div class="system-section expanded">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>⭐ WESTERN ASTROLOGY - Weekly Transits</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getWeeklyWesternForecast(zodiac, risingSign, moonSign)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🔢 NUMEROLOGY - Weekly Vibration</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getWeeklyNumerologyForecast(lifePath, personalYear, weekStart)}
+                    </div>
+                </div>
+
+                <div class="action-section">
+                    <h3>💡 WEEKLY PRIORITIES</h3>
+                    ${getWeeklyActionItems(zodiac, chinese, lifePath, focus)}
+                </div>
+
+                <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
+                <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
+            `;
+        }
+
+        // PHASE 2: Monthly Forecast Generator
+        function generateMonthlyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
+            gematria, fullName, crossAnalysis, focus, challenge, birth) {
+            
+            const today = new Date();
+            const monthName = today.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            const daysInMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate();
+            
+            // Calculate personal month
+            const personalMonth = ((today.getMonth() + 1) + personalYear) % 9 || 9;
+            
+            // Four week themes
+            const weekThemes = getMonthlyWeekThemes(zodiac, chinese, personalMonth, focus);
+            
+            return `
+                <div class="forecast-header">
+                    <h2>YOUR MONTHLY QUANTUM FORECAST</h2>
+                    <div class="forecast-meta">
+                        <p>Generated for: ${fullName || 'Seeker'}</p>
+                        <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
+                        <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
+                        <p>Month: ${monthName} | Personal Month: ${personalMonth}</p>
+                    </div>
+                </div>
+
+                <div class="overview-section">
+                    <h3>🌟 ${monthName.toUpperCase()} OVERVIEW</h3>
+                    <div class="overview-content">
+                        <p><strong>Month Theme:</strong> ${getMonthlyTheme(personalMonth, zodiac, chinese)}</p>
+                        <p><strong>Primary Energy:</strong> ${getMonthlyEnergy(zodiac, chinese, personalMonth)}</p>
+                        <p><strong>Growth Area:</strong> ${getMonthlyGrowth(lifePath, personalMonth, focus)}</p>
+                        <p><strong>Watch For:</strong> ${getMonthlyCaution(zodiac, moonSign, personalMonth)}</p>
+                    </div>
+                </div>
+
+                ${crossAnalysis.agreements.length > 0 ? `
+                <div class="cross-reference-section agreement">
+                    <h3>✨ MONTHLY COSMIC ALIGNMENTS</h3>
+                    ${crossAnalysis.agreements.map(a => `
+                        <div class="cross-item">
+                            <div class="system-badges">${a.systems.map(s => `<span class="badge">${s}</span>`).join(' + ')}</div>
+                            <p>${a.insight}</p>
+                        </div>
+                    `).join('')}
+                </div>
+                ` : ''}
+
+                <div class="monthly-breakdown">
+                    <h3>📅 4-WEEK BREAKDOWN</h3>
+                    <div class="weeks-grid">
+                        ${weekThemes.map((theme, i) => `
+                            <div class="week-item">
+                                <h4>Week ${i + 1}: ${theme.title}</h4>
+                                <p><strong>Focus:</strong> ${theme.focus}</p>
+                                <p><strong>Action:</strong> ${theme.action}</p>
+                                <p><strong>Key Days:</strong> ${theme.keyDays}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div class="key-dates-section">
+                    <h3>🔑 KEY DATES THIS MONTH</h3>
+                    ${getMonthlyKeyDates(zodiac, chinese, lifePath, today)}
+                </div>
+
+                <div class="system-section expanded">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>⭐ ASTROLOGICAL TRANSITS</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getMonthlyWesternForecast(zodiac, risingSign, moonSign, today)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🔢 NUMEROLOGY - Personal Month ${personalMonth}</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getMonthlyNumerologyForecast(lifePath, personalYear, personalMonth)}
+                    </div>
+                </div>
+
+                <div class="action-section">
+                    <h3>💡 MONTHLY INTENTIONS</h3>
+                    ${getMonthlyActionItems(zodiac, chinese, lifePath, personalMonth, focus)}
+                </div>
+
+                <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
+                <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
+            `;
+        }
+
+        // PHASE 2: Yearly Forecast Generator  
+        function generateYearlyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
+            gematria, fullName, crossAnalysis, focus, challenge, birth) {
+            
+            const currentYear = new Date().getFullYear();
+            const currentChinese = getChineseZodiac(currentYear);
+            
+            // Quarterly breakdown
+            const quarters = getYearlyQuarters(zodiac, chinese, lifePath, personalYear, focus);
+            
+            return `
+                <div class="forecast-header">
+                    <h2>YOUR ${currentYear} QUANTUM FORECAST</h2>
+                    <div class="forecast-meta">
+                        <p>Generated for: ${fullName || 'Seeker'}</p>
+                        <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
+                        <p>🐉 ${chinese.element} ${chinese.animal} in Year of ${currentChinese.element} ${currentChinese.animal}</p>
+                        <p>🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
+                    </div>
+                </div>
+
+                <div class="overview-section">
+                    <h3>🌟 ${currentYear} - YOUR YEAR OF ${getYearlyThemeTitle(personalYear).toUpperCase()}</h3>
+                    <div class="overview-content">
+                        <p><strong>Year Theme:</strong> ${getYearlyTheme(personalYear, zodiac, chinese)}</p>
+                        <p><strong>Core Lesson:</strong> ${getYearlyLesson(lifePath, personalYear)}</p>
+                        <p><strong>Major Opportunity:</strong> ${getYearlyOpportunity(zodiac, chinese, personalYear, focus)}</p>
+                        <p><strong>Growth Edge:</strong> ${getYearlyChallenge(zodiac, moonSign, lifePath)}</p>
+                    </div>
+                </div>
+
+                ${crossAnalysis.agreements.length > 0 ? `
+                <div class="cross-reference-section agreement">
+                    <h3>✨ ${currentYear} COSMIC ALIGNMENTS</h3>
+                    ${crossAnalysis.agreements.map(a => `
+                        <div class="cross-item">
+                            <div class="system-badges">${a.systems.map(s => `<span class="badge">${s}</span>`).join(' + ')}</div>
+                            <p>${a.insight}</p>
+                        </div>
+                    `).join('')}
+                </div>
+                ` : ''}
+
+                <div class="yearly-breakdown">
+                    <h3>📅 QUARTERLY ROADMAP</h3>
+                    <div class="quarters-grid">
+                        ${quarters.map((q, i) => `
+                            <div class="quarter-item">
+                                <h4>Q${i + 1}: ${q.title}</h4>
+                                <p><strong>Months:</strong> ${q.months}</p>
+                                <p><strong>Theme:</strong> ${q.theme}</p>
+                                <p><strong>Focus:</strong> ${q.focus}</p>
+                                <p><strong>Peak Time:</strong> ${q.peak}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div class="major-transits-section">
+                    <h3>🪐 MAJOR TRANSITS & EVENTS</h3>
+                    ${getYearlyTransits(zodiac, currentYear)}
+                </div>
+
+                <div class="system-section expanded">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>⭐ WESTERN ASTROLOGY - ${currentYear} Overview</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getYearlyWesternForecast(zodiac, risingSign, moonSign, currentYear)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🐉 CHINESE ZODIAC - Year of ${currentChinese.element} ${currentChinese.animal}</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getYearlyChineseForecast(chinese, currentChinese)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🔢 NUMEROLOGY - Personal Year ${personalYear}</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getYearlyNumerologyForecast(lifePath, personalYear)}
+                    </div>
+                </div>
+
+                <div class="action-section">
+                    <h3>💡 ${currentYear} STRATEGIC PRIORITIES</h3>
+                    ${getYearlyActionItems(zodiac, chinese, lifePath, personalYear, focus)}
+                </div>
+
+                <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
+                <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
+            `;
         }
 
         function toggleSystem(header) {
@@ -1046,58 +1946,762 @@
             section.classList.toggle('expanded');
         }
 
-        // Forecast content generators
-        function getOverviewEnergy(zodiac, chinese, personalYear) {
-            const energies = ['Transformative', 'Expansive', 'Reflective', 'Dynamic', 'Harmonious', 'Intense'];
-            return energies[personalYear % energies.length] + ' (' + zodiac.name + ' sun meets ' + chinese.element + ' ' + chinese.animal + ' energy)';
+        // PHASE 2: Enhanced Forecast Content Generators
+        function getEnhancedOverviewEnergy(zodiac, risingSign, moonSign, chinese, personalYear, moonPhase) {
+            const baseEnergy = `${zodiac.name} determination meets ${chinese.element} ${chinese.animal} wisdom`;
+            const moonInfluence = moonSign ? `, filtered through ${moonSign.name} emotional lens` : '';
+            const risingInfluence = risingSign ? `. Your ${risingSign.name} rising presents this energy to the world with characteristic ${getRisingStyle(risingSign.name)}` : '';
+            const phaseInfluence = `. The ${moonPhase.phase} amplifies ${moonPhase.energy.split(',')[0].toLowerCase()}`;
+            return baseEnergy + moonInfluence + risingInfluence + phaseInfluence + '.';
         }
 
-        function getOverviewFocus(lifePath, personalYear, focus) {
-            const focuses = {
-                'career': 'Professional growth and strategic advancement',
-                'love': 'Deep connections and emotional authenticity',
-                'health': 'Physical vitality and energetic balance',
-                'spiritual': 'Inner wisdom and cosmic alignment',
-                'finances': 'Abundance flow and material security'
+        function getRisingStyle(sign) {
+            const styles = {
+                'Aries': 'boldness and directness',
+                'Taurus': 'steadiness and sensuality',
+                'Gemini': 'wit and adaptability',
+                'Cancer': 'nurturing warmth',
+                'Leo': 'charisma and presence',
+                'Virgo': 'precision and helpfulness',
+                'Libra': 'grace and diplomacy',
+                'Scorpio': 'intensity and mystery',
+                'Sagittarius': 'optimism and adventure',
+                'Capricorn': 'authority and composure',
+                'Aquarius': 'uniqueness and vision',
+                'Pisces': 'empathy and dreaminess'
             };
-            return focuses[focus] || 'Inner work, creative expression, and purposeful action';
+            return styles[sign] || 'unique expression';
         }
 
-        function getOverviewCaution(zodiac, chinese) {
-            return 'Avoid impulsive reactions and rushed decisions. Your ' + zodiac.name + ' nature combined with ' + chinese.animal + ' energy can create intensity today.';
+        function getEnhancedOverviewFocus(lifePath, personalYear, focus, moonPhase) {
+            const lifePathFocus = getLifePathFocus(lifePath);
+            const yearFocus = getPersonalYearFocus(personalYear);
+            const phaseFocus = moonPhase.action;
+            
+            if (focus) {
+                const focusMap = {
+                    'career': `Professional advancement through ${lifePathFocus}. ${yearFocus}`,
+                    'love': `Heart-centered connections aligned with your ${lifePathFocus}. ${yearFocus}`,
+                    'health': `Physical vitality supporting your ${lifePathFocus}. ${yearFocus}`,
+                    'spiritual': `Inner wisdom development through ${lifePathFocus}. ${yearFocus}`,
+                    'finances': `Abundance manifestation via ${lifePathFocus}. ${yearFocus}`
+                };
+                return focusMap[focus] || `${lifePathFocus}. ${yearFocus}`;
+            }
+            return `${lifePathFocus}. ${yearFocus} Action: ${phaseFocus}`;
         }
 
-        function getWesternAstrologyForecast(zodiac, birthTime, birthLocation) {
+        function getLifePathFocus(lifePath) {
+            const focuses = {
+                1: 'pioneering innovation and independent leadership',
+                2: 'collaborative partnerships and diplomatic balance',
+                3: 'creative expression and inspiring communication',
+                4: 'building solid foundations and practical systems',
+                5: 'embracing change and freedom-seeking exploration',
+                6: 'nurturing responsibility and service to community',
+                7: 'deep analysis and spiritual understanding',
+                8: 'material mastery and authoritative achievement',
+                9: 'humanitarian vision and compassionate completion',
+                11: 'intuitive illumination and inspirational guidance',
+                22: 'visionary building and large-scale manifestation',
+                33: 'master teaching and healing transformation'
+            };
+            return focuses[lifePath] || 'purposeful growth';
+        }
+
+        function getPersonalYearFocus(personalYear) {
+            const focuses = {
+                1: 'This is your year to initiate—plant seeds boldly.',
+                2: 'Patience and partnership are your tools—cultivate relationships.',
+                3: 'Express yourself creatively—your voice matters now.',
+                4: 'Build systematically—foundations created now last.',
+                5: 'Embrace transformation—freedom awaits the adaptable.',
+                6: 'Nurture what matters—home and heart call.',
+                7: 'Go within—spiritual depth is available.',
+                8: 'Manifest materially—your power is visible.',
+                9: 'Complete and release—clearing creates space.'
+            };
+            return focuses[personalYear] || 'Transformative growth unfolds.';
+        }
+
+        function getEnhancedOverviewCaution(zodiac, moonSign, chinese) {
+            const sunShadow = getZodiacShadow(zodiac.name);
+            const moonShadow = moonSign ? getZodiacShadow(moonSign.name) : '';
+            const chineseShadow = getChineseShadow(chinese.animal);
+            
+            return `Watch for ${sunShadow} (sun shadow)${moonSign ? ` and ${moonShadow} (emotional trigger)` : ''}. Your ${chinese.animal} nature may amplify ${chineseShadow}. Awareness transforms shadow into strength.`;
+        }
+
+        function getZodiacShadow(sign) {
+            const shadows = {
+                'Aries': 'impatience and impulsive reactions',
+                'Taurus': 'stubbornness and resistance to change',
+                'Gemini': 'scattered focus and superficiality',
+                'Cancer': 'emotional overwhelm and clinginess',
+                'Leo': 'ego attachment and need for validation',
+                'Virgo': 'perfectionism and self-criticism',
+                'Libra': 'people-pleasing and indecision',
+                'Scorpio': 'obsessive control and jealousy',
+                'Sagittarius': 'overcommitment and restlessness',
+                'Capricorn': 'workaholism and emotional suppression',
+                'Aquarius': 'detachment and rebelliousness',
+                'Pisces': 'escapism and boundary dissolution'
+            };
+            return shadows[sign] || 'unconscious patterns';
+        }
+
+        function getChineseShadow(animal) {
+            const shadows = {
+                'Rat': 'anxiety about resources',
+                'Ox': 'inflexibility under pressure',
+                'Tiger': 'reckless aggression',
+                'Rabbit': 'avoidance of conflict',
+                'Dragon': 'arrogance and overreach',
+                'Snake': 'manipulation tendencies',
+                'Horse': 'commitment fears',
+                'Goat': 'dependency patterns',
+                'Monkey': 'trickster energy',
+                'Rooster': 'critical perfectionism',
+                'Dog': 'pessimistic worry',
+                'Pig': 'overindulgence'
+            };
+            return shadows[animal] || 'habitual reactions';
+        }
+
+        // PHASE 2: Enhanced Western Astrology Forecast
+        function getEnhancedWesternAstrologyForecast(zodiac, risingSign, moonSign, birthTime, birthLocation, moonPhase) {
+            let html = `
+                <div class="system-item">
+                    <h4>☉ Sun in ${zodiac.name} ${zodiac.symbol}</h4>
+                    <p>${getDetailedZodiacDescription(zodiac.name)}</p>
+                    <p><strong>Today's Solar Activation:</strong> ${getSolarActivation(zodiac.name)}</p>
+                </div>
+            `;
+            
+            if (risingSign) {
+                html += `
+                    <div class="system-item">
+                        <h4>↑ Rising Sign: ${risingSign.name} ${risingSign.symbol}</h4>
+                        <p>${getRisingSignDescription(risingSign.name)}</p>
+                        <p><strong>Public Presence Today:</strong> ${getRisingActivation(risingSign.name)}</p>
+                    </div>
+                `;
+            }
+            
+            if (moonSign) {
+                html += `
+                    <div class="system-item">
+                        <h4>☽ Moon Sign: ${moonSign.name} ${moonSign.symbol}</h4>
+                        <p>${getMoonSignDescription(moonSign.name)}</p>
+                        <p><strong>Emotional Navigation:</strong> ${getMoonActivation(moonSign.name, moonPhase)}</p>
+                    </div>
+                `;
+            }
+            
+            html += `
+                <div class="system-item">
+                    <h4>🌙 Current Moon Phase: ${moonPhase.symbol} ${moonPhase.phase}</h4>
+                    <p>${moonPhase.energy}</p>
+                    <p><strong>Moon Phase Guidance:</strong> ${moonPhase.action}</p>
+                </div>
+                <div class="system-item">
+                    <h4>🪐 Planetary Transits</h4>
+                    <p>${getTransitForecast(zodiac.name)}</p>
+                </div>
+            `;
+            
+            return html;
+        }
+
+        function getDetailedZodiacDescription(sign) {
+            const descriptions = {
+                'Aries': 'As a Cardinal Fire sign ruled by Mars, you carry the spark of initiation and the courage to begin. Your soul\'s purpose involves pioneering new territory and inspiring others through bold action. Today, your natural leadership is activated.',
+                'Taurus': 'As a Fixed Earth sign ruled by Venus, you embody stability, sensuality, and the art of building lasting value. Your soul\'s purpose involves creating beauty and security. Today, your grounding energy provides anchor for others.',
+                'Gemini': 'As a Mutable Air sign ruled by Mercury, you are the cosmic messenger—curious, adaptable, and intellectually vibrant. Your soul\'s purpose involves connecting ideas and people. Today, your communication gifts shine.',
+                'Cancer': 'As a Cardinal Water sign ruled by the Moon, you carry deep emotional intelligence and nurturing wisdom. Your soul\'s purpose involves creating emotional safety and honoring the past. Today, your intuition speaks clearly.',
+                'Leo': 'As a Fixed Fire sign ruled by the Sun, you radiate creative life force and natural authority. Your soul\'s purpose involves authentic self-expression and generous heart-leadership. Today, your light inspires others.',
+                'Virgo': 'As a Mutable Earth sign ruled by Mercury, you hold the gift of discernment, service, and practical wisdom. Your soul\'s purpose involves healing through attention to detail. Today, your analytical gifts are needed.',
+                'Libra': 'As a Cardinal Air sign ruled by Venus, you carry the scales of justice, beauty, and relational harmony. Your soul\'s purpose involves creating balance and beauty in the world. Today, your diplomatic skills mediate.',
+                'Scorpio': 'As a Fixed Water sign ruled by Pluto and Mars, you hold transformative power and psychological depth. Your soul\'s purpose involves healing through facing shadow. Today, your intensity transforms.',
+                'Sagittarius': 'As a Mutable Fire sign ruled by Jupiter, you carry the archer\'s vision—philosophical, adventurous, and truth-seeking. Your soul\'s purpose involves expanding understanding. Today, your optimism lifts spirits.',
+                'Capricorn': 'As a Cardinal Earth sign ruled by Saturn, you embody ambition, discipline, and mastery through time. Your soul\'s purpose involves building structures that serve the collective. Today, your authority is respected.',
+                'Aquarius': 'As a Fixed Air sign ruled by Uranus and Saturn, you are the visionary revolutionary—innovative, humanitarian, and future-oriented. Your soul\'s purpose involves awakening collective consciousness. Today, your uniqueness inspires.',
+                'Pisces': 'As a Mutable Water sign ruled by Neptune and Jupiter, you hold the ocean of collective consciousness—mystical, compassionate, and boundless. Your soul\'s purpose involves channeling divine love. Today, your spiritual sensitivity peaks.'
+            };
+            return descriptions[sign] || 'Your unique cosmic signature speaks today.';
+        }
+
+        function getSolarActivation(sign) {
+            const activations = {
+                'Aries': 'Your initiative and courage are amplified. Take that first step you\'ve been contemplating. Leadership opportunities present themselves—step forward with confidence.',
+                'Taurus': 'Your senses are heightened. Pay attention to physical comfort, financial matters, and anything related to beauty or nature. Steady progress yields results today.',
+                'Gemini': 'Your mind is electric. Conversations flow easily, ideas spark, and connections form naturally. Share your thoughts—they carry more weight than usual.',
+                'Cancer': 'Your emotional radar is finely tuned. Home and family matters take priority. Trust your gut feelings—they\'re carrying important information today.',
+                'Leo': 'Your creative heart opens wide. Express yourself boldly. Romance and creative projects flourish under today\'s energy. You\'re more magnetic than usual.',
+                'Virgo': 'Your analytical abilities peak. Details that others miss are crystal clear to you. Health routines and organizational tasks flow with unusual ease.',
+                'Libra': 'Your social grace is enhanced. Partnerships and negotiations favor you. Beauty matters more today—surround yourself with aesthetically pleasing environments.',
+                'Scorpio': 'Your transformative power intensifies. Deep conversations, research, and psychological insights come naturally. Trust your instincts about hidden matters.',
+                'Sagittarius': 'Your adventurous spirit soars. Learning, travel planning, and philosophical discussions energize you. Your optimism is contagious—spread it generously.',
+                'Capricorn': 'Your ambition finds clear expression. Career moves and long-term planning favor you. Your natural authority commands respect—use it wisely.',
+                'Aquarius': 'Your innovative mind activates. Original ideas flow, and group activities energize you. Your uniqueness is your superpower today—don\'t dim it.',
+                'Pisces': 'Your spiritual channels open wide. Intuitive downloads, creative inspiration, and compassionate connections define your day. Trust the mystical.'
+            };
+            return activations[sign] || 'Your unique gifts activate today.';
+        }
+
+        function getRisingSignDescription(sign) {
+            return `Your ${sign} Rising shapes how you meet the world and how others first perceive you. This is your social armor and your automatic response system—it colors every first impression and every new situation.`;
+        }
+
+        function getRisingActivation(sign) {
+            const activations = {
+                'Aries': 'You appear more dynamic and assertive today. First impressions favor bold introductions. People see your courage clearly.',
+                'Taurus': 'You radiate calm stability. Others seek your grounding presence. Your physical presence carries weight.',
+                'Gemini': 'Your wit and adaptability shine in social situations. Networking flows naturally. Quick thinking impresses.',
+                'Cancer': 'Your nurturing energy is visible. Others feel safe with you. Emotional availability opens doors.',
+                'Leo': 'Your charisma is undeniable. You naturally command attention. Creative self-expression attracts opportunity.',
+                'Virgo': 'Your competence is evident. Others trust your attention to detail. Helpful suggestions are well-received.',
+                'Libra': 'Your charm and grace smooth every interaction. Partnership opportunities arise. Beauty and diplomacy win.',
+                'Scorpio': 'Your intensity creates intrigue. Others sense your depth. Powerful presence commands respect.',
+                'Sagittarius': 'Your optimism is infectious. Adventure calls and others want to follow. Enthusiasm opens doors.',
+                'Capricorn': 'Your professionalism shines. Career-related first impressions succeed. Authority is recognized.',
+                'Aquarius': 'Your uniqueness attracts the right people. Innovative ideas are welcomed. Originality distinguishes you.',
+                'Pisces': 'Your empathy draws others in. Creative and spiritual connections form easily. Compassion is visible.'
+            };
+            return activations[sign] || 'Your presentation aligns with your authentic self.';
+        }
+
+        function getMoonSignDescription(sign) {
+            return `Your ${sign} Moon governs your emotional nature, instinctive reactions, and innermost needs. This is your private self—how you feel, what makes you secure, and how you nurture yourself and others.`;
+        }
+
+        function getMoonActivation(sign, moonPhase) {
+            const baseActivation = {
+                'Aries': 'Emotional energy runs high and fast. Process feelings through action. Don\'t let irritation fester—address it directly but kindly.',
+                'Taurus': 'Seek comfort and security. Emotional stability comes through sensory pleasure. Take time for self-care rituals.',
+                'Gemini': 'Talk through your feelings. Writing, conversations, and mental stimulation help process emotions. Avoid overthinking.',
+                'Cancer': 'Emotions run deep and strong. Honor your need for nurturing—give and receive. Home is your sanctuary.',
+                'Leo': 'Express your feelings creatively. Recognition and appreciation feed your emotional well-being. Share your heart.',
+                'Virgo': 'Organize your way to emotional clarity. Practical tasks soothe anxiety. Helpful service lifts your mood.',
+                'Libra': 'Seek balance in relationships. Harmony in your environment supports emotional peace. Beautiful surroundings help.',
+                'Scorpio': 'Emotional intensity needs healthy outlets. Deep conversations, creative expression, or physical release help. Transform feelings into power.',
+                'Sagittarius': 'Optimism is your emotional default. Freedom and adventure lift your spirits. Don\'t let others limit your joy.',
+                'Capricorn': 'Emotional strength comes through achievement. Structure supports your feelings. Allow yourself to feel beneath the composure.',
+                'Aquarius': 'Process emotions through intellectual understanding. Space and freedom matter. Connect with friends who understand.',
+                'Pisces': 'Emotional sensitivity is heightened. Boundaries matter. Creative and spiritual practices channel overwhelming feelings.'
+            };
+            return (baseActivation[sign] || 'Honor your emotional needs.') + ` The ${moonPhase.phase} especially supports ${moonPhase.energy.split(',')[0].toLowerCase()}.`;
+        }
+
+        function getTransitForecast(sign) {
+            const today = new Date();
+            const dayOfWeek = today.getDay();
+            const transits = [
+                `Mercury's current position enhances communication and mental clarity for ${sign}. Ideas flow and connections strengthen.`,
+                `Venus brings harmony to relationships and finances. Beauty and pleasure are favored for ${sign} today.`,
+                `Mars energizes action and assertion. ${sign} has extra physical and motivational energy available.`,
+                `Jupiter expands opportunities and optimism. ${sign} may encounter luck and growth in unexpected areas.`,
+                `Saturn calls for discipline and structure. ${sign} benefits from focused, long-term thinking today.`,
+                `The current planetary alignment supports ${sign}'s creative expression and authentic self-presentation.`,
+                `Neptune's influence enhances ${sign}'s intuition and spiritual sensitivity. Dreams may carry messages.`
+            ];
+            return transits[dayOfWeek] + ' Trust your instincts about timing—the cosmic clock is working in your favor.';
+        }
+
+        // PHASE 2: Enhanced Chinese Zodiac Forecast
+        function getEnhancedChineseZodiacForecast(chinese, moonPhase) {
             return `
                 <div class="system-item">
-                    <h4>Sun in ${zodiac.name} ${zodiac.symbol}</h4>
-                    <p>${getZodiacDescription(zodiac.name)} Today's energy amplifies your natural ${zodiac.name} tendencies toward ${getZodiacTrait(zodiac.name)}.</p>
+                    <h4>Your Animal: ${chinese.animal}</h4>
+                    <p>${getDetailedChineseDescription(chinese.animal)}</p>
                 </div>
-                ${birthTime ? `
                 <div class="system-item">
-                    <h4>Rising Sign Influence</h4>
-                    <p>With your birth time provided, today's transits activate your rising sign, bringing opportunities for self-expression and new beginnings.</p>
+                    <h4>Your Element: ${chinese.element}</h4>
+                    <p>${getDetailedElementDescription(chinese.element)}</p>
                 </div>
-                ` : ''}
                 <div class="system-item">
-                    <h4>Current Transits</h4>
-                    <p>The Moon's current phase supports introspection and emotional processing. Mercury's position favors clear communication and analytical thinking.</p>
+                    <h4>Today's Animal Energy</h4>
+                    <p>${getDailyAnimalEnergy(chinese.animal)}</p>
+                </div>
+                <div class="system-item">
+                    <h4>Elemental Harmony</h4>
+                    <p>${getElementalHarmony(chinese.element)}</p>
+                </div>
+                <div class="system-item">
+                    <h4>Auspicious Directions & Colors</h4>
+                    <p><strong>Lucky Direction:</strong> ${getLuckyDirection(chinese.animal)}<br>
+                    <strong>Lucky Colors:</strong> ${getChineseColor(chinese.element)}<br>
+                    <strong>Lucky Numbers:</strong> ${getLuckyNumbers(chinese.animal)}<br>
+                    <strong>Avoid:</strong> ${getUnluckyElements(chinese.animal)}</p>
                 </div>
             `;
         }
 
-        function getChineseZodiacForecast(chinese) {
+        function getDetailedChineseDescription(animal) {
+            const descriptions = {
+                'Rat': 'The Rat is first in the zodiac—clever, quick-witted, and resourceful. You possess natural charm and the ability to turn any situation to your advantage. Your instincts for opportunity are finely honed, and your social intelligence opens doors others don\'t even see.',
+                'Ox': 'The Ox embodies diligence, dependability, and quiet strength. You are the foundation upon which great things are built. Your patience and persistence are legendary—you accomplish through steady effort what others cannot achieve through force.',
+                'Tiger': 'The Tiger is brave, competitive, and unpredictable. You are a natural leader who inspires others through sheer presence and courage. Your protective instincts are fierce, and your confidence can move mountains.',
+                'Rabbit': 'The Rabbit brings elegance, sensitivity, and diplomatic skill. You navigate social situations with grace and possess artistic sensibility that enriches everything you touch. Your gentle strength should not be underestimated.',
+                'Dragon': 'The Dragon is the most powerful and auspicious sign—ambitious, energetic, and natural leaders. You carry imperial energy and the expectation of greatness. Your charisma is magnetic and your potential limitless.',
+                'Snake': 'The Snake is wise, intuitive, and enigmatic. You possess deep intelligence and the patience to wait for perfect timing. Your insight into human nature and strategic mind make you formidable in any arena.',
+                'Horse': 'The Horse embodies freedom, energy, and passionate independence. You need room to run and causes to champion. Your enthusiasm is infectious and your work ethic impressive when inspired.',
+                'Goat': 'The Goat (or Sheep) brings creativity, gentleness, and artistic vision. You are the aesthetic heart of the zodiac—sensitive to beauty and harmony. Your compassion and imagination enrich the world.',
+                'Monkey': 'The Monkey is clever, curious, and endlessly entertaining. You solve problems through wit and innovation, always finding the creative angle. Your intelligence is versatile and your charm disarming.',
+                'Rooster': 'The Rooster is observant, hardworking, and confident. You speak your truth and honor your word. Your attention to detail and organizational skills are unmatched when focused.',
+                'Dog': 'The Dog embodies loyalty, honesty, and a strong moral compass. You are the protector and the truth-teller—fiercely devoted to those you love. Your integrity is your greatest asset.',
+                'Pig': 'The Pig brings generosity, sincerity, and good fortune. You enjoy life\'s pleasures without apology and share your abundance freely. Your kind heart and genuine nature attract lasting relationships.'
+            };
+            return descriptions[animal] || 'Your animal spirit carries unique wisdom.';
+        }
+
+        function getDetailedElementDescription(element) {
+            const descriptions = {
+                'Metal': 'Metal element brings determination, focus, and righteousness. You have strong will, clear values, and the ability to cut through confusion. Your precision and persistence make you formidable in achieving goals.',
+                'Water': 'Water element brings wisdom, flexibility, and deep intuition. You adapt to circumstances while maintaining your essential nature. Your emotional intelligence and ability to flow around obstacles are your strengths.',
+                'Wood': 'Wood element brings growth, creativity, and expansive vision. You are naturally optimistic and ethical, with a drive toward progress. Your generosity and idealism inspire others to reach higher.',
+                'Fire': 'Fire element brings passion, charisma, and dynamic energy. You light up any room and inspire action in others. Your enthusiasm is contagious and your courage admirable.',
+                'Earth': 'Earth element brings stability, patience, and practical wisdom. You are the reliable center around which others orbit. Your grounding presence and nurturing nature support everyone around you.'
+            };
+            return descriptions[element] || 'Your element adds unique qualities to your nature.';
+        }
+
+        function getDailyAnimalEnergy(animal) {
+            const today = new Date();
+            const dailyAnimals = ['Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake', 'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig'];
+            const todayAnimal = dailyAnimals[today.getDate() % 12];
+            
+            const compatibility = getAnimalCompatibility(animal, todayAnimal);
+            return `Today carries ${todayAnimal} energy. ${compatibility} Your ${animal} wisdom ${getAnimalAdvice(animal, todayAnimal)}.`;
+        }
+
+        function getAnimalCompatibility(sign1, sign2) {
+            // Simplified compatibility
+            const allies = {
+                'Rat': ['Dragon', 'Monkey'],
+                'Ox': ['Snake', 'Rooster'],
+                'Tiger': ['Horse', 'Dog'],
+                'Rabbit': ['Goat', 'Pig'],
+                'Dragon': ['Rat', 'Monkey'],
+                'Snake': ['Ox', 'Rooster'],
+                'Horse': ['Tiger', 'Dog'],
+                'Goat': ['Rabbit', 'Pig'],
+                'Monkey': ['Rat', 'Dragon'],
+                'Rooster': ['Ox', 'Snake'],
+                'Dog': ['Tiger', 'Horse'],
+                'Pig': ['Rabbit', 'Goat']
+            };
+            
+            if (sign1 === sign2) return 'This is a same-sign day—your energy is doubled and amplified.';
+            if (allies[sign1]?.includes(sign2)) return `This is a highly auspicious day for you—${sign2} energy harmonizes beautifully with your ${sign1} nature.`;
+            return `Moderate energy blend—${sign2}\'s influence offers complementary lessons for your ${sign1} path.`;
+        }
+
+        function getAnimalAdvice(yourAnimal, todayAnimal) {
+            return `suggests balancing ${yourAnimal} strengths with ${todayAnimal} qualities today`;
+        }
+
+        function getElementalHarmony(element) {
+            const cycle = {
+                'Metal': { generates: 'Water', generated: 'Earth', controls: 'Wood', controlled: 'Fire' },
+                'Water': { generates: 'Wood', generated: 'Metal', controls: 'Fire', controlled: 'Earth' },
+                'Wood': { generates: 'Fire', generated: 'Water', controls: 'Earth', controlled: 'Metal' },
+                'Fire': { generates: 'Earth', generated: 'Wood', controls: 'Metal', controlled: 'Water' },
+                'Earth': { generates: 'Metal', generated: 'Fire', controls: 'Water', controlled: 'Wood' }
+            };
+            
+            const c = cycle[element];
+            return `Your ${element} element generates ${c.generates} (supportive energy) and is generated by ${c.generated} (receiving energy). You naturally control ${c.controls} and are controlled by ${c.controlled}. Today, lean into ${c.generates} activities for flowing creation.`;
+        }
+
+        function getLuckyDirection(animal) {
+            const directions = {
+                'Rat': 'North, Northwest',
+                'Ox': 'Southeast, North',
+                'Tiger': 'South, East',
+                'Rabbit': 'East, Southeast, South',
+                'Dragon': 'North, West, Northwest',
+                'Snake': 'South, Southwest',
+                'Horse': 'South, East',
+                'Goat': 'East, Southeast',
+                'Monkey': 'North, West',
+                'Rooster': 'West, Southwest',
+                'Dog': 'East, South',
+                'Pig': 'Southeast, Northeast'
+            };
+            return directions[animal] || 'All directions hold potential';
+        }
+
+        function getLuckyNumbers(animal) {
+            const numbers = {
+                'Rat': '2, 3, 7',
+                'Ox': '1, 4, 9',
+                'Tiger': '1, 3, 4',
+                'Rabbit': '3, 4, 9',
+                'Dragon': '1, 6, 7',
+                'Snake': '2, 8, 9',
+                'Horse': '2, 3, 7',
+                'Goat': '2, 7, 8',
+                'Monkey': '4, 9',
+                'Rooster': '5, 7, 8',
+                'Dog': '3, 4, 9',
+                'Pig': '2, 5, 8'
+            };
+            return numbers[animal] || '1, 8, 9';
+        }
+
+        function getUnluckyElements(animal) {
+            const avoid = {
+                'Rat': 'Horse direction (South), number 5, yellow/brown colors',
+                'Ox': 'Goat direction, number 6, green colors when in conflict',
+                'Tiger': 'Monkey energy, Southwest direction',
+                'Rabbit': 'Rooster energy, West direction',
+                'Dragon': 'Dog energy, Southeast direction when in conflict',
+                'Snake': 'Pig energy, Northwest direction',
+                'Horse': 'Rat energy, North direction',
+                'Goat': 'Ox energy, Northeast direction',
+                'Monkey': 'Tiger energy, Northeast direction',
+                'Rooster': 'Rabbit energy, East direction',
+                'Dog': 'Dragon energy, Southeast direction',
+                'Pig': 'Snake energy, Southeast direction'
+            };
+            return avoid[animal] || 'Nothing specific—remain balanced';
+        }
+
+        // PHASE 2: Enhanced Numerology Forecast
+        function getEnhancedNumerologyForecast(lifePath, personalYear, birth) {
+            const today = new Date();
+            const personalMonth = ((today.getMonth() + 1) + personalYear) % 9 || 9;
+            const personalDay = (birth.getDate() + today.getDate() + (today.getMonth() + 1)) % 9 || 9;
+            
             return `
                 <div class="system-item">
-                    <h4>Your Sign: ${chinese.element} ${chinese.animal}</h4>
-                    <p>${getChineseDescription(chinese.animal)} Your ${chinese.element} element adds ${getElementQuality(chinese.element)} to your natural ${chinese.animal} traits.</p>
+                    <h4>Life Path ${lifePath}</h4>
+                    <p>${getDetailedLifePathDescription(lifePath)}</p>
                 </div>
                 <div class="system-item">
-                    <h4>Today's Energy</h4>
-                    <p>The daily animal energy harmonizes with your ${chinese.animal} nature, creating favorable conditions for ${getChineseActivity(chinese.animal)}.</p>
+                    <h4>Personal Year ${personalYear}</h4>
+                    <p>${getDetailedPersonalYearDescription(personalYear)}</p>
                 </div>
                 <div class="system-item">
-                    <h4>Lucky Elements</h4>
+                    <h4>Personal Month ${personalMonth}</h4>
+                    <p>${getPersonalMonthDescription(personalMonth, personalYear)}</p>
+                </div>
+                <div class="system-item">
+                    <h4>Personal Day ${personalDay}</h4>
+                    <p>${getDetailedPersonalDayDescription(personalDay)}</p>
+                </div>
+                <div class="system-item">
+                    <h4>Today's Universal Number</h4>
+                    <p>${getUniversalDayGuidance(today)}</p>
+                </div>
+            `;
+        }
+
+        function getDetailedLifePathDescription(number) {
+            const descriptions = {
+                1: '<strong>The Pioneer & Leader</strong> - You are here to develop independence, individuality, and leadership. Your soul chose this path to learn self-reliance and to inspire others through original action. You are meant to be first—first to try, first to lead, first to stand alone when necessary. Success comes when you trust your innovative ideas and have the courage to implement them.',
+                2: '<strong>The Diplomat & Peacemaker</strong> - You are here to develop cooperation, sensitivity, and harmony. Your soul chose this path to learn the art of partnership and the power of patience. You are meant to bring balance—to situations, relationships, and groups. Success comes when you trust your intuition and allow your natural healing presence to work.',
+                3: '<strong>The Communicator & Creator</strong> - You are here to develop self-expression, creativity, and joy. Your soul chose this path to learn that your voice matters and your artistic vision enriches the world. You are meant to inspire—through words, art, performance, or simple presence. Success comes when you share your gifts without fear.',
+                4: '<strong>The Builder & Organizer</strong> - You are here to develop discipline, stability, and practical mastery. Your soul chose this path to learn that lasting value is built step by step. You are meant to create foundations—systems, structures, traditions that serve others. Success comes when you honor the process over the shortcut.',
+                5: '<strong>The Freedom Seeker & Adventurer</strong> - You are here to develop versatility, freedom, and constructive change. Your soul chose this path to learn that variety is indeed the spice of life and stagnation is the enemy. You are meant to experience—travel, taste, try everything. Success comes when you embrace change as the only constant.',
+                6: '<strong>The Nurturer & Healer</strong> - You are here to develop responsibility, love, and service. Your soul chose this path to learn that home, family, and community are sacred. You are meant to nurture—people, places, beauty, harmony. Success comes when you balance giving with receiving.',
+                7: '<strong>The Seeker & Mystic</strong> - You are here to develop wisdom, spirituality, and analytical depth. Your soul chose this path to look beneath the surface and trust the invisible. You are meant to understand—life\'s mysteries, human nature, spiritual truth. Success comes when you trust your inner knowing over external validation.',
+                8: '<strong>The Powerhouse & Manifestor</strong> - You are here to develop material mastery, authority, and abundance. Your soul chose this path to learn that power is responsibility and abundance is meant to be shared. You are meant to build empires—business, financial, structural. Success comes when you use power for collective benefit.',
+                9: '<strong>The Humanitarian & Wise One</strong> - You are here to develop universal love, completion, and letting go. Your soul chose this path to learn that giving without attachment is the highest form of receiving. You are meant to serve—causes larger than yourself. Success comes when you release what has ended and trust the new.',
+                11: '<strong>The Illuminator & Inspirational Leader</strong> - Master Number. You are here to channel higher wisdom and inspire through example. Your intuition is a direct line to spiritual truth. You are meant to light the way for others while managing heightened sensitivity. Success comes when you trust your visions and share them courageously.',
+                22: '<strong>The Master Builder & Visionary</strong> - Master Number. You are here to turn dreams into reality on a grand scale. You combine the intuition of 11 with the practical power of 4. You are meant to build structures that serve humanity. Success comes when you think big while attending to details.',
+                33: '<strong>The Master Teacher & Healer</strong> - Master Number. You are here to heal and teach through love. You combine the higher octaves of 6\'s nurturing with spiritual mastery. You are meant to be a channel for cosmic compassion. Success comes when you embody the love you teach.'
+            };
+            return descriptions[number] || 'Your life path carries unique purpose and lessons.';
+        }
+
+        function getDetailedPersonalYearDescription(number) {
+            const descriptions = {
+                1: '<strong>Year of New Beginnings</strong> - This is your launch year. Seeds planted now set the tone for the next 9-year cycle. Initiative is rewarded. Independence is necessary. It\'s time to start that project, make that change, step into that new identity. Don\'t wait for permission—pioneer forward.',
+                2: '<strong>Year of Partnership</strong> - This is your year of patience, cooperation, and relationship focus. Growth comes through others. Rushing defeats you; waiting rewards you. Pay attention to the details and the partnerships—both hold your keys.',
+                3: '<strong>Year of Expression</strong> - This is your year to speak, create, and share. Your voice carries extra weight. Creative projects flourish. Joy is not optional—it\'s necessary medicine. Express yourself in every possible way.',
+                4: '<strong>Year of Foundation</strong> - This is your year to build, organize, and establish. Hard work pays off. Structure matters. Create the systems and foundations that will support future dreams. This is a working year—embrace it.',
+                5: '<strong>Year of Change</strong> - This is your year of freedom, adventure, and transformation. Expect the unexpected. Flexibility is survival. Travel, variety, and new experiences call. Don\'t cling to what needs to change.',
+                6: '<strong>Year of Responsibility</strong> - This is your year of home, family, and service. Relationships demand attention. Beautify your environment. Take responsibility for what\'s yours. Love in action is your theme.',
+                7: '<strong>Year of Inner Work</strong> - This is your year of reflection, study, and spiritual deepening. Solitude is productive. Analysis yields insight. Trust your inner wisdom over external advice. Rest is not laziness—it\'s essential.',
+                8: '<strong>Year of Abundance</strong> - This is your year of power, manifestation, and material success. Financial and career opportunities peak. Authority increases. Use your power wisely—karma is immediate this year.',
+                9: '<strong>Year of Completion</strong> - This is your year of endings, release, and humanitarian service. Let go of what\'s finished. Clear the decks. Serve causes larger than yourself. What you release makes room for Year 1\'s new beginnings.'
+            };
+            return descriptions[number] || 'This year carries transformative potential.';
+        }
+
+        function getPersonalMonthDescription(month, year) {
+            const base = month + year;
+            const reduced = base > 9 ? (base.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0)) : base;
+            
+            const themes = {
+                1: 'Initiation energy peaks this month. Start projects, assert yourself, lead.',
+                2: 'Patience and partnership are this month\'s teachers. Collaborate, wait, receive.',
+                3: 'Express and create this month. Your voice and vision matter now.',
+                4: 'Build and organize this month. Structure supports your dreams.',
+                5: 'Change accelerates this month. Adapt, explore, embrace variety.',
+                6: 'Home and relationships need attention this month. Nurture what matters.',
+                7: 'Go within this month. Study, reflect, trust your intuition.',
+                8: 'Manifestation power peaks this month. Focus on career and finances.',
+                9: 'Complete and release this month. Clear space for the new.'
+            };
+            
+            return themes[reduced] || 'This month brings unique lessons and opportunities.';
+        }
+
+        function getDetailedPersonalDayDescription(number) {
+            const descriptions = {
+                1: '<strong>Initiative Day</strong> - Today favors bold action, new starts, and independent thinking. Lead with your ideas. Don\'t wait for group consensus—move first.',
+                2: '<strong>Partnership Day</strong> - Today favors cooperation, patience, and attention to others. Listen more than you speak. Relationships progress through small gestures.',
+                3: '<strong>Expression Day</strong> - Today favors creativity, communication, and social activity. Share your ideas. Write, speak, create. Joy is productive today.',
+                4: '<strong>Work Day</strong> - Today favors practical tasks, organization, and steady progress. Get things done. Details matter. Build systematically.',
+                5: '<strong>Change Day</strong> - Today favors flexibility, variety, and embracing the unexpected. Routine is your enemy. Adventure calls. Adapt quickly.',
+                6: '<strong>Service Day</strong> - Today favors helping others, beautifying spaces, and nurturing connections. Home and family take priority. Love in action.',
+                7: '<strong>Reflection Day</strong> - Today favors solitude, study, and inner work. Quiet productivity beats social noise. Trust your intuition.',
+                8: '<strong>Power Day</strong> - Today favors career moves, financial decisions, and authoritative action. Your influence is magnified. Use it wisely.',
+                9: '<strong>Completion Day</strong> - Today favors finishing projects, releasing what\'s done, and humanitarian thinking. Clear the old to welcome the new.'
+            };
+            return descriptions[number] || 'Today brings unique numerological energy.';
+        }
+
+        function getUniversalDayGuidance(today) {
+            const universalDay = (today.getDate() + (today.getMonth() + 1) + today.getFullYear()) % 9 || 9;
+            const guidance = {
+                1: `Universal Day ${universalDay}: Collective energy supports new beginnings and leadership. The world is ready for pioneers today.`,
+                2: `Universal Day ${universalDay}: Collective energy supports partnership and peace. Diplomacy succeeds globally today.`,
+                3: `Universal Day ${universalDay}: Collective energy supports expression and creativity. Communication flows worldwide today.`,
+                4: `Universal Day ${universalDay}: Collective energy supports building and structure. Practical progress is favored today.`,
+                5: `Universal Day ${universalDay}: Collective energy supports change and freedom. Expect surprises globally today.`,
+                6: `Universal Day ${universalDay}: Collective energy supports service and family. Community matters today.`,
+                7: `Universal Day ${universalDay}: Collective energy supports reflection and spirituality. Wisdom surfaces today.`,
+                8: `Universal Day ${universalDay}: Collective energy supports power and abundance. Material matters progress today.`,
+                9: `Universal Day ${universalDay}: Collective energy supports completion and compassion. Endings and humanitarian focus today.`
+            };
+            return guidance[universalDay] || 'Today carries unique universal energy.';
+        }
+
+        // PHASE 2: Enhanced Gematria Forecast
+        function getEnhancedGematriaForecast(name, value, birth) {
+            const today = new Date();
+            const dateValue = today.getFullYear() + (today.getMonth() + 1) + today.getDate();
+            const resonance = (value + dateValue) % 999;
+            const reducedName = reduceToSingleDigit(value);
+            const reducedDate = reduceToSingleDigit(dateValue);
+            const combinedReduced = reduceToSingleDigit(resonance);
+            
+            return `
+                <div class="system-item">
+                    <h4>Your Name Value: ${value} (reduces to ${reducedName})</h4>
+                    <p>${getNameValueInterpretation(value, reducedName, name)}</p>
+                </div>
+                <div class="system-item">
+                    <h4>Today's Date Value: ${dateValue} (reduces to ${reducedDate})</h4>
+                    <p>${getDateValueInterpretation(dateValue, reducedDate)}</p>
+                </div>
+                <div class="system-item">
+                    <h4>Name + Date Resonance: ${resonance} (reduces to ${combinedReduced})</h4>
+                    <p>${getResonanceInterpretation(resonance, combinedReduced)}</p>
+                </div>
+                <div class="system-item">
+                    <h4>Today's Gematria Guidance</h4>
+                    <p>${getGematriaGuidance(reducedName, reducedDate, combinedReduced)}</p>
+                </div>
+            `;
+        }
+
+        function reduceToSingleDigit(num) {
+            while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
+                num = num.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+            }
+            return num;
+        }
+
+        function getNameValueInterpretation(value, reduced, name) {
+            const themes = {
+                1: 'leadership, independence, and pioneering spirit',
+                2: 'partnership, diplomacy, and receptive energy',
+                3: 'creativity, expression, and joyful communication',
+                4: 'stability, structure, and practical foundation',
+                5: 'freedom, change, and dynamic experience',
+                6: 'nurturing, responsibility, and harmonious service',
+                7: 'wisdom, spirituality, and analytical depth',
+                8: 'power, abundance, and material mastery',
+                9: 'completion, humanitarianism, and universal love',
+                11: 'illumination, intuition, and inspirational leadership',
+                22: 'master building, practical vision, and large-scale impact',
+                33: 'master teaching, healing presence, and cosmic love'
+            };
+            return `The name "${name}" carries a vibrational signature of ${themes[reduced] || 'unique purpose'}. This frequency is your energetic calling card—it influences how others perceive you and what you naturally attract.`;
+        }
+
+        function getDateValueInterpretation(value, reduced) {
+            const themes = {
+                1: 'initiation and new beginning energy',
+                2: 'partnership and patience vibration',
+                3: 'creative expression and communication flow',
+                4: 'building and organization frequency',
+                5: 'change and freedom vibration',
+                6: 'service and harmony energy',
+                7: 'reflection and spiritual depth',
+                8: 'manifestation and power frequency',
+                9: 'completion and release energy'
+            };
+            return `Today's date creates a field of ${themes[reduced] || 'transformative energy'}. This universal vibration colors everything that happens today—work with it rather than against it.`;
+        }
+
+        function getResonanceInterpretation(resonance, reduced) {
+            const quality = resonance % 7 === 0 ? 'exceptionally harmonious' : 
+                           resonance % 3 === 0 ? 'creatively flowing' :
+                           resonance % 2 === 0 ? 'balanced and receptive' : 'dynamically charged';
+            return `Your name frequency meeting today's date frequency creates a ${quality} resonance field. This ${reduced}-energy combination supports activities aligned with ${getReducedTheme(reduced)}.`;
+        }
+
+        function getReducedTheme(num) {
+            const themes = {
+                1: 'leadership, starting projects, and individual initiative',
+                2: 'teamwork, patience, and relational harmony',
+                3: 'creative expression, communication, and joyful sharing',
+                4: 'practical work, organization, and foundation building',
+                5: 'adventure, flexibility, and embracing change',
+                6: 'service, home, family, and nurturing connections',
+                7: 'study, reflection, and spiritual development',
+                8: 'career advancement, financial decisions, and manifestation',
+                9: 'completion, generosity, and humanitarian service'
+            };
+            return themes[num] || 'transformative growth';
+        }
+
+        function getGematriaGuidance(nameNum, dateNum, combinedNum) {
+            if (nameNum === dateNum) {
+                return `Your name frequency perfectly matches today's date frequency—this is an amplification day. Your natural gifts are doubled. Lean into your strengths with confidence.`;
+            }
+            if (combinedNum === 1) {
+                return `Combined resonance points to initiation. Today is excellent for beginning new projects or asserting your leadership.`;
+            }
+            return `Today's combined ${combinedNum}-frequency suggests focusing on ${getReducedTheme(combinedNum)}. Let your natural ${getReducedTheme(nameNum)} meet the day's ${getReducedTheme(dateNum)} energy.`;
+        }
+
+        // PHASE 2: Enhanced Action Items
+        function getEnhancedActionItems(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, planetaryHour, moonPhase, focus, challenge) {
+            let items = [];
+            
+            items.push(`
+                <div class="action-item cosmic-timing">
+                    <h4>⏰ Right Now: Hour of ${planetaryHour.planet} ${planetaryHour.symbol}</h4>
+                    <p><strong>Best for:</strong> ${planetaryHour.activity}</p>
+                    <p><strong>Energy:</strong> ${planetaryHour.energy}</p>
+                    <p><strong>Wear/Use:</strong> ${planetaryHour.color} colors</p>
+                </div>
+            `);
+            
+            items.push(`
+                <div class="action-item">
+                    <h4>🌅 Morning Power Hour (6-9 AM)</h4>
+                    <p>${getEnhancedMorningAction(zodiac.name, risingSign, lifePath)}</p>
+                </div>
+            `);
+            
+            items.push(`
+                <div class="action-item">
+                    <h4>☀️ Peak Productivity (10 AM - 2 PM)</h4>
+                    <p>${getEnhancedAfternoonAction(zodiac.name, chinese, personalYear, focus)}</p>
+                </div>
+            `);
+            
+            items.push(`
+                <div class="action-item">
+                    <h4>🌙 Evening Integration (6-9 PM)</h4>
+                    <p>${getEnhancedEveningAction(moonSign, moonPhase, lifePath)}</p>
+                </div>
+            `);
+            
+            if (challenge) {
+                items.push(`
+                    <div class="action-item challenge">
+                        <h4>⚡ Challenge-Specific Guidance</h4>
+                        <p><strong>Regarding:</strong> "${challenge}"</p>
+                        <p>${getEnhancedChallengeGuidance(zodiac, chinese, moonSign, lifePath, moonPhase, challenge)}</p>
+                    </div>
+                `);
+            }
+            
+            items.push(`
+                <div class="action-item moon-ritual">
+                    <h4>${moonPhase.symbol} Moon Phase Ritual</h4>
+                    <p><strong>Phase:</strong> ${moonPhase.phase}</p>
+                    <p><strong>Action:</strong> ${moonPhase.action}</p>
+                </div>
+            `);
+            
+            return items.join('');
+        }
+
+        function getEnhancedMorningAction(sun, rising, lifePath) {
+            const sunAction = {
+                'Aries': 'Start with physical movement—even 10 minutes activates your fire',
+                'Taurus': 'Begin with sensory pleasure—quality coffee, comfortable clothing, beauty',
+                'Gemini': 'Read or journal first thing—your mind needs morning stimulation',
+                'Cancer': 'Check in emotionally—how do you feel? Honor it before moving',
+                'Leo': 'Set creative intentions—what do you want to express today?',
+                'Virgo': 'Review your plan—organization in the morning creates afternoon freedom',
+                'Libra': 'Create beauty in your space—aesthetics affect your energy',
+                'Scorpio': 'Deep meditation or shadow journaling—access your depths',
+                'Sagittarius': 'Read something inspiring—philosophy, adventure, wisdom',
+                'Capricorn': 'Review goals and priorities—strategic morning sets up success',
+                'Aquarius': 'Brainstorm innovation—your morning mind is most original',
+                'Pisces': 'Spiritual practice or creativity—connect to source first'
+            };
+            
+            const risingBoost = rising ? ` Your ${rising.name} rising adds ${getRisingStyle(rising.name)} to how you present this energy.` : '';
+            const lifePathBoost = ` Life Path ${lifePath} suggests focusing on ${getLifePathFocus(lifePath).split(' and ')[0]}.`;
+            
+            return (sunAction[sun] || 'Begin with centering practices') + risingBoost + lifePathBoost;
+        }
+
+        function getEnhancedAfternoonAction(sun, chinese, personalYear, focus) {
+            let baseAction = `Peak ${sun} energy combines with ${chinese.element} ${chinese.animal} persistence. `;
+            
+            if (focus === 'career') baseAction += 'Schedule important meetings and career-advancing work now.';
+            else if (focus === 'love') baseAction += 'Make meaningful connections—reach out with authentic intention.';
+            else if (focus === 'health') baseAction += 'This is optimal workout time—your energy supports physical achievement.';
+            else if (focus === 'spiritual') baseAction += 'Practice presence in action—make ordinary tasks sacred.';
+            else if (focus === 'finances') baseAction += 'Financial decisions and income-generating activities favor you now.';
+            else baseAction += 'Your most important work belongs here—give it your peak energy.';
+            
+            baseAction += ` Personal Year ${personalYear} energy: ${getPersonalYearFocus(personalYear)}`;
+            return baseAction;
+        }
+
+        function getEnhancedEveningAction(moonSign, moonPhase, lifePath) {
+            const moonAction = moonSign ? `Your ${moonSign.name} Moon needs ${getMoonNeed(moonSign.name)} in the evening. ` : '';
+            return moonAction + `The ${moonPhase.phase} supports ${moonPhase.energy.split(',')[0].toLowerCase()}. Life Path ${lifePath} benefits from evening reflection on ${getLifePathFocus(lifePath).split(' and ')[0]}.`;
+        }
+
+        function getMoonNeed(sign) {
+            const needs = {
+                'Aries': 'active unwinding—exercise or energetic activity',
+                'Taurus': 'comfort rituals—good food, soft textures, beauty',
+                'Gemini': 'conversation or reading—mental processing time',
+                'Cancer': 'nurturing environment—home, family, emotional safety',
+                'Leo': 'creative expression or appreciation—feel special',
+                'Virgo': 'organization and closure—tie up loose ends',
+                'Libra': 'harmony and beauty—peaceful environment',
+                'Scorpio': 'depth and intimacy—meaningful connection',
+                'Sagittarius': 'inspiration and adventure—even if just in books or plans',
+                'Capricorn': 'achievement review—acknowledge what you accomplished',
+                'Aquarius': 'freedom and friendship—social connection on your terms',
+                'Pisces': 'creative or spiritual practice—transcendence'
+            };
+            return needs[sign] || 'rest and integration';
+        }
+
+        function getEnhancedChallengeGuidance(zodiac, chinese, moonSign, lifePath, moonPhase, challenge) {
+            return `Your ${zodiac.name} determination and ${chinese.animal} wisdom suggest approaching "${challenge}" through strategic patience rather than force. ` +
+                   `${moonSign ? `Your ${moonSign.name} Moon may create emotional reactions—acknowledge them, then choose response over reaction. ` : ''}` +
+                   `Life Path ${lifePath} indicates this challenge is teaching you something essential about ${getLifePathFocus(lifePath)}. ` +
+                   `The ${moonPhase.phase} specifically supports ${moonPhase.action.toLowerCase()} as your approach.`;
+        }
                     <p><strong>Direction:</strong> South<br>
                     <strong>Color:</strong> ${getChineseColor(chinese.element)}<br>
                     <strong>Activity:</strong> ${getChineseActivity(chinese.animal)}</p>
@@ -1379,6 +2983,454 @@
 
         function getChallengeGuidance(sign, animal, lifePath) {
             return 'Your ' + sign + ' determination combined with ' + animal + ' wisdom suggests approaching this challenge through patience and strategic action rather than force. Life Path ' + lifePath + ' indicates this obstacle is teaching you a specific soul lesson about your purpose.';
+        }
+
+        // ========================================
+        // PHASE 2: WEEKLY/MONTHLY/YEARLY HELPERS
+        // ========================================
+
+        // Weekly Helpers
+        function getWeeklyTheme(zodiac, chinese, personalYear, moonPhase) {
+            return `Your ${zodiac.name} drive meets ${chinese.element} ${chinese.animal} persistence this week. Personal Year ${personalYear} energy shapes opportunities. The ${moonPhase.phase} sets the emotional tone for the week's beginning.`;
+        }
+
+        function getWeeklyOpportunity(lifePath, personalYear, focus) {
+            const focusMap = {
+                'career': 'Career advancement through strategic visibility',
+                'love': 'Deepening existing connections or meeting new potentials',
+                'health': 'Establishing sustainable wellness routines',
+                'spiritual': 'Breakthrough insights through consistent practice',
+                'finances': 'Identifying new income streams or reducing expenses'
+            };
+            return (focusMap[focus] || 'Multi-dimensional growth across life areas') + `. Life Path ${lifePath} in Year ${personalYear} creates momentum for ${getLifePathFocus(lifePath)}.`;
+        }
+
+        function getWeeklyChallenge(zodiac, chinese, challenge) {
+            const base = `${zodiac.name} impatience meeting ${chinese.animal} intensity may create friction.`;
+            return challenge ? `${base} Your stated challenge ("${challenge}") may surface for resolution this week.` : base;
+        }
+
+        function getKeyDayOfWeek(zodiac, lifePath) {
+            const signDays = {
+                'Aries': 'Tuesday (Mars day)', 'Taurus': 'Friday (Venus day)', 'Gemini': 'Wednesday (Mercury day)',
+                'Cancer': 'Monday (Moon day)', 'Leo': 'Sunday (Sun day)', 'Virgo': 'Wednesday (Mercury day)',
+                'Libra': 'Friday (Venus day)', 'Scorpio': 'Tuesday (Mars day)', 'Sagittarius': 'Thursday (Jupiter day)',
+                'Capricorn': 'Saturday (Saturn day)', 'Aquarius': 'Saturday (Saturn day)', 'Pisces': 'Thursday (Jupiter day)'
+            };
+            return `${signDays[zodiac.name] || 'Wednesday'} - Your ${zodiac.name} energy peaks. Schedule important matters here.`;
+        }
+
+        function getDaySpecificGuidance(zodiac, chinese, lifePath, dayIndex, focus) {
+            const dayGuidance = [
+                // Sunday
+                `Rest and reflect. ${zodiac.name} energy recharges through intentional pause. Set intentions for the week ahead.`,
+                // Monday
+                `New week energy. ${zodiac.name} initiative meets ${chinese.animal} determination. Launch new efforts.`,
+                // Tuesday
+                `Mars energy amplifies action. ${zodiac.name} assertiveness is supported. Address challenging tasks.`,
+                // Wednesday
+                `Mercury enhances communication. ${zodiac.name} ideas flow easily. Schedule important conversations.`,
+                // Thursday
+                `Jupiter expands opportunity. ${zodiac.name} optimism attracts luck. Think bigger today.`,
+                // Friday
+                `Venus brings harmony. ${zodiac.name} relationships are favored. Celebrate connections.`,
+                // Saturday
+                `Saturn rewards discipline. ${zodiac.name} structure-building succeeds. Handle responsibilities.`
+            ];
+            
+            let guidance = dayGuidance[dayIndex];
+            if (focus === 'career' && dayIndex < 5) guidance += ' Focus on career advancement.';
+            if (focus === 'love' && dayIndex >= 5) guidance += ' Relationship opportunities peak.';
+            return guidance;
+        }
+
+        function getWeeklyWesternForecast(zodiac, risingSign, moonSign) {
+            return `
+                <div class="system-item">
+                    <h4>☉ ${zodiac.name} Sun - Weekly Activation</h4>
+                    <p>This week emphasizes ${getZodiacTrait(zodiac.name)}. Your ${zodiac.name} energy is particularly strong mid-week when planetary alignments favor your natural tendencies.</p>
+                </div>
+                ${risingSign ? `
+                <div class="system-item">
+                    <h4>↑ ${risingSign.name} Rising - Social Dynamics</h4>
+                    <p>Your public presentation carries extra ${getRisingStyle(risingSign.name)} this week. First impressions are impactful—use this for important meetings or introductions.</p>
+                </div>
+                ` : ''}
+                ${moonSign ? `
+                <div class="system-item">
+                    <h4>☽ ${moonSign.name} Moon - Emotional Themes</h4>
+                    <p>Your emotional landscape this week involves ${getMoonNeed(moonSign.name)}. Mood fluctuations are normal—honor your inner rhythms.</p>
+                </div>
+                ` : ''}
+            `;
+        }
+
+        function getWeeklyNumerologyForecast(lifePath, personalYear, weekStart) {
+            const weekNum = Math.ceil((weekStart.getDate() + weekStart.getMonth() * 31) / 7) % 9 || 9;
+            return `
+                <div class="system-item">
+                    <h4>Weekly Vibration: ${weekNum}</h4>
+                    <p>This week carries ${weekNum}-energy: ${getReducedTheme(weekNum)}. Combined with your Life Path ${lifePath} and Personal Year ${personalYear}, this creates conditions for ${getLifePathFocus(lifePath)}.</p>
+                </div>
+            `;
+        }
+
+        function getWeeklyActionItems(zodiac, chinese, lifePath, focus) {
+            return `
+                <div class="action-item">
+                    <h4>Priority 1: Early Week (Mon-Tue)</h4>
+                    <p>Launch initiatives. Your ${zodiac.name} pioneering energy is strongest. Set the week's trajectory through bold action.</p>
+                </div>
+                <div class="action-item">
+                    <h4>Priority 2: Mid-Week (Wed-Thu)</h4>
+                    <p>Communicate and expand. Mercury and Jupiter days favor ${chinese.animal} wisdom in conversations and growth opportunities.</p>
+                </div>
+                <div class="action-item">
+                    <h4>Priority 3: Late Week (Fri-Sat)</h4>
+                    <p>Harmonize and structure. Venus and Saturn days support relationship building and completing what you started.</p>
+                </div>
+                <div class="action-item">
+                    <h4>Weekly Intention</h4>
+                    <p>${focus ? `Focus on ${focus}: ` : ''}By week's end, aim to have made tangible progress in ${getLifePathFocus(lifePath)}. Your Life Path ${lifePath} is activated when you ${getLifePathAction(lifePath)}.</p>
+                </div>
+            `;
+        }
+
+        function getLifePathAction(lifePath) {
+            const actions = {
+                1: 'take independent initiative without waiting for permission',
+                2: 'nurture partnerships and practice patience',
+                3: 'express yourself creatively and share your joy',
+                4: 'build systematic structures and complete practical tasks',
+                5: 'embrace change and try something completely new',
+                6: 'serve others and beautify your environment',
+                7: 'spend time in contemplation and trust your intuition',
+                8: 'make power moves and focus on material manifestation',
+                9: 'give generously and release what\'s complete'
+            };
+            return actions[lifePath] || 'align with your authentic purpose';
+        }
+
+        // Monthly Helpers
+        function getMonthlyTheme(personalMonth, zodiac, chinese) {
+            const themes = {
+                1: 'New Beginnings & Initiative',
+                2: 'Partnership & Patience',
+                3: 'Expression & Creativity',
+                4: 'Foundation & Structure',
+                5: 'Change & Freedom',
+                6: 'Responsibility & Service',
+                7: 'Reflection & Spirituality',
+                8: 'Power & Manifestation',
+                9: 'Completion & Release'
+            };
+            return `Personal Month ${personalMonth}: ${themes[personalMonth] || 'Transformation'}. Your ${zodiac.name} sun and ${chinese.element} ${chinese.animal} nature color how this theme manifests for you specifically.`;
+        }
+
+        function getMonthlyEnergy(zodiac, chinese, personalMonth) {
+            return `${zodiac.name} determination meets ${chinese.animal} wisdom in a ${personalMonth}-month context. This creates ${personalMonth <= 3 ? 'initiating' : personalMonth <= 6 ? 'building' : 'completing'} energy for the weeks ahead.`;
+        }
+
+        function getMonthlyGrowth(lifePath, personalMonth, focus) {
+            const growth = focus ? `Significant progress in ${focus} through ` : 'Primary development through ';
+            return growth + getReducedTheme(personalMonth) + `. Life Path ${lifePath} finds expression through ${getLifePathFocus(lifePath).split(' and ')[0]}.`;
+        }
+
+        function getMonthlyCaution(zodiac, moonSign, personalMonth) {
+            const caution = `Month ${personalMonth} tendency: ${personalMonth % 2 === 0 ? 'over-patience leading to stagnation' : 'over-initiative leading to burnout'}. `;
+            return caution + `Your ${zodiac.name} nature${moonSign ? ` combined with ${moonSign.name} Moon emotions` : ''} may amplify this—stay aware.`;
+        }
+
+        function getMonthlyWeekThemes(zodiac, chinese, personalMonth, focus) {
+            return [
+                {
+                    title: 'Initiation',
+                    focus: `Launch this month's primary ${focus || 'growth'} projects`,
+                    action: `Set clear intentions aligned with ${zodiac.name} nature`,
+                    keyDays: 'Days 1-3 and 7 are most auspicious'
+                },
+                {
+                    title: 'Development',
+                    focus: `Build momentum in started projects`,
+                    action: `Apply ${chinese.animal} patience to growing efforts`,
+                    keyDays: 'Mid-week days favor expansion'
+                },
+                {
+                    title: 'Cultivation',
+                    focus: `Refine and adjust based on feedback`,
+                    action: `Use ${chinese.element} wisdom for course corrections`,
+                    keyDays: 'New Moon or Full Moon window'
+                },
+                {
+                    title: 'Harvest & Preparation',
+                    focus: `Complete what's ready, prepare for next month`,
+                    action: `${zodiac.name} reflection on progress made`,
+                    keyDays: 'Final 3 days for completion energy'
+                }
+            ];
+        }
+
+        function getMonthlyKeyDates(zodiac, chinese, lifePath, today) {
+            const year = today.getFullYear();
+            const month = today.getMonth();
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            // Find key numerological dates
+            const powerDays = [];
+            for (let d = 1; d <= daysInMonth; d++) {
+                const dayEnergy = (d + (month + 1) + year) % 9 || 9;
+                if (dayEnergy === lifePath || dayEnergy === 1 || dayEnergy === 8) {
+                    powerDays.push({ day: d, energy: dayEnergy });
+                }
+            }
+            
+            const powerDaysStr = powerDays.slice(0, 5).map(p => 
+                `<strong>${p.day}:</strong> Day ${p.energy} energy (${p.energy === lifePath ? 'Life Path alignment' : p.energy === 1 ? 'initiative' : 'manifestation'})`
+            ).join('<br>');
+            
+            return `
+                <div class="key-dates-grid">
+                    <div class="key-date-item">
+                        <h4>Power Days</h4>
+                        <p>${powerDaysStr}</p>
+                    </div>
+                    <div class="key-date-item">
+                        <h4>Your ${zodiac.name} Power Windows</h4>
+                        <p>Early morning and late afternoon favor ${zodiac.name} initiatives. Schedule important decisions during your peak hours.</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function getMonthlyWesternForecast(zodiac, risingSign, moonSign, today) {
+            const monthName = today.toLocaleDateString('en-US', { month: 'long' });
+            return `
+                <div class="system-item">
+                    <h4>☉ ${zodiac.name} Sun - ${monthName} Transits</h4>
+                    <p>The Sun's current position activates themes of ${getZodiacTrait(zodiac.name)} throughout ${monthName}. Key planetary aspects support your natural ${zodiac.name} expression mid-month.</p>
+                </div>
+                ${risingSign ? `
+                <div class="system-item">
+                    <h4>↑ ${risingSign.name} Rising - Monthly Public Theme</h4>
+                    <p>This month emphasizes your ${getRisingStyle(risingSign.name)} in public settings. Career and social opportunities align with authentic self-presentation.</p>
+                </div>
+                ` : ''}
+            `;
+        }
+
+        function getMonthlyNumerologyForecast(lifePath, personalYear, personalMonth) {
+            return `
+                <div class="system-item">
+                    <h4>Personal Month ${personalMonth} within Personal Year ${personalYear}</h4>
+                    <p>${getPersonalMonthDescription(personalMonth, personalYear)}</p>
+                    <p>This month's ${personalMonth}-energy combines with your Year ${personalYear} themes to create specific conditions for growth in ${getReducedTheme(personalMonth)}.</p>
+                </div>
+                <div class="system-item">
+                    <h4>Life Path ${lifePath} Monthly Expression</h4>
+                    <p>Your Life Path ${lifePath} finds this month's expression through ${getLifePathFocus(lifePath)}. Look for opportunities that align with your core purpose.</p>
+                </div>
+            `;
+        }
+
+        function getMonthlyActionItems(zodiac, chinese, lifePath, personalMonth, focus) {
+            return `
+                <div class="action-item">
+                    <h4>Week 1 Intention</h4>
+                    <p>Launch: Set clear goals for ${focus || 'personal growth'} this month. Your ${zodiac.name} initiative is supported.</p>
+                </div>
+                <div class="action-item">
+                    <h4>Week 2 Intention</h4>
+                    <p>Build: Apply ${chinese.element} ${chinese.animal} persistence to growing your initiatives. Patience pays off.</p>
+                </div>
+                <div class="action-item">
+                    <h4>Week 3 Intention</h4>
+                    <p>Refine: Make adjustments based on what's working. Life Path ${lifePath} wisdom guides decisions.</p>
+                </div>
+                <div class="action-item">
+                    <h4>Week 4 Intention</h4>
+                    <p>Complete: Harvest what's ready and prepare for next month. Personal Month ${personalMonth} energy supports ${personalMonth <= 4 ? 'initiating new cycles' : personalMonth <= 7 ? 'cultivating growth' : 'completing and releasing'}.</p>
+                </div>
+            `;
+        }
+
+        // Yearly Helpers
+        function getYearlyThemeTitle(personalYear) {
+            const titles = {
+                1: 'New Beginnings', 2: 'Partnership', 3: 'Expression',
+                4: 'Foundation', 5: 'Change', 6: 'Responsibility',
+                7: 'Spirituality', 8: 'Manifestation', 9: 'Completion'
+            };
+            return titles[personalYear] || 'Transformation';
+        }
+
+        function getYearlyTheme(personalYear, zodiac, chinese) {
+            return `Personal Year ${personalYear} activates ${getYearlyThemeTitle(personalYear).toLowerCase()} energy for you. Your ${zodiac.name} sun nature and ${chinese.element} ${chinese.animal} wisdom shape how this year unfolds. This is ${personalYear <= 3 ? 'a building phase' : personalYear <= 6 ? 'a development phase' : 'a completion phase'} in your 9-year cycle.`;
+        }
+
+        function getYearlyLesson(lifePath, personalYear) {
+            return `Life Path ${lifePath} meeting Personal Year ${personalYear} creates specific soul curriculum around ${getLifePathFocus(lifePath)}. This year teaches you to ${getLifePathAction(lifePath)} with ${personalYear <= 5 ? 'active' : 'receptive'} energy.`;
+        }
+
+        function getYearlyOpportunity(zodiac, chinese, personalYear, focus) {
+            const base = `Your ${zodiac.name} drive combined with ${chinese.animal} intuition in Year ${personalYear} creates unprecedented opportunity for `;
+            if (focus === 'career') return base + 'professional advancement and recognition.';
+            if (focus === 'love') return base + 'deep, meaningful relationship evolution.';
+            if (focus === 'health') return base + 'sustainable vitality transformation.';
+            if (focus === 'spiritual') return base + 'profound spiritual awakening.';
+            if (focus === 'finances') return base + 'abundance breakthrough.';
+            return base + 'multi-dimensional life transformation.';
+        }
+
+        function getYearlyChallenge(zodiac, moonSign, lifePath) {
+            return `Your growth edge this year: integrating ${getZodiacShadow(zodiac.name)}${moonSign ? ` while managing ${getZodiacShadow(moonSign.name)} emotional patterns` : ''}. Life Path ${lifePath} asks you to ${getLifePathAction(lifePath)} even when it feels uncomfortable.`;
+        }
+
+        function getYearlyQuarters(zodiac, chinese, lifePath, personalYear, focus) {
+            return [
+                {
+                    title: 'Foundation',
+                    months: 'Jan - Mar',
+                    theme: `Plant seeds for Year ${personalYear} themes`,
+                    focus: `${zodiac.name} initiative launches new cycles`,
+                    peak: 'Equinox window (mid-March)'
+                },
+                {
+                    title: 'Growth',
+                    months: 'Apr - Jun',
+                    theme: 'Develop what was initiated in Q1',
+                    focus: `${chinese.animal} persistence builds momentum`,
+                    peak: 'Solstice window (mid-June)'
+                },
+                {
+                    title: 'Harvest',
+                    months: 'Jul - Sep',
+                    theme: 'Reap results from H1 efforts',
+                    focus: `Life Path ${lifePath} purpose becomes visible`,
+                    peak: 'Equinox window (mid-September)'
+                },
+                {
+                    title: 'Integration',
+                    months: 'Oct - Dec',
+                    theme: 'Complete year and prepare for next',
+                    focus: `Personal Year ${personalYear} lessons crystallize`,
+                    peak: 'Solstice window (mid-December)'
+                }
+            ];
+        }
+
+        function getYearlyTransits(zodiac, currentYear) {
+            return `
+                <div class="transit-grid">
+                    <div class="transit-item">
+                        <h4>Mercury Retrogrades (${currentYear})</h4>
+                        <p>Three periods of review and revision. For ${zodiac.name}, these times favor completing old projects over starting new ones. Communication and technology need extra attention.</p>
+                    </div>
+                    <div class="transit-item">
+                        <h4>Eclipse Season</h4>
+                        <p>Two eclipse seasons bring powerful change. Watch for major life shifts during these windows. ${zodiac.name} experiences these as catalysts for authentic expression.</p>
+                    </div>
+                    <div class="transit-item">
+                        <h4>Jupiter's Blessing</h4>
+                        <p>Jupiter's position this year expands opportunity in specific life areas. For ${zodiac.name}, this brings growth through ${getZodiacTrait(zodiac.name)}.</p>
+                    </div>
+                    <div class="transit-item">
+                        <h4>Saturn's Lessons</h4>
+                        <p>Saturn demands maturity and responsibility. For ${zodiac.name}, this means developing discipline around your natural ${getZodiacTrait(zodiac.name)} tendencies.</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function getYearlyWesternForecast(zodiac, risingSign, moonSign, currentYear) {
+            return `
+                <div class="system-item">
+                    <h4>☉ ${zodiac.name} Sun - ${currentYear} Overview</h4>
+                    <p>${getDetailedZodiacDescription(zodiac.name)}</p>
+                    <p>This year's planetary configurations particularly support your ${getZodiacTrait(zodiac.name)}. Key windows of opportunity occur when planets transit compatible signs.</p>
+                </div>
+                ${risingSign ? `
+                <div class="system-item">
+                    <h4>↑ ${risingSign.name} Rising - Yearly Evolution</h4>
+                    <p>Your public evolution this year involves refining your ${getRisingStyle(risingSign.name)}. Career and social positioning improve through authentic self-presentation.</p>
+                </div>
+                ` : ''}
+                ${moonSign ? `
+                <div class="system-item">
+                    <h4>☽ ${moonSign.name} Moon - Emotional Journey</h4>
+                    <p>Your emotional landscape this year explores themes of ${getMoonNeed(moonSign.name)}. Monthly lunar cycles highlight different aspects of your inner world.</p>
+                </div>
+                ` : ''}
+            `;
+        }
+
+        function getYearlyChineseForecast(yourChinese, currentChinese) {
+            const isElementMatch = yourChinese.element === currentChinese.element;
+            const compatibility = isElementMatch ? 'highly favorable—your element is amplified!' : 'dynamic—blending your natural element with the year\'s energy.';
+            
+            return `
+                <div class="system-item">
+                    <h4>Your Sign in the Year of ${currentChinese.element} ${currentChinese.animal}</h4>
+                    <p>As a ${yourChinese.element} ${yourChinese.animal}, this year's energy is ${compatibility}</p>
+                    <p>${isElementMatch ? 'This is a power year for you—your natural abilities are doubled.' : `Learn to integrate ${currentChinese.element} qualities with your ${yourChinese.element} nature for optimal results.`}</p>
+                </div>
+                <div class="system-item">
+                    <h4>Year Animal Relationship</h4>
+                    <p>${getAnimalCompatibility(yourChinese.animal, currentChinese.animal)}</p>
+                </div>
+                <div class="system-item">
+                    <h4>Yearly Lucky Elements</h4>
+                    <p><strong>Colors:</strong> ${getChineseColor(yourChinese.element)} (always), ${getChineseColor(currentChinese.element)} (this year)<br>
+                    <strong>Numbers:</strong> ${getLuckyNumbers(yourChinese.animal)}<br>
+                    <strong>Directions:</strong> ${getLuckyDirection(yourChinese.animal)}</p>
+                </div>
+            `;
+        }
+
+        function getYearlyNumerologyForecast(lifePath, personalYear) {
+            return `
+                <div class="system-item">
+                    <h4>Life Path ${lifePath} - Core Purpose</h4>
+                    <p>${getDetailedLifePathDescription(lifePath)}</p>
+                </div>
+                <div class="system-item">
+                    <h4>Personal Year ${personalYear} - Annual Theme</h4>
+                    <p>${getDetailedPersonalYearDescription(personalYear)}</p>
+                </div>
+                <div class="system-item">
+                    <h4>Yearly Numerological Guidance</h4>
+                    <p>Life Path ${lifePath} meeting Personal Year ${personalYear} creates a year focused on ${getReducedTheme(personalYear)}. Your purpose (${getLifePathFocus(lifePath)}) finds expression through this year's themes.</p>
+                </div>
+            `;
+        }
+
+        function getYearlyActionItems(zodiac, chinese, lifePath, personalYear, focus) {
+            return `
+                <div class="action-item">
+                    <h4>Q1 Priority (Jan-Mar)</h4>
+                    <p><strong>Theme:</strong> Plant Seeds<br>
+                    Initiate key ${focus || 'life'} projects. Your ${zodiac.name} energy supports bold beginnings. Life Path ${lifePath} opens doors through ${getLifePathAction(lifePath)}.</p>
+                </div>
+                <div class="action-item">
+                    <h4>Q2 Priority (Apr-Jun)</h4>
+                    <p><strong>Theme:</strong> Cultivate Growth<br>
+                    Nurture Q1 seeds with ${chinese.animal} patience. Avoid starting too many new things—depth over breadth.</p>
+                </div>
+                <div class="action-item">
+                    <h4>Q3 Priority (Jul-Sep)</h4>
+                    <p><strong>Theme:</strong> Harvest Results<br>
+                    Collect fruits of H1 labor. Year ${personalYear} rewards become visible. Celebrate progress while maintaining momentum.</p>
+                </div>
+                <div class="action-item">
+                    <h4>Q4 Priority (Oct-Dec)</h4>
+                    <p><strong>Theme:</strong> Complete & Prepare<br>
+                    Finish Year ${personalYear} lessons. Clear space for next year's Year ${(personalYear % 9) + 1} themes. Honor what you've learned.</p>
+                </div>
+                <div class="action-item">
+                    <h4>Year-Long Intention</h4>
+                    <p>Personal Year ${personalYear} asks you to master ${getYearlyThemeTitle(personalYear).toLowerCase()}. Your ${zodiac.name} nature, ${chinese.element} ${chinese.animal} wisdom, and Life Path ${lifePath} purpose all converge this year. Trust the process.</p>
+                </div>
+            `;
         }
 
         // Timeframe switcher
