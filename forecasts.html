@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Forecaster | Your Personalized Cosmic Forecast</title>
+    <meta name="description" content="Get your personalized cosmic forecast using Western astrology, Chinese zodiac, numerology, and gematria. Multi-system forecasting for daily, weekly, monthly, and yearly insights.">
+    <meta name="keywords" content="quantum forecaster, daily horoscope, personalized forecast, astrology, numerology, chinese zodiac, gematria, cosmic guidance">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum Forecaster | Multi-System Cosmic Guidance">
+    <meta property="og:description" content="The only forecaster that uses 8 mystical systems. From surface to soul: forecasts that go as deep as you want.">
+    <meta property="og:url" content="https://quantummerlin.com/forecasts">
+    <meta property="og:type" content="website">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --cosmic-bg: #000000;
+            --neon-cyan: #00f5ff;
+            --neon-purple: #9d00ff;
+            --neon-gold: #ffd700;
+            --neon-pink: #ff0066;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--cosmic-bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated Cosmic Background */
+        .cosmic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: radial-gradient(ellipse at center, #1a0033 0%, #000000 100%);
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple), var(--neon-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 30px rgba(0, 245, 255, 0.6));
+            animation: glow-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.4)); }
+            50% { filter: drop-shadow(0 0 40px rgba(0, 245, 255, 0.8)); }
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .hero .systems {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .system-badge {
+            background: rgba(0, 245, 255, 0.1);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--neon-cyan);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .system-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+            border-color: var(--neon-cyan);
+        }
+
+        /* Input Section */
+        .input-section {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.08) 0%, rgba(157, 0, 255, 0.08) 100%);
+            backdrop-filter: blur(30px);
+            border: 2px solid rgba(0, 245, 255, 0.4);
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 245, 255, 0.2);
+        }
+
+        .input-section h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            color: var(--neon-gold);
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+        }
+
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            font-family: 'Rajdhani', sans-serif;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 12px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+        }
+
+        .input-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .optional-badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: rgba(255, 215, 0, 0.7);
+            margin-left: 8px;
+        }
+
+        .help-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 5px;
+        }
+
+        /* Expandable Sections */
+        .expandable {
+            margin-top: 30px;
+        }
+
+        .expand-btn {
+            background: rgba(157, 0, 255, 0.2);
+            border: 2px solid rgba(157, 0, 255, 0.4);
+            color: var(--neon-purple);
+            padding: 12px 30px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .expand-btn:hover {
+            background: rgba(157, 0, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(157, 0, 255, 0.4);
+        }
+
+        .expanded-content {
+            display: none;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .expanded-content.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Accuracy Indicator */
+        .accuracy-indicator {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .accuracy-indicator h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            color: var(--neon-gold);
+            margin-bottom: 15px;
+        }
+
+        .accuracy-bar {
+            background: rgba(255, 255, 255, 0.1);
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .accuracy-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-gold));
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .data-checklist {
+            list-style: none;
+        }
+
+        .data-checklist li {
+            padding: 8px 0;
+            font-size: 1rem;
+        }
+
+        .data-checklist li:before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+
+        .data-checklist li.missing:before {
+            content: "⚠️ ";
+        }
+
+        /* Generate Button */
+        .generate-btn {
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+            border: none;
+            color: white;
+            padding: 18px 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: 'Orbitron', monospace;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 30px auto;
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.4);
+        }
+
+        .generate-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px rgba(0, 245, 255, 0.6);
+        }
+
+        .generate-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Timeframe Selector */
+        .timeframe-selector {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .timeframe-btn {
+            background: rgba(0, 245, 255, 0.1);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            color: var(--neon-cyan);
+            padding: 12px 30px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .timeframe-btn:hover,
+        .timeframe-btn.active {
+            background: rgba(0, 245, 255, 0.2);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+        }
+
+        /* Forecast Output */
+        .forecast-output {
+            display: none;
+        }
+
+        .forecast-output.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .forecast-header {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 0, 102, 0.1) 100%);
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .forecast-header h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--neon-gold), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .forecast-meta {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Overview Section */
+        .overview-section {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.15) 0%, rgba(157, 0, 255, 0.15) 100%);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .overview-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: var(--neon-cyan);
+            margin-bottom: 20px;
+        }
+
+        .overview-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* System Sections */
+        .system-section {
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 18px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .system-section:hover {
+            border-color: rgba(0, 245, 255, 0.3);
+        }
+
+        .system-header {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 245, 255, 0.05);
+        }
+
+        .system-header h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            color: var(--neon-cyan);
+        }
+
+        .system-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .system-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 25px;
+        }
+
+        .system-section.expanded .system-content {
+            max-height: 2000px;
+            padding: 25px;
+        }
+
+        .system-section.expanded .system-toggle {
+            transform: rotate(180deg);
+        }
+
+        .system-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .system-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .system-item h4 {
+            color: var(--neon-gold);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .system-item p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Action Item */
+        .action-section {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 0, 102, 0.15) 100%);
+            border: 2px solid var(--neon-gold);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .action-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: var(--neon-gold);
+            margin-bottom: 20px;
+        }
+
+        .action-item {
+            background: rgba(0, 0, 0, 0.4);
+            border-left: 4px solid var(--neon-gold);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .action-item h4 {
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .action-item p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Save Button */
+        .save-btn {
+            background: rgba(255, 215, 0, 0.2);
+            border: 2px solid var(--neon-gold);
+            color: var(--neon-gold);
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .save-btn:hover {
+            background: rgba(255, 215, 0, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            .input-section {
+                padding: 25px 20px;
+            }
+
+            .input-row {
+                grid-template-columns: 1fr;
+            }
+
+            .timeframe-selector {
+                flex-direction: column;
+            }
+
+            .timeframe-btn {
+                width: 100%;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            border: 4px solid rgba(0, 245, 255, 0.2);
+            border-top: 4px solid var(--neon-cyan);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="cosmic-bg"></div>
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>🌌 QUANTUM FORECASTER</h1>
+            <p class="tagline">Your personalized cosmic forecast based on ALL your data</p>
+            <div class="systems">
+                <div class="system-badge">⭐ Western Astrology</div>
+                <div class="system-badge">🐉 Chinese Zodiac</div>
+                <div class="system-badge">🔢 Numerology</div>
+                <div class="system-badge">📜 Gematria</div>
+            </div>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section" id="inputSection">
+            <h2>Generate Your Forecast</h2>
+            
+            <!-- Accuracy Indicator -->
+            <div class="accuracy-indicator" id="accuracyIndicator">
+                <h3>Forecast Accuracy</h3>
+                <div class="accuracy-bar">
+                    <div class="accuracy-fill" id="accuracyFill" style="width: 25%;">25%</div>
+                </div>
+                <ul class="data-checklist" id="dataChecklist">
+                    <li class="missing">Birth date not provided</li>
+                    <li class="missing">Birth time not provided</li>
+                    <li class="missing">Birth location not provided</li>
+                    <li class="missing">Name not provided</li>
+                </ul>
+            </div>
+
+            <!-- Tier 1: Required -->
+            <div class="input-group">
+                <label for="birthDate">Birth Date *</label>
+                <input type="date" id="birthDate" required>
+                <p class="help-text">Required - determines your sun sign, life path, and Chinese zodiac</p>
+            </div>
+
+            <!-- Tier 2: Enhanced Accuracy -->
+            <button class="expand-btn" id="expandEnhanced">
+                ▼ Add Birth Time & Location for More Accuracy
+            </button>
+            
+            <div class="expanded-content" id="enhancedContent">
+                <div class="input-group">
+                    <label for="birthTime">Birth Time <span class="optional-badge">(optional)</span></label>
+                    <input type="time" id="birthTime">
+                    <p class="help-text">Used for rising sign and moon sign calculations</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="birthLocation">Birth Location <span class="optional-badge">(optional)</span></label>
+                    <input type="text" id="birthLocation" placeholder="City, Country">
+                    <p class="help-text">Used for birth chart houses and local time calculations</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="currentLocation">Current Location <span class="optional-badge">(optional)</span></label>
+                    <input type="text" id="currentLocation" placeholder="City, Country">
+                    <p class="help-text">Used for current transits and local planetary hours</p>
+                </div>
+            </div>
+
+            <!-- Tier 3: Deep Personalization -->
+            <button class="expand-btn" id="expandAdvanced" style="display: none;">
+                ▼ Add Name & Focus for Deep Personalization
+            </button>
+            
+            <div class="expanded-content" id="advancedContent">
+                <div class="input-group">
+                    <label for="fullName">Full Name <span class="optional-badge">(optional)</span></label>
+                    <div class="input-row">
+                        <input type="text" id="firstName" placeholder="First">
+                        <input type="text" id="middleName" placeholder="Middle">
+                        <input type="text" id="lastName" placeholder="Last">
+                    </div>
+                    <p class="help-text">Used for gematria and name numerology calculations</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="focus">Current Focus <span class="optional-badge">(optional)</span></label>
+                    <select id="focus">
+                        <option value="">Select a focus area...</option>
+                        <option value="career">Career & Success</option>
+                        <option value="love">Love & Relationships</option>
+                        <option value="health">Health & Wellness</option>
+                        <option value="spiritual">Spiritual Growth</option>
+                        <option value="finances">Finances & Abundance</option>
+                    </select>
+                    <p class="help-text">Tailors guidance to your specific needs</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="challenge">Current Challenge <span class="optional-badge">(optional)</span></label>
+                    <textarea id="challenge" rows="3" placeholder="Brief description of what you're working through..."></textarea>
+                    <p class="help-text">Provides obstacle-specific advice and shadow work</p>
+                </div>
+            </div>
+
+            <!-- Generate Button -->
+            <button class="generate-btn" id="generateBtn">✨ Generate Forecast</button>
+        </div>
+
+        <!-- Loading Animation -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p style="color: var(--neon-cyan); font-size: 1.2rem;">Calculating your cosmic forecast...</p>
+        </div>
+
+        <!-- Timeframe Selector -->
+        <div class="timeframe-selector" id="timeframeSelector" style="display: none;">
+            <button class="timeframe-btn active" data-timeframe="daily">📅 Daily</button>
+            <button class="timeframe-btn" data-timeframe="weekly">📆 Weekly</button>
+            <button class="timeframe-btn" data-timeframe="monthly">🗓️ Monthly</button>
+            <button class="timeframe-btn" data-timeframe="yearly">📊 Yearly</button>
+        </div>
+
+        <!-- Forecast Output -->
+        <div class="forecast-output" id="forecastOutput">
+            <!-- Content will be dynamically generated -->
+        </div>
+    </div>
+
+    <script>
+        // Generate stars background
+        function generateStars() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = star.style.height = Math.random() * 3 + 'px';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+        generateStars();
+
+        // Expandable sections
+        document.getElementById('expandEnhanced').addEventListener('click', function() {
+            const content = document.getElementById('enhancedContent');
+            content.classList.toggle('show');
+            this.textContent = content.classList.contains('show') 
+                ? '▲ Hide Enhanced Options' 
+                : '▼ Add Birth Time & Location for More Accuracy';
+            
+            if (content.classList.contains('show')) {
+                document.getElementById('expandAdvanced').style.display = 'block';
+            }
+        });
+
+        document.getElementById('expandAdvanced').addEventListener('click', function() {
+            const content = document.getElementById('advancedContent');
+            content.classList.toggle('show');
+            this.textContent = content.classList.contains('show') 
+                ? '▲ Hide Advanced Options' 
+                : '▼ Add Name & Focus for Deep Personalization';
+        });
+
+        // Update accuracy indicator
+        function updateAccuracy() {
+            const birthDate = document.getElementById('birthDate').value;
+            const birthTime = document.getElementById('birthTime').value;
+            const birthLocation = document.getElementById('birthLocation').value;
+            const firstName = document.getElementById('firstName').value;
+            
+            let accuracy = 0;
+            const checklist = [];
+            
+            if (birthDate) {
+                accuracy += 25;
+                checklist.push('Birth date provided');
+            } else {
+                checklist.push({ text: 'Birth date not provided', missing: true });
+            }
+            
+            if (birthTime) {
+                accuracy += 25;
+                checklist.push('Birth time provided');
+            } else {
+                checklist.push({ text: 'Birth time not provided', missing: true });
+            }
+            
+            if (birthLocation) {
+                accuracy += 25;
+                checklist.push('Birth location provided');
+            } else {
+                checklist.push({ text: 'Birth location not provided', missing: true });
+            }
+            
+            if (firstName) {
+                accuracy += 25;
+                checklist.push('Name provided');
+            } else {
+                checklist.push({ text: 'Name not provided', missing: true });
+            }
+            
+            document.getElementById('accuracyFill').style.width = accuracy + '%';
+            document.getElementById('accuracyFill').textContent = accuracy + '%';
+            
+            const checklistHTML = checklist.map(item => {
+                if (typeof item === 'string') {
+                    return `<li>✅ ${item}</li>`;
+                } else {
+                    return `<li class="missing">⚠️ ${item.text}</li>`;
+                }
+            }).join('');
+            
+            document.getElementById('dataChecklist').innerHTML = checklistHTML;
+        }
+
+        // Listen for input changes
+        ['birthDate', 'birthTime', 'birthLocation', 'firstName'].forEach(id => {
+            document.getElementById(id).addEventListener('input', updateAccuracy);
+        });
+
+        // Calculation functions
+        function getZodiacSign(month, day) {
+            const signs = [
+                { name: 'Capricorn', symbol: '♑', dates: [[12, 22], [1, 19]] },
+                { name: 'Aquarius', symbol: '♒', dates: [[1, 20], [2, 18]] },
+                { name: 'Pisces', symbol: '♓', dates: [[2, 19], [3, 20]] },
+                { name: 'Aries', symbol: '♈', dates: [[3, 21], [4, 19]] },
+                { name: 'Taurus', symbol: '♉', dates: [[4, 20], [5, 20]] },
+                { name: 'Gemini', symbol: '♊', dates: [[5, 21], [6, 20]] },
+                { name: 'Cancer', symbol: '♋', dates: [[6, 21], [7, 22]] },
+                { name: 'Leo', symbol: '♌', dates: [[7, 23], [8, 22]] },
+                { name: 'Virgo', symbol: '♍', dates: [[8, 23], [9, 22]] },
+                { name: 'Libra', symbol: '♎', dates: [[9, 23], [10, 22]] },
+                { name: 'Scorpio', symbol: '♏', dates: [[10, 23], [11, 21]] },
+                { name: 'Sagittarius', symbol: '♐', dates: [[11, 22], [12, 21]] }
+            ];
+            
+            for (let sign of signs) {
+                const [[m1, d1], [m2, d2]] = sign.dates;
+                if ((month === m1 && day >= d1) || (month === m2 && day <= d2)) {
+                    return sign;
+                }
+            }
+            return signs[0];
+        }
+
+        function getChineseZodiac(year) {
+            const animals = [
+                'Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake',
+                'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig'
+            ];
+            const elements = ['Metal', 'Water', 'Wood', 'Fire', 'Earth'];
+            
+            const animalIndex = (year - 4) % 12;
+            const elementIndex = Math.floor(((year - 4) % 10) / 2);
+            
+            return {
+                animal: animals[animalIndex],
+                element: elements[elementIndex],
+                year: year
+            };
+        }
+
+        function getLifePathNumber(birthDate) {
+            const dateStr = birthDate.replace(/-/g, '');
+            let sum = 0;
+            for (let char of dateStr) {
+                sum += parseInt(char);
+            }
+            while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
+                sum = sum.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+            }
+            return sum;
+        }
+
+        function getPersonalYear(birthDate) {
+            const birth = new Date(birthDate);
+            const today = new Date();
+            const month = birth.getMonth() + 1;
+            const day = birth.getDate();
+            const year = today.getFullYear();
+            
+            let sum = month + day + year;
+            while (sum > 9) {
+                sum = sum.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+            }
+            return sum;
+        }
+
+        function calculateGematria(name) {
+            if (!name) return 0;
+            let sum = 0;
+            for (let char of name.toUpperCase()) {
+                if (char >= 'A' && char <= 'Z') {
+                    sum += char.charCodeAt(0) - 64;
+                }
+            }
+            return sum;
+        }
+
+        // Generate forecast
+        document.getElementById('generateBtn').addEventListener('click', function() {
+            const birthDate = document.getElementById('birthDate').value;
+            
+            if (!birthDate) {
+                alert('Please enter your birth date');
+                return;
+            }
+            
+            // Show loading
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('inputSection').style.display = 'none';
+            
+            // Simulate calculation time
+            setTimeout(() => {
+                generateForecast();
+                document.getElementById('loading').classList.remove('show');
+                document.getElementById('timeframeSelector').style.display = 'flex';
+                document.getElementById('forecastOutput').classList.add('show');
+                document.getElementById('forecastOutput').scrollIntoView({ behavior: 'smooth' });
+            }, 2000);
+        });
+
+        function generateForecast(timeframe = 'daily') {
+            const birthDate = document.getElementById('birthDate').value;
+            const birthTime = document.getElementById('birthTime').value;
+            const birthLocation = document.getElementById('birthLocation').value;
+            const firstName = document.getElementById('firstName').value;
+            const middleName = document.getElementById('middleName').value;
+            const lastName = document.getElementById('lastName').value;
+            const focus = document.getElementById('focus').value;
+            const challenge = document.getElementById('challenge').value;
+            
+            const birth = new Date(birthDate);
+            const month = birth.getMonth() + 1;
+            const day = birth.getDate();
+            const year = birth.getFullYear();
+            
+            // Calculate all systems
+            const zodiac = getZodiacSign(month, day);
+            const chinese = getChineseZodiac(year);
+            const lifePath = getLifePathNumber(birthDate);
+            const personalYear = getPersonalYear(birthDate);
+            const fullName = [firstName, middleName, lastName].filter(n => n).join(' ');
+            const gematria = calculateGematria(fullName);
+            
+            // Get today's date
+            const today = new Date();
+            const todayStr = today.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            
+            // Generate forecast content
+            let forecastHTML = `
+                <div class="forecast-header">
+                    <h2>YOUR QUANTUM FORECAST</h2>
+                    <div class="forecast-meta">
+                        <p>Generated for: ${fullName || 'Seeker'}</p>
+                        <p>Birth: ${birth.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} | ${zodiac.name} ${zodiac.symbol}</p>
+                        ${birthTime ? `<p>Birth Time: ${birthTime}</p>` : ''}
+                        <p>Timeframe: ${timeframe.charAt(0).toUpperCase() + timeframe.slice(1)}</p>
+                    </div>
+                </div>
+
+                <div class="overview-section">
+                    <h3>🌟 OVERVIEW - ${todayStr}</h3>
+                    <div class="overview-content">
+                        <p><strong>Today's Energy:</strong> ${getOverviewEnergy(zodiac, chinese, personalYear)}</p>
+                        <p><strong>Focus:</strong> ${getOverviewFocus(lifePath, personalYear, focus)}</p>
+                        <p><strong>Caution:</strong> ${getOverviewCaution(zodiac, chinese)}</p>
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>⭐ WESTERN ASTROLOGY</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getWesternAstrologyForecast(zodiac, birthTime, birthLocation)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🐉 CHINESE ZODIAC</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getChineseZodiacForecast(chinese)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🔢 NUMEROLOGY</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getNumerologyForecast(lifePath, personalYear, birthDate)}
+                    </div>
+                </div>
+
+                ${fullName ? `
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>📜 GEMATRIA</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getGematriaForecast(fullName, gematria, birthDate)}
+                    </div>
+                </div>
+                ` : ''}
+
+                <div class="action-section">
+                    <h3>💡 TODAY'S ACTION ITEMS</h3>
+                    ${getActionItems(zodiac, chinese, lifePath, personalYear, focus, challenge)}
+                </div>
+
+                <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
+                <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
+            `;
+            
+            document.getElementById('forecastOutput').innerHTML = forecastHTML;
+        }
+
+        function toggleSystem(header) {
+            const section = header.parentElement;
+            section.classList.toggle('expanded');
+        }
+
+        // Forecast content generators
+        function getOverviewEnergy(zodiac, chinese, personalYear) {
+            const energies = ['Transformative', 'Expansive', 'Reflective', 'Dynamic', 'Harmonious', 'Intense'];
+            return energies[personalYear % energies.length] + ' (' + zodiac.name + ' sun meets ' + chinese.element + ' ' + chinese.animal + ' energy)';
+        }
+
+        function getOverviewFocus(lifePath, personalYear, focus) {
+            const focuses = {
+                'career': 'Professional growth and strategic advancement',
+                'love': 'Deep connections and emotional authenticity',
+                'health': 'Physical vitality and energetic balance',
+                'spiritual': 'Inner wisdom and cosmic alignment',
+                'finances': 'Abundance flow and material security'
+            };
+            return focuses[focus] || 'Inner work, creative expression, and purposeful action';
+        }
+
+        function getOverviewCaution(zodiac, chinese) {
+            return 'Avoid impulsive reactions and rushed decisions. Your ' + zodiac.name + ' nature combined with ' + chinese.animal + ' energy can create intensity today.';
+        }
+
+        function getWesternAstrologyForecast(zodiac, birthTime, birthLocation) {
+            return `
+                <div class="system-item">
+                    <h4>Sun in ${zodiac.name} ${zodiac.symbol}</h4>
+                    <p>${getZodiacDescription(zodiac.name)} Today's energy amplifies your natural ${zodiac.name} tendencies toward ${getZodiacTrait(zodiac.name)}.</p>
+                </div>
+                ${birthTime ? `
+                <div class="system-item">
+                    <h4>Rising Sign Influence</h4>
+                    <p>With your birth time provided, today's transits activate your rising sign, bringing opportunities for self-expression and new beginnings.</p>
+                </div>
+                ` : ''}
+                <div class="system-item">
+                    <h4>Current Transits</h4>
+                    <p>The Moon's current phase supports introspection and emotional processing. Mercury's position favors clear communication and analytical thinking.</p>
+                </div>
+            `;
+        }
+
+        function getChineseZodiacForecast(chinese) {
+            return `
+                <div class="system-item">
+                    <h4>Your Sign: ${chinese.element} ${chinese.animal}</h4>
+                    <p>${getChineseDescription(chinese.animal)} Your ${chinese.element} element adds ${getElementQuality(chinese.element)} to your natural ${chinese.animal} traits.</p>
+                </div>
+                <div class="system-item">
+                    <h4>Today's Energy</h4>
+                    <p>The daily animal energy harmonizes with your ${chinese.animal} nature, creating favorable conditions for ${getChineseActivity(chinese.animal)}.</p>
+                </div>
+                <div class="system-item">
+                    <h4>Lucky Elements</h4>
+                    <p><strong>Direction:</strong> South<br>
+                    <strong>Color:</strong> ${getChineseColor(chinese.element)}<br>
+                    <strong>Activity:</strong> ${getChineseActivity(chinese.animal)}</p>
+                </div>
+            `;
+        }
+
+        function getNumerologyForecast(lifePath, personalYear, birthDate) {
+            const today = new Date();
+            const birth = new Date(birthDate);
+            const personalDay = (birth.getDate() + today.getDate() + (today.getMonth() + 1)) % 9 || 9;
+            
+            return `
+                <div class="system-item">
+                    <h4>Life Path ${lifePath}</h4>
+                    <p>${getLifePathDescription(lifePath)} This is your soul's purpose and natural operating frequency.</p>
+                </div>
+                <div class="system-item">
+                    <h4>Personal Year ${personalYear}</h4>
+                    <p>${getPersonalYearDescription(personalYear)} This year's theme shapes how today's energy manifests for you.</p>
+                </div>
+                <div class="system-item">
+                    <h4>Personal Day ${personalDay}</h4>
+                    <p>${getPersonalDayDescription(personalDay)} Today's specific vibration guides your actions and decisions.</p>
+                </div>
+            `;
+        }
+
+        function getGematriaForecast(name, value, birthDate) {
+            const today = new Date();
+            const dateValue = today.getFullYear() + (today.getMonth() + 1) + today.getDate();
+            const resonance = (value + dateValue) % 999;
+            
+            return `
+                <div class="system-item">
+                    <h4>Your Name Value: ${value}</h4>
+                    <p>The gematria value of "${name}" carries the frequency of ${getGematriaTheme(value)}. This is your vibrational signature.</p>
+                </div>
+                <div class="system-item">
+                    <h4>Today's Date Value: ${dateValue}</h4>
+                    <p>Today carries the frequency of ${getGematriaTheme(dateValue)}, creating a specific energetic field for manifestation.</p>
+                </div>
+                <div class="system-item">
+                    <h4>Name + Date Resonance: ${resonance}</h4>
+                    <p>The interaction between your name and today creates a ${resonance % 7 === 0 ? 'highly favorable' : 'supportive'} resonance field. This amplifies your natural abilities in ${getGematriaApplication(resonance % 7)}.</p>
+                </div>
+            `;
+        }
+
+        function getActionItems(zodiac, chinese, lifePath, personalYear, focus, challenge) {
+            let items = [];
+            
+            items.push(`
+                <div class="action-item">
+                    <h4>Morning (6-9 AM)</h4>
+                    <p>Begin with ${getMorningAction(zodiac.name, lifePath)}. Your ${zodiac.name} sun and Life Path ${lifePath} are most aligned during early hours.</p>
+                </div>
+            `);
+            
+            items.push(`
+                <div class="action-item">
+                    <h4>Afternoon (12-3 PM)</h4>
+                    <p>${getAfternoonAction(chinese.animal, personalYear, focus)}. This is your peak creative/productive window.</p>
+                </div>
+            `);
+            
+            items.push(`
+                <div class="action-item">
+                    <h4>Evening (6-9 PM)</h4>
+                    <p>${getEveningAction(zodiac.name, lifePath)}. Use this time for integration and reflection.</p>
+                </div>
+            `);
+            
+            if (challenge) {
+                items.push(`
+                    <div class="action-item">
+                        <h4>Challenge-Specific Guidance</h4>
+                        <p>Regarding "${challenge}": ${getChallengeGuidance(zodiac.name, chinese.animal, lifePath)}</p>
+                    </div>
+                `);
+            }
+            
+            return items.join('');
+        }
+
+        // Helper functions for descriptions
+        function getZodiacDescription(sign) {
+            const descriptions = {
+                'Aries': 'Bold and pioneering,',
+                'Taurus': 'Grounded and persistent,',
+                'Gemini': 'Curious and adaptable,',
+                'Cancer': 'Nurturing and intuitive,',
+                'Leo': 'Creative and confident,',
+                'Virgo': 'Analytical and detail-oriented,',
+                'Libra': 'Harmonious and diplomatic,',
+                'Scorpio': 'Intense and transformative,',
+                'Sagittarius': 'Philosophical and adventurous,',
+                'Capricorn': 'Ambitious and disciplined,',
+                'Aquarius': 'Innovative and humanitarian,',
+                'Pisces': 'Compassionate and mystical,'
+            };
+            return descriptions[sign] || '';
+        }
+
+        function getZodiacTrait(sign) {
+            const traits = {
+                'Aries': 'bold action and leadership',
+                'Taurus': 'stability and sensory pleasure',
+                'Gemini': 'communication and learning',
+                'Cancer': 'emotional depth and nurturing',
+                'Leo': 'creative expression and recognition',
+                'Virgo': 'service and practical improvement',
+                'Libra': 'balance and partnership',
+                'Scorpio': 'depth and transformation',
+                'Sagittarius': 'expansion and wisdom-seeking',
+                'Capricorn': 'achievement and structure',
+                'Aquarius': 'innovation and collective progress',
+                'Pisces': 'spirituality and compassion'
+            };
+            return traits[sign] || 'growth';
+        }
+
+        function getChineseDescription(animal) {
+            const descriptions = {
+                'Rat': 'Clever and resourceful,',
+                'Ox': 'Diligent and dependable,',
+                'Tiger': 'Brave and confident,',
+                'Rabbit': 'Gentle and compassionate,',
+                'Dragon': 'Ambitious and charismatic,',
+                'Snake': 'Wise and intuitive,',
+                'Horse': 'Energetic and free-spirited,',
+                'Goat': 'Creative and gentle,',
+                'Monkey': 'Intelligent and playful,',
+                'Rooster': 'Confident and organized,',
+                'Dog': 'Loyal and honest,',
+                'Pig': 'Generous and sincere,'
+            };
+            return descriptions[animal] || '';
+        }
+
+        function getElementQuality(element) {
+            const qualities = {
+                'Metal': 'structure and precision',
+                'Water': 'adaptability and depth',
+                'Wood': 'growth and expansion',
+                'Fire': 'passion and transformation',
+                'Earth': 'stability and grounding'
+            };
+            return qualities[element] || 'balance';
+        }
+
+        function getChineseColor(element) {
+            const colors = {
+                'Metal': 'White, Gold, Silver',
+                'Water': 'Black, Blue, Purple',
+                'Wood': 'Green, Teal',
+                'Fire': 'Red, Orange, Pink',
+                'Earth': 'Yellow, Brown, Beige'
+            };
+            return colors[element] || 'Rainbow';
+        }
+
+        function getChineseActivity(animal) {
+            const activities = {
+                'Rat': 'networking and strategic planning',
+                'Ox': 'focused work and building foundations',
+                'Tiger': 'taking bold action and leadership',
+                'Rabbit': 'creative projects and social connections',
+                'Dragon': 'ambitious pursuits and public visibility',
+                'Snake': 'deep thinking and strategic moves',
+                'Horse': 'travel and freedom-seeking',
+                'Goat': 'artistic expression and collaboration',
+                'Monkey': 'problem-solving and innovation',
+                'Rooster': 'organization and communication',
+                'Dog': 'loyalty-building and community service',
+                'Pig': 'generosity and celebration'
+            };
+            return activities[animal] || 'purposeful action';
+        }
+
+        function getLifePathDescription(number) {
+            const descriptions = {
+                1: 'The Leader - Independent and pioneering.',
+                2: 'The Diplomat - Cooperative and harmonious.',
+                3: 'The Communicator - Creative and expressive.',
+                4: 'The Builder - Practical and grounded.',
+                5: 'The Freedom Seeker - Adventurous and dynamic.',
+                6: 'The Nurturer - Responsible and caring.',
+                7: 'The Seeker - Analytical and spiritual.',
+                8: 'The Powerhouse - Ambitious and authoritative.',
+                9: 'The Humanitarian - Compassionate and wise.',
+                11: 'The Illuminator - Intuitive and inspirational.',
+                22: 'The Master Builder - Visionary and powerful.',
+                33: 'The Master Teacher - Compassionate healer.'
+            };
+            return descriptions[number] || 'The Seeker';
+        }
+
+        function getPersonalYearDescription(number) {
+            const descriptions = {
+                1: 'New Beginnings - This is a year of fresh starts and initiative.',
+                2: 'Partnership - Focus on cooperation and relationships.',
+                3: 'Creative Expression - Time for communication and creativity.',
+                4: 'Foundation Building - Establish stability and structure.',
+                5: 'Change and Freedom - Embrace transformation and adventure.',
+                6: 'Responsibility - Focus on home, family, and service.',
+                7: 'Spiritual Growth - Deepen inner knowledge and reflection.',
+                8: 'Power and Abundance - Manifest material success.',
+                9: 'Completion - Release the old and prepare for new cycles.'
+            };
+            return descriptions[number] || 'Transformation';
+        }
+
+        function getPersonalDayDescription(number) {
+            const descriptions = {
+                1: 'Initiative and Leadership - Take charge of your day.',
+                2: 'Cooperation - Work with others harmoniously.',
+                3: 'Expression - Communicate your ideas creatively.',
+                4: 'Organization - Focus on practical tasks.',
+                5: 'Flexibility - Adapt to changing circumstances.',
+                6: 'Service - Help others and nurture relationships.',
+                7: 'Reflection - Spend time in contemplation.',
+                8: 'Achievement - Focus on tangible results.',
+                9: 'Completion - Finish what you started.'
+            };
+            return descriptions[number] || 'Balance';
+        }
+
+        function getGematriaTheme(value) {
+            const reduced = value.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0) % 9 || 9;
+            const themes = [
+                '', 'leadership and new beginnings', 'partnership and balance', 
+                'creative expression', 'stability and foundation', 'change and freedom',
+                'nurturing and responsibility', 'wisdom and spirituality', 
+                'power and manifestation', 'completion and humanitarianism'
+            ];
+            return themes[reduced] || 'transformation';
+        }
+
+        function getGematriaApplication(value) {
+            const applications = [
+                'manifesting new opportunities', 'building partnerships',
+                'creative communication', 'establishing foundations',
+                'embracing change', 'service to others',
+                'spiritual insight', 'material success'
+            ];
+            return applications[value % applications.length];
+        }
+
+        function getMorningAction(sign, lifePath) {
+            const morning = {
+                'Aries': 'physical exercise or energetic movement',
+                'Taurus': 'grounding meditation or sensory ritual',
+                'Gemini': 'journaling or learning something new',
+                'Cancer': 'emotional check-in or creative visualization',
+                'Leo': 'affirmations or creative planning',
+                'Virgo': 'organization or detailed planning',
+                'Libra': 'beauty ritual or harmonizing your space',
+                'Scorpio': 'deep meditation or shadow work',
+                'Sagittarius': 'inspirational reading or goal-setting',
+                'Capricorn': 'strategic planning or reviewing goals',
+                'Aquarius': 'innovation brainstorming or future visioning',
+                'Pisces': 'spiritual practice or artistic expression'
+            };
+            return morning[sign] || 'mindful meditation';
+        }
+
+        function getAfternoonAction(animal, personalYear, focus) {
+            if (focus === 'career') return 'Focus on your most important work task or have that crucial conversation';
+            if (focus === 'love') return 'Reach out to someone you care about with authentic vulnerability';
+            if (focus === 'health') return 'Take a mindful movement break or prepare a nourishing meal';
+            if (focus === 'spiritual') return 'Practice presence or study spiritual teachings';
+            return 'Work on your highest priority project with focused energy';
+        }
+
+        function getEveningAction(sign, lifePath) {
+            return 'Journal about today\'s insights and set intentions for tomorrow. Your ' + sign + ' nature benefits from reflection and conscious closure.';
+        }
+
+        function getChallengeGuidance(sign, animal, lifePath) {
+            return 'Your ' + sign + ' determination combined with ' + animal + ' wisdom suggests approaching this challenge through patience and strategic action rather than force. Life Path ' + lifePath + ' indicates this obstacle is teaching you a specific soul lesson about your purpose.';
+        }
+
+        // Timeframe switcher
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('timeframe-btn')) {
+                document.querySelectorAll('.timeframe-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+                const timeframe = e.target.dataset.timeframe;
+                generateForecast(timeframe);
+            }
+        });
+
+        // Save forecast
+        function saveForecast() {
+            alert('✅ Forecast saved to your library!\n\nThis feature will integrate with the Quantum Jukebox library system.');
+        }
+    </script>
+</body>
+</html>
