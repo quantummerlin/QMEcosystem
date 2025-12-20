@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Zodiac Forecasts - Daily Cosmic Guidance | Quantum Merlin</title>
-    <meta name="description" content="Get your daily, weekly, and monthly zodiac forecasts with quantum insights and ritual suggestions.">
-    <meta name="keywords" content="zodiac forecasts, astrology predictions, cosmic guidance, quantum forecasts, quantum merlin">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
+    <title>Quantum Forecaster | Your Personalized Cosmic Forecast</title>
+    <meta name="description" content="Get your personalized cosmic forecast using Western astrology, Chinese zodiac, numerology, and gematria. Multi-system forecasting for daily, weekly, monthly, and yearly insights.">
+    <meta name="keywords" content="quantum forecaster, daily horoscope, personalized forecast, astrology, numerology, chinese zodiac, gematria, cosmic guidance">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Quantum Zodiac Forecasts - Daily Cosmic Guidance">
-    <meta property="og:description" content="Get your daily, weekly, and monthly zodiac forecasts with quantum insights.">
+    <meta property="og:title" content="Quantum Forecaster | Multi-System Cosmic Guidance">
+    <meta property="og:description" content="The only forecaster that uses 8 mystical systems. From surface to soul: forecasts that go as deep as you want.">
+    <meta property="og:url" content="https://quantummerlin.com/forecasts">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://forecasts.quantummerlin.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            --cosmic-bg: #000000;
+            --neon-cyan: #00f5ff;
+            --neon-purple: #9d00ff;
+            --neon-gold: #ffd700;
+            --neon-pink: #ff0066;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -25,116 +37,44 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #000014 100%);
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--cosmic-bg);
+            color: var(--text-primary);
             min-height: 100vh;
-            color: #ffffff;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Quantum Grid Background */
-        .quantum-grid {
+        /* Animated Cosmic Background */
+        .cosmic-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
-                linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: gridMove 20s linear infinite;
-            pointer-events: none;
-            z-index: 1;
+            z-index: 0;
+            background: radial-gradient(ellipse at center, #1a0033 0%, #000000 100%);
         }
 
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-
-        /* Quantum Sun */
-        .quantum-sun {
+        .stars {
             position: fixed;
-            top: 10%;
-            right: 10%;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, rgba(255, 165, 0, 0.1) 40%, transparent 70%);
-            border-radius: 50%;
-            filter: blur(40px);
-            animation: pulse 4s ease-in-out infinite;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
-            z-index: 2;
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.6; }
-            50% { transform: scale(1.2); opacity: 0.8; }
-        }
-
-        /* Navigation Menu */
-        .nav-menu {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-
-        .nav-toggle {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.8), rgba(75, 0, 130, 0.8));
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-toggle:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5);
-        }
-
-        .nav-dropdown {
+        .star {
             position: absolute;
-            top: 100%;
-            right: 0;
-            margin-top: 10px;
-            background: linear-gradient(135deg, rgba(25, 0, 51, 0.95), rgba(10, 0, 25, 0.95));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 15px;
-            min-width: 200px;
-            display: none;
-            backdrop-filter: blur(20px);
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
         }
 
-        .nav-dropdown.active {
-            display: block;
-            animation: slideDown 0.3s ease;
-        }
-
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .nav-dropdown a {
-            display: block;
-            color: #fff;
-            text-decoration: none;
-            padding: 12px 20px;
-            transition: all 0.3s ease;
-            border-radius: 10px;
-            margin: 5px;
-        }
-
-        .nav-dropdown a:hover {
-            background: rgba(138, 43, 226, 0.3);
-            transform: translateX(5px);
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
         }
 
         /* Main Container */
@@ -146,871 +86,1315 @@
             z-index: 10;
         }
 
-        /* Header */
-        .header {
+        /* Hero Section */
+        .hero {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
+            padding: 40px 20px;
         }
 
-        .title {
-            font-size: 3em;
-            background: linear-gradient(135deg, #ffd700, #ff6b6b, #4ecdc4);
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple), var(--neon-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
-        }
-
-        .subtitle {
-            color: #b8b8b8;
-            font-size: 1.2em;
-        }
-
-        /* Current Day Display */
-        .current-day {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            backdrop-filter: blur(10px);
-            text-align: center;
-        }
-
-        .day-title {
-            font-size: 2em;
-            color: #ffd700;
-            margin-bottom: 15px;
-        }
-
-        .element-of-day {
-            font-size: 1.5em;
-            color: #4ecdc4;
-            margin-bottom: 15px;
-        }
-
-        .frequency-of-day {
-            font-size: 1.3em;
-            color: #ff6b6b;
+            background-clip: text;
             margin-bottom: 20px;
+            filter: drop-shadow(0 0 30px rgba(0, 245, 255, 0.6));
+            animation: glow-pulse 3s ease-in-out infinite;
         }
 
-        .daily-message {
-            color: #e0e0e0;
-            line-height: 1.6;
-            font-size: 1.1em;
+        @keyframes glow-pulse {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.4)); }
+            50% { filter: drop-shadow(0 0 40px rgba(0, 245, 255, 0.8)); }
         }
 
-        /* Forecast Selection */
-        .forecast-tabs {
+        .hero .tagline {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .hero .systems {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 40px;
+            gap: 30px;
             flex-wrap: wrap;
+            margin-top: 30px;
         }
 
-        .forecast-tab {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 15px;
-            padding: 15px 30px;
-            cursor: pointer;
+        .system-badge {
+            background: rgba(0, 245, 255, 0.1);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--neon-cyan);
+            backdrop-filter: blur(10px);
             transition: all 0.3s ease;
-            text-align: center;
         }
 
-        .forecast-tab:hover {
+        .system-badge:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
-            border-color: #ffd700;
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+            border-color: var(--neon-cyan);
         }
 
-        .forecast-tab.active {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(138, 43, 226, 0.3));
-            border-color: #ffd700;
-        }
-
-        /* Zodiac Grid */
-        .zodiac-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+        /* Input Section */
+        .input-section {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.08) 0%, rgba(157, 0, 255, 0.08) 100%);
+            backdrop-filter: blur(30px);
+            border: 2px solid rgba(0, 245, 255, 0.4);
+            border-radius: 25px;
+            padding: 40px;
             margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 245, 255, 0.2);
         }
 
-        .zodiac-card {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 25px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .zodiac-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.4);
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .zodiac-symbol {
-            font-size: 2.5em;
-        }
-
-        .zodiac-name {
-            font-size: 1.5em;
-            color: #ffd700;
-        }
-
-        .card-content {
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-
-        .forecast-section {
-            margin-bottom: 15px;
-        }
-
-        .forecast-label {
-            color: #4ecdc4;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .forecast-text {
-            color: #e0e0e0;
-            line-height: 1.5;
-        }
-
-        .frequency-alignment {
-            background: rgba(255, 215, 0, 0.1);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 15px;
-            padding: 15px;
-            margin-top: 15px;
-        }
-
-        .frequency-alignment h4 {
-            color: #ffd700;
-            margin-bottom: 10px;
-        }
-
-        .ritual-section {
-            background: rgba(78, 205, 196, 0.1);
-            border: 1px solid rgba(78, 205, 196, 0.3);
-            border-radius: 15px;
-            padding: 15px;
-            margin-top: 15px;
-        }
-
-        .ritual-section h4 {
-            color: #4ecdc4;
-            margin-bottom: 10px;
-        }
-
-        .save-btn {
-            background: linear-gradient(135deg, #4ecdc4, #44a08d);
-            border: none;
-            padding: 8px 16px;
-            border-radius: 15px;
-            color: #fff;
-            font-size: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-
-        .save-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
-        }
-
-        /* Week Overview */
-        .week-overview {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 30px;
-            backdrop-filter: blur(10px);
+        .input-section h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            color: var(--neon-gold);
             margin-bottom: 30px;
-        }
-
-        .week-title {
-            font-size: 1.8em;
-            color: #ffd700;
-            margin-bottom: 20px;
             text-align: center;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
         }
 
-        .week-grid {
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+        }
+
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            font-family: 'Rajdhani', sans-serif;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 12px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+        }
+
+        .input-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
         }
 
-        .day-card {
-            background: rgba(255, 215, 0, 0.05);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
+        .optional-badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: rgba(255, 215, 0, 0.7);
+            margin-left: 8px;
+        }
+
+        .help-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 5px;
+        }
+
+        /* Expandable Sections */
+        .expandable {
+            margin-top: 30px;
+        }
+
+        .expand-btn {
+            background: rgba(157, 0, 255, 0.2);
+            border: 2px solid rgba(157, 0, 255, 0.4);
+            color: var(--neon-purple);
+            padding: 12px 30px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .expand-btn:hover {
+            background: rgba(157, 0, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(157, 0, 255, 0.4);
+        }
+
+        .expanded-content {
+            display: none;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .expanded-content.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Accuracy Indicator */
+        .accuracy-indicator {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .accuracy-indicator h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            color: var(--neon-gold);
+            margin-bottom: 15px;
+        }
+
+        .accuracy-bar {
+            background: rgba(255, 255, 255, 0.1);
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .accuracy-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-gold));
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .data-checklist {
+            list-style: none;
+        }
+
+        .data-checklist li {
+            padding: 8px 0;
+            font-size: 1rem;
+        }
+
+        .data-checklist li:before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+
+        .data-checklist li.missing:before {
+            content: "⚠️ ";
+        }
+
+        /* Generate Button */
+        .generate-btn {
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+            border: none;
+            color: white;
+            padding: 18px 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: 'Orbitron', monospace;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 30px auto;
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.4);
+        }
+
+        .generate-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px rgba(0, 245, 255, 0.6);
+        }
+
+        .generate-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Timeframe Selector */
+        .timeframe-selector {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .timeframe-btn {
+            background: rgba(0, 245, 255, 0.1);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            color: var(--neon-cyan);
+            padding: 12px 30px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .day-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        .timeframe-btn:hover,
+        .timeframe-btn.active {
+            background: rgba(0, 245, 255, 0.2);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
         }
 
-        .day-name {
-            font-weight: bold;
-            color: #ffd700;
+        /* Forecast Output */
+        .forecast-output {
+            display: none;
+        }
+
+        .forecast-output.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .forecast-header {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 0, 102, 0.1) 100%);
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .forecast-header h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--neon-gold), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .forecast-meta {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Overview Section */
+        .overview-section {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.15) 0%, rgba(157, 0, 255, 0.15) 100%);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .overview-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: var(--neon-cyan);
+            margin-bottom: 20px;
+        }
+
+        .overview-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* System Sections */
+        .system-section {
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 18px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .system-section:hover {
+            border-color: rgba(0, 245, 255, 0.3);
+        }
+
+        .system-header {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 245, 255, 0.05);
+        }
+
+        .system-header h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            color: var(--neon-cyan);
+        }
+
+        .system-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .system-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 25px;
+        }
+
+        .system-section.expanded .system-content {
+            max-height: 2000px;
+            padding: 25px;
+        }
+
+        .system-section.expanded .system-toggle {
+            transform: rotate(180deg);
+        }
+
+        .system-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .system-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .system-item h4 {
+            color: var(--neon-gold);
             margin-bottom: 10px;
+            font-size: 1.1rem;
         }
 
-        .day-element {
-            color: #4ecdc4;
-            margin-bottom: 5px;
+        .system-item p {
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
 
-        .day-frequency {
-            color: #ff6b6b;
-            font-size: 0.9em;
+        /* Action Item */
+        .action-section {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 0, 102, 0.15) 100%);
+            border: 2px solid var(--neon-gold);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
         }
 
-        /* Responsive Design */
+        .action-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: var(--neon-gold);
+            margin-bottom: 20px;
+        }
+
+        .action-item {
+            background: rgba(0, 0, 0, 0.4);
+            border-left: 4px solid var(--neon-gold);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .action-item h4 {
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .action-item p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Save Button */
+        .save-btn {
+            background: rgba(255, 215, 0, 0.2);
+            border: 2px solid var(--neon-gold);
+            color: var(--neon-gold);
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .save-btn:hover {
+            background: rgba(255, 215, 0, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .title {
-                font-size: 2em;
+            .hero h1 {
+                font-size: 2rem;
             }
-            
-            .container {
-                padding: 20px 15px;
+
+            .hero .tagline {
+                font-size: 1.1rem;
             }
-            
-            .forecast-tabs {
-                gap: 10px;
+
+            .input-section {
+                padding: 25px 20px;
             }
-            
-            .forecast-tab {
-                padding: 10px 20px;
-                font-size: 0.9em;
-            }
-            
-            .zodiac-grid {
+
+            .input-row {
                 grid-template-columns: 1fr;
             }
-            
-            .week-grid {
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
+            .timeframe-selector {
+                flex-direction: column;
+            }
+
+            .timeframe-btn {
+                width: 100%;
             }
         }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            border: 4px solid rgba(0, 245, 255, 0.2);
+            border-top: 4px solid var(--neon-cyan);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
-    <!-- Quantum Intro Animation -->
-    <link rel="stylesheet" href="../shared/css/quantum-intro.css">
-<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-    <!-- Quantum Intro Animation -->
-    <div id="intro-container">
-        <canvas id="lines-canvas"></canvas>
-        <div class="emoji-layer">
-            <div class="intro-emoji" data-symbol="⚛️"></div>
-            <div class="intro-emoji" data-symbol="🧙‍♂️"></div>
-            <div class="intro-emoji" data-symbol="🌹"></div>
-        </div>
-        <div id="singularity"></div>
-        <div id="intro-title">Quantum Merlin</div>
-    </div>
-    
-    <div id="app-content">
-    <div class="quantum-grid"></div>
-    <div class="quantum-sun"></div>
-    
-    <!-- Navigation Menu -->
-    <div class="nav-menu">
-        <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
-        <div class="nav-dropdown" id="navDropdown">
-            <a href="https://quantummerlin.com">🏠 Home</a>
-            <a href="https://frequency.quantummerlin.com">🎵 Frequency Generator</a>
-            <a href="https://jukebox.quantummerlin.com">📚 Quantum Jukebox</a>
-            <a href="https://gematria.quantummerlin.com">🔢 Quantum Gematria</a>
-            <a href="https://tarot.quantummerlin.com">🃏 Quantum Tarot</a>
-            <a href="https://sigils.quantummerlin.com">✨ Sigil Creator</a>
-            <a href="https://astrology.quantummerlin.com">⭐ Western Astrology</a>
-            <a href="https://chinese.quantummerlin.com">🐲 Chinese Zodiac</a>
-            <a href="https://forecasts.quantummerlin.com">🔮 Zodiac Forecasts</a>
-            <a href="https://codes.quantummerlin.com">💫 Reality Codes</a>
-            <a href="https://crystals.quantummerlin.com">💎 Quantum Crystals</a>
-            <a href="https://water.quantummerlin.com">💧 Water Charging</a>
-        </div>
-    </div>
+    <div class="cosmic-bg"></div>
+    <div class="stars" id="stars"></div>
 
     <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1 class="title">Quantum Zodiac Forecasts</h1>
-            <p class="subtitle">Daily cosmic guidance with quantum frequencies</p>
-        </div>
-
-        <!-- Current Day Display -->
-        <div class="current-day">
-            <h2 class="day-title" id="currentDayTitle">-</h2>
-            <div class="element-of-day" id="elementOfDay">-</div>
-            <div class="frequency-of-day" id="frequencyOfDay">-</div>
-            <div class="daily-message" id="dailyMessage">-</div>
-        </div>
-
-        <!-- Week Overview -->
-        <div class="week-overview">
-            <h3 class="week-title">🌟 This Week's Cosmic Flow</h3>
-            <div class="week-grid" id="weekGrid">
-                <!-- Week days will be dynamically added here -->
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>🌌 QUANTUM FORECASTER</h1>
+            <p class="tagline">Your personalized cosmic forecast based on ALL your data</p>
+            <div class="systems">
+                <div class="system-badge">⭐ Western Astrology</div>
+                <div class="system-badge">🐉 Chinese Zodiac</div>
+                <div class="system-badge">🔢 Numerology</div>
+                <div class="system-badge">📜 Gematria</div>
             </div>
         </div>
 
-        <!-- Forecast Selection -->
-        <div class="forecast-tabs">
-            <div class="forecast-tab active" onclick="selectForecast('daily', this)">
-                <h3>📅 Daily</h3>
-                <p>Today's guidance</p>
+        <!-- Input Section -->
+        <div class="input-section" id="inputSection">
+            <h2>Generate Your Forecast</h2>
+            
+            <!-- Accuracy Indicator -->
+            <div class="accuracy-indicator" id="accuracyIndicator">
+                <h3>Forecast Accuracy</h3>
+                <div class="accuracy-bar">
+                    <div class="accuracy-fill" id="accuracyFill" style="width: 25%;">25%</div>
+                </div>
+                <ul class="data-checklist" id="dataChecklist">
+                    <li class="missing">Birth date not provided</li>
+                    <li class="missing">Birth time not provided</li>
+                    <li class="missing">Birth location not provided</li>
+                    <li class="missing">Name not provided</li>
+                </ul>
             </div>
-            <div class="forecast-tab" onclick="selectForecast('weekly', this)">
-                <h3>📊 Weekly</h3>
-                <p>7-day journey</p>
+
+            <!-- Tier 1: Required -->
+            <div class="input-group">
+                <label for="birthDate">Birth Date *</label>
+                <input type="date" id="birthDate" required>
+                <p class="help-text">Required - determines your sun sign, life path, and Chinese zodiac</p>
             </div>
-            <div class="forecast-tab" onclick="selectForecast('monthly', this)">
-                <h3>🌙 Monthly</h3>
-                <p>Month ahead</p>
+
+            <!-- Tier 2: Enhanced Accuracy -->
+            <button class="expand-btn" id="expandEnhanced">
+                ▼ Add Birth Time & Location for More Accuracy
+            </button>
+            
+            <div class="expanded-content" id="enhancedContent">
+                <div class="input-group">
+                    <label for="birthTime">Birth Time <span class="optional-badge">(optional)</span></label>
+                    <input type="time" id="birthTime">
+                    <p class="help-text">Used for rising sign and moon sign calculations</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="birthLocation">Birth Location <span class="optional-badge">(optional)</span></label>
+                    <input type="text" id="birthLocation" placeholder="City, Country">
+                    <p class="help-text">Used for birth chart houses and local time calculations</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="currentLocation">Current Location <span class="optional-badge">(optional)</span></label>
+                    <input type="text" id="currentLocation" placeholder="City, Country">
+                    <p class="help-text">Used for current transits and local planetary hours</p>
+                </div>
             </div>
+
+            <!-- Tier 3: Deep Personalization -->
+            <button class="expand-btn" id="expandAdvanced" style="display: none;">
+                ▼ Add Name & Focus for Deep Personalization
+            </button>
+            
+            <div class="expanded-content" id="advancedContent">
+                <div class="input-group">
+                    <label for="fullName">Full Name <span class="optional-badge">(optional)</span></label>
+                    <div class="input-row">
+                        <input type="text" id="firstName" placeholder="First">
+                        <input type="text" id="middleName" placeholder="Middle">
+                        <input type="text" id="lastName" placeholder="Last">
+                    </div>
+                    <p class="help-text">Used for gematria and name numerology calculations</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="focus">Current Focus <span class="optional-badge">(optional)</span></label>
+                    <select id="focus">
+                        <option value="">Select a focus area...</option>
+                        <option value="career">Career & Success</option>
+                        <option value="love">Love & Relationships</option>
+                        <option value="health">Health & Wellness</option>
+                        <option value="spiritual">Spiritual Growth</option>
+                        <option value="finances">Finances & Abundance</option>
+                    </select>
+                    <p class="help-text">Tailors guidance to your specific needs</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="challenge">Current Challenge <span class="optional-badge">(optional)</span></label>
+                    <textarea id="challenge" rows="3" placeholder="Brief description of what you're working through..."></textarea>
+                    <p class="help-text">Provides obstacle-specific advice and shadow work</p>
+                </div>
+            </div>
+
+            <!-- Generate Button -->
+            <button class="generate-btn" id="generateBtn">✨ Generate Forecast</button>
         </div>
 
-        <!-- Zodiac Grid -->
-        <div class="zodiac-grid" id="zodiacGrid">
-            <!-- Zodiac forecast cards will be dynamically added here -->
+        <!-- Loading Animation -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p style="color: var(--neon-cyan); font-size: 1.2rem;">Calculating your cosmic forecast...</p>
+        </div>
+
+        <!-- Timeframe Selector -->
+        <div class="timeframe-selector" id="timeframeSelector" style="display: none;">
+            <button class="timeframe-btn active" data-timeframe="daily">📅 Daily</button>
+            <button class="timeframe-btn" data-timeframe="weekly">📆 Weekly</button>
+            <button class="timeframe-btn" data-timeframe="monthly">🗓️ Monthly</button>
+            <button class="timeframe-btn" data-timeframe="yearly">📊 Yearly</button>
+        </div>
+
+        <!-- Forecast Output -->
+        <div class="forecast-output" id="forecastOutput">
+            <!-- Content will be dynamically generated -->
         </div>
     </div>
 
     <script>
-        // Navigation toggle
-        function toggleNav() {
-            const dropdown = document.getElementById('navDropdown');
-            dropdown.classList.toggle('active');
+        // Generate stars background
+        function generateStars() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = star.style.height = Math.random() * 3 + 'px';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
         }
+        generateStars();
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(event) {
-            const navMenu = document.querySelector('.nav-menu');
-            const dropdown = document.getElementById('navDropdown');
+        // Expandable sections
+        document.getElementById('expandEnhanced').addEventListener('click', function() {
+            const content = document.getElementById('enhancedContent');
+            content.classList.toggle('show');
+            this.textContent = content.classList.contains('show') 
+                ? '▲ Hide Enhanced Options' 
+                : '▼ Add Birth Time & Location for More Accuracy';
             
-            if (!navMenu.contains(event.target)) {
-                dropdown.classList.remove('active');
+            if (content.classList.contains('show')) {
+                document.getElementById('expandAdvanced').style.display = 'block';
             }
         });
 
-        // Global variables
-        let currentForecastType = 'daily';
-        
-        // Western Zodiac data for forecasts
-        const westernZodiacForecasts = {
-            'Aries': {
-                symbol: '♈',
-                element: 'Fire',
-                daily: {
-                    message: 'Your leadership energy is amplified today. Take initiative on important projects and trust your instincts.',
-                    frequency: '396 Hz - Courage and Confidence',
-                    ritual: 'Meditate with the courage frequency while visualizing successful leadership moments.',
-                    tarot_tie: 'The Emperor card supports your natural authority today.',
-                    gematria_tie: 'Life path number 1 energy enhances your leadership qualities.'
-                },
-                weekly: {
-                    message: 'This week brings opportunities for breakthrough moments and new beginnings. Stay open to unexpected paths.',
-                    frequency: '528 Hz - Transformation and New Beginnings',
-                    ritual: 'Daily morning meditation with transformation frequency to prepare for new opportunities.',
-                    tarot_tie: 'The Fool card guides your weekly journey of exploration.',
-                    gematria_tie: 'Core number 5 supports your adventurous spirit.'
-                },
-                monthly: {
-                    message: 'This month focuses on personal power and achievement. Your natural leadership will be recognized and rewarded.',
-                    frequency: '174 Hz - Foundation Building and Achievement',
-                    ritual: 'Weekly achievement meditation with foundation frequency to ground your success.',
-                    tarot_tie: 'The Chariot card empowers your monthly journey to victory.',
-                    gematria_tie: 'Destiny number 8 aligns with your achievement potential.'
-                }
-            },
-            'Taurus': {
-                symbol: '♉',
-                element: 'Earth',
-                daily: {
-                    message: 'Stability and practical wisdom guide your decisions today. Focus on building solid foundations.',
-                    frequency: '174 Hz - Stability and Grounding',
-                    ritual: 'Grounding meditation with stability frequency while connecting with earth energy.',
-                    tarot_tie: 'The Hierophant card supports your practical wisdom today.',
-                    gematria_tie: 'Life path number 4 enhances your stability.'
-                },
-                weekly: {
-                    message: 'This week favors financial planning and long-term investments. Your patience will pay dividends.',
-                    frequency: '285 Hz - Healing and Manifestation',
-                    ritual: 'Abundance meditation with healing frequency to attract prosperity.',
-                    tarot_tie: 'The Pentacles suit guides your financial wisdom.',
-                    gematria_tie: 'Core number 6 supports your nurturing approach to wealth.'
-                },
-                monthly: {
-                    message: 'This month brings material abundance and security. Focus on sustainable growth and practical manifestations.',
-                    frequency: '528 Hz - Abundance and Security',
-                    ritual: 'Daily prosperity meditation with abundance frequency to maintain financial flow.',
-                    tarot_tie: 'The World card completes your manifestation cycle.',
-                    gematria_tie: 'Destiny number 2 supports your partnership approach to success.'
-                }
-            },
-            'Gemini': {
-                symbol: '♊',
-                element: 'Air',
-                daily: {
-                    message: 'Communication flows effortlessly today. Share your ideas and engage in meaningful conversations.',
-                    frequency: '741 Hz - Communication and Learning',
-                    ritual: 'Throat chakra meditation with communication frequency to enhance expression.',
-                    tarot_tie: 'The Lovers card supports harmonious connections today.',
-                    gematria_tie: 'Life path number 3 enhances your creative communication.'
-                },
-                weekly: {
-                    message: 'This week brings learning opportunities and networking connections. Stay curious and open-minded.',
-                    frequency: '417 Hz - Adaptability and Learning',
-                    ritual: 'Mind meditation with learning frequency to absorb new information.',
-                    tarot_tie: 'The Swords suit enhances your mental clarity.',
-                    gematria_tie: 'Core number 7 supports your intellectual growth.'
-                },
-                monthly: {
-                    message: 'This month favors writing, teaching, and sharing knowledge. Your words will have significant impact.',
-                    frequency: '528 Hz - Expression and Impact',
-                    ritual: 'Daily expression meditation with frequency to amplify your voice.',
-                    tarot_tie: 'The Magician card empowers your communication skills.',
-                    gematria_tie: 'Destiny number 5 aligns with your versatile expression.'
-                }
-            },
-            'Cancer': {
-                symbol: '♋',
-                element: 'Water',
-                daily: {
-                    message: 'Emotional intelligence and intuition guide your decisions today. Trust your feelings and nurture others.',
-                    frequency: '639 Hz - Emotional Healing and Love',
-                    ritual: 'Heart meditation with emotional healing frequency to balance feelings.',
-                    tarot_tie: 'The Moon card enhances your intuition today.',
-                    gematria_tie: 'Life path number 2 supports your empathetic nature.'
-                },
-                weekly: {
-                    message: 'This week focuses on home, family, and emotional healing. Create harmonious environments.',
-                    frequency: '396 Hz - Emotional Freedom and Healing',
-                    ritual: 'Family healing meditation with frequency to resolve emotional patterns.',
-                    tarot_tie: 'The Cups suit supports your emotional journey.',
-                    gematria_tie: 'Core number 9 enhances your compassionate wisdom.'
-                },
-                monthly: {
-                    message: 'This month brings deep emotional transformation and healing opportunities. Release the past.',
-                    frequency: '285 Hz - Deep Healing and Renewal',
-                    ritual: 'Monthly emotional clearing with healing frequency for renewal.',
-                    tarot_tie: 'The Star card guides your healing journey.',
-                    gematria_tie: 'Destiny number 6 supports your nurturing growth.'
-                }
-            },
-            'Leo': {
-                symbol: '♌',
-                element: 'Fire',
-                daily: {
-                    message: 'Creative self-expression shines brightly today. Share your talents and inspire others.',
-                    frequency: '528 Hz - Creativity and Self-Expression',
-                    ritual: 'Solar plexus meditation with creativity frequency to amplify expression.',
-                    tarot_tie: 'The Sun card energizes your creative power today.',
-                    gematria_tie: 'Life path number 3 enhances your creative expression.'
-                },
-                weekly: {
-                    message: 'This week brings recognition and opportunities to showcase your talents. Step into the spotlight.',
-                    frequency: '741 Hz - Confidence and Recognition',
-                    ritual: 'Performance meditation with confidence frequency before important events.',
-                    tarot_tie: 'The Strength card empowers your natural charisma.',
-                    gematria_tie: 'Core number 1 supports your leadership presence.'
-                },
-                monthly: {
-                    message: 'This month focuses on leadership and creative projects. Your innovative ideas will gain traction.',
-                    frequency: '174 Hz - Leadership and Innovation',
-                    ritual: 'Leadership meditation with frequency to guide creative teams.',
-                    tarot_tie: 'The Emperor card supports your authority this month.',
-                    gematria_tie: 'Destiny number 8 aligns with your leadership success.'
-                }
-            },
-            'Virgo': {
-                symbol: '♍',
-                element: 'Earth',
-                daily: {
-                    message: 'Attention to detail and analytical thinking serve you well today. Perfect your skills and systems.',
-                    frequency: '285 Hz - Perfection and Healing',
-                    ritual: 'Third eye meditation with perfection frequency for clarity.',
-                    tarot_tie: 'The Hermit card supports your analytical wisdom today.',
-                    gematria_tie: 'Life path number 7 enhances your analytical abilities.'
-                },
-                weekly: {
-                    message: 'This week favors organization, health improvements, and service to others. Your practical help is needed.',
-                    frequency: '417 Hz - Service and Healing',
-                    ritual: 'Service meditation with healing frequency to bless your work.',
-                    tarot_tie: 'The Temperance card balances your service approach.',
-                    gematria_tie: 'Core number 6 supports your nurturing service.'
-                },
-                monthly: {
-                    message: 'This month brings opportunities to perfect systems and heal situations. Your precision creates value.',
-                    frequency: '741 Hz - Clarity and Perfection',
-                    ritual: 'Monthly clarity meditation with frequency for precision.',
-                    tarot_tie: 'The World card acknowledges your perfect completion.',
-                    gematria_tie: 'Destiny number 5 supports your versatile service.'
-                }
-            },
-            'Libra': {
-                symbol: '♎',
-                element: 'Air',
-                daily: {
-                    message: 'Harmony and balance guide your relationships today. Seek compromise and beautiful solutions.',
-                    frequency: '639 Hz - Harmony and Relationships',
-                    ritual: 'Heart chakra meditation with harmony frequency for balance.',
-                    tarot_tie: 'Justice supports fair decisions today.',
-                    gematria_tie: 'Life path number 6 enhances your relationship wisdom.'
-                },
-                weekly: {
-                    message: 'This week focuses on partnerships and creative collaboration. Your diplomacy creates win-win situations.',
-                    frequency: '417 Hz - Balance and Cooperation',
-                    ritual: 'Partnership meditation with balance frequency for harmony.',
-                    tarot_tie: 'The Lovers card guides your relationship choices.',
-                    gematria_tie: 'Core number 2 supports your cooperative nature.'
-                },
-                monthly: {
-                    message: 'This month brings relationship growth and artistic expression. Create beauty in all areas of life.',
-                    frequency: '528 Hz - Beauty and Harmony',
-                    ritual: 'Daily beauty meditation with frequency for artistic flow.',
-                    tarot_tie: 'The Empress card nurtures your creative expression.',
-                    gematria_tie: 'Destiny number 9 supports your artistic wisdom.'
-                }
-            },
-            'Scorpio': {
-                symbol: '♏',
-                element: 'Water',
-                daily: {
-                    message: 'Transformation and deep insight guide your intuition today. Trust your psychic awareness.',
-                    frequency: '396 Hz - Transformation and Power',
-                    ritual: 'Root chakra meditation with transformation frequency for change.',
-                    tarot_tie: 'Death card supports necessary transformations today.',
-                    gematria_tie: 'Life path number 8 enhances your power.'
-                },
-                weekly: {
-                    message: 'This week brings opportunities for deep healing and rebirth. Release what no longer serves.',
-                    frequency: '852 Hz - Intuition and Transformation',
-                    ritual: 'Weekly transformation meditation with frequency for rebirth.',
-                    tarot_tie: 'The Tower card clears space for new beginnings.',
-                    gematria_tie: 'Core number 4 supports your foundation building.'
-                },
-                monthly: {
-                    message: 'This month focuses on spiritual transformation and accessing hidden wisdom. Your intuition is your guide.',
-                    frequency: '963 Hz - Spiritual Power and Transformation',
-                    ritual: 'Monthly spiritual meditation with frequency for wisdom.',
-                    tarot_tie: 'The Judgement card calls you to spiritual awakening.',
-                    gematria_tie: 'Destiny number 11 supports your spiritual mastery.'
-                }
-            },
-            'Sagittarius': {
-                symbol: '♐',
-                element: 'Fire',
-                daily: {
-                    message: 'Adventure and expansion call to you today. Explore new horizons and seek wisdom.',
-                    frequency: '528 Hz - Freedom and Expansion',
-                    ritual: 'Sacral chakra meditation with expansion frequency for growth.',
-                    tarot_tie: 'The Chariot supports your adventurous journey today.',
-                    gematria_tie: 'Life path number 5 enhances your freedom.'
-                },
-                weekly: {
-                    message: 'This week brings learning opportunities and travel possibilities. Keep your mind open to wisdom.',
-                    frequency: '741 Hz - Wisdom and Learning',
-                    ritual: 'Weekly wisdom meditation with frequency for insight.',
-                    tarot_tie: 'The Temperance card balances your adventurous spirit.',
-                    gematria_tie: 'Core number 3 supports your joyful learning.'
-                },
-                monthly: {
-                    message: 'This month focuses on higher education, philosophy, and spiritual growth. Seek truth and meaning.',
-                    frequency: '963 Hz - Spiritual Wisdom and Freedom',
-                    ritual: 'Monthly spiritual meditation with frequency for enlightenment.',
-                    tarot_tie: 'The Star card guides your search for truth.',
-                    gematria_tie: 'Destiny number 9 supports your philosophical wisdom.'
-                }
-            },
-            'Capricorn': {
-                symbol: '♑',
-                element: 'Earth',
-                daily: {
-                    message: 'Discipline and achievement guide your ambitions today. Build step by step toward success.',
-                    frequency: '174 Hz - Discipline and Achievement',
-                    ritual: 'Root chakra meditation with discipline frequency for focus.',
-                    tarot_tie: 'The Devil card helps you break limiting patterns today.',
-                    gematria_tie: 'Life path number 4 supports your structure.'
-                },
-                weekly: {
-                    message: 'This week favors career advancement and long-term planning. Your ambition creates lasting success.',
-                    frequency: '285 Hz - Structure and Success',
-                    ritual: 'Career meditation with success frequency for advancement.',
-                    tarot_tie: 'The Emperor card supports your leadership goals.',
-                    gematria_tie: 'Core number 8 enhances your achievement.'
-                },
-                monthly: {
-                    message: 'This month brings recognition for hard work and opportunities for promotion. Your dedication pays off.',
-                    frequency: '417 Hz - Achievement and Recognition',
-                    ritual: 'Monthly success meditation with frequency for recognition.',
-                    tarot_tie: 'The World card acknowledges your achievements.',
-                    gematria_tie: 'Destiny number 1 supports your leadership.'
-                }
-            },
-            'Aquarius': {
-                symbol: '♒',
-                element: 'Air',
-                daily: {
-                    message: 'Innovation and humanitarian service guide your actions today. Think outside the box.',
-                    frequency: '741 Hz - Innovation and Humanity',
-                    ritual: 'Third eye meditation with innovation frequency for creativity.',
-                    tarot_tie: 'The Star card inspires your visionary ideas today.',
-                    gematria_tie: 'Life path number 7 enhances your innovation.'
-                },
-                weekly: {
-                    message: 'This week brings opportunities to help others and implement progressive ideas. Your uniqueness is needed.',
-                    frequency: '417 Hz - Humanitarian Progress',
-                    ritual: 'Weekly humanitarian meditation with frequency for service.',
-                    tarot_tie: 'The Fool card encourages your innovative approach.',
-                    gematria_tie: 'Core number 5 supports your humanitarian freedom.'
-                },
-                monthly: {
-                    message: 'This month focuses on social change and technological innovation. Your ideas benefit humanity.',
-                    frequency: '528 Hz - Progressive Innovation',
-                    ritual: 'Monthly innovation meditation with frequency for breakthrough.',
-                    tarot_tie: 'The Tower card breaks old systems for new progress.',
-                    gematria_tie: 'Destiny number 11 supports your visionary leadership.'
-                }
-            },
-            'Pisces': {
-                symbol: '♓',
-                element: 'Water',
-                daily: {
-                    message: 'Spiritual connection and creative flow guide your intuition today. Trust your artistic dreams.',
-                    frequency: '963 Hz - Spirituality and Creativity',
-                    ritual: 'Crown chakra meditation with spiritual frequency for connection.',
-                    tarot_tie: 'The Moon enhances your intuitive insights today.',
-                    gematria_tie: 'Life path number 9 supports your spiritual wisdom.'
-                },
-                weekly: {
-                    message: 'This week brings creative inspiration and spiritual insights. Your compassion heals others.',
-                    frequency: '639 Hz - Compassion and Creativity',
-                    ritual: 'Weekly creative meditation with frequency for inspiration.',
-                    tarot_tie: 'The Cups suit flows with your emotional depth.',
-                    gematria_tie: 'Core number 6 enhances your compassionate nature.'
-                },
-                monthly: {
-                    message: 'This month focuses on spiritual growth and artistic mastery. Your dreams contain important messages.',
-                    frequency: '741 Hz - Spiritual Mastery and Art',
-                    ritual: 'Monthly spiritual meditation with frequency for mastery.',
-                    tarot_tie: 'The Hanged Man offers new spiritual perspectives.',
-                    gematria_tie: 'Destiny number 3 supports your creative expression.'
-                }
+        document.getElementById('expandAdvanced').addEventListener('click', function() {
+            const content = document.getElementById('advancedContent');
+            content.classList.toggle('show');
+            this.textContent = content.classList.contains('show') 
+                ? '▲ Hide Advanced Options' 
+                : '▼ Add Name & Focus for Deep Personalization';
+        });
+
+        // Update accuracy indicator
+        function updateAccuracy() {
+            const birthDate = document.getElementById('birthDate').value;
+            const birthTime = document.getElementById('birthTime').value;
+            const birthLocation = document.getElementById('birthLocation').value;
+            const firstName = document.getElementById('firstName').value;
+            
+            let accuracy = 0;
+            const checklist = [];
+            
+            if (birthDate) {
+                accuracy += 25;
+                checklist.push('Birth date provided');
+            } else {
+                checklist.push({ text: 'Birth date not provided', missing: true });
             }
-        };
-
-        // Elements and frequencies
-        const elements = ['Fire', 'Earth', 'Air', 'Water'];
-        const elementFrequencies = {
-            'Fire': '528 Hz - Creative Fire Energy',
-            'Earth': '174 Hz - Grounding Earth Frequency',
-            'Air': '741 Hz - Mental Clarity Air',
-            'Water': '639 Hz - Emotional Water Healing'
-        };
-
-        // Initialize
-        function initializeForecasts() {
-            updateCurrentDay();
-            updateWeekOverview();
-            displayZodiacForecasts('daily');
+            
+            if (birthTime) {
+                accuracy += 25;
+                checklist.push('Birth time provided');
+            } else {
+                checklist.push({ text: 'Birth time not provided', missing: true });
+            }
+            
+            if (birthLocation) {
+                accuracy += 25;
+                checklist.push('Birth location provided');
+            } else {
+                checklist.push({ text: 'Birth location not provided', missing: true });
+            }
+            
+            if (firstName) {
+                accuracy += 25;
+                checklist.push('Name provided');
+            } else {
+                checklist.push({ text: 'Name not provided', missing: true });
+            }
+            
+            document.getElementById('accuracyFill').style.width = accuracy + '%';
+            document.getElementById('accuracyFill').textContent = accuracy + '%';
+            
+            const checklistHTML = checklist.map(item => {
+                if (typeof item === 'string') {
+                    return `<li>✅ ${item}</li>`;
+                } else {
+                    return `<li class="missing">⚠️ ${item.text}</li>`;
+                }
+            }).join('');
+            
+            document.getElementById('dataChecklist').innerHTML = checklistHTML;
         }
 
-        // Update current day display
-        function updateCurrentDay() {
-            const today = new Date();
-            const dayOfWeek = today.toLocaleDateString('en-US', { weekday: 'long' });
-            const date = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-            
-            // Calculate element of day
-            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
-            const elementIndex = dayOfYear % 4;
-            const elementOfDay = elements[elementIndex];
-            
-            // Calculate frequency of day
-            const frequencyOfDay = ((dayOfYear + today.getFullYear()) % 9) || 9;
-            const frequencyMap = {
-                1: '396 Hz - Liberation and Freedom',
-                2: '417 Hz - Positive Change',
-                3: '528 Hz - Transformation and Love',
-                4: '174 Hz - Security and Stability',
-                5: '285 Hz - Healing and Structure',
-                6: '639 Hz - Harmony and Relationships',
-                7: '741 Hz - Intuition and Awakening',
-                8: '852 Hz - Spiritual Order',
-                9: '963 Hz - Divine Connection and Oneness'
-            };
-            
-            const dailyMessages = [
-                'Today\'s cosmic energy supports new beginnings and fresh starts. Embrace change with courage.',
-                'The universe invites you to find balance and harmony in all areas of your life.',
-                'Creative energy flows strongly today. Express yourself authentically and manifest your dreams.',
-                'Focus on building solid foundations for your future. Practical actions lead to lasting success.',
-                'Healing energies are amplified today. Release what no longer serves you and embrace renewal.',
-                'Relationship harmony is highlighted. Nurture your connections and open your heart to love.',
-                'Intuitive insights are available to you. Trust your inner wisdom and spiritual guidance.',
-                'Transformation is in the air. Embrace change as an opportunity for growth and evolution.',
-                'Divine connection is strengthened today. Align with your higher purpose and spiritual truth.'
+        // Listen for input changes
+        ['birthDate', 'birthTime', 'birthLocation', 'firstName'].forEach(id => {
+            document.getElementById(id).addEventListener('input', updateAccuracy);
+        });
+
+        // Calculation functions
+        function getZodiacSign(month, day) {
+            const signs = [
+                { name: 'Capricorn', symbol: '♑', dates: [[12, 22], [1, 19]] },
+                { name: 'Aquarius', symbol: '♒', dates: [[1, 20], [2, 18]] },
+                { name: 'Pisces', symbol: '♓', dates: [[2, 19], [3, 20]] },
+                { name: 'Aries', symbol: '♈', dates: [[3, 21], [4, 19]] },
+                { name: 'Taurus', symbol: '♉', dates: [[4, 20], [5, 20]] },
+                { name: 'Gemini', symbol: '♊', dates: [[5, 21], [6, 20]] },
+                { name: 'Cancer', symbol: '♋', dates: [[6, 21], [7, 22]] },
+                { name: 'Leo', symbol: '♌', dates: [[7, 23], [8, 22]] },
+                { name: 'Virgo', symbol: '♍', dates: [[8, 23], [9, 22]] },
+                { name: 'Libra', symbol: '♎', dates: [[9, 23], [10, 22]] },
+                { name: 'Scorpio', symbol: '♏', dates: [[10, 23], [11, 21]] },
+                { name: 'Sagittarius', symbol: '♐', dates: [[11, 22], [12, 21]] }
             ];
             
-            document.getElementById('currentDayTitle').textContent = `${dayOfWeek}, ${date}`;
-            document.getElementById('elementOfDay').textContent = `🌟 Element of the Day: ${elementOfDay}`;
-            document.getElementById('frequencyOfDay').textContent = `🎵 Frequency of the Day: ${frequencyMap[frequencyOfDay]}`;
-            document.getElementById('dailyMessage').textContent = dailyMessages[frequencyOfDay - 1];
-        }
-
-        // Update week overview
-        function updateWeekOverview() {
-            const weekGrid = document.getElementById('weekGrid');
-            weekGrid.innerHTML = '';
-            
-            const today = new Date();
-            const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            
-            for (let i = 0; i < 7; i++) {
-                const date = new Date(today);
-                date.setDate(today.getDate() - today.getDay() + i);
-                
-                const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 86400000);
-                const elementIndex = dayOfYear % 4;
-                const elementOfDay = elements[elementIndex];
-                const frequencyOfDay = ((dayOfYear + date.getFullYear()) % 9) || 9;
-                
-                const dayCard = document.createElement('div');
-                dayCard.className = 'day-card';
-                
-                dayCard.innerHTML = `
-                    <div class="day-name">${weekDays[i]}</div>
-                    <div class="day-element">${elementOfDay}</div>
-                    <div class="day-frequency">${frequencyOfDay} Hz</div>
-                `;
-                
-                weekGrid.appendChild(dayCard);
+            for (let sign of signs) {
+                const [[m1, d1], [m2, d2]] = sign.dates;
+                if ((month === m1 && day >= d1) || (month === m2 && day <= d2)) {
+                    return sign;
+                }
             }
+            return signs[0];
         }
 
-        // Select forecast type
-        function selectForecast(type, element) {
-            currentForecastType = type;
+        function getChineseZodiac(year) {
+            const animals = [
+                'Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake',
+                'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig'
+            ];
+            const elements = ['Metal', 'Water', 'Wood', 'Fire', 'Earth'];
             
-            // Update active tab
-            document.querySelectorAll('.forecast-tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            element.classList.add('active');
+            const animalIndex = (year - 4) % 12;
+            const elementIndex = Math.floor(((year - 4) % 10) / 2);
             
-            // Update forecasts
-            displayZodiacForecasts(type);
-        }
-
-        // Display zodiac forecasts
-        function displayZodiacForecasts(type) {
-            const zodiacGrid = document.getElementById('zodiacGrid');
-            zodiacGrid.innerHTML = '';
-            
-            for (const [sign, data] of Object.entries(westernZodiacForecasts)) {
-                const forecast = data[type];
-                const card = document.createElement('div');
-                card.className = 'zodiac-card';
-                
-                card.innerHTML = `
-                    <div class="card-header">
-                        <div class="zodiac-symbol">${data.symbol}</div>
-                        <div class="zodiac-name">${sign}</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="forecast-section">
-                            <div class="forecast-label">📿 ${type === 'daily' ? 'Today' : type === 'weekly' ? 'This Week' : 'This Month'}</div>
-                            <div class="forecast-text">${forecast.message}</div>
-                        </div>
-                        
-                        <div class="frequency-alignment">
-                            <h4>🎵 Aligned Frequency</h4>
-                            <p>${forecast.frequency}</p>
-                            <button class="save-btn" onclick="saveForecastFrequency('${sign}', '${type}', '${forecast.frequency}')">Save to Jukebox</button>
-                        </div>
-                        
-                        <div class="ritual-section">
-                            <h4>🧘 Ritual & Exercise</h4>
-                            <p>${forecast.ritual}</p>
-                        </div>
-                        
-                        <div class="forecast-section">
-                            <div class="forecast-label">🃏 Tarot Connection</div>
-                            <div class="forecast-text">${forecast.tarot_tie}</div>
-                        </div>
-                        
-                        <div class="forecast-section">
-                            <div class="forecast-label">🔢 Gematria Connection</div>
-                            <div class="forecast-text">${forecast.gematria_tie}</div>
-                        </div>
-                    </div>
-                `;
-                
-                zodiacGrid.appendChild(card);
-            }
-        }
-
-        function saveForecastFrequency(sign, type, frequency) {
-            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
-            
-            const newItem = {
-                id: Date.now(),
-                type: 'frequency',
-                name: `${sign} ${type === 'daily' ? 'Daily' : type === 'weekly' ? 'Weekly' : 'Monthly'} Forecast`,
-                description: frequency,
-                data: {
-                    frequency: frequency.split(' - ')[0] || frequency,
-                    type: 'zodiac_forecast',
-                    zodiacSign: sign,
-                    forecastType: type
-                },
-                savedAt: new Date().toISOString()
+            return {
+                animal: animals[animalIndex],
+                element: elements[elementIndex],
+                year: year
             };
-            
-            savedItems.push(newItem);
-            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
-            
-            // Show confirmation
-            const btn = event.target;
-            const originalText = btn.textContent;
-            btn.textContent = '✓ Saved to Jukebox';
-            btn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
-            
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.style.background = '';
-            }, 2000);
         }
 
-        // Initialize on load
-        window.addEventListener('load', function() {
-            initializeForecasts();
+        function getLifePathNumber(birthDate) {
+            const dateStr = birthDate.replace(/-/g, '');
+            let sum = 0;
+            for (let char of dateStr) {
+                sum += parseInt(char);
+            }
+            while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
+                sum = sum.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+            }
+            return sum;
+        }
+
+        function getPersonalYear(birthDate) {
+            const birth = new Date(birthDate);
+            const today = new Date();
+            const month = birth.getMonth() + 1;
+            const day = birth.getDate();
+            const year = today.getFullYear();
+            
+            let sum = month + day + year;
+            while (sum > 9) {
+                sum = sum.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+            }
+            return sum;
+        }
+
+        function calculateGematria(name) {
+            if (!name) return 0;
+            let sum = 0;
+            for (let char of name.toUpperCase()) {
+                if (char >= 'A' && char <= 'Z') {
+                    sum += char.charCodeAt(0) - 64;
+                }
+            }
+            return sum;
+        }
+
+        // Generate forecast
+        document.getElementById('generateBtn').addEventListener('click', function() {
+            const birthDate = document.getElementById('birthDate').value;
+            
+            if (!birthDate) {
+                alert('Please enter your birth date');
+                return;
+            }
+            
+            // Show loading
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('inputSection').style.display = 'none';
+            
+            // Simulate calculation time
+            setTimeout(() => {
+                generateForecast();
+                document.getElementById('loading').classList.remove('show');
+                document.getElementById('timeframeSelector').style.display = 'flex';
+                document.getElementById('forecastOutput').classList.add('show');
+                document.getElementById('forecastOutput').scrollIntoView({ behavior: 'smooth' });
+            }, 2000);
         });
+
+        function generateForecast(timeframe = 'daily') {
+            const birthDate = document.getElementById('birthDate').value;
+            const birthTime = document.getElementById('birthTime').value;
+            const birthLocation = document.getElementById('birthLocation').value;
+            const firstName = document.getElementById('firstName').value;
+            const middleName = document.getElementById('middleName').value;
+            const lastName = document.getElementById('lastName').value;
+            const focus = document.getElementById('focus').value;
+            const challenge = document.getElementById('challenge').value;
+            
+            const birth = new Date(birthDate);
+            const month = birth.getMonth() + 1;
+            const day = birth.getDate();
+            const year = birth.getFullYear();
+            
+            // Calculate all systems
+            const zodiac = getZodiacSign(month, day);
+            const chinese = getChineseZodiac(year);
+            const lifePath = getLifePathNumber(birthDate);
+            const personalYear = getPersonalYear(birthDate);
+            const fullName = [firstName, middleName, lastName].filter(n => n).join(' ');
+            const gematria = calculateGematria(fullName);
+            
+            // Get today's date
+            const today = new Date();
+            const todayStr = today.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            
+            // Generate forecast content
+            let forecastHTML = `
+                <div class="forecast-header">
+                    <h2>YOUR QUANTUM FORECAST</h2>
+                    <div class="forecast-meta">
+                        <p>Generated for: ${fullName || 'Seeker'}</p>
+                        <p>Birth: ${birth.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} | ${zodiac.name} ${zodiac.symbol}</p>
+                        ${birthTime ? `<p>Birth Time: ${birthTime}</p>` : ''}
+                        <p>Timeframe: ${timeframe.charAt(0).toUpperCase() + timeframe.slice(1)}</p>
+                    </div>
+                </div>
+
+                <div class="overview-section">
+                    <h3>🌟 OVERVIEW - ${todayStr}</h3>
+                    <div class="overview-content">
+                        <p><strong>Today's Energy:</strong> ${getOverviewEnergy(zodiac, chinese, personalYear)}</p>
+                        <p><strong>Focus:</strong> ${getOverviewFocus(lifePath, personalYear, focus)}</p>
+                        <p><strong>Caution:</strong> ${getOverviewCaution(zodiac, chinese)}</p>
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>⭐ WESTERN ASTROLOGY</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getWesternAstrologyForecast(zodiac, birthTime, birthLocation)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🐉 CHINESE ZODIAC</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getChineseZodiacForecast(chinese)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🔢 NUMEROLOGY</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getNumerologyForecast(lifePath, personalYear, birthDate)}
+                    </div>
+                </div>
+
+                ${fullName ? `
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>📜 GEMATRIA</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getGematriaForecast(fullName, gematria, birthDate)}
+                    </div>
+                </div>
+                ` : ''}
+
+                <div class="action-section">
+                    <h3>💡 TODAY'S ACTION ITEMS</h3>
+                    ${getActionItems(zodiac, chinese, lifePath, personalYear, focus, challenge)}
+                </div>
+
+                <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
+                <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
+            `;
+            
+            document.getElementById('forecastOutput').innerHTML = forecastHTML;
+        }
+
+        function toggleSystem(header) {
+            const section = header.parentElement;
+            section.classList.toggle('expanded');
+        }
+
+        // Forecast content generators
+        function getOverviewEnergy(zodiac, chinese, personalYear) {
+            const energies = ['Transformative', 'Expansive', 'Reflective', 'Dynamic', 'Harmonious', 'Intense'];
+            return energies[personalYear % energies.length] + ' (' + zodiac.name + ' sun meets ' + chinese.element + ' ' + chinese.animal + ' energy)';
+        }
+
+        function getOverviewFocus(lifePath, personalYear, focus) {
+            const focuses = {
+                'career': 'Professional growth and strategic advancement',
+                'love': 'Deep connections and emotional authenticity',
+                'health': 'Physical vitality and energetic balance',
+                'spiritual': 'Inner wisdom and cosmic alignment',
+                'finances': 'Abundance flow and material security'
+            };
+            return focuses[focus] || 'Inner work, creative expression, and purposeful action';
+        }
+
+        function getOverviewCaution(zodiac, chinese) {
+            return 'Avoid impulsive reactions and rushed decisions. Your ' + zodiac.name + ' nature combined with ' + chinese.animal + ' energy can create intensity today.';
+        }
+
+        function getWesternAstrologyForecast(zodiac, birthTime, birthLocation) {
+            return `
+                <div class="system-item">
+                    <h4>Sun in ${zodiac.name} ${zodiac.symbol}</h4>
+                    <p>${getZodiacDescription(zodiac.name)} Today's energy amplifies your natural ${zodiac.name} tendencies toward ${getZodiacTrait(zodiac.name)}.</p>
+                </div>
+                ${birthTime ? `
+                <div class="system-item">
+                    <h4>Rising Sign Influence</h4>
+                    <p>With your birth time provided, today's transits activate your rising sign, bringing opportunities for self-expression and new beginnings.</p>
+                </div>
+                ` : ''}
+                <div class="system-item">
+                    <h4>Current Transits</h4>
+                    <p>The Moon's current phase supports introspection and emotional processing. Mercury's position favors clear communication and analytical thinking.</p>
+                </div>
+            `;
+        }
+
+        function getChineseZodiacForecast(chinese) {
+            return `
+                <div class="system-item">
+                    <h4>Your Sign: ${chinese.element} ${chinese.animal}</h4>
+                    <p>${getChineseDescription(chinese.animal)} Your ${chinese.element} element adds ${getElementQuality(chinese.element)} to your natural ${chinese.animal} traits.</p>
+                </div>
+                <div class="system-item">
+                    <h4>Today's Energy</h4>
+                    <p>The daily animal energy harmonizes with your ${chinese.animal} nature, creating favorable conditions for ${getChineseActivity(chinese.animal)}.</p>
+                </div>
+                <div class="system-item">
+                    <h4>Lucky Elements</h4>
+                    <p><strong>Direction:</strong> South<br>
+                    <strong>Color:</strong> ${getChineseColor(chinese.element)}<br>
+                    <strong>Activity:</strong> ${getChineseActivity(chinese.animal)}</p>
+                </div>
+            `;
+        }
+
+        function getNumerologyForecast(lifePath, personalYear, birthDate) {
+            const today = new Date();
+            const birth = new Date(birthDate);
+            const personalDay = (birth.getDate() + today.getDate() + (today.getMonth() + 1)) % 9 || 9;
+            
+            return `
+                <div class="system-item">
+                    <h4>Life Path ${lifePath}</h4>
+                    <p>${getLifePathDescription(lifePath)} This is your soul's purpose and natural operating frequency.</p>
+                </div>
+                <div class="system-item">
+                    <h4>Personal Year ${personalYear}</h4>
+                    <p>${getPersonalYearDescription(personalYear)} This year's theme shapes how today's energy manifests for you.</p>
+                </div>
+                <div class="system-item">
+                    <h4>Personal Day ${personalDay}</h4>
+                    <p>${getPersonalDayDescription(personalDay)} Today's specific vibration guides your actions and decisions.</p>
+                </div>
+            `;
+        }
+
+        function getGematriaForecast(name, value, birthDate) {
+            const today = new Date();
+            const dateValue = today.getFullYear() + (today.getMonth() + 1) + today.getDate();
+            const resonance = (value + dateValue) % 999;
+            
+            return `
+                <div class="system-item">
+                    <h4>Your Name Value: ${value}</h4>
+                    <p>The gematria value of "${name}" carries the frequency of ${getGematriaTheme(value)}. This is your vibrational signature.</p>
+                </div>
+                <div class="system-item">
+                    <h4>Today's Date Value: ${dateValue}</h4>
+                    <p>Today carries the frequency of ${getGematriaTheme(dateValue)}, creating a specific energetic field for manifestation.</p>
+                </div>
+                <div class="system-item">
+                    <h4>Name + Date Resonance: ${resonance}</h4>
+                    <p>The interaction between your name and today creates a ${resonance % 7 === 0 ? 'highly favorable' : 'supportive'} resonance field. This amplifies your natural abilities in ${getGematriaApplication(resonance % 7)}.</p>
+                </div>
+            `;
+        }
+
+        function getActionItems(zodiac, chinese, lifePath, personalYear, focus, challenge) {
+            let items = [];
+            
+            items.push(`
+                <div class="action-item">
+                    <h4>Morning (6-9 AM)</h4>
+                    <p>Begin with ${getMorningAction(zodiac.name, lifePath)}. Your ${zodiac.name} sun and Life Path ${lifePath} are most aligned during early hours.</p>
+                </div>
+            `);
+            
+            items.push(`
+                <div class="action-item">
+                    <h4>Afternoon (12-3 PM)</h4>
+                    <p>${getAfternoonAction(chinese.animal, personalYear, focus)}. This is your peak creative/productive window.</p>
+                </div>
+            `);
+            
+            items.push(`
+                <div class="action-item">
+                    <h4>Evening (6-9 PM)</h4>
+                    <p>${getEveningAction(zodiac.name, lifePath)}. Use this time for integration and reflection.</p>
+                </div>
+            `);
+            
+            if (challenge) {
+                items.push(`
+                    <div class="action-item">
+                        <h4>Challenge-Specific Guidance</h4>
+                        <p>Regarding "${challenge}": ${getChallengeGuidance(zodiac.name, chinese.animal, lifePath)}</p>
+                    </div>
+                `);
+            }
+            
+            return items.join('');
+        }
+
+        // Helper functions for descriptions
+        function getZodiacDescription(sign) {
+            const descriptions = {
+                'Aries': 'Bold and pioneering,',
+                'Taurus': 'Grounded and persistent,',
+                'Gemini': 'Curious and adaptable,',
+                'Cancer': 'Nurturing and intuitive,',
+                'Leo': 'Creative and confident,',
+                'Virgo': 'Analytical and detail-oriented,',
+                'Libra': 'Harmonious and diplomatic,',
+                'Scorpio': 'Intense and transformative,',
+                'Sagittarius': 'Philosophical and adventurous,',
+                'Capricorn': 'Ambitious and disciplined,',
+                'Aquarius': 'Innovative and humanitarian,',
+                'Pisces': 'Compassionate and mystical,'
+            };
+            return descriptions[sign] || '';
+        }
+
+        function getZodiacTrait(sign) {
+            const traits = {
+                'Aries': 'bold action and leadership',
+                'Taurus': 'stability and sensory pleasure',
+                'Gemini': 'communication and learning',
+                'Cancer': 'emotional depth and nurturing',
+                'Leo': 'creative expression and recognition',
+                'Virgo': 'service and practical improvement',
+                'Libra': 'balance and partnership',
+                'Scorpio': 'depth and transformation',
+                'Sagittarius': 'expansion and wisdom-seeking',
+                'Capricorn': 'achievement and structure',
+                'Aquarius': 'innovation and collective progress',
+                'Pisces': 'spirituality and compassion'
+            };
+            return traits[sign] || 'growth';
+        }
+
+        function getChineseDescription(animal) {
+            const descriptions = {
+                'Rat': 'Clever and resourceful,',
+                'Ox': 'Diligent and dependable,',
+                'Tiger': 'Brave and confident,',
+                'Rabbit': 'Gentle and compassionate,',
+                'Dragon': 'Ambitious and charismatic,',
+                'Snake': 'Wise and intuitive,',
+                'Horse': 'Energetic and free-spirited,',
+                'Goat': 'Creative and gentle,',
+                'Monkey': 'Intelligent and playful,',
+                'Rooster': 'Confident and organized,',
+                'Dog': 'Loyal and honest,',
+                'Pig': 'Generous and sincere,'
+            };
+            return descriptions[animal] || '';
+        }
+
+        function getElementQuality(element) {
+            const qualities = {
+                'Metal': 'structure and precision',
+                'Water': 'adaptability and depth',
+                'Wood': 'growth and expansion',
+                'Fire': 'passion and transformation',
+                'Earth': 'stability and grounding'
+            };
+            return qualities[element] || 'balance';
+        }
+
+        function getChineseColor(element) {
+            const colors = {
+                'Metal': 'White, Gold, Silver',
+                'Water': 'Black, Blue, Purple',
+                'Wood': 'Green, Teal',
+                'Fire': 'Red, Orange, Pink',
+                'Earth': 'Yellow, Brown, Beige'
+            };
+            return colors[element] || 'Rainbow';
+        }
+
+        function getChineseActivity(animal) {
+            const activities = {
+                'Rat': 'networking and strategic planning',
+                'Ox': 'focused work and building foundations',
+                'Tiger': 'taking bold action and leadership',
+                'Rabbit': 'creative projects and social connections',
+                'Dragon': 'ambitious pursuits and public visibility',
+                'Snake': 'deep thinking and strategic moves',
+                'Horse': 'travel and freedom-seeking',
+                'Goat': 'artistic expression and collaboration',
+                'Monkey': 'problem-solving and innovation',
+                'Rooster': 'organization and communication',
+                'Dog': 'loyalty-building and community service',
+                'Pig': 'generosity and celebration'
+            };
+            return activities[animal] || 'purposeful action';
+        }
+
+        function getLifePathDescription(number) {
+            const descriptions = {
+                1: 'The Leader - Independent and pioneering.',
+                2: 'The Diplomat - Cooperative and harmonious.',
+                3: 'The Communicator - Creative and expressive.',
+                4: 'The Builder - Practical and grounded.',
+                5: 'The Freedom Seeker - Adventurous and dynamic.',
+                6: 'The Nurturer - Responsible and caring.',
+                7: 'The Seeker - Analytical and spiritual.',
+                8: 'The Powerhouse - Ambitious and authoritative.',
+                9: 'The Humanitarian - Compassionate and wise.',
+                11: 'The Illuminator - Intuitive and inspirational.',
+                22: 'The Master Builder - Visionary and powerful.',
+                33: 'The Master Teacher - Compassionate healer.'
+            };
+            return descriptions[number] || 'The Seeker';
+        }
+
+        function getPersonalYearDescription(number) {
+            const descriptions = {
+                1: 'New Beginnings - This is a year of fresh starts and initiative.',
+                2: 'Partnership - Focus on cooperation and relationships.',
+                3: 'Creative Expression - Time for communication and creativity.',
+                4: 'Foundation Building - Establish stability and structure.',
+                5: 'Change and Freedom - Embrace transformation and adventure.',
+                6: 'Responsibility - Focus on home, family, and service.',
+                7: 'Spiritual Growth - Deepen inner knowledge and reflection.',
+                8: 'Power and Abundance - Manifest material success.',
+                9: 'Completion - Release the old and prepare for new cycles.'
+            };
+            return descriptions[number] || 'Transformation';
+        }
+
+        function getPersonalDayDescription(number) {
+            const descriptions = {
+                1: 'Initiative and Leadership - Take charge of your day.',
+                2: 'Cooperation - Work with others harmoniously.',
+                3: 'Expression - Communicate your ideas creatively.',
+                4: 'Organization - Focus on practical tasks.',
+                5: 'Flexibility - Adapt to changing circumstances.',
+                6: 'Service - Help others and nurture relationships.',
+                7: 'Reflection - Spend time in contemplation.',
+                8: 'Achievement - Focus on tangible results.',
+                9: 'Completion - Finish what you started.'
+            };
+            return descriptions[number] || 'Balance';
+        }
+
+        function getGematriaTheme(value) {
+            const reduced = value.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0) % 9 || 9;
+            const themes = [
+                '', 'leadership and new beginnings', 'partnership and balance', 
+                'creative expression', 'stability and foundation', 'change and freedom',
+                'nurturing and responsibility', 'wisdom and spirituality', 
+                'power and manifestation', 'completion and humanitarianism'
+            ];
+            return themes[reduced] || 'transformation';
+        }
+
+        function getGematriaApplication(value) {
+            const applications = [
+                'manifesting new opportunities', 'building partnerships',
+                'creative communication', 'establishing foundations',
+                'embracing change', 'service to others',
+                'spiritual insight', 'material success'
+            ];
+            return applications[value % applications.length];
+        }
+
+        function getMorningAction(sign, lifePath) {
+            const morning = {
+                'Aries': 'physical exercise or energetic movement',
+                'Taurus': 'grounding meditation or sensory ritual',
+                'Gemini': 'journaling or learning something new',
+                'Cancer': 'emotional check-in or creative visualization',
+                'Leo': 'affirmations or creative planning',
+                'Virgo': 'organization or detailed planning',
+                'Libra': 'beauty ritual or harmonizing your space',
+                'Scorpio': 'deep meditation or shadow work',
+                'Sagittarius': 'inspirational reading or goal-setting',
+                'Capricorn': 'strategic planning or reviewing goals',
+                'Aquarius': 'innovation brainstorming or future visioning',
+                'Pisces': 'spiritual practice or artistic expression'
+            };
+            return morning[sign] || 'mindful meditation';
+        }
+
+        function getAfternoonAction(animal, personalYear, focus) {
+            if (focus === 'career') return 'Focus on your most important work task or have that crucial conversation';
+            if (focus === 'love') return 'Reach out to someone you care about with authentic vulnerability';
+            if (focus === 'health') return 'Take a mindful movement break or prepare a nourishing meal';
+            if (focus === 'spiritual') return 'Practice presence or study spiritual teachings';
+            return 'Work on your highest priority project with focused energy';
+        }
+
+        function getEveningAction(sign, lifePath) {
+            return 'Journal about today\'s insights and set intentions for tomorrow. Your ' + sign + ' nature benefits from reflection and conscious closure.';
+        }
+
+        function getChallengeGuidance(sign, animal, lifePath) {
+            return 'Your ' + sign + ' determination combined with ' + animal + ' wisdom suggests approaching this challenge through patience and strategic action rather than force. Life Path ' + lifePath + ' indicates this obstacle is teaching you a specific soul lesson about your purpose.';
+        }
+
+        // Timeframe switcher
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('timeframe-btn')) {
+                document.querySelectorAll('.timeframe-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+                const timeframe = e.target.dataset.timeframe;
+                generateForecast(timeframe);
+            }
+        });
+
+        // Save forecast
+        function saveForecast() {
+            alert('✅ Forecast saved to your library!\n\nThis feature will integrate with the Quantum Jukebox library system.');
+        }
     </script>
-    </div><!-- End app-content -->
-    <script src="../shared/js/quantum-intro-animation.js"></script>
 </body>
 </html>
