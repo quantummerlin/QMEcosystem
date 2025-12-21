@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Swiss Ephemeris for accurate astronomical calculations -->
+    <script src="https://cdn.jsdelivr.net/npm/swisseph@2.10.3-2/dist/swisseph.min.js"></script>
+    
     <style>
         :root {
             --cosmic-bg: #000000;
@@ -2343,9 +2346,111 @@
             return sum;
         }
 
-        // PHASE 2: Rising Sign Calculator (based on birth time)
+        // Geocoding helper - converts location to coordinates
+        function getCoordinates(location) {
+            const locations = {
+                'london': { lat: 51.5074, lon: -0.1278 },
+                'uk': { lat: 51.5074, lon: -0.1278 },
+                'england': { lat: 51.5074, lon: -0.1278 },
+                'new york': { lat: 40.7128, lon: -74.0060 },
+                'los angeles': { lat: 34.0522, lon: -118.2437 },
+                'california': { lat: 34.0522, lon: -118.2437 },
+                'sydney': { lat: -33.8688, lon: 151.2093 },
+                'australia': { lat: -33.8688, lon: 151.2093 },
+                'mumbai': { lat: 19.0760, lon: 72.8777 },
+                'india': { lat: 19.0760, lon: 72.8777 },
+                'tokyo': { lat: 35.6762, lon: 139.6503 },
+                'japan': { lat: 35.6762, lon: 139.6503 },
+                'paris': { lat: 48.8566, lon: 2.3522 },
+                'france': { lat: 48.8566, lon: 2.3522 },
+                'berlin': { lat: 52.5200, lon: 13.4050 },
+                'germany': { lat: 52.5200, lon: 13.4050 },
+                'toronto': { lat: 43.6532, lon: -79.3832 },
+                'canada': { lat: 43.6532, lon: -79.3832 },
+                'mexico city': { lat: 19.4326, lon: -99.1332 },
+                'mexico': { lat: 19.4326, lon: -99.1332 },
+                'rome': { lat: 41.9028, lon: 12.4964 },
+                'italy': { lat: 41.9028, lon: 12.4964 },
+                'madrid': { lat: 40.4168, lon: -3.7038 },
+                'spain': { lat: 40.4168, lon: -3.7038 },
+                'amsterdam': { lat: 52.3676, lon: 4.9041 },
+                'netherlands': { lat: 52.3676, lon: 4.9041 },
+                'moscow': { lat: 55.7558, lon: 37.6173 },
+                'russia': { lat: 55.7558, lon: 37.6173 },
+                'beijing': { lat: 39.9042, lon: 116.4074 },
+                'china': { lat: 39.9042, lon: 116.4074 },
+                'dubai': { lat: 25.2048, lon: 55.2708 },
+                'uae': { lat: 25.2048, lon: 55.2708 },
+                'singapore': { lat: 1.3521, lon: 103.8198 },
+                'hong kong': { lat: 22.3193, lon: 114.1694 },
+                'seoul': { lat: 37.5665, lon: 126.9780 },
+                'south korea': { lat: 37.5665, lon: 126.9780 },
+                'bangkok': { lat: 13.7563, lon: 100.5018 },
+                'thailand': { lat: 13.7563, lon: 100.5018 }
+            };
+            
+            if (!location) return { lat: 0, lon: 0 };
+            
+            const loc = location.toLowerCase();
+            for (let key in locations) {
+                if (loc.includes(key)) {
+                    return locations[key];
+                }
+            }
+            
+            return { lat: 0, lon: 0 }; // Default to Greenwich if not found
+        }
+
+        // PHASE 2: Rising Sign Calculator with Swiss Ephemeris
+        // PHASE 2: Rising Sign Calculator with Swiss Ephemeris
         function getRisingSign(birthDate, birthTime, birthLocation) {
             if (!birthTime) return null;
+            
+            // Try Swiss Ephemeris for maximum accuracy
+            if (typeof swisseph !== 'undefined' && birthLocation) {
+                try {
+                    const coords = getCoordinates(birthLocation);
+                    const birth = new Date(birthDate + ' ' + birthTime);
+                    
+                    // Calculate Julian Day
+                    const year = birth.getFullYear();
+                    const month = birth.getMonth() + 1;
+                    const day = birth.getDate();
+                    const hour = birth.getHours() + birth.getMinutes() / 60;
+                    
+                    const jd = swisseph.swe_julday(year, month, day, hour, swisseph.SE_GREG_CAL);
+                    
+                    // Calculate houses (Placidus system)
+                    const houses = swisseph.swe_houses(jd, coords.lat, coords.lon, 'P');
+                    
+                    if (houses && houses.ascendant) {
+                        // Convert ascendant degree to zodiac sign
+                        const ascDegree = houses.ascendant;
+                        const signIndex = Math.floor(ascDegree / 30);
+                        
+                        const signs = [
+                            { name: 'Aries', symbol: '♈' },
+                            { name: 'Taurus', symbol: '♉' },
+                            { name: 'Gemini', symbol: '♊' },
+                            { name: 'Cancer', symbol: '♋' },
+                            { name: 'Leo', symbol: '♌' },
+                            { name: 'Virgo', symbol: '♍' },
+                            { name: 'Libra', symbol: '♎' },
+                            { name: 'Scorpio', symbol: '♏' },
+                            { name: 'Sagittarius', symbol: '♐' },
+                            { name: 'Capricorn', symbol: '♑' },
+                            { name: 'Aquarius', symbol: '♒' },
+                            { name: 'Pisces', symbol: '♓' }
+                        ];
+                        
+                        return signs[signIndex % 12];
+                    }
+                } catch (e) {
+                    console.log('Swiss Ephemeris calculation failed, using fallback:', e);
+                }
+            }
+            
+            // Fallback: Simplified calculation
             const birth = new Date(birthDate);
             const month = birth.getMonth() + 1;
             const day = birth.getDate();
@@ -2353,31 +2458,20 @@
             const sunSignIndex = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 
                                   'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'].indexOf(sunSign.name);
             
-            // Parse birth time
             const [hours, minutes] = birthTime.split(':').map(Number);
             const totalMinutes = hours * 60 + minutes;
             
-            // Adjust sunrise time based on location if provided
-            let sunriseMinutes = 6 * 60; // Default 6 AM
+            let sunriseMinutes = 6 * 60;
             if (birthLocation) {
-                // Approximate latitude adjustment for sunrise time
                 const location = birthLocation.toLowerCase();
-                if (location.includes('uk') || location.includes('london') || location.includes('england')) {
-                    sunriseMinutes = 7 * 60; // UK ~7 AM average
-                } else if (location.includes('australia') || location.includes('sydney')) {
-                    sunriseMinutes = 6.5 * 60; // Australia
-                } else if (location.includes('india') || location.includes('mumbai')) {
-                    sunriseMinutes = 6 * 60; // India
-                } else if (location.includes('japan') || location.includes('tokyo')) {
-                    sunriseMinutes = 6 * 60; // Japan
-                } else if (location.includes('california') || location.includes('los angeles')) {
-                    sunriseMinutes = 6.5 * 60; // West Coast USA
-                } else if (location.includes('new york') || location.includes('boston')) {
-                    sunriseMinutes = 6.5 * 60; // East Coast USA
-                }
+                if (location.includes('uk') || location.includes('london')) sunriseMinutes = 7 * 60;
+                else if (location.includes('australia') || location.includes('sydney')) sunriseMinutes = 6.5 * 60;
+                else if (location.includes('india') || location.includes('mumbai')) sunriseMinutes = 6 * 60;
+                else if (location.includes('japan') || location.includes('tokyo')) sunriseMinutes = 6 * 60;
+                else if (location.includes('california') || location.includes('los angeles')) sunriseMinutes = 6.5 * 60;
+                else if (location.includes('new york') || location.includes('boston')) sunriseMinutes = 6.5 * 60;
             }
             
-            // Rising sign changes approximately every 2 hours (120 minutes)
             const minutesSinceSunrise = (totalMinutes - sunriseMinutes + 1440) % 1440;
             const risingOffset = Math.floor(minutesSinceSunrise / 120);
             const risingIndex = (sunSignIndex + risingOffset) % 12;
@@ -2399,20 +2493,62 @@
             return signs[risingIndex];
         }
 
-        // PHASE 2: Moon Sign Calculator
+        // PHASE 2: Moon Sign Calculator with Swiss Ephemeris
         function getMoonSign(birthDate, birthTime, birthLocation) {
+            // Try Swiss Ephemeris for maximum accuracy
+            if (typeof swisseph !== 'undefined' && birthTime && birthLocation) {
+                try {
+                    const coords = getCoordinates(birthLocation);
+                    const birth = new Date(birthDate + ' ' + birthTime);
+                    
+                    // Calculate Julian Day
+                    const year = birth.getFullYear();
+                    const month = birth.getMonth() + 1;
+                    const day = birth.getDate();
+                    const hour = birth.getHours() + birth.getMinutes() / 60;
+                    
+                    const jd = swisseph.swe_julday(year, month, day, hour, swisseph.SE_GREG_CAL);
+                    
+                    // Calculate Moon position
+                    const moonPos = swisseph.swe_calc_ut(jd, swisseph.SE_MOON, swisseph.SEFLG_SWIEPH);
+                    
+                    if (moonPos && moonPos.longitude !== undefined) {
+                        // Convert moon longitude to zodiac sign
+                        const moonDegree = moonPos.longitude;
+                        const signIndex = Math.floor(moonDegree / 30);
+                        
+                        const signs = [
+                            { name: 'Aries', symbol: '♈', element: 'Fire' },
+                            { name: 'Taurus', symbol: '♉', element: 'Earth' },
+                            { name: 'Gemini', symbol: '♊', element: 'Air' },
+                            { name: 'Cancer', symbol: '♋', element: 'Water' },
+                            { name: 'Leo', symbol: '♌', element: 'Fire' },
+                            { name: 'Virgo', symbol: '♍', element: 'Earth' },
+                            { name: 'Libra', symbol: '♎', element: 'Air' },
+                            { name: 'Scorpio', symbol: '♏', element: 'Water' },
+                            { name: 'Sagittarius', symbol: '♐', element: 'Fire' },
+                            { name: 'Capricorn', symbol: '♑', element: 'Earth' },
+                            { name: 'Aquarius', symbol: '♒', element: 'Air' },
+                            { name: 'Pisces', symbol: '♓', element: 'Water' }
+                        ];
+                        
+                        return signs[signIndex % 12];
+                    }
+                } catch (e) {
+                    console.log('Swiss Ephemeris moon calculation failed, using fallback:', e);
+                }
+            }
+            
+            // Fallback: Simplified calculation
             const birth = new Date(birthDate);
-            // Moon moves through all 12 signs in ~29.5 days = ~2.46 days per sign
-            const epoch = new Date('2000-01-06'); // New Moon in Capricorn reference
+            const epoch = new Date('2000-01-06');
             const daysSinceEpoch = Math.floor((birth - epoch) / (1000 * 60 * 60 * 24));
             
-            // Add time-based offset if birthTime provided
             let hourOffset = 0;
             if (birthTime) {
                 const [hours] = birthTime.split(':').map(Number);
-                hourOffset = hours / 24; // Convert hours to fraction of day
+                hourOffset = hours / 24;
                 
-                // Adjust for timezone if location provided
                 if (birthLocation) {
                     const location = birthLocation.toLowerCase();
                     if (location.includes('uk') || location.includes('london')) hourOffset += 0;
