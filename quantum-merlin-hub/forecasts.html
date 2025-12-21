@@ -764,6 +764,72 @@
             color: var(--neon-gold);
         }
 
+        /* Frequency Healing Section */
+        .frequency-display {
+            background: linear-gradient(135deg, rgba(0, 200, 150, 0.15) 0%, rgba(0, 100, 200, 0.15) 100%);
+            border: 2px solid rgba(0, 245, 255, 0.6);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .frequency-main {
+            margin-bottom: 25px;
+        }
+
+        .frequency-hz {
+            display: block;
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--neon-gold);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .frequency-name {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--neon-cyan);
+            font-weight: 600;
+        }
+
+        .frequency-details {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .frequency-details p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 12px;
+            padding: 10px 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        .frequency-details strong {
+            color: var(--neon-cyan);
+        }
+
+        .frequency-link {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--neon-magenta), var(--neon-cyan));
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(255, 0, 128, 0.4);
+        }
+
+        .frequency-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 40px rgba(255, 0, 128, 0.6);
+        }
+
         /* Planetary Aspects Section */
         .aspects-section {
             background: linear-gradient(135deg, rgba(0, 100, 255, 0.15) 0%, rgba(138, 43, 226, 0.15) 100%);
@@ -1245,6 +1311,24 @@
             background: rgba(0, 245, 255, 0.2);
             border-color: var(--neon-cyan);
             color: var(--neon-cyan);
+        }
+
+        .share-btn.whatsapp {
+            background: rgba(37, 211, 102, 0.2);
+            border-color: #25d366;
+            color: #25d366;
+        }
+
+        .share-btn.linkedin {
+            background: rgba(0, 119, 181, 0.2);
+            border-color: #0077b5;
+            color: #0077b5;
+        }
+
+        .share-btn.email {
+            background: rgba(255, 0, 128, 0.2);
+            border-color: var(--neon-magenta);
+            color: var(--neon-magenta);
         }
 
         .share-btn:hover {
@@ -2612,23 +2696,124 @@
             hideIntro();
         }
         
-        // Loading spinner control - simple overlay
+        // Loading spinner control - full intro-style animation
+        let loadingAnimationRunning = false;
+        let loadingAnimationTime = 0;
+        
         function showLoadingSpinner() {
             const loadingOverlay = document.getElementById('loadingSpinner');
-            const singularity = document.getElementById('loading-singularity');
-            const title = document.getElementById('loading-title');
-            
-            if (singularity) singularity.style.opacity = 1;
-            if (title) {
-                title.style.opacity = 1;
-                title.style.transform = 'translate(-50%, -50%)';
-            }
+            const loadingCanvas = document.getElementById('loading-lines-canvas');
+            const loadingCtx = loadingCanvas ? loadingCanvas.getContext('2d') : null;
             
             loadingOverlay.style.display = 'flex';
+            
+            if (!loadingCanvas || !loadingCtx) return;
+            
+            // Setup canvas
+            loadingCanvas.width = window.innerWidth;
+            loadingCanvas.height = window.innerHeight;
+            
+            const loadingQuantum = document.getElementById('loading-quantum');
+            const loadingWizard = document.getElementById('loading-wizard');
+            const loadingRose = document.getElementById('loading-rose');
+            const loadingSingularity = document.getElementById('loading-singularity');
+            const loadingTitle = document.getElementById('loading-title');
+            
+            loadingAnimationTime = 0;
+            loadingAnimationRunning = true;
+            
+            const centerX = loadingCanvas.width / 2;
+            const centerY = loadingCanvas.height / 2;
+            const speed = 0.35;
+            
+            function updateLoadingAnimation() {
+                if (!loadingAnimationRunning) return;
+                
+                const t = loadingAnimationTime * speed;
+                loadingCtx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+                loadingCtx.fillRect(0, 0, loadingCanvas.width, loadingCanvas.height);
+                
+                // Calculate positions for orbiting emojis
+                const maxRadius = Math.min(loadingCanvas.width, loadingCanvas.height) * 0.35;
+                const shrinkFactor = Math.max(0, 1 - t / 8);
+                const currentRadius = maxRadius * shrinkFactor;
+                
+                // Orbit angles
+                const angle1 = t * 1.2;
+                const angle2 = t * 1.2 + (2 * Math.PI / 3);
+                const angle3 = t * 1.2 + (4 * Math.PI / 3);
+                
+                const x1 = centerX + Math.cos(angle1) * currentRadius;
+                const y1 = centerY + Math.sin(angle1) * currentRadius;
+                const x2 = centerX + Math.cos(angle2) * currentRadius;
+                const y2 = centerY + Math.sin(angle2) * currentRadius;
+                const x3 = centerX + Math.cos(angle3) * currentRadius;
+                const y3 = centerY + Math.sin(angle3) * currentRadius;
+                
+                // Draw orbital trails
+                if (currentRadius > 10) {
+                    loadingCtx.strokeStyle = 'rgba(255, 215, 0, 0.3)';
+                    loadingCtx.lineWidth = 2;
+                    loadingCtx.beginPath();
+                    loadingCtx.arc(centerX, centerY, currentRadius, 0, Math.PI * 2);
+                    loadingCtx.stroke();
+                }
+                
+                // Position emojis
+                const opacity = t < 1 ? t : (shrinkFactor > 0 ? 1 : 0);
+                
+                if (loadingQuantum) {
+                    loadingQuantum.style.left = x1 + 'px';
+                    loadingQuantum.style.top = y1 + 'px';
+                    loadingQuantum.style.opacity = opacity;
+                    loadingQuantum.style.transform = 'translate(-50%, -50%)';
+                }
+                if (loadingWizard) {
+                    loadingWizard.style.left = x2 + 'px';
+                    loadingWizard.style.top = y2 + 'px';
+                    loadingWizard.style.opacity = opacity;
+                    loadingWizard.style.transform = 'translate(-50%, -50%)';
+                }
+                if (loadingRose) {
+                    loadingRose.style.left = x3 + 'px';
+                    loadingRose.style.top = y3 + 'px';
+                    loadingRose.style.opacity = opacity;
+                    loadingRose.style.transform = 'translate(-50%, -50%)';
+                }
+                
+                // Singularity and title appear as orbits converge
+                if (t >= 6) {
+                    const progress = Math.min(1, (t - 6) / 2);
+                    if (loadingSingularity) {
+                        loadingSingularity.style.opacity = progress;
+                        loadingSingularity.style.transform = `translate(-50%, -50%) scale(${progress * 2})`;
+                    }
+                    if (loadingTitle) {
+                        loadingTitle.style.opacity = progress;
+                        loadingTitle.style.transform = `translate(-50%, -50%) scale(${0.8 + progress * 0.2})`;
+                    }
+                }
+                
+                loadingAnimationTime++;
+                if (loadingAnimationRunning) {
+                    requestAnimationFrame(updateLoadingAnimation);
+                }
+            }
+            
+            updateLoadingAnimation();
         }
         
         function hideLoadingSpinner() {
-            document.getElementById('loadingSpinner').style.display = 'none';
+            loadingAnimationRunning = false;
+            const loadingOverlay = document.getElementById('loadingSpinner');
+            loadingOverlay.style.display = 'none';
+            
+            // Reset elements
+            const elements = ['loading-quantum', 'loading-wizard', 'loading-rose', 'loading-singularity', 'loading-title'];
+            elements.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.opacity = 0;
+            });
         }
 
         // Generate stars background
@@ -2691,6 +2876,24 @@
         function shareToFacebook() {
             const url = encodeURIComponent(generateShareURL());
             window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function shareToWhatsApp(text) {
+            const url = generateShareURL();
+            const message = encodeURIComponent((text || "Check out my Quantum Forecast! 🌌✨") + "\n\n" + url);
+            window.open(`https://wa.me/?text=${message}`, '_blank');
+        }
+
+        function shareToLinkedIn() {
+            const url = encodeURIComponent(generateShareURL());
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        }
+
+        function shareViaEmail(subject, body) {
+            const url = generateShareURL();
+            const emailSubject = encodeURIComponent(subject || "My Quantum Cosmic Forecast 🌌");
+            const emailBody = encodeURIComponent((body || "I just got my personalized cosmic guidance! Check it out:") + "\n\n" + url);
+            window.location.href = `mailto:?subject=${emailSubject}&body=${emailBody}`;
         }
 
         function copyForecastLink() {
@@ -2826,92 +3029,92 @@
         function getTarotDeck() {
             return [
                 // MAJOR ARCANA (22 cards)
-                { id: '00-fool', suit: 'major', number: 0, name: 'The Fool', meaning: 'New beginnings, innocence, spontaneity, free spirit', guidance: 'Embrace the unknown. Take a leap of faith.', symbol: '🃏', image: '../assets/tarot/00-fool.jpg' },
-                { id: '01-magician', suit: 'major', number: 1, name: 'The Magician', meaning: 'Manifestation, resourcefulness, power, inspired action', guidance: 'You have all the tools you need. Act with intention.', symbol: '🎩', image: '../assets/tarot/01-magician.jpg' },
-                { id: '02-high-priestess', suit: 'major', number: 2, name: 'The High Priestess', meaning: 'Intuition, sacred knowledge, divine feminine, subconscious', guidance: 'Trust your inner voice. Look beyond the surface.', symbol: '🔮', image: '../assets/tarot/02-high-priestess.jpg' },
-                { id: '03-empress', suit: 'major', number: 3, name: 'The Empress', meaning: 'Femininity, beauty, nature, nurturing, abundance', guidance: 'Create and nurture. Beauty surrounds you.', symbol: '👑', image: '../assets/tarot/03-empress.jpg' },
-                { id: '04-emperor', suit: 'major', number: 4, name: 'The Emperor', meaning: 'Authority, establishment, structure, father figure', guidance: 'Take control. Build solid foundations.', symbol: '⚔️', image: '../assets/tarot/04-emperor.jpg' },
-                { id: '05-hierophant', suit: 'major', number: 5, name: 'The Hierophant', meaning: 'Spiritual wisdom, tradition, conformity, institutions', guidance: 'Seek wisdom from tradition. Honor what works.', symbol: '🏛️', image: '../assets/tarot/05-hierophant.jpg' },
-                { id: '06-lovers', suit: 'major', number: 6, name: 'The Lovers', meaning: 'Love, harmony, relationships, values alignment', guidance: 'Choose with your heart. Align your values.', symbol: '💕', image: '../assets/tarot/06-lovers.jpg' },
-                { id: '07-chariot', suit: 'major', number: 7, name: 'The Chariot', meaning: 'Control, willpower, success, determination', guidance: 'Move forward with confidence. Victory is yours.', symbol: '🏇', image: '../assets/tarot/07-chariot.jpg' },
-                { id: '08-strength', suit: 'major', number: 8, name: 'Strength', meaning: 'Strength, courage, patience, compassion', guidance: 'Inner strength conquers all. Be gentle yet firm.', symbol: '🦁', image: '../assets/tarot/08-strength.jpg' },
-                { id: '09-hermit', suit: 'major', number: 9, name: 'The Hermit', meaning: 'Soul searching, introspection, inner guidance', guidance: 'Go within. Your answers are there.', symbol: '🕯️', image: '../assets/tarot/09-hermit.jpg' },
-                { id: '10-wheel-of-fortune', suit: 'major', number: 10, name: 'Wheel of Fortune', meaning: 'Good luck, karma, life cycles, destiny', guidance: 'Fate is turning. Embrace the change.', symbol: '☸️', image: '../assets/tarot/10-wheel-of-fortune.jpg' },
-                { id: '11-justice', suit: 'major', number: 11, name: 'Justice', meaning: 'Justice, fairness, truth, cause and effect', guidance: 'Seek truth and balance. Karma is active.', symbol: '⚖️', image: '../assets/tarot/11-justice.jpg' },
-                { id: '12-hanged-man', suit: 'major', number: 12, name: 'The Hanged Man', meaning: 'Pause, surrender, letting go, new perspective', guidance: 'Release control. See from a new angle.', symbol: '🙃', image: '../assets/tarot/12-hanged-man.jpg' },
-                { id: '13-death', suit: 'major', number: 13, name: 'Death', meaning: 'Endings, transformation, transition, rebirth', guidance: 'Let go of the old. Transformation awaits.', symbol: '🦋', image: '../assets/tarot/13-death.jpg' },
-                { id: '14-temperance', suit: 'major', number: 14, name: 'Temperance', meaning: 'Balance, moderation, patience, purpose', guidance: 'Find the middle way. Blend opposing forces.', symbol: '🌊', image: '../assets/tarot/14-temperance.jpg' },
-                { id: '15-devil', suit: 'major', number: 15, name: 'The Devil', meaning: 'Shadow self, attachment, addiction, materialism', guidance: 'Break free from chains. Face your shadows.', symbol: '😈', image: '../assets/tarot/15-devil.jpg' },
-                { id: '16-tower', suit: 'major', number: 16, name: 'The Tower', meaning: 'Sudden change, upheaval, chaos, revelation', guidance: 'Breakdown leads to breakthrough. Trust the process.', symbol: '⚡', image: '../assets/tarot/16-tower.jpg' },
-                { id: '17-star', suit: 'major', number: 17, name: 'The Star', meaning: 'Hope, faith, purpose, renewal, spirituality', guidance: 'Hope shines bright. Your wishes are heard.', symbol: '⭐', image: '../assets/tarot/17-star.jpg' },
-                { id: '18-moon', suit: 'major', number: 18, name: 'The Moon', meaning: 'Illusion, fear, anxiety, subconscious, intuition', guidance: 'Not all is as it seems. Trust your intuition.', symbol: '🌙', image: '../assets/tarot/18-moon.jpg' },
-                { id: '19-sun', suit: 'major', number: 19, name: 'The Sun', meaning: 'Positivity, fun, warmth, success, vitality', guidance: 'Success and joy are yours. Shine brightly.', symbol: '☀️', image: '../assets/tarot/19-sun.jpg' },
-                { id: '20-judgment', suit: 'major', number: 20, name: 'Judgment', meaning: 'Judgment, rebirth, inner calling, absolution', guidance: 'Answer your calling. Forgive and be reborn.', symbol: '📯', image: '../assets/tarot/20-judgment.jpg' },
-                { id: '21-world', suit: 'major', number: 21, name: 'The World', meaning: 'Completion, integration, accomplishment, travel', guidance: 'You\'ve come full circle. Celebrate completion.', symbol: '🌍', image: '../assets/tarot/21-world.jpg' },
+                { id: '00-fool', suit: 'major', number: 0, name: 'The Fool', meaning: 'New beginnings, innocence, spontaneity, free spirit', guidance: 'Embrace the unknown. Take a leap of faith.', symbol: '🃏', image: '../assets/tarot/The_Fool.jpg' },
+                { id: '01-magician', suit: 'major', number: 1, name: 'The Magician', meaning: 'Manifestation, resourcefulness, power, inspired action', guidance: 'You have all the tools you need. Act with intention.', symbol: '🎩', image: '../assets/tarot/The_Magician.jpg' },
+                { id: '02-high-priestess', suit: 'major', number: 2, name: 'The High Priestess', meaning: 'Intuition, sacred knowledge, divine feminine, subconscious', guidance: 'Trust your inner voice. Look beyond the surface.', symbol: '🔮', image: '../assets/tarot/The_High_Priestess.jpg' },
+                { id: '03-empress', suit: 'major', number: 3, name: 'The Empress', meaning: 'Femininity, beauty, nature, nurturing, abundance', guidance: 'Create and nurture. Beauty surrounds you.', symbol: '👑', image: '../assets/tarot/The_Empress.jpg' },
+                { id: '04-emperor', suit: 'major', number: 4, name: 'The Emperor', meaning: 'Authority, establishment, structure, father figure', guidance: 'Take control. Build solid foundations.', symbol: '⚔️', image: '../assets/tarot/The_Emperor.jpg' },
+                { id: '05-hierophant', suit: 'major', number: 5, name: 'The Hierophant', meaning: 'Spiritual wisdom, tradition, conformity, institutions', guidance: 'Seek wisdom from tradition. Honor what works.', symbol: '🏛️', image: '../assets/tarot/The_Hierophant.jpg' },
+                { id: '06-lovers', suit: 'major', number: 6, name: 'The Lovers', meaning: 'Love, harmony, relationships, values alignment', guidance: 'Choose with your heart. Align your values.', symbol: '💕', image: '../assets/tarot/The_Lovers.jpg' },
+                { id: '07-chariot', suit: 'major', number: 7, name: 'The Chariot', meaning: 'Control, willpower, success, determination', guidance: 'Move forward with confidence. Victory is yours.', symbol: '🏇', image: '../assets/tarot/The_Chariot.jpg' },
+                { id: '08-strength', suit: 'major', number: 8, name: 'Strength', meaning: 'Strength, courage, patience, compassion', guidance: 'Inner strength conquers all. Be gentle yet firm.', symbol: '🦁', image: '../assets/tarot/Strength.jpg' },
+                { id: '09-hermit', suit: 'major', number: 9, name: 'The Hermit', meaning: 'Soul searching, introspection, inner guidance', guidance: 'Go within. Your answers are there.', symbol: '🕯️', image: '../assets/tarot/The_Hermit.jpg' },
+                { id: '10-wheel-of-fortune', suit: 'major', number: 10, name: 'Wheel of Fortune', meaning: 'Good luck, karma, life cycles, destiny', guidance: 'Fate is turning. Embrace the change.', symbol: '☸️', image: '../assets/tarot/Wheel_of_Fortune.jpg' },
+                { id: '11-justice', suit: 'major', number: 11, name: 'Justice', meaning: 'Justice, fairness, truth, cause and effect', guidance: 'Seek truth and balance. Karma is active.', symbol: '⚖️', image: '../assets/tarot/Justice.jpg' },
+                { id: '12-hanged-man', suit: 'major', number: 12, name: 'The Hanged Man', meaning: 'Pause, surrender, letting go, new perspective', guidance: 'Release control. See from a new angle.', symbol: '🙃', image: '../assets/tarot/The_Hanged_Man.jpg' },
+                { id: '13-death', suit: 'major', number: 13, name: 'Death', meaning: 'Endings, transformation, transition, rebirth', guidance: 'Let go of the old. Transformation awaits.', symbol: '🦋', image: '../assets/tarot/Death.jpg' },
+                { id: '14-temperance', suit: 'major', number: 14, name: 'Temperance', meaning: 'Balance, moderation, patience, purpose', guidance: 'Find the middle way. Blend opposing forces.', symbol: '🌊', image: '../assets/tarot/Temperance.jpg' },
+                { id: '15-devil', suit: 'major', number: 15, name: 'The Devil', meaning: 'Shadow self, attachment, addiction, materialism', guidance: 'Break free from chains. Face your shadows.', symbol: '😈', image: '../assets/tarot/The_Devil.jpg' },
+                { id: '16-tower', suit: 'major', number: 16, name: 'The Tower', meaning: 'Sudden change, upheaval, chaos, revelation', guidance: 'Breakdown leads to breakthrough. Trust the process.', symbol: '⚡', image: '../assets/tarot/The_Tower.jpg' },
+                { id: '17-star', suit: 'major', number: 17, name: 'The Star', meaning: 'Hope, faith, purpose, renewal, spirituality', guidance: 'Hope shines bright. Your wishes are heard.', symbol: '⭐', image: '../assets/tarot/The_Star.jpg' },
+                { id: '18-moon', suit: 'major', number: 18, name: 'The Moon', meaning: 'Illusion, fear, anxiety, subconscious, intuition', guidance: 'Not all is as it seems. Trust your intuition.', symbol: '🌙', image: '../assets/tarot/The_Moon.jpg' },
+                { id: '19-sun', suit: 'major', number: 19, name: 'The Sun', meaning: 'Positivity, fun, warmth, success, vitality', guidance: 'Success and joy are yours. Shine brightly.', symbol: '☀️', image: '../assets/tarot/The_Sun.jpg' },
+                { id: '20-judgment', suit: 'major', number: 20, name: 'Judgment', meaning: 'Judgment, rebirth, inner calling, absolution', guidance: 'Answer your calling. Forgive and be reborn.', symbol: '📯', image: '../assets/tarot/Judgement.jpg' },
+                { id: '21-world', suit: 'major', number: 21, name: 'The World', meaning: 'Completion, integration, accomplishment, travel', guidance: 'You\'ve come full circle. Celebrate completion.', symbol: '🌍', image: '../assets/tarot/The_World.jpg' },
 
                 // WANDS - Fire element, passion, creativity, action
-                { id: 'wands-ace', suit: 'wands', number: 1, name: 'Ace of Wands', meaning: 'Inspiration, new opportunities, creative spark', guidance: 'Seize the moment. New creative ventures await.', symbol: '🔥', image: '../assets/tarot/wands-ace.jpg' },
-                { id: 'wands-2', suit: 'wands', number: 2, name: 'Two of Wands', meaning: 'Planning, making decisions, leaving comfort', guidance: 'The world is yours. Make your choice.', symbol: '🗺️', image: '../assets/tarot/wands-2.jpg' },
-                { id: 'wands-3', suit: 'wands', number: 3, name: 'Three of Wands', meaning: 'Expansion, foresight, leadership', guidance: 'Your plans are manifesting. Look ahead.', symbol: '🚢', image: '../assets/tarot/wands-3.jpg' },
-                { id: 'wands-4', suit: 'wands', number: 4, name: 'Four of Wands', meaning: 'Celebration, harmony, home, community', guidance: 'Celebrate your achievements. You deserve it.', symbol: '🎉', image: '../assets/tarot/wands-4.jpg' },
-                { id: 'wands-5', suit: 'wands', number: 5, name: 'Five of Wands', meaning: 'Competition, conflict, disagreements', guidance: 'Channel competitive energy productively.', symbol: '⚔️', image: '../assets/tarot/wands-5.jpg' },
-                { id: 'wands-6', suit: 'wands', number: 6, name: 'Six of Wands', meaning: 'Victory, success, public recognition', guidance: 'You are winning. Accept the accolades.', symbol: '🏆', image: '../assets/tarot/wands-6.jpg' },
-                { id: 'wands-7', suit: 'wands', number: 7, name: 'Seven of Wands', meaning: 'Perseverance, defensive, maintaining control', guidance: 'Stand your ground. You have the advantage.', symbol: '🛡️', image: '../assets/tarot/wands-7.jpg' },
-                { id: 'wands-8', suit: 'wands', number: 8, name: 'Eight of Wands', meaning: 'Speed, action, air travel, movement', guidance: 'Things are moving fast. Go with the flow.', symbol: '✈️', image: '../assets/tarot/wands-8.jpg' },
-                { id: 'wands-9', suit: 'wands', number: 9, name: 'Nine of Wands', meaning: 'Resilience, courage, persistence', guidance: 'Almost there. One more push to victory.', symbol: '💪', image: '../assets/tarot/wands-9.jpg' },
-                { id: 'wands-10', suit: 'wands', number: 10, name: 'Ten of Wands', meaning: 'Burden, responsibility, hard work', guidance: 'Delegate or release. Don\'t carry it all alone.', symbol: '🎒', image: '../assets/tarot/wands-10.jpg' },
-                { id: 'wands-page', suit: 'wands', number: 11, name: 'Page of Wands', meaning: 'Enthusiasm, exploration, discovery', guidance: 'Be curious. Adventure calls.', symbol: '🧭', image: '../assets/tarot/wands-page.jpg' },
-                { id: 'wands-knight', suit: 'wands', number: 12, name: 'Knight of Wands', meaning: 'Energy, passion, adventure, impulsiveness', guidance: 'Take bold action. Move with confidence.', symbol: '🏇', image: '../assets/tarot/wands-knight.jpg' },
-                { id: 'wands-queen', suit: 'wands', number: 13, name: 'Queen of Wands', meaning: 'Confidence, independence, determination', guidance: 'Own your power. Lead with charisma.', symbol: '👑', image: '../assets/tarot/wands-queen.jpg' },
-                { id: 'wands-king', suit: 'wands', number: 14, name: 'King of Wands', meaning: 'Leadership, vision, entrepreneurial', guidance: 'Lead with vision. Inspire others.', symbol: '🦁', image: '../assets/tarot/wands-king.jpg' },
+                { id: 'wands-ace', suit: 'wands', number: 1, name: 'Ace of Wands', meaning: 'Inspiration, new opportunities, creative spark', guidance: 'Seize the moment. New creative ventures await.', symbol: '🔥', image: '../assets/tarot/Ace_of_Wands.jpg' },
+                { id: 'wands-2', suit: 'wands', number: 2, name: 'Two of Wands', meaning: 'Planning, making decisions, leaving comfort', guidance: 'The world is yours. Make your choice.', symbol: '🗺️', image: '../assets/tarot/Two_of_Wands.jpg' },
+                { id: 'wands-3', suit: 'wands', number: 3, name: 'Three of Wands', meaning: 'Expansion, foresight, leadership', guidance: 'Your plans are manifesting. Look ahead.', symbol: '🚢', image: '../assets/tarot/Three_of_Wands.jpg' },
+                { id: 'wands-4', suit: 'wands', number: 4, name: 'Four of Wands', meaning: 'Celebration, harmony, home, community', guidance: 'Celebrate your achievements. You deserve it.', symbol: '🎉', image: '../assets/tarot/Four_of_Wands.jpg' },
+                { id: 'wands-5', suit: 'wands', number: 5, name: 'Five of Wands', meaning: 'Competition, conflict, disagreements', guidance: 'Channel competitive energy productively.', symbol: '⚔️', image: '../assets/tarot/Five_of_Wands.jpg' },
+                { id: 'wands-6', suit: 'wands', number: 6, name: 'Six of Wands', meaning: 'Victory, success, public recognition', guidance: 'You are winning. Accept the accolades.', symbol: '🏆', image: '../assets/tarot/Six_of_Wands.jpg' },
+                { id: 'wands-7', suit: 'wands', number: 7, name: 'Seven of Wands', meaning: 'Perseverance, defensive, maintaining control', guidance: 'Stand your ground. You have the advantage.', symbol: '🛡️', image: '../assets/tarot/Seven_of_Wands.jpg' },
+                { id: 'wands-8', suit: 'wands', number: 8, name: 'Eight of Wands', meaning: 'Speed, action, air travel, movement', guidance: 'Things are moving fast. Go with the flow.', symbol: '✈️', image: '../assets/tarot/Eight_of_Wands.jpg' },
+                { id: 'wands-9', suit: 'wands', number: 9, name: 'Nine of Wands', meaning: 'Resilience, courage, persistence', guidance: 'Almost there. One more push to victory.', symbol: '💪', image: '../assets/tarot/Nine_of_Wands.jpg' },
+                { id: 'wands-10', suit: 'wands', number: 10, name: 'Ten of Wands', meaning: 'Burden, responsibility, hard work', guidance: 'Delegate or release. Don\'t carry it all alone.', symbol: '🎒', image: '../assets/tarot/Ten_of_Wands.jpg' },
+                { id: 'wands-page', suit: 'wands', number: 11, name: 'Page of Wands', meaning: 'Enthusiasm, exploration, discovery', guidance: 'Be curious. Adventure calls.', symbol: '🧭', image: '../assets/tarot/Page_of_Wands.jpg' },
+                { id: 'wands-knight', suit: 'wands', number: 12, name: 'Knight of Wands', meaning: 'Energy, passion, adventure, impulsiveness', guidance: 'Take bold action. Move with confidence.', symbol: '🏇', image: '../assets/tarot/Knight_of_Wands.jpg' },
+                { id: 'wands-queen', suit: 'wands', number: 13, name: 'Queen of Wands', meaning: 'Confidence, independence, determination', guidance: 'Own your power. Lead with charisma.', symbol: '👑', image: '../assets/tarot/Queen_of_Wands.jpg' },
+                { id: 'wands-king', suit: 'wands', number: 14, name: 'King of Wands', meaning: 'Leadership, vision, entrepreneurial', guidance: 'Lead with vision. Inspire others.', symbol: '🦁', image: '../assets/tarot/King_of_Wands.jpg' },
 
                 // CUPS - Water element, emotions, relationships, intuition
-                { id: 'cups-ace', suit: 'cups', number: 1, name: 'Ace of Cups', meaning: 'Love, new relationships, emotional awakening', guidance: 'Open your heart. Love flows in.', symbol: '💖', image: '../assets/tarot/cups-ace.jpg' },
-                { id: 'cups-2', suit: 'cups', number: 2, name: 'Two of Cups', meaning: 'Partnership, unity, attraction', guidance: 'Connection deepens. Unity forms.', symbol: '💑', image: '../assets/tarot/cups-2.jpg' },
-                { id: 'cups-3', suit: 'cups', number: 3, name: 'Three of Cups', meaning: 'Celebration, friendship, community', guidance: 'Celebrate with loved ones. Joy multiplies.', symbol: '🥂', image: '../assets/tarot/cups-3.jpg' },
-                { id: 'cups-4', suit: 'cups', number: 4, name: 'Four of Cups', meaning: 'Apathy, contemplation, reevaluation', guidance: 'Look beyond disappointment. New gifts await.', symbol: '🤔', image: '../assets/tarot/cups-4.jpg' },
-                { id: 'cups-5', suit: 'cups', number: 5, name: 'Five of Cups', meaning: 'Loss, grief, disappointment', guidance: 'Acknowledge loss, but see what remains.', symbol: '😢', image: '../assets/tarot/cups-5.jpg' },
-                { id: 'cups-6', suit: 'cups', number: 6, name: 'Six of Cups', meaning: 'Nostalgia, childhood memories, innocence', guidance: 'Reconnect with your inner child. Simple joys.', symbol: '🌈', image: '../assets/tarot/cups-6.jpg' },
-                { id: 'cups-7', suit: 'cups', number: 7, name: 'Seven of Cups', meaning: 'Choices, illusion, fantasy, wishful thinking', guidance: 'Choose wisely. Not all that glitters is gold.', symbol: '✨', image: '../assets/tarot/cups-7.jpg' },
-                { id: 'cups-8', suit: 'cups', number: 8, name: 'Eight of Cups', meaning: 'Walking away, seeking deeper meaning', guidance: 'Leave behind what no longer serves you.', symbol: '🚶', image: '../assets/tarot/cups-8.jpg' },
-                { id: 'cups-9', suit: 'cups', number: 9, name: 'Nine of Cups', meaning: 'Satisfaction, contentment, wishes fulfilled', guidance: 'Your wish is granted. Savor the moment.', symbol: '🌟', image: '../assets/tarot/cups-9.jpg' },
-                { id: 'cups-10', suit: 'cups', number: 10, name: 'Ten of Cups', meaning: 'Harmony, family, emotional fulfillment', guidance: 'Domestic bliss. Happiness at home.', symbol: '🏡', image: '../assets/tarot/cups-10.jpg' },
-                { id: 'cups-page', suit: 'cups', number: 11, name: 'Page of Cups', meaning: 'Creative opportunities, intuitive messages', guidance: 'Follow your heart. Creative inspiration flows.', symbol: '🎨', image: '../assets/tarot/cups-page.jpg' },
-                { id: 'cups-knight', suit: 'cups', number: 12, name: 'Knight of Cups', meaning: 'Romance, charm, imagination', guidance: 'Follow your dreams. Romance beckons.', symbol: '💐', image: '../assets/tarot/cups-knight.jpg' },
-                { id: 'cups-queen', suit: 'cups', number: 13, name: 'Queen of Cups', meaning: 'Compassion, intuition, emotional security', guidance: 'Trust your intuition. Nurture with love.', symbol: '🧜‍♀️', image: '../assets/tarot/cups-queen.jpg' },
-                { id: 'cups-king', suit: 'cups', number: 14, name: 'King of Cups', meaning: 'Emotional balance, diplomacy, compassion', guidance: 'Lead with empathy. Balance head and heart.', symbol: '🌊', image: '../assets/tarot/cups-king.jpg' },
+                { id: 'cups-ace', suit: 'cups', number: 1, name: 'Ace of Cups', meaning: 'Love, new relationships, emotional awakening', guidance: 'Open your heart. Love flows in.', symbol: '💖', image: '../assets/tarot/Ace_of_Cups.jpg' },
+                { id: 'cups-2', suit: 'cups', number: 2, name: 'Two of Cups', meaning: 'Partnership, unity, attraction', guidance: 'Connection deepens. Unity forms.', symbol: '💑', image: '../assets/tarot/Two_of_Cups.jpg' },
+                { id: 'cups-3', suit: 'cups', number: 3, name: 'Three of Cups', meaning: 'Celebration, friendship, community', guidance: 'Celebrate with loved ones. Joy multiplies.', symbol: '🥂', image: '../assets/tarot/Three_of_Cups.jpg' },
+                { id: 'cups-4', suit: 'cups', number: 4, name: 'Four of Cups', meaning: 'Apathy, contemplation, reevaluation', guidance: 'Look beyond disappointment. New gifts await.', symbol: '🤔', image: '../assets/tarot/Four_of_Cups.jpg' },
+                { id: 'cups-5', suit: 'cups', number: 5, name: 'Five of Cups', meaning: 'Loss, grief, disappointment', guidance: 'Acknowledge loss, but see what remains.', symbol: '😢', image: '../assets/tarot/Five_of_Cups.jpg' },
+                { id: 'cups-6', suit: 'cups', number: 6, name: 'Six of Cups', meaning: 'Nostalgia, childhood memories, innocence', guidance: 'Reconnect with your inner child. Simple joys.', symbol: '🌈', image: '../assets/tarot/Six_of_Cups.jpg' },
+                { id: 'cups-7', suit: 'cups', number: 7, name: 'Seven of Cups', meaning: 'Choices, illusion, fantasy, wishful thinking', guidance: 'Choose wisely. Not all that glitters is gold.', symbol: '✨', image: '../assets/tarot/Seven_of_Cups.jpg' },
+                { id: 'cups-8', suit: 'cups', number: 8, name: 'Eight of Cups', meaning: 'Walking away, seeking deeper meaning', guidance: 'Leave behind what no longer serves you.', symbol: '🚶', image: '../assets/tarot/Eight_of_Cups.jpg' },
+                { id: 'cups-9', suit: 'cups', number: 9, name: 'Nine of Cups', meaning: 'Satisfaction, contentment, wishes fulfilled', guidance: 'Your wish is granted. Savor the moment.', symbol: '🌟', image: '../assets/tarot/Nine_of_Cups.jpg' },
+                { id: 'cups-10', suit: 'cups', number: 10, name: 'Ten of Cups', meaning: 'Harmony, family, emotional fulfillment', guidance: 'Domestic bliss. Happiness at home.', symbol: '🏡', image: '../assets/tarot/Ten_of_Cups.jpg' },
+                { id: 'cups-page', suit: 'cups', number: 11, name: 'Page of Cups', meaning: 'Creative opportunities, intuitive messages', guidance: 'Follow your heart. Creative inspiration flows.', symbol: '🎨', image: '../assets/tarot/Page_of_Cups.jpg' },
+                { id: 'cups-knight', suit: 'cups', number: 12, name: 'Knight of Cups', meaning: 'Romance, charm, imagination', guidance: 'Follow your dreams. Romance beckons.', symbol: '💐', image: '../assets/tarot/Knight_of_Cups.jpg' },
+                { id: 'cups-queen', suit: 'cups', number: 13, name: 'Queen of Cups', meaning: 'Compassion, intuition, emotional security', guidance: 'Trust your intuition. Nurture with love.', symbol: '🧜‍♀️', image: '../assets/tarot/Queen_of_Cups.jpg' },
+                { id: 'cups-king', suit: 'cups', number: 14, name: 'King of Cups', meaning: 'Emotional balance, diplomacy, compassion', guidance: 'Lead with empathy. Balance head and heart.', symbol: '🌊', image: '../assets/tarot/King_of_Cups.jpg' },
 
                 // SWORDS - Air element, intellect, communication, conflict
-                { id: 'swords-ace', suit: 'swords', number: 1, name: 'Ace of Swords', meaning: 'Breakthrough, clarity, new ideas', guidance: 'Truth cuts through. Clarity emerges.', symbol: '⚡', image: '../assets/tarot/swords-ace.jpg' },
-                { id: 'swords-2', suit: 'swords', number: 2, name: 'Two of Swords', meaning: 'Difficult decisions, stalemate, avoidance', guidance: 'Remove the blindfold. Make a choice.', symbol: '⚖️', image: '../assets/tarot/swords-2.jpg' },
-                { id: 'swords-3', suit: 'swords', number: 3, name: 'Three of Swords', meaning: 'Heartbreak, emotional pain, sorrow', guidance: 'Feel the pain. Healing follows.', symbol: '💔', image: '../assets/tarot/swords-3.jpg' },
-                { id: 'swords-4', suit: 'swords', number: 4, name: 'Four of Swords', meaning: 'Rest, recovery, contemplation', guidance: 'Rest now. Recharge your batteries.', symbol: '🧘', image: '../assets/tarot/swords-4.jpg' },
-                { id: 'swords-5', suit: 'swords', number: 5, name: 'Five of Swords', meaning: 'Conflict, tension, loss', guidance: 'Choose your battles. Some wins aren\'t worth it.', symbol: '⚔️', image: '../assets/tarot/swords-5.jpg' },
-                { id: 'swords-6', suit: 'swords', number: 6, name: 'Six of Swords', meaning: 'Transition, change, moving on', guidance: 'Rough waters behind you. Calmer ahead.', symbol: '⛵', image: '../assets/tarot/swords-6.jpg' },
-                { id: 'swords-7', suit: 'swords', number: 7, name: 'Seven of Swords', meaning: 'Deception, trickery, strategy', guidance: 'Be strategic. Watch for hidden agendas.', symbol: '🎭', image: '../assets/tarot/swords-7.jpg' },
-                { id: 'swords-8', suit: 'swords', number: 8, name: 'Eight of Swords', meaning: 'Restriction, imprisonment, self-imposed limits', guidance: 'You\'re freer than you think. Remove the blindfold.', symbol: '🔒', image: '../assets/tarot/swords-8.jpg' },
-                { id: 'swords-9', suit: 'swords', number: 9, name: 'Nine of Swords', meaning: 'Anxiety, worry, nightmares', guidance: 'Your fears are exaggerated. Dawn comes.', symbol: '😰', image: '../assets/tarot/swords-9.jpg' },
-                { id: 'swords-10', suit: 'swords', number: 10, name: 'Ten of Swords', meaning: 'Painful endings, rock bottom, betrayal', guidance: 'It\'s over. Only up from here.', symbol: '🗡️', image: '../assets/tarot/swords-10.jpg' },
-                { id: 'swords-page', suit: 'swords', number: 11, name: 'Page of Swords', meaning: 'Curiosity, mental energy, new ideas', guidance: 'Ask questions. Investigate thoroughly.', symbol: '🔍', image: '../assets/tarot/swords-page.jpg' },
-                { id: 'swords-knight', suit: 'swords', number: 12, name: 'Knight of Swords', meaning: 'Ambition, action, driven to succeed', guidance: 'Act decisively. Cut through obstacles.', symbol: '🏃', image: '../assets/tarot/swords-knight.jpg' },
-                { id: 'swords-queen', suit: 'swords', number: 13, name: 'Queen of Swords', meaning: 'Independent, clear thinking, direct', guidance: 'Speak truth. Think clearly. Decide wisely.', symbol: '🦅', image: '../assets/tarot/swords-queen.jpg' },
-                { id: 'swords-king', suit: 'swords', number: 14, name: 'King of Swords', meaning: 'Authority, truth, intellectual power', guidance: 'Use intellect and ethics. Judge fairly.', symbol: '⚖️', image: '../assets/tarot/swords-king.jpg' },
+                { id: 'swords-ace', suit: 'swords', number: 1, name: 'Ace of Swords', meaning: 'Breakthrough, clarity, new ideas', guidance: 'Truth cuts through. Clarity emerges.', symbol: '⚡', image: '../assets/tarot/Aces_of_Swords.jpg' },
+                { id: 'swords-2', suit: 'swords', number: 2, name: 'Two of Swords', meaning: 'Difficult decisions, stalemate, avoidance', guidance: 'Remove the blindfold. Make a choice.', symbol: '⚖️', image: '../assets/tarot/Two_of_Swords.jpg' },
+                { id: 'swords-3', suit: 'swords', number: 3, name: 'Three of Swords', meaning: 'Heartbreak, emotional pain, sorrow', guidance: 'Feel the pain. Healing follows.', symbol: '💔', image: '../assets/tarot/Three_of_Swords.jpg' },
+                { id: 'swords-4', suit: 'swords', number: 4, name: 'Four of Swords', meaning: 'Rest, recovery, contemplation', guidance: 'Rest now. Recharge your batteries.', symbol: '🧘', image: '../assets/tarot/Four_of_Swords.jpg' },
+                { id: 'swords-5', suit: 'swords', number: 5, name: 'Five of Swords', meaning: 'Conflict, tension, loss', guidance: 'Choose your battles. Some wins aren\'t worth it.', symbol: '⚔️', image: '../assets/tarot/Five_of_Swords.jpg' },
+                { id: 'swords-6', suit: 'swords', number: 6, name: 'Six of Swords', meaning: 'Transition, change, moving on', guidance: 'Rough waters behind you. Calmer ahead.', symbol: '⛵', image: '../assets/tarot/Six_of_Swords.jpg' },
+                { id: 'swords-7', suit: 'swords', number: 7, name: 'Seven of Swords', meaning: 'Deception, trickery, strategy', guidance: 'Be strategic. Watch for hidden agendas.', symbol: '🎭', image: '../assets/tarot/Seven_of_Swords.jpg' },
+                { id: 'swords-8', suit: 'swords', number: 8, name: 'Eight of Swords', meaning: 'Restriction, imprisonment, self-imposed limits', guidance: 'You\'re freer than you think. Remove the blindfold.', symbol: '🔒', image: '../assets/tarot/Eight_of_Swords.jpg' },
+                { id: 'swords-9', suit: 'swords', number: 9, name: 'Nine of Swords', meaning: 'Anxiety, worry, nightmares', guidance: 'Your fears are exaggerated. Dawn comes.', symbol: '😰', image: '../assets/tarot/Nine_of_Swords.jpg' },
+                { id: 'swords-10', suit: 'swords', number: 10, name: 'Ten of Swords', meaning: 'Painful endings, rock bottom, betrayal', guidance: 'It\'s over. Only up from here.', symbol: '🗡️', image: '../assets/tarot/Ten_of_Swords.jpg' },
+                { id: 'swords-page', suit: 'swords', number: 11, name: 'Page of Swords', meaning: 'Curiosity, mental energy, new ideas', guidance: 'Ask questions. Investigate thoroughly.', symbol: '🔍', image: '../assets/tarot/Page_of_Swords.jpg' },
+                { id: 'swords-knight', suit: 'swords', number: 12, name: 'Knight of Swords', meaning: 'Ambition, action, driven to succeed', guidance: 'Act decisively. Cut through obstacles.', symbol: '🏃', image: '../assets/tarot/Knight_of_Swords.jpg' },
+                { id: 'swords-queen', suit: 'swords', number: 13, name: 'Queen of Swords', meaning: 'Independent, clear thinking, direct', guidance: 'Speak truth. Think clearly. Decide wisely.', symbol: '🦅', image: '../assets/tarot/Queen_of_Swords.jpg' },
+                { id: 'swords-king', suit: 'swords', number: 14, name: 'King of Swords', meaning: 'Authority, truth, intellectual power', guidance: 'Use intellect and ethics. Judge fairly.', symbol: '⚖️', image: '../assets/tarot/King_of_Swords.jpg' },
 
                 // PENTACLES - Earth element, material world, finances, career
-                { id: 'pentacles-ace', suit: 'pentacles', number: 1, name: 'Ace of Pentacles', meaning: 'New financial opportunity, prosperity, manifestation', guidance: 'Plant seeds now. Abundance grows.', symbol: '💰', image: '../assets/tarot/pentacles-ace.jpg' },
-                { id: 'pentacles-2', suit: 'pentacles', number: 2, name: 'Two of Pentacles', meaning: 'Balance, adaptability, time management', guidance: 'Juggle with grace. Stay flexible.', symbol: '🤹', image: '../assets/tarot/pentacles-2.jpg' },
-                { id: 'pentacles-3', suit: 'pentacles', number: 3, name: 'Three of Pentacles', meaning: 'Teamwork, collaboration, learning', guidance: 'Work together. Master your craft.', symbol: '🔨', image: '../assets/tarot/pentacles-3.jpg' },
-                { id: 'pentacles-4', suit: 'pentacles', number: 4, name: 'Four of Pentacles', meaning: 'Security, control, conservation', guidance: 'Hold on, but not too tight. Balance security and flow.', symbol: '🏦', image: '../assets/tarot/pentacles-4.jpg' },
-                { id: 'pentacles-5', suit: 'pentacles', number: 5, name: 'Five of Pentacles', meaning: 'Financial loss, poverty, isolation', guidance: 'Help is available. Look for the light.', symbol: '🌨️', image: '../assets/tarot/pentacles-5.jpg' },
-                { id: 'pentacles-6', suit: 'pentacles', number: 6, name: 'Six of Pentacles', meaning: 'Generosity, charity, sharing wealth', guidance: 'Give and receive. Balance the flow.', symbol: '🎁', image: '../assets/tarot/pentacles-6.jpg' },
-                { id: 'pentacles-7', suit: 'pentacles', number: 7, name: 'Seven of Pentacles', meaning: 'Patience, long-term view, perseverance', guidance: 'Assess progress. Harvest is coming.', symbol: '🌱', image: '../assets/tarot/pentacles-7.jpg' },
-                { id: 'pentacles-8', suit: 'pentacles', number: 8, name: 'Eight of Pentacles', meaning: 'Skill development, craftsmanship, diligence', guidance: 'Master your craft. Practice makes perfect.', symbol: '🔧', image: '../assets/tarot/pentacles-8.jpg' },
-                { id: 'pentacles-9', suit: 'pentacles', number: 9, name: 'Nine of Pentacles', meaning: 'Abundance, luxury, self-sufficiency', guidance: 'Enjoy your success. You\'ve earned it.', symbol: '🦚', image: '../assets/tarot/pentacles-9.jpg' },
-                { id: 'pentacles-10', suit: 'pentacles', number: 10, name: 'Ten of Pentacles', meaning: 'Wealth, legacy, family, long-term success', guidance: 'Build lasting wealth. Create a legacy.', symbol: '🏰', image: '../assets/tarot/pentacles-10.jpg' },
-                { id: 'pentacles-page', suit: 'pentacles', number: 11, name: 'Page of Pentacles', meaning: 'Ambition, desire to learn, new venture', guidance: 'Study and prepare. Opportunity knocks.', symbol: '📚', image: '../assets/tarot/pentacles-page.jpg' },
-                { id: 'pentacles-knight', suit: 'pentacles', number: 12, name: 'Knight of Pentacles', meaning: 'Efficiency, routine, hard work', guidance: 'Stay the course. Consistent effort pays.', symbol: '🐂', image: '../assets/tarot/pentacles-knight.jpg' },
-                { id: 'pentacles-queen', suit: 'pentacles', number: 13, name: 'Queen of Pentacles', meaning: 'Practical, nurturing, providing financially', guidance: 'Nurture abundance. Create comfort and security.', symbol: '🌿', image: '../assets/tarot/pentacles-queen.jpg' },
-                { id: 'pentacles-king', suit: 'pentacles', number: 14, name: 'King of Pentacles', meaning: 'Wealth, business success, leadership', guidance: 'Build your empire. Lead with wisdom.', symbol: '👑', image: '../assets/tarot/pentacles-king.jpg' }
+                { id: 'pentacles-ace', suit: 'pentacles', number: 1, name: 'Ace of Pentacles', meaning: 'New financial opportunity, prosperity, manifestation', guidance: 'Plant seeds now. Abundance grows.', symbol: '💰', image: '../assets/tarot/Ace_of_Pentacles.jpg' },
+                { id: 'pentacles-2', suit: 'pentacles', number: 2, name: 'Two of Pentacles', meaning: 'Balance, adaptability, time management', guidance: 'Juggle with grace. Stay flexible.', symbol: '🤹', image: '../assets/tarot/Two_of_Pentacles.jpg' },
+                { id: 'pentacles-3', suit: 'pentacles', number: 3, name: 'Three of Pentacles', meaning: 'Teamwork, collaboration, learning', guidance: 'Work together. Master your craft.', symbol: '🔨', image: '../assets/tarot/Three_of_Pentacles.jpg' },
+                { id: 'pentacles-4', suit: 'pentacles', number: 4, name: 'Four of Pentacles', meaning: 'Security, control, conservation', guidance: 'Hold on, but not too tight. Balance security and flow.', symbol: '🏦', image: '../assets/tarot/Four_of_Pentacles.jpg' },
+                { id: 'pentacles-5', suit: 'pentacles', number: 5, name: 'Five of Pentacles', meaning: 'Financial loss, poverty, isolation', guidance: 'Help is available. Look for the light.', symbol: '🌨️', image: '../assets/tarot/Five_of_Pentacles.jpg' },
+                { id: 'pentacles-6', suit: 'pentacles', number: 6, name: 'Six of Pentacles', meaning: 'Generosity, charity, sharing wealth', guidance: 'Give and receive. Balance the flow.', symbol: '🎁', image: '../assets/tarot/Six_of_Pentacles.jpg' },
+                { id: 'pentacles-7', suit: 'pentacles', number: 7, name: 'Seven of Pentacles', meaning: 'Patience, long-term view, perseverance', guidance: 'Assess progress. Harvest is coming.', symbol: '🌱', image: '../assets/tarot/Seven_of_Pentacles.jpg' },
+                { id: 'pentacles-8', suit: 'pentacles', number: 8, name: 'Eight of Pentacles', meaning: 'Skill development, craftsmanship, diligence', guidance: 'Master your craft. Practice makes perfect.', symbol: '🔧', image: '../assets/tarot/Eight_of_Pentacles.jpg' },
+                { id: 'pentacles-9', suit: 'pentacles', number: 9, name: 'Nine of Pentacles', meaning: 'Abundance, luxury, self-sufficiency', guidance: 'Enjoy your success. You\'ve earned it.', symbol: '🦚', image: '../assets/tarot/Nine_of_Pentacles.jpg' },
+                { id: 'pentacles-10', suit: 'pentacles', number: 10, name: 'Ten of Pentacles', meaning: 'Wealth, legacy, family, long-term success', guidance: 'Build lasting wealth. Create a legacy.', symbol: '🏰', image: '../assets/tarot/Ten_of_Pentacles.jpg' },
+                { id: 'pentacles-page', suit: 'pentacles', number: 11, name: 'Page of Pentacles', meaning: 'Ambition, desire to learn, new venture', guidance: 'Study and prepare. Opportunity knocks.', symbol: '📚', image: '../assets/tarot/Page_of_Pentacles.jpg' },
+                { id: 'pentacles-knight', suit: 'pentacles', number: 12, name: 'Knight of Pentacles', meaning: 'Efficiency, routine, hard work', guidance: 'Stay the course. Consistent effort pays.', symbol: '🐂', image: '../assets/tarot/Knight_of_Pentacles.jpg' },
+                { id: 'pentacles-queen', suit: 'pentacles', number: 13, name: 'Queen of Pentacles', meaning: 'Practical, nurturing, providing financially', guidance: 'Nurture abundance. Create comfort and security.', symbol: '🌿', image: '../assets/tarot/Queen_of_Pentacles.jpg' },
+                { id: 'pentacles-king', suit: 'pentacles', number: 14, name: 'King of Pentacles', meaning: 'Wealth, business success, leadership', guidance: 'Build your empire. Lead with wisdom.', symbol: '👑', image: '../assets/tarot/King_of_Pentacles.jpg' }
             ];
         }
 
@@ -3704,7 +3907,7 @@
             showLoadingSpinner();
             document.getElementById('inputSection').style.display = 'none';
             
-            // Simulate calculation time (2.5s to match animation)
+            // Simulate calculation time (3.5s to match orbital animation convergence)
             setTimeout(() => {
                 generateForecast();
                 hideLoadingSpinner();
@@ -3712,7 +3915,7 @@
                 document.getElementById('forecastOutput').classList.add('show');
                 document.getElementById('howToUse').style.display = 'block';
                 document.getElementById('forecastOutput').scrollIntoView({ behavior: 'smooth' });
-            }, 2500);
+            }, 3500);
         });
 
         // Input Validation
@@ -3830,6 +4033,9 @@
             gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
             focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses) {
             
+            // Get frequency recommendation
+            const frequencyData = getDailyFrequency(zodiac, moonPhase, focus);
+            
             return `
                 <div class="forecast-header">
                     <h2>YOUR QUANTUM FORECAST</h2>
@@ -3850,7 +4056,66 @@
                     </div>
                 </div>
 
-                <div class="system-section expanded">
+                <div class="action-section">
+                    <h3>💡 YOUR DAILY ACTION PLAN</h3>
+                    ${getEnhancedActionItems(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, planetaryHour, moonPhase, focus, challenge)}
+                </div>
+
+                ${crossAnalysis.agreements.length > 0 ? `
+                <div class="cross-reference-section agreement">
+                    <h3>✨ SYSTEM AGREEMENTS - Where Your Cosmic DNA Aligns</h3>
+                    ${crossAnalysis.agreements.map(a => `
+                        <div class="cross-item">
+                            <div class="system-badges">${a.systems.map(s => `<span class="badge">${s}</span>`).join(' + ')}</div>
+                            <p>${a.insight}</p>
+                        </div>
+                    `).join('')}
+                </div>
+                ` : ''}
+
+                ${crossAnalysis.tensions.length > 0 ? `
+                <div class="cross-reference-section tension">
+                    <h3>⚡ DYNAMIC TENSIONS - Your Growth Edges</h3>
+                    ${crossAnalysis.tensions.map(t => `
+                        <div class="cross-item">
+                            <div class="system-badges">${t.systems.map(s => `<span class="badge tension">${s}</span>`).join(' ⟷ ')}</div>
+                            <p>${t.insight}</p>
+                        </div>
+                    `).join('')}
+                </div>
+                ` : ''}
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>⭐ ASTROLOGY</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getEnhancedWesternAstrologyForecast(zodiac, risingSign, moonSign, birthTime, birthLocation, moonPhase)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🐉 CHINESE ZODIAC</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getEnhancedChineseZodiacForecast(chinese, moonPhase)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🔢 NUMEROLOGY</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getEnhancedNumerologyForecast(lifePath, personalYear, birth)}
+                    </div>
+                </div>
+
+                <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
                         <h3>🪐 PLANETARY INFLUENCES</h3>
                         <span class="system-toggle">▼</span>
@@ -3910,60 +4175,6 @@
                     </div>
                 </div>
 
-                ${crossAnalysis.agreements.length > 0 ? `
-                <div class="cross-reference-section agreement">
-                    <h3>✨ SYSTEM AGREEMENTS - Where Your Cosmic DNA Aligns</h3>
-                    ${crossAnalysis.agreements.map(a => `
-                        <div class="cross-item">
-                            <div class="system-badges">${a.systems.map(s => `<span class="badge">${s}</span>`).join(' + ')}</div>
-                            <p>${a.insight}</p>
-                        </div>
-                    `).join('')}
-                </div>
-                ` : ''}
-
-                ${crossAnalysis.tensions.length > 0 ? `
-                <div class="cross-reference-section tension">
-                    <h3>⚡ DYNAMIC TENSIONS - Your Growth Edges</h3>
-                    ${crossAnalysis.tensions.map(t => `
-                        <div class="cross-item">
-                            <div class="system-badges">${t.systems.map(s => `<span class="badge tension">${s}</span>`).join(' ⟷ ')}</div>
-                            <p>${t.insight}</p>
-                        </div>
-                    `).join('')}
-                </div>
-                ` : ''}
-
-                <div class="system-section expanded">
-                    <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>⭐ ASTROLOGY</h3>
-                        <span class="system-toggle">▼</span>
-                    </div>
-                    <div class="system-content">
-                        ${getEnhancedWesternAstrologyForecast(zodiac, risingSign, moonSign, birthTime, birthLocation, moonPhase)}
-                    </div>
-                </div>
-
-                <div class="system-section">
-                    <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>🐉 CHINESE ZODIAC</h3>
-                        <span class="system-toggle">▼</span>
-                    </div>
-                    <div class="system-content">
-                        ${getEnhancedChineseZodiacForecast(chinese, moonPhase)}
-                    </div>
-                </div>
-
-                <div class="system-section">
-                    <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>🔢 NUMEROLOGY</h3>
-                        <span class="system-toggle">▼</span>
-                    </div>
-                    <div class="system-content">
-                        ${getEnhancedNumerologyForecast(lifePath, personalYear, birth)}
-                    </div>
-                </div>
-
                 ${fullName ? `
                 <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
@@ -3975,6 +4186,30 @@
                     </div>
                 </div>
                 ` : ''}
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🔊 FREQUENCY HEALING</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        <div class="frequency-display">
+                            <div class="frequency-main">
+                                <span class="frequency-hz">${frequencyData.hz} Hz</span>
+                                <span class="frequency-name">${frequencyData.name}</span>
+                            </div>
+                            <div class="frequency-details">
+                                <p><strong>Cosmic Alignment:</strong> ${frequencyData.alignment}</p>
+                                <p><strong>Benefits:</strong> ${frequencyData.benefits}</p>
+                                <p><strong>How to Use:</strong> ${frequencyData.usage}</p>
+                                <p><strong>Best Time:</strong> ${frequencyData.bestTime}</p>
+                            </div>
+                            <a href="../genesis/index-enhanced.html?freq=${frequencyData.hz}" class="frequency-link" target="_blank">
+                                🎵 Play This Frequency in Quantum Genesis
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
@@ -3997,11 +4232,6 @@
                     </div>
                 </div>
 
-                <div class="action-section">
-                    <h3>💡 YOUR DAILY ACTION PLAN</h3>
-                    ${getEnhancedActionItems(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, planetaryHour, moonPhase, focus, challenge)}
-                </div>
-
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
                 <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
 
@@ -4014,6 +4244,9 @@
                         </button>
                         <button class="share-btn facebook" onclick="shareToFacebook()">
                             <span>f</span> Share
+                        </button>
+                        <button class="share-btn whatsapp" onclick="shareToWhatsApp('Just got my ${zodiac.name} ${zodiac.symbol} cosmic forecast! 🌌✨ Check it out:')">
+                            <span>💬</span> WhatsApp
                         </button>
                         <button class="share-btn copy" onclick="copyForecastLink()">
                             <span>📋</span> Copy Link
@@ -4177,6 +4410,9 @@
                         <button class="share-btn facebook" onclick="shareToFacebook()">
                             <span>f</span> Share
                         </button>
+                        <button class="share-btn whatsapp" onclick="shareToWhatsApp('My ${zodiac.name} ${zodiac.symbol} weekly cosmic forecast! 🌌✨')">
+                            <span>💬</span> WhatsApp
+                        </button>
                         <button class="share-btn copy" onclick="copyForecastLink()">
                             <span>📋</span> Copy Link
                         </button>
@@ -4289,6 +4525,9 @@
                         </button>
                         <button class="share-btn facebook" onclick="shareToFacebook()">
                             <span>f</span> Share
+                        </button>
+                        <button class="share-btn whatsapp" onclick="shareToWhatsApp('My ${zodiac.name} ${zodiac.symbol} monthly cosmic forecast! 🌙✨')">
+                            <span>💬</span> WhatsApp
                         </button>
                         <button class="share-btn copy" onclick="copyForecastLink()">
                             <span>📋</span> Copy Link
@@ -4409,6 +4648,12 @@
                         </button>
                         <button class="share-btn facebook" onclick="shareToFacebook()">
                             <span>f</span> Share
+                        </button>
+                        <button class="share-btn whatsapp" onclick="shareToWhatsApp('My ${zodiac.name} ${zodiac.symbol} ${currentYear} cosmic forecast! 🌟✨')">
+                            <span>💬</span> WhatsApp
+                        </button>
+                        <button class="share-btn email" onclick="shareViaEmail('My ${currentYear} Cosmic Forecast', 'I just got my ${zodiac.name} yearly forecast with Personal Year ${personalYear} insights!')">
+                            <span>✉️</span> Email
                         </button>
                         <button class="share-btn copy" onclick="copyForecastLink()">
                             <span>📋</span> Copy Link
@@ -4673,17 +4918,154 @@
 
         function getTransitForecast(sign) {
             const today = new Date();
-            const dayOfWeek = today.getDay();
-            const transits = [
-                `Mercury's current position enhances communication and mental clarity for ${sign}. Ideas flow and connections strengthen.`,
-                `Venus brings harmony to relationships and finances. Beauty and pleasure are favored for ${sign} today.`,
-                `Mars energizes action and assertion. ${sign} has extra physical and motivational energy available.`,
-                `Jupiter expands opportunities and optimism. ${sign} may encounter luck and growth in unexpected areas.`,
-                `Saturn calls for discipline and structure. ${sign} benefits from focused, long-term thinking today.`,
-                `The current planetary alignment supports ${sign}'s creative expression and authentic self-presentation.`,
-                `Neptune's influence enhances ${sign}'s intuition and spiritual sensitivity. Dreams may carry messages.`
+            const dayOfMonth = today.getDate();
+            const month = today.getMonth();
+            
+            // Get current planetary positions (approximate based on date)
+            const sunSign = getSunSignFromDate(today);
+            const mercurySign = getMercurySign(today);
+            const venusSign = getVenusSign(today);
+            
+            // Get aspect relationship to birth sign
+            const sunAspect = getAspectBetweenSigns(sign, sunSign);
+            const mercuryAspect = getAspectBetweenSigns(sign, mercurySign);
+            const venusAspect = getAspectBetweenSigns(sign, venusSign);
+            
+            let forecast = `<strong>☉ Sun in ${sunSign}:</strong> ${getSunTransitMeaning(sunAspect, sign)}`;
+            forecast += `<br><br><strong>☿ Mercury in ${mercurySign}:</strong> ${getMercuryTransitMeaning(mercuryAspect, sign)}`;
+            forecast += `<br><br><strong>♀ Venus in ${venusSign}:</strong> ${getVenusTransitMeaning(venusAspect, sign)}`;
+            forecast += `<br><br><strong>🌟 Current Cosmic Theme:</strong> ${getCosmicTheme(dayOfMonth)}`;
+            
+            return forecast;
+        }
+        
+        function getSunSignFromDate(date) {
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            const sign = getZodiacSign(month, day);
+            return sign.name;
+        }
+        
+        function getMercurySign(date) {
+            // Mercury is typically within 28° of the Sun, so approximate
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            // Mercury shifts slightly from Sun position based on date
+            const offset = (date.getDate() % 10) - 5;
+            const adjustedDay = Math.max(1, Math.min(28, day + offset));
+            const sign = getZodiacSign(month, adjustedDay);
+            return sign.name;
+        }
+        
+        function getVenusSign(date) {
+            // Venus is typically within 47° of the Sun
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            // Venus moves slower, offset by ~1 sign ahead or behind
+            const offset = (date.getMonth() % 3) * 10 - 10;
+            let adjustedMonth = month;
+            let adjustedDay = day + offset;
+            if (adjustedDay > 30) { adjustedMonth++; adjustedDay -= 30; }
+            if (adjustedDay < 1) { adjustedMonth--; adjustedDay += 30; }
+            if (adjustedMonth > 12) adjustedMonth = 1;
+            if (adjustedMonth < 1) adjustedMonth = 12;
+            const sign = getZodiacSign(adjustedMonth, Math.max(1, Math.min(28, adjustedDay)));
+            return sign.name;
+        }
+        
+        function getAspectBetweenSigns(sign1, sign2) {
+            const signs = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
+            const i1 = signs.indexOf(sign1);
+            const i2 = signs.indexOf(sign2);
+            if (i1 === -1 || i2 === -1) return 'neutral';
+            
+            const diff = Math.abs(i1 - i2);
+            const aspect = Math.min(diff, 12 - diff);
+            
+            if (aspect === 0) return 'conjunction'; // Same sign - intensified
+            if (aspect === 1) return 'semi-sextile'; // Adjacent - adjustment
+            if (aspect === 2) return 'sextile'; // 60° - harmonious opportunity
+            if (aspect === 3) return 'square'; // 90° - tension/action
+            if (aspect === 4) return 'trine'; // 120° - easy flow
+            if (aspect === 5) return 'quincunx'; // 150° - adjustment needed
+            if (aspect === 6) return 'opposition'; // 180° - awareness/balance
+            return 'neutral';
+        }
+        
+        function getSunTransitMeaning(aspect, birthSign) {
+            const meanings = {
+                'conjunction': `The Sun illuminates your sign directly! Peak vitality and visibility. Your authentic self shines brightly. This is YOUR time.`,
+                'trine': `Harmonious energy flows to ${birthSign}. Creative expression and confidence are enhanced. Opportunities arise naturally.`,
+                'sextile': `Pleasant aspects support ${birthSign}. Favorable conditions for communication and short trips. Social connections thrive.`,
+                'square': `Dynamic tension activates growth for ${birthSign}. Challenges become catalysts. Take decisive action where needed.`,
+                'opposition': `Awareness through relationship is the theme. Others mirror important lessons. Balance self with others.`,
+                'semi-sextile': `Subtle adjustments required. Fine-tune your approach. Small changes yield big results.`,
+                'quincunx': `Recalibration energy. Something needs adjustment—health, routines, or perspectives. Flexibility is key.`
+            };
+            return meanings[aspect] || `Current solar energy supports ${birthSign}'s natural expression.`;
+        }
+        
+        function getMercuryTransitMeaning(aspect, birthSign) {
+            const meanings = {
+                'conjunction': `Mental clarity peaks! Communication, writing, and learning are supercharged. Your words carry extra weight.`,
+                'trine': `Smooth mental flow for ${birthSign}. Ideas come easily, conversations are productive, and learning accelerates.`,
+                'sextile': `Favorable for networking and information exchange. Good news may arrive. Curiosity leads to discovery.`,
+                'square': `Mental restlessness drives innovation. Channel nervous energy into problem-solving. Speak thoughtfully.`,
+                'opposition': `Others' perspectives inform your thinking. Dialogue leads to understanding. Listen as much as you speak.`,
+                'semi-sextile': `Minor adjustments in communication style improve outcomes. Pay attention to details.`,
+                'quincunx': `Review and revise. Something in your thinking or communication needs updating.`
+            };
+            return meanings[aspect] || `Mercury supports ${birthSign}'s intellectual endeavors today.`;
+        }
+        
+        function getVenusTransitMeaning(aspect, birthSign) {
+            const meanings = {
+                'conjunction': `Love and beauty highlight ${birthSign}! Attraction power increases. Aesthetic sensibilities peak. Romance favored.`,
+                'trine': `Pleasure and harmony flow easily. Relationships smooth, finances stable, creativity inspired.`,
+                'sextile': `Social charm is enhanced. Pleasant encounters and small luxuries brighten the day.`,
+                'square': `Desires create motivation. What you want may require effort—but the pursuit has value.`,
+                'opposition': `Relationship dynamics come into focus. Balance giving and receiving. Negotiate with grace.`,
+                'semi-sextile': `Small pleasures bring joy. Minor adjustments improve relationships.`,
+                'quincunx': `Values may need reconsideration. What brings true satisfaction? Align actions with authentic desires.`
+            };
+            return meanings[aspect] || `Venus graces ${birthSign} with harmony and attraction.`;
+        }
+        
+        function getCosmicTheme(dayOfMonth) {
+            const themes = [
+                'New beginnings and fresh intentions are cosmically supported.',
+                'Building momentum—consistent effort creates lasting results.',
+                'Communication channels open. Express what matters most.',
+                'Foundations matter. Strengthen what supports your growth.',
+                'Dynamic energy—embrace healthy competition and ambition.',
+                'Beauty and connection are emphasized. Appreciate the aesthetic.',
+                'Inner wisdom speaks clearly. Trust your deeper knowing.',
+                'Transformation is possible. Release what no longer serves.',
+                'Expansion beckons. Think bigger and aim higher.',
+                'Structure and discipline yield achievement. Focus matters.',
+                'Innovation and originality are rewarded. Break from routine.',
+                'Spiritual sensitivity heightens. Honor the mystical.',
+                'Leadership opportunities arise. Step into your authority.',
+                'Partnership energy flows. Collaborate and co-create.',
+                'The halfway point invites reflection. Assess and adjust.',
+                'Creativity and self-expression demand attention.',
+                'Balance is the lesson. Weigh opposing forces.',
+                'Depth and intensity reveal hidden truths.',
+                'Adventure calls. Explore new territory.',
+                'Achievement focus. Climb toward your goals.',
+                'Community matters. Your tribe supports you.',
+                'Dreams and visions carry important messages.',
+                'Initiative and courage are your allies.',
+                'Stability and comfort deserve attention.',
+                'Ideas flow freely. Capture and share them.',
+                'Emotional intelligence guides decisions.',
+                'Confidence radiates naturally. Own your light.',
+                'Details matter. Precision creates excellence.',
+                'Harmony in relationships brings peace.',
+                'Power and regeneration are themes.',
+                'Closing cycles—completion before new beginnings.'
             ];
-            return transits[dayOfWeek] + ' Trust your instincts about timing—the cosmic clock is working in your favor.';
+            return themes[(dayOfMonth - 1) % themes.length];
         }
 
         // PHASE 2: Enhanced Chinese Zodiac Forecast
@@ -5058,6 +5440,69 @@
                 return `Combined resonance points to initiation. Today is excellent for beginning new projects or asserting your leadership.`;
             }
             return `Today's combined ${combinedNum}-frequency suggests focusing on ${getReducedTheme(combinedNum)}. Let your natural ${getReducedTheme(nameNum)} meet the day's ${getReducedTheme(dateNum)} energy.`;
+        }
+
+        // PHASE 2: Daily Frequency Recommendation
+        function getDailyFrequency(zodiac, moonPhase, focus) {
+            // Frequencies mapped to zodiac elements
+            const elementFrequencies = {
+                'Fire': { hz: 528, name: 'Love & Transformation', element: 'Fire signs resonate with transformation frequencies' },
+                'Earth': { hz: 396, name: 'Liberation & Grounding', element: 'Earth signs benefit from grounding liberation frequencies' },
+                'Air': { hz: 741, name: 'Awakening & Expression', element: 'Air signs amplify with expression frequencies' },
+                'Water': { hz: 639, name: 'Connection & Healing', element: 'Water signs harmonize with heart connection frequencies' }
+            };
+            
+            // Moon phase frequency modifiers
+            const moonFrequencies = {
+                'New Moon': { hz: 174, name: 'Foundation', modifier: 'New Moon amplifies foundation frequencies for new beginnings' },
+                'Waxing Crescent': { hz: 285, name: 'Quantum Cognition', modifier: 'Waxing energy supports mental expansion' },
+                'First Quarter': { hz: 396, name: 'Liberation', modifier: 'First Quarter releases blockages' },
+                'Waxing Gibbous': { hz: 417, name: 'Change', modifier: 'Building energy facilitates transformation' },
+                'Full Moon': { hz: 528, name: 'Miracle Tone', modifier: 'Full Moon maximizes manifestation power' },
+                'Waning Gibbous': { hz: 639, name: 'Relationships', modifier: 'Gratitude phase deepens connections' },
+                'Last Quarter': { hz: 741, name: 'Awakening', modifier: 'Release phase opens intuition' },
+                'Waning Crescent': { hz: 852, name: 'Intuition', modifier: 'Dark moon heightens spiritual perception' }
+            };
+            
+            // Focus-based frequencies
+            const focusFrequencies = {
+                'Career': { hz: 852, name: 'Spiritual Order', benefit: 'aligns your path with higher purpose' },
+                'Love': { hz: 639, name: 'Heart Connection', benefit: 'opens heart chakra for relationship healing' },
+                'Health': { hz: 528, name: 'DNA Repair', benefit: 'supports cellular regeneration and vitality' },
+                'Wealth': { hz: 888, name: 'Abundance', benefit: 'activates prosperity consciousness' },
+                'Creativity': { hz: 741, name: 'Expression', benefit: 'unlocks creative channels and intuition' },
+                'Spirituality': { hz: 963, name: 'Divine Connection', benefit: 'connects to higher consciousness' },
+                'Family': { hz: 639, name: 'Harmony', benefit: 'promotes understanding and emotional bonds' },
+                'Learning': { hz: 285, name: 'Cognition', benefit: 'enhances memory and mental clarity' }
+            };
+            
+            // Get element from zodiac
+            const fireSign = ['Aries', 'Leo', 'Sagittarius'].includes(zodiac.name);
+            const earthSigns = ['Taurus', 'Virgo', 'Capricorn'].includes(zodiac.name);
+            const airSigns = ['Gemini', 'Libra', 'Aquarius'].includes(zodiac.name);
+            const waterSigns = ['Cancer', 'Scorpio', 'Pisces'].includes(zodiac.name);
+            
+            let element = 'Fire';
+            if (earthSigns) element = 'Earth';
+            if (airSigns) element = 'Air';
+            if (waterSigns) element = 'Water';
+            
+            const elementFreq = elementFrequencies[element];
+            const moonFreq = moonFrequencies[moonPhase.phase] || moonFrequencies['Full Moon'];
+            const focusFreq = focusFrequencies[focus] || focusFrequencies['Spirituality'];
+            
+            // Choose primary frequency based on moon phase (most immediate influence)
+            const primaryHz = moonFreq.hz;
+            const primaryName = moonFreq.name;
+            
+            return {
+                hz: primaryHz,
+                name: primaryName,
+                alignment: `${moonPhase.phase} energy combined with ${zodiac.name}'s ${element} nature suggests ${primaryHz} Hz for optimal resonance today.`,
+                benefits: `This frequency ${focusFreq.benefit}. Combined with your ${element} element, it ${elementFreq.element.toLowerCase()}.`,
+                usage: `Listen for 11-22 minutes during meditation, work, or sleep. Use headphones for best results. Combine with deep breathing.`,
+                bestTime: `${moonPhase.phase === 'Full Moon' ? 'Evening meditation under moonlight' : moonPhase.phase.includes('Waxing') ? 'Morning activation sessions' : 'Evening release rituals'}`
+            };
         }
 
         // PHASE 2: Enhanced Action Items
