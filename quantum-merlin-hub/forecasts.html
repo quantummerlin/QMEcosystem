@@ -721,6 +721,15 @@
             box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
         }
 
+        .tarot-image {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
         .tarot-symbol {
             font-size: 4rem;
             margin-bottom: 15px;
@@ -872,6 +881,72 @@
             margin-top: 10px;
             padding-top: 10px;
             border-top: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        /* Planetary Houses Section */
+        .houses-section {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15) 0%, rgba(0, 100, 255, 0.15) 100%);
+            border: 2px solid rgba(138, 43, 226, 0.6);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .houses-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: var(--neon-purple);
+            margin-bottom: 20px;
+        }
+
+        .houses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .house-item {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            transition: border-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .house-item:hover {
+            border-color: var(--neon-purple);
+            transform: translateY(-2px);
+        }
+
+        .house-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .planet-symbol {
+            font-size: 1.8rem;
+            color: var(--neon-gold);
+        }
+
+        .planet-name {
+            color: var(--neon-cyan);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .house-number {
+            color: var(--neon-purple);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .house-meaning {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
         }
 
         /* Cross-Reference Sections */
@@ -2926,9 +3001,101 @@
         });
 
         // ========================================
-        // TAROT CARD SYSTEM
+        // TAROT CARD SYSTEM - Full 78 Card Deck
         // ========================================
         
+        function getTarotDeck() {
+            return [
+                // MAJOR ARCANA (22 cards)
+                { id: '00-fool', suit: 'major', number: 0, name: 'The Fool', meaning: 'New beginnings, innocence, spontaneity, free spirit', guidance: 'Embrace the unknown. Take a leap of faith.', symbol: '🃏', image: '../assets/tarot/00-fool.jpg' },
+                { id: '01-magician', suit: 'major', number: 1, name: 'The Magician', meaning: 'Manifestation, resourcefulness, power, inspired action', guidance: 'You have all the tools you need. Act with intention.', symbol: '🎩', image: '../assets/tarot/01-magician.jpg' },
+                { id: '02-high-priestess', suit: 'major', number: 2, name: 'The High Priestess', meaning: 'Intuition, sacred knowledge, divine feminine, subconscious', guidance: 'Trust your inner voice. Look beyond the surface.', symbol: '🔮', image: '../assets/tarot/02-high-priestess.jpg' },
+                { id: '03-empress', suit: 'major', number: 3, name: 'The Empress', meaning: 'Femininity, beauty, nature, nurturing, abundance', guidance: 'Create and nurture. Beauty surrounds you.', symbol: '👑', image: '../assets/tarot/03-empress.jpg' },
+                { id: '04-emperor', suit: 'major', number: 4, name: 'The Emperor', meaning: 'Authority, establishment, structure, father figure', guidance: 'Take control. Build solid foundations.', symbol: '⚔️', image: '../assets/tarot/04-emperor.jpg' },
+                { id: '05-hierophant', suit: 'major', number: 5, name: 'The Hierophant', meaning: 'Spiritual wisdom, tradition, conformity, institutions', guidance: 'Seek wisdom from tradition. Honor what works.', symbol: '🏛️', image: '../assets/tarot/05-hierophant.jpg' },
+                { id: '06-lovers', suit: 'major', number: 6, name: 'The Lovers', meaning: 'Love, harmony, relationships, values alignment', guidance: 'Choose with your heart. Align your values.', symbol: '💕', image: '../assets/tarot/06-lovers.jpg' },
+                { id: '07-chariot', suit: 'major', number: 7, name: 'The Chariot', meaning: 'Control, willpower, success, determination', guidance: 'Move forward with confidence. Victory is yours.', symbol: '🏇', image: '../assets/tarot/07-chariot.jpg' },
+                { id: '08-strength', suit: 'major', number: 8, name: 'Strength', meaning: 'Strength, courage, patience, compassion', guidance: 'Inner strength conquers all. Be gentle yet firm.', symbol: '🦁', image: '../assets/tarot/08-strength.jpg' },
+                { id: '09-hermit', suit: 'major', number: 9, name: 'The Hermit', meaning: 'Soul searching, introspection, inner guidance', guidance: 'Go within. Your answers are there.', symbol: '🕯️', image: '../assets/tarot/09-hermit.jpg' },
+                { id: '10-wheel-of-fortune', suit: 'major', number: 10, name: 'Wheel of Fortune', meaning: 'Good luck, karma, life cycles, destiny', guidance: 'Fate is turning. Embrace the change.', symbol: '☸️', image: '../assets/tarot/10-wheel-of-fortune.jpg' },
+                { id: '11-justice', suit: 'major', number: 11, name: 'Justice', meaning: 'Justice, fairness, truth, cause and effect', guidance: 'Seek truth and balance. Karma is active.', symbol: '⚖️', image: '../assets/tarot/11-justice.jpg' },
+                { id: '12-hanged-man', suit: 'major', number: 12, name: 'The Hanged Man', meaning: 'Pause, surrender, letting go, new perspective', guidance: 'Release control. See from a new angle.', symbol: '🙃', image: '../assets/tarot/12-hanged-man.jpg' },
+                { id: '13-death', suit: 'major', number: 13, name: 'Death', meaning: 'Endings, transformation, transition, rebirth', guidance: 'Let go of the old. Transformation awaits.', symbol: '🦋', image: '../assets/tarot/13-death.jpg' },
+                { id: '14-temperance', suit: 'major', number: 14, name: 'Temperance', meaning: 'Balance, moderation, patience, purpose', guidance: 'Find the middle way. Blend opposing forces.', symbol: '🌊', image: '../assets/tarot/14-temperance.jpg' },
+                { id: '15-devil', suit: 'major', number: 15, name: 'The Devil', meaning: 'Shadow self, attachment, addiction, materialism', guidance: 'Break free from chains. Face your shadows.', symbol: '😈', image: '../assets/tarot/15-devil.jpg' },
+                { id: '16-tower', suit: 'major', number: 16, name: 'The Tower', meaning: 'Sudden change, upheaval, chaos, revelation', guidance: 'Breakdown leads to breakthrough. Trust the process.', symbol: '⚡', image: '../assets/tarot/16-tower.jpg' },
+                { id: '17-star', suit: 'major', number: 17, name: 'The Star', meaning: 'Hope, faith, purpose, renewal, spirituality', guidance: 'Hope shines bright. Your wishes are heard.', symbol: '⭐', image: '../assets/tarot/17-star.jpg' },
+                { id: '18-moon', suit: 'major', number: 18, name: 'The Moon', meaning: 'Illusion, fear, anxiety, subconscious, intuition', guidance: 'Not all is as it seems. Trust your intuition.', symbol: '🌙', image: '../assets/tarot/18-moon.jpg' },
+                { id: '19-sun', suit: 'major', number: 19, name: 'The Sun', meaning: 'Positivity, fun, warmth, success, vitality', guidance: 'Success and joy are yours. Shine brightly.', symbol: '☀️', image: '../assets/tarot/19-sun.jpg' },
+                { id: '20-judgment', suit: 'major', number: 20, name: 'Judgment', meaning: 'Judgment, rebirth, inner calling, absolution', guidance: 'Answer your calling. Forgive and be reborn.', symbol: '📯', image: '../assets/tarot/20-judgment.jpg' },
+                { id: '21-world', suit: 'major', number: 21, name: 'The World', meaning: 'Completion, integration, accomplishment, travel', guidance: 'You've come full circle. Celebrate completion.', symbol: '🌍', image: '../assets/tarot/21-world.jpg' },
+
+                // WANDS - Fire element, passion, creativity, action
+                { id: 'wands-ace', suit: 'wands', number: 1, name: 'Ace of Wands', meaning: 'Inspiration, new opportunities, creative spark', guidance: 'Seize the moment. New creative ventures await.', symbol: '🔥', image: '../assets/tarot/wands-ace.jpg' },
+                { id: 'wands-2', suit: 'wands', number: 2, name: 'Two of Wands', meaning: 'Planning, making decisions, leaving comfort', guidance: 'The world is yours. Make your choice.', symbol: '🗺️', image: '../assets/tarot/wands-2.jpg' },
+                { id: 'wands-3', suit: 'wands', number: 3, name: 'Three of Wands', meaning: 'Expansion, foresight, leadership', guidance: 'Your plans are manifesting. Look ahead.', symbol: '🚢', image: '../assets/tarot/wands-3.jpg' },
+                { id: 'wands-4', suit: 'wands', number: 4, name: 'Four of Wands', meaning: 'Celebration, harmony, home, community', guidance: 'Celebrate your achievements. You deserve it.', symbol: '🎉', image: '../assets/tarot/wands-4.jpg' },
+                { id: 'wands-5', suit: 'wands', number: 5, name: 'Five of Wands', meaning: 'Competition, conflict, disagreements', guidance: 'Channel competitive energy productively.', symbol: '⚔️', image: '../assets/tarot/wands-5.jpg' },
+                { id: 'wands-6', suit: 'wands', number: 6, name: 'Six of Wands', meaning: 'Victory, success, public recognition', guidance: 'You are winning. Accept the accolades.', symbol: '🏆', image: '../assets/tarot/wands-6.jpg' },
+                { id: 'wands-7', suit: 'wands', number: 7, name: 'Seven of Wands', meaning: 'Perseverance, defensive, maintaining control', guidance: 'Stand your ground. You have the advantage.', symbol: '🛡️', image: '../assets/tarot/wands-7.jpg' },
+                { id: 'wands-8', suit: 'wands', number: 8, name: 'Eight of Wands', meaning: 'Speed, action, air travel, movement', guidance: 'Things are moving fast. Go with the flow.', symbol: '✈️', image: '../assets/tarot/wands-8.jpg' },
+                { id: 'wands-9', suit: 'wands', number: 9, name: 'Nine of Wands', meaning: 'Resilience, courage, persistence', guidance: 'Almost there. One more push to victory.', symbol: '💪', image: '../assets/tarot/wands-9.jpg' },
+                { id: 'wands-10', suit: 'wands', number: 10, name: 'Ten of Wands', meaning: 'Burden, responsibility, hard work', guidance: 'Delegate or release. Don't carry it all alone.', symbol: '🎒', image: '../assets/tarot/wands-10.jpg' },
+                { id: 'wands-page', suit: 'wands', number: 11, name: 'Page of Wands', meaning: 'Enthusiasm, exploration, discovery', guidance: 'Be curious. Adventure calls.', symbol: '🧭', image: '../assets/tarot/wands-page.jpg' },
+                { id: 'wands-knight', suit: 'wands', number: 12, name: 'Knight of Wands', meaning: 'Energy, passion, adventure, impulsiveness', guidance: 'Take bold action. Move with confidence.', symbol: '🏇', image: '../assets/tarot/wands-knight.jpg' },
+                { id: 'wands-queen', suit: 'wands', number: 13, name: 'Queen of Wands', meaning: 'Confidence, independence, determination', guidance: 'Own your power. Lead with charisma.', symbol: '👑', image: '../assets/tarot/wands-queen.jpg' },
+                { id: 'wands-king', suit: 'wands', number: 14, name: 'King of Wands', meaning: 'Leadership, vision, entrepreneurial', guidance: 'Lead with vision. Inspire others.', symbol: '🦁', image: '../assets/tarot/wands-king.jpg' },
+
+                // CUPS - Water element, emotions, relationships, intuition
+                { id: 'cups-ace', suit: 'cups', number: 1, name: 'Ace of Cups', meaning: 'Love, new relationships, emotional awakening', guidance: 'Open your heart. Love flows in.', symbol: '💖', image: '../assets/tarot/cups-ace.jpg' },
+                { id: 'cups-2', suit: 'cups', number: 2, name: 'Two of Cups', meaning: 'Partnership, unity, attraction', guidance: 'Connection deepens. Unity forms.', symbol: '💑', image: '../assets/tarot/cups-2.jpg' },
+                { id: 'cups-3', suit: 'cups', number: 3, name: 'Three of Cups', meaning: 'Celebration, friendship, community', guidance: 'Celebrate with loved ones. Joy multiplies.', symbol: '🥂', image: '../assets/tarot/cups-3.jpg' },
+                { id: 'cups-4', suit: 'cups', number: 4, name: 'Four of Cups', meaning: 'Apathy, contemplation, reevaluation', guidance: 'Look beyond disappointment. New gifts await.', symbol: '🤔', image: '../assets/tarot/cups-4.jpg' },
+                { id: 'cups-5', suit: 'cups', number: 5, name: 'Five of Cups', meaning: 'Loss, grief, disappointment', guidance: 'Acknowledge loss, but see what remains.', symbol: '😢', image: '../assets/tarot/cups-5.jpg' },
+                { id: 'cups-6', suit: 'cups', number: 6, name: 'Six of Cups', meaning: 'Nostalgia, childhood memories, innocence', guidance: 'Reconnect with your inner child. Simple joys.', symbol: '🌈', image: '../assets/tarot/cups-6.jpg' },
+                { id: 'cups-7', suit: 'cups', number: 7, name: 'Seven of Cups', meaning: 'Choices, illusion, fantasy, wishful thinking', guidance: 'Choose wisely. Not all that glitters is gold.', symbol: '✨', image: '../assets/tarot/cups-7.jpg' },
+                { id: 'cups-8', suit: 'cups', number: 8, name: 'Eight of Cups', meaning: 'Walking away, seeking deeper meaning', guidance: 'Leave behind what no longer serves you.', symbol: '🚶', image: '../assets/tarot/cups-8.jpg' },
+                { id: 'cups-9', suit: 'cups', number: 9, name: 'Nine of Cups', meaning: 'Satisfaction, contentment, wishes fulfilled', guidance: 'Your wish is granted. Savor the moment.', symbol: '🌟', image: '../assets/tarot/cups-9.jpg' },
+                { id: 'cups-10', suit: 'cups', number: 10, name: 'Ten of Cups', meaning: 'Harmony, family, emotional fulfillment', guidance: 'Domestic bliss. Happiness at home.', symbol: '🏡', image: '../assets/tarot/cups-10.jpg' },
+                { id: 'cups-page', suit: 'cups', number: 11, name: 'Page of Cups', meaning: 'Creative opportunities, intuitive messages', guidance: 'Follow your heart. Creative inspiration flows.', symbol: '🎨', image: '../assets/tarot/cups-page.jpg' },
+                { id: 'cups-knight', suit: 'cups', number: 12, name: 'Knight of Cups', meaning: 'Romance, charm, imagination', guidance: 'Follow your dreams. Romance beckons.', symbol: '💐', image: '../assets/tarot/cups-knight.jpg' },
+                { id: 'cups-queen', suit: 'cups', number: 13, name: 'Queen of Cups', meaning: 'Compassion, intuition, emotional security', guidance: 'Trust your intuition. Nurture with love.', symbol: '🧜‍♀️', image: '../assets/tarot/cups-queen.jpg' },
+                { id: 'cups-king', suit: 'cups', number: 14, name: 'King of Cups', meaning: 'Emotional balance, diplomacy, compassion', guidance: 'Lead with empathy. Balance head and heart.', symbol: '🌊', image: '../assets/tarot/cups-king.jpg' },
+
+                // SWORDS - Air element, intellect, communication, conflict
+                { id: 'swords-ace', suit: 'swords', number: 1, name: 'Ace of Swords', meaning: 'Breakthrough, clarity, new ideas', guidance: 'Truth cuts through. Clarity emerges.', symbol: '⚡', image: '../assets/tarot/swords-ace.jpg' },
+                { id: 'swords-2', suit: 'swords', number: 2, name: 'Two of Swords', meaning: 'Difficult decisions, stalemate, avoidance', guidance: 'Remove the blindfold. Make a choice.', symbol: '⚖️', image: '../assets/tarot/swords-2.jpg' },
+                { id: 'swords-3', suit: 'swords', number: 3, name: 'Three of Swords', meaning: 'Heartbreak, emotional pain, sorrow', guidance: 'Feel the pain. Healing follows.', symbol: '💔', image: '../assets/tarot/swords-3.jpg' },
+                { id: 'swords-4', suit: 'swords', number: 4, name: 'Four of Swords', meaning: 'Rest, recovery, contemplation', guidance: 'Rest now. Recharge your batteries.', symbol: '🧘', image: '../assets/tarot/swords-4.jpg' },
+                { id: 'swords-5', suit: 'swords', number: 5, name: 'Five of Swords', meaning: 'Conflict, tension, loss', guidance: 'Choose your battles. Some wins aren't worth it.', symbol: '⚔️', image: '../assets/tarot/swords-5.jpg' },
+                { id: 'swords-6', suit: 'swords', number: 6, name: 'Six of Swords', meaning: 'Transition, change, moving on', guidance: 'Rough waters behind you. Calmer ahead.', symbol: '⛵', image: '../assets/tarot/swords-6.jpg' },
+                { id: 'swords-7', suit: 'swords', number: 7, name: 'Seven of Swords', meaning: 'Deception, trickery, strategy', guidance: 'Be strategic. Watch for hidden agendas.', symbol: '🎭', image: '../assets/tarot/swords-7.jpg' },
+                { id: 'swords-8', suit: 'swords', number: 8, name: 'Eight of Swords', meaning: 'Restriction, imprisonment, self-imposed limits', guidance: 'You're freer than you think. Remove the blindfold.', symbol: '🔒', image: '../assets/tarot/swords-8.jpg' },
+                { id: 'swords-9', suit: 'swords', number: 9, name: 'Nine of Swords', meaning: 'Anxiety, worry, nightmares', guidance: 'Your fears are exaggerated. Dawn comes.', symbol: '😰', image: '../assets/tarot/swords-9.jpg' },
+                { id: 'swords-10', suit: 'swords', number: 10, name: 'Ten of Swords', meaning: 'Painful endings, rock bottom, betrayal', guidance: 'It's over. Only up from here.', symbol: '🗡️', image: '../assets/tarot/swords-10.jpg' },
+                { id: 'swords-page', suit: 'swords', number: 11, name: 'Page of Swords', meaning: 'Curiosity, mental energy, new ideas', guidance: 'Ask questions. Investigate thoroughly.', symbol: '🔍', image: '../assets/tarot/swords-page.jpg' },
+                { id: 'swords-knight', suit: 'swords', number: 12, name: 'Knight of Swords', meaning: 'Ambition, action, driven to succeed', guidance: 'Act decisively. Cut through obstacles.', symbol: '🏃', image: '../assets/tarot/swords-knight.jpg' },
+                { id: 'swords-queen', suit: 'swords', number: 13, name: 'Queen of Swords', meaning: 'Independent, clear thinking, direct', guidance: 'Speak truth. Think clearly. Decide wisely.', symbol: '🦅', image: '../assets/tarot/swords-queen.jpg' },
+                { id: 'swords-king', suit: 'swords', number: 14, name: 'King of Swords', meaning: 'Authority, truth, intellectual power', guidance: 'Use intellect and ethics. Judge fairly.', symbol: '⚖️', image: '../assets/tarot/swords-king.jpg' },
+
+                // PENTACLES - Earth element, material world, finances, career
+                { id: 'pentacles-ace', suit: 'pentacles', number: 1, name: 'Ace of Pentacles', meaning: 'New financial opportunity, prosperity, manifestation', guidance: 'Plant seeds now. Abundance grows.', symbol: '💰', image: '../assets/tarot/pentacles-ace.jpg' },
+                { id: 'pentacles-2', suit: 'pentacles', number: 2, name: 'Two of Pentacles', meaning: 'Balance, adaptability, time management', guidance: 'Juggle with grace. Stay flexible.', symbol: '🤹', image: '../assets/tarot/pentacles-2.jpg' },
+                { id: 'pentacles-3', suit: 'pentacles', number: 3, name: 'Three of Pentacles', meaning: 'Teamwork, collaboration, learning', guidance: 'Work together. Master your craft.', symbol: '🔨', image: '../assets/tarot/pentacles-3.jpg' },
+                { id: 'pentacles-4', suit: 'pentacles', number: 4, name: 'Four of Pentacles', meaning: 'Security, control, conservation', guidance: 'Hold on, but not too tight. Balance security and flow.', symbol: '🏦', image: '../assets/tarot/pentacles-4.jpg' },
+                { id: 'pentacles-5', suit: 'pentacles', number: 5, name: 'Five of Pentacles', meaning: 'Financial loss, poverty, isolation', guidance: 'Help is available. Look for the light.', symbol: '🌨️', image: '../assets/tarot/pentacles-5.jpg' },
+                { id: 'pentacles-6', suit: 'pentacles', number: 6, name: 'Six of Pentacles', meaning: 'Generosity, charity, sharing wealth', guidance: 'Give and receive. Balance the flow.', symbol: '🎁', image: '../assets/tarot/pentacles-6.jpg' },
+                { id: 'pentacles-7', suit: 'pentacles', number: 7, name: 'Seven of Pentacles', meaning: 'Patience, long-term view, perseverance', guidance: 'Assess progress. Harvest is coming.', symbol: '🌱', image: '../assets/tarot/pentacles-7.jpg' },
+                { id: 'pentacles-8', suit: 'pentacles', number: 8, name: 'Eight of Pentacles', meaning: 'Skill development, craftsmanship, diligence', guidance: 'Master your craft. Practice makes perfect.', symbol: '🔧', image: '../assets/tarot/pentacles-8.jpg' },
+                { id: 'pentacles-9', suit: 'pentacles', number: 9, name: 'Nine of Pentacles', meaning: 'Abundance, luxury, self-sufficiency', guidance: 'Enjoy your success. You've earned it.', symbol: '🦚', image: '../assets/tarot/pentacles-9.jpg' },
+                { id: 'pentacles-10', suit: 'pentacles', number: 10, name: 'Ten of Pentacles', meaning: 'Wealth, legacy, family, long-term success', guidance: 'Build lasting wealth. Create a legacy.', symbol: '🏰', image: '../assets/tarot/pentacles-10.jpg' },
+                { id: 'pentacles-page', suit: 'pentacles', number: 11, name: 'Page of Pentacles', meaning: 'Ambition, desire to learn, new venture', guidance: 'Study and prepare. Opportunity knocks.', symbol: '📚', image: '../assets/tarot/pentacles-page.jpg' },
+                { id: 'pentacles-knight', suit: 'pentacles', number: 12, name: 'Knight of Pentacles', meaning: 'Efficiency, routine, hard work', guidance: 'Stay the course. Consistent effort pays.', symbol: '🐂', image: '../assets/tarot/pentacles-knight.jpg' },
+                { id: 'pentacles-queen', suit: 'pentacles', number: 13, name: 'Queen of Pentacles', meaning: 'Practical, nurturing, providing financially', guidance: 'Nurture abundance. Create comfort and security.', symbol: '🌿', image: '../assets/tarot/pentacles-queen.jpg' },
+                { id: 'pentacles-king', suit: 'pentacles', number: 14, name: 'King of Pentacles', meaning: 'Wealth, business success, leadership', guidance: 'Build your empire. Lead with wisdom.', symbol: '👑', image: '../assets/tarot/pentacles-king.jpg' }
+            ];
+        }
+
         function getTarotCard(birthDate, timeframe = 'daily') {
             const birth = new Date(birthDate);
             const today = new Date();
@@ -2946,33 +3113,9 @@
                 seed = today.getFullYear() + birth.getFullYear();
             }
             
-            const majorArcana = [
-                { number: 0, name: 'The Fool', meaning: 'New beginnings, innocence, spontaneity, free spirit', guidance: 'Embrace the unknown. Take a leap of faith.', symbol: '🃏' },
-                { number: 1, name: 'The Magician', meaning: 'Manifestation, resourcefulness, power, inspired action', guidance: 'You have all the tools you need. Act with intention.', symbol: '🎩' },
-                { number: 2, name: 'The High Priestess', meaning: 'Intuition, sacred knowledge, divine feminine, subconscious', guidance: 'Trust your inner voice. Look beyond the surface.', symbol: '🔮' },
-                { number: 3, name: 'The Empress', meaning: 'Femininity, beauty, nature, nurturing, abundance', guidance: 'Create and nurture. Beauty surrounds you.', symbol: '👑' },
-                { number: 4, name: 'The Emperor', meaning: 'Authority, establishment, structure, father figure', guidance: 'Take control. Build solid foundations.', symbol: '⚔️' },
-                { number: 5, name: 'The Hierophant', meaning: 'Spiritual wisdom, tradition, conformity, institutions', guidance: 'Seek wisdom from tradition. Honor what works.', symbol: '🏛️' },
-                { number: 6, name: 'The Lovers', meaning: 'Love, harmony, relationships, values alignment', guidance: 'Choose with your heart. Align your values.', symbol: '💕' },
-                { number: 7, name: 'The Chariot', meaning: 'Control, willpower, success, determination', guidance: 'Move forward with confidence. Victory is yours.', symbol: '🏇' },
-                { number: 8, name: 'Strength', meaning: 'Strength, courage, patience, compassion', guidance: 'Inner strength conquers all. Be gentle yet firm.', symbol: '🦁' },
-                { number: 9, name: 'The Hermit', meaning: 'Soul searching, introspection, inner guidance', guidance: 'Go within. Your answers are there.', symbol: '🕯️' },
-                { number: 10, name: 'Wheel of Fortune', meaning: 'Good luck, karma, life cycles, destiny', guidance: 'Fate is turning. Embrace the change.', symbol: '☸️' },
-                { number: 11, name: 'Justice', meaning: 'Justice, fairness, truth, cause and effect', guidance: 'Seek truth and balance. Karma is active.', symbol: '⚖️' },
-                { number: 12, name: 'The Hanged Man', meaning: 'Pause, surrender, letting go, new perspective', guidance: 'Release control. See from a new angle.', symbol: '🙃' },
-                { number: 13, name: 'Death', meaning: 'Endings, transformation, transition, rebirth', guidance: 'Let go of the old. Transformation awaits.', symbol: '🦋' },
-                { number: 14, name: 'Temperance', meaning: 'Balance, moderation, patience, purpose', guidance: 'Find the middle way. Blend opposing forces.', symbol: '🌊' },
-                { number: 15, name: 'The Devil', meaning: 'Shadow self, attachment, addiction, materialism', guidance: 'Break free from chains. Face your shadows.', symbol: '😈' },
-                { number: 16, name: 'The Tower', meaning: 'Sudden change, upheaval, chaos, revelation', guidance: 'Breakdown leads to breakthrough. Trust the process.', symbol: '⚡' },
-                { number: 17, name: 'The Star', meaning: 'Hope, faith, purpose, renewal, spirituality', guidance: 'Hope shines bright. Your wishes are heard.', symbol: '⭐' },
-                { number: 18, name: 'The Moon', meaning: 'Illusion, fear, anxiety, subconscious, intuition', guidance: 'Not all is as it seems. Trust your intuition.', symbol: '🌙' },
-                { number: 19, name: 'The Sun', meaning: 'Positivity, fun, warmth, success, vitality', guidance: 'Success and joy are yours. Shine brightly.', symbol: '☀️' },
-                { number: 20, name: 'Judgment', meaning: 'Judgment, rebirth, inner calling, absolution', guidance: 'Answer your calling. Forgive and be reborn.', symbol: '📯' },
-                { number: 21, name: 'The World', meaning: 'Completion, integration, accomplishment, travel', guidance: 'You've come full circle. Celebrate completion.', symbol: '🌍' }
-            ];
-            
-            const index = seed % majorArcana.length;
-            return majorArcana[index];
+            const deck = getTarotDeck();
+            const index = seed % deck.length;
+            return deck[index];
         }
 
         // ========================================
@@ -3054,6 +3197,219 @@
                 energy: energies[bestDayIndex],
                 action: `Schedule important activities on ${bestDay} this week for best results.`
             };
+        }
+
+        // ========================================
+        // PLANETARY HOUSES - Where Planets Reside
+        // ========================================
+        
+        function getPlanetaryHouses(birthDate, birthTime, birthLocation) {
+            // If no location, return simplified house placements
+            if (!birthLocation) {
+                return getSimplifiedHouses();
+            }
+            
+            const coords = getCoordinates(birthLocation.toLowerCase().trim());
+            if (!coords) {
+                return getSimplifiedHouses();
+            }
+            
+            // Use Swiss Ephemeris if available
+            if (typeof swisseph !== 'undefined') {
+                try {
+                    const birth = new Date(birthDate + (birthTime ? 'T' + birthTime : 'T12:00:00'));
+                    const year = birth.getFullYear();
+                    const month = birth.getMonth() + 1;
+                    const day = birth.getDate();
+                    const hour = birth.getHours() + (birth.getMinutes() / 60);
+                    
+                    const jd = swisseph.swe_julday(year, month, day, hour, swisseph.SE_GREG_CAL);
+                    const houses = swisseph.swe_houses(jd, coords.lat, coords.lon, 'P');
+                    
+                    // Calculate planet positions
+                    const planets = [
+                        { name: 'Sun', symbol: '☉', id: swisseph.SE_SUN },
+                        { name: 'Moon', symbol: '☽', id: swisseph.SE_MOON },
+                        { name: 'Mercury', symbol: '☿', id: swisseph.SE_MERCURY },
+                        { name: 'Venus', symbol: '♀', id: swisseph.SE_VENUS },
+                        { name: 'Mars', symbol: '♂', id: swisseph.SE_MARS },
+                        { name: 'Jupiter', symbol: '♃', id: swisseph.SE_JUPITER },
+                        { name: 'Saturn', symbol: '♄', id: swisseph.SE_SATURN }
+                    ];
+                    
+                    const placements = planets.map(planet => {
+                        const pos = swisseph.swe_calc_ut(jd, planet.id, swisseph.SEFLG_SWIEPH);
+                        const longitude = pos.longitude;
+                        
+                        // Determine which house (1-12) the planet is in
+                        let houseNum = 1;
+                        for (let i = 0; i < 12; i++) {
+                            const currentCusp = houses.cusps[i];
+                            const nextCusp = houses.cusps[(i + 1) % 12];
+                            
+                            if (nextCusp > currentCusp) {
+                                if (longitude >= currentCusp && longitude < nextCusp) {
+                                    houseNum = i + 1;
+                                    break;
+                                }
+                            } else {
+                                if (longitude >= currentCusp || longitude < nextCusp) {
+                                    houseNum = i + 1;
+                                    break;
+                                }
+                            }
+                        }
+                        
+                        return {
+                            planet: planet.name,
+                            symbol: planet.symbol,
+                            house: houseNum,
+                            meaning: getHouseMeaning(planet.name, houseNum)
+                        };
+                    });
+                    
+                    return placements;
+                } catch (e) {
+                    console.error('Swiss Ephemeris calculation error:', e);
+                    return getSimplifiedHouses();
+                }
+            }
+            
+            return getSimplifiedHouses();
+        }
+
+        function getSimplifiedHouses() {
+            // Simplified house placements based on current date
+            const today = new Date();
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+            
+            return [
+                { planet: 'Sun', symbol: '☉', house: ((dayOfYear % 12) + 1), meaning: getHouseMeaning('Sun', ((dayOfYear % 12) + 1)) },
+                { planet: 'Moon', symbol: '☽', house: (((dayOfYear * 2) % 12) + 1), meaning: getHouseMeaning('Moon', (((dayOfYear * 2) % 12) + 1)) },
+                { planet: 'Mercury', symbol: '☿', house: (((dayOfYear + 1) % 12) + 1), meaning: getHouseMeaning('Mercury', (((dayOfYear + 1) % 12) + 1)) },
+                { planet: 'Venus', symbol: '♀', house: (((dayOfYear + 3) % 12) + 1), meaning: getHouseMeaning('Venus', (((dayOfYear + 3) % 12) + 1)) },
+                { planet: 'Mars', symbol: '♂', house: (((dayOfYear + 5) % 12) + 1), meaning: getHouseMeaning('Mars', (((dayOfYear + 5) % 12) + 1)) }
+            ];
+        }
+
+        function getHouseMeaning(planet, house) {
+            const houseMeanings = {
+                1: 'Self, identity, appearance, first impressions',
+                2: 'Money, possessions, values, self-worth',
+                3: 'Communication, siblings, short trips, learning',
+                4: 'Home, family, roots, emotional foundation',
+                5: 'Creativity, romance, children, pleasure',
+                6: 'Health, work, daily routines, service',
+                7: 'Partnerships, marriage, relationships, contracts',
+                8: 'Transformation, shared resources, intimacy',
+                9: 'Higher learning, travel, philosophy, expansion',
+                10: 'Career, public image, ambition, achievements',
+                11: 'Friendship, groups, hopes, social causes',
+                12: 'Spirituality, subconscious, hidden matters, solitude'
+            };
+            
+            const planetInterpretations = {
+                'Sun': {
+                    1: 'Strong sense of self. Natural leadership.',
+                    2: 'Focus on building wealth and values.',
+                    3: 'Communication is key. Share your ideas.',
+                    4: 'Family and home are central to identity.',
+                    5: 'Creative self-expression shines.',
+                    6: 'Health and service bring fulfillment.',
+                    7: 'Partnerships define you. Collaborate.',
+                    8: 'Transformative power. Deep changes.',
+                    9: 'Seek wisdom and adventure.',
+                    10: 'Career success and public recognition.',
+                    11: 'Community involvement. Group leadership.',
+                    12: 'Inner work and spiritual growth.'
+                },
+                'Moon': {
+                    1: 'Emotions show outwardly. Sensitive.',
+                    2: 'Emotional security through resources.',
+                    3: 'Need to communicate feelings.',
+                    4: 'Strong attachment to home and family.',
+                    5: 'Emotional through creativity and romance.',
+                    6: 'Nurture through service and routine.',
+                    7: 'Emotional fulfillment through partnership.',
+                    8: 'Deep emotional transformations.',
+                    9: 'Emotional expansion through learning.',
+                    10: 'Public image affects emotions.',
+                    11: 'Find emotional support in groups.',
+                    12: 'Private emotional world. Intuitive.'
+                },
+                'Mercury': {
+                    1: 'Quick thinker. Communicative persona.',
+                    2: 'Practical thinking about money.',
+                    3: 'Natural communicator and learner.',
+                    4: 'Think about family and home matters.',
+                    5: 'Creative and playful communication.',
+                    6: 'Analytical about health and work.',
+                    7: 'Partnership communication is key.',
+                    8: 'Deep research and investigation.',
+                    9: 'Philosophical mind. Love learning.',
+                    10: 'Career involves communication.',
+                    11: 'Network and exchange ideas.',
+                    12: 'Intuitive thinking. Private thoughts.'
+                },
+                'Venus': {
+                    1: 'Charming and attractive.',
+                    2: 'Values beauty and comfort.',
+                    3: 'Social and friendly locally.',
+                    4: 'Beautiful home. Family harmony.',
+                    5: 'Romance and creative pleasures.',
+                    6: 'Beauty in daily work.',
+                    7: 'Harmonious partnerships.',
+                    8: 'Deep intimate connections.',
+                    9: 'Love of travel and culture.',
+                    10: 'Career in beauty or arts.',
+                    11: 'Friendship and social causes.',
+                    12: 'Secret admirers. Private love.'
+                },
+                'Mars': {
+                    1: 'Assertive and energetic.',
+                    2: 'Driven to earn and possess.',
+                    3: 'Direct communication. Active mind.',
+                    4: 'Protective of home and family.',
+                    5: 'Passionate romance and creativity.',
+                    6: 'Energetic work ethic.',
+                    7: 'Passionate partnerships. Possible conflicts.',
+                    8: 'Intense transformations.',
+                    9: 'Adventure and competition.',
+                    10: 'Ambitious career drive.',
+                    11: 'Fight for causes. Active socially.',
+                    12: 'Hidden anger. Private battles.'
+                },
+                'Jupiter': {
+                    1: 'Optimistic and expansive.',
+                    2: 'Financial growth and abundance.',
+                    3: 'Expands knowledge and connections.',
+                    4: 'Large or fortunate family.',
+                    5: 'Luck in romance and creativity.',
+                    6: 'Growth through service and health.',
+                    7: 'Fortunate partnerships.',
+                    8: 'Transformative wisdom.',
+                    9: 'Travel and higher education.',
+                    10: 'Career success and recognition.',
+                    11: 'Beneficial friendships.',
+                    12: 'Spiritual growth and faith.'
+                },
+                'Saturn': {
+                    1: 'Serious demeanor. Mature.',
+                    2: 'Financial discipline needed.',
+                    3: 'Serious communication.',
+                    4: 'Family responsibilities.',
+                    5: 'Disciplined creativity.',
+                    6: 'Hard work and health focus.',
+                    7: 'Serious committed partnerships.',
+                    8: 'Karmic debts and lessons.',
+                    9: 'Structured learning.',
+                    10: 'Career authority and achievement.',
+                    11: 'Responsible friendships.',
+                    12: 'Solitude and inner work.'
+                }
+            };
+            
+            return planetInterpretations[planet]?.[house] || houseMeanings[house];
         }
 
         // Calculation functions
@@ -3619,10 +3975,11 @@
             const moonPhase = getCurrentMoonPhase();
             const crossAnalysis = getCrossSystemAnalysis(zodiac, risingSign, moonSign, chinese, lifePath, personalYear);
             
-            // PHASE 3: New features - Tarot, Aspects, Best Day
+            // PHASE 3: New features - Tarot, Aspects, Best Day, Houses
             const tarotCard = getTarotCard(birthDate, timeframe);
             const planetaryAspects = getPlanetaryAspects(birthDate);
             const bestDay = getBestDayOfWeek(zodiac, chinese, lifePath);
+            const planetaryHouses = getPlanetaryHouses(birthDate, birthTime, birthLocation);
             
             // Get today's date
             const today = new Date();
@@ -3634,7 +3991,7 @@
             if (timeframe === 'daily') {
                 forecastHTML = generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
                     gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
-                    focus, challenge, birth, todayStr, tarotCard, planetaryAspects);
+                    focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses);
             } else if (timeframe === 'weekly') {
                 forecastHTML = generateWeeklyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
                     gematria, fullName, birthTime, moonPhase, crossAnalysis, focus, challenge, birth, tarotCard, bestDay);
@@ -3652,7 +4009,7 @@
         // PHASE 2: Daily Forecast Generator
         function generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
             gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
-            focus, challenge, birth, todayStr, tarotCard, planetaryAspects) {
+            focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses) {
             
             return `
                 <div class="forecast-header">
@@ -3669,8 +4026,9 @@
                     <h3>🃏 YOUR DAILY TAROT CARD</h3>
                     <div class="tarot-card-display">
                         <div class="tarot-card">
-                            <div class="tarot-symbol">${tarotCard.symbol}</div>
-                            <div class="tarot-number">${tarotCard.number === 0 ? '0' : tarotCard.number}</div>
+                            <img src="${tarotCard.image}" alt="${tarotCard.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="tarot-symbol" style="display:none;">${tarotCard.symbol}</div>
+                            <div class="tarot-number">${tarotCard.suit === 'major' ? (tarotCard.number === 0 ? '0' : tarotCard.number) : tarotCard.suit.toUpperCase()}</div>
                             <div class="tarot-name">${tarotCard.name}</div>
                         </div>
                         <div class="tarot-meaning">
@@ -3735,6 +4093,24 @@
                             <p>${t.insight}</p>
                         </div>
                     `).join('')}
+                </div>
+                ` : ''}
+
+                ${planetaryHouses.length > 0 ? `
+                <div class="houses-section">
+                    <h3>🏛️ PLANETARY HOUSES - Where Cosmic Forces Focus</h3>
+                    <div class="houses-grid">
+                        ${planetaryHouses.map(placement => `
+                            <div class="house-item">
+                                <div class="house-header">
+                                    <span class="planet-symbol">${placement.symbol}</span>
+                                    <span class="planet-name">${placement.planet}</span>
+                                    <span class="house-number">in House ${placement.house}</span>
+                                </div>
+                                <p class="house-meaning">${placement.meaning}</p>
+                            </div>
+                        `).join('')}
+                    </div>
                 </div>
                 ` : ''}
 
@@ -3875,8 +4251,9 @@
                     <h3>🃏 YOUR WEEKLY TAROT CARD</h3>
                     <div class="tarot-card-display">
                         <div class="tarot-card">
-                            <div class="tarot-symbol">${tarotCard.symbol}</div>
-                            <div class="tarot-number">${tarotCard.number === 0 ? '0' : tarotCard.number}</div>
+                            <img src="${tarotCard.image}" alt="${tarotCard.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="tarot-symbol" style="display:none;">${tarotCard.symbol}</div>
+                            <div class="tarot-number">${tarotCard.suit === 'major' ? (tarotCard.number === 0 ? '0' : tarotCard.number) : tarotCard.suit.toUpperCase()}</div>
                             <div class="tarot-name">${tarotCard.name}</div>
                         </div>
                         <div class="tarot-meaning">
