@@ -225,7 +225,7 @@
             background: rgba(157, 0, 255, 0.2);
             border: 2px solid rgba(157, 0, 255, 0.4);
             color: var(--neon-purple);
-            padding: 12px 30px;
+            padding: 15px 30px;
             border-radius: 20px;
             font-size: 1rem;
             font-weight: 600;
@@ -233,6 +233,18 @@
             transition: all 0.3s ease;
             display: block;
             margin: 0 auto;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: rgba(157, 0, 255, 0.3);
+            user-select: none;
+            -webkit-user-select: none;
+            min-height: 48px;
+            position: relative;
+            z-index: 100;
+        }
+
+        .expand-btn:active {
+            background: rgba(157, 0, 255, 0.4);
+            transform: scale(0.98);
         }
 
         .expand-btn:hover {
@@ -902,6 +914,596 @@
             border-left: 4px solid #9d00ff;
         }
 
+        /* ========================================
+           MONETIZATION FEATURES STYLES
+           ======================================== */
+
+        /* Streak Counter */
+        .streak-banner {
+            background: linear-gradient(135deg, rgba(255, 100, 0, 0.2) 0%, rgba(255, 215, 0, 0.2) 100%);
+            border: 2px solid rgba(255, 165, 0, 0.5);
+            border-radius: 15px;
+            padding: 15px 25px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .streak-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .streak-fire {
+            font-size: 2.5rem;
+            animation: fireGlow 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes fireGlow {
+            from { filter: drop-shadow(0 0 5px #ff6600); }
+            to { filter: drop-shadow(0 0 20px #ff9900); }
+        }
+
+        .streak-text h4 {
+            font-family: 'Orbitron', monospace;
+            color: var(--neon-gold);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .streak-text p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .streak-reward {
+            background: rgba(255, 215, 0, 0.2);
+            border: 1px solid var(--neon-gold);
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: var(--neon-gold);
+            font-weight: 600;
+        }
+
+        /* Daily Number & Affirmation Card */
+        .daily-insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .daily-card {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.1) 0%, rgba(157, 0, 255, 0.1) 100%);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .daily-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+        }
+
+        .daily-card h4 {
+            font-family: 'Orbitron', monospace;
+            color: var(--neon-gold);
+            margin-bottom: 15px;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .cosmic-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple), var(--neon-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .number-meaning {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        .daily-affirmation {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.6;
+            position: relative;
+            padding: 0 10px;
+        }
+
+        .power-hours-list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .power-hour {
+            background: rgba(255, 215, 0, 0.2);
+            border: 1px solid var(--neon-gold);
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: var(--neon-gold);
+            font-weight: 600;
+        }
+
+        /* Share Card Section */
+        .share-section {
+            background: linear-gradient(135deg, rgba(255, 0, 102, 0.15) 0%, rgba(157, 0, 255, 0.15) 100%);
+            border: 2px solid var(--neon-pink);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .share-section h3 {
+            font-family: 'Orbitron', monospace;
+            color: var(--neon-pink);
+            margin-bottom: 15px;
+        }
+
+        .share-section p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid;
+        }
+
+        .share-btn.twitter {
+            background: rgba(29, 161, 242, 0.2);
+            border-color: #1da1f2;
+            color: #1da1f2;
+        }
+
+        .share-btn.facebook {
+            background: rgba(66, 103, 178, 0.2);
+            border-color: #4267B2;
+            color: #4267B2;
+        }
+
+        .share-btn.copy {
+            background: rgba(0, 245, 255, 0.2);
+            border-color: var(--neon-cyan);
+            color: var(--neon-cyan);
+        }
+
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(255, 0, 102, 0.3);
+        }
+
+        /* Email Capture */
+        .email-capture {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(0, 245, 255, 0.1) 100%);
+            border: 2px solid var(--neon-gold);
+            border-radius: 20px;
+            padding: 35px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .email-capture h3 {
+            font-family: 'Orbitron', monospace;
+            color: var(--neon-gold);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .email-capture .subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .email-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .email-form input[type="email"] {
+            flex: 1;
+            min-width: 250px;
+            padding: 15px 20px;
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 25px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .email-form input[type="email"]:focus {
+            outline: none;
+            border-color: var(--neon-cyan);
+        }
+
+        .email-form button {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--neon-gold), #ff9500);
+            border: none;
+            border-radius: 25px;
+            color: #000;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .email-form button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        .email-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Ad Placement Containers */
+        .ad-container {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ad-container.horizontal {
+            min-height: 90px;
+        }
+
+        .ad-container.square {
+            min-height: 250px;
+        }
+
+        .ad-placeholder {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.8rem;
+        }
+
+        /* Compatibility Checker */
+        .compatibility-section {
+            background: linear-gradient(135deg, rgba(255, 0, 102, 0.1) 0%, rgba(255, 100, 200, 0.1) 100%);
+            border: 2px solid var(--neon-pink);
+            border-radius: 20px;
+            padding: 35px;
+            margin: 40px 0;
+        }
+
+        .compatibility-section h3 {
+            font-family: 'Orbitron', monospace;
+            color: var(--neon-pink);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        .compatibility-section .subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .compatibility-form {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 20px;
+            align-items: end;
+            margin-bottom: 25px;
+        }
+
+        .compat-person {
+            text-align: center;
+        }
+
+        .compat-person label {
+            display: block;
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .compat-person input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgba(255, 0, 102, 0.3);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .compat-vs {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: var(--neon-pink);
+            padding-bottom: 12px;
+        }
+
+        .check-compat-btn {
+            display: block;
+            margin: 0 auto;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .check-compat-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 0, 102, 0.5);
+        }
+
+        .compatibility-result {
+            display: none;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .compatibility-result.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .compat-score {
+            font-family: 'Orbitron', monospace;
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .compat-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .compat-detail-item {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            padding: 15px;
+        }
+
+        .compat-detail-item h5 {
+            color: var(--neon-gold);
+            margin-bottom: 8px;
+        }
+
+        .compat-detail-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Feedback/Rating Section */
+        .feedback-section {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .feedback-section h4 {
+            color: var(--neon-cyan);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .rating-star {
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            opacity: 0.4;
+        }
+
+        .rating-star:hover,
+        .rating-star.active {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .feedback-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px;
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1rem;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .feedback-input.show {
+            display: block;
+            margin: 10px auto;
+        }
+
+        /* Journal Section */
+        .journal-section {
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.1) 0%, rgba(0, 100, 255, 0.1) 100%);
+            border: 2px solid var(--neon-purple);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .journal-section h3 {
+            font-family: 'Orbitron', monospace;
+            color: var(--neon-purple);
+            margin-bottom: 15px;
+        }
+
+        .journal-section p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .journal-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px;
+            border: 2px solid rgba(157, 0, 255, 0.3);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1rem;
+            font-family: 'Rajdhani', sans-serif;
+            resize: vertical;
+            margin-bottom: 15px;
+        }
+
+        .journal-textarea:focus {
+            outline: none;
+            border-color: var(--neon-purple);
+        }
+
+        .journal-btn {
+            background: rgba(157, 0, 255, 0.3);
+            border: 2px solid var(--neon-purple);
+            color: var(--neon-purple);
+            padding: 12px 30px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .journal-btn:hover {
+            background: rgba(157, 0, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Explore More Tools */
+        .explore-tools {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .explore-tools h3 {
+            font-family: 'Orbitron', monospace;
+            color: var(--neon-cyan);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .tool-card {
+            background: rgba(0, 245, 255, 0.1);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.2);
+        }
+
+        .tool-card .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .tool-card h4 {
+            color: var(--neon-gold);
+            margin-bottom: 5px;
+        }
+
+        .tool-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
         /* Mobile Responsive Enhancements */
         @media (max-width: 768px) {
             .timing-grid,
@@ -935,6 +1537,31 @@
             .key-date-item {
                 padding: 15px;
             }
+
+            .streak-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .daily-insights-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .compatibility-form {
+                grid-template-columns: 1fr;
+            }
+
+            .compat-vs {
+                padding: 10px 0;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .email-form input[type="email"] {
+                min-width: auto;
+            }
         }
     </style>
 </head>
@@ -943,6 +1570,20 @@
     <div class="stars" id="stars"></div>
 
     <div class="container">
+        <!-- Streak Banner - Daily Return Mechanic -->
+        <div class="streak-banner" id="streakBanner">
+            <div class="streak-info">
+                <span class="streak-fire">🔥</span>
+                <div class="streak-text">
+                    <h4 id="streakTitle">Welcome Back!</h4>
+                    <p id="streakMessage">Check in daily to build your cosmic alignment streak</p>
+                </div>
+            </div>
+            <div class="streak-reward" id="streakReward">
+                Day 1
+            </div>
+        </div>
+
         <!-- Hero Section -->
         <div class="hero">
             <h1>🌌 QUANTUM FORECASTER</h1>
@@ -953,6 +1594,32 @@
                 <div class="system-badge">🔢 Numerology</div>
                 <div class="system-badge">📜 Gematria</div>
             </div>
+        </div>
+
+        <!-- Daily Insights Cards (shown after first visit) -->
+        <div class="daily-insights-grid" id="dailyInsights" style="display: none;">
+            <div class="daily-card">
+                <h4>TODAY'S COSMIC NUMBER</h4>
+                <div class="cosmic-number" id="cosmicNumber">7</div>
+                <p class="number-meaning" id="numberMeaning">Reflection & Spirituality</p>
+            </div>
+            <div class="daily-card">
+                <h4>YOUR DAILY AFFIRMATION</h4>
+                <p class="daily-affirmation" id="dailyAffirmation">"I trust the universe to guide my path today."</p>
+            </div>
+            <div class="daily-card">
+                <h4>YOUR POWER HOURS</h4>
+                <div class="power-hours-list" id="powerHours">
+                    <span class="power-hour">9 AM</span>
+                    <span class="power-hour">2 PM</span>
+                    <span class="power-hour">7 PM</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ad Container - Top (will be replaced with AdSense) -->
+        <div class="ad-container horizontal" id="adTop">
+            <span class="ad-placeholder">[ Ad Space - 728x90 ]</span>
         </div>
 
         <!-- Input Section -->
@@ -981,7 +1648,7 @@
             </div>
 
             <!-- Tier 2: Enhanced Accuracy -->
-            <button class="expand-btn" id="expandEnhanced">
+            <button class="expand-btn" id="expandEnhanced" onclick="toggleEnhanced()">
                 ▼ Add Birth Time & Location for More Accuracy
             </button>
             
@@ -1006,7 +1673,7 @@
             </div>
 
             <!-- Tier 3: Deep Personalization -->
-            <button class="expand-btn" id="expandAdvanced" style="display: none;">
+            <button class="expand-btn" id="expandAdvanced" style="display: none;" onclick="toggleAdvanced()">
                 ▼ Add Name & Focus for Deep Personalization
             </button>
             
@@ -1063,6 +1730,104 @@
         <div class="forecast-output" id="forecastOutput">
             <!-- Content will be dynamically generated -->
         </div>
+
+        <!-- Ad Container - Mid Content -->
+        <div class="ad-container horizontal" id="adMid" style="display: none;">
+            <span class="ad-placeholder">[ Ad Space - 728x90 ]</span>
+        </div>
+
+        <!-- Email Capture Section -->
+        <div class="email-capture" id="emailCapture">
+            <h3>☀️ Get Your Daily Forecast at Sunrise</h3>
+            <p class="subtitle">Never miss your cosmic guidance - delivered free to your inbox every morning</p>
+            <form class="email-form" id="emailForm">
+                <input type="email" id="emailInput" placeholder="Enter your email" required>
+                <button type="submit">Subscribe Free</button>
+            </form>
+            <div class="email-benefits">
+                <span>✓ 100% Free</span>
+                <span>✓ Personalized Daily</span>
+                <span>✓ Unsubscribe Anytime</span>
+            </div>
+        </div>
+
+        <!-- Compatibility Checker Section -->
+        <div class="compatibility-section" id="compatibilitySection">
+            <h3>💕 Love & Compatibility Checker</h3>
+            <p class="subtitle">Discover your cosmic compatibility with anyone</p>
+            <div class="compatibility-form">
+                <div class="compat-person">
+                    <label>Your Birth Date</label>
+                    <input type="date" id="compatDate1">
+                </div>
+                <div class="compat-vs">💞</div>
+                <div class="compat-person">
+                    <label>Their Birth Date</label>
+                    <input type="date" id="compatDate2">
+                </div>
+            </div>
+            <button class="check-compat-btn" id="checkCompatBtn">Check Compatibility</button>
+            
+            <div class="compatibility-result" id="compatResult">
+                <div class="compat-score" id="compatScore">85%</div>
+                <p id="compatSummary" style="color: var(--text-secondary); font-size: 1.1rem;"></p>
+                <div class="compat-details" id="compatDetails">
+                    <!-- Dynamically filled -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Ad Container - Bottom -->
+        <div class="ad-container square" id="adBottom">
+            <span class="ad-placeholder">[ Ad Space - 300x250 ]</span>
+        </div>
+
+        <!-- Explore More Tools -->
+        <div class="explore-tools">
+            <h3>🔮 Explore More Quantum Tools</h3>
+            <div class="tools-grid">
+                <a href="tarot.html" class="tool-card">
+                    <div class="icon">🃏</div>
+                    <h4>Tarot Reading</h4>
+                    <p>AI-powered card insights</p>
+                </a>
+                <a href="astrology.html" class="tool-card">
+                    <div class="icon">⭐</div>
+                    <h4>Birth Chart</h4>
+                    <p>Deep natal analysis</p>
+                </a>
+                <a href="gematria.html" class="tool-card">
+                    <div class="icon">🔢</div>
+                    <h4>Gematria</h4>
+                    <p>Name & number secrets</p>
+                </a>
+                <a href="crystals.html" class="tool-card">
+                    <div class="icon">💎</div>
+                    <h4>Crystal Guide</h4>
+                    <p>Your power stones</p>
+                </a>
+                <a href="sigils.html" class="tool-card">
+                    <div class="icon">✨</div>
+                    <h4>Sigil Generator</h4>
+                    <p>Manifest intentions</p>
+                </a>
+                <a href="chinese.html" class="tool-card">
+                    <div class="icon">🐉</div>
+                    <h4>Chinese Zodiac</h4>
+                    <p>Eastern wisdom</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; padding: 40px 20px; color: var(--text-secondary); font-size: 0.9rem;">
+            <p>© 2025 Quantum Merlin • For entertainment purposes</p>
+            <p style="margin-top: 10px;">
+                <a href="../genesis/privacy.html" style="color: var(--neon-cyan); text-decoration: none;">Privacy</a> • 
+                <a href="../genesis/terms.html" style="color: var(--neon-cyan); text-decoration: none;">Terms</a> • 
+                <a href="../genesis/disclaimer.html" style="color: var(--neon-cyan); text-decoration: none;">Disclaimer</a>
+            </p>
+        </div>
     </div>
 
     <script>
@@ -1081,25 +1846,359 @@
         }
         generateStars();
 
-        // Expandable sections
-        document.getElementById('expandEnhanced').addEventListener('click', function() {
+        // ========================================
+        // MONETIZATION FEATURES
+        // ========================================
+
+        // Streak System - Daily Return Mechanic
+        function initStreakSystem() {
+            const today = new Date().toDateString();
+            let streakData = JSON.parse(localStorage.getItem('qm_streak') || '{}');
+            
+            if (!streakData.lastVisit) {
+                // First visit ever
+                streakData = { streak: 1, lastVisit: today, totalVisits: 1 };
+            } else {
+                const lastVisit = new Date(streakData.lastVisit);
+                const todayDate = new Date(today);
+                const diffDays = Math.floor((todayDate - lastVisit) / (1000 * 60 * 60 * 24));
+                
+                if (diffDays === 0) {
+                    // Same day visit
+                } else if (diffDays === 1) {
+                    // Consecutive day - streak continues!
+                    streakData.streak++;
+                    streakData.lastVisit = today;
+                    streakData.totalVisits++;
+                } else {
+                    // Streak broken
+                    streakData.streak = 1;
+                    streakData.lastVisit = today;
+                    streakData.totalVisits++;
+                }
+            }
+            
+            localStorage.setItem('qm_streak', JSON.stringify(streakData));
+            updateStreakDisplay(streakData);
+            
+            // Show daily insights if returning visitor
+            if (streakData.totalVisits > 1) {
+                document.getElementById('dailyInsights').style.display = 'grid';
+                updateDailyInsights();
+            }
+            
+            return streakData;
+        }
+
+        function updateStreakDisplay(streakData) {
+            const title = document.getElementById('streakTitle');
+            const message = document.getElementById('streakMessage');
+            const reward = document.getElementById('streakReward');
+            
+            if (streakData.streak >= 7) {
+                title.textContent = '🌟 Cosmic Master!';
+                message.textContent = `${streakData.streak}-day streak! Your cosmic alignment is powerful.`;
+                reward.innerHTML = `<span style="font-size: 1.2rem;">🔥</span> ${streakData.streak} Days`;
+            } else if (streakData.streak >= 3) {
+                title.textContent = '✨ Building Momentum!';
+                message.textContent = `${streakData.streak}-day streak! Keep it going for stronger readings.`;
+                reward.innerHTML = `<span style="font-size: 1.2rem;">🔥</span> ${streakData.streak} Days`;
+            } else if (streakData.streak === 1 && streakData.totalVisits > 1) {
+                title.textContent = 'Welcome Back!';
+                message.textContent = 'Start a new streak by checking in tomorrow.';
+                reward.textContent = 'Day 1';
+            } else {
+                title.textContent = 'Welcome, Seeker!';
+                message.textContent = 'Check in daily to build your cosmic alignment streak.';
+                reward.textContent = 'Day 1';
+            }
+        }
+
+        // Daily Insights - Changes Every Day
+        function updateDailyInsights() {
+            const today = new Date();
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+            
+            // Cosmic Number (1-9, based on date)
+            const cosmicNumber = ((today.getDate() + today.getMonth() + 1 + today.getFullYear()) % 9) || 9;
+            const numberMeanings = {
+                1: 'Initiative & New Beginnings',
+                2: 'Partnership & Balance',
+                3: 'Creativity & Expression',
+                4: 'Foundation & Stability',
+                5: 'Change & Freedom',
+                6: 'Love & Responsibility',
+                7: 'Reflection & Spirituality',
+                8: 'Abundance & Power',
+                9: 'Completion & Wisdom'
+            };
+            
+            document.getElementById('cosmicNumber').textContent = cosmicNumber;
+            document.getElementById('numberMeaning').textContent = numberMeanings[cosmicNumber];
+            
+            // Daily Affirmation
+            const affirmations = [
+                '"I trust the universe to guide my path today."',
+                '"My intuition is my superpower."',
+                '"I am aligned with cosmic abundance."',
+                '"Every challenge is an opportunity for growth."',
+                '"I radiate positive energy and attract the same."',
+                '"My unique gifts serve the greater good."',
+                '"I am exactly where I need to be."',
+                '"The universe conspires in my favor."',
+                '"I embrace change as transformation."',
+                '"My energy creates my reality."',
+                '"I am connected to infinite wisdom."',
+                '"Today, I choose to see the magic in everything."'
+            ];
+            document.getElementById('dailyAffirmation').textContent = affirmations[dayOfYear % affirmations.length];
+            
+            // Power Hours (based on cosmic number)
+            const baseHour = (cosmicNumber * 2) % 12 || 12;
+            const powerHoursHTML = [
+                `<span class="power-hour">${baseHour} AM</span>`,
+                `<span class="power-hour">${(baseHour + 5) % 12 || 12} PM</span>`,
+                `<span class="power-hour">${(baseHour + 9) % 12 || 12} PM</span>`
+            ].join('');
+            document.getElementById('powerHours').innerHTML = powerHoursHTML;
+        }
+
+        // Initialize streak on page load
+        const streakData = initStreakSystem();
+
+        // Email Capture System
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            
+            // Store locally (in production, send to backend)
+            let emails = JSON.parse(localStorage.getItem('qm_subscribers') || '[]');
+            if (!emails.includes(email)) {
+                emails.push(email);
+                localStorage.setItem('qm_subscribers', JSON.stringify(emails));
+            }
+            
+            // Show success
+            this.innerHTML = `
+                <div style="color: var(--neon-gold); font-size: 1.2rem; padding: 15px;">
+                    ✅ You're subscribed! Check your inbox tomorrow at sunrise.
+                </div>
+            `;
+            
+            // Track conversion
+            console.log('Email captured:', email);
+        });
+
+        // Compatibility Checker
+        document.getElementById('checkCompatBtn').addEventListener('click', function() {
+            const date1 = document.getElementById('compatDate1').value;
+            const date2 = document.getElementById('compatDate2').value;
+            
+            if (!date1 || !date2) {
+                alert('Please enter both birth dates');
+                return;
+            }
+            
+            const result = calculateCompatibility(date1, date2);
+            displayCompatibilityResult(result);
+        });
+
+        function calculateCompatibility(date1, date2) {
+            const d1 = new Date(date1);
+            const d2 = new Date(date2);
+            
+            // Get zodiac signs
+            const sign1 = getZodiacSign(d1.getMonth() + 1, d1.getDate());
+            const sign2 = getZodiacSign(d2.getMonth() + 1, d2.getDate());
+            
+            // Get life paths
+            const lp1 = getLifePathNumber(date1);
+            const lp2 = getLifePathNumber(date2);
+            
+            // Get Chinese zodiac
+            const cn1 = getChineseZodiac(d1.getFullYear());
+            const cn2 = getChineseZodiac(d2.getFullYear());
+            
+            // Calculate compatibility scores
+            const zodiacCompat = calculateZodiacCompatibility(sign1.name, sign2.name);
+            const lifePathCompat = calculateLifePathCompatibility(lp1, lp2);
+            const chineseCompat = calculateChineseCompatibility(cn1.animal, cn2.animal);
+            
+            // Overall score
+            const overallScore = Math.round((zodiacCompat + lifePathCompat + chineseCompat) / 3);
+            
+            return {
+                score: overallScore,
+                sign1, sign2,
+                lp1, lp2,
+                cn1, cn2,
+                zodiacCompat,
+                lifePathCompat,
+                chineseCompat
+            };
+        }
+
+        function calculateZodiacCompatibility(sign1, sign2) {
+            const elements = {
+                'Aries': 'Fire', 'Leo': 'Fire', 'Sagittarius': 'Fire',
+                'Taurus': 'Earth', 'Virgo': 'Earth', 'Capricorn': 'Earth',
+                'Gemini': 'Air', 'Libra': 'Air', 'Aquarius': 'Air',
+                'Cancer': 'Water', 'Scorpio': 'Water', 'Pisces': 'Water'
+            };
+            
+            const el1 = elements[sign1];
+            const el2 = elements[sign2];
+            
+            if (sign1 === sign2) return 75; // Same sign
+            if (el1 === el2) return 90; // Same element
+            if ((el1 === 'Fire' && el2 === 'Air') || (el1 === 'Air' && el2 === 'Fire')) return 85;
+            if ((el1 === 'Earth' && el2 === 'Water') || (el1 === 'Water' && el2 === 'Earth')) return 85;
+            if ((el1 === 'Fire' && el2 === 'Earth') || (el1 === 'Earth' && el2 === 'Fire')) return 60;
+            if ((el1 === 'Air' && el2 === 'Water') || (el1 === 'Water' && el2 === 'Air')) return 55;
+            return 70; // Other combinations
+        }
+
+        function calculateLifePathCompatibility(lp1, lp2) {
+            const compatible = {
+                1: [3, 5, 7],
+                2: [4, 6, 8],
+                3: [1, 5, 9],
+                4: [2, 6, 8],
+                5: [1, 3, 7],
+                6: [2, 4, 9],
+                7: [1, 5, 9],
+                8: [2, 4, 6],
+                9: [3, 6, 7]
+            };
+            
+            if (lp1 === lp2) return 80;
+            if (compatible[lp1]?.includes(lp2)) return 90;
+            return 65;
+        }
+
+        function calculateChineseCompatibility(animal1, animal2) {
+            const allies = {
+                'Rat': ['Dragon', 'Monkey'],
+                'Ox': ['Snake', 'Rooster'],
+                'Tiger': ['Horse', 'Dog'],
+                'Rabbit': ['Goat', 'Pig'],
+                'Dragon': ['Rat', 'Monkey'],
+                'Snake': ['Ox', 'Rooster'],
+                'Horse': ['Tiger', 'Dog'],
+                'Goat': ['Rabbit', 'Pig'],
+                'Monkey': ['Rat', 'Dragon'],
+                'Rooster': ['Ox', 'Snake'],
+                'Dog': ['Tiger', 'Horse'],
+                'Pig': ['Rabbit', 'Goat']
+            };
+            
+            if (animal1 === animal2) return 75;
+            if (allies[animal1]?.includes(animal2)) return 95;
+            return 65;
+        }
+
+        function displayCompatibilityResult(result) {
+            document.getElementById('compatScore').textContent = result.score + '%';
+            
+            let summaryText = '';
+            if (result.score >= 85) summaryText = '🌟 Exceptional Match! You two are cosmically aligned.';
+            else if (result.score >= 75) summaryText = '✨ Great Match! Strong compatibility across systems.';
+            else if (result.score >= 65) summaryText = '💫 Good Match! Complementary energies with growth potential.';
+            else summaryText = '🔮 Challenging Match - but opposites can attract and teach.';
+            
+            document.getElementById('compatSummary').textContent = summaryText;
+            
+            document.getElementById('compatDetails').innerHTML = `
+                <div class="compat-detail-item">
+                    <h5>⭐ Zodiac (${result.zodiacCompat}%)</h5>
+                    <p>${result.sign1.name} ${result.sign1.symbol} + ${result.sign2.name} ${result.sign2.symbol}</p>
+                </div>
+                <div class="compat-detail-item">
+                    <h5>🔢 Life Path (${result.lifePathCompat}%)</h5>
+                    <p>Path ${result.lp1} + Path ${result.lp2}</p>
+                </div>
+                <div class="compat-detail-item">
+                    <h5>🐉 Chinese (${result.chineseCompat}%)</h5>
+                    <p>${result.cn1.animal} + ${result.cn2.animal}</p>
+                </div>
+            `;
+            
+            document.getElementById('compatResult').classList.add('show');
+            document.getElementById('compatResult').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Social Sharing Functions
+        function generateShareURL() {
+            const birthDate = document.getElementById('birthDate').value;
+            if (!birthDate) return window.location.href;
+            
+            const sign = getZodiacSign(new Date(birthDate).getMonth() + 1, new Date(birthDate).getDate());
+            return `${window.location.origin}/quantum-merlin-hub/forecasts.html?sign=${sign.name}`;
+        }
+
+        function shareToTwitter(text) {
+            const url = encodeURIComponent(generateShareURL());
+            const tweetText = encodeURIComponent(text || "I just got my Quantum Forecast! 🌌✨ Get your personalized cosmic guidance:");
+            window.open(`https://twitter.com/intent/tweet?text=${tweetText}&url=${url}`, '_blank');
+        }
+
+        function shareToFacebook() {
+            const url = encodeURIComponent(generateShareURL());
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function copyForecastLink() {
+            navigator.clipboard.writeText(generateShareURL()).then(() => {
+                alert('✅ Link copied to clipboard!');
+            });
+        }
+
+        // Show Ad Container Mid when forecast is generated
+        function showMidAd() {
+            document.getElementById('adMid').style.display = 'flex';
+        }
+
+        // Expandable sections - using global functions for better mobile compatibility
+        function toggleEnhanced() {
+            const btn = document.getElementById('expandEnhanced');
             const content = document.getElementById('enhancedContent');
             content.classList.toggle('show');
-            this.textContent = content.classList.contains('show') 
+            btn.textContent = content.classList.contains('show') 
                 ? '▲ Hide Enhanced Options' 
                 : '▼ Add Birth Time & Location for More Accuracy';
             
             if (content.classList.contains('show')) {
                 document.getElementById('expandAdvanced').style.display = 'block';
             }
-        });
+        }
 
-        document.getElementById('expandAdvanced').addEventListener('click', function() {
+        function toggleAdvanced() {
+            const btn = document.getElementById('expandAdvanced');
             const content = document.getElementById('advancedContent');
             content.classList.toggle('show');
-            this.textContent = content.classList.contains('show') 
+            btn.textContent = content.classList.contains('show') 
                 ? '▲ Hide Advanced Options' 
                 : '▼ Add Name & Focus for Deep Personalization';
+        }
+
+        // Add touchstart listeners for mobile (more reliable than click on some devices)
+        document.addEventListener('DOMContentLoaded', function() {
+            const enhancedBtn = document.getElementById('expandEnhanced');
+            const advancedBtn = document.getElementById('expandAdvanced');
+            
+            if (enhancedBtn) {
+                enhancedBtn.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    toggleEnhanced();
+                }, { passive: false });
+            }
+            
+            if (advancedBtn) {
+                advancedBtn.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    toggleAdvanced();
+                }, { passive: false });
+            }
         });
 
         // Update accuracy indicator
@@ -1636,7 +2735,24 @@
 
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
                 <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
+
+                <div class="share-section">
+                    <h4>✨ Share Your Forecast</h4>
+                    <p>Spread the cosmic wisdom!</p>
+                    <div class="share-buttons">
+                        <button class="share-btn twitter" onclick="shareToTwitter('Just got my ${zodiac.name} ${zodiac.symbol} daily forecast! ${focus} is my focus today. Get your free cosmic reading:')">
+                            <span>𝕏</span> Tweet
+                        </button>
+                        <button class="share-btn facebook" onclick="shareToFacebook()">
+                            <span>f</span> Share
+                        </button>
+                        <button class="share-btn copy" onclick="copyForecastLink()">
+                            <span>📋</span> Copy Link
+                        </button>
+                    </div>
+                </div>
             `;
+            showMidAd();
         }
 
         // PHASE 2: Weekly Forecast Generator
@@ -1739,7 +2855,24 @@
 
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
                 <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
+
+                <div class="share-section">
+                    <h4>✨ Share Your Forecast</h4>
+                    <p>Spread the cosmic wisdom!</p>
+                    <div class="share-buttons">
+                        <button class="share-btn twitter" onclick="shareToTwitter('My ${zodiac.name} ${zodiac.symbol} weekly forecast is in! Get your free cosmic reading:')">
+                            <span>𝕏</span> Tweet
+                        </button>
+                        <button class="share-btn facebook" onclick="shareToFacebook()">
+                            <span>f</span> Share
+                        </button>
+                        <button class="share-btn copy" onclick="copyForecastLink()">
+                            <span>📋</span> Copy Link
+                        </button>
+                    </div>
+                </div>
             `;
+            showMidAd();
         }
 
         // PHASE 2: Monthly Forecast Generator
@@ -1835,7 +2968,24 @@
 
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
                 <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
+
+                <div class="share-section">
+                    <h4>✨ Share Your Forecast</h4>
+                    <p>Spread the cosmic wisdom!</p>
+                    <div class="share-buttons">
+                        <button class="share-btn twitter" onclick="shareToTwitter('My ${zodiac.name} ${zodiac.symbol} monthly forecast reveals so much! Get your free cosmic reading:')">
+                            <span>𝕏</span> Tweet
+                        </button>
+                        <button class="share-btn facebook" onclick="shareToFacebook()">
+                            <span>f</span> Share
+                        </button>
+                        <button class="share-btn copy" onclick="copyForecastLink()">
+                            <span>📋</span> Copy Link
+                        </button>
+                    </div>
+                </div>
             `;
+            showMidAd();
         }
 
         // PHASE 2: Yearly Forecast Generator  
@@ -1938,7 +3088,24 @@
 
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
                 <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
+
+                <div class="share-section">
+                    <h4>✨ Share Your ${currentYear} Forecast</h4>
+                    <p>Your year ahead awaits - spread the wisdom!</p>
+                    <div class="share-buttons">
+                        <button class="share-btn twitter" onclick="shareToTwitter('My ${zodiac.name} ${zodiac.symbol} yearly forecast for ${currentYear} is incredible! Personal Year ${personalYear} energy. Get your free cosmic reading:')">
+                            <span>𝕏</span> Tweet
+                        </button>
+                        <button class="share-btn facebook" onclick="shareToFacebook()">
+                            <span>f</span> Share
+                        </button>
+                        <button class="share-btn copy" onclick="copyForecastLink()">
+                            <span>📋</span> Copy Link
+                        </button>
+                    </div>
+                </div>
             `;
+            showMidAd();
         }
 
         function toggleSystem(header) {
