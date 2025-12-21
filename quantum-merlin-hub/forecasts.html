@@ -1566,9 +1566,230 @@
                 min-width: auto;
             }
         }
+
+        /* ========================================
+           INTRO ANIMATION & LOADING SPINNER
+           ======================================== */
+        
+        .intro-overlay, .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            overflow: hidden;
+        }
+
+        .intro-animation, .loading-animation {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        /* Singularity Dot - Starts small, expands */
+        .singularity {
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #fff 0%, #00f5ff 50%, #9d00ff 100%);
+            border-radius: 50%;
+            box-shadow: 
+                0 0 20px #00f5ff,
+                0 0 40px #9d00ff,
+                0 0 60px #00f5ff,
+                0 0 80px #9d00ff;
+            animation: singularityExpand 3s ease-in-out forwards;
+        }
+
+        /* Loading spinner: Stop before text reveal */
+        .loading-overlay .singularity {
+            animation: singularityExpandShort 2.5s ease-in-out infinite;
+        }
+
+        @keyframes singularityExpand {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            25% {
+                transform: scale(5);
+                box-shadow: 
+                    0 0 40px #00f5ff,
+                    0 0 80px #9d00ff,
+                    0 0 120px #00f5ff;
+            }
+            50% {
+                transform: scale(15);
+                opacity: 0.8;
+                box-shadow: 
+                    0 0 100px #00f5ff,
+                    0 0 200px #9d00ff,
+                    0 0 300px #ffd700;
+            }
+            75% {
+                transform: scale(30) rotate(180deg);
+                opacity: 0.4;
+                box-shadow: 
+                    0 0 200px #00f5ff,
+                    0 0 400px #9d00ff;
+            }
+            100% {
+                transform: scale(100) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Shorter version for loading spinner - loops infinitely */
+        @keyframes singularityExpandShort {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            25% {
+                transform: scale(5);
+                box-shadow: 
+                    0 0 40px #00f5ff,
+                    0 0 80px #9d00ff,
+                    0 0 120px #00f5ff;
+            }
+            50% {
+                transform: scale(15);
+                opacity: 0.8;
+                box-shadow: 
+                    0 0 100px #00f5ff,
+                    0 0 200px #9d00ff,
+                    0 0 300px #ffd700;
+            }
+            75% {
+                transform: scale(30) rotate(180deg);
+                opacity: 0.4;
+                box-shadow: 
+                    0 0 200px #00f5ff,
+                    0 0 400px #9d00ff;
+            }
+            100% {
+                transform: scale(1) rotate(360deg);
+                opacity: 1;
+            }
+        }
+
+        /* Quantum Merlin Text - Appears after singularity */
+        .quantum-text {
+            position: absolute;
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 8px;
+            background: linear-gradient(135deg, #00f5ff 0%, #9d00ff 50%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0;
+            animation: textReveal 2s ease-in 3s forwards;
+            text-shadow: 0 0 40px rgba(0, 245, 255, 0.6);
+        }
+
+        @keyframes textReveal {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+                filter: blur(20px);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+                filter: blur(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                filter: blur(0);
+            }
+        }
+
+        /* Skip Button */
+        .skip-btn {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10001;
+        }
+
+        .skip-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #00f5ff;
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+        }
+
+        /* Loading text below spinner */
+        .loading-text {
+            margin-top: 40px;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* Hide intro overlay after animation */
+        .intro-overlay.hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .quantum-text {
+                font-size: 1.8rem;
+                letter-spacing: 4px;
+            }
+            
+            .skip-btn {
+                top: 15px;
+                right: 15px;
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Intro Animation Overlay (First Visit) -->
+    <div id="introOverlay" class="intro-overlay">
+        <div class="intro-animation">
+            <div class="singularity"></div>
+            <div class="quantum-text">QUANTUMMERLIN</div>
+        </div>
+        <button id="skipIntro" class="skip-btn">Skip →</button>
+    </div>
+
+    <!-- Loading Spinner (During Forecast Generation) -->
+    <div id="loadingSpinner" class="loading-overlay" style="display: none;">
+        <div class="loading-animation">
+            <div class="singularity"></div>
+            <p class="loading-text">Calculating cosmic alignments...</p>
+        </div>
+    </div>
+
     <div class="cosmic-bg"></div>
     <div class="stars" id="stars"></div>
 
@@ -1714,13 +1935,6 @@
             <!-- Generate Button -->
             <button class="generate-btn" id="generateBtn">✨ Generate Forecast</button>
         </div>
-
-        <!-- Loading Animation -->
-        <div class="loading" id="loading">
-            <div class="spinner"></div>
-            <p style="color: var(--neon-cyan); font-size: 1.2rem;">Calculating your cosmic forecast...</p>
-        </div>
-
         <!-- Timeframe Selector -->
         <div class="timeframe-selector" id="timeframeSelector" style="display: none;">
             <button class="timeframe-btn active" data-timeframe="daily">📅 Daily</button>
@@ -1834,6 +2048,41 @@
     </div>
 
     <script>
+        // ========================================
+        // INTRO ANIMATION & LOADING CONTROL
+        // ========================================
+        
+        // Check if first visit
+        const hasVisited = localStorage.getItem('qm_forecaster_visited');
+        const introOverlay = document.getElementById('introOverlay');
+        const skipBtn = document.getElementById('skipIntro');
+        
+        function hideIntro() {
+            introOverlay.classList.add('hidden');
+            localStorage.setItem('qm_forecaster_visited', 'true');
+        }
+        
+        if (hasVisited) {
+            // Not first visit - hide intro immediately
+            hideIntro();
+        } else {
+            // First visit - show full intro animation
+            // Auto-hide after 5 seconds (3s singularity + 2s text)
+            setTimeout(hideIntro, 5000);
+        }
+        
+        // Skip button functionality
+        skipBtn.addEventListener('click', hideIntro);
+        
+        // Loading spinner control
+        function showLoadingSpinner() {
+            document.getElementById('loadingSpinner').style.display = 'flex';
+        }
+        
+        function hideLoadingSpinner() {
+            document.getElementById('loadingSpinner').style.display = 'none';
+        }
+
         // Generate stars background
         function generateStars() {
             const starsContainer = document.getElementById('stars');
@@ -2730,18 +2979,18 @@
                 return;
             }
             
-            // Show loading
-            document.getElementById('loading').classList.add('show');
+            // Show loading spinner with animation
+            showLoadingSpinner();
             document.getElementById('inputSection').style.display = 'none';
             
-            // Simulate calculation time
+            // Simulate calculation time (2.5s to match animation)
             setTimeout(() => {
                 generateForecast();
-                document.getElementById('loading').classList.remove('show');
+                hideLoadingSpinner();
                 document.getElementById('timeframeSelector').style.display = 'flex';
                 document.getElementById('forecastOutput').classList.add('show');
                 document.getElementById('forecastOutput').scrollIntoView({ behavior: 'smooth' });
-            }, 2000);
+            }, 2500);
         });
 
         function generateForecast(timeframe = 'daily') {
@@ -4778,7 +5027,13 @@
                 document.querySelectorAll('.timeframe-btn').forEach(btn => btn.classList.remove('active'));
                 e.target.classList.add('active');
                 const timeframe = e.target.dataset.timeframe;
-                generateForecast(timeframe);
+                
+                // Show loading spinner during recalculation
+                showLoadingSpinner();
+                setTimeout(() => {
+                    generateForecast(timeframe);
+                    hideLoadingSpinner();
+                }, 1500);
             }
         });
 
