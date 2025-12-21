@@ -138,12 +138,24 @@
             color: var(--neon-cyan);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .system-badge:nth-child(1) { animation-delay: 0s; }
+        .system-badge:nth-child(2) { animation-delay: 0.5s; }
+        .system-badge:nth-child(3) { animation-delay: 1s; }
+        .system-badge:nth-child(4) { animation-delay: 1.5s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
         }
 
         .system-badge:hover {
             transform: translateY(-3px);
             box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
             border-color: var(--neon-cyan);
+            animation-play-state: paused;
         }
 
         /* Input Section */
@@ -332,7 +344,7 @@
             content: "⚠️ ";
         }
 
-        /* Generate Button */
+        /* Generate Button with magical effects */
         .generate-btn {
             background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
             border: none;
@@ -347,11 +359,37 @@
             display: block;
             margin: 30px auto;
             box-shadow: 0 0 30px rgba(0, 245, 255, 0.4);
+            position: relative;
+            overflow: hidden;
+            animation: buttonPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes buttonPulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(0, 245, 255, 0.4); }
+            50% { box-shadow: 0 0 50px rgba(0, 245, 255, 0.6), 0 0 80px rgba(157, 0, 255, 0.3); }
+        }
+        
+        .generate-btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+            transform: rotate(45deg);
+            animation: buttonShine 3s ease-in-out infinite;
+        }
+        
+        @keyframes buttonShine {
+            0% { left: -150%; }
+            50%, 100% { left: 150%; }
         }
 
         .generate-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 50px rgba(0, 245, 255, 0.6);
+            box-shadow: 0 0 50px rgba(0, 245, 255, 0.6), 0 0 100px rgba(157, 0, 255, 0.4);
+            animation-play-state: paused;
         }
 
         .generate-btn:active {
@@ -401,6 +439,44 @@
             to { opacity: 1; }
         }
 
+        /* ========================================
+           MAGICAL ANIMATIONS
+           ======================================== */
+        
+        @keyframes glowPulse {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 0 40px rgba(255, 0, 102, 0.2);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(255, 215, 0, 0.5), 0 0 80px rgba(255, 0, 102, 0.4);
+            }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+        }
+        
+        @keyframes borderGlow {
+            0%, 100% { border-color: rgba(0, 245, 255, 0.4); }
+            50% { border-color: rgba(0, 245, 255, 0.8); }
+        }
+        
+        @keyframes textGlow {
+            0%, 100% { text-shadow: 0 0 10px currentColor; }
+            50% { text-shadow: 0 0 20px currentColor, 0 0 40px currentColor; }
+        }
+
         .forecast-header {
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 0, 102, 0.1) 100%);
             border: 2px solid rgba(255, 215, 0, 0.4);
@@ -408,6 +484,7 @@
             padding: 30px;
             margin-bottom: 30px;
             text-align: center;
+            animation: glowPulse 3s ease-in-out infinite;
         }
 
         .forecast-header h2 {
@@ -418,6 +495,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin-bottom: 15px;
+            animation: textGlow 2s ease-in-out infinite;
         }
 
         .forecast-meta {
@@ -425,13 +503,29 @@
             color: var(--text-secondary);
         }
 
-        /* Overview Section */
+        /* Overview Section with shimmer effect */
         .overview-section {
             background: linear-gradient(135deg, rgba(0, 245, 255, 0.15) 0%, rgba(157, 0, 255, 0.15) 100%);
             border: 2px solid var(--neon-cyan);
             border-radius: 20px;
             padding: 30px;
             margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            animation: borderGlow 4s ease-in-out infinite;
+        }
+        
+        .overview-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%);
+            background-size: 200% 100%;
+            animation: shimmer 8s linear infinite;
+            pointer-events: none;
         }
 
         .overview-section h3 {
@@ -447,18 +541,20 @@
             color: var(--text-secondary);
         }
 
-        /* System Sections */
+        /* System Sections with hover magic */
         .system-section {
             background: rgba(0, 0, 0, 0.5);
             border: 2px solid rgba(255, 255, 255, 0.1);
             border-radius: 18px;
             margin-bottom: 20px;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .system-section:hover {
-            border-color: rgba(0, 245, 255, 0.3);
+            border-color: rgba(0, 245, 255, 0.5);
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.2), inset 0 0 20px rgba(0, 245, 255, 0.05);
+            transform: translateY(-2px);
         }
 
         .system-header {
@@ -468,12 +564,22 @@
             justify-content: space-between;
             align-items: center;
             background: rgba(0, 245, 255, 0.05);
+            transition: background 0.3s ease;
+        }
+        
+        .system-header:hover {
+            background: rgba(0, 245, 255, 0.1);
         }
 
         .system-header h3 {
             font-family: 'Orbitron', monospace;
             font-size: 1.3rem;
             color: var(--neon-cyan);
+            transition: text-shadow 0.3s ease;
+        }
+        
+        .system-header:hover h3 {
+            text-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
         }
 
         .system-toggle {
@@ -520,13 +626,34 @@
             line-height: 1.7;
         }
 
-        /* Action Item */
+        /* Action Item with magic effects */
         .action-section {
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 0, 102, 0.15) 100%);
             border: 2px solid var(--neon-gold);
             border-radius: 20px;
             padding: 30px;
             margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+            animation: glowPulse 4s ease-in-out infinite;
+        }
+        
+        .action-section::after {
+            content: '✨';
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            animation: sparkleRotate 3s linear infinite;
+            opacity: 0.7;
+        }
+        
+        @keyframes sparkleRotate {
+            0% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(90deg) scale(1.2); }
+            50% { transform: rotate(180deg) scale(1); }
+            75% { transform: rotate(270deg) scale(1.2); }
+            100% { transform: rotate(360deg) scale(1); }
         }
 
         .action-section h3 {
@@ -542,6 +669,14 @@
             padding: 20px;
             margin-bottom: 15px;
             border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .action-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            border-left-width: 6px;
         }
 
         .action-item h4 {
@@ -555,7 +690,7 @@
             line-height: 1.7;
         }
 
-        /* Save Button */
+        /* Magical Buttons */
         .save-btn {
             background: rgba(255, 215, 0, 0.2);
             border: 2px solid var(--neon-gold);
@@ -568,6 +703,23 @@
             transition: all 0.3s ease;
             margin: 20px auto;
             display: block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .save-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .save-btn:hover::before {
+            left: 100%;
         }
 
         .save-btn:hover {
@@ -2696,22 +2848,34 @@
             hideIntro();
         }
         
-        // Loading spinner control - full intro-style animation
+        // Loading spinner control - EXACT COPY of intro animation
         let loadingAnimationRunning = false;
-        let loadingAnimationTime = 0;
+        let loadingTime = 0;
+        let loadingWizardOrbitStart = 0;
+        let loadingRoseOrbitStart = Math.PI;
         
         function showLoadingSpinner() {
             const loadingOverlay = document.getElementById('loadingSpinner');
             const loadingCanvas = document.getElementById('loading-lines-canvas');
-            const loadingCtx = loadingCanvas ? loadingCanvas.getContext('2d') : null;
+            const loadingCtx = loadingCanvas ? loadingCanvas.getContext('2d', { alpha: true }) : null;
             
             loadingOverlay.style.display = 'flex';
+            loadingOverlay.style.opacity = 1;
             
             if (!loadingCanvas || !loadingCtx) return;
             
-            // Setup canvas
-            loadingCanvas.width = window.innerWidth;
-            loadingCanvas.height = window.innerHeight;
+            // Setup canvas with DPR
+            const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+            const lWidth = window.innerWidth;
+            const lHeight = window.innerHeight;
+            const lCenterX = lWidth / 2;
+            const lCenterY = lHeight / 2;
+            
+            loadingCanvas.width = lWidth * dpr;
+            loadingCanvas.height = lHeight * dpr;
+            loadingCanvas.style.width = lWidth + 'px';
+            loadingCanvas.style.height = lHeight + 'px';
+            loadingCtx.scale(dpr, dpr);
             
             const loadingQuantum = document.getElementById('loading-quantum');
             const loadingWizard = document.getElementById('loading-wizard');
@@ -2719,82 +2883,192 @@
             const loadingSingularity = document.getElementById('loading-singularity');
             const loadingTitle = document.getElementById('loading-title');
             
-            loadingAnimationTime = 0;
-            loadingAnimationRunning = true;
+            // Reset all elements
+            [loadingQuantum, loadingWizard, loadingRose, loadingSingularity, loadingTitle].forEach(el => {
+                if (el) { el.style.opacity = 0; el.style.transform = 'translate(-50%, -50%)'; }
+            });
             
-            const centerX = loadingCanvas.width / 2;
-            const centerY = loadingCanvas.height / 2;
-            const speed = 0.35;
+            loadingTime = 0;
+            loadingAnimationRunning = true;
+            loadingWizardOrbitStart = 0;
+            loadingRoseOrbitStart = Math.PI;
+            
+            function easeInOutCubic(t) {
+                return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+            }
+            
+            function clamp(value, min, max) {
+                return Math.max(min, Math.min(max, value));
+            }
             
             function updateLoadingAnimation() {
                 if (!loadingAnimationRunning) return;
                 
-                const t = loadingAnimationTime * speed;
-                loadingCtx.fillStyle = 'rgba(0, 0, 0, 0.15)';
-                loadingCtx.fillRect(0, 0, loadingCanvas.width, loadingCanvas.height);
-                
-                // Calculate positions for orbiting emojis
-                const maxRadius = Math.min(loadingCanvas.width, loadingCanvas.height) * 0.35;
-                const shrinkFactor = Math.max(0, 1 - t / 8);
-                const currentRadius = maxRadius * shrinkFactor;
-                
-                // Orbit angles
-                const angle1 = t * 1.2;
-                const angle2 = t * 1.2 + (2 * Math.PI / 3);
-                const angle3 = t * 1.2 + (4 * Math.PI / 3);
-                
-                const x1 = centerX + Math.cos(angle1) * currentRadius;
-                const y1 = centerY + Math.sin(angle1) * currentRadius;
-                const x2 = centerX + Math.cos(angle2) * currentRadius;
-                const y2 = centerY + Math.sin(angle2) * currentRadius;
-                const x3 = centerX + Math.cos(angle3) * currentRadius;
-                const y3 = centerY + Math.sin(angle3) * currentRadius;
-                
-                // Draw orbital trails
-                if (currentRadius > 10) {
-                    loadingCtx.strokeStyle = 'rgba(255, 215, 0, 0.3)';
+                const t = loadingTime / 60;
+                loadingCtx.clearRect(0, 0, lWidth, lHeight);
+
+                if (t < 1) {
+                    const progress = clamp(t / 1, 0, 1);
+                    const ease = easeInOutCubic(progress);
+                    loadingQuantum.style.left = lCenterX + 'px';
+                    loadingQuantum.style.top = lCenterY + 'px';
+                    loadingQuantum.style.transform = `translate(-50%, -50%) scale(${ease})`;
+                    loadingQuantum.style.opacity = ease;
+                    loadingWizard.style.opacity = 0;
+                    loadingRose.style.opacity = 0;
+                }
+                else if (t < 2) {
+                    const progress = clamp((t - 1) / 1, 0, 1);
+                    const ease = easeInOutCubic(progress);
+                    loadingQuantum.style.left = lCenterX + 'px';
+                    loadingQuantum.style.top = lCenterY + 'px';
+                    loadingQuantum.style.transform = 'translate(-50%, -50%) scale(1)';
+                    loadingQuantum.style.opacity = 1;
+                    const wizardX = ease * (lCenterX - 80);
+                    loadingWizard.style.left = wizardX + 'px';
+                    loadingWizard.style.top = lCenterY + 'px';
+                    loadingWizard.style.transform = 'translate(-50%, -50%) scale(1)';
+                    loadingWizard.style.opacity = ease;
+                    const roseX = lWidth - ease * (lWidth - lCenterX - 80);
+                    loadingRose.style.left = roseX + 'px';
+                    loadingRose.style.top = lCenterY + 'px';
+                    loadingRose.style.transform = 'translate(-50%, -50%) scale(1)';
+                    loadingRose.style.opacity = ease;
+                }
+                else if (t < 3) {
+                    loadingQuantum.style.left = lCenterX + 'px';
+                    loadingQuantum.style.top = lCenterY + 'px';
+                    loadingQuantum.style.transform = 'translate(-50%, -50%) scale(1)';
+                    loadingWizard.style.left = (lCenterX - 80) + 'px';
+                    loadingWizard.style.top = lCenterY + 'px';
+                    loadingWizard.style.transform = 'translate(-50%, -50%) scale(1)';
+                    loadingRose.style.left = (lCenterX + 80) + 'px';
+                    loadingRose.style.top = lCenterY + 'px';
+                    loadingRose.style.transform = 'translate(-50%, -50%) scale(1)';
+                }
+                else if (t < 4.5) {
+                    const progress = clamp((t - 3) / 1.5, 0, 1);
+                    const rotation = progress * Math.PI * 2 * 0.5;
+                    loadingCtx.strokeStyle = 'rgba(0, 240, 255, ' + (progress * 0.6) + ')';
                     loadingCtx.lineWidth = 2;
                     loadingCtx.beginPath();
-                    loadingCtx.arc(centerX, centerY, currentRadius, 0, Math.PI * 2);
+                    loadingCtx.arc(lCenterX, lCenterY, 80, rotation, rotation + Math.PI);
                     loadingCtx.stroke();
-                }
-                
-                // Position emojis
-                const opacity = t < 1 ? t : (shrinkFactor > 0 ? 1 : 0);
-                
-                if (loadingQuantum) {
-                    loadingQuantum.style.left = x1 + 'px';
-                    loadingQuantum.style.top = y1 + 'px';
-                    loadingQuantum.style.opacity = opacity;
-                    loadingQuantum.style.transform = 'translate(-50%, -50%)';
-                }
-                if (loadingWizard) {
-                    loadingWizard.style.left = x2 + 'px';
-                    loadingWizard.style.top = y2 + 'px';
-                    loadingWizard.style.opacity = opacity;
-                    loadingWizard.style.transform = 'translate(-50%, -50%)';
-                }
-                if (loadingRose) {
-                    loadingRose.style.left = x3 + 'px';
-                    loadingRose.style.top = y3 + 'px';
-                    loadingRose.style.opacity = opacity;
-                    loadingRose.style.transform = 'translate(-50%, -50%)';
-                }
-                
-                // Singularity and title appear as orbits converge
-                if (t >= 6) {
-                    const progress = Math.min(1, (t - 6) / 2);
-                    if (loadingSingularity) {
-                        loadingSingularity.style.opacity = progress;
-                        loadingSingularity.style.transform = `translate(-50%, -50%) scale(${progress * 2})`;
-                    }
-                    if (loadingTitle) {
-                        loadingTitle.style.opacity = progress;
-                        loadingTitle.style.transform = `translate(-50%, -50%) scale(${0.8 + progress * 0.2})`;
+                    loadingCtx.strokeStyle = 'rgba(255, 0, 255, ' + (progress * 0.6) + ')';
+                    loadingCtx.beginPath();
+                    loadingCtx.arc(lCenterX, lCenterY, 80, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
+                    loadingCtx.stroke();
+                    loadingCtx.strokeStyle = 'rgba(157, 0, 255, ' + (progress * 0.6) + ')';
+                    loadingCtx.beginPath();
+                    loadingCtx.arc(lCenterX, lCenterY, 80, rotation + Math.PI, rotation + Math.PI * 2);
+                    loadingCtx.stroke();
+                    if (t < 4.51) {
+                        loadingWizardOrbitStart = Math.PI;
+                        loadingRoseOrbitStart = 0;
                     }
                 }
-                
-                loadingAnimationTime++;
+                else if (t < 6.5) {
+                    const progress = clamp((t - 4.5) / 2, 0, 1);
+                    const speedMultiplier = 1 + progress * 8;
+                    const rotation = ((t - 3) * speedMultiplier) * Math.PI * 2 * 0.5;
+                    loadingCtx.strokeStyle = 'rgba(0, 240, 255, 0.6)';
+                    loadingCtx.lineWidth = 2;
+                    loadingCtx.beginPath();
+                    loadingCtx.arc(lCenterX, lCenterY, 80, rotation, rotation + Math.PI);
+                    loadingCtx.stroke();
+                    loadingCtx.strokeStyle = 'rgba(255, 0, 255, 0.6)';
+                    loadingCtx.beginPath();
+                    loadingCtx.arc(lCenterX, lCenterY, 80, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
+                    loadingCtx.stroke();
+                    loadingCtx.strokeStyle = 'rgba(157, 0, 255, 0.6)';
+                    loadingCtx.beginPath();
+                    loadingCtx.arc(lCenterX, lCenterY, 80, rotation + Math.PI, rotation + Math.PI * 2);
+                    loadingCtx.stroke();
+                    loadingQuantum.style.left = lCenterX + 'px';
+                    loadingQuantum.style.top = lCenterY + 'px';
+                    loadingQuantum.style.transform = 'translate(-50%, -50%) scale(1)';
+                    const orbitProgress = (t - 4.5) * speedMultiplier * 0.5;
+                    const orbitRadius = 80;
+                    const wizardAngle = loadingWizardOrbitStart + orbitProgress * Math.PI * 2;
+                    const wizardX = lCenterX + Math.cos(wizardAngle) * orbitRadius;
+                    const wizardY = lCenterY + Math.sin(wizardAngle) * orbitRadius;
+                    loadingWizard.style.left = wizardX + 'px';
+                    loadingWizard.style.top = wizardY + 'px';
+                    loadingWizard.style.transform = 'translate(-50%, -50%) scale(1)';
+                    const roseAngle = loadingRoseOrbitStart + orbitProgress * Math.PI * 2;
+                    const roseX = lCenterX + Math.cos(roseAngle) * orbitRadius;
+                    const roseY = lCenterY + Math.sin(roseAngle) * orbitRadius;
+                    loadingRose.style.left = roseX + 'px';
+                    loadingRose.style.top = roseY + 'px';
+                    loadingRose.style.transform = 'translate(-50%, -50%) scale(1)';
+                }
+                else if (t < 7.5) {
+                    const progress = clamp((t - 6.5) / 1, 0, 1);
+                    const ease = easeInOutCubic(progress);
+                    const rotation = ((t - 3) * 9) * Math.PI * 2 * 0.5;
+                    const lineOpacity = 0.6 * (1 - ease);
+                    const lineRadius = 80 * (1 - ease);
+                    loadingCtx.strokeStyle = 'rgba(0, 240, 255, ' + lineOpacity + ')';
+                    loadingCtx.lineWidth = 2;
+                    loadingCtx.beginPath();
+                    loadingCtx.arc(lCenterX, lCenterY, lineRadius, rotation, rotation + Math.PI);
+                    loadingCtx.stroke();
+                    loadingCtx.strokeStyle = 'rgba(255, 0, 255, ' + lineOpacity + ')';
+                    loadingCtx.beginPath();
+                    loadingCtx.arc(lCenterX, lCenterY, lineRadius, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
+                    loadingCtx.stroke();
+                    const orbitProgress = (t - 4.5) * 9 * 0.5;
+                    const orbitRadius = 80 * (1 - ease);
+                    const wizardAngle = loadingWizardOrbitStart + orbitProgress * Math.PI * 2;
+                    const wizardX = lCenterX + Math.cos(wizardAngle) * orbitRadius;
+                    const wizardY = lCenterY + Math.sin(wizardAngle) * orbitRadius;
+                    const roseAngle = loadingRoseOrbitStart + orbitProgress * Math.PI * 2;
+                    const roseX = lCenterX + Math.cos(roseAngle) * orbitRadius;
+                    const roseY = lCenterY + Math.sin(roseAngle) * orbitRadius;
+                    const emojiScale = 1 - ease * 0.9;
+                    loadingWizard.style.left = wizardX + 'px';
+                    loadingWizard.style.top = wizardY + 'px';
+                    loadingWizard.style.transform = `translate(-50%, -50%) scale(${emojiScale})`;
+                    loadingWizard.style.opacity = 1 - ease;
+                    loadingRose.style.left = roseX + 'px';
+                    loadingRose.style.top = roseY + 'px';
+                    loadingRose.style.transform = `translate(-50%, -50%) scale(${emojiScale})`;
+                    loadingRose.style.opacity = 1 - ease;
+                    const quantumScale = 1 + (ease < 0.3 ? ease * 0.5 : (1 - ease) * 1.5);
+                    loadingQuantum.style.left = lCenterX + 'px';
+                    loadingQuantum.style.top = lCenterY + 'px';
+                    loadingQuantum.style.transform = `translate(-50%, -50%) scale(${quantumScale})`;
+                    loadingQuantum.style.opacity = 1 - ease;
+                    loadingSingularity.style.transform = `translate(-50%, -50%) scale(${ease})`;
+                    loadingSingularity.style.opacity = ease;
+                }
+                else if (t < 8) {
+                    loadingQuantum.style.opacity = 0;
+                    loadingWizard.style.opacity = 0;
+                    loadingRose.style.opacity = 0;
+                    const pulse = Math.sin((t - 7.5) * Math.PI * 4) * 0.2 + 1;
+                    loadingSingularity.style.transform = `translate(-50%, -50%) scale(${pulse})`;
+                    loadingSingularity.style.opacity = 1;
+                }
+                else if (t < 10) {
+                    const progress = clamp((t - 8) / 2, 0, 1);
+                    const ease = easeInOutCubic(progress);
+                    loadingSingularity.style.transform = `translate(-50%, -50%) scale(1)`;
+                    loadingSingularity.style.opacity = 1 - ease;
+                    const maxFontSize = Math.min(lWidth * 0.065, 42);
+                    const fontSize = ease * maxFontSize;
+                    loadingTitle.style.fontSize = fontSize + 'px';
+                    loadingTitle.style.transform = `translate(-50%, -50%)`;
+                    loadingTitle.style.opacity = ease;
+                }
+                else if (t < 11) {
+                    loadingSingularity.style.opacity = 0;
+                    const maxFontSize = Math.min(lWidth * 0.065, 42);
+                    loadingTitle.style.fontSize = maxFontSize + 'px';
+                    loadingTitle.style.opacity = 1;
+                }
+
+                loadingTime++;
                 if (loadingAnimationRunning) {
                     requestAnimationFrame(updateLoadingAnimation);
                 }
@@ -2807,13 +3081,6 @@
             loadingAnimationRunning = false;
             const loadingOverlay = document.getElementById('loadingSpinner');
             loadingOverlay.style.display = 'none';
-            
-            // Reset elements
-            const elements = ['loading-quantum', 'loading-wizard', 'loading-rose', 'loading-singularity', 'loading-title'];
-            elements.forEach(id => {
-                const el = document.getElementById(id);
-                if (el) el.style.opacity = 0;
-            });
         }
 
         // Generate stars background
@@ -3907,7 +4174,7 @@
             showLoadingSpinner();
             document.getElementById('inputSection').style.display = 'none';
             
-            // Simulate calculation time (3.5s to match orbital animation convergence)
+            // Simulate calculation time (11s to match full intro animation)
             setTimeout(() => {
                 generateForecast();
                 hideLoadingSpinner();
@@ -3915,7 +4182,7 @@
                 document.getElementById('forecastOutput').classList.add('show');
                 document.getElementById('howToUse').style.display = 'block';
                 document.getElementById('forecastOutput').scrollIntoView({ behavior: 'smooth' });
-            }, 3500);
+            }, 11000);
         });
 
         // Input Validation
