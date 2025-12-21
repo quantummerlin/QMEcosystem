@@ -2305,20 +2305,6 @@
         <!-- Input Section -->
         <div class="input-section" id="inputSection">
             <h2>Generate Your Forecast</h2>
-            
-            <!-- Accuracy Indicator -->
-            <div class="accuracy-indicator" id="accuracyIndicator">
-                <h3>Forecast Accuracy</h3>
-                <div class="accuracy-bar">
-                    <div class="accuracy-fill" id="accuracyFill" style="width: 0%;">0%</div>
-                </div>
-                <ul class="data-checklist" id="dataChecklist">
-                    <li class="missing">⚠️ Birth date not provided</li>
-                    <li class="missing">⚠️ Birth time not provided</li>
-                    <li class="missing">⚠️ Birth location not provided</li>
-                    <li class="missing">⚠️ Name not provided</li>
-                </ul>
-            </div>
 
             <!-- Tier 1: Required -->
             <div class="input-group">
@@ -2390,6 +2376,20 @@
 
             <!-- Generate Button -->
             <button class="generate-btn" id="generateBtn">✨ Generate Forecast</button>
+            
+            <!-- Accuracy Indicator -->
+            <div class="accuracy-indicator" id="accuracyIndicator">
+                <h3>Forecast Accuracy</h3>
+                <div class="accuracy-bar">
+                    <div class="accuracy-fill" id="accuracyFill" style="width: 0%;">0%</div>
+                </div>
+                <ul class="data-checklist" id="dataChecklist">
+                    <li class="missing">⚠️ Birth date not provided</li>
+                    <li class="missing">⚠️ Birth time not provided</li>
+                    <li class="missing">⚠️ Birth location not provided</li>
+                    <li class="missing">⚠️ Name not provided</li>
+                </ul>
+            </div>
         </div>
         <!-- Timeframe Selector -->
         <div class="timeframe-selector" id="timeframeSelector" style="display: none;">
@@ -4285,21 +4285,7 @@
                     </div>
                 </div>
 
-                <div class="tarot-section">
-                    <h3>🃏 YOUR DAILY TAROT CARD</h3>
-                    <div class="tarot-card-display">
-                        <div class="tarot-card">
-                            <img src="${tarotCard.image}" alt="${tarotCard.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                            <div class="tarot-symbol" style="display:none;">${tarotCard.symbol}</div>
-                            <div class="tarot-number">${tarotCard.suit === 'major' ? (tarotCard.number === 0 ? '0' : tarotCard.number) : tarotCard.suit.toUpperCase()}</div>
-                            <div class="tarot-name">${tarotCard.name}</div>
-                        </div>
-                        <div class="tarot-meaning">
-                            <p><strong>Meaning:</strong> ${tarotCard.meaning}</p>
-                            <p><strong>Guidance:</strong> ${tarotCard.guidance}</p>
-                        </div>
-                    </div>
-                </div>
+
 
                 ${planetaryAspects.length > 0 ? `
                 <div class="aspects-section">
@@ -4427,6 +4413,27 @@
                     </div>
                 </div>
                 ` : ''}
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🃏 TAROT READING</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        <div class="tarot-card-display">
+                            <div class="tarot-card">
+                                <img src="${tarotCard.image}" alt="${tarotCard.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="tarot-symbol" style="display:none;">${tarotCard.symbol}</div>
+                                <div class="tarot-number">${tarotCard.suit === 'major' ? (tarotCard.number === 0 ? '0' : tarotCard.number) : tarotCard.suit.toUpperCase()}</div>
+                                <div class="tarot-name">${tarotCard.name}</div>
+                            </div>
+                            <div class="tarot-meaning">
+                                <p><strong>Meaning:</strong> ${tarotCard.meaning}</p>
+                                <p><strong>Guidance:</strong> ${tarotCard.guidance}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="action-section">
                     <h3>💡 YOUR DAILY ACTION PLAN</h3>
