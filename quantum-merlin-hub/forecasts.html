@@ -2290,12 +2290,14 @@
                 'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig'
             ];
             
-            // Correct element calculation based on Heavenly Stems (10-year cycle)
-            // Elements rotate: Metal, Metal, Water, Water, Wood, Wood, Fire, Fire, Earth, Earth
+            // Correct element based on last digit of year (Heavenly Stems)
+            // 0-1: Metal, 2-3: Water, 4-5: Wood, 6-7: Fire, 8-9: Earth
             const elements = ['Metal', 'Metal', 'Water', 'Water', 'Wood', 'Wood', 'Fire', 'Fire', 'Earth', 'Earth'];
             
+            // Animal calculation (12-year cycle starting from Rat in 1924)
             const animalIndex = (year - 4) % 12;
-            const elementIndex = (year - 4) % 10;
+            // Element calculation (10-year cycle based on year's last digit)
+            const elementIndex = year % 10;
             
             return {
                 animal: animals[animalIndex],
