@@ -2776,19 +2776,34 @@
 
         function hideIntro() {
             isRunning = false;
-            introOverlay.classList.add('hidden');
+            if (introOverlay) {
+                introOverlay.classList.add('hidden');
+            }
             localStorage.setItem('qm_forecaster_visited', 'true');
         }
         
-        if (hasVisited) {
+        // Force show intro if URL has ?intro parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const forceIntro = urlParams.has('intro');
+        
+        if (forceIntro) {
+            localStorage.removeItem('qm_forecaster_visited');
+        }
+        
+        if (hasVisited && !forceIntro) {
             hideIntro();
         } else {
-            resizeCanvas();
-            window.addEventListener('resize', resizeCanvas);
-            setTimeout(() => {
-                isRunning = true;
-                updateAnimation();
-            }, 100);
+            if (canvas && ctx) {
+                resizeCanvas();
+                window.addEventListener('resize', resizeCanvas);
+                setTimeout(() => {
+                    isRunning = true;
+                    updateAnimation();
+                }, 100);
+            } else {
+                // If canvas not found, skip intro
+                hideIntro();
+            }
         }
         
         if (skipBtn) {
