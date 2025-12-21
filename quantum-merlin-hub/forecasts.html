@@ -2279,46 +2279,20 @@
 
         <!-- Email Capture Section -->
         <div class="email-capture" id="emailCapture">
-            <h3>☀️ Get Your Daily Forecast at Sunrise</h3>
-            <p class="subtitle">Never miss your cosmic guidance - delivered free to your inbox every morning</p>
+            <h3>🔔 Stay Updated on New Quantum Tools</h3>
+            <p class="subtitle">Be the first to know when we release new tools in the Quantum Merlin Ecosystem</p>
             <form class="email-form" id="emailForm">
                 <input type="email" id="emailInput" placeholder="Enter your email" required>
-                <button type="submit">Subscribe Free</button>
+                <button type="submit">Get Notified</button>
             </form>
             <div class="email-benefits">
                 <span>✓ 100% Free</span>
-                <span>✓ Personalized Daily</span>
+                <span>✓ Exclusive Early Access</span>
                 <span>✓ Unsubscribe Anytime</span>
             </div>
         </div>
 
-        <!-- Compatibility Checker Section -->
-        <div class="compatibility-section" id="compatibilitySection">
-            <h3>💕 Love & Compatibility Checker</h3>
-            <p class="subtitle">Discover your cosmic compatibility with anyone</p>
-            <div class="compatibility-form">
-                <div class="compat-person">
-                    <label>Your Birth Date</label>
-                    <input type="date" id="compatDate1">
-                </div>
-                <div class="compat-vs">💞</div>
-                <div class="compat-person">
-                    <label>Their Birth Date</label>
-                    <input type="date" id="compatDate2">
-                </div>
-            </div>
-            <button class="check-compat-btn" id="checkCompatBtn">Check Compatibility</button>
-            
-            <div class="compatibility-result" id="compatResult">
-                <div class="compat-score" id="compatScore">85%</div>
-                <p id="compatSummary" style="color: var(--text-secondary); font-size: 1.1rem;"></p>
-                <div class="compat-details" id="compatDetails">
-                    <!-- Dynamically filled -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Ad Container - Bottom -->
+        <!-- Ad Container - Mid Content -->
         <div class="ad-container square" id="adBottom">
             <span class="ad-placeholder">[ Ad Space - 300x250 ]</span>
         </div>
@@ -2698,144 +2672,6 @@
             // Track conversion
             console.log('Email captured:', email);
         });
-
-        // Compatibility Checker
-        document.getElementById('checkCompatBtn').addEventListener('click', function() {
-            const date1 = document.getElementById('compatDate1').value;
-            const date2 = document.getElementById('compatDate2').value;
-            
-            if (!date1 || !date2) {
-                alert('Please enter both birth dates');
-                return;
-            }
-            
-            const result = calculateCompatibility(date1, date2);
-            displayCompatibilityResult(result);
-        });
-
-        function calculateCompatibility(date1, date2) {
-            const d1 = new Date(date1);
-            const d2 = new Date(date2);
-            
-            // Get zodiac signs
-            const sign1 = getZodiacSign(d1.getMonth() + 1, d1.getDate());
-            const sign2 = getZodiacSign(d2.getMonth() + 1, d2.getDate());
-            
-            // Get life paths
-            const lp1 = getLifePathNumber(date1);
-            const lp2 = getLifePathNumber(date2);
-            
-            // Get Chinese zodiac
-            const cn1 = getChineseZodiac(d1.getFullYear());
-            const cn2 = getChineseZodiac(d2.getFullYear());
-            
-            // Calculate compatibility scores
-            const zodiacCompat = calculateZodiacCompatibility(sign1.name, sign2.name);
-            const lifePathCompat = calculateLifePathCompatibility(lp1, lp2);
-            const chineseCompat = calculateChineseCompatibility(cn1.animal, cn2.animal);
-            
-            // Overall score
-            const overallScore = Math.round((zodiacCompat + lifePathCompat + chineseCompat) / 3);
-            
-            return {
-                score: overallScore,
-                sign1, sign2,
-                lp1, lp2,
-                cn1, cn2,
-                zodiacCompat,
-                lifePathCompat,
-                chineseCompat
-            };
-        }
-
-        function calculateZodiacCompatibility(sign1, sign2) {
-            const elements = {
-                'Aries': 'Fire', 'Leo': 'Fire', 'Sagittarius': 'Fire',
-                'Taurus': 'Earth', 'Virgo': 'Earth', 'Capricorn': 'Earth',
-                'Gemini': 'Air', 'Libra': 'Air', 'Aquarius': 'Air',
-                'Cancer': 'Water', 'Scorpio': 'Water', 'Pisces': 'Water'
-            };
-            
-            const el1 = elements[sign1];
-            const el2 = elements[sign2];
-            
-            if (sign1 === sign2) return 75; // Same sign
-            if (el1 === el2) return 90; // Same element
-            if ((el1 === 'Fire' && el2 === 'Air') || (el1 === 'Air' && el2 === 'Fire')) return 85;
-            if ((el1 === 'Earth' && el2 === 'Water') || (el1 === 'Water' && el2 === 'Earth')) return 85;
-            if ((el1 === 'Fire' && el2 === 'Earth') || (el1 === 'Earth' && el2 === 'Fire')) return 60;
-            if ((el1 === 'Air' && el2 === 'Water') || (el1 === 'Water' && el2 === 'Air')) return 55;
-            return 70; // Other combinations
-        }
-
-        function calculateLifePathCompatibility(lp1, lp2) {
-            const compatible = {
-                1: [3, 5, 7],
-                2: [4, 6, 8],
-                3: [1, 5, 9],
-                4: [2, 6, 8],
-                5: [1, 3, 7],
-                6: [2, 4, 9],
-                7: [1, 5, 9],
-                8: [2, 4, 6],
-                9: [3, 6, 7]
-            };
-            
-            if (lp1 === lp2) return 80;
-            if (compatible[lp1]?.includes(lp2)) return 90;
-            return 65;
-        }
-
-        function calculateChineseCompatibility(animal1, animal2) {
-            const allies = {
-                'Rat': ['Dragon', 'Monkey'],
-                'Ox': ['Snake', 'Rooster'],
-                'Tiger': ['Horse', 'Dog'],
-                'Rabbit': ['Goat', 'Pig'],
-                'Dragon': ['Rat', 'Monkey'],
-                'Snake': ['Ox', 'Rooster'],
-                'Horse': ['Tiger', 'Dog'],
-                'Goat': ['Rabbit', 'Pig'],
-                'Monkey': ['Rat', 'Dragon'],
-                'Rooster': ['Ox', 'Snake'],
-                'Dog': ['Tiger', 'Horse'],
-                'Pig': ['Rabbit', 'Goat']
-            };
-            
-            if (animal1 === animal2) return 75;
-            if (allies[animal1]?.includes(animal2)) return 95;
-            return 65;
-        }
-
-        function displayCompatibilityResult(result) {
-            document.getElementById('compatScore').textContent = result.score + '%';
-            
-            let summaryText = '';
-            if (result.score >= 85) summaryText = '🌟 Exceptional Match! You two are cosmically aligned.';
-            else if (result.score >= 75) summaryText = '✨ Great Match! Strong compatibility across systems.';
-            else if (result.score >= 65) summaryText = '💫 Good Match! Complementary energies with growth potential.';
-            else summaryText = '🔮 Challenging Match - but opposites can attract and teach.';
-            
-            document.getElementById('compatSummary').textContent = summaryText;
-            
-            document.getElementById('compatDetails').innerHTML = `
-                <div class="compat-detail-item">
-                    <h5>⭐ Zodiac (${result.zodiacCompat}%)</h5>
-                    <p>${result.sign1.name} ${result.sign1.symbol} + ${result.sign2.name} ${result.sign2.symbol}</p>
-                </div>
-                <div class="compat-detail-item">
-                    <h5>🔢 Life Path (${result.lifePathCompat}%)</h5>
-                    <p>Path ${result.lp1} + Path ${result.lp2}</p>
-                </div>
-                <div class="compat-detail-item">
-                    <h5>🐉 Chinese (${result.chineseCompat}%)</h5>
-                    <p>${result.cn1.animal} + ${result.cn2.animal}</p>
-                </div>
-            `;
-            
-            document.getElementById('compatResult').classList.add('show');
-            document.getElementById('compatResult').scrollIntoView({ behavior: 'smooth' });
-        }
 
         // Social Sharing Functions
         function generateShareURL() {
@@ -4234,38 +4070,22 @@
                     </div>
                 </div>
 
-                <div class="best-day-banner">
-                    <h3>🌟 YOUR POWER DAY THIS WEEK</h3>
-                    <div class="best-day-content">
-                        <div class="best-day-name">${bestDay.emoji} ${bestDay.day}</div>
-                        <p><strong>${bestDay.energy}</strong></p>
-                        <p>${bestDay.action}</p>
-                    </div>
-                </div>
-
-                <div class="tarot-section">
-                    <h3>🃏 YOUR WEEKLY TAROT CARD</h3>
-                    <div class="tarot-card-display">
-                        <div class="tarot-card">
-                            <img src="${tarotCard.image}" alt="${tarotCard.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                            <div class="tarot-symbol" style="display:none;">${tarotCard.symbol}</div>
-                            <div class="tarot-number">${tarotCard.suit === 'major' ? (tarotCard.number === 0 ? '0' : tarotCard.number) : tarotCard.suit.toUpperCase()}</div>
-                            <div class="tarot-name">${tarotCard.name}</div>
-                        </div>
-                        <div class="tarot-meaning">
-                            <p><strong>Theme:</strong> ${tarotCard.meaning}</p>
-                            <p><strong>Guidance:</strong> ${tarotCard.guidance}</p>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="overview-section">
                     <h3>🌟 WEEK AT A GLANCE</h3>
                     <div class="overview-content">
                         <p><strong>Theme:</strong> ${getWeeklyTheme(zodiac, chinese, personalYear, moonPhase)}</p>
                         <p><strong>Opportunity:</strong> ${getWeeklyOpportunity(lifePath, personalYear, focus)}</p>
                         <p><strong>Challenge:</strong> ${getWeeklyChallenge(zodiac, chinese, challenge)}</p>
-                        <p><strong>Key Day:</strong> ${getKeyDayOfWeek(zodiac, lifePath)}</p>
+                        <p><strong>Power Day:</strong> ${bestDay.emoji} ${bestDay.day} - ${bestDay.energy}</p>
+                    </div>
+                </div>
+
+                <div class="best-day-banner">
+                    <h3>🌟 YOUR POWER DAY THIS WEEK</h3>
+                    <div class="best-day-content">
+                        <div class="best-day-name">${bestDay.emoji} ${bestDay.day}</div>
+                        <p><strong>${bestDay.energy}</strong></p>
+                        <p>${bestDay.action}</p>
                     </div>
                 </div>
 
@@ -4300,11 +4120,42 @@
 
                 <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🐉 CHINESE ZODIAC</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getEnhancedChineseZodiacForecast(chinese, moonPhase)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
                         <h3>🔢 NUMEROLOGY - Weekly Vibration</h3>
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
                         ${getWeeklyNumerologyForecast(lifePath, personalYear, weekStart)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🃏 TAROT READING</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        <div class="tarot-card-display">
+                            <div class="tarot-card">
+                                <img src="${tarotCard.image}" alt="${tarotCard.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="tarot-symbol" style="display:none;">${tarotCard.symbol}</div>
+                                <div class="tarot-number">${tarotCard.suit === 'major' ? (tarotCard.number === 0 ? '0' : tarotCard.number) : tarotCard.suit.toUpperCase()}</div>
+                                <div class="tarot-name">${tarotCard.name}</div>
+                            </div>
+                            <div class="tarot-meaning">
+                                <p><strong>Theme:</strong> ${tarotCard.meaning}</p>
+                                <p><strong>Guidance:</strong> ${tarotCard.guidance}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
