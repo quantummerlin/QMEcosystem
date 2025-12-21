@@ -1630,13 +1630,13 @@
             <div class="accuracy-indicator" id="accuracyIndicator">
                 <h3>Forecast Accuracy</h3>
                 <div class="accuracy-bar">
-                    <div class="accuracy-fill" id="accuracyFill" style="width: 25%;">25%</div>
+                    <div class="accuracy-fill" id="accuracyFill" style="width: 0%;">0%</div>
                 </div>
                 <ul class="data-checklist" id="dataChecklist">
-                    <li class="missing">Birth date not provided</li>
-                    <li class="missing">Birth time not provided</li>
-                    <li class="missing">Birth location not provided</li>
-                    <li class="missing">Name not provided</li>
+                    <li class="missing">⚠️ Birth date not provided</li>
+                    <li class="missing">⚠️ Birth time not provided</li>
+                    <li class="missing">⚠️ Birth location not provided</li>
+                    <li class="missing">⚠️ Name not provided</li>
                 </ul>
             </div>
 
@@ -2344,7 +2344,7 @@
         }
 
         // PHASE 2: Rising Sign Calculator (based on birth time)
-        function getRisingSign(birthDate, birthTime) {
+        function getRisingSign(birthDate, birthTime, birthLocation) {
             if (!birthTime) return null;
             const birth = new Date(birthDate);
             const month = birth.getMonth() + 1;
@@ -2357,9 +2357,27 @@
             const [hours, minutes] = birthTime.split(':').map(Number);
             const totalMinutes = hours * 60 + minutes;
             
+            // Adjust sunrise time based on location if provided
+            let sunriseMinutes = 6 * 60; // Default 6 AM
+            if (birthLocation) {
+                // Approximate latitude adjustment for sunrise time
+                const location = birthLocation.toLowerCase();
+                if (location.includes('uk') || location.includes('london') || location.includes('england')) {
+                    sunriseMinutes = 7 * 60; // UK ~7 AM average
+                } else if (location.includes('australia') || location.includes('sydney')) {
+                    sunriseMinutes = 6.5 * 60; // Australia
+                } else if (location.includes('india') || location.includes('mumbai')) {
+                    sunriseMinutes = 6 * 60; // India
+                } else if (location.includes('japan') || location.includes('tokyo')) {
+                    sunriseMinutes = 6 * 60; // Japan
+                } else if (location.includes('california') || location.includes('los angeles')) {
+                    sunriseMinutes = 6.5 * 60; // West Coast USA
+                } else if (location.includes('new york') || location.includes('boston')) {
+                    sunriseMinutes = 6.5 * 60; // East Coast USA
+                }
+            }
+            
             // Rising sign changes approximately every 2 hours (120 minutes)
-            // 6 AM = Ascendant aligns with Sun sign
-            const sunriseMinutes = 6 * 60; // 6 AM baseline
             const minutesSinceSunrise = (totalMinutes - sunriseMinutes + 1440) % 1440;
             const risingOffset = Math.floor(minutesSinceSunrise / 120);
             const risingIndex = (sunSignIndex + risingOffset) % 12;
@@ -2382,12 +2400,31 @@
         }
 
         // PHASE 2: Moon Sign Calculator
-        function getMoonSign(birthDate) {
+        function getMoonSign(birthDate, birthTime, birthLocation) {
             const birth = new Date(birthDate);
             // Moon moves through all 12 signs in ~29.5 days = ~2.46 days per sign
             const epoch = new Date('2000-01-06'); // New Moon in Capricorn reference
             const daysSinceEpoch = Math.floor((birth - epoch) / (1000 * 60 * 60 * 24));
-            const moonCyclePosition = daysSinceEpoch % 29.5;
+            
+            // Add time-based offset if birthTime provided
+            let hourOffset = 0;
+            if (birthTime) {
+                const [hours] = birthTime.split(':').map(Number);
+                hourOffset = hours / 24; // Convert hours to fraction of day
+                
+                // Adjust for timezone if location provided
+                if (birthLocation) {
+                    const location = birthLocation.toLowerCase();
+                    if (location.includes('uk') || location.includes('london')) hourOffset += 0;
+                    else if (location.includes('india') || location.includes('mumbai')) hourOffset += 5.5/24;
+                    else if (location.includes('australia') || location.includes('sydney')) hourOffset += 10/24;
+                    else if (location.includes('japan') || location.includes('tokyo')) hourOffset += 9/24;
+                    else if (location.includes('los angeles') || location.includes('california')) hourOffset -= 8/24;
+                    else if (location.includes('new york') || location.includes('boston')) hourOffset -= 5/24;
+                }
+            }
+            
+            const moonCyclePosition = (daysSinceEpoch + hourOffset) % 29.5;
             const moonSignIndex = Math.floor((moonCyclePosition / 29.5) * 12) % 12;
             
             const signs = [
@@ -2595,8 +2632,8 @@
             const gematria = calculateGematria(fullName);
             
             // PHASE 2: Advanced calculations
-            const risingSign = getRisingSign(birthDate, birthTime);
-            const moonSign = getMoonSign(birthDate);
+            const risingSign = getRisingSign(birthDate, birthTime, birthLocation);
+            const moonSign = getMoonSign(birthDate, birthTime, birthLocation);
             const planetaryHour = getPlanetaryHour();
             const moonPhase = getCurrentMoonPhase();
             const crossAnalysis = getCrossSystemAnalysis(zodiac, risingSign, moonSign, chinese, lifePath, personalYear);
