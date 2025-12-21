@@ -2779,39 +2779,37 @@
             if (introOverlay) {
                 introOverlay.classList.add('hidden');
             }
-            localStorage.setItem('qm_forecaster_visited', 'true');
-        }
-        
-        // Force show intro if URL has ?intro parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const forceIntro = urlParams.has('intro');
-        
-        if (forceIntro) {
-            localStorage.removeItem('qm_forecaster_visited');
-        }
-        
-        if (hasVisited && !forceIntro) {
-            hideIntro();
-        } else {
-            if (canvas && ctx) {
-                resizeCanvas();
-                window.addEventListener('resize', resizeCanvas);
-                setTimeout(() => {
-                    isRunning = true;
-                    updateAnimation();
-                }, 100);
-            } else {
-                // If canvas not found, skip intro
-                hideIntro();
+            if (!hasVisited) {
+                localStorage.setItem('qm_forecaster_visited', 'true');
             }
         }
         
+        // Show/hide skip button based on first visit
         if (skipBtn) {
+            if (hasVisited) {
+                skipBtn.style.display = 'block';
+            } else {
+                skipBtn.style.display = 'none';
+            }
+            
             skipBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 hideIntro();
             });
+        }
+        
+        // Always run animation
+        if (canvas && ctx && introOverlay) {
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+            setTimeout(() => {
+                isRunning = true;
+                updateAnimation();
+            }, 100);
+        } else {
+            console.error('Canvas or overlay elements not found');
+            hideIntro();
         }
         
         // Loading spinner control
