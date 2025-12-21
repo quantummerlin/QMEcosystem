@@ -680,6 +680,200 @@
             font-style: normal;
         }
 
+        /* Tarot Card Display */
+        .tarot-section {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15) 0%, rgba(255, 215, 0, 0.15) 100%);
+            border: 2px solid var(--neon-gold);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .tarot-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: var(--neon-gold);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tarot-card-display {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tarot-card {
+            background: linear-gradient(145deg, rgba(0, 0, 0, 0.8), rgba(75, 0, 130, 0.4));
+            border: 3px solid var(--neon-gold);
+            border-radius: 15px;
+            padding: 30px 20px;
+            min-width: 200px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tarot-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+        }
+
+        .tarot-symbol {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .tarot-number {
+            color: var(--neon-gold);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .tarot-name {
+            color: var(--neon-cyan);
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .tarot-meaning {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .tarot-meaning p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .tarot-meaning strong {
+            color: var(--neon-gold);
+        }
+
+        /* Planetary Aspects Section */
+        .aspects-section {
+            background: linear-gradient(135deg, rgba(0, 100, 255, 0.15) 0%, rgba(138, 43, 226, 0.15) 100%);
+            border: 2px solid rgba(0, 245, 255, 0.6);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .aspects-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: var(--neon-cyan);
+            margin-bottom: 20px;
+        }
+
+        .aspects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .aspect-item {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        .aspect-item:hover {
+            border-color: var(--neon-cyan);
+        }
+
+        .aspect-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .aspect-symbol {
+            font-size: 2rem;
+            color: var(--neon-gold);
+        }
+
+        .aspect-type {
+            color: var(--neon-cyan);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .aspect-planets {
+            color: var(--neon-purple);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .aspect-meaning {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Best Day Banner */
+        .best-day-banner {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 0, 102, 0.2) 100%);
+            border: 3px solid var(--neon-gold);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .best-day-banner h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.6rem;
+            color: var(--neon-gold);
+            margin-bottom: 20px;
+        }
+
+        .best-day-content {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .best-day-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--neon-cyan);
+            margin-bottom: 15px;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .best-day-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .best-day-content strong {
+            color: var(--neon-gold);
+        }
+
+        .day-item.best-day {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(0, 245, 255, 0.15));
+            border: 2px solid var(--neon-gold);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .best-day-note {
+            color: var(--neon-gold);
+            font-weight: 600;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
         /* Cross-Reference Sections */
         .cross-reference-section {
             border-radius: 20px;
@@ -2731,6 +2925,137 @@
             document.getElementById(id).addEventListener('input', updateAccuracy);
         });
 
+        // ========================================
+        // TAROT CARD SYSTEM
+        // ========================================
+        
+        function getTarotCard(birthDate, timeframe = 'daily') {
+            const birth = new Date(birthDate);
+            const today = new Date();
+            
+            // Seed based on timeframe
+            let seed;
+            if (timeframe === 'daily') {
+                seed = today.getDate() + today.getMonth() * 31 + birth.getDate();
+            } else if (timeframe === 'weekly') {
+                const weekNum = Math.floor(today.getDate() / 7);
+                seed = weekNum + today.getMonth() * 5 + birth.getDate();
+            } else if (timeframe === 'monthly') {
+                seed = today.getMonth() + birth.getMonth() + birth.getDate();
+            } else {
+                seed = today.getFullYear() + birth.getFullYear();
+            }
+            
+            const majorArcana = [
+                { number: 0, name: 'The Fool', meaning: 'New beginnings, innocence, spontaneity, free spirit', guidance: 'Embrace the unknown. Take a leap of faith.', symbol: '🃏' },
+                { number: 1, name: 'The Magician', meaning: 'Manifestation, resourcefulness, power, inspired action', guidance: 'You have all the tools you need. Act with intention.', symbol: '🎩' },
+                { number: 2, name: 'The High Priestess', meaning: 'Intuition, sacred knowledge, divine feminine, subconscious', guidance: 'Trust your inner voice. Look beyond the surface.', symbol: '🔮' },
+                { number: 3, name: 'The Empress', meaning: 'Femininity, beauty, nature, nurturing, abundance', guidance: 'Create and nurture. Beauty surrounds you.', symbol: '👑' },
+                { number: 4, name: 'The Emperor', meaning: 'Authority, establishment, structure, father figure', guidance: 'Take control. Build solid foundations.', symbol: '⚔️' },
+                { number: 5, name: 'The Hierophant', meaning: 'Spiritual wisdom, tradition, conformity, institutions', guidance: 'Seek wisdom from tradition. Honor what works.', symbol: '🏛️' },
+                { number: 6, name: 'The Lovers', meaning: 'Love, harmony, relationships, values alignment', guidance: 'Choose with your heart. Align your values.', symbol: '💕' },
+                { number: 7, name: 'The Chariot', meaning: 'Control, willpower, success, determination', guidance: 'Move forward with confidence. Victory is yours.', symbol: '🏇' },
+                { number: 8, name: 'Strength', meaning: 'Strength, courage, patience, compassion', guidance: 'Inner strength conquers all. Be gentle yet firm.', symbol: '🦁' },
+                { number: 9, name: 'The Hermit', meaning: 'Soul searching, introspection, inner guidance', guidance: 'Go within. Your answers are there.', symbol: '🕯️' },
+                { number: 10, name: 'Wheel of Fortune', meaning: 'Good luck, karma, life cycles, destiny', guidance: 'Fate is turning. Embrace the change.', symbol: '☸️' },
+                { number: 11, name: 'Justice', meaning: 'Justice, fairness, truth, cause and effect', guidance: 'Seek truth and balance. Karma is active.', symbol: '⚖️' },
+                { number: 12, name: 'The Hanged Man', meaning: 'Pause, surrender, letting go, new perspective', guidance: 'Release control. See from a new angle.', symbol: '🙃' },
+                { number: 13, name: 'Death', meaning: 'Endings, transformation, transition, rebirth', guidance: 'Let go of the old. Transformation awaits.', symbol: '🦋' },
+                { number: 14, name: 'Temperance', meaning: 'Balance, moderation, patience, purpose', guidance: 'Find the middle way. Blend opposing forces.', symbol: '🌊' },
+                { number: 15, name: 'The Devil', meaning: 'Shadow self, attachment, addiction, materialism', guidance: 'Break free from chains. Face your shadows.', symbol: '😈' },
+                { number: 16, name: 'The Tower', meaning: 'Sudden change, upheaval, chaos, revelation', guidance: 'Breakdown leads to breakthrough. Trust the process.', symbol: '⚡' },
+                { number: 17, name: 'The Star', meaning: 'Hope, faith, purpose, renewal, spirituality', guidance: 'Hope shines bright. Your wishes are heard.', symbol: '⭐' },
+                { number: 18, name: 'The Moon', meaning: 'Illusion, fear, anxiety, subconscious, intuition', guidance: 'Not all is as it seems. Trust your intuition.', symbol: '🌙' },
+                { number: 19, name: 'The Sun', meaning: 'Positivity, fun, warmth, success, vitality', guidance: 'Success and joy are yours. Shine brightly.', symbol: '☀️' },
+                { number: 20, name: 'Judgment', meaning: 'Judgment, rebirth, inner calling, absolution', guidance: 'Answer your calling. Forgive and be reborn.', symbol: '📯' },
+                { number: 21, name: 'The World', meaning: 'Completion, integration, accomplishment, travel', guidance: 'You've come full circle. Celebrate completion.', symbol: '🌍' }
+            ];
+            
+            const index = seed % majorArcana.length;
+            return majorArcana[index];
+        }
+
+        // ========================================
+        // PLANETARY ASPECTS (Simplified)
+        // ========================================
+        
+        function getPlanetaryAspects(birthDate) {
+            const birth = new Date(birthDate);
+            const today = new Date();
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+            
+            // Simplified aspect calculation based on day of year
+            const aspects = [];
+            
+            // Sun aspects (changes daily)
+            if (dayOfYear % 30 < 10) {
+                aspects.push({ 
+                    type: 'Conjunction', 
+                    planets: 'Sun ☉ conjunct Mercury ☿', 
+                    meaning: 'Clear communication, mental clarity, important messages',
+                    symbol: '☌'
+                });
+            } else if (dayOfYear % 30 < 20) {
+                aspects.push({ 
+                    type: 'Trine', 
+                    planets: 'Sun ☉ trine Jupiter ♃', 
+                    meaning: 'Opportunity, expansion, good fortune, optimism',
+                    symbol: '△'
+                });
+            } else {
+                aspects.push({ 
+                    type: 'Square', 
+                    planets: 'Sun ☉ square Saturn ♄', 
+                    meaning: 'Challenges requiring discipline, patience, and hard work',
+                    symbol: '□'
+                });
+            }
+            
+            // Venus aspects (changes every 3 days)
+            if (Math.floor(dayOfYear / 3) % 2 === 0) {
+                aspects.push({ 
+                    type: 'Sextile', 
+                    planets: 'Venus ♀ sextile Mars ♂', 
+                    meaning: 'Attraction, passion, creative energy, social connections',
+                    symbol: '⚹'
+                });
+            }
+            
+            return aspects;
+        }
+
+        // ========================================
+        // BEST DAY CALCULATOR
+        // ========================================
+        
+        function getBestDayOfWeek(zodiac, chinese, lifePath) {
+            const today = new Date();
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const dayEmojis = ['☀️', '🌙', '♂️', '☿', '♃', '♀', '♄'];
+            
+            // Calculate based on life path
+            const bestDayIndex = (lifePath + today.getDate()) % 7;
+            const bestDay = daysOfWeek[bestDayIndex];
+            const emoji = dayEmojis[bestDayIndex];
+            
+            const energies = {
+                0: 'Spiritual connection and rest',
+                1: 'Intuition and emotions',
+                2: 'Action and courage',
+                3: 'Communication and learning',
+                4: 'Growth and abundance',
+                5: 'Love and harmony',
+                6: 'Structure and discipline'
+            };
+            
+            return {
+                day: bestDay,
+                emoji: emoji,
+                energy: energies[bestDayIndex],
+                action: `Schedule important activities on ${bestDay} this week for best results.`
+            };
+        }
+
         // Calculation functions
         function getZodiacSign(month, day) {
             const signs = [
@@ -3294,6 +3619,11 @@
             const moonPhase = getCurrentMoonPhase();
             const crossAnalysis = getCrossSystemAnalysis(zodiac, risingSign, moonSign, chinese, lifePath, personalYear);
             
+            // PHASE 3: New features - Tarot, Aspects, Best Day
+            const tarotCard = getTarotCard(birthDate, timeframe);
+            const planetaryAspects = getPlanetaryAspects(birthDate);
+            const bestDay = getBestDayOfWeek(zodiac, chinese, lifePath);
+            
             // Get today's date
             const today = new Date();
             const todayStr = today.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
@@ -3304,13 +3634,13 @@
             if (timeframe === 'daily') {
                 forecastHTML = generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
                     gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
-                    focus, challenge, birth, todayStr);
+                    focus, challenge, birth, todayStr, tarotCard, planetaryAspects);
             } else if (timeframe === 'weekly') {
                 forecastHTML = generateWeeklyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
-                    gematria, fullName, birthTime, moonPhase, crossAnalysis, focus, challenge, birth);
+                    gematria, fullName, birthTime, moonPhase, crossAnalysis, focus, challenge, birth, tarotCard, bestDay);
             } else if (timeframe === 'monthly') {
                 forecastHTML = generateMonthlyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
-                    gematria, fullName, crossAnalysis, focus, challenge, birth);
+                    gematria, fullName, crossAnalysis, focus, challenge, birth, tarotCard);
             } else {
                 forecastHTML = generateYearlyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
                     gematria, fullName, crossAnalysis, focus, challenge, birth);
@@ -3322,7 +3652,7 @@
         // PHASE 2: Daily Forecast Generator
         function generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
             gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
-            focus, challenge, birth, todayStr) {
+            focus, challenge, birth, todayStr, tarotCard, planetaryAspects) {
             
             return `
                 <div class="forecast-header">
@@ -3334,6 +3664,39 @@
                         <p>Timeframe: Daily | ${todayStr}</p>
                     </div>
                 </div>
+
+                <div class="tarot-section">
+                    <h3>🃏 YOUR DAILY TAROT CARD</h3>
+                    <div class="tarot-card-display">
+                        <div class="tarot-card">
+                            <div class="tarot-symbol">${tarotCard.symbol}</div>
+                            <div class="tarot-number">${tarotCard.number === 0 ? '0' : tarotCard.number}</div>
+                            <div class="tarot-name">${tarotCard.name}</div>
+                        </div>
+                        <div class="tarot-meaning">
+                            <p><strong>Meaning:</strong> ${tarotCard.meaning}</p>
+                            <p><strong>Guidance:</strong> ${tarotCard.guidance}</p>
+                        </div>
+                    </div>
+                </div>
+
+                ${planetaryAspects.length > 0 ? `
+                <div class="aspects-section">
+                    <h3>🌌 PLANETARY ASPECTS - Today's Celestial Geometry</h3>
+                    <div class="aspects-grid">
+                        ${planetaryAspects.map(aspect => `
+                            <div class="aspect-item">
+                                <div class="aspect-header">
+                                    <span class="aspect-symbol">${aspect.symbol}</span>
+                                    <span class="aspect-type">${aspect.type}</span>
+                                </div>
+                                <p class="aspect-planets">${aspect.planets}</p>
+                                <p class="aspect-meaning">${aspect.meaning}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                ` : ''}
 
                 <div class="cosmic-timing-section">
                     <h3>⏰ COSMIC TIMING - Right Now</h3>
@@ -3455,7 +3818,7 @@
 
         // PHASE 2: Weekly Forecast Generator
         function generateWeeklyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
-            gematria, fullName, birthTime, moonPhase, crossAnalysis, focus, challenge, birth) {
+            gematria, fullName, birthTime, moonPhase, crossAnalysis, focus, challenge, birth, tarotCard, bestDay) {
             
             const today = new Date();
             const weekStart = new Date(today);
@@ -3476,11 +3839,13 @@
                 const dayDate = new Date(weekStart);
                 dayDate.setDate(weekStart.getDate() + i);
                 const isToday = dayDate.toDateString() === today.toDateString();
+                const isBestDay = dayNames[i] === bestDay.day;
                 
                 dailyBreakdown += `
-                    <div class="day-item ${isToday ? 'today' : ''}">
-                        <h4>${dayNames[i]}${isToday ? ' (Today)' : ''} - ${dayDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</h4>
+                    <div class="day-item ${isToday ? 'today' : ''} ${isBestDay ? 'best-day' : ''}">
+                        <h4>${dayNames[i]}${isToday ? ' (Today)' : ''}${isBestDay ? ` ${bestDay.emoji} BEST DAY` : ''} - ${dayDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</h4>
                         <p><strong>Ruler:</strong> ${planetRulers[i]} | <strong>Energy:</strong> ${dayEnergies[i]}</p>
+                        ${isBestDay ? `<p class="best-day-note">✨ <strong>${bestDay.energy}</strong> - ${bestDay.action}</p>` : ''}
                         <p>${getDaySpecificGuidance(zodiac, chinese, lifePath, i, focus)}</p>
                     </div>
                 `;
@@ -3494,6 +3859,30 @@
                         <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
                         <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
                         <p>Week: ${weekStartStr} - ${weekEndStr}</p>
+                    </div>
+                </div>
+
+                <div class="best-day-banner">
+                    <h3>🌟 YOUR POWER DAY THIS WEEK</h3>
+                    <div class="best-day-content">
+                        <div class="best-day-name">${bestDay.emoji} ${bestDay.day}</div>
+                        <p><strong>${bestDay.energy}</strong></p>
+                        <p>${bestDay.action}</p>
+                    </div>
+                </div>
+
+                <div class="tarot-section">
+                    <h3>🃏 YOUR WEEKLY TAROT CARD</h3>
+                    <div class="tarot-card-display">
+                        <div class="tarot-card">
+                            <div class="tarot-symbol">${tarotCard.symbol}</div>
+                            <div class="tarot-number">${tarotCard.number === 0 ? '0' : tarotCard.number}</div>
+                            <div class="tarot-name">${tarotCard.name}</div>
+                        </div>
+                        <div class="tarot-meaning">
+                            <p><strong>Theme:</strong> ${tarotCard.meaning}</p>
+                            <p><strong>Guidance:</strong> ${tarotCard.guidance}</p>
+                        </div>
                     </div>
                 </div>
 
