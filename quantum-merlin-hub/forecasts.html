@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Forecaster | Your Personalized Cosmic Forecast</title>
-    <meta name="description" content="Get your personalized cosmic forecast using Western astrology, Chinese zodiac, numerology, and gematria. Multi-system forecasting for daily, weekly, monthly, and yearly insights.">
+    <meta name="description" content="Get your personalized cosmic forecast using astrology, Chinese zodiac, numerology, and gematria. Multi-system forecasting for daily, weekly, monthly, and yearly insights.">
     <meta name="keywords" content="quantum forecaster, daily horoscope, personalized forecast, astrology, numerology, chinese zodiac, gematria, cosmic guidance">
     
     <!-- Open Graph -->
@@ -2240,10 +2240,16 @@
 
     <!-- Loading Spinner (During Forecast Generation) -->
     <div id="loadingSpinner" class="loading-overlay" style="display: none;">
-        <div class="loading-animation">
-            <div class="singularity"></div>
-            <p class="loading-text">Calculating cosmic alignments...</p>
+        <canvas id="loading-lines-canvas"></canvas>
+        
+        <div class="emoji-layer" id="loadingEmojiLayer">
+            <div class="emoji" id="loading-quantum">⚛️</div>
+            <div class="emoji" id="loading-wizard">🧙‍♂️</div>
+            <div class="emoji" id="loading-rose">🌹</div>
         </div>
+
+        <div id="loading-singularity"></div>
+        <div id="loading-title">QUANTUM MERLIN</div>
     </div>
 
     <div class="cosmic-bg"></div>
@@ -2269,7 +2275,7 @@
             <h1>QUANTUM FORECASTER</h1>
             <p class="tagline">Your personalized cosmic forecast based on ALL your data</p>
             <div class="systems">
-                <div class="system-badge">⭐ Western Astrology</div>
+                <div class="system-badge">⭐ Astrology</div>
                 <div class="system-badge">🐉 Chinese Zodiac</div>
                 <div class="system-badge">🔢 Numerology</div>
                 <div class="system-badge">📜 Gematria</div>
@@ -2812,13 +2818,170 @@
             hideIntro();
         }
         
-        // Loading spinner control
+        // Loading spinner control with same animation as intro
         function showLoadingSpinner() {
-            document.getElementById('loadingSpinner').style.display = 'flex';
+            const loadingOverlay = document.getElementById('loadingSpinner');
+            loadingOverlay.style.display = 'flex';
+            
+            // Get elements
+            const canvas = document.getElementById('loading-lines-canvas');
+            const ctx = canvas ? canvas.getContext('2d') : null;
+            const quantum = document.getElementById('loading-quantum');
+            const wizard = document.getElementById('loading-wizard');
+            const rose = document.getElementById('loading-rose');
+            const singularity = document.getElementById('loading-singularity');
+            const title = document.getElementById('loading-title');
+            
+            if (!canvas || !ctx || !quantum || !wizard || !rose || !singularity || !title) {
+                console.error('Loading animation elements not found');
+                return;
+            }
+            
+            // Set canvas size
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            
+            let time = 0;
+            let animationId;
+            
+            function animate() {
+                time += 1/60;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Same 11-second animation loop as intro
+                const phase = time % 11;
+                
+                // PHASE 1: Emergence (0-1s)
+                if (phase < 1) {
+                    const t = phase;
+                    quantum.style.opacity = t;
+                    quantum.style.transform = `translate(-50%, -50%) scale(${0.5 + t*0.5})`;
+                }
+                // PHASE 2: Companions Arrive (1-2s)
+                else if (phase < 2) {
+                    const t = phase - 1;
+                    quantum.style.opacity = 1;
+                    quantum.style.transform = 'translate(-50%, -50%) scale(1)';
+                    wizard.style.opacity = t;
+                    wizard.style.transform = `translate(-50%, -50%) translateX(-120px) scale(${0.5 + t*0.5})`;
+                    rose.style.opacity = t;
+                    rose.style.transform = `translate(-50%, -50%) translateX(120px) scale(${0.5 + t*0.5})`;
+                }
+                // PHASE 3: Quiet Float (2-3s)
+                else if (phase < 3) {
+                    wizard.style.transform = 'translate(-50%, -50%) translateX(-120px) scale(1)';
+                    rose.style.transform = 'translate(-50%, -50%) translateX(120px) scale(1)';
+                }
+                // PHASE 4: Rings Emerge (3-4.5s)
+                else if (phase < 4.5) {
+                    const t = (phase - 3) / 1.5;
+                    const opacity = Math.min(t * 2, 0.6);
+                    ctx.strokeStyle = `rgba(255, 215, 0, ${opacity})`;
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY, 150 * t, 0, Math.PI * 2);
+                    ctx.stroke();
+                    ctx.strokeStyle = `rgba(0, 240, 255, ${opacity})`;
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY, 200 * t, 0, Math.PI * 2);
+                    ctx.stroke();
+                }
+                // PHASE 5: Acceleration & Orbit (4.5-6.5s)
+                else if (phase < 6.5) {
+                    const t = (phase - 4.5) / 2;
+                    const angle = t * Math.PI * 4;
+                    const radius = 150;
+                    
+                    ctx.strokeStyle = 'rgba(255, 215, 0, 0.6)';
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+                    ctx.stroke();
+                    ctx.strokeStyle = 'rgba(0, 240, 255, 0.6)';
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY, 200, 0, Math.PI * 2);
+                    ctx.stroke();
+                    
+                    const qX = Math.cos(angle) * radius;
+                    const qY = Math.sin(angle) * radius;
+                    quantum.style.transform = `translate(calc(-50% + ${qX}px), calc(-50% + ${qY}px)) scale(${1 - t*0.3})`;
+                    
+                    const wAngle = angle + Math.PI * 2/3;
+                    const wX = Math.cos(wAngle) * radius;
+                    const wY = Math.sin(wAngle) * radius;
+                    wizard.style.transform = `translate(calc(-50% + ${wX}px), calc(-50% + ${wY}px)) scale(${1 - t*0.3})`;
+                    
+                    const rAngle = angle + Math.PI * 4/3;
+                    const rX = Math.cos(rAngle) * radius;
+                    const rY = Math.sin(rAngle) * radius;
+                    rose.style.transform = `translate(calc(-50% + ${rX}px), calc(-50% + ${rY}px)) scale(${1 - t*0.3})`;
+                }
+                // PHASE 6: Collapse (6.5-7.5s)
+                else if (phase < 7.5) {
+                    const t = (phase - 6.5);
+                    quantum.style.opacity = Math.max(1 - t, 0);
+                    wizard.style.opacity = Math.max(1 - t, 0);
+                    rose.style.opacity = Math.max(1 - t, 0);
+                    quantum.style.transform = `translate(-50%, -50%) scale(${0.7 - t*0.7})`;
+                    wizard.style.transform = `translate(-50%, -50%) scale(${0.7 - t*0.7})`;
+                    rose.style.transform = `translate(-50%, -50%) scale(${0.7 - t*0.7})`;
+                    
+                    singularity.style.opacity = Math.min(t, 1);
+                }
+                // PHASE 7: Pulsing Singularity (7.5-8s)
+                else if (phase < 8) {
+                    singularity.style.opacity = 1;
+                    const pulse = Math.sin((phase - 7.5) * Math.PI * 8) * 0.2 + 1;
+                    singularity.style.transform = `translate(-50%, -50%) scale(${pulse})`;
+                }
+                // PHASE 8: Title Reveal (8-10s)
+                else if (phase < 10) {
+                    const t = (phase - 8) / 2;
+                    singularity.style.opacity = Math.max(1 - t, 0);
+                    title.style.opacity = Math.min(t * 2, 1);
+                    title.style.transform = `translate(-50%, -50%) scale(${0.8 + t*0.2})`;
+                }
+                // PHASE 9: Hold (10-11s)
+                else {
+                    title.style.opacity = 1;
+                    title.style.transform = 'translate(-50%, -50%) scale(1)';
+                }
+                
+                animationId = requestAnimationFrame(animate);
+            }
+            
+            animate();
+            
+            // Store animation ID for cleanup
+            loadingOverlay.animationId = animationId;
         }
         
         function hideLoadingSpinner() {
-            document.getElementById('loadingSpinner').style.display = 'none';
+            const loadingOverlay = document.getElementById('loadingSpinner');
+            
+            // Cancel animation if running
+            if (loadingOverlay.animationId) {
+                cancelAnimationFrame(loadingOverlay.animationId);
+                loadingOverlay.animationId = null;
+            }
+            
+            // Reset all elements
+            const quantum = document.getElementById('loading-quantum');
+            const wizard = document.getElementById('loading-wizard');
+            const rose = document.getElementById('loading-rose');
+            const singularity = document.getElementById('loading-singularity');
+            const title = document.getElementById('loading-title');
+            
+            if (quantum) quantum.style.opacity = 0;
+            if (wizard) wizard.style.opacity = 0;
+            if (rose) rose.style.opacity = 0;
+            if (singularity) singularity.style.opacity = 0;
+            if (title) title.style.opacity = 0;
+            
+            loadingOverlay.style.display = 'none';
         }
 
         // Generate stars background
@@ -4058,13 +4221,13 @@
             // Check Western-Chinese element harmony
             if (elementHarmony[sunElement] && elementHarmony[sunElement].includes(chinese.element)) {
                 agreements.push({
-                    systems: ['Western Astrology', 'Chinese Zodiac'],
+                    systems: ['Astrology', 'Chinese Zodiac'],
                     insight: `Your ${zodiac.name} ${sunElement} energy harmonizes beautifully with your ${chinese.element} ${chinese.animal}. Both systems point toward ${sunElement === 'Fire' ? 'passionate action and leadership' : sunElement === 'Earth' ? 'stability and manifestation' : sunElement === 'Air' ? 'intellectual pursuits and communication' : 'emotional depth and intuition'}.`
                 });
                 badges.push('⭐🐉');
             } else {
                 tensions.push({
-                    systems: ['Western Astrology', 'Chinese Zodiac'],
+                    systems: ['Astrology', 'Chinese Zodiac'],
                     insight: `Your ${zodiac.name} ${sunElement} energy creates dynamic tension with your ${chinese.element} ${chinese.animal}. This isn't negative—it provides depth and complexity, pushing you to integrate seemingly opposing forces.`
                 });
             }
@@ -4085,7 +4248,7 @@
                 (seekerPaths.includes(lifePath) && seekerSigns.includes(zodiac.name)) ||
                 (builderPaths.includes(lifePath) && builderSigns.includes(zodiac.name))) {
                 agreements.push({
-                    systems: ['Western Astrology', 'Numerology'],
+                    systems: ['Astrology', 'Numerology'],
                     insight: `Your Life Path ${lifePath} amplifies your ${zodiac.name} nature—both systems confirm your core purpose. This alignment gives you natural confidence in your path.`
                 });
                 badges.push('⭐🔢');
@@ -4374,7 +4537,7 @@
 
                 <div class="system-section expanded">
                     <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>⭐ WESTERN ASTROLOGY</h3>
+                        <h3>⭐ ASTROLOGY</h3>
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
@@ -4564,7 +4727,7 @@
 
                 <div class="system-section expanded">
                     <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>⭐ WESTERN ASTROLOGY - Weekly Transits</h3>
+                        <h3>⭐ ASTROLOGY - Weekly Transits</h3>
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
@@ -4787,7 +4950,7 @@
 
                 <div class="system-section expanded">
                     <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>⭐ WESTERN ASTROLOGY - ${currentYear} Overview</h3>
+                        <h3>⭐ ASTROLOGY - ${currentYear} Overview</h3>
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
