@@ -1852,9 +1852,97 @@
             justify-content: center;
             z-index: 10000;
             overflow: hidden;
+            transition: opacity 0.5s ease;
         }
 
-        .intro-animation, .loading-animation {
+        /* Canvas for orbital lines */
+        #lines-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* Emoji layer */
+        .emoji-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .emoji {
+            position: absolute;
+            font-size: 60px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-origin: center;
+            will-change: transform, opacity;
+            opacity: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #quantum {
+            color: #FFD700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+        }
+
+        #wizard {
+            color: #00F0FF;
+            text-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+        }
+
+        #rose {
+            color: #FF0066;
+            text-shadow: 0 0 20px rgba(255, 0, 102, 0.8);
+        }
+
+        /* Singularity dot */
+        #singularity {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, #FFD700, #00F0FF, #FF0066);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            z-index: 3;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+        }
+
+        /* Title text */
+        #title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 1px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00F0FF 0%, #FFD700 50%, #FF0066 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            white-space: nowrap;
+            opacity: 0;
+            z-index: 4;
+            letter-spacing: 0.05em;
+            max-width: 95vw;
+            font-family: 'Orbitron', monospace;
+        }
+
+        /* Loading animation for forecast generation */
+        .loading-animation {
             position: relative;
             width: 100%;
             height: 100%;
@@ -1864,8 +1952,7 @@
             flex-direction: column;
         }
 
-        /* Singularity Dot - Starts small, expands */
-        .singularity {
+        .loading-animation .singularity {
             width: 10px;
             height: 10px;
             background: radial-gradient(circle, #fff 0%, #00f5ff 50%, #9d00ff 100%);
@@ -1875,48 +1962,9 @@
                 0 0 40px #9d00ff,
                 0 0 60px #00f5ff,
                 0 0 80px #9d00ff;
-            animation: singularityExpand 3s ease-in-out forwards;
-        }
-
-        /* Loading spinner: Stop before text reveal */
-        .loading-overlay .singularity {
             animation: singularityExpandShort 2.5s ease-in-out infinite;
         }
 
-        @keyframes singularityExpand {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            25% {
-                transform: scale(5);
-                box-shadow: 
-                    0 0 40px #00f5ff,
-                    0 0 80px #9d00ff,
-                    0 0 120px #00f5ff;
-            }
-            50% {
-                transform: scale(15);
-                opacity: 0.8;
-                box-shadow: 
-                    0 0 100px #00f5ff,
-                    0 0 200px #9d00ff,
-                    0 0 300px #ffd700;
-            }
-            75% {
-                transform: scale(30) rotate(180deg);
-                opacity: 0.4;
-                box-shadow: 
-                    0 0 200px #00f5ff,
-                    0 0 400px #9d00ff;
-            }
-            100% {
-                transform: scale(100) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        /* Shorter version for loading spinner - loops infinitely */
         @keyframes singularityExpandShort {
             0% {
                 transform: scale(1);
@@ -1950,38 +1998,18 @@
             }
         }
 
-        /* Quantum Merlin Text - Appears after singularity */
-        .quantum-text {
-            position: absolute;
-            font-family: 'Orbitron', monospace;
-            font-size: 3rem;
-            font-weight: 900;
-            letter-spacing: 8px;
-            background: linear-gradient(135deg, #00f5ff 0%, #9d00ff 50%, #ffd700 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            opacity: 0;
-            animation: textReveal 2s ease-in 3s forwards;
-            text-shadow: 0 0 40px rgba(0, 245, 255, 0.6);
+        /* Loading text below spinner */
+        .loading-text {
+            margin-top: 40px;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            animation: pulse 2s ease-in-out infinite;
         }
 
-        @keyframes textReveal {
-            0% {
-                opacity: 0;
-                transform: scale(0.5);
-                filter: blur(20px);
-            }
-            50% {
-                opacity: 0.5;
-                transform: scale(1.2);
-                filter: blur(10px);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-                filter: blur(0);
-            }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
         }
 
         /* Skip Button */
@@ -1999,6 +2027,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             z-index: 10001;
+            pointer-events: all;
         }
 
         .skip-btn:hover {
@@ -2007,27 +2036,14 @@
             box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
         }
 
-        /* Loading text below spinner */
-        .loading-text {
-            margin-top: 40px;
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.8);
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
-        }
-
         /* Hide intro overlay after animation */
         .intro-overlay.hidden {
-            display: none;
+            display: none !important;
+            opacity: 0;
         }
 
         @media (max-width: 768px) {
-            .quantum-text {
+            #title {
                 font-size: 1.8rem;
                 letter-spacing: 4px;
             }
@@ -2208,10 +2224,17 @@
 <body>
     <!-- Intro Animation Overlay (First Visit) -->
     <div id="introOverlay" class="intro-overlay">
-        <div class="intro-animation">
-            <div class="singularity"></div>
-            <div class="quantum-text">QUANTUMMERLIN</div>
+        <canvas id="lines-canvas"></canvas>
+        
+        <div class="emoji-layer">
+            <div class="emoji" id="quantum">⚛️</div>
+            <div class="emoji" id="wizard">🧙‍♂️</div>
+            <div class="emoji" id="rose">🌹</div>
         </div>
+
+        <div id="singularity"></div>
+        <div id="title">QUANTUM MERLIN</div>
+        
         <button id="skipIntro" class="skip-btn">Skip →</button>
     </div>
 
@@ -2527,27 +2550,254 @@
         // INTRO ANIMATION & LOADING CONTROL
         // ========================================
         
-        // Check if first visit
         const hasVisited = localStorage.getItem('qm_forecaster_visited');
         const introOverlay = document.getElementById('introOverlay');
         const skipBtn = document.getElementById('skipIntro');
+        const canvas = document.getElementById('lines-canvas');
+        const ctx = canvas ? canvas.getContext('2d', { alpha: true }) : null;
         
+        const quantum = document.getElementById('quantum');
+        const wizard = document.getElementById('wizard');
+        const rose = document.getElementById('rose');
+        const singularity = document.getElementById('singularity');
+        const title = document.getElementById('title');
+
+        let width, height, centerX, centerY;
+        let time = 0;
+        let isRunning = false;
+        let wizardOrbitStart = 0;
+        let roseOrbitStart = Math.PI;
+        const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+
+        function resizeCanvas() {
+            if (!canvas) return;
+            width = window.innerWidth;
+            height = window.innerHeight;
+            centerX = width / 2;
+            centerY = height / 2;
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            canvas.style.width = width + 'px';
+            canvas.style.height = height + 'px';
+            ctx.scale(dpr, dpr);
+        }
+
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function clamp(value, min, max) {
+            return Math.max(min, Math.min(max, value));
+        }
+
+        function updateAnimation() {
+            if (!isRunning || !ctx) return;
+            
+            const t = time / 60;
+            ctx.clearRect(0, 0, width, height);
+
+            if (t < 1) {
+                const progress = clamp(t / 1, 0, 1);
+                const ease = easeInOutCubic(progress);
+                quantum.style.left = centerX + 'px';
+                quantum.style.top = centerY + 'px';
+                quantum.style.transform = `translate(-50%, -50%) scale(${ease})`;
+                quantum.style.opacity = ease;
+                wizard.style.opacity = 0;
+                rose.style.opacity = 0;
+            }
+            else if (t < 2) {
+                const progress = clamp((t - 1) / 1, 0, 1);
+                const ease = easeInOutCubic(progress);
+                quantum.style.left = centerX + 'px';
+                quantum.style.top = centerY + 'px';
+                quantum.style.transform = 'translate(-50%, -50%) scale(1)';
+                quantum.style.opacity = 1;
+                const wizardX = ease * (centerX - 80);
+                wizard.style.left = wizardX + 'px';
+                wizard.style.top = centerY + 'px';
+                wizard.style.transform = 'translate(-50%, -50%) scale(1)';
+                wizard.style.opacity = ease;
+                const roseX = width - ease * (width - centerX - 80);
+                rose.style.left = roseX + 'px';
+                rose.style.top = centerY + 'px';
+                rose.style.transform = 'translate(-50%, -50%) scale(1)';
+                rose.style.opacity = ease;
+            }
+            else if (t < 3) {
+                quantum.style.left = centerX + 'px';
+                quantum.style.top = centerY + 'px';
+                quantum.style.transform = 'translate(-50%, -50%) scale(1)';
+                wizard.style.left = (centerX - 80) + 'px';
+                wizard.style.top = centerY + 'px';
+                wizard.style.transform = 'translate(-50%, -50%) scale(1)';
+                rose.style.left = (centerX + 80) + 'px';
+                rose.style.top = centerY + 'px';
+                rose.style.transform = 'translate(-50%, -50%) scale(1)';
+            }
+            else if (t < 4.5) {
+                const progress = clamp((t - 3) / 1.5, 0, 1);
+                const rotation = progress * Math.PI * 2 * 0.5;
+                ctx.strokeStyle = 'rgba(0, 240, 255, ' + (progress * 0.6) + ')';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 80, rotation, rotation + Math.PI);
+                ctx.stroke();
+                ctx.strokeStyle = 'rgba(255, 0, 255, ' + (progress * 0.6) + ')';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 80, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
+                ctx.stroke();
+                ctx.strokeStyle = 'rgba(157, 0, 255, ' + (progress * 0.6) + ')';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 80, rotation + Math.PI, rotation + Math.PI * 2);
+                ctx.stroke();
+                if (t < 4.51) {
+                    wizardOrbitStart = Math.PI;
+                    roseOrbitStart = 0;
+                }
+            }
+            else if (t < 6.5) {
+                const progress = clamp((t - 4.5) / 2, 0, 1);
+                const speedMultiplier = 1 + progress * 8;
+                const rotation = ((t - 3) * speedMultiplier) * Math.PI * 2 * 0.5;
+                ctx.strokeStyle = 'rgba(0, 240, 255, 0.6)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 80, rotation, rotation + Math.PI);
+                ctx.stroke();
+                ctx.strokeStyle = 'rgba(255, 0, 255, 0.6)';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 80, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
+                ctx.stroke();
+                ctx.strokeStyle = 'rgba(157, 0, 255, 0.6)';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 80, rotation + Math.PI, rotation + Math.PI * 2);
+                ctx.stroke();
+                quantum.style.left = centerX + 'px';
+                quantum.style.top = centerY + 'px';
+                quantum.style.transform = 'translate(-50%, -50%) scale(1)';
+                const orbitProgress = (t - 4.5) * speedMultiplier * 0.5;
+                const orbitRadius = 80;
+                const wizardAngle = wizardOrbitStart + orbitProgress * Math.PI * 2;
+                const wizardX = centerX + Math.cos(wizardAngle) * orbitRadius;
+                const wizardY = centerY + Math.sin(wizardAngle) * orbitRadius;
+                wizard.style.left = wizardX + 'px';
+                wizard.style.top = wizardY + 'px';
+                wizard.style.transform = 'translate(-50%, -50%) scale(1)';
+                const roseAngle = roseOrbitStart + orbitProgress * Math.PI * 2;
+                const roseX = centerX + Math.cos(roseAngle) * orbitRadius;
+                const roseY = centerY + Math.sin(roseAngle) * orbitRadius;
+                rose.style.left = roseX + 'px';
+                rose.style.top = roseY + 'px';
+                rose.style.transform = 'translate(-50%, -50%) scale(1)';
+            }
+            else if (t < 7.5) {
+                const progress = clamp((t - 6.5) / 1, 0, 1);
+                const ease = easeInOutCubic(progress);
+                const rotation = ((t - 3) * 9) * Math.PI * 2 * 0.5;
+                const lineOpacity = 0.6 * (1 - ease);
+                const lineRadius = 80 * (1 - ease);
+                ctx.strokeStyle = 'rgba(0, 240, 255, ' + lineOpacity + ')';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, lineRadius, rotation, rotation + Math.PI);
+                ctx.stroke();
+                ctx.strokeStyle = 'rgba(255, 0, 255, ' + lineOpacity + ')';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, lineRadius, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
+                ctx.stroke();
+                const orbitProgress = (t - 4.5) * 9 * 0.5;
+                const orbitRadius = 80 * (1 - ease);
+                const wizardAngle = wizardOrbitStart + orbitProgress * Math.PI * 2;
+                const wizardX = centerX + Math.cos(wizardAngle) * orbitRadius;
+                const wizardY = centerY + Math.sin(wizardAngle) * orbitRadius;
+                const roseAngle = roseOrbitStart + orbitProgress * Math.PI * 2;
+                const roseX = centerX + Math.cos(roseAngle) * orbitRadius;
+                const roseY = centerY + Math.sin(roseAngle) * orbitRadius;
+                const emojiScale = 1 - ease * 0.9;
+                wizard.style.left = wizardX + 'px';
+                wizard.style.top = wizardY + 'px';
+                wizard.style.transform = `translate(-50%, -50%) scale(${emojiScale})`;
+                wizard.style.opacity = 1 - ease;
+                rose.style.left = roseX + 'px';
+                rose.style.top = roseY + 'px';
+                rose.style.transform = `translate(-50%, -50%) scale(${emojiScale})`;
+                rose.style.opacity = 1 - ease;
+                const quantumScale = 1 + (ease < 0.3 ? ease * 0.5 : (1 - ease) * 1.5);
+                quantum.style.left = centerX + 'px';
+                quantum.style.top = centerY + 'px';
+                quantum.style.transform = `translate(-50%, -50%) scale(${quantumScale})`;
+                quantum.style.opacity = 1 - ease;
+                singularity.style.transform = `translate(-50%, -50%) scale(${ease})`;
+                singularity.style.opacity = ease;
+            }
+            else if (t < 8) {
+                quantum.style.opacity = 0;
+                wizard.style.opacity = 0;
+                rose.style.opacity = 0;
+                const pulse = Math.sin((t - 7.5) * Math.PI * 4) * 0.2 + 1;
+                singularity.style.transform = `translate(-50%, -50%) scale(${pulse})`;
+                singularity.style.opacity = 1;
+            }
+            else if (t < 10) {
+                const progress = clamp((t - 8) / 2, 0, 1);
+                const ease = easeInOutCubic(progress);
+                singularity.style.transform = `translate(-50%, -50%) scale(1)`;
+                singularity.style.opacity = 1 - ease;
+                const maxFontSize = Math.min(width * 0.065, 42);
+                const fontSize = ease * maxFontSize;
+                title.style.fontSize = fontSize + 'px';
+                title.style.transform = `translate(-50%, -50%)`;
+                title.style.opacity = ease;
+            }
+            else if (t < 11) {
+                singularity.style.opacity = 0;
+                const maxFontSize = Math.min(width * 0.065, 42);
+                title.style.fontSize = maxFontSize + 'px';
+                title.style.opacity = 1;
+                if (t > 10.5) {
+                    const fadeProgress = (t - 10.5) / 0.5;
+                    introOverlay.style.opacity = 1 - fadeProgress;
+                }
+            }
+            else if (t >= 11) {
+                if (isRunning) {
+                    isRunning = false;
+                    hideIntro();
+                    return;
+                }
+            }
+
+            time++;
+            if (isRunning) {
+                requestAnimationFrame(updateAnimation);
+            }
+        }
+
         function hideIntro() {
+            isRunning = false;
             introOverlay.classList.add('hidden');
             localStorage.setItem('qm_forecaster_visited', 'true');
         }
         
         if (hasVisited) {
-            // Not first visit - hide intro immediately
             hideIntro();
         } else {
-            // First visit - show full intro animation
-            // Auto-hide after 5 seconds (3s singularity + 2s text)
-            setTimeout(hideIntro, 5000);
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+            setTimeout(() => {
+                isRunning = true;
+                updateAnimation();
+            }, 100);
         }
         
-        // Skip button functionality
-        skipBtn.addEventListener('click', hideIntro);
+        if (skipBtn) {
+            skipBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                hideIntro();
+            });
+        }
         
         // Loading spinner control
         function showLoadingSpinner() {
