@@ -6293,19 +6293,19 @@
             
             return `
                 <div class="forecast-header">
-                    <h2>YOUR 28-DAY QUANTUM FORECAST</h2>
+                    <h2>YOUR MONTHLY QUANTUM FORECAST</h2>
                     <div class="forecast-meta">
                         <p>Generated for: ${fullName || 'Seeker'}</p>
                         <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
                         <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
-                        <p style="font-size: 0.95rem; color: var(--neon-cyan);">Forecast Period: ${monthName} (28 days)</p>
+                        <p style="font-size: 0.95rem; color: var(--neon-cyan);">Forecast Period: ${monthName}</p>
                         <p>Personal Month: ${personalMonth}</p>
                         ${moonPhases.length > 0 ? `<p style="margin-top: 10px;">🌙 <strong>Moon Events:</strong> ${moonPhases.map(m => `${m.emoji} ${m.phase} on ${m.date}`).join(' | ')}</p>` : ''}
                     </div>
                 </div>
 
                 <div class="overview-section">
-                    <h3>🌟 28-DAY OVERVIEW</h3>
+                    <h3>🌟 MONTHLY OVERVIEW</h3>
                     <div class="overview-content">
                         <p><strong>Month Theme:</strong> ${getMonthlyTheme(personalMonth, zodiac, chinese)}</p>
                         <p><strong>Primary Energy:</strong> ${getMonthlyEnergy(zodiac, chinese, personalMonth)}</p>
@@ -6428,13 +6428,13 @@
             
             return `
                 <div class="forecast-header">
-                    <h2>YOUR 365-DAY QUANTUM FORECAST</h2>
+                    <h2>YOUR YEARLY QUANTUM FORECAST</h2>
                     <div class="forecast-meta">
                         <p>Generated for: ${fullName || 'Seeker'}</p>
                         <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
                         <p>🐉 ${chinese.element} ${chinese.animal} in Year of ${currentChinese.element} ${currentChinese.animal}</p>
                         <p>🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
-                        <p style="font-size: 0.95rem; color: var(--neon-cyan); margin-top: 10px;">Forecast Period: ${startMonth} - ${endMonth} (365 days)</p>
+                        <p style="font-size: 0.95rem; color: var(--neon-cyan); margin-top: 10px;">Forecast Period: ${startMonth} - ${endMonth}</p>
                     </div>
                 </div>
 
