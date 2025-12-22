@@ -204,56 +204,25 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 8px 20px;
             margin-top: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .system-badge {
-            background: linear-gradient(135deg, rgba(157, 0, 255, 0.3) 0%, rgba(0, 245, 255, 0.3) 100%);
-            border: 2px solid transparent;
-            background-clip: padding-box;
-            padding: 12px 25px;
-            border-radius: 50px;
+        .system-item {
             font-size: 1.1rem;
             font-weight: 600;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #00f5ff 0%, #9d00ff 50%, #ff0066 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .system-badge::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .system-badge:hover {
-            transform: scale(1.1);
-            background: linear-gradient(135deg, rgba(157, 0, 255, 0.5) 0%, rgba(0, 245, 255, 0.5) 100%);
-            box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
-        }
-
-        /* Plus sign between badges */
-        .systems-plus {
-            color: var(--neon-gold);
-            font-size: 1.5rem;
-            font-weight: bold;
-            animation: plusPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes plusPulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; transform: scale(1.2); }
+        .systems-separator {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 1rem;
         }
 
         @keyframes glow-pulse {
@@ -263,10 +232,10 @@
 
         /* Buy Me a Coffee - Top Right Corner */
         .coffee-floating {
-            position: fixed;
+            position: absolute;
             top: 20px;
             right: 20px;
-            z-index: 1000;
+            z-index: 100;
         }
 
         .coffee-btn {
@@ -3035,14 +3004,6 @@
     <div class="cosmic-bg"></div>
     <div class="stars" id="stars"></div>
 
-    <!-- Buy Me a Coffee - Fixed Top Right -->
-    <div class="coffee-floating">
-        <a href="https://buymeacoffee.com/quantummerlin" target="_blank" rel="noopener noreferrer" class="coffee-btn">
-            <span class="coffee-icon">☕</span>
-            <span>Support</span>
-        </a>
-    </div>
-
     <!-- Welcome Back Banner (hidden by default) -->
     <div id="welcomeBackBanner" class="welcome-back-banner" style="display: none;">
         <div class="welcome-content">
@@ -3080,27 +3041,33 @@
     <div class="container">
         <!-- Hero Section -->
         <div class="hero">
+            <!-- Buy Me a Coffee - Top Right -->
+            <div class="coffee-floating">
+                <a href="https://buymeacoffee.com/quantummerlin" target="_blank" rel="noopener noreferrer" class="coffee-btn">
+                    <span class="coffee-icon">☕</span>
+                    <span>Support</span>
+                </a>
+            </div>
             <div class="hero-content">
-                <div class="hero-subtitle">✧ Unlock Your Cosmic Blueprint ✧</div>
+                <div class="hero-subtitle">Unlock Your Cosmic Blueprint</div>
                 <h1>QUANTUM FORECASTER</h1>
                 <p class="tagline">8 Ancient Systems • 1 Powerful Reading • Infinite Insight</p>
                 <div class="systems">
-                    <div class="system-badge">⭐ Western Astrology</div>
-                    <span class="systems-plus">+</span>
-                    <div class="system-badge">🐉 Chinese Zodiac</div>
-                    <span class="systems-plus">+</span>
-                    <div class="system-badge">🔢 Numerology</div>
-                    <span class="systems-plus">+</span>
-                    <div class="system-badge">📜 Gematria</div>
-                </div>
-                <div class="systems" style="margin-top: 15px;">
-                    <div class="system-badge">🌙 Moon Phases</div>
-                    <span class="systems-plus">+</span>
-                    <div class="system-badge">🃏 Tarot</div>
-                    <span class="systems-plus">+</span>
-                    <div class="system-badge">🎵 Frequencies</div>
-                    <span class="systems-plus">+</span>
-                    <div class="system-badge">🔮 Planetary Hours</div>
+                    <span class="system-item">Western Astrology</span>
+                    <span class="systems-separator">•</span>
+                    <span class="system-item">Chinese Zodiac</span>
+                    <span class="systems-separator">•</span>
+                    <span class="system-item">Numerology</span>
+                    <span class="systems-separator">•</span>
+                    <span class="system-item">Gematria</span>
+                    <span class="systems-separator">•</span>
+                    <span class="system-item">Moon Phases</span>
+                    <span class="systems-separator">•</span>
+                    <span class="system-item">Tarot</span>
+                    <span class="systems-separator">•</span>
+                    <span class="system-item">Frequencies</span>
+                    <span class="systems-separator">•</span>
+                    <span class="system-item">Planetary Hours</span>
                 </div>
             </div>
         </div>
