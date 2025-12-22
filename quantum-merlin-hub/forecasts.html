@@ -3103,7 +3103,7 @@
 
         <!-- How to Use This Forecast -->
         <div class="how-to-use-section" id="howToUse" style="display: none;">
-            <h3>🔑 How to Use Your Forecast</h3>
+            <h3 style="text-align: center;">How to Use Your Forecast</h3>
             
             <div class="usage-grid">
                 <div class="usage-card">
@@ -5288,7 +5288,7 @@
                 ` : ''}
 
                 <div class="overview-section">
-                    <h3>🌟 TODAY'S OVERVIEW</h3>
+                    <h3 style="text-align: center;">TODAY'S OVERVIEW</h3>
                     <div class="overview-content">
                         <p><strong>Core Energy:</strong> ${getEnhancedOverviewEnergy(zodiac, risingSign, moonSign, chinese, personalYear, moonPhase)}</p>
                         <p><strong>Primary Focus:</strong> ${getEnhancedOverviewFocus(lifePath, personalYear, focus, moonPhase)}</p>
@@ -5297,13 +5297,13 @@
                 </div>
 
                 <div class="action-section">
-                    <h3>💡 YOUR DAILY ACTION PLAN</h3>
+                    <h3 style="text-align: center;">YOUR DAILY ACTION PLAN</h3>
                     ${getEnhancedActionItems(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, planetaryHour, moonPhase, focus, challenge)}
                 </div>
 
                 ${crossAnalysis.agreements.length > 0 ? `
                 <div class="cross-reference-section agreement">
-                    <h3>✨ SYSTEM AGREEMENTS - Where Your Cosmic DNA Aligns</h3>
+                    <h3 style="text-align: center;">SYSTEM AGREEMENTS - Where Your Cosmic DNA Aligns</h3>
                     ${crossAnalysis.agreements.map(a => `
                         <div class="cross-item">
                             <div class="system-badges">${a.systems.map(s => `<span class="badge">${s}</span>`).join(' + ')}</div>
