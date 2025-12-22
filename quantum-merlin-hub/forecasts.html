@@ -2409,7 +2409,7 @@
         }
 
         /* Canvas for orbital lines */
-        #lines-canvas {
+        #lines-canvas, #loading-lines-canvas {
             position: absolute;
             top: 0;
             left: 0;
@@ -2444,23 +2444,23 @@
             transform: translate(-50%, -50%);
         }
 
-        #quantum {
+        #quantum, #loading-quantum {
             color: #FFD700;
             text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
         }
 
-        #wizard {
+        #wizard, #loading-wizard {
             color: #00F0FF;
             text-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
         }
 
-        #rose {
+        #rose, #loading-rose {
             color: #FF0066;
             text-shadow: 0 0 20px rgba(255, 0, 102, 0.8);
         }
 
         /* Singularity dot */
-        #singularity {
+        #singularity, #loading-singularity {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -2475,7 +2475,7 @@
         }
 
         /* Title text */
-        #title {
+        #title, #loading-title {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -2772,6 +2772,233 @@
             font-size: 0.95rem;
             color: var(--neon-cyan);
         }
+
+        /* ========================================
+           WELCOME BACK BANNER & USER SESSION
+           ======================================== */
+        
+        /* Welcome Back Banner */
+        .welcome-back-banner {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(157, 0, 255, 0.15));
+            border: 2px solid rgba(0, 245, 255, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            position: relative;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .welcome-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .welcome-icon {
+            font-size: 3rem;
+            animation: wave 2s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(20deg); }
+            75% { transform: rotate(-20deg); }
+        }
+
+        .welcome-text {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .welcome-text h3 {
+            color: #00f5ff;
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+        }
+
+        .welcome-text p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .welcome-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .quick-forecast-btn {
+            background: linear-gradient(135deg, #00f5ff, #9d00ff);
+            border: 2px solid #00f5ff;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+        }
+
+        .quick-forecast-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.6);
+        }
+
+        .update-profile-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+        }
+
+        .update-profile-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .close-banner {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .close-banner:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
+        /* New User Prompt */
+        .new-user-prompt {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 165, 0, 0.15));
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .prompt-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .prompt-icon {
+            font-size: 3rem;
+            animation: sparklePrompt 2s ease-in-out infinite;
+        }
+
+        @keyframes sparklePrompt {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .prompt-text h3 {
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+
+        .prompt-text p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .get-started-btn {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border: 2px solid #ffd700;
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+        }
+
+        .get-started-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+        }
+
+        /* Success Toast */
+        .success-toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #00ff88, #00cc66);
+            color: #000;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4);
+            font-weight: 600;
+            z-index: 10000;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .success-toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile responsive for welcome banner */
+        @media (max-width: 768px) {
+            .welcome-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .welcome-actions {
+                width: 100%;
+                flex-direction: column;
+            }
+            
+            .quick-forecast-btn,
+            .update-profile-btn {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2814,6 +3041,40 @@
             <span class="coffee-icon">☕</span>
             <span>Support</span>
         </a>
+    </div>
+
+    <!-- Welcome Back Banner (hidden by default) -->
+    <div id="welcomeBackBanner" class="welcome-back-banner" style="display: none;">
+        <div class="welcome-content">
+            <div class="welcome-icon">👋</div>
+            <div class="welcome-text">
+                <h3>Welcome back, <span id="welcomeName">Seeker</span>!</h3>
+                <p>Your profile is ready. Generate today's forecast with one click.</p>
+            </div>
+            <div class="welcome-actions">
+                <button class="quick-forecast-btn" onclick="generateQuickForecast()">
+                    ⚡ Generate Today's Forecast
+                </button>
+                <button class="update-profile-btn" onclick="showUpdateProfile()">
+                    ✏️ Update Profile
+                </button>
+            </div>
+        </div>
+        <button class="close-banner" onclick="closeWelcomeBanner()">✕</button>
+    </div>
+
+    <!-- New User Prompt (hidden by default) -->
+    <div id="newUserPrompt" class="new-user-prompt" style="display: none;">
+        <div class="prompt-content">
+            <div class="prompt-icon">✨</div>
+            <div class="prompt-text">
+                <h3>First time here?</h3>
+                <p>Enter your birth details once, and we'll remember them for instant forecasts every time you visit.</p>
+            </div>
+            <button class="get-started-btn" onclick="scrollToInput()">
+                🚀 Get Started
+            </button>
+        </div>
     </div>
 
     <div class="container">
@@ -3303,6 +3564,10 @@
             if (!hasVisited) {
                 localStorage.setItem('qm_forecaster_visited', 'true');
             }
+            // Initialize user session when intro ends (if not already done)
+            if (typeof initializeUserSession === 'function') {
+                setTimeout(() => initializeUserSession(), 100);
+            }
         }
         
         // Show/hide skip button based on first visit
@@ -3317,6 +3582,8 @@
                 e.preventDefault();
                 e.stopPropagation();
                 hideIntro();
+                // Initialize user session immediately when skipping
+                setTimeout(() => initializeUserSession(), 500);
             });
         }
         
@@ -3552,6 +3819,38 @@
                     loadingTitle.style.fontSize = maxFontSize + 'px';
                     loadingTitle.style.opacity = 1;
                 }
+                else {
+                    // Loop the orbital animation after initial sequence
+                    loadingSingularity.style.opacity = 0;
+                    loadingQuantum.style.opacity = 0;
+                    loadingWizard.style.opacity = 0;
+                    loadingRose.style.opacity = 0;
+                    
+                    // Keep title visible
+                    const maxFontSize = Math.min(lWidth * 0.065, 42);
+                    loadingTitle.style.fontSize = maxFontSize + 'px';
+                    loadingTitle.style.opacity = 1;
+                    
+                    // Continuous orbital ring animation
+                    const loopTime = (t - 11) * 2; // Speed up for continuous loop
+                    const rotation = loopTime * Math.PI * 2 * 0.5;
+                    
+                    loadingCtx.strokeStyle = 'rgba(0, 240, 255, 0.6)';
+                    loadingCtx.lineWidth = 2;
+                    loadingCtx.beginPath();
+                    loadingCtx.arc(lCenterX, lCenterY, 80, rotation, rotation + Math.PI);
+                    loadingCtx.stroke();
+                    
+                    loadingCtx.strokeStyle = 'rgba(255, 0, 255, 0.6)';
+                    loadingCtx.beginPath();
+                    loadingCtx.arc(lCenterX, lCenterY, 80, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
+                    loadingCtx.stroke();
+                    
+                    loadingCtx.strokeStyle = 'rgba(157, 0, 255, 0.6)';
+                    loadingCtx.beginPath();
+                    loadingCtx.arc(lCenterX, lCenterY, 80, rotation + Math.PI, rotation + Math.PI * 2);
+                    loadingCtx.stroke();
+                }
 
                 loadingTime++;
                 if (loadingAnimationRunning) {
@@ -3582,6 +3881,216 @@
             }
         }
         generateStars();
+
+        // ========================================
+        // USER SESSION & PROFILE MANAGEMENT
+        // ========================================
+
+        // Save user profile to localStorage
+        function saveUserProfile(profile) {
+            localStorage.setItem('quantumMerlin_userProfile', JSON.stringify(profile));
+            localStorage.setItem('quantumMerlin_lastActive', new Date().toISOString());
+        }
+
+        // Load user profile from localStorage
+        function loadUserProfile() {
+            const saved = localStorage.getItem('quantumMerlin_userProfile');
+            return saved ? JSON.parse(saved) : null;
+        }
+
+        // Check if user has profile
+        function hasUserProfile() {
+            return localStorage.getItem('quantumMerlin_userProfile') !== null;
+        }
+
+        // Initialize user session on page load
+        function initializeUserSession() {
+            const userProfile = loadUserProfile();
+            
+            if (userProfile) {
+                // Returning user
+                showWelcomeBackBanner(userProfile);
+                window.savedProfile = userProfile;
+            } else {
+                // New user
+                showNewUserPrompt();
+            }
+        }
+
+        // Show welcome back banner for returning users
+        function showWelcomeBackBanner(profile) {
+            const banner = document.getElementById('welcomeBackBanner');
+            const nameSpan = document.getElementById('welcomeName');
+            
+            // Set name
+            const displayName = profile.preferredName || profile.firstName || 'Seeker';
+            nameSpan.textContent = displayName;
+            
+            // Show banner
+            banner.style.display = 'block';
+        }
+
+        // Show new user prompt
+        function showNewUserPrompt() {
+            const prompt = document.getElementById('newUserPrompt');
+            prompt.style.display = 'block';
+            
+            // Auto-hide after 8 seconds
+            setTimeout(() => {
+                prompt.style.display = 'none';
+            }, 8000);
+        }
+
+        // Close welcome banner
+        function closeWelcomeBanner() {
+            const banner = document.getElementById('welcomeBackBanner');
+            banner.style.display = 'none';
+        }
+
+        // Scroll to input section
+        function scrollToInput() {
+            document.getElementById('inputSection').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Hide new user prompt
+            const prompt = document.getElementById('newUserPrompt');
+            if (prompt) prompt.style.display = 'none';
+        }
+
+        // Quick forecast generation (one-click for returning users)
+        async function generateQuickForecast() {
+            const profile = loadUserProfile();
+            
+            if (!profile) {
+                alert('Profile not found. Please enter your details.');
+                scrollToInput();
+                return;
+            }
+            
+            // Update last used timestamp
+            profile.lastUsed = new Date().toISOString();
+            saveUserProfile(profile);
+            
+            // Hide welcome banner
+            closeWelcomeBanner();
+            
+            // Prefill form with saved data (for the generate function to use)
+            if (profile.firstName) document.getElementById('firstName').value = profile.firstName;
+            if (profile.middleName) document.getElementById('middleName').value = profile.middleName;
+            if (profile.lastName) document.getElementById('lastName').value = profile.lastName;
+            if (profile.birthDate) document.getElementById('birthDate').value = profile.birthDate;
+            if (profile.birthTime) document.getElementById('birthTime').value = profile.birthTime;
+            if (profile.birthLocation) document.getElementById('birthLocation').value = profile.birthLocation;
+            if (profile.currentLocation) document.getElementById('currentLocation').value = profile.currentLocation;
+            if (profile.focus) document.getElementById('focus').value = profile.focus;
+            if (profile.challenge) document.getElementById('challenge').value = profile.challenge;
+            
+            // Show loading spinner
+            showLoadingSpinner();
+            
+            // Generate forecast
+            setTimeout(async () => {
+                await generateForecast('daily');
+                hideLoadingSpinner();
+                
+                // Scroll to results
+                document.getElementById('forecastOutput').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 1500);
+        }
+
+        // Show update profile form
+        function showUpdateProfile() {
+            const profile = window.savedProfile || loadUserProfile();
+            
+            if (!profile) {
+                scrollToInput();
+                return;
+            }
+            
+            // Scroll to input section
+            scrollToInput();
+            
+            // Fill form fields
+            if (profile.firstName) document.getElementById('firstName').value = profile.firstName;
+            if (profile.middleName) document.getElementById('middleName').value = profile.middleName;
+            if (profile.lastName) document.getElementById('lastName').value = profile.lastName;
+            if (profile.birthDate) document.getElementById('birthDate').value = profile.birthDate;
+            if (profile.birthTime) document.getElementById('birthTime').value = profile.birthTime;
+            if (profile.birthLocation) document.getElementById('birthLocation').value = profile.birthLocation;
+            if (profile.currentLocation) document.getElementById('currentLocation').value = profile.currentLocation;
+            if (profile.focus) document.getElementById('focus').value = profile.focus;
+            if (profile.challenge) document.getElementById('challenge').value = profile.challenge;
+            
+            // Expand advanced sections if data exists
+            if (profile.birthTime || profile.birthLocation) {
+                const enhancedContent = document.getElementById('enhancedContent');
+                if (enhancedContent) enhancedContent.style.display = 'block';
+            }
+            
+            // Close welcome banner
+            closeWelcomeBanner();
+            
+            // Show success message
+            showSuccessMessage('Profile loaded! Update any fields and generate your forecast.');
+        }
+
+        // Save user profile from form (called after generating forecast)
+        function saveUserProfileFromForm() {
+            const profile = {
+                id: window.savedProfile?.id || 'user_' + Date.now(),
+                created: window.savedProfile?.created || new Date().toISOString(),
+                lastUsed: new Date().toISOString(),
+                
+                // Get data from form
+                firstName: document.getElementById('firstName').value || '',
+                middleName: document.getElementById('middleName').value || '',
+                lastName: document.getElementById('lastName').value || '',
+                birthDate: document.getElementById('birthDate').value || '',
+                birthTime: document.getElementById('birthTime').value || '',
+                birthLocation: document.getElementById('birthLocation').value || '',
+                currentLocation: document.getElementById('currentLocation').value || '',
+                focus: document.getElementById('focus').value || '',
+                challenge: document.getElementById('challenge').value || '',
+                
+                // Set preferred name
+                preferredName: document.getElementById('firstName').value || 'Seeker',
+                
+                // Store timezone
+                timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+            };
+            
+            // Only save if we have at least birth date
+            if (profile.birthDate) {
+                saveUserProfile(profile);
+                window.savedProfile = profile;
+                
+                // Show success message
+                showSuccessMessage('✨ Profile saved! Next time, just one click to get your forecast.');
+            }
+        }
+
+        // Show success toast notification
+        function showSuccessMessage(message) {
+            // Create toast notification
+            const toast = document.createElement('div');
+            toast.className = 'success-toast';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            // Animate in
+            setTimeout(() => toast.classList.add('show'), 100);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
 
         // ========================================
         // MONETIZATION FEATURES
@@ -4733,6 +5242,10 @@
             showLoadingSpinner();
             document.getElementById('inputSection').style.display = 'none';
             
+            // Hide new user prompt if showing
+            const newUserPrompt = document.getElementById('newUserPrompt');
+            if (newUserPrompt) newUserPrompt.style.display = 'none';
+            
             // Simulate calculation time (11s to match full intro animation)
             setTimeout(async () => {
                 await generateForecast();
@@ -4741,6 +5254,9 @@
                 document.getElementById('forecastOutput').classList.add('show');
                 document.getElementById('howToUse').style.display = 'block';
                 document.getElementById('forecastOutput').scrollIntoView({ behavior: 'smooth' });
+                
+                // Save user profile to localStorage for next visit
+                saveUserProfileFromForm();
             }, 11000);
         });
 
