@@ -4976,25 +4976,36 @@
         function generateYearlyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
             gematria, fullName, crossAnalysis, focus, challenge, birth) {
             
-            const currentYear = new Date().getFullYear();
+            const today = new Date();
+            const nextYear = new Date(today);
+            nextYear.setFullYear(today.getFullYear() + 1);
+            
+            const startMonth = today.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            const endMonth = nextYear.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            
+            const currentYear = today.getFullYear();
+            const nextYearNum = nextYear.getFullYear();
+            const yearLabel = currentYear === nextYearNum ? `${currentYear}` : `${currentYear}-${nextYearNum}`;
+            
             const currentChinese = getChineseZodiac(currentYear);
             
             // Quarterly breakdown
-            const quarters = getYearlyQuarters(zodiac, chinese, lifePath, personalYear, focus);
+            const quarters = getYearlyQuarters(zodiac, chinese, lifePath, personalYear, focus, today);
             
             return `
                 <div class="forecast-header">
-                    <h2>YOUR ${currentYear} QUANTUM FORECAST</h2>
+                    <h2>YOUR 12-MONTH QUANTUM FORECAST</h2>
                     <div class="forecast-meta">
                         <p>Generated for: ${fullName || 'Seeker'}</p>
                         <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
                         <p>🐉 ${chinese.element} ${chinese.animal} in Year of ${currentChinese.element} ${currentChinese.animal}</p>
                         <p>🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
+                        <p style="font-size: 0.95rem; color: var(--neon-cyan); margin-top: 10px;">Forecast Period: ${startMonth} - ${endMonth}</p>
                     </div>
                 </div>
 
                 <div class="overview-section">
-                    <h3>🌟 ${currentYear} - YOUR YEAR OF ${getYearlyThemeTitle(personalYear).toUpperCase()}</h3>
+                    <h3>🌟 YOUR NEXT 12 MONTHS - ${getYearlyThemeTitle(personalYear).toUpperCase()}</h3>
                     <div class="overview-content">
                         <p><strong>Year Theme:</strong> ${getYearlyTheme(personalYear, zodiac, chinese)}</p>
                         <p><strong>Core Lesson:</strong> ${getYearlyLesson(lifePath, personalYear)}</p>
@@ -5005,7 +5016,7 @@
 
                 ${crossAnalysis.agreements.length > 0 ? `
                 <div class="cross-reference-section agreement">
-                    <h3>✨ ${currentYear} COSMIC ALIGNMENTS</h3>
+                    <h3>✨ 12-MONTH COSMIC ALIGNMENTS</h3>
                     ${crossAnalysis.agreements.map(a => `
                         <div class="cross-item">
                             <div class="system-badges">${a.systems.map(s => `<span class="badge">${s}</span>`).join(' + ')}</div>
@@ -5037,11 +5048,11 @@
 
                 <div class="system-section expanded">
                     <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>⭐ ASTROLOGY - ${currentYear} Overview</h3>
+                        <h3>⭐ ASTROLOGY - 12-Month Overview</h3>
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        ${getYearlyWesternForecast(zodiac, risingSign, moonSign, currentYear)}
+                        ${getYearlyWesternForecast(zodiac, risingSign, moonSign, yearLabel)}
                     </div>
                 </div>
 
@@ -5066,7 +5077,7 @@
                 </div>
 
                 <div class="action-section">
-                    <h3>💡 ${currentYear} STRATEGIC PRIORITIES</h3>
+                    <h3>💡 YOUR 12-MONTH STRATEGIC PRIORITIES</h3>
                     ${getYearlyActionItems(zodiac, chinese, lifePath, personalYear, focus)}
                 </div>
 
@@ -5077,16 +5088,16 @@
                     <h4>✨ Share Your Cosmic Journey</h4>
                     <p>Your friends deserve this magic too! 💫</p>
                     <div class="share-buttons">
-                        <button class="share-btn twitter" onclick="shareToTwitter('Just got my ${currentYear} YEARLY cosmic blueprint! 🌟 Personal Year ${personalYear} + ${zodiac.name} energy + planetary transits = the most comprehensive life roadmap I\'ve ever seen. This is NEXT LEVEL (and FREE):')">
+                        <button class="share-btn twitter" onclick="shareToTwitter('Just got my 12-MONTH cosmic blueprint! 🌟 Personal Year ${personalYear} + ${zodiac.name} energy + planetary transits = the most comprehensive life roadmap I\'ve ever seen. This is NEXT LEVEL (and FREE):')">
                             <span>𝕏</span> Tweet
                         </button>
                         <button class="share-btn facebook" onclick="shareToFacebook()">
                             <span>f</span> Share
                         </button>
-                        <button class="share-btn whatsapp" onclick="shareToWhatsApp('Holy COSMIC MAGIC!! ✨🌌 I just got my ENTIRE ${currentYear} mapped out using astrology, numerology, Chinese zodiac, planetary houses & MORE... The quarterly breakdown alone is worth gold. You HAVE to experience this (FREE!):')">
+                        <button class="share-btn whatsapp" onclick="shareToWhatsApp('Holy COSMIC MAGIC!! ✨🌌 I just got my NEXT 12 MONTHS mapped out using astrology, numerology, Chinese zodiac, planetary houses & MORE... The quarterly breakdown alone is worth gold. You HAVE to experience this (FREE!):')">
                             <span>💬</span> WhatsApp
                         </button>
-                        <button class="share-btn email" onclick="shareViaEmail('My ${currentYear} Cosmic Blueprint 🌟', 'I discovered the most INCREDIBLE yearly forecast tool! It combines 8 mystical systems and gave me a complete roadmap for ${currentYear}. You need to see this!')">
+                        <button class="share-btn email" onclick="shareViaEmail('My 12-Month Cosmic Blueprint 🌟', 'I discovered the most INCREDIBLE forecast tool! It combines 8 mystical systems and gave me a complete roadmap for the next year. You need to see this!')">
                             <span>✉️</span> Email
                         </button>
                         <button class="share-btn copy" onclick="copyForecastLink()">
@@ -6637,35 +6648,57 @@
             return `Your growth edge this year: integrating ${getZodiacShadow(zodiac.name)}${moonSign ? ` while managing ${getZodiacShadow(moonSign.name)} emotional patterns` : ''}. Life Path ${lifePath} asks you to ${getLifePathAction(lifePath)} even when it feels uncomfortable.`;
         }
 
-        function getYearlyQuarters(zodiac, chinese, lifePath, personalYear, focus) {
+        function getYearlyQuarters(zodiac, chinese, lifePath, personalYear, focus, startDate = new Date()) {
+            const today = new Date(startDate);
+            const currentMonth = today.getMonth();
+            
+            // Calculate quarters from current month
+            const q1Start = new Date(today);
+            const q1End = new Date(today);
+            q1End.setMonth(currentMonth + 3);
+            
+            const q2Start = new Date(q1End);
+            const q2End = new Date(q2Start);
+            q2End.setMonth(q2Start.getMonth() + 3);
+            
+            const q3Start = new Date(q2End);
+            const q3End = new Date(q3Start);
+            q3End.setMonth(q3Start.getMonth() + 3);
+            
+            const q4Start = new Date(q3End);
+            const q4End = new Date(q4Start);
+            q4End.setMonth(q4Start.getMonth() + 3);
+            
+            const formatMonth = (date) => date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+            
             return [
                 {
                     title: 'Foundation',
-                    months: 'Jan - Mar',
-                    theme: `Plant seeds for Year ${personalYear} themes`,
+                    months: `${formatMonth(q1Start)} - ${formatMonth(q1End)}`,
+                    theme: `Plant seeds for Personal Year ${personalYear} themes`,
                     focus: `${zodiac.name} initiative launches new cycles`,
-                    peak: 'Equinox window (mid-March)'
+                    peak: `Peak energy: ${formatMonth(new Date(q1Start.getTime() + (q1End - q1Start) / 2))}`
                 },
                 {
                     title: 'Growth',
-                    months: 'Apr - Jun',
+                    months: `${formatMonth(q2Start)} - ${formatMonth(q2End)}`,
                     theme: 'Develop what was initiated in Q1',
                     focus: `${chinese.animal} persistence builds momentum`,
-                    peak: 'Solstice window (mid-June)'
+                    peak: `Peak energy: ${formatMonth(new Date(q2Start.getTime() + (q2End - q2Start) / 2))}`
                 },
                 {
                     title: 'Harvest',
-                    months: 'Jul - Sep',
+                    months: `${formatMonth(q3Start)} - ${formatMonth(q3End)}`,
                     theme: 'Reap results from H1 efforts',
                     focus: `Life Path ${lifePath} purpose becomes visible`,
-                    peak: 'Equinox window (mid-September)'
+                    peak: `Peak energy: ${formatMonth(new Date(q3Start.getTime() + (q3End - q3Start) / 2))}`
                 },
                 {
                     title: 'Integration',
-                    months: 'Oct - Dec',
-                    theme: 'Complete year and prepare for next',
+                    months: `${formatMonth(q4Start)} - ${formatMonth(q4End)}`,
+                    theme: 'Complete cycle and prepare for next',
                     focus: `Personal Year ${personalYear} lessons crystallize`,
-                    peak: 'Solstice window (mid-December)'
+                    peak: `Peak energy: ${formatMonth(new Date(q4Start.getTime() + (q4End - q4Start) / 2))}`
                 }
             ];
         }
