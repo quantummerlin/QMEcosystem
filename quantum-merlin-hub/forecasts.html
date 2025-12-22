@@ -3907,36 +3907,20 @@
                     loadingTitle.style.opacity = 1;
                 }
                 else {
-                    // Loop the orbital animation after initial sequence
+                    // Keep title visible with subtle pulse - NO orbital rings
                     loadingSingularity.style.opacity = 0;
                     loadingQuantum.style.opacity = 0;
                     loadingWizard.style.opacity = 0;
                     loadingRose.style.opacity = 0;
                     
-                    // Keep title visible
+                    // Clear canvas - no rings
+                    loadingCtx.clearRect(0, 0, lWidth, lHeight);
+                    
+                    // Keep title visible with subtle glow pulse
                     const maxFontSize = Math.min(lWidth * 0.065, 42);
                     loadingTitle.style.fontSize = maxFontSize + 'px';
-                    loadingTitle.style.opacity = 1;
-                    
-                    // Continuous orbital ring animation
-                    const loopTime = (t - 11) * 2; // Speed up for continuous loop
-                    const rotation = loopTime * Math.PI * 2 * 0.5;
-                    
-                    loadingCtx.strokeStyle = 'rgba(0, 240, 255, 0.6)';
-                    loadingCtx.lineWidth = 2;
-                    loadingCtx.beginPath();
-                    loadingCtx.arc(lCenterX, lCenterY, 80, rotation, rotation + Math.PI);
-                    loadingCtx.stroke();
-                    
-                    loadingCtx.strokeStyle = 'rgba(255, 0, 255, 0.6)';
-                    loadingCtx.beginPath();
-                    loadingCtx.arc(lCenterX, lCenterY, 80, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
-                    loadingCtx.stroke();
-                    
-                    loadingCtx.strokeStyle = 'rgba(157, 0, 255, 0.6)';
-                    loadingCtx.beginPath();
-                    loadingCtx.arc(lCenterX, lCenterY, 80, rotation + Math.PI, rotation + Math.PI * 2);
-                    loadingCtx.stroke();
+                    const pulse = 0.85 + Math.sin((t - 11) * 2) * 0.15;
+                    loadingTitle.style.opacity = pulse;
                 }
 
                 loadingTime++;
