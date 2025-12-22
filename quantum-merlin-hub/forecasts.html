@@ -5496,6 +5496,50 @@
             return { phase: 'Waning Crescent', symbol: '🌘', energy: 'Rest, surrender, preparation for renewal', action: 'Rest deeply and prepare for the new cycle' };
         }
 
+        // Get New Moon and Full Moon dates within a period
+        function getMoonPhasesForPeriod(startDate, days) {
+            const moonEvents = [];
+            const epoch = new Date('2000-01-06'); // Known new moon
+            const lunarCycle = 29.53;
+            
+            for (let i = 0; i < days; i++) {
+                const checkDate = new Date(startDate);
+                checkDate.setDate(startDate.getDate() + i);
+                
+                const daysSince = (checkDate - epoch) / (1000 * 60 * 60 * 24);
+                const lunation = daysSince % lunarCycle;
+                
+                // Check for New Moon (within ~1 day of exact)
+                if (lunation < 1 || lunation > 28.53) {
+                    const dateStr = checkDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                    // Avoid duplicates (check if we already have this date)
+                    if (!moonEvents.find(e => e.date === dateStr && e.phase === 'New Moon')) {
+                        moonEvents.push({
+                            phase: 'New Moon',
+                            emoji: '🌑',
+                            date: dateStr,
+                            meaning: 'Set intentions & plant seeds'
+                        });
+                    }
+                }
+                
+                // Check for Full Moon (around day 14.77 of cycle, within ~1 day)
+                if (lunation > 13.77 && lunation < 15.77) {
+                    const dateStr = checkDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                    if (!moonEvents.find(e => e.date === dateStr && e.phase === 'Full Moon')) {
+                        moonEvents.push({
+                            phase: 'Full Moon',
+                            emoji: '🌕',
+                            date: dateStr,
+                            meaning: 'Manifestation & release'
+                        });
+                    }
+                }
+            }
+            
+            return moonEvents;
+        }
+
         // Generate forecast
         document.getElementById('generateBtn').addEventListener('click', async function() {
             const birthDate = document.getElementById('birthDate').value;
@@ -6055,32 +6099,32 @@
             gematria, fullName, birthTime, moonPhase, crossAnalysis, focus, challenge, birth, tarotCard, bestDay) {
             
             const today = new Date();
-            const weekStart = new Date(today);
-            weekStart.setDate(today.getDate() - today.getDay());
-            const weekEnd = new Date(weekStart);
-            weekEnd.setDate(weekStart.getDate() + 6);
+            const weekStart = new Date(today); // Start from today
+            const weekEnd = new Date(today);
+            weekEnd.setDate(today.getDate() + 6); // 7 days total (today + 6)
             
             const weekStartStr = weekStart.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
             const weekEndStr = weekEnd.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
             
-            // Generate 7-day breakdown
+            // Generate 7-day breakdown starting from today
             let dailyBreakdown = '';
             const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
             const dayEnergies = ['reflection & rest', 'initiative & new beginnings', 'assertive action', 'communication & learning', 'expansion & opportunity', 'love & harmony', 'discipline & structure'];
             const planetRulers = ['Sun', 'Moon', 'Mars', 'Mercury', 'Jupiter', 'Venus', 'Saturn'];
             
             for (let i = 0; i < 7; i++) {
-                const dayDate = new Date(weekStart);
-                dayDate.setDate(weekStart.getDate() + i);
-                const isToday = dayDate.toDateString() === today.toDateString();
-                const isBestDay = dayNames[i] === bestDay.day;
+                const dayDate = new Date(today);
+                dayDate.setDate(today.getDate() + i);
+                const dayOfWeek = dayDate.getDay();
+                const isToday = i === 0;
+                const isBestDay = dayNames[dayOfWeek] === bestDay.day;
                 
                 dailyBreakdown += `
                     <div class="day-item ${isToday ? 'today' : ''} ${isBestDay ? 'best-day' : ''}">
-                        <h4>${dayNames[i]}${isToday ? ' (Today)' : ''}${isBestDay ? ` ${bestDay.emoji} BEST DAY` : ''} - ${dayDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</h4>
-                        <p><strong>Ruler:</strong> ${planetRulers[i]} | <strong>Energy:</strong> ${dayEnergies[i]}</p>
+                        <h4>${dayNames[dayOfWeek]}${isToday ? ' (Today)' : ''}${isBestDay ? ` ${bestDay.emoji} BEST DAY` : ''} - ${dayDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</h4>
+                        <p><strong>Ruler:</strong> ${planetRulers[dayOfWeek]} | <strong>Energy:</strong> ${dayEnergies[dayOfWeek]}</p>
                         ${isBestDay ? `<p class="best-day-note">✨ <strong>${bestDay.energy}</strong> - ${bestDay.action}</p>` : ''}
-                        <p>${getDaySpecificGuidance(zodiac, chinese, lifePath, i, focus)}</p>
+                        <p>${getDaySpecificGuidance(zodiac, chinese, lifePath, dayOfWeek, focus)}</p>
                     </div>
                 `;
             }
@@ -6231,28 +6275,37 @@
             gematria, fullName, crossAnalysis, focus, challenge, birth) {
             
             const today = new Date();
-            const monthName = today.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-            const daysInMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate();
+            const monthEnd = new Date(today);
+            monthEnd.setDate(today.getDate() + 27); // 28 days total (today + 27)
+            
+            const monthStartStr = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            const monthEndStr = monthEnd.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            const monthName = `${monthStartStr} - ${monthEndStr}`;
             
             // Calculate personal month
             const personalMonth = ((today.getMonth() + 1) + personalYear) % 9 || 9;
+            
+            // Get moon phases for next 28 days
+            const moonPhases = getMoonPhasesForPeriod(today, 28);
             
             // Four week themes
             const weekThemes = getMonthlyWeekThemes(zodiac, chinese, personalMonth, focus);
             
             return `
                 <div class="forecast-header">
-                    <h2>YOUR MONTHLY QUANTUM FORECAST</h2>
+                    <h2>YOUR 28-DAY QUANTUM FORECAST</h2>
                     <div class="forecast-meta">
                         <p>Generated for: ${fullName || 'Seeker'}</p>
                         <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
                         <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
-                        <p>Month: ${monthName} | Personal Month: ${personalMonth}</p>
+                        <p style="font-size: 0.95rem; color: var(--neon-cyan);">Forecast Period: ${monthName} (28 days)</p>
+                        <p>Personal Month: ${personalMonth}</p>
+                        ${moonPhases.length > 0 ? `<p style="margin-top: 10px;">🌙 <strong>Moon Events:</strong> ${moonPhases.map(m => `${m.emoji} ${m.phase} on ${m.date}`).join(' | ')}</p>` : ''}
                     </div>
                 </div>
 
                 <div class="overview-section">
-                    <h3>🌟 ${monthName.toUpperCase()} OVERVIEW</h3>
+                    <h3>🌟 28-DAY OVERVIEW</h3>
                     <div class="overview-content">
                         <p><strong>Month Theme:</strong> ${getMonthlyTheme(personalMonth, zodiac, chinese)}</p>
                         <p><strong>Primary Energy:</strong> ${getMonthlyEnergy(zodiac, chinese, personalMonth)}</p>
@@ -6375,13 +6428,13 @@
             
             return `
                 <div class="forecast-header">
-                    <h2>YOUR 12-MONTH QUANTUM FORECAST</h2>
+                    <h2>YOUR 365-DAY QUANTUM FORECAST</h2>
                     <div class="forecast-meta">
                         <p>Generated for: ${fullName || 'Seeker'}</p>
                         <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
                         <p>🐉 ${chinese.element} ${chinese.animal} in Year of ${currentChinese.element} ${currentChinese.animal}</p>
                         <p>🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
-                        <p style="font-size: 0.95rem; color: var(--neon-cyan); margin-top: 10px;">Forecast Period: ${startMonth} - ${endMonth}</p>
+                        <p style="font-size: 0.95rem; color: var(--neon-cyan); margin-top: 10px;">Forecast Period: ${startMonth} - ${endMonth} (365 days)</p>
                     </div>
                 </div>
 
