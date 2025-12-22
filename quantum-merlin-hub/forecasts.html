@@ -852,6 +852,19 @@
         .forecast-meta {
             font-size: 1.1rem;
             color: var(--text-secondary);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .forecast-meta p {
+            margin: 8px 0;
+        }
+        
+        .location-highlight {
+            color: #00ff88;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5),
+                         0 0 20px rgba(0, 255, 136, 0.3);
+            font-weight: 600;
         }
 
         /* Special Date Banner */
@@ -892,6 +905,7 @@
             position: relative;
             overflow: hidden;
             animation: borderGlow 4s ease-in-out infinite;
+            text-align: center;
         }
         
         .overview-section::before {
@@ -1015,6 +1029,7 @@
             position: relative;
             overflow: hidden;
             animation: glowPulse 4s ease-in-out infinite;
+            text-align: center;
         }
         
         .action-section::after {
@@ -1050,6 +1065,9 @@
             border-radius: 8px;
             transition: all 0.3s ease;
             position: relative;
+            text-align: left;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .action-item:hover {
@@ -4608,12 +4626,15 @@
             return sum;
         }
 
-        function getSpecialDateInfo(birthDate) {
+        function getSpecialDateInfo(birthDate, coords = null) {
             const today = new Date();
             const birth = new Date(birthDate);
             const month = today.getMonth() + 1;
             const day = today.getDate();
             const year = today.getFullYear();
+            
+            // Determine if southern hemisphere (negative latitude)
+            const isSouthernHemisphere = coords && coords.lat < 0;
             
             let special = [];
             
@@ -4662,24 +4683,40 @@
                 special.push({ type: 'halloween', message: '🎃 Halloween/Samhain - The veil between worlds is thinnest. Perfect for divination, ancestor work, and spiritual connection.' });
             }
             
-            // Spring Equinox (approx)
+            // Spring Equinox (adjust for hemisphere)
             if (month === 3 && day >= 19 && day <= 21) {
-                special.push({ type: 'spring-equinox', message: '🌸 Spring Equinox - Balance of light and dark. New beginnings, growth, and planting seeds for the coming season.' });
+                if (isSouthernHemisphere) {
+                    special.push({ type: 'autumn-equinox', message: '🍂 Autumn Equinox - Balance returns. Time for harvest, gratitude, and preparing for the inward season.' });
+                } else {
+                    special.push({ type: 'spring-equinox', message: '🌸 Spring Equinox - Balance of light and dark. New beginnings, growth, and planting seeds for the coming season.' });
+                }
             }
             
-            // Summer Solstice (approx)
+            // Summer/Winter Solstice (adjust for hemisphere)
             if (month === 6 && day >= 20 && day <= 22) {
-                special.push({ type: 'summer-solstice', message: '☀️ Summer Solstice - Longest day of the year. Peak solar energy, vitality, and outward expression reach their zenith.' });
+                if (isSouthernHemisphere) {
+                    special.push({ type: 'winter-solstice', message: '❄️ Winter Solstice - Longest night of the year. Deepest introspection, rest, and the return of the light begins.' });
+                } else {
+                    special.push({ type: 'summer-solstice', message: '☀️ Summer Solstice - Longest day of the year. Peak solar energy, vitality, and outward expression reach their zenith.' });
+                }
             }
             
-            // Fall Equinox (approx)
+            // Fall/Spring Equinox (adjust for hemisphere)
             if (month === 9 && day >= 21 && day <= 23) {
-                special.push({ type: 'fall-equinox', message: '🍂 Autumn Equinox - Balance returns. Time for harvest, gratitude, and preparing for the inward season.' });
+                if (isSouthernHemisphere) {
+                    special.push({ type: 'spring-equinox', message: '🌸 Spring Equinox - Balance of light and dark. New beginnings, growth, and planting seeds for the coming season.' });
+                } else {
+                    special.push({ type: 'fall-equinox', message: '🍂 Autumn Equinox - Balance returns. Time for harvest, gratitude, and preparing for the inward season.' });
+                }
             }
             
-            // Winter Solstice (approx)
+            // Winter/Summer Solstice (adjust for hemisphere)
             if (month === 12 && day >= 20 && day <= 22) {
-                special.push({ type: 'winter-solstice', message: '❄️ Winter Solstice - Longest night of the year. Deepest introspection, rest, and the return of the light begins.' });
+                if (isSouthernHemisphere) {
+                    special.push({ type: 'summer-solstice', message: '☀️ Summer Solstice - Longest day of the year. Peak solar energy, vitality, and outward expression reach their zenith.' });
+                } else {
+                    special.push({ type: 'winter-solstice', message: '❄️ Winter Solstice - Longest night of the year. Deepest introspection, rest, and the return of the light begins.' });
+                }
             }
             
             return special;
@@ -4713,7 +4750,8 @@
                 if (data && data.length > 0) {
                     const coords = {
                         lat: parseFloat(data[0].lat),
-                        lon: parseFloat(data[0].lon)
+                        lon: parseFloat(data[0].lon),
+                        displayName: data[0].display_name || location
                     };
                     
                     // Cache the result
@@ -5157,16 +5195,22 @@
             const moonPhase = getCurrentMoonPhase();
             const crossAnalysis = getCrossSystemAnalysis(zodiac, risingSign, moonSign, chinese, lifePath, personalYear);
             
+            // Get coordinates for hemisphere detection
+            let coords = null;
+            if (birthLocation) {
+                coords = await getCoordinates(birthLocation.toLowerCase().trim());
+            }
+            
             // PHASE 3: New features - Tarot, Aspects, Best Day, Houses
             const tarotCard = getTarotCard(birthDate, timeframe);
             const planetaryAspects = getPlanetaryAspects(birthDate);
             const bestDay = getBestDayOfWeek(zodiac, chinese, lifePath);
             const planetaryHouses = await getPlanetaryHouses(birthDate, birthTime, birthLocation);
             
-            // Get today's date and check for special dates
+            // Get today's date and check for special dates (pass coords for hemisphere detection)
             const today = new Date();
             const todayStr = today.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-            const specialDates = getSpecialDateInfo(birthDate);
+            const specialDates = getSpecialDateInfo(birthDate, coords);
             
             // Generate forecast content based on timeframe
             let forecastHTML = '';
@@ -5276,6 +5320,7 @@
                         <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''} ${moonSign ? `| ☽ Moon: ${moonSign.name} ${moonSign.symbol}` : ''}</p>
                         <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
                         <p>Timeframe: Daily | ${todayStr}</p>
+                        ${birthLocation ? `<p style="font-size: 0.95rem; margin-top: 10px;">📍 Location: <span style="color: #00ff88; text-shadow: 0 0 10px rgba(0, 255, 136, 0.5); font-weight: 600;">${birthLocation}</span> ${coords && coords.lat < 0 ? '(Southern Hemisphere)' : '(Northern Hemisphere)'}</span></p>` : ''}
                         <p style="font-size: 0.9rem; color: ${locationActive ? '#00ff88' : '#ff8800'}; margin-top: 10px;">${locationNote}</p>
                     </div>
                 </div>
