@@ -503,6 +503,34 @@
             color: var(--text-secondary);
         }
 
+        /* Special Date Banner */
+        .special-date-banner {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 140, 0, 0.2) 100%);
+            border: 3px solid var(--neon-gold);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: glowPulse 2s ease-in-out infinite;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .special-date-banner h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            color: var(--neon-gold);
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        }
+
+        .special-date-banner p {
+            font-size: 1.2rem;
+            color: #FFD700;
+            line-height: 1.8;
+            margin: 10px 0;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+        }
+
         /* Overview Section with shimmer effect */
         .overview-section {
             background: linear-gradient(135deg, rgba(0, 245, 255, 0.15) 0%, rgba(157, 0, 255, 0.15) 100%);
@@ -3766,7 +3794,13 @@
             const today = new Date();
             const month = birth.getMonth() + 1;
             const day = birth.getDate();
-            const year = today.getFullYear();
+            
+            // Check if birthday has passed this year
+            const birthdayThisYear = new Date(today.getFullYear(), birth.getMonth(), birth.getDate());
+            const hasBirthdayPassed = today >= birthdayThisYear;
+            
+            // Use current year if birthday passed, otherwise use last year
+            const year = hasBirthdayPassed ? today.getFullYear() : today.getFullYear() - 1;
             
             let sum = month + day + year;
             while (sum > 9) {
@@ -3786,47 +3820,195 @@
             return sum;
         }
 
+        function getSpecialDateInfo(birthDate) {
+            const today = new Date();
+            const birth = new Date(birthDate);
+            const month = today.getMonth() + 1;
+            const day = today.getDate();
+            const year = today.getFullYear();
+            
+            let special = [];
+            
+            // Birthday
+            if (month === birth.getMonth() + 1 && day === birth.getDate()) {
+                special.push({ type: 'birthday', message: '🎂 Today is YOUR BIRTHDAY! This is the start of your new personal year. A powerful day for setting intentions and manifesting your desires.' });
+            }
+            
+            // Christmas
+            if (month === 12 && day === 25) {
+                special.push({ type: 'christmas', message: '🎄 Christmas Day - A time of joy, giving, and spiritual renewal. The cosmic energy supports miracles and heart-opening.' });
+            }
+            
+            // Christmas Eve
+            if (month === 12 && day === 24) {
+                special.push({ type: 'christmas-eve', message: '🌟 Christmas Eve - The night before Christmas carries magical anticipation energy. Perfect for manifestation and wonder.' });
+            }
+            
+            // New Year's Day
+            if (month === 1 && day === 1) {
+                special.push({ type: 'new-year', message: '✨ New Year\'s Day - The beginning of a fresh calendar cycle. Set your intentions for the year ahead with clarity and purpose.' });
+            }
+            
+            // New Year's Eve
+            if (month === 12 && day === 31) {
+                special.push({ type: 'new-year-eve', message: '🎊 New Year\'s Eve - The threshold between years. Perfect for releasing the old and welcoming the new with gratitude.' });
+            }
+            
+            // Valentine's Day
+            if (month === 2 && day === 14) {
+                special.push({ type: 'valentines', message: '💕 Valentine\'s Day - The cosmic energy amplifies love, romance, and heart connections. Open yourself to giving and receiving affection.' });
+            }
+            
+            // Leap Day
+            if (month === 2 && day === 29) {
+                special.push({ type: 'leap-day', message: '🌀 February 29th - A rare portal day that only appears every 4 years. Use this extraordinary energy for quantum leaps and breakthroughs.' });
+            }
+            
+            // April Fools (Old New Year - Julian Calendar)
+            if (month === 4 && day === 1) {
+                special.push({ type: 'april-fools', message: '🃏 April 1st - The "Old New Year" from the Julian calendar. A day of trickster energy, playfulness, and seeing through illusions to truth.' });
+            }
+            
+            // Halloween/Samhain
+            if (month === 10 && day === 31) {
+                special.push({ type: 'halloween', message: '🎃 Halloween/Samhain - The veil between worlds is thinnest. Perfect for divination, ancestor work, and spiritual connection.' });
+            }
+            
+            // Spring Equinox (approx)
+            if (month === 3 && day >= 19 && day <= 21) {
+                special.push({ type: 'spring-equinox', message: '🌸 Spring Equinox - Balance of light and dark. New beginnings, growth, and planting seeds for the coming season.' });
+            }
+            
+            // Summer Solstice (approx)
+            if (month === 6 && day >= 20 && day <= 22) {
+                special.push({ type: 'summer-solstice', message: '☀️ Summer Solstice - Longest day of the year. Peak solar energy, vitality, and outward expression reach their zenith.' });
+            }
+            
+            // Fall Equinox (approx)
+            if (month === 9 && day >= 21 && day <= 23) {
+                special.push({ type: 'fall-equinox', message: '🍂 Autumn Equinox - Balance returns. Time for harvest, gratitude, and preparing for the inward season.' });
+            }
+            
+            // Winter Solstice (approx)
+            if (month === 12 && day >= 20 && day <= 22) {
+                special.push({ type: 'winter-solstice', message: '❄️ Winter Solstice - Longest night of the year. Deepest introspection, rest, and the return of the light begins.' });
+            }
+            
+            return special;
+        }
+
         // Geocoding helper - converts location to coordinates
         function getCoordinates(location) {
             const locations = {
+                // United Kingdom
                 'london': { lat: 51.5074, lon: -0.1278 },
                 'uk': { lat: 51.5074, lon: -0.1278 },
                 'england': { lat: 51.5074, lon: -0.1278 },
+                'manchester': { lat: 53.4808, lon: -2.2426 },
+                'edinburgh': { lat: 55.9533, lon: -3.1883 },
+                'scotland': { lat: 55.9533, lon: -3.1883 },
+                'dublin': { lat: 53.3498, lon: -6.2603 },
+                'ireland': { lat: 53.3498, lon: -6.2603 },
+                
+                // United States
                 'new york': { lat: 40.7128, lon: -74.0060 },
+                'nyc': { lat: 40.7128, lon: -74.0060 },
                 'los angeles': { lat: 34.0522, lon: -118.2437 },
                 'california': { lat: 34.0522, lon: -118.2437 },
+                'chicago': { lat: 41.8781, lon: -87.6298 },
+                'houston': { lat: 29.7604, lon: -95.3698 },
+                'texas': { lat: 29.7604, lon: -95.3698 },
+                'miami': { lat: 25.7617, lon: -80.1918 },
+                'florida': { lat: 25.7617, lon: -80.1918 },
+                'seattle': { lat: 47.6062, lon: -122.3321 },
+                'washington': { lat: 47.6062, lon: -122.3321 },
+                'san francisco': { lat: 37.7749, lon: -122.4194 },
+                'boston': { lat: 42.3601, lon: -71.0589 },
+                'atlanta': { lat: 33.7490, lon: -84.3880 },
+                'denver': { lat: 39.7392, lon: -104.9903 },
+                'phoenix': { lat: 33.4484, lon: -112.0740 },
+                'las vegas': { lat: 36.1699, lon: -115.1398 },
+                
+                // Canada
+                'toronto': { lat: 43.6532, lon: -79.3832 },
+                'vancouver': { lat: 49.2827, lon: -123.1207 },
+                'montreal': { lat: 45.5017, lon: -73.5673 },
+                'canada': { lat: 43.6532, lon: -79.3832 },
+                
+                // Australia & New Zealand
                 'sydney': { lat: -33.8688, lon: 151.2093 },
+                'melbourne': { lat: -37.8136, lon: 144.9631 },
+                'brisbane': { lat: -27.4698, lon: 153.0251 },
+                'perth': { lat: -31.9505, lon: 115.8605 },
                 'australia': { lat: -33.8688, lon: 151.2093 },
+                'auckland': { lat: -36.8485, lon: 174.7633 },
+                'new zealand': { lat: -36.8485, lon: 174.7633 },
+                
+                // Asia
                 'mumbai': { lat: 19.0760, lon: 72.8777 },
+                'delhi': { lat: 28.7041, lon: 77.1025 },
+                'bangalore': { lat: 12.9716, lon: 77.5946 },
                 'india': { lat: 19.0760, lon: 72.8777 },
                 'tokyo': { lat: 35.6762, lon: 139.6503 },
                 'japan': { lat: 35.6762, lon: 139.6503 },
+                'beijing': { lat: 39.9042, lon: 116.4074 },
+                'shanghai': { lat: 31.2304, lon: 121.4737 },
+                'china': { lat: 39.9042, lon: 116.4074 },
+                'seoul': { lat: 37.5665, lon: 126.9780 },
+                'south korea': { lat: 37.5665, lon: 126.9780 },
+                'singapore': { lat: 1.3521, lon: 103.8198 },
+                'hong kong': { lat: 22.3193, lon: 114.1694 },
+                'bangkok': { lat: 13.7563, lon: 100.5018 },
+                'thailand': { lat: 13.7563, lon: 100.5018 },
+                'jakarta': { lat: -6.2088, lon: 106.8456 },
+                'indonesia': { lat: -6.2088, lon: 106.8456 },
+                
+                // Europe
                 'paris': { lat: 48.8566, lon: 2.3522 },
                 'france': { lat: 48.8566, lon: 2.3522 },
                 'berlin': { lat: 52.5200, lon: 13.4050 },
                 'germany': { lat: 52.5200, lon: 13.4050 },
-                'toronto': { lat: 43.6532, lon: -79.3832 },
-                'canada': { lat: 43.6532, lon: -79.3832 },
-                'mexico city': { lat: 19.4326, lon: -99.1332 },
-                'mexico': { lat: 19.4326, lon: -99.1332 },
                 'rome': { lat: 41.9028, lon: 12.4964 },
                 'italy': { lat: 41.9028, lon: 12.4964 },
                 'madrid': { lat: 40.4168, lon: -3.7038 },
+                'barcelona': { lat: 41.3851, lon: 2.1734 },
                 'spain': { lat: 40.4168, lon: -3.7038 },
                 'amsterdam': { lat: 52.3676, lon: 4.9041 },
                 'netherlands': { lat: 52.3676, lon: 4.9041 },
                 'moscow': { lat: 55.7558, lon: 37.6173 },
                 'russia': { lat: 55.7558, lon: 37.6173 },
-                'beijing': { lat: 39.9042, lon: 116.4074 },
-                'china': { lat: 39.9042, lon: 116.4074 },
+                'vienna': { lat: 48.2082, lon: 16.3738 },
+                'austria': { lat: 48.2082, lon: 16.3738 },
+                'zurich': { lat: 47.3769, lon: 8.5417 },
+                'switzerland': { lat: 47.3769, lon: 8.5417 },
+                'stockholm': { lat: 59.3293, lon: 18.0686 },
+                'sweden': { lat: 59.3293, lon: 18.0686 },
+                'copenhagen': { lat: 55.6761, lon: 12.5683 },
+                'denmark': { lat: 55.6761, lon: 12.5683 },
+                'athens': { lat: 37.9838, lon: 23.7275 },
+                'greece': { lat: 37.9838, lon: 23.7275 },
+                
+                // Middle East & Africa
                 'dubai': { lat: 25.2048, lon: 55.2708 },
                 'uae': { lat: 25.2048, lon: 55.2708 },
-                'singapore': { lat: 1.3521, lon: 103.8198 },
-                'hong kong': { lat: 22.3193, lon: 114.1694 },
-                'seoul': { lat: 37.5665, lon: 126.9780 },
-                'south korea': { lat: 37.5665, lon: 126.9780 },
-                'bangkok': { lat: 13.7563, lon: 100.5018 },
-                'thailand': { lat: 13.7563, lon: 100.5018 }
+                'tel aviv': { lat: 32.0853, lon: 34.7818 },
+                'israel': { lat: 32.0853, lon: 34.7818 },
+                'cairo': { lat: 30.0444, lon: 31.2357 },
+                'egypt': { lat: 30.0444, lon: 31.2357 },
+                'johannesburg': { lat: -26.2041, lon: 28.0473 },
+                'south africa': { lat: -26.2041, lon: 28.0473 },
+                
+                // Latin America
+                'mexico city': { lat: 19.4326, lon: -99.1332 },
+                'mexico': { lat: 19.4326, lon: -99.1332 },
+                'buenos aires': { lat: -34.6037, lon: -58.3816 },
+                'argentina': { lat: -34.6037, lon: -58.3816 },
+                'sao paulo': { lat: -23.5505, lon: -46.6333 },
+                'brazil': { lat: -23.5505, lon: -46.6333 },
+                'lima': { lat: -12.0464, lon: -77.0428 },
+                'peru': { lat: -12.0464, lon: -77.0428 },
+                'santiago': { lat: -33.4489, lon: -70.6693 },
+                'chile': { lat: -33.4489, lon: -70.6693 }
             };
             
             if (!location) return { lat: 0, lon: 0 };
@@ -4270,9 +4452,10 @@
             const bestDay = getBestDayOfWeek(zodiac, chinese, lifePath);
             const planetaryHouses = getPlanetaryHouses(birthDate, birthTime, birthLocation);
             
-            // Get today's date
+            // Get today's date and check for special dates
             const today = new Date();
             const todayStr = today.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            const specialDates = getSpecialDateInfo(birthDate);
             
             // Generate forecast content based on timeframe
             let forecastHTML = '';
@@ -4280,7 +4463,7 @@
             if (timeframe === 'daily') {
                 forecastHTML = generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
                     gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
-                    focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses);
+                    focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates);
             } else if (timeframe === 'weekly') {
                 forecastHTML = generateWeeklyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
                     gematria, fullName, birthTime, moonPhase, crossAnalysis, focus, challenge, birth, tarotCard, bestDay);
@@ -4298,10 +4481,16 @@
         // PHASE 2: Daily Forecast Generator
         function generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
             gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
-            focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses) {
+            focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates) {
             
             // Get frequency recommendation
             const frequencyData = getDailyFrequency(zodiac, moonPhase, focus);
+            
+            // Check if location-based calculations are active
+            const locationActive = birthLocation && birthTime;
+            const locationNote = locationActive 
+                ? `📍 Location-based calculations ACTIVE for ${birthLocation} - Rising sign, Moon sign, and Planetary Houses are personalized to your exact birth coordinates.`
+                : `⚠️ Add birth time & location for personalized Rising sign, Moon sign, and accurate Planetary House placements.`;
             
             return `
                 <div class="forecast-header">
@@ -4311,8 +4500,16 @@
                         <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''} ${moonSign ? `| ☽ Moon: ${moonSign.name} ${moonSign.symbol}` : ''}</p>
                         <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
                         <p>Timeframe: Daily | ${todayStr}</p>
+                        <p style="font-size: 0.9rem; color: ${locationActive ? '#00ff88' : '#ff8800'}; margin-top: 10px;">${locationNote}</p>
                     </div>
                 </div>
+
+                ${specialDates.length > 0 ? `
+                <div class="special-date-banner">
+                    <h3>🌟 SPECIAL COSMIC ALIGNMENT 🌟</h3>
+                    ${specialDates.map(date => `<p>${date.message}</p>`).join('')}
+                </div>
+                ` : ''}
 
                 <div class="overview-section">
                     <h3>🌟 TODAY'S OVERVIEW</h3>
