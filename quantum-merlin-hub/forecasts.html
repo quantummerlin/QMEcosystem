@@ -4629,23 +4629,57 @@
         function getTarotCard(birthDate, timeframe = 'daily') {
             const birth = new Date(birthDate);
             const today = new Date();
+            const deck = getTarotDeck();
             
-            // Seed based on timeframe
-            let seed;
-            if (timeframe === 'daily') {
-                seed = today.getDate() + today.getMonth() * 31 + birth.getDate();
-            } else if (timeframe === 'weekly') {
-                const weekNum = Math.floor(today.getDate() / 7);
-                seed = weekNum + today.getMonth() * 5 + birth.getDate();
-            } else if (timeframe === 'monthly') {
-                seed = today.getMonth() + birth.getMonth() + birth.getDate();
-            } else {
-                seed = today.getFullYear() + birth.getFullYear();
+            // Determine how many cards based on timeframe
+            let numCards = 1;
+            if (timeframe === 'weekly') numCards = 3; // Past, Present, Future
+            else if (timeframe === 'monthly') numCards = 4; // Week 1-4
+            else if (timeframe === 'yearly') numCards = 12; // Month 1-12
+            
+            const cards = [];
+            const usedIndices = new Set();
+            
+            for (let i = 0; i < numCards; i++) {
+                // Seed based on timeframe and card position
+                let seed;
+                if (timeframe === 'daily') {
+                    seed = today.getDate() + today.getMonth() * 31 + birth.getDate();
+                } else if (timeframe === 'weekly') {
+                    const weekNum = Math.floor(today.getDate() / 7);
+                    seed = weekNum + today.getMonth() * 5 + birth.getDate() + (i * 17);
+                } else if (timeframe === 'monthly') {
+                    seed = today.getMonth() + birth.getMonth() + birth.getDate() + (i * 23);
+                } else {
+                    seed = today.getFullYear() + birth.getFullYear() + (i * 29);
+                }
+                
+                // Ensure unique cards
+                let index = seed % deck.length;
+                let attempts = 0;
+                while (usedIndices.has(index) && attempts < deck.length) {
+                    index = (index + 1) % deck.length;
+                    attempts++;
+                }
+                usedIndices.add(index);
+                
+                const card = { ...deck[index] };
+                
+                // Add position-specific meaning for multi-card spreads
+                if (timeframe === 'weekly') {
+                    card.position = ['Past Week', 'This Week', 'Week Ahead'][i];
+                } else if (timeframe === 'monthly') {
+                    card.position = `Week ${i + 1}`;
+                } else if (timeframe === 'yearly') {
+                    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                    const monthIndex = (today.getMonth() + i) % 12;
+                    card.position = monthNames[monthIndex];
+                }
+                
+                cards.push(card);
             }
             
-            const deck = getTarotDeck();
-            const index = seed % deck.length;
-            return deck[index];
+            return timeframe === 'daily' ? cards[0] : cards;
         }
 
         // ========================================
@@ -5678,7 +5712,7 @@
                     gematria, fullName, crossAnalysis, focus, challenge, birth, tarotCard);
             } else {
                 forecastHTML = generateYearlyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
-                    gematria, fullName, crossAnalysis, focus, challenge, birth);
+                    gematria, fullName, crossAnalysis, focus, challenge, birth, tarotCard);
             }
             
             document.getElementById('forecastOutput').innerHTML = forecastHTML;
@@ -6210,21 +6244,24 @@
 
                 <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>🃏 TAROT READING</h3>
+                        <h3>🃏 TAROT READING - 3-CARD SPREAD</h3>
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        <div class="tarot-card-display">
-                            <div class="tarot-card">
-                                <img src="${tarotCard.image}" alt="${tarotCard.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="tarot-symbol" style="display:none;">${tarotCard.symbol}</div>
-                                <div class="tarot-number">${tarotCard.suit === 'major' ? (tarotCard.number === 0 ? '0' : tarotCard.number) : tarotCard.suit.toUpperCase()}</div>
-                                <div class="tarot-name">${tarotCard.name}</div>
-                            </div>
-                            <div class="tarot-meaning">
-                                <p><strong>Theme:</strong> ${tarotCard.meaning}</p>
-                                <p><strong>Guidance:</strong> ${tarotCard.guidance}</p>
-                            </div>
+                        <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                            ${tarotCard.map(card => `
+                                <div class="tarot-card">
+                                    <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                    <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
+                                    <div class="tarot-number">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
+                                    <div class="tarot-name">${card.name}</div>
+                                    <div class="tarot-position" style="font-size: 0.9rem; color: var(--neon-gold); margin-top: 10px; font-weight: 600;">${card.position}</div>
+                                    <div class="tarot-meaning" style="margin-top: 10px;">
+                                        <p><strong>Theme:</strong> ${card.meaning}</p>
+                                        <p><strong>Guidance:</strong> ${card.guidance}</p>
+                                    </div>
+                                </div>
+                            `).join('')}
                         </div>
                     </div>
                 </div>
@@ -6365,6 +6402,30 @@
                     </div>
                 </div>
 
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🃏 TAROT READING - 4-CARD SPREAD</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                            ${tarotCard.map(card => `
+                                <div class="tarot-card">
+                                    <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                    <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
+                                    <div class="tarot-number">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
+                                    <div class="tarot-name">${card.name}</div>
+                                    <div class="tarot-position" style="font-size: 0.9rem; color: var(--neon-gold); margin-top: 10px; font-weight: 600;">${card.position}</div>
+                                    <div class="tarot-meaning" style="margin-top: 10px;">
+                                        <p><strong>Theme:</strong> ${card.meaning}</p>
+                                        <p><strong>Guidance:</strong> ${card.guidance}</p>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+
                 <div class="action-section">
                     <h3>💡 MONTHLY INTENTIONS</h3>
                     ${getMonthlyActionItems(zodiac, chinese, lifePath, personalMonth, focus)}
@@ -6408,7 +6469,7 @@
 
         // PHASE 2: Yearly Forecast Generator  
         function generateYearlyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
-            gematria, fullName, crossAnalysis, focus, challenge, birth) {
+            gematria, fullName, crossAnalysis, focus, challenge, birth, tarotCard) {
             
             const today = new Date();
             const nextYear = new Date(today);
@@ -6507,6 +6568,30 @@
                     </div>
                     <div class="system-content">
                         ${getYearlyNumerologyForecast(lifePath, personalYear)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🃏 TAROT READING - 12-MONTH SPREAD</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px;">
+                            ${tarotCard.map(card => `
+                                <div class="tarot-card">
+                                    <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                    <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
+                                    <div class="tarot-number">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
+                                    <div class="tarot-name">${card.name}</div>
+                                    <div class="tarot-position" style="font-size: 0.9rem; color: var(--neon-gold); margin-top: 10px; font-weight: 600;">${card.position}</div>
+                                    <div class="tarot-meaning" style="margin-top: 10px;">
+                                        <p><strong>Theme:</strong> ${card.meaning}</p>
+                                        <p><strong>Guidance:</strong> ${card.guidance}</p>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
                     </div>
                 </div>
 
