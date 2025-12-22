@@ -1229,6 +1229,231 @@
             font-style: normal;
         }
 
+        /* Reality Codes Section */
+        .reality-codes-section {
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.15), rgba(255, 0, 255, 0.15));
+            border: 2px solid rgba(157, 0, 255, 0.4);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .reality-codes-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: #9d00ff;
+            margin-bottom: 20px;
+        }
+        
+        .reality-code-card {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .reality-code-card:hover {
+            border-color: var(--neon-gold);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            transform: translateY(-3px);
+        }
+        
+        .reality-statement {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #fff;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.1), rgba(0, 245, 255, 0.1));
+            border-radius: 10px;
+        }
+        
+        .reality-why {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: left;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 3px solid #9d00ff;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .reality-match {
+            display: inline-block;
+            background: linear-gradient(135deg, #9d00ff, #ff00ff);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .reality-code-display {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            color: var(--neon-gold);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            margin: 20px 0;
+        }
+        
+        .amplification-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .amp-item {
+            text-align: center;
+        }
+        
+        .amp-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .amp-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--neon-cyan);
+        }
+        
+        .reality-code-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .reality-code-btn {
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.3), rgba(0, 245, 255, 0.3));
+            border: 2px solid #9d00ff;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .reality-code-btn:hover {
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.5), rgba(0, 245, 255, 0.5));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(157, 0, 255, 0.4);
+        }
+        
+        .reality-code-btn.primary {
+            background: linear-gradient(135deg, #9d00ff, #ff00ff);
+            border-color: transparent;
+        }
+        
+        .mersenne-theory {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+        
+        .mersenne-theory h4 {
+            color: var(--neon-gold);
+            margin-bottom: 15px;
+        }
+        
+        .mersenne-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .mersenne-item {
+            text-align: center;
+            padding: 10px;
+            background: rgba(157, 0, 255, 0.1);
+            border-radius: 10px;
+        }
+        
+        .mersenne-power {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--neon-cyan);
+        }
+        
+        .mersenne-people {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Bottom Timeframe Toggle */
+        .bottom-timeframe-toggle {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(157, 0, 255, 0.1));
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .bottom-timeframe-toggle h4 {
+            color: var(--neon-cyan);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .bottom-timeframe-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .bottom-timeframe-btn {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(0, 245, 255, 0.4);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .bottom-timeframe-btn:hover {
+            background: rgba(0, 245, 255, 0.2);
+            border-color: var(--neon-cyan);
+            transform: translateY(-2px);
+        }
+        
+        .bottom-timeframe-btn.active {
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+            border-color: transparent;
+        }
+        
+        .scroll-top-btn {
+            background: linear-gradient(135deg, var(--neon-purple), var(--neon-cyan));
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .scroll-top-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 25px rgba(0, 245, 255, 0.4);
+        }
+
         /* Tarot Card Display */
         .tarot-section {
             background: linear-gradient(135deg, rgba(138, 43, 226, 0.15) 0%, rgba(255, 215, 0, 0.15) 100%);
@@ -3725,6 +3950,200 @@
             loadingOverlay.style.display = 'none';
         }
 
+        // Scroll to top on page load/refresh
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+        
+        // Also scroll to top when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            window.scrollTo(0, 0);
+            // Small delay to ensure scroll happens after any other scripts
+            setTimeout(() => window.scrollTo(0, 0), 100);
+        });
+
+        // ========================================
+        // REALITY CODE TEMPLATES DATABASE
+        // ========================================
+        
+        const REALITY_TEMPLATES = {
+            // Life Path Templates
+            lifePath: {
+                1: [
+                    { statement: "I am confidently leading innovative projects that inspire others and create lasting impact in my field.", category: "career", icon: "💼", why: "Your Life Path 1 indicates natural leadership abilities. This statement aligns with your pioneering energy and need for independence.", keywords: ["leadership", "innovation", "independence"] },
+                    { statement: "I am boldly initiating new ventures and opportunities that align with my authentic vision and purpose.", category: "career", icon: "🚀", why: "As a Life Path 1, you're meant to start things. This statement honors your role as an initiator and trailblazer.", keywords: ["new beginnings", "courage", "vision"] }
+                ],
+                2: [
+                    { statement: "I am creating harmonious relationships and partnerships that bring peace, balance, and mutual growth into my life.", category: "love", icon: "❤️", why: "Your Life Path 2 thrives on cooperation and diplomacy. This statement honors your gift for bringing people together.", keywords: ["harmony", "partnership", "balance"] },
+                    { statement: "I am the bridge that connects people and ideas, creating beautiful collaborations that benefit everyone involved.", category: "love", icon: "🤝", why: "Life Path 2 is the peacemaker and mediator. This statement celebrates your ability to unite and harmonize.", keywords: ["connection", "collaboration", "unity"] }
+                ],
+                3: [
+                    { statement: "I am expressing my creativity freely and joyfully, inspiring millions through my authentic artistic voice.", category: "creative", icon: "🎨", why: "Your Life Path 3 is the creative communicator. This statement amplifies your natural gift for self-expression.", keywords: ["creativity", "expression", "joy"] },
+                    { statement: "I am radiating joy and optimism, uplifting everyone around me with my creative energy and authentic self-expression.", category: "creative", icon: "✨", why: "Life Path 3 brings light and joy to the world. This statement honors your role as an uplifter.", keywords: ["joy", "optimism", "creativity"] }
+                ],
+                4: [
+                    { statement: "I am building solid foundations for lasting success through disciplined action and practical wisdom.", category: "career", icon: "🏗️", why: "Your Life Path 4 excels at creating structure. This statement aligns with your ability to manifest tangible results.", keywords: ["foundation", "discipline", "structure"] },
+                    { statement: "I am creating stable, secure systems that support my dreams and provide lasting value to others.", category: "career", icon: "🧱", why: "Life Path 4 is the master builder. This statement celebrates your gift for creating order and stability.", keywords: ["stability", "security", "systems"] }
+                ],
+                5: [
+                    { statement: "I am living in complete freedom, exploring the world and experiencing endless adventure while maintaining perfect balance.", category: "freedom", icon: "🦅", why: "Your Life Path 5 craves freedom and variety. This statement honors your need for adventure.", keywords: ["freedom", "adventure", "exploration"] },
+                    { statement: "I am embracing change and new experiences with excitement, knowing each adventure expands my consciousness.", category: "freedom", icon: "🌍", why: "Life Path 5 is the adventurer. This statement celebrates your love of change and new experiences.", keywords: ["change", "excitement", "expansion"] }
+                ],
+                6: [
+                    { statement: "I am nurturing loving relationships and creating a harmonious home filled with beauty, comfort, and unconditional love.", category: "love", icon: "🏡", why: "Your Life Path 6 is the nurturer. This statement aligns with your natural ability to create harmony.", keywords: ["nurturing", "love", "harmony"] },
+                    { statement: "I am serving others with love and compassion, creating beauty and harmony in everything I touch.", category: "love", icon: "💕", why: "Life Path 6 is the caretaker. This statement honors your gift for service and creating beautiful environments.", keywords: ["service", "compassion", "beauty"] }
+                ],
+                7: [
+                    { statement: "I am deepening my spiritual wisdom and sharing profound insights that awaken consciousness in others.", category: "spiritual", icon: "🌟", why: "Your Life Path 7 is the seeker of truth. This statement honors your analytical mind and spiritual depth.", keywords: ["wisdom", "spirituality", "insight"] },
+                    { statement: "I am trusting my intuition and inner knowing, discovering profound truths that transform my understanding of reality.", category: "spiritual", icon: "🔮", why: "Life Path 7 is the mystic. This statement celebrates your connection to higher wisdom.", keywords: ["intuition", "truth", "transformation"] }
+                ],
+                8: [
+                    { statement: "I am manifesting abundant wealth and using my power to create positive change in the world.", category: "abundance", icon: "💰", why: "Your Life Path 8 is the powerhouse. This statement aligns with your natural ability to manifest success.", keywords: ["abundance", "wealth", "power"] },
+                    { statement: "I am stepping into my power as a leader and creator of wealth, achieving success while maintaining integrity.", category: "abundance", icon: "👑", why: "Life Path 8 is the CEO. This statement honors your ability to achieve material success ethically.", keywords: ["power", "leadership", "success"] }
+                ],
+                9: [
+                    { statement: "I am serving humanity with compassion and wisdom, transforming lives through my healing presence and universal love.", category: "spiritual", icon: "🌍", why: "Your Life Path 9 is the humanitarian. This statement honors your gift for compassion.", keywords: ["service", "compassion", "healing"] },
+                    { statement: "I am completing old cycles with grace and embracing my role as a lightworker who uplifts and transforms the world.", category: "spiritual", icon: "🌅", why: "Life Path 9 is the old soul. This statement celebrates your wisdom and ability to help others evolve.", keywords: ["completion", "transformation", "lightwork"] }
+                ],
+                11: [
+                    { statement: "I am channeling divine inspiration and illuminating the path for others through my spiritual gifts and intuitive wisdom.", category: "spiritual", icon: "✨", why: "Your Master Number 11 is the spiritual messenger. This statement amplifies your role as a lightworker.", keywords: ["inspiration", "illumination", "intuition"] }
+                ],
+                22: [
+                    { statement: "I am building visionary projects that transform society and leave a lasting legacy for future generations.", category: "career", icon: "🏛️", why: "Your Master Number 22 is the master builder. This statement aligns with your ability to manifest grand visions.", keywords: ["vision", "building", "legacy"] }
+                ],
+                33: [
+                    { statement: "I am embodying unconditional love and teaching others to heal themselves and the world through compassion.", category: "spiritual", icon: "💖", why: "Your Master Number 33 is the master teacher. This statement honors your role as a healer.", keywords: ["love", "teaching", "healing"] }
+                ]
+            },
+            
+            // Sun Sign Templates
+            sunSign: {
+                'Aries': [{ statement: "I am boldly pursuing my passions with courage and enthusiasm, achieving breakthrough success in everything I initiate.", category: "career", icon: "🔥", why: "Your Aries Sun gives you pioneering energy and fearless initiative.", keywords: ["courage", "passion", "initiative"] }],
+                'Taurus': [{ statement: "I am enjoying abundant material comfort and sensory pleasures while building lasting wealth and security.", category: "abundance", icon: "💎", why: "Your Taurus Sun values stability and luxury.", keywords: ["abundance", "comfort", "security"] }],
+                'Gemini': [{ statement: "I am communicating brilliant ideas that connect people and create exciting opportunities for learning and growth.", category: "creative", icon: "💬", why: "Your Gemini Sun thrives on communication and variety.", keywords: ["communication", "ideas", "connection"] }],
+                'Cancer': [{ statement: "I am creating a nurturing sanctuary filled with love, emotional safety, and deep family connections.", category: "love", icon: "🏠", why: "Your Cancer Sun is deeply emotional and nurturing.", keywords: ["nurturing", "love", "safety"] }],
+                'Leo': [{ statement: "I am shining my authentic light and inspiring others through my creative self-expression and generous heart.", category: "creative", icon: "👑", why: "Your Leo Sun needs to shine and be seen.", keywords: ["shine", "authenticity", "creativity"] }],
+                'Virgo': [{ statement: "I am perfecting my craft and serving others through my meticulous attention to detail and healing abilities.", category: "health", icon: "🌿", why: "Your Virgo Sun excels at refinement and service.", keywords: ["perfection", "service", "healing"] }],
+                'Libra': [{ statement: "I am creating beautiful harmony in all my relationships and experiencing perfect balance in every area of life.", category: "love", icon: "⚖️", why: "Your Libra Sun seeks balance and beauty.", keywords: ["harmony", "balance", "beauty"] }],
+                'Scorpio': [{ statement: "I am transforming my life through deep emotional healing and emerging more powerful, authentic, and magnetic.", category: "spiritual", icon: "🦂", why: "Your Scorpio Sun is about transformation and depth.", keywords: ["transformation", "healing", "power"] }],
+                'Sagittarius': [{ statement: "I am expanding my horizons through adventurous travel and sharing my philosophical wisdom with the world.", category: "freedom", icon: "🏹", why: "Your Sagittarius Sun craves expansion and meaning.", keywords: ["expansion", "adventure", "wisdom"] }],
+                'Capricorn': [{ statement: "I am achieving prestigious success and building an empire through disciplined ambition and strategic planning.", category: "career", icon: "🏔️", why: "Your Capricorn Sun is ambitious and disciplined.", keywords: ["success", "ambition", "discipline"] }],
+                'Aquarius': [{ statement: "I am revolutionizing my field through innovative ideas and creating a better future for humanity.", category: "career", icon: "⚡", why: "Your Aquarius Sun is the visionary rebel.", keywords: ["innovation", "revolution", "vision"] }],
+                'Pisces': [{ statement: "I am flowing with divine inspiration and channeling healing creativity that touches souls and transcends boundaries.", category: "spiritual", icon: "🌊", why: "Your Pisces Sun is deeply spiritual and artistic.", keywords: ["inspiration", "healing", "creativity"] }]
+            },
+            
+            // Personal Year Templates  
+            personalYear: {
+                1: { statement: "I am embracing this year of new beginnings and planting seeds for my most exciting chapter yet.", category: "other", icon: "🌱", why: "You're in a Personal Year 1 - a time for fresh starts.", keywords: ["new beginnings", "fresh start"] },
+                2: { statement: "I am cultivating patience and nurturing the relationships and projects that will bloom in perfect timing.", category: "love", icon: "🤝", why: "You're in a Personal Year 2 - a time for cooperation.", keywords: ["patience", "nurturing", "relationships"] },
+                3: { statement: "I am expressing my creativity joyfully and attracting abundant opportunities through my authentic self-expression.", category: "creative", icon: "🎭", why: "You're in a Personal Year 3 - a time for creativity.", keywords: ["creativity", "joy", "expression"] },
+                4: { statement: "I am building solid foundations and creating lasting structures that will support my dreams for years to come.", category: "career", icon: "🧱", why: "You're in a Personal Year 4 - a time for building.", keywords: ["foundation", "structure", "building"] },
+                5: { statement: "I am embracing change and freedom, welcoming unexpected adventures that expand my life in thrilling ways.", category: "freedom", icon: "🎢", why: "You're in a Personal Year 5 - a time for change.", keywords: ["change", "freedom", "adventure"] },
+                6: { statement: "I am deepening my commitments and creating harmony in my home, relationships, and community.", category: "love", icon: "💕", why: "You're in a Personal Year 6 - a time for responsibility.", keywords: ["commitment", "harmony", "home"] },
+                7: { statement: "I am going within to discover profound spiritual truths and emerging with wisdom that transforms my path.", category: "spiritual", icon: "🔮", why: "You're in a Personal Year 7 - a time for introspection.", keywords: ["introspection", "wisdom", "spirituality"] },
+                8: { statement: "I am manifesting abundant success and stepping into my power as a leader and creator of wealth.", category: "abundance", icon: "💸", why: "You're in a Personal Year 8 - a time for power.", keywords: ["abundance", "success", "power"] },
+                9: { statement: "I am releasing what no longer serves me and completing this cycle with grace, wisdom, and gratitude.", category: "spiritual", icon: "🌅", why: "You're in a Personal Year 9 - a time for completion.", keywords: ["release", "completion", "wisdom"] }
+            },
+            
+            // Universal Templates
+            universal: [
+                { statement: "I am living my most authentic, abundant, and joyful life, aligned with my highest purpose and surrounded by love.", category: "other", icon: "🌟", why: "This universal statement covers all major life areas - abundance, purpose, authenticity, and love.", keywords: ["authenticity", "abundance", "joy"] },
+                { statement: "I am a powerful creator of my reality, manifesting miracles and living in perfect alignment with my soul's purpose.", category: "other", icon: "⚡", why: "This statement affirms your creative power and divine alignment.", keywords: ["creator", "manifestation", "miracles"] },
+                { statement: "I am grateful for all the blessings flowing into my life, and I am open to receiving even more abundance and joy.", category: "abundance", icon: "🙏", why: "Gratitude amplifies manifestation. This statement opens you to receive.", keywords: ["gratitude", "blessings", "abundance"] }
+            ]
+        };
+        
+        // Generate Reality Code suggestions based on reading data
+        function generateRealityCodeSuggestions(lifePath, sunSign, personalYear) {
+            const suggestions = [];
+            
+            // Life Path suggestion
+            if (lifePath && REALITY_TEMPLATES.lifePath[lifePath]) {
+                const templates = REALITY_TEMPLATES.lifePath[lifePath];
+                const template = templates[Math.floor(Math.random() * templates.length)];
+                suggestions.push({ ...template, match: 95, source: `Life Path ${lifePath} Analysis` });
+            }
+            
+            // Sun Sign suggestion
+            if (sunSign && REALITY_TEMPLATES.sunSign[sunSign]) {
+                const templates = REALITY_TEMPLATES.sunSign[sunSign];
+                const template = templates[0];
+                suggestions.push({ ...template, match: 90, source: `${sunSign} Sun Analysis` });
+            }
+            
+            // Personal Year suggestion
+            if (personalYear && REALITY_TEMPLATES.personalYear[personalYear]) {
+                const template = REALITY_TEMPLATES.personalYear[personalYear];
+                suggestions.push({ ...template, match: 88, source: `Personal Year ${personalYear} Forecast` });
+            }
+            
+            // Add universal suggestion
+            const universal = REALITY_TEMPLATES.universal[Math.floor(Math.random() * REALITY_TEMPLATES.universal.length)];
+            suggestions.push({ ...universal, match: 85, source: "Universal Alignment" });
+            
+            return suggestions.slice(0, 3);
+        }
+        
+        // Generate unique Reality Code
+        function generateRealityCode(statement, userName, birthDate, category) {
+            let hash = 0;
+            for (let i = 0; i < statement.length; i++) {
+                const char = statement.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash;
+            }
+            if (userName) {
+                for (let i = 0; i < userName.length; i++) {
+                    hash += userName.charCodeAt(i);
+                }
+            }
+            if (birthDate) {
+                const dateNum = new Date(birthDate).getTime();
+                hash += dateNum;
+            }
+            hash = Math.abs(hash);
+            const part1 = (hash % 10000).toString().padStart(4, '0');
+            const part2 = (Math.floor(hash / 10000) % 10000).toString().padStart(4, '0');
+            
+            const prefixes = { abundance: 'ABN', love: 'LOV', health: 'HLT', career: 'CAR', spiritual: 'SPR', creative: 'CRT', freedom: 'FRE', other: 'QRC' };
+            const prefix = prefixes[category] || 'QRC';
+            
+            return `${prefix}-${part1}-${part2}`;
+        }
+        
+        // Save Reality Code to storage
+        function saveRealityCodeToStorage(code, statement, category) {
+            const codeData = {
+                code: code,
+                statement: statement,
+                category: category,
+                created: new Date().toISOString(),
+                people: 1,
+                power: 1
+            };
+            const codes = JSON.parse(localStorage.getItem('quantumRealityCodes') || '[]');
+            codes.push(codeData);
+            localStorage.setItem('quantumRealityCodes', JSON.stringify(codes));
+        }
+        
+        // Copy Reality Code to clipboard
+        function copyRealityCode(code, statement) {
+            const text = `${code}\n\n"${statement}"\n\nCreate yours at: quantummerlin.com`;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Reality Code copied to clipboard! Share it to amplify! ✨');
+            });
+        }
+        
+        // Share Reality Code
+        function shareRealityCode(code, statement) {
+            const text = `I just created my Quantum Reality Code: ${code}\n\n"${statement}"\n\nAmplify with me! 🌌⚛️\n\nhttps://quantummerlin.com/quantum-merlin-hub/forecasts.html`;
+            if (navigator.share) {
+                navigator.share({ title: 'My Quantum Reality Code', text: text, url: 'https://quantummerlin.com' });
+            } else {
+                copyRealityCode(code, statement);
+            }
+        }
+
         // Generate stars background
         function generateStars() {
             const starsContainer = document.getElementById('stars');
@@ -5516,6 +5935,77 @@
 
                 <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>⚡ REALITY CODES</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        <div class="reality-codes-section" style="border: none; background: transparent; padding: 0;">
+                            <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 25px; line-height: 1.8;">
+                                Based on your cosmic blueprint, here are personalized Reality Statements. When multiple consciousnesses focus on the same code, manifestation power <strong style="color: #9d00ff;">exponentially amplifies</strong> according to the Mersenne equation: Power = 2^n - 1
+                            </p>
+                            
+                            ${(() => {
+                                const suggestions = generateRealityCodeSuggestions(lifePath, zodiac.name, personalYear);
+                                const primarySuggestion = suggestions[0];
+                                const code = generateRealityCode(primarySuggestion.statement, fullName, birthDate, primarySuggestion.category);
+                                
+                                return `
+                                    <div class="reality-code-card">
+                                        <div class="reality-match">${primarySuggestion.icon} ${primarySuggestion.match}% Match - ${primarySuggestion.source}</div>
+                                        <div class="reality-statement">"${primarySuggestion.statement}"</div>
+                                        <div class="reality-why"><strong>Why this works for you:</strong> ${primarySuggestion.why}</div>
+                                        <div class="reality-code-display">${code}</div>
+                                        
+                                        <div class="amplification-info">
+                                            <div class="amp-item">
+                                                <div class="amp-value">1x</div>
+                                                <div class="amp-label">Current Power</div>
+                                            </div>
+                                            <div class="amp-item">
+                                                <div class="amp-value">1,023x</div>
+                                                <div class="amp-label">With 10 People</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="reality-code-actions">
+                                            <button class="reality-code-btn primary" onclick="shareRealityCode('${code}', \`${primarySuggestion.statement.replace(/'/g, "\\'")}\`)">📤 Share to Amplify</button>
+                                            <button class="reality-code-btn" onclick="copyRealityCode('${code}', \`${primarySuggestion.statement.replace(/'/g, "\\'")}\`)">📋 Copy Code</button>
+                                            <button class="reality-code-btn" onclick="saveRealityCodeToStorage('${code}', \`${primarySuggestion.statement.replace(/'/g, "\\'")}\`, '${primarySuggestion.category}'); alert('Reality Code saved to your library! ✨')">💾 Save</button>
+                                        </div>
+                                    </div>
+                                    
+                                    ${suggestions.slice(1).map((s, i) => {
+                                        const altCode = generateRealityCode(s.statement, fullName, birthDate, s.category);
+                                        return `
+                                            <div class="reality-code-card" style="opacity: 0.85;">
+                                                <div class="reality-match">${s.icon} ${s.match}% Match - ${s.source}</div>
+                                                <div class="reality-statement" style="font-size: 1.1rem;">"${s.statement}"</div>
+                                                <div class="reality-code-display" style="font-size: 1.3rem;">${altCode}</div>
+                                                <button class="reality-code-btn" onclick="copyRealityCode('${altCode}', \`${s.statement.replace(/'/g, "\\'")}\`)">📋 Copy This Code</button>
+                                            </div>
+                                        `;
+                                    }).join('')}
+                                `;
+                            })()}
+                            
+                            <div class="mersenne-theory">
+                                <h4>🌌 Mersenne Amplification Theory</h4>
+                                <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.95rem;">Share your code to exponentially increase manifestation power:</p>
+                                <div class="mersenne-grid">
+                                    <div class="mersenne-item"><div class="mersenne-power">1x</div><div class="mersenne-people">1 person</div></div>
+                                    <div class="mersenne-item"><div class="mersenne-power">3x</div><div class="mersenne-people">2 people</div></div>
+                                    <div class="mersenne-item"><div class="mersenne-power">7x</div><div class="mersenne-people">3 people</div></div>
+                                    <div class="mersenne-item"><div class="mersenne-power">15x</div><div class="mersenne-people">4 people</div></div>
+                                    <div class="mersenne-item"><div class="mersenne-power">31x</div><div class="mersenne-people">5 people</div></div>
+                                    <div class="mersenne-item"><div class="mersenne-power">1,023x</div><div class="mersenne-people">10 people</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
                         <h3>🃏 TAROT READING</h3>
                         <span class="system-toggle">▼</span>
                     </div>
@@ -5555,6 +6045,18 @@
                             <span>📋</span> Copy Link
                         </button>
                     </div>
+                </div>
+                
+                <div class="bottom-timeframe-toggle">
+                    <h4>🔮 Generate Another Forecast</h4>
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 15px;">Switch to a different timeframe without scrolling back up</p>
+                    <div class="bottom-timeframe-buttons">
+                        <button class="bottom-timeframe-btn active" onclick="generateForecast('daily')">📅 Daily</button>
+                        <button class="bottom-timeframe-btn" onclick="generateForecast('weekly')">📆 Weekly</button>
+                        <button class="bottom-timeframe-btn" onclick="generateForecast('monthly')">🗓️ Monthly</button>
+                        <button class="bottom-timeframe-btn" onclick="generateForecast('yearly')">📊 Yearly</button>
+                    </div>
+                    <button class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆️ Back to Top</button>
                 </div>
             `;
             showMidAd();
@@ -5721,6 +6223,17 @@
                         </button>
                     </div>
                 </div>
+
+                <div class="bottom-timeframe-toggle">
+                    <h4>🔮 Generate Another Forecast</h4>
+                    <div class="bottom-timeframe-buttons">
+                        <button class="bottom-timeframe-btn" onclick="generateForecast('daily')">📅 Daily</button>
+                        <button class="bottom-timeframe-btn active" onclick="generateForecast('weekly')">📆 Weekly</button>
+                        <button class="bottom-timeframe-btn" onclick="generateForecast('monthly')">🗓️ Monthly</button>
+                        <button class="bottom-timeframe-btn" onclick="generateForecast('yearly')">📊 Yearly</button>
+                    </div>
+                    <button class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆️ Back to Top</button>
+                </div>
             `;
             showMidAd();
         }
@@ -5836,6 +6349,17 @@
                             <span>📋</span> Copy Link
                         </button>
                     </div>
+                </div>
+
+                <div class="bottom-timeframe-toggle">
+                    <h4>🔮 Generate Another Forecast</h4>
+                    <div class="bottom-timeframe-buttons">
+                        <button class="bottom-timeframe-btn" onclick="generateForecast('daily')">📅 Daily</button>
+                        <button class="bottom-timeframe-btn" onclick="generateForecast('weekly')">📆 Weekly</button>
+                        <button class="bottom-timeframe-btn active" onclick="generateForecast('monthly')">🗓️ Monthly</button>
+                        <button class="bottom-timeframe-btn" onclick="generateForecast('yearly')">📊 Yearly</button>
+                    </div>
+                    <button class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆️ Back to Top</button>
                 </div>
             `;
             showMidAd();
@@ -5973,6 +6497,17 @@
                             <span>📋</span> Copy Link
                         </button>
                     </div>
+                </div>
+
+                <div class="bottom-timeframe-toggle">
+                    <h4>🔮 Generate Another Forecast</h4>
+                    <div class="bottom-timeframe-buttons">
+                        <button class="bottom-timeframe-btn" onclick="generateForecast('daily')">📅 Daily</button>
+                        <button class="bottom-timeframe-btn" onclick="generateForecast('weekly')">📆 Weekly</button>
+                        <button class="bottom-timeframe-btn" onclick="generateForecast('monthly')">🗓️ Monthly</button>
+                        <button class="bottom-timeframe-btn active" onclick="generateForecast('yearly')">📊 Yearly</button>
+                    </div>
+                    <button class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆️ Back to Top</button>
                 </div>
             `;
             showMidAd();
