@@ -6824,12 +6824,8 @@
                 e.target.classList.add('active');
                 const timeframe = e.target.dataset.timeframe;
                 
-                // Show loading spinner during recalculation
-                showLoadingSpinner();
-                setTimeout(async () => {
-                    await generateForecast(timeframe);
-                    hideLoadingSpinner();
-                }, 1500);
+                // No animation - just regenerate instantly
+                await generateForecast(timeframe);
             }
         });
 
