@@ -201,28 +201,20 @@
         }
 
         .systems {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 8px 20px;
-            margin-top: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            line-height: 1.8;
         }
 
-        .system-item {
-            font-size: 1.1rem;
-            font-weight: 600;
+        .systems-text {
+            font-size: 1rem;
+            font-weight: 500;
             background: linear-gradient(135deg, #00f5ff 0%, #9d00ff 50%, #ff0066 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-        }
-
-        .systems-separator {
-            color: rgba(255, 255, 255, 0.4);
-            font-size: 1rem;
+            letter-spacing: 1px;
         }
 
         @keyframes glow-pulse {
@@ -3053,21 +3045,7 @@
                 <h1>QUANTUM FORECASTER</h1>
                 <p class="tagline">8 Ancient Systems • 1 Powerful Reading • Infinite Insight</p>
                 <div class="systems">
-                    <span class="system-item">Western Astrology</span>
-                    <span class="systems-separator">•</span>
-                    <span class="system-item">Chinese Zodiac</span>
-                    <span class="systems-separator">•</span>
-                    <span class="system-item">Numerology</span>
-                    <span class="systems-separator">•</span>
-                    <span class="system-item">Gematria</span>
-                    <span class="systems-separator">•</span>
-                    <span class="system-item">Moon Phases</span>
-                    <span class="systems-separator">•</span>
-                    <span class="system-item">Tarot</span>
-                    <span class="systems-separator">•</span>
-                    <span class="system-item">Frequencies</span>
-                    <span class="systems-separator">•</span>
-                    <span class="system-item">Planetary Hours</span>
+                    <span class="systems-text">Western Astrology • Chinese Zodiac • Numerology • Gematria<br>Moon Phases • Tarot • Frequencies • Planetary Hours</span>
                 </div>
             </div>
         </div>
@@ -3228,15 +3206,15 @@
 
         <!-- Email Capture Section -->
         <div class="email-capture" id="emailCapture">
-            <h3>🔔 Stay Updated on New Quantum Tools</h3>
-            <p class="subtitle">Be the first to know when we release new tools in the Quantum Merlin Ecosystem</p>
+            <h3>🔔 Get Updates</h3>
+            <p class="subtitle">Join our list to hear about new tools and features</p>
             <form class="email-form" id="emailForm">
                 <input type="email" id="emailInput" placeholder="Enter your email" required>
-                <button type="submit">Get Notified</button>
+                <button type="submit">Subscribe</button>
             </form>
             <div class="email-benefits">
-                <span>✓ 100% Free</span>
-                <span>✓ Exclusive Early Access</span>
+                <span>✓ Free</span>
+                <span>✓ No Spam</span>
                 <span>✓ Unsubscribe Anytime</span>
             </div>
         </div>
@@ -4078,7 +4056,7 @@
             // Show success
             this.innerHTML = `
                 <div style="color: var(--neon-gold); font-size: 1.2rem; padding: 15px;">
-                    ✅ You're subscribed! Check your inbox tomorrow at sunrise.
+                    ✅ Thanks for subscribing!
                 </div>
             `;
             
