@@ -5803,7 +5803,19 @@
             const elementOfDay = getElementOfDay(zodiac);
             
             return `
-                <div class="cosmic-overview" id="cosmic-overview">
+                <div class="forecast-header" id="cosmic-overview">
+                    <h2>YOUR QUANTUM FORECAST</h2>
+                    <div class="forecast-meta">
+                        <p>Generated for: ${fullName || 'Seeker'}</p>
+                        <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''} ${moonSign ? `| ☽ Moon: ${moonSign.name} ${moonSign.symbol}` : ''}</p>
+                        <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
+                        <p>Timeframe: Daily | ${todayStr}</p>
+                        ${locationForHemisphere ? `<p style="font-size: 0.95rem; margin-top: 10px;">📍 ${currentLocation ? 'Current' : 'Birth'} Location: <span style="color: #00ff88; text-shadow: 0 0 10px rgba(0, 255, 136, 0.5); font-weight: 600;">${locationForHemisphere}</span> ${coords && coords.lat < 0 ? '(Southern Hemisphere)' : '(Northern Hemisphere)'}</span></p>` : ''}
+                        <p style="font-size: 0.9rem; color: ${locationActive ? '#00ff88' : '#ff8800'}; margin-top: 10px;">${locationNote}</p>
+                    </div>
+                </div>
+
+                <div class="cosmic-overview">
                     <div class="cosmic-header">
                         <h2>✨ TODAY'S COSMIC SNAPSHOT ✨</h2>
                         <p class="cosmic-subtitle">Your personalized energy blueprint for ${new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}</p>
@@ -5859,18 +5871,6 @@
                         <button onclick="downloadEnergyCard()" class="share-btn download-btn">
                             💾 Save Energy Card
                         </button>
-                    </div>
-                </div>
-
-                <div class="forecast-header">
-                    <h2>YOUR QUANTUM FORECAST</h2>
-                    <div class="forecast-meta">
-                        <p>Generated for: ${fullName || 'Seeker'}</p>
-                        <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''} ${moonSign ? `| ☽ Moon: ${moonSign.name} ${moonSign.symbol}` : ''}</p>
-                        <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
-                        <p>Timeframe: Daily | ${todayStr}</p>
-                        ${locationForHemisphere ? `<p style="font-size: 0.95rem; margin-top: 10px;">📍 ${currentLocation ? 'Current' : 'Birth'} Location: <span style="color: #00ff88; text-shadow: 0 0 10px rgba(0, 255, 136, 0.5); font-weight: 600;">${locationForHemisphere}</span> ${coords && coords.lat < 0 ? '(Southern Hemisphere)' : '(Northern Hemisphere)'}</span></p>` : ''}
-                        <p style="font-size: 0.9rem; color: ${locationActive ? '#00ff88' : '#ff8800'}; margin-top: 10px;">${locationNote}</p>
                     </div>
                 </div>
 
@@ -6219,6 +6219,12 @@
             const weekStartStr = weekStart.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
             const weekEndStr = weekEnd.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
             
+            // Calculate cosmic overview values for weekly
+            const energyLevel = getCosmicEnergyLevel(moonPhase, zodiac, chinese, personalYear, birth);
+            const manifestationFocus = getManifestationFocus(moonPhase, focus);
+            const elementOfDay = getElementOfDay(zodiac);
+            const frequencyData = getDailyFrequency(zodiac, moonPhase, focus);
+            
             // Generate 7-day breakdown starting from today
             let dailyBreakdown = '';
             const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -6243,7 +6249,17 @@
             }
             
             return `
-                <div class="cosmic-overview" id="cosmic-overview">
+                <div class="forecast-header" id="cosmic-overview">
+                    <h2>YOUR WEEKLY QUANTUM FORECAST</h2>
+                    <div class="forecast-meta">
+                        <p>Generated for: ${fullName || 'Seeker'}</p>
+                        <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
+                        <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
+                        <p>Week: ${weekStartStr} - ${weekEndStr}</p>
+                    </div>
+                </div>
+
+                <div class="cosmic-overview">
                     <div class="cosmic-header">
                         <h2>✨ THIS WEEK'S COSMIC SNAPSHOT ✨</h2>
                         <p class="cosmic-subtitle">Your personalized energy blueprint for ${weekStartStr} - ${weekEndStr}</p>
@@ -6299,16 +6315,6 @@
                         <button onclick="downloadEnergyCard()" class="share-btn download-btn">
                             💾 Save Energy Card
                         </button>
-                    </div>
-                </div>
-
-                <div class="forecast-header">
-                    <h2>YOUR WEEKLY QUANTUM FORECAST</h2>
-                    <div class="forecast-meta">
-                        <p>Generated for: ${fullName || 'Seeker'}</p>
-                        <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
-                        <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
-                        <p>Week: ${weekStartStr} - ${weekEndStr}</p>
                     </div>
                 </div>
 
@@ -6518,14 +6524,27 @@
             // Four week themes
             const weekThemes = getMonthlyWeekThemes(zodiac, chinese, personalMonth, focus);
             
-            // Generate data for cosmic overview
-            const energyLevel = getEnergyLevelForPeriod(zodiac, chinese, personalYear, moonPhases);
-            const manifestationFocus = getManifestationFocus(zodiac, chinese, personalYear, focus);
-            const elementOfMonth = getElementOfPeriod(zodiac, chinese, 'month');
-            const frequencyData = getFrequencyForPeriod(zodiac, chinese, personalYear, 'month');
+            // Generate data for cosmic overview (using existing functions)
+            const moonPhase = getMoonPhase(today);
+            const energyLevel = getCosmicEnergyLevel(moonPhase, zodiac, chinese, personalYear, birth);
+            const manifestationFocus = getManifestationFocus(moonPhase, focus);
+            const elementOfMonth = getElementOfDay(zodiac);
+            const frequencyData = getDailyFrequency(zodiac, moonPhase, focus);
             
             return `
-                <div class="cosmic-overview" id="cosmic-overview">
+                <div class="forecast-header" id="cosmic-overview">
+                    <h2>YOUR MONTHLY QUANTUM FORECAST</h2>
+                    <div class="forecast-meta">
+                        <p>Generated for: ${fullName || 'Seeker'}</p>
+                        <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
+                        <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
+                        <p style="font-size: 0.95rem; color: var(--neon-cyan);">Forecast Period: ${monthName}</p>
+                        <p>Personal Month: ${personalMonth}</p>
+                        ${moonPhases.length > 0 ? `<p style="margin-top: 10px;">🌙 <strong>Moon Events:</strong> ${moonPhases.map(m => `${m.emoji} ${m.phase} on ${m.date}`).join(' | ')}</p>` : ''}
+                    </div>
+                </div>
+
+                <div class="cosmic-overview">
                     <div class="cosmic-header">
                         <h2>✨ THIS MONTH'S COSMIC SNAPSHOT ✨</h2>
                         <p class="cosmic-subtitle">Your personalized energy blueprint for ${monthName}</p>
@@ -6581,18 +6600,6 @@
                         <button onclick="downloadEnergyCard()" class="share-btn download-btn">
                             💾 Save Energy Card
                         </button>
-                    </div>
-                </div>
-
-                <div class="forecast-header">
-                    <h2>YOUR MONTHLY QUANTUM FORECAST</h2>
-                    <div class="forecast-meta">
-                        <p>Generated for: ${fullName || 'Seeker'}</p>
-                        <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
-                        <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
-                        <p style="font-size: 0.95rem; color: var(--neon-cyan);">Forecast Period: ${monthName}</p>
-                        <p>Personal Month: ${personalMonth}</p>
-                        ${moonPhases.length > 0 ? `<p style="margin-top: 10px;">🌙 <strong>Moon Events:</strong> ${moonPhases.map(m => `${m.emoji} ${m.phase} on ${m.date}`).join(' | ')}</p>` : ''}
                     </div>
                 </div>
 
@@ -6804,14 +6811,26 @@
             // Quarterly breakdown
             const quarters = getYearlyQuarters(zodiac, chinese, lifePath, personalYear, focus, today);
             
-            // Generate data for cosmic overview
-            const energyLevel = getEnergyLevelForPeriod(zodiac, chinese, personalYear, null);
-            const manifestationFocus = getManifestationFocus(zodiac, chinese, personalYear, focus);
-            const elementOfYear = getElementOfPeriod(zodiac, chinese, 'year');
-            const frequencyData = getFrequencyForPeriod(zodiac, chinese, personalYear, 'year');
+            // Generate data for cosmic overview (using existing functions)
+            const moonPhase = getMoonPhase(today);
+            const energyLevel = getCosmicEnergyLevel(moonPhase, zodiac, chinese, personalYear, birth);
+            const manifestationFocus = getManifestationFocus(moonPhase, focus);
+            const elementOfYear = getElementOfDay(zodiac);
+            const frequencyData = getDailyFrequency(zodiac, moonPhase, focus);
             
             return `
-                <div class="cosmic-overview" id="cosmic-overview">
+                <div class="forecast-header" id="cosmic-overview">
+                    <h2>YOUR YEARLY QUANTUM FORECAST</h2>
+                    <div class="forecast-meta">
+                        <p>Generated for: ${fullName || 'Seeker'}</p>
+                        <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
+                        <p>🐉 ${chinese.element} ${chinese.animal} in Year of ${currentChinese.element} ${currentChinese.animal}</p>
+                        <p>🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
+                        <p style="font-size: 0.95rem; color: var(--neon-cyan); margin-top: 10px;">Forecast Period: ${startMonth} - ${endMonth}</p>
+                    </div>
+                </div>
+
+                <div class="cosmic-overview">
                     <div class="cosmic-header">
                         <h2>✨ THIS YEAR'S COSMIC SNAPSHOT ✨</h2>
                         <p class="cosmic-subtitle">Your personalized energy blueprint for ${startMonth} - ${endMonth}</p>
@@ -6867,17 +6886,6 @@
                         <button onclick="downloadEnergyCard()" class="share-btn download-btn">
                             💾 Save Energy Card
                         </button>
-                    </div>
-                </div>
-
-                <div class="forecast-header">
-                    <h2>YOUR YEARLY QUANTUM FORECAST</h2>
-                    <div class="forecast-meta">
-                        <p>Generated for: ${fullName || 'Seeker'}</p>
-                        <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''}</p>
-                        <p>🐉 ${chinese.element} ${chinese.animal} in Year of ${currentChinese.element} ${currentChinese.animal}</p>
-                        <p>🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
-                        <p style="font-size: 0.95rem; color: var(--neon-cyan); margin-top: 10px;">Forecast Period: ${startMonth} - ${endMonth}</p>
                     </div>
                 </div>
 
