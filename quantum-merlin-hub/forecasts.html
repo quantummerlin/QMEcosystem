@@ -2982,127 +2982,32 @@
         }
 
         /* ========================================
-           WELCOME BACK BANNER & USER SESSION
+           LOAD SAVED PROFILE BUTTON
            ======================================== */
         
-        /* Welcome Back Banner */
-        .welcome-back-banner {
-            background: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(157, 0, 255, 0.15));
-            border: 2px solid rgba(0, 245, 255, 0.4);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 1200px;
-            position: relative;
-            animation: slideDown 0.5s ease-out;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .welcome-content {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .welcome-icon {
-            font-size: 3rem;
-            animation: wave 2s ease-in-out infinite;
-        }
-
-        @keyframes wave {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(20deg); }
-            75% { transform: rotate(-20deg); }
-        }
-
-        .welcome-text {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .welcome-text h3 {
-            color: #00f5ff;
-            margin-bottom: 5px;
-            font-size: 1.3rem;
-        }
-
-        .welcome-text p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.95rem;
-        }
-
-        .welcome-actions {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .quick-forecast-btn {
+        .load-profile-btn {
             background: linear-gradient(135deg, #00f5ff, #9d00ff);
             border: 2px solid #00f5ff;
             color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-weight: 600;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
             font-family: 'Rajdhani', sans-serif;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
         }
 
-        .quick-forecast-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 30px rgba(0, 245, 255, 0.6);
+        .load-profile-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 35px rgba(0, 245, 255, 0.7);
+            background: linear-gradient(135deg, #00f5ff, #ff00ff);
         }
 
-        .update-profile-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 1rem;
-        }
-
-        .update-profile-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.5);
-        }
-
-        .close-banner {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-
-        .close-banner:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: rotate(90deg);
+        .load-profile-btn:active {
+            transform: translateY(-1px);
         }
 
         /* Success Toast */
@@ -3231,6 +3136,14 @@
         <!-- Input Section -->
         <div class="input-section" id="inputSection">
             <h2>Generate Your Forecast</h2>
+            
+            <!-- Load Saved Profile Button -->
+            <div id="loadProfileSection" style="display: none; text-align: center; margin-bottom: 20px;">
+                <button class="load-profile-btn" onclick="loadSavedProfile()">
+                    📚 Load Your Saved Profile
+                </button>
+                <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); margin-top: 8px;">You have a saved profile in the library</p>
+            </div>
 
             <!-- Tier 1: Required -->
             <div class="input-group">
@@ -4184,29 +4097,64 @@
             const userProfile = loadUserProfile();
             
             if (userProfile) {
-                // Returning user
-                showWelcomeBackBanner(userProfile);
+                // Returning user - show load profile button
+                const loadProfileSection = document.getElementById('loadProfileSection');
+                if (loadProfileSection) {
+                    loadProfileSection.style.display = 'block';
+                }
                 window.savedProfile = userProfile;
             }
         }
 
-        // Show welcome back banner for returning users
-        function showWelcomeBackBanner(profile) {
-            const banner = document.getElementById('welcomeBackBanner');
-            const nameSpan = document.getElementById('welcomeName');
+        // Load saved profile into form
+        function loadSavedProfile() {
+            const profile = loadUserProfile();
             
-            // Set name
-            const displayName = profile.preferredName || profile.firstName || 'Seeker';
-            nameSpan.textContent = displayName;
+            if (!profile) {
+                alert('No saved profile found. Please enter your details.');
+                return;
+            }
             
-            // Show banner
-            banner.style.display = 'block';
-        }
-
-        // Close welcome banner
-        function closeWelcomeBanner() {
-            const banner = document.getElementById('welcomeBackBanner');
-            banner.style.display = 'none';
+            // Fill in all saved fields
+            if (profile.birthDate) document.getElementById('birthDate').value = profile.birthDate;
+            if (profile.birthTime) {
+                document.getElementById('birthTime').value = profile.birthTime;
+                toggleEnhanced(); // Expand the section
+            }
+            if (profile.birthLocation) {
+                document.getElementById('birthLocation').value = profile.birthLocation;
+                if (!document.getElementById('enhancedContent').classList.contains('expanded')) {
+                    toggleEnhanced();
+                }
+            }
+            if (profile.currentLocation) {
+                document.getElementById('currentLocation').value = profile.currentLocation;
+                if (!document.getElementById('enhancedContent').classList.contains('expanded')) {
+                    toggleEnhanced();
+                }
+            }
+            if (profile.firstName) {
+                document.getElementById('firstName').value = profile.firstName;
+                if (!document.getElementById('advancedContent').classList.contains('expanded')) {
+                    toggleAdvanced();
+                }
+            }
+            if (profile.middleName) document.getElementById('middleName').value = profile.middleName;
+            if (profile.lastName) document.getElementById('lastName').value = profile.lastName;
+            if (profile.focus) document.getElementById('focus').value = profile.focus;
+            if (profile.challenge) document.getElementById('challenge').value = profile.challenge;
+            
+            // Hide the load profile section
+            document.getElementById('loadProfileSection').style.display = 'none';
+            
+            // Show success message
+            const successMsg = document.createElement('div');
+            successMsg.style.cssText = 'background: rgba(0, 255, 136, 0.2); border: 2px solid rgba(0, 255, 136, 0.5); padding: 15px; border-radius: 12px; text-align: center; margin-bottom: 20px; color: #00ff88;';
+            successMsg.innerHTML = '✅ Profile loaded successfully! Ready to generate your forecast.';
+            document.querySelector('.input-section').insertBefore(successMsg, document.querySelector('.input-group'));
+            
+            // Remove success message after 3 seconds
+            setTimeout(() => successMsg.remove(), 3000);
         }
 
         // Scroll to input section
@@ -4217,17 +4165,7 @@
             });
         }
 
-        // Quick forecast generation (one-click for returning users)
-        async function generateQuickForecast() {
-            const profile = loadUserProfile();
-            
-            if (!profile) {
-                alert('Profile not found. Please enter your details.');
-                scrollToInput();
-                return;
-            }
-            
-            // Update last used timestamp
+        // Save user profile to localStorage
             profile.lastUsed = new Date().toISOString();
             saveUserProfile(profile);
             
