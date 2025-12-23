@@ -5678,11 +5678,11 @@
             
             document.getElementById('forecastOutput').innerHTML = forecastHTML;
             
-            // Scroll to Quantum Insight section
+            // Scroll to Cosmic Overview section
             setTimeout(() => {
-                const insightSection = document.getElementById('quantum-insight');
-                if (insightSection) {
-                    insightSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const cosmicSection = document.getElementById('cosmic-overview');
+                if (cosmicSection) {
+                    cosmicSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }, 100);
         }
@@ -5708,7 +5708,7 @@
             const elementOfDay = getElementOfDay(zodiac);
             
             return `
-                <div class="cosmic-overview">
+                <div class="cosmic-overview" id="cosmic-overview">
                     <div class="cosmic-header">
                         <h2>✨ TODAY'S COSMIC SNAPSHOT ✨</h2>
                         <p class="cosmic-subtitle">Your personalized energy blueprint for ${new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}</p>
@@ -6139,6 +6139,65 @@
             }
             
             return `
+                <div class="cosmic-overview" id="cosmic-overview">
+                    <div class="cosmic-header">
+                        <h2>✨ THIS WEEK'S COSMIC SNAPSHOT ✨</h2>
+                        <p class="cosmic-subtitle">Your personalized energy blueprint for ${weekStartStr} - ${weekEndStr}</p>
+                    </div>
+                    
+                    <div class="energy-status">
+                        <div class="energy-badge ${energyLevel.level}">
+                            <div class="energy-label">${energyLevel.label}</div>
+                            <div class="energy-description">${energyLevel.description}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="cosmic-meta">
+                        <div class="cosmic-meta-item">
+                            <div class="meta-icon">🎯</div>
+                            <div class="meta-content">
+                                <div class="meta-label">Week's Manifestation Focus</div>
+                                <div class="meta-value">${manifestationFocus}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cosmic-meta-item">
+                            <div class="meta-icon">⏰</div>
+                            <div class="meta-content">
+                                <div class="meta-label">Strongest Portal Day</div>
+                                <div class="meta-value">${bestDay.day}</div>
+                                <div class="meta-description">${bestDay.energy}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cosmic-meta-item">
+                            <div class="meta-icon">${elementOfDay.element.split(' ')[0]}</div>
+                            <div class="meta-content">
+                                <div class="meta-label">Dominant Element</div>
+                                <div class="meta-value" style="color: ${elementOfDay.color}">${elementOfDay.element}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cosmic-meta-item">
+                            <div class="meta-icon">🎵</div>
+                            <div class="meta-content">
+                                <div class="meta-label">Week's Frequency</div>
+                                <div class="meta-value">${frequencyData.frequency}</div>
+                                <div class="meta-description">${frequencyData.category}</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="share-energy-buttons">
+                        <button onclick="shareEnergy('twitter')" class="share-btn twitter-btn">
+                            📱 Share This Week's Energy
+                        </button>
+                        <button onclick="downloadEnergyCard()" class="share-btn download-btn">
+                            💾 Save Energy Card
+                        </button>
+                    </div>
+                </div>
+
                 <div class="forecast-header">
                     <h2>YOUR WEEKLY QUANTUM FORECAST</h2>
                     <div class="forecast-meta">
@@ -6241,6 +6300,48 @@
                     </div>
                 </div>
 
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🪐 PLANETARY INFLUENCES - Weekly</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getWeeklyPlanetaryForecast(zodiac, risingSign, moonPhase)}
+                    </div>
+                </div>
+
+                ${fullName ? `
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>📜 GEMATRIA</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getEnhancedGematriaForecast(fullName, gematria, birth)}
+                    </div>
+                </div>
+                ` : ''}
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🔊 FREQUENCY HEALING</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getWeeklyFrequencyForecast(zodiac, chinese, personalYear)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>⚡ REALITY CODES</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getWeeklyRealityCodesForecast(lifePath, zodiac.name, personalYear, fullName, birth)}
+                    </div>
+                </div>
+
                 <div class="action-section">
                     <h3>💡 WEEKLY PRIORITIES</h3>
                     ${getWeeklyActionItems(zodiac, chinese, lifePath, focus)}
@@ -6304,7 +6405,72 @@
             // Four week themes
             const weekThemes = getMonthlyWeekThemes(zodiac, chinese, personalMonth, focus);
             
+            // Generate data for cosmic overview
+            const energyLevel = getEnergyLevelForPeriod(zodiac, chinese, personalYear, moonPhases);
+            const manifestationFocus = getManifestationFocus(zodiac, chinese, personalYear, focus);
+            const elementOfMonth = getElementOfPeriod(zodiac, chinese, 'month');
+            const frequencyData = getFrequencyForPeriod(zodiac, chinese, personalYear, 'month');
+            
             return `
+                <div class="cosmic-overview" id="cosmic-overview">
+                    <div class="cosmic-header">
+                        <h2>✨ THIS MONTH'S COSMIC SNAPSHOT ✨</h2>
+                        <p class="cosmic-subtitle">Your personalized energy blueprint for ${monthName}</p>
+                    </div>
+                    
+                    <div class="energy-status">
+                        <div class="energy-badge ${energyLevel.level}">
+                            <div class="energy-label">${energyLevel.label}</div>
+                            <div class="energy-description">${energyLevel.description}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="cosmic-meta">
+                        <div class="cosmic-meta-item">
+                            <div class="meta-icon">🎯</div>
+                            <div class="meta-content">
+                                <div class="meta-label">Month's Manifestation Focus</div>
+                                <div class="meta-value">${manifestationFocus}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cosmic-meta-item">
+                            <div class="meta-icon">🌙</div>
+                            <div class="meta-content">
+                                <div class="meta-label">Key Lunar Phase</div>
+                                <div class="meta-value">${moonPhases[0].phase}</div>
+                                <div class="meta-description">${moonPhases[0].date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cosmic-meta-item">
+                            <div class="meta-icon">${elementOfMonth.element.split(' ')[0]}</div>
+                            <div class="meta-content">
+                                <div class="meta-label">Dominant Element</div>
+                                <div class="meta-value" style="color: ${elementOfMonth.color}">${elementOfMonth.element}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cosmic-meta-item">
+                            <div class="meta-icon">🎵</div>
+                            <div class="meta-content">
+                                <div class="meta-label">Month's Frequency</div>
+                                <div class="meta-value">${frequencyData.frequency}</div>
+                                <div class="meta-description">${frequencyData.category}</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="share-energy-buttons">
+                        <button onclick="shareEnergy('twitter')" class="share-btn twitter-btn">
+                            📱 Share This Month's Energy
+                        </button>
+                        <button onclick="downloadEnergyCard()" class="share-btn download-btn">
+                            💾 Save Energy Card
+                        </button>
+                    </div>
+                </div>
+
                 <div class="forecast-header">
                     <h2>YOUR MONTHLY QUANTUM FORECAST</h2>
                     <div class="forecast-meta">
@@ -6402,6 +6568,58 @@
                     </div>
                 </div>
 
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🐉 CHINESE ZODIAC - Monthly</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getMonthlyChineseForecast(chinese, moonPhases)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🪐 PLANETARY INFLUENCES - Monthly</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getMonthlyPlanetaryForecast(zodiac, risingSign, moonPhases)}
+                    </div>
+                </div>
+
+                ${fullName ? `
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>📜 GEMATRIA</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getEnhancedGematriaForecast(fullName, gematria, birth)}
+                    </div>
+                </div>
+                ` : ''}
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🔊 FREQUENCY HEALING</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getMonthlyFrequencyForecast(zodiac, chinese, personalYear, personalMonth)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>⚡ REALITY CODES</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getMonthlyRealityCodesForecast(lifePath, zodiac.name, personalYear, personalMonth, fullName, birth)}
+                    </div>
+                </div>
+
                 <div class="action-section">
                     <h3>💡 MONTHLY INTENTIONS</h3>
                     ${getMonthlyActionItems(zodiac, chinese, lifePath, personalMonth, focus)}
@@ -6464,7 +6682,72 @@
             // Quarterly breakdown
             const quarters = getYearlyQuarters(zodiac, chinese, lifePath, personalYear, focus, today);
             
+            // Generate data for cosmic overview
+            const energyLevel = getEnergyLevelForPeriod(zodiac, chinese, personalYear, null);
+            const manifestationFocus = getManifestationFocus(zodiac, chinese, personalYear, focus);
+            const elementOfYear = getElementOfPeriod(zodiac, chinese, 'year');
+            const frequencyData = getFrequencyForPeriod(zodiac, chinese, personalYear, 'year');
+            
             return `
+                <div class="cosmic-overview" id="cosmic-overview">
+                    <div class="cosmic-header">
+                        <h2>✨ THIS YEAR'S COSMIC SNAPSHOT ✨</h2>
+                        <p class="cosmic-subtitle">Your personalized energy blueprint for ${startMonth} - ${endMonth}</p>
+                    </div>
+                    
+                    <div class="energy-status">
+                        <div class="energy-badge ${energyLevel.level}">
+                            <div class="energy-label">${energyLevel.label}</div>
+                            <div class="energy-description">${energyLevel.description}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="cosmic-meta">
+                        <div class="cosmic-meta-item">
+                            <div class="meta-icon">🎯</div>
+                            <div class="meta-content">
+                                <div class="meta-label">Year's Manifestation Focus</div>
+                                <div class="meta-value">${manifestationFocus}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cosmic-meta-item">
+                            <div class="meta-icon">📅</div>
+                            <div class="meta-content">
+                                <div class="meta-label">Personal Year Number</div>
+                                <div class="meta-value">${personalYear}</div>
+                                <div class="meta-description">${getYearlyTheme(personalYear, zodiac, chinese)}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cosmic-meta-item">
+                            <div class="meta-icon">${elementOfYear.element.split(' ')[0]}</div>
+                            <div class="meta-content">
+                                <div class="meta-label">Dominant Element</div>
+                                <div class="meta-value" style="color: ${elementOfYear.color}">${elementOfYear.element}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cosmic-meta-item">
+                            <div class="meta-icon">🎵</div>
+                            <div class="meta-content">
+                                <div class="meta-label">Year's Frequency</div>
+                                <div class="meta-value">${frequencyData.frequency}</div>
+                                <div class="meta-description">${frequencyData.category}</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="share-energy-buttons">
+                        <button onclick="shareEnergy('twitter')" class="share-btn twitter-btn">
+                            📱 Share This Year's Energy
+                        </button>
+                        <button onclick="downloadEnergyCard()" class="share-btn download-btn">
+                            💾 Save Energy Card
+                        </button>
+                    </div>
+                </div>
+
                 <div class="forecast-header">
                     <h2>YOUR YEARLY QUANTUM FORECAST</h2>
                     <div class="forecast-meta">
@@ -6569,6 +6852,48 @@
                                 </div>
                             `).join('')}
                         </div>
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🪐 PLANETARY INFLUENCES - Yearly</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getYearlyPlanetaryForecast(zodiac, risingSign, currentYear)}
+                    </div>
+                </div>
+
+                ${fullName ? `
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>📜 GEMATRIA</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getEnhancedGematriaForecast(fullName, gematria, birth)}
+                    </div>
+                </div>
+                ` : ''}
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🔊 FREQUENCY HEALING</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getYearlyFrequencyForecast(zodiac, chinese, personalYear)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>⚡ REALITY CODES</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        ${getYearlyRealityCodesForecast(lifePath, zodiac.name, personalYear, fullName, birth)}
                     </div>
                 </div>
 
