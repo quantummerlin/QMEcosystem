@@ -226,7 +226,7 @@
         .coffee-floating {
             position: absolute;
             top: 20px;
-            left: 20px;
+            right: 20px;
             z-index: 100;
             display: flex;
             gap: 15px;
@@ -325,7 +325,7 @@
             }
             .coffee-floating {
                 top: 10px;
-                left: 10px;
+                right: 10px;
                 gap: 8px;
             }
             .coffee-btn,
@@ -4459,7 +4459,7 @@
         }
 
         // Load saved profile and generate forecast
-        async function loadSavedProfile() {
+        function loadSavedProfile() {
             const profile = window.savedProfile || loadUserProfile();
             
             if (!profile) {
@@ -4484,33 +4484,19 @@
             if (profile.focus) document.getElementById('focus').value = profile.focus;
             if (profile.challenge) document.getElementById('challenge').value = profile.challenge;
             
-            // Show loading spinner
+            // Show loading spinner with full animation (same as generate button)
             showLoadingSpinner();
+            document.getElementById('inputSection').style.display = 'none';
             
-            // Wait a moment for the spinner to display, then generate forecast
-            try {
-                // Small delay to let spinner initialize
-                await new Promise(resolve => setTimeout(resolve, 500));
-                
-                // Generate forecast
+            // Wait for full intro animation (11s) then generate forecast (same as generate button)
+            setTimeout(async () => {
                 await generateForecast('daily');
-                
-                // Hide loading spinner after forecast is generated
                 hideLoadingSpinner();
-                
-                // Scroll to results
-                const forecastOutput = document.getElementById('forecastOutput');
-                if (forecastOutput) {
-                    forecastOutput.scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            } catch (error) {
-                console.error('Error generating forecast:', error);
-                hideLoadingSpinner();
-                alert('Error generating forecast. Please try again.');
-            }
+                document.getElementById('timeframeSelector').style.display = 'flex';
+                document.getElementById('forecastOutput').classList.add('show');
+                document.getElementById('howToUse').style.display = 'block';
+                document.getElementById('forecastOutput').scrollIntoView({ behavior: 'smooth' });
+            }, 11000);
         }
 
         // Show update profile form
