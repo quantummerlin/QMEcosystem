@@ -4154,6 +4154,14 @@
             });
         }
 
+        // Close welcome banner
+        function closeWelcomeBanner() {
+            const banner = document.getElementById('welcomeBackBanner');
+            if (banner) {
+                banner.style.display = 'none';
+            }
+        }
+
         // Load saved profile and generate forecast
         function loadSavedProfile() {
             const profile = window.savedProfile || loadUserProfile();
