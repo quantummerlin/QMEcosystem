@@ -4565,8 +4565,6 @@
         }
 
         function getTarotCard(birthDate, timeframe = 'daily') {
-            const birth = new Date(birthDate);
-            const today = new Date();
             const deck = getTarotDeck();
             
             // Determine how many cards based on timeframe
@@ -4579,28 +4577,15 @@
             const usedIndices = new Set();
             
             for (let i = 0; i < numCards; i++) {
-                // Seed based on timeframe and card position
-                let seed;
-                if (timeframe === 'daily') {
-                    seed = today.getDate() + today.getMonth() * 31 + birth.getDate();
-                } else if (timeframe === 'weekly') {
-                    const weekNum = Math.floor(today.getDate() / 7);
-                    seed = weekNum + today.getMonth() * 5 + birth.getDate() + (i * 17);
-                } else if (timeframe === 'monthly') {
-                    seed = today.getMonth() + birth.getMonth() + birth.getDate() + (i * 23);
-                } else {
-                    seed = today.getFullYear() + birth.getFullYear() + (i * 29);
-                }
-                
-                // Ensure unique cards
-                let index = seed % deck.length;
+                // Truly random selection
+                let index;
                 let attempts = 0;
-                while (usedIndices.has(index) && attempts < deck.length) {
-                    index = (index + 1) % deck.length;
+                do {
+                    index = Math.floor(Math.random() * deck.length);
                     attempts++;
-                }
-                usedIndices.add(index);
+                } while (usedIndices.has(index) && attempts < deck.length * 2);
                 
+                usedIndices.add(index);
                 const card = { ...deck[index] };
                 
                 // Add position-specific meaning for multi-card spreads
@@ -4609,6 +4594,7 @@
                 } else if (timeframe === 'monthly') {
                     card.position = `Week ${i + 1}`;
                 } else if (timeframe === 'yearly') {
+                    const today = new Date();
                     const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
                     const monthIndex = (today.getMonth() + i) % 12;
                     card.position = monthNames[monthIndex];
@@ -6060,8 +6046,8 @@
                 </div>
                 
                 <div class="bottom-timeframe-toggle">
-                    <h4>🔮 Generate Another Forecast</h4>
-                    <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 15px;">Switch to a different timeframe without scrolling back up</p>
+                    <h4>Have you read the extended readings? Click here to view them or save to library to read them later</h4>
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 15px;">🔮 Generate Another Forecast - Switch to a different timeframe without scrolling back up</p>
                     <div class="bottom-timeframe-buttons">
                         <button class="bottom-timeframe-btn active" onclick="generateForecast('daily')">📅 Daily</button>
                         <button class="bottom-timeframe-btn" onclick="generateForecast('weekly')">📆 Weekly</button>
@@ -6240,7 +6226,8 @@
                 </div>
 
                 <div class="bottom-timeframe-toggle">
-                    <h4>🔮 Generate Another Forecast</h4>
+                    <h4>Have you read the extended readings? Click here to view them or save to library to read them later</h4>
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 15px;">🔮 Generate Another Forecast - Switch to a different timeframe without scrolling back up</p>
                     <div class="bottom-timeframe-buttons">
                         <button class="bottom-timeframe-btn" onclick="generateForecast('daily')">📅 Daily</button>
                         <button class="bottom-timeframe-btn active" onclick="generateForecast('weekly')">📆 Weekly</button>
@@ -6400,7 +6387,8 @@
                 </div>
 
                 <div class="bottom-timeframe-toggle">
-                    <h4>🔮 Generate Another Forecast</h4>
+                    <h4>Have you read the extended readings? Click here to view them or save to library to read them later</h4>
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 15px;">🔮 Generate Another Forecast - Switch to a different timeframe without scrolling back up</p>
                     <div class="bottom-timeframe-buttons">
                         <button class="bottom-timeframe-btn" onclick="generateForecast('daily')">📅 Daily</button>
                         <button class="bottom-timeframe-btn" onclick="generateForecast('weekly')">📆 Weekly</button>
@@ -6572,7 +6560,8 @@
                 </div>
 
                 <div class="bottom-timeframe-toggle">
-                    <h4>🔮 Generate Another Forecast</h4>
+                    <h4>Have you read the extended readings? Click here to view them or save to library to read them later</h4>
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 15px;">🔮 Generate Another Forecast - Switch to a different timeframe without scrolling back up</p>
                     <div class="bottom-timeframe-buttons">
                         <button class="bottom-timeframe-btn" onclick="generateForecast('daily')">📅 Daily</button>
                         <button class="bottom-timeframe-btn" onclick="generateForecast('weekly')">📆 Weekly</button>
