@@ -5677,6 +5677,14 @@
             }
             
             document.getElementById('forecastOutput').innerHTML = forecastHTML;
+            
+            // Scroll to Quantum Insight section
+            setTimeout(() => {
+                const insightSection = document.getElementById('quantum-insight');
+                if (insightSection) {
+                    insightSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
         }
 
         // PHASE 2: Daily Forecast Generator
@@ -6142,7 +6150,7 @@
                 </div>
 
                 <div class="overview-section">
-                    <h3>🌟 WEEK AT A GLANCE</h3>
+                    <h3 id="quantum-insight" style="text-align: center;">🔮 QUANTUM INSIGHT</h3>
                     <div class="overview-content">
                         <p><strong>Theme:</strong> ${getWeeklyTheme(zodiac, chinese, personalYear, moonPhase)}</p>
                         <p><strong>Opportunity:</strong> ${getWeeklyOpportunity(lifePath, personalYear, focus)}</p>
@@ -6216,7 +6224,7 @@
                     </div>
                     <div class="system-content">
                         <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                            ${tarotCard.map(card => `
+                            ${(Array.isArray(tarotCard) ? tarotCard : []).map(card => `
                                 <div class="tarot-card">
                                     <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                                     <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
@@ -6310,7 +6318,7 @@
                 </div>
 
                 <div class="overview-section">
-                    <h3>🌟 MONTHLY OVERVIEW</h3>
+                    <h3 id="quantum-insight" style="text-align: center;">🔮 QUANTUM INSIGHT</h3>
                     <div class="overview-content">
                         <p><strong>Month Theme:</strong> ${getMonthlyTheme(personalMonth, zodiac, chinese)}</p>
                         <p><strong>Primary Energy:</strong> ${getMonthlyEnergy(zodiac, chinese, personalMonth)}</p>
@@ -6377,7 +6385,7 @@
                     </div>
                     <div class="system-content">
                         <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                            ${tarotCard.map(card => `
+                            ${(Array.isArray(tarotCard) ? tarotCard : []).map(card => `
                                 <div class="tarot-card">
                                     <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                                     <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
@@ -6469,7 +6477,7 @@
                 </div>
 
                 <div class="overview-section">
-                    <h3>🌟 YOUR NEXT 12 MONTHS - ${getYearlyThemeTitle(personalYear).toUpperCase()}</h3>
+                    <h3 id="quantum-insight" style="text-align: center;">🔮 QUANTUM INSIGHT</h3>
                     <div class="overview-content">
                         <p><strong>Year Theme:</strong> ${getYearlyTheme(personalYear, zodiac, chinese)}</p>
                         <p><strong>Core Lesson:</strong> ${getYearlyLesson(lifePath, personalYear)}</p>
@@ -6547,7 +6555,7 @@
                     </div>
                     <div class="system-content">
                         <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px;">
-                            ${tarotCard.map(card => `
+                            ${(Array.isArray(tarotCard) ? tarotCard : []).map(card => `
                                 <div class="tarot-card">
                                     <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                                     <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
