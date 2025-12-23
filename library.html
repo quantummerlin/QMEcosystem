@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Quantum Intro Animation -->
+    <link rel="stylesheet" href="./shared/css/quantum-intro.css">
+    
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
@@ -360,6 +363,19 @@
     </style>
 </head>
 <body>
+    <!-- Quantum Intro Animation -->
+    <div id="intro-container">
+        <canvas id="lines-canvas"></canvas>
+        <div class="emoji-layer">
+            <div class="intro-emoji" id="intro-quantum">⚛️</div>
+            <div class="intro-emoji" id="intro-wizard">🧙‍♂️</div>
+            <div class="intro-emoji" id="intro-rose">🌹</div>
+        </div>
+        <div id="singularity"></div>
+        <div id="intro-title">QUANTUM MERLIN</div>
+    </div>
+    
+    <div id="app-content">
     <!-- Header -->
     <header class="qm-header">
         <div class="qm-header-inner">
@@ -415,8 +431,11 @@
         </div>
     </main>
 
+    </div>
+    
     <!-- Quantum Profile System -->
     <script src="./shared/js/quantum-profile.js"></script>
+    <script src="./shared/js/quantum-intro-animation.js"></script>
     
     <script>
         // Library Management
@@ -584,5 +603,18 @@
         // Initialize Library
         const libraryManager = new LibraryManager();
     </script>
+    
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid rgba(0, 245, 255, 0.15);">
+        <p style="color: rgba(255, 255, 255, 0.7);">&copy; 2024 Quantum Merlin. Bridging ancient wisdom with quantum possibilities.</p>
+        <p style="margin-top: 15px;">
+            <a href="./genesis/privacy.html" style="color: #00f5ff; text-decoration: none; margin: 0 15px;">Privacy Policy</a>
+            <a href="./genesis/terms.html" style="color: #00f5ff; text-decoration: none; margin: 0 15px;">Terms of Service</a>
+            <a href="./genesis/disclaimer.html" style="color: #00f5ff; text-decoration: none; margin: 0 15px;">Disclaimer</a>
+        </p>
+        <p style="margin-top: 15px;">
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" style="color: #00f5ff; text-decoration: none;">☕ Support This Project</a>
+        </p>
+    </footer>
 </body>
 </html>
