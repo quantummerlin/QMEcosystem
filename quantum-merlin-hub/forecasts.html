@@ -6430,7 +6430,9 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        ${getWeeklyPlanetaryForecast(zodiac, risingSign, moonPhase)}
+                        <p><strong>Moon Phase:</strong> ${moonPhase.symbol} ${moonPhase.phase}</p>
+                        <p><strong>Energy:</strong> ${moonPhase.energy}</p>
+                        <p><strong>Action:</strong> ${moonPhase.action}</p>
                     </div>
                 </div>
 
@@ -6530,7 +6532,7 @@
             const weekThemes = getMonthlyWeekThemes(zodiac, chinese, personalMonth, focus);
             
             // Generate data for cosmic overview (using existing functions)
-            const moonPhase = getMoonPhase(today);
+            const moonPhase = getCurrentMoonPhase();
             const energyLevel = getCosmicEnergyLevel(moonPhase, zodiac, chinese, personalYear, birth);
             const manifestationFocus = getManifestationFocus(moonPhase, focus);
             const elementOfMonth = getElementOfDay(zodiac);
@@ -6817,7 +6819,7 @@
             const quarters = getYearlyQuarters(zodiac, chinese, lifePath, personalYear, focus, today);
             
             // Generate data for cosmic overview (using existing functions)
-            const moonPhase = getMoonPhase(today);
+            const moonPhase = getCurrentMoonPhase();
             const energyLevel = getCosmicEnergyLevel(moonPhase, zodiac, chinese, personalYear, birth);
             const manifestationFocus = getManifestationFocus(moonPhase, focus);
             const elementOfYear = getElementOfDay(zodiac);
