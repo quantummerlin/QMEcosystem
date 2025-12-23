@@ -122,11 +122,12 @@ const QRC_EMAIL = {
         <p style="color: var(--text-secondary); margin-bottom: var(--space-6);">
           Get early access to new tools, exclusive reality codes, and cosmic updates delivered to your inbox.
         </p>
-        <form onsubmit="QRC_EMAIL.handleSubmit(event)">
+        <form action="https://formspree.io/f/mgowrolb" method="POST" onsubmit="QRC_EMAIL.handleSubmit(event)">
           <div class="input-group">
             <label class="input-label" for="email-input">Your Email</label>
             <input 
               type="email" 
+              name="email"
               id="email-input" 
               class="input" 
               placeholder="mystic@quantum.com" 
