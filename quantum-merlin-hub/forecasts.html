@@ -3998,29 +3998,18 @@
         
         // Generate unique Reality Code
         function generateRealityCode(statement, userName, birthDate, category) {
-            let hash = 0;
-            for (let i = 0; i < statement.length; i++) {
-                const char = statement.charCodeAt(i);
-                hash = ((hash << 5) - hash) + char;
-                hash = hash & hash;
-            }
-            if (userName) {
-                for (let i = 0; i < userName.length; i++) {
-                    hash += userName.charCodeAt(i);
+            // Calculate English Gematria (A=1, B=2, C=3...Z=26)
+            let gematria = 0;
+            const cleanStatement = statement.toUpperCase().replace(/[^A-Z]/g, '');
+            
+            for (let i = 0; i < cleanStatement.length; i++) {
+                const charCode = cleanStatement.charCodeAt(i);
+                if (charCode >= 65 && charCode <= 90) { // A-Z
+                    gematria += (charCode - 64); // A=1, B=2, etc.
                 }
             }
-            if (birthDate) {
-                const dateNum = new Date(birthDate).getTime();
-                hash += dateNum;
-            }
-            hash = Math.abs(hash);
-            const part1 = (hash % 10000).toString().padStart(4, '0');
-            const part2 = (Math.floor(hash / 10000) % 10000).toString().padStart(4, '0');
             
-            const prefixes = { abundance: 'ABN', love: 'LOV', health: 'HLT', career: 'CAR', spiritual: 'SPR', creative: 'CRT', freedom: 'FRE', other: 'QRC' };
-            const prefix = prefixes[category] || 'QRC';
-            
-            return `${prefix}-${part1}-${part2}`;
+            return gematria.toString();
         }
         
         // Save Reality Code to storage
@@ -5958,7 +5947,7 @@
                     <div class="system-content">
                         <div class="reality-codes-section" style="border: none; background: transparent; padding: 0;">
                             <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 25px; line-height: 1.8;">
-                                Based on your cosmic blueprint, here are personalized Reality Statements. When multiple consciousnesses focus on the same code, manifestation power <strong style="color: #9d00ff;">exponentially amplifies</strong> according to the Mersenne equation: Power = 2^n - 1
+                                Your Reality Code is the <strong style="color: var(--neon-gold);">English Gematria</strong> of your intention (A=1, B=2...Z=26). Use this number as your <strong style="color: var(--neon-cyan);">phone PIN, passwords, or passcodes</strong> to constantly reinforce your intention into reality. When multiple people use the same code, manifestation power <strong style="color: #9d00ff;">exponentially amplifies</strong>: 2 people = 3x, 3 people = 7x, 33 people = 8.58 billion, 111 people = 2.4 decillion!
                             </p>
                             
                             ${(() => {
@@ -5977,6 +5966,10 @@
                                             <div class="amp-item">
                                                 <div class="amp-value">1x</div>
                                                 <div class="amp-label">Current Power</div>
+                                            </div>
+                                            <div class="amp-item">
+                                                <div class="amp-value">31x</div>
+                                                <div class="amp-label">With 5 People</div>
                                             </div>
                                             <div class="amp-item">
                                                 <div class="amp-value">1,023x</div>
@@ -6006,8 +5999,8 @@
                             })()}
                             
                             <div class="mersenne-theory">
-                                <h4>🌌 Mersenne Amplification Theory</h4>
-                                <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.95rem;">Share your code to exponentially increase manifestation power:</p>
+                                <h4>🌌 Group Intention Amplification</h4>
+                                <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.95rem;">Share your code to exponentially increase manifestation power (Power = 2^n - 1):</p>
                                 <div class="mersenne-grid">
                                     <div class="mersenne-item"><div class="mersenne-power">1x</div><div class="mersenne-people">1 person</div></div>
                                     <div class="mersenne-item"><div class="mersenne-power">3x</div><div class="mersenne-people">2 people</div></div>
@@ -6015,6 +6008,8 @@
                                     <div class="mersenne-item"><div class="mersenne-power">15x</div><div class="mersenne-people">4 people</div></div>
                                     <div class="mersenne-item"><div class="mersenne-power">31x</div><div class="mersenne-people">5 people</div></div>
                                     <div class="mersenne-item"><div class="mersenne-power">1,023x</div><div class="mersenne-people">10 people</div></div>
+                                    <div class="mersenne-item"><div class="mersenne-power">8.58B</div><div class="mersenne-people">33 people</div></div>
+                                    <div class="mersenne-item"><div class="mersenne-power">2.4 Decillion</div><div class="mersenne-people">111 people</div></div>
                                 </div>
                             </div>
                         </div>
