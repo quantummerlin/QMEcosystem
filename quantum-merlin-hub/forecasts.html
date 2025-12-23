@@ -3388,7 +3388,7 @@
                 <p>Your profile is ready. Generate today's forecast with one click.</p>
             </div>
             <div class="welcome-actions">
-                <button class="quick-forecast-btn" onclick="generateQuickForecast()">
+                <button class="quick-forecast-btn" onclick="loadSavedProfile()">
                     ⚡ Generate Today's Forecast
                 </button>
                 <button class="update-profile-btn" onclick="showUpdateProfile()">
@@ -4391,8 +4391,8 @@
             }
         }
 
-        // Load saved profile into form
-        function loadSavedProfile() {
+        // Load saved profile into form (for manual profile load button in input section)
+        function loadProfileToForm() {
             const profile = loadUserProfile();
             
             if (!profile) {
@@ -4459,7 +4459,7 @@
         }
 
         // Load saved profile and generate forecast
-        function loadSavedProfile() {
+        async function loadSavedProfile() {
             const profile = window.savedProfile || loadUserProfile();
             
             if (!profile) {
@@ -4487,17 +4487,30 @@
             // Show loading spinner
             showLoadingSpinner();
             
-            // Generate forecast
-            setTimeout(async () => {
+            // Wait a moment for the spinner to display, then generate forecast
+            try {
+                // Small delay to let spinner initialize
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                // Generate forecast
                 await generateForecast('daily');
+                
+                // Hide loading spinner after forecast is generated
                 hideLoadingSpinner();
                 
                 // Scroll to results
-                document.getElementById('forecastOutput').scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }, 1500);
+                const forecastOutput = document.getElementById('forecastOutput');
+                if (forecastOutput) {
+                    forecastOutput.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            } catch (error) {
+                console.error('Error generating forecast:', error);
+                hideLoadingSpinner();
+                alert('Error generating forecast. Please try again.');
+            }
         }
 
         // Show update profile form
