@@ -4154,7 +4154,15 @@
             });
         }
 
-        // Save user profile to localStorage
+        // Load saved profile and generate forecast
+        function loadSavedProfile() {
+            const profile = window.savedProfile || loadUserProfile();
+            
+            if (!profile) {
+                scrollToInput();
+                return;
+            }
+            
             profile.lastUsed = new Date().toISOString();
             saveUserProfile(profile);
             
