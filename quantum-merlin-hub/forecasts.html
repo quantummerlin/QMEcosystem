@@ -2648,7 +2648,11 @@
             .weeks-grid,
             .quarters-grid,
             .transit-grid,
-            .key-dates-grid {
+            .key-dates-grid,
+            .houses-grid,
+            .aspects-grid,
+            .cosmic-meta,
+            .usage-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -2658,7 +2662,9 @@
             .monthly-breakdown,
             .yearly-breakdown,
             .key-dates-section,
-            .major-transits-section {
+            .major-transits-section,
+            .houses-section,
+            .aspects-section {
                 padding: 20px;
             }
 
@@ -2671,8 +2677,65 @@
             .quarter-item,
             .timing-item,
             .transit-item,
-            .key-date-item {
+            .key-date-item,
+            .house-item,
+            .aspect-item {
                 padding: 15px;
+            }
+
+            /* Planetary Houses Mobile Fixes */
+            .house-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .planet-symbol {
+                font-size: 1.5rem;
+            }
+
+            .planet-name {
+                font-size: 1rem;
+            }
+
+            .house-number {
+                font-size: 0.9rem;
+            }
+
+            .house-meaning {
+                font-size: 0.9rem;
+            }
+
+            /* Aspect Items Mobile Fixes */
+            .aspect-header {
+                flex-wrap: wrap;
+            }
+
+            .aspect-symbol {
+                font-size: 1.5rem;
+            }
+
+            /* Cross Reference Items */
+            .cross-item {
+                padding: 15px;
+            }
+
+            /* Cosmic Overview Mobile */
+            .cosmic-overview {
+                padding: 25px 15px;
+            }
+
+            .cosmic-title {
+                font-size: 1.8rem;
+            }
+
+            .energy-indicators {
+                gap: 10px;
+            }
+
+            .energy-badge {
+                padding: 10px 15px;
+                font-size: 0.95rem;
             }
 
             .compatibility-form {
@@ -2689,6 +2752,76 @@
 
             .email-form input[type="email"] {
                 min-width: auto;
+            }
+
+            /* Tarot Card Mobile */
+            .tarot-card {
+                min-width: 150px;
+                padding: 20px 15px;
+            }
+
+            .tarot-meaning {
+                min-width: 100%;
+            }
+
+            .tarot-card-display {
+                gap: 20px;
+            }
+
+            /* Frequency Display Mobile */
+            .frequency-display {
+                padding: 20px 15px;
+            }
+
+            .frequency-hz {
+                font-size: 2.2rem;
+            }
+
+            /* Forecast Header Mobile */
+            .forecast-header {
+                padding: 20px 15px;
+            }
+
+            .forecast-header h2 {
+                font-size: 1.5rem;
+            }
+
+            /* Action Section Mobile */
+            .action-section {
+                padding: 20px 15px;
+            }
+
+            /* System Section Mobile */
+            .system-section {
+                padding: 15px;
+            }
+
+            .system-header {
+                padding: 10px;
+            }
+
+            /* Share Buttons Mobile */
+            .share-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .share-btn {
+                width: 100%;
+            }
+
+            /* Bottom Timeframe Toggle Mobile */
+            .bottom-timeframe-toggle {
+                padding: 20px 15px;
+            }
+
+            .bottom-timeframe-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .bottom-timeframe-btn {
+                width: 100%;
             }
         }
 
@@ -6176,7 +6309,6 @@
                 </div>
 
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
-                <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
 
                 <div class="share-section">
                     <h4>✨ Share Your Cosmic Journey</h4>
@@ -6207,6 +6339,7 @@
                         <button class="bottom-timeframe-btn" onclick="generateForecast('yearly')">📊 Yearly</button>
                     </div>
                     <button class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆️ Back to Top</button>
+                    <button class="generate-btn" onclick="location.reload()" style="margin-top: 15px; width: 100%;">🔄 Generate New Forecast</button>
                 </div>
             `;
             showMidAd();
@@ -6454,17 +6587,11 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        ${getWeeklyFrequencyForecast(zodiac, chinese, personalYear)}
-                    </div>
-                </div>
-
-                <div class="system-section">
-                    <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>⚡ REALITY CODES</h3>
-                        <span class="system-toggle">▼</span>
-                    </div>
-                    <div class="system-content">
-                        ${getWeeklyRealityCodesForecast(lifePath, zodiac.name, personalYear, fullName, birth)}
+                        <p><strong>Recommended Frequency:</strong> ${frequencyData.frequency}</p>
+                        <p><strong>Effect:</strong> ${frequencyData.category}</p>
+                        <div class="coming-soon-banner" style="background: linear-gradient(135deg, rgba(157, 0, 255, 0.2), rgba(0, 255, 136, 0.2)); border: 2px solid var(--neon-gold); border-radius: 15px; padding: 15px; text-align: center; margin-top: 15px;">
+                            <p style="color: var(--neon-gold); margin: 0;">🎵 Frequency Generator Coming Soon! 🎵</p>
+                        </div>
                     </div>
                 </div>
 
@@ -6474,7 +6601,6 @@
                 </div>
 
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
-                <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
 
                 <div class="share-section">
                     <h4>✨ Share Your Cosmic Journey</h4>
@@ -6505,6 +6631,7 @@
                         <button class="bottom-timeframe-btn" onclick="generateForecast('yearly')">📊 Yearly</button>
                     </div>
                     <button class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆️ Back to Top</button>
+                    <button class="generate-btn" onclick="location.reload()" style="margin-top: 15px; width: 100%;">🔄 Generate New Forecast</button>
                 </div>
             `;
             showMidAd();
@@ -6577,8 +6704,8 @@
                             <div class="meta-icon">🌙</div>
                             <div class="meta-content">
                                 <div class="meta-label">Key Lunar Phase</div>
-                                <div class="meta-value">${moonPhases[0].phase}</div>
-                                <div class="meta-description">${moonPhases[0].date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</div>
+                                <div class="meta-value">${moonPhases.length > 0 ? moonPhases[0].phase : moonPhase.phase}</div>
+                                <div class="meta-description">${moonPhases.length > 0 ? moonPhases[0].date : 'This month'}</div>
                             </div>
                         </div>
                         
@@ -6710,7 +6837,9 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        ${getMonthlyChineseForecast(chinese, moonPhases)}
+                        <p><strong>Your Animal:</strong> ${chinese.element} ${chinese.animal}</p>
+                        <p><strong>Monthly Energy:</strong> Your ${chinese.element} nature harmonizes with the lunar cycles this month.</p>
+                        <p><strong>Key Days:</strong> ${moonPhases.map(m => m.emoji + ' ' + m.phase + ' on ' + m.date).join(' | ')}</p>
                     </div>
                 </div>
 
@@ -6720,7 +6849,9 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        ${getMonthlyPlanetaryForecast(zodiac, risingSign, moonPhases)}
+                        <p><strong>Moon Phase:</strong> ${moonPhase.symbol} ${moonPhase.phase}</p>
+                        <p><strong>Energy:</strong> ${moonPhase.energy}</p>
+                        <p><strong>Action:</strong> ${moonPhase.action}</p>
                     </div>
                 </div>
 
@@ -6742,17 +6873,11 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        ${getMonthlyFrequencyForecast(zodiac, chinese, personalYear, personalMonth)}
-                    </div>
-                </div>
-
-                <div class="system-section">
-                    <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>⚡ REALITY CODES</h3>
-                        <span class="system-toggle">▼</span>
-                    </div>
-                    <div class="system-content">
-                        ${getMonthlyRealityCodesForecast(lifePath, zodiac.name, personalYear, personalMonth, fullName, birth)}
+                        <p><strong>Recommended Frequency:</strong> ${frequencyData.frequency}</p>
+                        <p><strong>Effect:</strong> ${frequencyData.category}</p>
+                        <div class="coming-soon-banner" style="background: linear-gradient(135deg, rgba(157, 0, 255, 0.2), rgba(0, 255, 136, 0.2)); border: 2px solid var(--neon-gold); border-radius: 15px; padding: 15px; text-align: center; margin-top: 15px;">
+                            <p style="color: var(--neon-gold); margin: 0;">🎵 Frequency Generator Coming Soon! 🎵</p>
+                        </div>
                     </div>
                 </div>
 
@@ -6762,7 +6887,6 @@
                 </div>
 
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
-                <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
 
                 <div class="share-section">
                     <h4>✨ Share Your Cosmic Journey</h4>
@@ -6793,6 +6917,7 @@
                         <button class="bottom-timeframe-btn" onclick="generateForecast('yearly')">📊 Yearly</button>
                     </div>
                     <button class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆️ Back to Top</button>
+                    <button class="generate-btn" onclick="location.reload()" style="margin-top: 15px; width: 100%;">🔄 Generate New Forecast</button>
                 </div>
             `;
             showMidAd();
@@ -7007,7 +7132,9 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        ${getYearlyPlanetaryForecast(zodiac, risingSign, currentYear)}
+                        <p><strong>Moon Phase:</strong> ${moonPhase.symbol} ${moonPhase.phase}</p>
+                        <p><strong>Year of:</strong> ${currentChinese.element} ${currentChinese.animal}</p>
+                        <p><strong>Your ${zodiac.name} Journey:</strong> This year brings transformative energy for your sign.</p>
                     </div>
                 </div>
 
@@ -7029,17 +7156,11 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        ${getYearlyFrequencyForecast(zodiac, chinese, personalYear)}
-                    </div>
-                </div>
-
-                <div class="system-section">
-                    <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>⚡ REALITY CODES</h3>
-                        <span class="system-toggle">▼</span>
-                    </div>
-                    <div class="system-content">
-                        ${getYearlyRealityCodesForecast(lifePath, zodiac.name, personalYear, fullName, birth)}
+                        <p><strong>Recommended Frequency:</strong> ${frequencyData.frequency}</p>
+                        <p><strong>Effect:</strong> ${frequencyData.category}</p>
+                        <div class="coming-soon-banner" style="background: linear-gradient(135deg, rgba(157, 0, 255, 0.2), rgba(0, 255, 136, 0.2)); border: 2px solid var(--neon-gold); border-radius: 15px; padding: 15px; text-align: center; margin-top: 15px;">
+                            <p style="color: var(--neon-gold); margin: 0;">🎵 Frequency Generator Coming Soon! 🎵</p>
+                        </div>
                     </div>
                 </div>
 
@@ -7049,7 +7170,6 @@
                 </div>
 
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
-                <button class="generate-btn" onclick="location.reload()">🔄 Generate New Forecast</button>
 
                 <div class="share-section">
                     <h4>✨ Share Your Cosmic Journey</h4>
@@ -7083,6 +7203,7 @@
                         <button class="bottom-timeframe-btn active" onclick="generateForecast('yearly')">📊 Yearly</button>
                     </div>
                     <button class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆️ Back to Top</button>
+                    <button class="generate-btn" onclick="location.reload()" style="margin-top: 15px; width: 100%;">🔄 Generate New Forecast</button>
                 </div>
             `;
             showMidAd();
