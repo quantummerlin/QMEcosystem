@@ -1483,6 +1483,12 @@
             justify-content: center;
         }
 
+        /* Tarot Card Flip Animation */
+        .tarot-card-container {
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
         .tarot-card {
             background: linear-gradient(145deg, rgba(0, 0, 0, 0.8), rgba(75, 0, 130, 0.4));
             border: 3px solid var(--neon-gold);
@@ -1491,12 +1497,101 @@
             min-width: 200px;
             text-align: center;
             box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+            transform-style: preserve-3d;
+            position: relative;
         }
 
-        .tarot-card:hover {
-            transform: translateY(-5px) scale(1.05);
+        .tarot-card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .tarot-card-back,
+        .tarot-card-front {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        .tarot-card-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .tarot-card-back img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .tarot-card-back .tap-hint {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: var(--neon-gold);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            animation: pulse-hint 2s ease-in-out infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes pulse-hint {
+            0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+            50% { opacity: 0.7; transform: translateX(-50%) scale(0.95); }
+        }
+
+        .tarot-card-front {
+            transform: rotateY(180deg);
+        }
+
+        .tarot-card:not(.flipped) .tarot-card-front {
+            visibility: hidden;
+        }
+
+        .tarot-card.flipped .tarot-card-back {
+            visibility: hidden;
+        }
+
+        .tarot-card:hover:not(.flipped) {
+            transform: scale(1.05) rotateY(10deg);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.5), 0 0 80px rgba(157, 0, 255, 0.3);
+        }
+
+        .tarot-card.flipped:hover {
+            transform: rotateY(180deg) scale(1.02);
             box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Magical reveal particles */
+        .tarot-card.revealing::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.4) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            animation: magic-burst 0.8s ease-out forwards;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        @keyframes magic-burst {
+            0% { opacity: 1; transform: translate(-50%, -50%) scale(0); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
         }
 
         .tarot-image {
@@ -6051,14 +6146,23 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
+                        <p style="text-align: center; color: var(--neon-gold); margin-bottom: 20px; font-style: italic;">✨ Click the card to reveal your reading ✨</p>
                         <div class="tarot-card-display">
-                            <div class="tarot-card">
-                                <img src="${tarotCard.image}" alt="${tarotCard.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="tarot-symbol" style="display:none;">${tarotCard.symbol}</div>
-                                <div class="tarot-number">${tarotCard.suit === 'major' ? (tarotCard.number === 0 ? '0' : tarotCard.number) : tarotCard.suit.toUpperCase()}</div>
-                                <div class="tarot-name">${tarotCard.name}</div>
+                            <div class="tarot-card-container" onclick="flipTarotCard(this)">
+                                <div class="tarot-card">
+                                    <div class="tarot-card-back">
+                                        <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
+                                        <div class="tap-hint">🔮 Tap to Reveal</div>
+                                    </div>
+                                    <div class="tarot-card-front">
+                                        <img src="${tarotCard.image}" alt="${tarotCard.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                        <div class="tarot-symbol" style="display:none;">${tarotCard.symbol}</div>
+                                        <div class="tarot-number">${tarotCard.suit === 'major' ? (tarotCard.number === 0 ? '0' : tarotCard.number) : tarotCard.suit.toUpperCase()}</div>
+                                        <div class="tarot-name">${tarotCard.name}</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="tarot-meaning">
+                            <div class="tarot-meaning" style="opacity: 0; transition: opacity 0.5s ease 0.4s;" id="tarot-meaning-daily">
                                 <p><strong>Meaning:</strong> ${tarotCard.meaning}</p>
                                 <p><strong>Guidance:</strong> ${tarotCard.guidance}</p>
                             </div>
@@ -6282,17 +6386,26 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
+                        <p style="text-align: center; color: var(--neon-gold); margin-bottom: 20px; font-style: italic;">✨ Click each card to reveal your weekly reading ✨</p>
                         <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                            ${(Array.isArray(tarotCard) ? tarotCard : []).map(card => `
-                                <div class="tarot-card">
-                                    <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                    <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
-                                    <div class="tarot-number">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
-                                    <div class="tarot-name">${card.name}</div>
-                                    <div class="tarot-position" style="font-size: 0.9rem; color: var(--neon-gold); margin-top: 10px; font-weight: 600;">${card.position}</div>
-                                    <div class="tarot-meaning" style="margin-top: 10px;">
-                                        <p><strong>Theme:</strong> ${card.meaning}</p>
-                                        <p><strong>Guidance:</strong> ${card.guidance}</p>
+                            ${(Array.isArray(tarotCard) ? tarotCard : []).map((card, index) => `
+                                <div class="tarot-card-container" onclick="flipTarotCard(this)">
+                                    <div class="tarot-card">
+                                        <div class="tarot-card-back">
+                                            <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
+                                            <div class="tap-hint">🔮 ${card.position}</div>
+                                        </div>
+                                        <div class="tarot-card-front">
+                                            <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                            <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
+                                            <div class="tarot-number">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
+                                            <div class="tarot-name">${card.name}</div>
+                                            <div class="tarot-position" style="font-size: 0.9rem; color: var(--neon-gold); margin-top: 10px; font-weight: 600;">${card.position}</div>
+                                            <div class="tarot-meaning" style="margin-top: 10px;">
+                                                <p><strong>Theme:</strong> ${card.meaning}</p>
+                                                <p><strong>Guidance:</strong> ${card.guidance}</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             `).join('')}
@@ -6550,17 +6663,26 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
+                        <p style="text-align: center; color: var(--neon-gold); margin-bottom: 20px; font-style: italic;">✨ Click each card to reveal your monthly reading ✨</p>
                         <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                            ${(Array.isArray(tarotCard) ? tarotCard : []).map(card => `
-                                <div class="tarot-card">
-                                    <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                    <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
-                                    <div class="tarot-number">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
-                                    <div class="tarot-name">${card.name}</div>
-                                    <div class="tarot-position" style="font-size: 0.9rem; color: var(--neon-gold); margin-top: 10px; font-weight: 600;">${card.position}</div>
-                                    <div class="tarot-meaning" style="margin-top: 10px;">
-                                        <p><strong>Theme:</strong> ${card.meaning}</p>
-                                        <p><strong>Guidance:</strong> ${card.guidance}</p>
+                            ${(Array.isArray(tarotCard) ? tarotCard : []).map((card, index) => `
+                                <div class="tarot-card-container" onclick="flipTarotCard(this)">
+                                    <div class="tarot-card">
+                                        <div class="tarot-card-back">
+                                            <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
+                                            <div class="tap-hint">🔮 ${card.position}</div>
+                                        </div>
+                                        <div class="tarot-card-front">
+                                            <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                            <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
+                                            <div class="tarot-number">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
+                                            <div class="tarot-name">${card.name}</div>
+                                            <div class="tarot-position" style="font-size: 0.9rem; color: var(--neon-gold); margin-top: 10px; font-weight: 600;">${card.position}</div>
+                                            <div class="tarot-meaning" style="margin-top: 10px;">
+                                                <p><strong>Theme:</strong> ${card.meaning}</p>
+                                                <p><strong>Guidance:</strong> ${card.guidance}</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             `).join('')}
@@ -6837,17 +6959,26 @@
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
+                        <p style="text-align: center; color: var(--neon-gold); margin-bottom: 20px; font-style: italic;">✨ Click each card to reveal your yearly reading ✨</p>
                         <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px;">
-                            ${(Array.isArray(tarotCard) ? tarotCard : []).map(card => `
-                                <div class="tarot-card">
-                                    <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                    <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
-                                    <div class="tarot-number">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
-                                    <div class="tarot-name">${card.name}</div>
-                                    <div class="tarot-position" style="font-size: 0.9rem; color: var(--neon-gold); margin-top: 10px; font-weight: 600;">${card.position}</div>
-                                    <div class="tarot-meaning" style="margin-top: 10px;">
-                                        <p><strong>Theme:</strong> ${card.meaning}</p>
-                                        <p><strong>Guidance:</strong> ${card.guidance}</p>
+                            ${(Array.isArray(tarotCard) ? tarotCard : []).map((card, index) => `
+                                <div class="tarot-card-container" onclick="flipTarotCard(this)">
+                                    <div class="tarot-card">
+                                        <div class="tarot-card-back">
+                                            <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
+                                            <div class="tap-hint">🔮 ${card.position}</div>
+                                        </div>
+                                        <div class="tarot-card-front">
+                                            <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                            <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
+                                            <div class="tarot-number">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
+                                            <div class="tarot-name">${card.name}</div>
+                                            <div class="tarot-position" style="font-size: 0.9rem; color: var(--neon-gold); margin-top: 10px; font-weight: 600;">${card.position}</div>
+                                            <div class="tarot-meaning" style="margin-top: 10px;">
+                                                <p><strong>Theme:</strong> ${card.meaning}</p>
+                                                <p><strong>Guidance:</strong> ${card.guidance}</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             `).join('')}
@@ -6945,6 +7076,50 @@
         function toggleSystem(header) {
             const section = header.parentElement;
             section.classList.toggle('expanded');
+        }
+
+        // Tarot Card Flip Animation
+        function flipTarotCard(container) {
+            const card = container.querySelector('.tarot-card');
+            
+            // If already flipped, don't do anything
+            if (card.classList.contains('flipped')) return;
+            
+            // Add revealing class for magic burst effect
+            card.classList.add('revealing');
+            
+            // Play a mystical sound if available
+            try {
+                const flipSound = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJirrJuEg4OLnKSmloJ9f42coaCXioOCjZyhn5WIgH+LmZ+flIqDgYuYnZ2Uh4GBipadnZSIgoCJlZublYmCgYmVm5qVioOCiZSam5WLhISKlJqalYuFhYuUmZmVi4aGjJWZmJWMh4eNlZiYlY2IiI6VmJeUjomKj5WYl5SNiouQlZeXlI6LjJCVl5aTj4yNkZWWlpOQjY6RlJaVkpCOjpGUlZWSkY+PkpSVlJKRkJCSlJSUkpGQkJKTlJOSkZGRkpOTk5KRkZGSk5OTkpGRkpKTk5OSkZGSk5OTkpKRkpKTk5KSkpKSkpOTkpKSkpKTk5KSkpKSkpKTkpKSkpKTk5KSkpKSkpKSkpKSkpKSkpKS');
+                flipSound.volume = 0.3;
+                flipSound.play().catch(() => {});
+            } catch (e) {}
+            
+            // Flip the card
+            setTimeout(() => {
+                card.classList.add('flipped');
+                
+                // Show meaning if it's the daily single card
+                const meaningSection = container.closest('.tarot-card-display')?.querySelector('#tarot-meaning-daily');
+                if (meaningSection) {
+                    meaningSection.style.opacity = '1';
+                }
+            }, 100);
+            
+            // Remove revealing class after animation
+            setTimeout(() => {
+                card.classList.remove('revealing');
+            }, 900);
+        }
+
+        // Reveal all tarot cards at once
+        function revealAllTarotCards() {
+            const cards = document.querySelectorAll('.tarot-card-container');
+            cards.forEach((container, index) => {
+                setTimeout(() => {
+                    flipTarotCard(container);
+                }, index * 200); // Stagger the reveals
+            });
         }
 
         // PHASE 2: Enhanced Forecast Content Generators
