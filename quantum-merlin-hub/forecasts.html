@@ -222,14 +222,20 @@
             50% { filter: drop-shadow(0 0 40px rgba(0, 245, 255, 0.8)); }
         }
 
+        /* Library Button - Top Left Corner */
+        .library-floating {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+        
         /* Buy Me a Coffee - Top Right Corner */
         .coffee-floating {
             position: absolute;
             top: 20px;
             right: 20px;
             z-index: 100;
-            display: flex;
-            gap: 15px;
         }
         
         .library-btn {
@@ -323,10 +329,13 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
+            .library-floating {
+                top: 10px;
+                left: 10px;
+            }
             .coffee-floating {
                 top: 10px;
                 right: 10px;
-                gap: 8px;
             }
             .coffee-btn,
             .library-btn {
@@ -3373,7 +3382,9 @@
         <div id="loading-singularity"></div>
         <div id="loading-title">QUANTUM MERLIN</div>
         
-        <button id="skipLoading" class="skip-btn" onclick="skipLoadingAnimation()">Skip →</button>
+        <div class="loading-wait-message" style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); color: rgba(255, 255, 255, 0.8); font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; text-align: center; z-index: 10001;">
+            ✨ Please wait while your full forecast is generated ✨
+        </div>
     </div>
 
     <div class="cosmic-bg"></div>
@@ -3402,13 +3413,16 @@
     <div class="container">
         <!-- Hero Section -->
         <div class="hero">
-            <!-- Buy Me a Coffee - Top Right -->
-            <div class="coffee-floating">
+            <!-- Library Button - Top Left -->
+            <div class="library-floating">
                 <button class="library-btn" onclick="viewLibrary()" title="View your saved forecasts">
                     <span class="library-icon">📚</span>
                     <span>Library</span>
                     <span class="library-counter" id="libraryCounter">0</span>
                 </button>
+            </div>
+            <!-- Buy Me a Coffee - Top Right -->
+            <div class="coffee-floating">
                 <a href="https://buymeacoffee.com/quantummerlin" target="_blank" rel="noopener noreferrer" class="coffee-btn">
                     <span class="coffee-icon">☕</span>
                     <span>Support</span>
@@ -6884,11 +6898,43 @@
 
                 <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>� CHINESE ZODIAC - Monthly</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        <p><strong>Your Animal:</strong> ${chinese.element} ${chinese.animal}</p>
+                        <p><strong>Monthly Energy:</strong> Your ${chinese.element} nature harmonizes with the lunar cycles this month.</p>
+                        <p><strong>Key Days:</strong> ${moonPhases.map(m => m.emoji + ' ' + m.phase + ' on ' + m.date).join(' | ')}</p>
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
                         <h3>🔢 NUMEROLOGY - Personal Month ${personalMonth}</h3>
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
                         ${getMonthlyNumerologyForecast(lifePath, personalYear, personalMonth)}
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🪐 PLANETARY INFLUENCES - This Month</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        <div style="background: rgba(0, 245, 255, 0.1); border-left: 4px solid var(--neon-cyan); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                            <h4 style="color: var(--neon-cyan); margin-bottom: 10px;">🌙 Current Moon Phase</h4>
+                            <p style="margin-bottom: 8px;"><strong>Phase:</strong> ${moonPhase.symbol} ${moonPhase.phase}</p>
+                            <p style="margin-bottom: 8px;"><strong>Monthly Energy:</strong> ${moonPhase.energy}</p>
+                            <p><strong>This Month's Action:</strong> ${moonPhase.action}</p>
+                        </div>
+                        <div style="background: rgba(157, 0, 255, 0.1); border-left: 4px solid var(--neon-purple); padding: 20px; border-radius: 8px;">
+                            <h4 style="color: var(--neon-purple); margin-bottom: 10px;">✨ Monthly Cosmic Rhythm</h4>
+                            <p style="line-height: 1.7; margin-bottom: 10px;">The ${moonPhase.phase} Moon sets the tone for your month. As a ${zodiac.name}, you'll navigate these 28 days with ${zodiac.element === 'Water' ? 'emotional depth and intuitive wisdom' : zodiac.element === 'Earth' ? 'practical manifestation and steady progress' : zodiac.element === 'Fire' ? 'passionate action and creative breakthroughs' : 'intellectual clarity and social connections'}.</p>
+                            <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);"><strong>Key Lunar Moments:</strong> ${moonPhases.map(m => m.emoji + ' ' + m.phase).join(' → ')}</p>
+                        </div>
                     </div>
                 </div>
 
@@ -6921,38 +6967,6 @@
                                     </div>
                                 </div>
                             `).join('')}
-                        </div>
-                    </div>
-                </div>
-
-                <div class="system-section">
-                    <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>🐉 CHINESE ZODIAC - Monthly</h3>
-                        <span class="system-toggle">▼</span>
-                    </div>
-                    <div class="system-content">
-                        <p><strong>Your Animal:</strong> ${chinese.element} ${chinese.animal}</p>
-                        <p><strong>Monthly Energy:</strong> Your ${chinese.element} nature harmonizes with the lunar cycles this month.</p>
-                        <p><strong>Key Days:</strong> ${moonPhases.map(m => m.emoji + ' ' + m.phase + ' on ' + m.date).join(' | ')}</p>
-                    </div>
-                </div>
-
-                <div class="system-section">
-                    <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>🪐 PLANETARY INFLUENCES - This Month</h3>
-                        <span class="system-toggle">▼</span>
-                    </div>
-                    <div class="system-content">
-                        <div style="background: rgba(0, 245, 255, 0.1); border-left: 4px solid var(--neon-cyan); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
-                            <h4 style="color: var(--neon-cyan); margin-bottom: 10px;">🌙 Current Moon Phase</h4>
-                            <p style="margin-bottom: 8px;"><strong>Phase:</strong> ${moonPhase.symbol} ${moonPhase.phase}</p>
-                            <p style="margin-bottom: 8px;"><strong>Monthly Energy:</strong> ${moonPhase.energy}</p>
-                            <p><strong>This Month's Action:</strong> ${moonPhase.action}</p>
-                        </div>
-                        <div style="background: rgba(157, 0, 255, 0.1); border-left: 4px solid var(--neon-purple); padding: 20px; border-radius: 8px;">
-                            <h4 style="color: var(--neon-purple); margin-bottom: 10px;">✨ Monthly Cosmic Rhythm</h4>
-                            <p style="line-height: 1.7; margin-bottom: 10px;">The ${moonPhase.phase} Moon sets the tone for your month. As a ${zodiac.name}, you'll navigate these 28 days with ${zodiac.element === 'Water' ? 'emotional depth and intuitive wisdom' : zodiac.element === 'Earth' ? 'practical manifestation and steady progress' : zodiac.element === 'Fire' ? 'passionate action and creative breakthroughs' : 'intellectual clarity and social connections'}.</p>
-                            <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);"><strong>Key Lunar Moments:</strong> ${moonPhases.map(m => m.emoji + ' ' + m.phase).join(' → ')}</p>
                         </div>
                     </div>
                 </div>
@@ -7197,6 +7211,25 @@
 
                 <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>🪐 PLANETARY INFLUENCES - This Year</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        <div style="background: rgba(0, 245, 255, 0.1); border-left: 4px solid var(--neon-cyan); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                            <h4 style="color: var(--neon-cyan); margin-bottom: 10px;">🌏 Year of the ${currentChinese.element} ${currentChinese.animal}</h4>
+                            <p style="margin-bottom: 8px;"><strong>Current Moon Phase:</strong> ${moonPhase.symbol} ${moonPhase.phase}</p>
+                            <p><strong>Annual Cosmic Signature:</strong> This year unfolds under the wisdom of the ${currentChinese.element} ${currentChinese.animal}, bringing ${currentChinese.element === 'Wood' ? 'growth and expansion' : currentChinese.element === 'Fire' ? 'passion and transformation' : currentChinese.element === 'Earth' ? 'stability and manifestation' : currentChinese.element === 'Metal' ? 'precision and refinement' : 'flow and intuition'} to your 12-month journey.</p>
+                        </div>
+                        <div style="background: rgba(157, 0, 255, 0.1); border-left: 4px solid var(--neon-purple); padding: 20px; border-radius: 8px;">
+                            <h4 style="color: var(--neon-purple); margin-bottom: 10px;">✨ Your ${zodiac.name} Year Ahead</h4>
+                            <p style="line-height: 1.7; margin-bottom: 10px;">As a ${zodiac.name} navigating Personal Year ${personalYear}, this year brings transformative energy perfectly suited to your soul's evolution. Your ${zodiac.element} nature will ${zodiac.element === 'Water' ? 'flow with emotional wisdom through' : zodiac.element === 'Earth' ? 'ground and manifest' : zodiac.element === 'Fire' ? 'ignite and transform' : 'illuminate and connect'} the 12 months ahead.</p>
+                            <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);"><strong>Key Theme:</strong> The convergence of ${currentChinese.animal} year energy with your Life Path ${lifePath} creates unique opportunities for soul-level growth and manifestation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
                         <h3>🃏 TAROT READING - 12-MONTH SPREAD</h3>
                         <span class="system-toggle">▼</span>
                     </div>
@@ -7224,25 +7257,6 @@
                                     </div>
                                 </div>
                             `).join('')}
-                        </div>
-                    </div>
-                </div>
-
-                <div class="system-section">
-                    <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>🪐 PLANETARY INFLUENCES - This Year</h3>
-                        <span class="system-toggle">▼</span>
-                    </div>
-                    <div class="system-content">
-                        <div style="background: rgba(0, 245, 255, 0.1); border-left: 4px solid var(--neon-cyan); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
-                            <h4 style="color: var(--neon-cyan); margin-bottom: 10px;">🌏 Year of the ${currentChinese.element} ${currentChinese.animal}</h4>
-                            <p style="margin-bottom: 8px;"><strong>Current Moon Phase:</strong> ${moonPhase.symbol} ${moonPhase.phase}</p>
-                            <p><strong>Annual Cosmic Signature:</strong> This year unfolds under the wisdom of the ${currentChinese.element} ${currentChinese.animal}, bringing ${currentChinese.element === 'Wood' ? 'growth and expansion' : currentChinese.element === 'Fire' ? 'passion and transformation' : currentChinese.element === 'Earth' ? 'stability and manifestation' : currentChinese.element === 'Metal' ? 'precision and refinement' : 'flow and intuition'} to your 12-month journey.</p>
-                        </div>
-                        <div style="background: rgba(157, 0, 255, 0.1); border-left: 4px solid var(--neon-purple); padding: 20px; border-radius: 8px;">
-                            <h4 style="color: var(--neon-purple); margin-bottom: 10px;">✨ Your ${zodiac.name} Year Ahead</h4>
-                            <p style="line-height: 1.7; margin-bottom: 10px;">As a ${zodiac.name} navigating Personal Year ${personalYear}, this year brings transformative energy perfectly suited to your soul's evolution. Your ${zodiac.element} nature will ${zodiac.element === 'Water' ? 'flow with emotional wisdom through' : zodiac.element === 'Earth' ? 'ground and manifest' : zodiac.element === 'Fire' ? 'ignite and transform' : 'illuminate and connect'} the 12 months ahead.</p>
-                            <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);"><strong>Key Theme:</strong> The convergence of ${currentChinese.animal} year energy with your Life Path ${lifePath} creates unique opportunities for soul-level growth and manifestation.</p>
                         </div>
                     </div>
                 </div>
