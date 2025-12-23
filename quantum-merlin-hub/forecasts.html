@@ -228,6 +228,60 @@
             top: 20px;
             right: 20px;
             z-index: 100;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .library-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(157, 0, 255, 0.9);
+            color: #ffffff;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 10px 18px;
+            border: 2px solid rgba(0, 245, 255, 0.5);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(157, 0, 255, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+        
+        .library-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(157, 0, 255, 0.5);
+            background: rgba(157, 0, 255, 1);
+            border-color: rgba(0, 245, 255, 1);
+        }
+        
+        .library-icon {
+            font-size: 1.2rem;
+            animation: libraryPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes libraryPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .library-counter {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: linear-gradient(135deg, #ff0066, #ff3399);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 7px;
+            border-radius: 12px;
+            border: 2px solid #000;
+            min-width: 20px;
+            text-align: center;
+            display: none;
         }
 
         .coffee-btn {
@@ -272,10 +326,18 @@
             .coffee-floating {
                 top: 10px;
                 right: 10px;
+                gap: 8px;
             }
-            .coffee-btn {
+            .coffee-btn,
+            .library-btn {
                 padding: 8px 14px;
                 font-size: 0.75rem;
+            }
+            .library-btn span:not(.library-icon):not(.library-counter) {
+                display: none;
+            }
+            .coffee-btn span:not(.coffee-icon) {
+                display: none;
             }
             .tagline::before, .tagline::after {
                 display: none;
@@ -3341,6 +3403,11 @@
         <div class="hero">
             <!-- Buy Me a Coffee - Top Right -->
             <div class="coffee-floating">
+                <button class="library-btn" onclick="viewLibrary()" title="View your saved forecasts">
+                    <span class="library-icon">📚</span>
+                    <span>Library</span>
+                    <span class="library-counter" id="libraryCounter">0</span>
+                </button>
                 <a href="https://buymeacoffee.com/quantummerlin" target="_blank" rel="noopener noreferrer" class="coffee-btn">
                     <span class="coffee-icon">☕</span>
                     <span>Support</span>
@@ -9183,10 +9250,228 @@
             alert('📸 Energy Card Download\n\nThis feature will create a beautiful shareable image card with:\n• Your energy level\n• Portal times\n• Element & frequency\n• Manifestation focus\n\nComing soon! For now, use the Share button or screenshot.');
         }
 
-        // Save forecast
+        // Save forecast to library
         function saveForecast() {
-            alert('✅ Forecast saved to your library!\n\nThis feature will integrate with the Quantum Jukebox library system.');
+            const forecastOutput = document.getElementById('forecastOutput');
+            if (!forecastOutput || !forecastOutput.innerHTML.trim()) {
+                alert('❌ Please generate a forecast first before saving.');
+                return;
+            }
+            
+            // Get current forecast data
+            const forecastData = {
+                id: 'forecast_' + Date.now(),
+                timestamp: new Date().toISOString(),
+                date: new Date().toLocaleDateString('en-US', { 
+                    weekday: 'long', 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                }),
+                timeframe: getCurrentTimeframe(),
+                content: forecastOutput.innerHTML,
+                profile: {
+                    name: document.getElementById('firstName')?.value || 'Seeker',
+                    birthDate: document.getElementById('birthDate')?.value || ''
+                }
+            };
+            
+            // Load existing library
+            let library = JSON.parse(localStorage.getItem('quantumMerlin_forecastLibrary') || '[]');
+            
+            // Add new forecast to beginning of array
+            library.unshift(forecastData);
+            
+            // Keep only last 50 forecasts to prevent storage bloat
+            if (library.length > 50) {
+                library = library.slice(0, 50);
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('quantumMerlin_forecastLibrary', JSON.stringify(library));
+            
+            // Update counter
+            updateLibraryCounter();
+            
+            // Show success message
+            showSuccessMessage(`✅ ${forecastData.timeframe} forecast saved! Library: ${library.length} reading${library.length !== 1 ? 's' : ''}`);
         }
+        
+        // Get current timeframe from active button
+        function getCurrentTimeframe() {
+            const activeBtn = document.querySelector('.timeframe-btn.active') || 
+                             document.querySelector('.bottom-timeframe-btn.active');
+            if (activeBtn) {
+                const text = activeBtn.textContent.trim();
+                if (text.includes('Daily')) return 'Daily';
+                if (text.includes('Weekly')) return 'Weekly';
+                if (text.includes('Monthly')) return 'Monthly';
+                if (text.includes('Yearly')) return 'Yearly';
+            }
+            return 'Daily';
+        }
+        
+        // Update library counter
+        function updateLibraryCounter() {
+            const library = JSON.parse(localStorage.getItem('quantumMerlin_forecastLibrary') || '[]');
+            const counter = document.getElementById('libraryCounter');
+            if (counter) {
+                counter.textContent = library.length;
+                counter.style.display = library.length > 0 ? 'inline-block' : 'none';
+            }
+        }
+        
+        // View library
+        function viewLibrary() {
+            const library = JSON.parse(localStorage.getItem('quantumMerlin_forecastLibrary') || '[]');
+            
+            if (library.length === 0) {
+                alert('📚 Your library is empty.\n\nGenerate and save forecasts to build your personal cosmic archive!');
+                return;
+            }
+            
+            // Create library modal
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                z-index: 10000;
+                overflow-y: auto;
+                padding: 20px;
+            `;
+            
+            modal.innerHTML = `
+                <div style="max-width: 1200px; margin: 0 auto; position: relative;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; position: sticky; top: 0; background: rgba(0, 0, 0, 0.95); padding: 20px 0; z-index: 10001;">
+                        <h2 style="font-family: 'Orbitron', monospace; font-size: 2rem; background: linear-gradient(135deg, #00f5ff, #9d00ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                            📚 Your Forecast Library (${library.length})
+                        </h2>
+                        <button onclick="this.closest('[style*=fixed]').remove()" style="background: rgba(255, 0, 102, 0.2); border: 2px solid #ff0066; color: #ff0066; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                            ✕ Close
+                        </button>
+                    </div>
+                    <div style="display: grid; gap: 20px;">
+                        ${library.map((forecast, index) => `
+                            <div style="background: rgba(255, 255, 255, 0.05); border: 2px solid rgba(0, 245, 255, 0.3); border-radius: 16px; padding: 20px; position: relative;">
+                                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                                    <div>
+                                        <h3 style="color: #00f5ff; font-size: 1.3rem; margin-bottom: 5px;">
+                                            ${forecast.timeframe} Forecast
+                                        </h3>
+                                        <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">
+                                            ${forecast.date}
+                                        </p>
+                                        <p style="color: rgba(255, 255, 255, 0.5); font-size: 0.85rem;">
+                                            For: ${forecast.profile.name}
+                                        </p>
+                                    </div>
+                                    <div style="display: flex; gap: 10px;">
+                                        <button onclick="viewForecastDetails(${index})" style="background: linear-gradient(135deg, #00f5ff, #9d00ff); border: none; color: white; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                                            👁️ View
+                                        </button>
+                                        <button onclick="deleteForecast(${index})" style="background: rgba(255, 0, 102, 0.2); border: 2px solid #ff0066; color: #ff0066; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                                            🗑️ Delete
+                                        </button>
+                                    </div>
+                                </div>
+                                <div style="max-height: 200px; overflow: hidden; position: relative;">
+                                    <div style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); line-height: 1.6;">
+                                        ${forecast.content.substring(0, 500)}...
+                                    </div>
+                                    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));"></div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div style="text-align: center; margin-top: 30px; padding: 20px;">
+                        <button onclick="clearLibrary()" style="background: rgba(255, 0, 102, 0.1); border: 2px solid rgba(255, 0, 102, 0.5); color: #ff0066; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                            🗑️ Clear All Forecasts
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+        }
+        
+        // View forecast details in modal
+        function viewForecastDetails(index) {
+            const library = JSON.parse(localStorage.getItem('quantumMerlin_forecastLibrary') || '[]');
+            const forecast = library[index];
+            
+            if (!forecast) return;
+            
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.98);
+                z-index: 10002;
+                overflow-y: auto;
+                padding: 20px;
+            `;
+            
+            modal.innerHTML = `
+                <div style="max-width: 1200px; margin: 0 auto; position: relative;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; position: sticky; top: 0; background: rgba(0, 0, 0, 0.98); padding: 20px 0; z-index: 10003;">
+                        <div>
+                            <h2 style="font-family: 'Orbitron', monospace; font-size: 1.8rem; color: #00f5ff;">
+                                ${forecast.timeframe} Forecast
+                            </h2>
+                            <p style="color: rgba(255, 255, 255, 0.6);">${forecast.date}</p>
+                        </div>
+                        <button onclick="this.closest('[style*=fixed]').remove()" style="background: rgba(255, 0, 102, 0.2); border: 2px solid #ff0066; color: #ff0066; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                            ✕ Close
+                        </button>
+                    </div>
+                    <div>
+                        ${forecast.content}
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+        }
+        
+        // Delete single forecast
+        function deleteForecast(index) {
+            if (!confirm('Are you sure you want to delete this forecast?')) return;
+            
+            let library = JSON.parse(localStorage.getItem('quantumMerlin_forecastLibrary') || '[]');
+            library.splice(index, 1);
+            localStorage.setItem('quantumMerlin_forecastLibrary', JSON.stringify(library));
+            
+            updateLibraryCounter();
+            
+            // Close and reopen library to refresh
+            document.querySelectorAll('[style*="position: fixed"]').forEach(el => el.remove());
+            viewLibrary();
+        }
+        
+        // Clear entire library
+        function clearLibrary() {
+            if (!confirm('⚠️ Are you sure you want to delete ALL saved forecasts?\n\nThis cannot be undone!')) return;
+            
+            localStorage.removeItem('quantumMerlin_forecastLibrary');
+            updateLibraryCounter();
+            
+            // Close library modal
+            document.querySelectorAll('[style*="position: fixed"]').forEach(el => el.remove());
+            
+            alert('✅ Library cleared successfully!');
+        }
+        
+        // Initialize library counter on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateLibraryCounter();
+        });
     </script>
 </body>
 </html>
