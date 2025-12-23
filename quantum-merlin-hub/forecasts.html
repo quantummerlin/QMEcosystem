@@ -3176,6 +3176,8 @@
 
         <div id="loading-singularity"></div>
         <div id="loading-title">QUANTUM MERLIN</div>
+        
+        <button id="skipLoading" class="skip-btn" onclick="skipLoadingAnimation()">Skip →</button>
     </div>
 
     <div class="cosmic-bg"></div>
@@ -3936,6 +3938,15 @@
             loadingAnimationRunning = false;
             const loadingOverlay = document.getElementById('loadingSpinner');
             loadingOverlay.style.display = 'none';
+        }
+
+        function skipLoadingAnimation() {
+            hideLoadingSpinner();
+            document.getElementById('inputSection').style.display = 'none';
+            document.getElementById('timeframeSelector').style.display = 'flex';
+            document.getElementById('forecastOutput').classList.add('show');
+            document.getElementById('howToUse').style.display = 'block';
+            document.getElementById('forecastOutput').scrollIntoView({ behavior: 'smooth' });
         }
 
         // Scroll to top on page load/refresh
@@ -5703,7 +5714,7 @@
             if (timeframe === 'daily') {
                 forecastHTML = generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
                     gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
-                    focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates);
+                    focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates, coords);
             } else if (timeframe === 'weekly') {
                 forecastHTML = generateWeeklyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
                     gematria, fullName, birthTime, moonPhase, crossAnalysis, focus, challenge, birth, tarotCard, bestDay);
@@ -5721,7 +5732,7 @@
         // PHASE 2: Daily Forecast Generator
         function generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
             gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
-            focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates) {
+            focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates, coords) {
             
             // Get frequency recommendation
             const frequencyData = getDailyFrequency(zodiac, moonPhase, focus);
