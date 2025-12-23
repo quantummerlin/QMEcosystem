@@ -5665,6 +5665,7 @@
             const birthDate = document.getElementById('birthDate').value;
             const birthTime = document.getElementById('birthTime').value;
             const birthLocation = document.getElementById('birthLocation').value;
+            const currentLocation = document.getElementById('currentLocation').value;
             const firstName = document.getElementById('firstName').value;
             const middleName = document.getElementById('middleName').value;
             const lastName = document.getElementById('lastName').value;
@@ -5691,10 +5692,11 @@
             const moonPhase = getCurrentMoonPhase();
             const crossAnalysis = getCrossSystemAnalysis(zodiac, risingSign, moonSign, chinese, lifePath, personalYear);
             
-            // Get coordinates for hemisphere detection
+            // Get coordinates for hemisphere detection - use current location first, fall back to birth location
             let coords = null;
-            if (birthLocation) {
-                coords = await getCoordinates(birthLocation.toLowerCase().trim());
+            const locationForHemisphere = currentLocation || birthLocation;
+            if (locationForHemisphere) {
+                coords = await getCoordinates(locationForHemisphere.toLowerCase().trim());
             }
             
             // PHASE 3: New features - Tarot, Aspects, Best Day, Houses
@@ -5714,7 +5716,7 @@
             if (timeframe === 'daily') {
                 forecastHTML = generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
                     gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
-                    focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates, coords);
+                    focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates, coords, currentLocation, locationForHemisphere);
             } else if (timeframe === 'weekly') {
                 forecastHTML = generateWeeklyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
                     gematria, fullName, birthTime, moonPhase, crossAnalysis, focus, challenge, birth, tarotCard, bestDay);
@@ -5732,7 +5734,7 @@
         // PHASE 2: Daily Forecast Generator
         function generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
             gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
-            focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates, coords) {
+            focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates, coords, currentLocation, locationForHemisphere) {
             
             // Get frequency recommendation
             const frequencyData = getDailyFrequency(zodiac, moonPhase, focus);
@@ -5816,7 +5818,7 @@
                         <p>☉ Sun: ${zodiac.name} ${zodiac.symbol} ${risingSign ? `| ↑ Rising: ${risingSign.name} ${risingSign.symbol}` : ''} ${moonSign ? `| ☽ Moon: ${moonSign.name} ${moonSign.symbol}` : ''}</p>
                         <p>🐉 ${chinese.element} ${chinese.animal} | 🔢 Life Path ${lifePath} | Personal Year ${personalYear}</p>
                         <p>Timeframe: Daily | ${todayStr}</p>
-                        ${birthLocation ? `<p style="font-size: 0.95rem; margin-top: 10px;">📍 Location: <span style="color: #00ff88; text-shadow: 0 0 10px rgba(0, 255, 136, 0.5); font-weight: 600;">${birthLocation}</span> ${coords && coords.lat < 0 ? '(Southern Hemisphere)' : '(Northern Hemisphere)'}</span></p>` : ''}
+                        ${locationForHemisphere ? `<p style="font-size: 0.95rem; margin-top: 10px;">📍 ${currentLocation ? 'Current' : 'Birth'} Location: <span style="color: #00ff88; text-shadow: 0 0 10px rgba(0, 255, 136, 0.5); font-weight: 600;">${locationForHemisphere}</span> ${coords && coords.lat < 0 ? '(Southern Hemisphere)' : '(Northern Hemisphere)'}</span></p>` : ''}
                         <p style="font-size: 0.9rem; color: ${locationActive ? '#00ff88' : '#ff8800'}; margin-top: 10px;">${locationNote}</p>
                     </div>
                 </div>
