@@ -6347,13 +6347,13 @@
 
                 <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>🃏 TAROT READING</h3>
+                        <h3>🃏 TAROT READING - Card of the Day</h3>
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        <p style="text-align: center; color: var(--neon-gold); margin-bottom: 20px; font-style: italic;">✨ Click the card to reveal your reading ✨</p>
-                        <div class="tarot-card-display">
-                            <div class="tarot-card-container" onclick="flipTarotCard(this)">
+                        <p style="text-align: center; color: var(--neon-gold); margin-bottom: 20px; font-style: italic;">✨ Click the card to reveal your daily guidance ✨</p>
+                        <div class="tarot-card-display" style="display: flex; flex-direction: column; align-items: center; gap: 25px;">
+                            <div class="tarot-card-container" onclick="flipTarotCard(this)" style="max-width: 280px;">
                                 <div class="tarot-card">
                                     <div class="tarot-card-back">
                                         <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
@@ -6367,9 +6367,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tarot-meaning" style="opacity: 0; transition: opacity 0.5s ease 0.4s;" id="tarot-meaning-daily">
-                                <p><strong>Meaning:</strong> ${tarotCard.meaning}</p>
-                                <p><strong>Guidance:</strong> ${tarotCard.guidance}</p>
+                            <div class="tarot-meaning" style="opacity: 0; transition: opacity 0.5s ease 0.4s; max-width: 600px; width: 100%;" id="tarot-meaning-daily">
+                                <div style="background: rgba(255, 215, 0, 0.1); border-left: 4px solid var(--neon-gold); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                                    <h4 style="color: var(--neon-gold); margin-bottom: 10px; font-size: 1.1rem;">🌟 Core Meaning</h4>
+                                    <p style="line-height: 1.8;">${tarotCard.meaning}</p>
+                                </div>
+                                <div style="background: rgba(157, 0, 255, 0.1); border-left: 4px solid var(--neon-purple); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                                    <h4 style="color: var(--neon-purple); margin-bottom: 10px; font-size: 1.1rem;">🧘 Today's Guidance</h4>
+                                    <p style="line-height: 1.8;">${tarotCard.guidance}</p>
+                                </div>
+                                <div style="background: rgba(0, 245, 255, 0.1); border-left: 4px solid var(--neon-cyan); padding: 20px; border-radius: 8px;">
+                                    <h4 style="color: var(--neon-cyan); margin-bottom: 10px; font-size: 1.1rem;">🎯 Action Steps for Today</h4>
+                                    <p style="line-height: 1.8;">Focus on embodying ${tarotCard.name}'s energy throughout your day. ${tarotCard.suit === 'major' ? 'This Major Arcana card signals a significant theme in your daily journey.' : 'This card encourages you to work with ' + tarotCard.suit + ' energy.'} Reflect on this message during your ${bestDay.day} power hours.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -6593,46 +6603,63 @@
 
                 <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>🃏 TAROT READING - 3-CARD SPREAD</h3>
+                        <h3>🃏 TAROT READING - Past, Present, Future Spread</h3>
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        <p style="text-align: center; color: var(--neon-gold); margin-bottom: 20px; font-style: italic;">✨ Click each card to reveal your weekly reading ✨</p>
-                        <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        <p style="text-align: center; color: var(--neon-gold); margin-bottom: 25px; font-style: italic;">✨ Click each card to reveal your week's journey ✨</p>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 25px;">
                             ${(Array.isArray(tarotCard) ? tarotCard : []).map((card, index) => `
-                                <div class="tarot-card-container" onclick="flipTarotCard(this)">
-                                    <div class="tarot-card">
-                                        <div class="tarot-card-back">
-                                            <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
-                                            <div class="tap-hint">🔮 ${card.position}</div>
-                                        </div>
-                                        <div class="tarot-card-front">
-                                            <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                            <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
-                                            <div class="tarot-number">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
-                                            <div class="tarot-name">${card.name}</div>
-                                            <div class="tarot-position" style="font-size: 0.9rem; color: var(--neon-gold); margin-top: 10px; font-weight: 600;">${card.position}</div>
-                                            <div class="tarot-meaning" style="margin-top: 10px;">
-                                                <p><strong>Theme:</strong> ${card.meaning}</p>
-                                                <p><strong>Guidance:</strong> ${card.guidance}</p>
+                                <div style="display: flex; flex-direction: column; gap: 15px;">
+                                    <div class="tarot-card-container" onclick="flipTarotCard(this)">
+                                        <div class="tarot-card">
+                                            <div class="tarot-card-back">
+                                                <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
+                                                <div class="tap-hint">🔮 ${card.position}</div>
                                             </div>
+                                            <div class="tarot-card-front">
+                                                <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                                <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
+                                                <div class="tarot-number">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
+                                                <div class="tarot-name">${card.name}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="background: rgba(255, 215, 0, 0.05); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 12px; padding: 15px;">
+                                        <h4 style="color: var(--neon-gold); margin-bottom: 8px; font-size: 1rem;">${card.position}</h4>
+                                        <div style="margin-bottom: 10px;">
+                                            <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 8px;"><strong style="color: var(--neon-cyan);">Theme:</strong> ${card.meaning}</p>
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.8);"><strong style="color: var(--neon-purple);">Guidance:</strong> ${card.guidance}</p>
                                         </div>
                                     </div>
                                 </div>
                             `).join('')}
+                        </div>
+                        <div style="background: linear-gradient(135deg, rgba(157, 0, 255, 0.1), rgba(0, 245, 255, 0.1)); border: 2px solid rgba(157, 0, 255, 0.4); border-radius: 12px; padding: 20px; text-align: center;">
+                            <h4 style="color: var(--neon-gold); margin-bottom: 12px;">🌀 Weekly Integration</h4>
+                            <p style="line-height: 1.7;">These three cards reveal your week's arc: where you've been, where you are, and where you're heading. Notice the narrative they create together. Each card's energy builds upon the last, guiding you through this week's lessons and opportunities.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>🪐 PLANETARY INFLUENCES - Weekly</h3>
+                        <h3>🪐 PLANETARY INFLUENCES - This Week</h3>
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        <p><strong>Moon Phase:</strong> ${moonPhase.symbol} ${moonPhase.phase}</p>
-                        <p><strong>Energy:</strong> ${moonPhase.energy}</p>
-                        <p><strong>Action:</strong> ${moonPhase.action}</p>
+                        <div style="background: rgba(0, 245, 255, 0.1); border-left: 4px solid var(--neon-cyan); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                            <h4 style="color: var(--neon-cyan); margin-bottom: 10px;">🌙 Current Moon Phase</h4>
+                            <p style="margin-bottom: 8px;"><strong>Phase:</strong> ${moonPhase.symbol} ${moonPhase.phase}</p>
+                            <p style="margin-bottom: 8px;"><strong>Weekly Energy:</strong> ${moonPhase.energy}</p>
+                            <p><strong>This Week's Action:</strong> ${moonPhase.action}</p>
+                        </div>
+                        <div style="background: rgba(157, 0, 255, 0.1); border-left: 4px solid var(--neon-purple); padding: 20px; border-radius: 8px;">
+                            <h4 style="color: var(--neon-purple); margin-bottom: 10px;">✨ Weekly Cosmic Rhythm</h4>
+                            <p style="line-height: 1.7;">The ${moonPhase.phase} Moon guides your week's tempo. As a ${zodiac.name}, you'll feel this lunar energy ${zodiac.element === 'Water' ? 'especially deeply' : zodiac.element === 'Earth' ? 'in practical matters' : zodiac.element === 'Fire' ? 'as creative fuel' : 'through connections'}. Align your most important tasks with this week's natural flow.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -6912,13 +6939,21 @@
 
                 <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>🪐 PLANETARY INFLUENCES - Monthly</h3>
+                        <h3>🪐 PLANETARY INFLUENCES - This Month</h3>
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        <p><strong>Moon Phase:</strong> ${moonPhase.symbol} ${moonPhase.phase}</p>
-                        <p><strong>Energy:</strong> ${moonPhase.energy}</p>
-                        <p><strong>Action:</strong> ${moonPhase.action}</p>
+                        <div style="background: rgba(0, 245, 255, 0.1); border-left: 4px solid var(--neon-cyan); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                            <h4 style="color: var(--neon-cyan); margin-bottom: 10px;">🌙 Current Moon Phase</h4>
+                            <p style="margin-bottom: 8px;"><strong>Phase:</strong> ${moonPhase.symbol} ${moonPhase.phase}</p>
+                            <p style="margin-bottom: 8px;"><strong>Monthly Energy:</strong> ${moonPhase.energy}</p>
+                            <p><strong>This Month's Action:</strong> ${moonPhase.action}</p>
+                        </div>
+                        <div style="background: rgba(157, 0, 255, 0.1); border-left: 4px solid var(--neon-purple); padding: 20px; border-radius: 8px;">
+                            <h4 style="color: var(--neon-purple); margin-bottom: 10px;">✨ Monthly Cosmic Rhythm</h4>
+                            <p style="line-height: 1.7; margin-bottom: 10px;">The ${moonPhase.phase} Moon sets the tone for your month. As a ${zodiac.name}, you'll navigate these 28 days with ${zodiac.element === 'Water' ? 'emotional depth and intuitive wisdom' : zodiac.element === 'Earth' ? 'practical manifestation and steady progress' : zodiac.element === 'Fire' ? 'passionate action and creative breakthroughs' : 'intellectual clarity and social connections'}.</p>
+                            <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);"><strong>Key Lunar Moments:</strong> ${moonPhases.map(m => m.emoji + ' ' + m.phase).join(' → ')}</p>
+                        </div>
                     </div>
                 </div>
 
@@ -7195,13 +7230,20 @@
 
                 <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
-                        <h3>🪐 PLANETARY INFLUENCES - Yearly</h3>
+                        <h3>🪐 PLANETARY INFLUENCES - This Year</h3>
                         <span class="system-toggle">▼</span>
                     </div>
                     <div class="system-content">
-                        <p><strong>Moon Phase:</strong> ${moonPhase.symbol} ${moonPhase.phase}</p>
-                        <p><strong>Year of:</strong> ${currentChinese.element} ${currentChinese.animal}</p>
-                        <p><strong>Your ${zodiac.name} Journey:</strong> This year brings transformative energy for your sign.</p>
+                        <div style="background: rgba(0, 245, 255, 0.1); border-left: 4px solid var(--neon-cyan); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                            <h4 style="color: var(--neon-cyan); margin-bottom: 10px;">🌏 Year of the ${currentChinese.element} ${currentChinese.animal}</h4>
+                            <p style="margin-bottom: 8px;"><strong>Current Moon Phase:</strong> ${moonPhase.symbol} ${moonPhase.phase}</p>
+                            <p><strong>Annual Cosmic Signature:</strong> This year unfolds under the wisdom of the ${currentChinese.element} ${currentChinese.animal}, bringing ${currentChinese.element === 'Wood' ? 'growth and expansion' : currentChinese.element === 'Fire' ? 'passion and transformation' : currentChinese.element === 'Earth' ? 'stability and manifestation' : currentChinese.element === 'Metal' ? 'precision and refinement' : 'flow and intuition'} to your 12-month journey.</p>
+                        </div>
+                        <div style="background: rgba(157, 0, 255, 0.1); border-left: 4px solid var(--neon-purple); padding: 20px; border-radius: 8px;">
+                            <h4 style="color: var(--neon-purple); margin-bottom: 10px;">✨ Your ${zodiac.name} Year Ahead</h4>
+                            <p style="line-height: 1.7; margin-bottom: 10px;">As a ${zodiac.name} navigating Personal Year ${personalYear}, this year brings transformative energy perfectly suited to your soul's evolution. Your ${zodiac.element} nature will ${zodiac.element === 'Water' ? 'flow with emotional wisdom through' : zodiac.element === 'Earth' ? 'ground and manifest' : zodiac.element === 'Fire' ? 'ignite and transform' : 'illuminate and connect'} the 12 months ahead.</p>
+                            <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);"><strong>Key Theme:</strong> The convergence of ${currentChinese.animal} year energy with your Life Path ${lifePath} creates unique opportunities for soul-level growth and manifestation.</p>
+                        </div>
                     </div>
                 </div>
 
