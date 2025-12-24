@@ -1700,6 +1700,20 @@
         }
 
         .tarot-meaning p {
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .tarot-card-front .tarot-meaning {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 215, 0, 0.3);
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .tarot-meaning p {
             color: var(--text-secondary);
             line-height: 1.7;
             margin-bottom: 15px;
@@ -6945,10 +6959,10 @@
                     </div>
                     <div class="system-content">
                         <p style="text-align: center; color: var(--neon-gold); margin-bottom: 20px; font-style: italic;">✨ Click each card to reveal your monthly reading ✨</p>
-                        <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px;">
                             ${(Array.isArray(tarotCard) ? tarotCard : []).map((card, index) => `
                                 <div class="tarot-card-container" onclick="flipTarotCard(this)">
-                                    <div class="tarot-card">
+                                    <div class="tarot-card" style="min-height: 420px;">
                                         <div class="tarot-card-back">
                                             <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
                                             <div class="tap-hint">🔮 ${card.position}</div>
@@ -6958,10 +6972,10 @@
                                             <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
                                             <div class="tarot-number">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
                                             <div class="tarot-name">${card.name}</div>
-                                            <div class="tarot-position" style="font-size: 0.9rem; color: var(--neon-gold); margin-top: 10px; font-weight: 600;">${card.position}</div>
-                                            <div class="tarot-meaning" style="margin-top: 10px;">
-                                                <p><strong>Theme:</strong> ${card.meaning}</p>
-                                                <p><strong>Guidance:</strong> ${card.guidance}</p>
+                                            <div class="tarot-position" style="font-size: 0.85rem; color: var(--neon-gold); margin-top: 8px; font-weight: 600;">${card.position}</div>
+                                            <div class="tarot-meaning">
+                                                <p style="font-size: 0.85rem; line-height: 1.4;"><strong>Theme:</strong> ${card.meaning}</p>
+                                                <p style="font-size: 0.85rem; line-height: 1.4;"><strong>Guidance:</strong> ${card.guidance}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -7235,23 +7249,23 @@
                     </div>
                     <div class="system-content">
                         <p style="text-align: center; color: var(--neon-gold); margin-bottom: 20px; font-style: italic;">✨ Click each card to reveal your yearly reading ✨</p>
-                        <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px;">
+                        <div class="tarot-card-display" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
                             ${(Array.isArray(tarotCard) ? tarotCard : []).map((card, index) => `
                                 <div class="tarot-card-container" onclick="flipTarotCard(this)">
-                                    <div class="tarot-card">
+                                    <div class="tarot-card" style="min-height: 400px; padding: 20px 15px;">
                                         <div class="tarot-card-back">
                                             <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
                                             <div class="tap-hint">🔮 ${card.position}</div>
                                         </div>
                                         <div class="tarot-card-front">
-                                            <img src="${card.image}" alt="${card.name}" class="tarot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                            <img src="${card.image}" alt="${card.name}" class="tarot-image" style="max-width: 140px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                                             <div class="tarot-symbol" style="display:none;">${card.symbol}</div>
-                                            <div class="tarot-number">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
-                                            <div class="tarot-name">${card.name}</div>
-                                            <div class="tarot-position" style="font-size: 0.9rem; color: var(--neon-gold); margin-top: 10px; font-weight: 600;">${card.position}</div>
-                                            <div class="tarot-meaning" style="margin-top: 10px;">
-                                                <p><strong>Theme:</strong> ${card.meaning}</p>
-                                                <p><strong>Guidance:</strong> ${card.guidance}</p>
+                                            <div class="tarot-number" style="font-size: 1rem;">${card.suit === 'major' ? (card.number === 0 ? '0' : card.number) : card.suit.toUpperCase()}</div>
+                                            <div class="tarot-name" style="font-size: 1.1rem;">${card.name}</div>
+                                            <div class="tarot-position" style="font-size: 0.8rem; color: var(--neon-gold); margin-top: 6px; font-weight: 600;">${card.position}</div>
+                                            <div class="tarot-meaning">
+                                                <p style="font-size: 0.8rem; line-height: 1.3; margin-bottom: 8px;"><strong>Theme:</strong> ${card.meaning}</p>
+                                                <p style="font-size: 0.8rem; line-height: 1.3;"><strong>Guidance:</strong> ${card.guidance}</p>
                                             </div>
                                         </div>
                                     </div>
