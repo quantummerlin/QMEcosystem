@@ -13,6 +13,14 @@
     <meta property="og:url" content="https://quantummerlin.com/forecasts">
     <meta property="og:type" content="website">
     
+    <!-- PWA Support -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#00f5ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Quantum Forecast">
+    <link rel="apple-touch-icon" href="/shared/images/icon-192x192.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -2495,6 +2503,156 @@
             font-size: 1.5rem;
         }
 
+        /* Floating Share Button */
+        .floating-share-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 245, 255, 0.5);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-share-btn:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 6px 30px rgba(0, 245, 255, 0.7);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 4px 20px rgba(0, 245, 255, 0.5);
+            }
+            50% {
+                box-shadow: 0 4px 30px rgba(0, 245, 255, 0.8);
+            }
+        }
+
+        /* Install Prompt Banner */
+        .install-prompt {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.95), rgba(0, 245, 255, 0.95));
+            padding: 20px;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            z-index: 9998;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+            animation: slideUp 0.5s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .install-prompt-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .install-prompt-icon {
+            font-size: 2rem;
+        }
+
+        .install-prompt-text h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        .install-prompt-text p {
+            margin: 5px 0 0 0;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .install-prompt-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .install-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .install-btn.primary {
+            background: white;
+            color: var(--neon-purple);
+        }
+
+        .install-btn.primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .install-btn.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .install-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .floating-share-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 1.3rem;
+            }
+
+            .install-prompt {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .install-prompt-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .install-prompt-buttons {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .install-btn {
+                width: 100%;
+            }
+        }
+
         /* Email Capture */
         .email-capture {
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(0, 245, 255, 0.1) 100%);
@@ -4820,8 +4978,9 @@
             window.open(`https://twitter.com/intent/tweet?text=${tweetText}&url=${url}`, '_blank');
         }
 
-        // Section-specific sharing - Show modal with options
+        // Section-specific sharing - Use native share API when available
         let currentShareMessage = '';
+        let currentShareTitle = '';
         
         function shareSectionInsight(sectionType, details) {
             const messages = {
@@ -4835,8 +4994,52 @@
                 'frequency': `🔊 My healing frequency today: ${details}! Find yours with this cosmic calculator:`
             };
             
+            const titles = {
+                'tarot': 'My Tarot Card',
+                'chinese': 'My Chinese Zodiac',
+                'astrology': 'My Cosmic Identity',
+                'numerology': 'My Life Path',
+                'reality-code': 'My Reality Code',
+                'planetary': 'My Cosmic Timing',
+                'gematria': 'My Gematria',
+                'frequency': 'My Healing Frequency'
+            };
+            
             currentShareMessage = messages[sectionType] || `✨ Just discovered something amazing about myself!`;
-            showShareModal();
+            currentShareTitle = titles[sectionType] || 'My Quantum Discovery';
+            
+            // Try native Web Share API first (mobile)
+            if (navigator.share) {
+                navigator.share({
+                    title: currentShareTitle,
+                    text: currentShareMessage,
+                    url: generateShareURL()
+                }).catch(() => {
+                    // If native share fails, show modal
+                    showShareModal();
+                });
+            } else {
+                // Desktop - show modal
+                showShareModal();
+            }
+        }
+        
+        // Floating share button - shares general forecast
+        function shareGeneralForecast() {
+            currentShareMessage = '✨ I just got my personalized Quantum Forecast! This tool combines 8 mystical systems for incredible accuracy.';
+            currentShareTitle = 'My Quantum Forecast';
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: currentShareTitle,
+                    text: currentShareMessage,
+                    url: generateShareURL()
+                }).catch(() => {
+                    showShareModal();
+                });
+            } else {
+                showShareModal();
+            }
         }
         
         function showShareModal() {
@@ -6671,6 +6874,12 @@
                 </div>
             `;
             showMidAd();
+            
+            // Show floating share button after forecast is generated
+            const floatingBtn = document.getElementById('floatingShareBtn');
+            if (floatingBtn) {
+                floatingBtn.style.display = 'flex';
+            }
         }
 
         // PHASE 2: Weekly Forecast Generator
@@ -9728,11 +9937,84 @@
             alert('✅ Library cleared successfully!');
         }
         
+        // PWA Install Prompt
+        let deferredPrompt;
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // Show install prompt after 30 seconds if not already dismissed
+            if (!localStorage.getItem('installPromptDismissed')) {
+                setTimeout(() => {
+                    showInstallPrompt();
+                }, 30000);
+            }
+        });
+        
+        function showInstallPrompt() {
+            const prompt = document.getElementById('installPrompt');
+            if (prompt) {
+                prompt.style.display = 'flex';
+            }
+        }
+        
+        function installApp() {
+            const prompt = document.getElementById('installPrompt');
+            if (prompt) {
+                prompt.style.display = 'none';
+            }
+            
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                    }
+                    deferredPrompt = null;
+                });
+            }
+        }
+        
+        function dismissInstallPrompt() {
+            const prompt = document.getElementById('installPrompt');
+            if (prompt) {
+                prompt.style.display = 'none';
+            }
+            localStorage.setItem('installPromptDismissed', 'true');
+        }
+        
+        // Track when app is installed
+        window.addEventListener('appinstalled', () => {
+            console.log('App installed successfully');
+            localStorage.setItem('appInstalled', 'true');
+        });
+        
         // Initialize library counter on page load
         document.addEventListener('DOMContentLoaded', function() {
             updateLibraryCounter();
         });
     </script>
+
+    <!-- Floating Share Button -->
+    <button class="floating-share-btn" onclick="shareGeneralForecast()" title="Share your forecast" style="display: none;" id="floatingShareBtn">
+        ✨
+    </button>
+
+    <!-- Install Prompt -->
+    <div id="installPrompt" class="install-prompt">
+        <div class="install-prompt-content">
+            <div class="install-prompt-icon">📱</div>
+            <div class="install-prompt-text">
+                <h4>Add to Home Screen</h4>
+                <p>Get instant access to your cosmic guidance anytime!</p>
+            </div>
+        </div>
+        <div class="install-prompt-buttons">
+            <button class="install-btn primary" onclick="installApp()">Install</button>
+            <button class="install-btn secondary" onclick="dismissInstallPrompt()">Maybe Later</button>
+        </div>
+    </div>
 
     <!-- Share Modal -->
     <div id="shareModal" class="share-modal">

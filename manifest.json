@@ -1,15 +1,15 @@
 {
-  "name": "Quantum Reality Codes",
-  "short_name": "QRC",
-  "description": "Transform your intentions into reality through sacred mathematics. Free manifestation tools including Reality Codes, Frequency Generator, Tarot, Gematria, and more.",
-  "start_url": "/",
+  "name": "Quantum Merlin - Cosmic Forecasts & Reality Codes",
+  "short_name": "Quantum Merlin",
+  "description": "Your personalized cosmic guidance combining 8 mystical systems: Astrology, Tarot, Numerology, Chinese Zodiac, Gematria, Frequencies & more. Get free daily forecasts and manifestation tools.",
+  "start_url": "/quantum-merlin-hub/forecasts.html",
   "display": "standalone",
   "background_color": "#0a0a0f",
   "theme_color": "#00f5ff",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
-  "categories": ["lifestyle", "entertainment", "health", "utilities"],
+  "categories": ["lifestyle", "entertainment", "health", "utilities", "personalization"],
   "icons": [
     {
       "src": "/shared/images/icon-72x72.png",
@@ -77,6 +77,13 @@
     }
   ],
   "shortcuts": [
+    {
+      "name": "Daily Forecast",
+      "short_name": "Forecast",
+      "description": "Get your daily cosmic forecast",
+      "url": "/quantum-merlin-hub/forecasts.html",
+      "icons": [{"src": "/shared/images/shortcut-codes.png", "sizes": "96x96"}]
+    },
     {
       "name": "Reality Codes",
       "short_name": "Codes",
