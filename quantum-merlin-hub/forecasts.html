@@ -2568,6 +2568,76 @@
             background: rgba(157, 0, 255, 0.25);
             border-style: solid;
         }
+        
+        /* Community Share Section - for Reality Codes */
+        .community-share-section {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .community-divider {
+            text-align: center;
+            color: #d4af37;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .community-text {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .community-buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        
+        .community-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        
+        .community-btn.facebook-group {
+            background: linear-gradient(135deg, rgba(66, 103, 178, 0.3), rgba(59, 89, 152, 0.3));
+            border-color: rgba(66, 103, 178, 0.6);
+        }
+        
+        .community-btn.facebook-group:hover {
+            background: linear-gradient(135deg, rgba(66, 103, 178, 0.5), rgba(59, 89, 152, 0.5));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(66, 103, 178, 0.4);
+        }
+        
+        .community-btn.telegram-group {
+            background: linear-gradient(135deg, rgba(0, 136, 204, 0.3), rgba(0, 114, 177, 0.3));
+            border-color: rgba(0, 136, 204, 0.6);
+        }
+        
+        .community-btn.telegram-group:hover {
+            background: linear-gradient(135deg, rgba(0, 136, 204, 0.5), rgba(0, 114, 177, 0.5));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+        }
+        
+        .community-btn .icon {
+            font-size: 1.1rem;
+        }
 
         /* Share options grid - always 2 columns except visual card */
         .share-options {
@@ -2587,6 +2657,10 @@
             
             .share-option-btn.visual-card {
                 grid-column: span 1;
+            }
+            
+            .community-buttons {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -4768,18 +4842,17 @@
         function copyRealityCode(code, statement) {
             const text = `${code}\n\n"${statement}"\n\nCreate yours at: quantummerlin.com`;
             navigator.clipboard.writeText(text).then(() => {
-                alert('Reality Code copied to clipboard! Share it to amplify! ✨');
+                showShareToast('Reality Code copied! Share it to amplify! ✨');
             });
         }
         
-        // Share Reality Code
+        // Share Reality Code - show special modal with community links
         function shareRealityCode(code, statement) {
-            const text = `I just created my Quantum Reality Code: ${code}\n\n"${statement}"\n\nAmplify with me! 🌌⚛️\n\nhttps://quantummerlin.com/quantum-merlin-hub/forecasts.html`;
-            if (navigator.share) {
-                navigator.share({ title: 'My Quantum Reality Code', text: text, url: 'https://quantummerlin.com' });
-            } else {
-                copyRealityCode(code, statement);
-            }
+            currentShareMessage = `🔮 My Quantum Reality Code: ${code}\n\n"${statement}"\n\n✨ Amplify with me using the Power of Eight! When groups focus on the same intention, manifestation power grows exponentially.\n\nGet your FREE Reality Code:`;
+            currentShareTitle = 'My Quantum Reality Code';
+            currentShareType = 'reality-code';
+            currentShareDetails = code;
+            showShareModal();
         }
 
         // Generate stars background
@@ -5131,12 +5204,32 @@
         
         function showShareModal() {
             const modal = document.getElementById('shareModal');
+            const communitySection = document.getElementById('communityShareSection');
+            
+            // Show community section only for reality-code shares
+            if (communitySection) {
+                communitySection.style.display = currentShareType === 'reality-code' ? 'block' : 'none';
+            }
+            
             modal.style.display = 'block';
         }
         
         function closeShareModal() {
             const modal = document.getElementById('shareModal');
             modal.style.display = 'none';
+        }
+        
+        // Direct share to community groups
+        function shareToFacebookGroup() {
+            window.open('https://facebook.com/groups/1950742399049451/', '_blank');
+            showShareToast('Opening Facebook Group - paste your code there! 🔮');
+            closeShareModal();
+        }
+        
+        function shareToTelegramGroup() {
+            window.open('https://t.me/+BIChXgOqFH9iMmU1', '_blank');
+            showShareToast('Opening Telegram Group - share your code! ✨');
+            closeShareModal();
         }
         
         // Generate visual share card
@@ -7094,6 +7187,24 @@
                                     <div class="mersenne-item"><div class="mersenne-power">8.58B</div><div class="mersenne-people">33 people</div></div>
                                     <div class="mersenne-item"><div class="mersenne-power">2.4 Decillion</div><div class="mersenne-people">111 people</div></div>
                                 </div>
+                            </div>
+                            
+                            <div class="community-amplify" style="background: linear-gradient(135deg, rgba(157, 0, 255, 0.2), rgba(0, 245, 255, 0.2)); border: 2px solid var(--neon-gold); border-radius: 20px; padding: 25px; margin-top: 25px; text-align: center;">
+                                <h4 style="color: var(--neon-gold); font-size: 1.3rem; margin-bottom: 15px;">🔮 Join the Quantum Reality Codes Community</h4>
+                                <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 20px; line-height: 1.7;">
+                                    Post your Reality Code and have <strong style="color: var(--neon-cyan);">hundreds of community members</strong> focus their intention on YOUR manifestation. Based on the Power of Eight principle, group intention exponentially amplifies results!
+                                </p>
+                                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                                    <a href="https://facebook.com/groups/1950742399049451/" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #1877F2; color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                                        📘 Facebook Group
+                                    </a>
+                                    <a href="https://t.me/+BIChXgOqFH9iMmU1" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0088cc; color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                                        ✈️ Telegram Group
+                                    </a>
+                                </div>
+                                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; margin-top: 15px;">
+                                    ✨ Free to join • Active community • Daily group intentions ✨
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -10338,6 +10449,24 @@
                     <span class="icon">🚀</span>
                     <span>More...</span>
                 </button>
+            </div>
+            
+            <!-- Community Section - Only shows for Reality Codes -->
+            <div id="communityShareSection" class="community-share-section" style="display: none;">
+                <div class="community-divider">
+                    <span>✨ AMPLIFY WITH THE COLLECTIVE ✨</span>
+                </div>
+                <p class="community-text">Share to our manifestation groups for group intention amplification!</p>
+                <div class="community-buttons">
+                    <button class="community-btn facebook-group" onclick="shareToFacebookGroup()">
+                        <span class="icon">👥</span>
+                        <span>Facebook Group</span>
+                    </button>
+                    <button class="community-btn telegram-group" onclick="shareToTelegramGroup()">
+                        <span class="icon">🌐</span>
+                        <span>Telegram Group</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
