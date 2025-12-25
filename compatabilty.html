@@ -34,7 +34,7 @@
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Quantum Merlin">
     <meta name="application-name" content="Quantum Merlin">
@@ -1102,8 +1102,14 @@
                             <input type="time" id="birthtime1" name="birthtime1">
                         </div>
                         <div class="input-group">
-                            <label for="birthplace1">Birth Place (optional)</label>
+                            <label for="birthplace1">Birth Place</label>
                             <input type="text" id="birthplace1" name="birthplace1" placeholder="City, Country">
+                            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 3px;">Background traits</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="currentLocation1">📍 Current Location</label>
+                            <input type="text" id="currentLocation1" name="currentLocation1" placeholder="Where are they today?">
+                            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 3px;">Today's cosmic influences</p>
                         </div>
                     </div>
 
@@ -1123,20 +1129,16 @@
                             <input type="time" id="birthtime2" name="birthtime2">
                         </div>
                         <div class="input-group">
-                            <label for="birthplace2">Birth Place (optional)</label>
+                            <label for="birthplace2">Birth Place</label>
                             <input type="text" id="birthplace2" name="birthplace2" placeholder="City, Country">
+                            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 3px;">Background traits</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="currentLocation2">📍 Current Location</label>
+                            <input type="text" id="currentLocation2" name="currentLocation2" placeholder="Where are they today?">
+                            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 3px;">Today's cosmic influences</p>
                         </div>
                     </div>
-                </div>
-
-                <!-- Current Location for Today's Cosmic Positioning -->
-                <div class="input-group" style="position: relative; z-index: 1; margin-top: 1.5rem;">
-                    <label for="currentLocation" style="display: flex; align-items: center; gap: 8px;">
-                        <span>📍 Current Location</span>
-                        <span style="font-size: 0.8rem; color: var(--neon-cyan); font-weight: normal;">(Today's cosmic alignment)</span>
-                    </label>
-                    <input type="text" id="currentLocation" name="currentLocation" placeholder="City, Country - for current star/lunar/sun positions">
-                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 5px;">Birth place reveals background traits • Current location shows today's cosmic influences on your connection</p>
                 </div>
 
                 <div style="text-align: center; margin-top: 2rem; position: relative; z-index: 1;">
@@ -1558,8 +1560,6 @@
             }, 100);
         }
     </script>
-    <script src="quantum-rose-calculator-enhanced.js"></script>
-    <script src="analytics-setup.js"></script>
     
     <!-- Generate Stars -->
     <script>
