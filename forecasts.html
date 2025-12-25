@@ -251,6 +251,50 @@
             z-index: 100;
         }
         
+        /* Compatibility Button - Top Center-Left */
+        .compatibility-floating {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+        }
+        
+        .compatibility-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(255, 0, 102, 0.9), rgba(157, 0, 255, 0.9));
+            color: #ffffff;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 10px 18px;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            border-radius: 25px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 0, 102, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .compatibility-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 0, 102, 0.5), 0 0 20px rgba(255, 215, 0, 0.4);
+            border-color: rgba(255, 215, 0, 1);
+        }
+        
+        .compatibility-btn .compat-icon {
+            font-size: 1.2rem;
+            animation: compatSpin 3s ease-in-out infinite;
+        }
+        
+        @keyframes compatSpin {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(15deg) scale(1.1); }
+        }
+        
         /* Buy Me a Coffee - Top Right Corner */
         .coffee-floating {
             position: absolute;
@@ -353,6 +397,18 @@
             .library-floating {
                 top: 10px;
                 left: 10px;
+            }
+            .compatibility-floating {
+                top: 60px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .compatibility-btn {
+                padding: 8px 14px;
+                font-size: 0.75rem;
+            }
+            .compatibility-btn span:not(.compat-icon) {
+                display: none;
             }
             .coffee-floating {
                 top: 10px;
@@ -3972,6 +4028,13 @@
                 <a href="/library" class="library-btn" title="View your saved items">
                     <span class="library-icon">📚</span>
                     <span>Library</span>
+                </a>
+            </div>
+            <!-- Compatibility Calculator - Top Center -->
+            <div class="compatibility-floating">
+                <a href="/compatabilty.html" class="compatibility-btn" title="Check any relationship compatibility">
+                    <span class="compat-icon">💫</span>
+                    <span>Compatibility</span>
                 </a>
             </div>
             <!-- Buy Me a Coffee - Top Right -->

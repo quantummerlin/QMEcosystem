@@ -8,23 +8,23 @@
     <!-- SEO Meta Tags -->
     <meta name="description" content="Discover soul connections across all relationships: romantic partners, friends, family, business partners & teams. Sacred compatibility analysis through 12 mystical systems including zodiac, numerology, tarot & quantum wisdom.">
     <meta name="keywords" content="love compatibility, zodiac compatibility, numerology, tarot reading, soulmate, twin flame, relationship advice, astrology, Chinese zodiac, sacred geometry, free love calculator">
-    <meta name="author" content="Quantum Rose - Sacred Wisdom">
+    <meta name="author" content="Quantum Merlin">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Quantum Compatibility Calculator | All Relationship Types">
     <meta property="og:description" content="Comprehensive compatibility analysis for romantic, platonic, family, and business relationships using 12 mystical systems. Discover the sacred dynamics of any connection.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://quantumrose.com">
-    <meta property="og:image" content="https://quantumrose.com/quantum-rose-social-share.jpg">
-    <meta property="og:site_name" content="Quantum Rose">
+    <meta property="og:url" content="https://quantummerlin.com/compatability">
+    <meta property="og:image" content="https://quantummerlin.com/images/compatibility-share.jpg">
+    <meta property="og:site_name" content="Quantum Merlin">
     <meta property="og:locale" content="en_US">
     
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Quantum Rose: The English Rose's Sacred Compatibility - Free Wisdom">
-    <meta name="twitter:description" content="Discover your soul connection with the most comprehensive free love compatibility calculator.">
-    <meta name="twitter:image" content="https://quantumrose.com/quantum-rose-twitter.jpg">
+    <meta name="twitter:title" content="Quantum Merlin: Universal Compatibility Calculator - Free">
+    <meta name="twitter:description" content="Discover soul connections in any relationship with the most comprehensive free compatibility calculator. Love, business, friends & more.">
+    <meta name="twitter:image" content="https://quantummerlin.com/images/compatibility-share.jpg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://quantummerlin.com/compatability">
@@ -36,9 +36,9 @@
     <link rel="manifest" href="manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Quantum Rose">
-    <meta name="application-name" content="Quantum Rose">
-    <meta name="theme-color" content="#EC4899">
+    <meta name="apple-mobile-web-app-title" content="Quantum Merlin">
+    <meta name="application-name" content="Quantum Merlin">
+    <meta name="theme-color" content="#9d00ff">
     <meta name="msapplication-TileColor" content="#1F0529">
     <meta name="msapplication-config" content="browserconfig.xml">
     
@@ -153,6 +153,7 @@
 
         /* Quantum Navigation Bar */
         .quantum-nav {
+            display: none; /* Hidden to maximize mobile space */
             position: fixed;
             top: 20px;
             left: 50%;
@@ -163,7 +164,6 @@
             border: 1px solid var(--glass-border);
             border-radius: 50px;
             padding: 10px 20px;
-            display: flex;
             gap: 20px;
             align-items: center;
             box-shadow: 0 8px 32px rgba(236, 72, 153, 0.2);
@@ -200,7 +200,7 @@
         /* Header with Buy Me a Coffee */
         .header-container {
             background: transparent;
-            padding: 100px 2rem 2rem;
+            padding: 20px 2rem 2rem;
             position: relative;
             z-index: 10;
         }
@@ -956,23 +956,27 @@
 
     <!-- Quantum Navigation -->
     <nav class="quantum-nav">
-        <a href="index.html" class="quantum-nav-link active">🌹 Quantum Rose</a>
+        <a href="index.html" class="quantum-nav-link">🧙‍♂️ Home</a>
         <div class="quantum-nav-divider"></div>
-        <a href="forecasts.html" class="quantum-nav-link">🔮 Quantum Merlin</a>
+        <a href="forecasts.html" class="quantum-nav-link">🔮 Forecaster</a>
         <div class="quantum-nav-divider"></div>
-        <a href="about.html" class="quantum-nav-link">About</a>
+        <a href="compatabilty.html" class="quantum-nav-link active">💫 Compatibility</a>
+        <div class="quantum-nav-divider"></div>
+        <a href="birth-sigil.html" class="quantum-nav-link">🌙 Birth Sigil</a>
+        <div class="quantum-nav-divider"></div>
+        <a href="library.html" class="quantum-nav-link">📚 Library</a>
     </nav>
 
     <!-- Header -->
     <header class="header-container">
         <div class="header-content">
             <div class="logo-section">
-                <div class="sacred-rose">🌹</div>
-                <h1 class="site-title">Quantum Rose</h1>
+                <div class="sacred-rose" style="background: linear-gradient(135deg, #00f5ff, #9d00ff);">💫</div>
+                <h1 class="site-title">Quantum Merlin</h1>
             </div>
             <div class="support-section">
-                <a href="https://www.buymeacoffee.com/quantumrose" target="_blank" class="buy-me-coffee-btn">
-                    ☕ Support Sacred Wisdom
+                <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank" class="buy-me-coffee-btn">
+                    ☕ Support the Magic
                 </a>
             </div>
         </div>
@@ -1125,16 +1129,14 @@
                     </div>
                 </div>
 
-                <!-- Specific Question -->
-                <div class="input-group" style="position: relative; z-index: 1;">
-                    <label for="specificQuestion" id="questionLabel">What would you like to understand about this connection?</label>
-                    <textarea id="specificQuestion" name="specificQuestion" rows="3" placeholder="e.g., Will we work well together? What are our strengths and challenges? How can we improve our connection?"></textarea>
-                </div>
-
-                <!-- Goals/Intentions -->
-                <div class="input-group" style="position: relative; z-index: 1;">
-                    <label for="intentions" id="intentionsLabel">What are your goals for this relationship?</label>
-                    <textarea id="intentions" name="intentions" rows="2" placeholder="e.g., Build a successful business, create lasting friendship, heal family dynamics..."></textarea>
+                <!-- Current Location for Today's Cosmic Positioning -->
+                <div class="input-group" style="position: relative; z-index: 1; margin-top: 1.5rem;">
+                    <label for="currentLocation" style="display: flex; align-items: center; gap: 8px;">
+                        <span>📍 Current Location</span>
+                        <span style="font-size: 0.8rem; color: var(--neon-cyan); font-weight: normal;">(Today's cosmic alignment)</span>
+                    </label>
+                    <input type="text" id="currentLocation" name="currentLocation" placeholder="City, Country - for current star/lunar/sun positions">
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 5px;">Birth place reveals background traits • Current location shows today's cosmic influences on your connection</p>
                 </div>
 
                 <div style="text-align: center; margin-top: 2rem; position: relative; z-index: 1;">
@@ -1171,8 +1173,8 @@
                 </div>
                 <div class="promo-features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
                     <div class="feature-item" style="display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-question-circle" style="color: var(--accent);"></i>
-                        <span>Answers to YOUR specific questions</span>
+                        <i class="fas fa-star" style="color: var(--accent);"></i>
+                        <span>Personalized deep-dive analysis</span>
                     </div>
                     <div class="feature-item" style="display: flex; align-items: center; gap: 0.5rem;">
                         <i class="fas fa-history" style="color: var(--accent);"></i>
@@ -1343,19 +1345,49 @@
         </section>
     </main>
 
+    <!-- Discover More Tools Section -->
+    <section class="discover-tools" style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; font-family: 'Orbitron', monospace; font-size: 2rem; margin-bottom: 15px; background: linear-gradient(135deg, var(--neon-cyan), var(--neon-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+            ✨ Continue Your Cosmic Journey
+        </h2>
+        <p style="text-align: center; opacity: 0.8; margin-bottom: 40px; font-size: 1.1rem;">
+            Deepen your insights with our other mystical tools
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+            <!-- Quantum Forecaster -->
+            <a href="forecasts.html" style="text-decoration: none; background: linear-gradient(135deg, rgba(157, 0, 255, 0.2), rgba(0, 245, 255, 0.1)); border: 2px solid var(--neon-purple); border-radius: 20px; padding: 30px; transition: all 0.3s ease; display: block;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">🔮</div>
+                <h3 style="color: var(--neon-cyan); font-family: 'Orbitron', monospace; margin-bottom: 10px; font-size: 1.3rem;">Quantum Forecaster</h3>
+                <p style="color: var(--light-text); opacity: 0.8; font-size: 0.95rem; line-height: 1.6;">Get your complete cosmic profile across 8 mystical systems with daily personalized insights.</p>
+            </a>
+            <!-- Birth Sigil Generator -->
+            <a href="birth-sigil.html" style="text-decoration: none; background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(157, 0, 255, 0.1)); border: 2px solid var(--neon-gold); border-radius: 20px; padding: 30px; transition: all 0.3s ease; display: block;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">🌙</div>
+                <h3 style="color: var(--neon-gold); font-family: 'Orbitron', monospace; margin-bottom: 10px; font-size: 1.3rem;">Birth Sigil Generator</h3>
+                <p style="color: var(--light-text); opacity: 0.8; font-size: 0.95rem; line-height: 1.6;">Generate your unique cosmic signature based on your exact birth moment. A sacred symbol of your soul.</p>
+            </a>
+            <!-- My Library -->
+            <a href="library.html" style="text-decoration: none; background: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(255, 0, 102, 0.1)); border: 2px solid var(--neon-cyan); border-radius: 20px; padding: 30px; transition: all 0.3s ease; display: block;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">📚</div>
+                <h3 style="color: var(--neon-cyan); font-family: 'Orbitron', monospace; margin-bottom: 10px; font-size: 1.3rem;">My Library</h3>
+                <p style="color: var(--light-text); opacity: 0.8; font-size: 0.95rem; line-height: 1.6;">Access all your saved sigils, readings, and forecasts in one sacred collection.</p>
+            </a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer-container">
         <div class="footer-content">
             <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="about.html">About Quantum Rose</a>
-                <a href="https://www.buymeacoffee.com/quantumrose" target="_blank">Support Us</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="forecasts.html">Quantum Forecaster</a>
+                <a href="birth-sigil.html">Birth Sigil</a>
+                <a href="library.html">My Library</a>
+                <a href="quantum-rose.html">Quantum Rose</a>
+                <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank">Support Us</a>
             </div>
             <p style="opacity: 0.7; margin-top: 1rem; font-family: 'Rajdhani', sans-serif;">
-                © 2024 Quantum Rose Sacred Wisdom. Where souls meet sacred wisdom. 
-                Continuing a mother's legacy of love and guidance.
+                © 2024 Quantum Merlin. Where Ancient Wisdom Meets Quantum Possibilities.
             </p>
         </div>
     </footer>
@@ -1384,141 +1416,81 @@
             const relationshipType = this.value;
             const person1Label = document.getElementById('person1Label');
             const person2Label = document.getElementById('person2Label');
-            const questionLabel = document.getElementById('questionLabel');
-            const intentionsLabel = document.getElementById('intentionsLabel');
             const submitBtn = document.getElementById('submitBtn');
-            const questionField = document.getElementById('specificQuestion');
-            const intentionsField = document.getElementById('intentions');
             
             // Define labels and placeholders for different relationship types
             const labelConfigs = {
                 'romantic': {
                     person1: 'Your Details',
                     person2: 'Partner\'s Details',
-                    question: 'What would you like to know about your romantic connection?',
-                    intentions: 'What are your hopes for this relationship?',
-                    submit: 'Analyze Romantic Compatibility',
-                    questionPlaceholder: 'e.g., Are we meant to be together? What challenges might we face? How can we strengthen our bond?',
-                    intentionsPlaceholder: 'e.g., Build a lasting partnership, understand our connection better, prepare for commitment...'
+                    submit: 'Analyze Romantic Compatibility'
                 },
                 'friendship': {
                     person1: 'Your Details',
                     person2: 'Friend\'s Details',
-                    question: 'What aspects of your friendship would you like to explore?',
-                    intentions: 'What do you value in this friendship?',
-                    submit: 'Analyze Friendship Compatibility',
-                    questionPlaceholder: 'e.g., Why do we click so well? Can we be lifelong friends? How can we support each other better?',
-                    intentionsPlaceholder: 'e.g., Deepen our trust, travel together, support each other\'s growth...'
+                    submit: 'Analyze Friendship Compatibility'
                 },
                 'family': {
                     person1: 'Your Details',
                     person2: 'Family Member\'s Details',
-                    question: 'What family dynamics would you like to understand?',
-                    intentions: 'What would you like to heal or strengthen?',
-                    submit: 'Analyze Family Connection',
-                    questionPlaceholder: 'e.g., Why do we clash? How can we communicate better? What karmic ties do we share?',
-                    intentionsPlaceholder: 'e.g., Heal past wounds, improve communication, create harmony...'
+                    submit: 'Analyze Family Connection'
                 },
                 'business': {
                     person1: 'Your Details',
                     person2: 'Partner\'s Details',
-                    question: 'What business aspects concern you most?',
-                    intentions: 'What are your business goals together?',
-                    submit: 'Analyze Business Partnership',
-                    questionPlaceholder: 'e.g., Will we work well together? What are our complementary strengths? How should we divide responsibilities?',
-                    intentionsPlaceholder: 'e.g., Build a profitable company, create innovative products, scale successfully...'
+                    submit: 'Analyze Business Partnership'
                 },
                 'colleagues': {
                     person1: 'Your Details',
                     person2: 'Colleague\'s Details',
-                    question: 'What work dynamics would you like to improve?',
-                    intentions: 'What are your collaboration goals?',
-                    submit: 'Analyze Work Compatibility',
-                    questionPlaceholder: 'e.g., How can we collaborate more effectively? What communication style works best? How do we handle conflict?',
-                    intentionsPlaceholder: 'e.g., Improve teamwork, reduce friction, achieve project success...'
+                    submit: 'Analyze Work Compatibility'
                 },
                 'mentor': {
                     person1: 'Mentor\'s Details',
                     person2: 'Mentee\'s Details',
-                    question: 'What aspects of this mentorship interest you?',
-                    intentions: 'What growth are you seeking?',
-                    submit: 'Analyze Mentor-Mentee Dynamic',
-                    questionPlaceholder: 'e.g., Are we a good match? What can they teach me? How should we structure our sessions?',
-                    intentionsPlaceholder: 'e.g., Accelerate career growth, develop new skills, gain wisdom...'
+                    submit: 'Analyze Mentor-Mentee Dynamic'
                 },
                 'team': {
                     person1: 'Team Member 1',
                     person2: 'Team Member 2',
-                    question: 'What team dynamics would you like to explore?',
-                    intentions: 'What are your team\'s objectives?',
-                    submit: 'Analyze Team Compatibility',
-                    questionPlaceholder: 'e.g., How do these members complement each other? What roles suit them best? How to optimize collaboration?',
-                    intentionsPlaceholder: 'e.g., Build high-performing team, improve morale, achieve milestones...'
+                    submit: 'Analyze Team Compatibility'
                 },
                 'company': {
                     person1: 'Company/Brand Details',
                     person2: 'Your/Partner Details',
-                    question: 'What alignment factors are important?',
-                    intentions: 'What outcomes are you seeking?',
-                    submit: 'Analyze Brand Alignment',
-                    questionPlaceholder: 'e.g., Does this company align with my values? Will I thrive in this culture? Is this the right fit?',
-                    intentionsPlaceholder: 'e.g., Find fulfilling work, align values with career, ensure cultural fit...'
+                    submit: 'Analyze Brand Alignment'
                 },
                 'twinflame': {
                     person1: 'Your Soul Details',
                     person2: 'Twin Flame Details',
-                    question: 'What aspects of your divine connection do you seek clarity on?',
-                    intentions: 'What is your soul\'s purpose in this union?',
-                    submit: 'Reveal Twin Flame Connection',
-                    questionPlaceholder: 'e.g., Are we true twin flames? What is our divine purpose? How do we navigate separation/union?',
-                    intentionsPlaceholder: 'e.g., Achieve union, complete soul mission, heal and ascend together...'
+                    submit: 'Reveal Twin Flame Connection'
                 },
                 'soulcontract': {
                     person1: 'Your Details',
                     person2: 'Soul Contract Partner',
-                    question: 'What karmic lessons are you exploring?',
-                    intentions: 'What soul agreements are you fulfilling?',
-                    submit: 'Analyze Soul Contract',
-                    questionPlaceholder: 'e.g., What lessons are we meant to teach each other? What karma are we clearing? When will this contract complete?',
-                    intentionsPlaceholder: 'e.g., Learn soul lessons, clear karma, fulfill agreements with grace...'
+                    submit: 'Analyze Soul Contract'
                 },
                 'creative': {
                     person1: 'Your Creative Profile',
                     person2: 'Collaborator\'s Profile',
-                    question: 'What creative synergies interest you?',
-                    intentions: 'What are your creative goals?',
-                    submit: 'Analyze Creative Compatibility',
-                    questionPlaceholder: 'e.g., Will our creative styles mesh? Who should lead what aspects? How do we handle artistic differences?',
-                    intentionsPlaceholder: 'e.g., Create groundbreaking work, inspire each other, build artistic legacy...'
+                    submit: 'Analyze Creative Compatibility'
                 },
                 'parent-child': {
                     person1: 'Parent\'s Details',
                     person2: 'Child\'s Details',
-                    question: 'What aspects of your parent-child bond would you like to understand?',
-                    intentions: 'How can you nurture this relationship?',
-                    submit: 'Analyze Parent-Child Bond',
-                    questionPlaceholder: 'e.g., How can I best support my child? What challenges might we face? How do our personalities interact?',
-                    intentionsPlaceholder: 'e.g., Raise confident children, heal generational patterns, create strong bond...'
+                    submit: 'Analyze Parent-Child Bond'
                 }
             };
             
             const config = labelConfigs[relationshipType] || {
                 person1: 'First Person/Entity',
                 person2: 'Second Person/Entity',
-                question: 'What would you like to understand about this connection?',
-                intentions: 'What are your goals for this relationship?',
-                submit: 'Analyze Compatibility',
-                questionPlaceholder: 'e.g., Will we work well together? What are our strengths and challenges? How can we improve our connection?',
-                intentionsPlaceholder: 'e.g., Build a successful relationship, improve communication, achieve mutual goals...'
+                submit: 'Analyze Compatibility'
             };
             
             person1Label.textContent = config.person1;
             person2Label.textContent = config.person2;
-            questionLabel.textContent = config.question;
-            intentionsLabel.textContent = config.intentions;
             submitBtn.textContent = config.submit;
-            questionField.placeholder = config.questionPlaceholder;
-            intentionsField.placeholder = config.intentionsPlaceholder;
             
             // Scroll smoothly to the input section
             document.querySelector('.soul-input-grid').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -1532,36 +1504,28 @@
                     name1: 'Steve Jobs',
                     birthdate1: '1955-02-24',
                     name2: 'Steve Wozniak',
-                    birthdate2: '1950-08-11',
-                    question: 'Could we build a revolutionary tech company together?',
-                    intentions: 'Create products that change the world and build a billion-dollar business'
+                    birthdate2: '1950-08-11'
                 },
                 {
                     type: 'creative',
                     name1: 'John Lennon',
                     birthdate1: '1940-10-09',
                     name2: 'Paul McCartney',
-                    birthdate2: '1942-06-18',
-                    question: 'Can we create timeless music together?',
-                    intentions: 'Write songs that inspire generations and revolutionize music'
+                    birthdate2: '1942-06-18'
                 },
                 {
                     type: 'romantic',
                     name1: 'Romeo',
                     birthdate1: '1995-07-15',
                     name2: 'Juliet',
-                    birthdate2: '1997-04-22',
-                    question: 'Are we meant to be together for the long haul?',
-                    intentions: 'Build a loving partnership and create a beautiful life together'
+                    birthdate2: '1997-04-22'
                 },
                 {
                     type: 'friendship',
                     name1: 'Oprah Winfrey',
                     birthdate1: '1954-01-29',
                     name2: 'Gayle King',
-                    birthdate2: '1954-12-28',
-                    question: 'What makes our friendship so strong and lasting?',
-                    intentions: 'Support each other through life\'s ups and downs'
+                    birthdate2: '1954-12-28'
                 }
             ];
 
@@ -1577,8 +1541,6 @@
                 document.getElementById('birthdate1').value = example.birthdate1;
                 document.getElementById('name2').value = example.name2;
                 document.getElementById('birthdate2').value = example.birthdate2;
-                document.getElementById('specificQuestion').value = example.question;
-                document.getElementById('intentions').value = example.intentions;
 
                 // Scroll to the form
                 document.getElementById('name1').scrollIntoView({ behavior: 'smooth', block: 'center' });
