@@ -619,24 +619,29 @@
                 `;
                 
                 modal.innerHTML = `
-                    <div style="max-width: 1200px; margin: 0 auto; position: relative;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; position: sticky; top: 0; background: rgba(0, 0, 0, 0.98); padding: 20px 0; z-index: 10003;">
-                            <div>
-                                <h2 style="font-family: 'Orbitron', monospace; font-size: 1.8rem; color: #00f5ff;">
-                                    ${forecast.timeframe} Forecast
-                                </h2>
-                                <p style="color: rgba(255, 255, 255, 0.6);">${forecast.date} • For: ${forecast.profile?.name || 'Seeker'}</p>
-                            </div>
-                            <div style="display: flex; gap: 10px;">
-                                <button onclick="libraryManager.loadProfileFromForecast('${forecastId}')" style="background: linear-gradient(135deg, #ffd700, #ff8c00); border: none; color: #000; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600;">
-                                    📊 Generate New
-                                </button>
-                                <button onclick="this.closest('[style*=fixed]').remove()" style="background: rgba(255, 0, 102, 0.2); border: 2px solid #ff0066; color: #ff0066; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600;">
-                                    ✕ Close
-                                </button>
-                            </div>
+                    <div style="max-width: 1200px; margin: 0 auto; position: relative; padding-top: 20px;">
+                        <!-- Floating close button -->
+                        <button onclick="this.closest('[style*=fixed]').remove()" style="position: fixed; top: 20px; right: 20px; background: rgba(0, 0, 0, 0.8); border: 2px solid #00f5ff; color: #00f5ff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; z-index: 10004; display: flex; align-items: center; justify-content: center;">
+                            ✕
+                        </button>
+                        
+                        <!-- Floating action buttons -->
+                        <div style="position: fixed; bottom: 20px; right: 20px; display: flex; gap: 10px; z-index: 10004;">
+                            <button onclick="libraryManager.loadProfileFromForecast('${forecastId}')" style="background: linear-gradient(135deg, #ffd700, #ff8c00); border: none; color: #000; padding: 12px 20px; border-radius: 25px; cursor: pointer; font-weight: 600; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);">
+                                📊 Generate New Forecast
+                            </button>
                         </div>
-                        <div style="line-height: 1.8;">
+                        
+                        <!-- Header info -->
+                        <div style="text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid rgba(0, 245, 255, 0.2);">
+                            <h2 style="font-family: 'Orbitron', monospace; font-size: 1.8rem; color: #00f5ff; margin-bottom: 10px;">
+                                ${forecast.timeframe} Forecast
+                            </h2>
+                            <p style="color: rgba(255, 255, 255, 0.6);">For: ${forecast.profile?.name || 'Seeker'} • ${forecast.date}</p>
+                        </div>
+                        
+                        <!-- Forecast content -->
+                        <div style="line-height: 1.8; padding-bottom: 80px;">
                             ${forecast.content}
                         </div>
                     </div>
