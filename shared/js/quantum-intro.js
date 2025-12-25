@@ -6,13 +6,14 @@
 (function() {
     'use strict';
 
-    // Check if intro should be skipped (e.g., navigating between tools)
-    const skipIntro = sessionStorage.getItem('qm-intro-shown') === 'true';
+    // Shared localStorage key for skip functionality across all QM pages
+    const STORAGE_KEY = 'qm_intro_watched';
+    const hasWatchedBefore = localStorage.getItem(STORAGE_KEY) === 'true';
     
     // Create intro HTML elements
     function createIntroElements() {
-        // Skip if already shown this session (unless forced)
-        if (skipIntro && !window.forceQuantumIntro) {
+        // Skip if already watched before (unless forced)
+        if (hasWatchedBefore && !window.forceQuantumIntro) {
             const appContent = document.getElementById('app-content');
             if (appContent) {
                 appContent.classList.add('visible');
@@ -36,6 +37,7 @@
             </div>
             <div id="singularity"></div>
             <div id="intro-title">QUANTUM MERLIN</div>
+            ${hasWatchedBefore ? '<button id="skip-intro-btn">Skip Intro ⏭️</button>' : ''}
         `;
         document.body.insertBefore(container, document.body.firstChild);
 
@@ -61,6 +63,29 @@
                 #intro-container.fade-out {
                     opacity: 0;
                     pointer-events: none;
+                }
+
+                #skip-intro-btn {
+                    position: fixed;
+                    bottom: 30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 10001;
+                    background: rgba(0, 245, 255, 0.15);
+                    border: 1px solid rgba(0, 245, 255, 0.5);
+                    color: #00f5ff;
+                    padding: 12px 30px;
+                    border-radius: 25px;
+                    font-family: 'Orbitron', sans-serif;
+                    font-size: 0.9rem;
+                    cursor: pointer;
+                    backdrop-filter: blur(10px);
+                    transition: all 0.3s ease;
+                }
+
+                #skip-intro-btn:hover {
+                    background: rgba(0, 245, 255, 0.3);
+                    box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
                 }
 
                 #lines-canvas {
@@ -439,9 +464,18 @@
             }
         }
 
+        function skipIntro() {
+            isRunning = false;
+            complete();
+        }
+
         function complete() {
-            // Mark intro as shown for this session
-            sessionStorage.setItem('qm-intro-shown', 'true');
+            // Mark intro as watched in shared localStorage (works across all QM pages)
+            localStorage.setItem(STORAGE_KEY, 'true');
+            
+            // Hide skip button if it exists
+            const skipBtn = document.getElementById('skip-intro-btn');
+            if (skipBtn) skipBtn.style.display = 'none';
             
             container.classList.add('fade-out');
             setTimeout(() => {
@@ -454,6 +488,13 @@
 
         resize();
         window.addEventListener('resize', resize);
+        
+        // Setup skip button if it exists
+        const skipBtn = document.getElementById('skip-intro-btn');
+        if (skipBtn) {
+            skipBtn.onclick = skipIntro;
+        }
+        
         updateAnimation();
     }
 
@@ -473,11 +514,10 @@
     // Export for manual control
     window.QuantumIntro = {
         reset: function() {
-            sessionStorage.removeItem('qm-intro-shown');
+            localStorage.removeItem(STORAGE_KEY);
         },
         forcePlay: function() {
-            sessionStorage.removeItem('qm-intro-shown');
-            location.reload();
+            localStorage.removeItem(STORAGE_KEY);
         }
     };
 })();

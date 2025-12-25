@@ -164,6 +164,10 @@
         // QUANTUM MERLIN INTRO — PRODUCTION VERSION
         // ============================================
 
+        // Shared localStorage key for skip functionality across all QM pages
+        const STORAGE_KEY = 'qm_intro_watched';
+        const hasWatchedBefore = localStorage.getItem(STORAGE_KEY) === 'true';
+
         const canvas = document.getElementById('lines-canvas');
         const ctx = canvas.getContext('2d', { alpha: true });
         const container = document.getElementById('intro-container');
@@ -174,6 +178,43 @@
         const rose = document.getElementById('rose');
         const singularity = document.getElementById('singularity');
         const title = document.getElementById('title');
+
+        // Create skip button if user has watched before
+        let skipBtn = null;
+        if (hasWatchedBefore && container) {
+            skipBtn = document.createElement('button');
+            skipBtn.id = 'skip-intro-btn';
+            skipBtn.innerHTML = 'Skip Intro ⏭️';
+            skipBtn.style.cssText = `
+                position: fixed;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10001;
+                background: rgba(0, 245, 255, 0.15);
+                border: 1px solid rgba(0, 245, 255, 0.5);
+                color: #00f5ff;
+                padding: 12px 30px;
+                border-radius: 25px;
+                font-family: 'Orbitron', sans-serif;
+                font-size: 0.9rem;
+                cursor: pointer;
+                backdrop-filter: blur(10px);
+                transition: all 0.3s ease;
+            `;
+            skipBtn.onmouseover = () => {
+                skipBtn.style.background = 'rgba(0, 245, 255, 0.3)';
+                skipBtn.style.boxShadow = '0 0 20px rgba(0, 245, 255, 0.5)';
+            };
+            skipBtn.onmouseout = () => {
+                skipBtn.style.background = 'rgba(0, 245, 255, 0.15)';
+                skipBtn.style.boxShadow = 'none';
+            };
+            skipBtn.onclick = () => {
+                skipIntro();
+            };
+            container.appendChild(skipBtn);
+        }
 
         let width, height, centerX, centerY;
         let time = 0;
@@ -204,6 +245,11 @@
 
         function clamp(value, min, max) {
             return Math.max(min, Math.min(max, value));
+        }
+
+        function skipIntro() {
+            isRunning = false;
+            complete();
         }
 
         // Timeline controller
@@ -487,12 +533,12 @@
         }
 
         function complete() {
-            container.classList.add('fade-out');
-            setTimeout(() => {
-                container.style.display = 'none';
-                appContent.classList.add('visible');
-            }, 100);
-        }
+            // Mark as watched in localStorage (shared across all QM pages)
+            localStorage.setItem(STORAGE_KEY, 'true');
+            
+            // Hide skip button if exists
+            if (skipBtn) skipBtn.style.display = 'none';
+            
 
         // Initialize
         resize();

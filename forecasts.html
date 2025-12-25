@@ -4169,7 +4169,9 @@
         // INTRO ANIMATION & LOADING CONTROL
         // ========================================
         
-        const hasVisited = localStorage.getItem('qm_forecaster_visited');
+        // Shared localStorage key for skip functionality across all QM pages
+        const STORAGE_KEY = 'qm_intro_watched';
+        const hasVisited = localStorage.getItem(STORAGE_KEY) === 'true';
         const introOverlay = document.getElementById('introOverlay');
         const skipBtn = document.getElementById('skipIntro');
         const canvas = document.getElementById('lines-canvas');
@@ -4398,9 +4400,8 @@
             if (introOverlay) {
                 introOverlay.classList.add('hidden');
             }
-            if (!hasVisited) {
-                localStorage.setItem('qm_forecaster_visited', 'true');
-            }
+            // Mark as watched in shared localStorage (works across all QM pages)
+            localStorage.setItem(STORAGE_KEY, 'true');
             // Initialize user session when intro ends (if not already done)
             if (typeof initializeUserSession === 'function') {
                 setTimeout(() => initializeUserSession(), 100);
