@@ -2529,6 +2529,56 @@
             margin-top: 3px;
         }
 
+        /* WhatsApp button - Green highlight */
+        .share-option-btn.whatsapp {
+            background: rgba(37, 211, 102, 0.2);
+            border: 1px solid rgba(37, 211, 102, 0.5);
+        }
+
+        .share-option-btn.whatsapp:hover {
+            background: rgba(37, 211, 102, 0.3);
+            border-color: #25D366;
+        }
+
+        /* Native share button */
+        .share-option-btn.native-share {
+            background: rgba(157, 0, 255, 0.15);
+            border: 1px dashed rgba(157, 0, 255, 0.4);
+        }
+
+        .share-option-btn.native-share:hover {
+            background: rgba(157, 0, 255, 0.25);
+            border-style: solid;
+        }
+
+        /* Share options grid layout for 2 columns on mobile */
+        @media (min-width: 500px) {
+            .share-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .share-option-btn.visual-card {
+                grid-column: span 2;
+            }
+        }
+
+        /* Toast animations */
+        @keyframes slideUpToast {
+            from {
+                transform: translateX(-50%) translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
         /* Floating Share Button */
         .floating-share-btn {
             position: fixed;
@@ -5071,76 +5121,162 @@
             // Background gradient
             const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
             gradient.addColorStop(0, '#1a0033');
+            gradient.addColorStop(0.5, '#0d001a');
             gradient.addColorStop(1, '#0a0a1a');
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, 1200, 630);
             
-            // Load tarot card back as watermark/branding
+            // Add subtle star pattern
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+            for (let i = 0; i < 50; i++) {
+                const x = Math.random() * 1200;
+                const y = Math.random() * 630;
+                const r = Math.random() * 2;
+                ctx.beginPath();
+                ctx.arc(x, y, r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            
+            // Load appropriate image based on share type
             try {
-                const tarotBack = new Image();
-                tarotBack.crossOrigin = 'anonymous';
-                tarotBack.src = '../assets/tarot/QMTarot.png';
+                const cardImage = new Image();
+                cardImage.crossOrigin = 'anonymous';
+                
+                // For tarot shares, try to load the actual card
+                if (currentShareType === 'tarot' && currentShareDetails) {
+                    const cardName = currentShareDetails.replace(/ /g, '_');
+                    cardImage.src = `../assets/tarot/${cardName}.jpg`;
+                } else {
+                    cardImage.src = '../assets/tarot/QMTarot.png';
+                }
+                
                 await new Promise((resolve, reject) => {
-                    tarotBack.onload = resolve;
-                    tarotBack.onerror = reject;
+                    cardImage.onload = resolve;
+                    cardImage.onerror = () => {
+                        // Fallback to tarot back
+                        cardImage.src = '../assets/tarot/QMTarot.png';
+                        cardImage.onload = resolve;
+                        cardImage.onerror = reject;
+                    };
                 });
                 
-                // Semi-transparent tarot card background
-                ctx.globalAlpha = 0.15;
-                ctx.drawImage(tarotBack, 800, 100, 350, 500);
-                ctx.globalAlpha = 1;
+                // Draw card with glow effect
+                ctx.shadowColor = '#00f5ff';
+                ctx.shadowBlur = 30;
+                ctx.drawImage(cardImage, 820, 80, 320, 470);
+                ctx.shadowBlur = 0;
             } catch (e) {
-                console.log('Could not load tarot card');
+                console.log('Could not load card image');
             }
             
-            // Title
+            // Branding - Top left
+            ctx.fillStyle = 'rgba(255, 215, 0, 0.9)';
+            ctx.font = 'bold 28px Orbitron, sans-serif';
+            ctx.fillText('QUANTUM MERLIN', 60, 50);
+            
+            // Main Title
             ctx.fillStyle = '#00f5ff';
-            ctx.font = 'bold 60px Orbitron, sans-serif';
-            ctx.fillText(currentShareTitle, 60, 100);
+            ctx.font = 'bold 56px Orbitron, sans-serif';
+            ctx.fillText(currentShareTitle, 60, 140);
             
-            // Subtitle/Details
+            // Discovery/Details - with glow
+            ctx.shadowColor = '#ffd700';
+            ctx.shadowBlur = 10;
             ctx.fillStyle = '#ffd700';
-            ctx.font = '48px Rajdhani, sans-serif';
-            const detailsText = currentShareDetails.length > 40 ? currentShareDetails.substring(0, 37) + '...' : currentShareDetails;
-            ctx.fillText(detailsText, 60, 180);
+            ctx.font = 'bold 44px Rajdhani, sans-serif';
+            const detailsText = currentShareDetails.length > 30 ? currentShareDetails.substring(0, 27) + '...' : currentShareDetails;
+            ctx.fillText(detailsText, 60, 210);
+            ctx.shadowBlur = 0;
             
-            // Main message (word wrap)
-            ctx.fillStyle = '#ffffff';
-            ctx.font = '32px Rajdhani, sans-serif';
-            const words = currentShareMessage.split(' ');
-            let line = '';
-            let y = 280;
-            for (let word of words) {
-                const testLine = line + word + ' ';
-                const metrics = ctx.measureText(testLine);
-                if (metrics.width > 700 && line !== '') {
-                    ctx.fillText(line, 60, y);
-                    line = word + ' ';
-                    y += 45;
-                    if (y > 500) break; // Limit height
-                } else {
-                    line = testLine;
-                }
-            }
-            ctx.fillText(line, 60, y);
+            // Divider line
+            ctx.strokeStyle = 'rgba(0, 245, 255, 0.5)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(60, 240);
+            ctx.lineTo(700, 240);
+            ctx.stroke();
             
-            // Call to action
+            // Short teaser message (not full message)
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            ctx.font = '28px Rajdhani, sans-serif';
+            const teasers = {
+                'tarot': 'Discover what the cards reveal about YOUR path...',
+                'chinese': 'Uncover your Chinese Zodiac destiny...',
+                'astrology': 'Your cosmic identity awaits...',
+                'numerology': 'Decode the numbers guiding your life...',
+                'reality-code': 'Manifest with quantum power...',
+                'planetary': 'Align with cosmic timing...',
+                'gematria': 'Decode the sacred numbers in your name...',
+                'frequency': 'Tune into your healing vibration...',
+                'general': 'Your personalized cosmic guidance awaits...'
+            };
+            ctx.fillText(teasers[currentShareType] || teasers['general'], 60, 300);
+            
+            // Features list
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.font = '24px Rajdhani, sans-serif';
+            ctx.fillText('✨ 8 Mystical Systems Combined', 60, 370);
+            ctx.fillText('🃏 Tarot • ⭐ Astrology • 🔢 Numerology', 60, 405);
+            ctx.fillText('🐉 Chinese Zodiac • 📜 Gematria • 🔊 Frequencies', 60, 440);
+            
+            // CTA Button
             ctx.fillStyle = '#9d00ff';
-            ctx.font = 'bold 36px Rajdhani, sans-serif';
-            ctx.fillText('Get Your FREE Forecast ↗', 60, 570);
+            ctx.beginPath();
+            ctx.roundRect(60, 490, 350, 60, 30);
+            ctx.fill();
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 28px Rajdhani, sans-serif';
+            ctx.fillText('Get Your FREE Forecast →', 90, 530);
+            
+            // URL at bottom
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+            ctx.font = '20px Rajdhani, sans-serif';
+            ctx.fillText('quantummerlin.com/forecasts', 60, 600);
             
             return canvas.toDataURL('image/png');
         }
         
         async function downloadShareCard() {
-            const dataUrl = await generateShareCard();
-            const link = document.createElement('a');
-            link.download = `quantum-forecast-${currentShareType}.png`;
-            link.href = dataUrl;
-            link.click();
+            try {
+                const dataUrl = await generateShareCard();
+                const link = document.createElement('a');
+                link.download = `quantum-${currentShareType}-${Date.now()}.png`;
+                link.href = dataUrl;
+                link.click();
+                
+                // Show success toast instead of alert
+                showShareToast('🌟 Card downloaded! Share it on Instagram, Stories, or anywhere!');
+                closeShareModal();
+            } catch (e) {
+                console.error('Error generating card:', e);
+                showShareToast('⚠️ Could not generate card. Try another share option!');
+            }
+        }
+        
+        function showShareToast(message) {
+            const toast = document.createElement('div');
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: linear-gradient(135deg, #9d00ff, #00f5ff);
+                color: white;
+                padding: 15px 30px;
+                border-radius: 30px;
+                font-family: 'Rajdhani', sans-serif;
+                font-size: 1rem;
+                z-index: 10001;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                animation: slideUpToast 0.3s ease;
+            `;
+            toast.textContent = message;
+            document.body.appendChild(toast);
             
-            // Show success message
-            alert('✅ Share card downloaded! Now share it on Instagram, Facebook, or anywhere you like!');
+            setTimeout(() => {
+                toast.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
         }
         
         function shareToX() {
@@ -5153,6 +5289,13 @@
         function shareToFacebookModal() {
             const url = encodeURIComponent(generateShareURL());
             window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+            closeShareModal();
+        }
+        
+        function shareToWhatsAppModal() {
+            const url = generateShareURL();
+            const message = encodeURIComponent(currentShareMessage + '\n\n' + url);
+            window.open(`https://wa.me/?text=${message}`, '_blank');
             closeShareModal();
         }
         
@@ -5170,10 +5313,24 @@
             closeShareModal();
         }
         
+        function useNativeShare() {
+            if (navigator.share) {
+                navigator.share({
+                    title: currentShareTitle,
+                    text: currentShareMessage,
+                    url: generateShareURL()
+                }).then(() => {
+                    closeShareModal();
+                }).catch(console.log);
+            } else {
+                showShareToast('Native share not available on this device');
+            }
+        }
+        
         function copyShareLink() {
             const fullMessage = currentShareMessage + '\n\n' + generateShareURL();
             navigator.clipboard.writeText(fullMessage).then(() => {
-                alert('✅ Copied to clipboard! Paste it anywhere you like.');
+                showShareToast('✅ Copied! Paste anywhere to share.');
                 closeShareModal();
             });
         }
@@ -10121,32 +10278,40 @@
             <span class="share-modal-close" onclick="closeShareModal()">&times;</span>
             <h3>✨ Share Your Discovery ✨</h3>
             <p style="text-align: center; color: rgba(255, 255, 255, 0.8); margin-bottom: 20px; font-size: 0.95rem;">
-                Sharing = caring! Help others discover their cosmic truth 🌟
+                Share the magic • Help others discover their cosmic truth
             </p>
             <div class="share-options">
                 <button class="share-option-btn visual-card" onclick="downloadShareCard()">
                     <span class="icon">🎴</span>
-                    <span><strong>Download Visual Card</strong><br><small>Perfect for Instagram, Facebook, Stories</small></span>
+                    <span><strong>Download Visual Card</strong><br><small>📸 Perfect for Instagram, Stories, TikTok</small></span>
+                </button>
+                <button class="share-option-btn whatsapp" onclick="shareToWhatsAppModal()">
+                    <span class="icon">💬</span>
+                    <span>WhatsApp</span>
                 </button>
                 <button class="share-option-btn" onclick="shareToX()">
                     <span class="icon">𝕏</span>
-                    <span>Share on X (Twitter)</span>
+                    <span>X (Twitter)</span>
                 </button>
                 <button class="share-option-btn" onclick="shareToFacebookModal()">
                     <span class="icon">📘</span>
-                    <span>Share on Facebook</span>
+                    <span>Facebook</span>
                 </button>
                 <button class="share-option-btn" onclick="shareToTelegram()">
                     <span class="icon">✈️</span>
-                    <span>Share on Telegram</span>
+                    <span>Telegram</span>
                 </button>
                 <button class="share-option-btn" onclick="shareViaSMS()">
-                    <span class="icon">💬</span>
-                    <span>Share via Text Message</span>
+                    <span class="icon">📱</span>
+                    <span>Text Message</span>
+                </button>
+                <button class="share-option-btn native-share" onclick="useNativeShare()">
+                    <span class="icon">🚀</span>
+                    <span>More Options...</span>
                 </button>
                 <button class="share-option-btn" onclick="copyShareLink()">
                     <span class="icon">📋</span>
-                    <span>Copy Link & Message</span>
+                    <span>Copy Link</span>
                 </button>
             </div>
         </div>
