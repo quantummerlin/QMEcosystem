@@ -409,6 +409,7 @@
         <!-- Filter Buttons -->
         <div class="filter-bar">
             <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="forecast">📊 Forecasts</button>
             <button class="filter-btn" data-filter="birth-sigil">🌙 Birth Sigils</button>
             <button class="filter-btn" data-filter="tarot">🃏 Tarot</button>
             <button class="filter-btn" data-filter="affirmation">🔮 Affirmations</button>
@@ -442,6 +443,7 @@
         class LibraryManager {
             constructor() {
                 this.storageKey = 'quantumJukebox';
+                this.forecastKey = 'quantumMerlin_forecastLibrary';
                 this.currentFilter = 'all';
                 this.init();
             }
@@ -453,8 +455,22 @@
 
             getLibraryData() {
                 try {
-                    const data = localStorage.getItem(this.storageKey);
-                    return data ? JSON.parse(data) : [];
+                    // Get general library items
+                    const generalData = localStorage.getItem(this.storageKey);
+                    const generalItems = generalData ? JSON.parse(generalData) : [];
+                    
+                    // Get forecast items and normalize them
+                    const forecastData = localStorage.getItem(this.forecastKey);
+                    const forecastItems = forecastData ? JSON.parse(forecastData).map(f => ({
+                        ...f,
+                        type: 'forecast',
+                        timestamp: new Date(f.timestamp).getTime(),
+                        title: `${f.timeframe} Forecast`,
+                        name: f.profile?.name || 'Seeker'
+                    })) : [];
+                    
+                    // Combine both
+                    return [...generalItems, ...forecastItems];
                 } catch (error) {
                     console.error('Error loading library:', error);
                     return [];
@@ -463,7 +479,12 @@
 
             saveLibraryData(data) {
                 try {
-                    localStorage.setItem(this.storageKey, JSON.stringify(data));
+                    // Separate forecasts from general items
+                    const forecasts = data.filter(item => item.type === 'forecast');
+                    const generalItems = data.filter(item => item.type !== 'forecast');
+                    
+                    localStorage.setItem(this.storageKey, JSON.stringify(generalItems));
+                    // Note: forecasts are saved separately to maintain compatibility
                 } catch (error) {
                     console.error('Error saving library:', error);
                 }
@@ -509,6 +530,7 @@
                 });
 
                 const typeLabels = {
+                    'forecast': '📊 Forecast',
                     'birth-sigil': '🌙 Birth Sigil',
                     'tarot': '🃏 Tarot',
                     'affirmation': '🔮 Affirmation',
@@ -520,7 +542,20 @@
                 let contentHTML = '';
                 
                 // Render based on type
-                if (item.type === 'birth-sigil' && item.sigil) {
+                if (item.type === 'forecast') {
+                    contentHTML = `
+                        <h3>${item.timeframe || 'Daily'} Forecast</h3>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">For: ${item.profile?.name || 'Seeker'}</p>
+                        ${item.profile?.birthDate ? `<p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">🎂 ${item.profile.birthDate}</p>` : ''}
+                        <div style="margin-top: 10px; max-height: 150px; overflow: hidden; position: relative;">
+                            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">${item.content?.substring(0, 300) || ''}...</div>
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(20,20,30,1));"></div>
+                        </div>
+                        <button onclick="libraryManager.viewForecast('${item.id}')" style="margin-top: 15px; padding: 8px 16px; background: linear-gradient(135deg, #00f5ff, #9d00ff); border: none; border-radius: 8px; color: white; font-weight: 600; cursor: pointer;">
+                            👁️ View Full Forecast
+                        </button>
+                    `;
+                } else if (item.type === 'birth-sigil' && item.sigil) {
                     contentHTML = `
                         <div class="sigil-container">
                             ${item.sigil}
@@ -546,10 +581,10 @@
                 }
 
                 return `
-                    <div class="library-item" data-type="${item.type}">
+                    <div class="library-item" data-type="${item.type}" data-id="${item.id || index}">
                         <div class="library-item-header">
                             <span class="library-item-type">${typeLabels[item.type] || item.type}</span>
-                            <button class="delete-btn" onclick="libraryManager.deleteItem(${index})">Delete</button>
+                            <button class="delete-btn" onclick="libraryManager.deleteItem('${item.id || index}', '${item.type}')">Delete</button>
                         </div>
                         <div class="library-item-content">
                             ${contentHTML}
@@ -559,23 +594,88 @@
                 `;
             }
 
-            deleteItem(index) {
+            viewForecast(forecastId) {
+                const forecastData = localStorage.getItem(this.forecastKey);
+                const forecasts = forecastData ? JSON.parse(forecastData) : [];
+                const forecast = forecasts.find(f => f.id === forecastId);
+                
+                if (!forecast) {
+                    alert('Forecast not found.');
+                    return;
+                }
+                
+                // Create modal to view full forecast
+                const modal = document.createElement('div');
+                modal.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.98);
+                    z-index: 10002;
+                    overflow-y: auto;
+                    padding: 20px;
+                `;
+                
+                modal.innerHTML = `
+                    <div style="max-width: 1200px; margin: 0 auto; position: relative;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; position: sticky; top: 0; background: rgba(0, 0, 0, 0.98); padding: 20px 0; z-index: 10003;">
+                            <div>
+                                <h2 style="font-family: 'Orbitron', monospace; font-size: 1.8rem; color: #00f5ff;">
+                                    ${forecast.timeframe} Forecast
+                                </h2>
+                                <p style="color: rgba(255, 255, 255, 0.6);">${forecast.date} • For: ${forecast.profile?.name || 'Seeker'}</p>
+                            </div>
+                            <div style="display: flex; gap: 10px;">
+                                <button onclick="libraryManager.loadProfileFromForecast('${forecastId}')" style="background: linear-gradient(135deg, #ffd700, #ff8c00); border: none; color: #000; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                                    📊 Generate New
+                                </button>
+                                <button onclick="this.closest('[style*=fixed]').remove()" style="background: rgba(255, 0, 102, 0.2); border: 2px solid #ff0066; color: #ff0066; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                                    ✕ Close
+                                </button>
+                            </div>
+                        </div>
+                        <div style="line-height: 1.8;">
+                            ${forecast.content}
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(modal);
+            }
+            
+            loadProfileFromForecast(forecastId) {
+                const forecastData = localStorage.getItem(this.forecastKey);
+                const forecasts = forecastData ? JSON.parse(forecastData) : [];
+                const forecast = forecasts.find(f => f.id === forecastId);
+                
+                if (!forecast || !forecast.profile) {
+                    window.location.href = '/forecasts';
+                    return;
+                }
+                
+                // Store profile data in sessionStorage to load on forecasts page
+                sessionStorage.setItem('loadProfile', JSON.stringify(forecast.profile));
+                window.location.href = '/forecasts';
+            }
+
+            deleteItem(itemId, itemType) {
                 if (!confirm('Are you sure you want to delete this item?')) return;
 
-                const library = this.getLibraryData();
+                if (itemType === 'forecast') {
+                    // Delete from forecast storage
+                    const forecastData = localStorage.getItem(this.forecastKey);
+                    let forecasts = forecastData ? JSON.parse(forecastData) : [];
+                    forecasts = forecasts.filter(f => f.id !== itemId);
+                    localStorage.setItem(this.forecastKey, JSON.stringify(forecasts));
+                } else {
+                    // Delete from general library
+                    const library = JSON.parse(localStorage.getItem(this.storageKey) || '[]');
+                    const newLibrary = library.filter(item => (item.id || item.timestamp) !== itemId);
+                    localStorage.setItem(this.storageKey, JSON.stringify(newLibrary));
+                }
                 
-                // Filter items based on current filter
-                const filteredItems = this.currentFilter === 'all' 
-                    ? library 
-                    : library.filter(item => item.type === this.currentFilter);
-                
-                // Get the actual item to delete
-                const itemToDelete = filteredItems[index];
-                
-                // Remove from main library
-                const newLibrary = library.filter(item => item.timestamp !== itemToDelete.timestamp);
-                
-                this.saveLibraryData(newLibrary);
                 this.loadLibrary();
             }
 

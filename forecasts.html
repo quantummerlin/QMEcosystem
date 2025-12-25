@@ -10472,9 +10472,53 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
             localStorage.setItem('appInstalled', 'true');
         });
         
+        // Check for profile to load from library
+        function checkForProfileToLoad() {
+            const profileData = sessionStorage.getItem('loadProfile');
+            if (profileData) {
+                try {
+                    const profile = JSON.parse(profileData);
+                    
+                    // Load profile data into form fields
+                    if (profile.name) {
+                        const nameField = document.getElementById('firstName');
+                        if (nameField) nameField.value = profile.name;
+                    }
+                    if (profile.birthDate) {
+                        const dateField = document.getElementById('birthDate');
+                        if (dateField) dateField.value = profile.birthDate;
+                    }
+                    if (profile.birthTime) {
+                        const timeField = document.getElementById('birthTime');
+                        if (timeField) timeField.value = profile.birthTime;
+                    }
+                    if (profile.birthLocation) {
+                        const locationField = document.getElementById('birthLocation');
+                        if (locationField) locationField.value = profile.birthLocation;
+                    }
+                    
+                    // Clear the sessionStorage
+                    sessionStorage.removeItem('loadProfile');
+                    
+                    // Show success message
+                    showSuccessMessage(`✅ Profile "${profile.name}" loaded! Ready to generate a new forecast.`);
+                    
+                    // Scroll to input section
+                    const inputSection = document.getElementById('inputSection');
+                    if (inputSection) {
+                        inputSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                } catch (e) {
+                    console.error('Error loading profile:', e);
+                    sessionStorage.removeItem('loadProfile');
+                }
+            }
+        }
+        
         // Initialize library counter on page load
         document.addEventListener('DOMContentLoaded', function() {
             updateLibraryCounter();
+            checkForProfileToLoad();
         });
     </script>
 
