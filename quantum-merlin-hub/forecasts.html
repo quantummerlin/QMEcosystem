@@ -2504,6 +2504,31 @@
             font-size: 1.5rem;
         }
 
+        /* Visual Card Share Button - Make it stand out! */
+        .share-option-btn.visual-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(157, 0, 255, 0.2));
+            border: 2px solid var(--neon-gold);
+            padding: 20px;
+        }
+
+        .share-option-btn.visual-card:hover {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(157, 0, 255, 0.3));
+            border-color: var(--neon-gold);
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .share-option-btn.visual-card .icon {
+            font-size: 2rem;
+        }
+
+        .share-option-btn small {
+            display: block;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 3px;
+        }
+
         /* Floating Share Button */
         .floating-share-btn {
             position: fixed;
@@ -4979,20 +5004,22 @@
             window.open(`https://twitter.com/intent/tweet?text=${tweetText}&url=${url}`, '_blank');
         }
 
-        // Section-specific sharing - Use native share API when available
+        // Section-specific sharing - Always show modal first for maximum control
         let currentShareMessage = '';
         let currentShareTitle = '';
+        let currentShareType = '';
+        let currentShareDetails = '';
         
         function shareSectionInsight(sectionType, details) {
             const messages = {
-                'tarot': `🃏 Just pulled "${details}" in my daily forecast! This cosmic tool combines 8 mystical systems...`,
-                'chinese': `🐉 Just found out I'm a ${details}! Discover your cosmic identity with this FREE tool:`,
-                'astrology': `⭐ ${details} This multi-system forecast tool is INSANELY accurate:`,
-                'numerology': `🔢 My Life Path is ${details}! Calculate yours with 8 ancient systems:`,
-                'reality-code': `✨ My Reality Code: ${details} - Join the quantum manifestation revolution:`,
-                'planetary': `🪐 Cosmic timing: ${details}! Get your personalized celestial forecast:`,
-                'gematria': `📜 My name's gematria value: ${details} - Discover the hidden code in YOUR name:`,
-                'frequency': `🔊 My healing frequency today: ${details}! Find yours with this cosmic calculator:`
+                'tarot': `🃏 Just pulled "${details}" in my daily forecast!\n\nThis FREE tool combines 8 mystical systems (Astrology, Tarot, Numerology, Chinese Zodiac, Gematria & more) for scary-accurate cosmic guidance.\n\nGet yours now:`,
+                'chinese': `🐉 I'm a ${details}!\n\nJust discovered this with a FREE multi-system forecast tool that combines ancient wisdom from 8 different traditions.\n\nFind your cosmic identity:`,
+                'astrology': `⭐ ${details}\n\nThis multi-system forecast tool is INSANELY accurate. It combines Astrology, Tarot, Numerology, Chinese Zodiac, Gematria, Frequencies & more.\n\n100% FREE. Try it:`,
+                'numerology': `🔢 My Life Path is ${details}!\n\nCalculate yours with this FREE tool that combines 8 ancient systems for incredibly accurate cosmic guidance.\n\nDiscover your path:`,
+                'reality-code': `✨ My Reality Code: ${details}\n\nJoin the quantum manifestation revolution. When multiple people use the same code, manifestation power exponentially amplifies!\n\nGet your code:`,
+                'planetary': `🪐 My cosmic timing: ${details}\n\nPerfect timing = maximum manifestation. Get your personalized celestial forecast combining 8 mystical systems.\n\n100% FREE:`,
+                'gematria': `📜 My name's gematria value: ${details}\n\nDiscover the hidden code in YOUR name with this FREE multi-system forecast tool.\n\nUnlock your code:`,
+                'frequency': `🔊 My healing frequency: ${details}\n\nFind YOUR healing frequency with this free cosmic calculator combining 8 ancient wisdom systems.\n\nGet yours:`
             };
             
             const titles = {
@@ -5006,41 +5033,22 @@
                 'frequency': 'My Healing Frequency'
             };
             
-            currentShareMessage = messages[sectionType] || `✨ Just discovered something amazing about myself!`;
+            currentShareMessage = messages[sectionType] || `✨ Just discovered something amazing about myself with this FREE multi-system forecast tool!`;
             currentShareTitle = titles[sectionType] || 'My Quantum Discovery';
+            currentShareType = sectionType;
+            currentShareDetails = details;
             
-            // Try native Web Share API first (mobile)
-            if (navigator.share) {
-                navigator.share({
-                    title: currentShareTitle,
-                    text: currentShareMessage,
-                    url: generateShareURL()
-                }).catch(() => {
-                    // If native share fails, show modal
-                    showShareModal();
-                });
-            } else {
-                // Desktop - show modal
-                showShareModal();
-            }
+            // Always show modal first - gives user control and shows visual card option
+            showShareModal();
         }
         
         // Floating share button - shares general forecast
         function shareGeneralForecast() {
-            currentShareMessage = '✨ I just got my personalized Quantum Forecast! This tool combines 8 mystical systems for incredible accuracy.';
+            currentShareMessage = '✨ I just got my FREE personalized Quantum Forecast!\n\nThis tool combines 8 mystical systems (Astrology, Tarot, Numerology, Chinese Zodiac, Gematria, Frequencies & more) for scary-accurate cosmic guidance.\n\nTry it yourself:';
             currentShareTitle = 'My Quantum Forecast';
-            
-            if (navigator.share) {
-                navigator.share({
-                    title: currentShareTitle,
-                    text: currentShareMessage,
-                    url: generateShareURL()
-                }).catch(() => {
-                    showShareModal();
-                });
-            } else {
-                showShareModal();
-            }
+            currentShareType = 'general';
+            currentShareDetails = '';
+            showShareModal();
         }
         
         function showShareModal() {
@@ -5051,6 +5059,88 @@
         function closeShareModal() {
             const modal = document.getElementById('shareModal');
             modal.style.display = 'none';
+        }
+        
+        // Generate visual share card
+        async function generateShareCard() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1200;
+            canvas.height = 630; // Optimal for social media
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+            gradient.addColorStop(0, '#1a0033');
+            gradient.addColorStop(1, '#0a0a1a');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 630);
+            
+            // Load tarot card back as watermark/branding
+            try {
+                const tarotBack = new Image();
+                tarotBack.crossOrigin = 'anonymous';
+                tarotBack.src = '../assets/tarot/QMTarot.png';
+                await new Promise((resolve, reject) => {
+                    tarotBack.onload = resolve;
+                    tarotBack.onerror = reject;
+                });
+                
+                // Semi-transparent tarot card background
+                ctx.globalAlpha = 0.15;
+                ctx.drawImage(tarotBack, 800, 100, 350, 500);
+                ctx.globalAlpha = 1;
+            } catch (e) {
+                console.log('Could not load tarot card');
+            }
+            
+            // Title
+            ctx.fillStyle = '#00f5ff';
+            ctx.font = 'bold 60px Orbitron, sans-serif';
+            ctx.fillText(currentShareTitle, 60, 100);
+            
+            // Subtitle/Details
+            ctx.fillStyle = '#ffd700';
+            ctx.font = '48px Rajdhani, sans-serif';
+            const detailsText = currentShareDetails.length > 40 ? currentShareDetails.substring(0, 37) + '...' : currentShareDetails;
+            ctx.fillText(detailsText, 60, 180);
+            
+            // Main message (word wrap)
+            ctx.fillStyle = '#ffffff';
+            ctx.font = '32px Rajdhani, sans-serif';
+            const words = currentShareMessage.split(' ');
+            let line = '';
+            let y = 280;
+            for (let word of words) {
+                const testLine = line + word + ' ';
+                const metrics = ctx.measureText(testLine);
+                if (metrics.width > 700 && line !== '') {
+                    ctx.fillText(line, 60, y);
+                    line = word + ' ';
+                    y += 45;
+                    if (y > 500) break; // Limit height
+                } else {
+                    line = testLine;
+                }
+            }
+            ctx.fillText(line, 60, y);
+            
+            // Call to action
+            ctx.fillStyle = '#9d00ff';
+            ctx.font = 'bold 36px Rajdhani, sans-serif';
+            ctx.fillText('Get Your FREE Forecast ↗', 60, 570);
+            
+            return canvas.toDataURL('image/png');
+        }
+        
+        async function downloadShareCard() {
+            const dataUrl = await generateShareCard();
+            const link = document.createElement('a');
+            link.download = `quantum-forecast-${currentShareType}.png`;
+            link.href = dataUrl;
+            link.click();
+            
+            // Show success message
+            alert('✅ Share card downloaded! Now share it on Instagram, Facebook, or anywhere you like!');
         }
         
         function shareToX() {
@@ -5078,6 +5168,14 @@
             const message = encodeURIComponent(currentShareMessage + '\n\n' + url);
             window.location.href = `sms:?&body=${message}`;
             closeShareModal();
+        }
+        
+        function copyShareLink() {
+            const fullMessage = currentShareMessage + '\n\n' + generateShareURL();
+            navigator.clipboard.writeText(fullMessage).then(() => {
+                alert('✅ Copied to clipboard! Paste it anywhere you like.');
+                closeShareModal();
+            });
         }
         
         // Close modal when clicking outside
@@ -6529,7 +6627,7 @@
 
                 ${specialDates.length > 0 ? `
                 <div class="special-date-banner">
-                    <h3>🌟 SPECIAL COSMIC ALIGNMENT 🌟</h3>
+                    <h3>SPECIAL COSMIC ALIGNMENT</h3>
                     ${specialDates.map(date => `<p>${date.message}</p>`).join('')}
                 </div>
                 ` : ''}
@@ -10022,7 +10120,14 @@
         <div class="share-modal-content">
             <span class="share-modal-close" onclick="closeShareModal()">&times;</span>
             <h3>✨ Share Your Discovery ✨</h3>
+            <p style="text-align: center; color: rgba(255, 255, 255, 0.8); margin-bottom: 20px; font-size: 0.95rem;">
+                Sharing = caring! Help others discover their cosmic truth 🌟
+            </p>
             <div class="share-options">
+                <button class="share-option-btn visual-card" onclick="downloadShareCard()">
+                    <span class="icon">🎴</span>
+                    <span><strong>Download Visual Card</strong><br><small>Perfect for Instagram, Facebook, Stories</small></span>
+                </button>
                 <button class="share-option-btn" onclick="shareToX()">
                     <span class="icon">𝕏</span>
                     <span>Share on X (Twitter)</span>
@@ -10038,6 +10143,10 @@
                 <button class="share-option-btn" onclick="shareViaSMS()">
                     <span class="icon">💬</span>
                     <span>Share via Text Message</span>
+                </button>
+                <button class="share-option-btn" onclick="copyShareLink()">
+                    <span class="icon">📋</span>
+                    <span>Copy Link & Message</span>
                 </button>
             </div>
         </div>
