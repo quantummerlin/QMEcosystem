@@ -2,9 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Forecaster | Your Personalized Cosmic Forecast</title>
     <meta name="description" content="Get your personalized cosmic forecast using astrology, Chinese zodiac, numerology, and gematria. Multi-system forecasting for daily, weekly, monthly, and yearly insights.">
@@ -3958,12 +3955,13 @@
     <div class="container">
         <!-- Hero Section -->
         <div class="hero">
-            <!-- Library Button - Top Left - Links to /library -->
+            <!-- Library Button - Top Left -->
             <div class="library-floating">
-                <a href="/library" class="library-btn" title="View your saved items">
+                <button class="library-btn" onclick="viewLibrary()" title="View your saved forecasts">
                     <span class="library-icon">📚</span>
                     <span>Library</span>
-                </a>
+                    <span class="library-counter" id="libraryCounter">0</span>
+                </button>
             </div>
             <!-- Buy Me a Coffee - Top Right -->
             <div class="coffee-floating">
@@ -3977,7 +3975,7 @@
                 <h1>QUANTUM FORECASTER</h1>
                 <p class="tagline">8 Ancient Systems • 1 Powerful Reading • Infinite Insight</p>
                 <div class="systems">
-                    <span class="systems-text">Astrology • Chinese Zodiac • Numerology • Gematria<br>Moon Phases • Tarot • Frequencies • Planetary Hours</span>
+                    <span class="systems-text">Western Astrology • Chinese Zodiac • Numerology • Gematria<br>Moon Phases • Tarot • Frequencies • Planetary Hours</span>
                 </div>
             </div>
         </div>
@@ -5336,16 +5334,16 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                 // For tarot shares, try to load the actual card
                 if (currentShareType === 'tarot' && currentShareDetails) {
                     const cardName = currentShareDetails.replace(/ /g, '_');
-                    cardImage.src = `./assets/tarot/${cardName}.jpg`;
+                    cardImage.src = `../assets/tarot/${cardName}.jpg`;
                 } else {
-                    cardImage.src = './assets/tarot/QMTarot.png';
+                    cardImage.src = '../assets/tarot/QMTarot.png';
                 }
                 
                 await new Promise((resolve, reject) => {
                     cardImage.onload = resolve;
                     cardImage.onerror = () => {
                         // Fallback to tarot back
-                        cardImage.src = './assets/tarot/QMTarot.png';
+                        cardImage.src = '../assets/tarot/QMTarot.png';
                         cardImage.onload = resolve;
                         cardImage.onerror = reject;
                     };
@@ -5690,92 +5688,92 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
         function getTarotDeck() {
             return [
                 // MAJOR ARCANA (22 cards)
-                { id: '00-fool', suit: 'major', number: 0, name: 'The Fool', meaning: 'New beginnings, innocence, spontaneity, free spirit', guidance: 'Embrace the unknown. Take a leap of faith.', symbol: '🃏', image: './assets/tarot/The_Fool.jpg' },
-                { id: '01-magician', suit: 'major', number: 1, name: 'The Magician', meaning: 'Manifestation, resourcefulness, power, inspired action', guidance: 'You have all the tools you need. Act with intention.', symbol: '🎩', image: './assets/tarot/The_Magician.jpg' },
-                { id: '02-high-priestess', suit: 'major', number: 2, name: 'The High Priestess', meaning: 'Intuition, sacred knowledge, divine feminine, subconscious', guidance: 'Trust your inner voice. Look beyond the surface.', symbol: '🔮', image: './assets/tarot/The_High_Priestess.jpg' },
-                { id: '03-empress', suit: 'major', number: 3, name: 'The Empress', meaning: 'Femininity, beauty, nature, nurturing, abundance', guidance: 'Create and nurture. Beauty surrounds you.', symbol: '👑', image: './assets/tarot/The_Empress.jpg' },
-                { id: '04-emperor', suit: 'major', number: 4, name: 'The Emperor', meaning: 'Authority, establishment, structure, father figure', guidance: 'Take control. Build solid foundations.', symbol: '⚔️', image: './assets/tarot/The_Emperor.jpg' },
-                { id: '05-hierophant', suit: 'major', number: 5, name: 'The Hierophant', meaning: 'Spiritual wisdom, tradition, conformity, institutions', guidance: 'Seek wisdom from tradition. Honor what works.', symbol: '🏛️', image: './assets/tarot/The_Hierophant.jpg' },
-                { id: '06-lovers', suit: 'major', number: 6, name: 'The Lovers', meaning: 'Love, harmony, relationships, values alignment', guidance: 'Choose with your heart. Align your values.', symbol: '💕', image: './assets/tarot/The_Lovers.jpg' },
-                { id: '07-chariot', suit: 'major', number: 7, name: 'The Chariot', meaning: 'Control, willpower, success, determination', guidance: 'Move forward with confidence. Victory is yours.', symbol: '🏇', image: './assets/tarot/The_Chariot.jpg' },
-                { id: '08-strength', suit: 'major', number: 8, name: 'Strength', meaning: 'Strength, courage, patience, compassion', guidance: 'Inner strength conquers all. Be gentle yet firm.', symbol: '🦁', image: './assets/tarot/Strength.jpg' },
-                { id: '09-hermit', suit: 'major', number: 9, name: 'The Hermit', meaning: 'Soul searching, introspection, inner guidance', guidance: 'Go within. Your answers are there.', symbol: '🕯️', image: './assets/tarot/The_Hermit.jpg' },
-                { id: '10-wheel-of-fortune', suit: 'major', number: 10, name: 'Wheel of Fortune', meaning: 'Good luck, karma, life cycles, destiny', guidance: 'Fate is turning. Embrace the change.', symbol: '☸️', image: './assets/tarot/Wheel_of_Fortune.jpg' },
-                { id: '11-justice', suit: 'major', number: 11, name: 'Justice', meaning: 'Justice, fairness, truth, cause and effect', guidance: 'Seek truth and balance. Karma is active.', symbol: '⚖️', image: './assets/tarot/Justice.jpg' },
-                { id: '12-hanged-man', suit: 'major', number: 12, name: 'The Hanged Man', meaning: 'Pause, surrender, letting go, new perspective', guidance: 'Release control. See from a new angle.', symbol: '🙃', image: './assets/tarot/The_Hanged_Man.jpg' },
-                { id: '13-death', suit: 'major', number: 13, name: 'Death', meaning: 'Endings, transformation, transition, rebirth', guidance: 'Let go of the old. Transformation awaits.', symbol: '🦋', image: './assets/tarot/Death.jpg' },
-                { id: '14-temperance', suit: 'major', number: 14, name: 'Temperance', meaning: 'Balance, moderation, patience, purpose', guidance: 'Find the middle way. Blend opposing forces.', symbol: '🌊', image: './assets/tarot/Temperance.jpg' },
-                { id: '15-devil', suit: 'major', number: 15, name: 'The Devil', meaning: 'Shadow self, attachment, addiction, materialism', guidance: 'Break free from chains. Face your shadows.', symbol: '😈', image: './assets/tarot/The_Devil.jpg' },
-                { id: '16-tower', suit: 'major', number: 16, name: 'The Tower', meaning: 'Sudden change, upheaval, chaos, revelation', guidance: 'Breakdown leads to breakthrough. Trust the process.', symbol: '⚡', image: './assets/tarot/The_Tower.jpg' },
-                { id: '17-star', suit: 'major', number: 17, name: 'The Star', meaning: 'Hope, faith, purpose, renewal, spirituality', guidance: 'Hope shines bright. Your wishes are heard.', symbol: '⭐', image: './assets/tarot/The_Star.jpg' },
-                { id: '18-moon', suit: 'major', number: 18, name: 'The Moon', meaning: 'Illusion, fear, anxiety, subconscious, intuition', guidance: 'Not all is as it seems. Trust your intuition.', symbol: '🌙', image: './assets/tarot/The_Moon.jpg' },
-                { id: '19-sun', suit: 'major', number: 19, name: 'The Sun', meaning: 'Positivity, fun, warmth, success, vitality', guidance: 'Success and joy are yours. Shine brightly.', symbol: '☀️', image: './assets/tarot/The_Sun.jpg' },
-                { id: '20-judgment', suit: 'major', number: 20, name: 'Judgment', meaning: 'Judgment, rebirth, inner calling, absolution', guidance: 'Answer your calling. Forgive and be reborn.', symbol: '📯', image: './assets/tarot/Judgement.jpg' },
-                { id: '21-world', suit: 'major', number: 21, name: 'The World', meaning: 'Completion, integration, accomplishment, travel', guidance: 'You\'ve come full circle. Celebrate completion.', symbol: '🌍', image: './assets/tarot/The_World.jpg' },
+                { id: '00-fool', suit: 'major', number: 0, name: 'The Fool', meaning: 'New beginnings, innocence, spontaneity, free spirit', guidance: 'Embrace the unknown. Take a leap of faith.', symbol: '🃏', image: '../assets/tarot/The_Fool.jpg' },
+                { id: '01-magician', suit: 'major', number: 1, name: 'The Magician', meaning: 'Manifestation, resourcefulness, power, inspired action', guidance: 'You have all the tools you need. Act with intention.', symbol: '🎩', image: '../assets/tarot/The_Magician.jpg' },
+                { id: '02-high-priestess', suit: 'major', number: 2, name: 'The High Priestess', meaning: 'Intuition, sacred knowledge, divine feminine, subconscious', guidance: 'Trust your inner voice. Look beyond the surface.', symbol: '🔮', image: '../assets/tarot/The_High_Priestess.jpg' },
+                { id: '03-empress', suit: 'major', number: 3, name: 'The Empress', meaning: 'Femininity, beauty, nature, nurturing, abundance', guidance: 'Create and nurture. Beauty surrounds you.', symbol: '👑', image: '../assets/tarot/The_Empress.jpg' },
+                { id: '04-emperor', suit: 'major', number: 4, name: 'The Emperor', meaning: 'Authority, establishment, structure, father figure', guidance: 'Take control. Build solid foundations.', symbol: '⚔️', image: '../assets/tarot/The_Emperor.jpg' },
+                { id: '05-hierophant', suit: 'major', number: 5, name: 'The Hierophant', meaning: 'Spiritual wisdom, tradition, conformity, institutions', guidance: 'Seek wisdom from tradition. Honor what works.', symbol: '🏛️', image: '../assets/tarot/The_Hierophant.jpg' },
+                { id: '06-lovers', suit: 'major', number: 6, name: 'The Lovers', meaning: 'Love, harmony, relationships, values alignment', guidance: 'Choose with your heart. Align your values.', symbol: '💕', image: '../assets/tarot/The_Lovers.jpg' },
+                { id: '07-chariot', suit: 'major', number: 7, name: 'The Chariot', meaning: 'Control, willpower, success, determination', guidance: 'Move forward with confidence. Victory is yours.', symbol: '🏇', image: '../assets/tarot/The_Chariot.jpg' },
+                { id: '08-strength', suit: 'major', number: 8, name: 'Strength', meaning: 'Strength, courage, patience, compassion', guidance: 'Inner strength conquers all. Be gentle yet firm.', symbol: '🦁', image: '../assets/tarot/Strength.jpg' },
+                { id: '09-hermit', suit: 'major', number: 9, name: 'The Hermit', meaning: 'Soul searching, introspection, inner guidance', guidance: 'Go within. Your answers are there.', symbol: '🕯️', image: '../assets/tarot/The_Hermit.jpg' },
+                { id: '10-wheel-of-fortune', suit: 'major', number: 10, name: 'Wheel of Fortune', meaning: 'Good luck, karma, life cycles, destiny', guidance: 'Fate is turning. Embrace the change.', symbol: '☸️', image: '../assets/tarot/Wheel_of_Fortune.jpg' },
+                { id: '11-justice', suit: 'major', number: 11, name: 'Justice', meaning: 'Justice, fairness, truth, cause and effect', guidance: 'Seek truth and balance. Karma is active.', symbol: '⚖️', image: '../assets/tarot/Justice.jpg' },
+                { id: '12-hanged-man', suit: 'major', number: 12, name: 'The Hanged Man', meaning: 'Pause, surrender, letting go, new perspective', guidance: 'Release control. See from a new angle.', symbol: '🙃', image: '../assets/tarot/The_Hanged_Man.jpg' },
+                { id: '13-death', suit: 'major', number: 13, name: 'Death', meaning: 'Endings, transformation, transition, rebirth', guidance: 'Let go of the old. Transformation awaits.', symbol: '🦋', image: '../assets/tarot/Death.jpg' },
+                { id: '14-temperance', suit: 'major', number: 14, name: 'Temperance', meaning: 'Balance, moderation, patience, purpose', guidance: 'Find the middle way. Blend opposing forces.', symbol: '🌊', image: '../assets/tarot/Temperance.jpg' },
+                { id: '15-devil', suit: 'major', number: 15, name: 'The Devil', meaning: 'Shadow self, attachment, addiction, materialism', guidance: 'Break free from chains. Face your shadows.', symbol: '😈', image: '../assets/tarot/The_Devil.jpg' },
+                { id: '16-tower', suit: 'major', number: 16, name: 'The Tower', meaning: 'Sudden change, upheaval, chaos, revelation', guidance: 'Breakdown leads to breakthrough. Trust the process.', symbol: '⚡', image: '../assets/tarot/The_Tower.jpg' },
+                { id: '17-star', suit: 'major', number: 17, name: 'The Star', meaning: 'Hope, faith, purpose, renewal, spirituality', guidance: 'Hope shines bright. Your wishes are heard.', symbol: '⭐', image: '../assets/tarot/The_Star.jpg' },
+                { id: '18-moon', suit: 'major', number: 18, name: 'The Moon', meaning: 'Illusion, fear, anxiety, subconscious, intuition', guidance: 'Not all is as it seems. Trust your intuition.', symbol: '🌙', image: '../assets/tarot/The_Moon.jpg' },
+                { id: '19-sun', suit: 'major', number: 19, name: 'The Sun', meaning: 'Positivity, fun, warmth, success, vitality', guidance: 'Success and joy are yours. Shine brightly.', symbol: '☀️', image: '../assets/tarot/The_Sun.jpg' },
+                { id: '20-judgment', suit: 'major', number: 20, name: 'Judgment', meaning: 'Judgment, rebirth, inner calling, absolution', guidance: 'Answer your calling. Forgive and be reborn.', symbol: '📯', image: '../assets/tarot/Judgement.jpg' },
+                { id: '21-world', suit: 'major', number: 21, name: 'The World', meaning: 'Completion, integration, accomplishment, travel', guidance: 'You\'ve come full circle. Celebrate completion.', symbol: '🌍', image: '../assets/tarot/The_World.jpg' },
 
                 // WANDS - Fire element, passion, creativity, action
-                { id: 'wands-ace', suit: 'wands', number: 1, name: 'Ace of Wands', meaning: 'Inspiration, new opportunities, creative spark', guidance: 'Seize the moment. New creative ventures await.', symbol: '🔥', image: './assets/tarot/Ace_of_Wands.jpg' },
-                { id: 'wands-2', suit: 'wands', number: 2, name: 'Two of Wands', meaning: 'Planning, making decisions, leaving comfort', guidance: 'The world is yours. Make your choice.', symbol: '🗺️', image: './assets/tarot/Two_of_Wands.jpg' },
-                { id: 'wands-3', suit: 'wands', number: 3, name: 'Three of Wands', meaning: 'Expansion, foresight, leadership', guidance: 'Your plans are manifesting. Look ahead.', symbol: '🚢', image: './assets/tarot/Three_of_Wands.jpg' },
-                { id: 'wands-4', suit: 'wands', number: 4, name: 'Four of Wands', meaning: 'Celebration, harmony, home, community', guidance: 'Celebrate your achievements. You deserve it.', symbol: '🎉', image: './assets/tarot/Four_of_Wands.jpg' },
-                { id: 'wands-5', suit: 'wands', number: 5, name: 'Five of Wands', meaning: 'Competition, conflict, disagreements', guidance: 'Channel competitive energy productively.', symbol: '⚔️', image: './assets/tarot/Five_of_Wands.jpg' },
-                { id: 'wands-6', suit: 'wands', number: 6, name: 'Six of Wands', meaning: 'Victory, success, public recognition', guidance: 'You are winning. Accept the accolades.', symbol: '🏆', image: './assets/tarot/Six_of_Wands.jpg' },
-                { id: 'wands-7', suit: 'wands', number: 7, name: 'Seven of Wands', meaning: 'Perseverance, defensive, maintaining control', guidance: 'Stand your ground. You have the advantage.', symbol: '🛡️', image: './assets/tarot/Seven_of_Wands.jpg' },
-                { id: 'wands-8', suit: 'wands', number: 8, name: 'Eight of Wands', meaning: 'Speed, action, air travel, movement', guidance: 'Things are moving fast. Go with the flow.', symbol: '✈️', image: './assets/tarot/Eight_of_Wands.jpg' },
-                { id: 'wands-9', suit: 'wands', number: 9, name: 'Nine of Wands', meaning: 'Resilience, courage, persistence', guidance: 'Almost there. One more push to victory.', symbol: '💪', image: './assets/tarot/Nine_of_Wands.jpg' },
-                { id: 'wands-10', suit: 'wands', number: 10, name: 'Ten of Wands', meaning: 'Burden, responsibility, hard work', guidance: 'Delegate or release. Don\'t carry it all alone.', symbol: '🎒', image: './assets/tarot/Ten_of_Wands.jpg' },
-                { id: 'wands-page', suit: 'wands', number: 11, name: 'Page of Wands', meaning: 'Enthusiasm, exploration, discovery', guidance: 'Be curious. Adventure calls.', symbol: '🧭', image: './assets/tarot/Page_of_Wands.jpg' },
-                { id: 'wands-knight', suit: 'wands', number: 12, name: 'Knight of Wands', meaning: 'Energy, passion, adventure, impulsiveness', guidance: 'Take bold action. Move with confidence.', symbol: '🏇', image: './assets/tarot/Knight_of_Wands.jpg' },
-                { id: 'wands-queen', suit: 'wands', number: 13, name: 'Queen of Wands', meaning: 'Confidence, independence, determination', guidance: 'Own your power. Lead with charisma.', symbol: '👑', image: './assets/tarot/Queen_of_Wands.jpg' },
-                { id: 'wands-king', suit: 'wands', number: 14, name: 'King of Wands', meaning: 'Leadership, vision, entrepreneurial', guidance: 'Lead with vision. Inspire others.', symbol: '🦁', image: './assets/tarot/King_of_Wands.jpg' },
+                { id: 'wands-ace', suit: 'wands', number: 1, name: 'Ace of Wands', meaning: 'Inspiration, new opportunities, creative spark', guidance: 'Seize the moment. New creative ventures await.', symbol: '🔥', image: '../assets/tarot/Ace_of_Wands.jpg' },
+                { id: 'wands-2', suit: 'wands', number: 2, name: 'Two of Wands', meaning: 'Planning, making decisions, leaving comfort', guidance: 'The world is yours. Make your choice.', symbol: '🗺️', image: '../assets/tarot/Two_of_Wands.jpg' },
+                { id: 'wands-3', suit: 'wands', number: 3, name: 'Three of Wands', meaning: 'Expansion, foresight, leadership', guidance: 'Your plans are manifesting. Look ahead.', symbol: '🚢', image: '../assets/tarot/Three_of_Wands.jpg' },
+                { id: 'wands-4', suit: 'wands', number: 4, name: 'Four of Wands', meaning: 'Celebration, harmony, home, community', guidance: 'Celebrate your achievements. You deserve it.', symbol: '🎉', image: '../assets/tarot/Four_of_Wands.jpg' },
+                { id: 'wands-5', suit: 'wands', number: 5, name: 'Five of Wands', meaning: 'Competition, conflict, disagreements', guidance: 'Channel competitive energy productively.', symbol: '⚔️', image: '../assets/tarot/Five_of_Wands.jpg' },
+                { id: 'wands-6', suit: 'wands', number: 6, name: 'Six of Wands', meaning: 'Victory, success, public recognition', guidance: 'You are winning. Accept the accolades.', symbol: '🏆', image: '../assets/tarot/Six_of_Wands.jpg' },
+                { id: 'wands-7', suit: 'wands', number: 7, name: 'Seven of Wands', meaning: 'Perseverance, defensive, maintaining control', guidance: 'Stand your ground. You have the advantage.', symbol: '🛡️', image: '../assets/tarot/Seven_of_Wands.jpg' },
+                { id: 'wands-8', suit: 'wands', number: 8, name: 'Eight of Wands', meaning: 'Speed, action, air travel, movement', guidance: 'Things are moving fast. Go with the flow.', symbol: '✈️', image: '../assets/tarot/Eight_of_Wands.jpg' },
+                { id: 'wands-9', suit: 'wands', number: 9, name: 'Nine of Wands', meaning: 'Resilience, courage, persistence', guidance: 'Almost there. One more push to victory.', symbol: '💪', image: '../assets/tarot/Nine_of_Wands.jpg' },
+                { id: 'wands-10', suit: 'wands', number: 10, name: 'Ten of Wands', meaning: 'Burden, responsibility, hard work', guidance: 'Delegate or release. Don\'t carry it all alone.', symbol: '🎒', image: '../assets/tarot/Ten_of_Wands.jpg' },
+                { id: 'wands-page', suit: 'wands', number: 11, name: 'Page of Wands', meaning: 'Enthusiasm, exploration, discovery', guidance: 'Be curious. Adventure calls.', symbol: '🧭', image: '../assets/tarot/Page_of_Wands.jpg' },
+                { id: 'wands-knight', suit: 'wands', number: 12, name: 'Knight of Wands', meaning: 'Energy, passion, adventure, impulsiveness', guidance: 'Take bold action. Move with confidence.', symbol: '🏇', image: '../assets/tarot/Knight_of_Wands.jpg' },
+                { id: 'wands-queen', suit: 'wands', number: 13, name: 'Queen of Wands', meaning: 'Confidence, independence, determination', guidance: 'Own your power. Lead with charisma.', symbol: '👑', image: '../assets/tarot/Queen_of_Wands.jpg' },
+                { id: 'wands-king', suit: 'wands', number: 14, name: 'King of Wands', meaning: 'Leadership, vision, entrepreneurial', guidance: 'Lead with vision. Inspire others.', symbol: '🦁', image: '../assets/tarot/King_of_Wands.jpg' },
 
                 // CUPS - Water element, emotions, relationships, intuition
-                { id: 'cups-ace', suit: 'cups', number: 1, name: 'Ace of Cups', meaning: 'Love, new relationships, emotional awakening', guidance: 'Open your heart. Love flows in.', symbol: '💖', image: './assets/tarot/Ace_of_Cups.jpg' },
-                { id: 'cups-2', suit: 'cups', number: 2, name: 'Two of Cups', meaning: 'Partnership, unity, attraction', guidance: 'Connection deepens. Unity forms.', symbol: '💑', image: './assets/tarot/Two_of_Cups.jpg' },
-                { id: 'cups-3', suit: 'cups', number: 3, name: 'Three of Cups', meaning: 'Celebration, friendship, community', guidance: 'Celebrate with loved ones. Joy multiplies.', symbol: '🥂', image: './assets/tarot/Three_of_Cups.jpg' },
-                { id: 'cups-4', suit: 'cups', number: 4, name: 'Four of Cups', meaning: 'Apathy, contemplation, reevaluation', guidance: 'Look beyond disappointment. New gifts await.', symbol: '🤔', image: './assets/tarot/Four_of_Cups.jpg' },
-                { id: 'cups-5', suit: 'cups', number: 5, name: 'Five of Cups', meaning: 'Loss, grief, disappointment', guidance: 'Acknowledge loss, but see what remains.', symbol: '😢', image: './assets/tarot/Five_of_Cups.jpg' },
-                { id: 'cups-6', suit: 'cups', number: 6, name: 'Six of Cups', meaning: 'Nostalgia, childhood memories, innocence', guidance: 'Reconnect with your inner child. Simple joys.', symbol: '🌈', image: './assets/tarot/Six_of_Cups.jpg' },
-                { id: 'cups-7', suit: 'cups', number: 7, name: 'Seven of Cups', meaning: 'Choices, illusion, fantasy, wishful thinking', guidance: 'Choose wisely. Not all that glitters is gold.', symbol: '✨', image: './assets/tarot/Seven_of_Cups.jpg' },
-                { id: 'cups-8', suit: 'cups', number: 8, name: 'Eight of Cups', meaning: 'Walking away, seeking deeper meaning', guidance: 'Leave behind what no longer serves you.', symbol: '🚶', image: './assets/tarot/Eight_of_Cups.jpg' },
-                { id: 'cups-9', suit: 'cups', number: 9, name: 'Nine of Cups', meaning: 'Satisfaction, contentment, wishes fulfilled', guidance: 'Your wish is granted. Savor the moment.', symbol: '🌟', image: './assets/tarot/Nine_of_Cups.jpg' },
-                { id: 'cups-10', suit: 'cups', number: 10, name: 'Ten of Cups', meaning: 'Harmony, family, emotional fulfillment', guidance: 'Domestic bliss. Happiness at home.', symbol: '🏡', image: './assets/tarot/Ten_of_Cups.jpg' },
-                { id: 'cups-page', suit: 'cups', number: 11, name: 'Page of Cups', meaning: 'Creative opportunities, intuitive messages', guidance: 'Follow your heart. Creative inspiration flows.', symbol: '🎨', image: './assets/tarot/Page_of_Cups.jpg' },
-                { id: 'cups-knight', suit: 'cups', number: 12, name: 'Knight of Cups', meaning: 'Romance, charm, imagination', guidance: 'Follow your dreams. Romance beckons.', symbol: '💐', image: './assets/tarot/Knight_of_Cups.jpg' },
-                { id: 'cups-queen', suit: 'cups', number: 13, name: 'Queen of Cups', meaning: 'Compassion, intuition, emotional security', guidance: 'Trust your intuition. Nurture with love.', symbol: '🧜‍♀️', image: './assets/tarot/Queen_of_Cups.jpg' },
-                { id: 'cups-king', suit: 'cups', number: 14, name: 'King of Cups', meaning: 'Emotional balance, diplomacy, compassion', guidance: 'Lead with empathy. Balance head and heart.', symbol: '🌊', image: './assets/tarot/King_of_Cups.jpg' },
+                { id: 'cups-ace', suit: 'cups', number: 1, name: 'Ace of Cups', meaning: 'Love, new relationships, emotional awakening', guidance: 'Open your heart. Love flows in.', symbol: '💖', image: '../assets/tarot/Ace_of_Cups.jpg' },
+                { id: 'cups-2', suit: 'cups', number: 2, name: 'Two of Cups', meaning: 'Partnership, unity, attraction', guidance: 'Connection deepens. Unity forms.', symbol: '💑', image: '../assets/tarot/Two_of_Cups.jpg' },
+                { id: 'cups-3', suit: 'cups', number: 3, name: 'Three of Cups', meaning: 'Celebration, friendship, community', guidance: 'Celebrate with loved ones. Joy multiplies.', symbol: '🥂', image: '../assets/tarot/Three_of_Cups.jpg' },
+                { id: 'cups-4', suit: 'cups', number: 4, name: 'Four of Cups', meaning: 'Apathy, contemplation, reevaluation', guidance: 'Look beyond disappointment. New gifts await.', symbol: '🤔', image: '../assets/tarot/Four_of_Cups.jpg' },
+                { id: 'cups-5', suit: 'cups', number: 5, name: 'Five of Cups', meaning: 'Loss, grief, disappointment', guidance: 'Acknowledge loss, but see what remains.', symbol: '😢', image: '../assets/tarot/Five_of_Cups.jpg' },
+                { id: 'cups-6', suit: 'cups', number: 6, name: 'Six of Cups', meaning: 'Nostalgia, childhood memories, innocence', guidance: 'Reconnect with your inner child. Simple joys.', symbol: '🌈', image: '../assets/tarot/Six_of_Cups.jpg' },
+                { id: 'cups-7', suit: 'cups', number: 7, name: 'Seven of Cups', meaning: 'Choices, illusion, fantasy, wishful thinking', guidance: 'Choose wisely. Not all that glitters is gold.', symbol: '✨', image: '../assets/tarot/Seven_of_Cups.jpg' },
+                { id: 'cups-8', suit: 'cups', number: 8, name: 'Eight of Cups', meaning: 'Walking away, seeking deeper meaning', guidance: 'Leave behind what no longer serves you.', symbol: '🚶', image: '../assets/tarot/Eight_of_Cups.jpg' },
+                { id: 'cups-9', suit: 'cups', number: 9, name: 'Nine of Cups', meaning: 'Satisfaction, contentment, wishes fulfilled', guidance: 'Your wish is granted. Savor the moment.', symbol: '🌟', image: '../assets/tarot/Nine_of_Cups.jpg' },
+                { id: 'cups-10', suit: 'cups', number: 10, name: 'Ten of Cups', meaning: 'Harmony, family, emotional fulfillment', guidance: 'Domestic bliss. Happiness at home.', symbol: '🏡', image: '../assets/tarot/Ten_of_Cups.jpg' },
+                { id: 'cups-page', suit: 'cups', number: 11, name: 'Page of Cups', meaning: 'Creative opportunities, intuitive messages', guidance: 'Follow your heart. Creative inspiration flows.', symbol: '🎨', image: '../assets/tarot/Page_of_Cups.jpg' },
+                { id: 'cups-knight', suit: 'cups', number: 12, name: 'Knight of Cups', meaning: 'Romance, charm, imagination', guidance: 'Follow your dreams. Romance beckons.', symbol: '💐', image: '../assets/tarot/Knight_of_Cups.jpg' },
+                { id: 'cups-queen', suit: 'cups', number: 13, name: 'Queen of Cups', meaning: 'Compassion, intuition, emotional security', guidance: 'Trust your intuition. Nurture with love.', symbol: '🧜‍♀️', image: '../assets/tarot/Queen_of_Cups.jpg' },
+                { id: 'cups-king', suit: 'cups', number: 14, name: 'King of Cups', meaning: 'Emotional balance, diplomacy, compassion', guidance: 'Lead with empathy. Balance head and heart.', symbol: '🌊', image: '../assets/tarot/King_of_Cups.jpg' },
 
                 // SWORDS - Air element, intellect, communication, conflict
-                { id: 'swords-ace', suit: 'swords', number: 1, name: 'Ace of Swords', meaning: 'Breakthrough, clarity, new ideas', guidance: 'Truth cuts through. Clarity emerges.', symbol: '⚡', image: './assets/tarot/Aces_of_Swords.jpg' },
-                { id: 'swords-2', suit: 'swords', number: 2, name: 'Two of Swords', meaning: 'Difficult decisions, stalemate, avoidance', guidance: 'Remove the blindfold. Make a choice.', symbol: '⚖️', image: './assets/tarot/Two_of_Swords.jpg' },
-                { id: 'swords-3', suit: 'swords', number: 3, name: 'Three of Swords', meaning: 'Heartbreak, emotional pain, sorrow', guidance: 'Feel the pain. Healing follows.', symbol: '💔', image: './assets/tarot/Three_of_Swords.jpg' },
-                { id: 'swords-4', suit: 'swords', number: 4, name: 'Four of Swords', meaning: 'Rest, recovery, contemplation', guidance: 'Rest now. Recharge your batteries.', symbol: '🧘', image: './assets/tarot/Four_of_Swords.jpg' },
-                { id: 'swords-5', suit: 'swords', number: 5, name: 'Five of Swords', meaning: 'Conflict, tension, loss', guidance: 'Choose your battles. Some wins aren\'t worth it.', symbol: '⚔️', image: './assets/tarot/Five_of_Swords.jpg' },
-                { id: 'swords-6', suit: 'swords', number: 6, name: 'Six of Swords', meaning: 'Transition, change, moving on', guidance: 'Rough waters behind you. Calmer ahead.', symbol: '⛵', image: './assets/tarot/Six_of_Swords.jpg' },
-                { id: 'swords-7', suit: 'swords', number: 7, name: 'Seven of Swords', meaning: 'Deception, trickery, strategy', guidance: 'Be strategic. Watch for hidden agendas.', symbol: '🎭', image: './assets/tarot/Seven_of_Swords.jpg' },
-                { id: 'swords-8', suit: 'swords', number: 8, name: 'Eight of Swords', meaning: 'Restriction, imprisonment, self-imposed limits', guidance: 'You\'re freer than you think. Remove the blindfold.', symbol: '🔒', image: './assets/tarot/Eight_of_Swords.jpg' },
-                { id: 'swords-9', suit: 'swords', number: 9, name: 'Nine of Swords', meaning: 'Anxiety, worry, nightmares', guidance: 'Your fears are exaggerated. Dawn comes.', symbol: '😰', image: './assets/tarot/Nine_of_Swords.jpg' },
-                { id: 'swords-10', suit: 'swords', number: 10, name: 'Ten of Swords', meaning: 'Painful endings, rock bottom, betrayal', guidance: 'It\'s over. Only up from here.', symbol: '🗡️', image: './assets/tarot/Ten_of_Swords.jpg' },
-                { id: 'swords-page', suit: 'swords', number: 11, name: 'Page of Swords', meaning: 'Curiosity, mental energy, new ideas', guidance: 'Ask questions. Investigate thoroughly.', symbol: '🔍', image: './assets/tarot/Page_of_Swords.jpg' },
-                { id: 'swords-knight', suit: 'swords', number: 12, name: 'Knight of Swords', meaning: 'Ambition, action, driven to succeed', guidance: 'Act decisively. Cut through obstacles.', symbol: '🏃', image: './assets/tarot/Knight_of_Swords.jpg' },
-                { id: 'swords-queen', suit: 'swords', number: 13, name: 'Queen of Swords', meaning: 'Independent, clear thinking, direct', guidance: 'Speak truth. Think clearly. Decide wisely.', symbol: '🦅', image: './assets/tarot/Queen_of_Swords.jpg' },
-                { id: 'swords-king', suit: 'swords', number: 14, name: 'King of Swords', meaning: 'Authority, truth, intellectual power', guidance: 'Use intellect and ethics. Judge fairly.', symbol: '⚖️', image: './assets/tarot/King_of_Swords.jpg' },
+                { id: 'swords-ace', suit: 'swords', number: 1, name: 'Ace of Swords', meaning: 'Breakthrough, clarity, new ideas', guidance: 'Truth cuts through. Clarity emerges.', symbol: '⚡', image: '../assets/tarot/Aces_of_Swords.jpg' },
+                { id: 'swords-2', suit: 'swords', number: 2, name: 'Two of Swords', meaning: 'Difficult decisions, stalemate, avoidance', guidance: 'Remove the blindfold. Make a choice.', symbol: '⚖️', image: '../assets/tarot/Two_of_Swords.jpg' },
+                { id: 'swords-3', suit: 'swords', number: 3, name: 'Three of Swords', meaning: 'Heartbreak, emotional pain, sorrow', guidance: 'Feel the pain. Healing follows.', symbol: '💔', image: '../assets/tarot/Three_of_Swords.jpg' },
+                { id: 'swords-4', suit: 'swords', number: 4, name: 'Four of Swords', meaning: 'Rest, recovery, contemplation', guidance: 'Rest now. Recharge your batteries.', symbol: '🧘', image: '../assets/tarot/Four_of_Swords.jpg' },
+                { id: 'swords-5', suit: 'swords', number: 5, name: 'Five of Swords', meaning: 'Conflict, tension, loss', guidance: 'Choose your battles. Some wins aren\'t worth it.', symbol: '⚔️', image: '../assets/tarot/Five_of_Swords.jpg' },
+                { id: 'swords-6', suit: 'swords', number: 6, name: 'Six of Swords', meaning: 'Transition, change, moving on', guidance: 'Rough waters behind you. Calmer ahead.', symbol: '⛵', image: '../assets/tarot/Six_of_Swords.jpg' },
+                { id: 'swords-7', suit: 'swords', number: 7, name: 'Seven of Swords', meaning: 'Deception, trickery, strategy', guidance: 'Be strategic. Watch for hidden agendas.', symbol: '🎭', image: '../assets/tarot/Seven_of_Swords.jpg' },
+                { id: 'swords-8', suit: 'swords', number: 8, name: 'Eight of Swords', meaning: 'Restriction, imprisonment, self-imposed limits', guidance: 'You\'re freer than you think. Remove the blindfold.', symbol: '🔒', image: '../assets/tarot/Eight_of_Swords.jpg' },
+                { id: 'swords-9', suit: 'swords', number: 9, name: 'Nine of Swords', meaning: 'Anxiety, worry, nightmares', guidance: 'Your fears are exaggerated. Dawn comes.', symbol: '😰', image: '../assets/tarot/Nine_of_Swords.jpg' },
+                { id: 'swords-10', suit: 'swords', number: 10, name: 'Ten of Swords', meaning: 'Painful endings, rock bottom, betrayal', guidance: 'It\'s over. Only up from here.', symbol: '🗡️', image: '../assets/tarot/Ten_of_Swords.jpg' },
+                { id: 'swords-page', suit: 'swords', number: 11, name: 'Page of Swords', meaning: 'Curiosity, mental energy, new ideas', guidance: 'Ask questions. Investigate thoroughly.', symbol: '🔍', image: '../assets/tarot/Page_of_Swords.jpg' },
+                { id: 'swords-knight', suit: 'swords', number: 12, name: 'Knight of Swords', meaning: 'Ambition, action, driven to succeed', guidance: 'Act decisively. Cut through obstacles.', symbol: '🏃', image: '../assets/tarot/Knight_of_Swords.jpg' },
+                { id: 'swords-queen', suit: 'swords', number: 13, name: 'Queen of Swords', meaning: 'Independent, clear thinking, direct', guidance: 'Speak truth. Think clearly. Decide wisely.', symbol: '🦅', image: '../assets/tarot/Queen_of_Swords.jpg' },
+                { id: 'swords-king', suit: 'swords', number: 14, name: 'King of Swords', meaning: 'Authority, truth, intellectual power', guidance: 'Use intellect and ethics. Judge fairly.', symbol: '⚖️', image: '../assets/tarot/King_of_Swords.jpg' },
 
                 // PENTACLES - Earth element, material world, finances, career
-                { id: 'pentacles-ace', suit: 'pentacles', number: 1, name: 'Ace of Pentacles', meaning: 'New financial opportunity, prosperity, manifestation', guidance: 'Plant seeds now. Abundance grows.', symbol: '💰', image: './assets/tarot/Ace_of_Pentacles.jpg' },
-                { id: 'pentacles-2', suit: 'pentacles', number: 2, name: 'Two of Pentacles', meaning: 'Balance, adaptability, time management', guidance: 'Juggle with grace. Stay flexible.', symbol: '🤹', image: './assets/tarot/Two_of_Pentacles.jpg' },
-                { id: 'pentacles-3', suit: 'pentacles', number: 3, name: 'Three of Pentacles', meaning: 'Teamwork, collaboration, learning', guidance: 'Work together. Master your craft.', symbol: '🔨', image: './assets/tarot/Three_of_Pentacles.jpg' },
-                { id: 'pentacles-4', suit: 'pentacles', number: 4, name: 'Four of Pentacles', meaning: 'Security, control, conservation', guidance: 'Hold on, but not too tight. Balance security and flow.', symbol: '🏦', image: './assets/tarot/Four_of_Pentacles.jpg' },
-                { id: 'pentacles-5', suit: 'pentacles', number: 5, name: 'Five of Pentacles', meaning: 'Financial loss, poverty, isolation', guidance: 'Help is available. Look for the light.', symbol: '🌨️', image: './assets/tarot/Five_of_Pentacles.jpg' },
-                { id: 'pentacles-6', suit: 'pentacles', number: 6, name: 'Six of Pentacles', meaning: 'Generosity, charity, sharing wealth', guidance: 'Give and receive. Balance the flow.', symbol: '🎁', image: './assets/tarot/Six_of_Pentacles.jpg' },
-                { id: 'pentacles-7', suit: 'pentacles', number: 7, name: 'Seven of Pentacles', meaning: 'Patience, long-term view, perseverance', guidance: 'Assess progress. Harvest is coming.', symbol: '🌱', image: './assets/tarot/Seven_of_Pentacles.jpg' },
-                { id: 'pentacles-8', suit: 'pentacles', number: 8, name: 'Eight of Pentacles', meaning: 'Skill development, craftsmanship, diligence', guidance: 'Master your craft. Practice makes perfect.', symbol: '🔧', image: './assets/tarot/Eight_of_Pentacles.jpg' },
-                { id: 'pentacles-9', suit: 'pentacles', number: 9, name: 'Nine of Pentacles', meaning: 'Abundance, luxury, self-sufficiency', guidance: 'Enjoy your success. You\'ve earned it.', symbol: '🦚', image: './assets/tarot/Nine_of_Pentacles.jpg' },
-                { id: 'pentacles-10', suit: 'pentacles', number: 10, name: 'Ten of Pentacles', meaning: 'Wealth, legacy, family, long-term success', guidance: 'Build lasting wealth. Create a legacy.', symbol: '🏰', image: './assets/tarot/Ten_of_Pentacles.jpg' },
-                { id: 'pentacles-page', suit: 'pentacles', number: 11, name: 'Page of Pentacles', meaning: 'Ambition, desire to learn, new venture', guidance: 'Study and prepare. Opportunity knocks.', symbol: '📚', image: './assets/tarot/Page_of_Pentacles.jpg' },
-                { id: 'pentacles-knight', suit: 'pentacles', number: 12, name: 'Knight of Pentacles', meaning: 'Efficiency, routine, hard work', guidance: 'Stay the course. Consistent effort pays.', symbol: '🐂', image: './assets/tarot/Knight_of_Pentacles.jpg' },
-                { id: 'pentacles-queen', suit: 'pentacles', number: 13, name: 'Queen of Pentacles', meaning: 'Practical, nurturing, providing financially', guidance: 'Nurture abundance. Create comfort and security.', symbol: '🌿', image: './assets/tarot/Queen_of_Pentacles.jpg' },
-                { id: 'pentacles-king', suit: 'pentacles', number: 14, name: 'King of Pentacles', meaning: 'Wealth, business success, leadership', guidance: 'Build your empire. Lead with wisdom.', symbol: '👑', image: './assets/tarot/King_of_Pentacles.jpg' }
+                { id: 'pentacles-ace', suit: 'pentacles', number: 1, name: 'Ace of Pentacles', meaning: 'New financial opportunity, prosperity, manifestation', guidance: 'Plant seeds now. Abundance grows.', symbol: '💰', image: '../assets/tarot/Ace_of_Pentacles.jpg' },
+                { id: 'pentacles-2', suit: 'pentacles', number: 2, name: 'Two of Pentacles', meaning: 'Balance, adaptability, time management', guidance: 'Juggle with grace. Stay flexible.', symbol: '🤹', image: '../assets/tarot/Two_of_Pentacles.jpg' },
+                { id: 'pentacles-3', suit: 'pentacles', number: 3, name: 'Three of Pentacles', meaning: 'Teamwork, collaboration, learning', guidance: 'Work together. Master your craft.', symbol: '🔨', image: '../assets/tarot/Three_of_Pentacles.jpg' },
+                { id: 'pentacles-4', suit: 'pentacles', number: 4, name: 'Four of Pentacles', meaning: 'Security, control, conservation', guidance: 'Hold on, but not too tight. Balance security and flow.', symbol: '🏦', image: '../assets/tarot/Four_of_Pentacles.jpg' },
+                { id: 'pentacles-5', suit: 'pentacles', number: 5, name: 'Five of Pentacles', meaning: 'Financial loss, poverty, isolation', guidance: 'Help is available. Look for the light.', symbol: '🌨️', image: '../assets/tarot/Five_of_Pentacles.jpg' },
+                { id: 'pentacles-6', suit: 'pentacles', number: 6, name: 'Six of Pentacles', meaning: 'Generosity, charity, sharing wealth', guidance: 'Give and receive. Balance the flow.', symbol: '🎁', image: '../assets/tarot/Six_of_Pentacles.jpg' },
+                { id: 'pentacles-7', suit: 'pentacles', number: 7, name: 'Seven of Pentacles', meaning: 'Patience, long-term view, perseverance', guidance: 'Assess progress. Harvest is coming.', symbol: '🌱', image: '../assets/tarot/Seven_of_Pentacles.jpg' },
+                { id: 'pentacles-8', suit: 'pentacles', number: 8, name: 'Eight of Pentacles', meaning: 'Skill development, craftsmanship, diligence', guidance: 'Master your craft. Practice makes perfect.', symbol: '🔧', image: '../assets/tarot/Eight_of_Pentacles.jpg' },
+                { id: 'pentacles-9', suit: 'pentacles', number: 9, name: 'Nine of Pentacles', meaning: 'Abundance, luxury, self-sufficiency', guidance: 'Enjoy your success. You\'ve earned it.', symbol: '🦚', image: '../assets/tarot/Nine_of_Pentacles.jpg' },
+                { id: 'pentacles-10', suit: 'pentacles', number: 10, name: 'Ten of Pentacles', meaning: 'Wealth, legacy, family, long-term success', guidance: 'Build lasting wealth. Create a legacy.', symbol: '🏰', image: '../assets/tarot/Ten_of_Pentacles.jpg' },
+                { id: 'pentacles-page', suit: 'pentacles', number: 11, name: 'Page of Pentacles', meaning: 'Ambition, desire to learn, new venture', guidance: 'Study and prepare. Opportunity knocks.', symbol: '📚', image: '../assets/tarot/Page_of_Pentacles.jpg' },
+                { id: 'pentacles-knight', suit: 'pentacles', number: 12, name: 'Knight of Pentacles', meaning: 'Efficiency, routine, hard work', guidance: 'Stay the course. Consistent effort pays.', symbol: '🐂', image: '../assets/tarot/Knight_of_Pentacles.jpg' },
+                { id: 'pentacles-queen', suit: 'pentacles', number: 13, name: 'Queen of Pentacles', meaning: 'Practical, nurturing, providing financially', guidance: 'Nurture abundance. Create comfort and security.', symbol: '🌿', image: '../assets/tarot/Queen_of_Pentacles.jpg' },
+                { id: 'pentacles-king', suit: 'pentacles', number: 14, name: 'King of Pentacles', meaning: 'Wealth, business success, leadership', guidance: 'Build your empire. Lead with wisdom.', symbol: '👑', image: '../assets/tarot/King_of_Pentacles.jpg' }
             ];
         }
 
@@ -7309,7 +7307,7 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                             <div class="tarot-card-container" onclick="flipTarotCard(this)" style="max-width: 280px;">
                                 <div class="tarot-card">
                                     <div class="tarot-card-back">
-                                        <img src="./assets/tarot/QMTarot.png" alt="Tarot Card Back">
+                                        <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
                                         <div class="tap-hint">🔮 Tap to Reveal</div>
                                     </div>
                                     <div class="tarot-card-front">
@@ -7557,7 +7555,7 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                                     <div class="tarot-card-container" onclick="flipTarotCard(this)">
                                         <div class="tarot-card">
                                             <div class="tarot-card-back">
-                                                <img src="./assets/tarot/QMTarot.png" alt="Tarot Card Back">
+                                                <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
                                                 <div class="tap-hint">🔮 ${card.position}</div>
                                             </div>
                                             <div class="tarot-card-front">
@@ -7880,7 +7878,7 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                                     <div class="tarot-card-container" onclick="flipTarotCard(this)">
                                         <div class="tarot-card">
                                             <div class="tarot-card-back">
-                                                <img src="./assets/tarot/QMTarot.png" alt="Tarot Card Back">
+                                                <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
                                                 <div class="tap-hint">🔮 ${card.position}</div>
                                             </div>
                                             <div class="tarot-card-front">
@@ -8180,7 +8178,7 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                                     <div class="tarot-card-container yearly-card" onclick="flipTarotCard(this)">
                                         <div class="tarot-card yearly-tarot-card">
                                             <div class="tarot-card-back">
-                                                <img src="./assets/tarot/QMTarot.png" alt="Tarot Card Back">
+                                                <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
                                                 <div class="tap-hint">🔮 ${card.position}</div>
                                             </div>
                                             <div class="tarot-card-front">
@@ -8442,7 +8440,7 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
             return shadows[animal] || 'habitual reactions';
         }
 
-        // PHASE 2: Enhanced Astrology Forecast
+        // PHASE 2: Enhanced Western Astrology Forecast
         function getEnhancedWesternAstrologyForecast(zodiac, risingSign, moonSign, birthTime, birthLocation, moonPhase) {
             let html = `
                 <div class="system-item">
@@ -10224,9 +10222,7 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                 content: forecastOutput.innerHTML,
                 profile: {
                     name: document.getElementById('firstName')?.value || 'Seeker',
-                    birthDate: document.getElementById('birthDate')?.value || '',
-                    birthTime: document.getElementById('birthTime')?.value || '',
-                    birthLocation: document.getElementById('birthLocation')?.value || ''
+                    birthDate: document.getElementById('birthDate')?.value || ''
                 }
             };
             
@@ -10421,7 +10417,7 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
             
             alert('✅ Library cleared successfully!');
         }
-
+        
         // PWA Install Prompt
         let deferredPrompt;
         
@@ -10475,53 +10471,9 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
             localStorage.setItem('appInstalled', 'true');
         });
         
-        // Check for profile to load from library
-        function checkForProfileToLoad() {
-            const profileData = sessionStorage.getItem('loadProfile');
-            if (profileData) {
-                try {
-                    const profile = JSON.parse(profileData);
-                    
-                    // Load profile data into form fields
-                    if (profile.name) {
-                        const nameField = document.getElementById('firstName');
-                        if (nameField) nameField.value = profile.name;
-                    }
-                    if (profile.birthDate) {
-                        const dateField = document.getElementById('birthDate');
-                        if (dateField) dateField.value = profile.birthDate;
-                    }
-                    if (profile.birthTime) {
-                        const timeField = document.getElementById('birthTime');
-                        if (timeField) timeField.value = profile.birthTime;
-                    }
-                    if (profile.birthLocation) {
-                        const locationField = document.getElementById('birthLocation');
-                        if (locationField) locationField.value = profile.birthLocation;
-                    }
-                    
-                    // Clear the sessionStorage
-                    sessionStorage.removeItem('loadProfile');
-                    
-                    // Show success message
-                    showSuccessMessage(`✅ Profile "${profile.name}" loaded! Ready to generate a new forecast.`);
-                    
-                    // Scroll to input section
-                    const inputSection = document.getElementById('inputSection');
-                    if (inputSection) {
-                        inputSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                } catch (e) {
-                    console.error('Error loading profile:', e);
-                    sessionStorage.removeItem('loadProfile');
-                }
-            }
-        }
-        
         // Initialize library counter on page load
         document.addEventListener('DOMContentLoaded', function() {
             updateLibraryCounter();
-            checkForProfileToLoad();
         });
     </script>
 

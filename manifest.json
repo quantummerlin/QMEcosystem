@@ -2,7 +2,7 @@
   "name": "Quantum Merlin - Cosmic Forecasts & Reality Codes",
   "short_name": "Quantum Merlin",
   "description": "Your personalized cosmic guidance combining 8 mystical systems: Astrology, Tarot, Numerology, Chinese Zodiac, Gematria, Frequencies & more. Get free daily forecasts and manifestation tools.",
-  "start_url": "/quantum-merlin-hub/forecasts.html",
+  "start_url": "/forecasts",
   "display": "standalone",
   "background_color": "#0a0a0f",
   "theme_color": "#00f5ff",
@@ -81,7 +81,7 @@
       "name": "Daily Forecast",
       "short_name": "Forecast",
       "description": "Get your daily cosmic forecast",
-      "url": "/quantum-merlin-hub/forecasts.html",
+      "url": "/forecasts",
       "icons": [{"src": "/assets/tarot/QMTarot.png", "sizes": "96x96"}]
     },
     {
