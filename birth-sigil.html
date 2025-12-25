@@ -27,6 +27,19 @@
     
     <style>
         /* Page-Specific Quantum Styles */
+        :root {
+            --cosmic-bg: #000000;
+            --neon-cyan: #00f5ff;
+            --neon-purple: #9d00ff;
+            --neon-gold: #ffd700;
+            --neon-pink: #ff0066;
+            --neon-magenta: #ff00ff;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+        }
+
         *, *::before, *::after {
             box-sizing: border-box;
         }
@@ -35,12 +48,205 @@
             max-width: 100vw;
         }
         body {
-            background: #0a0a0f;
-            color: #fff;
+            font-family: 'Exo 2', sans-serif;
+            background: var(--cosmic-bg);
+            color: var(--text-primary);
+            min-height: 100vh;
             overflow-x: hidden;
-            padding-top: 90px;
+            padding-top: 0;
             max-width: 100vw;
             width: 100%;
+            position: relative;
+        }
+
+        /* Cosmic Background - Matching Forecast */
+        .cosmic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: radial-gradient(ellipse at center, #1a0033 0%, #000000 100%);
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Home Button - Center Top */
+        .home-floating {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.2) 0%, rgba(157, 0, 255, 0.2) 100%);
+            color: #ffffff;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 10px 18px;
+            border: 2px solid rgba(0, 245, 255, 0.5);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 245, 255, 0.2);
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+        }
+        
+        .home-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.4);
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.4) 0%, rgba(157, 0, 255, 0.4) 100%);
+            border-color: rgba(0, 245, 255, 1);
+        }
+        
+        .home-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Library Button - Top Left Corner */
+        .library-floating {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+        
+        /* Buy Me a Coffee - Top Right Corner */
+        .coffee-floating {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .library-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(157, 0, 255, 0.9);
+            color: #ffffff;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 10px 18px;
+            border: 2px solid rgba(0, 245, 255, 0.5);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(157, 0, 255, 0.3);
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+        }
+        
+        .library-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(157, 0, 255, 0.5);
+            background: rgba(157, 0, 255, 1);
+            border-color: rgba(0, 245, 255, 1);
+        }
+        
+        .library-icon {
+            font-size: 1.2rem;
+            animation: libraryPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes libraryPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .coffee-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 221, 0, 0.9);
+            color: #000000;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 221, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .coffee-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 221, 0, 0.5);
+            background: rgba(255, 221, 0, 1);
+        }
+
+        .coffee-btn .coffee-icon {
+            font-size: 1.2rem;
+            animation: coffeeFloat 2s ease-in-out infinite;
+        }
+
+        @keyframes coffeeFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-3px); }
+        }
+
+        @media (max-width: 768px) {
+            .home-floating {
+                top: 10px;
+            }
+            .home-btn {
+                padding: 8px 14px;
+                font-size: 0.75rem;
+            }
+            .home-btn span:not(.home-icon) {
+                display: none;
+            }
+            .library-floating {
+                top: 10px;
+                left: 10px;
+            }
+            .coffee-floating {
+                top: 10px;
+                right: 10px;
+            }
+            .coffee-btn,
+            .library-btn {
+                padding: 8px 14px;
+                font-size: 0.75rem;
+            }
+            .library-btn span:not(.library-icon) {
+                display: none;
+            }
+            .coffee-btn span:not(.coffee-icon) {
+                display: none;
+            }
         }
 
         /* World-Class Header Styling */
@@ -402,25 +608,153 @@
             justify-content: center;
         }
 
-        /* Quantum Hero Section */
-        .page-header {
+        /* Quantum Hero Section - Matching Forecast */
+        .hero {
             text-align: center;
-            margin-bottom: 50px;
-            padding: 80px 20px 50px;
+            margin-bottom: 60px;
+            padding: 120px 20px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(157, 0, 255, 0.3) 0%, rgba(0, 245, 255, 0.2) 30%, transparent 70%);
+            transform: translate(-50%, -50%);
+            animation: heroOrb 8s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, transparent 60%);
+            transform: translate(-50%, -50%);
+            animation: heroOrb 6s ease-in-out infinite reverse;
+            z-index: 0;
+        }
+
+        @keyframes heroOrb {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-subtitle {
+            font-family: 'Orbitron', monospace;
+            font-size: 1rem;
+            color: var(--neon-cyan);
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            animation: subtitleGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes subtitleGlow {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; text-shadow: 0 0 20px var(--neon-cyan); }
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #fff 0%, var(--neon-cyan) 25%, var(--neon-purple) 50%, var(--neon-gold) 75%, #fff 100%);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 25px;
+            animation: gradientShift 5s ease infinite, titleFloat 3s ease-in-out infinite;
+            text-shadow: none;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes titleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
             position: relative;
         }
 
-        .page-header::before {
-            content: '';
+        .hero .tagline::after {
+            content: '✨';
             position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0, 245, 255, 0.15) 0%, transparent 70%);
-            pointer-events: none;
-            animation: cosmicPulse 6s ease-in-out infinite;
+            right: -30px;
+            animation: sparkle 1s ease-in-out infinite;
+        }
+
+        .hero .tagline::before {
+            content: '✨';
+            position: absolute;
+            left: -30px;
+            animation: sparkle 1s ease-in-out infinite 0.5s;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .systems {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            line-height: 1.8;
+        }
+
+        .systems-text {
+            font-size: 1rem;
+            font-weight: 500;
+            background: linear-gradient(135deg, #00f5ff 0%, #9d00ff 50%, #ff0066 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 20px 40px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .tagline::before,
+            .hero .tagline::after {
+                display: none;
+            }
+        }
+
+        /* Page Header - For sections below hero */
+        .page-header {
+            display: none;
         }
 
         /* About Section */
@@ -1354,38 +1688,48 @@
 
     <!-- APP CONTENT WRAPPER -->
     <div id="app-content">
-    <!-- Quantum Background -->
-    <div class="quantum-bg">
-        <div class="quantum-grid"></div>
-        <div class="energy-orb energy-orb-1"></div>
-        <div class="energy-orb energy-orb-2"></div>
-        <div class="energy-orb energy-orb-3"></div>
+    
+    <!-- Cosmic Background -->
+    <div class="cosmic-bg"></div>
+    <div class="stars" id="starfield"></div>
+    
+    <!-- Floating Buttons -->
+    <div class="home-floating">
+        <a href="/" class="home-btn">
+            <span class="home-icon">🏠</span>
+            <span>Home</span>
+        </a>
+    </div>
+    
+    <div class="library-floating">
+        <a href="/library" class="library-btn">
+            <span class="library-icon">📚</span>
+            <span>My Library</span>
+        </a>
+    </div>
+    
+    <div class="coffee-floating">
+        <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="coffee-btn">
+            <span class="coffee-icon">☕</span>
+            <span>Support</span>
+        </a>
     </div>
 
-    <!-- Starfield -->
-    <div class="starfield" id="starfield"></div>
-
-    <!-- Header -->
-    <header class="qrc-header">
-        <div class="qrc-header-inner">
-            <a href="/index.html" class="qrc-logo">
-                <div class="qrc-logo-icon">🧙‍♂️</div>
-                <div class="qrc-logo-text">
-                    Quantum Merlin
-                    <span>Mystical Tools & Sacred Frequencies</span>
-                </div>
-            </a>
-            <nav class="qrc-nav-actions">
-                <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="qrc-coffee-btn" title="Buy Me a Coffee" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FFDD00, #FFA500); color: #000; font-family: 'Orbitron', sans-serif; font-weight: 600; border-radius: 14px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 221, 0, 0.3);">
-                    <span style="font-size: 1.8rem;">☕</span>
-                </a>
-            </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle">Quantum Merlin Presents</p>
+            <h1>🌙 Birth Sigil Generator</h1>
+            <p class="tagline">Create a unique cosmic signature based on your exact birth moment</p>
+            <div class="systems">
+                <span class="systems-text">🌑 Lunar Phase • ✨ Stellar Alignment • 🔮 Sacred Geometry • 🌌 Celestial Mapping</span>
+            </div>
         </div>
-    </header>
+    </section>
 
     <!-- Main Content -->
     <main class="generator-container">
-        <!-- Page Header -->
+        <!-- Old Page Header (hidden, replaced by hero) -->
         <div class="page-header">
             <h1>✨ Quantum Birth Sigil Generator</h1>
             <p class="subtitle">Create a unique sigil for any date, time, and place based on lunar and stellar alignment</p>
@@ -1563,6 +1907,11 @@
                     <div class="cross-tool-icon">🃏</div>
                     <div class="cross-tool-name">Quantum Tarot</div>
                     <div class="cross-tool-desc">Guidance for using your sigil</div>
+                </a>
+                <a href="/forecasts" class="cross-tool-card">
+                    <div class="cross-tool-icon">🔮</div>
+                    <div class="cross-tool-name">Quantum Forecaster</div>
+                    <div class="cross-tool-desc">8 systems in one reading</div>
                 </a>
                 <a href="/library" class="cross-tool-card">
                     <div class="cross-tool-icon">📚</div>
