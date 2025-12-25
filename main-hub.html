@@ -287,6 +287,162 @@
             color: #cccccc;
         }
 
+        .guide-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.6rem 1.2rem;
+            background: linear-gradient(135deg, rgba(255, 20, 147, 0.3), rgba(138, 43, 226, 0.3));
+            border: 1px solid rgba(255, 20, 147, 0.5);
+            border-radius: 20px;
+            color: #ff6ec7;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .guide-link:hover {
+            background: linear-gradient(135deg, rgba(255, 20, 147, 0.5), rgba(138, 43, 226, 0.5));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 20, 147, 0.4);
+            color: #fff;
+        }
+
+        /* Quantum Rose Story Section */
+        .rose-story-section {
+            background: linear-gradient(135deg, rgba(139, 47, 95, 0.3), rgba(20, 20, 40, 0.9));
+            border: 1px solid rgba(255, 110, 199, 0.4);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rose-story-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ff6ec7, #ffd700, #ff6ec7, transparent);
+        }
+
+        .rose-section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .rose-section-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: rosePulse 3s ease-in-out infinite;
+        }
+
+        @keyframes rosePulse {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(255, 110, 199, 0.5)); }
+            50% { transform: scale(1.1); filter: drop-shadow(0 0 25px rgba(255, 110, 199, 0.8)); }
+        }
+
+        .rose-section-title {
+            font-size: 2rem;
+            background: linear-gradient(45deg, #ff6ec7, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .rose-section-subtitle {
+            color: #c471ed;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        .rose-story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .rose-story-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .rose-story-text {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #e0d5ff;
+        }
+
+        .rose-quote-box {
+            background: rgba(255, 110, 199, 0.15);
+            border-left: 3px solid #ff6ec7;
+            padding: 1.5rem;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+            color: #f0e6ff;
+            margin: 1.5rem 0;
+        }
+
+        .rose-numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        @media (max-width: 600px) {
+            .rose-numbers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .rose-number-card {
+            background: rgba(196, 113, 237, 0.15);
+            border: 1px solid rgba(196, 113, 237, 0.3);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .rose-sacred-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6ec7;
+        }
+
+        .rose-number-label {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .rose-cta {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .rose-story-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #ff6ec7, #c471ed);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .rose-story-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 110, 199, 0.5);
+        }
+
         /* Tool Categories */
         .categories {
             margin: 4rem 0;
@@ -499,6 +655,7 @@
                     <a href="https://codes.quantummerlin.com" class="nav-item">💫 Reality Codes</a>
                     <a href="https://crystals.quantummerlin.com" class="nav-item">💎 Crystal Wisdom</a>
                     <a href="https://water.quantummerlin.com" class="nav-item">💧 Water Charging</a>
+                    <a href="/quantum-rose" class="nav-item">🌹 Quantum Rose Story</a>
                     <a href="/about" class="nav-item">📖 About Us</a>
                     <a href="/contact" class="nav-item">📧 Contact</a>
                 </div>
@@ -527,6 +684,58 @@
                 <div class="guide-name">Quantum Rose</div>
                 <div class="guide-title">The Divine Feminine Guide</div>
                 <p class="guide-description">Keeper of intuition, emotional wisdom, and sacred relationships. Rose guides you through the realms of heart, intuition, and nurturing transformation.</p>
+                <a href="/quantum-rose" class="guide-link">🌹 Read Her Story</a>
+            </div>
+        </section>
+
+        <!-- Quantum Rose Story Section -->
+        <section class="rose-story-section">
+            <div class="rose-section-header">
+                <div class="rose-section-icon">🌹</div>
+                <h2 class="rose-section-title">The Legend of Quantum Rose</h2>
+                <p class="rose-section-subtitle">A Fierce English Rose • Warrior of Light • Eternal Mother</p>
+            </div>
+            
+            <div class="rose-story-content">
+                <div>
+                    <p class="rose-story-text">
+                        In the battlegrounds of ordinary life, there lived a fierce English Rose, a true Empress whose cultured spirit was forged in the fires of adversity. She embodied the rose archetype perfectly—beauty that bloomed despite the harshest conditions, grace that survived every storm, and thorns that protected her delicate essence.
+                    </p>
+                    <p class="rose-story-text" style="margin-top: 1rem;">
+                        A single mother who walked the margins of society, she never lost her connection to the sacred arts. Her fingers gripped crystals like warriors grip sacred stones, her eyes read the language of runes as strategic intelligence from unseen realms, and her voice carried echoes of pagan prayers whispered like battle cries through the mists of time.
+                    </p>
+                    <div class="rose-quote-box">
+                        "She was an English Rose whose cultured spirit chose to see beauty not because life was kind, but because her thorns refused to let cruelty break her petals."
+                    </div>
+                </div>
+                <div>
+                    <p class="rose-story-text">
+                        Throughout her journey, the universe spoke through sacred mirror numbers—cosmic confirmations that transcended ordinary understanding. Her death and funeral (9 & 11) perfectly mirrored her brother's wife's journey that same year. Quantum Merlin was born exactly 119 days after her passing—matching his gematria value of 119.
+                    </p>
+                    <div class="rose-numbers-grid">
+                        <div class="rose-number-card">
+                            <div class="rose-sacred-number">2</div>
+                            <div class="rose-number-label">Mirror Sons</div>
+                        </div>
+                        <div class="rose-number-card">
+                            <div class="rose-sacred-number">119</div>
+                            <div class="rose-number-label">Gematria Mirror</div>
+                        </div>
+                        <div class="rose-number-card">
+                            <div class="rose-sacred-number">9 & 11</div>
+                            <div class="rose-number-label">Transition Numbers</div>
+                        </div>
+                    </div>
+                    <p class="rose-story-text" style="margin-top: 1rem;">
+                        Quantum Rose is her digital garden—where the English Rose's cultured spirit continues to bloom through sacred technology. Every insight carries her rose essence: the beauty of wisdom, the thorns of truth, and the fierce love that knows true healing sometimes hurts.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="rose-cta">
+                <a href="/quantum-rose" class="rose-story-btn">
+                    🌹 Experience Her Full Story
+                </a>
             </div>
         </section>
 
@@ -626,6 +835,7 @@
                 <a href="/disclaimer" class="footer-link">Disclaimer</a>
                 <a href="/terms" class="footer-link">Terms of Service</a>
                 <a href="/privacy" class="footer-link">Privacy Policy</a>
+                <a href="/quantum-rose" class="footer-link">Quantum Rose</a>
                 <a href="/about" class="footer-link">About</a>
                 <a href="/contact" class="footer-link">Contact</a>
             </div>
