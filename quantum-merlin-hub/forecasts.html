@@ -2394,6 +2394,34 @@
             box-shadow: 0 5px 20px rgba(255, 0, 102, 0.3);
         }
 
+        /* Section Share Button */
+        .section-share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: rgba(0, 245, 255, 0.1);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 20px;
+            color: var(--neon-cyan);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .section-share-btn:hover {
+            background: rgba(0, 245, 255, 0.2);
+            border-color: var(--neon-cyan);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 245, 255, 0.3);
+        }
+
+        .section-share-btn .icon {
+            font-size: 1rem;
+        }
+
         /* Email Capture */
         .email-capture {
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(0, 245, 255, 0.1) 100%);
@@ -4719,6 +4747,23 @@
             window.open(`https://twitter.com/intent/tweet?text=${tweetText}&url=${url}`, '_blank');
         }
 
+        // Section-specific sharing
+        function shareSectionInsight(sectionType, details) {
+            const messages = {
+                'tarot': `🃏 Just pulled "${details}" in my daily forecast! This cosmic tool combines 8 mystical systems...`,
+                'chinese': `🐉 Just found out I'm a ${details}! Discover your cosmic identity with this FREE tool:`,
+                'astrology': `⭐ ${details} This multi-system forecast tool is INSANELY accurate:`,
+                'numerology': `🔢 My Life Path is ${details}! Calculate yours with 8 ancient systems:`,
+                'reality-code': `✨ My Reality Code: ${details} - Join the quantum manifestation revolution:`,
+                'planetary': `🪐 Cosmic timing: ${details}! Get your personalized celestial forecast:`,
+                'gematria': `📜 My name's gematria value: ${details} - Discover the hidden code in YOUR name:`,
+                'frequency': `🔊 My healing frequency today: ${details}! Find yours with this cosmic calculator:`
+            };
+            
+            const message = messages[sectionType] || `✨ Just discovered something amazing about myself!`;
+            shareToTwitter(message);
+        }
+
         function shareToFacebook() {
             const url = encodeURIComponent(generateShareURL());
             window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
@@ -6219,6 +6264,9 @@
                     </div>
                     <div class="system-content">
                         ${getEnhancedWesternAstrologyForecast(zodiac, risingSign, moonSign, birthTime, birthLocation, moonPhase)}
+                        <button class="section-share-btn" onclick="shareSectionInsight('astrology', '${zodiac.name}${risingSign ? ' Rising ' + risingSign.name : ''}')">
+                            <span class="icon">🐦</span> Share My Cosmic Identity
+                        </button>
                     </div>
                 </div>
 
@@ -6229,6 +6277,9 @@
                     </div>
                     <div class="system-content">
                         ${getEnhancedChineseZodiacForecast(chinese, moonPhase)}
+                        <button class="section-share-btn" onclick="shareSectionInsight('chinese', '${chinese.element} ${chinese.animal}')">
+                            <span class="icon">🐦</span> Share My Zodiac Discovery
+                        </button>
                     </div>
                 </div>
 
@@ -6239,6 +6290,9 @@
                     </div>
                     <div class="system-content">
                         ${getEnhancedNumerologyForecast(lifePath, personalYear, birth)}
+                        <button class="section-share-btn" onclick="shareSectionInsight('numerology', 'Life Path ${lifePath}')">
+                            <span class="icon">🐦</span> Share My Life Path
+                        </button>
                     </div>
                 </div>
 
@@ -6299,6 +6353,9 @@
                             </div>
                         </div>
                         ` : ''}
+                        <button class="section-share-btn" onclick="shareSectionInsight('planetary', '${moonPhase.phase} & ${planetaryHour.planet} Hour')">
+                            <span class="icon">🐦</span> Share My Cosmic Timing
+                        </button>
                     </div>
                 </div>
 
@@ -6310,6 +6367,9 @@
                     </div>
                     <div class="system-content">
                         ${getEnhancedGematriaForecast(fullName, gematria, birth)}
+                        <button class="section-share-btn" onclick="shareSectionInsight('gematria', '${gematria}')">
+                            <span class="icon">🐦</span> Share My Gematria
+                        </button>
                     </div>
                 </div>
                 ` : ''}
@@ -6358,6 +6418,9 @@
                                 <p>${getFrequencyScience(frequencyData.hz)}</p>
                             </div>
                         </div>
+                        <button class="section-share-btn" onclick="shareSectionInsight('frequency', '${frequencyData.hz} Hz')">
+                            <span class="icon">🐦</span> Share My Healing Frequency
+                        </button>
                     </div>
                 </div>
 
@@ -6474,30 +6537,14 @@
                                     <p style="line-height: 1.8;">Focus on embodying ${tarotCard.name}'s energy throughout your day. ${tarotCard.suit === 'major' ? 'This Major Arcana card signals a significant theme in your daily journey.' : 'This card encourages you to work with ' + tarotCard.suit + ' energy.'} Meditate on this message during your most powerful hours - pay attention to portal times like 11:11, 2:22, or your personal power number ${lifePath}.</p>
                                 </div>
                             </div>
+                            <button class="section-share-btn" onclick="shareSectionInsight('tarot', '${tarotCard.name}')">
+                                <span class="icon">🐦</span> Share My Tarot Card
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
-
-                <div class="share-section">
-                    <h4>✨ Share Your Cosmic Journey</h4>
-                    <p>Your friends deserve this magic too! 💫</p>
-                    <div class="share-buttons">
-                        <button class="share-btn twitter" onclick="shareToTwitter('🌟 Just discovered my ${zodiac.name} cosmic blueprint! The accuracy is mind-blowing... this FREE tool combines astrology, numerology, Chinese zodiac & more. You NEED to try this:')">
-                            <span>𝕏</span> Tweet
-                        </button>
-                        <button class="share-btn facebook" onclick="shareToFacebook()">
-                            <span>f</span> Share
-                        </button>
-                        <button class="share-btn whatsapp" onclick="shareToWhatsApp('OMG!! 😱 I just got the most ACCURATE cosmic forecast of my life! ✨ It combines 8 mystical systems and knows me better than I know myself... You have to try this (it\'s FREE):')">
-                            <span>💬</span> WhatsApp
-                        </button>
-                        <button class="share-btn copy" onclick="copyForecastLink()">
-                            <span>📋</span> Copy Link
-                        </button>
-                    </div>
-                </div>
                 
                 <div class="bottom-timeframe-toggle">
                     <h4>Have you read the extended readings? Click here to view them or save to library to read them later</h4>
