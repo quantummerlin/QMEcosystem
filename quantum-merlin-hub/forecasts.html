@@ -4873,11 +4873,26 @@
             localStorage.setItem('quantumRealityCodes', JSON.stringify(codes));
         }
         
-        // Copy Reality Code to clipboard
+        // Copy Reality Code to clipboard with viral message
         function copyRealityCode(code, statement) {
-            const text = `${code}\n\n"${statement}"\n\nCreate yours at: quantummerlin.com`;
+            const text = `🌟 QUANTUM REALITY CODE: ${code} 🌟
+
+💫 "${statement}"
+
+✨ Comment my code "${code}" below to amplify my manifestation!
+
+🔮 IMPORTANT: By supporting my code, you CLEAR BLOCKAGES in your own manifestation field! When you help me, you help yourself. This is quantum reciprocity in action.
+
+🚀 Drop your code below and I'll support yours too!
+
+Together we manifest faster. The more we support each other, the more powerful we ALL become.
+
+#QuantumRealityCode #QuantumReciprocity #CollectiveManifestation #Manifestation
+
+———
+Get your FREE code: quantummerlin.com/quantum-merlin-hub/forecasts.html`;
             navigator.clipboard.writeText(text).then(() => {
-                showShareToast('Reality Code copied! Share it to amplify! ✨');
+                showShareToast('Copied! Paste into community below 👇');
             });
         }
         
@@ -7213,6 +7228,9 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                                             </div>
                                         </div>
                                         
+                                        <button class="reality-code-btn primary" onclick="copyRealityCode('${code}', \`${primarySuggestion.statement.replace(/'/g, "\\'")}\`)" style="width: 100%; margin-top: 15px; padding: 15px; font-size: 1.1rem;">
+                                            📋 Copy Code & Message - Paste into Community Below 👇
+                                        </button>
 
                                     </div>
                                     
@@ -7223,6 +7241,9 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                                                 <div class="reality-match">${s.icon} ${s.match}% Match - ${s.source}</div>
                                                 <div class="reality-statement" style="font-size: 1.1rem;">"${s.statement}"</div>
                                                 <div class="reality-code-display" style="font-size: 1.3rem;">${altCode}</div>
+                                                <button class="reality-code-btn" onclick="copyRealityCode('${altCode}', \`${s.statement.replace(/'/g, "\\'")}\`)" style="width: 100%; margin-top: 10px;">
+                                                    📋 Copy & Paste into Community
+                                                </button>
                                             </div>
                                         `;
                                     }).join('')}
