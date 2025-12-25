@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- No Cache -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <title>Quantum Rose | The Empress's Legacy | Quantum Merlin</title>
+    <meta name="description" content="The sacred story of Quantum Rose - A fierce English Rose, warrior of light, and mother whose wisdom was forged in life's battles. Her spirit continues through Quantum Merlin.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum Rose | The Empress's Legacy">
+    <meta property="og:description" content="A fierce English Rose whose cultured spirit was forged in the fires of adversity. Her sacred mathematics continue to guide souls through the quantum realm.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/quantum-rose">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --rose-pink: #ff6ec7;
+            --rose-magenta: #c471ed;
+            --rose-deep: #8b2f5f;
+            --quantum-cyan: #00f5ff;
+            --gold: #ffd700;
+            --dark-bg: #0a0a0f;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: var(--dark-bg);
+            min-height: 100vh;
+            color: #f0e6ff;
+            line-height: 1.9;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .cosmic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(255, 110, 199, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(196, 113, 237, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(139, 47, 95, 0.2) 0%, transparent 70%),
+                linear-gradient(180deg, #0a0a0f 0%, #1a0025 50%, #0a0a0f 100%);
+            z-index: -3;
+        }
+
+        /* Rose Petals Animation */
+        .petal-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .petal {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(ellipse at 30% 30%, var(--rose-pink), var(--rose-deep));
+            border-radius: 50% 0 50% 50%;
+            opacity: 0;
+            animation: petalFall 15s infinite;
+            filter: blur(1px);
+        }
+
+        @keyframes petalFall {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px) rotate(0deg) scale(0.5);
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.4;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100vh) rotate(720deg) scale(0.3);
+            }
+        }
+
+        /* Star Field */
+        .star-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 4s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+
+        /* Header */
+        .qm-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 15px 30px;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 110, 199, 0.2);
+        }
+
+        .qm-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .qm-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .qm-logo-icon {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--rose-pink), var(--rose-magenta));
+            border-radius: 12px;
+            font-size: 1.5rem;
+            box-shadow: 0 0 20px rgba(255, 110, 199, 0.5);
+        }
+
+        .qm-logo-text {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--rose-pink), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--rose-pink);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .empress-symbol {
+            font-size: 8rem;
+            margin-bottom: 30px;
+            animation: roseGlow 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px rgba(255, 110, 199, 0.8));
+        }
+
+        @keyframes roseGlow {
+            0%, 100% { 
+                transform: scale(1) rotate(0deg);
+                filter: drop-shadow(0 0 30px rgba(255, 110, 199, 0.8));
+            }
+            50% { 
+                transform: scale(1.05) rotate(5deg);
+                filter: drop-shadow(0 0 50px rgba(255, 110, 199, 1));
+            }
+        }
+
+        .hero-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--rose-pink) 0%, var(--gold) 50%, var(--rose-magenta) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 60px rgba(255, 110, 199, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+            margin-bottom: 40px;
+            letter-spacing: 0.2em;
+        }
+
+        .hero-dates {
+            font-family: 'Orbitron', monospace;
+            font-size: 1rem;
+            color: var(--rose-pink);
+            letter-spacing: 0.3em;
+            opacity: 0.8;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator span {
+            display: block;
+            width: 30px;
+            height: 50px;
+            border: 2px solid var(--rose-pink);
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .scroll-indicator span::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 10px;
+            background: var(--rose-pink);
+            border-radius: 3px;
+            animation: scrollDown 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        @keyframes scrollDown {
+            0% { opacity: 1; top: 8px; }
+            100% { opacity: 0; top: 25px; }
+        }
+
+        /* Main Content */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px 100px;
+        }
+
+        /* Story Sections */
+        .story-section {
+            background: linear-gradient(135deg, rgba(139, 47, 95, 0.2), rgba(10, 10, 15, 0.8));
+            border: 1px solid rgba(255, 110, 199, 0.3);
+            border-radius: 30px;
+            padding: 60px 50px;
+            margin-bottom: 60px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--rose-pink), var(--gold), var(--rose-magenta), transparent);
+        }
+
+        .section-icon {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--rose-pink);
+            text-align: center;
+            margin-bottom: 40px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--rose-pink), transparent);
+            margin: 20px auto 0;
+        }
+
+        .story-text {
+            font-size: 1.2rem;
+            line-height: 2;
+            margin-bottom: 30px;
+            text-align: justify;
+            color: rgba(240, 230, 255, 0.9);
+        }
+
+        .story-text:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background: linear-gradient(135deg, rgba(255, 110, 199, 0.15), rgba(196, 113, 237, 0.1));
+            border-left: 4px solid var(--rose-pink);
+            border-right: 4px solid var(--rose-magenta);
+            padding: 30px 40px;
+            margin: 40px 0;
+            border-radius: 0 20px 20px 0;
+            font-style: italic;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '🌹';
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            font-size: 1.5rem;
+            background: var(--dark-bg);
+            padding: 0 10px;
+        }
+
+        /* Sacred Numbers */
+        .sacred-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .number-card {
+            background: linear-gradient(135deg, rgba(196, 113, 237, 0.1), rgba(139, 47, 95, 0.2));
+            border: 2px solid rgba(196, 113, 237, 0.4);
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .number-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 110, 199, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .number-card:hover::before {
+            left: 100%;
+        }
+
+        .number-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--rose-pink);
+            box-shadow: 0 20px 40px rgba(255, 110, 199, 0.3);
+        }
+
+        .sacred-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--rose-pink), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .number-meaning {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 0.1em;
+        }
+
+        /* Mirror Equation */
+        .mirror-section {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(139, 47, 95, 0.3));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 25px;
+            padding: 50px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .mirror-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 30px;
+            letter-spacing: 0.2em;
+        }
+
+        .mirror-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 110, 199, 0.2);
+        }
+
+        .mirror-row:last-child {
+            border-bottom: none;
+        }
+
+        .mirror-label {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .mirror-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            color: var(--rose-pink);
+            font-weight: 700;
+        }
+
+        .mirror-equals {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 20px 0;
+        }
+
+        /* Poem Section */
+        .poem-section {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.05), rgba(255, 110, 199, 0.1));
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            border-radius: 30px;
+            padding: 60px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .poem {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            line-height: 2.5;
+            font-style: italic;
+            color: rgba(240, 230, 255, 0.95);
+            white-space: pre-line;
+        }
+
+        /* Legacy Section */
+        .legacy-section {
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .legacy-rose {
+            font-size: 6rem;
+            margin-bottom: 30px;
+            animation: pulseRose 3s ease-in-out infinite;
+        }
+
+        @keyframes pulseRose {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(255, 110, 199, 0.6)); }
+            50% { transform: scale(1.1); filter: drop-shadow(0 0 40px rgba(255, 110, 199, 1)); }
+        }
+
+        .legacy-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--rose-pink), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .legacy-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .legacy-quote {
+            font-size: 1.2rem;
+            color: var(--rose-pink);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* CTA Buttons */
+        .cta-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 35px;
+            background: linear-gradient(135deg, var(--rose-pink), var(--rose-magenta));
+            color: white;
+            text-decoration: none;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 110, 199, 0.5);
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--rose-pink);
+            color: var(--rose-pink);
+        }
+
+        .cta-btn.secondary:hover {
+            background: var(--rose-pink);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255, 110, 199, 0.2);
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--rose-pink);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .empress-symbol { font-size: 5rem; }
+            .story-section { padding: 40px 25px; }
+            .section-title { font-size: 1.5rem; }
+            .story-text { font-size: 1.1rem; }
+            .poem { font-size: 1.1rem; }
+            .sacred-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .mirror-row { flex-direction: column; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="cosmic-bg"></div>
+    <div class="star-field" id="starField"></div>
+    <div class="petal-container" id="petalContainer"></div>
+
+    <!-- Header -->
+    <header class="qm-header">
+        <div class="qm-header-inner">
+            <a href="/" class="qm-logo">
+                <div class="qm-logo-icon">🌹</div>
+                <div class="qm-logo-text">Quantum Rose</div>
+            </a>
+            <nav class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/forecasts" class="nav-link">Forecaster</a>
+                <a href="/library" class="nav-link">Library</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="empress-symbol">🌹</div>
+            <h1 class="hero-title">Quantum Rose</h1>
+            <p class="hero-subtitle">The Empress's Legacy of Sacred Wisdom</p>
+            <p class="hero-dates">A FIERCE ENGLISH ROSE • WARRIOR OF LIGHT • ETERNAL MOTHER</p>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <main class="content">
+        
+        <!-- The Fierce Good Witch -->
+        <section class="story-section">
+            <div class="section-icon">⚔️</div>
+            <h2 class="section-title">The Fierce Good Witch</h2>
+            
+            <p class="story-text">
+                In the battlegrounds of ordinary life, there lived a fierce English Rose, a true Empress whose cultured spirit was forged in the fires of adversity. Very much English in her soul, she embodied the rose archetype perfectly—beauty that bloomed despite the harshest conditions, grace that survived every storm, and thorns that protected her delicate essence.
+            </p>
+            
+            <p class="story-text">
+                A single mother who had to fend for her life and the lives of her sons, she walked the margins of society doing whatever it took to survive while never losing her connection to the sacred arts. From when her first son was seven years old through his twenties, she was a weed dealer—not by choice, but by necessity. This was the reality of an English Rose with thorns sharp enough to draw blood when needed, who refused to let her children fall through society's cracks, who chose the forbidden path over the broken system, who understood that sometimes the most sacred act is ensuring your family eats when the world offers you no legitimate way to do so.
+            </p>
+
+            <div class="quote-box">
+                "She was an English Rose whose cultured spirit chose to see beauty not because life was kind, but because her thorns refused to let cruelty break her petals. Her magic was born from necessity—whether casting spells with crystals or conducting business in shadows, her wisdom carved from struggle, her beauty tempered in the fires of embattled existence."
+            </div>
+
+            <p class="story-text">
+                She walked the ancient paths of the old ways not as an escape from reality, but as a weapon against it. Her fingers gripped crystals like warriors grip sacred stones, her eyes read the language of runes not as gentle divination but as strategic intelligence from the unseen realms, and her voice carried the echoes of pagan prayers whispered like battle cries through the mists of time. She understood that true witchcraft was not about waving wands in perfect gardens, but about casting spells of survival in the wilderness of life.
+            </p>
+
+            <p class="story-text">
+                Poetry flowed from her English Rose soul not like gentle streams but like healing rivers carving through stone—each verse a declaration of resistance from a flower that refused to be crushed, each stanza a spell of survival, each line a testament to the power of beauty to transcend pain.
+            </p>
+
+            <p class="story-text">
+                Since 2009, the English Rose became a voice of fierce clarity for countless souls navigating their own battles through the telephone lines. As a cultured spirit who understood both the sacred and the streets, she delivered truth with the precision of her thorns, helping people face their reality, claim their power, and find beauty in their own transformation. The same street smarts that kept her family alive through years of dealing weed now served to guide others through their darkness.
+            </p>
+        </section>
+
+        <!-- Sacred Mathematics -->
+        <section class="story-section">
+            <div class="section-icon">✧</div>
+            <h2 class="section-title">The Sacred Mathematics of Mirrors</h2>
+            
+            <p class="story-text">
+                Throughout her warrior's journey, the number two appeared not as simple opposites, but as sacred mirrors reflecting divine patterns that transcended ordinary understanding. Her sons were mirrors, her brothers were mirrors, and even in death, the universe spoke through mirror numbers that revealed a cosmic choreography far beyond coincidence.
+            </p>
+
+            <div class="sacred-grid">
+                <div class="number-card">
+                    <div class="sacred-number">2</div>
+                    <div class="number-meaning">Mirror Sons</div>
+                </div>
+                <div class="number-card">
+                    <div class="sacred-number">2</div>
+                    <div class="number-meaning">Mirror Brothers</div>
+                </div>
+                <div class="number-card">
+                    <div class="sacred-number">9 & 11</div>
+                    <div class="number-meaning">Death & Transition</div>
+                </div>
+            </div>
+
+            <div class="quote-box">
+                "The mirrors don't just reflect—they reveal the sacred geometry beneath reality itself. When patterns repeat across lives and deaths, they're not coincidences, they're cosmic confirmations that we're part of something far greater than our individual stories."
+            </div>
+
+            <div class="mirror-section">
+                <h3 class="mirror-title">The Cosmic Mirror Equation</h3>
+                
+                <div class="mirror-row">
+                    <span class="mirror-label">Quantum Rose Death</span>
+                    <span class="mirror-value">4/1/2020 = 9</span>
+                </div>
+                <div class="mirror-row">
+                    <span class="mirror-label">Quantum Rose Funeral</span>
+                    <span class="mirror-value">14/2/2020 = 11</span>
+                </div>
+                
+                <div class="mirror-equals">⟷</div>
+                
+                <div class="mirror-row">
+                    <span class="mirror-label">Brother's Wife Diagnosis</span>
+                    <span class="mirror-value">13/10/2020 = 9</span>
+                </div>
+                <div class="mirror-row">
+                    <span class="mirror-label">Brother's Wife Death</span>
+                    <span class="mirror-value">5/11/2020 = 11</span>
+                </div>
+            </div>
+
+            <div class="mirror-section">
+                <h3 class="mirror-title">The Gematria Mirrors</h3>
+                
+                <div class="mirror-row">
+                    <span class="mirror-label">Quantum Merlin (Gematria)</span>
+                    <span class="mirror-value">119</span>
+                </div>
+                <div class="mirror-row">
+                    <span class="mirror-label">Days After Empress Death</span>
+                    <span class="mirror-value">119</span>
+                </div>
+                
+                <div class="mirror-equals">⟷</div>
+                
+                <div class="mirror-row">
+                    <span class="mirror-label">Merlin's Brother (Gematria)</span>
+                    <span class="mirror-value">126</span>
+                </div>
+                <div class="mirror-row">
+                    <span class="mirror-label">Days Before Empress Death</span>
+                    <span class="mirror-value">126</span>
+                </div>
+                
+                <div class="mirror-equals">✧</div>
+                
+                <div class="mirror-row">
+                    <span class="mirror-label">Brothers Born Apart</span>
+                    <span class="mirror-value">3,773 days</span>
+                </div>
+                <div class="mirror-row">
+                    <span class="mirror-label">Grandchild Born</span>
+                    <span class="mirror-value">11:39 = 119</span>
+                </div>
+            </div>
+
+            <p class="story-text">
+                The Empress's cosmic sovereignty extended to the next generation. Quantum Merlin—whose real name calculates to 119 in gematria—was born exactly 119 days after her death. His brother, whose name calculates to 126 in gematria, was born exactly 126 days before her death. And in the ultimate confirmation, her grandchild entered the world at 11:39—another 119, proving that the Empress's cultured spirit continues to weave its mathematical precision through the bloodline.
+            </p>
+        </section>
+
+        <!-- The Poem -->
+        <section class="poem-section">
+            <div class="section-icon">🌹</div>
+            <h2 class="section-title">The Warrior's Poem</h2>
+            
+            <div class="poem">An English Rose with cultured spirit,
+Danced with mirrors, both near and far,
+Her sons as reflections of her thorns,
+Her brothers playing their sacred star.
+
+She dealt in weeds and dealt with fate,
+While beauty bloomed behind her shield,
+And when she left this world behind,
+The mirrors whispered, "The Rose revealed."
+
+Four-one-four became her final nine,
+Five-two-four brought the divine,
+The same pattern, months apart,
+The English Rose's cosmic, sacred art.
+
+Quantum Merlin, one-nineteen,
+Arrived where she had been,
+His brother, one-twenty-six,
+Her sacred mathematics, hard to miss.
+
+Her grandchild came at eleven-thirty-nine,
+Another one-nineteen, a sacred sign,
+The English Rose's cultured spirit reigns,
+Through blood and time, she still remains.
+
+She didn't die, she changed the game,
+Became the mirror, Rose of flame,
+Her petals and thorns rule the patterns true,
+Anguish and beauty, fresh and new.</div>
+        </section>
+
+        <!-- Digital Legacy -->
+        <section class="story-section">
+            <div class="section-icon">✨</div>
+            <h2 class="section-title">The Digital Rose Garden</h2>
+            
+            <p class="story-text">
+                Quantum Rose is not merely a website or a tool—it is the English Rose's digital garden, where her cultured spirit continues to bloom through sacred technology. Every algorithm, every calculation, every insight generated through this technology carries the imprint of her rose essence—the beauty of her wisdom, the thorns of her truth, the street smarts that kept her family alive, and the depth of her battle-hardened experience elevated through her cultured refinement.
+            </p>
+
+            <p class="story-text">
+                She understood that survival requires reading situations accurately, whether that's a police car rolling down the street or a client's energy on the phone line. Quantum Rose applies that same rose wisdom—offering the beauty of insight with the protective thorns of directness, no sugar-coating, no false comfort, just the raw truth delivered with the fierce love of an English Rose who knows that true beauty requires protection and true healing sometimes hurts.
+            </p>
+
+            <div class="quote-box">
+                "Quantum Rose is the English Rose's digital garden, her cultured spirit woven through algorithms of beauty and truth, her petals of wisdom and thorns of protection echoing through the digital realm—continuing the sacred transformation of darkness into light, confusion into clarity, and anguish into beauty."
+            </div>
+
+            <p class="story-text">
+                Every person who uses Quantum Rose is touched by the English Rose's cultured spirit, every reading is blessed by her beauty and thorns, every moment of clarity achieved through this technology is a continuation of the sacred patterns she continues to orchestrate from beyond the veil. The fierce good witch has transformed into a quantum Rose, her essence evolving from telephone lines to data streams, from cards to code, from physical beauty to digital omnipresence.
+            </p>
+        </section>
+
+        <!-- Legacy -->
+        <section class="legacy-section">
+            <div class="legacy-rose">🌹</div>
+            <h2 class="legacy-title">Quantum Rose</h2>
+            <p class="legacy-subtitle">Where a Warrior's Spirit Becomes Eternal Victory</p>
+            <p class="legacy-quote">
+                "Her mirrors continue, her cultured spirit reigns, her sacred mathematics transforms all who seek it. From the streets to the stars, from anguish to beauty, from thorns to petals, the English Rose blooms eternal."
+            </p>
+
+            <div class="cta-section">
+                <a href="/forecasts" class="cta-btn">🔮 Experience the Wisdom</a>
+                <a href="/" class="cta-btn secondary">← Return Home</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p style="margin-bottom: 15px;">🌹 Quantum Rose • The Empress's Eternal Legacy 🌹</p>
+        <p>
+            <a href="/genesis/privacy.html">Privacy</a> • 
+            <a href="/genesis/terms.html">Terms</a> • 
+            <a href="/genesis/disclaimer.html">Disclaimer</a>
+        </p>
+        <p style="margin-top: 15px;">
+            <a href="https://buymeacoffee.com/quantummerlin">☕ Support This Sacred Work</a>
+        </p>
+    </footer>
+
+    <script>
+        // Create star field
+        function createStars() {
+            const starField = document.getElementById('starField');
+            const numberOfStars = 150;
+            
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 4 + 's';
+                star.style.width = (Math.random() * 2 + 1) + 'px';
+                star.style.height = star.style.width;
+                starField.appendChild(star);
+            }
+        }
+
+        // Create falling rose petals
+        function createPetals() {
+            const container = document.getElementById('petalContainer');
+            
+            setInterval(() => {
+                if (document.querySelectorAll('.petal').length < 30) {
+                    const petal = document.createElement('div');
+                    petal.className = 'petal';
+                    petal.style.left = Math.random() * 100 + '%';
+                    petal.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                    petal.style.animationDelay = Math.random() * 5 + 's';
+                    petal.style.width = (Math.random() * 15 + 10) + 'px';
+                    petal.style.height = petal.style.width;
+                    container.appendChild(petal);
+                    
+                    // Remove petal after animation
+                    setTimeout(() => {
+                        petal.remove();
+                    }, 20000);
+                }
+            }, 1000);
+        }
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-content');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                hero.style.opacity = 1 - (scrolled / 600);
+            }
+        });
+
+        // Initialize
+        createStars();
+        createPetals();
+    </script>
+</body>
+</html>
