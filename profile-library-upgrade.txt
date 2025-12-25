@@ -1,0 +1,37 @@
+PROFILE & LIBRARY SYSTEM UPGRADE PLAN
+======================================
+
+Current Issues:
+- Only saves name and birth date (no place of birth)
+- Can't save/load profiles easily
+- No primary profile concept
+- Library is hard to browse
+- Can't switch between profiles
+
+New Features to Add:
+1. Profile Manager
+   - Save profiles with: Name, DOB, Place of Birth
+   - Set primary profile (auto-loads on page)
+   - Quick profile switcher dropdown
+   - Edit/delete profiles
+
+2. Enhanced Library
+   - Filter by profile
+   - Better visual cards
+   - Search functionality
+   - Export/import capability
+   - Preview pane
+
+3. Integration
+   - "Load Profile" button next to form
+   - Auto-save last used profile
+   - Profile selector in library view
+
+Implementation Steps:
+1. Add profile storage structure in localStorage
+2. Create profile management modal
+3. Add profile selector dropdown in header
+4. Enhance library with profile filtering
+5. Add "Load" buttons in library to populate form with that forecast's profile
+
+This will be a significant upgrade. Should I proceed with implementation?
