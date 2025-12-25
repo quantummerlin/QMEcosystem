@@ -12,49 +12,49 @@
   "categories": ["lifestyle", "entertainment", "health", "utilities", "personalization"],
   "icons": [
     {
-      "src": "/shared/images/icon-72x72.png",
+      "src": "/assets/tarot/QMTarot.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/shared/images/icon-96x96.png",
+      "src": "/assets/tarot/QMTarot.png",
       "sizes": "96x96",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/shared/images/icon-128x128.png",
+      "src": "/assets/tarot/QMTarot.png",
       "sizes": "128x128",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/shared/images/icon-144x144.png",
+      "src": "/assets/tarot/QMTarot.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/shared/images/icon-152x152.png",
+      "src": "/assets/tarot/QMTarot.png",
       "sizes": "152x152",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/shared/images/icon-192x192.png",
+      "src": "/assets/tarot/QMTarot.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/shared/images/icon-384x384.png",
+      "src": "/assets/tarot/QMTarot.png",
       "sizes": "384x384",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/shared/images/icon-512x512.png",
+      "src": "/assets/tarot/QMTarot.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
@@ -82,28 +82,28 @@
       "short_name": "Forecast",
       "description": "Get your daily cosmic forecast",
       "url": "/quantum-merlin-hub/forecasts.html",
-      "icons": [{"src": "/shared/images/shortcut-codes.png", "sizes": "96x96"}]
+      "icons": [{"src": "/assets/tarot/QMTarot.png", "sizes": "96x96"}]
     },
     {
       "name": "Reality Codes",
       "short_name": "Codes",
       "description": "Generate manifestation codes",
       "url": "/quantum-merlin-hub/codes.html",
-      "icons": [{"src": "/shared/images/shortcut-codes.png", "sizes": "96x96"}]
+      "icons": [{"src": "/assets/tarot/QMTarot.png", "sizes": "96x96"}]
     },
     {
       "name": "Frequency Generator",
       "short_name": "Frequencies",
       "description": "674 healing frequencies",
       "url": "/genesis/index-enhanced.html",
-      "icons": [{"src": "/shared/images/shortcut-freq.png", "sizes": "96x96"}]
+      "icons": [{"src": "/assets/tarot/QMTarot.png", "sizes": "96x96"}]
     },
     {
       "name": "Quantum Tarot",
       "short_name": "Tarot",
       "description": "Daily tarot readings",
       "url": "/quantum-merlin-hub/tarot.html",
-      "icons": [{"src": "/shared/images/shortcut-tarot.png", "sizes": "96x96"}]
+      "icons": [{"src": "/assets/tarot/QMTarot.png", "sizes": "96x96"}]
     }
   ],
   "related_applications": [],
