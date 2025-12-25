@@ -3955,13 +3955,12 @@
     <div class="container">
         <!-- Hero Section -->
         <div class="hero">
-            <!-- Library Button - Top Left -->
+            <!-- Library Button - Top Left - Links to /library -->
             <div class="library-floating">
-                <button class="library-btn" onclick="viewLibrary()" title="View your saved forecasts">
+                <a href="/library" class="library-btn" title="View your saved items">
                     <span class="library-icon">📚</span>
                     <span>Library</span>
-                    <span class="library-counter" id="libraryCounter">0</span>
-                </button>
+                </a>
             </div>
             <!-- Buy Me a Coffee - Top Right -->
             <div class="coffee-floating">
@@ -10222,7 +10221,9 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                 content: forecastOutput.innerHTML,
                 profile: {
                     name: document.getElementById('firstName')?.value || 'Seeker',
-                    birthDate: document.getElementById('birthDate')?.value || ''
+                    birthDate: document.getElementById('birthDate')?.value || '',
+                    birthTime: document.getElementById('birthTime')?.value || '',
+                    birthLocation: document.getElementById('birthLocation')?.value || ''
                 }
             };
             
@@ -10417,7 +10418,7 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
             
             alert('✅ Library cleared successfully!');
         }
-        
+
         // PWA Install Prompt
         let deferredPrompt;
         
