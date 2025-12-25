@@ -1646,6 +1646,61 @@
             box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
         }
 
+        /* Yearly Tarot Cards - Smaller size for 12-month spread */
+        .yearly-tarot-grid {
+            max-width: 100%;
+        }
+
+        .yearly-tarot-card {
+            min-width: unset !important;
+            min-height: 180px !important;
+            padding: 15px 10px !important;
+            width: 100%;
+        }
+
+        .yearly-tarot-card .tarot-image {
+            max-width: 100%;
+            width: 80px;
+            height: auto;
+        }
+
+        .yearly-tarot-card .tarot-name {
+            font-size: 0.85rem !important;
+        }
+
+        .yearly-tarot-card .tarot-number {
+            font-size: 0.9rem !important;
+        }
+
+        .yearly-tarot-card .tap-hint {
+            font-size: 0.7rem !important;
+            padding: 5px 10px !important;
+        }
+
+        /* Responsive: 3 columns on medium, 2 on small */
+        @media (max-width: 900px) {
+            .yearly-tarot-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .yearly-tarot-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 8px !important;
+            }
+            .yearly-tarot-card {
+                min-height: 150px !important;
+                padding: 10px 8px !important;
+            }
+            .yearly-tarot-card .tarot-image {
+                width: 60px;
+            }
+            .yearly-tarot-card .tarot-name {
+                font-size: 0.75rem !important;
+            }
+        }
+
         /* Magical reveal particles */
         .tarot-card.revealing::before {
             content: '';
@@ -3386,12 +3441,19 @@
     <!-- Loading Spinner (During Forecast Generation) -->
     <div id="loadingSpinner" class="loading-overlay" style="display: none;">
         <canvas id="loading-lines-canvas"></canvas>
+        
+        <div class="emoji-layer" id="loadingEmojiLayer">
+            <div class="emoji" id="loading-quantum">⚛️</div>
+            <div class="emoji" id="loading-wizard">🧙‍♂️</div>
+            <div class="emoji" id="loading-rose">🌹</div>
+        </div>
 
         <div id="loading-singularity"></div>
         <div id="loading-title">QUANTUM MERLIN</div>
         
-        <div class="loading-wait-message" style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); color: rgba(255, 255, 255, 0.8); font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; text-align: center; z-index: 10001;">
-            ✨ Please wait while your full forecast is generated ✨
+        <div class="loading-wait-message" style="position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%); color: rgba(255, 255, 255, 0.9); font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; text-align: center; z-index: 10001; max-width: 90%; line-height: 1.6;">
+            <div style="margin-bottom: 10px;">✨ Thank you for your patience ✨</div>
+            <div style="color: rgba(255, 215, 0, 0.9); font-size: 1rem;">Your personalized cosmic forecast is being carefully crafted...</div>
         </div>
     </div>
 
@@ -3931,6 +3993,11 @@
             const loadingCanvas = document.getElementById('loading-lines-canvas');
             const loadingCtx = loadingCanvas ? loadingCanvas.getContext('2d', { alpha: true }) : null;
             
+            if (!loadingOverlay) {
+                console.error('Loading overlay not found');
+                return;
+            }
+            
             loadingOverlay.style.display = 'flex';
             loadingOverlay.style.opacity = 1;
             
@@ -3954,6 +4021,12 @@
             const loadingRose = document.getElementById('loading-rose');
             const loadingSingularity = document.getElementById('loading-singularity');
             const loadingTitle = document.getElementById('loading-title');
+            
+            // Check if all required elements exist
+            if (!loadingQuantum || !loadingWizard || !loadingRose || !loadingSingularity || !loadingTitle) {
+                console.error('Loading animation elements not found');
+                return;
+            }
             
             // Reset all elements
             [loadingQuantum, loadingWizard, loadingRose, loadingSingularity, loadingTitle].forEach(el => {
@@ -4168,7 +4241,9 @@
         function hideLoadingSpinner() {
             loadingAnimationRunning = false;
             const loadingOverlay = document.getElementById('loadingSpinner');
-            loadingOverlay.style.display = 'none';
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'none';
+            }
         }
 
         function skipLoadingAnimation() {
@@ -7278,11 +7353,11 @@
                     </div>
                     <div class="system-content">
                         <p style="text-align: center; color: var(--neon-gold); margin-bottom: 25px; font-style: italic;">✨ Click each card to reveal your yearly reading ✨</p>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; margin-bottom: 25px;">
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 25px;" class="yearly-tarot-grid">
                             ${(Array.isArray(tarotCard) ? tarotCard : []).map((card, index) => `
-                                <div style="display: flex; flex-direction: column; gap: 15px;">
-                                    <div class="tarot-card-container" onclick="flipTarotCard(this)">
-                                        <div class="tarot-card">
+                                <div style="display: flex; flex-direction: column; gap: 10px;">
+                                    <div class="tarot-card-container yearly-card" onclick="flipTarotCard(this)">
+                                        <div class="tarot-card yearly-tarot-card">
                                             <div class="tarot-card-back">
                                                 <img src="../assets/tarot/QMTarot.png" alt="Tarot Card Back">
                                                 <div class="tap-hint">🔮 ${card.position}</div>
@@ -7295,13 +7370,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div style="background: rgba(255, 215, 0, 0.05); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 12px; padding: 15px;">
-                                        <h4 style="color: var(--neon-gold); margin-bottom: 8px; font-size: 1rem;">${card.position}</h4>
-                                        <div style="margin-bottom: 10px;">
-                                            <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 8px;"><strong style="color: var(--neon-cyan);">Theme:</strong> ${card.meaning}</p>
+                                    <div style="background: rgba(255, 215, 0, 0.05); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 8px; padding: 10px;">
+                                        <h4 style="color: var(--neon-gold); margin-bottom: 5px; font-size: 0.85rem;">${card.position}</h4>
+                                        <div style="margin-bottom: 6px;">
+                                            <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 5px;"><strong style="color: var(--neon-cyan);">Theme:</strong> ${card.meaning}</p>
                                         </div>
                                         <div>
-                                            <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.8);"><strong style="color: var(--neon-purple);">Guidance:</strong> ${card.guidance}</p>
+                                            <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.8);"><strong style="color: var(--neon-purple);">Guidance:</strong> ${card.guidance}</p>
                                         </div>
                                     </div>
                                 </div>
