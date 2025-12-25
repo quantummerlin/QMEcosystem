@@ -3559,7 +3559,7 @@
 
             <!-- Tier 3: Deep Personalization -->
             <button class="expand-btn" id="expandAdvanced" style="display: none;" onclick="toggleAdvanced()">
-                ▼ Add Name & Focus for Deep Personalization
+                ▼ Add Name for Deep Personalization
             </button>
             
             <div class="expanded-content" id="advancedContent">
@@ -3571,25 +3571,6 @@
                         <input type="text" id="lastName" placeholder="Last">
                     </div>
                     <p class="help-text">Used for gematria and name numerology calculations</p>
-                </div>
-
-                <div class="input-group">
-                    <label for="focus">Current Focus <span class="optional-badge">(optional)</span></label>
-                    <select id="focus">
-                        <option value="">Select a focus area...</option>
-                        <option value="career">Career & Success</option>
-                        <option value="love">Love & Relationships</option>
-                        <option value="health">Health & Wellness</option>
-                        <option value="spiritual">Spiritual Growth</option>
-                        <option value="finances">Finances & Abundance</option>
-                    </select>
-                    <p class="help-text">Tailors guidance to your specific needs</p>
-                </div>
-
-                <div class="input-group">
-                    <label for="challenge">Current Challenge <span class="optional-badge">(optional)</span></label>
-                    <textarea id="challenge" rows="3" placeholder="Brief description of what you're working through..."></textarea>
-                    <p class="help-text">Provides obstacle-specific advice and shadow work</p>
                 </div>
             </div>
 
@@ -4523,8 +4504,6 @@
             }
             if (profile.middleName) document.getElementById('middleName').value = profile.middleName;
             if (profile.lastName) document.getElementById('lastName').value = profile.lastName;
-            if (profile.focus) document.getElementById('focus').value = profile.focus;
-            if (profile.challenge) document.getElementById('challenge').value = profile.challenge;
             
             // Hide the load profile section
             document.getElementById('loadProfileSection').style.display = 'none';
@@ -4578,8 +4557,6 @@
             if (profile.birthTime) document.getElementById('birthTime').value = profile.birthTime;
             if (profile.birthLocation) document.getElementById('birthLocation').value = profile.birthLocation;
             if (profile.currentLocation) document.getElementById('currentLocation').value = profile.currentLocation;
-            if (profile.focus) document.getElementById('focus').value = profile.focus;
-            if (profile.challenge) document.getElementById('challenge').value = profile.challenge;
             
             // Show loading spinner with full animation (same as generate button)
             showLoadingSpinner();
@@ -4616,8 +4593,6 @@
             if (profile.birthTime) document.getElementById('birthTime').value = profile.birthTime;
             if (profile.birthLocation) document.getElementById('birthLocation').value = profile.birthLocation;
             if (profile.currentLocation) document.getElementById('currentLocation').value = profile.currentLocation;
-            if (profile.focus) document.getElementById('focus').value = profile.focus;
-            if (profile.challenge) document.getElementById('challenge').value = profile.challenge;
             
             // Expand advanced sections if data exists
             if (profile.birthTime || profile.birthLocation) {
@@ -4647,8 +4622,6 @@
                 birthTime: document.getElementById('birthTime').value || '',
                 birthLocation: document.getElementById('birthLocation').value || '',
                 currentLocation: document.getElementById('currentLocation').value || '',
-                focus: document.getElementById('focus').value || '',
-                challenge: document.getElementById('challenge').value || '',
                 
                 // Set preferred name
                 preferredName: document.getElementById('firstName').value || 'Seeker',
@@ -4800,7 +4773,7 @@
             content.classList.toggle('show');
             btn.textContent = content.classList.contains('show') 
                 ? '▲ Hide Advanced Options' 
-                : '▼ Add Name & Focus for Deep Personalization';
+                : '▼ Add Name for Deep Personalization';
         }
 
         // Add touchstart listeners for mobile (more reliable than click on some devices)
@@ -6034,8 +6007,6 @@
             const firstName = document.getElementById('firstName').value;
             const middleName = document.getElementById('middleName').value;
             const lastName = document.getElementById('lastName').value;
-            const focus = document.getElementById('focus').value;
-            const challenge = document.getElementById('challenge').value;
             
             const birth = new Date(birthDate);
             const month = birth.getMonth() + 1;
@@ -6081,16 +6052,16 @@
             if (timeframe === 'daily') {
                 forecastHTML = generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
                     gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
-                    focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates, coords, currentLocation, locationForHemisphere);
+                    birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates, coords, currentLocation, locationForHemisphere);
             } else if (timeframe === 'weekly') {
                 forecastHTML = generateWeeklyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
-                    gematria, fullName, birthTime, moonPhase, crossAnalysis, focus, challenge, birth, tarotCard, bestDay);
+                    gematria, fullName, birthTime, moonPhase, crossAnalysis, birth, tarotCard, bestDay);
             } else if (timeframe === 'monthly') {
                 forecastHTML = generateMonthlyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
-                    gematria, fullName, crossAnalysis, focus, challenge, birth, tarotCard);
+                    gematria, fullName, crossAnalysis, birth, tarotCard);
             } else {
                 forecastHTML = generateYearlyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
-                    gematria, fullName, crossAnalysis, focus, challenge, birth, tarotCard);
+                    gematria, fullName, crossAnalysis, birth, tarotCard);
             }
             
             document.getElementById('forecastOutput').innerHTML = forecastHTML;
@@ -6107,10 +6078,10 @@
         // PHASE 2: Daily Forecast Generator
         function generateDailyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, 
             gematria, fullName, birthTime, birthLocation, planetaryHour, moonPhase, crossAnalysis, 
-            focus, challenge, birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates, coords, currentLocation, locationForHemisphere) {
+            birth, todayStr, tarotCard, planetaryAspects, planetaryHouses, specialDates, coords, currentLocation, locationForHemisphere) {
             
             // Get frequency recommendation
-            const frequencyData = getDailyFrequency(zodiac, moonPhase, focus);
+            const frequencyData = getDailyFrequency(zodiac, moonPhase);
             
             // Check if location-based calculations are active
             const locationActive = birthLocation && birthTime;
@@ -6120,7 +6091,7 @@
             
             // Calculate cosmic overview values
             const energyLevel = getCosmicEnergyLevel(moonPhase, zodiac, chinese, personalYear, birth);
-            const manifestationFocus = getManifestationFocus(moonPhase, focus);
+            const manifestationFocus = getManifestationFocus(moonPhase);
             const portalTimes = getPortalTimes();
             const elementOfDay = getElementOfDay(zodiac);
             
@@ -6207,14 +6178,14 @@
                     <h3 style="text-align: center;">TODAY'S OVERVIEW</h3>
                     <div class="overview-content">
                         <p><strong>Core Energy:</strong> ${getEnhancedOverviewEnergy(zodiac, risingSign, moonSign, chinese, personalYear, moonPhase)}</p>
-                        <p><strong>Primary Focus:</strong> ${getEnhancedOverviewFocus(lifePath, personalYear, focus, moonPhase)}</p>
+                        <p><strong>Primary Focus:</strong> ${getEnhancedOverviewFocus(lifePath, personalYear, moonPhase)}</p>
                         <p><strong>Shadow Work:</strong> ${getEnhancedOverviewCaution(zodiac, moonSign, chinese)}</p>
                     </div>
                 </div>
 
                 <div class="action-section">
                     <h3 style="text-align: center;">YOUR DAILY ACTION PLAN</h3>
-                    ${getEnhancedActionItems(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, planetaryHour, moonPhase, focus, challenge)}
+                    ${getEnhancedActionItems(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, planetaryHour, moonPhase)}
                 </div>
 
                 ${crossAnalysis.agreements.length > 0 ? `
@@ -6546,7 +6517,7 @@
 
         // PHASE 2: Weekly Forecast Generator
         function generateWeeklyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
-            gematria, fullName, birthTime, moonPhase, crossAnalysis, focus, challenge, birth, tarotCard, bestDay) {
+            gematria, fullName, birthTime, moonPhase, crossAnalysis, birth, tarotCard, bestDay) {
             
             const today = new Date();
             const weekStart = new Date(today); // Start from today
@@ -6558,9 +6529,9 @@
             
             // Calculate cosmic overview values for weekly
             const energyLevel = getCosmicEnergyLevel(moonPhase, zodiac, chinese, personalYear, birth);
-            const manifestationFocus = getManifestationFocus(moonPhase, focus);
+            const manifestationFocus = getManifestationFocus(moonPhase);
             const elementOfDay = getElementOfDay(zodiac);
-            const frequencyData = getDailyFrequency(zodiac, moonPhase, focus);
+            const frequencyData = getDailyFrequency(zodiac, moonPhase);
             
             // Generate 7-day breakdown starting from today
             let dailyBreakdown = '';
@@ -6580,7 +6551,7 @@
                         <h4>${dayNames[dayOfWeek]}${isToday ? ' (Today)' : ''}${isBestDay ? ` ${bestDay.emoji} BEST DAY` : ''} - ${dayDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</h4>
                         <p><strong>Ruler:</strong> ${planetRulers[dayOfWeek]} | <strong>Energy:</strong> ${dayEnergies[dayOfWeek]}</p>
                         ${isBestDay ? `<p class="best-day-note">✨ <strong>${bestDay.energy}</strong> - ${bestDay.action}</p>` : ''}
-                        <p>${getDaySpecificGuidance(zodiac, chinese, lifePath, dayOfWeek, focus)}</p>
+                        <p>${getDaySpecificGuidance(zodiac, chinese, lifePath, dayOfWeek)}</p>
                     </div>
                 `;
             }
@@ -6659,8 +6630,8 @@
                     <h3 id="quantum-insight" style="text-align: center;">🔮 QUANTUM INSIGHT</h3>
                     <div class="overview-content">
                         <p><strong>Theme:</strong> ${getWeeklyTheme(zodiac, chinese, personalYear, moonPhase)}</p>
-                        <p><strong>Opportunity:</strong> ${getWeeklyOpportunity(lifePath, personalYear, focus)}</p>
-                        <p><strong>Challenge:</strong> ${getWeeklyChallenge(zodiac, chinese, challenge)}</p>
+                        <p><strong>Opportunity:</strong> ${getWeeklyOpportunity(lifePath, personalYear)}</p>
+                        <p><strong>Challenge:</strong> ${getWeeklyChallenge(zodiac, chinese)}</p>
                         <p><strong>Power Day:</strong> ${bestDay.emoji} ${bestDay.day} - ${bestDay.energy}</p>
                     </div>
                 </div>
@@ -6813,7 +6784,7 @@
 
                 <div class="action-section">
                     <h3>💡 WEEKLY PRIORITIES</h3>
-                    ${getWeeklyActionItems(zodiac, chinese, lifePath, focus)}
+                    ${getWeeklyActionItems(zodiac, chinese, lifePath)}
                 </div>
 
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
@@ -6855,7 +6826,7 @@
 
         // PHASE 2: Monthly Forecast Generator
         function generateMonthlyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
-            gematria, fullName, crossAnalysis, focus, challenge, birth, tarotCard) {
+            gematria, fullName, crossAnalysis, birth, tarotCard) {
             
             const today = new Date();
             const monthEnd = new Date(today);
@@ -6872,14 +6843,14 @@
             const moonPhases = getMoonPhasesForPeriod(today, 28);
             
             // Four week themes
-            const weekThemes = getMonthlyWeekThemes(zodiac, chinese, personalMonth, focus);
+            const weekThemes = getMonthlyWeekThemes(zodiac, chinese, personalMonth);
             
             // Generate data for cosmic overview (using existing functions)
             const moonPhase = getCurrentMoonPhase();
             const energyLevel = getCosmicEnergyLevel(moonPhase, zodiac, chinese, personalYear, birth);
-            const manifestationFocus = getManifestationFocus(moonPhase, focus);
+            const manifestationFocus = getManifestationFocus(moonPhase);
             const elementOfMonth = getElementOfDay(zodiac);
-            const frequencyData = getDailyFrequency(zodiac, moonPhase, focus);
+            const frequencyData = getDailyFrequency(zodiac, moonPhase);
             
             return `
                 <div class="forecast-header" id="cosmic-overview">
@@ -6958,7 +6929,7 @@
                     <div class="overview-content">
                         <p><strong>Month Theme:</strong> ${getMonthlyTheme(personalMonth, zodiac, chinese)}</p>
                         <p><strong>Primary Energy:</strong> ${getMonthlyEnergy(zodiac, chinese, personalMonth)}</p>
-                        <p><strong>Growth Area:</strong> ${getMonthlyGrowth(lifePath, personalMonth, focus)}</p>
+                        <p><strong>Growth Area:</strong> ${getMonthlyGrowth(lifePath, personalMonth)}</p>
                         <p><strong>Watch For:</strong> ${getMonthlyCaution(zodiac, moonSign, personalMonth)}</p>
                     </div>
                 </div>
@@ -7117,7 +7088,7 @@
 
                 <div class="action-section">
                     <h3>💡 MONTHLY INTENTIONS</h3>
-                    ${getMonthlyActionItems(zodiac, chinese, lifePath, personalMonth, focus)}
+                    ${getMonthlyActionItems(zodiac, chinese, lifePath, personalMonth)}
                 </div>
 
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
@@ -7159,7 +7130,7 @@
 
         // PHASE 2: Yearly Forecast Generator  
         function generateYearlyForecast(zodiac, risingSign, moonSign, chinese, lifePath, personalYear,
-            gematria, fullName, crossAnalysis, focus, challenge, birth, tarotCard) {
+            gematria, fullName, crossAnalysis, birth, tarotCard) {
             
             const today = new Date();
             const nextYear = new Date(today);
@@ -7175,14 +7146,14 @@
             const currentChinese = getChineseZodiac(currentYear, today.getMonth() + 1, today.getDate());
             
             // Quarterly breakdown
-            const quarters = getYearlyQuarters(zodiac, chinese, lifePath, personalYear, focus, today);
+            const quarters = getYearlyQuarters(zodiac, chinese, lifePath, personalYear, today);
             
             // Generate data for cosmic overview (using existing functions)
             const moonPhase = getCurrentMoonPhase();
             const energyLevel = getCosmicEnergyLevel(moonPhase, zodiac, chinese, personalYear, birth);
-            const manifestationFocus = getManifestationFocus(moonPhase, focus);
+            const manifestationFocus = getManifestationFocus(moonPhase);
             const elementOfYear = getElementOfDay(zodiac);
-            const frequencyData = getDailyFrequency(zodiac, moonPhase, focus);
+            const frequencyData = getDailyFrequency(zodiac, moonPhase);
             
             return `
                 <div class="forecast-header" id="cosmic-overview">
@@ -7260,7 +7231,7 @@
                     <div class="overview-content">
                         <p><strong>Year Theme:</strong> ${getYearlyTheme(personalYear, zodiac, chinese)}</p>
                         <p><strong>Core Lesson:</strong> ${getYearlyLesson(lifePath, personalYear)}</p>
-                        <p><strong>Major Opportunity:</strong> ${getYearlyOpportunity(zodiac, chinese, personalYear, focus)}</p>
+                        <p><strong>Major Opportunity:</strong> ${getYearlyOpportunity(zodiac, chinese, personalYear)}</p>
                         <p><strong>Growth Edge:</strong> ${getYearlyChallenge(zodiac, moonSign, lifePath)}</p>
                     </div>
                 </div>
@@ -7417,7 +7388,7 @@
 
                 <div class="action-section">
                     <h3>💡 YOUR 12-MONTH STRATEGIC PRIORITIES</h3>
-                    ${getYearlyActionItems(zodiac, chinese, lifePath, personalYear, focus)}
+                    ${getYearlyActionItems(zodiac, chinese, lifePath, personalYear)}
                 </div>
 
                 <button class="save-btn" onclick="saveForecast()">📥 Save to Library</button>
@@ -7536,21 +7507,11 @@
             return styles[sign] || 'unique expression';
         }
 
-        function getEnhancedOverviewFocus(lifePath, personalYear, focus, moonPhase) {
+        function getEnhancedOverviewFocus(lifePath, personalYear, moonPhase) {
             const lifePathFocus = getLifePathFocus(lifePath);
             const yearFocus = getPersonalYearFocus(personalYear);
             const phaseFocus = moonPhase.action;
             
-            if (focus) {
-                const focusMap = {
-                    'career': `Professional advancement through ${lifePathFocus}. ${yearFocus}`,
-                    'love': `Heart-centered connections aligned with your ${lifePathFocus}. ${yearFocus}`,
-                    'health': `Physical vitality supporting your ${lifePathFocus}. ${yearFocus}`,
-                    'spiritual': `Inner wisdom development through ${lifePathFocus}. ${yearFocus}`,
-                    'finances': `Abundance manifestation via ${lifePathFocus}. ${yearFocus}`
-                };
-                return focusMap[focus] || `${lifePathFocus}. ${yearFocus}`;
-            }
             return `${lifePathFocus}. ${yearFocus} Action: ${phaseFocus}`;
         }
 
@@ -8333,7 +8294,7 @@
         }
 
         // Get manifestation focus for the day
-        function getManifestationFocus(moonPhase, focus) {
+        function getManifestationFocus(moonPhase) {
             const moonFocus = {
                 'New Moon': '🌱 New Beginnings',
                 'Waxing Crescent': '📈 Building Momentum',
@@ -8393,7 +8354,7 @@
         }
 
         // PHASE 2: Daily Frequency Recommendation
-        function getDailyFrequency(zodiac, moonPhase, focus) {
+        function getDailyFrequency(zodiac, moonPhase) {
             // Frequencies mapped to zodiac elements
             const elementFrequencies = {
                 'Fire': { hz: 528, name: 'Love & Transformation', element: 'Fire signs resonate with transformation frequencies' },
@@ -8414,18 +8375,6 @@
                 'Waning Crescent': { hz: 852, name: 'Intuition', modifier: 'Dark moon heightens spiritual perception' }
             };
             
-            // Focus-based frequencies
-            const focusFrequencies = {
-                'Career': { hz: 852, name: 'Spiritual Order', benefit: 'aligns your path with higher purpose' },
-                'Love': { hz: 639, name: 'Heart Connection', benefit: 'opens heart chakra for relationship healing' },
-                'Health': { hz: 528, name: 'DNA Repair', benefit: 'supports cellular regeneration and vitality' },
-                'Wealth': { hz: 888, name: 'Abundance', benefit: 'activates prosperity consciousness' },
-                'Creativity': { hz: 741, name: 'Expression', benefit: 'unlocks creative channels and intuition' },
-                'Spirituality': { hz: 963, name: 'Divine Connection', benefit: 'connects to higher consciousness' },
-                'Family': { hz: 639, name: 'Harmony', benefit: 'promotes understanding and emotional bonds' },
-                'Learning': { hz: 285, name: 'Cognition', benefit: 'enhances memory and mental clarity' }
-            };
-            
             // Get element from zodiac
             const fireSign = ['Aries', 'Leo', 'Sagittarius'].includes(zodiac.name);
             const earthSigns = ['Taurus', 'Virgo', 'Capricorn'].includes(zodiac.name);
@@ -8439,7 +8388,6 @@
             
             const elementFreq = elementFrequencies[element];
             const moonFreq = moonFrequencies[moonPhase.phase] || moonFrequencies['Full Moon'];
-            const focusFreq = focusFrequencies[focus] || focusFrequencies['Spirituality'];
             
             // Choose primary frequency based on moon phase (most immediate influence)
             const primaryHz = moonFreq.hz;
@@ -8451,7 +8399,7 @@
                 frequency: `${primaryHz} Hz`,
                 category: primaryName,
                 alignment: `${moonPhase.phase} energy combined with ${zodiac.name}'s ${element} nature suggests ${primaryHz} Hz for optimal resonance today.`,
-                benefits: `This frequency ${focusFreq.benefit}. Combined with your ${element} element, it ${elementFreq.element.toLowerCase()}.`,
+                benefits: `This frequency supports spiritual growth. Combined with your ${element} element, it ${elementFreq.element.toLowerCase()}.`,
                 usage: `Listen for 11-22 minutes during meditation, work, or sleep. Use headphones for best results. Combine with deep breathing.`,
                 bestTime: `${moonPhase.phase === 'Full Moon' ? 'Evening meditation under moonlight' : moonPhase.phase.includes('Waxing') ? 'Morning activation sessions' : 'Evening release rituals'}`
             };
@@ -8528,7 +8476,7 @@
         }
 
         // PHASE 2: Enhanced Action Items
-        function getEnhancedActionItems(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, planetaryHour, moonPhase, focus, challenge) {
+        function getEnhancedActionItems(zodiac, risingSign, moonSign, chinese, lifePath, personalYear, planetaryHour, moonPhase) {
             let items = [];
             
             items.push(`
@@ -8550,7 +8498,7 @@
             items.push(`
                 <div class="action-item">
                     <h4>☀️ Peak Productivity (10 AM - 2 PM)</h4>
-                    <p>${getEnhancedAfternoonAction(zodiac.name, chinese, personalYear, focus)}</p>
+                    <p>${getEnhancedAfternoonAction(zodiac.name, chinese, personalYear)}</p>
                 </div>
             `);
             
@@ -8560,16 +8508,6 @@
                     <p>${getEnhancedEveningAction(moonSign, moonPhase, lifePath)}</p>
                 </div>
             `);
-            
-            if (challenge) {
-                items.push(`
-                    <div class="action-item challenge">
-                        <h4>⚡ Challenge-Specific Guidance</h4>
-                        <p><strong>Regarding:</strong> "${challenge}"</p>
-                        <p>${getEnhancedChallengeGuidance(zodiac, chinese, moonSign, lifePath, moonPhase, challenge)}</p>
-                    </div>
-                `);
-            }
             
             items.push(`
                 <div class="action-item moon-ritual">
@@ -8604,15 +8542,10 @@
             return (sunAction[sun] || 'Begin with centering practices') + risingBoost + lifePathBoost;
         }
 
-        function getEnhancedAfternoonAction(sun, chinese, personalYear, focus) {
+        function getEnhancedAfternoonAction(sun, chinese, personalYear) {
             let baseAction = `Peak ${sun} energy combines with ${chinese.element} ${chinese.animal} persistence. `;
             
-            if (focus === 'career') baseAction += 'Schedule important meetings and career-advancing work now.';
-            else if (focus === 'love') baseAction += 'Make meaningful connections—reach out with authentic intention.';
-            else if (focus === 'health') baseAction += 'This is optimal workout time—your energy supports physical achievement.';
-            else if (focus === 'spiritual') baseAction += 'Practice presence in action—make ordinary tasks sacred.';
-            else if (focus === 'finances') baseAction += 'Financial decisions and income-generating activities favor you now.';
-            else baseAction += 'Your most important work belongs here—give it your peak energy.';
+            baseAction += 'Your most important work belongs here—give it your peak energy.';
             
             baseAction += ` Personal Year ${personalYear} energy: ${getPersonalYearFocus(personalYear)}`;
             return baseAction;
@@ -8933,20 +8866,13 @@
             return `Your ${zodiac.name} drive meets ${chinese.element} ${chinese.animal} persistence this week. Personal Year ${personalYear} energy shapes opportunities. The ${moonPhase.phase} sets the emotional tone for the week's beginning.`;
         }
 
-        function getWeeklyOpportunity(lifePath, personalYear, focus) {
-            const focusMap = {
-                'career': 'Career advancement through strategic visibility',
-                'love': 'Deepening existing connections or meeting new potentials',
-                'health': 'Establishing sustainable wellness routines',
-                'spiritual': 'Breakthrough insights through consistent practice',
-                'finances': 'Identifying new income streams or reducing expenses'
-            };
-            return (focusMap[focus] || 'Multi-dimensional growth across life areas') + `. Life Path ${lifePath} in Year ${personalYear} creates momentum for ${getLifePathFocus(lifePath)}.`;
+        function getWeeklyOpportunity(lifePath, personalYear) {
+            return 'Multi-dimensional growth across life areas' + `. Life Path ${lifePath} in Year ${personalYear} creates momentum for ${getLifePathFocus(lifePath)}.`;
         }
 
-        function getWeeklyChallenge(zodiac, chinese, challenge) {
+        function getWeeklyChallenge(zodiac, chinese) {
             const base = `${zodiac.name} impatience meeting ${chinese.animal} intensity may create friction.`;
-            return challenge ? `${base} Your stated challenge ("${challenge}") may surface for resolution this week.` : base;
+            return base;
         }
 
         function getKeyDayOfWeek(zodiac, lifePath) {
@@ -8959,7 +8885,7 @@
             return `${signDays[zodiac.name] || 'Wednesday'} - Your ${zodiac.name} energy peaks. Schedule important matters here.`;
         }
 
-        function getDaySpecificGuidance(zodiac, chinese, lifePath, dayIndex, focus) {
+        function getDaySpecificGuidance(zodiac, chinese, lifePath, dayIndex) {
             const dayGuidance = [
                 // Sunday
                 `Rest and reflect. ${zodiac.name} energy recharges through intentional pause. Set intentions for the week ahead.`,
@@ -8977,10 +8903,7 @@
                 `Saturn rewards discipline. ${zodiac.name} structure-building succeeds. Handle responsibilities.`
             ];
             
-            let guidance = dayGuidance[dayIndex];
-            if (focus === 'career' && dayIndex < 5) guidance += ' Focus on career advancement.';
-            if (focus === 'love' && dayIndex >= 5) guidance += ' Relationship opportunities peak.';
-            return guidance;
+            return dayGuidance[dayIndex];
         }
 
         function getWeeklyWesternForecast(zodiac, risingSign, moonSign) {
@@ -9014,7 +8937,7 @@
             `;
         }
 
-        function getWeeklyActionItems(zodiac, chinese, lifePath, focus) {
+        function getWeeklyActionItems(zodiac, chinese, lifePath) {
             return `
                 <div class="action-item">
                     <h4>Priority 1: Early Week (Mon-Tue)</h4>
@@ -9030,7 +8953,7 @@
                 </div>
                 <div class="action-item">
                     <h4>Weekly Intention</h4>
-                    <p>${focus ? `Focus on ${focus}: ` : ''}By week's end, aim to have made tangible progress in ${getLifePathFocus(lifePath)}. Your Life Path ${lifePath} is activated when you ${getLifePathAction(lifePath)}.</p>
+                    <p>By week's end, aim to have made tangible progress in ${getLifePathFocus(lifePath)}. Your Life Path ${lifePath} is activated when you ${getLifePathAction(lifePath)}.</p>
                 </div>
             `;
         }
@@ -9070,8 +8993,8 @@
             return `${zodiac.name} determination meets ${chinese.animal} wisdom in a ${personalMonth}-month context. This creates ${personalMonth <= 3 ? 'initiating' : personalMonth <= 6 ? 'building' : 'completing'} energy for the weeks ahead.`;
         }
 
-        function getMonthlyGrowth(lifePath, personalMonth, focus) {
-            const growth = focus ? `Significant progress in ${focus} through ` : 'Primary development through ';
+        function getMonthlyGrowth(lifePath, personalMonth) {
+            const growth = 'Primary development through ';
             return growth + getReducedTheme(personalMonth) + `. Life Path ${lifePath} finds expression through ${getLifePathFocus(lifePath).split(' and ')[0]}.`;
         }
 
@@ -9080,11 +9003,11 @@
             return caution + `Your ${zodiac.name} nature${moonSign ? ` combined with ${moonSign.name} Moon emotions` : ''} may amplify this—stay aware.`;
         }
 
-        function getMonthlyWeekThemes(zodiac, chinese, personalMonth, focus) {
+        function getMonthlyWeekThemes(zodiac, chinese, personalMonth) {
             return [
                 {
                     title: 'Initiation',
-                    focus: `Launch this month's primary ${focus || 'growth'} projects`,
+                    focus: `Launch this month's primary growth projects`,
                     action: `Set clear intentions aligned with ${zodiac.name} nature`,
                     keyDays: 'Days 1-3 and 7 are most auspicious'
                 },
@@ -9172,11 +9095,11 @@
             `;
         }
 
-        function getMonthlyActionItems(zodiac, chinese, lifePath, personalMonth, focus) {
+        function getMonthlyActionItems(zodiac, chinese, lifePath, personalMonth) {
             return `
                 <div class="action-item">
                     <h4>Week 1 Intention</h4>
-                    <p>Launch: Set clear goals for ${focus || 'personal growth'} this month. Your ${zodiac.name} initiative is supported.</p>
+                    <p>Launch: Set clear goals for personal growth this month. Your ${zodiac.name} initiative is supported.</p>
                 </div>
                 <div class="action-item">
                     <h4>Week 2 Intention</h4>
@@ -9211,13 +9134,8 @@
             return `Life Path ${lifePath} meeting Personal Year ${personalYear} creates specific soul curriculum around ${getLifePathFocus(lifePath)}. This year teaches you to ${getLifePathAction(lifePath)} with ${personalYear <= 5 ? 'active' : 'receptive'} energy.`;
         }
 
-        function getYearlyOpportunity(zodiac, chinese, personalYear, focus) {
+        function getYearlyOpportunity(zodiac, chinese, personalYear) {
             const base = `Your ${zodiac.name} drive combined with ${chinese.animal} intuition in Year ${personalYear} creates unprecedented opportunity for `;
-            if (focus === 'career') return base + 'professional advancement and recognition.';
-            if (focus === 'love') return base + 'deep, meaningful relationship evolution.';
-            if (focus === 'health') return base + 'sustainable vitality transformation.';
-            if (focus === 'spiritual') return base + 'profound spiritual awakening.';
-            if (focus === 'finances') return base + 'abundance breakthrough.';
             return base + 'multi-dimensional life transformation.';
         }
 
@@ -9225,7 +9143,7 @@
             return `Your growth edge this year: integrating ${getZodiacShadow(zodiac.name)}${moonSign ? ` while managing ${getZodiacShadow(moonSign.name)} emotional patterns` : ''}. Life Path ${lifePath} asks you to ${getLifePathAction(lifePath)} even when it feels uncomfortable.`;
         }
 
-        function getYearlyQuarters(zodiac, chinese, lifePath, personalYear, focus, startDate = new Date()) {
+        function getYearlyQuarters(zodiac, chinese, lifePath, personalYear, startDate = new Date()) {
             const today = new Date(startDate);
             const currentMonth = today.getMonth();
             
@@ -9365,12 +9283,12 @@
             `;
         }
 
-        function getYearlyActionItems(zodiac, chinese, lifePath, personalYear, focus) {
+        function getYearlyActionItems(zodiac, chinese, lifePath, personalYear) {
             return `
                 <div class="action-item">
                     <h4>Q1 Priority (Jan-Mar)</h4>
                     <p><strong>Theme:</strong> Plant Seeds<br>
-                    Initiate key ${focus || 'life'} projects. Your ${zodiac.name} energy supports bold beginnings. Life Path ${lifePath} opens doors through ${getLifePathAction(lifePath)}.</p>
+                    Initiate key life projects. Your ${zodiac.name} energy supports bold beginnings. Life Path ${lifePath} opens doors through ${getLifePathAction(lifePath)}.</p>
                 </div>
                 <div class="action-item">
                     <h4>Q2 Priority (Apr-Jun)</h4>
