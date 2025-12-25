@@ -2396,19 +2396,19 @@
 
         /* Section Share Button */
         .section-share-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 16px;
+            display: block;
+            width: fit-content;
+            margin: 15px auto 0 auto;
+            padding: 10px 24px;
             background: rgba(0, 245, 255, 0.1);
             border: 1px solid rgba(0, 245, 255, 0.3);
             border-radius: 20px;
             color: var(--neon-cyan);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-top: 15px;
             font-family: 'Rajdhani', sans-serif;
+            text-align: center;
         }
 
         .section-share-btn:hover {
@@ -2418,8 +2418,81 @@
             box-shadow: 0 4px 15px rgba(0, 245, 255, 0.3);
         }
 
-        .section-share-btn .icon {
+        /* Share Modal Styles */
+        .share-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .share-modal-content {
+            position: relative;
+            background: linear-gradient(135deg, #1a0033 0%, #0a0a1a 100%);
+            margin: 10% auto;
+            padding: 30px;
+            border: 2px solid var(--neon-cyan);
+            border-radius: 20px;
+            max-width: 500px;
+            box-shadow: 0 0 50px rgba(0, 245, 255, 0.3);
+        }
+
+        .share-modal-close {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--neon-cyan);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .share-modal-close:hover {
+            color: #fff;
+            transform: scale(1.2);
+        }
+
+        .share-modal h3 {
+            text-align: center;
+            color: var(--neon-gold);
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+        }
+
+        .share-options {
+            display: grid;
+            gap: 12px;
+        }
+
+        .share-option-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #fff;
             font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .share-option-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--neon-cyan);
+            transform: translateX(5px);
+        }
+
+        .share-option-btn .icon {
+            font-size: 1.5rem;
         }
 
         /* Email Capture */
@@ -4747,7 +4820,9 @@
             window.open(`https://twitter.com/intent/tweet?text=${tweetText}&url=${url}`, '_blank');
         }
 
-        // Section-specific sharing
+        // Section-specific sharing - Show modal with options
+        let currentShareMessage = '';
+        
         function shareSectionInsight(sectionType, details) {
             const messages = {
                 'tarot': `🃏 Just pulled "${details}" in my daily forecast! This cosmic tool combines 8 mystical systems...`,
@@ -4760,8 +4835,53 @@
                 'frequency': `🔊 My healing frequency today: ${details}! Find yours with this cosmic calculator:`
             };
             
-            const message = messages[sectionType] || `✨ Just discovered something amazing about myself!`;
-            shareToTwitter(message);
+            currentShareMessage = messages[sectionType] || `✨ Just discovered something amazing about myself!`;
+            showShareModal();
+        }
+        
+        function showShareModal() {
+            const modal = document.getElementById('shareModal');
+            modal.style.display = 'block';
+        }
+        
+        function closeShareModal() {
+            const modal = document.getElementById('shareModal');
+            modal.style.display = 'none';
+        }
+        
+        function shareToX() {
+            const url = encodeURIComponent(generateShareURL());
+            const tweetText = encodeURIComponent(currentShareMessage);
+            window.open(`https://twitter.com/intent/tweet?text=${tweetText}&url=${url}`, '_blank');
+            closeShareModal();
+        }
+        
+        function shareToFacebookModal() {
+            const url = encodeURIComponent(generateShareURL());
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+            closeShareModal();
+        }
+        
+        function shareToTelegram() {
+            const url = encodeURIComponent(generateShareURL());
+            const text = encodeURIComponent(currentShareMessage);
+            window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
+            closeShareModal();
+        }
+        
+        function shareViaSMS() {
+            const url = generateShareURL();
+            const message = encodeURIComponent(currentShareMessage + '\n\n' + url);
+            window.location.href = `sms:?&body=${message}`;
+            closeShareModal();
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('shareModal');
+            if (event.target == modal) {
+                closeShareModal();
+            }
         }
 
         function shareToFacebook() {
@@ -6201,15 +6321,6 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="share-energy-buttons">
-                        <button onclick="shareEnergy('twitter')" class="share-btn twitter-btn">
-                            📱 Share Today's Energy
-                        </button>
-                        <button onclick="downloadEnergyCard()" class="share-btn download-btn">
-                            💾 Save Energy Card
-                        </button>
-                    </div>
                 </div>
 
                 ${specialDates.length > 0 ? `
@@ -6265,7 +6376,7 @@
                     <div class="system-content">
                         ${getEnhancedWesternAstrologyForecast(zodiac, risingSign, moonSign, birthTime, birthLocation, moonPhase)}
                         <button class="section-share-btn" onclick="shareSectionInsight('astrology', '${zodiac.name}${risingSign ? ' Rising ' + risingSign.name : ''}')">
-                            <span class="icon">🐦</span> Share My Cosmic Identity
+                            Share My Cosmic Identity
                         </button>
                     </div>
                 </div>
@@ -6278,7 +6389,7 @@
                     <div class="system-content">
                         ${getEnhancedChineseZodiacForecast(chinese, moonPhase)}
                         <button class="section-share-btn" onclick="shareSectionInsight('chinese', '${chinese.element} ${chinese.animal}')">
-                            <span class="icon">🐦</span> Share My Zodiac Discovery
+                            Share My Zodiac Discovery
                         </button>
                     </div>
                 </div>
@@ -6291,7 +6402,7 @@
                     <div class="system-content">
                         ${getEnhancedNumerologyForecast(lifePath, personalYear, birth)}
                         <button class="section-share-btn" onclick="shareSectionInsight('numerology', 'Life Path ${lifePath}')">
-                            <span class="icon">🐦</span> Share My Life Path
+                            Share My Life Path
                         </button>
                     </div>
                 </div>
@@ -6354,7 +6465,7 @@
                         </div>
                         ` : ''}
                         <button class="section-share-btn" onclick="shareSectionInsight('planetary', '${moonPhase.phase} & ${planetaryHour.planet} Hour')">
-                            <span class="icon">🐦</span> Share My Cosmic Timing
+                            Share My Cosmic Timing
                         </button>
                     </div>
                 </div>
@@ -6368,7 +6479,7 @@
                     <div class="system-content">
                         ${getEnhancedGematriaForecast(fullName, gematria, birth)}
                         <button class="section-share-btn" onclick="shareSectionInsight('gematria', '${gematria}')">
-                            <span class="icon">🐦</span> Share My Gematria
+                            Share My Gematria
                         </button>
                     </div>
                 </div>
@@ -6419,7 +6530,7 @@
                             </div>
                         </div>
                         <button class="section-share-btn" onclick="shareSectionInsight('frequency', '${frequencyData.hz} Hz')">
-                            <span class="icon">🐦</span> Share My Healing Frequency
+                            Share My Healing Frequency
                         </button>
                     </div>
                 </div>
@@ -6538,7 +6649,7 @@
                                 </div>
                             </div>
                             <button class="section-share-btn" onclick="shareSectionInsight('tarot', '${tarotCard.name}')">
-                                <span class="icon">🐦</span> Share My Tarot Card
+                                Share My Tarot Card
                             </button>
                         </div>
                     </div>
@@ -9622,6 +9733,32 @@
             updateLibraryCounter();
         });
     </script>
+
+    <!-- Share Modal -->
+    <div id="shareModal" class="share-modal">
+        <div class="share-modal-content">
+            <span class="share-modal-close" onclick="closeShareModal()">&times;</span>
+            <h3>✨ Share Your Discovery ✨</h3>
+            <div class="share-options">
+                <button class="share-option-btn" onclick="shareToX()">
+                    <span class="icon">𝕏</span>
+                    <span>Share on X (Twitter)</span>
+                </button>
+                <button class="share-option-btn" onclick="shareToFacebookModal()">
+                    <span class="icon">📘</span>
+                    <span>Share on Facebook</span>
+                </button>
+                <button class="share-option-btn" onclick="shareToTelegram()">
+                    <span class="icon">✈️</span>
+                    <span>Share on Telegram</span>
+                </button>
+                <button class="share-option-btn" onclick="shareViaSMS()">
+                    <span class="icon">💬</span>
+                    <span>Share via Text Message</span>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 
