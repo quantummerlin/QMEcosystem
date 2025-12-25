@@ -2638,6 +2638,41 @@
         .community-btn .icon {
             font-size: 1.1rem;
         }
+        
+        /* Community link buttons in Reality Codes section */
+        .community-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .community-link-btn.facebook {
+            background: linear-gradient(135deg, #1877F2, #0d5bbd);
+        }
+        
+        .community-link-btn.facebook:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(24, 119, 242, 0.5);
+        }
+        
+        .community-link-btn.telegram {
+            background: linear-gradient(135deg, #0088cc, #006699);
+        }
+        
+        .community-link-btn.telegram:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.5);
+        }
+        
+        .community-link-btn img {
+            filter: brightness(0) invert(1);
+        }
 
         /* Share options grid - always 2 columns except visual card */
         .share-options {
@@ -5232,6 +5267,27 @@
             closeShareModal();
         }
         
+        // Share the community card invite
+        function shareCommunityCard() {
+            currentShareText = `🔮 Join the Quantum Reality Codes Community!
+
+Post your Reality Code and have hundreds of community members focus their intention on YOUR manifestation!
+
+Based on the Power of Eight principle - group intention exponentially amplifies results:
+• 2 people = 3x power
+• 5 people = 31x power  
+• 10 people = 1,023x power!
+
+✨ Free to join • Active community • Daily group intentions ✨
+
+📘 Facebook: https://facebook.com/groups/1950742399049451/
+🌐 Telegram: https://t.me/+BIChXgOqFH9iMmU1`;
+            currentShareTitle = 'Quantum Reality Codes Community';
+            currentShareType = 'community';
+            currentShareDetails = '';
+            showShareModal();
+        }
+        
         // Generate visual share card
         async function generateShareCard() {
             const canvas = document.createElement('canvas');
@@ -7153,11 +7209,7 @@
                                             </div>
                                         </div>
                                         
-                                        <div class="reality-code-actions">
-                                            <button class="reality-code-btn primary" onclick="shareRealityCode('${code}', \`${primarySuggestion.statement.replace(/'/g, "\\'")}\`)">📤 Share to Amplify</button>
-                                            <button class="reality-code-btn" onclick="copyRealityCode('${code}', \`${primarySuggestion.statement.replace(/'/g, "\\'")}\`)">📋 Copy Code</button>
-                                            <button class="reality-code-btn" onclick="saveRealityCodeToStorage('${code}', \`${primarySuggestion.statement.replace(/'/g, "\\'")}\`, '${primarySuggestion.category}'); alert('Reality Code saved to your library! ✨')">💾 Save</button>
-                                        </div>
+
                                     </div>
                                     
                                     ${suggestions.slice(1).map((s, i) => {
@@ -7167,7 +7219,6 @@
                                                 <div class="reality-match">${s.icon} ${s.match}% Match - ${s.source}</div>
                                                 <div class="reality-statement" style="font-size: 1.1rem;">"${s.statement}"</div>
                                                 <div class="reality-code-display" style="font-size: 1.3rem;">${altCode}</div>
-                                                <button class="reality-code-btn" onclick="copyRealityCode('${altCode}', \`${s.statement.replace(/'/g, "\\'")}\`)">📋 Copy This Code</button>
                                             </div>
                                         `;
                                     }).join('')}
@@ -7189,22 +7240,27 @@
                                 </div>
                             </div>
                             
-                            <div class="community-amplify" style="background: linear-gradient(135deg, rgba(157, 0, 255, 0.2), rgba(0, 245, 255, 0.2)); border: 2px solid var(--neon-gold); border-radius: 20px; padding: 25px; margin-top: 25px; text-align: center;">
+                            <div class="community-amplify" id="communityCard" style="background: linear-gradient(135deg, rgba(157, 0, 255, 0.2), rgba(0, 245, 255, 0.2)); border: 2px solid var(--neon-gold); border-radius: 20px; padding: 25px; margin-top: 25px; text-align: center;">
                                 <h4 style="color: var(--neon-gold); font-size: 1.3rem; margin-bottom: 15px;">🔮 Join the Quantum Reality Codes Community</h4>
                                 <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 20px; line-height: 1.7;">
                                     Post your Reality Code and have <strong style="color: var(--neon-cyan);">hundreds of community members</strong> focus their intention on YOUR manifestation. Based on the Power of Eight principle, group intention exponentially amplifies results!
                                 </p>
-                                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                                    <a href="https://facebook.com/groups/1950742399049451/" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #1877F2; color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
-                                        📘 Facebook Group
+                                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px;">
+                                    <a href="https://facebook.com/groups/1950742399049451/" target="_blank" class="community-link-btn facebook">
+                                        <img src="../assets/tarot/facebook.png" alt="Facebook" style="width: 24px; height: 24px;">
+                                        <span>Facebook Group</span>
                                     </a>
-                                    <a href="https://t.me/+BIChXgOqFH9iMmU1" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0088cc; color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
-                                        ✈️ Telegram Group
+                                    <a href="https://t.me/+BIChXgOqFH9iMmU1" target="_blank" class="community-link-btn telegram">
+                                        <img src="../assets/tarot/telegram.png" alt="Telegram" style="width: 24px; height: 24px;">
+                                        <span>Telegram Group</span>
                                     </a>
                                 </div>
-                                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; margin-top: 15px;">
+                                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; margin-bottom: 15px;">
                                     ✨ Free to join • Active community • Daily group intentions ✨
                                 </p>
+                                <button class="section-share-btn" onclick="shareCommunityCard()" style="margin-top: 10px;">
+                                    Share Community Invite
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -10459,11 +10515,11 @@
                 <p class="community-text">Share to our manifestation groups for group intention amplification!</p>
                 <div class="community-buttons">
                     <button class="community-btn facebook-group" onclick="shareToFacebookGroup()">
-                        <span class="icon">👥</span>
+                        <img src="../assets/tarot/facebook.png" alt="Facebook" style="width: 20px; height: 20px; filter: brightness(0) invert(1);">
                         <span>Facebook Group</span>
                     </button>
                     <button class="community-btn telegram-group" onclick="shareToTelegramGroup()">
-                        <span class="icon">🌐</span>
+                        <img src="../assets/tarot/telegram.png" alt="Telegram" style="width: 20px; height: 20px; filter: brightness(0) invert(1);">
                         <span>Telegram Group</span>
                     </button>
                 </div>
