@@ -458,16 +458,20 @@
 
             getLibraryData() {
                 try {
-                    // Get general library items
+                    // Get general library items and normalize them
                     const generalData = localStorage.getItem(this.storageKey);
-                    const generalItems = generalData ? JSON.parse(generalData) : [];
+                    const generalItems = generalData ? JSON.parse(generalData).map(item => ({
+                        ...item,
+                        // Normalize timestamp - handle savedAt, timestamp, or use id as fallback
+                        timestamp: item.timestamp || (item.savedAt ? new Date(item.savedAt).getTime() : item.id) || Date.now()
+                    })) : [];
                     
                     // Get forecast items and normalize them
                     const forecastData = localStorage.getItem(this.forecastKey);
                     const forecastItems = forecastData ? JSON.parse(forecastData).map(f => ({
                         ...f,
                         type: 'forecast',
-                        timestamp: new Date(f.timestamp).getTime(),
+                        timestamp: f.timestamp || (f.savedAt ? new Date(f.savedAt).getTime() : f.id) || Date.now(),
                         title: `${f.timeframe} Forecast`,
                         name: f.profile?.name || 'Seeker'
                     })) : [];
@@ -535,11 +539,14 @@
                 const typeLabels = {
                     'forecast': '📊 Forecast',
                     'birth-sigil': '🌙 Birth Sigil',
+                    'sigil': '🔮 Sigil',
                     'tarot': '🃏 Tarot',
-                    'affirmation': '🔮 Affirmation',
+                    'affirmation': '💫 Affirmation',
                     'astrology': '⭐ Astrology',
                     'gematria': '🔢 Gematria',
-                    'angel': '👼 Angel Number'
+                    'angel': '👼 Angel Number',
+                    'water': '💧 Water Charging',
+                    'code': '🔑 Reality Code'
                 };
 
                 let contentHTML = '';
@@ -558,13 +565,24 @@
                             👁️ View Full Forecast
                         </button>
                     `;
-                } else if (item.type === 'birth-sigil' && item.sigil) {
+                } else if ((item.type === 'birth-sigil' || item.type === 'sigil') && item.sigil) {
                     contentHTML = `
                         <div class="sigil-container">
                             ${item.sigil}
                         </div>
                         <h3>${item.name || 'Birth Sigil'}</h3>
                         ${item.birthDate ? `<p>Born: ${item.birthDate}</p>` : ''}
+                        ${item.description ? `<p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: 8px;">${item.description}</p>` : ''}
+                    `;
+                } else if ((item.type === 'birth-sigil' || item.type === 'sigil') && item.data?.sigilData) {
+                    // Handle sigils saved with data structure
+                    contentHTML = `
+                        <div class="sigil-container" style="padding: 20px; background: rgba(255,255,255,0.05); border-radius: 12px; margin-bottom: 15px;">
+                            <div style="font-size: 3rem; text-align: center;">${item.data.sigilData}</div>
+                        </div>
+                        <h3>${item.name || 'Sigil'}</h3>
+                        ${item.description ? `<p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">${item.description}</p>` : ''}
+                        ${item.data.intention ? `<p style="color: rgba(0,245,255,0.8); font-size: 0.85rem; margin-top: 8px;">Intention: ${item.data.intention}</p>` : ''}
                     `;
                 } else if (item.type === 'affirmation') {
                     contentHTML = `
@@ -671,20 +689,28 @@
             deleteItem(itemId, itemType) {
                 if (!confirm('Are you sure you want to delete this item?')) return;
 
-                if (itemType === 'forecast') {
-                    // Delete from forecast storage
-                    const forecastData = localStorage.getItem(this.forecastKey);
-                    let forecasts = forecastData ? JSON.parse(forecastData) : [];
-                    forecasts = forecasts.filter(f => f.id !== itemId);
-                    localStorage.setItem(this.forecastKey, JSON.stringify(forecasts));
-                } else {
-                    // Delete from general library
-                    const library = JSON.parse(localStorage.getItem(this.storageKey) || '[]');
-                    const newLibrary = library.filter(item => (item.id || item.timestamp) !== itemId);
-                    localStorage.setItem(this.storageKey, JSON.stringify(newLibrary));
+                try {
+                    if (itemType === 'forecast') {
+                        // Delete from forecast storage
+                        const forecastData = localStorage.getItem(this.forecastKey);
+                        let forecasts = forecastData ? JSON.parse(forecastData) : [];
+                        forecasts = forecasts.filter(f => f.id !== itemId && f.id !== parseInt(itemId));
+                        localStorage.setItem(this.forecastKey, JSON.stringify(forecasts));
+                    } else {
+                        // Delete from general library
+                        const library = JSON.parse(localStorage.getItem(this.storageKey) || '[]');
+                        const newLibrary = library.filter(item => {
+                            const id = item.id || item.timestamp;
+                            return id !== itemId && id !== parseInt(itemId);
+                        });
+                        localStorage.setItem(this.storageKey, JSON.stringify(newLibrary));
+                    }
+                    
+                    this.loadLibrary();
+                } catch (error) {
+                    console.error('Error deleting item:', error);
+                    alert('Failed to delete item. Please try again.');
                 }
-                
-                this.loadLibrary();
             }
 
             setupFilters() {
