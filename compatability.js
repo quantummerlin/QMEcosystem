@@ -538,6 +538,85 @@ class QuantumCompatibilityCalculator {
         return this.wisdomMessages.growing[Math.floor(Math.random()*this.wisdomMessages.growing.length)];
     }
 
+    getOverallInsight(score, type) {
+        if (score >= 85) {
+            return `This is an exceptionally rare and powerful connection. Your ${type} compatibility transcends the ordinary, showing alignment across multiple cosmic dimensions. The universe has woven your paths together with remarkable precision.`;
+        } else if (score >= 75) {
+            return `A strong and harmonious connection with natural flow. While every relationship requires effort, your cosmic blueprint shows significant compatibility that creates a solid foundation for growth together.`;
+        } else if (score >= 65) {
+            return `A balanced connection with both harmony and growth opportunities. The cosmic forces show promise, though conscious effort and understanding will help you navigate differences and strengthen your bond.`;
+        } else if (score >= 55) {
+            return `This connection presents valuable learning opportunities. While challenges exist, they're gateways to profound personal and relational growth. With awareness and intention, you can transform obstacles into strengths.`;
+        } else {
+            return `A relationship that calls for deep understanding and patience. The cosmos presents significant differences that, while challenging, offer unique opportunities for expansion and transformation if both parties are committed to the journey.`;
+        }
+    }
+
+    getSystemExplanation(systemName, results, soul1, soul2) {
+        const explanations = {
+            zodiac: `<strong>${results.zodiac.sign1} (${results.zodiac.element1})</strong> and <strong>${results.zodiac.sign2} (${results.zodiac.element2})</strong> create ${results.zodiac.score >= 80 ? 'a harmonious cosmic dance' : results.zodiac.score >= 65 ? 'a dynamic partnership with complementary energies' : 'an opportunity for growth through differences'}. ${this.getElementalInsight(results.zodiac.element1, results.zodiac.element2)}`,
+            
+            chinese: `In Chinese astrology, <strong>${results.chineseZodiac.animal1}</strong> and <strong>${results.chineseZodiac.animal2}</strong> ${results.chineseZodiac.score >= 85 ? 'form a blessed alliance, often part of the same affinity triangle' : results.chineseZodiac.score >= 70 ? 'work well together with mutual respect' : 'have different approaches that require understanding'}.`,
+            
+            numerology: `Life Path <strong>${results.numerology.lifePath1}</strong> and <strong>${results.numerology.lifePath2}</strong> ${results.numerology.score >= 85 ? 'resonate at complementary frequencies' : results.numerology.score >= 70 ? 'share compatible life purposes' : 'walk different paths that can teach each other'}. ${this.getLifePathInsight(results.numerology.lifePath1, results.numerology.lifePath2)}`,
+            
+            tarot: `Your birth cards, <strong>${results.tarot.card1.name}</strong> and <strong>${results.tarot.card2.name}</strong>, reveal ${results.tarot.score >= 85 ? 'deeply aligned archetypal energies' : 'unique soul signatures'}. These cards illuminate your individual journeys and how they interweave.`,
+            
+            geometry: `Sacred geometry shapes <strong>${results.sacredGeometry.shape1}</strong> and <strong>${results.sacredGeometry.shape2}</strong> ${results.sacredGeometry.score >= 80 ? 'create harmonic resonance patterns' : 'each hold unique vibrational frequencies'}. These geometries reflect the fundamental structures of your souls.`,
+            
+            planetary: `Ruled by <strong>${results.planetary.ruler1}</strong> and <strong>${results.planetary.ruler2}</strong>, your planetary influences ${results.planetary.score >= 85 ? 'work in beautiful harmony' : 'create a unique cosmic interplay'}. ${this.getPlanetaryInsight(results.planetary.ruler1, results.planetary.ruler2)}`,
+            
+            elemental: `${results.elemental.element1} and ${results.elemental.element2} ${results.elemental.score >= 85 ? 'flow together naturally' : results.elemental.score >= 70 ? 'can find complementary balance' : 'require conscious bridging'}. ${this.getElementalBalance(results.elemental.element1, results.elemental.element2)}`,
+            
+            moon: `Born under <strong>${results.moonPhase.phase1}</strong> and <strong>${results.moonPhase.phase2}</strong>, your lunar energies ${results.moonPhase.score >= 85 ? 'align in powerful synchronicity' : 'each bring unique emotional rhythms to the connection'}.`,
+            
+            karmic: `${this.getKarmicInsight(results.karmic.karmic1, results.karmic.karmic2)} This reveals ${results.karmic.score >= 85 ? 'shared karmic lessons and soul contract indicators' : 'individual karmic patterns that influence the relationship'}.`,
+            
+            nameVibration: `Your names vibrate at frequencies <strong>${results.nameVibration.vibration1}</strong> and <strong>${results.nameVibration.vibration2}</strong>. ${results.nameVibration.score >= 85 ? 'These harmonics create natural resonance' : 'Each name carries its own energetic signature'}, influencing how you express yourselves.`,
+            
+            birthday: `Birthday power numbers <strong>${results.birthDayPower.power1}</strong> and <strong>${results.birthDayPower.power2}</strong> ${results.birthDayPower.score >= 85 ? 'amplify each other beautifully' : 'each bring distinct strengths'}. These numbers reveal core personality traits and life force energy.`,
+            
+            cosmic: `Currently, the cosmos is in <strong>${results.currentCosmic.currentSign} season</strong> under a <strong>${results.currentCosmic.currentMoon}</strong>. ${results.currentCosmic.score >= 80 ? 'This timing favors your connection with supportive celestial energies' : 'The current cosmic climate adds its own unique flavor to your dynamic'}.`
+        };
+        
+        return explanations[systemName] || '';
+    }
+
+    getElementalInsight(el1, el2) {
+        if (el1 === el2) return `Same-element partnerships share natural understanding and similar approaches to life.`;
+        if ((el1==='Fire'&&el2==='Air')||(el1==='Air'&&el2==='Fire')) return `Fire and Air fuel each other - Air fans Fire's flames while Fire heats Air's ideas.`;
+        if ((el1==='Earth'&&el2==='Water')||(el1==='Water'&&el2==='Earth')) return `Earth and Water nourish each other - Earth grounds Water while Water softens Earth.`;
+        return `Different elements bring complementary qualities that can balance each other with understanding.`;
+    }
+
+    getLifePathInsight(lp1, lp2) {
+        if (lp1 === lp2) return `Sharing the same Life Path creates deep mutual understanding.`;
+        if ([11,22,33].includes(lp1) || [11,22,33].includes(lp2)) return `Master numbers indicate old souls with heightened spiritual purpose.`;
+        return `Each path brings unique wisdom to the relationship.`;
+    }
+
+    getPlanetaryInsight(p1, p2) {
+        if (p1 === p2) return `Sharing planetary rulers creates similar core drives and motivations.`;
+        if ((p1==='Sun'&&p2==='Moon')||(p1==='Moon'&&p2==='Sun')) return `Sun and Moon together create the ultimate balance of masculine and feminine energies.`;
+        if ((p1==='Venus'&&p2==='Mars')||(p1==='Mars'&&p2==='Venus')) return `Venus and Mars together spark attraction and passion.`;
+        return `Different planetary rulers bring diverse cosmic influences.`;
+    }
+
+    getElementalBalance(el1, el2) {
+        if (el1 === 'Fire') return `Fire brings passion, enthusiasm, and initiative to the connection.`;
+        if (el1 === 'Earth') return `Earth brings stability, practicality, and grounding energy.`;
+        if (el1 === 'Air') return `Air brings intellect, communication, and mental stimulation.`;
+        if (el1 === 'Water') return `Water brings emotion, intuition, and deep feeling.`;
+        return `Each element contributes its unique qualities.`;
+    }
+
+    getKarmicInsight(day1, day2) {
+        const karmic = [13,14,16,19];
+        if (karmic.includes(day1) && karmic.includes(day2)) return `Both carry karmic debt numbers - you're here to learn profound lessons together.`;
+        if (karmic.includes(day1) || karmic.includes(day2)) return `One of you carries a karmic debt number, indicating important soul lessons.`;
+        return `Your birth days show natural life flow without major karmic debts.`;
+    }
+
     displayResults(results, soul1, soul2, relationshipType) {
         const resultsContainer = document.getElementById('resultsContainer');
         
@@ -554,10 +633,15 @@ class QuantumCompatibilityCalculator {
                     <div class="score-inner">${results.overall}%</div>
                 </div>
                 <h3 class="compatibility-title" style="color:var(--neon-gold);margin-top:1rem;">${results.title}</h3>
-                <p style="color:rgba(255,255,255,0.8);font-style:italic;max-width:500px;margin:1rem auto;">"${results.message}"</p>
+                <p style="color:rgba(255,255,255,0.8);font-style:italic;max-width:600px;margin:1rem auto;font-size:1.1rem;">"${results.message}"</p>
+                <div style="margin-top:2rem;padding:2rem;background:rgba(0,245,255,0.05);border-radius:15px;max-width:800px;margin-left:auto;margin-right:auto;">
+                    <p style="color:rgba(255,255,255,0.9);line-height:1.8;margin:0;font-size:1.05rem;">
+                        ${this.getOverallInsight(results.overall, relationshipType)}
+                    </p>
+                </div>
             </div>
             
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0;">
+            <!-- Summary Cards for Top 4 Systems -->
                 <div style="background:rgba(0,245,255,0.05);border:1px solid rgba(0,245,255,0.3);border-radius:15px;padding:1.5rem;">
                     <h4 style="color:var(--neon-cyan);margin-bottom:0.5rem;">⭐ Western Zodiac</h4>
                     <div style="font-size:1.5rem;margin-bottom:0.5rem;">${results.zodiac.sign1} + ${results.zodiac.sign2}</div>
@@ -581,21 +665,151 @@ class QuantumCompatibilityCalculator {
                 </div>
             </div>
             
-            <div style="margin:2rem 0;">
-                <h3 style="text-align:center;color:var(--neon-cyan);margin-bottom:1.5rem;font-family:'Orbitron',monospace;">12-System Breakdown</h3>
-                <div class="compatibility-breakdown">
-                    ${this.createBreakdownItem('⭐ Western Zodiac',results.zodiac.score)}
-                    ${this.createBreakdownItem('🐉 Chinese Zodiac',results.chineseZodiac.score)}
-                    ${this.createBreakdownItem('🔢 Numerology',results.numerology.score)}
-                    ${this.createBreakdownItem('🃏 Tarot Archetypes',results.tarot.score)}
-                    ${this.createBreakdownItem('🔯 Sacred Geometry',results.sacredGeometry.score)}
-                    ${this.createBreakdownItem('🪐 Planetary Rulers',results.planetary.score)}
-                    ${this.createBreakdownItem('🔥 Elemental Balance',results.elemental.score)}
-                    ${this.createBreakdownItem('🌙 Moon Phases',results.moonPhase.score)}
-                    ${this.createBreakdownItem('♾️ Karmic Numbers',results.karmic.score)}
-                    ${this.createBreakdownItem('📛 Name Vibration',results.nameVibration.score)}
-                    ${this.createBreakdownItem('🎂 Birthday Power',results.birthDayPower.score)}
-                    ${this.createBreakdownItem('🌌 Current Cosmos',results.currentCosmic.score)}
+            <div style="margin:3rem 0;">
+                <h3 style="text-align:center;color:var(--neon-cyan);margin-bottom:2rem;font-family:'Orbitron',monospace;">Comprehensive System Analysis</h3>
+                
+                <!-- Western Zodiac -->
+                <div style="margin-bottom:2rem;padding:2rem;background:rgba(0,245,255,0.03);border:1px solid rgba(0,245,255,0.2);border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                        <h4 style="color:var(--neon-cyan);font-size:1.3rem;">⭐ Western Zodiac</h4>
+                        <span style="font-size:1.5rem;font-weight:bold;color:var(--neon-gold);">${results.zodiac.score}%</span>
+                    </div>
+                    <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:1rem;">
+                        <div style="width:${results.zodiac.score}%;height:100%;background:linear-gradient(90deg,var(--neon-cyan),var(--neon-purple));border-radius:3px;"></div>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.85);line-height:1.7;">${this.getSystemExplanation('zodiac', results, soul1, soul2)}</p>
+                </div>
+                
+                <!-- Chinese Zodiac -->
+                <div style="margin-bottom:2rem;padding:2rem;background:rgba(255,0,102,0.03);border:1px solid rgba(255,0,102,0.2);border-radius:20px;">
+                    <div style="display:flex;justify-space-between;align-items:center;margin-bottom:1rem;">
+                        <h4 style="color:var(--neon-pink);font-size:1.3rem;">🐉 Chinese Zodiac</h4>
+                        <span style="font-size:1.5rem;font-weight:bold;color:var(--neon-gold);">${results.chineseZodiac.score}%</span>
+                    </div>
+                    <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:1rem;">
+                        <div style="width:${results.chineseZodiac.score}%;height:100%;background:linear-gradient(90deg,var(--neon-pink),var(--neon-purple));border-radius:3px;"></div>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.85);line-height:1.7;">${this.getSystemExplanation('chinese', results, soul1, soul2)}</p>
+                </div>
+                
+                <!-- Numerology -->
+                <div style="margin-bottom:2rem;padding:2rem;background:rgba(157,0,255,0.03);border:1px solid rgba(157,0,255,0.2);border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                        <h4 style="color:var(--neon-purple);font-size:1.3rem;">🔢 Numerology</h4>
+                        <span style="font-size:1.5rem;font-weight:bold;color:var(--neon-gold);">${results.numerology.score}%</span>
+                    </div>
+                    <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:1rem;">
+                        <div style="width:${results.numerology.score}%;height:100%;background:linear-gradient(90deg,var(--neon-purple),var(--neon-pink));border-radius:3px;"></div>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.85);line-height:1.7;">${this.getSystemExplanation('numerology', results, soul1, soul2)}</p>
+                </div>
+                
+                <!-- Tarot -->
+                <div style="margin-bottom:2rem;padding:2rem;background:rgba(255,215,0,0.03);border:1px solid rgba(255,215,0,0.2);border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                        <h4 style="color:var(--neon-gold);font-size:1.3rem;">🃏 Tarot Birth Cards</h4>
+                        <span style="font-size:1.5rem;font-weight:bold;color:var(--neon-gold);">${results.tarot.score}%</span>
+                    </div>
+                    <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:1rem;">
+                        <div style="width:${results.tarot.score}%;height:100%;background:linear-gradient(90deg,var(--neon-gold),var(--neon-cyan));border-radius:3px;"></div>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.85);line-height:1.7;">${this.getSystemExplanation('tarot', results, soul1, soul2)}</p>
+                </div>
+                
+                <!-- Sacred Geometry -->
+                <div style="margin-bottom:2rem;padding:2rem;background:rgba(0,245,255,0.03);border:1px solid rgba(0,245,255,0.2);border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                        <h4 style="color:var(--neon-cyan);font-size:1.3rem;">🔯 Sacred Geometry</h4>
+                        <span style="font-size:1.5rem;font-weight:bold;color:var(--neon-gold);">${results.sacredGeometry.score}%</span>
+                    </div>
+                    <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:1rem;">
+                        <div style="width:${results.sacredGeometry.score}%;height:100%;background:linear-gradient(90deg,var(--neon-cyan),var(--neon-gold));border-radius:3px;"></div>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.85);line-height:1.7;">${this.getSystemExplanation('geometry', results, soul1, soul2)}</p>
+                </div>
+                
+                <!-- Planetary Rulers -->
+                <div style="margin-bottom:2rem;padding:2rem;background:rgba(157,0,255,0.03);border:1px solid rgba(157,0,255,0.2);border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                        <h4 style="color:var(--neon-purple);font-size:1.3rem;">🪐 Planetary Rulers</h4>
+                        <span style="font-size:1.5rem;font-weight:bold;color:var(--neon-gold);">${results.planetary.score}%</span>
+                    </div>
+                    <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:1rem;">
+                        <div style="width:${results.planetary.score}%;height:100%;background:linear-gradient(90deg,var(--neon-purple),var(--neon-cyan));border-radius:3px;"></div>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.85);line-height:1.7;">${this.getSystemExplanation('planetary', results, soul1, soul2)}</p>
+                </div>
+                
+                <!-- Elemental Balance -->
+                <div style="margin-bottom:2rem;padding:2rem;background:rgba(255,0,102,0.03);border:1px solid rgba(255,0,102,0.2);border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                        <h4 style="color:var(--neon-pink);font-size:1.3rem;">🔥 Elemental Balance</h4>
+                        <span style="font-size:1.5rem;font-weight:bold;color:var(--neon-gold);">${results.elemental.score}%</span>
+                    </div>
+                    <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:1rem;">
+                        <div style="width:${results.elemental.score}%;height:100%;background:linear-gradient(90deg,var(--neon-pink),var(--neon-gold));border-radius:3px;"></div>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.85);line-height:1.7;">${this.getSystemExplanation('elemental', results, soul1, soul2)}</p>
+                </div>
+                
+                <!-- Moon Phases -->
+                <div style="margin-bottom:2rem;padding:2rem;background:rgba(255,215,0,0.03);border:1px solid rgba(255,215,0,0.2);border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                        <h4 style="color:var(--neon-gold);font-size:1.3rem;">🌙 Moon Phase Compatibility</h4>
+                        <span style="font-size:1.5rem;font-weight:bold;color:var(--neon-gold);">${results.moonPhase.score}%</span>
+                    </div>
+                    <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:1rem;">
+                        <div style="width:${results.moonPhase.score}%;height:100%;background:linear-gradient(90deg,var(--neon-gold),var(--neon-purple));border-radius:3px;"></div>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.85);line-height:1.7;">${this.getSystemExplanation('moon', results, soul1, soul2)}</p>
+                </div>
+                
+                <!-- Karmic Numbers -->
+                <div style="margin-bottom:2rem;padding:2rem;background:rgba(0,245,255,0.03);border:1px solid rgba(0,245,255,0.2);border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                        <h4 style="color:var(--neon-cyan);font-size:1.3rem;">♾️ Karmic Connections</h4>
+                        <span style="font-size:1.5rem;font-weight:bold;color:var(--neon-gold);">${results.karmic.score}%</span>
+                    </div>
+                    <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:1rem;">
+                        <div style="width:${results.karmic.score}%;height:100%;background:linear-gradient(90deg,var(--neon-cyan),var(--neon-pink));border-radius:3px;"></div>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.85);line-height:1.7;">${this.getSystemExplanation('karmic', results, soul1, soul2)}</p>
+                </div>
+                
+                <!-- Name Vibration -->
+                <div style="margin-bottom:2rem;padding:2rem;background:rgba(157,0,255,0.03);border:1px solid rgba(157,0,255,0.2);border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                        <h4 style="color:var(--neon-purple);font-size:1.3rem;">📛 Name Vibration</h4>
+                        <span style="font-size:1.5rem;font-weight:bold;color:var(--neon-gold);">${results.nameVibration.score}%</span>
+                    </div>
+                    <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:1rem;">
+                        <div style="width:${results.nameVibration.score}%;height:100%;background:linear-gradient(90deg,var(--neon-purple),var(--neon-gold));border-radius:3px;"></div>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.85);line-height:1.7;">${this.getSystemExplanation('nameVibration', results, soul1, soul2)}</p>
+                </div>
+                
+                <!-- Birthday Power -->
+                <div style="margin-bottom:2rem;padding:2rem;background:rgba(255,0,102,0.03);border:1px solid rgba(255,0,102,0.2);border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                        <h4 style="color:var(--neon-pink);font-size:1.3rem;">🎂 Birthday Power</h4>
+                        <span style="font-size:1.5rem;font-weight:bold;color:var(--neon-gold);">${results.birthDayPower.score}%</span>
+                    </div>
+                    <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:1rem;">
+                        <div style="width:${results.birthDayPower.score}%;height:100%;background:linear-gradient(90deg,var(--neon-pink),var(--neon-cyan));border-radius:3px;"></div>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.85);line-height:1.7;">${this.getSystemExplanation('birthday', results, soul1, soul2)}</p>
+                </div>
+                
+                <!-- Current Cosmic -->
+                <div style="margin-bottom:2rem;padding:2rem;background:rgba(255,215,0,0.03);border:1px solid rgba(255,215,0,0.2);border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                        <h4 style="color:var(--neon-gold);font-size:1.3rem;">🌌 Current Cosmic Influence</h4>
+                        <span style="font-size:1.5rem;font-weight:bold;color:var(--neon-gold);">${results.currentCosmic.score}%</span>
+                    </div>
+                    <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:1rem;">
+                        <div style="width:${results.currentCosmic.score}%;height:100%;background:linear-gradient(90deg,var(--neon-gold),var(--neon-purple));border-radius:3px;"></div>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.85);line-height:1.7;">${this.getSystemExplanation('cosmic', results, soul1, soul2)}</p>
                 </div>
             </div>
             
