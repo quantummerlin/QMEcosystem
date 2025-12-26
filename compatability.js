@@ -37,6 +37,9 @@ class QuantumCompatibilityCalculator {
                 e.preventDefault();
                 this.calculateComprehensiveCompatibility();
             });
+            console.log('Quantum Compatibility Calculator initialized successfully');
+        } else {
+            console.error('Compatibility form not found');
         }
     }
 
@@ -44,17 +47,28 @@ class QuantumCompatibilityCalculator {
         const formData = new FormData(document.getElementById('compatibilityForm'));
         const relationshipType = formData.get('relationshipType') || 'romantic';
         
+        // Validate required fields
+        const name1 = formData.get('name1');
+        const birthdate1 = formData.get('birthdate1');
+        const name2 = formData.get('name2');
+        const birthdate2 = formData.get('birthdate2');
+        
+        if (!name1 || !birthdate1 || !name2 || !birthdate2) {
+            alert('Please fill in at least the names and birth dates for both people.');
+            return;
+        }
+        
         const soul1 = {
-            name: formData.get('name1'),
-            birthdate: formData.get('birthdate1'),
+            name: name1,
+            birthdate: birthdate1,
             birthtime: formData.get('birthtime1'),
             birthplace: formData.get('birthplace1'),
             currentLocation: formData.get('currentLocation1')
         };
         
         const soul2 = {
-            name: formData.get('name2'),
-            birthdate: formData.get('birthdate2'),
+            name: name2,
+            birthdate: birthdate2,
             birthtime: formData.get('birthtime2'),
             birthplace: formData.get('birthplace2'),
             currentLocation: formData.get('currentLocation2')
@@ -67,7 +81,7 @@ class QuantumCompatibilityCalculator {
             const results = this.performAllCalculations(soul1, soul2, relationshipType);
             this.hideLoadingOverlay();
             this.displayResults(results, soul1, soul2, relationshipType);
-        }, 3500);
+        }, 8000);
     }
 
     showLoadingOverlay() {
@@ -606,7 +620,21 @@ class QuantumCompatibilityCalculator {
     }
 }
 
-// Initialize
+// Initialize and expose globally
+let quantumCalculator;
 document.addEventListener('DOMContentLoaded', () => {
-    new QuantumCompatibilityCalculator();
+    quantumCalculator = new QuantumCompatibilityCalculator();
+    window.quantumCalculator = quantumCalculator;
+    console.log('Quantum Compatibility Calculator ready');
 });
+
+// Fallback initialization if DOMContentLoaded already fired
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(() => {
+        if (!quantumCalculator) {
+            quantumCalculator = new QuantumCompatibilityCalculator();
+            window.quantumCalculator = quantumCalculator;
+            console.log('Quantum Compatibility Calculator ready (fallback)');
+        }
+    }, 100);
+}
