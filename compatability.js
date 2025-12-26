@@ -76,16 +76,27 @@ class QuantumCompatibilityCalculator {
         
         // Show loading overlay with animation
         this.showLoadingOverlay();
+        console.log('Starting 8 second calculation for:', soul1.name, '&', soul2.name);
         
         setTimeout(() => {
-            const results = this.performAllCalculations(soul1, soul2, relationshipType);
-            this.hideLoadingOverlay();
-            this.displayResults(results, soul1, soul2, relationshipType);
+            try {
+                console.log('Performing calculations...');
+                const results = this.performAllCalculations(soul1, soul2, relationshipType);
+                console.log('Calculations complete:', results);
+                this.hideLoadingOverlay();
+                console.log('Displaying results...');
+                this.displayResults(results, soul1, soul2, relationshipType);
+            } catch (error) {
+                console.error('Calculation error:', error);
+                this.hideLoadingOverlay();
+                alert('Error calculating compatibility: ' + error.message);
+            }
         }, 8000);
     }
 
     showLoadingOverlay() {
         const overlay = document.getElementById('loadingOverlay');
+        console.log('Showing loading overlay, found:', !!overlay);
         if (overlay) {
             overlay.style.display = 'flex';
             // Start the orbital line animation
@@ -603,7 +614,9 @@ class QuantumCompatibilityCalculator {
         `;
         
         resultsContainer.style.display = 'block';
+        resultsContainer.classList.add('active');
         resultsContainer.scrollIntoView({ behavior: 'smooth' });
+        console.log('Results displayed successfully');
     }
 
     createBreakdownItem(label, score) {
