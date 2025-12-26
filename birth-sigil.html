@@ -91,45 +91,6 @@
             50% { opacity: 1; }
         }
 
-        /* Home Button - Center Top */
-        .home-floating {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-        }
-        
-        .home-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(135deg, rgba(0, 245, 255, 0.2) 0%, rgba(157, 0, 255, 0.2) 100%);
-            color: #ffffff;
-            font-family: 'Orbitron', monospace;
-            font-weight: 600;
-            font-size: 0.85rem;
-            padding: 10px 18px;
-            border: 2px solid rgba(0, 245, 255, 0.5);
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 245, 255, 0.2);
-            backdrop-filter: blur(10px);
-            text-decoration: none;
-        }
-        
-        .home-btn:hover {
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.4);
-            background: linear-gradient(135deg, rgba(0, 245, 255, 0.4) 0%, rgba(157, 0, 255, 0.4) 100%);
-            border-color: rgba(0, 245, 255, 1);
-        }
-        
-        .home-icon {
-            font-size: 1.2rem;
-        }
-
         /* Library Button - Top Left Corner */
         .library-floating {
             position: fixed;
@@ -218,16 +179,6 @@
         }
 
         @media (max-width: 768px) {
-            .home-floating {
-                top: 10px;
-            }
-            .home-btn {
-                padding: 8px 14px;
-                font-size: 0.75rem;
-            }
-            .home-btn span:not(.home-icon) {
-                display: none;
-            }
             .library-floating {
                 top: 10px;
                 left: 10px;
@@ -246,6 +197,49 @@
             }
             .coffee-btn span:not(.coffee-icon) {
                 display: none;
+            }
+            
+            /* Reduce padding for mobile */
+            .hero {
+                padding: 60px 1rem 40px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1rem;
+            }
+            
+            .generator-section,
+            .about-section,
+            .education-section,
+            .cross-tools-section {
+                padding: 2rem 1rem;
+                margin: 1rem 0;
+            }
+            
+            .generator-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .input-group {
+                margin: 1rem 0;
+            }
+            
+            .generate-btn {
+                padding: 14px 30px;
+                font-size: 1rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .action-btn {
+                width: 100%;
             }
         }
 
@@ -1694,13 +1688,6 @@
     <div class="stars" id="starfield"></div>
     
     <!-- Floating Buttons -->
-    <div class="home-floating">
-        <a href="/" class="home-btn">
-            <span class="home-icon">🏠</span>
-            <span>Home</span>
-        </a>
-    </div>
-    
     <div class="library-floating">
         <a href="/library" class="library-btn">
             <span class="library-icon">📚</span>
@@ -1751,8 +1738,15 @@
 
         <!-- Generator Section -->
         <section class="generator-section">
-            <h2>Create Your Cosmic Sigil</h2>
-            <p>Enter your birth details to generate your unique celestial signature</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <h2 style="margin: 0;">Create Your Cosmic Sigil</h2>
+                    <p style="margin: 0.5rem 0 0 0;">Enter your birth details to generate your unique celestial signature</p>
+                </div>
+                <button onclick="loadMyProfile()" style="background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple)); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-size: 0.9rem; font-family: 'Orbitron', monospace; font-weight: 600; transition: all 0.3s ease; white-space: nowrap;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(0,245,255,0.4)'" onmouseout="this.style.transform=''; this.style.boxShadow=''">
+                    👤 Load My Profile
+                </button>
+            </div>
             
             <div class="input-group">
                 <label>Birth Date & Time</label>
@@ -2535,6 +2529,72 @@
         // PART 4: Main Generation & Display
         // ==========================================
         
+        // Load My Profile function
+        function loadMyProfile() {
+            const savedProfile = localStorage.getItem('quantumMerlin_userProfile');
+            
+            if (!savedProfile) {
+                alert('No saved profile found! Please create a profile in the Quantum Forecaster first.');
+                return;
+            }
+            
+            try {
+                const profile = JSON.parse(savedProfile);
+                
+                // Parse birth date (format: YYYY-MM-DD)
+                if (profile.birthDate) {
+                    const dateParts = profile.birthDate.split('-');
+                    if (dateParts.length === 3) {
+                        document.getElementById('year').value = dateParts[0];
+                        document.getElementById('month').value = parseInt(dateParts[1]);
+                        document.getElementById('day').value = parseInt(dateParts[2]);
+                    }
+                }
+                
+                // Parse birth time (format: HH:MM)
+                if (profile.birthTime) {
+                    const timeParts = profile.birthTime.split(':');
+                    if (timeParts.length === 2) {
+                        let hour = parseInt(timeParts[0]);
+                        const minute = timeParts[1];
+                        const ampm = hour >= 12 ? 'PM' : 'AM';
+                        
+                        // Convert to 12-hour format
+                        if (hour === 0) hour = 12;
+                        else if (hour > 12) hour -= 12;
+                        
+                        document.getElementById('hour').value = hour;
+                        document.getElementById('minute').value = minute;
+                        document.getElementById('ampm').value = ampm;
+                    }
+                }
+                
+                // Set location if available
+                if (profile.birthLocation) {
+                    document.getElementById('locationSearch').value = profile.birthLocation;
+                    
+                    // If we have lat/lon, set the selected location
+                    if (profile.latitude && profile.longitude) {
+                        selectedLocation = {
+                            city: profile.birthLocation,
+                            lat: parseFloat(profile.latitude),
+                            lon: parseFloat(profile.longitude)
+                        };
+                    }
+                }
+                
+                // Show success message
+                showNotification('✓ Profile loaded successfully!', 'success');
+                
+                // Scroll to the first input
+                document.getElementById('day').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+            } catch (error) {
+                console.error('Error loading profile:', error);
+                alert('Error loading profile. Please try again.');
+            }
+        }
+        
         function generateCosmicSigil() {
             console.log('generateCosmicSigil called');
             // Get form inputs
@@ -3063,9 +3123,6 @@
                 <canvas id="sigilCanvas" width="400" height="400"></canvas>
                 
                 <div class="action-buttons">
-                    <button class="action-btn" onclick="replayAnimation()" title="Replay the generation animation">🔄 Replay</button>
-                    <button class="action-btn" onclick="saveSigil()">💾 Save Sigil</button>
-                    <button class="action-btn" onclick="saveSigilHighRes()" title="Export 2000x2000 high resolution">🖼️ High-Res</button>
                     <button class="action-btn" onclick="saveToJukebox()">📚 Add to Library</button>
                     <button class="action-btn" onclick="shareSocial()">📤 Share</button>
                     <button class="action-btn" onclick="generateNew()">✨ Create Another</button>
