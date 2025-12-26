@@ -60,12 +60,84 @@ class QuantumCompatibilityCalculator {
             currentLocation: formData.get('currentLocation2')
         };
         
-        this.showLoadingAnimation();
+        // Show loading overlay with animation
+        this.showLoadingOverlay();
         
         setTimeout(() => {
             const results = this.performAllCalculations(soul1, soul2, relationshipType);
+            this.hideLoadingOverlay();
             this.displayResults(results, soul1, soul2, relationshipType);
-        }, 2500);
+        }, 3500);
+    }
+
+    showLoadingOverlay() {
+        const overlay = document.getElementById('loadingOverlay');
+        if (overlay) {
+            overlay.style.display = 'flex';
+            // Start the orbital line animation
+            this.startLoadingAnimation();
+        }
+    }
+
+    hideLoadingOverlay() {
+        const overlay = document.getElementById('loadingOverlay');
+        if (overlay) {
+            overlay.style.opacity = '0';
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                overlay.style.opacity = '1';
+            }, 500);
+        }
+    }
+
+    startLoadingAnimation() {
+        const canvas = document.getElementById('loading-lines-canvas');
+        if (!canvas) return;
+        
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        let angle = 0;
+        
+        const animate = () => {
+            if (document.getElementById('loadingOverlay').style.display === 'none') return;
+            
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw orbital lines
+            for (let i = 0; i < 3; i++) {
+                const radius = 80 + i * 50;
+                const lineAngle = angle + (i * Math.PI * 2 / 3);
+                
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius, lineAngle, lineAngle + Math.PI * 0.5);
+                
+                const gradient = ctx.createLinearGradient(
+                    centerX + Math.cos(lineAngle) * radius,
+                    centerY + Math.sin(lineAngle) * radius,
+                    centerX + Math.cos(lineAngle + Math.PI * 0.5) * radius,
+                    centerY + Math.sin(lineAngle + Math.PI * 0.5) * radius
+                );
+                
+                const colors = ['#00f5ff', '#ffd700', '#ff0066'];
+                gradient.addColorStop(0, 'transparent');
+                gradient.addColorStop(0.5, colors[i]);
+                gradient.addColorStop(1, 'transparent');
+                
+                ctx.strokeStyle = gradient;
+                ctx.lineWidth = 3;
+                ctx.stroke();
+            }
+            
+            angle += 0.02;
+            requestAnimationFrame(animate);
+        };
+        
+        animate();
     }
 
     performAllCalculations(soul1, soul2, relationshipType) {
@@ -439,32 +511,6 @@ class QuantumCompatibilityCalculator {
         if (score >= 80) return this.wisdomMessages.high[Math.floor(Math.random()*this.wisdomMessages.high.length)];
         if (score >= 60) return this.wisdomMessages.medium[Math.floor(Math.random()*this.wisdomMessages.medium.length)];
         return this.wisdomMessages.growing[Math.floor(Math.random()*this.wisdomMessages.growing.length)];
-    }
-
-    showLoadingAnimation() {
-        const resultsContainer = document.getElementById('resultsContainer');
-        resultsContainer.innerHTML = `
-            <div style="text-align:center;padding:3rem;">
-                <div style="font-size:4rem;margin-bottom:1rem;animation:pulse 1.5s ease-in-out infinite;">🔮</div>
-                <h3 style="color:var(--neon-cyan);margin-bottom:1rem;font-family:'Orbitron',monospace;">Analyzing 12 Mystical Systems...</h3>
-                <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Western Zodiac • Chinese Zodiac • Numerology • Tarot</p>
-                <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Sacred Geometry • Planetary Rulers • Elements • Moon Phases</p>
-                <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Karmic Numbers • Name Vibration • Birthday Power • Current Cosmos</p>
-                <div style="margin-top:2rem;display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-                    <span style="animation:fadeInOut 2s ease-in-out infinite;">⭐</span>
-                    <span style="animation:fadeInOut 2s ease-in-out infinite 0.2s;">🌙</span>
-                    <span style="animation:fadeInOut 2s ease-in-out infinite 0.4s;">✨</span>
-                    <span style="animation:fadeInOut 2s ease-in-out infinite 0.6s;">💫</span>
-                    <span style="animation:fadeInOut 2s ease-in-out infinite 0.8s;">🔯</span>
-                </div>
-            </div>
-            <style>
-                @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
-                @keyframes fadeInOut{0%,100%{opacity:0.3;}50%{opacity:1;}}
-            </style>
-        `;
-        resultsContainer.style.display = 'block';
-        resultsContainer.scrollIntoView({ behavior: 'smooth' });
     }
 
     displayResults(results, soul1, soul2, relationshipType) {

@@ -946,10 +946,196 @@
             border-radius: 8px;
             margin: 1rem 0;
         }
+
+        /* ========================================
+           LOADING ANIMATION OVERLAY
+           ======================================== */
+        
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            overflow: hidden;
+            transition: opacity 0.5s ease;
+        }
+
+        #loading-lines-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .loading-overlay .emoji-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .loading-overlay .emoji {
+            position: absolute;
+            font-size: 60px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-origin: center;
+            will-change: transform, opacity;
+            opacity: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #loading-quantum {
+            color: #FFD700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+            animation: orbitEmoji 3s ease-in-out infinite;
+        }
+
+        #loading-wizard {
+            color: #00F0FF;
+            text-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+            animation: orbitEmoji 3s ease-in-out infinite 1s;
+        }
+
+        #loading-rose {
+            color: #FF0066;
+            text-shadow: 0 0 20px rgba(255, 0, 102, 0.8);
+            animation: orbitEmoji 3s ease-in-out infinite 2s;
+        }
+
+        @keyframes orbitEmoji {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) translateX(-100px) scale(0.5);
+            }
+            25% {
+                opacity: 1;
+                transform: translate(-50%, -50%) translateX(0) scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: translate(-50%, -50%) translateX(100px) scale(1);
+            }
+            75% {
+                opacity: 0;
+                transform: translate(-50%, -50%) translateX(0) scale(0.5);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) translateX(-100px) scale(0.5);
+            }
+        }
+
+        #loading-singularity {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #fff 0%, #00f5ff 50%, #9d00ff 100%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            box-shadow: 
+                0 0 20px #00f5ff,
+                0 0 40px #9d00ff,
+                0 0 60px #00f5ff,
+                0 0 80px #9d00ff;
+            animation: singularityPulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes singularityPulse {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            25% { transform: translate(-50%, -50%) scale(5); }
+            50% { transform: translate(-50%, -50%) scale(15); opacity: 0.8; }
+            75% { transform: translate(-50%, -50%) scale(30) rotate(180deg); opacity: 0.4; }
+            100% { transform: translate(-50%, -50%) scale(1) rotate(360deg); opacity: 1; }
+        }
+
+        #loading-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00F0FF 0%, #FFD700 50%, #FF0066 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            white-space: nowrap;
+            z-index: 4;
+            font-family: 'Orbitron', monospace;
+            animation: titlePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes titlePulse {
+            0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(0.95); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
+        }
+
+        .loading-wait-message {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.9);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.2rem;
+            text-align: center;
+            z-index: 10001;
+            max-width: 90%;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            #loading-title {
+                font-size: 1.5rem;
+            }
+            .loading-overlay .emoji {
+                font-size: 40px;
+                width: 40px;
+                height: 40px;
+            }
+        }
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
+    <!-- Loading Overlay (During Compatibility Calculation) -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <canvas id="loading-lines-canvas"></canvas>
+        
+        <div class="emoji-layer">
+            <div class="emoji" id="loading-quantum">⚛️</div>
+            <div class="emoji" id="loading-wizard">🧙‍♂️</div>
+            <div class="emoji" id="loading-rose">🌹</div>
+        </div>
+
+        <div id="loading-singularity"></div>
+        <div id="loading-title">QUANTUM MERLIN</div>
+        
+        <div class="loading-wait-message">
+            <div style="margin-bottom: 10px;">Analyzing your cosmic connection...</div>
+            <div style="color: rgba(255, 215, 0, 0.9); font-size: 1rem;">Calculating across 12 mystical systems</div>
+        </div>
+    </div>
+
     <!-- Cosmic Background -->
     <div class="cosmic-bg"></div>
     <div class="stars" id="stars"></div>
