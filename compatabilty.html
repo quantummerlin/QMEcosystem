@@ -1274,7 +1274,12 @@
                 <div class="soul-input-grid">
                     <!-- Person/Entity 1 -->
                     <div class="soul-input-card">
-                        <h4 class="card-title" id="person1Label">1st Person/Entity</h4>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <h4 class="card-title" id="person1Label" style="margin: 0;">1st Person/Entity</h4>
+                            <button type="button" onclick="loadMyProfile()" style="background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple)); color: white; border: none; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-family: 'Rajdhani', sans-serif; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(0,245,255,0.4)'" onmouseout="this.style.transform=''; this.style.boxShadow=''">
+                                👤 Load My Profile
+                            </button>
+                        </div>
                         <div class="input-group">
                             <label for="name1">Name</label>
                             <input type="text" id="name1" name="name1" required placeholder="Enter name">
@@ -1744,6 +1749,61 @@
                     }, 1000);
                 });
             }, 100);
+        }
+
+        // Load My Profile function
+        function loadMyProfile() {
+            const savedProfile = localStorage.getItem('quantumMerlin_userProfile');
+            
+            if (!savedProfile) {
+                alert('No saved profile found! Please create a profile in the Quantum Forecaster first.');
+                window.location.href = 'quantum-merlin-hub/forecasts.html';
+                return;
+            }
+            
+            try {
+                const profile = JSON.parse(savedProfile);
+                
+                // Build full name
+                let fullName = '';
+                if (profile.firstName) fullName += profile.firstName;
+                if (profile.middleName) fullName += ' ' + profile.middleName;
+                if (profile.lastName) fullName += ' ' + profile.lastName;
+                fullName = fullName.trim();
+                
+                // Fill person 1 fields
+                if (fullName) document.getElementById('name1').value = fullName;
+                if (profile.birthDate) document.getElementById('birthdate1').value = profile.birthDate;
+                if (profile.birthTime) document.getElementById('birthtime1').value = profile.birthTime;
+                if (profile.birthLocation) document.getElementById('birthplace1').value = profile.birthLocation;
+                if (profile.currentLocation) document.getElementById('currentLocation1').value = profile.currentLocation;
+                
+                // Scroll to person 2 card for manual entry
+                document.getElementById('name2').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                document.getElementById('name2').focus();
+                
+                // Success animation
+                const card1 = document.querySelectorAll('.soul-input-card')[0];
+                card1.style.transform = 'scale(1.02)';
+                card1.style.boxShadow = '0 0 40px rgba(0, 245, 255, 0.4)';
+                card1.style.border = '2px solid var(--neon-cyan)';
+                setTimeout(() => {
+                    card1.style.transform = '';
+                    card1.style.boxShadow = '';
+                    card1.style.border = '';
+                }, 1500);
+                
+                // Show success message
+                const successMsg = document.createElement('div');
+                successMsg.style.cssText = 'position: fixed; top: 20px; right: 20px; background: linear-gradient(135deg, #00ff88, #00cc66); color: #000; padding: 15px 25px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4); font-weight: 600; z-index: 10000; font-family: Rajdhani, sans-serif;';
+                successMsg.textContent = '✓ Your profile loaded! Now add the other person.';
+                document.body.appendChild(successMsg);
+                setTimeout(() => successMsg.remove(), 3000);
+                
+            } catch (error) {
+                console.error('Error loading profile:', error);
+                alert('Error loading profile. Please try again.');
+            }
         }
     </script>
     
