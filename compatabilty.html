@@ -47,6 +47,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Quantum Intro Animation -->
+    <link rel="stylesheet" href="shared/css/quantum-intro.css">
+    
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
     <script>
@@ -1117,21 +1120,19 @@
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-    <!-- Intro Animation Overlay (First Visit) -->
-    <div id="introOverlay" class="intro-overlay">
+    <!-- Quantum Merlin Intro Animation -->
+    <div id="intro-container">
         <canvas id="lines-canvas"></canvas>
-        
         <div class="emoji-layer">
-            <div class="emoji" id="quantum">⚛️</div>
-            <div class="emoji" id="wizard">🧙‍♂️</div>
-            <div class="emoji" id="rose">🌹</div>
+            <div class="intro-emoji" data-symbol="⚛️"></div>
+            <div class="intro-emoji" data-symbol="🧙‍♂️"></div>
+            <div class="intro-emoji" data-symbol="🌹"></div>
         </div>
-
         <div id="singularity"></div>
-        <div id="title">QUANTUM MERLIN</div>
-        
-        <button id="skipIntro" class="skip-btn">Skip →</button>
+        <div id="intro-title">Quantum Merlin</div>
     </div>
+    
+    <div id="app-content">
 
     <!-- Loading Overlay (During Compatibility Calculation) -->
     <div id="loadingOverlay" class="loading-overlay" style="display: none;">
@@ -1763,139 +1764,13 @@
         }
     </script>
     
+    </div>
+    
     <!-- Compatibility Calculator -->
     <script src="compatability.js"></script>
     
-    <!-- Intro Animation Script -->
-    <script>
-        // Intro Animation - Runs on page load
-        (function() {
-            const introOverlay = document.getElementById('introOverlay');
-            const canvas = document.getElementById('lines-canvas');
-            const ctx = canvas ? canvas.getContext('2d') : null;
-            const skipBtn = document.getElementById('skipIntro');
-
-            // Check if user has seen intro before
-            const hasSeenIntro = sessionStorage.getItem('quantumMerlin_seenIntro');
-            
-            if (hasSeenIntro) {
-                // Skip intro if seen this session
-                if (introOverlay) introOverlay.classList.add('hidden');
-                return;
-            }
-
-            if (!canvas || !ctx || !introOverlay) return;
-
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-
-            const quantum = document.getElementById('quantum');
-            const wizard = document.getElementById('wizard');
-            const rose = document.getElementById('rose');
-            const singularity = document.getElementById('singularity');
-            const title = document.getElementById('title');
-
-            let animationTime = 0;
-            const totalDuration = 6000; // 6 seconds
-            let animationFrame;
-
-            function animate() {
-                animationTime += 16;
-                const progress = Math.min(animationTime / totalDuration, 1);
-
-                // Clear canvas
-                ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-                // Draw orbital lines
-                const centerX = canvas.width / 2;
-                const centerY = canvas.height / 2;
-
-                for (let i = 0; i < 3; i++) {
-                    const radius = 80 + i * 50;
-                    const angle = progress * Math.PI * 2 + (i * Math.PI * 2 / 3);
-                    
-                    ctx.beginPath();
-                    ctx.arc(centerX, centerY, radius, angle, angle + Math.PI * 0.5);
-                    
-                    const colors = ['#00f5ff', '#ffd700', '#ff0066'];
-                    const gradient = ctx.createLinearGradient(
-                        centerX + Math.cos(angle) * radius,
-                        centerY + Math.sin(angle) * radius,
-                        centerX + Math.cos(angle + Math.PI * 0.5) * radius,
-                        centerY + Math.sin(angle + Math.PI * 0.5) * radius
-                    );
-                    gradient.addColorStop(0, 'transparent');
-                    gradient.addColorStop(0.5, colors[i]);
-                    gradient.addColorStop(1, 'transparent');
-                    
-                    ctx.strokeStyle = gradient;
-                    ctx.lineWidth = 3;
-                    ctx.stroke();
-                }
-
-                // Animate emojis orbiting
-                if (progress < 0.7) {
-                    const orbitRadius = 150;
-                    const angles = [0, Math.PI * 2 / 3, Math.PI * 4 / 3];
-                    const emojis = [quantum, wizard, rose];
-                    
-                    emojis.forEach((emoji, i) => {
-                        const orbitAngle = progress * Math.PI * 2 + angles[i];
-                        const x = Math.cos(orbitAngle) * orbitRadius;
-                        const y = Math.sin(orbitAngle) * orbitRadius;
-                        emoji.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
-                        emoji.style.opacity = Math.min(progress * 3, 1);
-                    });
-                }
-
-                // Singularity explosion
-                if (progress >= 0.5 && progress < 0.8) {
-                    const singularityProgress = (progress - 0.5) / 0.3;
-                    singularity.style.transform = `translate(-50%, -50%) scale(${singularityProgress * 50})`;
-                    singularity.style.opacity = 1 - singularityProgress;
-                }
-
-                // Title expansion
-                if (progress >= 0.7) {
-                    const titleProgress = (progress - 0.7) / 0.3;
-                    title.style.transform = `translate(-50%, -50%) scale(${titleProgress})`;
-                    title.style.fontSize = `${titleProgress * 2.5}rem`;
-                    title.style.opacity = titleProgress;
-                }
-
-                // Fade out everything at the end
-                if (progress >= 0.9) {
-                    const fadeProgress = (progress - 0.9) / 0.1;
-                    introOverlay.style.opacity = 1 - fadeProgress;
-                }
-
-                if (progress < 1) {
-                    animationFrame = requestAnimationFrame(animate);
-                } else {
-                    endIntro();
-                }
-            }
-
-            function endIntro() {
-                if (animationFrame) cancelAnimationFrame(animationFrame);
-                if (introOverlay) {
-                    introOverlay.classList.add('hidden');
-                    sessionStorage.setItem('quantumMerlin_seenIntro', 'true');
-                }
-            }
-
-            // Skip button
-            if (skipBtn) {
-                skipBtn.addEventListener('click', endIntro);
-            }
-
-            // Start animation
-            if (canvas && ctx && introOverlay) {
-                animate();
-            }
-        })();
-    </script>
+    <!-- Quantum Intro Animation -->
+    <script src="shared/js/quantum-intro-animation.js"></script>
     
     <!-- Generate Stars -->
     <script>
