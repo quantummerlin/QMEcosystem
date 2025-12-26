@@ -882,6 +882,165 @@
             color: var(--qm-cyan);
         }
 
+        /* Social Sharing Section */
+        .social-share-section {
+            margin-top: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.15), rgba(0, 245, 255, 0.1));
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .share-title {
+            color: var(--qm-gold);
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .share-subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .share-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 12px;
+        }
+
+        .share-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 10px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 600;
+        }
+
+        .share-btn .share-icon {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .share-btn .share-label {
+            font-size: 0.85em;
+        }
+
+        .share-btn.twitter {
+            background: #1DA1F2;
+            color: white;
+        }
+
+        .share-btn.facebook {
+            background: #4267B2;
+            color: white;
+        }
+
+        .share-btn.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+
+        .share-btn.tiktok {
+            background: #000000;
+            color: white;
+            border: 1px solid #333;
+        }
+
+        .share-btn.copy {
+            background: rgba(108, 117, 125, 0.8);
+            color: white;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Frequency Card */
+        .frequency-card {
+            margin-top: 25px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(78, 205, 196, 0.15), rgba(78, 205, 196, 0.05));
+            border: 2px solid var(--qm-cyan);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .frequency-header {
+            margin-bottom: 20px;
+        }
+
+        .frequency-title {
+            color: var(--qm-cyan);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .frequency-hz {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5em;
+            font-weight: 900;
+            color: var(--qm-cyan);
+            text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+            margin: 10px 0;
+        }
+
+        .frequency-name {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .frequency-description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .frequency-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .frequency-btn {
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .frequency-btn.primary {
+            background: linear-gradient(135deg, var(--qm-cyan), rgba(0, 245, 255, 0.7));
+            color: #000;
+        }
+
+        .frequency-btn.secondary {
+            background: transparent;
+            border: 1px solid var(--qm-cyan);
+            color: var(--qm-cyan);
+        }
+
+        .frequency-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 245, 255, 0.3);
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 80px 15px 30px;
@@ -989,11 +1148,59 @@
 
             .feedback-btn {
                 width: 100%;
+                min-height: 48px; /* Better touch target */
             }
 
             .related-numbers {
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+
+            /* Social sharing mobile */
+            .share-buttons {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .share-btn {
+                min-height: 60px;
+            }
+
+            /* Frequency card mobile */
+            .frequency-card {
+                padding: 20px;
+            }
+
+            .frequency-hz {
+                font-size: 2em;
+            }
+
+            .frequency-actions {
+                flex-direction: column;
+            }
+
+            .frequency-btn {
+                width: 100%;
+                min-height: 48px;
+            }
+
+            /* Action buttons mobile */
+            .actions-bar {
+                flex-direction: column;
+            }
+
+            .action-btn {
+                width: 100%;
+                min-height: 48px;
+            }
+
+            /* Affirmation section mobile */
+            .affirmation-section {
+                padding: 15px;
+            }
+
+            .copy-affirmation-btn {
+                width: 100%;
+                margin-top: 15px;
             }
         }
     </style>
@@ -1218,6 +1425,26 @@
                 <div class="related-numbers" id="relatedNumbers"></div>
             </div>
 
+            <!-- Frequency Integration Card -->
+            <div class="frequency-card" id="frequencyCard" style="display: none;">
+                <div class="frequency-header">
+                    <h3 class="frequency-title">🎵 Your Aligned Frequency</h3>
+                    <div class="frequency-hz" id="frequencyHz">-</div>
+                    <div class="frequency-name" id="frequencyName">-</div>
+                </div>
+                <p class="frequency-description" id="frequencyDescription">
+                    Listen to this frequency while meditating on your angel number to amplify its manifestation power.
+                </p>
+                <div class="frequency-actions">
+                    <button class="frequency-btn primary" onclick="goToJukebox()">
+                        🎵 Listen in Jukebox
+                    </button>
+                    <button class="frequency-btn secondary" onclick="learnAboutFrequencies()">
+                        📚 Learn More
+                    </button>
+                </div>
+            </div>
+
             <!-- Feedback Section -->
             <div class="feedback-section">
                 <p class="feedback-question">Did this message resonate with you?</p>
@@ -1227,6 +1454,34 @@
                     <button class="feedback-btn no" onclick="submitFeedback('no')">💭 Not quite</button>
                 </div>
                 <div id="feedbackResponse" class="feedback-response" style="display: none;"></div>
+            </div>
+
+            <!-- Social Sharing Section -->
+            <div class="social-share-section">
+                <h3 class="share-title">📱 Share Your Angel Number</h3>
+                <p class="share-subtitle">Amplify your manifestation by sharing with your community!</p>
+                <div class="share-buttons">
+                    <button class="share-btn twitter" onclick="shareToTwitter()">
+                        <span class="share-icon">𝕏</span>
+                        <span class="share-label">Twitter</span>
+                    </button>
+                    <button class="share-btn facebook" onclick="shareToFacebook()">
+                        <span class="share-icon">📘</span>
+                        <span class="share-label">Facebook</span>
+                    </button>
+                    <button class="share-btn instagram" onclick="shareToInstagram()">
+                        <span class="share-icon">📷</span>
+                        <span class="share-label">Instagram</span>
+                    </button>
+                    <button class="share-btn tiktok" onclick="shareToTikTok()">
+                        <span class="share-icon">🎵</span>
+                        <span class="share-label">TikTok</span>
+                    </button>
+                    <button class="share-btn copy" onclick="copyShareText()">
+                        <span class="share-icon">📋</span>
+                        <span class="share-label">Copy Text</span>
+                    </button>
+                </div>
             </div>
 
             <div class="actions-bar">
@@ -1273,6 +1528,28 @@
         let currentReading = null;
         let selectedContext = null;
         let numberJournal = JSON.parse(localStorage.getItem('qm_angel_journal') || '[]');
+
+        // Angel Number to Frequency Mapping
+        const angelNumberFrequencies = {
+            111: { hz: '111', name: 'New Beginnings Frequency', description: 'Activates manifestation power and new start energy.' },
+            222: { hz: '222', name: 'Harmony Balance Frequency', description: 'Creates balance and strengthens partnerships.' },
+            333: { hz: '333', name: 'Ascended Master Frequency', description: 'Connects you with spiritual guides and creativity.' },
+            444: { hz: '444', name: 'Angelic Protection Frequency', description: 'Surrounds you with angelic protection and stability.' },
+            555: { hz: '555', name: 'Transformation Frequency', description: 'Accelerates positive life changes and growth.' },
+            666: { hz: '396', name: 'Liberation Frequency', description: 'Releases guilt and fear, restores balance.' },
+            777: { hz: '777', name: 'Divine Luck Frequency', description: 'Amplifies spiritual blessings and miracles.' },
+            888: { hz: '888', name: 'Infinite Abundance Frequency', description: 'Opens channels for prosperity and success.' },
+            999: { hz: '432', name: 'Completion Frequency', description: 'Supports closure and new beginnings.' },
+            1111: { hz: '1111', name: 'Manifestation Portal Frequency', description: 'The ultimate manifestation gateway frequency.' },
+            11: { hz: '528', name: 'DNA Activation Frequency', description: 'Activates intuition and spiritual insight.' },
+            22: { hz: '741', name: 'Master Builder Frequency', description: 'Manifests dreams into physical reality.' },
+            33: { hz: '639', name: 'Heart Healing Frequency', description: 'Opens heart chakra and universal love.' },
+            44: { hz: '396', name: 'Foundation Frequency', description: 'Builds solid spiritual foundations.' },
+            55: { hz: '417', name: 'Change Activation Frequency', description: 'Facilitates positive transformation.' },
+            77: { hz: '852', name: 'Third Eye Frequency', description: 'Awakens intuition and spiritual vision.' },
+            88: { hz: '963', name: 'Crown Chakra Frequency', description: 'Connects to infinite abundance consciousness.' },
+            99: { hz: '528', name: 'Soul Purpose Frequency', description: 'Aligns with humanitarian service.' }
+        };
 
         // Context messages
         const contextMessages = {
@@ -1745,6 +2022,342 @@
                 affirmation: "My soul mission activates now. I live my purpose with passion.",
                 lucky: { color: "Platinum/White", crystal: "Phenacite", day: "Tuesday" },
                 related: [19, 91, 1991, 1818, 1010]
+            },
+            // Extended sequences - 2000s
+            2020: {
+                spiritual: "Trust and patience in divine timing. Everything unfolds perfectly.",
+                guidance: "Have faith - your prayers are being answered in divine order.",
+                frequency: "Resonates with 417 Hz - patience and divine timing frequency.",
+                affirmation: "I trust completely in divine timing. My patience is rewarded.",
+                lucky: { color: "Pearl/Cream", crystal: "Pearl", day: "Monday" },
+                related: [20, 2, 2222, 1010, 2121]
+            },
+            2121: {
+                spiritual: "New beginnings in relationships. Positive partnership changes.",
+                guidance: "Trust the process of connection. Beautiful relationships are forming.",
+                frequency: "Connects with 639 Hz - relationship harmony and new connections.",
+                affirmation: "Beautiful relationships manifest in my life. I attract loving connections.",
+                lucky: { color: "Soft Pink/White", crystal: "Pink Opal", day: "Friday" },
+                related: [21, 12, 1212, 2020, 2323]
+            },
+            2323: {
+                spiritual: "Ascended masters support your balance. Harmony is being created.",
+                guidance: "Divine beings help you find equilibrium in all areas of life.",
+                frequency: "Aligns with 528 Hz - ascended master balance frequency.",
+                affirmation: "I am in perfect balance. Ascended masters guide my harmony.",
+                lucky: { color: "Lavender/Yellow", crystal: "Ametrine", day: "Wednesday" },
+                related: [23, 32, 2222, 3333, 2424]
+            },
+            2424: {
+                spiritual: "Angels supporting your partnerships. Divine collaboration.",
+                guidance: "Your angels are arranging beneficial partnerships and connections.",
+                frequency: "Works with 396 Hz - angelic partnership support.",
+                affirmation: "Angels arrange perfect partnerships for me. I collaborate divinely.",
+                lucky: { color: "Green/Orange", crystal: "Prehnite", day: "Thursday" },
+                related: [24, 42, 2323, 4444, 1414]
+            },
+            // Extended sequences - 3000s/4000s
+            3434: {
+                spiritual: "Ascended masters and angels working together for you.",
+                guidance: "You have the most powerful spiritual team supporting your journey.",
+                frequency: "Resonates with 639 Hz - combined master and angel energy.",
+                affirmation: "Masters and angels unite to support me. I am powerfully guided.",
+                lucky: { color: "Yellow/Green", crystal: "Green Tourmaline", day: "Wednesday" },
+                related: [34, 43, 3333, 4444, 3535]
+            },
+            4545: {
+                spiritual: "Angels guiding you through major transformation.",
+                guidance: "Trust the changes happening. Angels are overseeing your transformation.",
+                frequency: "Connects with 417 Hz - angelic transformation guidance.",
+                affirmation: "Angels guide my transformation. I change with grace and protection.",
+                lucky: { color: "Turquoise/Green", crystal: "Chrysoprase", day: "Friday" },
+                related: [45, 54, 4444, 5555, 4646]
+            },
+            // Extended sequences - 6000s/7000s
+            6666: {
+                spiritual: "Deep spiritual healing and balance needed. Return to center.",
+                guidance: "Focus on spiritual nourishment. Release material anxiety.",
+                frequency: "Aligns with 639 Hz - deep healing and spiritual balance.",
+                affirmation: "I release material worries. Spiritual peace fills my being.",
+                lucky: { color: "Deep Rose", crystal: "Morganite", day: "Friday" },
+                related: [6, 66, 666, 5555, 7777]
+            },
+            7777: {
+                spiritual: "Ultimate spiritual alignment. Divine perfection manifesting.",
+                guidance: "You are in complete alignment with your highest path. Miracles abound.",
+                frequency: "Works with 852 Hz - ultimate spiritual alignment frequency.",
+                affirmation: "I am in perfect divine alignment. Miracles are my reality.",
+                lucky: { color: "Deep Violet", crystal: "Purple Fluorite", day: "Saturday" },
+                related: [7, 77, 777, 6666, 8888]
+            },
+            8888: {
+                spiritual: "Maximum abundance flowing. Infinite prosperity in all forms.",
+                guidance: "You are a conduit for unlimited abundance. Receive with open arms.",
+                frequency: "Resonates with 963 Hz - maximum abundance frequency.",
+                affirmation: "Infinite abundance flows through me. I am prosperity embodied.",
+                lucky: { color: "Pure Gold", crystal: "Golden Topaz", day: "Sunday" },
+                related: [8, 88, 888, 7777, 9999]
+            },
+            9999: {
+                spiritual: "Complete cycle ending. Major life chapter closing with grace.",
+                guidance: "Honor what was and release it with love. A beautiful new chapter begins.",
+                frequency: "Connects with 528 Hz - graceful completion frequency.",
+                affirmation: "I complete this cycle with gratitude. New blessings await.",
+                lucky: { color: "Pure White/Gold", crystal: "White Sapphire", day: "Tuesday" },
+                related: [9, 99, 999, 8888, 1111]
+            },
+            // Mirror numbers (popular)
+            1001: {
+                spiritual: "New beginning and completion cycle. Full circle moment.",
+                guidance: "You're completing one journey to begin another. Trust the transition.",
+                frequency: "Aligns with 396 Hz - cycle completion and new beginning.",
+                affirmation: "I complete and begin anew. Every ending creates a fresh start.",
+                lucky: { color: "Red/White", crystal: "Howlite with Garnet", day: "Sunday" },
+                related: [10, 01, 1010, 0000, 1111]
+            },
+            1221: {
+                spiritual: "Balance in new relationships. Harmony forming in connections.",
+                guidance: "Trust the partnerships forming. Balance is being restored.",
+                frequency: "Works with 639 Hz - balanced relationship harmony.",
+                affirmation: "My relationships are perfectly balanced. Harmony flows naturally.",
+                lucky: { color: "Orange/Blue", crystal: "Lapis Lazuli with Carnelian", day: "Monday" },
+                related: [12, 21, 1212, 2112, 1331]
+            },
+            1331: {
+                spiritual: "Creative expression with ascended master support.",
+                guidance: "Your creativity is divinely inspired. Create boldly.",
+                frequency: "Resonates with 528 Hz - inspired creative expression.",
+                affirmation: "My creativity flows with divine inspiration. I create masterpieces.",
+                lucky: { color: "Gold/Purple", crystal: "Ametrine", day: "Wednesday" },
+                related: [13, 31, 1313, 3113, 1441]
+            },
+            1441: {
+                spiritual: "Angels building your foundation. Stable blessings incoming.",
+                guidance: "Angels are constructing something beautiful in your life. Be patient.",
+                frequency: "Connects with 396 Hz - angelic foundation building.",
+                affirmation: "Angels build my foundation strong. Stability is my blessing.",
+                lucky: { color: "Green/Gold", crystal: "Green Jade with Pyrite", day: "Thursday" },
+                related: [14, 41, 1414, 4114, 1551]
+            },
+            1551: {
+                spiritual: "Change leading to positive outcomes. Transformation success.",
+                guidance: "The changes you're experiencing lead to wonderful outcomes.",
+                frequency: "Aligns with 417 Hz - positive transformation outcomes.",
+                affirmation: "All changes lead to positive outcomes. I embrace transformation.",
+                lucky: { color: "Turquoise/Red", crystal: "Turquoise with Ruby", day: "Friday" },
+                related: [15, 51, 1515, 5115, 1661]
+            },
+            // More sequential patterns
+            234: {
+                spiritual: "Ascended masters helping you progress step by step.",
+                guidance: "Keep moving forward. Divine support guides each step.",
+                frequency: "Works with 528 Hz - step-by-step divine guidance.",
+                affirmation: "I progress step by step. Divine guidance leads the way.",
+                lucky: { color: "Orange/Yellow", crystal: "Orange Calcite", day: "Wednesday" },
+                related: [23, 34, 123, 345, 2345]
+            },
+            345: {
+                spiritual: "Major changes guided by ascended masters and angels.",
+                guidance: "Significant transformation with complete spiritual support.",
+                frequency: "Resonates with 417 Hz - supported transformation.",
+                affirmation: "My transformation is divinely guided. I change with grace.",
+                lucky: { color: "Yellow/Turquoise", crystal: "Amazonite with Citrine", day: "Friday" },
+                related: [34, 45, 234, 456, 3456]
+            },
+            456: {
+                spiritual: "Balance and change creating abundance. Progress manifesting.",
+                guidance: "Your balanced approach to change brings material success.",
+                frequency: "Connects with 741 Hz - balanced abundance manifestation.",
+                affirmation: "Balance and change create abundance. Success flows to me.",
+                lucky: { color: "Green/Blue", crystal: "Green Aventurine with Aquamarine", day: "Thursday" },
+                related: [45, 56, 345, 567, 4567]
+            },
+            567: {
+                spiritual: "Spiritual wisdom through change and balance. Evolution.",
+                guidance: "Your spiritual growth accelerates through balanced transformation.",
+                frequency: "Aligns with 852 Hz - wisdom through transformation.",
+                affirmation: "I grow through change. Spiritual wisdom flows through me.",
+                lucky: { color: "Blue/Purple", crystal: "Sodalite with Amethyst", day: "Saturday" },
+                related: [56, 67, 456, 678, 5678]
+            },
+            678: {
+                spiritual: "Balance, wisdom, and abundance combining. Triple blessing.",
+                guidance: "You're receiving blessings in harmony, spirituality, and prosperity.",
+                frequency: "Works with 963 Hz - triple blessing frequency.",
+                affirmation: "Triple blessings flow to me. Harmony, wisdom, and abundance are mine.",
+                lucky: { color: "Pink/Purple/Gold", crystal: "Ametrine with Rose Quartz", day: "Thursday" },
+                related: [67, 78, 567, 789, 6789]
+            },
+            789: {
+                spiritual: "Completion leading to abundance and spiritual fulfillment.",
+                guidance: "One cycle completes, bringing prosperity and spiritual gifts.",
+                frequency: "Resonates with 528 Hz - prosperous completion.",
+                affirmation: "Completion brings abundance. I am spiritually and materially blessed.",
+                lucky: { color: "Purple/Gold/White", crystal: "Amethyst with Citrine", day: "Tuesday" },
+                related: [78, 89, 678, 890, 7890]
+            },
+            // Zero sequences
+            0000: {
+                spiritual: "The universe is completely resetting around you. Pure potential.",
+                guidance: "A complete spiritual reset is occurring. Embrace the blank slate.",
+                frequency: "Connects with 432 Hz - universal reset frequency.",
+                affirmation: "I embrace the universal reset. Infinite potential is mine.",
+                lucky: { color: "Iridescent/Clear", crystal: "Clear Quartz Cluster", day: "New Moon" },
+                related: [0, 00, 000, 1000, 10000]
+            },
+            1000: {
+                spiritual: "New beginning with divine support and infinite potential.",
+                guidance: "You have everything needed for a powerful fresh start.",
+                frequency: "Aligns with 396 Hz - supported new beginning.",
+                affirmation: "I begin anew with infinite potential. Divine support surrounds me.",
+                lucky: { color: "White/Red", crystal: "Clear Quartz with Ruby", day: "Sunday" },
+                related: [1, 10, 100, 0000, 2000]
+            },
+            // More common double numbers
+            1122: {
+                spiritual: "New beginnings with balance and partnership. Harmony manifesting.",
+                guidance: "Start fresh with a partner or in balance. Trust the process.",
+                frequency: "Works with 417 Hz - balanced new beginnings.",
+                affirmation: "I begin anew in perfect balance. Harmony is my foundation.",
+                lucky: { color: "Red/Orange", crystal: "Red Jasper with Carnelian", day: "Monday" },
+                related: [11, 22, 1111, 2222, 1133]
+            },
+            1133: {
+                spiritual: "New beginnings with ascended master support. Divine creativity.",
+                guidance: "Start your creative projects now. Masters support your vision.",
+                frequency: "Resonates with 528 Hz - creative new beginnings.",
+                affirmation: "I create new beginnings with divine support. My creativity flourishes.",
+                lucky: { color: "Gold/Yellow", crystal: "Citrine with Sunstone", day: "Wednesday" },
+                related: [11, 33, 1111, 3333, 1144]
+            },
+            1144: {
+                spiritual: "New beginnings with complete angelic protection. Safe start.",
+                guidance: "Begin your new journey with confidence. Angels protect every step.",
+                frequency: "Connects with 396 Hz - protected new beginnings.",
+                affirmation: "I begin with angelic protection. My new path is safe and blessed.",
+                lucky: { color: "Gold/Green", crystal: "Citrine with Jade", day: "Thursday" },
+                related: [11, 44, 1111, 4444, 1155]
+            },
+            1155: {
+                spiritual: "New beginnings through positive change. Transformation starting.",
+                guidance: "Embrace the changes initiating your new chapter. Trust the shift.",
+                frequency: "Aligns with 417 Hz - transformative new beginnings.",
+                affirmation: "Positive change initiates my new beginning. I embrace transformation.",
+                lucky: { color: "Gold/Turquoise", crystal: "Citrine with Turquoise", day: "Friday" },
+                related: [11, 55, 1111, 5555, 2255]
+            },
+            2233: {
+                spiritual: "Balance and ascended master guidance. Harmony with divine support.",
+                guidance: "Find your balance with the help of spiritual guides.",
+                frequency: "Works with 639 Hz - balanced divine guidance.",
+                affirmation: "I find perfect balance with divine guidance. Masters support my harmony.",
+                lucky: { color: "Orange/Yellow", crystal: "Orange Calcite with Sunstone", day: "Wednesday" },
+                related: [22, 33, 2222, 3333, 2244]
+            },
+            2244: {
+                spiritual: "Balance with angelic protection. Harmony and safety.",
+                guidance: "Your path to balance is protected by angels. Trust the process.",
+                frequency: "Resonates with 396 Hz - protected harmony.",
+                affirmation: "I achieve balance under angelic protection. I am safe and harmonious.",
+                lucky: { color: "Orange/Green", crystal: "Carnelian with Jade", day: "Thursday" },
+                related: [22, 44, 2222, 4444, 2255]
+            },
+            2255: {
+                spiritual: "Balance through transformation. Harmony via change.",
+                guidance: "The changes you're experiencing create perfect balance.",
+                frequency: "Connects with 417 Hz - balancing transformation.",
+                affirmation: "Change brings me into balance. Transformation creates harmony.",
+                lucky: { color: "Orange/Turquoise", crystal: "Carnelian with Aquamarine", day: "Friday" },
+                related: [22, 55, 2222, 5555, 3355]
+            },
+            3344: {
+                spiritual: "Ascended masters and angels unite for you. Maximum divine support.",
+                guidance: "You have the most powerful spiritual team. Ask for anything.",
+                frequency: "Aligns with 528 Hz - unified divine support.",
+                affirmation: "Masters and angels unite for me. I am maximally supported.",
+                lucky: { color: "Yellow/Green", crystal: "Sunstone with Jade", day: "Wednesday" },
+                related: [33, 44, 3333, 4444, 3355]
+            },
+            3355: {
+                spiritual: "Ascended masters support your transformation. Divine change.",
+                guidance: "Major positive changes with complete master support.",
+                frequency: "Works with 417 Hz - master-supported transformation.",
+                affirmation: "My transformation is guided by ascended masters. I change divinely.",
+                lucky: { color: "Yellow/Turquoise", crystal: "Sunstone with Chrysocolla", day: "Wednesday" },
+                related: [33, 55, 3333, 5555, 4455]
+            },
+            4455: {
+                spiritual: "Angels guiding your transformation. Protected change.",
+                guidance: "Every change is protected by angels. Trust the transformation.",
+                frequency: "Resonates with 417 Hz - angelically protected change.",
+                affirmation: "Angels guide my transformation. Every change is blessed.",
+                lucky: { color: "Green/Turquoise", crystal: "Jade with Turquoise", day: "Thursday" },
+                related: [44, 55, 4444, 5555, 5566]
+            },
+            5566: {
+                spiritual: "Change creating love and harmony. Transformation brings balance.",
+                guidance: "The changes lead to deeper love and harmony in relationships.",
+                frequency: "Connects with 639 Hz - transformative harmony.",
+                affirmation: "Change brings love and harmony. My relationships transform beautifully.",
+                lucky: { color: "Turquoise/Pink", crystal: "Turquoise with Rose Quartz", day: "Friday" },
+                related: [55, 66, 5555, 6666, 6677]
+            },
+            6677: {
+                spiritual: "Love and spiritual wisdom combining. Heart and mind alignment.",
+                guidance: "Your heart wisdom and spiritual insight are aligning perfectly.",
+                frequency: "Aligns with 852 Hz - heart-mind spiritual alignment.",
+                affirmation: "My heart and spirit align. Love and wisdom guide me.",
+                lucky: { color: "Pink/Purple", crystal: "Rose Quartz with Amethyst", day: "Saturday" },
+                related: [66, 77, 6666, 7777, 7788]
+            },
+            7788: {
+                spiritual: "Spiritual wisdom attracting abundance. Enlightened prosperity.",
+                guidance: "Your spiritual growth is attracting material blessings.",
+                frequency: "Works with 963 Hz - wisdom-based abundance.",
+                affirmation: "Spiritual wisdom brings abundance. Enlightenment attracts prosperity.",
+                lucky: { color: "Purple/Gold", crystal: "Amethyst with Citrine", day: "Thursday" },
+                related: [77, 88, 7777, 8888, 8899]
+            },
+            8899: {
+                spiritual: "Abundance completing a cycle. Prosperity with purpose.",
+                guidance: "Your abundance serves a higher purpose. Share your blessings.",
+                frequency: "Resonates with 528 Hz - purposeful abundance.",
+                affirmation: "My abundance serves the greater good. I share my blessings freely.",
+                lucky: { color: "Gold/White", crystal: "Citrine with Clear Quartz", day: "Tuesday" },
+                related: [88, 99, 8888, 9999, 1188]
+            },
+            // More frequently searched
+            717: {
+                spiritual: "You're on the right spiritual path. Divine confirmation.",
+                guidance: "Keep going! The universe confirms you're aligned with your purpose.",
+                frequency: "Connects with 852 Hz - spiritual path confirmation.",
+                affirmation: "I am on my divine path. The universe confirms my direction.",
+                lucky: { color: "Purple/White", crystal: "Amethyst with Selenite", day: "Saturday" },
+                related: [7, 17, 71, 777, 7777]
+            },
+            818: {
+                spiritual: "Abundance flowing through new beginnings. Prosperous fresh start.",
+                guidance: "Your new beginning brings financial and spiritual abundance.",
+                frequency: "Aligns with 963 Hz - prosperous new beginnings.",
+                affirmation: "My fresh start brings abundance. Prosperity flows with my new beginning.",
+                lucky: { color: "Gold/Red", crystal: "Citrine with Garnet", day: "Sunday" },
+                related: [8, 18, 81, 888, 8888]
+            },
+            919: {
+                spiritual: "Completion of soul mission phase. Purpose fulfilled.",
+                guidance: "You've completed an important phase of your soul mission. Celebrate!",
+                frequency: "Works with 528 Hz - soul mission completion.",
+                affirmation: "I complete my soul mission phase. My purpose manifests perfectly.",
+                lucky: { color: "White/Red", crystal: "Clear Quartz with Ruby", day: "Tuesday" },
+                related: [9, 19, 91, 999, 9999]
+            },
+            1234567: {
+                spiritual: "Ultimate divine order and progression. Perfect alignment.",
+                guidance: "You are in complete alignment with the universe. Everything flows perfectly.",
+                frequency: "Resonates with 963 Hz - ultimate divine order.",
+                affirmation: "I am in perfect divine order. The universe flows through me.",
+                lucky: { color: "Rainbow", crystal: "Rainbow Quartz", day: "Any day" },
+                related: [1234, 567, 123, 4567]
             }
         };
 
@@ -1880,12 +2493,68 @@
                 });
             }
 
+            // Display frequency card if available
+            displayFrequencyCard(number);
+
             // Reset feedback buttons
             document.querySelectorAll('.feedback-btn').forEach(btn => btn.classList.remove('selected'));
+
+            // Track the calculation in analytics
+            trackCalculation(number, namePrefix || 'quick');
 
             // Show result section with animation
             resultSection.classList.add('active');
             resultSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Display frequency card
+        function displayFrequencyCard(number) {
+            const frequencyCard = document.getElementById('frequencyCard');
+            const freq = angelNumberFrequencies[number];
+            
+            if (freq) {
+                document.getElementById('frequencyHz').textContent = freq.hz + ' Hz';
+                document.getElementById('frequencyName').textContent = freq.name;
+                document.getElementById('frequencyDescription').textContent = 
+                    `Your angel number ${number} resonates with the ${freq.hz} Hz frequency. ${freq.description}`;
+                frequencyCard.style.display = 'block';
+            } else {
+                // Find closest match based on digital root or pattern
+                const digitalRoot = getDigitalRoot(number);
+                const rootFreq = angelNumberFrequencies[digitalRoot];
+                
+                if (rootFreq) {
+                    document.getElementById('frequencyHz').textContent = rootFreq.hz + ' Hz';
+                    document.getElementById('frequencyName').textContent = rootFreq.name;
+                    document.getElementById('frequencyDescription').textContent = 
+                        `Based on your number's digital root (${digitalRoot}), try the ${rootFreq.hz} Hz frequency. ${rootFreq.description}`;
+                    frequencyCard.style.display = 'block';
+                } else {
+                    frequencyCard.style.display = 'none';
+                }
+            }
+        }
+
+        // Navigate to jukebox
+        function goToJukebox() {
+            const freq = document.getElementById('frequencyHz').textContent.replace(' Hz', '');
+            window.location.href = `quantum-merlin-hub/jukebox.html?freq=${freq}`;
+        }
+
+        // Learn about frequencies
+        function learnAboutFrequencies() {
+            window.location.href = 'genesis/index-enhanced.html';
+        }
+
+        // Track calculation event
+        function trackCalculation(number, method) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'calculate_angel_number', {
+                    'angel_number': number.toString(),
+                    'calculation_method': method,
+                    'event_category': 'engagement'
+                });
+            }
         }
 
         // Add to recent searches
@@ -2025,6 +2694,93 @@
             } else {
                 copyToClipboard(url);
             }
+        }
+
+        // Social Sharing Functions
+        function shareToTwitter() {
+            if (!currentReading) {
+                showMessage('⚠️ Calculate a number first');
+                return;
+            }
+            const number = currentReading.number;
+            const url = `${window.location.origin}${window.location.pathname}?number=${number}`;
+            const text = `I just discovered my Angel Number is ${number}! ✨\n\nThe universe is sending me divine messages. What's your angel number?\n\nFind yours at: ${url}\n\n#AngelNumbers #Numerology #SpiritualGuidance #DivineMessages`;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank', 'width=600,height=400');
+            trackShare('twitter', number);
+        }
+
+        function shareToFacebook() {
+            if (!currentReading) {
+                showMessage('⚠️ Calculate a number first');
+                return;
+            }
+            const number = currentReading.number;
+            const url = `${window.location.origin}${window.location.pathname}?number=${number}`;
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(`My Angel Number is ${number}! ✨ Discover yours!`)}`, '_blank', 'width=600,height=400');
+            trackShare('facebook', number);
+        }
+
+        function shareToInstagram() {
+            if (!currentReading) {
+                showMessage('⚠️ Calculate a number first');
+                return;
+            }
+            const number = currentReading.number;
+            const url = `${window.location.origin}${window.location.pathname}?number=${number}`;
+            const text = `✨ My Angel Number is ${number}! ✨\n\n${currentReading.meaning.spiritual.substring(0, 100)}...\n\nThe angels are guiding me. What's your number?\n\nDiscover yours at: ${url}\n\n#AngelNumbers #Numerology #SpiritualGuidance #DivineMessages #Manifestation #SpiritualAwakening`;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                showMessage('📋 Caption copied! Open Instagram and paste in your story or post.');
+            });
+            trackShare('instagram', number);
+        }
+
+        function shareToTikTok() {
+            if (!currentReading) {
+                showMessage('⚠️ Calculate a number first');
+                return;
+            }
+            const number = currentReading.number;
+            const url = `${window.location.origin}${window.location.pathname}?number=${number}`;
+            const text = `✨ My Angel Number is ${number}! ✨\n\nThe universe is speaking to me through numbers. What's your angel number?\n\nFind yours at: ${url}\n\n#AngelNumbers #Numerology #SpiritualTikTok #Manifestation #DivineGuidance #SpiritualJourney`;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                showMessage('📋 Caption copied! Open TikTok and paste in your video caption.');
+            });
+            trackShare('tiktok', number);
+        }
+
+        function copyShareText() {
+            if (!currentReading) {
+                showMessage('⚠️ Calculate a number first');
+                return;
+            }
+            const number = currentReading.number;
+            const url = `${window.location.origin}${window.location.pathname}?number=${number}`;
+            const shortMeaning = currentReading.meaning.spiritual.substring(0, 150) + '...';
+            const text = `✨ My Angel Number is ${number}! ✨\n\n${shortMeaning}\n\nDiscover your angel number at: ${url}\n\n#AngelNumbers #Numerology #SpiritualGuidance`;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                showMessage('📋 Share text copied to clipboard! Paste anywhere.');
+            });
+            trackShare('copy', number);
+        }
+
+        // Track social shares
+        function trackShare(platform, number) {
+            // GA4 tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'share', {
+                    method: platform,
+                    content_type: 'angel_number',
+                    content_id: number.toString()
+                });
+            }
+            
+            // Store locally for analytics
+            const shares = JSON.parse(localStorage.getItem('qm_angel_shares') || '[]');
+            shares.push({ platform, number, timestamp: new Date().toISOString() });
+            localStorage.setItem('qm_angel_shares', JSON.stringify(shares));
         }
 
         // Copy to clipboard
