@@ -548,6 +548,81 @@
             color: var(--qm-gold);
         }
 
+        /* Email Capture */
+        .email-capture {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(0, 245, 255, 0.1) 100%);
+            border: 2px solid var(--qm-gold);
+            border-radius: 20px;
+            padding: 35px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .email-capture h3 {
+            font-family: 'Orbitron', monospace;
+            color: var(--qm-gold);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .email-capture .subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .email-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .email-form input[type="email"] {
+            flex: 1;
+            min-width: 250px;
+            padding: 15px 20px;
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 25px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .email-form input[type="email"]:focus {
+            outline: none;
+            border-color: var(--qm-cyan);
+        }
+
+        .email-form button {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--qm-gold), #ff9500);
+            border: none;
+            border-radius: 25px;
+            color: #000;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .email-form button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        .email-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
         .navigation-buttons {
             display: flex;
             gap: 15px;
@@ -1513,6 +1588,21 @@
             <h3>Trust Your Intuition</h3>
             <p>While these interpretations provide guidance, always trust your personal connection to the numbers you encounter. The most meaningful interpretation is the one that resonates with your inner wisdom and current life situation. Angel numbers are invitations to deepen your awareness and trust in the guidance that surrounds you.</p>
         </section>
+
+        <!-- Email Capture Section -->
+        <div class="email-capture" id="emailCapture">
+            <h3>🔔 Stay Connected</h3>
+            <p class="subtitle">Get updates on new tools and cosmic insights</p>
+            <form class="email-form" id="emailForm" action="https://formspree.io/f/mgowrolb" method="POST">
+                <input type="email" name="email" id="emailInput" placeholder="Enter your email" required>
+                <button type="submit">Subscribe ✨</button>
+            </form>
+            <div class="email-benefits">
+                <span>✓ Free</span>
+                <span>✓ No Spam</span>
+                <span>✓ Unsubscribe Anytime</span>
+            </div>
+        </div>
 
         <div class="navigation-buttons">
             <a href="forecasts.html" class="nav-btn">🔮 Cosmic Forecasts</a>
@@ -2816,6 +2906,41 @@
         document.getElementById('angelNumber').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 calculateAngelNumber();
+            }
+        });
+
+        // Email Form Handler
+        document.getElementById('emailForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = 'Joining...';
+            submitBtn.disabled = true;
+            
+            try {
+                const response = await fetch('https://formspree.io/f/mgowrolb', {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                
+                if (response.ok) {
+                    let emails = JSON.parse(localStorage.getItem('qm_subscribers') || '[]');
+                    if (!emails.includes(email)) {
+                        emails.push(email);
+                        localStorage.setItem('qm_subscribers', JSON.stringify(emails));
+                    }
+                    form.innerHTML = '<div style="color: var(--qm-gold); font-size: 1.2rem; padding: 15px;">✅ Thanks for subscribing!</div>';
+                } else {
+                    throw new Error('Subscription failed');
+                }
+            } catch (error) {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                showMessage('⚠️ There was a problem. Please try again.');
             }
         });
 
