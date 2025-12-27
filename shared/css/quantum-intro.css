@@ -55,17 +55,18 @@
     transform: translate(-50%, -50%);
 }
 
-#intro-quantum {
+/* Support both naming conventions */
+#quantum, #intro-quantum {
     color: #FFD700;
     text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
 }
 
-#intro-wizard {
+#wizard, #intro-wizard {
     color: #00F0FF;
     text-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
 }
 
-#intro-rose {
+#rose, #intro-rose {
     color: #FF0066;
     text-shadow: 0 0 20px rgba(255, 0, 102, 0.8);
 }
@@ -84,7 +85,8 @@
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
 }
 
-#intro-title {
+/* Support both naming conventions for title */
+#title, #intro-title {
     position: absolute;
     top: 50%;
     left: 50%;
