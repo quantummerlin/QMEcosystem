@@ -61,12 +61,13 @@
     }
 
     const ctx = canvas.getContext('2d', { alpha: true });
-    const emojiElements = document.querySelectorAll('.intro-emoji');
-    const quantum = emojiElements[0];
-    const wizard = emojiElements[1];
-    const rose = emojiElements[2];
+    
+    // Support both old (.intro-emoji) and new (#quantum, #wizard, #rose) element structures
+    const quantum = document.getElementById('quantum') || document.querySelector('.intro-emoji[data-symbol="⚛️"]');
+    const wizard = document.getElementById('wizard') || document.querySelector('.intro-emoji[data-symbol="🧙‍♂️"]');
+    const rose = document.getElementById('rose') || document.querySelector('.intro-emoji[data-symbol="🌹"]');
     const singularity = document.getElementById('singularity');
-    const introTitle = document.getElementById('intro-title');
+    const introTitle = document.getElementById('title') || document.getElementById('intro-title');
 
     let width, height, centerX, centerY;
     let time = 0;
