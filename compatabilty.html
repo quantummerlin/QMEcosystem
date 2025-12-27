@@ -222,6 +222,51 @@
             gap: 1rem;
         }
 
+        /* Icon Buttons for Mobile */
+        .icon-nav {
+            position: fixed;
+            top: 20px;
+            display: none;
+            z-index: 100;
+        }
+
+        .icon-nav.left {
+            left: 20px;
+        }
+
+        .icon-nav.right {
+            right: 20px;
+        }
+
+        .icon-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--glass-border);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .icon-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(0, 245, 255, 0.4);
+        }
+
+        .icon-btn.library {
+            border-color: rgba(0, 245, 255, 0.5);
+        }
+
+        .icon-btn.coffee {
+            border-color: rgba(255, 215, 0, 0.5);
+        }
+
         .sacred-rose {
             width: 60px;
             height: 60px;
@@ -815,28 +860,20 @@
                 padding: 0;
             }
 
+            /* Hide full header on mobile */
             .header-container {
-                padding: 10px 1rem 1rem;
+                display: none;
             }
 
-            .header-content {
-                flex-direction: column;
-                gap: 0.75rem;
+            /* Show icon navigation on mobile */
+            .icon-nav {
+                display: block;
             }
 
-            .sacred-rose {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-            }
-
-            .site-title {
-                font-size: 1.5rem;
-            }
-
-            .buy-me-coffee-btn {
-                padding: 8px 16px;
-                font-size: 0.85rem;
+            .icon-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
             }
 
             .main-container {
@@ -845,7 +882,7 @@
 
             .hero-section {
                 margin: 1rem 0;
-                padding: 40px 1rem 30px;
+                padding: 60px 1rem 30px;
             }
 
             .hero-subtitle {
@@ -1331,6 +1368,14 @@
     <!-- Cosmic Background -->
     <div class="cosmic-bg"></div>
     <div class="stars" id="stars"></div>
+
+    <!-- Mobile Icon Navigation -->
+    <div class="icon-nav left">
+        <a href="library.html" class="icon-btn library" title="Library">📚</a>
+    </div>
+    <div class="icon-nav right">
+        <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank" class="icon-btn coffee" title="Support">☕</a>
+    </div>
 
     <!-- Quantum Navigation -->
     <nav class="quantum-nav">
