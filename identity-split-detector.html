@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity Split Detector | Quantum Merlin</title>
+    <meta name="description" content="Reveal conflicts between your different identities and integrate them.">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cinzel', serif;
+            background: linear-gradient(135deg, #0a0015 0%, #1a0033 50%, #2d1b4e 100%);
+            color: #e0d4f7;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { text-align: center; padding: 40px 20px; margin-bottom: 40px; }
+        h1 {
+            font-size: 2.8em;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+        .subtitle { font-size: 1.2em; color: #c4b5fd; font-style: italic; line-height: 1.6; }
+        .intro-section {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            color: #c4b5fd;
+        }
+        .question-section {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        .question-number { color: #9333ea; font-size: 1.1em; font-weight: bold; margin-bottom: 15px; }
+        .question-text { font-size: 1.3em; color: #e0d4f7; margin-bottom: 20px; line-height: 1.5; }
+        .scale-container { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 20px; }
+        .scale-label { font-size: 0.95em; color: #ec4899; font-family: 'Orbitron', sans-serif; font-weight: bold; text-align: center; }
+        .scale-options { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; max-width: 280px; width: 100%; }
+        .scale-option {
+            max-width: 38px;
+            height: 38px;
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 12px;
+            background: rgba(147, 51, 234, 0.1);
+            color: #c4b5fd;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .scale-option:hover {
+            border-color: #9333ea;
+            background: rgba(147, 51, 234, 0.2);
+            transform: scale(1.05);
+        }
+        .scale-option.selected {
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            border-color: #9333ea;
+            color: white;
+            transform: scale(1.15);
+            box-shadow: 0 5px 20px rgba(147, 51, 234, 0.5);
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        .submit-btn:hover { transform: scale(1.02); box-shadow: 0 10px 40px rgba(147, 51, 234, 0.6); }
+        .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .results-section { display: none; }
+        .results-section.active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .result-title { font-size: 2.2em; color: #9333ea; text-align: center; margin-bottom: 30px; }
+        .split-display {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+            border: 3px solid #9333ea;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        .split-title { font-size: 2em; color: #ec4899; text-align: center; margin-bottom: 20px; font-weight: bold; }
+        .split-description { font-size: 1.1em; color: #c4b5fd; line-height: 1.7; text-align: center; }
+        .identity-box {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        .identity-label { font-size: 1.3em; color: #9333ea; margin-bottom: 15px; font-weight: bold; }
+        .identity-text { color: #c4b5fd; line-height: 1.7; }
+        .insight-box {
+            background: rgba(147, 51, 234, 0.1);
+            border-left: 4px solid #9333ea;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+        .insight-title { font-size: 1.4em; color: #9333ea; margin-bottom: 15px; }
+        .insight-text { color: #c4b5fd; line-height: 1.8; font-size: 1.05em; }
+        .enhanced-cta {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%);
+            border: 2px solid #ec4899;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .enhanced-cta h3 {
+            color: #ec4899;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+        .enhanced-cta p {
+            color: #c4b5fd;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .enhanced-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .enhanced-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(147, 51, 234, 0.6);
+        }
+        .action-buttons { display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap; }
+        .action-btn {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px 30px;
+            border-radius: 25px;
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            background: rgba(147, 51, 234, 0.2);
+            color: #c4b5fd;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .action-btn:hover {
+            background: rgba(147, 51, 234, 0.3);
+            border-color: #9333ea;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .scale-options { gap: 5px; max-width: 250px; }
+            .scale-option { max-width: 35px; height: 35px; font-size: 1em; }
+            .action-buttons { flex-direction: column; }
+            .action-btn { min-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎭 Identity Split Detector 🎭</h1>
+            <p class="subtitle">Reveal conflicts between your different identities</p>
+        </header>
+
+        <div class="intro-section">
+            <p><strong>You are not one person—you are many.</strong></p>
+            <p>You have a work identity, a family identity, a social identity, a private identity. When these identities conflict, you experience internal fragmentation and exhaustion.</p>
+            <p>This tool reveals your primary identity split and provides integration strategies.</p>
+        </div>
+
+        <div id="questionsContainer">
+            <div class="question-section">
+                <div class="question-number">Question 1 of 4</div>
+                <div class="question-text">I act differently in different contexts (work vs home vs friends)</div>
+                <div class="scale-container">
+                    <span class="scale-label">&#9664; Not at all</span>
+                    <div class="scale-options">
+                        <div class="scale-option" data-question="q1" data-value="0" onclick="selectAnswer('q1', 0)">0</div>
+                        <div class="scale-option" data-question="q1" data-value="1" onclick="selectAnswer('q1', 1)">1</div>
+                        <div class="scale-option" data-question="q1" data-value="2" onclick="selectAnswer('q1', 2)">2</div>
+                        <div class="scale-option" data-question="q1" data-value="3" onclick="selectAnswer('q1', 3)">3</div>
+                        <div class="scale-option" data-question="q1" data-value="4" onclick="selectAnswer('q1', 4)">4</div>
+                        <div class="scale-option" data-question="q1" data-value="5" onclick="selectAnswer('q1', 5)">5</div>
+                    </div>
+                    <span class="scale-label">Extremely &#9654;</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <div class="question-number">Question 2 of 4</div>
+                <div class="question-text">I hide parts of myself to be accepted or successful</div>
+                <div class="scale-container">
+                    <span class="scale-label">&#9664; Never</span>
+                    <div class="scale-options">
+                        <div class="scale-option" data-question="q2" data-value="0" onclick="selectAnswer('q2', 0)">0</div>
+                        <div class="scale-option" data-question="q2" data-value="1" onclick="selectAnswer('q2', 1)">1</div>
+                        <div class="scale-option" data-question="q2" data-value="2" onclick="selectAnswer('q2', 2)">2</div>
+                        <div class="scale-option" data-question="q2" data-value="3" onclick="selectAnswer('q2', 3)">3</div>
+                        <div class="scale-option" data-question="q2" data-value="4" onclick="selectAnswer('q2', 4)">4</div>
+                        <div class="scale-option" data-question="q2" data-value="5" onclick="selectAnswer('q2', 5)">5</div>
+                    </div>
+                    <span class="scale-label">Always &#9654;</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <div class="question-number">Question 3 of 4</div>
+                <div class="question-text">I feel like I'm living someone else's life or expectations</div>
+                <div class="scale-container">
+                    <span class="scale-label">&#9664; Not at all</span>
+                    <div class="scale-options">
+                        <div class="scale-option" data-question="q3" data-value="0" onclick="selectAnswer('q3', 0)">0</div>
+                        <div class="scale-option" data-question="q3" data-value="1" onclick="selectAnswer('q3', 1)">1</div>
+                        <div class="scale-option" data-question="q3" data-value="2" onclick="selectAnswer('q3', 2)">2</div>
+                        <div class="scale-option" data-question="q3" data-value="3" onclick="selectAnswer('q3', 3)">3</div>
+                        <div class="scale-option" data-question="q3" data-value="4" onclick="selectAnswer('q3', 4)">4</div>
+                        <div class="scale-option" data-question="q3" data-value="5" onclick="selectAnswer('q3', 5)">5</div>
+                    </div>
+                    <span class="scale-label">Completely &#9654;</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <div class="question-number">Question 4 of 4</div>
+                <div class="question-text">I know who I really am beneath all the roles I play</div>
+                <div class="scale-container">
+                    <span class="scale-label">&#9664; Not at all</span>
+                    <div class="scale-options">
+                        <div class="scale-option" data-question="q4" data-value="0" onclick="selectAnswer('q4', 0)">0</div>
+                        <div class="scale-option" data-question="q4" data-value="1" onclick="selectAnswer('q4', 1)">1</div>
+                        <div class="scale-option" data-question="q4" data-value="2" onclick="selectAnswer('q4', 2)">2</div>
+                        <div class="scale-option" data-question="q4" data-value="3" onclick="selectAnswer('q4', 3)">3</div>
+                        <div class="scale-option" data-question="q4" data-value="4" onclick="selectAnswer('q4', 4)">4</div>
+                        <div class="scale-option" data-question="q4" data-value="5" onclick="selectAnswer('q4', 5)">5</div>
+                    </div>
+                    <span class="scale-label">Completely &#9654;</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="submit-btn" id="submitBtn" onclick="generateResults()" disabled>
+            Detect My Identity Split
+        </button>
+
+        <div class="results-section" id="resultsSection"></div>
+    </div>
+
+    <script>
+        let answers = {};
+
+        function selectAnswer(question, value) {
+            answers[question] = value;
+            document.querySelectorAll(`[data-question="${question}"]`).forEach(option => {
+                option.classList.remove('selected');
+            });
+            document.querySelector(`[data-question="${question}"][data-value="${value}"]`).classList.add('selected');
+            if (Object.keys(answers).length === 4) {
+                document.getElementById('submitBtn').disabled = false;
+            }
+        }
+
+        function goToEnhanced() {
+            const enhancedData = {
+                tool: 'identity-split-detector',
+                answers: answers,
+                timestamp: Date.now()
+            };
+            sessionStorage.setItem('qm_enhanced_data', JSON.stringify(enhancedData));
+            window.location.href = '/identity-split-detector-enhanced.html';
+        }
+
+        function generateResults() {
+            const q1 = answers.q1;
+            const q2 = answers.q2;
+            const q3 = answers.q3;
+            const q4 = answers.q4;
+
+            const splits = [
+                {
+                    name: 'The Professional vs Authentic Split',
+                    condition: q1 >= 4 && q2 >= 3,
+                    description: 'You have one identity at work and another everywhere else. Your professional persona is polished, competent, and controlled. Your authentic self is more relaxed, creative, and spontaneous. The gap between them exhausts you.',
+                    identity1: 'Professional You: Competent, controlled, achievement-oriented, image-conscious',
+                    identity2: 'Authentic You: Relaxed, creative, spontaneous, unfiltered',
+                    conflict: 'You can\'t bring your full self to work, and you can\'t fully relax at home because you\'re always managing your image.',
+                    integration: 'Start small: Share one authentic opinion at work. Let one "unprofessional" trait show. Notice that competence and authenticity aren\'t opposites—they enhance each other.'
+                },
+                {
+                    name: 'The Performer vs Private Split',
+                    condition: q2 >= 4 && q4 <= 2,
+                    description: 'You have a public persona that performs for approval and a private self that no one sees. You\'re exhausted from the performance but terrified of being seen without the mask.',
+                    identity1: 'Public You: Charming, agreeable, impressive, curated',
+                    identity2: 'Private You: Uncertain, messy, vulnerable, real',
+                    conflict: 'You feel like a fraud because the person people praise isn\'t the real you. But you\'re terrified they\'ll reject the real you.',
+                    integration: 'Let one person see behind the mask. Choose someone safe and share one "unimpressive" truth. Practice being loved for who you are, not who you perform.'
+                },
+                {
+                    name: 'The Obligation vs Desire Split',
+                    condition: q3 >= 4,
+                    description: 'You have the identity you think you should have and the identity you actually want. You\'re living someone else\'s dream—parents, society, past self—while your true desires go unfulfilled.',
+                    identity1: 'Obligated You: Responsible, dutiful, meeting expectations, safe',
+                    identity2: 'Desired You: Free, authentic, pursuing what you actually want, risky',
+                    conflict: 'You resent the life you\'re living but feel guilty for wanting something different. You\'re trapped between duty and desire.',
+                    integration: 'Give yourself permission to want what you want. Start with one small choice that honors your desire over obligation. Notice that you can be responsible AND authentic.'
+                },
+                {
+                    name: 'The Strong vs Vulnerable Split',
+                    condition: q2 >= 3 && q4 <= 3,
+                    description: 'You have the strong, capable identity you show the world and the vulnerable, uncertain identity you hide. You\'ve learned that vulnerability is weakness, so you armor up.',
+                    identity1: 'Strong You: Capable, independent, unshakeable, self-sufficient',
+                    identity2: 'Vulnerable You: Uncertain, needing support, emotional, human',
+                    conflict: 'You\'re exhausted from always being strong. You want support but can\'t ask for it without feeling weak.',
+                    integration: 'Strength includes vulnerability. Ask for help once this week. Let someone see you struggle. Notice that people connect with your vulnerability, not your perfection.'
+                },
+                {
+                    name: 'The Integrated Self',
+                    condition: q1 <= 2 && q2 <= 2 && q4 >= 4,
+                    description: 'You have minimal identity fragmentation. You\'re largely the same person across contexts, comfortable with who you are, and able to show up authentically.',
+                    identity1: 'Core You: Consistent, authentic, integrated across contexts',
+                    identity2: 'Adaptive You: Flexible without losing yourself, context-aware without fragmenting',
+                    conflict: 'Minimal. You may still adjust your expression for context, but you don\'t lose yourself in the process.',
+                    integration: 'Your work is maintenance, not repair. Continue honoring your authenticity. Help others integrate their splits by modeling wholeness.'
+                }
+            ];
+
+            let selectedSplit = splits.find(s => s.condition) || splits[splits.length - 1];
+
+            const resultsHTML = `
+                <div class="result-title">🎭 Your Identity Split Revealed 🎭</div>
+                
+                <div class="split-display">
+                    <div class="split-title">${selectedSplit.name}</div>
+                    <div class="split-description">${selectedSplit.description}</div>
+                </div>
+
+                <div class="identity-box">
+                    <div class="identity-label">Identity #1</div>
+                    <div class="identity-text">${selectedSplit.identity1}</div>
+                </div>
+
+                <div class="identity-box">
+                    <div class="identity-label">Identity #2</div>
+                    <div class="identity-text">${selectedSplit.identity2}</div>
+                </div>
+
+                <div class="insight-box">
+                    <div class="insight-title">⚡ The Conflict</div>
+                    <div class="insight-text">${selectedSplit.conflict}</div>
+                </div>
+
+                <div class="insight-box">
+                    <div class="insight-title">🔗 Integration Path</div>
+                    <div class="insight-text">${selectedSplit.integration}</div>
+                </div>
+
+                <div class="insight-box">
+                    <div class="insight-title">💫 Key Insight</div>
+                    <div class="insight-text">
+                        Identity splits aren't about choosing one identity over another—they're about integration. 
+                        You don't have to kill the professional to be authentic, or abandon responsibility to pursue desire. 
+                        You integrate by bringing more of your whole self to each context, not by fragmenting further.
+                    </div>
+                </div>
+
+                <div class="enhanced-cta">
+                    <h3>✨ Want Deeper Insights?</h3>
+                    <p>The enhanced version integrates your birth data with astrological insights, frequency recommendations, and personalized integration practices tailored to your zodiac sign and life path number.</p>
+                    <button class="enhanced-btn" onclick="goToEnhanced()">Get Enhanced Reading</button>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="index.html" class="action-btn">🏠 Home</a>
+                    <a href="library.html" class="action-btn">📚 View Library</a>
+                </div>
+            `;
+
+            document.getElementById('resultsSection').innerHTML = resultsHTML;
+            document.getElementById('resultsSection').classList.add('active');
+            
+            saveToLibrary(selectedSplit);
+            
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function saveToLibrary(split) {
+            const insight = {
+                toolName: 'Identity Split Detector',
+                category: 'psychological',
+                summary: split.name,
+                content: `${split.name}\n\n${split.description}\n\nIdentity #1: ${split.identity1}\nIdentity #2: ${split.identity2}\n\nConflict: ${split.conflict}\n\nIntegration: ${split.integration}`,
+                tags: ['identity', 'integration', 'authenticity', 'wholeness']
+            };
+
+            let insights = localStorage.getItem('quantumMerlinInsights');
+            insights = insights ? JSON.parse(insights) : [];
+            insight.id = Date.now();
+            insight.timestamp = new Date().toISOString();
+            insights.unshift(insight);
+            localStorage.setItem('quantumMerlinInsights', JSON.stringify(insights));
+        }
+    </script>
+</body>
+</html>
