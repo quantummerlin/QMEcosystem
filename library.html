@@ -498,6 +498,33 @@
                 transform: scale(1.2); 
             }
         }
+
+        /* Achievement Badges */
+        .achievement-badge {
+            background: rgba(147, 51, 234, 0.2);
+            border: 2px solid #9333ea;
+            border-radius: 12px;
+            padding: 15px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-badge.active {
+            background: rgba(147, 51, 234, 0.2);
+            border: 2px solid #9333ea;
+            box-shadow: 0 0 20px rgba(147, 51, 234, 0.4);
+        }
+
+        .achievement-badge.locked {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            opacity: 0.5;
+        }
+
+        .achievement-badge.active:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(147, 51, 234, 0.6);
+        }
     </style>
 </head>
 <body>
@@ -549,6 +576,42 @@
             <div class="stat">
                 <div class="stat-number" id="total-tools">0</div>
                 <div class="stat-label">Tools Used</div>
+            </div>
+        </div>
+
+        <!-- Achievements Section -->
+        <div style="
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 25px;
+        ">
+            <h3 style="color: #9333ea; text-align: center; margin-bottom: 20px; font-family: 'Cinzel', serif;">
+                🏆 Your Achievements
+            </h3>
+            <div style="
+                display: flex;
+                gap: 15px;
+                justify-content: center;
+                flex-wrap: wrap;
+            ">
+                <div class="achievement-badge active" id="achievement-first">
+                    <div style="font-size: 2em; margin-bottom: 5px;">🌱</div>
+                    <div style="color: #c4b5fd; font-size: 0.9em;">First Steps</div>
+                </div>
+                
+                <div class="achievement-badge locked" id="achievement-seeker">
+                    <div style="font-size: 2em; margin-bottom: 5px;">🔮</div>
+                    <div style="color: #c4b5fd; font-size: 0.9em;">Pattern Seeker</div>
+                    <div style="color: #a78bfa; font-size: 0.8em; margin-top: 5px;">Use 5 tools</div>
+                </div>
+                
+                <div class="achievement-badge locked" id="achievement-master">
+                    <div style="font-size: 2em; margin-bottom: 5px;">👑</div>
+                    <div style="color: #c4b5fd; font-size: 0.9em;">Quantum Master</div>
+                    <div style="color: #a78bfa; font-size: 0.8em; margin-top: 5px;">Use all 33 tools</div>
+                </div>
             </div>
         </div>
 
@@ -897,6 +960,32 @@
 
                 document.getElementById('total-items').textContent = totalItems;
                 document.getElementById('total-tools').textContent = uniqueTools;
+                
+                // Update achievements
+                this.updateAchievements(uniqueTools);
+            }
+
+            updateAchievements(toolsUsed) {
+                // First Steps - unlocked by default (already using the library)
+                const firstSteps = document.getElementById('achievement-first');
+                if (firstSteps) {
+                    firstSteps.classList.add('active');
+                    firstSteps.classList.remove('locked');
+                }
+
+                // Pattern Seeker - unlock at 5 tools
+                const patternSeeker = document.getElementById('achievement-seeker');
+                if (patternSeeker && toolsUsed >= 5) {
+                    patternSeeker.classList.add('active');
+                    patternSeeker.classList.remove('locked');
+                }
+
+                // Quantum Master - unlock at 33 tools (all tools)
+                const quantumMaster = document.getElementById('achievement-master');
+                if (quantumMaster && toolsUsed >= 33) {
+                    quantumMaster.classList.add('active');
+                    quantumMaster.classList.remove('locked');
+                }
             }
         }
 
