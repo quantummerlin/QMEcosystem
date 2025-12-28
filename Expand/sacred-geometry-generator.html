@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred Geometry Generator - Your Personal Cosmic Patterns</title>
+    <meta name="description" content="Generate personalized sacred geometry patterns based on your birth data. Create unique visual sigils for manifestation and spiritual alignment.">
+    <meta name="keywords" content="sacred geometry, personal sigils, cosmic patterns, manifestation tools">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a0b2e 50%, #2a1b3e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .quantum-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            z-index: 1;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        .quantum-sun {
+            position: fixed;
+            top: 10%;
+            right: 10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 204, 0, 0.3) 0%, rgba(147, 51, 234, 0.2) 50%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: sunPulse 4s ease-in-out infinite;
+            z-index: 2;
+        }
+        
+        @keyframes sunPulse {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.2); opacity: 0.9; }
+        }
+        
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            background: linear-gradient(45deg, #9333ea, #ec4899, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #b794f6;
+            margin-bottom: 30px;
+        }
+        
+        .input-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #e9d5ff;
+            font-weight: 500;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 10px;
+            color: #ffffff;
+            font-size: 16px;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        button {
+            background: linear-gradient(45deg, #9333ea, #7c3aed);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: linear-gradient(45deg, #7c3aed, #6d28d9);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.4);
+        }
+        
+        .results {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .geometry-display {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .canvas-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        canvas {
+            border: 2px solid rgba(147, 51, 234, 0.5);
+            border-radius: 15px;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 15px 40px rgba(147, 51, 234, 0.3);
+        }
+        
+        .geometry-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .control-btn {
+            background: linear-gradient(45deg, #9333ea, #7c3aed);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: auto;
+            margin: 5px;
+        }
+        
+        .control-btn:hover {
+            background: linear-gradient(45deg, #7c3aed, #6d28d9);
+            transform: scale(1.05);
+        }
+        
+        .insight-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .insight-title {
+            font-size: 1.4em;
+            color: #f59e0b;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .insight-content {
+            line-height: 1.6;
+            color: #e9d5ff;
+        }
+        
+        .frequency-alignment {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2));
+            border: 1px solid rgba(147, 51, 234, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .frequency-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .frequency-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .frequency-item:hover {
+            background: rgba(147, 51, 234, 0.3);
+            transform: scale(1.05);
+        }
+        
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(147, 51, 234, 0.3);
+            border: 1px solid rgba(147, 51, 234, 0.5);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-toggle:hover {
+            background: rgba(147, 51, 234, 0.5);
+            transform: scale(1.1);
+        }
+        
+        .menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(26, 11, 46, 0.95), rgba(42, 27, 62, 0.95));
+            backdrop-filter: blur(10px);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 80px 20px 20px;
+            overflow-y: auto;
+        }
+        
+        .menu.active {
+            right: 0;
+        }
+        
+        .menu-item {
+            display: block;
+            padding: 12px;
+            color: #e9d5ff;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-item:hover {
+            background: rgba(147, 51, 234, 0.3);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .container {
+                padding: 15px;
+            }
+            canvas {
+                max-width: 100%;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="quantum-grid"></div>
+    <div class="quantum-sun"></div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span style="font-size: 24px;">☰</span>
+    </div>
+    
+    <nav class="menu" id="menu">
+        <a href="https://quantummerlin.com" class="menu-item">🏠 Quantum Home</a>
+        <a href="https://frequency.quantummerlin.com" class="menu-item">🎵 Frequency Generator</a>
+        <a href="https://quantummerlin.com/jukebox.html" class="menu-item">📚 Quantum Jukebox</a>
+        <a href="https://gematria.quantummerlin.com" class="menu-item">🔢 Quantum Gematria</a>
+        <a href="https://tarot.quantummerlin.com" class="menu-item">🃏 Quantum Tarot</a>
+        <a href="https://sigils.quantummerlin.com" class="menu-item">✨ Sigil Creator</a>
+        <a href="https://astrology.quantummerlin.com" class="menu-item">🌟 Western Astrology</a>
+        <a href="https://chinese.quantummerlin.com" class="menu-item">🐲 Chinese Zodiac</a>
+        <a href="https://forecasts.quantummerlin.com" class="menu-item">🔮 Zodiac Forecasts</a>
+        <a href="https://codes.quantummerlin.com" class="menu-item">💫 Reality Codes</a>
+        <a href="https://crystals.quantummerlin.com" class="menu-item">💎 Crystal Guide</a>
+        <a href="https://water.quantummerlin.com" class="menu-item">💧 Water Charging</a>
+        <a href="https://quantummerlin.com/soul-card-calculator.html" class="menu-item">🃏 Soul Card Calculator</a>
+        <a href="https://quantummerlin.com/quantum-blueprint.html" class="menu-item">🌌 Quantum Blueprint</a>
+        <a href="https://quantummerlin.com/sacred-geometry-generator.html" class="menu-item">🔮 Sacred Geometry Generator</a>
+    </nav>
+    
+    <div class="container">
+        <header>
+            <h1>Sacred Geometry Generator</h1>
+            <p class="subtitle">Create personal sacred geometry patterns based on your unique birth signature</p>
+        </header>
+        
+        <section class="input-section">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
+                
+                <div class="input-group">
+                    <label for="birthDate">Birth Date</label>
+                    <input type="date" id="birthDate">
+                </div>
+                
+                <div class="input-group">
+                    <label for="intention">Primary Intention</label>
+                    <select id="intention">
+                        <option value="love">Love & Relationships</option>
+                        <option value="abundance">Abundance & Prosperity</option>
+                        <option value="healing">Healing & Health</option>
+                        <option value="wisdom">Wisdom & Clarity</option>
+                        <option value="protection">Protection & Safety</option>
+                        <option value="creativity">Creativity & Expression</option>
+                        <option value="spiritual">Spiritual Growth</option>
+                        <option value="manifestation">General Manifestation</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="geometryStyle">Geometry Style</label>
+                    <select id="geometryStyle">
+                        <option value="flower">Flower of Life</option>
+                        <option value="metatron">Metatron's Cube</option>
+                        <option value="sri">Sri Yantra</option>
+                        <option value="tree">Tree of Life</option>
+                        <option value="personal">Personal Sigil</option>
+                        <option value="mandala">Personal Mandala</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="specificIntention">Specific Intention (Optional)</label>
+                <textarea id="specificIntention" placeholder="Describe your specific intention or goal..."></textarea>
+            </div>
+            
+            <button onclick="generateSacredGeometry()">Generate My Sacred Geometry</button>
+        </section>
+        
+        <section class="results" id="results">
+            <div class="geometry-display">
+                <h2 style="font-size: 2em; color: #f59e0b; margin-bottom: 20px;">Your Personal Sacred Geometry</h2>
+                <div class="canvas-container">
+                    <canvas id="geometryCanvas" width="600" height="600"></canvas>
+                </div>
+                
+                <div class="geometry-controls">
+                    <button class="control-btn" onclick="regeneratePattern()">🔄 Regenerate</button>
+                    <button class="control-btn" onclick="changeColors()">🎨 Change Colors</button>
+                    <button class="control-btn" onclick="downloadPattern()">💾 Download PNG</button>
+                    <button class="control-btn" onclick="animatePattern()">✨ Animate</button>
+                    <button class="control-btn" onclick="saveToJukebox()">📚 Save to Jukebox</button>
+                </div>
+            </div>
+            
+            <div class="insight-section">
+                <h3 class="insight-title">
+                    <span>🔮</span>
+                    <span>Pattern Meaning</span>
+                </h3>
+                <p class="insight-content" id="patternMeaning">
+                    Your sacred geometry pattern meaning will be revealed here...
+                </p>
+            </div>
+            
+            <div class="insight-section">
+                <h3 class="insight-title">
+                    <span>🌟</span>
+                    <span>Energetic Properties</span>
+                </h3>
+                <p class="insight-content" id="energeticProperties">
+                    The energetic properties of your pattern will be described here...
+                </p>
+            </div>
+            
+            <div class="insight-section">
+                <h3 class="insight-title">
+                    <span>💫</span>
+                    <span>How to Use</span>
+                </h3>
+                <p class="insight-content" id="usageInstructions">
+                    Instructions for using your sacred geometry pattern will appear here...
+                </p>
+            </div>
+            
+            <div class="frequency-alignment">
+                <h3 class="insight-title">
+                    <span>🎵</span>
+                    <span>Charging Frequencies</span>
+                </h3>
+                <p class="insight-content">
+                    These frequencies enhance the power of your sacred geometry pattern:
+                </p>
+                <div class="frequency-list" id="frequencyList">
+                    <!-- Frequencies will be populated here -->
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        let currentGeometry = null;
+        let animationId = null;
+        let isAnimating = false;
+        
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+        
+        function generateSacredGeometry() {
+            const name = document.getElementById('name').value;
+            const birthDate = document.getElementById('birthDate').value;
+            const intention = document.getElementById('intention').value;
+            const style = document.getElementById('geometryStyle').value;
+            const specificIntention = document.getElementById('specificIntention').value;
+            
+            if (!name || !birthDate) {
+                alert('Please enter your name and birth date.');
+                return;
+            }
+            
+            // Generate geometry based on birth data and intention
+            const canvas = document.getElementById('geometryCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Calculate personal parameters
+            const date = new Date(birthDate);
+            const day = date.getDate();
+            const month = date.getMonth() + 1;
+            const year = date.getFullYear();
+            
+            const personalSeed = day + month + year + name.length;
+            const personalColor = `hsl(${(personalSeed * 7) % 360}, 70%, 50%)`;
+            const secondaryColor = `hsl(${(personalSeed * 13) % 360}, 60%, 40%)`;
+            
+            // Clear canvas
+            ctx.fillStyle = '#0a0e27';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw based on style
+            switch(style) {
+                case 'flower':
+                    drawFlowerOfLife(ctx, personalSeed, personalColor, secondaryColor);
+                    break;
+                case 'metatron':
+                    drawMetatronsCube(ctx, personalSeed, personalColor, secondaryColor);
+                    break;
+                case 'sri':
+                    drawSriYantra(ctx, personalSeed, personalColor, secondaryColor);
+                    break;
+                case 'tree':
+                    drawTreeOfLife(ctx, personalSeed, personalColor, secondaryColor);
+                    break;
+                case 'personal':
+                    drawPersonalSigil(ctx, name, personalSeed, personalColor, secondaryColor);
+                    break;
+                case 'mandala':
+                    drawPersonalMandala(ctx, personalSeed, personalColor, secondaryColor, intention);
+                    break;
+            }
+            
+            currentGeometry = {
+                name,
+                birthDate,
+                intention,
+                style,
+                specificIntention,
+                personalSeed,
+                colors: [personalColor, secondaryColor]
+            };
+            
+            // Display insights
+            displayInsights(currentGeometry);
+            
+            // Show results
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function drawFlowerOfLife(ctx, seed, color1, color2) {
+            const centerX = 300;
+            const centerY = 300;
+            const radius = 40 + (seed % 20);
+            const circles = 7 + (seed % 6);
+            
+            ctx.strokeStyle = color1;
+            ctx.lineWidth = 2;
+            
+            // Draw central circle
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            // Draw surrounding circles
+            for (let i = 0; i < circles; i++) {
+                const angle = (i / circles) * Math.PI * 2;
+                const x = centerX + Math.cos(angle) * radius;
+                const y = centerY + Math.sin(angle) * radius;
+                
+                ctx.strokeStyle = i % 2 === 0 ? color1 : color2;
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+            
+            // Add inner glow
+            const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, radius * 2);
+            gradient.addColorStop(0, color1 + '33');
+            gradient.addColorStop(1, 'transparent');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 600, 600);
+        }
+        
+        function drawMetatronsCube(ctx, seed, color1, color2) {
+            const centerX = 300;
+            const centerY = 300;
+            const size = 100 + (seed % 50);
+            
+            ctx.strokeStyle = color1;
+            ctx.lineWidth = 2;
+            
+            // Draw outer circle
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, size, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            // Draw hexagon
+            ctx.beginPath();
+            for (let i = 0; i < 6; i++) {
+                const angle = (i / 6) * Math.PI * 2 - Math.PI / 2;
+                const x = centerX + Math.cos(angle) * size;
+                const y = centerY + Math.sin(angle) * size;
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+            ctx.stroke();
+            
+            // Draw inner connections
+            ctx.strokeStyle = color2;
+            for (let i = 0; i < 6; i++) {
+                const angle = (i / 6) * Math.PI * 2 - Math.PI / 2;
+                const x = centerX + Math.cos(angle) * size;
+                const y = centerY + Math.sin(angle) * size;
+                
+                for (let j = i + 1; j < 6; j++) {
+                    const angle2 = (j / 6) * Math.PI * 2 - Math.PI / 2;
+                    const x2 = centerX + Math.cos(angle2) * size;
+                    const y2 = centerY + Math.sin(angle2) * size;
+                    
+                    ctx.beginPath();
+                    ctx.moveTo(x, y);
+                    ctx.lineTo(x2, y2);
+                    ctx.stroke();
+                }
+            }
+            
+            // Center point
+            ctx.fillStyle = color1;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 5, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        
+        function drawSriYantra(ctx, seed, color1, color2) {
+            const centerX = 300;
+            const centerY = 300;
+            const layers = 4 + (seed % 3);
+            
+            ctx.strokeStyle = color1;
+            ctx.lineWidth = 2;
+            
+            // Draw concentric triangles
+            for (let layer = 0; layer < layers; layer++) {
+                const size = 200 - (layer * 40);
+                
+                // Upward triangle
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY - size);
+                ctx.lineTo(centerX - size * 0.866, centerY + size * 0.5);
+                ctx.lineTo(centerX + size * 0.866, centerY + size * 0.5);
+                ctx.closePath();
+                ctx.stroke();
+                
+                // Downward triangle
+                ctx.strokeStyle = layer % 2 === 0 ? color1 : color2;
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY + size);
+                ctx.lineTo(centerX - size * 0.866, centerY - size * 0.5);
+                ctx.lineTo(centerX + size * 0.866, centerY - size * 0.5);
+                ctx.closePath();
+                ctx.stroke();
+            }
+            
+            // Central point (bindu)
+            ctx.fillStyle = color2;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 8, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        
+        function drawTreeOfLife(ctx, seed, color1, color2) {
+            const centerX = 300;
+            const centerY = 300;
+            
+            ctx.strokeStyle = color1;
+            ctx.lineWidth = 3;
+            
+            // Draw circles (sephiroth)
+            const positions = [
+                {x: centerX, y: centerY - 120, name: "Kether"},
+                {x: centerX - 80, y: centerY - 60, name: "Chokmah"},
+                {x: centerX + 80, y: centerY - 60, name: "Binah"},
+                {x: centerX - 120, y: centerY, name: "Chesed"},
+                {x: centerX, y: centerY, name: "Geburah"},
+                {x: centerX + 120, y: centerY, name: "Tiphareth"},
+                {x: centerX - 80, y: centerY + 60, name: "Netzach"},
+                {x: centerX + 80, y: centerY + 60, name: "Hod"},
+                {x: centerX, y: centerY + 120, name: "Malkuth"}
+            ];
+            
+            // Draw connections
+            const connections = [
+                [0, 1], [0, 2], [1, 3], [1, 4], [2, 4], [2, 5],
+                [3, 6], [4, 6], [4, 7], [5, 7], [5, 8], [6, 8], [7, 8]
+            ];
+            
+            connections.forEach(([start, end]) => {
+                ctx.beginPath();
+                ctx.moveTo(positions[start].x, positions[start].y);
+                ctx.lineTo(positions[end].x, positions[end].y);
+                ctx.stroke();
+            });
+            
+            // Draw sephiroth
+            positions.forEach((pos, i) => {
+                ctx.fillStyle = i % 2 === 0 ? color1 : color2;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, 15, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '10px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText(pos.name, pos.x, pos.y + 3);
+            });
+        }
+        
+        function drawPersonalSigil(ctx, name, seed, color1, color2) {
+            const centerX = 300;
+            const centerY = 300;
+            
+            // Create sigil from name
+            const letters = name.toUpperCase().replace(/[^A-Z]/g, '').split('');
+            const letterValues = letters.map(letter => letter.charCodeAt(0) - 64);
+            
+            ctx.strokeStyle = color1;
+            ctx.lineWidth = 3;
+            
+            // Draw sigil pattern
+            ctx.beginPath();
+            letterValues.forEach((value, index) => {
+                const angle = (value / 26) * Math.PI * 2 + (seed % 360) * Math.PI / 180;
+                const radius = 100 + (index * 20);
+                const x = centerX + Math.cos(angle) * radius;
+                const y = centerY + Math.sin(angle) * radius;
+                
+                if (index === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            });
+            ctx.closePath();
+            ctx.stroke();
+            
+            // Add energy centers
+            ctx.fillStyle = color2;
+            letterValues.forEach((value, index) => {
+                const angle = (value / 26) * Math.PI * 2 + (seed % 360) * Math.PI / 180;
+                const radius = 100 + (index * 20);
+                const x = centerX + Math.cos(angle) * radius;
+                const y = centerY + Math.sin(angle) * radius;
+                
+                ctx.beginPath();
+                ctx.arc(x, y, 8, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            
+            // Center sigil
+            ctx.fillStyle = color1;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 12, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        
+        function drawPersonalMandala(ctx, seed, color1, color2, intention) {
+            const centerX = 300;
+            const centerY = 300;
+            const petals = 6 + (seed % 6);
+            
+            // Draw petals
+            for (let i = 0; i < petals; i++) {
+                const angle = (i / petals) * Math.PI * 2;
+                
+                ctx.fillStyle = i % 2 === 0 ? color1 + '66' : color2 + '66';
+                ctx.beginPath();
+                ctx.ellipse(
+                    centerX + Math.cos(angle) * 60,
+                    centerY + Math.sin(angle) * 60,
+                    40, 20, angle, 0, Math.PI * 2
+                );
+                ctx.fill();
+            }
+            
+            // Draw center circle
+            ctx.fillStyle = color1;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 30, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Add intention symbol
+            ctx.fillStyle = '#ffffff';
+            ctx.font = '20px Arial';
+            ctx.textAlign = 'center';
+            const symbols = {
+                love: '♥',
+                abundance: '$',
+                healing: '✚',
+                wisdom: '👁',
+                protection: '⭐',
+                creativity: '✨',
+                spiritual: 'ॐ',
+                manifestation: '🎯'
+            };
+            ctx.fillText(symbols[intention] || '✨', centerX, centerY + 7);
+        }
+        
+        function displayInsights(geometry) {
+            // Pattern meanings
+            const meanings = {
+                flower: "Your Flower of Life pattern represents the interconnectedness of all existence and your place within the cosmic web. This sacred geometry activates unity consciousness and helps you remember your connection to all of life.",
+                metatron: "Your Metatron's Cube pattern serves as a divine conduit between higher dimensions and earthly reality. This sacred geometry structure contains the five Platonic solids and represents the building blocks of creation itself.",
+                sri: "Your Sri Yantra pattern is one of the most powerful sacred geometries for spiritual growth and manifestation. It represents the union of masculine and feminine energies and serves as a cosmic diagram of creation.",
+                tree: "Your Tree of Life pattern maps the journey of the soul from divine unity to earthly manifestation and back. It represents the pathways of consciousness and the stages of spiritual evolution.",
+                personal: "Your personal sigil is a unique energetic signature encoded with the essence of your name and soul purpose. It serves as a direct key to your higher consciousness and personal power.",
+                mandala: "Your personal mandala creates a sacred space for meditation and transformation. It aligns your energy with your highest intention and serves as a portal to higher states of awareness."
+            };
+            
+            // Energetic properties
+            const properties = {
+                flower: "Amplifies unity consciousness, divine remembrance, and the understanding that all life is interconnected. Creates a field of harmony and coherence.",
+                metatron: "Enhances dimensional communication, sacred geometry understanding, and the ability to perceive the underlying patterns of reality. Activates higher mind functions.",
+                sri: "Balances divine masculine and feminine energies, accelerates spiritual growth, and enhances manifestation abilities. Creates profound transformation.",
+                tree: "Facilitates soul journey understanding, cosmic consciousness, and the integration of spiritual wisdom into daily life. Supports divine purpose alignment.",
+                personal: "Activates personal sovereignty, soul memory, and the full expression of your unique gifts. Enhances connection to your higher self and soul purpose.",
+                mandala: "Creates sacred space, enhances meditation, and aligns energy with specific intentions. Promotes inner peace and spiritual centering."
+            };
+            
+            // Usage instructions
+            const usage = {
+                flower: "Meditate on the center point while expanding your awareness to include all circles. Use as a focus for unity consciousness practices or place in your sacred space.",
+                metatron: "Gaze at the center and allow your awareness to expand through the geometric patterns. Use for dimensional journeying or understanding cosmic structures.",
+                sri: "Focus on the central point (bindu) while allowing your gaze to expand outward. Perfect for manifestation rituals and balancing inner polarities.",
+                tree: "Trace the pathways with your eyes or finger, moving from crown to kingdom. Use for understanding your soul's journey and aligning with divine purpose.",
+                personal: "Keep this sigil with you, meditate on it daily, or place it on your altar. Use as a focus for activating your unique gifts and soul mission.",
+                mandala: "Use as a meditation focal point, color it mindfully, or place it in your environment. Perfect for intention setting and creating sacred space."
+            };
+            
+            document.getElementById('patternMeaning').textContent = meanings[geometry.style];
+            document.getElementById('energeticProperties').textContent = properties[geometry.style];
+            document.getElementById('usageInstructions').textContent = usage[geometry.style];
+            
+            // Frequency recommendations
+            const frequencies = {
+                love: ["528 Hz", "639 Hz", "741 Hz"],
+                abundance: ["417 Hz", "528 Hz", "741 Hz"],
+                healing: ["396 Hz", "528 Hz", "639 Hz"],
+                wisdom: ["432 Hz", "741 Hz", "963 Hz"],
+                protection: ["396 Hz", "417 Hz", "741 Hz"],
+                creativity: ["432 Hz", "528 Hz", "639 Hz"],
+                spiritual: ["432 Hz", "741 Hz", "963 Hz"],
+                manifestation: ["528 Hz", "639 Hz", "741 Hz"]
+            };
+            
+            const frequencyList = document.getElementById('frequencyList');
+            frequencyList.innerHTML = '';
+            
+            (frequencies[geometry.intention] || ["432 Hz", "528 Hz", "639 Hz"]).forEach(freq => {
+                const freqItem = document.createElement('div');
+                freqItem.className = 'frequency-item';
+                freqItem.innerHTML = `<strong>${freq}</strong>`;
+                freqItem.onclick = () => {
+                    const jukeboxItem = {
+                        type: 'frequency',
+                        name: `${freq} - Sacred Geometry Enhancement`,
+                        description: `Frequency for enhancing ${geometry.style} pattern with ${geometry.intention} intention`,
+                        timestamp: new Date().toISOString()
+                    };
+                    
+                    let jukebox = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+                    jukebox.push(jukeboxItem);
+                    localStorage.setItem('quantumJukebox', JSON.stringify(jukebox));
+                    
+                    freqItem.style.background = 'rgba(52, 211, 153, 0.3)';
+                    setTimeout(() => {
+                        freqItem.style.background = '';
+                    }, 1000);
+                };
+                frequencyList.appendChild(freqItem);
+            });
+        }
+        
+        function regeneratePattern() {
+            if (currentGeometry) {
+                // Regenerate with slight variation
+                currentGeometry.personalSeed += 7;
+                currentGeometry.colors[0] = `hsl(${(currentGeometry.personalSeed * 7) % 360}, 70%, 50%)`;
+                currentGeometry.colors[1] = `hsl(${(currentGeometry.personalSeed * 13) % 360}, 60%, 40%)`;
+                
+                // Redraw
+                const canvas = document.getElementById('geometryCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Clear and redraw
+                ctx.fillStyle = '#0a0e27';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                switch(currentGeometry.style) {
+                    case 'flower':
+                        drawFlowerOfLife(ctx, currentGeometry.personalSeed, currentGeometry.colors[0], currentGeometry.colors[1]);
+                        break;
+                    case 'metatron':
+                        drawMetatronsCube(ctx, currentGeometry.personalSeed, currentGeometry.colors[0], currentGeometry.colors[1]);
+                        break;
+                    case 'sri':
+                        drawSriYantra(ctx, currentGeometry.personalSeed, currentGeometry.colors[0], currentGeometry.colors[1]);
+                        break;
+                    case 'tree':
+                        drawTreeOfLife(ctx, currentGeometry.personalSeed, currentGeometry.colors[0], currentGeometry.colors[1]);
+                        break;
+                    case 'personal':
+                        drawPersonalSigil(ctx, currentGeometry.name, currentGeometry.personalSeed, currentGeometry.colors[0], currentGeometry.colors[1]);
+                        break;
+                    case 'mandala':
+                        drawPersonalMandala(ctx, currentGeometry.personalSeed, currentGeometry.colors[0], currentGeometry.colors[1], currentGeometry.intention);
+                        break;
+                }
+            }
+        }
+        
+        function changeColors() {
+            if (currentGeometry) {
+                // Generate new colors
+                currentGeometry.personalSeed += 13;
+                currentGeometry.colors[0] = `hsl(${(currentGeometry.personalSeed * 7) % 360}, 70%, 50%)`;
+                currentGeometry.colors[1] = `hsl(${(currentGeometry.personalSeed * 13) % 360}, 60%, 40%)`;
+                
+                regeneratePattern();
+            }
+        }
+        
+        function downloadPattern() {
+            const canvas = document.getElementById('geometryCanvas');
+            const link = document.createElement('a');
+            link.download = `sacred-geometry-${currentGeometry.name}-${Date.now()}.png`;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        function animatePattern() {
+            if (!isAnimating && currentGeometry) {
+                isAnimating = true;
+                let frame = 0;
+                
+                function animate() {
+                    const canvas = document.getElementById('geometryCanvas');
+                    const ctx = canvas.getContext('2d');
+                    
+                    // Clear and redraw with rotation
+                    ctx.fillStyle = '#0a0e27';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    
+                    ctx.save();
+                    ctx.translate(300, 300);
+                    ctx.rotate((frame * 0.01) % (Math.PI * 2));
+                    ctx.translate(-300, -300);
+                    
+                    switch(currentGeometry.style) {
+                        case 'flower':
+                            drawFlowerOfLife(ctx, currentGeometry.personalSeed + frame, currentGeometry.colors[0], currentGeometry.colors[1]);
+                            break;
+                        case 'metatron':
+                            drawMetatronsCube(ctx, currentGeometry.personalSeed + frame, currentGeometry.colors[0], currentGeometry.colors[1]);
+                            break;
+                        case 'sri':
+                            drawSriYantra(ctx, currentGeometry.personalSeed + frame, currentGeometry.colors[0], currentGeometry.colors[1]);
+                            break;
+                        case 'tree':
+                            drawTreeOfLife(ctx, currentGeometry.personalSeed + frame, currentGeometry.colors[0], currentGeometry.colors[1]);
+                            break;
+                        case 'personal':
+                            drawPersonalSigil(ctx, currentGeometry.name, currentGeometry.personalSeed + frame, currentGeometry.colors[0], currentGeometry.colors[1]);
+                            break;
+                        case 'mandala':
+                            drawPersonalMandala(ctx, currentGeometry.personalSeed + frame, currentGeometry.colors[0], currentGeometry.colors[1], currentGeometry.intention);
+                            break;
+                    }
+                    
+                    ctx.restore();
+                    
+                    frame++;
+                    if (isAnimating) {
+                        animationId = requestAnimationFrame(animate);
+                    }
+                }
+                
+                animate();
+            } else {
+                isAnimating = false;
+                if (animationId) {
+                    cancelAnimationFrame(animationId);
+                }
+                regeneratePattern();
+            }
+        }
+        
+        function saveToJukebox() {
+            if (currentGeometry) {
+                const jukeboxItem = {
+                    type: 'sigil',
+                    name: `${currentGeometry.name}'s ${currentGeometry.style} Geometry`,
+                    description: `Personal sacred geometry for ${currentGeometry.intention}`,
+                    geometry: currentGeometry,
+                    timestamp: new Date().toISOString()
+                };
+                
+                let jukebox = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+                jukebox.push(jukeboxItem);
+                localStorage.setItem('quantumJukebox', JSON.stringify(jukebox));
+                
+                alert('Saved to your Quantum Jukebox!');
+            }
+        }
+    </script>
+</body>
+</html>

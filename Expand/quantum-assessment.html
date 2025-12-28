@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Profile Assessment - Quantum Merlin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a0033 0%, #2d1b4e 50%, #1a0033 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(138, 43, 226, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #b19cd9;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 30px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section h2 {
+            color: #ff00ff;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .question {
+            margin-bottom: 30px;
+        }
+
+        .question label {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            color: #e0d4f7;
+        }
+
+        .option {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .option:hover {
+            background: rgba(255, 0, 255, 0.1);
+            border-color: #ff00ff;
+            transform: translateX(5px);
+        }
+
+        .option.selected {
+            background: rgba(255, 0, 255, 0.2);
+            border-color: #ff00ff;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+        }
+
+        .option input[type="radio"],
+        .option input[type="checkbox"] {
+            margin-right: 15px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 120px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            color: #fff;
+            font-size: 1em;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #ff00ff;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .btn-next {
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            color: #fff;
+        }
+
+        .btn-next:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255, 0, 255, 0.5);
+        }
+
+        .btn-prev {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .btn-prev:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .profile-preview {
+            background: rgba(255, 0, 255, 0.1);
+            border: 2px solid #ff00ff;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .profile-preview h3 {
+            color: #00ffff;
+            margin-bottom: 15px;
+        }
+
+        .profile-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(0, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .profile-item strong {
+            color: #ff00ff;
+        }
+
+        .completion-message {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .completion-message h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .button-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Quantum Profile Assessment</h1>
+            <p>Discover your unique energetic signature for personalized spiritual guidance</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+
+        <!-- Section 1: Spiritual Journey -->
+        <div class="section active" id="section1">
+            <h2>🌟 Your Spiritual Journey</h2>
+            
+            <div class="question">
+                <label>How would you describe your current relationship with spirituality?</label>
+                <div class="option" onclick="selectOption(this, 'spiritualRelationship', 'beginner')">
+                    <input type="radio" name="spiritualRelationship" value="beginner">
+                    <span>I'm just beginning to explore spiritual concepts</span>
+                </div>
+                <div class="option" onclick="selectOption(this, 'spiritualRelationship', 'curious')">
+                    <input type="radio" name="spiritualRelationship" value="curious">
+                    <span>I'm curious and learning about different paths</span>
+                </div>
+                <div class="option" onclick="selectOption(this, 'spiritualRelationship', 'regular')">
+                    <input type="radio" name="spiritualRelationship" value="regular">
+                    <span>I have a regular spiritual practice but want to deepen it</span>
+                </div>
+                <div class="option" onclick="selectOption(this, 'spiritualRelationship', 'experienced')">
+                    <input type="radio" name="spiritualRelationship" value="experienced">
+                    <span>I'm experienced and seeking advanced understanding</span>
+                </div>
+                <div class="option" onclick="selectOption(this, 'spiritualRelationship', 'teacher')">
+                    <input type="radio" name="spiritualRelationship" value="teacher">
+                    <span>I'm a practitioner/teacher guiding others</span>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>What's your primary spiritual motivation right now?</label>
+                <div class="option" onclick="selectOption(this, 'motivation', 'clarity')">
+                    <input type="radio" name="motivation" value="clarity">
+                    <span>Finding clarity and direction</span>
+                </div>
+                <div class="option" onclick="selectOption(this, 'motivation', 'healing')">
+                    <input type="radio" name="motivation" value="healing">
+                    <span>Healing emotional or physical challenges</span>
+                </div>
+                <div class="option" onclick="selectOption(this, 'motivation', 'connection')">
+                    <input type="radio" name="motivation" value="connection">
+                    <span>Deepening my connection to divine/source</span>
+                </div>
+                <div class="option" onclick="selectOption(this, 'motivation', 'abilities')">
+                    <input type="radio" name="motivation" value="abilities">
+                    <span>Developing intuitive or psychic abilities</span>
+                </div>
+                <div class="option" onclick="selectOption(this, 'motivation', 'purpose')">
+                    <input type="radio" name="motivation" value="purpose">
+                    <span>Understanding my life purpose and mission</span>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-prev" onclick="prevSection()" style="visibility: hidden;">Previous</button>
+                <button class="btn-next" onclick="nextSection()">Next →</button>
+            </div>
+        </div>
+
+        <!-- Section 2: Arthurian Archetype -->
+        <div class="section" id="section2">
+            <h2>⚔️ Your Arthurian Archetype</h2>
+            
+            <div class="question">
+                <label>Which description resonates most deeply with who you are?</label>
+                
+                <div class="option" onclick="selectOption(this, 'archetype', 'seeker')">
+                    <input type="radio" name="archetype" value="seeker">
+                    <span><strong>THE SEEKER (Percival):</strong> I'm on a quest for truth, purity, and higher purpose. I feel called to discover something meaningful and am willing to journey into the unknown.</span>
+                </div>
+
+                <div class="option" onclick="selectOption(this, 'archetype', 'warrior')">
+                    <input type="radio" name="archetype" value="warrior">
+                    <span><strong>THE WARRIOR (Lancelot):</strong> I'm driven by courage, honor, and right action. I feel called to stand up for what's right and protect others/my values.</span>
+                </div>
+
+                <div class="option" onclick="selectOption(this, 'archetype', 'healer')">
+                    <input type="radio" name="archetype" value="healer">
+                    <span><strong>THE HEALER (Guinevere):</strong> I'm naturally compassionate and drawn to help others. I feel called to bring love, harmony, and healing to relationships and situations.</span>
+                </div>
+
+                <div class="option" onclick="selectOption(this, 'archetype', 'magician')">
+                    <input type="radio" name="archetype" value="magician">
+                    <span><strong>THE MAGICIAN (Merlin):</strong> I'm a seeker of wisdom and transformer of reality. I feel called to understand deeper truths and help others transform their lives.</span>
+                </div>
+
+                <div class="option" onclick="selectOption(this, 'archetype', 'ruler')">
+                    <input type="radio" name="archetype" value="ruler">
+                    <span><strong>THE RULER (Arthur):</strong> I'm a natural leader with a sense of responsibility. I feel called to create order, justice, and harmony in my sphere of influence.</span>
+                </div>
+
+                <div class="option" onclick="selectOption(this, 'archetype', 'guardian')">
+                    <input type="radio" name="archetype" value="guardian">
+                    <span><strong>THE GUARDIAN (Galahad):</strong> I'm deeply devoted to a higher purpose or calling. I feel called to protect sacred values and maintain integrity against all odds.</span>
+                </div>
+
+                <div class="option" onclick="selectOption(this, 'archetype', 'transformer')">
+                    <input type="radio" name="archetype" value="transformer">
+                    <span><strong>THE TRANSFORMER (Morgan):</strong> I'm an agent of change and bridge between worlds. I feel called to help others navigate transitions and transform limitations.</span>
+                </div>
+
+                <div class="option" onclick="selectOption(this, 'archetype', 'oracle')">
+                    <input type="radio" name="archetype" value="oracle">
+                    <span><strong>THE ORACLE (Lady of the Lake):</strong> I'm visionary and intuitive with deep wisdom. I feel called to see beyond the veil and guide others with prophetic insight.</span>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-prev" onclick="prevSection()">← Previous</button>
+                <button class="btn-next" onclick="nextSection()">Next →</button>
+            </div>
+        </div>
+
+        <!-- Section 3: Life Priorities -->
+        <div class="section" id="section3">
+            <h2>🎯 Your Current Focus</h2>
+            
+            <div class="question">
+                <label>Select your top 3 current priorities:</label>
+                
+                <div class="option" onclick="toggleCheckbox(this, 'priorities')">
+                    <input type="checkbox" name="priorities" value="career">
+                    <span>Career/Professional Development</span>
+                </div>
+                <div class="option" onclick="toggleCheckbox(this, 'priorities')">
+                    <input type="checkbox" name="priorities" value="relationships">
+                    <span>Relationships/Partnerships</span>
+                </div>
+                <div class="option" onclick="toggleCheckbox(this, 'priorities')">
+                    <input type="checkbox" name="priorities" value="health">
+                    <span>Health/Physical Wellbeing</span>
+                </div>
+                <div class="option" onclick="toggleCheckbox(this, 'priorities')">
+                    <input type="checkbox" name="priorities" value="financial">
+                    <span>Financial Abundance/Prosperity</span>
+                </div>
+                <div class="option" onclick="toggleCheckbox(this, 'priorities')">
+                    <input type="checkbox" name="priorities" value="spiritual">
+                    <span>Spiritual Growth/Awakening</span>
+                </div>
+                <div class="option" onclick="toggleCheckbox(this, 'priorities')">
+                    <input type="checkbox" name="priorities" value="creative">
+                    <span>Creative Expression/Life Purpose</span>
+                </div>
+                <div class="option" onclick="toggleCheckbox(this, 'priorities')">
+                    <input type="checkbox" name="priorities" value="family">
+                    <span>Family/Home Harmony</span>
+                </div>
+                <div class="option" onclick="toggleCheckbox(this, 'priorities')">
+                    <input type="checkbox" name="priorities" value="personal">
+                    <span>Personal Development/Healing</span>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-prev" onclick="prevSection()">← Previous</button>
+                <button class="btn-next" onclick="nextSection()">Next →</button>
+            </div>
+        </div>
+
+        <!-- Section 4: Learning Style -->
+        <div class="section" id="section4">
+            <h2>🧠 How You Learn Best</h2>
+            
+            <div class="question">
+                <label>How do you most effectively receive and integrate spiritual guidance?</label>
+                
+                <div class="option" onclick="selectOption(this, 'learningStyle', 'visual')">
+                    <input type="radio" name="learningStyle" value="visual">
+                    <span><strong>VISUAL:</strong> I need to see it - symbols, images, visualizations</span>
+                </div>
+                <div class="option" onclick="selectOption(this, 'learningStyle', 'auditory')">
+                    <input type="radio" name="learningStyle" value="auditory">
+                    <span><strong>AUDITORY:</strong> I need to hear it - spoken words, tones, vibrations</span>
+                </div>
+                <div class="option" onclick="selectOption(this, 'learningStyle', 'kinesthetic')">
+                    <input type="radio" name="learningStyle" value="kinesthetic">
+                    <span><strong>KINESTHETIC:</strong> I need to feel it - emotions, body sensations, experiences</span>
+                </div>
+                <div class="option" onclick="selectOption(this, 'learningStyle', 'cognitive')">
+                    <input type="radio" name="learningStyle" value="cognitive">
+                    <span><strong>COGNITIVE:</strong> I need to understand it - logic, analysis, intellectual processing</span>
+                </div>
+                <div class="option" onclick="selectOption(this, 'learningStyle', 'intuitive')">
+                    <input type="radio" name="learningStyle" value="intuitive">
+                    <span><strong>INTUITIVE:</strong> I just know it - inner guidance, gut feelings, instant recognition</span>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-prev" onclick="prevSection()">← Previous</button>
+                <button class="btn-next" onclick="nextSection()">Next →</button>
+            </div>
+        </div>
+
+        <!-- Section 5: Personal Context -->
+        <div class="section" id="section5">
+            <h2>💫 Personal Context</h2>
+            
+            <div class="question">
+                <label>Your Name (or spiritual name if you prefer):</label>
+                <textarea id="userName" placeholder="Enter your name..." rows="2"></textarea>
+            </div>
+
+            <div class="question">
+                <label>Your Email (for receiving your personalized reading):</label>
+                <textarea id="userEmail" placeholder="Enter your email..." rows="2"></textarea>
+            </div>
+
+            <div class="question">
+                <label>Is there anything else important for us to know about your spiritual journey or current situation?</label>
+                <textarea id="additionalContext" placeholder="Share any additional context that would help us provide the most accurate guidance..."></textarea>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-prev" onclick="prevSection()">← Previous</button>
+                <button class="btn-next" onclick="completeAssessment()">Complete Assessment →</button>
+            </div>
+        </div>
+
+        <!-- Completion Section -->
+        <div class="section" id="completion">
+            <div class="completion-message">
+                <h2>✨ Your Quantum Profile is Ready!</h2>
+                
+                <div class="profile-preview" id="profilePreview">
+                    <!-- Profile will be displayed here -->
+                </div>
+
+                <p style="margin: 30px 0; font-size: 1.1em; line-height: 1.8;">
+                    Your unique energetic signature has been captured. This profile allows our Quantum AI to provide insights specifically tailored to your soul's journey - unlike generic readings, our guidance speaks directly to who you are at the deepest level.
+                </p>
+
+                <button class="btn-next" onclick="proceedToWishes()" style="font-size: 1.2em; padding: 20px 50px;">
+                    ⚡ Create Your Quantum Wishes →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSection = 1;
+        const totalSections = 5;
+        const assessmentData = {};
+
+        function selectOption(element, name, value) {
+            // Remove selected class from siblings
+            const siblings = element.parentElement.querySelectorAll('.option');
+            siblings.forEach(sib => sib.classList.remove('selected'));
+            
+            // Add selected class to clicked option
+            element.classList.add('selected');
+            
+            // Check the radio button
+            element.querySelector('input').checked = true;
+            
+            // Store data
+            assessmentData[name] = value;
+            
+            console.log('Assessment Data:', assessmentData);
+        }
+
+        function toggleCheckbox(element, name) {
+            const checkbox = element.querySelector('input[type="checkbox"]');
+            checkbox.checked = !checkbox.checked;
+            element.classList.toggle('selected');
+            
+            // Store priorities
+            if (!assessmentData[name]) {
+                assessmentData[name] = [];
+            }
+            
+            if (checkbox.checked) {
+                if (assessmentData[name].length < 3) {
+                    assessmentData[name].push(checkbox.value);
+                } else {
+                    checkbox.checked = false;
+                    element.classList.remove('selected');
+                    alert('Please select only 3 priorities');
+                }
+            } else {
+                assessmentData[name] = assessmentData[name].filter(v => v !== checkbox.value);
+            }
+            
+            console.log('Assessment Data:', assessmentData);
+        }
+
+        function nextSection() {
+            if (currentSection < totalSections) {
+                document.getElementById(`section${currentSection}`).classList.remove('active');
+                currentSection++;
+                document.getElementById(`section${currentSection}`).classList.add('active');
+                updateProgress();
+                window.scrollTo(0, 0);
+            }
+        }
+
+        function prevSection() {
+            if (currentSection > 1) {
+                document.getElementById(`section${currentSection}`).classList.remove('active');
+                currentSection--;
+                document.getElementById(`section${currentSection}`).classList.add('active');
+                updateProgress();
+                window.scrollTo(0, 0);
+            }
+        }
+
+        function updateProgress() {
+            const progress = (currentSection / totalSections) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function completeAssessment() {
+            // Collect final data
+            assessmentData.userName = document.getElementById('userName').value;
+            assessmentData.userEmail = document.getElementById('userEmail').value;
+            assessmentData.additionalContext = document.getElementById('additionalContext').value;
+            
+            // Validate email
+            if (!assessmentData.userEmail || !assessmentData.userEmail.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Store in localStorage
+            localStorage.setItem('quantumProfile', JSON.stringify(assessmentData));
+            
+            // Display profile preview
+            displayProfilePreview();
+            
+            // Show completion section
+            document.getElementById(`section${currentSection}`).classList.remove('active');
+            document.getElementById('completion').classList.add('active');
+            document.getElementById('progressBar').style.width = '100%';
+            window.scrollTo(0, 0);
+        }
+
+        function displayProfilePreview() {
+            const archetypeNames = {
+                'seeker': 'The Seeker (Percival)',
+                'warrior': 'The Warrior (Lancelot)',
+                'healer': 'The Healer (Guinevere)',
+                'magician': 'The Magician (Merlin)',
+                'ruler': 'The Ruler (Arthur)',
+                'guardian': 'The Guardian (Galahad)',
+                'transformer': 'The Transformer (Morgan)',
+                'oracle': 'The Oracle (Lady of the Lake)'
+            };
+            
+            const learningStyles = {
+                'visual': 'Visual - Symbols & Images',
+                'auditory': 'Auditory - Sound & Vibration',
+                'kinesthetic': 'Kinesthetic - Feeling & Experience',
+                'cognitive': 'Cognitive - Logic & Analysis',
+                'intuitive': 'Intuitive - Inner Knowing'
+            };
+            
+            const preview = document.getElementById('profilePreview');
+            preview.innerHTML = `
+                <h3>Your Quantum Signature</h3>
+                <div class="profile-item">
+                    <strong>Primary Archetype:</strong> ${archetypeNames[assessmentData.archetype] || 'Not selected'}
+                </div>
+                <div class="profile-item">
+                    <strong>Learning Style:</strong> ${learningStyles[assessmentData.learningStyle] || 'Not selected'}
+                </div>
+                <div class="profile-item">
+                    <strong>Current Priorities:</strong> ${assessmentData.priorities ? assessmentData.priorities.join(', ') : 'Not selected'}
+                </div>
+                <div class="profile-item">
+                    <strong>Spiritual Motivation:</strong> ${assessmentData.motivation || 'Not selected'}
+                </div>
+            `;
+        }
+
+        function proceedToWishes() {
+            // Redirect to wish creation page
+            window.location.href = 'quantum-wishes.html';
+        }
+
+        // Initialize
+        updateProgress();
+    </script>
+</body>
+</html>

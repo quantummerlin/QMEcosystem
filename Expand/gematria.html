@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Gematria - Numerology Engine | Quantum Merlin</title>
+    <meta name="description" content="Discover the numerical patterns in your name and birthdate with quantum gematria. Calculate life path, destiny, and soul numbers.">
+    <meta name="keywords" content="gematria, numerology, life path number, destiny number, quantum merlin">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum Gematria - Numerology Engine">
+    <meta property="og:description" content="Discover the numerical patterns in your name and birthdate with quantum gematria.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gematria.quantummerlin.com">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #000014 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Quantum Grid Background */
+        .quantum-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Quantum Sun */
+        .quantum-sun {
+            position: fixed;
+            top: 10%;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, rgba(255, 165, 0, 0.1) 40%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: pulse 4s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .nav-toggle {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.8), rgba(75, 0, 130, 0.8));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .nav-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: linear-gradient(135deg, rgba(25, 0, 51, 0.95), rgba(10, 0, 25, 0.95));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            min-width: 200px;
+            display: none;
+            backdrop-filter: blur(20px);
+        }
+
+        .nav-dropdown.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-dropdown a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        .nav-dropdown a:hover {
+            background: rgba(138, 43, 226, 0.3);
+            transform: translateX(5px);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title {
+            font-size: 3em;
+            background: linear-gradient(135deg, #ffd700, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .subtitle {
+            color: #b8b8b8;
+            font-size: 1.2em;
+        }
+
+        /* Input Section */
+        .input-section {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ffd700;
+            font-weight: 500;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .calculate-btn {
+            background: linear-gradient(135deg, #ffd700, #ff6b6b);
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            color: #000;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Results Section */
+        .results-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .results-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .result-title {
+            font-size: 1.5em;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .number-display {
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            background: linear-gradient(135deg, #ffd700, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .meaning-text {
+            line-height: 1.6;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+        }
+
+        .frequency-recommendation {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .frequency-recommendation h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .save-btn {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .save-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+        }
+
+        /* Synchronicity Map */
+        .synchronicity-map {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .sync-number {
+            background: rgba(138, 43, 226, 0.2);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .sync-number:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .sync-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .sync-label {
+            font-size: 0.9em;
+            color: #b8b8b8;
+            margin-top: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .input-section, .result-card {
+                padding: 20px;
+            }
+            
+            .number-display {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="quantum-grid"></div>
+    <div class="quantum-sun"></div>
+    
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+        <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+        <div class="nav-dropdown" id="navDropdown">
+            <a href="https://quantummerlin.com">🏠 Home</a>
+            <a href="https://frequency.quantummerlin.com">🎵 Frequency Generator</a>
+            <a href="https://jukebox.quantummerlin.com">📚 Quantum Jukebox</a>
+            <a href="https://gematria.quantummerlin.com">🔢 Quantum Gematria</a>
+            <a href="https://tarot.quantummerlin.com">🃏 Quantum Tarot</a>
+            <a href="https://sigils.quantummerlin.com">✨ Sigil Creator</a>
+            <a href="https://astrology.quantummerlin.com">⭐ Western Astrology</a>
+            <a href="https://chinese.quantummerlin.com">🐲 Chinese Zodiac</a>
+            <a href="https://forecasts.quantummerlin.com">🔮 Zodiac Forecasts</a>
+            <a href="https://codes.quantummerlin.com">💫 Reality Codes</a>
+            <a href="https://crystals.quantummerlin.com">💎 Quantum Crystals</a>
+            <a href="https://water.quantummerlin.com">💧 Water Charging</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title">Quantum Gematria</h1>
+            <p class="subtitle">Discover the numerical patterns and synchronicities in your life</p>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <div class="input-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name">
+            </div>
+            
+            <div class="input-group">
+                <label for="nickname">Nickname (Optional)</label>
+                <input type="text" id="nickname" placeholder="Enter your nickname">
+            </div>
+            
+            <div class="input-group">
+                <label for="birthDate">Date of Birth</label>
+                <input type="date" id="birthDate">
+            </div>
+            
+            <div class="input-group">
+                <label for="significantDate">Significant Date (Optional)</label>
+                <input type="date" id="significantDate" placeholder="Anniversary, graduation, etc.">
+            </div>
+            
+            <div class="input-group">
+                <label for="luckyNumber">Lucky Number (Optional)</label>
+                <input type="number" id="luckyNumber" placeholder="Your lucky number">
+            </div>
+            
+            <button class="calculate-btn" onclick="calculateGematria()">Calculate Quantum Patterns</button>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-section" id="resultsSection">
+            <div class="result-card">
+                <h3 class="result-title">Core Gematria Number</h3>
+                <div class="number-display" id="coreNumber">-</div>
+                <p class="meaning-text" id="coreMeaning">Your core numerological vibration...</p>
+                
+                <div class="frequency-recommendation">
+                    <h4>🎵 Recommended Frequencies</h4>
+                    <p id="coreFrequencies">Frequencies that align with your core vibration...</p>
+                    <button class="save-btn" onclick="saveToFrequencies('Core Number', document.getElementById('coreNumber').textContent, document.getElementById('coreFrequencies').textContent)">Save to Jukebox</button>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <h3 class="result-title">Life Path Number</h3>
+                <div class="number-display" id="lifePathNumber">-</div>
+                <p class="meaning-text" id="lifePathMeaning">Your life's journey and purpose...</p>
+                
+                <div class="frequency-recommendation">
+                    <h4>🎵 Life Path Frequencies</h4>
+                    <p id="lifePathFrequencies">Frequencies for your life path...</p>
+                    <button class="save-btn" onclick="saveToFrequencies('Life Path', document.getElementById('lifePathNumber').textContent, document.getElementById('lifePathFrequencies').textContent)">Save to Jukebox</button>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <h3 class="result-title">Destiny Number</h3>
+                <div class="number-display" id="destinyNumber">-</div>
+                <p class="meaning-text" id="destinyMeaning">Your destiny and life purpose...</p>
+                
+                <div class="frequency-recommendation">
+                    <h4>🎵 Destiny Frequencies</h4>
+                    <p id="destinyFrequencies">Frequencies for your destiny...</p>
+                    <button class="save-btn" onclick="saveToFrequencies('Destiny', document.getElementById('destinyNumber').textContent, document.getElementById('destinyFrequencies').textContent)">Save to Jukebox</button>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <h3 class="result-title">Synchronicity Map</h3>
+                <div class="synchronicity-map" id="synchronicityMap">
+                    <!-- Will be populated dynamically -->
+                </div>
+                <p class="meaning-text">These numbers appear in your life's patterns and reveal hidden connections...</p>
+            </div>
+
+            <div class="result-card">
+                <h3 class="result-title">Quantum Interpretation</h3>
+                <p class="meaning-text" id="quantumInterpretation">The quantum meaning behind your numerical patterns...</p>
+                
+                <div class="frequency-recommendation">
+                    <h4>🎵 Quantum Alignment Frequency</h4>
+                    <p id="quantumFrequencies">Master frequency for your quantum alignment...</p>
+                    <button class="save-btn" onclick="saveToFrequencies('Quantum Alignment', 'Master', document.getElementById('quantumFrequencies').textContent)">Save to Jukebox</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation toggle
+        function toggleNav() {
+            const dropdown = document.getElementById('navDropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdown = document.getElementById('navDropdown');
+            
+            if (!navMenu.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Numerology calculations
+        function calculateGematria() {
+            const fullName = document.getElementById('fullName').value;
+            const birthDate = document.getElementById('birthDate').value;
+            
+            if (!fullName || !birthDate) {
+                alert('Please enter your full name and date of birth');
+                return;
+            }
+
+            // Calculate core numbers
+            const coreNumber = calculateNameNumber(fullName);
+            const lifePathNumber = calculateLifePathNumber(birthDate);
+            const destinyNumber = calculateDestinyNumber(fullName);
+            
+            // Display results
+            displayResults(coreNumber, lifePathNumber, destinyNumber, fullName, birthDate);
+        }
+
+        function calculateNameNumber(name) {
+            const letterValues = {
+                'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8, 'I': 9,
+                'J': 1, 'K': 2, 'L': 3, 'M': 4, 'N': 5, 'O': 6, 'P': 7, 'Q': 8, 'R': 9,
+                'S': 1, 'T': 2, 'U': 3, 'V': 4, 'W': 5, 'X': 6, 'Y': 7, 'Z': 8
+            };
+            
+            let total = 0;
+            for (let letter of name.toUpperCase()) {
+                if (letterValues[letter]) {
+                    total += letterValues[letter];
+                }
+            }
+            
+            return reduceToSingleDigit(total);
+        }
+
+        function calculateLifePathNumber(birthDate) {
+            const date = new Date(birthDate);
+            const day = date.getDate();
+            const month = date.getMonth() + 1;
+            const year = date.getFullYear();
+            
+            const total = day + month + year;
+            return reduceToSingleDigit(total);
+        }
+
+        function calculateDestinyNumber(name) {
+            // Destiny number uses vowels only
+            const vowels = 'AEIOU';
+            let total = 0;
+            const vowelValues = {A:1, E:5, I:9, O:6, U:3};
+            
+            for (let letter of name.toUpperCase()) {
+                if (vowels.includes(letter)) {
+                    total += vowelValues[letter] || 0;
+                }
+            }
+            
+            return reduceToSingleDigit(total);
+        }
+
+        function reduceToSingleDigit(number) {
+            while (number > 9) {
+                let sum = 0;
+                while (number > 0) {
+                    sum += number % 10;
+                    number = Math.floor(number / 10);
+                }
+                number = sum;
+            }
+            return number;
+        }
+
+        function displayResults(coreNumber, lifePathNumber, destinyNumber, name, birthDate) {
+            // Show results section
+            document.getElementById('resultsSection').classList.add('active');
+            
+            // Display numbers
+            document.getElementById('coreNumber').textContent = coreNumber;
+            document.getElementById('lifePathNumber').textContent = lifePathNumber;
+            document.getElementById('destinyNumber').textContent = destinyNumber;
+            
+            // Number meanings database
+            const meanings = {
+                1: {
+                    core: "Leadership, independence, and new beginnings. You are a natural pioneer with strong willpower and determination.",
+                    lifePath: "Your path involves leadership and innovation. You're here to blaze new trails and inspire others.",
+                    destiny: "Your destiny is to lead and initiate change. You have the power to create new opportunities.",
+                    frequencies: "396 Hz - Liberating Guilt, 174 Hz - Pain Relief, 741 Hz - Awakening Intuition"
+                },
+                2: {
+                    core: "Cooperation, diplomacy, and sensitivity. You are a natural peacemaker with strong intuition.",
+                    lifePath: "Your path involves partnerships and harmony. You're here to bring people together and create balance.",
+                    destiny: "Your destiny is to create harmony and understanding through cooperation and empathy.",
+                    frequencies: "417 Hz - Undoing Situations, 528 Hz - Transformation, 639 Hz - Connecting Relationships"
+                },
+                3: {
+                    core: "Creativity, self-expression, and communication. You are a natural artist with joy and optimism.",
+                    lifePath: "Your path involves creative expression and joy. You're here to inspire others through your creativity.",
+                    destiny: "Your destiny is to express yourself creatively and bring joy to others.",
+                    frequencies: "528 Hz - Transformation, 741 Hz - Awakening Intuition, 963 Hz - Divine Connection"
+                },
+                4: {
+                    core: "Stability, practicality, and hard work. You are a natural builder with strong foundation skills.",
+                    lifePath: "Your path involves building solid foundations and creating order. You're here to manifest ideas into reality.",
+                    destiny: "Your destiny is to create stability and structure in the world.",
+                    frequencies: "174 Hz - Pain Relief, 285 Hz - Tissue Healing, 396 Hz - Liberating Guilt"
+                },
+                5: {
+                    core: "Freedom, adventure, and versatility. You are a natural explorer with curiosity and adaptability.",
+                    lifePath: "Your path involves freedom and change. You're here to experience variety and share wisdom.",
+                    destiny: "Your destiny is to explore and expand horizons, embracing change and adventure.",
+                    frequencies: "417 Hz - Undoing Situations, 741 Hz - Awakening Intuition, 852 Hz - Returning to Spiritual Order"
+                },
+                6: {
+                    core: "Nurturing, responsibility, and love. You are a natural caregiver with compassion and healing energy.",
+                    lifePath: "Your path involves service and healing. You're here to nurture and protect others.",
+                    destiny: "Your destiny is to create harmony and beauty through love and service.",
+                    frequencies: "528 Hz - Transformation, 639 Hz - Connecting Relationships, 741 Hz - Awakening Intuition"
+                },
+                7: {
+                    core: "Spirituality, analysis, and wisdom. You are a natural seeker with deep intuition and knowledge.",
+                    lifePath: "Your path involves spiritual growth and wisdom. You're here to seek truth and share knowledge.",
+                    destiny: "Your destiny is to uncover deeper truths and guide others spiritually.",
+                    frequencies: "741 Hz - Awakening Intuition, 963 Hz - Divine Connection, 174 Hz - Pain Relief"
+                },
+                8: {
+                    core: "Abundance, power, and achievement. You are a natural leader with strong business sense.",
+                    lifePath: "Your path involves material and spiritual abundance. You're here to master the material world.",
+                    destiny: "Your destiny is to achieve success and empower others through abundance.",
+                    frequencies: "396 Hz - Liberating Guilt, 528 Hz - Transformation, 963 Hz - Divine Connection"
+                },
+                9: {
+                    core: "Humanitarianism, completion, and wisdom. You are a natural healer with universal love.",
+                    lifePath: "Your path involves humanitarian service and completion. You're here to serve humanity.",
+                    destiny: "Your destiny is to bring healing and completion to the world through compassion.",
+                    frequencies: "639 Hz - Connecting Relationships, 741 Hz - Awakening Intuition, 963 Hz - Divine Connection"
+                }
+            };
+            
+            // Update meanings
+            const coreMeaning = meanings[coreNumber];
+            const lifeMeaning = meanings[lifePathNumber];
+            const destinyMeaning = meanings[destinyNumber];
+            
+            document.getElementById('coreMeaning').textContent = coreMeaning.core;
+            document.getElementById('lifePathMeaning').textContent = lifeMeaning.lifePath;
+            document.getElementById('destinyMeaning').textContent = destinyMeaning.destiny;
+            
+            document.getElementById('coreFrequencies').textContent = coreMeaning.frequencies;
+            document.getElementById('lifePathFrequencies').textContent = lifeMeaning.frequencies;
+            document.getElementById('destinyFrequencies').textContent = destinyMeaning.frequencies;
+            
+            // Generate synchronicity map
+            generateSynchronicityMap(coreNumber, lifePathNumber, destinyNumber);
+            
+            // Generate quantum interpretation
+            generateQuantumInterpretation(coreNumber, lifePathNumber, destinyNumber, name);
+        }
+
+        function generateSynchronicityMap(coreNumber, lifePathNumber, destinyNumber) {
+            const mapContainer = document.getElementById('synchronicityMap');
+            mapContainer.innerHTML = '';
+            
+            const synchronicityNumbers = [
+                { value: coreNumber, label: 'Core' },
+                { value: lifePathNumber, label: 'Life Path' },
+                { value: destinyNumber, label: 'Destiny' },
+                { value: (coreNumber + lifePathNumber) % 9 || 9, label: 'Expression' },
+                { value: (coreNumber * lifePathNumber) % 9 || 9, label: 'Power' },
+                { value: (lifePathNumber + destinyNumber) % 9 || 9, label: 'Growth' }
+            ];
+            
+            synchronicityNumbers.forEach(num => {
+                const div = document.createElement('div');
+                div.className = 'sync-number';
+                div.innerHTML = `
+                    <div class="sync-value">${num.value}</div>
+                    <div class="sync-label">${num.label}</div>
+                `;
+                mapContainer.appendChild(div);
+            });
+        }
+
+        function generateQuantumInterpretation(coreNumber, lifePathNumber, destinyNumber, name) {
+            const interpretations = {
+                1: "Your quantum signature aligns with initiation and leadership. You emit frequencies of new beginnings and pioneering energy.",
+                2: "Your quantum signature resonates with cooperation and balance. You naturally create harmonic fields and attract partnerships.",
+                3: "Your quantum signature vibrates with creative expression. You channel joy and inspiration through your energetic field.",
+                4: "Your quantum signature grounds stability and order. You create energetic foundations that support collective manifestation.",
+                5: "Your quantum signature pulses with freedom and adventure. You naturally shift energies and create new possibilities.",
+                6: "Your quantum signature radiates nurturing and healing. You create loving energetic environments and support growth.",
+                7: "Your quantum signature attunes to spiritual wisdom. You access higher dimensional information and guide others.",
+                8: "Your quantum signature amplifies abundance and power. You manifest resources and empower collective success.",
+                9: "Your quantum signature embodies universal love and completion. You transmute energies and bring healing to the whole."
+            };
+            
+            const primaryInfluence = Math.max(coreNumber, lifePathNumber, destinyNumber);
+            const quantumInterpretation = interpretations[primaryInfluence] + ` Your numerical pattern creates a unique quantum field that attracts corresponding synchronicities and opportunities. The combination of ${coreNumber}-${lifePathNumber}-${destinyNumber} forms a specific vibrational signature that resonates with your soul's purpose.`;
+            
+            document.getElementById('quantumInterpretation').textContent = quantumInterpretation;
+            
+            // Master frequency based on primary influence
+            const masterFrequencies = {
+                1: "174 Hz - Grounding and Foundation",
+                2: "285 Hz - Tissue Healing and Structure",
+                3: "396 Hz - Liberating Guilt and Fear",
+                4: "417 Hz - Undoing Negative Patterns",
+                5: "528 Hz - DNA Repair and Transformation",
+                6: "639 Hz - Harmonizing Relationships",
+                7: "741 Hz - Awakening Intuition",
+                8: "852 Hz - Spiritual Order",
+                9: "963 Hz - Divine Connection and Oneness"
+            };
+            
+            document.getElementById('quantumFrequencies').textContent = masterFrequencies[primaryInfluence];
+        }
+
+        function saveToFrequencies(type, number, frequencies) {
+            // Save to localStorage for the Jukebox
+            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            
+            const newItem = {
+                id: Date.now(),
+                type: 'frequency',
+                name: `Gematria ${type}: ${number}`,
+                description: frequencies,
+                data: {
+                    frequency: frequencies.split(' - ')[0] || frequencies,
+                    type: 'gematria',
+                    gematriaType: type,
+                    gematriaNumber: number
+                },
+                savedAt: new Date().toISOString()
+            };
+            
+            savedItems.push(newItem);
+            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
+            
+            // Show confirmation
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = '✓ Saved to Jukebox';
+            btn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+            
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+            }, 2000);
+        }
+
+        // Initialize with today's date for significant date placeholder
+        document.getElementById('significantDate').valueAsDate = new Date();
+    </script>
+</body>
+</html>

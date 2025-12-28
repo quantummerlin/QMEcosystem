@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Rose Compatibility | Multi-System Analysis</title>
+    <meta name="description" content="Advanced compatibility analysis using Western astrology, Chinese zodiac, and numerology.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cinzel', serif;
+            background: linear-gradient(135deg, #0a0015 0%, #1a0033 50%, #2d1b4e 100%);
+            color: #e0d4f7;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #c4b5fd;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .input-section {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .person-header {
+            font-size: 1.5em;
+            color: #9333ea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            color: #c4b5fd;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        input[type="date"] {
+            width: 100%;
+            padding: 15px;
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 10px;
+            color: #e0d4f7;
+            font-size: 1em;
+            font-family: 'Cinzel', serif;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #9333ea;
+            box-shadow: 0 0 15px rgba(147, 51, 234, 0.3);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 40px rgba(147, 51, 234, 0.6);
+        }
+
+        .results-section {
+            display: none;
+        }
+
+        .results-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .compatibility-score {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+            border: 3px solid #9333ea;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .score-number {
+            font-size: 5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .score-label {
+            font-size: 1.5em;
+            color: #c4b5fd;
+            margin-bottom: 20px;
+        }
+
+        .compatibility-meter {
+            height: 40px;
+            background: rgba(147, 51, 234, 0.2);
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .compatibility-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #9333ea 0%, #ec4899 100%);
+            transition: width 1.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .system-analysis {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .system-title {
+            font-size: 1.5em;
+            color: #9333ea;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .system-score {
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+        }
+
+        .system-content {
+            color: #c4b5fd;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        .insight-box {
+            background: rgba(147, 51, 234, 0.1);
+            border-left: 4px solid #9333ea;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+
+        .insight-title {
+            font-size: 1.4em;
+            color: #9333ea;
+            margin-bottom: 15px;
+        }
+
+        .insight-text {
+            color: #c4b5fd;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px 30px;
+            border-radius: 25px;
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            background: rgba(147, 51, 234, 0.2);
+            color: #c4b5fd;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .action-btn:hover {
+            background: rgba(147, 51, 234, 0.3);
+            border-color: #9333ea;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .score-number {
+                font-size: 3.5em;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .action-btn {
+                min-width: 100%;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💕 Quantum Rose Compatibility 💕</h1>
+            <p class="subtitle">Multi-system relationship compatibility analysis</p>
+        </header>
+
+        <div class="input-section">
+            <div class="person-header">Person 1</div>
+            <div class="form-group">
+                <label class="form-label">Birth Date</label>
+                <input type="date" id="person1Date" required>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <div class="person-header">Person 2</div>
+            <div class="form-group">
+                <label class="form-label">Birth Date</label>
+                <input type="date" id="person2Date" required>
+            </div>
+        </div>
+
+        <button class="submit-btn" onclick="analyzeCompatibility()">
+            Analyze Compatibility
+        </button>
+
+        <div class="results-section" id="resultsSection">
+            <!-- Results will be generated here -->
+        </div>
+    </div>
+
+    <script>
+        const zodiacSigns = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
+        const chineseZodiac = ['Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake', 'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig'];
+
+        function getZodiacSign(month, day) {
+            const dates = [20, 19, 20, 20, 21, 21, 22, 23, 23, 23, 22, 22];
+            return zodiacSigns[month - (day < dates[month - 1] ? 1 : 0)];
+        }
+
+        function getChineseZodiac(year) {
+            return chineseZodiac[(year - 4) % 12];
+        }
+
+        function getLifePath(date) {
+            const digits = date.replace(/-/g, '').split('').map(Number);
+            let sum = digits.reduce((a, b) => a + b, 0);
+            while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
+                sum = sum.toString().split('').map(Number).reduce((a, b) => a + b, 0);
+            }
+            return sum;
+        }
+
+        function analyzeCompatibility() {
+            const date1 = document.getElementById('person1Date').value;
+            const date2 = document.getElementById('person2Date').value;
+
+            if (!date1 || !date2) {
+                alert('Please enter both birth dates');
+                return;
+            }
+
+            const [year1, month1, day1] = date1.split('-').map(Number);
+            const [year2, month2, day2] = date2.split('-').map(Number);
+
+            // Calculate signs
+            const sign1 = getZodiacSign(month1, day1);
+            const sign2 = getZodiacSign(month2, day2);
+            const chinese1 = getChineseZodiac(year1);
+            const chinese2 = getChineseZodiac(year2);
+            const lifePath1 = getLifePath(date1);
+            const lifePath2 = getLifePath(date2);
+
+            // Calculate compatibility scores
+            const westernScore = calculateWesternCompatibility(sign1, sign2);
+            const chineseScore = calculateChineseCompatibility(chinese1, chinese2);
+            const numerologyScore = calculateNumerologyCompatibility(lifePath1, lifePath2);
+
+            const overallScore = Math.round((westernScore + chineseScore + numerologyScore) / 3);
+
+            displayResults(overallScore, westernScore, chineseScore, numerologyScore, sign1, sign2, chinese1, chinese2, lifePath1, lifePath2);
+        }
+
+        function calculateWesternCompatibility(sign1, sign2) {
+            const compatibility = {
+                'Aries': { 'Leo': 95, 'Sagittarius': 95, 'Gemini': 85, 'Aquarius': 85, 'Libra': 75, 'Aries': 70 },
+                'Taurus': { 'Virgo': 95, 'Capricorn': 95, 'Cancer': 85, 'Pisces': 85, 'Scorpio': 75, 'Taurus': 70 },
+                'Gemini': { 'Libra': 95, 'Aquarius': 95, 'Aries': 85, 'Leo': 85, 'Sagittarius': 75, 'Gemini': 70 },
+                'Cancer': { 'Scorpio': 95, 'Pisces': 95, 'Taurus': 85, 'Virgo': 85, 'Capricorn': 75, 'Cancer': 70 },
+                'Leo': { 'Aries': 95, 'Sagittarius': 95, 'Gemini': 85, 'Libra': 85, 'Aquarius': 75, 'Leo': 70 },
+                'Virgo': { 'Taurus': 95, 'Capricorn': 95, 'Cancer': 85, 'Scorpio': 85, 'Pisces': 75, 'Virgo': 70 },
+                'Libra': { 'Gemini': 95, 'Aquarius': 95, 'Leo': 85, 'Sagittarius': 85, 'Aries': 75, 'Libra': 70 },
+                'Scorpio': { 'Cancer': 95, 'Pisces': 95, 'Virgo': 85, 'Capricorn': 85, 'Taurus': 75, 'Scorpio': 70 },
+                'Sagittarius': { 'Aries': 95, 'Leo': 95, 'Libra': 85, 'Aquarius': 85, 'Gemini': 75, 'Sagittarius': 70 },
+                'Capricorn': { 'Taurus': 95, 'Virgo': 95, 'Scorpio': 85, 'Pisces': 85, 'Cancer': 75, 'Capricorn': 70 },
+                'Aquarius': { 'Gemini': 95, 'Libra': 95, 'Sagittarius': 85, 'Aries': 85, 'Leo': 75, 'Aquarius': 70 },
+                'Pisces': { 'Cancer': 95, 'Scorpio': 95, 'Capricorn': 85, 'Taurus': 85, 'Virgo': 75, 'Pisces': 70 }
+            };
+
+            return compatibility[sign1]?.[sign2] || 60;
+        }
+
+        function calculateChineseCompatibility(animal1, animal2) {
+            const compatibility = {
+                'Rat': { 'Dragon': 95, 'Monkey': 95, 'Ox': 85, 'Rat': 75 },
+                'Ox': { 'Snake': 95, 'Rooster': 95, 'Rat': 85, 'Ox': 75 },
+                'Tiger': { 'Horse': 95, 'Dog': 95, 'Pig': 85, 'Tiger': 75 },
+                'Rabbit': { 'Goat': 95, 'Pig': 95, 'Dog': 85, 'Rabbit': 75 },
+                'Dragon': { 'Rat': 95, 'Monkey': 95, 'Rooster': 85, 'Dragon': 75 },
+                'Snake': { 'Ox': 95, 'Rooster': 95, 'Monkey': 85, 'Snake': 75 },
+                'Horse': { 'Tiger': 95, 'Dog': 95, 'Goat': 85, 'Horse': 75 },
+                'Goat': { 'Rabbit': 95, 'Pig': 95, 'Horse': 85, 'Goat': 75 },
+                'Monkey': { 'Rat': 95, 'Dragon': 95, 'Snake': 85, 'Monkey': 75 },
+                'Rooster': { 'Ox': 95, 'Snake': 95, 'Dragon': 85, 'Rooster': 75 },
+                'Dog': { 'Tiger': 95, 'Horse': 95, 'Rabbit': 85, 'Dog': 75 },
+                'Pig': { 'Rabbit': 95, 'Goat': 95, 'Tiger': 85, 'Pig': 75 }
+            };
+
+            return compatibility[animal1]?.[animal2] || 65;
+        }
+
+        function calculateNumerologyCompatibility(lp1, lp2) {
+            const diff = Math.abs(lp1 - lp2);
+            if (diff === 0) return 85;
+            if (diff === 1 || diff === 2) return 90;
+            if (diff === 3 || diff === 4) return 75;
+            if (diff === 5 || diff === 6) return 70;
+            return 65;
+        }
+
+        function displayResults(overall, western, chinese, numerology, sign1, sign2, animal1, animal2, lp1, lp2) {
+            let level, description, guidance;
+
+            if (overall >= 85) {
+                level = "SOUL MATCH";
+                description = "This is a rare and powerful connection. Your energies naturally harmonize across multiple systems, creating a relationship with exceptional potential for growth, passion, and mutual support.";
+                guidance = "This level of compatibility is rare. Focus on maintaining open communication and honoring each other's individual growth. Your natural harmony can create complacency—keep choosing each other actively.";
+            } else if (overall >= 75) {
+                level = "HIGHLY COMPATIBLE";
+                description = "You share strong natural compatibility with minor areas requiring conscious attention. This relationship has excellent potential for long-term success with mutual effort.";
+                guidance = "Your foundation is solid. Pay attention to the areas where your systems show lower compatibility—these are your growth edges. Use your natural harmony to navigate challenges together.";
+            } else if (overall >= 65) {
+                level = "MODERATELY COMPATIBLE";
+                description = "You have good baseline compatibility with some significant differences. This relationship requires conscious effort and mutual understanding but can be deeply rewarding.";
+                guidance = "Your differences are your teachers. This relationship will require more conscious effort than high-compatibility matches, but it offers tremendous growth potential. Focus on appreciating your differences rather than trying to change each other.";
+            } else {
+                level = "CHALLENGING MATCH";
+                description = "This pairing shows significant energetic differences across multiple systems. While not impossible, this relationship will require exceptional maturity, communication, and commitment from both partners.";
+                guidance = "This is a growth relationship. If you choose to pursue it, know that it will challenge you deeply. The question isn't whether you're compatible—it's whether you're both willing to do the work. Sometimes the answer is no, and that's okay.";
+            }
+
+            const resultsHTML = `
+                <div class="compatibility-score">
+                    <div class="score-number">${overall}%</div>
+                    <div class="score-label">${level}</div>
+                    <div class="compatibility-meter">
+                        <div class="compatibility-fill" style="width: ${overall}%">${overall}%</div>
+                    </div>
+                    <div style="color: #c4b5fd; font-size: 1.1em; line-height: 1.6; margin-top: 20px;">
+                        ${description}
+                    </div>
+                </div>
+
+                <div class="system-analysis">
+                    <div class="system-title">
+                        ♈ Western Astrology
+                        <span class="system-score">${western}%</span>
+                    </div>
+                    <div class="system-content">
+                        <strong>${sign1} + ${sign2}</strong><br>
+                        ${getWesternAnalysis(sign1, sign2, western)}
+                    </div>
+                </div>
+
+                <div class="system-analysis">
+                    <div class="system-title">
+                        🐉 Chinese Zodiac
+                        <span class="system-score">${chinese}%</span>
+                    </div>
+                    <div class="system-content">
+                        <strong>${animal1} + ${animal2}</strong><br>
+                        ${getChineseAnalysis(animal1, animal2, chinese)}
+                    </div>
+                </div>
+
+                <div class="system-analysis">
+                    <div class="system-title">
+                        🔢 Numerology
+                        <span class="system-score">${numerology}%</span>
+                    </div>
+                    <div class="system-content">
+                        <strong>Life Path ${lp1} + Life Path ${lp2}</strong><br>
+                        ${getNumerologyAnalysis(lp1, lp2, numerology)}
+                    </div>
+                </div>
+
+                <div class="insight-box">
+                    <div class="insight-title">💫 Relationship Guidance</div>
+                    <div class="insight-text">${guidance}</div>
+                </div>
+
+                <div class="insight-box">
+                    <div class="insight-title">🔮 Remember</div>
+                    <div class="insight-text">
+                        Compatibility is not destiny. It's a starting point, not an ending. 
+                        The most "compatible" couples can fail without effort, and "incompatible" couples can thrive with commitment. 
+                        Use this analysis as a map, not a mandate.
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="tools-hub.html" class="action-btn">🎯 Explore More Tools</a>
+                    <a href="premium-assessment.html" class="action-btn">🔮 Get Complete Reading</a>
+                    <a href="insight-library.html" class="action-btn">📚 View Library</a>
+                </div>
+            `;
+
+            document.getElementById('resultsSection').innerHTML = resultsHTML;
+            document.getElementById('resultsSection').classList.add('active');
+
+            saveToLibrary(overall, level, sign1, sign2, animal1, animal2, lp1, lp2);
+
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function getWesternAnalysis(sign1, sign2, score) {
+            if (score >= 90) return `Exceptional elemental harmony. Your energies flow naturally together, creating a relationship that feels effortless and deeply aligned.`;
+            if (score >= 80) return `Strong elemental compatibility. You understand each other's core nature and can support each other's growth effectively.`;
+            if (score >= 70) return `Good baseline compatibility with some friction. Your differences can be complementary if you approach them with curiosity rather than judgment.`;
+            return `Significant elemental differences. This pairing requires conscious effort to bridge different approaches to life, love, and expression.`;
+        }
+
+        function getChineseAnalysis(animal1, animal2, score) {
+            if (score >= 90) return `Powerful energetic alignment in Chinese astrology. Your life rhythms and approaches to challenges naturally complement each other.`;
+            if (score >= 80) return `Strong compatibility in life approach and values. You share similar priorities and can build a stable foundation together.`;
+            if (score >= 70) return `Moderate compatibility with some areas of natural tension. Your different approaches can balance each other if you remain flexible.`;
+            return `Challenging energetic match. Your natural rhythms and approaches to life differ significantly, requiring extra patience and understanding.`;
+        }
+
+        function getNumerologyAnalysis(lp1, lp2, score) {
+            if (score >= 85) return `Your life path numbers create natural resonance. You're likely to understand each other's core motivations and life purposes intuitively.`;
+            if (score >= 75) return `Good numerological compatibility. Your life paths support each other's growth and evolution effectively.`;
+            return `Your life paths have different rhythms and priorities. This can create growth opportunities but requires conscious alignment of goals and values.`;
+        }
+
+        function saveToLibrary(score, level, sign1, sign2, animal1, animal2, lp1, lp2) {
+            const insight = {
+                toolName: 'Quantum Rose Compatibility',
+                category: 'spiritual',
+                summary: `${score}% - ${level}`,
+                content: `Compatibility Score: ${score}%\nLevel: ${level}\n\nWestern: ${sign1} + ${sign2}\nChinese: ${animal1} + ${animal2}\nNumerology: Life Path ${lp1} + ${lp2}`,
+                tags: ['compatibility', 'relationships', 'astrology', 'love']
+            };
+
+            let insights = localStorage.getItem('quantumMerlinInsights');
+            insights = insights ? JSON.parse(insights) : [];
+            insight.id = Date.now();
+            insight.timestamp = new Date().toISOString();
+            insights.unshift(insight);
+            localStorage.setItem('quantumMerlinInsights', JSON.stringify(insights));
+        }
+    </script>
+</body>
+</html>

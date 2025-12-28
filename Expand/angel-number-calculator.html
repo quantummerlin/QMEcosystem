@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Number Calculator - Discover the Meaning of Repeating Numbers</title>
+    <meta name="description" content="Calculate the meaning of angel numbers like 111, 222, 333, 444, 555. Discover what the universe is trying to tell you through repeating numbers.">
+    <meta name="keywords" content="angel numbers, repeating numbers, 111 meaning, 222 meaning, 333 meaning, 444 meaning, 555 meaning, number symbolism">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a0b2e 50%, #2a1b3e 100%);
+            color: #ffffff;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        
+        .quantum-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            z-index: 1;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        .quantum-sun {
+            position: fixed;
+            top: 10%;
+            right: 10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 204, 0, 0.3) 0%, rgba(147, 51, 234, 0.2) 50%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: sunPulse 4s ease-in-out infinite;
+            z-index: 2;
+        }
+        
+        @keyframes sunPulse {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.2); opacity: 0.9; }
+        }
+        
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            background: linear-gradient(45deg, #9333ea, #ec4899, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #b794f6;
+            margin-bottom: 30px;
+        }
+        
+        .tool-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #e9d5ff;
+            font-weight: 500;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 10px;
+            color: #ffffff;
+            font-size: 16px;
+        }
+        
+        button {
+            background: linear-gradient(45deg, #9333ea, #7c3aed);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        button:hover {
+            background: linear-gradient(45deg, #7c3aed, #6d28d9);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.4);
+        }
+        
+        .results {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .result-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .angel-number {
+            font-size: 3em;
+            color: #f59e0b;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+        }
+        
+        .meaning-title {
+            font-size: 1.5em;
+            color: #e9d5ff;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .meaning-text {
+            color: #b794f6;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .quick-numbers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            margin: 30px 0;
+        }
+        
+        .quick-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 10px;
+            padding: 10px;
+            color: #e9d5ff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .quick-btn:hover {
+            background: rgba(147, 51, 234, 0.3);
+            color: #ffffff;
+        }
+        
+        .info-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .info-title {
+            font-size: 1.8em;
+            color: #f59e0b;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2));
+            border: 1px solid rgba(147, 51, 234, 0.4);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #9333ea, #7c3aed);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(45deg, #7c3aed, #6d28d9);
+            transform: scale(1.05);
+        }
+        
+        .disclaimer {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #b794f6;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            .container {
+                padding: 20px 15px;
+            }
+            .tool-section {
+                padding: 20px;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="quantum-grid"></div>
+    <div class="quantum-sun"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Angel Number Calculator</h1>
+            <p class="subtitle">Discover the hidden meaning behind repeating numbers in your life</p>
+        </header>
+        
+        <section class="tool-section">
+            <div class="input-group">
+                <label for="angelNumber">Enter the Angel Number You Keep Seeing</label>
+                <input type="number" id="angelNumber" placeholder="111, 222, 333, 444, 555..." min="0" max="9999">
+            </div>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <p style="color: #b794f6; margin-bottom: 15px;">Or select a common angel number:</p>
+                <div class="quick-numbers">
+                    <button class="quick-btn" onclick="calculateAngelNumber('111')">111</button>
+                    <button class="quick-btn" onclick="calculateAngelNumber('222')">222</button>
+                    <button class="quick-btn" onclick="calculateAngelNumber('333')">333</button>
+                    <button class="quick-btn" onclick="calculateAngelNumber('444')">444</button>
+                    <button class="quick-btn" onclick="calculateAngelNumber('555')">555</button>
+                    <button class="quick-btn" onclick="calculateAngelNumber('666')">666</button>
+                    <button class="quick-btn" onclick="calculateAngelNumber('777')">777</button>
+                    <button class="quick-btn" onclick="calculateAngelNumber('888')">888</button>
+                    <button class="quick-btn" onclick="calculateAngelNumber('999')">999</button>
+                    <button class="quick-btn" onclick="calculateAngelNumber('1234')">1234</button>
+                </div>
+            </div>
+            
+            <button onclick="calculateFromInput()">Calculate Meaning</button>
+        </section>
+        
+        <section class="results" id="results">
+            <div class="result-card">
+                <div class="angel-number" id="displayNumber">111</div>
+                <h3 class="meaning-title">Angel Number Meaning</h3>
+                <p class="meaning-text" id="meaningText">
+                    Your angel number meaning will appear here...
+                </p>
+            </div>
+        </section>
+        
+        <section class="info-section">
+            <h2 class="info-title">🔮 What Are Angel Numbers?</h2>
+            
+            <p>
+                Angel numbers are repeating number sequences that carry spiritual significance and divine guidance. When you repeatedly see the same numbers, it's believed to be a message from the universe, your angels, or your higher self.
+            </p>
+            
+            <p>
+                These number patterns appear in clocks, license plates, phone numbers, addresses, and many other places. The key is that you notice them repeatedly and feel they're meaningful to you personally.
+            </p>
+            
+            <h3>How Angel Numbers Work</h3>
+            <p>
+                Angel numbers work through <strong>symbolic resonance</strong> - the idea that numbers carry energetic frequencies and meanings. Each number (and combination) represents different qualities, lessons, or guidance:
+            </p>
+            
+            <ul style="color: #b794f6; margin-left: 20px;">
+                <li><strong>1:</strong> New beginnings, independence, leadership</li>
+                <li><strong>2:</strong> Balance, relationships, intuition</li>
+                <li><strong>3:</strong> Creativity, communication, growth</li>
+                <li><strong>4:</strong> Stability, foundation, hard work</li>
+                <li><strong>5:</strong> Change, freedom, adventure</li>
+                <li><strong>6:</strong> Harmony, family, responsibility</li>
+                <li><strong>7:</strong> Spirituality, wisdom, introspection</li>
+                <li><strong>8:</strong> Abundance, success, manifestation</li>
+                <li><strong>9:</strong> Completion, humanitarianism, wisdom</li>
+                <li><strong>0:</strong> Potential, wholeness, spiritual journey</li>
+            </ul>
+        </section>
+        
+        <section class="cta-section">
+            <h3 style="color: #f59e0b; margin-bottom: 15px;">This is just one signal. Most people see dozens of patterns.</h3>
+            <p style="color: #b794f6; margin-bottom: 20px;">
+                Explore your complete number patterns and discover how they connect across your life.
+            </p>
+            <a href="https://gematria.quantummerlin.com" class="cta-button">🔢 Explore Your Full Number Pattern</a>
+            <a href="https://quantummerlin.com" class="cta-button">🏠 Return Home</a>
+        </section>
+        
+        <div class="disclaimer">
+            <p>
+                ℹ️ <strong>About These Tools:</strong> These tools are designed for reflection, focus, and creative exploration using symbolic systems such as numbers, archetypes, and patterns. They do not claim to predict the future or guarantee outcomes. Any insight or meaning comes from the person engaging with the experience — through attention, belief, and interpretation. Use what resonates. Leave what doesn't. <a href="about.html" style="color: #f59e0b;">Learn more about our philosophy →</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        const angelNumberMeanings = {
+            '111': 'New beginnings and manifestation. You are aligning with your highest potential. The universe is supporting your thoughts and intentions. This is a powerful time for positive thinking and creative visualization.',
+            '222': 'Balance and harmony. Trust that everything is working out for your highest good. Relationships, partnerships, and cooperation are highlighted. Stay patient and maintain faith in the process.',
+            '333': 'Creative expression and growth. The universe is encouraging your creative pursuits and communication. Your angels are nearby, supporting your self-expression and joy.',
+            '444': 'Stability and protection. You are safe and supported. This number indicates solid foundations and angelic presence. Trust the path you are on and know you are guided.',
+            '555': 'Major changes and transformation. Exciting shifts are coming. Embrace change with an open heart. This is a time of liberation and new opportunities.',
+            '666': 'Balance between material and spiritual. Focus on harmony in your physical world while nurturing your spiritual growth. This is a reminder to care for yourself and others.',
+            '777': 'Spiritual awakening and wisdom. You are on the right spiritual path. Trust your intuition and inner wisdom. Blessings and good fortune are flowing to you.',
+            '888': 'Abundance and success. Financial and material prosperity are coming. Your hard work will pay off. The universe is supporting your material goals.',
+            '999': 'Completion and new beginnings. A cycle is ending, making way for something new. Release what no longer serves you and embrace the transformative energy.',
+            '123': 'Simplicity and divine guidance. Keep things simple and trust the step-by-step process. The universe is guiding you forward in an organized way.',
+            '1234': 'Progressive forward movement. You are on the right path, advancing steadily. Trust the sequence of events and continue moving forward.',
+            '1111': 'Powerful manifestation portal. Your thoughts are manifesting quickly. Focus on what you want, not what you fear. This is a wake-up call to your spiritual purpose.',
+            '2222': 'Double harmony and balance. Peace and cooperation are emphasized. Trust in divine timing and maintain harmonious relationships.',
+            '3333': 'Amplified creative energy. Strong creative and communicative influences. Express yourself joyfully and share your unique gifts.',
+            '4444': 'Maximum protection and stability. You are deeply protected and supported. Your foundation is solid, and angels are watching over you.',
+            '5555': 'Massive transformation. Big life changes are occurring. Embrace the journey of transformation with courage and optimism.'
+        };
+        
+        function calculateFromInput() {
+            const input = document.getElementById('angelNumber').value;
+            if (input) {
+                calculateAngelNumber(input);
+            }
+        }
+        
+        function calculateAngelNumber(number) {
+            // Update input field
+            document.getElementById('angelNumber').value = number;
+            
+            // Get meaning or default message
+            const meaning = angelNumberMeanings[number] || generateGenericMeaning(number);
+            
+            // Display results
+            document.getElementById('displayNumber').textContent = number;
+            document.getElementById('meaningText').textContent = meaning;
+            document.getElementById('results').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function generateGenericMeaning(number) {
+            const digits = number.split('').map(d => parseInt(d));
+            const sum = digits.reduce((a, b) => a + b, 0);
+            const repeatingDigit = digits[0];
+            
+            let meaning = `The number ${number} carries unique significance for you. `;
+            
+            if (digits.every(d => d === repeatingDigit)) {
+                meaning += `As a repeating pattern of ${repeatingDigit}, it amplifies the qualities of `;
+                switch(repeatingDigit) {
+                    case 1: meaning += 'new beginnings, independence, and manifestation.'; break;
+                    case 2: meaning += 'balance, relationships, and intuition.'; break;
+                    case 3: meaning += 'creativity, communication, and growth.'; break;
+                    case 4: meaning += 'stability, foundation, and hard work.'; break;
+                    case 5: meaning += 'change, freedom, and adventure.'; break;
+                    case 6: meaning += 'harmony, family, and responsibility.'; break;
+                    case 7: meaning += 'spirituality, wisdom, and introspection.'; break;
+                    case 8: meaning += 'abundance, success, and manifestation.'; break;
+                    case 9: meaning += 'completion, humanitarianism, and wisdom.'; break;
+                    case 0: meaning += 'potential, wholeness, and spiritual journey.'; break;
+                    default: meaning += 'personal significance and unique meaning.'; break;
+                }
+            } else {
+                meaning += `The combination of digits creates a unique message for your current life situation. Pay attention to what you were thinking about when you noticed this number - there may be personal meaning in the timing and context.`;
+            }
+            
+            meaning += ' Trust your intuition to understand how this message applies to your life.';
+            
+            return meaning;
+        }
+        
+        // Handle Enter key in input
+        document.getElementById('angelNumber').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calculateFromInput();
+            }
+        });
+    </script>
+</body>
+</html>
