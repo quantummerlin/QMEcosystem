@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Strengths Revealer | Quantum Merlin</title>
+    <meta name="description" content="Uncover your dormant superpowers and natural gifts.">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cinzel', serif;
+            background: linear-gradient(135deg, #0a0015 0%, #1a0033 50%, #2d1b4e 100%);
+            color: #e0d4f7;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { text-align: center; padding: 40px 20px; margin-bottom: 40px; }
+        h1 {
+            font-size: 2.8em;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+        .subtitle { font-size: 1.2em; color: #c4b5fd; font-style: italic; line-height: 1.6; }
+        .intro-section {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            color: #c4b5fd;
+        }
+        .question-section {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        .question-number { color: #9333ea; font-size: 1.1em; font-weight: bold; margin-bottom: 15px; }
+        .question-text { font-size: 1.3em; color: #e0d4f7; margin-bottom: 20px; line-height: 1.5; }
+        .scale-container { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 20px; }
+        .scale-label { font-size: 0.95em; color: #ec4899; font-family: 'Orbitron', sans-serif; font-weight: bold; text-align: center; }
+        .scale-options { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; max-width: 280px; width: 100%; }
+        .scale-option {
+            max-width: 38px;
+            height: 38px;
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 12px;
+            background: rgba(147, 51, 234, 0.1);
+            color: #c4b5fd;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .scale-option:hover {
+            border-color: #9333ea;
+            background: rgba(147, 51, 234, 0.2);
+            transform: scale(1.05);
+        }
+        .scale-option.selected {
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            border-color: #9333ea;
+            color: white;
+            transform: scale(1.15);
+            box-shadow: 0 5px 20px rgba(147, 51, 234, 0.5);
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        .submit-btn:hover { transform: scale(1.02); box-shadow: 0 10px 40px rgba(147, 51, 234, 0.6); }
+        .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .results-section { display: none; }
+        .results-section.active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .result-title { font-size: 2.2em; color: #9333ea; text-align: center; margin-bottom: 30px; }
+        .strength-display {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+            border: 3px solid #9333ea;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        .strength-icon { font-size: 4em; text-align: center; margin-bottom: 20px; }
+        .strength-title { font-size: 2em; color: #ec4899; text-align: center; margin-bottom: 20px; font-weight: bold; }
+        .strength-description { font-size: 1.1em; color: #c4b5fd; line-height: 1.7; text-align: center; }
+        .insight-box {
+            background: rgba(147, 51, 234, 0.1);
+            border-left: 4px solid #9333ea;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+        .insight-title { font-size: 1.4em; color: #9333ea; margin-bottom: 15px; }
+        .insight-text { color: #c4b5fd; line-height: 1.8; font-size: 1.05em; }
+        .enhanced-cta {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%);
+            border: 2px solid #ec4899;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .enhanced-cta h3 {
+            color: #ec4899;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+        .enhanced-cta p {
+            color: #c4b5fd;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .enhanced-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .enhanced-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(147, 51, 234, 0.6);
+        }
+        .action-buttons { display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap; }
+        .action-btn {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px 30px;
+            border-radius: 25px;
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            background: rgba(147, 51, 234, 0.2);
+            color: #c4b5fd;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .action-btn:hover {
+            background: rgba(147, 51, 234, 0.3);
+            border-color: #9333ea;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .scale-options { gap: 5px; max-width: 250px; }
+            .scale-option { max-width: 35px; height: 35px; font-size: 1em; }
+            .action-buttons { flex-direction: column; }
+            .action-btn { min-width: 100%; }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💪 Hidden Strengths Revealer 💪</h1>
+            <p class="subtitle">Uncover your dormant superpowers</p>
+        </header>
+
+        <div class="intro-section">
+            <p><strong>Your greatest strengths are often invisible to you.</strong></p>
+            <p>What comes naturally to you feels ordinary. What you do effortlessly, you assume everyone can do. But your "normal" is someone else's superpower.</p>
+            <p>This tool reveals the strengths you've been overlooking.</p>
+        </div>
+
+        <div id="questionsContainer">
+            <div class="question-section">
+                <div class="question-number">Question 1 of 5</div>
+                <div class="question-text">People often come to me for advice or perspective</div>
+                <div class="scale-container">
+                    <span class="scale-label">&#9664; Never</span>
+                    <div class="scale-options">
+                        <div class="scale-option" data-question="q1" data-value="0" onclick="selectAnswer('q1', 0)">0</div>
+                        <div class="scale-option" data-question="q1" data-value="1" onclick="selectAnswer('q1', 1)">1</div>
+                        <div class="scale-option" data-question="q1" data-value="2" onclick="selectAnswer('q1', 2)">2</div>
+                        <div class="scale-option" data-question="q1" data-value="3" onclick="selectAnswer('q1', 3)">3</div>
+                        <div class="scale-option" data-question="q1" data-value="4" onclick="selectAnswer('q1', 4)">4</div>
+                        <div class="scale-option" data-question="q1" data-value="5" onclick="selectAnswer('q1', 5)">5</div>
+                    </div>
+                    <span class="scale-label">Constantly &#9654;</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <div class="question-number">Question 2 of 5</div>
+                <div class="question-text">I can see patterns and connections others miss</div>
+                <div class="scale-container">
+                    <span class="scale-label">&#9664; Rarely</span>
+                    <div class="scale-options">
+                        <div class="scale-option" data-question="q2" data-value="0" onclick="selectAnswer('q2', 0)">0</div>
+                        <div class="scale-option" data-question="q2" data-value="1" onclick="selectAnswer('q2', 1)">1</div>
+                        <div class="scale-option" data-question="q2" data-value="2" onclick="selectAnswer('q2', 2)">2</div>
+                        <div class="scale-option" data-question="q2" data-value="3" onclick="selectAnswer('q2', 3)">3</div>
+                        <div class="scale-option" data-question="q2" data-value="4" onclick="selectAnswer('q2', 4)">4</div>
+                        <div class="scale-option" data-question="q2" data-value="5" onclick="selectAnswer('q2', 5)">5</div>
+                    </div>
+                    <span class="scale-label">Frequently &#9654;</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <div class="question-number">Question 3 of 5</div>
+                <div class="question-text">I can sense what people are feeling even when they don't say it</div>
+                <div class="scale-container">
+                    <span class="scale-label">&#9664; Not at all</span>
+                    <div class="scale-options">
+                        <div class="scale-option" data-question="q3" data-value="0" onclick="selectAnswer('q3', 0)">0</div>
+                        <div class="scale-option" data-question="q3" data-value="1" onclick="selectAnswer('q3', 1)">1</div>
+                        <div class="scale-option" data-question="q3" data-value="2" onclick="selectAnswer('q3', 2)">2</div>
+                        <div class="scale-option" data-question="q3" data-value="3" onclick="selectAnswer('q3', 3)">3</div>
+                        <div class="scale-option" data-question="q3" data-value="4" onclick="selectAnswer('q3', 4)">4</div>
+                        <div class="scale-option" data-question="q3" data-value="5" onclick="selectAnswer('q3', 5)">5</div>
+                    </div>
+                    <span class="scale-label">Extremely &#9654;</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <div class="question-number">Question 4 of 5</div>
+                <div class="question-text">I can take complex ideas and make them simple</div>
+                <div class="scale-container">
+                    <span class="scale-label">&#9664; Rarely</span>
+                    <div class="scale-options">
+                        <div class="scale-option" data-question="q4" data-value="0" onclick="selectAnswer('q4', 0)">0</div>
+                        <div class="scale-option" data-question="q4" data-value="1" onclick="selectAnswer('q4', 1)">1</div>
+                        <div class="scale-option" data-question="q4" data-value="2" onclick="selectAnswer('q4', 2)">2</div>
+                        <div class="scale-option" data-question="q4" data-value="3" onclick="selectAnswer('q4', 3)">3</div>
+                        <div class="scale-option" data-question="q4" data-value="4" onclick="selectAnswer('q4', 4)">4</div>
+                        <div class="scale-option" data-question="q4" data-value="5" onclick="selectAnswer('q4', 5)">5</div>
+                    </div>
+                    <span class="scale-label">Easily &#9654;</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <div class="question-number">Question 5 of 5</div>
+                <div class="question-text">I stay calm and clear-headed in crisis situations</div>
+                <div class="scale-container">
+                    <span class="scale-label">&#9664; Never</span>
+                    <div class="scale-options">
+                        <div class="scale-option" data-question="q5" data-value="0" onclick="selectAnswer('q5', 0)">0</div>
+                        <div class="scale-option" data-question="q5" data-value="1" onclick="selectAnswer('q5', 1)">1</div>
+                        <div class="scale-option" data-question="q5" data-value="2" onclick="selectAnswer('q5', 2)">2</div>
+                        <div class="scale-option" data-question="q5" data-value="3" onclick="selectAnswer('q5', 3)">3</div>
+                        <div class="scale-option" data-question="q5" data-value="4" onclick="selectAnswer('q5', 4)">4</div>
+                        <div class="scale-option" data-question="q5" data-value="5" onclick="selectAnswer('q5', 5)">5</div>
+                    </div>
+                    <span class="scale-label">Always &#9654;</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="submit-btn" id="submitBtn" onclick="generateResults()" disabled>
+            Reveal My Hidden Strengths
+        </button>
+
+        <div class="results-section" id="resultsSection"></div>
+    </div>
+
+    <script>
+        let answers = {};
+
+        function selectAnswer(question, value) {
+            answers[question] = value;
+            document.querySelectorAll(`[data-question="${question}"]`).forEach(option => {
+                option.classList.remove('selected');
+            });
+            document.querySelector(`[data-question="${question}"][data-value="${value}"]`).classList.add('selected');
+            if (Object.keys(answers).length === 5) {
+                document.getElementById('submitBtn').disabled = false;
+            }
+        }
+
+        function goToEnhanced() {
+            const enhancedData = {
+                tool: 'hidden-strengths-revealer',
+                answers: answers,
+                timestamp: Date.now()
+            };
+            sessionStorage.setItem('qm_enhanced_data', JSON.stringify(enhancedData));
+            window.location.href = '/hidden-strengths-revealer-enhanced.html';
+        }
+
+        function generateResults() {
+            const strengths = [
+                { name: 'Wisdom Keeper', score: answers.q1, icon: '🦉' },
+                { name: 'Pattern Recognizer', score: answers.q2, icon: '🔮' },
+                { name: 'Emotional Alchemist', score: answers.q3, icon: '💫' },
+                { name: 'Clarity Bringer', score: answers.q4, icon: '💎' },
+                { name: 'Crisis Navigator', score: answers.q5, icon: '⚓' }
+            ];
+
+            strengths.sort((a, b) => b.score - a.score);
+            const primary = strengths[0];
+            const secondary = strengths[1];
+
+            const profiles = {
+                'Wisdom Keeper': {
+                    description: 'You have the rare gift of perspective. People come to you because you see what they can\'t see. You hold space for complexity without needing to fix it. Your wisdom isn\'t from books—it\'s from depth.',
+                    shadow: 'You might undervalue this because it feels effortless. "I\'m just saying what\'s obvious." But it\'s not obvious to them—that\'s why they\'re asking you.',
+                    activation: 'Own your role as a guide. Stop minimizing your insights. When people seek your wisdom, give it fully. Your perspective is a gift, not a burden.',
+                    monetize: 'Coaching, consulting, mentoring, writing, speaking. People will pay for your perspective.'
+                },
+                'Pattern Recognizer': {
+                    description: 'You see connections others miss. You spot patterns, trends, and systems intuitively. What takes others hours of analysis, you see in moments. This is strategic genius.',
+                    shadow: 'You might think everyone sees what you see. They don\'t. Your pattern recognition is a rare cognitive gift.',
+                    activation: 'Trust your pattern recognition. When you see something, say it. Your insights are valuable even if you can\'t explain how you got there.',
+                    monetize: 'Strategy, analysis, forecasting, innovation, problem-solving. Your pattern recognition is worth serious money.'
+                },
+                'Emotional Alchemist': {
+                    description: 'You feel what others feel. You sense the unspoken. You can read a room, understand subtext, and navigate emotional complexity with ease. This is emotional intelligence at the highest level.',
+                    shadow: 'You might see this as a burden, not a gift. "I\'m just sensitive." No—you\'re perceptive. There\'s a difference.',
+                    activation: 'Use your empathy strategically. You can sense what people need before they know it. This is leadership, not weakness.',
+                    monetize: 'Therapy, coaching, mediation, HR, leadership development. Emotional intelligence is the most valuable skill in the modern economy.'
+                },
+                'Clarity Bringer': {
+                    description: 'You take complexity and make it simple. You can explain anything to anyone. You cut through noise and find signal. This is rare and incredibly valuable.',
+                    shadow: 'You might think this is basic. "I\'m just explaining it clearly." But most people can\'t do this. Clarity is a superpower.',
+                    activation: 'Own your ability to simplify. When things are confusing, you\'re the one who makes sense of them. That\'s leadership.',
+                    monetize: 'Teaching, writing, consulting, communication, training. Clarity is worth its weight in gold.'
+                },
+                'Crisis Navigator': {
+                    description: 'You stay calm when everything is falling apart. While others panic, you think clearly. You\'re the person people want in a crisis. This is rare and powerful.',
+                    shadow: 'You might not realize how rare this is. "I just stay calm." Most people can\'t. Your nervous system regulation under pressure is a gift.',
+                    activation: 'Step into leadership during chaos. You\'re built for crisis. When things get hard, you get clear. Use this.',
+                    monetize: 'Emergency response, crisis management, leadership, coaching, consulting. People pay premium for calm in chaos.'
+                }
+            };
+
+            const prof = profiles[primary.name];
+
+            const resultsHTML = `
+                <div class="result-title">💪 Your Hidden Strengths 💪</div>
+                
+                <div class="strength-display">
+                    <div class="strength-icon">${primary.icon}</div>
+                    <div class="strength-title">Primary Strength: ${primary.name}</div>
+                    <div class="strength-description">${prof.description}</div>
+                </div>
+
+                <div class="insight-box">
+                    <div class="insight-title">🌑 Your Shadow</div>
+                    <div class="insight-text">${prof.shadow}</div>
+                </div>
+
+                <div class="insight-box">
+                    <div class="insight-title">⚡ Activation Protocol</div>
+                    <div class="insight-text">${prof.activation}</div>
+                </div>
+
+                <div class="insight-box">
+                    <div class="insight-title">💰 Monetization Path</div>
+                    <div class="insight-text">${prof.monetize}</div>
+                </div>
+
+                <div class="insight-box">
+                    <div class="insight-title">🎯 Secondary Strength</div>
+                    <div class="insight-text">
+                        <strong>${secondary.icon} ${secondary.name}</strong><br>
+                        ${profiles[secondary.name].description}
+                    </div>
+                </div>
+
+                <div class="insight-box">
+                    <div class="insight-title">💫 Truth Bomb</div>
+                    <div class="insight-text">
+                        Your greatest strengths feel ordinary to you because they're natural. But natural doesn't mean common. 
+                        What's effortless for you is impossible for most people. Stop minimizing your gifts. 
+                        Own them. Use them. Monetize them. The world needs what you have.
+                    </div>
+                </div>
+
+                <div class="enhanced-cta">
+                    <h3>✨ Want Deeper Insights?</h3>
+                    <p>The enhanced version integrates your birth data with astrological insights, frequency recommendations, and personalized activation practices tailored to your zodiac sign and life path number.</p>
+                    <button class="enhanced-btn" onclick="goToEnhanced()">Get Enhanced Reading</button>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="index.html" class="action-btn">🏠 Home</a>
+                    <a href="library.html" class="action-btn">📚 View Library</a>
+                </div>
+            `;
+
+            document.getElementById('resultsSection').innerHTML = resultsHTML;
+            document.getElementById('resultsSection').classList.add('active');
+            
+            saveToLibrary(primary, secondary, prof);
+            
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function saveToLibrary(primary, secondary, prof) {
+            const insight = {
+                toolName: 'Hidden Strengths Revealer',
+                category: 'psychological',
+                summary: `${primary.icon} ${primary.name}`,
+                content: `Primary: ${primary.name}\n\n${prof.description}\n\nShadow: ${prof.shadow}\nActivation: ${prof.activation}\nMonetization: ${prof.monetize}\n\nSecondary: ${secondary.name}`,
+                tags: ['strengths', 'gifts', 'superpowers', 'potential']
+            };
+
+            let insights = localStorage.getItem('quantumMerlinInsights');
+            insights = insights ? JSON.parse(insights) : [];
+            insight.id = Date.now();
+            insight.timestamp = new Date().toISOString();
+            insights.unshift(insight);
+            localStorage.setItem('quantumMerlinInsights', JSON.stringify(insights));
+        }
+    </script>
+</body>
+</html>
