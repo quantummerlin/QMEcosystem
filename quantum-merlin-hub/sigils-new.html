@@ -325,6 +325,46 @@
             font-size: 0.85rem;
             color: var(--neon-cyan);
         }
+
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            .input-section,
+            .canvas-section {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .page-subtitle {
+                font-size: 0.95rem;
+                padding: 0 10px;
+            }
+            
+            .input-section,
+            .canvas-section {
+                padding: 15px;
+                border-radius: 15px;
+            }
+            
+            .sigil-canvas {
+                max-width: 280px;
+                max-height: 280px;
+            }
+            
+            .generate-btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>

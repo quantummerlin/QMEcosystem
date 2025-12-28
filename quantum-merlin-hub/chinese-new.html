@@ -351,6 +351,49 @@
             margin-bottom: 8px;
             display: block;
         }
+
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            .input-card,
+            .result-section {
+                padding: 20px;
+            }
+            
+            .animal-display {
+                font-size: 4rem;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .page-subtitle {
+                font-size: 0.95rem;
+                padding: 0 10px;
+            }
+            
+            .input-card,
+            .result-section {
+                padding: 15px;
+                border-radius: 15px;
+            }
+            
+            .animal-display {
+                font-size: 3rem;
+            }
+            
+            .calculate-btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .trait-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>

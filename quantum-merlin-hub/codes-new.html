@@ -610,6 +610,36 @@
                 gap: var(--space-3);
             }
         }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .codes-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .codes-hero p {
+                font-size: 0.95rem;
+                padding: 0 10px;
+            }
+            
+            .generator-card,
+            .section-card {
+                padding: var(--space-4);
+                margin: 0 -5px;
+                border-radius: var(--radius-lg);
+            }
+            
+            .code-pattern {
+                font-size: 1.2rem;
+                letter-spacing: 0.05em;
+            }
+            
+            .generate-btn,
+            .code-action-btn {
+                padding: var(--space-3) var(--space-4);
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>

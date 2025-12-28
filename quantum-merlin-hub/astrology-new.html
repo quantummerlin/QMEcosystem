@@ -298,6 +298,46 @@
             padding: 30px;
             margin-top: 30px;
         }
+
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            .input-card,
+            .result-section {
+                padding: 20px;
+            }
+            
+            .sign-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .page-subtitle {
+                font-size: 0.95rem;
+                padding: 0 10px;
+            }
+            
+            .input-card,
+            .result-section {
+                padding: 15px;
+                border-radius: 15px;
+            }
+            
+            .sign-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .calculate-btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
