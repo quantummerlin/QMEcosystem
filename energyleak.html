@@ -578,7 +578,7 @@
 
         .scale-container {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
             gap: 15px;
@@ -587,13 +587,14 @@
         }
 
         .scale-label {
-            font-size: 1em;
+            font-size: 0.9em;
             color: #ec4899;
             text-align: center;
             font-weight: 700;
-            width: 100%;
             font-family: 'Orbitron', monospace;
             letter-spacing: 0.5px;
+            min-width: 80px;
+            max-width: 100px;
         }
 
         .scale-options {
