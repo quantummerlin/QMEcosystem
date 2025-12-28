@@ -463,9 +463,11 @@
 
         .library-item-header {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             margin-bottom: 20px;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
         .library-item-type {
@@ -502,10 +504,34 @@
             transform: scale(0.95);
         }
 
+        .load-btn {
+            background: rgba(147, 51, 234, 0.2);
+            border: 1px solid rgba(147, 51, 234, 0.5);
+            color: #c4b5fd;
+            padding: 8px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 500;
+        }
+
+        .load-btn:hover {
+            background: rgba(147, 51, 234, 0.4);
+            border-color: #9333ea;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(147, 51, 234, 0.3);
+        }
+
+        .load-btn:active {
+            transform: scale(0.95);
+        }
+
         .library-item-content {
             margin: 20px 0;
             position: relative;
             z-index: 1;
+            text-align: center;
         }
 
         .library-item-content h3 {
@@ -534,6 +560,7 @@
             margin-top: 15px;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
         }
 
@@ -1617,7 +1644,8 @@
                     <div class="library-item" data-type="${item.type}" data-id="${item.id || index}">
                         <div class="library-item-header">
                             <span class="library-item-type">${typeLabels[item.type] || item.type}</span>
-                            <button class="delete-btn" onclick="libraryManager.deleteItem('${item.id || index}', '${item.type}')">Delete</button>
+                            <button class="load-btn" onclick="libraryManager.loadItem('${item.id || index}', '${item.type}')">📂 Load</button>
+                            <button class="delete-btn" onclick="libraryManager.deleteItem('${item.id || index}', '${item.type}')">🗑️ Delete</button>
                         </div>
                         <div class="library-item-content">
                             ${contentHTML}
@@ -1696,6 +1724,65 @@
                 // Store profile data in sessionStorage to load on forecasts page
                 sessionStorage.setItem('loadProfile', JSON.stringify(forecast.profile));
                 window.location.href = '/forecasts';
+            }
+
+            loadItem(itemId, itemType) {
+                try {
+                    let itemData = null;
+                    
+                    // Get the item data
+                    if (itemType === 'forecast') {
+                        const forecastData = localStorage.getItem(this.forecastKey);
+                        const forecasts = forecastData ? JSON.parse(forecastData) : [];
+                        itemData = forecasts.find(f => f.id === itemId);
+                    } else {
+                        const library = JSON.parse(localStorage.getItem(this.storageKey) || '[]');
+                        itemData = library.find(item => {
+                            const id = item.id || item.timestamp;
+                            return id === itemId || id === parseInt(itemId);
+                        });
+                    }
+                    
+                    if (!itemData) {
+                        this.showToast('Item not found', 'error');
+                        return;
+                    }
+                    
+                    // Determine where to redirect based on type
+                    const toolUrls = {
+                        'forecast': '/forecasts.html',
+                        'birth-sigil': '/birth-sigil.html',
+                        'sigil': '/quantum-sigil-generator.html',
+                        'tarot': '/quantum-merlin-hub/tarot.html',
+                        'affirmation': '/quantum-merlin-hub/affirmations.html',
+                        'astrology': '/quantum-merlin-hub/astrology.html',
+                        'gematria': '/quantum-merlin-hub/gematria.html',
+                        'angel': '/angel-number-calculator.html',
+                        'water': '/quantum-merlin-hub/water.html',
+                        'code': '/quantum-merlin-hub/codes.html'
+                    };
+                    
+                    const url = toolUrls[itemType];
+                    if (!url) {
+                        this.showToast('Cannot load this item type', 'error');
+                        return;
+                    }
+                    
+                    // Store data in sessionStorage for the target page to load
+                    sessionStorage.setItem('qm_load_item', JSON.stringify(itemData));
+                    
+                    // Show loading toast
+                    this.showToast('Loading reading...', 'info');
+                    
+                    // Redirect to the tool page
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 500);
+                    
+                } catch (error) {
+                    console.error('Error loading item:', error);
+                    this.showToast('Failed to load item', 'error');
+                }
             }
 
             deleteItem(itemId, itemType) {
