@@ -1188,7 +1188,22 @@
             { name: 'Michael', location: 'New York', tool: 'Energy Leak Locator', time: '5 min ago' },
             { name: 'Jennifer', location: 'Texas', tool: 'Manifestation Readiness', time: '8 min ago' },
             { name: 'David', location: 'Florida', tool: 'Trust Radar', time: '12 min ago' },
-            { name: 'Emma', location: 'Washington', tool: 'Life Phase Decoder', time: '15 min ago' }
+            { name: 'Emma', location: 'Washington', tool: 'Life Phase Decoder', time: '15 min ago' },
+            { name: 'Alex', location: 'Oregon', tool: 'Quantum Rose', time: '18 min ago' },
+            { name: 'Sophia', location: 'Arizona', tool: 'Angel Number Calculator', time: '22 min ago' },
+            { name: 'James', location: 'Colorado', tool: 'Compatibility Calculator', time: '25 min ago' },
+            { name: 'Olivia', location: 'Georgia', tool: 'Birth Sigil', time: '28 min ago' },
+            { name: 'Ryan', location: 'Michigan', tool: 'Chinese Zodiac', time: '31 min ago' },
+            { name: 'Isabella', location: 'Nevada', tool: 'Tarot Reading', time: '35 min ago' },
+            { name: 'Ethan', location: 'Massachusetts', tool: 'Astrology Chart', time: '38 min ago' },
+            { name: 'Ava', location: 'Illinois', tool: 'Sacred Codes', time: '42 min ago' },
+            { name: 'Noah', location: 'Pennsylvania', tool: 'Crystal Guide', time: '45 min ago' },
+            { name: 'Mia', location: 'Ohio', tool: 'Water Blessing', time: '48 min ago' },
+            { name: 'Lucas', location: 'North Carolina', tool: 'Gematria Calculator', time: '52 min ago' },
+            { name: 'Charlotte', location: 'Virginia', tool: 'Sigil Generator', time: '55 min ago' },
+            { name: 'Mason', location: 'Tennessee', tool: 'Unconscious Contract', time: '58 min ago' },
+            { name: 'Amelia', location: 'Indiana', tool: 'Energy Leak Locator', time: '1 hr ago' },
+            { name: 'Logan', location: 'Missouri', tool: 'Manifestation Readiness', time: '1 hr ago' }
         ];
 
         function displayActivity() {
@@ -1215,6 +1230,78 @@
 
         displayActivity();
         setInterval(displayActivity, 45000); // Update every 45 seconds
+
+        // Celebrate milestones
+        function getCompletedTools() {
+            const library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            return new Set(library.map(item => item.type));
+        }
+
+        function checkMilestones() {
+            const completed = getCompletedTools().size;
+            const milestones = {
+                5: { emoji: '🌟', message: 'Amazing! You\'ve explored 5 tools!' },
+                10: { emoji: '🔥', message: 'You\'re on fire! 10 tools completed!' },
+                15: { emoji: '💫', message: 'Incredible! Halfway there!' },
+                25: { emoji: '👑', message: 'You\'re a Quantum Master in training!' },
+                33: { emoji: '🎉', message: 'LEGENDARY! You\'ve mastered all 33 tools!' }
+            };
+            
+            const lastCelebrated = parseInt(localStorage.getItem('lastCelebrated') || '0');
+            
+            if (milestones[completed] && completed > lastCelebrated) {
+                const milestone = milestones[completed];
+                
+                // Show celebration
+                const celebration = document.createElement('div');
+                celebration.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+                    color: white;
+                    padding: 40px 60px;
+                    border-radius: 20px;
+                    font-size: 1.5em;
+                    text-align: center;
+                    z-index: 10000;
+                    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+                    animation: celebrationPop 0.5s ease;
+                `;
+                celebration.innerHTML = `
+                    <div style="font-size: 3em; margin-bottom: 15px;">${milestone.emoji}</div>
+                    <div style="font-weight: bold; margin-bottom: 10px;">${milestone.message}</div>
+                    <div style="font-size: 0.8em; opacity: 0.9;">Keep exploring!</div>
+                `;
+                
+                document.body.appendChild(celebration);
+                
+                setTimeout(() => {
+                    celebration.style.animation = 'celebrationFade 0.5s ease';
+                    setTimeout(() => celebration.remove(), 500);
+                }, 3000);
+                
+                localStorage.setItem('lastCelebrated', completed);
+            }
+        }
+
+        // Add animation styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes celebrationPop {
+                0% { transform: translate(-50%, -50%) scale(0); }
+                100% { transform: translate(-50%, -50%) scale(1); }
+            }
+            @keyframes celebrationFade {
+                0% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Check on page load
+        window.addEventListener('load', checkMilestones);
 
         // Email Form Handler
         document.getElementById('emailForm')?.addEventListener('submit', async function(e) {
