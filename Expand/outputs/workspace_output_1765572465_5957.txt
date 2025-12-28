@@ -1,0 +1,10 @@
+/workspace/QUANTUM_MERLIN_COMPLETE_TECHNICAL_FRAMEWORK.md
+/workspace/LAUNCH_ROADMAP_AND_CHECKLIST.md
+/workspace/VISUAL_BRAND_GUIDELINES.md
+/workspace/SESSION_SUMMARY.md
+/workspace/QUANTUM_MERLIN_ULTIMATE_MARKETING_PLAN.md
+/workspace/COMPLETE_BUILD_SUMMARY.md
+/workspace/BUILD_STATUS.md
+/workspace/PHASE_1_COMPLETE.md
+/workspace/README.md
+/workspace/todo.md

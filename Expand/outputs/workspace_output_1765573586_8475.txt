@@ -1,0 +1,32 @@
+Found 1384 frequency combinations to process
+Generated 492 unique new tracks
+
+=== NEW TRACKS SAMPLE ===
+1000: Frequency 73Hz Frequency Synergy (37Hz + 73Hz) - other
+1001: Trinity: Theta Meditation (37Hz + 73Hz + 9Hz) - trinity
+1002: Trinity: Cosmic Rhythm (27.5Hz + 37Hz + 73Hz) - trinity
+1003: Trinity: Angelic Gateway (111Hz + 37Hz + 73Hz) - trinity
+1004: Trinity: Manifestation (194Hz + 37Hz + 73Hz) - trinity
+1005: Trinity: Harmonic Balance (37Hz + 432Hz + 73Hz) - trinity
+1006: Trinity: DNA Repair (37Hz + 528Hz + 73Hz) - trinity
+1007: Trinity: Heart Connection (37Hz + 639Hz + 73Hz) - trinity
+1008: Trinity: Creative Expression (37Hz + 73Hz + 741Hz) - trinity
+1009: Trinity: Intuitive Clarity (37Hz + 73Hz + 852Hz) - trinity
+1010: Trinity: Cosmic Connection (37Hz + 73Hz + 963Hz) - trinity
+1011: Gamma Focus Focus Enhancement (10Hz + 40Hz) - focus
+1012: Cosmic Connection Healing Protocol (528Hz + 963Hz) - healing
+1013: Cosmic Connection Spiritual Activation (110Hz + 963Hz) - spiritual
+1014: Triple Healing Protocol: Cosmic Connection (174Hz + 528Hz + 963Hz) - healing
+
+Saved 492 new tracks to new_frequency_tracks_fixed.json
+
+=== CATEGORY BREAKDOWN ===
+other: 79 tracks
+trinity: 112 tracks
+focus: 87 tracks
+healing: 109 tracks
+spiritual: 61 tracks
+abundance: 9 tracks
+emotional: 7 tracks
+relationships: 12 tracks
+sleep: 16 tracks

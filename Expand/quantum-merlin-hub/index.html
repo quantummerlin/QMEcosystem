@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Merlin - Your Complete Metaphysical Toolkit</title>
+    <meta name="description" content="Explore 12 powerful quantum tools for frequencies, numerology, tarot, astrology, manifestation and more. All free, all interconnected, all designed for your transformation.">
+    <meta name="keywords" content="quantum merlin, frequency generator, gematria, tarot, astrology, manifestation, reality codes, sigils, metaphysical tools">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum Merlin - Your Complete Metaphysical Toolkit">
+    <meta property="og:description" content="12 powerful quantum tools for transformation. All free. All interconnected.">
+    <meta property="og:type" content="website">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --quantum-purple: #667eea;
+            --quantum-cyan: #00f5ff;
+            --quantum-gold: #ffd700;
+            --quantum-dark: #0a0e27;
+            --quantum-card: rgba(255, 255, 255, 0.05);
+            --quantum-border: rgba(0, 245, 255, 0.2);
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Quantum Grid Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        /* Quantum Sun */
+        .quantum-sun {
+            position: fixed;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.3; }
+            50% { transform: translateX(-50%) scale(1.1); opacity: 0.5; }
+        }
+        
+        /* Floating Particles */
+        .particle {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: var(--quantum-cyan);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            animation: float 20s linear infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+        }
+        
+        /* Container */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+        
+        .logo {
+            font-size: 3.5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--quantum-purple), var(--quantum-cyan), var(--quantum-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+        }
+        
+        .tagline {
+            font-size: 1.3em;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+        }
+        
+        /* Disclaimer Banner */
+        .disclaimer-banner {
+            background: rgba(255, 193, 7, 0.15);
+            border: 2px solid #ffc107;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 900px;
+            text-align: center;
+        }
+        
+        .disclaimer-banner p {
+            margin: 0;
+            font-size: 1em;
+            color: #ffc107;
+        }
+        
+        .disclaimer-banner a {
+            color: #ffc107;
+            text-decoration: underline;
+        }
+        
+        /* Daily Alignment Section */
+        .daily-alignment {
+            background: var(--quantum-card);
+            border: 1px solid var(--quantum-border);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 900px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .daily-alignment h2 {
+            color: var(--quantum-cyan);
+            margin-bottom: 30px;
+            font-size: 2em;
+            text-align: center;
+        }
+        
+        .alignment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .alignment-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 245, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .alignment-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--quantum-cyan);
+            transform: translateY(-5px);
+        }
+        
+        .alignment-item .icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .alignment-item .label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        
+        .alignment-item .value {
+            color: var(--quantum-cyan);
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        /* Featured Tools */
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 60px 0 40px;
+            background: linear-gradient(135deg, var(--quantum-purple), var(--quantum-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .featured-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .tool-card {
+            background: var(--quantum-card);
+            border: 1px solid var(--quantum-border);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        
+        .tool-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--quantum-cyan);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(0, 245, 255, 0.3);
+        }
+        
+        .tool-card .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        
+        .tool-card h3 {
+            color: var(--quantum-cyan);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .tool-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+        
+        /* All Tools List */
+        .all-tools {
+            max-width: 900px;
+            margin: 0 auto 60px;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .tool-link {
+            background: var(--quantum-card);
+            border: 1px solid var(--quantum-border);
+            border-radius: 15px;
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .tool-link:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--quantum-cyan);
+            transform: translateX(10px);
+        }
+        
+        .tool-link .icon {
+            font-size: 2em;
+        }
+        
+        .tool-link .name {
+            font-size: 1.1em;
+            color: var(--quantum-cyan);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 40px 20px;
+            margin-top: 80px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-disclaimer {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: rgba(255, 193, 7, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 193, 7, 0.3);
+        }
+        
+        .footer-disclaimer p {
+            color: #ffc107;
+            margin: 0;
+            font-size: 0.95em;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: var(--quantum-cyan);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--quantum-gold);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9em;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5em;
+            }
+            
+            .tagline {
+                font-size: 1.1em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .featured-tools {
+                grid-template-columns: 1fr;
+            }
+            
+            .alignment-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Quantum Sun -->
+    <div class="quantum-sun"></div>
+    
+    <!-- Floating Particles -->
+    <script>
+        // Generate floating particles
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+            document.body.appendChild(particle);
+        }
+    </script>
+    
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 class="logo">✨ Quantum Merlin</h1>
+            <p class="tagline">Your Complete Metaphysical Toolkit</p>
+            
+            <!-- Disclaimer Banner -->
+            <div class="disclaimer-banner">
+                <p>
+                    ⚠️ <strong>DISCLAIMER:</strong> For entertainment and exploration purposes only. 
+                    Not medical advice or treatment. 
+                    <a href="../genesis/disclaimer.html">Read Full Disclaimer</a>
+                </p>
+            </div>
+        </header>
+        
+        <!-- Daily Alignment -->
+        <section class="daily-alignment">
+            <h2>🌅 Your Daily Quantum Alignment</h2>
+            <div class="alignment-grid">
+                <div class="alignment-item">
+                    <div class="icon">🎵</div>
+                    <div class="label">Daily Frequency</div>
+                    <div class="value" id="daily-frequency">528 Hz</div>
+                </div>
+                <div class="alignment-item">
+                    <div class="icon">🔢</div>
+                    <div class="label">Daily Number</div>
+                    <div class="value" id="daily-number">7</div>
+                </div>
+                <div class="alignment-item">
+                    <div class="icon">💎</div>
+                    <div class="label">Daily Crystal</div>
+                    <div class="value" id="daily-crystal">Amethyst</div>
+                </div>
+                <div class="alignment-item">
+                    <div class="icon">🎨</div>
+                    <div class="label">Daily Color</div>
+                    <div class="value" id="daily-color">Violet</div>
+                </div>
+                <div class="alignment-item">
+                    <div class="icon">✨</div>
+                    <div class="label">Daily Affirmation</div>
+                    <div class="value" id="daily-affirmation" style="font-size: 0.9em;">I am aligned</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Tools -->
+        <h2 class="section-title">🔮 Featured Quantum Tools</h2>
+        <div class="featured-tools">
+            <a href="../genesis/index-enhanced.html" class="tool-card">
+                <div class="icon">🎵</div>
+                <h3>Frequency Generator</h3>
+                <p>Create custom frequency mixes with 674+ tracks. Layer, blend, and explore healing frequencies.</p>
+            </a>
+            
+            <a href="gematria.html" class="tool-card">
+                <div class="icon">🔢</div>
+                <h3>Quantum Gematria</h3>
+                <p>Discover your life's numerical patterns. Analyze names, dates, and synchronicities.</p>
+            </a>
+            
+            <a href="reality-codes.html" class="tool-card">
+                <div class="icon">🧬</div>
+                <h3>Reality Codes</h3>
+                <p>Generate personalized manifestation codes. Amplify your intentions with quantum precision.</p>
+            </a>
+            
+            <a href="jukebox.html" class="tool-card">
+                <div class="icon">🎧</div>
+                <h3>Quantum Jukebox</h3>
+                <p>Your personal library of saved frequencies, codes, and readings. Access anytime.</p>
+            </a>
+        </div>
+        
+        <!-- All Tools -->
+        <h2 class="section-title">🌟 All Quantum Tools</h2>
+        <div class="all-tools">
+            <div class="tools-grid">
+                <a href="../genesis/index-enhanced.html" class="tool-link">
+                    <span class="icon">🎵</span>
+                    <span class="name">Frequency Generator</span>
+                </a>
+                <a href="jukebox.html" class="tool-link">
+                    <span class="icon">🎧</span>
+                    <span class="name">Quantum Jukebox</span>
+                </a>
+                <a href="gematria.html" class="tool-link">
+                    <span class="icon">🔢</span>
+                    <span class="name">Quantum Gematria</span>
+                </a>
+                <a href="tarot.html" class="tool-link">
+                    <span class="icon">🃏</span>
+                    <span class="name">Quantum Tarot</span>
+                </a>
+                <a href="runes.html" class="tool-link">
+                    <span class="icon">ᚱ</span>
+                    <span class="name">Quantum Runes</span>
+                </a>
+                <a href="astrology.html" class="tool-link">
+                    <span class="icon">⭐</span>
+                    <span class="name">Western Astrology</span>
+                </a>
+                <a href="chinese-zodiac.html" class="tool-link">
+                    <span class="icon">🐉</span>
+                    <span class="name">Chinese Zodiac</span>
+                </a>
+                <a href="forecasts.html" class="tool-link">
+                    <span class="icon">🔮</span>
+                    <span class="name">Daily Forecasts</span>
+                </a>
+                <a href="sigils.html" class="tool-link">
+                    <span class="icon">✒️</span>
+                    <span class="name">Sigil Creator</span>
+                </a>
+                <a href="reality-codes.html" class="tool-link">
+                    <span class="icon">🧬</span>
+                    <span class="name">Reality Codes</span>
+                </a>
+                <a href="crystals.html" class="tool-link">
+                    <span class="icon">💎</span>
+                    <span class="name">Crystal Guide</span>
+                </a>
+                <a href="water-charging.html" class="tool-link">
+                    <span class="icon">💧</span>
+                    <span class="name">Water Charging</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3 style="color: var(--quantum-purple); margin-bottom: 15px;">Quantum Merlin</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); max-width: 600px; margin: 0 auto;">
+                Your complete metaphysical toolkit for exploration, transformation, and alignment.
+            </p>
+            
+            <div class="footer-disclaimer">
+                <p>
+                    <strong>⚠️ Important:</strong> Quantum Merlin provides tools for entertainment and exploration only. 
+                    Not intended as medical treatment or therapy. Not intended to diagnose, treat, cure, or prevent any disease. 
+                    Always consult healthcare professionals for medical advice.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="../genesis/disclaimer.html">Disclaimer</a>
+                <a href="../genesis/terms.html">Terms of Service</a>
+                <a href="../genesis/privacy.html">Privacy Policy</a>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 Quantum Merlin. All rights reserved. | Powered by Genesis Engine</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Daily Alignment Generator Script -->
+    <script>
+        // Generate daily alignment based on current date
+        function generateDailyAlignment() {
+            const today = new Date();
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+            
+            // Frequencies
+            const frequencies = ['174 Hz', '285 Hz', '396 Hz', '417 Hz', '528 Hz', '639 Hz', '741 Hz', '852 Hz', '963 Hz', '432 Hz', '111 Hz', '222 Hz'];
+            const dailyFrequency = frequencies[dayOfYear % frequencies.length];
+            
+            // Numbers
+            const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '11', '22', '33'];
+            const dailyNumber = numbers[dayOfYear % numbers.length];
+            
+            // Crystals
+            const crystals = ['Amethyst', 'Clear Quartz', 'Rose Quartz', 'Citrine', 'Black Tourmaline', 'Selenite', 'Labradorite', 'Carnelian', 'Lapis Lazuli', 'Moonstone'];
+            const dailyCrystal = crystals[dayOfYear % crystals.length];
+            
+            // Colors
+            const colors = ['Violet', 'Indigo', 'Blue', 'Green', 'Yellow', 'Orange', 'Red', 'Gold', 'Silver', 'White'];
+            const dailyColor = colors[dayOfYear % colors.length];
+            
+            // Affirmations
+            const affirmations = [
+                'I am aligned',
+                'I am abundant',
+                'I am powerful',
+                'I am loved',
+                'I am grateful',
+                'I am peaceful',
+                'I am creative',
+                'I am confident',
+                'I am worthy',
+                'I am transforming'
+            ];
+            const dailyAffirmation = affirmations[dayOfYear % affirmations.length];
+            
+            // Update DOM
+            document.getElementById('daily-frequency').textContent = dailyFrequency;
+            document.getElementById('daily-number').textContent = dailyNumber;
+            document.getElementById('daily-crystal').textContent = dailyCrystal;
+            document.getElementById('daily-color').textContent = dailyColor;
+            document.getElementById('daily-affirmation').textContent = dailyAffirmation;
+        }
+        
+        // Generate on page load
+        generateDailyAlignment();
+    </script>
+</body>
+</html>

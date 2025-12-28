@@ -1,0 +1,3 @@
+        const tools = {
+            categoryA: [
+                { name: 'Birth Sigil Generator', icon: '🔮', description: 'Generate your personal quantum sigil from birth data', file: 'sigils.html', badge: 'Popular' },

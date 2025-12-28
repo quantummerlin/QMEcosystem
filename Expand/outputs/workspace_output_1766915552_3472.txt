@@ -1,0 +1,12 @@
+                            <strong>Recommended Frequency: ${frequencyRecommendation}</strong><br><br>
+                            <a href="${youtubeUrl}" target="_blank" style="color: #10b981; text-decoration: underline; font-weight: bold;">
+                                🔊 Listen to ${hzValue} on YouTube
+                            </a><br><br>
+                            <strong>Daily Practice (10-15 minutes):</strong><br>
+                            1. Find a quiet space and close your eyes.<br>
+                            2. Listen to this frequency using the link above.<br>
+                            3. Focus on the identity split you\'ve identified.<br>
+                            4. Visualize the two identities gently merging into one integrated whole.<br>
+                            5. Repeat silently: "I am whole. I am one. I am enough."<br>
+                            6. Notice any emotions that arise and allow them to be present.<br>
+                            7. When ready, open your eyes and carry this sense of wholeness with you.

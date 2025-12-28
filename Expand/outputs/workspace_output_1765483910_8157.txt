@@ -1,0 +1,19 @@
+.
+├── EXECUTIVE_SUMMARY.md
+├── LAUNCH_ROADMAP_AND_CHECKLIST.md
+├── QUANTUM_MERLIN_ULTIMATE_MARKETING_PLAN.md
+├── QUICK_START_GUIDE.md
+├── Quantum Merlin Framework plan.odt
+├── VISUAL_BRAND_GUIDELINES.md
+├── outputs
+│   ├── workspace_output_1765483352_6274.txt
+│   ├── workspace_output_1765483356_9826.txt
+│   ├── workspace_output_1765483379_15.txt
+│   ├── workspace_output_1765483387_6859.txt
+│   ├── workspace_output_1765483390_4774.txt
+│   ├── workspace_output_1765483845_5257.txt
+│   └── workspace_output_1765483910_8157.txt
+├── quantum_merlin_content.txt
+└── todo.md
+
+2 directories, 15 files

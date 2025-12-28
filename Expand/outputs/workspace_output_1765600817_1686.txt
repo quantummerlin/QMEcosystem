@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Jukebox - Your Personal Library | Quantum Merlin</title>
+    <meta name="description" content="Access your saved frequency mixes, reality codes, tarot readings, and more. Your personal quantum library.">
+    <meta name="keywords" content="quantum jukebox, saved frequencies, personal library, quantum merlin">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --quantum-purple: #667eea;
+            --quantum-cyan: #00f5ff;
+            --quantum-gold: #ffd700;

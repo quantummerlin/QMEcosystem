@@ -1,0 +1,5 @@
+                { name: 'Unconscious Contract Reveal', icon: '📜', description: 'Discover hidden life rules you\'re following', file: 'unconscious-contract-reveal.html', badge: 'FLAGSHIP' },
+                { name: 'Power Avoidance Pattern', icon: '👑', description: 'Why you sabotage your own success', file: 'power-avoidance-pattern.html', badge: 'Deep' },
+                { name: 'Safety vs Expansion', icon: '🌊', description: 'The tension between security and growth', file: 'safety-vs-expansion.html', badge: 'Core' },
+                { name: 'Future Self Alignment', icon: '🔮', description: 'How aligned are you with who you\'re becoming?', file: 'future-self-alignment.html', badge: 'Visionary' },
+                { name: 'Time Orientation', icon: '⏰', description: 'Are you living in past, present, or future?', file: 'time-orientation.html', badge: 'Temporal' }

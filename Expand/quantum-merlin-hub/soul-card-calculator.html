@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Soul Card Calculator - Discover Your Soul's Archetype</title>
+    <meta name="description" content="Calculate your soul card from birth data. Discover your soul's archetype, mission, and deep spiritual truths.">
+    <meta name="keywords" content="soul card calculator, birth tarot, soul archetype, spiritual mission">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a0b2e 50%, #2a1b3e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .quantum-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            z-index: 1;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        .quantum-sun {
+            position: fixed;
+            top: 10%;
+            right: 10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 204, 0, 0.3) 0%, rgba(147, 51, 234, 0.2) 50%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: sunPulse 4s ease-in-out infinite;
+            z-index: 2;
+        }
+        
+        @keyframes sunPulse {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.2); opacity: 0.9; }
+        }
+        
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            background: linear-gradient(45deg, #9333ea, #ec4899, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #b794f6;
+            margin-bottom: 30px;
+        }
+        
+        .input-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #e9d5ff;
+            font-weight: 500;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 10px;
+            color: #ffffff;
+            font-size: 16px;
+        }
+        
+        button {
+            background: linear-gradient(45deg, #9333ea, #7c3aed);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: linear-gradient(45deg, #7c3aed, #6d28d9);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.4);
+        }
+        
+        .results {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .soul-card-display {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .card-image {
+            width: 150px;
+            height: 250px;
+            background: linear-gradient(135deg, #9333ea, #ec4899);
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            box-shadow: 0 15px 40px rgba(147, 51, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: cardShine 3s infinite;
+        }
+        
+        @keyframes cardShine {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .card-name {
+            font-size: 2em;
+            color: #f59e0b;
+            margin-bottom: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.3em;
+            color: #e9d5ff;
+            margin-bottom: 20px;
+        }
+        
+        .insight-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .insight-title {
+            font-size: 1.4em;
+            color: #f59e0b;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .insight-content {
+            line-height: 1.6;
+            color: #e9d5ff;
+        }
+        
+        .frequency-alignment {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2));
+            border: 1px solid rgba(147, 51, 234, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .frequency-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .frequency-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .frequency-item:hover {
+            background: rgba(147, 51, 234, 0.3);
+            transform: scale(1.05);
+        }
+        
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(147, 51, 234, 0.3);
+            border: 1px solid rgba(147, 51, 234, 0.5);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-toggle:hover {
+            background: rgba(147, 51, 234, 0.5);
+            transform: scale(1.1);
+        }
+        
+        .menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(26, 11, 46, 0.95), rgba(42, 27, 62, 0.95));
+            backdrop-filter: blur(10px);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 80px 20px 20px;
+            overflow-y: auto;
+        }
+        
+        .menu.active {
+            right: 0;
+        }
+        
+        .menu-item {
+            display: block;
+            padding: 12px;
+            color: #e9d5ff;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-item:hover {
+            background: rgba(147, 51, 234, 0.3);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .container {
+                padding: 15px;
+            }
+            .input-section, .insight-section {
+                padding: 20px;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="quantum-grid"></div>
+    <div class="quantum-sun"></div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span style="font-size: 24px;">☰</span>
+    </div>
+    
+    <nav class="menu" id="menu">
+        <a href="https://quantummerlin.com" class="menu-item">🏠 Quantum Home</a>
+        <a href="https://frequency.quantummerlin.com" class="menu-item">🎵 Frequency Generator</a>
+        <a href="https://quantummerlin.com/jukebox.html" class="menu-item">📚 Quantum Jukebox</a>
+        <a href="https://gematria.quantummerlin.com" class="menu-item">🔢 Quantum Gematria</a>
+        <a href="https://tarot.quantummerlin.com" class="menu-item">🃏 Quantum Tarot</a>
+        <a href="https://sigils.quantummerlin.com" class="menu-item">✨ Sigil Creator</a>
+        <a href="https://astrology.quantummerlin.com" class="menu-item">🌟 Western Astrology</a>
+        <a href="https://chinese.quantummerlin.com" class="menu-item">🐲 Chinese Zodiac</a>
+        <a href="https://forecasts.quantummerlin.com" class="menu-item">🔮 Zodiac Forecasts</a>
+        <a href="https://codes.quantummerlin.com" class="menu-item">💫 Reality Codes</a>
+        <a href="https://crystals.quantummerlin.com" class="menu-item">💎 Crystal Guide</a>
+        <a href="https://water.quantummerlin.com" class="menu-item">💧 Water Charging</a>
+        <a href="https://quantummerlin.com/soul-card-calculator.html" class="menu-item">🃏 Soul Card Calculator</a>
+    </nav>
+    
+    <div class="container">
+        <header>
+            <h1>Quantum Soul Card Calculator</h1>
+            <p class="subtitle">Discover your soul's archetype and cosmic mission through the wisdom of tarot</p>
+        </header>
+        
+        <section class="input-section">
+            <div class="input-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            
+            <div class="input-group">
+                <label for="birthdate">Birth Date</label>
+                <input type="date" id="birthdate">
+            </div>
+            
+            <button onclick="calculateSoulCard()">Calculate My Soul Card</button>
+        </section>
+        
+        <section class="results" id="results">
+            <div class="soul-card-display">
+                <div class="card-image" id="cardImage">
+                    <span id="cardSymbol">🃏</span>
+                </div>
+                <h2 class="card-name" id="cardName">Your Soul Card</h2>
+                <p class="card-title" id="cardTitle">The Archetype of Your Soul</p>
+            </div>
+            
+            <div class="insight-section">
+                <h3 class="insight-title">
+                    <span>🎯</span>
+                    <span>Your Soul Mission</span>
+                </h3>
+                <p class="insight-content" id="soulMission">
+                    Your soul's mission will be revealed here...
+                </p>
+            </div>
+            
+            <div class="insight-section">
+                <h3 class="insight-title">
+                    <span>🌟</span>
+                    <span>Deep Spiritual Truth</span>
+                </h3>
+                <p class="insight-content" id="spiritualTruth">
+                    Your deep spiritual truth will be revealed here...
+                </p>
+            </div>
+            
+            <div class="insight-section">
+                <h3 class="insight-title">
+                    <span>🔮</span>
+                    <span>Past Life Connection</span>
+                </h3>
+                <p class="insight-content" id="pastLife">
+                    Your past life connection will be revealed here...
+                </p>
+            </div>
+            
+            <div class="insight-section">
+                <h3 class="insight-title">
+                    <span>⚡</span>
+                    <span>Soul Challenge & Gift</span>
+                </h3>
+                <p class="insight-content" id="challengeGift">
+                    Your soul challenge and gift will be revealed here...
+                </p>
+            </div>
+            
+            <div class="frequency-alignment">
+                <h3 class="insight-title">
+                    <span>🎵</span>
+                    <span>Frequency Alignment</span>
+                </h3>
+                <p class="insight-content">
+                    These frequencies resonate with your soul card's energy and will help you align with your soul's purpose:
+                </p>
+                <div class="frequency-list" id="frequencyList">
+                    <!-- Frequencies will be populated here -->
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        // Soul Card Database
+        const soulCards = {
+            0: {
+                name: "The Fool",
+                symbol: "🃏",
+                title: "The Innocent Explorer",
+                mission: "Your soul's mission is to embrace new beginnings with faith and enthusiasm. You are here to inspire others to take leaps of faith, to trust the unknown, and to walk paths that others fear to tread. Your journey is about demonstrating that the universe rewards courage and that every ending is simply a new beginning in disguise.",
+                spiritualTruth: "The deep truth your soul carries is that safety is found not in certainty, but in surrender to divine guidance. You are living proof that the universe conspires to support those who dare to begin again, and that the greatest adventures await those willing to step into the unknown with an open heart.",
+                pastLife: "In past lives, you were often the pioneer, the explorer, or the one who dared to challenge established boundaries. You may have been a traveler who discovered new lands, an inventor who created revolutionary ideas, or a spiritual seeker who brought new wisdom to your community. Your soul carries the wisdom of countless journeys and the courage to always begin anew.",
+                challengeGift: "Your challenge is to overcome the fear of the unknown and trust in divine timing. Your gift is the ability to inspire others to take risks and embrace change. When you balance caution with courage, you become a catalyst for transformation in yourself and others.",
+                frequencies: ["432 Hz", "528 Hz", "741 Hz", "963 Hz"]
+            },
+            1: {
+                name: "The Magician",
+                symbol: "🎩",
+                title: "The Divine Manifestor",
+                mission: "Your soul's mission is to demonstrate the power of focused intention and conscious creation. You are here to show others that they have the ability to manifest their reality through the alignment of thought, word, and action. Your purpose is to be a living example of divine creative power.",
+                spiritualTruth: "The deep truth your soul carries is that you are a co-creator with the universe, endowed with the ability to transform dreams into reality. You understand that true magic is not about deception, but about the conscious application of universal laws to create positive change.",
+                pastLife: "In past lives, you were often the alchemist, the inventor, the artist, or the spiritual teacher who understood the deeper laws of creation. You may have been a healer who worked with energy, a craftsman who turned raw materials into beauty, or a leader who inspired others to achieve the impossible.",
+                challengeGift: "Your challenge is to use your power for the highest good and avoid the temptation of ego. Your gift is the ability to see opportunities where others see obstacles and to transform visions into tangible reality. When you align your power with divine wisdom, you become a true magician of light.",
+                frequencies: ["396 Hz", "417 Hz", "528 Hz", "741 Hz"]
+            },
+            2: {
+                name: "The High Priestess",
+                symbol: "🌙",
+                title: "The Divine Intuitive",
+                mission: "Your soul's mission is to be a keeper of sacred wisdom and intuition. You are here to trust your inner guidance and teach others to listen to their own inner voice. Your purpose is to bridge the seen and unseen worlds, bringing mystical insight into practical reality.",
+                spiritualTruth: "The deep truth your soul carries is that intuition is the highest form of intelligence and that the answers you seek are already within you. You understand that silence is not empty, but full of answers, and that the greatest wisdom comes from listening rather than seeking.",
+                pastLife: "In past lives, you were often the oracle, the mystic, the priestess, or the keeper of sacred knowledge. You may have served in temples, advised leaders with your insights, or held space for others to connect with their own inner wisdom. Your soul carries the ancient knowing of countless mysteries.",
+                challengeGift: "Your challenge is to trust your intuition even when it doesn't make logical sense and to share your wisdom authentically. Your gift is the ability to see beyond the veil and guide others to their own inner truth. When you embrace your sensitivity as strength, you become a beacon of divine wisdom.",
+                frequencies: ["432 Hz", "528 Hz", "639 Hz", "963 Hz"]
+            },
+            3: {
+                name: "The Empress",
+                symbol: "👑",
+                title: "The Divine Nurturer",
+                mission: "Your soul's mission is to create abundance, beauty, and nurturing environments. You are here to teach others about the power of unconditional love and creative expression. Your purpose is to bring forth life in all its forms - ideas, projects, relationships, and spiritual growth.",
+                spiritualTruth: "The deep truth your soul carries is that abundance is your natural state and that your capacity to nurture others is limitless. You understand that true wealth is measured in love, creativity, and the ability to help others flourish. You are a living embodiment of divine motherhood.",
+                pastLife: "In past lives, you were often the queen, the healer, the artist, or the one who created beauty and harmony. You may have been a midwife who brought new life, a gardener who cultivated abundance, or a leader who created prosperous communities. Your soul carries the wisdom of creation and nurturing.",
+                challengeGift: "Your challenge is to nurture yourself as much as you nurture others and to release control over outcomes. Your gift is the ability to create beauty from chaos and abundance from scarcity. When you balance giving with receiving, you become a source of infinite creative energy.",
+                frequencies: ["432 Hz", "528 Hz", "639 Hz", "741 Hz"]
+            },
+            4: {
+                name: "The Emperor",
+                symbol: "⚡",
+                title: "The Divine Authority",
+                mission: "Your soul's mission is to establish order, structure, and divine leadership. You are here to teach others about responsibility, discipline, and the wise use of power. Your purpose is to create systems that serve the highest good and lead with both strength and compassion.",
+                spiritualTruth: "The deep truth your soul carries is that true authority comes from service to the greater good, not from control. You understand that leadership is not about dominance, but about creating structures that allow others to thrive. You are a living embodiment of divine order and wisdom.",
+                pastLife: "In past lives, you were often the emperor, the judge, the builder, or the one who established lasting systems. You may have been a leader who governed wisely, an architect who designed enduring structures, or a protector who maintained order in chaotic times. Your soul carries the wisdom of divine governance.",
+                challengeGift: "Your challenge is to balance authority with compassion and structure with flexibility. Your gift is the ability to create order from chaos and lead with integrity and wisdom. When you temper power with love, you become a true divine ruler.",
+                frequencies: ["396 Hz", "417 Hz", "528 Hz", "741 Hz"]
+            },
+            5: {
+                name: "The Hierophant",
+                symbol: "🔮",
+                title: "The Divine Teacher",
+                mission: "Your soul's mission is to be a bridge between ancient wisdom and modern understanding. You are here to interpret sacred knowledge for contemporary times and guide others on their spiritual path. Your purpose is to uphold traditions while making them accessible and relevant.",
+                spiritualTruth: "The deep truth your soul carries is that true wisdom is eternal and that you are a channel for divine teachings. You understand that spiritual growth happens through both tradition and personal revelation, and that you are here to help others integrate the two.",
+                pastLife: "In past lives, you were often the priest, the teacher, the scholar, or the keeper of sacred traditions. You may have taught in ancient mystery schools, preserved important texts, or guided others through spiritual initiations. Your soul carries the authority of ancient wisdom.",
+                challengeGift: "Your challenge is to balance tradition with innovation and teach with humility rather than dogma. Your gift is the ability to make complex spiritual truths understandable and practical. When you honor both the old and the new, you become a true spiritual guide.",
+                frequencies: ["432 Hz", "528 Hz", "639 Hz", "741 Hz"]
+            },
+            6: {
+                name: "The Lovers",
+                symbol: "💕",
+                title: "The Divine Unifier",
+                mission: "Your soul's mission is to teach about the power of love, choice, and sacred union. You are here to show others how to harmonize opposites within themselves and create meaningful connections. Your purpose is to bridge polarities and demonstrate that love is the ultimate creative force.",
+                spiritualTruth: "The deep truth your soul carries is that all separation is illusion and that love is the fundamental reality of the universe. You understand that true love begins within and radiates outward, and that every choice you make is an expression of either love or fear.",
+                pastLife: "In past lives, you were often the diplomat, the matchmaker, the artist, or the one who brought people together. You may have healed relationships, created beauty that inspired love, or served as a bridge between conflicting parties. Your soul carries the wisdom of divine union.",
+                challengeGift: "Your challenge is to choose love over fear in every decision and to honor your own truth while maintaining harmony. Your gift is the ability to see the divine connection in all relationships and to heal divisions with love. When you embrace the power of choice, you become a catalyst for unity.",
+                frequencies: ["528 Hz", "639 Hz", "741 Hz", "963 Hz"]
+            },
+            7: {
+                name: "The Chariot",
+                symbol: "🏆",
+                title: "The Divine Victor",
+                mission: "Your soul's mission is to demonstrate mastery through the balanced integration of opposites. You are here to show others how to achieve their goals through determination, focus, and the harmonious use of opposing forces. Your purpose is to be a living example of triumph over obstacles through inner alignment.",
+                spiritualTruth: "The deep truth your soul carries is that true victory comes from mastering yourself, not conquering others. You understand that progress requires both movement and stillness, assertion and surrender, and that the greatest battles are won within.",
+                pastLife: "In past lives, you were often the warrior, the athlete, the explorer, or the one who achieved great victories. You may have led armies to victory, achieved impossible physical feats, or overcome tremendous obstacles to achieve your goals. Your soul carries the warrior spirit of determination.",
+                challengeGift: "Your challenge is to balance your drive with compassion and to channel your competitive nature toward higher purposes. Your gift is the ability to overcome any obstacle through focus and determination. When you align your will with divine purpose, you become unstoppable.",
+                frequencies: ["396 Hz", "417 Hz", "528 Hz", "741 Hz"]
+            },
+            8: {
+                name: "Strength",
+                symbol: "🦁",
+                title: "The Divine Empowerer",
+                mission: "Your soul's mission is to teach about the power of gentle strength and compassionate courage. You are here to show others that true power comes from the heart, not force. Your purpose is to tame the wild aspects of yourself and others through love and understanding.",
+                spiritualTruth: "The deep truth your soul carries is that vulnerability is strength and that compassion is the ultimate power. You understand that the greatest force in the universe is love, and that gentleness can tame what force cannot control.",
+                pastLife: "In past lives, you were often the healer, the animal whisperer, the diplomat, or the one who brought peace through understanding. You may have healed with your touch, communicated with animals, or resolved conflicts through compassion. Your soul carries the wisdom of heart-centered power.",
+                challengeGift: "Your challenge is to balance gentleness with boundaries and compassion with strength. Your gift is the ability to calm chaos and transform fear into love. When you embrace your heart power, you become a true agent of transformation.",
+                frequencies: ["528 Hz", "639 Hz", "741 Hz", "963 Hz"]
+            },
+            9: {
+                name: "The Hermit",
+                symbol: "🕯️",
+                title: "The Divine Seeker",
+                mission: "Your soul's mission is to seek truth and guide others to their own inner wisdom. You are here to demonstrate the value of solitude, introspection, and the search for deeper meaning. Your purpose is to be a light that helps others find their way through darkness.",
+                spiritualTruth: "The deep truth your soul carries is that all answers are found within and that solitude is not loneliness, but communion with the divine. You understand that true wisdom comes from inner exploration and that your light shines brightest when you honor your need for quiet reflection.",
+                pastLife: "In past lives, you were often the sage, the scholar, the mystic, or the lone seeker of truth. You may have spent years in meditation, preserved sacred knowledge, or guided others from a place of deep wisdom. Your soul carries the light of countless revelations.",
+                challengeGift: "Your challenge is to balance solitude with connection and inner knowing with worldly engagement. Your gift is the ability to see truth that others miss and guide others to their own inner wisdom. When you share your light wisely, you illuminate the path for many.",
+                frequencies: ["432 Hz", "528 Hz", "741 Hz", "963 Hz"]
+            },
+            10: {
+                name: "Wheel of Fortune",
+                symbol: "🎡",
+                title: "The Divine Cycler",
+                mission: "Your soul's mission is to teach about the cycles of life and the perfection of divine timing. You are here to show others how to navigate change with grace and trust in the cosmic order. Your purpose is to be a living example of adaptability and faith in the universe.",
+                spiritualTruth: "The deep truth your soul carries is that everything is in divine order and that every ending brings a new beginning. You understand that life is a spiral of growth and that what appears to be chaos is actually the universe working to bring you to your highest good.",
+                pastLife: "In past lives, you were often the astrologer, the mathematician, the philosopher, or the one who understood cosmic patterns. You may have studied the stars, taught about natural cycles, or helped others understand timing and destiny. Your soul carries the wisdom of cosmic rhythms.",
+                challengeGift: "Your challenge is to trust the timing of your life and release resistance to change. Your gift is the ability to see the bigger picture and help others navigate transitions. When you embrace life's cycles, you become a master of divine timing.",
+                frequencies: ["432 Hz", "528 Hz", "639 Hz", "741 Hz"]
+            },
+            11: {
+                name: "Justice",
+                symbol: "⚖️",
+                title: "The Divine Harmonizer",
+                mission: "Your soul's mission is to bring balance, fairness, and divine order to the world. You are here to teach about cause and effect, responsibility, and the importance of making choices aligned with truth. Your purpose is to be a living example of integrity and karmic awareness.",
+                spiritualTruth: "The deep truth your soul carries is that justice is not punishment, but restoration of balance. You understand that every action creates a ripple and that truth is the ultimate equalizer. You are a living embodiment of cosmic law and divine fairness.",
+                pastLife: "In past lives, you were often the judge, the mediator, the lawyer, or the one who upheld justice. You may have settled disputes, created fair laws, or advocated for those who couldn't speak for themselves. Your soul carries the authority of divine justice.",
+                challengeGift: "Your challenge is to balance mercy with truth and compassion with accountability. Your gift is the ability to see all sides of a situation and make decisions that honor the highest good. When you act with integrity and wisdom, you become a true instrument of divine justice.",
+                frequencies: ["396 Hz", "417 Hz", "528 Hz", "741 Hz"]
+            },
+            12: {
+                name: "The Hanged Man",
+                symbol: "🙃",
+                title: "The Divine Surrenderer",
+                mission: "Your soul's mission is to teach the power of surrender and the wisdom of seeing things from a different perspective. You are here to show others that letting go is not giving up, but allowing a higher wisdom to guide. Your purpose is to demonstrate that true freedom comes from release.",
+                spiritualTruth: "The deep truth your soul carries is that surrender is the ultimate act of strength and that sometimes you must let go to receive something better. You understand that the universe works in mysterious ways and that what appears to be sacrifice is often preparation for greater blessing.",
+                pastLife: "In past lives, you were often the martyr, the monk, the artist, or the one who made sacrifices for higher purpose. You may have given up worldly comforts for spiritual growth, created art that challenged perspectives, or served others at great personal cost. Your soul carries the wisdom of sacred surrender.",
+                challengeGift: "Your challenge is to release attachment to outcomes and trust in divine timing. Your gift is the ability to see beauty in sacrifice and wisdom in apparent setbacks. When you embrace surrender as strength, you become a conduit for divine miracles.",
+                frequencies: ["432 Hz", "528 Hz", "639 Hz", "963 Hz"]
+            },
+            13: {
+                name: "Death",
+                symbol: "🦋",
+                title: "The Divine Transformer",
+                mission: "Your soul's mission is to be an agent of transformation and rebirth. You are here to help others navigate endings and embrace new beginnings. Your purpose is to show that transformation, though sometimes painful, always leads to greater beauty and purpose.",
+                spiritualTruth: "The deep truth your soul carries is that death is not an end but a transformation and that every ending plants the seed of new life. You understand that the Phoenix must burn to rise again and that the most profound growth comes from releasing what no longer serves.",
+                pastLife: "In past lives, you were often the shaman, the midwife, the gardener, or the one who guided others through transitions. You may have assisted in death and rebirth ceremonies, helped communities through major changes, or transformed situations that seemed hopeless. Your soul carries the wisdom of transformation.",
+                challengeGift: "Your challenge is to help others embrace change without resistance and to trust the process of transformation. Your gift is the ability to see the potential in endings and guide others through difficult transitions. When you embrace the power of transformation, you become a true agent of rebirth.",
+                frequencies: ["396 Hz", "417 Hz", "528 Hz", "741 Hz"]
+            },
+            14: {
+                name: "Temperance",
+                symbol: "🏺",
+                title: "The Divine Alchemist",
+                mission: "Your soul's mission is to teach the art of balance and the magic of divine timing. You are here to show others how to blend different energies into perfect harmony and practice patience in the manifestation process. Your purpose is to be a living example of graceful integration.",
+                spiritualTruth: "The deep truth your soul carries is that harmony is found not in extremes, but in the perfect balance of opposites. You understand that patience is not waiting, but the art of trusting the process and that the universe works in perfect timing.",
+                pastLife: "In past lives, you were often the alchemist, the musician, the diplomat, or the one who brought harmony to discordant situations. You may have created healing remedies, composed beautiful music, or mediated between opposing forces. Your soul carries the wisdom of divine alchemy.",
+                challengeGift: "Your challenge is to practice patience when you want to rush and trust the process when you want to control. Your gift is the ability to bring harmony to any situation and create beauty from opposing forces. When you master the art of temperance, you become a true alchemist of the soul.",
+                frequencies: ["432 Hz", "528 Hz", "639 Hz", "741 Hz"]
+            },
+            15: {
+                name: "The Devil",
+                symbol: "🔗",
+                title: "The Divine Liberator",
+                mission: "Your soul's mission is to help others recognize and break free from their self-imposed limitations. You are here to illuminate the shadows and show that true freedom comes from facing fears. Your purpose is to be a catalyst for liberation from illusions and attachments.",
+                spiritualTruth: "The deep truth your soul carries is that the only real chains are those we place on ourselves and that freedom comes from facing your truth. You understand that the shadows contain the keys to liberation and that what you resist persists.",
+                pastLife: "In past lives, you were often the psychologist, the exorcist, the truth-seeker, or the one who helped others break free from limitations. You may have faced darkness to bring light, helped others overcome addictions, or challenged oppressive systems. Your soul carries the wisdom of liberation.",
+                challengeGift: "Your challenge is to face your own shadows without judgment and help others do the same. Your gift is the ability to see through illusions and help others recognize their true power. When you embrace both light and shadow, you become a true liberator of souls.",
+                frequencies: ["396 Hz", "417 Hz", "741 Hz", "963 Hz"]
+            },
+            16: {
+                name: "The Tower",
+                symbol: "🏰",
+                title: "The Divine Awakener",
+                mission: "Your soul's mission is to be an agent of necessary disruption and divine revelation. You are here to help others see through false structures and embrace truth, even when it's uncomfortable. Your purpose is to tear down what no longer serves so that something authentic can be built.",
+                spiritualTruth: "The deep truth your soul carries is that sometimes destruction is necessary for creation and that truth destroys all illusions. You understand that the universe will sometimes shake things up to wake you up and that liberation often comes through apparent chaos.",
+                pastLife: "In past lives, you were often the revolutionary, the truth-teller, the whistleblower, or the one who challenged established systems. You may have spoken uncomfortable truths, helped dismantle corrupt structures, or guided others through major awakenings. Your soul carries the revolutionary spirit of truth.",
+                challengeGift: "Your challenge is to deliver truth with compassion and help others navigate the aftermath of revelation. Your gift is the ability to see through facades and catalyze necessary change. When you embrace disruption as divine intervention, you become an agent of awakening.",
+                frequencies: ["396 Hz", "417 Hz", "528 Hz", "741 Hz"]
+            },
+            17: {
+                name: "The Star",
+                symbol: "⭐",
+                title: "The Divine Hope-Bringer",
+                mission: "Your soul's mission is to be a beacon of hope and inspiration in times of darkness. You are here to remind others of their divine nature and the infinite possibilities that await. Your purpose is to guide lost souls back to their light and restore faith in the universe.",
+                spiritualTruth: "The deep truth your soul carries is that hope is a divine force and that light always follows darkness. You understand that your presence alone can inspire others and that miracles happen when faith meets divine timing. You are a living embodiment of divine hope.",
+                pastLife: "In past lives, you were often the healer, the prophet, the artist, or the one who inspired hope in others. You may have healed with your presence, prophesied positive outcomes, or created beauty that lifted spirits. Your soul carries the light of countless hopes fulfilled.",
+                challengeGift: "Your challenge is to maintain hope even in dark times and to shine your light even when you feel depleted. Your gift is the ability to inspire faith and guide others to their own inner light. When you embrace your role as hope-bringer, you become a star for many.",
+                frequencies: ["528 Hz", "639 Hz", "741 Hz", "963 Hz"]
+            },
+            18: {
+                name: "The Moon",
+                symbol: "🌙",
+                title: "The Divine Mystic",
+                mission: "Your soul's mission is to navigate the mysteries between the worlds and guide others through their inner darkness. You are here to teach the importance of intuition, dreams, and the wisdom that comes from embracing the unknown. Your purpose is to be a guide through the unconscious realms.",
+                spiritualTruth: "The deep truth your soul carries is that the greatest treasures are found in darkness and that your intuition is your most reliable guide. You understand that dreams are messages from the divine and that the unseen world is more real than the physical one.",
+                pastLife: "In past lives, you were often the dream interpreter, the psychic, the mystic, or the one who walked between worlds. You may have interpreted dreams, received prophetic visions, or helped others understand their unconscious patterns. Your soul carries the wisdom of the mysteries.",
+                challengeGift: "Your challenge is to trust your intuition even when it defies logic and to embrace the unknown without fear. Your gift is the ability to see what others miss and guide others through confusion. When you embrace your mystical nature, you become a bridge between worlds.",
+                frequencies: ["432 Hz", "528 Hz", "639 Hz", "963 Hz"]
+            },
+            19: {
+                name: "The Sun",
+                symbol: "☀️",
+                title: "The Divine Illuminator",
+                mission: "Your soul's mission is to bring light, joy, and clarity to the world. You are here to help others see their own brilliance and celebrate the beauty of life. Your purpose is to be a living example of success, happiness, and the power of positive energy.",
+                spiritualTruth: "The deep truth your soul carries is that joy is your birthright and that your light is meant to shine brightly. You understand that success is not just material achievement but the full expression of your divine nature and that enthusiasm is contagious.",
+                pastLife: "In past lives, you were often the leader, the performer, the teacher, or the one who brought joy to others. You may have led celebrations, inspired others with your success, or illuminated paths with your wisdom. Your soul carries the radiance of countless successes.",
+                challengeGift: "Your challenge is to shine your light even when others are uncomfortable and to maintain joy in challenging times. Your gift is the ability to illuminate possibilities and inspire others to their greatest potential. When you embrace your solar nature, you become a true sun for humanity.",
+                frequencies: ["528 Hz", "639 Hz", "741 Hz", "963 Hz"]
+            },
+            20: {
+                name: "Judgement",
+                symbol: "🎺",
+                title: "The Divine Awakener",
+                mission: "Your soul's mission is to sound the call to awakening and help others answer their higher purpose. You are here to guide people through their spiritual rebirth and help them release past judgments. Your purpose is to be a catalyst for collective evolution.",
+                spiritualTruth: "The deep truth your soul carries is that it's never too late to begin again and that forgiveness is the key to liberation. You understand that every soul is being called to awaken and that you are here to help others hear that call.",
+                pastLife: "In past lives, you were often the spiritual leader, the reformer, the healer, or the one who guided others to awakening. You may have led spiritual movements, helped heal collective wounds, or called others to their higher purpose. Your soul carries the authority of divine awakening.",
+                challengeGift: "Your challenge is to forgive yourself and others completely and to answer your own call to awakening. Your gift is the ability to see the divine potential in others and guide them to their rebirth. When you embrace your role as awakener, you become an instrument of divine transformation.",
+                frequencies: ["396 Hz", "417 Hz", "528 Hz", "963 Hz"]
+            },
+            21: {
+                name: "The World",
+                symbol: "🌍",
+                title: "The Divine Completer",
+                mission: "Your soul's mission is to bring projects, relationships, and cycles to beautiful completion. You are here to demonstrate mastery through the successful integration of all aspects of life. Your purpose is to be a living example of wholeness and celebrate the beauty of completion.",
+                spiritualTruth: "The deep truth your soul carries is that every journey leads to mastery and that completion is not an end but a portal to new beginnings. You understand that wholeness comes from embracing all parts of yourself and that success is the natural result of aligned effort.",
+                pastLife: "In past lives, you were often the master craftsman, the completionist, the integrator, or the one who brought harmony to complex systems. You may have completed great works, integrated diverse teachings, or helped others achieve their goals. Your soul carries the wisdom of mastery.",
+                challengeGift: "Your challenge is to recognize when to bring things to completion and to celebrate your achievements. Your gift is the ability to see the big picture and bring harmony to diverse elements. When you embrace completion as a sacred act, you become a master of manifestation.",
+                frequencies: ["432 Hz", "528 Hz", "639 Hz", "741 Hz"]
+            }
+        };
+        
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+        
+        function calculateSoulCard() {
+            const name = document.getElementById('name').value;
+            const birthdate = document.getElementById('birthdate').value;
+            
+            if (!name || !birthdate) {
+                alert('Please enter both your name and birth date.');
+                return;
+            }
+            
+            // Calculate soul card number
+            const date = new Date(birthdate);
+            const day = date.getDate();
+            const month = date.getMonth() + 1;
+            const year = date.getFullYear();
+            
+            // Add all digits of birth date
+            let sum = day + month + year;
+            
+            // Reduce to single digit (keep 22 as is)
+            while (sum > 22 || (sum > 9 && sum !== 11 && sum !== 22)) {
+                sum = sum.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+            }
+            
+            // Adjust for tarot cards (0-21)
+            if (sum === 22) sum = 0; // Fool is often 22 in numerology but 0 in tarot
+            
+            const soulCard = soulCards[sum];
+            
+            // Display results
+            displayResults(name, soulCard);
+        }
+        
+        function displayResults(name, soulCard) {
+            document.getElementById('cardSymbol').textContent = soulCard.symbol;
+            document.getElementById('cardName').textContent = `${name}'s Soul Card: ${soulCard.name}`;
+            document.getElementById('cardTitle').textContent = soulCard.title;
+            document.getElementById('soulMission').textContent = soulCard.mission;
+            document.getElementById('spiritualTruth').textContent = soulCard.spiritualTruth;
+            document.getElementById('pastLife').textContent = soulCard.pastLife;
+            document.getElementById('challengeGift').textContent = soulCard.challengeGift;
+            
+            // Display frequencies
+            const frequencyList = document.getElementById('frequencyList');
+            frequencyList.innerHTML = '';
+            soulCard.frequencies.forEach(freq => {
+                const freqItem = document.createElement('div');
+                freqItem.className = 'frequency-item';
+                freqItem.innerHTML = `<strong>${freq}</strong>`;
+                freqItem.onclick = () => {
+                    // Save to jukebox
+                    const jukeboxItem = {
+                        type: 'frequency',
+                        name: `${freq} - ${soulCard.name} Alignment`,
+                        description: `Personal frequency for ${soulCard.name} soul card energy`,
+                        timestamp: new Date().toISOString()
+                    };
+                    
+                    let jukebox = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+                    jukebox.push(jukeboxItem);
+                    localStorage.setItem('quantumJukebox', JSON.stringify(jukebox));
+                    
+                    freqItem.style.background = 'rgba(52, 211, 153, 0.3)';
+                    setTimeout(() => {
+                        freqItem.style.background = '';
+                    }, 1000);
+                };
+                frequencyList.appendChild(freqItem);
+            });
+            
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

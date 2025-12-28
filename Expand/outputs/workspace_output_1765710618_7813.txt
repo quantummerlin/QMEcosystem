@@ -1,0 +1,21 @@
+            
+            return phases[phase] || phases[0];
+        }
+
+        function displayReading(dateTime, moonInfo, starDensity, quadrant, location) {
+            const readingSection = document.getElementById('readingSection');
+            const locationText = location ? ` in ${location.city}` : '';
+            const quadrantInfo = getQuadrantInfo(quadrant);
+            
+            const reading = `
+                <h3>Your Cosmic Reading</h3>
+                <p><strong>Birth Moment:</strong> ${dateTime.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} at ${dateTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}${locationText}</p>
+                <p><strong>Moon Phase:</strong> ${moonInfo.name} - ${moonInfo.meaning}</p>
+                <p><strong>Stellar Pattern:</strong> Star density indicates ${starDensity > 5 ? 'high energy and expanded possibilities' : 'focused, concentrated energy and deep work'}</p>
+                <p><strong>Celestial Focus:</strong> The cosmic energies are aligned with ${quadrantInfo}</p>
+                <p><strong>Personal Guidance:</strong> This cosmic moment suggests a time for ${moonInfo.meaning.toLowerCase()}. The stellar patterns indicate that ${starDensity > 5 ? 'expansion and exploration' : 'focus and depth'} will serve you well. Your celestial quadrant emphasizes the importance of ${quadrantInfo}.</p>
+                <p><strong>Sigil Meaning:</strong> Your personal sigil captures this unique cosmic configuration from ${location.city}. Use it as a focal point for meditation, intention-setting, or simply as a reminder of your unique place in the universe at this moment.</p>
+            `;
+            
+            readingSection.innerHTML = reading;
+            readingSection.classList.add('active');

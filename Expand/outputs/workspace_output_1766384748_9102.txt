@@ -1,0 +1,31 @@
+919:        function updateCurrentDay() {
+920-            const today = new Date();
+921-            const dayOfWeek = today.toLocaleDateString('en-US', { weekday: 'long' });
+922-            const date = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+923-            
+924-            // Calculate element of day
+925-            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+926-            const elementIndex = dayOfYear % 4;
+927-            const elementOfDay = elements[elementIndex];
+928-            
+929-            // Calculate frequency of day
+930-            const frequencyOfDay = ((dayOfYear + today.getFullYear()) % 9) || 9;
+931-            const frequencyMap = {
+932-                1: '396 Hz - Liberation and Freedom',
+933-                2: '417 Hz - Positive Change',
+934-                3: '528 Hz - Transformation and Love',
+935-                4: '174 Hz - Security and Stability',
+936-                5: '285 Hz - Healing and Structure',
+937-                6: '639 Hz - Harmony and Relationships',
+938-                7: '741 Hz - Intuition and Awakening',
+939-                8: '852 Hz - Spiritual Order',
+940-                9: '963 Hz - Divine Connection and Oneness'
+941-            };
+942-            
+943-            const dailyMessages = [
+944-                'Today\'s cosmic energy supports new beginnings and fresh starts. Embrace change with courage.',
+945-                'The universe invites you to find balance and harmony in all areas of your life.',
+946-                'Creative energy flows strongly today. Express yourself authentically and manifest your dreams.',
+947-                'Focus on building solid foundations for your future. Practical actions lead to lasting success.',
+948-                'Healing energies are amplified today. Release what no longer serves you and embrace renewal.',
+949-                'Relationship harmony is highlighted. Nurture your connections and open your heart to love.',

@@ -1,0 +1,21 @@
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="number" id="hour" min="0" max="23" placeholder="Hour" style="width: 80px;">
+                    <span>:</span>
+                    <input type="number" id="minute" min="0" max="59" placeholder="Min" style="width: 80px;">
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="locationSearch">Birth Location (any city worldwide)</label>
+                <div id="locationInput">
+                    <input type="text" id="locationSearch" placeholder="Start typing any city name..." autocomplete="off">
+                    <div id="suggestions"></div>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="recipient">For Yourself or Someone Special?</label>
+                <select id="recipient">
+                    <option value="self">For Me</option>
+                    <option value="gift">As a Gift</option>
+                </select>

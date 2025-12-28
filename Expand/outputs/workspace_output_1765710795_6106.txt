@@ -1,0 +1,76 @@
+        function drawCosmicSigil(moonPhase, starDensity, quadrant, style) {
+            const canvas = document.getElementById('sigilCanvas');
+            const ctx = canvas.getContext('2d');
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Set up drawing style
+            ctx.strokeStyle = '#ffd700';
+            ctx.fillStyle = '#ffd700';
+            ctx.lineWidth = 2;
+            
+            // Moon phase influences the central shape
+            const moonRadius = 30 + (moonPhase * 5);
+            
+            // Draw moon circle
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, moonRadius, 0, 2 * Math.PI);
+            ctx.globalAlpha = 0.3;
+            ctx.fill();
+            ctx.globalAlpha = 1;
+            ctx.stroke();
+            
+            // Star density influences the number of points
+            const starCount = starDensity * 3;
+            
+            // Draw star points
+            for (let i = 0; i < starCount; i++) {
+                const angle = (i / starCount) * 2 * Math.PI;
+                const distance = 80 + (Math.sin(i * 1.618) * 30); // Golden ratio variation
+                const x = centerX + Math.cos(angle) * distance;
+                const y = centerY + Math.sin(angle) * distance;
+                
+                // Draw star point
+                ctx.beginPath();
+                ctx.arc(x, y, 2, 0, 2 * Math.PI);
+                ctx.fill();
+                
+                // Connect to center with subtle lines
+                if (i % 2 === 0) {
+                    ctx.beginPath();
+                    ctx.moveTo(centerX, centerY);
+                    ctx.lineTo(x, y);
+                    ctx.globalAlpha = 0.2;
+                    ctx.stroke();
+                    ctx.globalAlpha = 1;
+                }
+            }
+            
+            // Quadrant influences the main lines
+            const quadrantAngles = {
+                'north': -Math.PI / 2,
+                'east': 0,
+                'south': Math.PI / 2,
+                'west': Math.PI
+            };
+            
+            const baseAngle = quadrantAngles[quadrant] || 0;
+            
+            // Draw main directional lines
+            for (let i = 0; i < 4; i++) {
+                const angle = baseAngle + (i * Math.PI / 2);
+                const innerRadius = moonRadius + 10;
+                const outerRadius = 140;
+                
+                ctx.beginPath();
+                ctx.moveTo(
+                    centerX + Math.cos(angle) * innerRadius,
+                    centerY + Math.sin(angle) * innerRadius
+                );
+                ctx.lineTo(
+                    centerX + Math.cos(angle) * outerRadius,
+                    centerY + Math.sin(angle) * outerRadius
+                );

@@ -1,0 +1,6 @@
+405:            <a href="index.html">🏠 Home</a>
+406-            <a href="genesis/index-enhanced.html">🎵 Frequency Generator</a>
+407-            <a href="jukebox.html">📚 Quantum Jukebox</a>
+408-            <a href="gematria.html">🔢 Quantum Gematria</a>
+409-            <a href="tarot.html">🃏 Quantum Tarot</a>
+410-            <a href="sigils.html">✨ Sigil Creator</a>

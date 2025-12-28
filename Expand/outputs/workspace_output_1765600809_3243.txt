@@ -1,0 +1,3 @@
+389:                <a href="../quantum-merlin-hub/jukebox.html" style="display: flex; align-items: center; gap: 10px; padding: 12px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: white; text-decoration: none; transition: all 0.3s;">
+481:                <a href="https://jukebox.quantummerlin.com">📚 Jukebox</a>
+645:            <a href="../quantum-merlin-hub/jukebox.html" style="background: rgba(0, 245, 255, 0.05); border: 1px solid rgba(0, 245, 255, 0.2); border-radius: 15px; padding: 25px; text-decoration: none; color: white; transition: all 0.3s; display: block;">

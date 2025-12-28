@@ -1,0 +1,41 @@
+            }, 3000);
+        }
+
+        // Display astronomical data with tooltips
+        function displayAstronomicalData(dateTime, moonInfo, starDensity, quadrant, location) {
+            const dataContainer = document.getElementById('astronomicalData');
+            const moonIllumination = calculateMoonIllumination(dateTime);
+            const lst = calculateLocalSiderealTime(dateTime, location.lon);
+            const sunAltitude = calculateSunAltitude(dateTime, location);
+            const isDaytime = sunAltitude > 0;
+            
+            dataContainer.innerHTML = `
+                <div class="data-grid">
+                    <div class="data-item" data-tooltip="Your birth location using precise geodetic coordinates">
+                        <span class="data-icon">🌍</span>
+                        <div>
+                            <div class="data-label">Location</div>
+                            <div class="data-value">${location.city}</div>
+                            <div class="data-detail">${location.lat.toFixed(2)}°, ${location.lon.toFixed(2)}°</div>
+                        </div>
+                    </div>
+                    <div class="data-item" data-tooltip="Moon's phase and illumination percentage at your birth moment">
+                        <span class="data-icon">🌙</span>
+                        <div>
+                            <div class="data-label">Moon Phase</div>
+                            <div class="data-value">${moonInfo.name}</div>
+                            <div class="data-detail">${moonIllumination.toFixed(1)}% illuminated</div>
+                        </div>
+                    </div>
+                    <div class="data-item" data-tooltip="Star visibility based on location, time, and atmospheric conditions">
+                        <span class="data-icon">⭐</span>
+                        <div>
+                            <div class="data-label">Star Density</div>
+                            <div class="data-value">${starDensity}/8</div>
+                            <div class="data-detail">${starDensity > 5 ? 'High visibility' : 'Focused view'}</div>
+                        </div>
+                    </div>
+                    <div class="data-item" data-tooltip="Celestial quadrant based on Local Sidereal Time">
+                        <span class="data-icon">🧭</span>
+                        <div>
+                            <div class="data-label">Celestial Quadrant</div>

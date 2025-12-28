@@ -1,0 +1,10 @@
+336:                <label for="location">Birth Location</label>
+337:                <select id="location">
+467:        function calculateStarDensity(date, location) {
+478:        function calculateCelestialQuadrant(date, location) {
+494:            const location = document.getElementById('location').value;
+507:            const starDensity = calculateStarDensity(dateTime, location);
+508:            const quadrant = calculateCelestialQuadrant(dateTime, location);
+744:        function displayAstronomicalData(dateTime, moonInfo, starDensity, quadrant, location) {
+747:            const lst = calculateLocalSiderealTime(dateTime, location.lon);
+748:            const sunAltitude = calculateSunAltitude(dateTime, location);

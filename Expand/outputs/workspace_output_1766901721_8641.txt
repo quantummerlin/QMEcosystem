@@ -1,0 +1,5 @@
+quantum-merlin-hub/authority-imprint-detector.html
+quantum-merlin-hub/compatibility.html
+quantum-merlin-hub/energy-leak-locator.html
+quantum-merlin-hub/hidden-strengths-revealer.html
+quantum-merlin-hub/identity-split-detector.html

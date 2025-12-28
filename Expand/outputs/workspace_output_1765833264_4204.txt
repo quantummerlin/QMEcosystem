@@ -1,0 +1,101 @@
+                    <p class="category-description">Ancient wisdom systems reimagined for the quantum age of spiritual exploration.</p>
+                    <div class="tools-list">
+                        <a href="https://tarot.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">🃏 Quantum Tarot</span>
+                            <span class="tool-guide">Guide: Rose</span>
+                        </a>
+                        <a href="https://sigils.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">✨ Sigil Creator</span>
+                            <span class="tool-guide">Guide: Both</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">🌟 Astrology Suite</h3>
+                    <p class="category-description">Celestial wisdom and cosmic guidance for navigating your life's journey.</p>
+                    <div class="tools-list">
+                        <a href="https://astrology.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">🌟 Western Astrology</span>
+                            <span class="tool-guide">Guide: Merlin</span>
+                        </a>
+                        <a href="https://chinese.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">🐲 Chinese Zodiac</span>
+                            <span class="tool-guide">Guide: Merlin</span>
+                        </a>
+                        <a href="https://forecasts.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">🔮 Zodiac Forecasts</span>
+                            <span class="tool-guide">Guide: Rose</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">💫 Manifestation Suite</h3>
+                    <p class="category-description">Powerful tools for creating reality and aligning with your highest potential.</p>
+                    <div class="tools-list">
+                        <a href="https://codes.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">💫 Reality Codes</span>
+                            <span class="tool-guide">Guide: Merlin</span>
+                        </a>
+                        <a href="https://crystals.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">💎 Crystal Wisdom</span>
+                            <span class="tool-guide">Guide: Rose</span>
+                        </a>
+                        <a href="https://water.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">💧 Water Charging</span>
+                            <span class="tool-guide">Guide: Both</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/disclaimer" class="footer-link">Disclaimer</a>
+                <a href="/terms" class="footer-link">Terms of Service</a>
+                <a href="/privacy" class="footer-link">Privacy Policy</a>
+                <a href="/about" class="footer-link">About</a>
+                <a href="/contact" class="footer-link">Contact</a>
+            </div>
+            <div>© 2024 Quantum Merlin. All rights reserved.</div>
+        </div>
+        <div class="disclaimer">
+            🔮 For entertainment and exploration purposes only. Not medical advice. Consult healthcare professionals for medical concerns.
+        </div>
+    </footer>
+
+    <script>
+        // Navigation Toggle
+        function toggleNav() {
+            const dropdown = document.getElementById('navDropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdown = document.getElementById('navDropdown');
+            
+            if (!navMenu.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Daily Alignment Generator
+        function generateDailyAlignment() {
+            const today = new Date();
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+            
+            const alignments = [
+                {
+                    message: "Today is perfect for setting clear intentions. The quantum field is especially receptive to focused thought and decisive action.",
+                    frequency: "528 Hz - Transformation & DNA Repair",
+                    guide: "Merlin advises: Structure your thoughts, structure your reality."
+                },
+                {
+                    message: "Emotional healing is highlighted today. Allow yourself to feel deeply and release what no longer serves your highest good.",

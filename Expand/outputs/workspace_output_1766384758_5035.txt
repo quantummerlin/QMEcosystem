@@ -1,0 +1,20 @@
+950-                'Intuitive insights are available to you. Trust your inner wisdom and spiritual guidance.',
+951-                'Transformation is in the air. Embrace change as an opportunity for growth and evolution.',
+952-                'Divine connection is strengthened today. Align with your higher purpose and spiritual truth.'
+953-            ];
+954-            
+955-            document.getElementById('currentDayTitle').textContent = `${dayOfWeek}, ${date}`;
+956-            document.getElementById('elementOfDay').textContent = `🌟 Element of the Day: ${elementOfDay}`;
+957-            document.getElementById('frequencyOfDay').textContent = `🎵 Frequency of the Day: ${frequencyMap[frequencyOfDay]}`;
+958-            document.getElementById('dailyMessage').textContent = dailyMessages[frequencyOfDay - 1];
+959-        }
+960-
+961-        // Update week overview
+962-        function updateWeekOverview() {
+963-            const weekGrid = document.getElementById('weekGrid');
+964-            weekGrid.innerHTML = '';
+965-            
+966-            const today = new Date();
+967-            const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+968-            
+969-            for (let i = 0; i < 7; i++) {

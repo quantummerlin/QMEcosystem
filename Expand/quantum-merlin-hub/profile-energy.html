@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy & Manifestation Profile | Quantum Merlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #0a0015 0%, #1a0033 50%, #2d1b4e 100%);
+            color: #e0d4f7;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(13, 0, 26, 0.6);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .profile-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            font-family: 'Cinzel', serif;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3em;
+            color: #fbbf24;
+            text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+            margin-bottom: 15px;
+        }
+
+        .unlock-date {
+            font-size: 1.1em;
+            color: #fcd34d;
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2em;
+            color: #f59e0b;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-icon {
+            font-size: 1.2em;
+        }
+
+        .section p {
+            font-size: 1.15em;
+            margin-bottom: 15px;
+            color: #e0d4f7;
+        }
+
+        .insight-box {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #f59e0b;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .insight-box h3 {
+            font-family: 'Cinzel', serif;
+            color: #fbbf24;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .insight-box p {
+            margin-bottom: 10px;
+        }
+
+        .pattern-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pattern-list li {
+            background: rgba(245, 158, 11, 0.05);
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 3px solid #f59e0b;
+        }
+
+        .pattern-list li strong {
+            color: #f59e0b;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .action-steps {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .action-steps h3 {
+            font-family: 'Cinzel', serif;
+            color: #10b981;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .action-steps ol {
+            padding-left: 25px;
+        }
+
+        .action-steps li {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .action-steps li strong {
+            color: #10b981;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            border: 2px solid #f59e0b;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(245, 158, 11, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2em;
+            color: #fcd34d;
+            text-align: center;
+            padding: 20px;
+            margin: 30px 0;
+            border-top: 1px solid rgba(245, 158, 11, 0.3);
+            border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-badge">⚡ SYSTEM UNLOCKED</div>
+            <h1>Your Energy & Manifestation Profile</h1>
+            <p class="unlock-date" id="unlockDate">Unlocked on <span id="dateText"></span></p>
+        </header>
+
+        <div id="profileContent">
+            <div class="section">
+                <h2><span class="section-icon">📊</span> Overview</h2>
+                <p id="overviewText">Loading your personalized profile...</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">🔍</span> Key Patterns Identified</h2>
+                <ul class="pattern-list" id="patternsList"></ul>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">🧩</span> Pattern Integration</h2>
+                <div class="insight-box">
+                    <h3>How Your Energy Patterns Interact</h3>
+                    <p id="integrationText"></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">💡</span> Core Insights</h2>
+                <div id="insightsContainer"></div>
+            </div>
+
+            <div class="action-steps">
+                <h3>🎯 Your Energy Optimization Plan</h3>
+                <ol id="actionSteps"></ol>
+            </div>
+
+            <div class="quote" id="closingQuote"></div>
+        </div>
+
+        <div class="navigation">
+            <a href="insight-library-enhanced.html" class="nav-btn">← Back to Library</a>
+            <a href="tools-hub.html" class="nav-btn">Explore More Tools →</a>
+        </div>
+    </div>
+
+    <script src="js/unlock-system.js"></script>
+    <script>
+        const unlockSystem = new UnlockSystem();
+
+        function generateProfile() {
+            const insights = unlockSystem.getSystemInsights('energy');
+            
+            const timestamps = JSON.parse(localStorage.getItem('quantumMerlinUnlockTimestamps') || '{}');
+            const unlockDate = timestamps.energy ? new Date(timestamps.energy) : new Date();
+            document.getElementById('dateText').textContent = unlockDate.toLocaleDateString('en-US', {
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric'
+            });
+
+            const overview = generateOverview(insights);
+            document.getElementById('overviewText').innerHTML = overview;
+
+            const patterns = identifyPatterns(insights);
+            const patternsList = document.getElementById('patternsList');
+            patternsList.innerHTML = patterns.map(p => `
+                <li>
+                    <strong>${p.title}</strong>
+                    ${p.description}
+                </li>
+            `).join('');
+
+            const integration = generateIntegration(patterns);
+            document.getElementById('integrationText').innerHTML = integration;
+
+            const coreInsights = generateCoreInsights(insights);
+            const insightsContainer = document.getElementById('insightsContainer');
+            insightsContainer.innerHTML = coreInsights.map(insight => `
+                <div class="insight-box">
+                    <h3>${insight.title}</h3>
+                    <p>${insight.content}</p>
+                </div>
+            `).join('');
+
+            const actions = generateActionSteps(patterns);
+            const actionSteps = document.getElementById('actionSteps');
+            actionSteps.innerHTML = actions.map(action => `<li>${action}</li>`).join('');
+
+            document.getElementById('closingQuote').textContent = getClosingQuote();
+        }
+
+        function generateOverview(insights) {
+            const toolCount = insights.length;
+            
+            return `
+                <p>You've completed all ${toolCount} tools in the Energy & Manifestation system, revealing the fundamental patterns that govern your vital force and creative power. This profile synthesizes your results to show you how energy flows through your system—and where it gets blocked.</p>
+                
+                <p>Energy isn't just physical—it's the currency of manifestation. Your capacity to create, transform, and actualize depends entirely on how you generate, conserve, and direct your life force. Understanding your energy signature is understanding your power.</p>
+                
+                <p>What follows is a map of your energetic landscape: where you're thriving, where you're depleted, and what's possible when you optimize your energy system. This isn't theory—it's the operating manual for your personal power.</p>
+            `;
+        }
+
+        function identifyPatterns(insights) {
+            const patterns = [];
+
+            insights.forEach(insight => {
+                if (insight.tool === 'Manifestation Readiness') {
+                    patterns.push({
+                        title: 'Manifestation Capacity',
+                        description: 'Your readiness score reveals your current bandwidth for rapid change. This isn\'t fixed—it\'s a reflection of your nervous system\'s capacity to handle transformation without overwhelm.'
+                    });
+                }
+                
+                if (insight.tool === 'Stress Signature Analysis') {
+                    patterns.push({
+                        title: 'Stress Response Pattern',
+                        description: 'Your stress signature shows how your nervous system responds to pressure. Fight, flight, freeze, or fawn—each pattern has different energy implications and recovery needs.'
+                    });
+                }
+                
+                if (insight.tool === 'Life-Force Signal Detector') {
+                    patterns.push({
+                        title: 'Vital Energy Baseline',
+                        description: 'Your life-force signal is the foundation of everything. When it\'s high, you\'re resilient, creative, and magnetic. When it\'s low, everything becomes harder. This is your energetic operating system.'
+                    });
+                }
+            });
+
+            return patterns;
+        }
+
+        function generateIntegration(patterns) {
+            return `
+                <p>Your energy patterns form a complete system. Your life-force baseline determines your manifestation capacity—you can't manifest beyond your energetic bandwidth. When your vital energy is depleted, your nervous system goes into survival mode, and manifestation becomes impossible.</p>
+                
+                <p>Your stress response pattern directly impacts your life-force signal. Chronic stress depletes vital energy faster than anything else. If you're stuck in fight-or-flight, you're burning through your reserves. If you're in freeze or fawn, you're suppressing your power to stay safe.</p>
+                
+                <p>Manifestation readiness isn't about positive thinking—it's about nervous system capacity. You can't think your way into readiness. You have to regulate your nervous system, restore your vital energy, and create the internal conditions for transformation. When your energy is optimized, manifestation becomes natural.</p>
+            `;
+        }
+
+        function generateCoreInsights(insights) {
+            return [
+                {
+                    title: 'Energy Is the Foundation of Everything',
+                    content: 'Every goal, dream, and desire requires energy to manifest. Without sufficient life force, you can have perfect strategy, clear vision, and strong motivation—and still fail. Energy isn\'t optional. It\'s the substrate of creation. Optimize your energy first, then everything else becomes possible.'
+                },
+                {
+                    title: 'Your Nervous System Is Your Manifestation Engine',
+                    content: 'Manifestation isn\'t metaphysical—it\'s neurological. Your nervous system determines what you can perceive, what actions you can take, and what outcomes you can hold. A dysregulated nervous system can\'t manifest effectively. Regulation isn\'t self-care—it\'s the prerequisite for power.'
+                },
+                {
+                    title: 'Stress Is Energy Leakage',
+                    content: 'Chronic stress isn\'t just uncomfortable—it\'s hemorrhaging your life force. Every moment spent in survival mode is energy that could be used for creation. The fastest way to increase your manifestation capacity is to reduce your stress load and restore your nervous system to baseline.'
+                }
+            ];
+        }
+
+        function generateActionSteps(patterns) {
+            return [
+                '<strong>Measure Your Baseline:</strong> Track your energy levels daily for one week. Rate yourself 1-10 upon waking, midday, and evening. Identify your natural rhythm and energy peaks.',
+                '<strong>Eliminate Energy Vampires:</strong> Identify the top 3 things that drain your energy most. These could be people, activities, environments, or thoughts. Eliminate or minimize at least one this week.',
+                '<strong>Regulate Your Nervous System:</strong> Practice daily nervous system regulation: breathwork, cold exposure, meditation, or somatic exercises. 10 minutes daily is more effective than occasional long sessions.',
+                '<strong>Optimize Your Recovery:</strong> Sleep is non-negotiable. Aim for 8+ hours in a dark, cool room. Add a 20-minute power nap if needed. Recovery is when your life force regenerates.',
+                '<strong>Build Energy Reserves:</strong> Don\'t operate at maximum capacity. Maintain a 20% energy buffer for unexpected demands. This buffer is what allows you to handle stress without depleting.',
+                '<strong>Align Actions With Energy:</strong> Schedule high-stakes activities during your energy peaks. Use low-energy periods for routine tasks. Stop fighting your natural rhythm.',
+                '<strong>Test Your Manifestation Capacity:</strong> Choose one small goal and manifest it this week. Notice what happens. If you can\'t manifest small things, you can\'t manifest big things. Start where you are.'
+            ];
+        }
+
+        function getClosingQuote() {
+            const quotes = [
+                '"Energy and persistence conquer all things." — Benjamin Franklin',
+                '"The energy of the mind is the essence of life." — Aristotle',
+                '"Where attention goes, energy flows." — James Redfield',
+                '"You are energy, and energy cannot be created or destroyed. Energy just changes form." — Rhonda Byrne',
+                '"The higher your energy level, the more efficient your body. The more efficient your body, the better you feel and the more you will use your talent to produce outstanding results." — Tony Robbins'
+            ];
+            return quotes[Math.floor(Math.random() * quotes.length)];
+        }
+
+        generateProfile();
+    </script>
+</body>
+</html>

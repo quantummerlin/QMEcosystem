@@ -1,0 +1,36 @@
+4-    <meta charset="UTF-8">
+5-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6:    <title>Quantum Zodiac Forecasts - Daily Cosmic Guidance | Quantum Merlin</title>
+7-    <meta name="description" content="Get your daily, weekly, and monthly zodiac forecasts with quantum insights and ritual suggestions.">
+8-    <meta name="keywords" content="zodiac forecasts, astrology predictions, cosmic guidance, quantum forecasts, quantum merlin">
+9-    
+10-    <!-- Favicon -->
+11-    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
+12-    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
+13-    
+14-    <!-- Open Graph -->
+15:    <meta property="og:title" content="Quantum Zodiac Forecasts - Daily Cosmic Guidance">
+16-    <meta property="og:description" content="Get your daily, weekly, and monthly zodiac forecasts with quantum insights.">
+17-    <meta property="og:type" content="website">
+18-    <meta property="og:url" content="https://forecasts.quantummerlin.com">
+19-    
+20-    <style>
+21-        * {
+22-            margin: 0;
+23-            padding: 0;
+24-            box-sizing: border-box;
+25-        }
+--
+442-        <!-- Header -->
+443-        <div class="header">
+444:            <h1 class="title">Quantum Zodiac Forecasts</h1>
+445-            <p class="subtitle">Daily cosmic guidance with quantum frequencies</p>
+446-        </div>
+447-
+448-        <!-- Current Day Display -->
+449-        <div class="current-day">
+450-            <h2 class="day-title" id="currentDayTitle">-</h2>
+451-            <div class="element-of-day" id="elementOfDay">-</div>
+452-            <div class="frequency-of-day" id="frequencyOfDay">-</div>
+453-            <div class="daily-message" id="dailyMessage">-</div>
+454-        </div>

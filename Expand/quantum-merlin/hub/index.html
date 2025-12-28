@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quantum Merlin - Your gateway to 16+ interconnected spiritual and manifestation tools. Explore frequencies, reality codes, tarot, sigils, and more.">
+    <meta name="keywords" content="quantum, manifestation, frequency generator, reality codes, tarot, sigils, spiritual tools, gematria, angel numbers">
+    <meta name="author" content="Quantum Merlin">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum Merlin - Quantum Tools Ecosystem">
+    <meta property="og:description" content="16+ interconnected spiritual and manifestation tools in one beautiful ecosystem">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com">
+    
+    <title>Quantum Merlin - Quantum Tools Ecosystem</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="../shared/css/quantum-core.css">
+    <link rel="stylesheet" href="../shared/css/quantum-animations.css">
+    <link rel="stylesheet" href="../shared/css/quantum-components.css">
+    <link rel="stylesheet" href="../shared/css/quantum-backgrounds.css">
+    
+    <!-- Hub Specific Styles -->
+    <style>
+        body {
+            background: linear-gradient(180deg, var(--quantum-dark) 0%, #0a1520 100%);
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--space-3xl) var(--space-lg);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-logo {
+            width: 300px;
+            height: auto;
+            margin-bottom: var(--space-2xl);
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .hero-title {
+            font-size: var(--text-6xl);
+            margin-bottom: var(--space-lg);
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+        }
+        
+        .hero-subtitle {
+            font-size: var(--text-xl);
+            color: var(--quantum-gray);
+            max-width: 600px;
+            margin-bottom: var(--space-2xl);
+            animation: fadeInUp 1s ease-out 0.4s backwards;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+        
+        .tools-section {
+            padding: var(--space-3xl) 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-3xl);
+        }
+        
+        .tool-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            backdrop-filter: blur(10px);
+            transition: all var(--transition-base);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--tool-gradient);
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--tool-color);
+            box-shadow: 0 0 30px var(--tool-glow);
+        }
+        
+        .tool-card:hover::before {
+            opacity: 1;
+        }
+        
+        .tool-icon {
+            font-size: var(--text-6xl);
+            margin-bottom: var(--space-lg);
+            filter: drop-shadow(0 0 10px var(--tool-color));
+        }
+        
+        .tool-name {
+            font-family: var(--font-heading);
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--tool-color);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .tool-description {
+            font-size: var(--text-sm);
+            color: var(--quantum-gray);
+            line-height: 1.6;
+        }
+        
+        .tool-badge {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            padding: var(--space-xs) var(--space-sm);
+            background: var(--tool-color);
+            color: var(--quantum-dark);
+            font-size: var(--text-xs);
+            font-weight: 700;
+            border-radius: var(--radius-full);
+            text-transform: uppercase;
+        }
+        
+        .features-section {
+            padding: var(--space-3xl) 0;
+            background: rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: var(--space-xl);
+        }
+        
+        .feature-icon {
+            font-size: var(--text-5xl);
+            margin-bottom: var(--space-md);
+        }
+        
+        .feature-title {
+            font-family: var(--font-heading);
+            font-size: var(--text-xl);
+            color: var(--quantum-cyan);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .feature-text {
+            color: var(--quantum-gray);
+            line-height: 1.6;
+        }
+        
+        .footer {
+            padding: var(--space-2xl) 0;
+            text-align: center;
+            border-top: 1px solid var(--glass-border);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: var(--space-lg);
+            justify-content: center;
+            margin-bottom: var(--space-lg);
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: var(--quantum-gray);
+            text-decoration: none;
+            transition: color var(--transition-base);
+        }
+        
+        .footer-link:hover {
+            color: var(--quantum-cyan);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: var(--text-4xl);
+            }
+            
+            .hero-subtitle {
+                font-size: var(--text-lg);
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="../shared/assets/logo.svg" alt="Quantum Merlin Logo" class="hero-logo">
+        
+        <h1 class="hero-title gradient-text">
+            Welcome to Quantum Merlin
+        </h1>
+        
+        <p class="hero-subtitle">
+            Your gateway to 16+ interconnected spiritual and manifestation tools. 
+            Explore frequencies, reality codes, tarot, sigils, and more in one beautiful ecosystem.
+        </p>
+        
+        <div class="hero-cta">
+            <a href="#tools" class="btn btn-primary btn-lg">
+                Explore Tools
+            </a>
+            <a href="#features" class="btn btn-outline btn-lg">
+                Learn More
+            </a>
+        </div>
+    </section>
+    
+    <!-- Tools Section -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <h2 class="section-title">
+                🔮 Quantum Tools Ecosystem
+            </h2>
+            
+            <!-- MVP Tools -->
+            <div class="tools-grid">
+                <!-- Frequency Generator -->
+                <a href="https://genesis.quantummerlin.com" class="tool-card" 
+                   style="--tool-color: #00f5ff; --tool-gradient: linear-gradient(135deg, #00f5ff 0%, #00a8ff 100%); --tool-glow: rgba(0, 245, 255, 0.3);">
+                    <span class="tool-badge">MVP</span>
+                    <div class="tool-icon">🎵</div>
+                    <h3 class="tool-name">Frequency Generator</h3>
+                    <p class="tool-description">
+                        Multi-layered audio healing with binaural beats, isochronic tones, and sacred frequencies
+                    </p>
+                </a>
+                
+                <!-- Reality Codes -->
+                <a href="https://codes.quantummerlin.com" class="tool-card"
+                   style="--tool-color: #ff00ff; --tool-gradient: linear-gradient(135deg, #ff00ff 0%, #ff1493 100%); --tool-glow: rgba(255, 0, 255, 0.3);">
+                    <span class="tool-badge">MVP</span>
+                    <div class="tool-icon">✨</div>
+                    <h3 class="tool-name">Reality Codes</h3>
+                    <p class="tool-description">
+                        Gematria-based manifestation codes with instant calculations and frequency suggestions
+                    </p>
+                </a>
+                
+                <!-- Quantum Jukebox -->
+                <a href="https://jukebox.quantummerlin.com" class="tool-card"
+                   style="--tool-color: #ffd700; --tool-gradient: linear-gradient(135deg, #ffd700 0%, #ff6b35 100%); --tool-glow: rgba(255, 215, 0, 0.3);">
+                    <span class="tool-badge">MVP</span>
+                    <div class="tool-icon">📻</div>
+                    <h3 class="tool-name">Quantum Jukebox</h3>
+                    <p class="tool-description">
+                        Unified library for all your saved creations across all tools
+                    </p>
+                </a>
+                
+                <!-- Gematria Calculator -->
+                <a href="https://dramaggia.quantummerlin.com" class="tool-card"
+                   style="--tool-color: #9d00ff; --tool-gradient: linear-gradient(135deg, #9d00ff 0%, #8a2be2 100%); --tool-glow: rgba(157, 0, 255, 0.3);">
+                    <span class="tool-badge">Coming Soon</span>
+                    <div class="tool-icon">🔢</div>
+                    <h3 class="tool-name">Gematria Calculator</h3>
+                    <p class="tool-description">
+                        Multi-system gematria calculator with Hebrew, English, and custom ciphers
+                    </p>
+                </a>
+                
+                <!-- Quantum Tarot -->
+                <a href="https://tarot.quantummerlin.com" class="tool-card"
+                   style="--tool-color: #ff00ff; --tool-gradient: linear-gradient(135deg, #ff00ff 0%, #9d00ff 100%); --tool-glow: rgba(255, 0, 255, 0.3);">
+                    <span class="tool-badge">Coming Soon</span>
+                    <div class="tool-icon">🃏</div>
+                    <h3 class="tool-name">Quantum Tarot</h3>
+                    <p class="tool-description">
+                        Interactive tarot readings with AI-enhanced interpretations
+                    </p>
+                </a>
+                
+                <!-- Sigil Creator -->
+                <a href="https://sigils.quantummerlin.com" class="tool-card"
+                   style="--tool-color: #ffd700; --tool-gradient: linear-gradient(135deg, #ffd700 0%, #ff6b35 100%); --tool-glow: rgba(255, 215, 0, 0.3);">
+                    <span class="tool-badge">Coming Soon</span>
+                    <div class="tool-icon">🔯</div>
+                    <h3 class="tool-name">Sigil Creator</h3>
+                    <p class="tool-description">
+                        Automatic sigil generation from intentions with sacred geometry
+                    </p>
+                </a>
+                
+                <!-- Angel Numbers -->
+                <a href="https://angels.quantummerlin.com" class="tool-card"
+                   style="--tool-color: #00f5ff; --tool-gradient: linear-gradient(135deg, #00f5ff 0%, #ffd700 100%); --tool-glow: rgba(0, 245, 255, 0.3);">
+                    <span class="tool-badge">Coming Soon</span>
+                    <div class="tool-icon">👼</div>
+                    <h3 class="tool-name">Angel Numbers</h3>
+                    <p class="tool-description">
+                        Instant angel number meanings and synchronicity tracking
+                    </p>
+                </a>
+                
+                <!-- Name Analyzer -->
+                <a href="https://names.quantummerlin.com" class="tool-card"
+                   style="--tool-color: #9d00ff; --tool-gradient: linear-gradient(135deg, #9d00ff 0%, #ffd700 100%); --tool-glow: rgba(157, 0, 255, 0.3);">
+                    <span class="tool-badge">Coming Soon</span>
+                    <div class="tool-icon">📛</div>
+                    <h3 class="tool-name">Name Analyzer</h3>
+                    <p class="tool-description">
+                        Gematria and numerology analysis for names and words
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">
+                ✨ Why Quantum Merlin?
+            </h2>
+            
+            <div class="features-grid">
+                <div class="feature-card animate-fade-in-up">
+                    <div class="feature-icon">🔗</div>
+                    <h3 class="feature-title">Interconnected</h3>
+                    <p class="feature-text">
+                        All tools work together seamlessly. Create a Reality Code, generate a matching frequency, design a sigil - all linked in your Quantum Jukebox.
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-fade-in-up delay-100">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Privacy First</h3>
+                    <p class="feature-text">
+                        Everything stays on your device. No accounts, no tracking, no data collection. Your spiritual journey is yours alone.
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-fade-in-up delay-200">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Beautiful Design</h3>
+                    <p class="feature-text">
+                        Retro-futuristic aesthetic with quantum grids, glowing particles, and smooth animations. A visual feast for your consciousness.
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-fade-in-up delay-300">
+                    <div class="feature-icon">🆓</div>
+                    <h3 class="feature-title">Free Forever</h3>
+                    <p class="feature-text">
+                        All tools are completely free to use. Optional one-time export unlock ($20) gives you unlimited exports across all tools.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Contact</a>
+            </div>
+            
+            <p style="color: var(--quantum-gray); font-size: var(--text-sm);">
+                © 2024 Quantum Merlin. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    
+    <!-- Shared JavaScript -->
+    <script src="../shared/js/quantum-storage.js"></script>
+    <script src="../shared/js/quantum-guides.js"></script>
+    <script src="../shared/js/quantum-backgrounds.js"></script>
+    <script src="../shared/js/quantum-navigation.js"></script>
+    
+    <!-- Hub Specific JavaScript -->
+    <script>
+        // Initialize backgrounds with mixed colors
+        QuantumBackgrounds.init({
+            particles: {
+                count: 50,
+                colors: ['#00f5ff', '#ff00ff', '#ffd700']
+            },
+            stars: {
+                count: 100
+            },
+            grid: {
+                color: 'cyan'
+            },
+            sun: {
+                color: 'magenta'
+            }
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add hover effects to tool cards
+        document.querySelectorAll('.tool-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const color = this.style.getPropertyValue('--tool-color');
+                this.style.boxShadow = `0 0 30px ${color}40`;
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '';
+            });
+        });
+    </script>
+    
+    <!-- Google Analytics Placeholder -->
+    <!-- Add your Google Analytics code here -->
+</body>
+</html>

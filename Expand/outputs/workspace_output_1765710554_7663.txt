@@ -1,0 +1,21 @@
+                </select>
+            </div>
+            
+            <button class="generate-btn" onclick="generateCosmicSigil()">Generate Cosmic Sigil</button>
+        </section>
+
+        <section id="sigilDisplay" class="sigil-display">
+            <h2 class="reading-title">Your Cosmic Sigil</h2>
+            <canvas id="sigilCanvas" width="400" height="400"></canvas>
+            
+            <div class="action-buttons">
+                <button class="action-btn" onclick="saveSigil()">💾 Save Sigil</button>
+                <button class="action-btn" onclick="shareSigil()">🎁 Gift This</button>
+                <button class="action-btn" onclick="generateNew()">✨ Create Another</button>
+            </div>
+            
+            <div class="merch-placeholder">
+                <p>Want this sigil on a mug, poster, or t-shirt? Coming soon to the Quantum Merlin Shop ✨</p>
+            </div>
+        </section>
+

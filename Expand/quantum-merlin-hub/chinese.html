@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Chinese Zodiac - Eastern Wisdom | Quantum Merlin</title>
+    <meta name="description" content="Discover your Chinese zodiac sign and compatibility analysis. Eastern wisdom meets quantum insights.">
+    <meta name="keywords" content="chinese zodiac, eastern astrology, zodiac compatibility, quantum chinese, quantum merlin">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum Chinese Zodiac - Eastern Wisdom">
+    <meta property="og:description" content="Discover your Chinese zodiac sign and compatibility analysis.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chinese.quantummerlin.com">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #000014 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Quantum Grid Background */
+        .quantum-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Quantum Sun */
+        .quantum-sun {
+            position: fixed;
+            top: 10%;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, rgba(255, 165, 0, 0.1) 40%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: pulse 4s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .nav-toggle {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.8), rgba(75, 0, 130, 0.8));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .nav-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: linear-gradient(135deg, rgba(25, 0, 51, 0.95), rgba(10, 0, 25, 0.95));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            min-width: 200px;
+            display: none;
+            backdrop-filter: blur(20px);
+        }
+
+        .nav-dropdown.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-dropdown a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        .nav-dropdown a:hover {
+            background: rgba(138, 43, 226, 0.3);
+            transform: translateX(5px);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title {
+            font-size: 3em;
+            background: linear-gradient(135deg, #ffd700, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .subtitle {
+            color: #b8b8b8;
+            font-size: 1.2em;
+        }
+
+        /* Year Selection */
+        .year-selection {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .year-input {
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 16px;
+            margin: 0 10px;
+            width: 120px;
+            text-align: center;
+        }
+
+        .year-input:focus {
+            outline: none;
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .calculate-btn {
+            background: linear-gradient(135deg, #ffd700, #ff6b6b);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 10px 0 10px;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Zodiac Grid */
+        .zodiac-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .zodiac-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .zodiac-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.4);
+            border-color: #ffd700;
+        }
+
+        .zodiac-card.active {
+            border-color: #ffd700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            color: #ffd700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .zodiac-emoji {
+            font-size: 2em;
+        }
+
+        .card-content {
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .element-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .element-wood {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            color: #fff;
+        }
+
+        .element-fire {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            color: #fff;
+        }
+
+        .element-earth {
+            background: linear-gradient(135deg, #8b7355, #a0826d);
+            color: #fff;
+        }
+
+        .element-metal {
+            background: linear-gradient(135deg, #C0C0C0, #808080);
+            color: #fff;
+        }
+
+        .element-water {
+            background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+            color: #fff;
+        }
+
+        .frequency-recommendation {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .frequency-recommendation h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .save-btn {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .save-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+        }
+
+        /* Results Section */
+        .results-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .results-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Detailed Results */
+        .detailed-results {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+
+        .result-title {
+            font-size: 2em;
+            color: #ffd700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .zodiac-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .detail-section {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .detail-section h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .detail-section p {
+            color: #e0e0e0;
+            line-height: 1.5;
+        }
+
+        /* Compatibility */
+        .compatibility-section {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+
+        .compatibility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .compatibility-item {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .compatibility-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .compatibility-score {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+
+        .compatibility-sign {
+            color: #e0e0e0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .zodiac-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .zodiac-details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="quantum-grid"></div>
+    <div class="quantum-sun"></div>
+    
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+        <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+        <div class="nav-dropdown" id="navDropdown">
+            <a href="https://quantummerlin.com">🏠 Home</a>
+            <a href="https://frequency.quantummerlin.com">🎵 Frequency Generator</a>
+            <a href="https://jukebox.quantummerlin.com">📚 Quantum Jukebox</a>
+            <a href="https://gematria.quantummerlin.com">🔢 Quantum Gematria</a>
+            <a href="https://tarot.quantummerlin.com">🃏 Quantum Tarot</a>
+            <a href="https://sigils.quantummerlin.com">✨ Sigil Creator</a>
+            <a href="https://astrology.quantummerlin.com">⭐ Western Astrology</a>
+            <a href="https://chinese.quantummerlin.com">🐲 Chinese Zodiac</a>
+            <a href="https://forecasts.quantummerlin.com">🔮 Zodiac Forecasts</a>
+            <a href="https://codes.quantummerlin.com">💫 Reality Codes</a>
+            <a href="https://crystals.quantummerlin.com">💎 Quantum Crystals</a>
+            <a href="https://water.quantummerlin.com">💧 Water Charging</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title">Quantum Chinese Zodiac</h1>
+            <p class="subtitle">Discover your Eastern animal sign and quantum wisdom</p>
+        </div>
+
+        <!-- Year Selection -->
+        <div class="year-selection">
+            <h3 style="color: #ffd700; margin-bottom: 20px;">🎯 Find Your Chinese Zodiac Sign</h3>
+            <div>
+                <label style="color: #e0e0e0; margin-right: 10px;">Birth Year:</label>
+                <input type="number" id="birthYear" class="year-input" placeholder="1990" min="1900" max="2024">
+                <button class="calculate-btn" onclick="calculateZodiac()">🐲 Find My Sign</button>
+            </div>
+        </div>
+
+        <!-- Zodiac Grid -->
+        <div class="zodiac-grid" id="zodiacGrid">
+            <!-- Zodiac cards will be dynamically added here -->
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-section" id="resultsSection">
+            <!-- Detailed results will be added here -->
+        </div>
+    </div>
+
+    <script>
+        // Navigation toggle
+        function toggleNav() {
+            const dropdown = document.getElementById('navDropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdown = document.getElementById('navDropdown');
+            
+            if (!navMenu.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Chinese Zodiac Data
+        const chineseZodiac = {
+            'Rat': {
+                emoji: '🐭',
+                years: [1912, 1924, 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020],
+                element: 'Water',
+                traits: 'Quick-witted, resourceful, versatile, kind',
+                challenges: 'Can be stubborn, talkative, greedy',
+                quantum: 'Quantum adaptability and resourceful intelligence',
+                frequencies: '741 Hz - Mental Agility, 528 Hz - Resourcefulness, 417 Hz - Adaptability',
+                career: 'Suitable for creative, research, and analytical roles',
+                wealth: 'Financially savvy, good at saving and investing',
+                relationships: 'Compatible with Dragon, Monkey, Ox'
+            },
+            'Ox': {
+                emoji: '🐂',
+                years: [1913, 1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009, 2021],
+                element: 'Earth',
+                traits: 'Diligent, dependable, strong, determined',
+                challenges: 'Can be stubborn, poor communicator',
+                quantum: 'Quantum stability and determined manifestation',
+                frequencies: '174 Hz - Stability, 285 Hz - Diligence, 528 Hz - Determination',
+                career: 'Excellent in roles requiring patience and reliability',
+                wealth: 'Consistent wealth building through hard work',
+                relationships: 'Compatible with Rat, Snake, Rooster'
+            },
+            'Tiger': {
+                emoji: '🐅',
+                years: [1914, 1926, 1938, 1950, 1962, 1974, 1986, 1998, 2010, 2022],
+                element: 'Wood',
+                traits: 'Brave, confident, competitive, unpredictable',
+                challenges: 'Can be arrogant, reckless, impatient',
+                quantum: 'Quantum courage and bold transformation',
+                frequencies: '396 Hz - Courage, 528 Hz - Confidence, 852 Hz - Leadership',
+                career: 'Natural leaders, suited for management and entrepreneurship',
+                wealth: 'Risk-taker who can achieve great wealth',
+                relationships: 'Compatible with Horse, Dog, Dragon'
+            },
+            'Rabbit': {
+                emoji: '🐇',
+                years: [1915, 1927, 1939, 1951, 1963, 1975, 1987, 1999, 2011, 2023],
+                element: 'Wood',
+                traits: 'Quiet, elegant, kind, responsible',
+                challenges: 'Can be hesitant, superficial, melancholy',
+                quantum: 'Quantum gentleness and compassionate healing',
+                frequencies: '639 Hz - Compassion, 285 Hz - Gentleness, 528 Hz - Kindness',
+                career: 'Excels in diplomatic, artistic, and healing professions',
+                wealth: 'Modest but steady financial growth',
+                relationships: 'Compatible with Sheep, Dog, Pig'
+            },
+            'Dragon': {
+                emoji: '🐲',
+                years: [1916, 1928, 1940, 1952, 1964, 1976, 1988, 2000, 2012, 2024],
+                element: 'Earth',
+                traits: 'Confident, intelligent, enthusiastic, ambitious',
+                challenges: 'Can be arrogant, impatient, aggressive',
+                quantum: 'Quantum power and ambitious manifestation',
+                frequencies: '528 Hz - Power, 174 Hz - Ambition, 852 Hz - Leadership',
+                career: 'Natural leaders suited for high-level positions',
+                wealth: 'Potential for great wealth and success',
+                relationships: 'Compatible with Rat, Monkey, Rooster'
+            },
+            'Snake': {
+                emoji: '🐍',
+                years: [1917, 1929, 1941, 1953, 1965, 1977, 1989, 2001, 2013, 2025],
+                element: 'Fire',
+                traits: 'Enigmatic, intelligent, wise, intuitive',
+                challenges: 'Can be jealous, suspicious, secretive',
+                quantum: 'Quantum wisdom and mystical insight',
+                frequencies: '741 Hz - Intuition, 963 Hz - Wisdom, 396 Hz - Transformation',
+                career: 'Excels in research, philosophy, and spiritual fields',
+                wealth: 'Strategic wealth building through intuition',
+                relationships: 'Compatible with Rooster, Ox, Dragon'
+            },
+            'Horse': {
+                emoji: '🐎',
+                years: [1918, 1930, 1942, 1954, 1966, 1978, 1990, 2002, 2014, 2026],
+                element: 'Fire',
+                traits: 'Active, energetic, independent, impatient',
+                challenges: 'Can be selfish, anxious, impatient',
+                quantum: 'Quantum freedom and energetic movement',
+                frequencies: '528 Hz - Freedom, 396 Hz - Energy, 417 Hz - Independence',
+                career: 'Suitable for dynamic, travel-related, and sales roles',
+                wealth: 'Variable wealth through ventures and risks',
+                relationships: 'Compatible with Tiger, Sheep, Dog'
+            },
+            'Sheep': {
+                emoji: '🐑',
+                years: [1919, 1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015, 2027],
+                element: 'Earth',
+                traits: 'Calm, gentle, creative, thoughtful',
+                challenges: 'Can be pessimistic, shy, over-sensitive',
+                quantum: 'Quantum creativity and gentle transformation',
+                frequencies: '528 Hz - Creativity, 639 Hz - Gentleness, 285 Hz - Thoughtfulness',
+                career: 'Excels in artistic, charitable, and nurturing professions',
+                wealth: 'Steady wealth through creativity and cooperation',
+                relationships: 'Compatible with Rabbit, Horse, Pig'
+            },
+            'Monkey': {
+                emoji: '🐒',
+                years: [1920, 1932, 1944, 1956, 1968, 1980, 1992, 2004, 2016, 2028],
+                element: 'Metal',
+                traits: 'Sharp, intelligent, curious, mischievous',
+                challenges: 'Can be arrogant, jealous, cunning',
+                quantum: 'Quantum intelligence and adaptable wisdom',
+                frequencies: '741 Hz - Intelligence, 528 Hz - Curiosity, 417 Hz - Adaptability',
+                career: 'Suited for innovative, technical, and problem-solving roles',
+                wealth: 'Smart investments and entrepreneurial success',
+                relationships: 'Compatible with Rat, Dragon, Snake'
+            },
+            'Rooster': {
+                emoji: '🐓',
+                years: [1921, 1933, 1945, 1957, 1969, 1981, 1993, 2005, 2017, 2029],
+                element: 'Metal',
+                traits: 'Observant, hardworking, courageous, talented',
+                challenges: 'Can be arrogant, impatient, blunt',
+                quantum: 'Quantum discipline and confident expression',
+                frequencies: '174 Hz - Discipline, 528 Hz - Confidence, 396 Hz - Courage',
+                career: 'Excellents in management, entertainment, and public speaking',
+                wealth: 'Consistent wealth through hard work and timing',
+                relationships: 'Compatible with Ox, Snake, Dragon'
+            },
+            'Dog': {
+                emoji: '🐕',
+                years: [1922, 1934, 1946, 1958, 1970, 1982, 1994, 2006, 2018, 2030],
+                element: 'Earth',
+                traits: 'Loyal, honest, prudent, kind',
+                challenges: 'Can be stubborn, anxious, cynical',
+                quantum: 'Quantum loyalty and protective energy',
+                frequencies: '639 Hz - Loyalty, 174 Hz - Honesty, 285 Hz - Kindness',
+                career: 'Suited for service, protection, and advisory roles',
+                wealth: 'Steady wealth through trust and reliability',
+                relationships: 'Compatible with Rabbit, Tiger, Horse'
+            },
+            'Pig': {
+                emoji: '🐖',
+                years: [1923, 1935, 1947, 1959, 1971, 1983, 1995, 2007, 2019, 2031],
+                element: 'Water',
+                traits: 'Compassionate, generous, diligent, easygoing',
+                challenges: 'Can be naive, self-indulgent, materialistic',
+                quantum: 'Quantum abundance and compassionate manifestation',
+                frequencies: '528 Hz - Abundance, 639 Hz - Compassion, 174 Hz - Diligence',
+                career: 'Excels in hospitality, entertainment, and service industries',
+                wealth: 'Natural wealth attraction through generosity',
+                relationships: 'Compatible with Rabbit, Sheep, Tiger'
+            }
+        };
+
+        // Initialize zodiac grid
+        function initializeZodiacGrid() {
+            const grid = document.getElementById('zodiacGrid');
+            
+            for (const [sign, data] of Object.entries(chineseZodiac)) {
+                const card = document.createElement('div');
+                card.className = 'zodiac-card';
+                card.onclick = () => showZodiacDetails(sign);
+                
+                card.innerHTML = `
+                    <h3 class="card-title">
+                        <span class="zodiac-emoji">${data.emoji}</span>
+                        ${sign}
+                    </h3>
+                    <div class="card-content">
+                        <p><strong>Element:</strong> ${data.element}</p>
+                        <p><strong>Traits:</strong> ${data.traits}</p>
+                        <p><strong>Quantum:</strong> ${data.quantum}</p>
+                        <span class="element-badge element-${data.element.toLowerCase()}">${data.element}</span>
+                        
+                        <div class="frequency-recommendation">
+                            <h4>🎵 Aligned Frequencies</h4>
+                            <p>${data.frequencies}</p>
+                            <button class="save-btn" onclick="event.stopPropagation(); saveZodiacFrequency('${sign}', '${data.frequencies}')">Save to Jukebox</button>
+                        </div>
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            }
+        }
+
+        // Calculate zodiac sign
+        function calculateZodiac() {
+            const birthYear = parseInt(document.getElementById('birthYear').value);
+            
+            if (!birthYear || birthYear < 1900 || birthYear > 2031) {
+                alert('Please enter a valid birth year between 1900 and 2031');
+                return;
+            }
+            
+            const zodiacSign = findZodiacSign(birthYear);
+            
+            if (zodiacSign) {
+                showZodiacDetails(zodiacSign);
+                
+                // Highlight the selected card
+                document.querySelectorAll('.zodiac-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+                
+                const cards = document.querySelectorAll('.zodiac-card');
+                const signIndex = Object.keys(chineseZodiac).indexOf(zodiacSign);
+                if (cards[signIndex]) {
+                    cards[signIndex].classList.add('active');
+                    cards[signIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        }
+
+        function findZodiacSign(year) {
+            for (const [sign, data] of Object.entries(chineseZodiac)) {
+                if (data.years.includes(year)) {
+                    return sign;
+                }
+            }
+            return null;
+        }
+
+        function showZodiacDetails(sign) {
+            const data = chineseZodiac[sign];
+            const resultsSection = document.getElementById('resultsSection');
+            
+            resultsSection.innerHTML = `
+                <div class="detailed-results">
+                    <h2 class="result-title">
+                        <span style="font-size: 1.5em; margin-right: 15px;">${data.emoji}</span>
+                        Your Chinese Zodiac: ${sign}
+                    </h2>
+                    
+                    <div class="zodiac-details">
+                        <div class="detail-section">
+                            <h4>🌟 Personality Traits</h4>
+                            <p>${data.traits}</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h4>⚠️ Challenges</h4>
+                            <p>${data.challenges}</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h4>✨ Quantum Energy</h4>
+                            <p>${data.quantum}</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h4>💼 Career Path</h4>
+                            <p>${data.career}</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h4>💰 Wealth Potential</h4>
+                            <p>${data.wealth}</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h4>💝 Element</h4>
+                            <p>${data.element} element</p>
+                            <span class="element-badge element-${data.element.toLowerCase()}">${data.element}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="frequency-recommendation" style="margin-top: 20px;">
+                        <h4>🎵 Your Master Zodiac Frequencies</h4>
+                        <p>${data.frequencies}</p>
+                        <button class="save-btn" onclick="saveZodiacFrequency('${sign}', '${data.frequencies}')">Save Master Frequencies to Jukebox</button>
+                    </div>
+                </div>
+                
+                <div class="compatibility-section">
+                    <h3 style="color: #ffd700; text-align: center; margin-bottom: 20px;">💝 Compatibility</h3>
+                    <p style="color: #e0e0e0; text-align: center; margin-bottom: 20px;">${data.relationships}</p>
+                    
+                    <div class="compatibility-grid" id="compatibilityGrid">
+                        <!-- Compatibility items will be added here -->
+                    </div>
+                </div>
+            `;
+            
+            resultsSection.classList.add('active');
+            
+            // Generate compatibility
+            generateCompatibility(sign);
+            
+            // Scroll to results
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function generateCompatibility(sign) {
+            const compatibilityGrid = document.getElementById('compatibilityGrid');
+            const compatibleSigns = chineseZodiac[sign].relationships.split(': ')[1].split(', ');
+            
+            const compatibilityScores = {
+                'Excellent': { score: '95%', color: '#4CAF50' },
+                'Good': { score: '80%', color: '#2196F3' },
+                'Fair': { score: '65%', color: '#FF9800' },
+                'Challenging': { score: '40%', color: '#f44336' }
+            };
+            
+            compatibleSigns.forEach(compatibleSign => {
+                const item = document.createElement('div');
+                item.className = 'compatibility-item';
+                
+                const score = compatibilityScores['Excellent']; // Simplified - all listed as compatible
+                
+                item.innerHTML = `
+                    <div class="compatibility-score" style="color: ${score.color}">${score.score}</div>
+                    <div class="compatibility-sign">
+                        <div style="font-size: 2em; margin-bottom: 5px;">${chineseZodiac[compatibleSign].emoji}</div>
+                        <div>${compatibleSign}</div>
+                    </div>
+                `;
+                
+                compatibilityGrid.appendChild(item);
+            });
+        }
+
+        function saveZodiacFrequency(sign, frequencies) {
+            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            
+            const newItem = {
+                id: Date.now(),
+                type: 'frequency',
+                name: `Chinese Zodiac: ${sign}`,
+                description: frequencies,
+                data: {
+                    frequency: frequencies.split(' - ')[0] || frequencies,
+                    type: 'chinese_zodiac',
+                    zodiacSign: sign
+                },
+                savedAt: new Date().toISOString()
+            };
+            
+            savedItems.push(newItem);
+            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
+            
+            // Show confirmation
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = '✓ Saved to Jukebox';
+            btn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+            
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+            }, 2000);
+        }
+
+        // Initialize on load
+        window.addEventListener('load', function() {
+            initializeZodiacGrid();
+            
+            // Set current year as default
+            const currentYear = new Date().getFullYear();
+            document.getElementById('birthYear').placeholder = currentYear.toString();
+        });
+    </script>
+</body>
+</html>

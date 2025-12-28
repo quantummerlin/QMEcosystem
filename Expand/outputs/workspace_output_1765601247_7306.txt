@@ -1,0 +1,7 @@
+526:            <a href="astrology.html">⭐ Western Astrology</a>
+527-            <a href="chinese.html">🐲 Chinese Zodiac</a>
+528-            <a href="forecasts.html">🔮 Zodiac Forecasts</a>
+529-            <a href="codes.html">💫 Reality Codes</a>
+530-            <a href="crystals.html">💎 Quantum Crystals</a>
+531-            <a href="water.html">💧 Water Charging</a>
+532-        </div>

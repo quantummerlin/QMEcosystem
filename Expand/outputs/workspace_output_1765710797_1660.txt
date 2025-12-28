@@ -1,0 +1,51 @@
+                );
+                ctx.stroke();
+            }
+            
+            // Add time-based rotation element
+            const timeMinutes = dateTime.getHours() * 60 + dateTime.getMinutes();
+            const rotationAngle = (timeMinutes / 1440) * 2 * Math.PI;
+            
+            ctx.save();
+            ctx.translate(centerX, centerY);
+            ctx.rotate(rotationAngle);
+            
+            // Draw rotating element
+            ctx.beginPath();
+            ctx.arc(60, 0, 8, 0, 2 * Math.PI);
+            ctx.stroke();
+            
+            ctx.restore();
+            
+            // Add subtle animation effect
+            animateSigil();
+        }
+
+        function animateSigil() {
+            const canvas = document.getElementById('sigilCanvas');
+            canvas.style.animation = 'pulse 4s ease-in-out infinite';
+            
+            // Add CSS animation if not exists
+            if (!document.querySelector('#sigilAnimation')) {
+                const style = document.createElement('style');
+                style.id = 'sigilAnimation';
+                style.textContent = `
+                    @keyframes pulse {
+                        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3)); }
+                        50% { transform: scale(1.02); filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.5)); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
+
+        function generateReading(moonPhase, starDensity, quadrant, dateTime) {
+            const moonPhases = [
+                { name: 'New Moon', meaning: 'New beginnings, planting intentions, fresh energy' },
+                { name: 'Waxing Crescent', meaning: 'Early growth, building momentum, taking first steps' },
+                { name: 'First Quarter', meaning: 'Decision points, overcoming challenges, commitment' },
+                { name: 'Waxing Gibbous', meaning: 'Refinement, adjustment, gathering resources' },
+                { name: 'Full Moon', meaning: 'Culmination, illumination, release and celebration' },
+                { name: 'Waning Gibbous', meaning: 'Gratitude, sharing wisdom, integration' },
+                { name: 'Last Quarter', meaning: 'Release, letting go, forgiveness' },
+                { name: 'Waning Crescent', meaning: 'Rest, reflection, spiritual renewal' }

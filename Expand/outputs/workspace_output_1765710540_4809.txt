@@ -1,0 +1,21 @@
+            <div class="input-group">
+                <label for="birthtime">Birth Time (if known, otherwise use noon)</label>
+                <input type="time" id="birthtime" value="12:00">
+            </div>
+            
+            <div class="input-group">
+                <label for="location">Birth Location</label>
+                <select id="location">
+                    <option value="melbourne">Melbourne, Australia</option>
+                    <option value="sydney">Sydney, Australia</option>
+                    <option value="newyork">New York, USA</option>
+                    <option value="london">London, UK</option>
+                    <option value="tokyo">Tokyo, Japan</option>
+                    <option value="custom">Custom Location</option>
+                </select>
+            </div>
+            
+            <div class="input-group" id="customLocationGroup" style="display: none;">
+                <label for="customLocation">Enter City</label>
+                <input type="text" id="customLocation" placeholder="Enter city name...">
+            </div>

@@ -1,0 +1,11 @@
+                <input type="number" id="angelNumber" placeholder="Enter any number..." min="1" max="999999">
+                <button class="calculate-btn" onclick="calculateAngelNumber()">Calculate</button>
+            </div>
+        </section>
+
+        <section id="resultSection" class="result-section">
+            <div class="number-display" id="numberDisplay">000</div>
+            
+            <div class="meaning-section">
+                <h3 class="meaning-title">Spiritual Message</h3>
+                <p class="meaning-text" id="spiritualMessage"></p>

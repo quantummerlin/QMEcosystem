@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety vs Expansion Tension | Quantum Merlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #0a0015 0%, #1a0033 50%, #2d1b4e 100%);
+            color: #e0d4f7;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(13, 0, 26, 0.6);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5em;
+            color: #b19cd9;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #9d7ec0;
+            font-style: italic;
+        }
+
+        .intro-section {
+            background: rgba(138, 43, 226, 0.1);
+            border-left: 4px solid #8a2be2;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .intro-section p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .question-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(138, 43, 226, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        .question-label {
+            font-size: 1.2em;
+            color: #b19cd9;
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 600;
+        }
+
+        .scale-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .scale-option {
+            flex: 1;
+            text-align: center;
+        }
+
+        .scale-option input[type="radio"] {
+            display: none;
+        }
+
+        .scale-option label {
+            display: block;
+            padding: 15px 10px;
+            background: rgba(138, 43, 226, 0.1);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            color: #9d7ec0;
+        }
+
+        .scale-option input[type="radio"]:checked + label {
+            background: rgba(138, 43, 226, 0.3);
+            border-color: #8a2be2;
+            color: #e0d4f7;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+        }
+
+        .scale-option label:hover {
+            background: rgba(138, 43, 226, 0.2);
+            border-color: #8a2be2;
+        }
+
+        .scale-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #9d7ec0;
+            font-style: italic;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #8a2be2 0%, #9d4edd 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.3em;
+            font-family: 'Cinzel', serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(138, 43, 226, 0.5);
+            background: linear-gradient(135deg, #9d4edd 0%, #8a2be2 100%);
+        }
+
+        .results-section {
+            display: none;
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(138, 43, 226, 0.1);
+            border: 2px solid #8a2be2;
+            border-radius: 15px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .results-section h2 {
+            font-family: 'Cinzel', serif;
+            color: #b19cd9;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .pattern-display {
+            text-align: center;
+            font-size: 2em;
+            color: #8a2be2;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(138, 43, 226, 0.1);
+            border-radius: 10px;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .insight-box {
+            background: rgba(13, 0, 26, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #8a2be2;
+        }
+
+        .insight-box h3 {
+            color: #b19cd9;
+            font-family: 'Cinzel', serif;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .insight-box p {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .insight-box ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .insight-box li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 15px;
+            background: rgba(138, 43, 226, 0.2);
+            color: #b19cd9;
+            border: 2px solid #8a2be2;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            font-family: 'Cinzel', serif;
+        }
+
+        .action-btn:hover {
+            background: rgba(138, 43, 226, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .scale-container {
+                flex-wrap: wrap;
+            }
+
+            .scale-option {
+                flex-basis: calc(33.333% - 10px);
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚖️ Safety vs Expansion Tension ⚖️</h1>
+            <p class="subtitle">Reveal Your Internal Conflict Between Security & Growth</p>
+        </header>
+
+        <div class="intro-section">
+            <p><strong>Every human has a tension between safety and expansion.</strong></p>
+            <p>Part of you wants to grow, evolve, and reach for more. Another part wants to stay safe, comfortable, and protected. This isn't weakness—it's biology. Your nervous system is designed to keep you alive, not to help you thrive.</p>
+            <p><strong>But when this tension becomes extreme, it keeps you small.</strong> You sabotage opportunities, choose comfort over growth, and stay stuck in patterns that no longer serve you.</p>
+            <p>Answer these 5 questions to reveal where you fall on the safety-expansion spectrum.</p>
+        </div>
+
+        <form id="assessmentForm">
+            <div class="question-section">
+                <label class="question-label">1. I choose familiar comfort over exciting opportunities</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="0" id="q1-0" required>
+                        <label for="q1-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="1" id="q1-1">
+                        <label for="q1-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="2" id="q1-2">
+                        <label for="q1-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="3" id="q1-3">
+                        <label for="q1-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="4" id="q1-4">
+                        <label for="q1-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="5" id="q1-5">
+                        <label for="q1-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label class="question-label">2. I feel anxious when things are going too well</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="0" id="q2-0" required>
+                        <label for="q2-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="1" id="q2-1">
+                        <label for="q2-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="2" id="q2-2">
+                        <label for="q2-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="3" id="q2-3">
+                        <label for="q2-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="4" id="q2-4">
+                        <label for="q2-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="5" id="q2-5">
+                        <label for="q2-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label class="question-label">3. I sabotage myself when I'm about to level up</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="0" id="q3-0" required>
+                        <label for="q3-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="1" id="q3-1">
+                        <label for="q3-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="2" id="q3-2">
+                        <label for="q3-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="3" id="q3-3">
+                        <label for="q3-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="4" id="q3-4">
+                        <label for="q3-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="5" id="q3-5">
+                        <label for="q3-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label class="question-label">4. I prioritize security over fulfillment</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="0" id="q4-0" required>
+                        <label for="q4-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="1" id="q4-1">
+                        <label for="q4-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="2" id="q4-2">
+                        <label for="q4-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="3" id="q4-3">
+                        <label for="q4-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="4" id="q4-4">
+                        <label for="q4-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="5" id="q4-5">
+                        <label for="q4-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label class="question-label">5. I feel guilty for wanting more than I have</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="0" id="q5-0" required>
+                        <label for="q5-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="1" id="q5-1">
+                        <label for="q5-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="2" id="q5-2">
+                        <label for="q5-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="3" id="q5-3">
+                        <label for="q5-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="4" id="q5-4">
+                        <label for="q5-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="5" id="q5-5">
+                        <label for="q5-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">⚖️ Reveal My Pattern ⚖️</button>
+        </form>
+
+        <div class="results-section" id="resultsSection"></div>
+    </div>
+
+    <script>
+        document.getElementById('assessmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            generateResults();
+        });
+
+        function generateResults() {
+            // Collect answers
+            const answers = {
+                q1: parseInt(document.querySelector('input[name="q1"]:checked').value),
+                q2: parseInt(document.querySelector('input[name="q2"]:checked').value),
+                q3: parseInt(document.querySelector('input[name="q3"]:checked').value),
+                q4: parseInt(document.querySelector('input[name="q4"]:checked').value),
+                q5: parseInt(document.querySelector('input[name="q5"]:checked').value)
+            };
+
+            // Calculate total score
+            const totalScore = answers.q1 + answers.q2 + answers.q3 + answers.q4 + answers.q5;
+
+            // Determine pattern and insights
+            let pattern, description, safetyAnchor, expansionFear, integrationPath;
+
+            if (totalScore <= 8) {
+                pattern = "EXPANSION-ORIENTED (Growth Seeker)";
+                description = "You lean heavily toward growth and expansion. You're willing to take risks, embrace uncertainty, and push beyond your comfort zone. This is powerful—but watch for recklessness or burnout.";
+                safetyAnchor = "You may be avoiding safety because it feels like stagnation. But true expansion requires a secure foundation. Without roots, you can't grow tall.";
+                expansionFear = "You're not afraid of growth—you're afraid of being trapped. The fear isn't expansion itself, but losing your freedom or becoming 'ordinary.'";
+                integrationPath = [
+                    "Build a secure foundation (financial, relational, physical) to support your expansion",
+                    "Practice grounding rituals (meditation, nature, routine) to balance your growth energy",
+                    "Recognize that safety isn't the enemy—it's the launchpad for sustainable expansion",
+                    "Honor your need for security without letting it become a cage",
+                    "Expand from a place of fullness, not emptiness or escape"
+                ];
+            } else if (totalScore <= 15) {
+                pattern = "BALANCED TENSION (Healthy Conflict)";
+                description = "You experience a normal, healthy tension between safety and expansion. You want to grow, but you also value security. This is the sweet spot—you're neither reckless nor paralyzed.";
+                safetyAnchor = "You're protecting your stability, relationships, and well-being. This is wise. The key is ensuring your safety needs don't become excuses for staying small.";
+                expansionFear = "You're cautious about growth because you've been hurt before. Past failures or losses taught you to be careful. But caution can become a prison.";
+                integrationPath = [
+                    "Take calculated risks—expand in areas where you have support and resources",
+                    "Build safety nets before making big leaps (savings, skills, relationships)",
+                    "Practice small expansions regularly to build confidence and resilience",
+                    "Recognize when safety is genuine vs when it's fear disguised as wisdom",
+                    "Honor both needs: expand from a secure base, not from desperation"
+                ];
+            } else if (totalScore <= 20) {
+                pattern = "SAFETY-ORIENTED (Security Seeker)";
+                description = "You consistently choose security over growth. This isn't wrong—it's a survival strategy. But it's keeping you small. You're protecting yourself from risk, but also from possibility.";
+                safetyAnchor = "You're protecting yourself from failure, loss, or disappointment. Somewhere along the way, you learned that safety = survival. But now, safety = stagnation.";
+                expansionFear = "You're afraid that if you expand, you'll lose what you have. The fear isn't growth itself—it's the potential cost of growth (failure, judgment, loss).";
+                integrationPath = [
+                    "Start with micro-expansions: tiny risks that feel manageable",
+                    "Identify what you're actually protecting (ego, relationships, identity)",
+                    "Recognize that staying small is also a risk—the risk of regret",
+                    "Build evidence that expansion is safe through small wins",
+                    "Reframe growth as an act of self-care, not self-destruction"
+                ];
+            } else {
+                pattern = "EXPANSION-PHOBIC (Growth Avoider)";
+                description = "You're actively avoiding growth and expansion. This is a red flag. You're not just choosing safety—you're running from possibility. This pattern is rooted in deep fear or past trauma.";
+                safetyAnchor = "You're protecting yourself from something specific: failure, judgment, abandonment, or loss. Your nervous system is in survival mode, and expansion feels like a threat to your existence.";
+                expansionFear = "You're terrified of what growth might cost you. The fear is so strong that you've made safety your entire identity. But this isn't safety—it's a cage.";
+                integrationPath = [
+                    "Seek professional support (therapy, coaching) to address the root fear",
+                    "Start with the smallest possible expansion: one tiny step outside your comfort zone",
+                    "Build a support system that encourages growth without pressure",
+                    "Recognize that your fear is valid, but it's not the truth",
+                    "Practice self-compassion: you're not broken, you're protecting yourself",
+                    "Understand that staying small is also painful—just in a different way"
+                ];
+            }
+
+            // Generate results HTML
+            const resultsHTML = `
+                <h2>⚖️ Your Safety vs Expansion Pattern ⚖️</h2>
+                <div class="pattern-display">${pattern}</div>
+
+                <div class="insight-box">
+                    <h3>📊 What This Means</h3>
+                    <p>${description}</p>
+                </div>
+
+                <div class="insight-box">
+                    <h3>🛡️ Your Safety Anchor</h3>
+                    <p>${safetyAnchor}</p>
+                </div>
+
+                <div class="insight-box">
+                    <h3>🚀 Your Expansion Fear</h3>
+                    <p>${expansionFear}</p>
+                </div>
+
+                <div class="insight-box">
+                    <h3>🔗 Integration Path</h3>
+                    <p><strong>How to honor both safety AND expansion:</strong></p>
+                    <ul>
+                        ${integrationPath.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="insight-box">
+                    <h3>🎯 The Truth</h3>
+                    <p>You don't have to choose between safety and expansion. The goal isn't to eliminate the tension—it's to dance with it. True power comes from expanding from a secure foundation, not from desperation or fear.</p>
+                    <p><strong>Your next step: Choose ONE small expansion that feels 80% safe, 20% scary. That's the sweet spot.</strong></p>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="insight-library.html" class="action-btn">📚 View All Insights</a>
+                    <a href="tools-hub.html" class="action-btn">🔮 Explore More Tools</a>
+                    <button onclick="location.reload()" class="action-btn">🔄 Retake Assessment</button>
+                </div>
+            `;
+
+            // Display results
+            const resultsSection = document.getElementById('resultsSection');
+            resultsSection.innerHTML = resultsHTML;
+            resultsSection.style.display = 'block';
+            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Save to localStorage
+            saveToLibrary(totalScore, pattern);
+        }
+
+        function saveToLibrary(score, pattern) {
+            const insight = {
+                tool: 'Safety vs Expansion Tension',
+                category: 'unconscious',
+                timestamp: new Date().toISOString(),
+                score: score,
+                pattern: pattern,
+                summary: `Safety vs Expansion: ${pattern}`
+            };
+
+            let library = JSON.parse(localStorage.getItem('quantumMerlinLibrary') || '[]');
+            
+            // Remove any existing entry for this tool
+            library = library.filter(item => item.tool !== 'Safety vs Expansion Tension');
+            
+            // Add new entry
+            library.push(insight);
+            
+            localStorage.setItem('quantumMerlinLibrary', JSON.stringify(library));
+        }
+    </script>
+</body>
+</html>

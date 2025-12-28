@@ -1,0 +1,20 @@
+37Hz + 73Hz
+37Hz + 73Hz + 9Hz
+37Hz + 73Hz + 27.5Hz
+37Hz + 73Hz + 111Hz
+37Hz + 73Hz + 194Hz
+37Hz + 73Hz + 432Hz
+37Hz + 73Hz + 528Hz
+37Hz + 73Hz + 639Hz
+37Hz + 73Hz + 741Hz
+37Hz + 73Hz + 852Hz
+37Hz + 73Hz + 963Hz
+40Hz + 10Hz
+37Hz+73Hz
+963Hz + 528Hz
+963Hz + 110Hz
+528Hz + 963Hz
+528Hz + 963Hz
+174Hz + 528Hz + 963Hz
+37Hz + 73Hz For 194Hz
+37Hz + 73Hz + 194Hz

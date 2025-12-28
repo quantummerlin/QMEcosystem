@@ -1,0 +1,21 @@
+        }
+
+        .education-section p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+
+        .merch-placeholder {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 215, 0, 0.05);
+            border-radius: 15px;
+            margin-top: 20px;
+            border: 1px dashed rgba(255, 215, 0, 0.3);
+        }
+
+        .merch-placeholder p {
+            color: #ffd700;
+            font-style: italic;
+        }

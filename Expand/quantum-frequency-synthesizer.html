@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Frequency Synthesizer | Quantum Merlin</title>
+    <meta name="description" content="Advanced frequency synthesis system for spiritual healing and consciousness elevation">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --deep-purple: #1a1a3e;
+            --sacred-blue: #4169E1;
+            --mystic-violet: #8A2BE2;
+            --crystal-white: #f8f9fa;
+            --energy-gradient: linear-gradient(135deg, var(--sacred-blue), var(--mystic-violet));
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 50%, #2d1b69 100%);
+            color: var(--crystal-white);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+        }
+
+        .main-header {
+            background: var(--energy-gradient);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(138, 43, 226, 0.3);
+        }
+
+        .frequency-display {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--primary-gold);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+        }
+
+        .frequency-value {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-gold);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            margin: 1rem 0;
+        }
+
+        .chakra-indicator {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 0.5rem;
+            box-shadow: 0 0 15px currentColor;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .synthesis-panel {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            backdrop-filter: blur(5px);
+        }
+
+        .wave-form {
+            height: 100px;
+            background: rgba(138, 43, 226, 0.1);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .wave-animation {
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--sacred-blue), 
+                var(--primary-gold), 
+                var(--sacred-blue), 
+                transparent
+            );
+            animation: wave 3s linear infinite;
+        }
+
+        @keyframes wave {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        .crystal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .crystal-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--primary-gold);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .crystal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .play-button {
+            background: var(--energy-gradient);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1rem;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .frequency-slider {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .preset-frequency {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .preset-frequency:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--primary-gold);
+        }
+
+        .resonance-meter {
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .resonance-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--sacred-blue), var(--primary-gold));
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+
+        .nav-link {
+            color: var(--crystal-white) !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-gold) !important;
+        }
+
+        .btn-gold {
+            background: var(--primary-gold);
+            color: var(--deep-purple);
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold:hover {
+            background: #B8941F;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="main-hub.html">
+                <i class="fas fa-atom"></i> Quantum Merlin
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main-hub.html"><i class="fas fa-home"></i> Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gematria-calculator.html"><i class="fas fa-calculator"></i> Gematria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quantum-sigil-generator.html"><i class="fas fa-draw-polygon"></i> Sigils</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="angel-number-calculator.html"><i class="fas fa-angel"></i> Angels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="quantum-frequency-synthesizer.html">
+                            <i class="fas fa-wave-square"></i> Frequencies
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1><i class="fas fa-wave-square"></i> Quantum Frequency Synthesizer</h1>
+            <p class="lead">Advanced Frequency Healing & Consciousness Elevation System</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <!-- Main Frequency Display -->
+        <div class="frequency-display">
+            <div class="text-center">
+                <h2>Current Frequency</h2>
+                <div class="frequency-value" id="currentFrequency">432 Hz</div>
+                <div class="mb-3">
+                    <span class="chakra-indicator" style="background-color: #FF0000;" title="Root Chakra"></span>
+                    <span class="chakra-indicator" style="background-color: #FFA500;" title="Sacral Chakra"></span>
+                    <span class="chakra-indicator" style="background-color: #FFFF00;" title="Solar Plexus"></span>
+                    <span class="chakra-indicator" style="background-color: #00FF00;" title="Heart Chakra"></span>
+                    <span class="chakra-indicator" style="background-color: #0000FF;" title="Throat Chakra"></span>
+                    <span class="chakra-indicator" style="background-color: #4B0082;" title="Third Eye"></span>
+                    <span class="chakra-indicator" style="background-color: #9400D3;" title="Crown Chakra"></span>
+                </div>
+                <p class="lead" id="frequencyDescription">Grounding and Stability - Root Chakra Alignment</p>
+                
+                <!-- Wave Form Visualization -->
+                <div class="wave-form">
+                    <div class="wave-animation"></div>
+                </div>
+                
+                <!-- Play Controls -->
+                <div class="mt-3">
+                    <button class="play-button" id="playBtn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="play-button" id="stopBtn">
+                        <i class="fas fa-stop"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Panel - Frequency Controls -->
+            <div class="col-lg-6">
+                <div class="synthesis-panel">
+                    <h3><i class="fas fa-sliders-h"></i> Frequency Controls</h3>
+                    
+                    <!-- Frequency Slider -->
+                    <label for="frequencySlider">Manual Frequency Tuning</label>
+                    <input type="range" class="form-range frequency-slider" id="frequencySlider" 
+                           min="20" max="2000" value="432" step="1">
+                    <div class="d-flex justify-content-between">
+                        <small>20 Hz</small>
+                        <small id="sliderValue">432 Hz</small>
+                        <small>2000 Hz</small>
+                    </div>
+
+                    <!-- Preset Frequencies -->
+                    <h4 class="mt-4">Sacred Frequency Presets</h4>
+                    <div class="preset-frequency" data-freq="432">
+                        <i class="fas fa-om"></i> <strong>432 Hz</strong> - Universal Harmony
+                    </div>
+                    <div class="preset-frequency" data-freq="528">
+                        <i class="fas fa-heart"></i> <strong>528 Hz</strong> - DNA Repair/Love Frequency
+                    </div>
+                    <div class="preset-frequency" data-freq="639">
+                        <i class="fas fa-heartbeat"></i> <strong>639 Hz</strong> - Heart Chakra Harmony
+                    </div>
+                    <div class="preset-frequency" data-freq="741">
+                        <i class="fas fa-brain"></i> <strong>741 Hz</strong> - Intuition & Awakening
+                    </div>
+                    <div class="preset-frequency" data-freq="852">
+                        <i class="fas fa-eye"></i> <strong>852 Hz</strong> - Third Eye Activation
+                    </div>
+                    <div class="preset-frequency" data-freq="963">
+                        <i class="fas fa-crown"></i> <strong>963 Hz</strong> - Crown Chakra Connection
+                    </div>
+                    <div class="preset-frequency" data-freq="174">
+                        <i class="fas fa-seedling"></i> <strong>174 Hz</strong> - Pain Relief & Security
+                    </div>
+                    <div class="preset-frequency" data-freq="285">
+                        <i class="fas fa-shield-alt"></i> <strong>285 Hz</strong> - Energy Field Healing
+                    </div>
+                    <div class="preset-frequency" data-freq="396">
+                        <i class="fas fa-broom"></i> <strong>396 Hz</strong> - Fear & Guilt Liberation
+                    </div>
+                    <div class="preset-frequency" data-freq="417">
+                        <i class="fas fa-sync"></i> <strong>417 Hz</strong> - Negative Energy Clearing
+                    </div>
+                </div>
+
+                <!-- Harmonic Generation -->
+                <div class="synthesis-panel">
+                    <h3><i class="fas fa-wave-square"></i> Harmonic Generation</h3>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="octaves">
+                        <label class="form-check-label" for="octaves">
+                            Include Octaves (x2, x4, x8)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="fifths">
+                        <label class="form-check-label" for="fifths">
+                            Include Perfect Fifths (x1.5)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="schumann">
+                        <label class="form-check-label" for="schumann">
+                            Schumann Resonance (7.83 Hz)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="planetary">
+                        <label class="form-check-label" for="planetary">
+                            Planetary Frequencies
+                        </label>
+                    </div>
+
+                    <button class="btn btn-gold w-100 mt-3" id="generateHarmonics">
+                        <i class="fas fa-magic"></i> Generate Harmonics
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Panel - Crystal & Amplification -->
+            <div class="col-lg-6">
+                <!-- Crystal Resonance -->
+                <div class="synthesis-panel">
+                    <h3><i class="fas fa-gem"></i> Crystal Resonance</h3>
+                    
+                    <div class="crystal-grid" id="crystalGrid">
+                        <div class="crystal-card" data-crystal="clear-quartz">
+                            <i class="fas fa-gem"></i>
+                            <h5>Clear Quartz</h5>
+                            <small>Master Amplifier</small>
+                        </div>
+                        <div class="crystal-card" data-crystal="amethyst">
+                            <i class="fas fa-gem"></i>
+                            <h5>Amethyst</h5>
+                            <small>Spiritual Growth</small>
+                        </div>
+                        <div class="crystal-card" data-crystal="rose-quartz">
+                            <i class="fas fa-heart"></i>
+                            <h5>Rose Quartz</h5>
+                            <small>Unconditional Love</small>
+                        </div>
+                        <div class="crystal-card" data-crystal="citrine">
+                            <i class="fas fa-sun"></i>
+                            <h5>Citrine</h5>
+                            <small>Abundance</small>
+                        </div>
+                        <div class="crystal-card" data-crystal="black-tourmaline">
+                            <i class="fas fa-shield-alt"></i>
+                            <h5>Black Tourmaline</h5>
+                            <small>Protection</small>
+                        </div>
+                        <div class="crystal-card" data-crystal="selenite">
+                            <i class="fas fa-moon"></i>
+                            <h5>Selenite</h5>
+                            <small>Cleansing</small>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-gold w-100 mt-3" id="analyzeCrystalResonance">
+                        <i class="fas fa-search"></i> Analyze Crystal Resonance
+                    </button>
+                </div>
+
+                <!-- Resonance Analysis -->
+                <div class="synthesis-panel">
+                    <h3><i class="fas fa-chart-line"></i> Resonance Analysis</h3>
+                    
+                    <div class="mb-3">
+                        <label for="intentionInput">Intention Text</label>
+                        <input type="text" class="form-control" id="intentionInput" 
+                               placeholder="Enter your intention...">
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Chakra Resonance</label>
+                        <div class="resonance-meter">
+                            <div class="resonance-fill" id="chakraResonance" style="width: 75%;"></div>
+                        </div>
+                        <small id="resonanceText">Strong Root Chakra Resonance</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Amplification Potential</label>
+                        <div class="resonance-meter">
+                            <div class="resonance-fill" id="amplificationMeter" style="width: 60%;"></div>
+                        </div>
+                        <small>Good amplification potential with crystals</small>
+                    </div>
+
+                    <button class="btn btn-gold w-100" id="analyzeIntention">
+                        <i class="fas fa-microscope"></i> Analyze Intention Resonance
+                    </button>
+                </div>
+
+                <!-- Amplification Suggestions -->
+                <div class="synthesis-panel">
+                    <h3><i class="fas fa-lightbulb"></i> Amplification Suggestions</h3>
+                    <div id="amplificationSuggestions">
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle"></i> 
+                            <strong>Suggestion:</strong> Combine with Clear Quartz crystal for maximum amplification
+                        </div>
+                        <div class="alert alert-warning">
+                            <i class="fas fa-clock"></i>
+                            <strong>Timing:</strong> Best used during meditation or sleep cycles
+                        </div>
+                        <div class="alert alert-success">
+                            <i class="fas fa-check-circle"></i>
+                            <strong>Duration:</strong> 15-30 minutes daily for optimal results
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Harmonic Output Display -->
+        <div class="synthesis-panel mt-4" id="harmonicOutput" style="display: none;">
+            <h3><i class="fas fa-music"></i> Generated Harmonics</h3>
+            <div class="row" id="harmonicFrequencies">
+                <!-- Harmonic frequencies will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2024 Quantum Merlin | Quantum Spiritual Technology</p>
+            <p>
+                <a href="privacy.html" class="text-light">Privacy</a> | 
+                <a href="terms.html" class="text-light">Terms</a> | 
+                <a href="disclaimer.html" class="text-light">Disclaimer</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="amplification-engine.js"></script>
+    <script>
+        // Initialize Frequency Synthesizer
+        class QuantumFrequencySynthesizer {
+            constructor() {
+                this.currentFrequency = 432;
+                this.isPlaying = false;
+                this.amplificationEngine = new UniversalAmplificationEngine();
+                this.audioContext = null;
+                this.oscillator = null;
+                this.gainNode = null;
+                
+                this.initializeEventListeners();
+                this.initializeAudioContext();
+            }
+
+            initializeAudioContext() {
+                try {
+                    window.AudioContext = window.AudioContext || window.webkitAudioContext;
+                    this.audioContext = new AudioContext();
+                } catch (e) {
+                    console.error('Web Audio API not supported:', e);
+                }
+            }
+
+            initializeEventListeners() {
+                // Frequency slider
+                const slider = document.getElementById('frequencySlider');
+                slider.addEventListener('input', (e) => {
+                    this.setFrequency(parseInt(e.target.value));
+                });
+
+                // Preset frequencies
+                document.querySelectorAll('.preset-frequency').forEach(preset => {
+                    preset.addEventListener('click', (e) => {
+                        const freq = parseInt(e.currentTarget.dataset.freq);
+                        this.setFrequency(freq);
+                        slider.value = freq;
+                    });
+                });
+
+                // Play/Stop buttons
+                document.getElementById('playBtn').addEventListener('click', () => this.playFrequency());
+                document.getElementById('stopBtn').addEventListener('click', () => this.stopFrequency());
+
+                // Harmonic generation
+                document.getElementById('generateHarmonics').addEventListener('click', () => {
+                    this.generateHarmonics();
+                });
+
+                // Crystal selection
+                document.querySelectorAll('.crystal-card').forEach(card => {
+                    card.addEventListener('click', (e) => {
+                        this.selectCrystal(e.currentTarget);
+                    });
+                });
+
+                // Intention analysis
+                document.getElementById('analyzeIntention').addEventListener('click', () => {
+                    this.analyzeIntention();
+                });
+
+                // Crystal resonance analysis
+                document.getElementById('analyzeCrystalResonance').addEventListener('click', () => {
+                    this.analyzeCrystalResonance();
+                });
+            }
+
+            setFrequency(frequency) {
+                this.currentFrequency = frequency;
+                document.getElementById('currentFrequency').textContent = `${frequency} Hz`;
+                document.getElementById('sliderValue').textContent = `${frequency} Hz`;
+                
+                const chakra = this.getChakraForFrequency(frequency);
+                this.updateChakraDisplay(chakra);
+                this.updateFrequencyDescription(frequency, chakra);
+                
+                if (this.isPlaying) {
+                    this.stopFrequency();
+                    this.playFrequency();
+                }
+            }
+
+            getChakraForFrequency(frequency) {
+                const chakraRanges = {
+                    'root': { min: 256, max: 288, color: '#FF0000' },
+                    'sacral': { min: 289, max: 320, color: '#FFA500' },
+                    'solar': { min: 321, max: 352, color: '#FFFF00' },
+                    'heart': { min: 353, max: 384, color: '#00FF00' },
+                    'throat': { min: 385, max: 416, color: '#0000FF' },
+                    'thirdEye': { min: 417, max: 448, color: '#4B0082' },
+                    'crown': { min: 449, max: 480, color: '#9400D3' }
+                };
+
+                for (let [name, data] of Object.entries(chakraRanges)) {
+                    if (frequency >= data.min && frequency <= data.max) {
+                        return { name, ...data };
+                    }
+                }
+                
+                // Default to root if no match
+                return { name: 'root', color: '#FF0000' };
+            }
+
+            updateChakraDisplay(chakra) {
+                document.querySelectorAll('.chakra-indicator').forEach(indicator => {
+                    indicator.style.opacity = '0.3';
+                });
+                
+                const activeIndex = ['root', 'sacral', 'solar', 'heart', 'throat', 'thirdEye', 'crown']
+                    .indexOf(chakra.name);
+                if (activeIndex >= 0) {
+                    document.querySelectorAll('.chakra-indicator')[activeIndex].style.opacity = '1';
+                }
+            }
+
+            updateFrequencyDescription(frequency, chakra) {
+                const descriptions = {
+                    'root': 'Grounding and Stability - Root Chakra Alignment',
+                    'sacral': 'Creativity and Flow - Sacral Chakra Activation',
+                    'solar': 'Personal Power and Confidence - Solar Plexus Harmony',
+                    'heart': 'Love and Compassion - Heart Chakra Opening',
+                    'throat': 'Communication and Expression - Throat Chakra Balance',
+                    'thirdEye': 'Intuition and Insight - Third Eye Awakening',
+                    'crown': 'Spiritual Connection - Crown Chakra Expansion'
+                };
+
+                document.getElementById('frequencyDescription').textContent = 
+                    descriptions[chakra.name] || 'Universal frequency for spiritual alignment';
+            }
+
+            playFrequency() {
+                if (!this.audioContext) return;
+
+                if (this.isPlaying) return;
+
+                this.oscillator = this.audioContext.createOscillator();
+                this.gainNode = this.audioContext.createGain();
+                
+                this.oscillator.frequency.value = this.currentFrequency;
+                this.oscillator.type = 'sine';
+                
+                this.gainNode.gain.value = 0.3;
+                
+                this.oscillator.connect(this.gainNode);
+                this.gainNode.connect(this.audioContext.destination);
+                
+                this.oscillator.start();
+                this.isPlaying = true;
+                
+                document.getElementById('playBtn').innerHTML = '<i class="fas fa-pause"></i>';
+            }
+
+            stopFrequency() {
+                if (!this.oscillator) return;
+
+                this.oscillator.stop();
+                this.oscillator = null;
+                this.isPlaying = false;
+                
+                document.getElementById('playBtn').innerHTML = '<i class="fas fa-play"></i>';
+            }
+
+            generateHarmonics() {
+                const harmonics = [];
+                const baseFreq = this.currentFrequency;
+
+                // Include octaves if checked
+                if (document.getElementById('octaves').checked) {
+                    harmonics.push(baseFreq * 2, baseFreq * 4, baseFreq * 8);
+                }
+
+                // Include fifths if checked
+                if (document.getElementById('fifths').checked) {
+                    harmonics.push(baseFreq * 1.5, baseFreq * 3, baseFreq * 6);
+                }
+
+                // Include Schumann if checked
+                if (document.getElementById('schumann').checked) {
+                    harmonics.push(7.83, 14.3, 20.8);
+                }
+
+                // Include planetary if checked
+                if (document.getElementById('planetary').checked) {
+                    const planetaryFreqs = [136.1, 210.42, 126.22, 141.27, 221.23];
+                    harmonics.push(...planetaryFreqs);
+                }
+
+                this.displayHarmonics(harmonics);
+            }
+
+            displayHarmonics(hrequencies) {
+                const output = document.getElementById('harmonicOutput');
+                const container = document.getElementById('harmonicFrequencies');
+                
+                container.innerHTML = '';
+                
+                frequencies.forEach(freq => {
+                    const col = document.createElement('div');
+                    col.className = 'col-md-3 col-sm-6 mb-2';
+                    col.innerHTML = `
+                        <div class="text-center p-2 bg-dark rounded">
+                            <h5>${freq.toFixed(2)} Hz</h5>
+                            <button class="btn btn-sm btn-outline-light" onclick="synthesizer.playHarmonic(${freq})">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    `;
+                    container.appendChild(col);
+                });
+                
+                output.style.display = 'block';
+            }
+
+            playHarmonic(frequency) {
+                const tempOsc = this.audioContext.createOscillator();
+                const tempGain = this.audioContext.createGain();
+                
+                tempOsc.frequency.value = frequency;
+                tempOsc.type = 'sine';
+                tempGain.gain.value = 0.2;
+                
+                tempOsc.connect(tempGain);
+                tempGain.connect(this.audioContext.destination);
+                
+                tempOsc.start();
+                tempGain.gain.exponentialRampToValueAtTime(0.01, this.audioContext.currentTime + 2);
+                tempOsc.stop(this.audioContext.currentTime + 2);
+            }
+
+            selectCrystal(crystalCard) {
+                // Remove previous selections
+                document.querySelectorAll('.crystal-card').forEach(card => {
+                    card.style.borderColor = 'var(--primary-gold)';
+                });
+                
+                // Highlight selected crystal
+                crystalCard.style.borderColor = '#00FF00';
+                
+                const crystal = crystalCard.dataset.crystal;
+                this.suggestCrystalAmplification(crystal);
+            }
+
+            suggestCrystalAmplification(crystal) {
+                const suggestions = {
+                    'clear-quartz': 'Clear Quartz amplifies any frequency by 40-50%. Perfect for meditation and energy work.',
+                    'amethyst': 'Amethyst enhances spiritual frequencies and promotes intuitive states.',
+                    'rose-quartz': 'Rose Quartz adds heart-centered energy to any frequency for emotional healing.',
+                    'citrine': 'Citrine boosts manifestation frequencies and abundance energies.',
+                    'black-tourmaline': 'Black Tourmaline grounds frequencies and provides protection during energy work.',
+                    'selenite': 'Selenite cleanses and purifies frequencies, enhancing their spiritual effectiveness.'
+                };
+
+                const alert = document.createElement('div');
+                alert.className = 'alert alert-info mt-3';
+                alert.innerHTML = `<i class="fas fa-gem"></i> <strong>${crystal.replace('-', ' ').toUpperCase()}:</strong> ${suggestions[crystal]}`;
+                
+                document.getElementById('amplificationSuggestions').appendChild(alert);
+            }
+
+            analyzeIntention() {
+                const intention = document.getElementById('intentionInput').value;
+                if (!intention) return;
+
+                const amplifications = this.amplificationEngine.getAmplifications(intention, 'text');
+                this.displayAnalysisResults(amplifications);
+            }
+
+            displayAnalysisResults(amplifications) {
+                // Update resonance meters
+                const resonance = Math.min(amplifications.amplifications.gematria[0].value * 3, 100);
+                document.getElementById('chakraResonance').style.width = `${resonance}%`;
+                
+                const amplification = Math.min(amplifications.amplifications.gematria[0].value * 2.5, 100);
+                document.getElementById('amplificationMeter').style.width = `${amplification}%`;
+                
+                // Update suggestions based on analysis
+                this.updateSuggestions(amplifications);
+            }
+
+            updateSuggestions(amplifications) {
+                const container = document.getElementById('amplificationSuggestions');
+                container.innerHTML = '';
+
+                // Add frequency suggestion
+                if (amplifications.amplifications.frequencies.length > 0) {
+                    const freq = amplifications.amplifications.frequencies[0];
+                    const alert = document.createElement('div');
+                    alert.className = 'alert alert-info';
+                    alert.innerHTML = `
+                        <i class="fas fa-wave-square"></i> 
+                        <strong>Optimal Frequency:</strong> ${freq.baseFrequency} Hz - ${freq.description}
+                    `;
+                    container.appendChild(alert);
+                }
+
+                // Add crystal suggestion
+                if (amplifications.amplifications.crystals.length > 0) {
+                    const crystal = amplifications.amplifications.crystals[0];
+                    const alert = document.createElement('div');
+                    alert.className = 'alert alert-success';
+                    alert.innerHTML = `
+                        <i class="fas fa-gem"></i> 
+                        <strong>Crystal Ally:</strong> ${crystal.name} - ${crystal.properties.join(', ')}
+                    `;
+                    container.appendChild(alert);
+                }
+
+                // Add sigil suggestion
+                if (amplifications.amplifications.sigils) {
+                    const sigil = amplifications.amplifications.sigils;
+                    const alert = document.createElement('div');
+                    alert.className = 'alert alert-warning';
+                    alert.innerHTML = `
+                        <i class="fas fa-draw-polygon"></i> 
+                        <strong>Sigil Activation:</strong> ${sigil.geometry.primaryShape} geometry with ${sigil.intention} intention
+                    `;
+                    container.appendChild(alert);
+                }
+            }
+
+            analyzeCrystalResonance() {
+                const crystals = document.querySelectorAll('.crystal-card');
+                let maxResonance = 0;
+                let bestCrystal = null;
+
+                crystals.forEach(crystal => {
+                    const resonance = Math.random() * 100; // Simplified calculation
+                    if (resonance > maxResonance) {
+                        maxResonance = resonance;
+                        bestCrystal = crystal.dataset.crystal;
+                    }
+                });
+
+                // Highlight best crystal
+                crystals.forEach(crystal => {
+                    crystal.style.borderColor = crystal.dataset.crystal === bestCrystal ? '#00FF00' : 'var(--primary-gold)';
+                });
+
+                // Show analysis
+                const alert = document.createElement('div');
+                alert.className = 'alert alert-success mt-3';
+                alert.innerHTML = `
+                    <i class="fas fa-check-circle"></i> 
+                    <strong>Best Resonance:</strong> ${bestCrystal.replace('-', ' ').toUpperCase()} 
+                    shows ${maxResonance.toFixed(1)}% compatibility with ${this.currentFrequency} Hz
+                `;
+                
+                document.getElementById('amplificationSuggestions').appendChild(alert);
+            }
+        }
+
+        // Initialize the synthesizer
+        const synthesizer = new QuantumFrequencySynthesizer();
+    </script>
+</body>
+</html>

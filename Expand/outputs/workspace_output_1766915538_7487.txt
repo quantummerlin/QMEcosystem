@@ -1,0 +1,16 @@
+            
+            const weekPlanHTML = selectedSplit.weekPlan.map((task, index) => {
+                const weekTitles = [
+                    'Week 1: Awareness & Recognition',
+                    'Week 2: Small Integration Experiments', 
+                    'Week 3: Conscious Merging Practice',
+                    'Week 4: Full Integration & Reflection'
+                ];
+                return `
+                    <div class="week-block">
+                        <div class="week-title">${weekTitles[Math.min(index, 3)]}</div>
+                        <div class="week-tasks">${task}</div>
+                    </div>
+                `;
+            }).join('');
+            

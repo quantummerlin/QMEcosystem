@@ -1,0 +1,115 @@
+8:    <meta name="keywords" content="western astrology, zodiac signs, cosmic guidance, quantum astrology, quantum merlin">
+9-    
+10-    <!-- Favicon -->
+11-    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
+12-    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
+13-    
+14-    <!-- Open Graph -->
+--
+18:    <meta property="og:url" content="https://astrology.quantummerlin.com">
+19-    
+20-    <style>
+21-        * {
+22-            margin: 0;
+23-            padding: 0;
+24-            box-sizing: border-box;
+--
+248:        .astrology-grid {
+249-            display: grid;
+250-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+251-            gap: 25px;
+252-            margin-bottom: 30px;
+253-        }
+254-
+255:        .astrology-card {
+256-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+257-            border: 1px solid rgba(255, 215, 0, 0.2);
+258-            border-radius: 20px;
+259-            padding: 25px;
+260-            backdrop-filter: blur(10px);
+261-            transition: all 0.3s ease;
+--
+264:        .astrology-card:hover {
+265-            transform: translateY(-5px);
+266-            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.4);
+267-        }
+268-
+269-        .card-title {
+270-            font-size: 1.5em;
+--
+386:            .astrology-grid {
+387-                grid-template-columns: 1fr;
+388-            }
+389-            
+390-            .alignment-number {
+391-                font-size: 3em;
+392-            }
+--
+411:            <a href="astrology.html">⭐ Western Astrology</a>
+412-            <a href="chinese.html">🐲 Chinese Zodiac</a>
+413-            <a href="forecasts.html">🔮 Zodiac Forecasts</a>
+414-            <a href="codes.html">💫 Reality Codes</a>
+415-            <a href="crystals.html">💎 Quantum Crystals</a>
+416-            <a href="water.html">💧 Water Charging</a>
+417-        </div>
+--
+459:            <div class="astrology-grid" id="astrologyGrid">
+460-                <!-- Astrology cards will be dynamically added here -->
+461-            </div>
+462-
+463-            <!-- Quantum Interpretation -->
+464:            <div class="astrology-card">
+465-                <h3 class="card-title">✨ Quantum Cosmic Interpretation</h3>
+466-                <div class="card-content" id="quantumInterpretation">
+467-                    Your quantum cosmic profile...
+468-                </div>
+469-                
+470-                <div class="frequency-recommendation">
+--
+642:        // Calculate astrology
+643-        function calculateAstrology() {
+644-            const birthDate = document.getElementById('birthDate').value;
+645-            const birthTime = document.getElementById('birthTime').value;
+646-            const birthLocation = document.getElementById('birthLocation').value;
+647-            
+648-            if (!birthDate) {
+--
+690:            // Simplified rising sign calculation (in real astrology this would need exact time and location)
+691-            if (!time) {
+692-                return 'Unknown (requires birth time)';
+693-            }
+694-            
+695-            const hours = parseInt(time.split(':')[0]);
+696-            const signs = Object.keys(zodiacSigns);
+--
+703:            const grid = document.getElementById('astrologyGrid');
+704-            grid.innerHTML = '';
+705-            
+706-            // Sun Sign Card
+707-            const sunCard = createAstrologyCard('Sun Sign', sunSign, zodiacSigns[sunSign]);
+708-            grid.appendChild(sunCard);
+709-            
+--
+738:            card.className = 'astrology-card';
+739-            
+740-            card.innerHTML = `
+741-                <h3 class="card-title">
+742-                    <span class="zodiac-symbol">${data.symbol}</span>
+743-                    ${title}: ${sign}
+744-                </h3>
+--
+778:            card.className = 'astrology-card';
+779-            
+780-            card.innerHTML = `
+781-                <h3 class="card-title">🌟 Element Analysis</h3>
+782-                <div class="card-content">
+783-                    <p><strong>Dominant Element:</strong> ${dominantElement}</p>
+784-                    <p><strong>Element Balance:</strong></p>
+--
+897:                    type: 'astrology',
+898-                    sign: sign,
+899-                    signType: type.toLowerCase()
+900-                },
+901-                savedAt: new Date().toISOString()
+902-            };
+903-            

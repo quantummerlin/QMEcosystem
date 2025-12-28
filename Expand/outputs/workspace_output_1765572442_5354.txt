@@ -1,0 +1,3 @@
+/workspace/genesis/js/frequency-database.js
+/workspace/genesis/js/audio-engine.js
+/workspace/quantum-merlin/genesis/frequency-generator.js

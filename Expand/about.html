@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Quantum Merlin - A Project About Meaning, Belief, and Human Experience</title>
-    <meta name="description" content="Learn about Quantum Merlin's philosophy of symbolic exploration, belief mechanics, and transparent approach to spiritual tools for reflection and personal growth.">
+    <title>About Quantum Merlin - Our Story & Mission</title>
+    <meta name="description" content="Discover the story behind Quantum Merlin and Quantum Rose. Learn how we're making spiritual technology accessible to everyone.">
+    <meta name="keywords" content="about quantum merlin, quantum rose, spiritual technology, our story, mission">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Quantum Merlin - Our Story & Mission">
+    <meta property="og:description" content="Discover the story behind Quantum Merlin and Quantum Rose. Learn how we're making spiritual technology accessible to everyone.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/about">
     
     <style>
         * {
@@ -12,15 +23,17 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0e27 0%, #1a0b2e 50%, #2a1b3e 100%);
+            background: #0a0a0a;
             color: #ffffff;
-            line-height: 1.7;
-            min-height: 100vh;
+            line-height: 1.8;
+            overflow-x: hidden;
+            position: relative;
         }
-        
+
+        /* Quantum Grid Background */
         .quantum-grid {
             position: fixed;
             top: 0;
@@ -28,342 +41,674 @@
             width: 100%;
             height: 100%;
             background-image: 
-                linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
+                linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.1), transparent 70%);
+            background-size: 50px 50px, 50px 50px, 200px 200px;
             animation: gridMove 20s linear infinite;
-            z-index: 1;
+            z-index: -1;
         }
-        
+
         @keyframes gridMove {
             0% { transform: translate(0, 0); }
             100% { transform: translate(50px, 50px); }
         }
-        
+
+        /* Quantum Sun */
         .quantum-sun {
             position: fixed;
             top: 10%;
             right: 10%;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(255, 204, 0, 0.3) 0%, rgba(147, 51, 234, 0.2) 50%, transparent 70%);
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            filter: blur(40px);
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.3), rgba(255, 215, 0, 0.1), transparent);
             animation: sunPulse 4s ease-in-out infinite;
-            z-index: 2;
+            z-index: -1;
         }
-        
+
         @keyframes sunPulse {
-            0%, 100% { transform: scale(1); opacity: 0.7; }
-            50% { transform: scale(1.2); opacity: 0.9; }
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.2); opacity: 0.6; }
         }
-        
-        .container {
-            position: relative;
-            z-index: 10;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
+
+        /* Header */
         header {
-            text-align: center;
-            margin-bottom: 50px;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(0, 255, 255, 0.2));
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        
-        h1 {
-            font-size: 3em;
-            background: linear-gradient(45deg, #9333ea, #ec4899, #f59e0b);
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #8a2be2, #00ffff, #ffd700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-            text-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+            background-clip: text;
         }
-        
-        .subtitle {
-            font-size: 1.3em;
-            color: #b794f6;
-            margin-bottom: 30px;
+
+        .nav-menu {
+            position: relative;
         }
-        
-        .content-section {
-            background: rgba(255, 255, 255, 0.05);
+
+        .nav-toggle {
+            background: linear-gradient(135deg, #8a2be2, #00ffff);
+            border: none;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.4);
+        }
+
+        .nav-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(20, 20, 40, 0.95);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(147, 51, 234, 0.3);
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 30px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 10px;
+            margin-top: 0.5rem;
+            min-width: 250px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
         }
-        
-        h2 {
-            font-size: 2em;
-            color: #f59e0b;
-            margin-bottom: 20px;
+
+        .nav-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-item {
+            display: block;
+            padding: 0.8rem 1.2rem;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-item:hover {
+            background: rgba(138, 43, 226, 0.2);
+            padding-left: 1.5rem;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #8a2be2, #00ffff, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.2); }
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #00ffff;
+            margin-bottom: 2rem;
+        }
+
+        /* Divine Guides Section */
+        .divine-guides {
             display: flex;
-            align-items: center;
-            gap: 15px;
+            justify-content: center;
+            gap: 4rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
         }
-        
-        h3 {
-            font-size: 1.5em;
-            color: #e9d5ff;
-            margin: 30px 0 15px 0;
-        }
-        
-        p {
-            color: #b794f6;
-            margin-bottom: 20px;
-            font-size: 1.1em;
-        }
-        
-        ul, ol {
-            color: #b794f6;
-            margin-left: 30px;
-            margin-bottom: 20px;
-        }
-        
-        li {
-            margin-bottom: 10px;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(147, 51, 234, 0.2));
-            border: 1px solid rgba(245, 158, 11, 0.4);
+
+        .guide {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(20, 20, 40, 0.6);
             border-radius: 15px;
-            padding: 30px;
-            margin: 30px 0;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            flex: 1;
+            max-width: 300px;
+            transition: all 0.3s ease;
         }
-        
-        .emphasis {
-            color: #f59e0b;
+
+        .guide:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.4);
+        }
+
+        .guide.merlin {
+            border-color: rgba(138, 43, 226, 0.5);
+        }
+
+        .guide.rose {
+            border-color: rgba(255, 20, 147, 0.5);
+        }
+
+        .guide-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .guide.rose .guide-icon {
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .guide-name {
+            font-size: 1.8rem;
             font-weight: bold;
+            margin-bottom: 0.5rem;
         }
-        
+
+        .guide.merlin .guide-name {
+            color: #8a2be2;
+        }
+
+        .guide.rose .guide-name {
+            color: #ff1493;
+        }
+
+        .guide-title {
+            color: #00ffff;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .guide-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+        /* Story Section */
+        .story-section {
+            margin: 4rem 0;
+            padding: 3rem;
+            background: rgba(20, 20, 40, 0.8);
+            border-radius: 20px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #8a2be2, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .story-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+
+        .story-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .story-content .highlight {
+            color: #ffd700;
+            font-weight: 500;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(0, 255, 255, 0.1));
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .mission-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .mission-point {
+            background: rgba(20, 20, 40, 0.6);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .mission-point:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 255, 255, 0.5);
+        }
+
+        .mission-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .mission-title {
+            font-size: 1.3rem;
+            color: #00ffff;
+            margin-bottom: 1rem;
+        }
+
+        .mission-description {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        /* Technology Section */
+        .tech-section {
+            margin: 4rem 0;
+            padding: 3rem;
+            background: rgba(20, 20, 40, 0.8);
+            border-radius: 20px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .tech-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .tech-feature {
+            background: rgba(138, 43, 226, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #8a2be2;
+        }
+
+        .tech-feature h4 {
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-feature p {
+            color: #cccccc;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
         .cta-section {
             text-align: center;
-            margin: 50px 0;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(0, 255, 255, 0.2));
+            border-radius: 20px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
         }
-        
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #8a2be2, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
         .cta-button {
-            background: linear-gradient(45deg, #9333ea, #7c3aed);
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 25px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 10px;
-            text-decoration: none;
             display: inline-block;
-        }
-        
-        .cta-button:hover {
-            background: linear-gradient(45deg, #7c3aed, #6d28d9);
-            transform: scale(1.05);
-        }
-        
-        .footer-nav {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(147, 51, 234, 0.3);
-        }
-        
-        .footer-nav a {
-            color: #e9d5ff;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #8a2be2, #00ffff);
+            color: white;
             text-decoration: none;
-            margin: 0 15px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.5);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid #8a2be2;
+        }
+
+        .cta-button.secondary:hover {
+            background: rgba(138, 43, 226, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(20, 20, 40, 0.8);
+            padding: 2rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-link {
+            color: #00ffff;
+            text-decoration: none;
             transition: color 0.3s ease;
         }
-        
-        .footer-nav a:hover {
-            color: #f59e0b;
+
+        .footer-link:hover {
+            color: #8a2be2;
         }
-        
+
+        .disclaimer {
+            font-size: 0.8rem;
+            color: #999999;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2em;
+            .hero h1 {
+                font-size: 2.5rem;
             }
-            .container {
-                padding: 20px 15px;
+
+            .divine-guides {
+                gap: 2rem;
             }
-            .content-section {
-                padding: 25px;
+
+            .guide {
+                max-width: 250px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
+    <!-- Quantum Effects -->
     <div class="quantum-grid"></div>
     <div class="quantum-sun"></div>
-    
-    <div class="container">
-        <header>
-            <h1>About Quantum Merlin</h1>
-            <p class="subtitle">A Project About Meaning, Belief, and Human Experience</p>
-        </header>
-        
-        <section class="content-section">
-            <p>
-                <strong>Quantum Merlin is a collection of interactive tools designed for reflection, exploration, and creative engagement with symbolic systems such as sound, numbers, astrology, tarot, runes, crystals, and ritual.</strong>
-            </p>
-            
-            <p>
-                These tools are not presented as objective truths or guaranteed mechanisms for change. Instead, they exist as interfaces for attention, intention, and meaning — ways for people to slow down, focus, and engage more consciously with their own lives.
-            </p>
-        </section>
-        
-        <section class="content-section">
-            <h2>🔮 Why These Tools Exist</h2>
-            
-            <p>
-                Across history and culture, humans have always used symbolic frameworks to make sense of the world:
-            </p>
-            
-            <ul>
-                <li>religions</li>
-                <li>myths</li>
-                <li>rituals</li>
-                <li>numbers</li>
-                <li>stories</li>
-                <li>sound and music</li>
-                <li>archetypes and images</li>
-            </ul>
-            
-            <p>
-                Tarot, runes, astrology, numerology, gematria, and similar systems appear in many forms across time and geography. While their symbols differ, the underlying pattern is remarkably consistent.
-            </p>
-            
-            <div class="highlight-box">
-                <p>
-                    A person engages with a system they trust.<br>
-                    Meaning is assigned.<br>
-                    Attention becomes focused.<br>
-                    Insight, reflection, and change often follow.
-                </p>
-            </div>
-            
-            <p>
-                This project explores that common denominator.
-            </p>
-        </section>
-        
-        <section class="content-section">
-            <h2>🧠 How These Systems "Work" in Practice</h2>
-            
-            <p>
-                From a practical perspective, systems like tarot, runes, soul readings, Akashic records, numerology, and gematria do not function because symbols independently control reality.
-            </p>
-            
-            <p>
-                They function because humans are meaning-making beings.
-            </p>
-            
-            <p>
-                When someone engages sincerely with symbolic material:
-            </p>
-            
-            <ul>
-                <li>attention narrows</li>
-                <li>emotional relevance increases</li>
-                <li>patterns are noticed</li>
-                <li>internal narratives shift</li>
-            </ul>
-            
-            <p>
-                This process is well documented across psychology, anthropology, philosophy, and cognitive science. The experience can feel profound, personal, and even uncanny — not because the system "knows" the future, but because the person engaging with it knows far more about themselves than they often realise.
-            </p>
-        </section>
-        
-        <section class="content-section">
-            <h2>🌟 Personal Belief & Transparency</h2>
-            
-            <p>
-                <strong>I personally find these systems meaningful and believe they can be useful as tools for reflection, intention, and perspective.</strong>
-            </p>
-            
-            <p>
-                At the same time, it's important to be realistic and transparent. This project does not present a single, proven model of how reality works. It is an ongoing exploration — piecing together stories, theories, traditions, and ideas from many sources: psychology, symbolism, spirituality, numerology, sound, ritual, and personal experience.
-            </p>
-            
-            <p>
-                Some people may interpret these tools spiritually. Others psychologically. Others creatively or philosophically. All of those interpretations are valid.
-            </p>
-        </section>
-        
-        <section class="content-section">
-            <h2>✅ What This Project Is — and Is Not</h2>
-            
-            <h3>Quantum Merlin is:</h3>
-            <ul>
-                <li>a space for exploration and reflection</li>
-                <li>a collection of symbolic tools</li>
-                <li>an invitation to engage with meaning intentionally</li>
-                <li>a creative experiment in human belief systems</li>
-            </ul>
-            
-            <h3>Quantum Merlin is not:</h3>
-            <ul>
-                <li>medical advice</li>
-                <li>psychological treatment</li>
-                <li>financial advice</li>
-                <li>a promise of specific outcomes</li>
-                <li>a replacement for professional guidance</li>
-            </ul>
-            
-            <div class="highlight-box">
-                <p>
-                    <strong>Any insight, change, or experience comes from the individual engaging with the tools — not from the tools acting independently.</strong>
-                </p>
-            </div>
-        </section>
-        
-        <section class="content-section">
-            <h2>🛡️ Ethics and Responsibility</h2>
-            
-            <p>
-                Transparency and respect for personal autonomy are central to this project. No claims are made about curing illness, guaranteeing success, or altering reality through force or certainty. Users are encouraged to approach these tools thoughtfully, critically, and in ways that support their own wellbeing.
-            </p>
-            
-            <p>
-                Belief is treated here not as something to exploit, but as something to understand.
-            </p>
-        </section>
-        
-        <section class="content-section">
-            <h2>🎯 An Invitation</h2>
-            
-            <p>
-                If these tools resonate with you, you're invited to explore them at your own pace. If they don't, that's equally valid.
-            </p>
-            
-            <p>
-                This project is not about convincing anyone of a worldview — it's about creating space for curiosity, reflection, and conscious engagement with the stories we tell ourselves about the world and our place within it.
-            </p>
-            
-            <div class="highlight-box">
-                <p>
-                    <strong>Thank you for being here.</strong>
-                </p>
-            </div>
-        </section>
-        
-        <div class="cta-section">
-            <h2 style="color: #f59e0b; margin-bottom: 20px;">Explore the Tools</h2>
-            <a href="https://quantummerlin.com" class="cta-button">🏠 Return Home</a>
-            <a href="https://frequency.quantummerlin.com" class="cta-button">🎵 Frequency Generator</a>
-            <a href="https://gematria.quantummerlin.com" class="cta-button">🔢 Quantum Gematria</a>
-            <a href="https://tarot.quantummerlin.com" class="cta-button">🃏 Quantum Tarot</a>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">✨ Quantum Merlin</div>
+            <nav class="nav-menu">
+                <button class="nav-toggle" onclick="toggleNav()">🔮 Explore Tools</button>
+                <div class="nav-dropdown" id="navDropdown">
+                    <a href="https://frequency.quantummerlin.com" class="nav-item">🎵 Frequency Generator</a>
+                    <a href="https://jukebox.quantummerlin.com" class="nav-item">📚 Quantum Jukebox</a>
+                    <a href="https://gematria.quantummerlin.com" class="nav-item">🔢 Quantum Gematria</a>
+                    <a href="https://tarot.quantummerlin.com" class="nav-item">🃏 Quantum Tarot</a>
+                    <a href="https://sigils.quantummerlin.com" class="nav-item">✨ Sigil Creator</a>
+                    <a href="https://astrology.quantummerlin.com" class="nav-item">🌟 Western Astrology</a>
+                    <a href="https://chinese.quantummerlin.com" class="nav-item">🐲 Chinese Zodiac</a>
+                    <a href="https://forecasts.quantummerlin.com" class="nav-item">🔮 Zodiac Forecasts</a>
+                    <a href="https://codes.quantummerlin.com" class="nav-item">💫 Reality Codes</a>
+                    <a href="https://crystals.quantummerlin.com" class="nav-item">💎 Crystal Wisdom</a>
+                    <a href="https://water.quantummerlin.com" class="nav-item">💧 Water Charging</a>
+                    <a href="/" class="nav-item">🏠 Home</a>
+                    <a href="/contact" class="nav-item">📧 Contact</a>
+                </div>
+            </nav>
         </div>
-        
-        <nav class="footer-nav">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Use</a>
-            <a href="contact.html">Contact</a>
-            <a href="https://quantummerlin.com">Home</a>
-        </nav>
-    </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Our Story</h1>
+            <p class="hero-subtitle">Bridging Ancient Wisdom with Modern Technology</p>
+        </section>
+
+        <!-- Divine Guides -->
+        <section class="divine-guides">
+            <div class="guide merlin">
+                <div class="guide-icon">🧙‍♂️</div>
+                <div class="guide-name">Quantum Merlin</div>
+                <div class="guide-title">The Divine Masculine Guide</div>
+                <p class="guide-description">Master of sacred geometry, quantum codes, and structured manifestation. Merlin brings clarity, logic, and the power of focused intention to help you build the foundation of your dreams.</p>
+            </div>
+            <div class="guide rose">
+                <div class="guide-icon">🌹</div>
+                <div class="guide-name">Quantum Rose</div>
+                <div class="guide-title">The Divine Feminine Guide</div>
+                <p class="guide-description">Keeper of intuitive wisdom, emotional healing, and sacred relationships. Rose guides you through the realms of heart-centered living, nurturing transformation, and flowing with divine timing.</p>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story-section">
+            <h2 class="section-title">The Quantum Merlin Story</h2>
+            <div class="story-content">
+                <p>In a world where ancient spiritual wisdom often feels disconnected from our digital age, a vision emerged: <span class="highlight">What if we could bridge the mystical and the technological?</span> What if the profound insights of ancient masters could meet the precision of modern science?</p>
+                
+                <p>This question sparked the birth of Quantum Merlin. We believed that spiritual technology shouldn't be exclusive or complicated. It should be <span class="highlight">accessible, powerful, and beautifully integrated</span> into our daily lives.</p>
+                
+                <p>Like the legendary Merlin of Arthurian lore, our Quantum Merlin represents mastery of ancient wisdom—numerology, astrology, sacred geometry, and vibrational healing. But we've evolved beyond traditional limitations. By understanding that everything is energy and frequency, we've reimagined these ancient tools through the lens of quantum principles.</p>
+                
+                <p>Yet something was missing. In our journey, we discovered that true transformation requires both structure and flow, both logic and intuition, both the divine masculine and divine feminine. This realization birthed <span class="highlight">Quantum Rose</span>—the perfect balance to Merlin's structured wisdom.</p>
+                
+                <p>Together, Merlin and Rose guide you through a complete ecosystem of spiritual technology. Merlin shows you how to build, structure, and manifest. Rose teaches you how to feel, heal, and flow in harmony with divine timing.</p>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <h2 class="section-title">Our Mission</h2>
+            <div class="mission-points">
+                <div class="mission-point">
+                    <div class="mission-icon">🌍</div>
+                    <h3 class="mission-title">Democratize Spiritual Technology</h3>
+                    <p class="mission-description">Make powerful spiritual tools accessible to everyone, regardless of background or experience. No gates, no elitism—just pure transformation potential.</p>
+                </div>
+                <div class="mission-point">
+                    <div class="mission-icon">🔬</div>
+                    <h3 class="mission-title">Bridge Science & Spirituality</h3>
+                    <p class="mission-description">Honor both ancient wisdom and modern understanding. We believe in exploring the intersection of quantum science and spiritual practice without dogma.</p>
+                </div>
+                <div class="mission-point">
+                    <div class="mission-icon">🤝</div>
+                    <h3 class="mission-title">Empower Personal Transformation</h3>
+                    <p class="mission-description">Provide practical tools that support your unique journey. Whether you're seeking clarity, healing, or manifestation—we're here to serve your growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section class="tech-section">
+            <h2 class="section-title">Our Technology</h2>
+            <div class="tech-features">
+                <div class="tech-feature">
+                    <h4>🎵 674 Frequency Tracks</h4>
+                    <p>Sanitized, legally compliant audio tracks designed for exploration and entertainment.</p>
+                </div>
+                <div class="tech-feature">
+                    <h4>🔢 Advanced Numerology</h4>
+                    <p>Comprehensive gematria and life path calculations with quantum insights.</p>
+                </div>
+                <div class="tech-feature">
+                    <h4>🃏 Complete Tarot System</h4>
+                    <p>Full 78-card tarot with multiple spreads and quantum interpretations.</p>
+                </div>
+                <div class="tech-feature">
+                    <h4>🌟 Dual Astrology Suites</h4>
+                    <p>Both Western and Chinese zodiac systems with compatibility analysis.</p>
+                </div>
+                <div class="tech-feature">
+                    <h4>💫 Reality Code Generator</h4>
+                    <p>Personalized quantum codes for manifestation and consciousness expansion.</p>
+                </div>
+                <div class="tech-feature">
+                    <h4>💎 Crystal Wisdom Database</h4>
+                    <p>Comprehensive crystal encyclopedia with smart recommendations.</p>
+                </div>
+                <div class="tech-feature">
+                    <h4>✨ Dynamic Sigil Creator</h4>
+                    <p>Five styles of sigil generation with download capabilities.</p>
+                </div>
+                <div class="tech-feature">
+                    <h4>💧 Water Charging Assistant</h4>
+                    <p>Animated ritual assistant with timer and frequency guidance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2 class="cta-title">Begin Your Journey</h2>
+            <p class="cta-description">Transform your consciousness with the complete Quantum Merlin ecosystem</p>
+            <div class="cta-buttons">
+                <a href="https://frequency.quantummerlin.com" class="cta-button">🎵 Start Exploring</a>
+                <a href="/#tools" class="cta-button secondary">🔮 View All Tools</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/disclaimer" class="footer-link">Disclaimer</a>
+                <a href="/terms" class="footer-link">Terms of Service</a>
+                <a href="/privacy" class="footer-link">Privacy Policy</a>
+                <a href="/contact" class="footer-link">Contact</a>
+            </div>
+            <div>© 2024 Quantum Merlin. All rights reserved.</div>
+        </div>
+        <div class="disclaimer">
+            🔮 For entertainment and exploration purposes only. Not medical advice. Consult healthcare professionals for medical concerns.
+        </div>
+    </footer>
+
+    <script>
+        // Navigation Toggle
+        function toggleNav() {
+            const dropdown = document.getElementById('navDropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdown = document.getElementById('navDropdown');
+            
+            if (!navMenu.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add entrance animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Observe elements for animation
+            document.querySelectorAll('.mission-point, .tech-feature').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>

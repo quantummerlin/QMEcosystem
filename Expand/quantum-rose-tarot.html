@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Rose Tarot | Quantum Merlin</title>
+    <meta name="description" content="Advanced quantum tarot reading system with archetype amplification and spiritual guidance">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --deep-purple: #1a1a3e;
+            --sacred-blue: #4169E1;
+            --mystic-violet: #8A2BE2;
+            --crystal-white: #f8f9fa;
+            --rose-gold: #E8B4B8;
+            --energy-gradient: linear-gradient(135deg, var(--sacred-blue), var(--mystic-violet));
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 50%, #2d1b69 100%);
+            color: var(--crystal-white);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+        }
+
+        .main-header {
+            background: var(--energy-gradient);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(138, 43, 226, 0.3);
+        }
+
+        .tarot-deck {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .tarot-card {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(138, 43, 226, 0.1));
+            border: 2px solid var(--primary-gold);
+            border-radius: 15px;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .tarot-card:hover {
+            transform: translateY(-10px) rotateY(5deg);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(138, 43, 226, 0.2));
+        }
+
+        .tarot-card.selected {
+            border-color: var(--rose-gold);
+            background: linear-gradient(135deg, rgba(232, 180, 184, 0.2), rgba(138, 43, 226, 0.3));
+            box-shadow: 0 0 25px rgba(232, 180, 184, 0.5);
+        }
+
+        .tarot-card.reversed {
+            transform: rotate(180deg);
+            opacity: 0.8;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .reading-layout {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--primary-gold);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .position-marker {
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px dashed var(--primary-gold);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reading-result {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            backdrop-filter: blur(5px);
+        }
+
+        .spread-option {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .spread-option:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--primary-gold);
+            transform: translateX(5px);
+        }
+
+        .spread-option.active {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: var(--rose-gold);
+        }
+
+        .question-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            color: var(--crystal-white);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .question-input::placeholder {
+            color: rgba(248, 249, 250, 0.5);
+        }
+
+        .btn-rose {
+            background: var(--rose-gold);
+            color: var(--deep-purple);
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-rose:hover {
+            background: #D49195;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(232, 180, 184, 0.3);
+        }
+
+        .interpretation-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--crystal-white);
+            margin: 1rem 0;
+        }
+
+        .archetype-badge {
+            background: var(--energy-gradient);
+            color: var(--crystal-white);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin: 0.2rem;
+            display: inline-block;
+        }
+
+        .energy-indicator {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0.5rem 0;
+        }
+
+        .energy-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--sacred-blue), var(--primary-gold));
+            transition: width 0.5s ease;
+        }
+
+        .card-animation {
+            animation: cardFlip 0.6s ease-in-out;
+        }
+
+        @keyframes cardFlip {
+            0% { transform: rotateY(0deg); }
+            50% { transform: rotateY(90deg); }
+            100% { transform: rotateY(0deg); }
+        }
+
+        .mystical-glow {
+            animation: mysticalPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes mysticalPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(138, 43, 226, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(138, 43, 226, 0.6); }
+        }
+
+        .quantum-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent, rgba(138, 43, 226, 0.1));
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .nav-link {
+            color: var(--crystal-white) !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-gold) !important;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Quantum Overlay Effect -->
+    <div class="quantum-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="main-hub.html">
+                <i class="fas fa-atom"></i> Quantum Merlin
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main-hub.html"><i class="fas fa-home"></i> Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gematria-calculator.html"><i class="fas fa-calculator"></i> Gematria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quantum-sigil-generator.html"><i class="fas fa-draw-polygon"></i> Sigils</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quantum-frequency-synthesizer.html"><i class="fas fa-wave-square"></i> Frequencies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="quantum-rose-tarot.html">
+                            <i class="fas fa-star"></i> Quantum Rose Tarot
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1><i class="fas fa-star"></i> Quantum Rose Tarot</h1>
+            <p class="lead">Advanced Archetype Reading & Spiritual Guidance System</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <!-- Reading Setup -->
+        <div class="reading-layout">
+            <h2><i class="fas fa-question-circle"></i> Reading Setup</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Choose Your Spread</h4>
+                    
+                    <div class="spread-option active" data-spread="single">
+                        <h5><i class="fas fa-circle"></i> Single Card</h5>
+                        <p>Quick insight and daily guidance</p>
+                    </div>
+                    
+                    <div class="spread-option" data-spread="three">
+                        <h5><i class="fas fa-align-left"></i> Three Card Spread</h5>
+                        <p>Past, Present, Future timeline</p>
+                    </div>
+                    
+                    <div class="spread-option" data-spread="celtic">
+                        <h5><i class="fas fa-cross"></i> Celtic Cross</h5>
+                        <p>Comprehensive life situation analysis</p>
+                    </div>
+                    
+                    <div class="spread-option" data-spread="quantum">
+                        <h5><i class="fas fa-atom"></i> Quantum Spread</h5>
+                        <p>Multi-dimensional consciousness reading</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <h4>Your Question</h4>
+                    <textarea class="question-input form-control" id="questionInput" rows="6" 
+                              placeholder="Enter your question or area of focus...&#10;&#10;Examples:&#10;• What energy should I focus on this week?&#10;• What guidance do you have about my career path?&#10;• How can I improve my relationships?&#10;• What is blocking my spiritual growth?"></textarea>
+                    
+                    <div class="mt-3">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" id="useGematria"> 
+                            Integrate Gematria Analysis
+                        </label>
+                    </div>
+                    
+                    <div class="mt-2">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" id="useFrequencies"> 
+                            Include Frequency Resonance
+                        </label>
+                    </div>
+                    
+                    <div class="mt-2">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" id="useCrystals"> 
+                            Crystal Amplification Suggestions
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <button class="btn btn-rose btn-lg" id="shuffleDeck">
+                    <i class="fas fa-random"></i> Shuffle & Draw Cards
+                </button>
+            </div>
+        </div>
+
+        <!-- Card Selection Area -->
+        <div class="reading-layout" id="cardSelectionArea" style="display: none;">
+            <h2><i class="fas fa-hand-pointer"></i> Select Your Cards</h2>
+            <p class="lead">Click the cards that draw your attention - trust your intuition</p>
+            
+            <div class="tarot-deck" id="tarotDeck">
+                <!-- Tarot cards will be generated here -->
+            </div>
+            
+            <div class="text-center mt-4">
+                <button class="btn btn-rose" id="completeReading">
+                    <i class="fas fa-check-circle"></i> Complete Reading
+                </button>
+                <button class="btn btn-secondary ms-2" id="reshuffle">
+                    <i class="fas fa-redo"></i> Reshuffle
+                </button>
+            </div>
+        </div>
+
+        <!-- Reading Results -->
+        <div class="reading-layout" id="readingResults" style="display: none;">
+            <h2><i class="fas fa-scroll"></i> Your Quantum Rose Reading</h2>
+            
+            <div id="spreadLayout">
+                <!-- Spread layout will be generated here -->
+            </div>
+            
+            <div class="reading-result" id="interpretationSection">
+                <h3><i class="fas fa-book-open"></i> Quantum Interpretation</h3>
+                <div id="interpretationText" class="interpretation-text">
+                    <!-- Interpretation will be generated here -->
+                </div>
+            </div>
+            
+            <!-- Amplification Analysis -->
+            <div class="reading-result" id="amplificationSection" style="display: none;">
+                <h3><i class="fas fa-magic"></i> Spiritual Amplification Analysis</h3>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Gematria Connections</h5>
+                        <div id="gematriaAnalysis">
+                            <!-- Gematria analysis here -->
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <h5>Frequency Resonance</h5>
+                        <div id="frequencyAnalysis">
+                            <!-- Frequency analysis here -->
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <h5>Crystal Allies</h5>
+                        <div id="crystalAnalysis">
+                            <!-- Crystal analysis here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <button class="btn btn-rose" id="saveReading">
+                    <i class="fas fa-save"></i> Save Reading
+                </button>
+                <button class="btn btn-secondary ms-2" id="newReading">
+                    <i class="fas fa-plus"></i> New Reading
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2024 Quantum Merlin | Quantum Spiritual Technology</p>
+            <p>
+                <a href="privacy.html" class="text-light">Privacy</a> | 
+                <a href="terms.html" class="text-light">Terms</a> | 
+                <a href="disclaimer.html" class="text-light">Disclaimer</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="amplification-engine.js"></script>
+    <script>
+        // Quantum Rose Tarot System
+        class QuantumRoseTarot {
+            constructor() {
+                this.currentSpread = 'single';
+                this.selectedCards = [];
+                this.question = '';
+                this.amplificationEngine = new UniversalAmplificationEngine();
+                this.tarotDeck = this.initializeTarotDeck();
+                
+                this.initializeEventListeners();
+            }
+
+            initializeTarotDeck() {
+                return [
+                    // Major Arcana
+                    { name: 'The Fool', number: 0, suit: 'Major Arcana', archetype: 'Beginner\'s Mind', element: 'Air', planet: 'Uranus' },
+                    { name: 'The Magician', number: 1, suit: 'Major Arcana', archetype: 'Divine Manifestation', element: 'Earth', planet: 'Mercury' },
+                    { name: 'The High Priestess', number: 2, suit: 'Major Arcana', archetype: 'Sacred Intuition', element: 'Water', planet: 'Moon' },
+                    { name: 'The Empress', number: 3, suit: 'Major Arcana', archetype: 'Divine Mother', element: 'Earth', planet: 'Venus' },
+                    { name: 'The Emperor', number: 4, suit: 'Major Arcana', archetype: 'Sacred Authority', element: 'Fire', planet: 'Aries' },
+                    { name: 'The Hierophant', number: 5, suit: 'Major Arcana', archetype: 'Spiritual Teacher', element: 'Earth', planet: 'Taurus' },
+                    { name: 'The Lovers', number: 6, suit: 'Major Arcana', archetype: 'Sacred Union', element: 'Air', planet: 'Gemini' },
+                    { name: 'The Chariot', number: 7, suit: 'Major Arcana', archetype: 'Spiritual Victory', element: 'Water', planet: 'Cancer' },
+                    { name: 'Strength', number: 8, suit: 'Major Arcana', archetype: 'Inner Power', element: 'Fire', planet: 'Leo' },
+                    { name: 'The Hermit', number: 9, suit: 'Major Arcana', archetype: 'Inner Wisdom', element: 'Earth', planet: 'Virgo' },
+                    { name: 'Wheel of Fortune', number: 10, suit: 'Major Arcana', archetype: 'Destiny', element: 'Fire', planet: 'Jupiter' },
+                    { name: 'Justice', number: 11, suit: 'Major Arcana', archetype: 'Divine Balance', element: 'Air', planet: 'Libra' },
+                    { name: 'The Hanged Man', number: 12, suit: 'Major Arcana', archetype: 'Spiritual Surrender', element: 'Water', planet: 'Neptune' },
+                    { name: 'Death', number: 13, suit: 'Major Arcana', archetype: 'Transformation', element: 'Water', planet: 'Scorpio' },
+                    { name: 'Temperance', number: 14, suit: 'Major Arcana', archetype: 'Divine Alchemy', element: 'Fire', planet: 'Sagittarius' },
+                    { name: 'The Devil', number: 15, suit: 'Major Arcana', archetype: 'Material Bondage', element: 'Earth', planet: 'Capricorn' },
+                    { name: 'The Tower', number: 16, suit: 'Major Arcana', archetype: 'Spiritual Awakening', element: 'Fire', planet: 'Mars' },
+                    { name: 'The Star', number: 17, suit: 'Major Arcana', archetype: 'Divine Hope', element: 'Air', planet: 'Aquarius' },
+                    { name: 'The Moon', number: 18, suit: 'Major Arcana', archetype: 'Illusion & Reality', element: 'Water', planet: 'Pisces' },
+                    { name: 'The Sun', number: 19, suit: 'Major Arcana', archetype: 'Divine Consciousness', element: 'Fire', planet: 'Sun' },
+                    { name: 'Judgement', number: 20, suit: 'Major Arcana', archetype: 'Spiritual Rebirth', element: 'Fire', planet: 'Pluto' },
+                    { name: 'The World', number: 21, suit: 'Major Arcana', archetype: 'Cosmic Completion', element: 'Earth', planet: 'Saturn' },
+                    
+                    // Minor Arcana - Wands
+                    { name: 'Ace of Wands', number: 1, suit: 'Wands', archetype: 'Creative Spark', element: 'Fire' },
+                    { name: 'Two of Wands', number: 2, suit: 'Wands', archetype: 'Future Planning', element: 'Fire' },
+                    { name: 'Three of Wands', number: 3, suit: 'Wands', archetype: 'Expansion', element: 'Fire' },
+                    { name: 'Four of Wands', number: 4, suit: 'Wands', archetype: 'Celebration', element: 'Fire' },
+                    { name: 'Five of Wands', number: 5, suit: 'Wands', archetype: 'Conflict', element: 'Fire' },
+                    { name: 'Six of Wands', number: 6, suit: 'Wands', archetype: 'Victory', element: 'Fire' },
+                    { name: 'Seven of Wands', number: 7, suit: 'Wands', archetype: 'Defense', element: 'Fire' },
+                    { name: 'Eight of Wands', number: 8, suit: 'Wands', archetype: 'Speed', element: 'Fire' },
+                    { name: 'Nine of Wands', number: 9, suit: 'Wands', archetype: 'Resilience', element: 'Fire' },
+                    { name: 'Ten of Wands', number: 10, suit: 'Wands', archetype: 'Burden', element: 'Fire' },
+                    { name: 'Page of Wands', number: 11, suit: 'Wands', archetype: 'Curiosity', element: 'Fire' },
+                    { name: 'Knight of Wands', number: 12, suit: 'Wands', archetype: 'Action', element: 'Fire' },
+                    { name: 'Queen of Wands', number: 13, suit: 'Wands', archetype: 'Passion', element: 'Fire' },
+                    { name: 'King of Wands', number: 14, suit: 'Wands', archetype: 'Leadership', element: 'Fire' },
+                    
+                    // Minor Arcana - Cups
+                    { name: 'Ace of Cups', number: 1, suit: 'Cups', archetype: 'Emotional Beginnings', element: 'Water' },
+                    { name: 'Two of Cups', number: 2, suit: 'Cups', archetype: 'Union', element: 'Water' },
+                    { name: 'Three of Cups', number: 3, suit: 'Cups', archetype: 'Friendship', element: 'Water' },
+                    { name: 'Four of Cups', number: 4, suit: 'Cups', archetype: 'Apathy', element: 'Water' },
+                    { name: 'Five of Cups', number: 5, suit: 'Cups', archetype: 'Loss', element: 'Water' },
+                    { name: 'Six of Cups', number: 6, suit: 'Cups', archetype: 'Nostalgia', element: 'Water' },
+                    { name: 'Seven of Cups', number: 7, suit: 'Cups', archetype: 'Choices', element: 'Water' },
+                    { name: 'Eight of Cups', number: 8, suit: 'Cups', archetype: 'Leaving', element: 'Water' },
+                    { name: 'Nine of Cups', number: 9, suit: 'Cups', archetype: 'Wish Fulfillment', element: 'Water' },
+                    { name: 'Ten of Cups', number: 10, suit: 'Cups', archetype: 'Harmony', element: 'Water' },
+                    { name: 'Page of Cups', number: 11, suit: 'Cups', archetype: 'Sensitivity', element: 'Water' },
+                    { name: 'Knight of Cups', number: 12, suit: 'Cups', archetype: 'Romance', element: 'Water' },
+                    { name: 'Queen of Cups', number: 13, suit: 'Cups', archetype: 'Compassion', element: 'Water' },
+                    { name: 'King of Cups', number: 14, suit: 'Cups', archetype: 'Emotional Mastery', element: 'Water' },
+                    
+                    // Minor Arcana - Swords
+                    { name: 'Ace of Swords', number: 1, suit: 'Swords', archetype: 'Mental Clarity', element: 'Air' },
+                    { name: 'Two of Swords', number: 2, suit: 'Swords', archetype: 'Stalemate', element: 'Air' },
+                    { name: 'Three of Swords', number: 3, suit: 'Swords', archetype: 'Heartbreak', element: 'Air' },
+                    { name: 'Four of Swords', number: 4, suit: 'Swords', archetype: 'Rest', element: 'Air' },
+                    { name: 'Five of Swords', number: 5, suit: 'Swords', archetype: 'Defeat', element: 'Air' },
+                    { name: 'Six of Swords', number: 6, suit: 'Swords', archetype: 'Transition', element: 'Air' },
+                    { name: 'Seven of Swords', number: 7, suit: 'Swords', archetype: 'Deception', element: 'Air' },
+                    { name: 'Eight of Swords', number: 8, suit: 'Swords', archetype: 'Restriction', element: 'Air' },
+                    { name: 'Nine of Swords', number: 9, suit: 'Swords', archetype: 'Anxiety', element: 'Air' },
+                    { name: 'Ten of Swords', number: 10, suit: 'Swords', archetype: 'Rock Bottom', element: 'Air' },
+                    { name: 'Page of Swords', number: 11, suit: 'Swords', archetype: 'Curiosity', element: 'Air' },
+                    { name: 'Knight of Swords', number: 12, suit: 'Swords', archetype: 'Haste', element: 'Air' },
+                    { name: 'Queen of Swords', number: 13, suit: 'Swords', archetype: 'Independence', element: 'Air' },
+                    { name: 'King of Swords', number: 14, suit: 'Swords', archetype: 'Intellectual Authority', element: 'Air' },
+                    
+                    // Minor Arcana - Pentacles
+                    { name: 'Ace of Pentacles', number: 1, suit: 'Pentacles', archetype: 'Material Opportunity', element: 'Earth' },
+                    { name: 'Two of Pentacles', number: 2, suit: 'Pentacles', archetype: 'Balance', element: 'Earth' },
+                    { name: 'Three of Pentacles', number: 3, suit: 'Pentacles', archetype: 'Teamwork', element: 'Earth' },
+                    { name: 'Four of Pentacles', number: 4, suit: 'Pentacles', archetype: 'Possessiveness', element: 'Earth' },
+                    { name: 'Five of Pentacles', number: 5, suit: 'Pentacles', archetype: 'Hardship', element: 'Earth' },
+                    { name: 'Six of Pentacles', number: 6, suit: 'Pentacles', archetype: 'Charity', element: 'Earth' },
+                    { name: 'Seven of Pentacles', number: 7, suit: 'Pentacles', archetype: 'Patience', element: 'Earth' },
+                    { name: 'Eight of Pentacles', number: 8, suit: 'Pentacles', archetype: 'Apprenticeship', element: 'Earth' },
+                    { name: 'Nine of Pentacles', number: 9, suit: 'Pentacles', archetype: 'Abundance', element: 'Earth' },
+                    { name: 'Ten of Pentacles', number: 10, suit: 'Pentacles', archetype: 'Legacy', element: 'Earth' },
+                    { name: 'Page of Pentacles', number: 11, suit: 'Pentacles', archetype: 'Learning', element: 'Earth' },
+                    { name: 'Knight of Pentacles', number: 12, suit: 'Pentacles', archetype: 'Diligence', element: 'Earth' },
+                    { name: 'Queen of Pentacles', number: 13, suit: 'Pentacles', archetype: 'Nurturing', element: 'Earth' },
+                    { name: 'King of Pentacles', number: 14, suit: 'Pentacles', archetype: 'Material Mastery', element: 'Earth' }
+                ];
+            }
+
+            initializeEventListeners() {
+                // Spread selection
+                document.querySelectorAll('.spread-option').forEach(option => {
+                    option.addEventListener('click', (e) => {
+                        this.selectSpread(e.currentTarget);
+                    });
+                });
+
+                // Shuffle and draw
+                document.getElementById('shuffleDeck').addEventListener('click', () => {
+                    this.startReading();
+                });
+
+                // Complete reading
+                document.getElementById('completeReading').addEventListener('click', () => {
+                    this.completeReading();
+                });
+
+                // Reshuffle
+                document.getElementById('reshuffle').addEventListener('click', () => {
+                    this.reshuffleCards();
+                });
+
+                // Save reading
+                document.getElementById('saveReading').addEventListener('click', () => {
+                    this.saveReading();
+                });
+
+                // New reading
+                document.getElementById('newReading').addEventListener('click', () => {
+                    this.newReading();
+                });
+            }
+
+            selectSpread(spreadOption) {
+                document.querySelectorAll('.spread-option').forEach(option => {
+                    option.classList.remove('active');
+                });
+                spreadOption.classList.add('active');
+                
+                this.currentSpread = spreadOption.dataset.spread;
+            }
+
+            startReading() {
+                this.question = document.getElementById('questionInput').value;
+                
+                // Show card selection area
+                document.getElementById('cardSelectionArea').style.display = 'block';
+                
+                // Shuffle and display cards
+                this.displayCardDeck();
+                
+                // Scroll to card selection
+                document.getElementById('cardSelectionArea').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            displayCardDeck() {
+                const deck = document.getElementById('tarotDeck');
+                deck.innerHTML = '';
+                
+                // Shuffle the deck
+                const shuffled = [...this.tarotDeck].sort(() => Math.random() - 0.5);
+                
+                // Display a subset of cards for selection
+                const selectionCards = shuffled.slice(0, this.getCardsNeeded());
+                
+                selectionCards.forEach((card, index) => {
+                    const cardElement = this.createCardElement(card, index);
+                    deck.appendChild(cardElement);
+                });
+            }
+
+            getCardsNeeded() {
+                const requirements = {
+                    'single': 1,
+                    'three': 3,
+                    'celtic': 10,
+                    'quantum': 12
+                };
+                return requirements[this.currentSpread] || 1;
+            }
+
+            createCardElement(card, index) {
+                const cardDiv = document.createElement('div');
+                cardDiv.className = 'tarot-card mystical-glow';
+                cardDiv.dataset.cardName = card.name;
+                cardDiv.dataset.index = index;
+                
+                const icon = this.getCardIcon(card);
+                const elementSymbol = this.getElementSymbol(card.element);
+                
+                cardDiv.innerHTML = `
+                    <div class="card-icon">${icon}</div>
+                    <h6>${card.name}</h6>
+                    <small>${card.suit}</small>
+                    <div class="mt-2">
+                        <span class="archetype-badge">${elementSymbol}</span>
+                        <span class="archetype-badge">${card.archetype}</span>
+                    </div>
+                `;
+                
+                cardDiv.addEventListener('click', () => {
+                    this.selectCard(card, cardDiv);
+                });
+                
+                return cardDiv;
+            }
+
+            getCardIcon(card) {
+                const suitIcons = {
+                    'Wands': '🔥',
+                    'Cups': '💧',
+                    'Swords': '⚔️',
+                    'Pentacles': '🪙',
+                    'Major Arcana': '⭐'
+                };
+                return suitIcons[card.suit] || '🌟';
+            }
+
+            getElementSymbol(element) {
+                const symbols = {
+                    'Fire': '🔥',
+                    'Water': '💧',
+                    'Air': '💨',
+                    'Earth': '🌍'
+                };
+                return symbols[element] || '✨';
+            }
+
+            selectCard(card, cardElement) {
+                if (cardElement.classList.contains('selected')) {
+                    // Deselect card
+                    cardElement.classList.remove('selected');
+                    this.selectedCards = this.selectedCards.filter(c => c.name !== card.name);
+                } else if (this.selectedCards.length < this.getCardsNeeded()) {
+                    // Select card
+                    cardElement.classList.add('selected');
+                    cardElement.classList.add('card-animation');
+                    this.selectedCards.push(card);
+                    
+                    setTimeout(() => {
+                        cardElement.classList.remove('card-animation');
+                    }, 600);
+                }
+                
+                // Enable complete button if enough cards selected
+                if (this.selectedCards.length === this.getCardsNeeded()) {
+                    document.getElementById('completeReading').disabled = false;
+                } else {
+                    document.getElementById('completeReading').disabled = true;
+                }
+            }
+
+            completeReading() {
+                if (this.selectedCards.length !== this.getCardsNeeded()) return;
+                
+                // Hide card selection
+                document.getElementById('cardSelectionArea').style.display = 'none';
+                
+                // Show results
+                document.getElementById('readingResults').style.display = 'block';
+                
+                // Generate reading interpretation
+                this.generateInterpretation();
+                
+                // Generate amplification analysis if requested
+                if (document.getElementById('useGematria').checked || 
+                    document.getElementById('useFrequencies').checked || 
+                    document.getElementById('useCrystals').checked) {
+                    this.generateAmplificationAnalysis();
+                }
+                
+                // Scroll to results
+                document.getElementById('readingResults').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            generateInterpretation() {
+                const layout = document.getElementById('spreadLayout');
+                layout.innerHTML = '';
+                
+                const interpretations = this.generateSpreadInterpretation();
+                
+                // Display spread layout
+                this.displaySpreadLayout(layout, interpretations);
+                
+                // Generate overall interpretation
+                const interpretationText = this.generateOverallInterpretation(interpretations);
+                document.getElementById('interpretationText').innerHTML = interpretationText;
+            }
+
+            generateSpreadInterpretation() {
+                const interpretations = [];
+                
+                switch(this.currentSpread) {
+                    case 'single':
+                        interpretations.push(this.interpretSingleCard(this.selectedCards[0]));
+                        break;
+                    case 'three':
+                        interpretations.push(this.interpretCard(this.selectedCards[0], 'Past'));
+                        interpretations.push(this.interpretCard(this.selectedCards[1], 'Present'));
+                        interpretations.push(this.interpretCard(this.selectedCards[2], 'Future'));
+                        break;
+                    case 'celtic':
+                        interpretations.push(this.interpretCard(this.selectedCards[0], 'Present'));
+                        interpretations.push(this.interpretCard(this.selectedCards[1], 'Challenge'));
+                        interpretations.push(this.interpretCard(this.selectedCards[2], 'Past'));
+                        interpretations.push(this.interpretCard(this.selectedCards[3], 'Future'));
+                        interpretations.push(this.interpretCard(this.selectedCards[4], 'Consciousness'));
+                        interpretations.push(this.interpretCard(this.selectedCards[5], 'Unconscious'));
+                        interpretations.push(this.interpretCard(this.selectedCards[6], 'External Influences'));
+                        interpretations.push(this.interpretCard(this.selectedCards[7], 'Hopes & Fears'));
+                        interpretations.push(this.interpretCard(this.selectedCards[8], 'Outcome'));
+                        interpretations.push(this.interpretCard(this.selectedCards[9], 'Spiritual Guidance'));
+                        break;
+                    case 'quantum':
+                        interpretations.push(this.interpretCard(this.selectedCards[0], 'Physical Realm'));
+                        interpretations.push(this.interpretCard(this.selectedCards[1], 'Emotional Realm'));
+                        interpretations.push(this.interpretCard(this.selectedCards[2], 'Mental Realm'));
+                        interpretations.push(this.interpretCard(this.selectedCards[3], 'Spiritual Realm'));
+                        interpretations.push(this.interpretCard(this.selectedCards[4], 'Past Life'));
+                        interpretations.push(this.interpretCard(this.selectedCards[5], 'Future Self'));
+                        interpretations.push(this.interpretCard(this.selectedCards[6], 'Higher Self'));
+                        interpretations.push(this.interpretCard(this.selectedCards[7], 'Shadow Self'));
+                        interpretations.push(this.interpretCard(this.selectedCards[8], 'Soul Purpose'));
+                        interpretations.push(this.interpretCard(this.selectedCards[9], 'Karmic Pattern'));
+                        interpretations.push(this.interpretCard(this.selectedCards[10], 'Spiritual Lesson'));
+                        interpretations.push(this.interpretCard(this.selectedCards[11], 'Divine Guidance'));
+                        break;
+                }
+                
+                return interpretations;
+            }
+
+            interpretSingleCard(card) {
+                const meaning = this.getCardMeaning(card);
+                return {
+                    card: card,
+                    position: 'Guidance',
+                    interpretation: meaning
+                };
+            }
+
+            interpretCard(card, position) {
+                const meaning = this.getPositionalMeaning(card, position);
+                return {
+                    card: card,
+                    position: position,
+                    interpretation: meaning
+                };
+            }
+
+            getCardMeaning(card) {
+                // Simplified card meanings - in production, this would be a comprehensive database
+                const meanings = {
+                    'The Fool': 'New beginnings, innocence, freedom, adventure',
+                    'The Magician': 'Manifestation, willpower, creation, resourcefulness',
+                    'The High Priestess': 'Intuition, sacred knowledge, divine feminine',
+                    'The Empress': 'Abundance, fertility, nurturing, creativity',
+                    'The Emperor': 'Authority, structure, control, father figure',
+                    'The Hierophant': 'Spiritual wisdom, tradition, conformity',
+                    'The Lovers': 'Partnership, choices, harmony, relationships',
+                    'The Chariot': 'Victory, determination, willpower, self-control',
+                    'Strength': 'Inner strength, courage, compassion, self-control',
+                    'The Hermit': 'Soul searching, introspection, inner guidance',
+                    'Wheel of Fortune': 'Destiny, change, cycles, luck',
+                    'Justice': 'Fairness, truth, cause and effect, law',
+                    'The Hanged Man': 'Surrender, new perspectives, sacrifice',
+                    'Death': 'Transformation, endings, change, transition',
+                    'Temperance': 'Balance, moderation, patience, purpose',
+                    'The Devil': 'Bondage, materialism, temptation, ignorance',
+                    'The Tower': 'Upheaval, chaos, revelation, awakening',
+                    'The Star': 'Hope, inspiration, serenity, healing',
+                    'The Moon': 'Illusion, anxiety, subconscious, confusion',
+                    'The Sun': 'Joy, success, vitality, positivity',
+                    'Judgement': 'Rebirth, inner calling, absolution, examination',
+                    'The World': 'Completion, integration, accomplishment, travel'
+                };
+                
+                return meanings[card.name] || `${card.name} - ${card.archetype}`;
+            }
+
+            getPositionalMeaning(card, position) {
+                const baseMeaning = this.getCardMeaning(card);
+                
+                const positionalContext = {
+                    'Past': `In your past, ${card.name} suggests ${baseMeaning.toLowerCase()}. This energy has shaped your current situation.`,
+                    'Present': `Currently, ${card.name} indicates ${baseMeaning.toLowerCase()}. This is the active energy in your life right now.`,
+                    'Future': `Moving forward, ${card.name} points to ${baseMeaning.toLowerCase()}. This is the potential outcome or direction.`,
+                    'Challenge': `The challenge you face is represented by ${card.name}, bringing ${baseMeaning.toLowerCase()}.`,
+                    'Consciousness': `Your conscious awareness is influenced by ${card.name}, emphasizing ${baseMeaning.toLowerCase()}.`,
+                    'Unconscious': `Deep in your unconscious, ${card.name} operates through ${baseMeaning.toLowerCase()}.`,
+                    'Physical Realm': `In the physical realm, ${card.name} manifests as ${baseMeaning.toLowerCase()}.`,
+                    'Emotional Realm': `Emotionally, ${card.name} brings ${baseMeaning.toLowerCase()}.`,
+                    'Mental Realm': `Mentally, ${card.name} patterns suggest ${baseMeaning.toLowerCase()}.`,
+                    'Spiritual Realm': `Spiritually, ${card.name} illuminates ${baseMeaning.toLowerCase()}.`
+                };
+                
+                return positionalContext[position] || baseMeaning;
+            }
+
+            displaySpreadLayout(layout, interpretations) {
+                const spreadHTML = interpretations.map(interp => `
+                    <div class="col-md-6 mb-3">
+                        <div class="reading-result">
+                            <h5>${interp.position}</h5>
+                            <h6>${interp.card.name}</h6>
+                            <div class="mb-2">
+                                <span class="archetype-badge">${interp.card.archetype}</span>
+                                <span class="archetype-badge">${this.getElementSymbol(interp.card.element)}</span>
+                            </div>
+                            <p class="interpretation-text">${interp.interpretation}</p>
+                        </div>
+                    </div>
+                `).join('');
+                
+                layout.innerHTML = `<div class="row">${spreadHTML}</div>`;
+            }
+
+            generateOverallInterpretation(interpretations) {
+                const questionContext = this.question ? `Regarding your question about "${this.question}", ` : '';
+                
+                let overallHTML = `
+                    <h4>Quantum Rose Synthesis</h4>
+                    <p>${questionContext}the cards reveal a powerful narrative of your current spiritual journey.</p>
+                    
+                    <h5>Key Themes</h5>
+                    <ul>
+                `;
+                
+                // Extract key themes from cards
+                const themes = this.extractKeyThemes(interpretations);
+                themes.forEach(theme => {
+                    overallHTML += `<li>${theme}</li>`;
+                });
+                
+                overallHTML += `</ul>
+                    
+                    <h5>Spiritual Guidance</h5>
+                    <p>${this.generateSpiritualGuidance(interpretations)}</p>
+                    
+                    <h5>Quantum Perspective</h5>
+                    <p>${this.generateQuantumPerspective(interpretations)}</p>
+                `;
+                
+                return overallHTML;
+            }
+
+            extractKeyThemes(interpretations) {
+                const themes = [];
+                const archetypes = interpretations.map(i => i.card.archetype);
+                
+                // Group similar archetypes
+                if (archetypes.some(a => a.includes('Transformation') || a.includes('Change'))) {
+                    themes.push('Major transformation and change are actively working in your life');
+                }
+                
+                if (archetypes.some(a => a.includes('Love') || a.includes('Union'))) {
+                    themes.push('Relationships and partnerships are a central focus');
+                }
+                
+                if (archetypes.some(a => a.includes('Wisdom') || a.includes('Intuition'))) {
+                    themes.push('Trust your inner wisdom and intuitive guidance');
+                }
+                
+                if (archetypes.some(a => a.includes('Power') || a.includes('Strength'))) {
+                    themes.push('You have the inner strength to overcome challenges');
+                }
+                
+                return themes;
+            }
+
+            generateSpiritualGuidance(interpretations) {
+                const majorArcana = interpretations.filter(i => i.card.suit === 'Major Arcana');
+                
+                if (majorArcana.length > interpretations.length / 2) {
+                    return 'This reading indicates a significant spiritual initiation is occurring. The universe is calling you to step into your highest purpose and embrace the transformation that is being offered.';
+                } else {
+                    return 'Your current situation is actively evolving through conscious choice and divine timing. Trust the process and continue taking inspired action toward your highest good.';
+                }
+            }
+
+            generateQuantumPerspective(interpretations) {
+                const elements = interpretations.map(i => i.card.element);
+                const elementBalance = this.analyzeElementBalance(elements);
+                
+                return `From a quantum perspective, your energy field is showing ${elementBalance}. This suggests that your vibrational alignment is shifting to match your soul's evolution. The cards are reflecting the quantum entanglement between your thoughts, emotions, and manifest reality.`;
+            }
+
+            analyzeElementBalance(elements) {
+                const counts = {};
+                elements.forEach(element => {
+                    counts[element] = (counts[element] || 0) + 1;
+                });
+                
+                const dominant = Object.entries(counts).sort((a, b) => b[1] - a[1])[0];
+                
+                const elementDescriptions = {
+                    'Fire': 'strong creative and passionate energy',
+                    'Water': 'emotional depth and intuitive flow',
+                    'Air': 'mental clarity and intellectual growth',
+                    'Earth': 'practical manifestation and stability'
+                };
+                
+                return elementDescriptions[dominant[0]] || 'balanced elemental energy';
+            }
+
+            generateAmplificationAnalysis() {
+                const section = document.getElementById('amplificationSection');
+                section.style.display = 'block';
+                
+                // Generate amplification based on question and cards
+                const cardNames = this.selectedCards.map(c => c.name).join(' ');
+                const fullText = this.question + ' ' + cardNames;
+                
+                const amplifications = this.amplificationEngine.getAmplifications(fullText, 'text');
+                
+                this.displayGematriaAnalysis(amplifications.amplifications.gematria);
+                this.displayFrequencyAnalysis(amplifications.amplifications.frequencies);
+                this.displayCrystalAnalysis(amplifications.amplifications.crystals);
+            }
+
+            displayGematriaAnalysis(gematria) {
+                const container = document.getElementById('gematriaAnalysis');
+                
+                const html = gematria.map(g => `
+                    <div class="mb-2">
+                        <strong>${g.system}:</strong> ${g.value}
+                        <div class="energy-indicator">
+                            <div class="energy-fill" style="width: ${Math.min(g.value * 2, 100)}%"></div>
+                        </div>
+                        <small>${g.significance}</small>
+                    </div>
+                `).join('');
+                
+                container.innerHTML = html;
+            }
+
+            displayFrequencyAnalysis(frequencies) {
+                const container = document.getElementById('frequencyAnalysis');
+                
+                const html = frequencies.slice(0, 3).map(f => `
+                    <div class="mb-2">
+                        <strong>${f.baseFrequency} Hz</strong>
+                        <div class="energy-indicator">
+                            <div class="energy-fill" style="width: 70%"></div>
+                        </div>
+                        <small>${f.description}</small>
+                    </div>
+                `).join('');
+                
+                container.innerHTML = html;
+            }
+
+            displayCrystalAnalysis(crystals) {
+                const container = document.getElementById('crystalAnalysis');
+                
+                const html = crystals.slice(0, 3).map(c => `
+                    <div class="mb-2">
+                        <strong>${c.name}</strong>
+                        <small>${c.properties.join(', ')}</small>
+                    </div>
+                `).join('');
+                
+                container.innerHTML = html;
+            }
+
+            reshuffleCards() {
+                this.selectedCards = [];
+                document.querySelectorAll('.tarot-card').forEach(card => {
+                    card.classList.remove('selected');
+                });
+                document.getElementById('completeReading').disabled = true;
+                
+                this.displayCardDeck();
+            }
+
+            saveReading() {
+                const reading = {
+                    date: new Date().toISOString(),
+                    question: this.question,
+                    spread: this.currentSpread,
+                    cards: this.selectedCards,
+                    timestamp: Date.now()
+                };
+                
+                // Save to localStorage
+                let savedReadings = JSON.parse(localStorage.getItem('quantumRoseReadings') || '[]');
+                savedReadings.push(reading);
+                localStorage.setItem('quantumRoseReadings', JSON.stringify(savedReadings));
+                
+                alert('Reading saved successfully!');
+            }
+
+            newReading() {
+                // Reset everything
+                this.selectedCards = [];
+                this.question = '';
+                
+                document.getElementById('questionInput').value = '';
+                document.getElementById('cardSelectionArea').style.display = 'none';
+                document.getElementById('readingResults').style.display = 'none';
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Initialize the Quantum Rose Tarot system
+        const quantumRoseTarot = new QuantumRoseTarot();
+    </script>
+</body>
+</html>

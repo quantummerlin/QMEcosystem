@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychological Profile | Quantum Merlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #0a0015 0%, #1a0033 50%, #2d1b4e 100%);
+            color: #e0d4f7;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(13, 0, 26, 0.6);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .profile-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            font-family: 'Cinzel', serif;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3em;
+            color: #b19cd9;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+            margin-bottom: 15px;
+        }
+
+        .unlock-date {
+            font-size: 1.1em;
+            color: #9d7ec0;
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2em;
+            color: #9333ea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-icon {
+            font-size: 1.2em;
+        }
+
+        .section p {
+            font-size: 1.15em;
+            margin-bottom: 15px;
+            color: #e0d4f7;
+        }
+
+        .insight-box {
+            background: rgba(138, 43, 226, 0.1);
+            border-left: 4px solid #8a2be2;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .insight-box h3 {
+            font-family: 'Cinzel', serif;
+            color: #b19cd9;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .insight-box p {
+            margin-bottom: 10px;
+        }
+
+        .pattern-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pattern-list li {
+            background: rgba(138, 43, 226, 0.05);
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 3px solid #8a2be2;
+        }
+
+        .pattern-list li strong {
+            color: #9333ea;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .action-steps {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .action-steps h3 {
+            font-family: 'Cinzel', serif;
+            color: #10b981;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .action-steps ol {
+            padding-left: 25px;
+        }
+
+        .action-steps li {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .action-steps li strong {
+            color: #10b981;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background: rgba(138, 43, 226, 0.2);
+            color: #b19cd9;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            border: 2px solid #8a2be2;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(138, 43, 226, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2em;
+            color: #c4b5fd;
+            text-align: center;
+            padding: 20px;
+            margin: 30px 0;
+            border-top: 1px solid rgba(138, 43, 226, 0.3);
+            border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-badge">🧠 SYSTEM UNLOCKED</div>
+            <h1>Your Psychological Profile</h1>
+            <p class="unlock-date" id="unlockDate">Unlocked on <span id="dateText"></span></p>
+        </header>
+
+        <div id="profileContent">
+            <div class="section">
+                <h2><span class="section-icon">📊</span> Overview</h2>
+                <p id="overviewText">Loading your personalized profile...</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">🔍</span> Key Patterns Identified</h2>
+                <ul class="pattern-list" id="patternsList"></ul>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">🧩</span> Pattern Integration</h2>
+                <div class="insight-box">
+                    <h3>How Your Patterns Interact</h3>
+                    <p id="integrationText"></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">💡</span> Core Insights</h2>
+                <div id="insightsContainer"></div>
+            </div>
+
+            <div class="action-steps">
+                <h3>🎯 Your Action Plan</h3>
+                <ol id="actionSteps"></ol>
+            </div>
+
+            <div class="quote" id="closingQuote"></div>
+        </div>
+
+        <div class="navigation">
+            <a href="insight-library-enhanced.html" class="nav-btn">← Back to Library</a>
+            <a href="tools-hub.html" class="nav-btn">Explore More Tools →</a>
+        </div>
+    </div>
+
+    <script src="js/unlock-system.js"></script>
+    <script>
+        const unlockSystem = new UnlockSystem();
+
+        function generateProfile() {
+            // Get insights from psychological tools
+            const insights = unlockSystem.getSystemInsights('psychological');
+            
+            // Set unlock date
+            const timestamps = JSON.parse(localStorage.getItem('quantumMerlinUnlockTimestamps') || '{}');
+            const unlockDate = timestamps.psychological ? new Date(timestamps.psychological) : new Date();
+            document.getElementById('dateText').textContent = unlockDate.toLocaleDateString('en-US', {
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric'
+            });
+
+            // Generate overview
+            const overview = generateOverview(insights);
+            document.getElementById('overviewText').innerHTML = overview;
+
+            // Generate patterns
+            const patterns = identifyPatterns(insights);
+            const patternsList = document.getElementById('patternsList');
+            patternsList.innerHTML = patterns.map(p => `
+                <li>
+                    <strong>${p.title}</strong>
+                    ${p.description}
+                </li>
+            `).join('');
+
+            // Generate integration analysis
+            const integration = generateIntegration(patterns);
+            document.getElementById('integrationText').innerHTML = integration;
+
+            // Generate core insights
+            const coreInsights = generateCoreInsights(insights);
+            const insightsContainer = document.getElementById('insightsContainer');
+            insightsContainer.innerHTML = coreInsights.map(insight => `
+                <div class="insight-box">
+                    <h3>${insight.title}</h3>
+                    <p>${insight.content}</p>
+                </div>
+            `).join('');
+
+            // Generate action steps
+            const actions = generateActionSteps(patterns);
+            const actionSteps = document.getElementById('actionSteps');
+            actionSteps.innerHTML = actions.map(action => `<li>${action}</li>`).join('');
+
+            // Set closing quote
+            document.getElementById('closingQuote').textContent = getClosingQuote();
+        }
+
+        function generateOverview(insights) {
+            const toolCount = insights.length;
+            
+            return `
+                <p>You've completed all ${toolCount} tools in the Psychological Patterns system, revealing deep insights into how your mind operates. This profile synthesizes your results to show you the underlying patterns that shape your thoughts, behaviors, and emotional responses.</p>
+                
+                <p>Your psychological landscape is unique—a complex interplay of energy management, life phases, identity structures, and hidden strengths. Understanding these patterns is the first step toward conscious transformation.</p>
+                
+                <p>What follows is not just analysis—it's a mirror reflecting the unconscious patterns that have been running your life. Some of what you read may feel uncomfortable. That discomfort is the signal that you're touching something real.</p>
+            `;
+        }
+
+        function identifyPatterns(insights) {
+            const patterns = [];
+
+            // Analyze each tool's insights
+            insights.forEach(insight => {
+                if (insight.tool === 'Energy Leak Locator') {
+                    patterns.push({
+                        title: 'Energy Management Pattern',
+                        description: 'Your energy leaks reveal where you unconsciously give away your power. These aren\'t random—they\'re systematic patterns of self-abandonment that keep you depleted.'
+                    });
+                }
+                
+                if (insight.tool === 'Life Phase Decoder') {
+                    patterns.push({
+                        title: 'Life Phase Alignment',
+                        description: 'Your current life phase determines what\'s available to you. Fighting your phase creates resistance. Aligning with it creates flow.'
+                    });
+                }
+                
+                if (insight.tool === 'Identity Split Detector') {
+                    patterns.push({
+                        title: 'Identity Fragmentation',
+                        description: 'The split between who you are and who you think you should be creates internal conflict. This fragmentation drains energy and prevents authentic expression.'
+                    });
+                }
+                
+                if (insight.tool === 'Hidden Strengths Revealer') {
+                    patterns.push({
+                        title: 'Dormant Potential',
+                        description: 'Your hidden strengths aren\'t weaknesses—they\'re superpowers you\'ve been trained to suppress. Reclaiming them is reclaiming your power.'
+                    });
+                }
+            });
+
+            return patterns;
+        }
+
+        function generateIntegration(patterns) {
+            return `
+                <p>These patterns don't exist in isolation—they reinforce each other in a complex feedback loop. Your energy leaks are often connected to your identity splits. When you're not living authentically, you hemorrhage energy trying to maintain a false self.</p>
+                
+                <p>Your life phase determines which patterns are most active right now. Some patterns that were adaptive in earlier phases may now be limiting you. The key is recognizing which patterns serve your current evolution and which need to be released.</p>
+                
+                <p>Your hidden strengths are the antidote to your energy leaks. The very qualities you've been suppressing are the ones that would restore your vitality. This isn't coincidence—it's how the psyche maintains balance. What you reject in yourself doesn't disappear; it goes underground and drains you from within.</p>
+            `;
+        }
+
+        function generateCoreInsights(insights) {
+            return [
+                {
+                    title: 'The Energy-Identity Connection',
+                    content: 'Your energy levels are a direct reflection of how aligned you are with your authentic self. When you\'re living in integrity with who you truly are, energy flows naturally. When you\'re performing a role or meeting others\' expectations, energy drains rapidly. This isn\'t about willpower—it\'s about alignment.'
+                },
+                {
+                    title: 'The Hidden Cost of Suppression',
+                    content: 'Every strength you suppress requires energy to keep suppressed. It\'s like holding a beach ball underwater—it takes constant effort. The moment you stop suppressing and start expressing these qualities, that energy becomes available for creation instead of containment.'
+                },
+                {
+                    title: 'Phase-Appropriate Growth',
+                    content: 'Not all growth is appropriate for all phases. Trying to force expansion during a consolidation phase creates burnout. Trying to maintain stability during a transformation phase creates stagnation. Your psychological health depends on honoring the natural rhythm of your current phase.'
+                }
+            ];
+        }
+
+        function generateActionSteps(patterns) {
+            return [
+                '<strong>Identify Your Primary Energy Leak:</strong> For the next week, notice when your energy drops. What were you doing? Who were you with? What were you thinking? Track the pattern.',
+                '<strong>Align With Your Life Phase:</strong> Stop fighting where you are. If you\'re in a consolidation phase, consolidate. If you\'re in a transformation phase, transform. Resistance to your phase is the real problem.',
+                '<strong>Practice Authentic Expression:</strong> Choose one area where you\'re performing instead of being. Start expressing your truth there, even in small ways. Notice how your energy shifts.',
+                '<strong>Activate One Hidden Strength:</strong> Choose one suppressed quality and deliberately express it this week. If you\'ve been suppressing assertiveness, practice saying no. If you\'ve been suppressing vulnerability, share something real.',
+                '<strong>Create an Energy Audit:</strong> List everything you do in a typical week. Mark each activity as energy-giving (+) or energy-draining (-). Eliminate or delegate at least one major energy drain.',
+                '<strong>Integrate Your Insights:</strong> Spend 10 minutes daily reflecting on how your patterns interact. Journal about what you\'re noticing. Awareness itself begins the transformation process.',
+                '<strong>Complete Other Systems:</strong> Your psychological patterns don\'t exist in isolation. Complete the Energy, Unconscious, Relational, and Spiritual systems to see the full picture of how you operate.'
+            ];
+        }
+
+        function getClosingQuote() {
+            const quotes = [
+                '"The privilege of a lifetime is to become who you truly are." — Carl Jung',
+                '"Until you make the unconscious conscious, it will direct your life and you will call it fate." — Carl Jung',
+                '"Your visions will become clear only when you can look into your own heart. Who looks outside, dreams; who looks inside, awakes." — Carl Jung',
+                '"The curious paradox is that when I accept myself just as I am, then I can change." — Carl Rogers',
+                '"Knowing yourself is the beginning of all wisdom." — Aristotle'
+            ];
+            return quotes[Math.floor(Math.random() * quotes.length)];
+        }
+
+        // Generate profile on page load
+        generateProfile();
+    </script>
+</body>
+</html>

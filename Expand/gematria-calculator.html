@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gematria Calculator - Quantum Merlin</title>
+    <meta name="description" content="Calculate gematria values across 8 systems including English Ordinal, Hebrew, Chaldean, Pythagorean, and more. Discover symbolic patterns and word meanings in numerology.">
+    <meta name="keywords" content="gematria calculator, numerology, english gematria, hebrew gematria, name calculator, number meanings">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cinzel', 'Georgia', serif;
+            background: linear-gradient(135deg, #1a0033 0%, #2d0052 50%, #4a0080 100%);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 215, 0, 0.05);
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .header p {
+            color: #FF69B4;
+            font-size: 1.1rem;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .calculator-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-group label {
+            display: block;
+            color: #FFD700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .text-input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            color: #ffffff;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .text-input:focus {
+            outline: none;
+            border-color: #FFD700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .systems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .system-checkbox {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .system-checkbox:hover {
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .system-checkbox input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        .system-checkbox label {
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .calculate-btn {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .calculate-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .results-section {
+            display: none;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .results-section.active {
+            display: block;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .result-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .result-card h3 {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .result-value {
+            font-size: 2rem;
+            color: #FF69B4;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .result-reduced {
+            font-size: 1.2rem;
+            color: #c4b5fd;
+            margin-bottom: 15px;
+        }
+
+        .word-matches {
+            margin-top: 15px;
+        }
+
+        .word-matches h4 {
+            color: #FFD700;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .match-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .match-item {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: #FFD700;
+        }
+
+        .deep-reading-btn {
+            background: linear-gradient(45deg, #FF69B4, #FF1493);
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .deep-reading-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255, 105, 180, 0.4);
+        }
+
+        .amplification-section {
+            display: none;
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .amplification-section.active {
+            display: block;
+        }
+
+        .amplification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .amp-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .amp-card:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: scale(1.05);
+        }
+
+        .amp-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .amp-title {
+            color: #FFD700;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .amp-value {
+            color: #cccccc;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .systems-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>🔢 Gematria Calculator</h1>
+        <p>Discover the numerical patterns behind words and names</p>
+    </div>
+
+    <div class="main-container">
+        <div class="calculator-section">
+            <div class="input-group">
+                <label for="textInput">Enter Word, Phrase, or Name:</label>
+                <input type="text" id="textInput" class="text-input" placeholder="Type any word, phrase, or name..." />
+            </div>
+
+            <div class="input-group">
+                <label>Select Calculation Systems:</label>
+                <div class="systems-grid">
+                    <div class="system-checkbox">
+                        <input type="checkbox" id="englishOrdinal" checked>
+                        <label for="englishOrdinal">English Ordinal (A=1...Z=26)</label>
+                    </div>
+                    <div class="system-checkbox">
+                        <input type="checkbox" id="englishReduced" checked>
+                        <label for="englishReduced">English Reduced (1-9 cycling)</label>
+                    </div>
+                    <div class="system-checkbox">
+                        <input type="checkbox" id="reverseOrdinal">
+                        <label for="reverseOrdinal">Reverse Ordinal (Z=1...A=26)</label>
+                    </div>
+                    <div class="system-checkbox">
+                        <input type="checkbox" id="reverseReduced">
+                        <label for="reverseReduced">Reverse Reduced</label>
+                    </div>
+                    <div class="system-checkbox">
+                        <input type="checkbox" id="hebrewStandard">
+                        <label for="hebrewStandard">Hebrew/Jewish</label>
+                    </div>
+                    <div class="system-checkbox">
+                        <input type="checkbox" id="satanic">
+                        <label for="satanic">Satanic (A=36...Z=61)</label>
+                    </div>
+                    <div class="system-checkbox">
+                        <input type="checkbox" id="chaldean">
+                        <label for="chaldean">Chaldean (Ancient)</label>
+                    </div>
+                    <div class="system-checkbox">
+                        <input type="checkbox" id="pythagorean">
+                        <label for="pythagorean">Pythagorean</label>
+                    </div>
+                </div>
+            </div>
+
+            <button class="calculate-btn" onclick="calculateGematria()">Calculate Gematria</button>
+        </div>
+
+        <div class="results-section" id="resultsSection">
+            <h2 style="text-align: center; color: #FFD700; margin-bottom: 30px;">Numerical Patterns Discovered</h2>
+            
+            <div class="result-grid" id="resultGrid">
+                <!-- Results will be populated here -->
+            </div>
+
+            <button class="deep-reading-btn" onclick="goToDeepReading()">
+                🌟 Explore Deeper Reading
+            </button>
+
+            <div class="amplification-section" id="amplificationSection">
+                <h3 style="color: #FFD700; margin-bottom: 15px;">🌟 Amplify This With</h3>
+                <p style="color: #cccccc; margin-bottom: 20px;">
+                    These systems are often used together to deepen focus and symbolic coherence.
+                </p>
+                <div class="amplification-grid" id="amplificationGrid">
+                    <!-- Amplification suggestions will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="gematria-systems.js"></script>
+    <script src="gematria-matches.js"></script>
+    <script src="gematria-calculator.js"></script>
+    <script>
+        // Initialize calculator
+        const calculator = new GematriaCalculator();
+
+        function calculateGematria() {
+            const text = document.getElementById('textInput').value.trim();
+            
+            if (!text) {
+                alert('Please enter a word, phrase, or name to calculate.');
+                return;
+            }
+
+            // Get selected systems
+            const selectedSystems = [];
+            const systemCheckboxes = document.querySelectorAll('.system-checkbox input[type="checkbox"]:checked');
+            
+            systemCheckboxes.forEach(checkbox => {
+                selectedSystems.push(checkbox.id);
+            });
+
+            if (selectedSystems.length === 0) {
+                alert('Please select at least one calculation system.');
+                return;
+            }
+
+            // Calculate results
+            const results = calculator.calculateAll(text);
+            const resultGrid = document.getElementById('resultGrid');
+            
+            // Clear previous results
+            resultGrid.innerHTML = '';
+
+            // Display results for selected systems
+            selectedSystems.forEach(systemKey => {
+                if (results[systemKey]) {
+                    const result = results[systemKey];
+                    const matches = calculator.findMatches(result.value);
+                    
+                    const resultCard = document.createElement('div');
+                    resultCard.className = 'result-card';
+                    resultCard.innerHTML = `
+                        <h3>${result.name}</h3>
+                        <div class="result-value">${result.value}</div>
+                        <div class="result-reduced">Reduced: ${result.reduced}</div>
+                        ${matches.length > 0 ? `
+                            <div class="word-matches">
+                                <h4>Words with same value:</h4>
+                                <div class="match-list">
+                                    ${matches.map(match => `<span class="match-item">${match}</span>`).join('')}
+                                </div>
+                            </div>
+                        ` : ''}
+                    `;
+                    resultGrid.appendChild(resultCard);
+                }
+            });
+
+            // Show results section
+            document.getElementById('resultsSection').classList.add('active');
+
+            // Generate amplification suggestions
+            generateAmplifications(results, selectedSystems);
+        }
+
+        function generateAmplifications(results, selectedSystems) {
+            const amplificationSection = document.getElementById('amplificationSection');
+            const amplificationGrid = document.getElementById('amplificationGrid');
+            
+            // Clear previous amplifications
+            amplificationGrid.innerHTML = '';
+
+            // Get first result for amplification
+            const firstSystem = selectedSystems[0];
+            const firstResult = results[firstSystem];
+            
+            if (!firstResult) return;
+
+            const amplifications = [
+                {
+                    icon: '🎵',
+                    title: 'Frequency Generator',
+                    value: `${firstResult.value} Hz`,
+                    url: `genesis/index-enhanced.html?freq=${firstResult.value}&source=gematria`
+                },
+                {
+                    icon: '💎',
+                    title: 'Crystal Lens',
+                    value: getCrystalForNumber(firstResult.reduced),
+                    url: `quantum-merlin-hub/crystals.html?number=${firstResult.reduced}`
+                },
+                {
+                    icon: '🃏',
+                    title: 'Tarot Connection',
+                    value: getTarotForNumber(firstResult.reduced),
+                    url: `quantum-merlin-hub/tarot.html?number=${firstResult.reduced}`
+                },
+                {
+                    icon: '🜂',
+                    title: 'Sigil Generator',
+                    value: `Create from ${firstResult.value}`,
+                    url: `quantum-merlin-hub/sigils.html?seed=${firstResult.value}`
+                },
+                {
+                    icon: '🌙',
+                    title: 'Lunar Timing',
+                    value: getCurrentMoonPhase(),
+                    url: `quantum-sigil-generator.html`
+                },
+                {
+                    icon: '💧',
+                    title: 'Water Ritual',
+                    value: 'Focus ceremony',
+                    url: `quantum-merlin-hub/water.html`
+                }
+            ];
+
+            amplifications.forEach(amp => {
+                const ampCard = document.createElement('div');
+                ampCard.className = 'amp-card';
+                ampCard.onclick = () => window.open(amp.url, '_blank');
+                ampCard.innerHTML = `
+                    <div class="amp-icon">${amp.icon}</div>
+                    <div class="amp-title">${amp.title}</div>
+                    <div class="amp-value">${amp.value}</div>
+                `;
+                amplificationGrid.appendChild(ampCard);
+            });
+
+            // Show amplification section
+            amplificationSection.classList.add('active');
+        }
+
+        function getCrystalForNumber(number) {
+            const crystalMap = {
+                1: "Clear Quartz",
+                2: "Rose Quartz",
+                3: "Citrine",
+                4: "Hematite",
+                5: "Turquoise",
+                6: "Amethyst",
+                7: "Lapis Lazuli",
+                8: "Pyrite",
+                9: "Obsidian",
+                11: "Celestite",
+                22: "Moldavite",
+                33: "Phenakite"
+            };
+            return crystalMap[number] || "Clear Quartz";
+        }
+
+        function getTarotForNumber(number) {
+            const tarotMap = {
+                0: "The Fool",
+                1: "The Magician",
+                2: "The High Priestess",
+                3: "The Empress",
+                4: "The Emperor",
+                5: "The Hierophant",
+                6: "The Lovers",
+                7: "The Chariot",
+                8: "Strength",
+                9: "The Hermit",
+                11: "Justice",
+                22: "The World"
+            };
+            return tarotMap[number] || "Major Arcana";
+        }
+
+        function getCurrentMoonPhase() {
+            const phases = ['New Moon', 'Waxing Crescent', 'First Quarter', 'Waxing Gibbous', 
+                          'Full Moon', 'Waning Gibbous', 'Last Quarter', 'Waning Crescent'];
+            // Simplified - in real implementation would calculate actual moon phase
+            return phases[Math.floor(Math.random() * phases.length)];
+        }
+
+        function goToDeepReading() {
+            const text = document.getElementById('textInput').value;
+            if (text) {
+                window.location.href = `quantum-gematria-reading.html?text=${encodeURIComponent(text)}`;
+            } else {
+                window.location.href = 'quantum-gematria-reading.html';
+            }
+        }
+
+        // Add enter key support for input
+        document.getElementById('textInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calculateGematria();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Merlin - Complete Metaphysical Toolkit</title>
+    <meta name="description" content="Discover your spiritual power with Quantum Merlin's complete suite of 12 mystical tools. From numerology to tarot, crystals to frequencies - transform your consciousness today.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum Merlin - Complete Metaphysical Toolkit">
+    <meta property="og:description" content="Discover your spiritual power with 12 mystical tools. Transform your consciousness today.">
+    <meta property="og:image" content="/images/quantum-merlin-og.jpg">
+    <meta property="og:url" content="https://quantummerlin.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+      
+      // Custom event tracking for Quantum Merlin
+      function trackEvent(eventName, parameters) {
+        gtag('event', eventName, parameters);
+      }
+      
+      // Tool usage tracking
+      function trackToolUsage(toolName, action) {
+        gtag('event', 'tool_usage', {
+          tool_name: toolName,
+          action: action,
+          timestamp: new Date().toISOString()
+        });
+      }
+      
+      // Jukebox tracking
+      function trackJukeboxAction(action, itemType) {
+        gtag('event', 'jukebox_action', {
+          action: action,
+          item_type: itemType,
+          timestamp: new Date().toISOString()
+        });
+      }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Quantum Grid Background */
+        .quantum-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.1), transparent 70%);
+            background-size: 50px 50px, 50px 50px, 200px 200px;
+            animation: gridMove 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Quantum Sun */
+        .quantum-sun {
+            position: fixed;
+            top: 10%;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.3), rgba(255, 215, 0, 0.1), transparent);
+            animation: sunPulse 4s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes sunPulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.2); opacity: 0.6; }
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(0, 255, 255, 0.2));
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #8a2be2, #00ffff, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            position: relative;
+        }
+
+        .nav-toggle {
+            background: linear-gradient(135deg, #8a2be2, #00ffff);
+            border: none;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.4);
+        }
+
+        .nav-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(20, 20, 40, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 10px;
+            margin-top: 0.5rem;
+            min-width: 250px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-item {
+            display: block;
+            padding: 0.8rem 1.2rem;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-item:hover {
+            background: rgba(138, 43, 226, 0.2);
+            padding-left: 1.5rem;
+        }
+
+        .nav-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #8a2be2, #00ffff, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.2); }
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #00ffff;
+            margin-bottom: 2rem;
+        }
+
+        /* Divine Guides Section */
+        .divine-guides {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .guide {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(20, 20, 40, 0.6);
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .guide.merlin {
+            border-color: rgba(138, 43, 226, 0.5);
+        }
+
+        .guide.rose {
+            border-color: rgba(255, 20, 147, 0.5);
+        }
+
+        .guide-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .guide-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .guide.merlin .guide-name {
+            color: #8a2be2;
+        }
+
+        .guide.rose .guide-name {
+            color: #ff1493;
+        }
+
+        .guide-title {
+            color: #00ffff;
+            margin-bottom: 1rem;
+        }
+
+        .guide-description {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+        /* Tool Categories */
+        .categories {
+            margin: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #8a2be2, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .category {
+            background: rgba(20, 20, 40, 0.8);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+            border-color: rgba(0, 255, 255, 0.5);
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-description {
+            margin-bottom: 1.5rem;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .tool-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem;
+            background: rgba(138, 43, 226, 0.1);
+            border-radius: 8px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .tool-link:hover {
+            background: rgba(138, 43, 226, 0.3);
+            transform: translateX(5px);
+        }
+
+        .tool-name {
+            font-weight: 500;
+        }
+
+        .tool-guide {
+            font-size: 0.8rem;
+            color: #00ffff;
+        }
+
+        /* Daily Alignment */
+        .daily-alignment {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(0, 255, 255, 0.2));
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 3rem 0;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .alignment-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #ffd700;
+        }
+
+        .alignment-content {
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .alignment-frequency {
+            font-size: 1.2rem;
+            color: #00ffff;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(20, 20, 40, 0.8);
+            padding: 2rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-link {
+            color: #00ffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #8a2be2;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            color: #999999;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .divine-guides {
+                gap: 2rem;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Quantum Effects -->
+    <div class="quantum-grid"></div>
+    <div class="quantum-sun"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">✨ Quantum Merlin</div>
+            <nav class="nav-menu">
+                <button class="nav-toggle" onclick="toggleNav()">🔮 Explore Tools</button>
+                <div class="nav-dropdown" id="navDropdown">
+                    <a href="https://frequency.quantummerlin.com" class="nav-item">🎵 Frequency Generator</a>
+                    <a href="https://jukebox.quantummerlin.com" class="nav-item">📚 Quantum Jukebox</a>
+                    <a href="https://gematria.quantummerlin.com" class="nav-item">🔢 Quantum Gematria</a>
+                    <a href="quantum-rose-tarot.html" class="nav-item">🃏 Quantum Rose Tarot</a>
+                    <a href="quantum-sigil-generator.html" class="nav-item">✨ Sigil Creator</a>
+                    <a href="quantum-jukebox.html" class="nav-item">🎵 Quantum Jukebox</a>
+                    <a href="https://astrology.quantummerlin.com" class="nav-item">🌟 Western Astrology</a>
+                    <a href="https://chinese.quantummerlin.com" class="nav-item">🐲 Chinese Zodiac</a>
+                    <a href="https://forecasts.quantummerlin.com" class="nav-item">🔮 Zodiac Forecasts</a>
+                    <a href="https://codes.quantummerlin.com" class="nav-item">💫 Reality Codes</a>
+                    <a href="https://crystals.quantummerlin.com" class="nav-item">💎 Crystal Wisdom</a>
+                    <a href="https://water.quantummerlin.com" class="nav-item">💧 Water Charging</a>
+                    <a href="/about" class="nav-item">📖 About Us</a>
+                    <a href="/contact" class="nav-item">📧 Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Quantum Merlin</h1>
+            <p class="hero-subtitle">Complete Metaphysical Toolkit for Consciousness Transformation</p>
+        </section>
+
+        <!-- Divine Guides -->
+        <section class="divine-guides">
+            <div class="guide merlin">
+                <div class="guide-icon">🧙‍♂️</div>
+                <div class="guide-name">Quantum Merlin</div>
+                <div class="guide-title">The Divine Masculine Guide</div>
+                <p class="guide-description">Master of manifestation, quantum codes, and sacred geometry. Merlin guides you through the realms of logic, structure, and powerful creation techniques.</p>
+            </div>
+            <div class="guide rose">
+                <div class="guide-icon">🌹</div>
+                <div class="guide-name">Quantum Rose</div>
+                <div class="guide-title">The Divine Feminine Guide</div>
+                <p class="guide-description">Keeper of intuition, emotional wisdom, and sacred relationships. Rose guides you through the realms of heart, intuition, and nurturing transformation.</p>
+            </div>
+        </section>
+
+        <!-- Daily Alignment -->
+        <section class="daily-alignment">
+            <h2 class="alignment-title">🌟 Daily Quantum Alignment</h2>
+            <div class="alignment-content" id="dailyAlignment">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Tool Categories -->
+        <section class="categories">
+            <h2 class="section-title">Your 12 Quantum Tools</h2>
+            
+            <!-- Foundation Tools -->
+            <div class="category-grid">
+                <div class="category">
+                    <h3 class="category-title">🏛️ Foundation Suite</h3>
+                    <p class="category-description">Essential tools for your daily spiritual practice and consciousness exploration.</p>
+                    <div class="tools-list">
+                        <a href="https://frequency.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">🎵 Frequency Generator</span>
+                            <span class="tool-guide">Guide: Merlin</span>
+                        </a>
+                        <a href="https://jukebox.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">📚 Quantum Jukebox</span>
+                            <span class="tool-guide">Guides: Both</span>
+                        </a>
+                        <a href="gematria-calculator.html" class="tool-link">
+                            <span class="tool-name">🔢 Gematria Calculator</span>
+                            <span class="tool-guide">Guide: Merlin</span>
+                        </a>
+                        <a href="quantum-frequency-synthesizer.html" class="tool-link">
+                            <span class="tool-name">🎵 Frequency Synthesizer</span>
+                            <span class="tool-guide">Guide: Merlin</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">🔮 Mystic Arts Suite</h3>
+                    <p class="category-description">Ancient wisdom systems reimagined for the quantum age of spiritual exploration.</p>
+                    <div class="tools-list">
+                        <a href="quantum-rose-tarot.html" class="tool-link">
+                            <span class="tool-name">🃏 Quantum Rose Tarot</span>
+                            <span class="tool-guide">Guide: Rose</span>
+                        </a>
+                        <a href="quantum-sigil-generator.html" class="tool-link">
+                            <span class="tool-name">✨ Sigil Creator</span>
+                            <span class="tool-guide">Guide: Both</span>
+                        </a>
+                        <a href="gematria-calculator.html" class="tool-link">
+                            <span class="tool-name">🔢 Gematria Calculator</span>
+                            <span class="tool-guide">Guide: Merlin</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">🌟 Astrology Suite</h3>
+                    <p class="category-description">Celestial wisdom and cosmic guidance for navigating your life's journey.</p>
+                    <div class="tools-list">
+                        <a href="https://astrology.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">🌟 Western Astrology</span>
+                            <span class="tool-guide">Guide: Merlin</span>
+                        </a>
+                        <a href="https://chinese.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">🐲 Chinese Zodiac</span>
+                            <span class="tool-guide">Guide: Merlin</span>
+                        </a>
+                        <a href="https://forecasts.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">🔮 Zodiac Forecasts</span>
+                            <span class="tool-guide">Guide: Rose</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">💫 Manifestation Suite</h3>
+                    <p class="category-description">Powerful tools for creating reality and aligning with your highest potential.</p>
+                    <div class="tools-list">
+                        <a href="https://codes.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">💫 Reality Codes</span>
+                            <span class="tool-guide">Guide: Merlin</span>
+                        </a>
+                        <a href="https://crystals.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">💎 Crystal Wisdom</span>
+                            <span class="tool-guide">Guide: Rose</span>
+                        </a>
+                        <a href="https://water.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">💧 Water Charging</span>
+                            <span class="tool-guide">Guide: Both</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/disclaimer" class="footer-link">Disclaimer</a>
+                <a href="/terms" class="footer-link">Terms of Service</a>
+                <a href="/privacy" class="footer-link">Privacy Policy</a>
+                <a href="/about" class="footer-link">About</a>
+                <a href="/contact" class="footer-link">Contact</a>
+            </div>
+            <div>© 2024 Quantum Merlin. All rights reserved.</div>
+        </div>
+        <div class="disclaimer">
+            🔮 For entertainment and exploration purposes only. Not medical advice. Consult healthcare professionals for medical concerns.
+        </div>
+    </footer>
+
+    <script>
+        // Navigation Toggle
+        function toggleNav() {
+            const dropdown = document.getElementById('navDropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdown = document.getElementById('navDropdown');
+            
+            if (!navMenu.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Daily Alignment Generator
+        function generateDailyAlignment() {
+            const today = new Date();
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+            
+            const alignments = [
+                {
+                    message: "Today is perfect for setting clear intentions. The quantum field is especially receptive to focused thought and decisive action.",
+                    frequency: "528 Hz - Transformation & DNA Repair",
+                    guide: "Merlin advises: Structure your thoughts, structure your reality."
+                },
+                {
+                    message: "Emotional healing is highlighted today. Allow yourself to feel deeply and release what no longer serves your highest good.",
+                    frequency: "396 Hz - Liberating Guilt & Fear",
+                    guide: "Rose advises: Your heart knows the way. Trust its wisdom."
+                },
+                {
+                    message: "Creative inspiration flows abundantly today. This is an excellent time for artistic expression and innovative thinking.",
+                    frequency: "741 Hz - Awakening Intuition & Creativity",
+                    guide: "Rose advises: Let your imagination soar beyond limits."
+                },
+                {
+                    message: "Focus and mental clarity are enhanced today. Perfect for problem-solving and deep learning.",
+                    frequency: "40 Hz - Cognitive Enhancement",
+                    guide: "Merlin advises: The focused mind creates miracles."
+                },
+                {
+                    message: "Relationship harmony and connection are favored today. Reach out to others with an open heart.",
+                    frequency: "639 Hz - Connecting Relationships",
+                    guide: "Rose advises: Love bridges all divides."
+                },
+                {
+                    message: "Spiritual insights and divine guidance are particularly strong today. Meditation will be especially fruitful.",
+                    frequency: "963 Hz - Divine Connection",
+                    guide: "Merlin advises: The veil between worlds is thin. Listen carefully."
+                },
+                {
+                    message: "Manifestation power is at its peak today. Focus on what you wish to create, not what you lack.",
+                    frequency: "432 Hz - Universal Harmony",
+                    guide: "Rose advises: You are the creator of your reality."
+                },
+                {
+                    message: "Physical healing and vitality are supported today. Honor your body as the temple of consciousness.",
+                    frequency: "174 Hz - Pain Relief & Security",
+                    guide: "Merlin advises: Strong foundation creates lasting success."
+                }
+            ];
+
+            const alignment = alignments[dayOfYear % alignments.length];
+            
+            document.getElementById('dailyAlignment').innerHTML = `
+                <p><strong>${alignment.message}</strong></p>
+                <p>${alignment.guide}</p>
+                <div class="alignment-frequency">🎵 Today's Frequency: ${alignment.frequency}</div>
+            `;
+        }
+
+        // Initialize daily alignment on page load
+        generateDailyAlignment();
+        
+        // Track page view
+        gtag('event', 'page_view', {
+            page_title: 'Quantum Merlin - Main Hub',
+            page_location: 'https://quantummerlin.com'
+        });
+
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add smooth scroll behavior
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Add hover effects to tools
+            const toolLinks = document.querySelectorAll('.tool-link');
+            toolLinks.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(10px) scale(1.02)';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

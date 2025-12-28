@@ -1,0 +1,41 @@
+            
+            <button class="generate-btn" onclick="generateCosmicSigil()">Generate Cosmic Sigil</button>
+            <button id="regenerateBtn" onclick="regenerateStyle()" style="display: none; margin-left: 10px; background: linear-gradient(45deg, #ff6b6b, #ff8787); padding: 12px 24px; border: none; border-radius: 8px; color: white; font-weight: bold; cursor: pointer; transition: transform 0.2s;">Try Different Style</button>
+        </section>
+
+        <section id="sigilDisplay" class="sigil-display">
+            <h2 class="reading-title">Your Cosmic Sigil</h2>
+            <canvas id="sigilCanvas" width="400" height="400"></canvas>
+            
+            <div class="action-buttons">
+                <button class="action-btn" onclick="saveSigil()">💾 Save Sigil</button>
+--
+            
+            // Show regenerate button
+            document.getElementById('regenerateBtn').style.display = 'inline-block';
+            
+            // Show results
+            document.getElementById('sigilDisplay').classList.add('active');
+            
+            // Scroll to results
+            document.getElementById('sigilDisplay').scrollIntoView({ behavior: 'smooth' });
+            
+            // Scroll to results
+            document.getElementById('sigilDisplay').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function regenerateStyle() {
+            const savedData = JSON.parse(localStorage.getItem('birthData'));
+            if (!savedData) {
+--
+        }
+
+        function generateNew() {
+            // Clear form and results
+            document.getElementById('birthdate').value = '';
+            document.getElementById('sigilDisplay').classList.remove('active');
+            document.getElementById('readingSection').classList.remove('active');
+            document.getElementById('giftSection').classList.remove('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });

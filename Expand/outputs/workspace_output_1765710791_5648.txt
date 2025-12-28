@@ -1,0 +1,3 @@
+896:            drawCosmicSigil(moonPhase, starDensity, quadrant, style);
+933:            drawCosmicSigil(
+975:        function drawCosmicSigil(moonPhase, starDensity, quadrant, style) {

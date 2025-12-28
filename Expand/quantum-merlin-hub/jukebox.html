@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Jukebox - Your Personal Library | Quantum Merlin</title>
+    <meta name="description" content="Access your saved frequency mixes, reality codes, tarot readings, and more. Your personal quantum library.">
+    <meta name="keywords" content="quantum jukebox, saved frequencies, personal library, quantum merlin">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum Jukebox - Your Personal Library">
+    <meta property="og:description" content="Access your saved frequency mixes, reality codes, tarot readings, and more. Your personal quantum library.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jukebox.quantummerlin.com">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --quantum-purple: #667eea;
+            --quantum-cyan: #00f5ff;
+            --quantum-gold: #ffd700;
+            --quantum-dark: #0a0e27;
+            --quantum-card: rgba(255, 255, 255, 0.05);
+            --quantum-border: rgba(0, 245, 255, 0.2);
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Quantum Grid Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        /* Quantum Sun */
+        .quantum-sun {
+            position: fixed;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.3; }
+            50% { transform: translateX(-50%) scale(1.1); opacity: 0.5; }
+        }
+        
+        /* Container */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+        
+        .logo {
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--quantum-purple), var(--quantum-cyan), var(--quantum-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+        }
+        
+        /* Back Button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: rgba(0, 245, 255, 0.1);
+            border: 1px solid var(--quantum-cyan);
+            border-radius: 10px;
+            color: var(--quantum-cyan);
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .back-btn:hover {
+            background: rgba(0, 245, 255, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+            padding: 30px;
+            background: var(--quantum-card);
+            border: 1px solid var(--quantum-border);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2.5em;
+            color: var(--quantum-cyan);
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        /* Filter Bar */
+        .filter-bar {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        
+        .filter-btn {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1em;
+        }
+        
+        .filter-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--quantum-cyan);
+        }
+        
+        .filter-btn.active {
+            background: var(--quantum-cyan);
+            color: var(--quantum-dark);
+            border-color: var(--quantum-cyan);
+        }
+        
+        /* Search Bar */
+        .search-bar {
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--quantum-border);
+            border-radius: 15px;
+            color: white;
+            font-size: 1.1em;
+        }
+        
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        /* Library Grid */
+        .library-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .library-card {
+            background: var(--quantum-card);
+            border: 1px solid var(--quantum-border);
+            border-radius: 20px;
+            padding: 25px;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        
+        .library-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--quantum-cyan);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .card-icon {
+            font-size: 2.5em;
+        }
+        
+        .card-type {
+            background: rgba(0, 245, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-size: 0.8em;
+            color: var(--quantum-cyan);
+        }
+        
+        .card-title {
+            font-size: 1.3em;
+            color: var(--quantum-cyan);
+            margin-bottom: 10px;
+        }
+        
+        .card-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 20px;
+        }
+        
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .action-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        
+        .play-btn {
+            background: linear-gradient(135deg, var(--quantum-purple), var(--quantum-cyan));
+            color: white;
+        }
+        
+        .play-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .delete-btn {
+            background: rgba(255, 0, 0, 0.2);
+            color: #ff6b6b;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+        }
+        
+        .delete-btn:hover {
+            background: rgba(255, 0, 0, 0.3);
+        }
+        
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .empty-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+        
+        .empty-title {
+            font-size: 1.8em;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 15px;
+        }
+        
+        .empty-text {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        
+        .explore-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, var(--quantum-purple), var(--quantum-cyan));
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+        
+        .explore-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 40px 20px;
+            margin-top: 80px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: var(--quantum-cyan);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--quantum-gold);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2em;
+            }
+            
+            .stats-bar {
+                gap: 20px;
+            }
+            
+            .stat-value {
+                font-size: 2em;
+            }
+            
+            .library-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Quantum Sun -->
+    <div class="quantum-sun"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="https://quantummerlin.com" class="back-btn">
+                ← Back to Home
+            </a>
+            <h1 class="logo">🎧 Quantum Jukebox</h1>
+            <p class="tagline">Your Personal Quantum Library</p>
+        </header>
+        
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-value" id="total-items">0</div>
+                <div class="stat-label">Total Items</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="frequency-count">0</div>
+                <div class="stat-label">Frequencies</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="code-count">0</div>
+                <div class="stat-label">Reality Codes</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="reading-count">0</div>
+                <div class="stat-label">Readings</div>
+            </div>
+        </div>
+        
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterItems('all')">All Items</button>
+            <button class="filter-btn" onclick="filterItems('frequency')">🎵 Frequencies</button>
+            <button class="filter-btn" onclick="filterItems('code')">🧬 Reality Codes</button>
+            <button class="filter-btn" onclick="filterItems('tarot')">🃏 Tarot</button>
+            <button class="filter-btn" onclick="filterItems('gematria')">🔢 Gematria</button>
+            <button class="filter-btn" onclick="filterItems('sigil')">✒️ Sigils</button>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="🔍 Search your library..." id="search-input" oninput="searchItems()">
+        </div>
+        
+        <!-- Library Grid -->
+        <div class="library-grid" id="library-grid">
+            <!-- Items will be dynamically loaded here -->
+        </div>
+        
+        <!-- Empty State -->
+        <div class="empty-state" id="empty-state" style="display: none;">
+            <div class="empty-icon">📦</div>
+            <h2 class="empty-title">Your Jukebox is Empty</h2>
+            <p class="empty-text">Start exploring Quantum Merlin tools to save your favorite frequencies, codes, and readings!</p>
+            <a href="index.html" class="explore-btn">Explore Tools</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3 style="color: var(--quantum-purple); margin-bottom: 15px;">Quantum Merlin</h3>
+            <div class="footer-links">
+                <a href="https://quantummerlin.com">Home</a>
+                <a href="https://frequency.quantummerlin.com">Frequency Generator</a>
+                <a href="https://quantummerlin.com/disclaimer">Disclaimer</a>
+                <a href="https://quantummerlin.com/terms">Terms</a>
+                <a href="https://quantummerlin.com/privacy">Privacy</a>
+            </div>
+            <div style="margin-top: 20px; color: rgba(255, 255, 255, 0.5); font-size: 0.9em;">
+                <p>© 2025 Quantum Merlin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        let currentFilter = 'all';
+        let allItems = [];
+        
+        // Load items from localStorage
+        function loadItems() {
+            const jukebox = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            allItems = jukebox;
+            updateStats();
+            displayItems(allItems);
+        }
+        
+        // Update statistics
+        function updateStats() {
+            const frequencies = allItems.filter(item => item.type === 'frequency').length;
+            const codes = allItems.filter(item => item.type === 'code').length;
+            const readings = allItems.filter(item => ['tarot', 'gematria', 'sigil'].includes(item.type)).length;
+            
+            document.getElementById('total-items').textContent = allItems.length;
+            document.getElementById('frequency-count').textContent = frequencies;
+            document.getElementById('code-count').textContent = codes;
+            document.getElementById('reading-count').textContent = readings;
+        }
+        
+        // Display items
+        function displayItems(items) {
+            const grid = document.getElementById('library-grid');
+            const emptyState = document.getElementById('empty-state');
+            
+            if (items.length === 0) {
+                grid.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+            
+            grid.style.display = 'grid';
+            emptyState.style.display = 'none';
+            
+            grid.innerHTML = items.map((item, index) => {
+                const icon = getIcon(item.type);
+                const typeLabel = getTypeLabel(item.type);
+                const date = new Date(item.timestamp).toLocaleDateString();
+                
+                return `
+                    <div class="library-card" data-type="${item.type}">
+                        <div class="card-header">
+                            <div class="card-icon">${icon}</div>
+                            <div class="card-type">${typeLabel}</div>
+                        </div>
+                        <h3 class="card-title">${item.name}</h3>
+                        <p class="card-description">${item.description || 'No description available'}</p>
+                        <div class="card-meta">
+                            <span>📅 ${date}</span>
+                            <span>${item.duration || 'N/A'}</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="action-btn play-btn" onclick="playItem(${index})">
+                                ▶️ Play
+                            </button>
+                            <button class="action-btn delete-btn" onclick="deleteItem(${index})">
+                                🗑️ Delete
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Get icon for type
+        function getIcon(type) {
+            const icons = {
+                'frequency': '🎵',
+                'code': '🧬',
+                'tarot': '🃏',
+                'gematria': '🔢',
+                'sigil': '✒️',
+                'crystal': '💎'
+            };
+            return icons[type] || '✨';
+        }
+        
+        // Get type label
+        function getTypeLabel(type) {
+            const labels = {
+                'frequency': 'Frequency Mix',
+                'code': 'Reality Code',
+                'tarot': 'Tarot Reading',
+                'gematria': 'Gematria',
+                'sigil': 'Sigil',
+                'crystal': 'Crystal'
+            };
+            return labels[type] || 'Item';
+        }
+        
+        // Filter items
+        function filterItems(type) {
+            currentFilter = type;
+            
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Filter and display
+            const filtered = type === 'all' 
+                ? allItems 
+                : allItems.filter(item => item.type === type);
+            
+            displayItems(filtered);
+        }
+        
+        // Search items
+        function searchItems() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const filtered = allItems.filter(item => 
+                item.name.toLowerCase().includes(query) ||
+                (item.description && item.description.toLowerCase().includes(query))
+            );
+            displayItems(filtered);
+        }
+        
+        // Play item
+        function playItem(index) {
+            const item = allItems[index];
+            alert(`▶️ Playing: ${item.name}\n\nThis feature will be fully integrated with each tool's player.`);
+            // TODO: Implement actual playback based on item type
+        }
+        
+        // Delete item
+        function deleteItem(index) {
+            if (confirm('Are you sure you want to delete this item?')) {
+                allItems.splice(index, 1);
+                localStorage.setItem('quantumJukebox', JSON.stringify(allItems));
+                loadItems();
+            }
+        }
+        
+        // Add sample data for demonstration (remove in production)
+        function addSampleData() {
+            const sampleItems = [
+                {
+                    name: 'Morning Meditation Mix',
+                    type: 'frequency',
+                    description: '528Hz + 432Hz healing combination',
+                    timestamp: new Date().toISOString(),
+                    duration: '10:00'
+                },
+                {
+                    name: 'Abundance Manifestation',
+                    type: 'code',
+                    description: 'Reality code for financial abundance',
+                    timestamp: new Date().toISOString()
+                },
+                {
+                    name: 'Daily Guidance',
+                    type: 'tarot',
+                    description: 'Three card spread for today',
+                    timestamp: new Date().toISOString()
+                }
+            ];
+            
+            localStorage.setItem('quantumJukebox', JSON.stringify(sampleItems));
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Uncomment to add sample data for testing
+            // addSampleData();
+            
+            loadItems();
+        });
+    </script>
+</body>
+</html>

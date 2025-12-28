@@ -1,0 +1,21 @@
+                            <button class="save-btn" onclick="saveForecastFrequency('${sign}', '${type}', '${forecast.frequency}')">Save to Jukebox</button>
+                        </div>
+                        
+                        <div class="ritual-section">
+                            <h4>🧘 Ritual & Exercise</h4>
+                            <p>${forecast.ritual}</p>
+--
+        function saveForecastFrequency(sign, type, frequency) {
+            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            
+            const newItem = {
+                id: Date.now(),
+                type: 'frequency',
+                name: `${sign} ${type === 'daily' ? 'Daily' : type === 'weekly' ? 'Weekly' : 'Monthly'} Forecast`,
+--
+            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
+            
+            // Show confirmation
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = '✓ Saved to Jukebox';

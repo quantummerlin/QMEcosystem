@@ -1,0 +1,50 @@
+/**
+ * Quantum Frequency Database
+ * Complete catalog of 600+ frequency combinations
+ * Starting with top 30 most popular tracks from Spotify
+ */
+
+const FrequencyDatabase = {
+    categories: {
+        abundance: {
+            name: "Abundance & Wealth",
+            color: "#ffd700",
+            icon: "💰",
+            description: "Frequencies for manifesting prosperity and financial abundance"
+        },
+        sleep: {
+            name: "Sleep & Rest",
+            color: "#9d00ff",
+            icon: "😴",
+            description: "Deep sleep, relaxation, and restorative rest"
+        },
+        focus: {
+            name: "Focus & Productivity",
+            color: "#00f5ff",
+            icon: "🎯",
+            description: "Enhanced concentration, mental clarity, and productivity"
+        },
+        healing: {
+            name: "Healing & Health",
+            color: "#00ff88",
+            icon: "💚",
+            description: "Physical healing, cellular regeneration, and wellness"
+        },
+        relationships: {
+            name: "Relationships & Love",
+            color: "#ff00ff",
+            icon: "💕",
+            description: "Love, harmony, and relationship enhancement"
+        },
+        spiritual: {
+            name: "Spiritual Growth",
+            color: "#ff00ff",
+            icon: "🔮",
+            description: "Spiritual awakening, higher consciousness, and enlightenment"
+        },
+        emotional: {
+            name: "Emotional Balance",
+            color: "#00a8ff",
+            icon: "🌊",
+            description: "Emotional healing, stress relief, and inner peace"
+        },

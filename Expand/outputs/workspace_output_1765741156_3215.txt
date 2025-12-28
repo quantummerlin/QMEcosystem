@@ -1,0 +1,10 @@
+                    document.getElementById('suggestions').innerHTML = '';
+                }
+            });
+            
+            // Create starfield background
+            createStarfield();
+        });
+    </script>
+</body>
+</html>

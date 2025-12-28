@@ -1,0 +1,100 @@
+/**
+ * Quantum Frequency Database - EXPANDED VERSION
+ * Complete catalog of 595+ frequency combinations
+ * Merged with Deepseek Frequency Database
+ * Generated: 2025-12-12T21:06:56.211Z
+ */
+
+const FrequencyDatabase = {
+  "categories": {
+    "abundance": {
+      "name": "Abundance & Wealth",
+      "color": "#ffd700",
+      "icon": "💰",
+      "description": "Frequencies for manifesting prosperity and financial abundance"
+    },
+    "sleep": {
+      "name": "Sleep & Rest",
+      "color": "#9d00ff",
+      "icon": "😴",
+      "description": "Deep sleep, relaxation, and restorative rest"
+    },
+    "focus": {
+      "name": "Focus & Productivity",
+      "color": "#00f5ff",
+      "icon": "🎯",
+      "description": "Enhanced concentration, mental clarity, and productivity"
+    },
+    "healing": {
+      "name": "Healing & Health",
+      "color": "#00ff88",
+      "icon": "💚",
+      "description": "Physical healing, cellular regeneration, and wellness"
+    },
+    "relationships": {
+      "name": "Relationships & Love",
+      "color": "#ff00ff",
+      "icon": "💕",
+      "description": "Love, harmony, and relationship enhancement"
+    },
+    "spiritual": {
+      "name": "Spiritual Growth",
+      "color": "#ff00ff",
+      "icon": "🔮",
+      "description": "Spiritual awakening, higher consciousness, and enlightenment"
+    },
+    "emotional": {
+      "name": "Emotional Balance",
+      "color": "#00a8ff",
+      "icon": "🌊",
+      "description": "Emotional healing, stress relief, and inner peace"
+    },
+    "vocal": {
+      "name": "Vocal & Performance",
+      "color": "#ff6b6b",
+      "icon": "🎤",
+      "description": "Voice enhancement, performance confidence, and expression"
+    },
+    "trinity": {
+      "name": "Trinity Frequencies",
+      "color": "#ff6b35",
+      "icon": "✨",
+      "description": "Powerful 37Hz + 73Hz + Third Frequency combinations for deep transformation"
+    }
+  },
+  "tracks": [
+    {
+      "id": "amplified-abundance",
+      "name": "Amplified Abundance",
+      "category": "abundance",
+      "playCount": 20035,
+      "duration": 3600,
+      "description": "The most powerful abundance frequency combination. Signature 37Hz + 73Hz base with 888Hz infinite abundance carrier.",
+      "frequencies": [
+        37,
+        73,
+        888,
+        432,
+        528
+      ],
+      "waveforms": [
+        "sine",
+        "sine",
+        "sine",
+        "sine",
+        "sine"
+      ],
+      "volumes": [
+        0.7,
+        0.5,
+        0.3,
+        0.2,
+        0.15
+      ],
+      "tags": [
+        "abundance",
+        "wealth",
+        "manifestation",
+        "prosperity",
+        "888",
+        "signature"

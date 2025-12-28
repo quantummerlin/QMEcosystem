@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relational Dynamics Profile | Quantum Merlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #0a0015 0%, #1a0033 50%, #2d1b4e 100%);
+            color: #e0d4f7;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(13, 0, 26, 0.6);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .profile-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            font-family: 'Cinzel', serif;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3em;
+            color: #f9a8d4;
+            text-shadow: 0 0 20px rgba(249, 168, 212, 0.5);
+            margin-bottom: 15px;
+        }
+
+        .unlock-date {
+            font-size: 1.1em;
+            color: #fbcfe8;
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2em;
+            color: #ec4899;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-icon {
+            font-size: 1.2em;
+        }
+
+        .section p {
+            font-size: 1.15em;
+            margin-bottom: 15px;
+            color: #e0d4f7;
+        }
+
+        .insight-box {
+            background: rgba(236, 72, 153, 0.1);
+            border-left: 4px solid #ec4899;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .insight-box h3 {
+            font-family: 'Cinzel', serif;
+            color: #f9a8d4;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .insight-box p {
+            margin-bottom: 10px;
+        }
+
+        .pattern-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pattern-list li {
+            background: rgba(236, 72, 153, 0.05);
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 3px solid #ec4899;
+        }
+
+        .pattern-list li strong {
+            color: #ec4899;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .action-steps {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .action-steps h3 {
+            font-family: 'Cinzel', serif;
+            color: #10b981;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .action-steps ol {
+            padding-left: 25px;
+        }
+
+        .action-steps li {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .action-steps li strong {
+            color: #10b981;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background: rgba(236, 72, 153, 0.2);
+            color: #f9a8d4;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            border: 2px solid #ec4899;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(236, 72, 153, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2em;
+            color: #fbcfe8;
+            text-align: center;
+            padding: 20px;
+            margin: 30px 0;
+            border-top: 1px solid rgba(236, 72, 153, 0.3);
+            border-bottom: 1px solid rgba(236, 72, 153, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-badge">💫 SYSTEM UNLOCKED</div>
+            <h1>Your Relational Dynamics Profile</h1>
+            <p class="unlock-date" id="unlockDate">Unlocked on <span id="dateText"></span></p>
+        </header>
+
+        <div id="profileContent">
+            <div class="section">
+                <h2><span class="section-icon">📊</span> Overview</h2>
+                <p id="overviewText">Loading your personalized profile...</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">🔍</span> Key Patterns Identified</h2>
+                <ul class="pattern-list" id="patternsList"></ul>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">🧩</span> Pattern Integration</h2>
+                <div class="insight-box">
+                    <h3>How Your Relational Patterns Interact</h3>
+                    <p id="integrationText"></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">💡</span> Core Insights</h2>
+                <div id="insightsContainer"></div>
+            </div>
+
+            <div class="action-steps">
+                <h3>🎯 Your Relationship Transformation Plan</h3>
+                <ol id="actionSteps"></ol>
+            </div>
+
+            <div class="quote" id="closingQuote"></div>
+        </div>
+
+        <div class="navigation">
+            <a href="insight-library-enhanced.html" class="nav-btn">← Back to Library</a>
+            <a href="tools-hub.html" class="nav-btn">Explore More Tools →</a>
+        </div>
+    </div>
+
+    <script src="js/unlock-system.js"></script>
+    <script>
+        const unlockSystem = new UnlockSystem();
+
+        function generateProfile() {
+            const insights = unlockSystem.getSystemInsights('relational');
+            
+            const timestamps = JSON.parse(localStorage.getItem('quantumMerlinUnlockTimestamps') || '{}');
+            const unlockDate = timestamps.relational ? new Date(timestamps.relational) : new Date();
+            document.getElementById('dateText').textContent = unlockDate.toLocaleDateString('en-US', {
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric'
+            });
+
+            const overview = generateOverview(insights);
+            document.getElementById('overviewText').innerHTML = overview;
+
+            const patterns = identifyPatterns(insights);
+            const patternsList = document.getElementById('patternsList');
+            patternsList.innerHTML = patterns.map(p => `
+                <li>
+                    <strong>${p.title}</strong>
+                    ${p.description}
+                </li>
+            `).join('');
+
+            const integration = generateIntegration(patterns);
+            document.getElementById('integrationText').innerHTML = integration;
+
+            const coreInsights = generateCoreInsights(insights);
+            const insightsContainer = document.getElementById('insightsContainer');
+            insightsContainer.innerHTML = coreInsights.map(insight => `
+                <div class="insight-box">
+                    <h3>${insight.title}</h3>
+                    <p>${insight.content}</p>
+                </div>
+            `).join('');
+
+            const actions = generateActionSteps(patterns);
+            const actionSteps = document.getElementById('actionSteps');
+            actionSteps.innerHTML = actions.map(action => `<li>${action}</li>`).join('');
+
+            document.getElementById('closingQuote').textContent = getClosingQuote();
+        }
+
+        function generateOverview(insights) {
+            const toolCount = insights.length;
+            
+            return `
+                <p>You've completed all ${toolCount} tools in the Relational Dynamics system, revealing the unconscious patterns that shape how you connect with others. This profile synthesizes your results to show you the invisible architecture of your relationships.</p>
+                
+                <p>Your relational patterns aren't about other people—they're about you. You attract what you are, not what you want. The same dynamics repeat because you're unconsciously recreating familiar patterns. Understanding these patterns is the first step toward creating different relationships.</p>
+                
+                <p>What follows is a map of your relational operating system: how you trust, how you relate to authority, and how you show up in intimate connections. Some of this will be uncomfortable. That discomfort is the signal you're touching something real.</p>
+            `;
+        }
+
+        function identifyPatterns(insights) {
+            const patterns = [];
+
+            insights.forEach(insight => {
+                if (insight.tool === 'Trust Radar') {
+                    patterns.push({
+                        title: 'Trust Architecture',
+                        description: 'Your trust patterns reveal who and what you actually trust versus who you think you trust. This gap between conscious belief and unconscious behavior is where most relational pain originates. You can\'t trust what your nervous system perceives as unsafe.'
+                    });
+                }
+                
+                if (insight.tool === 'Authority Imprint Detector') {
+                    patterns.push({
+                        title: 'Authority Relationship Pattern',
+                        description: 'Your relationship with authority was formed in childhood and now runs automatically in all power dynamics. Whether you rebel, comply, or avoid, this pattern shapes your career, your relationships, and your relationship with your own power.'
+                    });
+                }
+                
+                if (insight.tool === 'Relationship Dynamic Decoder') {
+                    patterns.push({
+                        title: 'Intimate Connection Pattern',
+                        description: 'Your relationship dynamic is the unconscious script you follow in intimate connections. Merger, avoider, rescuer, runner—each pattern has its own logic, its own pain, and its own path to healing. You can\'t change what you can\'t see.'
+                    });
+                }
+            });
+
+            return patterns;
+        }
+
+        function generateIntegration(patterns) {
+            return `
+                <p>Your relational patterns form a complete system. Your trust architecture determines who you let in. Your authority imprint shapes how you relate to power—both others' and your own. Your relationship dynamic determines what you do once someone is close.</p>
+                
+                <p>These patterns aren't separate—they reinforce each other. If you don't trust easily, you'll keep people at a distance (avoider pattern). If you over-trust, you'll merge with others and lose yourself. If you have an authority wound, you'll either rebel against or submit to your partners, recreating the original dynamic.</p>
+                
+                <p>The good news: these patterns are learned, which means they can be unlearned. The bad news: unlearning requires more than insight. You have to create new experiences that prove the old patterns wrong. You have to show your nervous system it's safe to trust, safe to be close, safe to be powerful. That takes time, patience, and often support.</p>
+            `;
+        }
+
+        function generateCoreInsights(insights) {
+            return [
+                {
+                    title: 'You Attract Your Unhealed Patterns',
+                    content: 'The people you attract aren\'t random—they\'re mirrors of your unconscious patterns. If you keep attracting unavailable people, you\'re likely an avoider. If you keep attracting broken people, you\'re likely a rescuer. If you keep attracting controlling people, you likely have an authority wound. The pattern isn\'t in them—it\'s in you.'
+                },
+                {
+                    title: 'Relationship Patterns Are Survival Strategies',
+                    content: 'Your relational patterns aren\'t character flaws—they\'re adaptations. They kept you safe once. Maybe merging prevented abandonment. Maybe avoiding prevented engulfment. Maybe rescuing gave you worth. These patterns were intelligent responses to real threats. They\'re just outdated now.'
+                },
+                {
+                    title: 'Healing Happens in Relationship',
+                    content: 'You can\'t heal relational wounds alone. You need corrective experiences—relationships where the old pattern doesn\'t play out. Where you can trust and not be betrayed. Where you can be close and not lose yourself. Where you can be powerful and not be punished. These experiences rewire your nervous system.'
+                }
+            ];
+        }
+
+        function generateActionSteps(patterns) {
+            return [
+                '<strong>Map Your Pattern:</strong> Write out your typical relationship arc from beginning to end. Notice the pattern. When does it start? What triggers it? How does it end? Awareness is the first step.',
+                '<strong>Identify Your Triggers:</strong> What behaviors in others trigger your pattern? Unavailability? Neediness? Control? Criticism? Your triggers reveal your wounds. Track them for one week.',
+                '<strong>Practice Opposite Action:</strong> If you typically merge, practice maintaining boundaries. If you typically avoid, practice vulnerability. If you typically rescue, practice letting others handle their own problems. Small steps.',
+                '<strong>Heal Your Authority Wound:</strong> Notice how you relate to authority figures this week. Are you rebelling? Complying? Avoiding? Choose one interaction to respond differently. Break the automatic pattern.',
+                '<strong>Build Trust Gradually:</strong> Don\'t try to trust everyone or no one. Practice discernment. Trust people in small ways first. Let them prove themselves. Trust is earned through consistent behavior over time.',
+                '<strong>Communicate Your Pattern:</strong> Tell your partner (or close friend) about your relational pattern. "I tend to merge and lose myself." "I tend to run when things get close." Naming it reduces its power.',
+                '<strong>Get Relational Support:</strong> Work with a therapist, join a support group, or find a mentor who models healthy relationships. You can\'t see your blind spots alone. You need mirrors.'
+            ];
+        }
+
+        function getClosingQuote() {
+            const quotes = [
+                '"We are not held back by the love we didn\'t receive in the past, but by the love we\'re not extending in the present." — Marianne Williamson',
+                '"The meeting of two personalities is like the contact of two chemical substances: if there is any reaction, both are transformed." — Carl Jung',
+                '"Intimacy is not who you let touch you. Intimacy is who you text at 3am about your dreams and fears." — Unknown',
+                '"The quality of your life is the quality of your relationships." — Tony Robbins',
+                '"We accept the love we think we deserve." — Stephen Chbosky'
+            ];
+            return quotes[Math.floor(Math.random() * quotes.length)];
+        }
+
+        generateProfile();
+    </script>
+</body>
+</html>

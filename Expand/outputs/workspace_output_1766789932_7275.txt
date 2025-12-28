@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+    <h2>Quantum Code Generator</h2>
+    <form method="post">
+        <label for="intention">Enter your intention (be specific, grateful, and positive):</label><br>
+        <textarea id="intention" name="intention" rows="5" cols="50" required>{{ intention }}</textarea><br><br>
+        <button type="submit" class="button">Generate Code</button>
+    </form>
+    {% if code %}
+        <div class="card">
+            <h3>Your Quantum Reality Code:</h3>
+            <div id="gematria-number" style="font-size:2rem; font-weight:bold; color:#4a7bda;">{{ code }}</div>
+            <button class="button" onclick="navigator.clipboard.writeText('{{ code }}')">Copy Code</button>
+            <p>Amplify your code by sharing it on social media with #QuantumRealityCode and supporting others!</p>
+            <ol>
+                <li>Generate your code</li>
+                <li>Share on social media (the more, the stronger)</li>
+                <li>Support others by replying to their posts</li>
+                <li>Repeat your code while listening to the sound of creation (37Hz + 73Hz)</li>
+            </ol>
+            <p><strong>Note:</strong> Your intention is never stored. Be careful what you wish for—quantum snap back will correct abuse.</p>
+        </div>
+        <!-- BEGIN: Quantum Activation Protocol Block -->
+        <div class="confirmation-section" id="confirmation-section">
+            <h3>QUANTUM FIELD ACTIVATION</h3>
+            <p>Share your code to amplify the manifestation:</p>
+            <div class="social-share-grid">
+                <a href="#" class="share-platform" onclick="shareToX()" id="x-share">
+                    <img src="{{ url_for('static', filename='icons/x.png') }}" alt="X" class="social-icon-img"><br>
+                    <span>X</span>
+                </a>
+                <a href="https://www.facebook.com/QuantumRealityCodes" class="share-platform" onclick="shareToFacebook(); return false;" id="facebook-share">
+                    <img src="{{ url_for('static', filename='icons/facebook.png') }}" alt="Facebook" class="social-icon-img"><br>
+                    <span>Facebook</span>
+                </a>
+                <a href="#" class="share-platform" onclick="shareToInstagram()" id="instagram-share">
+                    <img src="{{ url_for('static', filename='icons/instagram.png') }}" alt="Instagram" class="social-icon-img"><br>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" class="share-platform" onclick="shareToTikTok()" id="tiktok-share">
+                    <img src="{{ url_for('static', filename='icons/tiktok.png') }}" alt="TikTok" class="social-icon-img"><br>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://t.me/+BIChXgOqFH9iMmU1" class="share-platform" onclick="shareToTelegram(); return false;" id="telegram-share">
+                    <img src="{{ url_for('static', filename='icons/telegram.png') }}" alt="Telegram" class="social-icon-img"><br>
+                    <span>Telegram</span>
+                </a>
+            </div>
+            <button onclick="confirmPosted()" class="confirmation-btn">I Posted My Confirmation!</button>
+        </div>
+        <div class="completion-celebration" id="completion-celebration" style="display:none;">
+            <h3>MANIFESTATION PROTOCOL COMPLETE!</h3>
+            <p>Your quantum code is now fully activated and broadcasting to the universe.</p>
+            <p><strong>Expect manifestation within 24-72 hours</strong></p>
+            <div style="margin: 20px 0; font-size: 1.2em;">
+                You are now part of the quantum manifestation network!
+            </div>
+            <button onclick="generateAnother()" class="celebration-btn">Generate Another Code</button>
+            <button onclick="joinCommunity()" class="celebration-btn">Join Community</button>
+        </div>
+        <div id="mobileToast" style="display:none;position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#1e3b6e;color:#e0f2ff;padding:12px 24px;border-radius:8px;z-index:999;font-weight:bold;box-shadow:0 0 10px #4a7bda;"></div>
+        <script>
+        // Get share text
+        function getShareText() {
+            const code = document.getElementById('gematria-number').textContent;
+            const intention = document.getElementById('intention').value || '';
+            return `My Quantum Reality Code: ${code}\n\n${intention}\n\nGenerated with Quantum Merlin\n#QuantumRealityCode #Manifestation #Gematria`;
+        }
+        function shareToX() {
+            const text = getShareText();
+            const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+            showMobileToast('X opened! Post your code to activate!', 3000);
+        }
+        function shareToFacebook() {
+            const text = getShareText();
+            const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+            showMobileToast('Facebook opened! Share your quantum code!', 3000);
+        }
+        function shareToInstagram() {
+            const text = getShareText();
+            navigator.clipboard.writeText(text).then(() => {
+                showMobileToast('Text copied! Open Instagram and paste in your story!', 4000);
+            });
+        }
+        function shareToTikTok() {
+            const text = getShareText();
+            navigator.clipboard.writeText(text).then(() => {
+                showMobileToast('Text copied! Open TikTok and paste in your video caption!', 4000);
+                if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                    window.open('https://www.tiktok.com/upload/', '_blank');
+                }
+            });
+        }
+        function shareToTelegram() {
+            const text = getShareText();
+            const url = `https://t.me/share/url?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+            showMobileToast('Telegram opened! Share in your groups!', 3000);
+        }
+        function confirmPosted() {
+            document.getElementById('completion-celebration').style.display = 'block';
+            document.getElementById('completion-celebration').scrollIntoView({ behavior: 'smooth' });
+            showMobileToast('Manifestation protocol complete! Watch for signs!', 5000);
+        }
+        function generateAnother() {
+            document.getElementById('intention').value = '';
+            window.location.reload();
+        }
+        function joinCommunity() {
+            window.open('https://t.me/', '_blank');
+        }
+        function showMobileToast(message, duration = 3000) {
+            const toast = document.getElementById('mobileToast');
+            toast.textContent = message;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, duration);
+        }
+        </script>
+        <!-- END: Quantum Activation Protocol Block -->
+    {% endif %}
+</div>
+{% endblock %}

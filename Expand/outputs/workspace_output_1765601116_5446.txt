@@ -1,0 +1,11 @@
+361-    
+362-    <!-- Navigation Menu -->
+363-    <div class="nav-menu">
+364-        <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+365-        <div class="nav-dropdown" id="navDropdown">
+366:            <a href="index.html">🏠 Home</a>
+367-            <a href="genesis/index-enhanced.html">🎵 Frequency Generator</a>
+368-            <a href="jukebox.html">📚 Quantum Jukebox</a>
+369-            <a href="gematria.html">🔢 Quantum Gematria</a>
+370-            <a href="tarot.html">🃏 Quantum Tarot</a>
+371-            <a href="sigils.html">✨ Sigil Creator</a>

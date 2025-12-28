@@ -1,0 +1,21 @@
+
+        <section class="generator-section">
+            <h2>Create Your Cosmic Sigil</h2>
+            <p style="margin-bottom: 20px; color: #cccccc;">Enter your birth details to generate your unique celestial signature</p>
+            
+            <div class="input-group">
+                <label for="birthdate">Birth Date</label>
+                <input type="date" id="birthdate" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="birthtime">Birth Time (if known, otherwise use noon)</label>
+                <input type="time" id="birthtime" value="12:00">
+            </div>
+            
+            <div class="input-group">
+                <label for="locationSearch">Birth Location (any city worldwide)</label>
+                <div id="locationInput">
+                    <input type="text" id="locationSearch" placeholder="Start typing any city name..." autocomplete="off">
+                    <div id="suggestions"></div>
+                </div>

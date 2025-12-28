@@ -1,0 +1,1 @@
+744:        function displayAstronomicalData(dateTime, moonInfo, starDensity, quadrant, location) {

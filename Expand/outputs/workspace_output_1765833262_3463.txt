@@ -1,0 +1,101 @@
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Quantum Effects -->
+    <div class="quantum-grid"></div>
+    <div class="quantum-sun"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">✨ Quantum Merlin</div>
+            <nav class="nav-menu">
+                <button class="nav-toggle" onclick="toggleNav()">🔮 Explore Tools</button>
+                <div class="nav-dropdown" id="navDropdown">
+                    <a href="https://frequency.quantummerlin.com" class="nav-item">🎵 Frequency Generator</a>
+                    <a href="https://jukebox.quantummerlin.com" class="nav-item">📚 Quantum Jukebox</a>
+                    <a href="https://gematria.quantummerlin.com" class="nav-item">🔢 Quantum Gematria</a>
+                    <a href="https://tarot.quantummerlin.com" class="nav-item">🃏 Quantum Tarot</a>
+                    <a href="https://sigils.quantummerlin.com" class="nav-item">✨ Sigil Creator</a>
+                    <a href="https://astrology.quantummerlin.com" class="nav-item">🌟 Western Astrology</a>
+                    <a href="https://chinese.quantummerlin.com" class="nav-item">🐲 Chinese Zodiac</a>
+                    <a href="https://forecasts.quantummerlin.com" class="nav-item">🔮 Zodiac Forecasts</a>
+                    <a href="https://codes.quantummerlin.com" class="nav-item">💫 Reality Codes</a>
+                    <a href="https://crystals.quantummerlin.com" class="nav-item">💎 Crystal Wisdom</a>
+                    <a href="https://water.quantummerlin.com" class="nav-item">💧 Water Charging</a>
+                    <a href="/about" class="nav-item">📖 About Us</a>
+                    <a href="/contact" class="nav-item">📧 Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Quantum Merlin</h1>
+            <p class="hero-subtitle">Complete Metaphysical Toolkit for Consciousness Transformation</p>
+        </section>
+
+        <!-- Divine Guides -->
+        <section class="divine-guides">
+            <div class="guide merlin">
+                <div class="guide-icon">🧙‍♂️</div>
+                <div class="guide-name">Quantum Merlin</div>
+                <div class="guide-title">The Divine Masculine Guide</div>
+                <p class="guide-description">Master of manifestation, quantum codes, and sacred geometry. Merlin guides you through the realms of logic, structure, and powerful creation techniques.</p>
+            </div>
+            <div class="guide rose">
+                <div class="guide-icon">🌹</div>
+                <div class="guide-name">Quantum Rose</div>
+                <div class="guide-title">The Divine Feminine Guide</div>
+                <p class="guide-description">Keeper of intuition, emotional wisdom, and sacred relationships. Rose guides you through the realms of heart, intuition, and nurturing transformation.</p>
+            </div>
+        </section>
+
+        <!-- Daily Alignment -->
+        <section class="daily-alignment">
+            <h2 class="alignment-title">🌟 Daily Quantum Alignment</h2>
+            <div class="alignment-content" id="dailyAlignment">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Tool Categories -->
+        <section class="categories">
+            <h2 class="section-title">Your 12 Quantum Tools</h2>
+            
+            <!-- Foundation Tools -->
+            <div class="category-grid">
+                <div class="category">
+                    <h3 class="category-title">🏛️ Foundation Suite</h3>
+                    <p class="category-description">Essential tools for your daily spiritual practice and consciousness exploration.</p>
+                    <div class="tools-list">
+                        <a href="https://frequency.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">🎵 Frequency Generator</span>
+                            <span class="tool-guide">Guide: Merlin</span>
+                        </a>
+                        <a href="https://jukebox.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">📚 Quantum Jukebox</span>
+                            <span class="tool-guide">Guides: Both</span>
+                        </a>
+                        <a href="https://gematria.quantummerlin.com" class="tool-link">
+                            <span class="tool-name">🔢 Quantum Gematria</span>
+                            <span class="tool-guide">Guide: Merlin</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">🔮 Mystic Arts Suite</h3>
+                    <p class="category-description">Ancient wisdom systems reimagined for the quantum age of spiritual exploration.</p>

@@ -1,0 +1,23 @@
+408-    
+409-    <div class="container">
+410-        <!-- Header -->
+411-        <header>
+412-            <a href="index.html" class="back-btn">
+413:                ← Back to Home
+414-            </a>
+415-            <h1 class="logo">🎧 Quantum Jukebox</h1>
+416-            <p class="tagline">Your Personal Quantum Library</p>
+417-        </header>
+418-        
+--
+468-    <!-- Footer -->
+469-    <footer>
+470-        <div class="container">
+471-            <h3 style="color: var(--quantum-purple); margin-bottom: 15px;">Quantum Merlin</h3>
+472-            <div class="footer-links">
+473:                <a href="index.html">Home</a>
+474-                <a href="../genesis/index-enhanced.html">Frequency Generator</a>
+475-                <a href="../genesis/disclaimer.html">Disclaimer</a>
+476-                <a href="../genesis/terms.html">Terms</a>
+477-                <a href="../genesis/privacy.html">Privacy</a>
+478-            </div>

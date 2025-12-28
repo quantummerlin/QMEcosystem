@@ -1,0 +1,11 @@
+                <span>Quantum Merlin</span>
+            </a>
+            <div class="nav-links">
+                <a href="../hub/index.html">Hub</a>
+                <a href="../genesis/index.html" class="active">Frequency Generator</a>
+                <a href="../codes/index.html">Reality Codes</a>
+                <a href="../jukebox/index.html">Jukebox</a>
+            </div>
+        </div>
+    </nav>
+    

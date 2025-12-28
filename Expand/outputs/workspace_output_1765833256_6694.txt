@@ -1,0 +1,9 @@
+6:    <title>Quantum Merlin - Complete Metaphysical Toolkit</title>
+7:    <meta name="description" content="Discover your spiritual power with Quantum Merlin's complete suite of 12 mystical tools. From numerology to tarot, crystals to frequencies - transform your consciousness today.">
+14:    <meta property="og:title" content="Quantum Merlin - Complete Metaphysical Toolkit">
+28:      // Custom event tracking for Quantum Merlin
+469:            <div class="logo">✨ Quantum Merlin</div>
+495:            <h1>Quantum Merlin</h1>
+503:                <div class="guide-name">Quantum Merlin</div>
+614:            <div>© 2024 Quantum Merlin. All rights reserved.</div>
+700:            page_title: 'Quantum Merlin - Main Hub',

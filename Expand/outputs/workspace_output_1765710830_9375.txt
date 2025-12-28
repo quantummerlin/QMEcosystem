@@ -1,0 +1,23 @@
+                quadrant: quadrant
+            }));
+            
+            // Generate sigil
+            const style = document.getElementById('style').value;
+            drawCosmicSigil(moonPhase, starDensity, quadrant, style);
+            
+            // Display astronomical data
+            displayAstronomicalData(birthDateTime, moonInfo, starDensity, quadrant, selectedLocation);
+            
+            // Display reading
+--
+            
+            readingSection.innerHTML = reading;
+            readingSection.classList.add('active');
+        }
+
+        function drawCosmicSigil(moonPhase, starDensity, quadrant, style) {
+            const canvas = document.getElementById('sigilCanvas');
+            const ctx = canvas.getContext('2d');
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            

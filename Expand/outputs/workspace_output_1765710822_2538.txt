@@ -1,0 +1,2 @@
+881:            const moonInfo = getMoonPhaseInfo(moonPhase);
+941:        function getMoonPhaseInfo(phase) {

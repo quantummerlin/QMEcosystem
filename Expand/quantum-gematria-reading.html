@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Gematria Reading - Deep Personal Analysis</title>
+    <meta name="description" content="Deep gematria reading with family resonance analysis, date patterns, and personal meaning discovery. Explore the symbolic patterns in your life through advanced numerology.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cinzel', 'Georgia', serif;
+            background: linear-gradient(135deg, #1a0033 0%, #2d0052 50%, #4a0080 100%);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 215, 0, 0.05);
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .header p {
+            color: #FF69B4;
+            font-size: 1.1rem;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .reading-flow {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .step-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            display: none;
+        }
+
+        .step-section.active {
+            display: block;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .step-title {
+            color: #FFD700;
+            font-size: 1.8rem;
+        }
+
+        .step-description {
+            color: #cccccc;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            color: #FFD700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .text-input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            color: #ffffff;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .text-input:focus {
+            outline: none;
+            border-color: #FFD700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .date-input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+
+        .optional-section {
+            background: rgba(255, 105, 180, 0.05);
+            border: 1px solid rgba(255, 105, 180, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .optional-title {
+            color: #FF69B4;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .optional-title::before {
+            content: "✨";
+            margin-right: 10px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 15px;
+        }
+
+        .nav-btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn.primary {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+        }
+
+        .nav-btn.primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .nav-btn.secondary {
+            background: linear-gradient(45deg, #FF69B4, #FF1493);
+            color: #fff;
+        }
+
+        .nav-btn.secondary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255, 105, 180, 0.4);
+        }
+
+        .results-display {
+            display: none;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .results-display.active {
+            display: block;
+        }
+
+        .result-section {
+            margin-bottom: 30px;
+        }
+
+        .result-section h3 {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .result-section h3::before {
+            content: "🌟";
+            margin-right: 10px;
+        }
+
+        .pattern-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pattern-title {
+            color: #FF69B4;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .pattern-description {
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .number-highlight {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .amplification-section {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .amplification-section h3 {
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        .amplification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .amp-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .amp-card:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: scale(1.05);
+        }
+
+        .amp-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .amp-title {
+            color: #FFD700;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .amp-value {
+            color: #cccccc;
+            font-size: 0.85rem;
+        }
+
+        .save-btn {
+            background: linear-gradient(45deg, #FF69B4, #FF1493);
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .save-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255, 105, 180, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .step-title {
+                font-size: 1.5rem;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>🔮 Quantum Gematria Reading</h1>
+        <p>Discover the symbolic patterns woven through your personal journey</p>
+    </div>
+
+    <div class="main-container">
+        <div class="reading-flow">
+            <!-- Step 1: Personal Information -->
+            <div class="step-section active" id="step1">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Personal Foundation</div>
+                </div>
+                <p class="step-description">
+                    Let's begin with your core information to establish your numerical foundation.
+                </p>
+                
+                <div class="input-group">
+                    <label for="fullName">Full Legal Name:</label>
+                    <input type="text" id="fullName" class="text-input" placeholder="Enter your full legal name..." />
+                </div>
+
+                <div class="input-group">
+                    <label for="nickname">Chosen Name or Nickname (Optional):</label>
+                    <input type="text" id="nickname" class="text-input" placeholder="Name you feel most connected to..." />
+                </div>
+
+                <div class="input-group">
+                    <label for="birthdate">Birth Date:</label>
+                    <input type="date" id="birthdate" class="date-input" />
+                </div>
+
+                <div class="optional-section">
+                    <div class="optional-title">Additional Personal Numbers</div>
+                    <div class="input-group">
+                        <label for="luckyNumbers">Important Numbers (comma separated):</label>
+                        <input type="text" id="luckyNumbers" class="text-input" placeholder="7, 13, 22..." />
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <div></div>
+                    <button class="nav-btn primary" onclick="nextStep()">Continue to Family</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Family Information -->
+            <div class="step-section" id="step2">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Family Resonance</div>
+                </div>
+                <p class="step-description">
+                    Family connections often reveal shared numerical patterns. This step is optional but provides deeper insights.
+                </p>
+                
+                <div class="optional-section">
+                    <div class="optional-title">Parents</div>
+                    <div class="input-group">
+                        <label for="motherName">Mother's Name:</label>
+                        <input type="text" id="motherName" class="text-input" placeholder="Mother's full name..." />
+                    </div>
+                    <div class="input-group">
+                        <label for="motherBirthdate">Mother's Birth Date:</label>
+                        <input type="date" id="motherBirthdate" class="date-input" />
+                    </div>
+                    <div class="input-group">
+                        <label for="fatherName">Father's Name:</label>
+                        <input type="text" id="fatherName" class="text-input" placeholder="Father's full name..." />
+                    </div>
+                    <div class="input-group">
+                        <label for="fatherBirthdate">Father's Birth Date:</label>
+                        <input type="date" id="fatherBirthdate" class="date-input" />
+                    </div>
+                </div>
+
+                <div class="optional-section">
+                    <div class="optional-title">Partner</div>
+                    <div class="input-group">
+                        <label for="partnerName">Partner's Name:</label>
+                        <input type="text" id="partnerName" class="text-input" placeholder="Partner's full name..." />
+                    </div>
+                    <div class="input-group">
+                        <label for="anniversary">Anniversary Date:</label>
+                        <input type="date" id="anniversary" class="date-input" />
+                    </div>
+                </div>
+
+                <div class="optional-section">
+                    <div class="optional-title">Children</div>
+                    <div class="input-group">
+                        <label for="child1Name">First Child's Name:</label>
+                        <input type="text" id="child1Name" class="text-input" placeholder="Child's full name..." />
+                    </div>
+                    <div class="input-group">
+                        <label for="child1Birthdate">First Child's Birth Date:</label>
+                        <input type="date" id="child1Birthdate" class="date-input" />
+                    </div>
+                    <div class="input-group">
+                        <label for="child2Name">Second Child's Name:</label>
+                        <input type="text" id="child2Name" class="text-input" placeholder="Child's full name..." />
+                    </div>
+                    <div class="input-group">
+                        <label for="child2Birthdate">Second Child's Birth Date:</label>
+                        <input type="date" id="child2Birthdate" class="date-input" />
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn secondary" onclick="previousStep()">Back</button>
+                    <button class="nav-btn primary" onclick="nextStep()">Generate Reading</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Results -->
+            <div class="step-section" id="step3">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Your Symbolic Patterns</div>
+                </div>
+                <p class="step-description">
+                    The patterns that may feel meaningful in your personal numerology profile.
+                </p>
+
+                <div class="results-display active" id="resultsDisplay">
+                    <!-- Results will be populated here -->
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn secondary" onclick="previousStep()">Back</button>
+                    <button class="nav-btn primary" onclick="startNewReading()">New Reading</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="gematria-systems.js"></script>
+    <script src="gematria-matches.js"></script>
+    <script src="gematria-calculator.js"></script>
+    <script>
+        // Initialize calculator
+        const calculator = new GematriaCalculator();
+        let currentStep = 1;
+        let readingData = {};
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const textParam = urlParams.get('text');
+            if (textParam) {
+                document.getElementById('fullName').value = textParam;
+            }
+        });
+
+        function nextStep() {
+            if (currentStep < 3) {
+                // Save current step data
+                saveStepData();
+                
+                // Validate current step
+                if (!validateCurrentStep()) {
+                    return;
+                }
+                
+                // Hide current step
+                document.getElementById(`step${currentStep}`).classList.remove('active');
+                
+                // Show next step
+                currentStep++;
+                document.getElementById(`step${currentStep}`).classList.add('active');
+                
+                // Generate reading if we're on step 3
+                if (currentStep === 3) {
+                    generateReading();
+                }
+            }
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                // Hide current step
+                document.getElementById(`step${currentStep}`).classList.remove('active');
+                
+                // Show previous step
+                currentStep--;
+                document.getElementById(`step${currentStep}`).classList.add('active');
+            }
+        }
+
+        function saveStepData() {
+            if (currentStep === 1) {
+                readingData.fullName = document.getElementById('fullName').value;
+                readingData.nickname = document.getElementById('nickname').value;
+                readingData.birthdate = document.getElementById('birthdate').value;
+                readingData.luckyNumbers = document.getElementById('luckyNumbers').value;
+            } else if (currentStep === 2) {
+                readingData.motherName = document.getElementById('motherName').value;
+                readingData.motherBirthdate = document.getElementById('motherBirthdate').value;
+                readingData.fatherName = document.getElementById('fatherName').value;
+                readingData.fatherBirthdate = document.getElementById('fatherBirthdate').value;
+                readingData.partnerName = document.getElementById('partnerName').value;
+                readingData.anniversary = document.getElementById('anniversary').value;
+                readingData.child1Name = document.getElementById('child1Name').value;
+                readingData.child1Birthdate = document.getElementById('child1Birthdate').value;
+                readingData.child2Name = document.getElementById('child2Name').value;
+                readingData.child2Birthdate = document.getElementById('child2Birthdate').value;
+            }
+        }
+
+        function validateCurrentStep() {
+            if (currentStep === 1) {
+                const fullName = document.getElementById('fullName').value.trim();
+                const birthdate = document.getElementById('birthdate').value;
+                
+                if (!fullName) {
+                    alert('Please enter your full name.');
+                    return false;
+                }
+                
+                if (!birthdate) {
+                    alert('Please enter your birth date.');
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function generateReading() {
+            const resultsDisplay = document.getElementById('resultsDisplay');
+            
+            // Calculate personal numerology
+            const personalResults = calculator.calculateAll(readingData.fullName);
+            const personalReduced = personalResults.englishOrdinal.reduced;
+            
+            // Calculate birthdate numerology
+            let birthdateNumerology = null;
+            if (readingData.birthdate) {
+                birthdateNumerology = calculator.calculateDateNumerology(readingData.birthdate);
+            }
+            
+            // Analyze family resonance
+            const familyData = [];
+            if (readingData.fullName) {
+                familyData.push({ name: readingData.fullName, type: 'self' });
+            }
+            if (readingData.motherName) {
+                familyData.push({ name: readingData.motherName, type: 'mother' });
+            }
+            if (readingData.fatherName) {
+                familyData.push({ name: readingData.fatherName, type: 'father' });
+            }
+            if (readingData.partnerName) {
+                familyData.push({ name: readingData.partnerName, type: 'partner' });
+            }
+            if (readingData.child1Name) {
+                familyData.push({ name: readingData.child1Name, type: 'child1' });
+            }
+            if (readingData.child2Name) {
+                familyData.push({ name: readingData.child2Name, type: 'child2' });
+            }
+            
+            const familyResonance = calculator.analyzeFamilyResonance(familyData);
+            
+            // Generate HTML
+            let html = '';
+            
+            // Personal Analysis
+            html += '<div class="result-section">';
+            html += '<h3>Personal Numerology Patterns</h3>';
+            html += `<div class="pattern-card">`;
+            html += `<div class="pattern-title">Your Name Vibration</div>`;
+            html += `<div class="pattern-description">`;
+            html += `Your full name "${readingData.fullName}" vibrates to the number <span class="number-highlight">${personalResults.englishOrdinal.value}</span> `;
+            html += `which reduces to <span class="number-highlight">${personalReduced}</span>. `;
+            html += `This number may feel meaningful as it represents your core essence. `;
+            const nameMatches = calculator.findMatches(personalResults.englishOrdinal.value);
+            if (nameMatches.length > 0) {
+                html += `Words with this same value include: ${nameMatches.join(', ')}.`;
+            }
+            html += `</div></div>`;
+            
+            if (birthdateNumerology) {
+                html += `<div class="pattern-card">`;
+                html += `<div class="pattern-title">Life Path Number</div>`;
+                html += `<div class="pattern-description">`;
+                html += `Your birth date reveals a life path number of <span class="number-highlight">${birthdateNumerology.lifePath}</span>. `;
+                html += `This may represent the journey and lessons you're here to experience. `;
+                html += `Your day vibration is <span class="number-highlight">${birthdateNumerology.day}</span>, `;
+                html += `month is <span class="number-highlight">${birthdateNumerology.month}</span>, `;
+                html += `and year is <span class="number-highlight">${birthdateNumerology.year}</span>.`;
+                html += `</div></div>`;
+            }
+            
+            html += '</div>';
+            
+            // Family Resonance
+            if (Object.keys(familyResonance).length > 0) {
+                html += '<div class="result-section">';
+                html += '<h3>Family Resonance Patterns</h3>';
+                
+                Object.entries(familyResonance).forEach(([number, data]) => {
+                    html += `<div class="pattern-card">`;
+                    html += `<div class="pattern-title">Shared Number: ${number}</div>`;
+                    html += `<div class="pattern-description">`;
+                    html += `The number <span class="number-highlight">${number}</span> appears <span class="number-highlight">${data.count}</span> times `;
+                    html += `across family members, suggesting a shared energetic pattern. `;
+                    if (data.matches.length > 0) {
+                        html += `This number connects to words like: ${data.matches.join(', ')}.`;
+                    }
+                    html += `</div></div>`;
+                });
+                
+                html += '</div>';
+            }
+            
+            // Date Distances
+            if (readingData.birthdate && readingData.anniversary) {
+                const daysBetween = calculator.calculateDaysBetween(readingData.birthdate, readingData.anniversary);
+                const reducedDays = calculator.reduceToSingleDigit(daysBetween);
+                
+                html += '<div class="result-section">';
+                html += '<h3>Relationship Timing Patterns</h3>';
+                html += `<div class="pattern-card">`;
+                html += `<div class="pattern-title>Partnership Connection</div>`;
+                html += `<div class="pattern-description">`;
+                html += `There are <span class="number-highlight">${daysBetween}</span> days between your birth and your anniversary, `;
+                html += `which reduces to <span class="number-highlight">${reducedDays}</span>. `;
+                html += `This timing pattern may feel significant in understanding your relationship dynamics.`;
+                html += `</div></div>`;
+                html += '</div>';
+            }
+            
+            // Add amplification section
+            html += generateAmplificationSection(personalResults.englishOrdinal.value, personalReduced);
+            
+            // Add save button
+            html += '<button class="save-btn" onclick="saveReading()">💾 Save to Jukebox</button>';
+            
+            resultsDisplay.innerHTML = html;
+        }
+
+        function generateAmplificationSection(value, reduced) {
+            let html = '<div class="amplification-section">';
+            html += '<h3>🌟 Amplify This Reading</h3>';
+            html += '<p style="color: #cccccc; margin-bottom: 20px;">';
+            html += 'These systems are often used together to deepen focus and symbolic coherence.';
+            html += '</p>';
+            
+            const amplifications = [
+                {
+                    icon: '🎵',
+                    title: 'Frequency Generator',
+                    value: `${value} Hz`,
+                    url: `genesis/index-enhanced.html?freq=${value}&source=gematria-reading`
+                },
+                {
+                    icon: '💎',
+                    title: 'Crystal Lens',
+                    value: getCrystalForNumber(reduced),
+                    url: `quantum-merlin-hub/crystals.html?number=${reduced}`
+                },
+                {
+                    icon: '🃏',
+                    title: 'Tarot Connection',
+                    value: getTarotForNumber(reduced),
+                    url: `quantum-merlin-hub/tarot.html?number=${reduced}`
+                },
+                {
+                    icon: '🜂',
+                    title: 'Sigil Generator',
+                    value: `Create from ${value}`,
+                    url: `quantum-merlin-hub/sigils.html?seed=${value}`
+                },
+                {
+                    icon: '🌙',
+                    title: 'Lunar Timing',
+                    value: getCurrentMoonPhase(),
+                    url: `quantum-sigil-generator.html`
+                },
+                {
+                    icon: '💧',
+                    title: 'Water Ritual',
+                    value: 'Focus ceremony',
+                    url: `quantum-merlin-hub/water.html`
+                }
+            ];
+            
+            html += '<div class="amplification-grid">';
+            amplifications.forEach(amp => {
+                html += `<div class="amp-card" onclick="window.open('${amp.url}', '_blank')">`;
+                html += `<div class="amp-icon">${amp.icon}</div>`;
+                html += `<div class="amp-title">${amp.title}</div>`;
+                html += `<div class="amp-value">${amp.value}</div>`;
+                html += `</div>`;
+            });
+            html += '</div>';
+            html += '</div>';
+            
+            return html;
+        }
+
+        function getCrystalForNumber(number) {
+            const crystalMap = {
+                1: "Clear Quartz",
+                2: "Rose Quartz",
+                3: "Citrine",
+                4: "Hematite",
+                5: "Turquoise",
+                6: "Amethyst",
+                7: "Lapis Lazuli",
+                8: "Pyrite",
+                9: "Obsidian",
+                11: "Celestite",
+                22: "Moldavite",
+                33: "Phenakite"
+            };
+            return crystalMap[number] || "Clear Quartz";
+        }
+
+        function getTarotForNumber(number) {
+            const tarotMap = {
+                0: "The Fool",
+                1: "The Magician",
+                2: "The High Priestess",
+                3: "The Empress",
+                4: "The Emperor",
+                5: "The Hierophant",
+                6: "The Lovers",
+                7: "The Chariot",
+                8: "Strength",
+                9: "The Hermit",
+                11: "Justice",
+                22: "The World"
+            };
+            return tarotMap[number] || "Major Arcana";
+        }
+
+        function getCurrentMoonPhase() {
+            const phases = ['New Moon', 'Waxing Crescent', 'First Quarter', 'Waxing Gibbous', 
+                          'Full Moon', 'Waning Gibbous', 'Last Quarter', 'Waning Crescent'];
+            return phases[Math.floor(Math.random() * phases.length)];
+        }
+
+        function saveReading() {
+            // Create reading object
+            const reading = {
+                type: 'quantum-gematria-reading',
+                data: readingData,
+                timestamp: Date.now(),
+                saved: new Date().toISOString()
+            };
+            
+            // Save to localStorage
+            const jukebox = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            jukebox.push(reading);
+            localStorage.setItem('quantumJukebox', JSON.stringify(jukebox));
+            
+            alert('Reading saved to your Quantum Jukebox!');
+        }
+
+        function startNewReading() {
+            // Reset all form fields
+            document.getElementById('fullName').value = '';
+            document.getElementById('nickname').value = '';
+            document.getElementById('birthdate').value = '';
+            document.getElementById('luckyNumbers').value = '';
+            document.getElementById('motherName').value = '';
+            document.getElementById('motherBirthdate').value = '';
+            document.getElementById('fatherName').value = '';
+            document.getElementById('fatherBirthdate').value = '';
+            document.getElementById('partnerName').value = '';
+            document.getElementById('anniversary').value = '';
+            document.getElementById('child1Name').value = '';
+            document.getElementById('child1Birthdate').value = '';
+            document.getElementById('child2Name').value = '';
+            document.getElementById('child2Birthdate').value = '';
+            
+            // Reset reading data
+            readingData = {};
+            
+            // Go back to step 1
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep = 1;
+            document.getElementById('step1').classList.add('active');
+        }
+    </script>
+</body>
+</html>

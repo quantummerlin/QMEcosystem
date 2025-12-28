@@ -1,0 +1,1 @@
+446:                { name: 'Authority Imprint', icon: '👤', description: 'How childhood authority figures shape you now', file: 'authority-imprint.html', badge: 'Psychological' },

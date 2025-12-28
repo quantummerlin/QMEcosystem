@@ -1,0 +1,100 @@
+                a.click();
+            }
+        }
+
+        const library = new InsightLibrary();
+
+        // Initialize page
+        function init() {
+            updateProgress();
+            displayInsights();
+            setupFilters();
+        }
+
+        function updateProgress() {
+            const toolCount = library.getToolCount();
+            const percentage = (toolCount / 33) * 100;
+            const circumference = 2 * Math.PI * 90;
+            const offset = circumference - (percentage / 100) * circumference;
+
+            document.querySelector('.progress-ring-circle').style.strokeDashoffset = offset;
+            document.getElementById('progressText').textContent = `${toolCount}/33`;
+        }
+
+        function displayInsights(filter = 'all') {
+            const container = document.getElementById('insightsContainer');
+            const insights = library.getInsights(filter);
+
+            if (insights.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">🌟</div>
+                        <div class="empty-text">Your Insight Library is waiting to be filled with wisdom</div>
+                        <a href="tools-hub.html" class="cta-button">Start Your Journey</a>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = '<div class="insights-grid">' + 
+                insights.map(insight => createInsightCard(insight)).join('') +
+            '</div>';
+        }
+
+        function createInsightCard(insight) {
+            const date = new Date(insight.timestamp).toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric'
+            });
+
+            return `
+                <div class="insight-card" onclick="viewInsight(${insight.id})">
+                    <div class="insight-header">
+                        <div class="insight-title">${insight.toolName}</div>
+                        <div class="insight-date">${date}</div>
+                    </div>
+                    <div class="insight-content">
+                        ${insight.summary || insight.content.substring(0, 150) + '...'}
+                    </div>
+                    <div class="insight-tags">
+                        <span class="tag">${insight.category}</span>
+                        ${insight.tags ? insight.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        function setupFilters() {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    displayInsights(this.dataset.filter);
+                });
+            });
+        }
+
+        function viewInsight(id) {
+            const insight = library.insights.find(i => i.id === id);
+            if (insight) {
+                alert(`${insight.toolName}\n\n${insight.content}\n\nCategory: ${insight.category}\nDate: ${new Date(insight.timestamp).toLocaleString()}`);
+            }
+        }
+
+        function exportInsights() {
+            library.export();
+        }
+
+        function clearLibrary() {
+            library.clear();
+        }
+
+        // Initialize on page load
+        init();
+
+        // Make library available globally for other pages to use
+        window.QuantumMerlinLibrary = library;
+    </script>
+</body>
+</html>

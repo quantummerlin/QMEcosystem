@@ -1,0 +1,16 @@
+<body>
+    <div class="cosmic-background"></div>
+    <div class="starfield" id="starfield"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Cosmic Birth Sigil</h1>
+            <p class="subtitle">Your personal symbol from the stars and moon at your birth moment</p>
+        </header>
+
+        <section class="generator-section">
+            <h2>Create Your Cosmic Sigil</h2>
+            <p style="margin-bottom: 20px; color: #cccccc;">Enter your birth details to generate your unique celestial signature</p>
+            
+            <div class="input-group">
+                <label>Birth Date</label>

@@ -1,0 +1,33 @@
+total 153884
+drwxr-xr-x  6 user user      4096 Dec 12 20:52 .
+drwxr-xr-x 20 root root      4096 Nov 25 05:51 ..
+-rw-r--r--  1 root root     12091 Dec 11 21:27 BUILD_PROGRESS.md
+-rw-r--r--  1 root root      8886 Dec 12 19:53 BUILD_STATUS.md
+-rw-r--r--  1 root root     12244 Dec 12 19:59 COMPLETE_BUILD_SUMMARY.md
+-rw-r--r--  1 root root     10754 Dec 11 21:33 DEPLOYMENT_GUIDE.md
+-rw-r--r--  1 root root   6898429 Dec 12 06:14 Deepseek Frequencies.pdf
+-rw-r--r--  1 root root   2965940 Dec 12 06:14 Deepseek Frequency Expansion.pdf
+-rw-r--r--  1 root root     13080 Dec 11 20:10 EXECUTIVE_SUMMARY.md
+-rw-r--r--  1 root root     13183 Dec 11 21:34 FINAL_SUMMARY.md
+-rw-r--r--  1 root root     12567 Dec 11 21:32 LAUNCH_READY.md
+-rw-r--r--  1 root root     23898 Dec 11 20:08 LAUNCH_ROADMAP_AND_CHECKLIST.md
+-rw-r--r--  1 root root      9408 Dec 12 19:54 PHASE_1_COMPLETE.md
+-rw-r--r--  1 root root     11569 Dec 12 19:58 PHASE_2_PROGRESS.md
+-rw-r--r--  1 root root 145848619 Dec 11 20:36 QRCODES.zip
+-rw-r--r--  1 root root     49582 Dec 11 21:07 QUANTUM_MERLIN_COMPLETE_TECHNICAL_FRAMEWORK.md
+-rw-r--r--  1 root root     27041 Dec 11 20:05 QUANTUM_MERLIN_ULTIMATE_MARKETING_PLAN.md
+-rw-r--r--  1 root root     12476 Dec 11 20:11 QUICK_START_GUIDE.md
+-rw-r--r--  1 root root     76225 Dec 11 20:02 Quantum Merlin Framework plan.odt
+-rw-r--r--  1 root root     55370 Dec 12 05:33 Quantum Merlin Franmework plan 2.odt
+-rw-r--r--  1 root root      8679 Dec 12 20:00 README.md
+-rw-r--r--  1 root root     12411 Dec 12 20:01 SESSION_SUMMARY.md
+-rw-r--r--  1 root root     17871 Dec 11 20:07 VISUAL_BRAND_GUIDELINES.md
+-rw-r--r--  1 root root    836713 Dec 12 20:48 deepseek_frequencies.txt
+-rw-r--r--  1 root root    316749 Dec 12 20:48 deepseek_frequency_expansion.txt
+drwxr-xr-x  3 root root      4096 Dec 12 19:52 genesis
+drwxr-xr-x  2 root root      4096 Dec 12 20:58 outputs
+drwxr-xr-x  7 root root      4096 Dec 11 21:16 quantum-merlin
+-rw-r--r--  1 root root     74133 Dec 11 20:03 quantum_merlin_content.txt
+-rw-r--r--  1 root root    156506 Dec 12 06:17 rebranding app.pdf
+drwxr-xr-x  2 root root      4096 Dec 12 20:57 summarized_conversations
+-rw-r--r--  1 root root       535 Dec 12 20:58 todo.md

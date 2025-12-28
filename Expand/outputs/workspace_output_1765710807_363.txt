@@ -1,0 +1,21 @@
+                );
+                ctx.stroke();
+            }
+            
+            // Remove dateTime reference as it's not passed to this function
+            const timeMinutes = 12 * 60; // Default to noon as fallback
+            
+            ctx.save();
+            ctx.translate(centerX, centerY);
+            ctx.rotate(rotationAngle);
+            
+            // Draw rotating element
+            ctx.beginPath();
+            ctx.arc(60, 0, 8, 0, 2 * Math.PI);
+            ctx.stroke();
+            
+            ctx.restore();
+            
+            // Add subtle animation effect
+            animateSigil();
+        }

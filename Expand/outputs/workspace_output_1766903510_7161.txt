@@ -1,0 +1,120 @@
+        const westernZodiacForecasts = {
+            'Aries': {
+                symbol: '♈',
+                element: 'Fire',
+                daily: {
+                    message: 'Your leadership energy is amplified today. Take initiative on important projects and trust your instincts.',
+                    frequency: '396 Hz - Courage and Confidence',
+                    ritual: 'Meditate with the courage frequency while visualizing successful leadership moments.',
+                    tarot_tie: 'The Emperor card supports your natural authority today.',
+                    gematria_tie: 'Life path number 1 energy enhances your leadership qualities.'
+                },
+                weekly: {
+                    message: 'This week brings opportunities for breakthrough moments and new beginnings. Stay open to unexpected paths.',
+                    frequency: '528 Hz - Transformation and New Beginnings',
+                    ritual: 'Daily morning meditation with transformation frequency to prepare for new opportunities.',
+                    tarot_tie: 'The Fool card guides your weekly journey of exploration.',
+                    gematria_tie: 'Core number 5 supports your adventurous spirit.'
+                },
+                monthly: {
+                    message: 'This month focuses on personal power and achievement. Your natural leadership will be recognized and rewarded.',
+                    frequency: '174 Hz - Foundation Building and Achievement',
+                    ritual: 'Weekly achievement meditation with foundation frequency to ground your success.',
+                    tarot_tie: 'The Chariot card empowers your monthly journey to victory.',
+                    gematria_tie: 'Destiny number 8 aligns with your achievement potential.'
+                }
+            },
+            'Taurus': {
+                symbol: '♉',
+                element: 'Earth',
+                daily: {
+                    message: 'Stability and practical wisdom guide your decisions today. Focus on building solid foundations.',
+                    frequency: '174 Hz - Stability and Grounding',
+                    ritual: 'Grounding meditation with stability frequency while connecting with earth energy.',
+                    tarot_tie: 'The Hierophant card supports your practical wisdom today.',
+                    gematria_tie: 'Life path number 4 enhances your stability.'
+                },
+                weekly: {
+                    message: 'This week favors financial planning and long-term investments. Your patience will pay dividends.',
+                    frequency: '285 Hz - Healing and Manifestation',
+                    ritual: 'Abundance meditation with healing frequency to attract prosperity.',
+                    tarot_tie: 'The Pentacles suit guides your financial wisdom.',
+                    gematria_tie: 'Core number 6 supports your nurturing approach to wealth.'
+                },
+                monthly: {
+                    message: 'This month brings material abundance and security. Focus on sustainable growth and practical manifestations.',
+                    frequency: '528 Hz - Abundance and Security',
+                    ritual: 'Daily prosperity meditation with abundance frequency to maintain financial flow.',
+                    tarot_tie: 'The World card completes your manifestation cycle.',
+                    gematria_tie: 'Destiny number 2 supports your partnership approach to success.'
+                }
+            },
+            'Gemini': {
+                symbol: '♊',
+                element: 'Air',
+                daily: {
+                    message: 'Communication flows effortlessly today. Share your ideas and engage in meaningful conversations.',
+                    frequency: '741 Hz - Communication and Learning',
+                    ritual: 'Throat chakra meditation with communication frequency to enhance expression.',
+                    tarot_tie: 'The Lovers card supports harmonious connections today.',
+                    gematria_tie: 'Life path number 3 enhances your creative communication.'
+                },
+                weekly: {
+                    message: 'This week brings learning opportunities and networking connections. Stay curious and open-minded.',
+                    frequency: '417 Hz - Adaptability and Learning',
+                    ritual: 'Mind meditation with learning frequency to absorb new information.',
+                    tarot_tie: 'The Swords suit enhances your mental clarity.',
+                    gematria_tie: 'Core number 7 supports your intellectual growth.'
+                },
+                monthly: {
+                    message: 'This month favors writing, teaching, and sharing knowledge. Your words will have significant impact.',
+                    frequency: '528 Hz - Expression and Impact',
+                    ritual: 'Daily expression meditation with frequency to amplify your voice.',
+                    tarot_tie: 'The Magician card empowers your communication skills.',
+                    gematria_tie: 'Destiny number 5 aligns with your versatile expression.'
+                }
+            },
+            'Cancer': {
+                symbol: '♋',
+                element: 'Water',
+                daily: {
+                    message: 'Emotional intelligence and intuition guide your decisions today. Trust your feelings and nurture others.',
+                    frequency: '639 Hz - Emotional Healing and Love',
+                    ritual: 'Heart meditation with emotional healing frequency to balance feelings.',
+                    tarot_tie: 'The Moon card enhances your intuition today.',
+                    gematria_tie: 'Life path number 2 supports your empathetic nature.'
+                },
+                weekly: {
+                    message: 'This week focuses on home, family, and emotional healing. Create harmonious environments.',
+                    frequency: '396 Hz - Emotional Freedom and Healing',
+                    ritual: 'Family healing meditation with frequency to resolve emotional patterns.',
+                    tarot_tie: 'The Cups suit supports your emotional journey.',
+                    gematria_tie: 'Core number 9 enhances your compassionate wisdom.'
+                },
+                monthly: {
+                    message: 'This month brings deep emotional transformation and healing opportunities. Release the past.',
+                    frequency: '285 Hz - Deep Healing and Renewal',
+                    ritual: 'Monthly emotional clearing with healing frequency for renewal.',
+                    tarot_tie: 'The Star card guides your healing journey.',
+                    gematria_tie: 'Destiny number 6 supports your nurturing growth.'
+                }
+            },
+--
+            for (const [sign, data] of Object.entries(westernZodiacForecasts)) {
+                const forecast = data[type];
+                const card = document.createElement('div');
+                card.className = 'zodiac-card';
+                
+                card.innerHTML = `
+                    <div class="card-header">
+                        <div class="zodiac-symbol">${data.symbol}</div>
+                        <div class="zodiac-name">${sign}</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="forecast-section">
+                            <div class="forecast-label">📿 ${type === 'daily' ? 'Today' : type === 'weekly' ? 'This Week' : 'This Month'}</div>
+                            <div class="forecast-text">${forecast.message}</div>
+                        </div>
+                        
+                        <div class="frequency-alignment">
+                            <h4>🎵 Aligned Frequency</h4>

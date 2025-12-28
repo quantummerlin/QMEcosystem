@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Merlin - Complete Metaphysical Toolkit</title>
+    <meta name="description" content="Discover your spiritual power with Quantum Merlin's complete suite of 12 mystical tools. From numerology to tarot, crystals to frequencies - transform your consciousness today.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum Merlin - Complete Metaphysical Toolkit">
+    <meta property="og:description" content="Discover your spiritual power with 12 mystical tools. Transform your consciousness today.">
+    <meta property="og:image" content="/images/quantum-merlin-og.jpg">
+    <meta property="og:url" content="https://quantummerlin.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+      
+      // Custom event tracking for Quantum Merlin
+      function trackEvent(eventName, parameters) {
+        gtag('event', eventName, parameters);
+      }
+      
+      // Tool usage tracking
+      function trackToolUsage(toolName, action) {
+        gtag('event', 'tool_usage', {
+          tool_name: toolName,
+          action: action,
+          timestamp: new Date().toISOString()
+        });
+      }
+      

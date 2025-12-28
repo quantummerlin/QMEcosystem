@@ -1,0 +1,5 @@
+7:    <meta name="description" content="Advanced quantum frequency generator with 600+ healing frequency combinations. Multi-layer binaural beats, isochronic tones, and sacred sound healing.">
+8:    <meta name="keywords" content="frequency generator, binaural beats, healing frequencies, 432hz, 528hz, solfeggio, quantum healing">
+12:    <meta property="og:description" content="Experience 600+ powerful frequency combinations for healing, abundance, focus, and spiritual growth.">
+389:                <p class="tool-subtitle">Multi-layer audio healing with 600+ frequency combinations</p>
+412:                    <button class="category-tab" data-category="healing">💚 Healing</button>

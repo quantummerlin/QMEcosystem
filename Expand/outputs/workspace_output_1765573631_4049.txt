@@ -1,0 +1,50 @@
+        0.5,
+        0.3
+      ],
+      "tags": [
+        "high-vibration",
+        "light",
+        "ascension",
+        "spiritual",
+        "elevated"
+      ],
+      "featured": true
+    },
+    {
+      "id": "geological-stillness",
+      "name": "Geological Stillness",
+      "category": "emotional",
+      "playCount": 6900,
+      "duration": 3600,
+      "description": "Deep geological stillness for profound inner peace.",
+      "frequencies": [
+        0.1,
+        0.2,
+        0.3
+      ],
+      "waveforms": [
+        "sine",
+        "sine",
+        "sine"
+      ],
+      "volumes": [
+        0.7,
+        0.5,
+        0.3
+      ],
+      "tags": [
+        "geological",
+        "stillness",
+        "peace",
+        "calm",
+        "profound"
+      ],
+      "recommended": true
+    }
+  ]
+};
+
+// Export for use in applications
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = FrequencyDatabase;
+}

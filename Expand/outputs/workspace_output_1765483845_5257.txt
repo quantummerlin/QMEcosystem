@@ -1,0 +1,11 @@
+total 256
+drwxr-xr-x  3 user user  4096 Dec 11 20:10 .
+drwxr-xr-x 20 root root  4096 Nov 25 05:51 ..
+-rw-r--r--  1 root root 13080 Dec 11 20:10 EXECUTIVE_SUMMARY.md
+-rw-r--r--  1 root root 23898 Dec 11 20:08 LAUNCH_ROADMAP_AND_CHECKLIST.md
+-rw-r--r--  1 root root 27041 Dec 11 20:05 QUANTUM_MERLIN_ULTIMATE_MARKETING_PLAN.md
+-rw-r--r--  1 root root 76225 Dec 11 20:02 Quantum Merlin Framework plan.odt
+-rw-r--r--  1 root root 17871 Dec 11 20:07 VISUAL_BRAND_GUIDELINES.md
+drwxr-xr-x  2 root root  4096 Dec 11 20:10 outputs
+-rw-r--r--  1 root root 74133 Dec 11 20:03 quantum_merlin_content.txt
+-rw-r--r--  1 root root  1671 Dec 11 20:09 todo.md

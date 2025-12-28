@@ -1,0 +1,2 @@
+811:                    <div class="score-title">Integration Score</div>
+907:                content: `${split.name}\\n\\nIntegration Score: ${score}%\\n\\n${split.description}\\n\\nIdentity #1: ${split.identity1}\\nIdentity #2: ${split.identity2}\\n\\nConflict: ${split.conflict}\\n\\nIntegration: ${split.integration}`,

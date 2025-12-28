@@ -1,0 +1,179 @@
+  {
+    "id": 1000,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1012,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1074,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1104,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1125,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1126,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1303,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1304,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1474,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1504,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1513,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz 73Hz"
+--
+  {
+    "id": 1580,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz 73Hz"
+--
+  {
+    "id": 1587,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1588,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1589,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1590,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1817,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1818,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1827,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1828,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 1837,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 2023,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 2046,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 2047,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 2048,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 2049,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 2050,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 2051,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+--
+  {
+    "id": 2052,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz 73Hz"
+--
+  {
+    "id": 2053,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz 73Hz"

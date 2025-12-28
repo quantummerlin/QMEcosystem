@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Insight Library | Quantum Merlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #0a0015 0%, #1a0033 50%, #2d1b4e 100%);
+            color: #e0d4f7;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 2px solid rgba(147, 51, 234, 0.3);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3em;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #c4b5fd;
+            font-style: italic;
+        }
+
+        /* Master Progress Section */
+        .master-progress {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .master-progress h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2em;
+            color: #9333ea;
+            margin-bottom: 20px;
+        }
+
+        .master-progress-bar {
+            background: rgba(147, 51, 234, 0.2);
+            border-radius: 25px;
+            height: 50px;
+            max-width: 600px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(147, 51, 234, 0.3);
+        }
+
+        .master-progress-fill {
+            background: linear-gradient(90deg, #9333ea 0%, #ec4899 100%);
+            height: 100%;
+            width: 0%;
+            transition: width 1.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .unlock-status {
+            font-size: 1.3em;
+            color: #c4b5fd;
+            margin-top: 20px;
+        }
+
+        .unlock-status .highlight {
+            color: #9333ea;
+            font-weight: bold;
+        }
+
+        /* System Cards Grid */
+        .systems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .system-card {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .system-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.3);
+            border-color: #9333ea;
+        }
+
+        .system-card.unlocked {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .system-card.unlocked::before {
+            content: '✓';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2em;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .system-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .system-icon {
+            font-size: 3em;
+        }
+
+        .system-info h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5em;
+            color: #9333ea;
+            margin-bottom: 5px;
+        }
+
+        .system-card.unlocked .system-info h3 {
+            color: #10b981;
+        }
+
+        .system-status {
+            font-size: 0.9em;
+            color: #a78bfa;
+        }
+
+        .system-progress-bar {
+            background: rgba(147, 51, 234, 0.2);
+            border-radius: 10px;
+            height: 30px;
+            margin: 15px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .system-progress-fill {
+            background: linear-gradient(90deg, #9333ea 0%, #ec4899 100%);
+            height: 100%;
+            width: 0%;
+            transition: width 1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .system-card.unlocked .system-progress-fill {
+            background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+        }
+
+        .system-tools {
+            margin-top: 15px;
+            font-size: 0.95em;
+            color: #c4b5fd;
+        }
+
+        .unlock-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .unlock-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(147, 51, 234, 0.5);
+        }
+
+        .unlock-button.unlocked {
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+        }
+
+        .unlock-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Next Unlock Section */
+        .next-unlock {
+            background: rgba(236, 72, 153, 0.1);
+            border: 2px solid rgba(236, 72, 153, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .next-unlock h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8em;
+            color: #ec4899;
+            margin-bottom: 15px;
+        }
+
+        .next-unlock p {
+            font-size: 1.2em;
+            color: #c4b5fd;
+        }
+
+        /* Insights Section */
+        .insights-section {
+            margin-top: 50px;
+        }
+
+        .insights-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2em;
+            color: #9333ea;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .filter-section {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: rgba(147, 51, 234, 0.2);
+            color: #c4b5fd;
+            padding: 10px 25px;
+            border-radius: 25px;
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cinzel', serif;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: rgba(147, 51, 234, 0.4);
+            border-color: #9333ea;
+            color: #e0d4f7;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .insight-card {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .insight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.3);
+            border-color: #9333ea;
+        }
+
+        .insight-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .insight-title {
+            font-size: 1.2em;
+            color: #9333ea;
+            font-weight: bold;
+        }
+
+        .insight-date {
+            font-size: 0.9em;
+            color: #a78bfa;
+        }
+
+        .insight-content {
+            color: #e0d4f7;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .insight-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: rgba(147, 51, 234, 0.2);
+            color: #c4b5fd;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            border: 1px solid rgba(147, 51, 234, 0.3);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .empty-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-text {
+            font-size: 1.3em;
+            color: #a78bfa;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .systems-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .insights-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔮 Your Insight Library 🔮</h1>
+            <p class="subtitle">Track Your Journey Through the Quantum Merlin System</p>
+        </header>
+
+        <!-- Master Progress -->
+        <div class="master-progress">
+            <h2>Overall Progress</h2>
+            <div class="master-progress-bar">
+                <div class="master-progress-fill" id="masterProgressFill">0/17</div>
+            </div>
+            <div class="unlock-status">
+                <span class="highlight" id="unlockedCount">0</span> of 5 Systems Unlocked
+            </div>
+        </div>
+
+        <!-- Next Unlock -->
+        <div class="next-unlock" id="nextUnlockSection" style="display: none;">
+            <h3>🎯 Next Unlock</h3>
+            <p id="nextUnlockText"></p>
+        </div>
+
+        <!-- System Cards -->
+        <div class="systems-grid" id="systemsGrid"></div>
+
+        <!-- Insights Section -->
+        <div class="insights-section">
+            <h2>📚 Your Insights</h2>
+            
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="psychological">Psychological</button>
+                <button class="filter-btn" data-filter="energy">Energy</button>
+                <button class="filter-btn" data-filter="unconscious">Unconscious</button>
+                <button class="filter-btn" data-filter="relational">Relational</button>
+                <button class="filter-btn" data-filter="spiritual">Spiritual</button>
+            </div>
+
+            <div id="insightsContainer"></div>
+        </div>
+    </div>
+
+    <script src="js/unlock-system.js"></script>
+    <script>
+        // Initialize unlock system
+        const unlockSystem = new UnlockSystem();
+
+        // Initialize page
+        function init() {
+            updateMasterProgress();
+            updateSystemCards();
+            updateNextUnlock();
+            displayInsights();
+            setupFilters();
+            checkForNewUnlocks();
+        }
+
+        function updateMasterProgress() {
+            const overall = unlockSystem.getOverallCompletion();
+            const unlockedCount = unlockSystem.getUnlockedSystemsCount();
+
+            // Update progress bar
+            const progressFill = document.getElementById('masterProgressFill');
+            progressFill.style.width = `${overall.percentage}%`;
+            progressFill.textContent = `${overall.completed}/17`;
+
+            // Update unlocked count
+            document.getElementById('unlockedCount').textContent = unlockedCount;
+        }
+
+        function updateSystemCards() {
+            const systemsData = unlockSystem.getSystemProgressData();
+            const container = document.getElementById('systemsGrid');
+
+            container.innerHTML = Object.entries(systemsData).map(([key, system]) => {
+                const isUnlocked = system.isUnlocked;
+                const buttonText = isUnlocked ? '✓ View Profile' : 
+                                  system.isComplete ? '🔓 Unlock Profile' : 
+                                  `Complete ${system.toolsRemaining} More Tool${system.toolsRemaining > 1 ? 's' : ''}`;
+                
+                return `
+                    <div class="system-card ${isUnlocked ? 'unlocked' : ''}">
+                        <div class="system-header">
+                            <div class="system-icon">${system.icon}</div>
+                            <div class="system-info">
+                                <h3>${system.name}</h3>
+                                <div class="system-status">${system.completed}/${system.total} Tools Complete</div>
+                            </div>
+                        </div>
+                        <div class="system-progress-bar">
+                            <div class="system-progress-fill" style="width: ${system.percentage}%">
+                                ${system.percentage}%
+                            </div>
+                        </div>
+                        <div class="system-tools">
+                            ${isUnlocked ? '✨ Profile Unlocked!' : 
+                              system.isComplete ? '🎉 Ready to Unlock!' : 
+                              `${system.toolsRemaining} tool${system.toolsRemaining > 1 ? 's' : ''} remaining`}
+                        </div>
+                        <button class="unlock-button ${isUnlocked ? 'unlocked' : ''}" 
+                                onclick="handleSystemAction('${key}')"
+                                ${!system.isComplete && !isUnlocked ? 'disabled' : ''}>
+                            ${buttonText}
+                        </button>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function updateNextUnlock() {
+            const nextUnlock = unlockSystem.getNextUnlock();
+            const section = document.getElementById('nextUnlockSection');
+            const text = document.getElementById('nextUnlockText');
+
+            if (nextUnlock) {
+                section.style.display = 'block';
+                text.textContent = `Complete ${nextUnlock.remaining} more tool${nextUnlock.remaining > 1 ? 's' : ''} in ${nextUnlock.systemName} to unlock your personalized profile!`;
+            } else if (unlockSystem.isMasterUnlockAvailable()) {
+                section.style.display = 'block';
+                text.textContent = '🎊 All systems complete! Generate your Complete Quantum Merlin Reading!';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+
+        function handleSystemAction(systemKey) {
+            const system = unlockSystem.getSystemProgressData()[systemKey];
+            
+            if (system.isUnlocked) {
+                // View profile
+                window.location.href = unlockSystem.getSystemProfileUrl(systemKey);
+            } else if (system.isComplete) {
+                // Unlock system
+                const wasUnlocked = unlockSystem.unlockSystem(systemKey);
+                if (wasUnlocked) {
+                    celebrateUnlock(systemKey, system.name, system.icon);
+                    updateSystemCards();
+                    updateMasterProgress();
+                    updateNextUnlock();
+                }
+            }
+        }
+
+        function celebrateUnlock(systemKey, systemName, icon) {
+            // Simple celebration (can be enhanced with animations)
+            alert(`🎉 Congratulations! 🎉\n\n${icon} ${systemName} Unlocked!\n\nYour personalized profile is ready to view.`);
+        }
+
+        function checkForNewUnlocks() {
+            const newUnlocks = unlockSystem.checkForUnlocks();
+            
+            newUnlocks.forEach(unlock => {
+                celebrateUnlock(unlock.systemKey, unlock.systemName, unlock.icon);
+            });
+
+            if (newUnlocks.length > 0) {
+                updateSystemCards();
+                updateMasterProgress();
+                updateNextUnlock();
+            }
+        }
+
+        function displayInsights(filter = 'all') {
+            const container = document.getElementById('insightsContainer');
+            const library = JSON.parse(localStorage.getItem('quantumMerlinLibrary') || '[]');
+            
+            let insights = library;
+            if (filter !== 'all') {
+                insights = library.filter(item => item.category === filter);
+            }
+
+            if (insights.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">🌟</div>
+                        <div class="empty-text">Your Insight Library is waiting to be filled with wisdom</div>
+                        <a href="tools-hub.html" class="cta-button">Start Your Journey</a>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = '<div class="insights-grid">' + 
+                insights.map(insight => createInsightCard(insight)).join('') +
+            '</div>';
+        }
+
+        function createInsightCard(insight) {
+            const date = new Date(insight.timestamp).toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric'
+            });
+
+            return `
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <div class="insight-title">${insight.tool}</div>
+                        <div class="insight-date">${date}</div>
+                    </div>
+                    <div class="insight-content">
+                        ${insight.summary || 'Insight saved'}
+                    </div>
+                    <div class="insight-tags">
+                        <span class="tag">${insight.category}</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        function setupFilters() {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    displayInsights(this.dataset.filter);
+                });
+            });
+        }
+
+        // Initialize on page load
+        init();
+
+        // Check for unlocks every 5 seconds (in case user completes tools in another tab)
+        setInterval(checkForNewUnlocks, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+-rw-r--r-- 1 root root 25392 Dec 13 04:58 about.html
+-rw-r--r-- 1 root root 32084 Dec 14 19:38 angel-number-calculator.html
+-rw-r--r-- 1 root root 29121 Dec 13 04:58 contact.html
+-rw-r--r-- 1 root root 10526 Dec 13 04:45 disclaimer.html
+-rw-r--r-- 1 root root 11322 Dec 14 19:38 email-capture.html
+-rw-r--r-- 1 root root 18909 Dec 15 21:06 gematria-calculator.html
+-rw-r--r-- 1 root root 26676 Dec 13 04:58 main-hub.html
+-rw-r--r-- 1 root root 14290 Dec 13 04:45 privacy.html
+-rw-r--r-- 1 root root 21209 Dec 14 19:38 quantum-forum.html
+-rw-r--r-- 1 root root 31084 Dec 15 21:06 quantum-gematria-reading.html
+-rw-r--r-- 1 root root 73346 Dec 15 06:16 quantum-sigil-generator.html
+-rw-r--r-- 1 root root 13438 Dec 13 04:45 terms.html

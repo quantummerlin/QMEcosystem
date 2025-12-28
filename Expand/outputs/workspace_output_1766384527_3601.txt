@@ -1,0 +1,10 @@
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title">Quantum Zodiac Forecasts</h1>
+            <p class="subtitle">Daily cosmic guidance with quantum frequencies</p>
+        </div>
+
+        <!-- Current Day Display -->
+        <div class="current-day">
+            <h2 class="day-title" id="currentDayTitle">-</h2>

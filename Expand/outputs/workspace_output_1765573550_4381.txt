@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1000,
+    "name": "Trinity: Frequency undefined",
+    "frequencies": [
+      "37Hz",
+      "73Hz"
+    ],
+    "category": "other",
+    "description": "Powerful frequency combination: 37Hz +  73Hz",
+    "duration": 600,
+    "benefits": [
+      "Multiple frequency synergy",
+      "Enhanced effectiveness",
+      "Comprehensive support"
+    ],
+    "source": "Deepseek Frequency Database",
+    "intensity": "medium"
+  },
+  {

@@ -1,0 +1,3 @@
+                { name: 'Virility/Life-Force Signal', icon: '⚡', description: 'Measure your vital energy and creative power', file: 'life-force-signal.html', badge: 'Vital' },
+                { name: 'Authority Imprint', icon: '👤', description: 'How childhood authority figures shape you now', file: 'authority-imprint.html', badge: 'Psychological' },
+                { name: 'Relationship Dynamic', icon: '💞', description: 'Your unconscious relationship patterns', file: 'relationship-dynamic.html', badge: 'Connection' },

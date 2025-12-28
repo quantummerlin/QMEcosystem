@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unconscious Patterns Profile | Quantum Merlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #0a0015 0%, #1a0033 50%, #2d1b4e 100%);
+            color: #e0d4f7;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(13, 0, 26, 0.6);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .profile-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            font-family: 'Cinzel', serif;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3em;
+            color: #a78bfa;
+            text-shadow: 0 0 20px rgba(167, 139, 250, 0.5);
+            margin-bottom: 15px;
+        }
+
+        .unlock-date {
+            font-size: 1.1em;
+            color: #c4b5fd;
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2em;
+            color: #8b5cf6;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-icon {
+            font-size: 1.2em;
+        }
+
+        .section p {
+            font-size: 1.15em;
+            margin-bottom: 15px;
+            color: #e0d4f7;
+        }
+
+        .insight-box {
+            background: rgba(139, 92, 246, 0.1);
+            border-left: 4px solid #8b5cf6;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .insight-box h3 {
+            font-family: 'Cinzel', serif;
+            color: #a78bfa;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .insight-box p {
+            margin-bottom: 10px;
+        }
+
+        .pattern-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pattern-list li {
+            background: rgba(139, 92, 246, 0.05);
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 3px solid #8b5cf6;
+        }
+
+        .pattern-list li strong {
+            color: #8b5cf6;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .action-steps {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .action-steps h3 {
+            font-family: 'Cinzel', serif;
+            color: #10b981;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .action-steps ol {
+            padding-left: 25px;
+        }
+
+        .action-steps li {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .action-steps li strong {
+            color: #10b981;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background: rgba(139, 92, 246, 0.2);
+            color: #a78bfa;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            border: 2px solid #8b5cf6;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(139, 92, 246, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2em;
+            color: #c4b5fd;
+            text-align: center;
+            padding: 20px;
+            margin: 30px 0;
+            border-top: 1px solid rgba(139, 92, 246, 0.3);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-badge">🌙 SYSTEM UNLOCKED</div>
+            <h1>Your Unconscious Patterns Profile</h1>
+            <p class="unlock-date" id="unlockDate">Unlocked on <span id="dateText"></span></p>
+        </header>
+
+        <div id="profileContent">
+            <div class="section">
+                <h2><span class="section-icon">📊</span> Overview</h2>
+                <p id="overviewText">Loading your personalized profile...</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">🔍</span> Key Patterns Identified</h2>
+                <ul class="pattern-list" id="patternsList"></ul>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">🧩</span> Pattern Integration</h2>
+                <div class="insight-box">
+                    <h3>How Your Unconscious Patterns Interact</h3>
+                    <p id="integrationText"></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">💡</span> Core Insights</h2>
+                <div id="insightsContainer"></div>
+            </div>
+
+            <div class="action-steps">
+                <h3>🎯 Your Liberation Path</h3>
+                <ol id="actionSteps"></ol>
+            </div>
+
+            <div class="quote" id="closingQuote"></div>
+        </div>
+
+        <div class="navigation">
+            <a href="insight-library-enhanced.html" class="nav-btn">← Back to Library</a>
+            <a href="tools-hub.html" class="nav-btn">Explore More Tools →</a>
+        </div>
+    </div>
+
+    <script src="js/unlock-system.js"></script>
+    <script>
+        const unlockSystem = new UnlockSystem();
+
+        function generateProfile() {
+            const insights = unlockSystem.getSystemInsights('unconscious');
+            
+            const timestamps = JSON.parse(localStorage.getItem('quantumMerlinUnlockTimestamps') || '{}');
+            const unlockDate = timestamps.unconscious ? new Date(timestamps.unconscious) : new Date();
+            document.getElementById('dateText').textContent = unlockDate.toLocaleDateString('en-US', {
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric'
+            });
+
+            const overview = generateOverview(insights);
+            document.getElementById('overviewText').innerHTML = overview;
+
+            const patterns = identifyPatterns(insights);
+            const patternsList = document.getElementById('patternsList');
+            patternsList.innerHTML = patterns.map(p => `
+                <li>
+                    <strong>${p.title}</strong>
+                    ${p.description}
+                </li>
+            `).join('');
+
+            const integration = generateIntegration(patterns);
+            document.getElementById('integrationText').innerHTML = integration;
+
+            const coreInsights = generateCoreInsights(insights);
+            const insightsContainer = document.getElementById('insightsContainer');
+            insightsContainer.innerHTML = coreInsights.map(insight => `
+                <div class="insight-box">
+                    <h3>${insight.title}</h3>
+                    <p>${insight.content}</p>
+                </div>
+            `).join('');
+
+            const actions = generateActionSteps(patterns);
+            const actionSteps = document.getElementById('actionSteps');
+            actionSteps.innerHTML = actions.map(action => `<li>${action}</li>`).join('');
+
+            document.getElementById('closingQuote').textContent = getClosingQuote();
+        }
+
+        function generateOverview(insights) {
+            const toolCount = insights.length;
+            
+            return `
+                <p>You've completed all ${toolCount} tools in the Unconscious Patterns system, revealing the hidden rules, contracts, and beliefs that have been running your life from the shadows. This profile synthesizes your results to show you the invisible architecture of your limitations.</p>
+                
+                <p>The unconscious isn't mystical—it's the 95% of your mind that operates below awareness. These patterns were formed early, reinforced through repetition, and now run automatically. They're not you—they're programs you inherited or adopted. But they feel like you because they've been running so long.</p>
+                
+                <p>What follows is an excavation of your unconscious operating system. Some of what you read will feel uncomfortable. That's the signal you're touching something real. The patterns that limit you most are the ones you can't see. Until now.</p>
+            `;
+        }
+
+        function identifyPatterns(insights) {
+            const patterns = [];
+
+            insights.forEach(insight => {
+                if (insight.tool === 'Unconscious Contract Reveal') {
+                    patterns.push({
+                        title: 'Hidden Life Rules',
+                        description: 'Your unconscious contracts are the invisible agreements you made with life: "I can have stability but not expansion," "I can be loved but not powerful," "I can be safe but not free." These contracts limit what you allow yourself to have.'
+                    });
+                }
+                
+                if (insight.tool === 'Power Avoidance Pattern') {
+                    patterns.push({
+                        title: 'Success Sabotage Mechanism',
+                        description: 'You avoid power not because you\'re weak, but because power feels dangerous. Somewhere you learned that being powerful means being alone, attacked, or responsible for others\' pain. So you stay small to stay safe.'
+                    });
+                }
+                
+                if (insight.tool === 'Safety vs Expansion Tension') {
+                    patterns.push({
+                        title: 'Growth-Security Conflict',
+                        description: 'The tension between safety and expansion isn\'t a problem to solve—it\'s a polarity to manage. You need both. The issue is when one dominates so completely that the other is suppressed. Balance isn\'t static; it\'s dynamic navigation.'
+                    });
+                }
+            });
+
+            return patterns;
+        }
+
+        function generateIntegration(patterns) {
+            return `
+                <p>Your unconscious patterns form a coherent system designed to keep you safe. Your hidden contracts define what you're allowed to have. Your power avoidance ensures you don't exceed those limits. Your safety-expansion tension keeps you from growing too fast or too far.</p>
+                
+                <p>These patterns aren't random—they're intelligent. They were adaptive once. Maybe being powerful was dangerous in your family. Maybe expansion led to abandonment. Maybe success brought punishment. Your unconscious learned these lessons and built a system to protect you.</p>
+                
+                <p>But what kept you safe then is keeping you small now. The contracts that protected you as a child are limiting you as an adult. The power you avoided to stay safe is the power you need to thrive. The safety you cling to is the cage preventing your expansion. Liberation isn't about destroying these patterns—it's about updating them for who you are now.</p>
+            `;
+        }
+
+        function generateCoreInsights(insights) {
+            return [
+                {
+                    title: 'Your Unconscious Is Trying to Protect You',
+                    content: 'Every limitation, every sabotage, every avoidance pattern exists to keep you safe. Your unconscious isn\'t your enemy—it\'s an overprotective parent using outdated information. It thinks you\'re still the child who needed protection. The work isn\'t to fight it—it\'s to update it with current reality.'
+                },
+                {
+                    title: 'You Can\'t Think Your Way Out of Unconscious Patterns',
+                    content: 'Insight alone doesn\'t create change. You can understand your patterns perfectly and still be controlled by them. Transformation requires somatic work, nervous system regulation, and repeated new experiences that prove the old patterns wrong. You have to show your unconscious it\'s safe to change.'
+                },
+                {
+                    title: 'The Patterns You Can\'t See Control You Most',
+                    content: 'The unconscious contracts you just discovered aren\'t the only ones. There are deeper layers. But awareness of these patterns is the beginning. Once you see them, you can\'t unsee them. And once you see them, you can choose differently. Not always. Not perfectly. But sometimes. And sometimes is enough to start.'
+                }
+            ];
+        }
+
+        function generateActionSteps(patterns) {
+            return [
+                '<strong>Name Your Contracts:</strong> Write down the unconscious contracts you discovered. Make them explicit. "I am allowed X but not Y." Seeing them in writing breaks their power.',
+                '<strong>Question Their Origin:</strong> Where did each contract come from? Who taught you this rule? Was it true then? Is it true now? Most contracts are inherited, not chosen.',
+                '<strong>Test One Contract:</strong> Choose your least scary contract and deliberately violate it this week. If your contract is "I can be successful but not happy," do something successful AND enjoyable. Notice what happens.',
+                '<strong>Reclaim Your Power Gradually:</strong> Don\'t try to become fully powerful overnight. Your nervous system can\'t handle it. Take 10% more power this week. Then 10% more next week. Gradual expansion is sustainable.',
+                '<strong>Navigate the Safety-Expansion Polarity:</strong> Stop trying to choose between safety and expansion. You need both. When you feel too safe, expand. When you feel too exposed, consolidate. Dynamic balance, not static choice.',
+                '<strong>Work Somatically:</strong> Your unconscious patterns live in your body, not your mind. Practice somatic exercises: breathwork, movement, bodywork. You can\'t think your way to liberation.',
+                '<strong>Get Support:</strong> Unconscious patterns are called unconscious for a reason—you can\'t see them alone. Work with a therapist, coach, or trusted friend who can mirror what you can\'t see.'
+            ];
+        }
+
+        function getClosingQuote() {
+            const quotes = [
+                '"Until you make the unconscious conscious, it will direct your life and you will call it fate." — Carl Jung',
+                '"The cave you fear to enter holds the treasure you seek." — Joseph Campbell',
+                '"What you resist persists." — Carl Jung',
+                '"The wound is the place where the Light enters you." — Rumi',
+                '"Your task is not to seek for love, but merely to seek and find all the barriers within yourself that you have built against it." — Rumi'
+            ];
+            return quotes[Math.floor(Math.random() * quotes.length)];
+        }
+
+        generateProfile();
+    </script>
+</body>
+</html>

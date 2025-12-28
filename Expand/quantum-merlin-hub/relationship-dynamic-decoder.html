@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relationship Dynamic Decoder | Quantum Merlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #0a0015 0%, #1a0033 50%, #2d1b4e 100%);
+            color: #e0d4f7;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(13, 0, 26, 0.6);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5em;
+            color: #b19cd9;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #9d7ec0;
+            font-style: italic;
+        }
+
+        .intro-section {
+            background: rgba(138, 43, 226, 0.1);
+            border-left: 4px solid #8a2be2;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .intro-section p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .question-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(138, 43, 226, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        .question-label {
+            font-size: 1.2em;
+            color: #b19cd9;
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 600;
+        }
+
+        .scale-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .scale-option {
+            flex: 1;
+            text-align: center;
+        }
+
+        .scale-option input[type="radio"] {
+            display: none;
+        }
+
+        .scale-option label {
+            display: block;
+            padding: 15px 10px;
+            background: rgba(138, 43, 226, 0.1);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            color: #9d7ec0;
+        }
+
+        .scale-option input[type="radio"]:checked + label {
+            background: rgba(138, 43, 226, 0.3);
+            border-color: #8a2be2;
+            color: #e0d4f7;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+        }
+
+        .scale-option label:hover {
+            background: rgba(138, 43, 226, 0.2);
+            border-color: #8a2be2;
+        }
+
+        .scale-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #9d7ec0;
+            font-style: italic;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #8a2be2 0%, #9d4edd 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.3em;
+            font-family: 'Cinzel', serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(138, 43, 226, 0.5);
+            background: linear-gradient(135deg, #9d4edd 0%, #8a2be2 100%);
+        }
+
+        .results-section {
+            display: none;
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(138, 43, 226, 0.1);
+            border: 2px solid #8a2be2;
+            border-radius: 15px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .results-section h2 {
+            font-family: 'Cinzel', serif;
+            color: #b19cd9;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .pattern-display {
+            text-align: center;
+            font-size: 2em;
+            color: #8a2be2;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(138, 43, 226, 0.1);
+            border-radius: 10px;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .insight-box {
+            background: rgba(13, 0, 26, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #8a2be2;
+        }
+
+        .insight-box h3 {
+            color: #b19cd9;
+            font-family: 'Cinzel', serif;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .insight-box p {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .insight-box ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .insight-box li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 15px;
+            background: rgba(138, 43, 226, 0.2);
+            color: #b19cd9;
+            border: 2px solid #8a2be2;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            font-family: 'Cinzel', serif;
+        }
+
+        .action-btn:hover {
+            background: rgba(138, 43, 226, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .scale-container {
+                flex-wrap: wrap;
+            }
+
+            .scale-option {
+                flex-basis: calc(33.333% - 10px);
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💕 Relationship Dynamic Decoder 💕</h1>
+            <p class="subtitle">Reveal Your Unconscious Relationship Patterns</p>
+        </header>
+
+        <div class="intro-section">
+            <p><strong>You have a relationship pattern—a predictable way you show up in intimate connections.</strong></p>
+            <p>This pattern was formed in childhood, reinforced through experience, and now runs automatically. You attract the same type of person. Your relationships follow the same arc. The same conflicts arise. The same endings occur.</p>
+            <p><strong>Most people blame their partners.</strong> But the pattern isn't about them—it's about you. Your unconscious is recreating familiar dynamics, even when they hurt.</p>
+            <p>Answer these 6 questions to decode your relationship pattern and understand why you keep attracting the same experiences.</p>
+        </div>
+
+        <form id="assessmentForm">
+            <div class="question-section">
+                <label class="question-label">1. I attract the same type of person repeatedly</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="0" id="q1-0" required>
+                        <label for="q1-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="1" id="q1-1">
+                        <label for="q1-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="2" id="q1-2">
+                        <label for="q1-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="3" id="q1-3">
+                        <label for="q1-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="4" id="q1-4">
+                        <label for="q1-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="5" id="q1-5">
+                        <label for="q1-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label class="question-label">2. My relationships follow a predictable pattern</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="0" id="q2-0" required>
+                        <label for="q2-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="1" id="q2-1">
+                        <label for="q2-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="2" id="q2-2">
+                        <label for="q2-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="3" id="q2-3">
+                        <label for="q2-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="4" id="q2-4">
+                        <label for="q2-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="5" id="q2-5">
+                        <label for="q2-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label class="question-label">3. I lose myself in relationships</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="0" id="q3-0" required>
+                        <label for="q3-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="1" id="q3-1">
+                        <label for="q3-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="2" id="q3-2">
+                        <label for="q3-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="3" id="q3-3">
+                        <label for="q3-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="4" id="q3-4">
+                        <label for="q3-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="5" id="q3-5">
+                        <label for="q3-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label class="question-label">4. I keep people at a distance to stay safe</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="0" id="q4-0" required>
+                        <label for="q4-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="1" id="q4-1">
+                        <label for="q4-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="2" id="q4-2">
+                        <label for="q4-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="3" id="q4-3">
+                        <label for="q4-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="4" id="q4-4">
+                        <label for="q4-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="5" id="q4-5">
+                        <label for="q4-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label class="question-label">5. I'm attracted to people who need fixing</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="0" id="q5-0" required>
+                        <label for="q5-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="1" id="q5-1">
+                        <label for="q5-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="2" id="q5-2">
+                        <label for="q5-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="3" id="q5-3">
+                        <label for="q5-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="4" id="q5-4">
+                        <label for="q5-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="5" id="q5-5">
+                        <label for="q5-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label class="question-label">6. I end relationships before they can hurt me</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q6" value="0" id="q6-0" required>
+                        <label for="q6-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q6" value="1" id="q6-1">
+                        <label for="q6-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q6" value="2" id="q6-2">
+                        <label for="q6-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q6" value="3" id="q6-3">
+                        <label for="q6-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q6" value="4" id="q6-4">
+                        <label for="q6-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q6" value="5" id="q6-5">
+                        <label for="q6-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">💕 Decode My Pattern 💕</button>
+        </form>
+
+        <div class="results-section" id="resultsSection"></div>
+    </div>
+
+    <script>
+        document.getElementById('assessmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            generateResults();
+        });
+
+        function generateResults() {
+            // Collect answers
+            const answers = {
+                q1: parseInt(document.querySelector('input[name="q1"]:checked').value),
+                q2: parseInt(document.querySelector('input[name="q2"]:checked').value),
+                q3: parseInt(document.querySelector('input[name="q3"]:checked').value),
+                q4: parseInt(document.querySelector('input[name="q4"]:checked').value),
+                q5: parseInt(document.querySelector('input[name="q5"]:checked').value),
+                q6: parseInt(document.querySelector('input[name="q6"]:checked').value)
+            };
+
+            // Determine dominant pattern
+            const mergerScore = answers.q3;
+            const avoiderScore = answers.q4 + answers.q6;
+            const rescuerScore = answers.q5;
+            const patternScore = answers.q1 + answers.q2;
+
+            let pattern, description, whyYouDoThis, whatYoureAvoiding, healthyAlternative;
+
+            if (mergerScore >= 4 && mergerScore > avoiderScore && mergerScore > rescuerScore) {
+                pattern = "MERGER PATTERN (Enmeshment)";
+                description = "You lose yourself in relationships. Your identity becomes 'we' instead of 'I.' You abandon your needs, interests, and boundaries to maintain connection. This feels like love—but it's actually fear of abandonment disguised as devotion.";
+                whyYouDoThis = "You learned early that love = losing yourself. Maybe your parents were enmeshed, or you had to sacrifice yourself to keep the peace. Now, merging feels like safety—but it's actually self-abandonment.";
+                whatYoureAvoiding = "You're avoiding the terror of being alone or rejected. If you maintain your own identity, you fear the other person will leave. So you disappear into them—but then you lose yourself and resent them for it.";
+                healthyAlternative = [
+                    "Practice maintaining your identity while in relationship (hobbies, friends, opinions)",
+                    "Recognize that healthy love includes separateness, not just togetherness",
+                    "Set small boundaries and notice that the relationship survives",
+                    "Understand that you can be loved AND be yourself—you don't have to choose",
+                    "Heal the wound: being yourself doesn't cause abandonment"
+                ];
+            } else if (avoiderScore >= 7 && avoiderScore > mergerScore && avoiderScore > rescuerScore) {
+                pattern = "AVOIDER PATTERN (Independence)";
+                description = "You keep people at a distance to stay safe. Intimacy feels dangerous. Vulnerability triggers panic. You end relationships before they get too close, or you choose partners who are unavailable. This feels like freedom—but it's actually fear of intimacy disguised as independence.";
+                whyYouDoThis = "You learned early that closeness = pain. Maybe you were betrayed, abandoned, or smothered. Now, distance feels like safety—but it's actually loneliness disguised as self-protection.";
+                whatYoureAvoiding = "You're avoiding the vulnerability of being truly seen and potentially hurt. If you let someone in, you fear they'll hurt you or control you. So you keep them out—but then you're alone and long for connection.";
+                healthyAlternative = [
+                    "Practice small acts of vulnerability with safe people",
+                    "Recognize that intimacy doesn't have to mean losing yourself or getting hurt",
+                    "Stay in relationships past the point where you'd normally run",
+                    "Understand that you can be close AND safe—you don't have to choose",
+                    "Heal the wound: intimacy doesn't always lead to pain"
+                ];
+            } else if (rescuerScore >= 4 && rescuerScore > mergerScore && rescuerScore > avoiderScore) {
+                pattern = "RESCUER PATTERN (Codependency)";
+                description = "You're attracted to broken people because fixing them feels like love. You become their therapist, parent, or savior. You ignore red flags because you see their 'potential.' This feels like compassion—but it's actually avoiding your own needs by focusing on theirs.";
+                whyYouDoThis = "You learned early that your worth comes from being needed. Maybe you had to take care of a parent, or you were only valued when you were useful. Now, rescuing feels like purpose—but it's actually self-abandonment disguised as service.";
+                whatYoureAvoiding = "You're avoiding your own needs, pain, or emptiness. If you focus on fixing them, you don't have to face yourself. But you can't fix anyone—and trying keeps you stuck in unfulfilling relationships.";
+                healthyAlternative = [
+                    "Choose partners who are already whole, not projects to fix",
+                    "Recognize that rescuing isn't love—it's control disguised as care",
+                    "Focus on your own healing instead of theirs",
+                    "Understand that you can be valuable without being needed",
+                    "Heal the wound: your worth isn't conditional on fixing others"
+                ];
+            } else if (patternScore >= 8) {
+                pattern = "RUNNER PATTERN (Fear of Intimacy)";
+                description = "You end relationships before they can hurt you. As soon as things get real, you find reasons to leave. You sabotage good relationships or choose unavailable partners. This feels like self-protection—but it's actually fear of intimacy disguised as discernment.";
+                whyYouDoThis = "You learned early that staying = getting hurt. Maybe you were abandoned, betrayed, or witnessed painful relationships. Now, leaving first feels like power—but it's actually fear disguised as control.";
+                whatYoureAvoiding = "You're avoiding the vulnerability of staying and potentially being hurt. If you leave first, you control the pain. But you also never experience real intimacy—and you're still alone.";
+                healthyAlternative = [
+                    "Stay in relationships past the point where you'd normally run",
+                    "Recognize that leaving isn't always the answer—sometimes it's avoidance",
+                    "Practice tolerating discomfort in intimacy without fleeing",
+                    "Understand that vulnerability is the price of connection",
+                    "Heal the wound: staying doesn't always lead to pain"
+                ];
+            } else {
+                pattern = "SECURE PATTERN (Healthy Attachment)";
+                description = "You have a healthy relationship pattern. You can be close without losing yourself. You can be independent without avoiding intimacy. You choose partners who are emotionally available and treat you well. This is the goal.";
+                whyYouDoThis = "You likely had secure attachment in childhood, or you've done significant healing work. You learned that relationships can be both safe and fulfilling.";
+                whatYoureAvoiding = "You're not avoiding—you're engaging with relationships in a healthy way. You can handle both intimacy and independence.";
+                healthyAlternative = [
+                    "Maintain your secure attachment style",
+                    "Model healthy relationships for others",
+                    "Continue to practice vulnerability and boundaries",
+                    "Support others in healing their relationship patterns",
+                    "Celebrate your emotional health and continue growing"
+                ];
+            }
+
+            // Generate results HTML
+            const resultsHTML = `
+                <h2>💕 Your Relationship Dynamic 💕</h2>
+                <div class="pattern-display">${pattern}</div>
+
+                <div class="insight-box">
+                    <h3>📊 Your Pattern</h3>
+                    <p>${description}</p>
+                </div>
+
+                <div class="insight-box">
+                    <h3>🔍 Why You Do This</h3>
+                    <p>${whyYouDoThis}</p>
+                </div>
+
+                <div class="insight-box">
+                    <h3>🚫 What You're Avoiding</h3>
+                    <p>${whatYoureAvoiding}</p>
+                </div>
+
+                <div class="insight-box">
+                    <h3>💚 Healthy Alternative</h3>
+                    <p><strong>How to create secure, fulfilling relationships:</strong></p>
+                    <ul>
+                        ${healthyAlternative.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="insight-box">
+                    <h3>🎯 The Truth</h3>
+                    <p>Your relationship pattern isn't about your partners—it's about you. You're unconsciously recreating familiar dynamics, even when they hurt. But awareness is the first step to change.</p>
+                    <p><strong>Your next step: Notice your pattern in action this week. Just notice. You can't change what you can't see.</strong></p>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="insight-library.html" class="action-btn">📚 View All Insights</a>
+                    <a href="tools-hub.html" class="action-btn">🔮 Explore More Tools</a>
+                    <button onclick="location.reload()" class="action-btn">🔄 Retake Assessment</button>
+                </div>
+            `;
+
+            // Display results
+            const resultsSection = document.getElementById('resultsSection');
+            resultsSection.innerHTML = resultsHTML;
+            resultsSection.style.display = 'block';
+            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Save to localStorage
+            saveToLibrary(pattern);
+        }
+
+        function saveToLibrary(pattern) {
+            const insight = {
+                tool: 'Relationship Dynamic Decoder',
+                category: 'relational',
+                timestamp: new Date().toISOString(),
+                pattern: pattern,
+                summary: `Relationship Dynamic: ${pattern}`
+            };
+
+            let library = JSON.parse(localStorage.getItem('quantumMerlinLibrary') || '[]');
+            
+            // Remove any existing entry for this tool
+            library = library.filter(item => item.tool !== 'Relationship Dynamic Decoder');
+            
+            // Add new entry
+            library.push(insight);
+            
+            localStorage.setItem('quantumMerlinLibrary', JSON.stringify(library));
+        }
+    </script>
+</body>
+</html>

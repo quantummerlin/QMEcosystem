@@ -1,0 +1,57 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#roseGradient)" opacity="0.2"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="roseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff1493;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glowRose">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Rose Center -->
+  <circle cx="50" cy="50" r="8" fill="#ff00ff" opacity="0.8" filter="url(#glowRose)"/>
+  
+  <!-- Inner Petals -->
+  <ellipse cx="50" cy="42" rx="6" ry="10" fill="#ff00ff" opacity="0.6" transform="rotate(0 50 50)"/>
+  <ellipse cx="50" cy="42" rx="6" ry="10" fill="#ff00ff" opacity="0.6" transform="rotate(72 50 50)"/>
+  <ellipse cx="50" cy="42" rx="6" ry="10" fill="#ff00ff" opacity="0.6" transform="rotate(144 50 50)"/>
+  <ellipse cx="50" cy="42" rx="6" ry="10" fill="#ff00ff" opacity="0.6" transform="rotate(216 50 50)"/>
+  <ellipse cx="50" cy="42" rx="6" ry="10" fill="#ff00ff" opacity="0.6" transform="rotate(288 50 50)"/>
+  
+  <!-- Outer Petals -->
+  <ellipse cx="50" cy="35" rx="8" ry="15" fill="#ff00ff" opacity="0.4" transform="rotate(0 50 50)"/>
+  <ellipse cx="50" cy="35" rx="8" ry="15" fill="#ff00ff" opacity="0.4" transform="rotate(72 50 50)"/>
+  <ellipse cx="50" cy="35" rx="8" ry="15" fill="#ff00ff" opacity="0.4" transform="rotate(144 50 50)"/>
+  <ellipse cx="50" cy="35" rx="8" ry="15" fill="#ff00ff" opacity="0.4" transform="rotate(216 50 50)"/>
+  <ellipse cx="50" cy="35" rx="8" ry="15" fill="#ff00ff" opacity="0.4" transform="rotate(288 50 50)"/>
+  
+  <!-- Stem -->
+  <line x1="50" y1="65" x2="50" y2="85" stroke="#ff00ff" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Leaves -->
+  <ellipse cx="45" cy="72" rx="5" ry="8" fill="#ff00ff" opacity="0.4" transform="rotate(-30 45 72)"/>
+  <ellipse cx="55" cy="78" rx="5" ry="8" fill="#ff00ff" opacity="0.4" transform="rotate(30 55 78)"/>
+  
+  <!-- Heart Accent -->
+  <path d="M 50 48 C 48 46, 45 46, 45 49 C 45 51, 50 55, 50 55 C 50 55, 55 51, 55 49 C 55 46, 52 46, 50 48 Z" 
+        fill="#ffffff" opacity="0.6"/>
+  
+  <!-- Sparkles -->
+  <circle cx="35" cy="35" r="1.5" fill="#ff00ff" opacity="0.8"/>
+  <circle cx="65" cy="35" r="1.5" fill="#ff00ff" opacity="0.8"/>
+  <circle cx="35" cy="65" r="1.5" fill="#ff00ff" opacity="0.8"/>
+  <circle cx="65" cy="65" r="1.5" fill="#ff00ff" opacity="0.8"/>
+  
+  <!-- Outer Ring -->
+  <circle cx="50" cy="50" r="48" fill="none" stroke="#ff00ff" stroke-width="1" opacity="0.3"/>
+</svg>

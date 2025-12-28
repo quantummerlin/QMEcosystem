@@ -1,0 +1,1 @@
+722:            let selectedSplit = splits.find(s => s.condition) || splits[splits.length - 1];

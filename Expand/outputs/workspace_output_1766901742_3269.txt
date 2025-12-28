@@ -1,0 +1,11 @@
+                { name: 'Values Clash Identifier', icon: '⚖️', description: 'Find competing values creating internal conflict', file: 'values-clash-identifier.html', badge: 'Clarity' },
+                { name: 'Motivation Heatmap', icon: '🔥', description: 'See what truly drives you vs what you think does', file: 'motivation-heatmap.html', badge: 'Insightful' }
+            ],
+            categoryC: [
+                { name: 'Manifestation Readiness', icon: '🎯', description: 'Assess your capacity for rapid change', file: 'manifestation-readiness.html', badge: 'Essential' },
+                { name: 'Virility/Life-Force Signal', icon: '⚡', description: 'Measure your vital energy and creative power', file: 'life-force-signal.html', badge: 'Vital' },
+                { name: 'Energy Recovery Protocol', icon: '🔋', description: 'Personalized energy restoration strategies', file: 'energy-recovery-protocol.html', badge: 'Healing' },
+                { name: 'Stress Signature', icon: '😰', description: 'Identify your unique stress patterns', file: 'stress-signature.html', badge: 'Awareness' },
+                { name: 'Decision Bias Detector', icon: '🤔', description: 'Reveal how you make choices unconsciously', file: 'decision-bias-detector.html', badge: 'Practical' },
+                { name: 'Comfort Zone Mirror', icon: '🪞', description: 'See the edges of your current reality', file: 'comfort-zone-mirror.html', badge: 'Growth' }
+            ],

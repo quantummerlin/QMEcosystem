@@ -1,0 +1,27 @@
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 https://deb.nodesource.com/node_20.x nodistro InRelease [12.1 kB]
+Get:5 https://cli.github.com/packages stable InRelease [3917 B]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [290 kB]
+Get:7 https://deb.nodesource.com/node_20.x nodistro/main amd64 Packages [13.2 kB]
+Get:8 https://cli.github.com/packages stable/main amd64 Packages [345 B]
+Fetched 423 kB in 0s (1500 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  odt2txt
+0 upgraded, 1 newly installed, 0 to remove and 10 not upgraded.
+Need to get 15.5 kB of archives.
+After this operation, 61.4 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 odt2txt amd64 0.5-7 [15.5 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 15.5 kB in 0s (291 kB/s)
+Selecting previously unselected package odt2txt.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 55634 files and directories currently installed.)
+Preparing to unpack .../odt2txt_0.5-7_amd64.deb ...
+Unpacking odt2txt (0.5-7) ...
+Setting up odt2txt (0.5-7) ...
+Processing triggers for mailcap (3.70+nmu1) ...

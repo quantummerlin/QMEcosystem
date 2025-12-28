@@ -1,0 +1,4 @@
+                { name: 'Life-Force Signal Detector', icon: '⚡', description: 'Measure your vital energy and creative power', file: 'life-force-signal-detector.html', badge: 'Vital' },
+                { name: 'Safety vs Expansion Tension', icon: '⚖️', description: 'The tension between security and growth', file: 'safety-expansion-tension.html', badge: 'Core' },
+                { name: 'Authority Imprint Detector', icon: '👑', description: 'How childhood authority figures shape you now', file: 'authority-imprint-detector.html', badge: 'Psychological' },
+                { name: 'Relationship Dynamic Decoder', icon: '💕', description: 'Your unconscious relationship patterns', file: 'relationship-dynamic-decoder.html', badge: 'Connection' },

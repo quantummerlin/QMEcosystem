@@ -1,0 +1,21 @@
+=== MERGING FREQUENCY DATABASES ===
+Existing tracks: 103
+New tracks: 492
+Successfully merged 492 new tracks
+Total tracks after merge: 595
+
+=== UPDATED CATEGORY BREAKDOWN ===
+Abundance & Wealth: 17 tracks
+Sleep & Rest: 20 tracks
+Healing & Health: 129 tracks
+Focus & Productivity: 97 tracks
+Emotional Balance: 17 tracks
+Spiritual Growth: 108 tracks
+Relationships & Love: 15 tracks
+Vocal & Performance: 1 tracks
+other: 79 tracks
+Trinity Frequencies: 112 tracks
+
+✅ Merged database saved as frequency-database-merged.js
+✅ Original database backed up
+✅ Original database updated with merged version

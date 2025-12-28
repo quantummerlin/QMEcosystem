@@ -1,0 +1,15 @@
+Found 453 expansion combinations to process
+Existing combinations: 569
+Generated 79 unique expansion tracks
+
+Saved 79 expansion tracks to expansion_frequency_tracks.json
+
+=== EXPANSION CATEGORY BREAKDOWN ===
+healing: 21 tracks
+abundance: 4 tracks
+other: 14 tracks
+sleep: 4 tracks
+focus: 17 tracks
+spiritual: 15 tracks
+emotional: 1 tracks
+relationships: 3 tracks

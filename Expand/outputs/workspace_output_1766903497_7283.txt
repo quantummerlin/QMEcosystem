@@ -1,0 +1,20 @@
+7:    <meta name="description" content="Get your daily, weekly, and monthly zodiac forecasts with quantum insights and ritual suggestions.">
+8:    <meta name="keywords" content="zodiac forecasts, astrology predictions, cosmic guidance, quantum forecasts, quantum merlin">
+16:    <meta property="og:description" content="Get your daily, weekly, and monthly zodiac forecasts with quantum insights.">
+235:        .zodiac-grid {
+242:        .zodiac-card {
+251:        .zodiac-card:hover {
+263:        .zodiac-symbol {
+267:        .zodiac-name {
+457:        /* Responsive Design */
+476:            .zodiac-grid {
+513:            <a href="https://astrology.quantummerlin.com">⭐ Western Astrology</a>
+573:        <div class="zodiac-grid" id="zodiacGrid">
+668:                    message: 'This month favors writing, teaching, and sharing knowledge. Your words will have significant impact.',
+1038:        // Display zodiac forecasts
+1040:            const zodiacGrid = document.getElementById('zodiacGrid');
+1041:            zodiacGrid.innerHTML = '';
+1043:            for (const [sign, data] of Object.entries(westernZodiacForecasts)) {
+1046:                card.className = 'zodiac-card';
+1050:                        <div class="zodiac-symbol">${data.symbol}</div>
+1051:                        <div class="zodiac-name">${sign}</div>

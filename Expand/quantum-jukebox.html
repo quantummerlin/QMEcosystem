@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Jukebox | Quantum Merlin</title>
+    <meta name="description" content="Personalized spiritual content delivery system with frequency healing, guided meditations, and amplified consciousness tools">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --deep-purple: #1a1a3e;
+            --sacred-blue: #4169E1;
+            --mystic-violet: #8A2BE2;
+            --crystal-white: #f8f9fa;
+            --rose-gold: #E8B4B8;
+            --energy-gradient: linear-gradient(135deg, var(--sacred-blue), var(--mystic-violet));
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 50%, #2d1b69 100%);
+            color: var(--crystal-white);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+        }
+
+        .main-header {
+            background: var(--energy-gradient);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(138, 43, 226, 0.3);
+        }
+
+        .jukebox-interface {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--primary-gold);
+            border-radius: 25px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary-gold);
+        }
+
+        .content-card.active {
+            border-color: var(--rose-gold);
+            background: rgba(232, 180, 184, 0.1);
+        }
+
+        .media-controls {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .play-button {
+            background: var(--energy-gradient);
+            border: none;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1rem;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--sacred-blue), var(--primary-gold));
+            transition: width 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .vibration-meter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .vibration-bar {
+            height: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            flex: 1;
+            margin: 0 0.5rem;
+        }
+
+        .vibration-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--mystic-violet), var(--rose-gold));
+            transition: width 0.5s ease;
+            border-radius: 15px;
+            animation: vibration 2s ease-in-out infinite;
+        }
+
+        @keyframes vibration {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        .category-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .category-pill {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-pill:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: var(--primary-gold);
+        }
+
+        .category-pill.active {
+            background: var(--primary-gold);
+            color: var(--deep-purple);
+            border-color: var(--primary-gold);
+        }
+
+        .intention-form {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .intention-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            color: var(--crystal-white);
+            padding: 1rem;
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+
+        .intention-input::placeholder {
+            color: rgba(248, 249, 250, 0.5);
+        }
+
+        .amplification-indicators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .indicator-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .indicator-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-gold);
+            margin: 0.5rem 0;
+        }
+
+        .playlist-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .playlist-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .playlist-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .playlist-item.active {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .playlist-duration {
+            margin-left: auto;
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+
+        .mood-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .mood-option {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mood-option:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .mood-option.selected {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: var(--primary-gold);
+        }
+
+        .mood-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-gold {
+            background: var(--primary-gold);
+            color: var(--deep-purple);
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold:hover {
+            background: #B8941F;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .nav-link {
+            color: var(--crystal-white) !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-gold) !important;
+        }
+
+        .quantum-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent, rgba(138, 43, 226, 0.1));
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Quantum Overlay Effect -->
+    <div class="quantum-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="main-hub.html">
+                <i class="fas fa-atom"></i> Quantum Merlin
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main-hub.html"><i class="fas fa-home"></i> Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gematria-calculator.html"><i class="fas fa-calculator"></i> Gematria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quantum-sigil-generator.html"><i class="fas fa-draw-polygon"></i> Sigils</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quantum-frequency-synthesizer.html"><i class="fas fa-wave-square"></i> Frequencies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="quantum-jukebox.html">
+                            <i class="fas fa-music"></i> Quantum Jukebox
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1><i class="fas fa-music"></i> Quantum Jukebox</h1>
+            <p class="lead">Personalized Spiritual Content & Frequency Healing System</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <!-- Intention Setting -->
+        <div class="jukebox-interface">
+            <h2><i class="fas fa-heart"></i> Set Your Spiritual Intention</h2>
+            
+            <div class="intention-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="intentionText">What do you want to experience today?</label>
+                        <textarea class="intention-input" id="intentionText" rows="4" 
+                                  placeholder="Example: I want to feel peaceful, centered, and connected to my higher self..."></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Select Your Mood</label>
+                        <div class="mood-selector">
+                            <div class="mood-option" data-mood="peaceful">
+                                <div class="mood-icon">😌</div>
+                                <small>Peaceful</small>
+                            </div>
+                            <div class="mood-option" data-mood="energized">
+                                <div class="mood-icon">⚡</div>
+                                <small>Energized</small>
+                            </div>
+                            <div class="mood-option" data-mood="focused">
+                                <div class="mood-icon">🎯</div>
+                                <small>Focused</small>
+                            </div>
+                            <div class="mood-option" data-mood="inspired">
+                                <div class="mood-icon">✨</div>
+                                <small>Inspired</small>
+                            </div>
+                            <div class="mood-option" data-mood="healed">
+                                <div class="mood-icon">💚</div>
+                                <small>Healed</small>
+                            </div>
+                            <div class="mood-option" data-mood="connected">
+                                <div class="mood-icon">🔗</div>
+                                <small>Connected</small>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <label>Select Categories</label>
+                            <div class="category-pills">
+                                <div class="category-pill active" data-category="meditation">🧘 Meditation</div>
+                                <div class="category-pill active" data-category="frequency">🎵 Frequencies</div>
+                                <div class="category-pill" data-category="affirmations">💬 Affirmations</div>
+                                <div class="category-pill" data-category="breathwork">🌬️ Breathwork</div>
+                                <div class="category-pill" data-category="sound-healing">🎶 Sound Healing</div>
+                                <div class="category-pill" data-category="guided-journey">🌟 Guided Journey</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-3">
+                    <button class="btn btn-gold btn-lg" id="generatePlaylist">
+                        <i class="fas fa-magic"></i> Generate My Quantum Playlist
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Amplification Analysis -->
+        <div class="jukebox-interface" id="amplificationPanel" style="display: none;">
+            <h2><i class="fas fa-chart-line"></i> Quantum Amplification Analysis</h2>
+            
+            <div class="amplification-indicators">
+                <div class="indicator-card">
+                    <i class="fas fa-brain"></i>
+                    <h5>Consciousness</h5>
+                    <div class="indicator-value" id="consciousnessLevel">85%</div>
+                    <small>Awareness Level</small>
+                </div>
+                <div class="indicator-card">
+                    <i class="fas fa-heart"></i>
+                    <h5>Heart Coherence</h5>
+                    <div class="indicator-value" id="heartCoherence">92%</div>
+                    <small>Emotional Alignment</small>
+                </div>
+                <div class="indicator-card">
+                    <i class="fas fa-wave-square"></i>
+                    <h5>Frequency Match</h5>
+                    <div class="indicator-value" id="frequencyMatch">78%</div>
+                    <small>Vibrational Resonance</small>
+                </div>
+                <div class="indicator-card">
+                    <i class="fas fa-gem"></i>
+                    <h5>Crystal Sync</h5>
+                    <div class="indicator-value" id="crystalSync">88%</div>
+                    <small>Energetic Harmony</small>
+                </div>
+            </div>
+            
+            <div class="vibration-meter">
+                <span><i class="fas fa-bolt"></i> Quantum Vibration</span>
+                <div class="vibration-bar">
+                    <div class="vibration-fill" id="vibrationLevel" style="width: 75%;"></div>
+                </div>
+                <span id="vibrationText">High</span>
+            </div>
+        </div>
+
+        <!-- Generated Playlist -->
+        <div class="jukebox-interface" id="playlistPanel" style="display: none;">
+            <h2><i class="fas fa-list-music"></i> Your Personalized Quantum Playlist</h2>
+            
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="playlist-section">
+                        <h4>Current Selection</h4>
+                        <div id="playlistItems">
+                            <!-- Playlist items will be generated here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="media-controls">
+                        <div class="text-center">
+                            <h4>Now Playing</h4>
+                            <div class="mb-3">
+                                <i class="fas fa-music" style="font-size: 3rem; color: var(--primary-gold);"></i>
+                            </div>
+                            <h5 id="nowPlayingTitle">Peaceful Meditation</h5>
+                            <p id="nowPlayingDescription">Deep relaxation and inner peace</p>
+                            
+                            <button class="play-button" id="playBtn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="mediaProgress" style="width: 0%;"></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <small id="currentTime">0:00</small>
+                                <small id="totalTime">15:00</small>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-3">
+                            <button class="btn btn-sm btn-outline-light" id="previousBtn">
+                                <i class="fas fa-backward"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-light mx-2" id="nextBtn">
+                                <i class="fas fa-forward"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-light" id="shuffleBtn">
+                                <i class="fas fa-random"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommended Content -->
+        <div class="jukebox-interface" id="recommendationsPanel" style="display: none;">
+            <h2><i class="fas fa-sparkles"></i> Quantum Recommendations</h2>
+            
+            <div class="row" id="recommendedContent">
+                <!-- Recommended content will be generated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2024 Quantum Merlin | Quantum Spiritual Technology</p>
+            <p>
+                <a href="privacy.html" class="text-light">Privacy</a> | 
+                <a href="terms.html" class="text-light">Terms</a> | 
+                <a href="disclaimer.html" class="text-light">Disclaimer</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="amplification-engine.js"></script>
+    <script>
+        // Quantum Jukebox System
+        class QuantumJukebox {
+            constructor() {
+                this.currentPlaylist = [];
+                this.currentlyPlaying = null;
+                this.isPlaying = false;
+                this.amplificationEngine = new UniversalAmplificationEngine();
+                this.selectedMood = null;
+                this.selectedCategories = [];
+                this.intention = '';
+                
+                this.contentDatabase = this.initializeContentDatabase();
+                this.initializeEventListeners();
+            }
+
+            initializeContentDatabase() {
+                return {
+                    meditation: [
+                        { 
+                            id: 'med001', 
+                            title: 'Peaceful Mind Meditation', 
+                            description: 'Calm your mind and find inner peace',
+                            duration: '15:00',
+                            frequency: 432,
+                            mood: ['peaceful', 'focused'],
+                            vibration: 75
+                        },
+                        { 
+                            id: 'med002', 
+                            title: 'Heart Opening Meditation', 
+                            description: 'Open your heart to love and compassion',
+                            duration: '20:00',
+                            frequency: 639,
+                            mood: ['healed', 'connected'],
+                            vibration: 85
+                        },
+                        { 
+                            id: 'med003', 
+                            title: 'Third Eye Activation', 
+                            description: 'Enhance intuition and spiritual insight',
+                            duration: '25:00',
+                            frequency: 852,
+                            mood: ['inspired', 'focused'],
+                            vibration: 90
+                        },
+                        { 
+                            id: 'med004', 
+                            title: 'Energy Boost Meditation', 
+                            description: 'Revitalize your body and mind',
+                            duration: '10:00',
+                            frequency: 528,
+                            mood: ['energized', 'focused'],
+                            vibration: 80
+                        }
+                    ],
+                    frequency: [
+                        { 
+                            id: 'freq001', 
+                            title: '432Hz Universal Harmony', 
+                            description: 'Grounding frequency for spiritual alignment',
+                            duration: '30:00',
+                            frequency: 432,
+                            mood: ['peaceful', 'connected'],
+                            vibration: 70
+                        },
+                        { 
+                            id: 'freq002', 
+                            title: '528Hz DNA Repair', 
+                            description: 'Transformation and healing frequency',
+                            duration: '30:00',
+                            frequency: 528,
+                            mood: ['healed', 'inspired'],
+                            vibration: 85
+                        },
+                        { 
+                            id: 'freq003', 
+                            title: '639Hz Heart Chakra', 
+                            description: 'Love and relationships harmony',
+                            duration: '30:00',
+                            frequency: 639,
+                            mood: ['healed', 'connected'],
+                            vibration: 80
+                        },
+                        { 
+                            id: 'freq004', 
+                            title: '741Hz Intuition Awakening', 
+                            description: 'Spiritual awareness and cleansing',
+                            duration: '30:00',
+                            frequency: 741,
+                            mood: ['inspired', 'focused'],
+                            vibration: 88
+                        }
+                    ],
+                    affirmations: [
+                        { 
+                            id: 'aff001', 
+                            title: 'Self-Love Affirmations', 
+                            description: 'Empowering affirmations for self-worth',
+                            duration: '12:00',
+                            frequency: 528,
+                            mood: ['healed', 'peaceful'],
+                            vibration: 75
+                        },
+                        { 
+                            id: 'aff002', 
+                            title: 'Abundance Mindset', 
+                            description: 'Attract prosperity and success',
+                            duration: '15:00',
+                            frequency: 639,
+                            mood: ['inspired', 'energized'],
+                            vibration: 82
+                        }
+                    ],
+                    breathwork: [
+                        { 
+                            id: 'breath001', 
+                            title: '4-7-8 Breathing', 
+                            description: 'Calming breathwork for anxiety relief',
+                            duration: '10:00',
+                            frequency: 432,
+                            mood: ['peaceful', 'focused'],
+                            vibration: 70
+                        },
+                        { 
+                            id: 'breath002', 
+                            title: 'Box Breathing', 
+                            description: 'Focus and clarity enhancement',
+                            duration: '8:00',
+                            frequency: 528,
+                            mood: ['focused', 'energized'],
+                            vibration: 75
+                        }
+                    ],
+                    'sound-healing': [
+                        { 
+                            id: 'sound001', 
+                            title: 'Crystal Bowl Healing', 
+                            description: 'Pure crystal sound frequencies',
+                            duration: '35:00',
+                            frequency: 432,
+                            mood: ['peaceful', 'healed'],
+                            vibration: 85
+                        },
+                        { 
+                            id: 'sound002', 
+                            title: 'Tibetan Bowl Meditation', 
+                            description: 'Ancient healing vibrations',
+                            duration: '40:00',
+                            frequency: 528,
+                            mood: ['connected', 'inspired'],
+                            vibration: 90
+                        }
+                    ],
+                    'guided-journey': [
+                        { 
+                            id: 'journey001', 
+                            title: 'Higher Self Connection', 
+                            description: 'Meet your higher self meditation',
+                            duration: '25:00',
+                            frequency: 963,
+                            mood: ['connected', 'inspired'],
+                            vibration: 95
+                        },
+                        { 
+                            id: 'journey002', 
+                            title: 'Akashic Records Journey', 
+                            description: 'Access your soul's wisdom',
+                            duration: '30:00',
+                            frequency: 852,
+                            mood: ['inspired', 'focused'],
+                            vibration: 92
+                        }
+                    ]
+                };
+            }
+
+            initializeEventListeners() {
+                // Generate playlist button
+                document.getElementById('generatePlaylist').addEventListener('click', () => {
+                    this.generatePersonalizedPlaylist();
+                });
+
+                // Mood selection
+                document.querySelectorAll('.mood-option').forEach(option => {
+                    option.addEventListener('click', (e) => {
+                        this.selectMood(e.currentTarget);
+                    });
+                });
+
+                // Category selection
+                document.querySelectorAll('.category-pill').forEach(pill => {
+                    pill.addEventListener('click', (e) => {
+                        this.toggleCategory(e.currentTarget);
+                    });
+                });
+
+                // Media controls
+                document.getElementById('playBtn').addEventListener('click', () => {
+                    this.togglePlayPause();
+                });
+
+                document.getElementById('previousBtn').addEventListener('click', () => {
+                    this.playPrevious();
+                });
+
+                document.getElementById('nextBtn').addEventListener('click', () => {
+                    this.playNext();
+                });
+
+                document.getElementById('shuffleBtn').addEventListener('click', () => {
+                    this.shufflePlaylist();
+                });
+            }
+
+            selectMood(moodOption) {
+                document.querySelectorAll('.mood-option').forEach(option => {
+                    option.classList.remove('selected');
+                });
+                moodOption.classList.add('selected');
+                this.selectedMood = moodOption.dataset.mood;
+            }
+
+            toggleCategory(categoryPill) {
+                categoryPill.classList.toggle('active');
+                const category = categoryPill.dataset.category;
+                
+                if (categoryPill.classList.contains('active')) {
+                    if (!this.selectedCategories.includes(category)) {
+                        this.selectedCategories.push(category);
+                    }
+                } else {
+                    this.selectedCategories = this.selectedCategories.filter(c => c !== category);
+                }
+            }
+
+            generatePersonalizedPlaylist() {
+                this.intention = document.getElementById('intentionText').value;
+                
+                if (!this.selectedMood) {
+                    alert('Please select your current mood');
+                    return;
+                }
+
+                if (this.selectedCategories.length === 0) {
+                    alert('Please select at least one category');
+                    return;
+                }
+
+                // Generate playlist based on selections
+                this.currentPlaylist = this.createPlaylistFromPreferences();
+                
+                // Show amplification analysis
+                this.showAmplificationAnalysis();
+                
+                // Display playlist
+                this.displayPlaylist();
+                
+                // Show recommendations
+                this.showRecommendations();
+                
+                // Scroll to results
+                document.getElementById('amplificationPanel').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            createPlaylistFromPreferences() {
+                const playlist = [];
+                
+                this.selectedCategories.forEach(category => {
+                    const content = this.contentDatabase[category] || [];
+                    const filtered = content.filter(item => 
+                        item.mood.includes(this.selectedMood)
+                    );
+                    playlist.push(...filtered);
+                });
+
+                // Add amplification-based content
+                if (this.intention) {
+                    const amplifications = this.amplificationEngine.getAmplifications(this.intention, 'text');
+                    const frequencyContent = this.getFrequencyBasedContent(amplifications);
+                    playlist.push(...frequencyContent);
+                }
+
+                // Sort by vibration level and limit to 10 items
+                return playlist
+                    .sort((a, b) => b.vibration - a.vibration)
+                    .slice(0, 10);
+            }
+
+            getFrequencyBasedContent(amplifications) {
+                const frequencyContent = [];
+                
+                if (amplifications.amplifications.frequencies.length > 0) {
+                    const targetFreq = amplifications.amplifications.frequencies[0].baseFrequency;
+                    
+                    Object.values(this.contentDatabase).flat().forEach(content => {
+                        if (Math.abs(content.frequency - targetFreq) < 50) {
+                            frequencyContent.push(content);
+                        }
+                    });
+                }
+
+                return frequencyContent.slice(0, 3);
+            }
+
+            showAmplificationAnalysis() {
+                document.getElementById('amplificationPanel').style.display = 'block';
+                
+                // Simulate amplification analysis based on intention and mood
+                const baseValues = {
+                    peaceful: { consciousness: 75, heart: 90, frequency: 70, crystal: 80 },
+                    energized: { consciousness: 85, heart: 70, frequency: 90, crystal: 75 },
+                    focused: { consciousness: 90, heart: 75, frequency: 85, crystal: 80 },
+                    inspired: { consciousness: 88, heart: 85, frequency: 80, crystal: 90 },
+                    healed: { consciousness: 80, heart: 95, frequency: 75, crystal: 85 },
+                    connected: { consciousness: 85, heart: 88, frequency: 85, crystal: 92 }
+                };
+
+                const values = baseValues[this.selectedMood] || baseValues.peaceful;
+                
+                // Add intention boost
+                if (this.intention) {
+                    const boost = Math.min(this.intention.length / 10, 15);
+                    Object.keys(values).forEach(key => {
+                        values[key] = Math.min(values[key] + boost, 100);
+                    });
+                }
+
+                // Update UI with animation
+                this.animateValue('consciousnessLevel', 0, values.consciousness, 1500);
+                this.animateValue('heartCoherence', 0, values.heart, 1500);
+                this.animateValue('frequencyMatch', 0, values.frequency, 1500);
+                this.animateValue('crystalSync', 0, values.crystal, 1500);
+                
+                // Update vibration meter
+                const avgVibration = Math.round((values.consciousness + values.heart + values.frequency + values.crystal) / 4);
+                document.getElementById('vibrationLevel').style.width = `${avgVibration}%`;
+                
+                const vibrationLevel = avgVibration > 80 ? 'Very High' : avgVibration > 60 ? 'High' : avgVibration > 40 ? 'Moderate' : 'Low';
+                document.getElementById('vibrationText').textContent = vibrationLevel;
+            }
+
+            animateValue(elementId, start, end, duration) {
+                const element = document.getElementById(elementId);
+                const range = end - start;
+                const increment = range / (duration / 16);
+                let current = start;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+                        current = end;
+                        clearInterval(timer);
+                    }
+                    element.textContent = `${Math.round(current)}%`;
+                }, 16);
+            }
+
+            displayPlaylist() {
+                document.getElementById('playlistPanel').style.display = 'block';
+                
+                const container = document.getElementById('playlistItems');
+                container.innerHTML = '';
+                
+                this.currentPlaylist.forEach((item, index) => {
+                    const playlistItem = document.createElement('div');
+                    playlistItem.className = 'playlist-item';
+                    playlistItem.dataset.index = index;
+                    
+                    playlistItem.innerHTML = `
+                        <div class="me-3">
+                            <i class="fas fa-play-circle" style="font-size: 1.5rem; color: var(--primary-gold);"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">${item.title}</h6>
+                            <small>${item.description}</small>
+                        </div>
+                        <div class="playlist-duration">${item.duration}</div>
+                    `;
+                    
+                    playlistItem.addEventListener('click', () => {
+                        this.selectPlaylistItem(index);
+                    });
+                    
+                    container.appendChild(playlistItem);
+                });
+                
+                // Auto-select first item
+                if (this.currentPlaylist.length > 0) {
+                    this.selectPlaylistItem(0);
+                }
+            }
+
+            selectPlaylistItem(index) {
+                // Update active state
+                document.querySelectorAll('.playlist-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                document.querySelector(`[data-index="${index}"]`).classList.add('active');
+                
+                // Update now playing
+                this.currentlyPlaying = this.currentPlaylist[index];
+                document.getElementById('nowPlayingTitle').textContent = this.currentlyPlaying.title;
+                document.getElementById('nowPlayingDescription').textContent = this.currentlyPlaying.description;
+                document.getElementById('totalTime').textContent = this.currentlyPlaying.duration;
+                
+                // Auto-play
+                this.play();
+            }
+
+            togglePlayPause() {
+                if (this.isPlaying) {
+                    this.pause();
+                } else {
+                    this.play();
+                }
+            }
+
+            play() {
+                if (!this.currentlyPlaying) return;
+                
+                this.isPlaying = true;
+                document.getElementById('playBtn').innerHTML = '<i class="fas fa-pause"></i>';
+                
+                // Simulate playback progress
+                this.startPlaybackProgress();
+            }
+
+            pause() {
+                this.isPlaying = false;
+                document.getElementById('playBtn').innerHTML = '<i class="fas fa-play"></i>';
+            }
+
+            startPlaybackProgress() {
+                // Simple progress simulation
+                let progress = 0;
+                const duration = parseInt(this.currentlyPlaying.duration) || 15; // Default 15 minutes
+                const interval = 100; // Update every 100ms
+                const increment = (100 * interval) / (duration * 60 * 1000);
+                
+                const progressTimer = setInterval(() => {
+                    if (!this.isPlaying) {
+                        clearInterval(progressTimer);
+                        return;
+                    }
+                    
+                    progress += increment;
+                    if (progress >= 100) {
+                        progress = 100;
+                        clearInterval(progressTimer);
+                        this.playNext();
+                    }
+                    
+                    document.getElementById('mediaProgress').style.width = `${progress}%`;
+                    
+                    // Update current time
+                    const currentSeconds = Math.floor((progress / 100) * duration * 60);
+                    const minutes = Math.floor(currentSeconds / 60);
+                    const seconds = currentSeconds % 60;
+                    document.getElementById('currentTime').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                }, interval);
+            }
+
+            playPrevious() {
+                const currentIndex = this.currentPlaylist.indexOf(this.currentlyPlaying);
+                const prevIndex = currentIndex > 0 ? currentIndex - 1 : this.currentPlaylist.length - 1;
+                this.selectPlaylistItem(prevIndex);
+            }
+
+            playNext() {
+                const currentIndex = this.currentPlaylist.indexOf(this.currentlyPlaying);
+                const nextIndex = currentIndex < this.currentPlaylist.length - 1 ? currentIndex + 1 : 0;
+                this.selectPlaylistItem(nextIndex);
+            }
+
+            shufflePlaylist() {
+                // Shuffle the current playlist
+                this.currentPlaylist = this.currentPlaylist.sort(() => Math.random() - 0.5);
+                this.displayPlaylist();
+            }
+
+            showRecommendations() {
+                document.getElementById('recommendationsPanel').style.display = 'block';
+                
+                const container = document.getElementById('recommendedContent');
+                container.innerHTML = '';
+                
+                // Generate recommendations based on current selection
+                const recommendations = this.generateRecommendations();
+                
+                recommendations.forEach(rec => {
+                    const card = document.createElement('div');
+                    card.className = 'col-md-4 mb-3';
+                    card.innerHTML = `
+                        <div class="content-card">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-star" style="font-size: 2rem; color: var(--primary-gold);"></i>
+                            </div>
+                            <h5>${rec.title}</h5>
+                            <p>${rec.description}</p>
+                            <div class="text-center">
+                                <button class="btn btn-sm btn-outline-light" onclick="jukebox.addToPlaylist('${rec.id}')">
+                                    <i class="fas fa-plus"></i> Add to Playlist
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            }
+
+            generateRecommendations() {
+                // Simple recommendation algorithm
+                const allContent = Object.values(this.contentDatabase).flat();
+                const currentIds = this.currentPlaylist.map(item => item.id);
+                
+                // Filter out current items and match mood
+                const recommendations = allContent
+                    .filter(item => !currentIds.includes(item.id))
+                    .filter(item => item.mood.includes(this.selectedMood))
+                    .sort((a, b) => b.vibration - a.vibration)
+                    .slice(0, 3);
+                
+                return recommendations.map(rec => ({
+                    ...rec,
+                    id: rec.id
+                }));
+            }
+
+            addToPlaylist(contentId) {
+                // Find content by ID and add to playlist
+                Object.values(this.contentDatabase).flat().forEach(content => {
+                    if (content.id === contentId && !this.currentPlaylist.find(item => item.id === contentId)) {
+                        this.currentPlaylist.push(content);
+                        this.displayPlaylist();
+                    }
+                });
+            }
+        }
+
+        // Initialize the Quantum Jukebox
+        const jukebox = new QuantumJukebox();
+    </script>
+</body>
+</html>

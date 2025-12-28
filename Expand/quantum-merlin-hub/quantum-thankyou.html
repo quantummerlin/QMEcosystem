@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Quantum Merlin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a0033 0%, #2d1b4e 50%, #1a0033 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 8px 32px rgba(138, 43, 226, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #e0d4f7;
+            margin: 30px 0;
+        }
+
+        .highlight {
+            color: #00ffff;
+            font-weight: bold;
+        }
+
+        .submission-summary {
+            background: rgba(255, 0, 255, 0.1);
+            border: 2px solid #ff00ff;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .submission-summary h3 {
+            color: #00ffff;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .summary-item {
+            margin: 12px 0;
+            padding: 10px;
+            background: rgba(0, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .summary-item strong {
+            color: #ff00ff;
+        }
+
+        .next-steps {
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid #00ffff;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .next-steps h3 {
+            color: #ff00ff;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .next-steps ol {
+            padding-left: 25px;
+        }
+
+        .next-steps li {
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .timeline-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .timeline-item .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item .label {
+            color: #00ffff;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .desc {
+            color: #b19cd9;
+            font-size: 0.9em;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            border: none;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255, 0, 255, 0.6);
+        }
+
+        .social-share {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-share p {
+            color: #b19cd9;
+            margin-bottom: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: rgba(255, 0, 255, 0.2);
+            border-color: #ff00ff;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✨</div>
+        
+        <h1>Your Quantum Wishes Are Activated!</h1>
+        
+        <p class="message">
+            Thank you for trusting Quantum Merlin with your spiritual journey. Your wishes have been received and are now being processed through our quantum consciousness AI system.
+        </p>
+
+        <div class="submission-summary" id="submissionSummary">
+            <h3>📋 Your Submission</h3>
+            <!-- Summary will be loaded here -->
+        </div>
+
+        <div class="next-steps">
+            <h3>🌟 What Happens Next</h3>
+            <ol>
+                <li><strong>Quantum Analysis:</strong> Your profile and wishes are being analyzed by our AI system, tuned specifically to your archetypal energy and consciousness level.</li>
+                <li><strong>Personalized Reading:</strong> Within 24 hours, you'll receive a comprehensive reading addressing each of your wishes with wisdom tailored to your unique spiritual signature.</li>
+                <li><strong>Email Delivery:</strong> Your reading will arrive at <span class="highlight" id="userEmail"></span> in a beautifully formatted email.</li>
+                <li><strong>Integration Support:</strong> You'll receive follow-up guidance to help you integrate and manifest your quantum intentions.</li>
+            </ol>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="icon">📧</div>
+                <div class="label">Day 1</div>
+                <div class="desc">Integration check-in</div>
+            </div>
+            <div class="timeline-item">
+                <div class="icon">📈</div>
+                <div class="label">Week 1</div>
+                <div class="desc">Progress update</div>
+            </div>
+            <div class="timeline-item">
+                <div class="icon">🎯</div>
+                <div class="label">Month 1</div>
+                <div class="desc">Transformation review</div>
+            </div>
+            <div class="timeline-item">
+                <div class="icon">🌟</div>
+                <div class="label">Year 1</div>
+                <div class="desc">Annual journey review</div>
+            </div>
+        </div>
+
+        <p class="message">
+            Your quantum journey has begun. Watch for synchronicities, trust the process, and prepare for transformation.
+        </p>
+
+        <a href="index.html" class="cta-button">
+            🏠 Return to Quantum Merlin Hub
+        </a>
+
+        <div class="social-share">
+            <p>Share your quantum journey with others:</p>
+            <div class="social-icons">
+                <div class="social-icon" onclick="shareOnFacebook()">📘</div>
+                <div class="social-icon" onclick="shareOnTwitter()">🐦</div>
+                <div class="social-icon" onclick="shareOnInstagram()">📷</div>
+                <div class="social-icon" onclick="copyLink()">🔗</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Load submission data
+        function loadSubmission() {
+            const submissionData = localStorage.getItem('quantumSubmission');
+            if (submissionData) {
+                const data = JSON.parse(submissionData);
+                displaySubmissionSummary(data);
+                
+                // Display email
+                document.getElementById('userEmail').textContent = data.userProfile.userEmail;
+            }
+        }
+
+        function displaySubmissionSummary(data) {
+            const archetypeNames = {
+                'seeker': 'The Seeker',
+                'warrior': 'The Warrior',
+                'healer': 'The Healer',
+                'magician': 'The Magician',
+                'ruler': 'The Ruler',
+                'guardian': 'The Guardian',
+                'transformer': 'The Transformer',
+                'oracle': 'The Oracle'
+            };
+
+            const packageNames = {
+                'basic': 'Basic Wishes',
+                'enhanced': 'Enhanced Wishes',
+                'unlimited': 'Quantum Mastery'
+            };
+
+            const summary = document.getElementById('submissionSummary');
+            summary.innerHTML += `
+                <div class="summary-item">
+                    <strong>Package:</strong> ${packageNames[data.packageType]} - $${data.price}
+                </div>
+                <div class="summary-item">
+                    <strong>Total Wishes/Questions:</strong> ${data.wishes.length}
+                </div>
+                <div class="summary-item">
+                    <strong>Your Archetype:</strong> ${archetypeNames[data.userProfile.archetype]}
+                </div>
+                <div class="summary-item">
+                    <strong>Submission Time:</strong> ${new Date(data.timestamp).toLocaleString()}
+                </div>
+            `;
+        }
+
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.origin);
+            const text = encodeURIComponent('I just activated my quantum wishes with Quantum Merlin! 🌟⚡');
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, '_blank');
+        }
+
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.origin);
+            const text = encodeURIComponent('I just activated my quantum wishes with Quantum Merlin! 🌟⚡ #QuantumMerlin #SpiritualGuidance');
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+
+        function shareOnInstagram() {
+            alert('Share your quantum journey on Instagram by posting about your experience and tagging @quantummerlin!');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.origin).then(() => {
+                alert('Link copied to clipboard! Share Quantum Merlin with your friends.');
+            });
+        }
+
+        // Initialize
+        window.onload = loadSubmission;
+    </script>
+</body>
+</html>

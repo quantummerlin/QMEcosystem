@@ -1,0 +1,41 @@
+165-            color: #b8b8b8;
+166-            font-size: 1.2em;
+167-        }
+168-
+169-        /* Current Day Display */
+170:        .current-day {
+171-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+172-            border: 1px solid rgba(255, 215, 0, 0.2);
+173-            border-radius: 20px;
+174-            padding: 30px;
+175-            margin-bottom: 30px;
+176-            backdrop-filter: blur(10px);
+177-            text-align: center;
+178-        }
+179-
+180:        .day-title {
+181-            font-size: 2em;
+182-            color: #ffd700;
+183-            margin-bottom: 15px;
+184-        }
+185-
+186:        .element-of-day {
+187-            font-size: 1.5em;
+188-            color: #4ecdc4;
+189-            margin-bottom: 15px;
+190-        }
+191-
+--
+444-            <h1 class="title">Quantum Zodiac Forecasts</h1>
+445-            <p class="subtitle">Daily cosmic guidance with quantum frequencies</p>
+446-        </div>
+447-
+448-        <!-- Current Day Display -->
+449:        <div class="current-day">
+450:            <h2 class="day-title" id="currentDayTitle">-</h2>
+451:            <div class="element-of-day" id="elementOfDay">-</div>
+452-            <div class="frequency-of-day" id="frequencyOfDay">-</div>
+453-            <div class="daily-message" id="dailyMessage">-</div>
+454-        </div>
+455-
+456-        <!-- Week Overview -->

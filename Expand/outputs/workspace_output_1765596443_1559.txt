@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Merlin - Frequency Audio Experience | 674 Tracks</title>
+    <meta name="description" content="Explore 674 frequency-based audio tracks for relaxation, meditation, and sound exploration. For entertainment purposes only.">
+    <meta name="keywords" content="frequency audio, sound meditation, relaxation music, binaural beats, meditation sounds, quantum merlin">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum Merlin - Frequency Audio Experience">
+    <meta property="og:description" content="Explore 674 frequency-based audio tracks for relaxation and meditation. For entertainment purposes only.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../shared/assets/logo.svg">
+    
+    <!-- Shared Brand System -->
+    <link rel="stylesheet" href="../shared/css/quantum-core.css">
+    <link rel="stylesheet" href="../shared/css/quantum-animations.css">
+    <link rel="stylesheet" href="../shared/css/quantum-components.css">
+    <link rel="stylesheet" href="../shared/css/quantum-backgrounds.css">
+    
+    <!-- Tool-Specific Styles -->
+    <style>
+        /* Enhanced Generator Layout */
+        .generator-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .generator-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        /* Track Browser Sidebar */
+        .track-browser {
+            background: rgba(0, 245, 255, 0.05);
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            border-radius: 20px;
+            padding: 1.5rem;
+            height: fit-content;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: sticky;
+            top: 2rem;
+        }
+        
+        .track-browser h3 {
+            color: var(--quantum-cyan);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .category-tab {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+        }
+        
+        .category-tab:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--quantum-cyan);
+        }
+        
+        .category-tab.active {
+            background: var(--quantum-cyan);
+            color: var(--quantum-dark);
+            border-color: var(--quantum-cyan);
+        }
+        
+        .track-search {
+            width: 100%;
+            padding: 0.75rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .track-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .track-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .track-card:hover {
+            background: rgba(0, 245, 255, 0.1);
+            border-color: var(--quantum-cyan);
+            transform: translateX(5px);
+        }
+        
+        .track-card.featured {
+            border-color: var(--quantum-gold);
+            background: rgba(255, 215, 0, 0.05);
+        }
+        
+        .track-name {
+            font-weight: 600;
+            color: var(--quantum-cyan);
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+        
+        .track-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 0.5rem;
+        }
+        
+        .track-plays {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .track-description {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+        
+        .track-frequencies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            margin-top: 0.5rem;
+        }
+        
+        .freq-badge {
+            background: rgba(0, 245, 255, 0.2);
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            color: var(--quantum-cyan);
+        }
+        
+        /* Main Generator Area */
+        .generator-main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        /* Visualizer */
+        .visualizer-container {
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 20px;
+            padding: 1rem;
+            height: 400px;
+        }
+        
+        #visualizer-canvas {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+        
+        /* Layer Controls */
+        .layers-container {
+            background: rgba(0, 245, 255, 0.05);
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            border-radius: 20px;
+            padding: 1.5rem;
+        }
+        
+        .layers-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;

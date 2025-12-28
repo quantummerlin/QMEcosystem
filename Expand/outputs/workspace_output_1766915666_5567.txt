@@ -1,0 +1,9 @@
+                            6. Notice any emotions that arise and allow them to be present.<br>$
+                            7. When ready, open your eyes and carry this sense of wholeness with you.$
+                        </div>$
+                    </div>$
+                `;$
+            }$
+            $
+            ${additionalPatternsHTML}$
+            $

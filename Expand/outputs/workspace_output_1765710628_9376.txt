@@ -1,0 +1,20 @@
+            // Add enter key support for location search
+            document.getElementById('locationSearch').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    selectFirstSuggestion();
+                }
+            });
+            
+            // Hide suggestions when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('#locationInput')) {
+                    hideSuggestions();
+                }
+            });
+            
+            // Create starfield background
+            createStarfield();
+        });
+    </script>
+</body>
+</html>

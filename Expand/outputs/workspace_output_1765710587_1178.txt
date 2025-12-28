@@ -1,0 +1,36 @@
+            return info[quadrant] || 'Balance and harmony';
+        }
+
+        // Sigil generation algorithm
+        function generateCosmicSigil() {
+            const birthdate = document.getElementById('birthdate').value;
+            const birthtime = document.getElementById('birthtime').value;
+            const location = document.getElementById('location').value;
+            const recipient = document.getElementById('recipient').value;
+            
+            if (!birthdate) {
+                showMessage('Please enter your birth date');
+                return;
+            }
+            
+            // Create date object
+            const dateTime = new Date(birthdate + 'T' + birthtime);
+            
+            // Calculate astronomical data
+            const moonPhase = calculateMoonPhase(dateTime);
+            const starDensity = calculateStarDensity(dateTime, location);
+            const quadrant = calculateCelestialQuadrant(dateTime, location);
+            
+            // Generate sigil
+            drawSigil(moonPhase, starDensity, quadrant, dateTime);
+            
+            // Generate reading
+            generateReading(moonPhase, starDensity, quadrant, dateTime);
+            
+            // Show results
+            document.getElementById('sigilDisplay').classList.add('active');
+            document.getElementById('readingSection').classList.add('active');
+            
+            if (recipient === 'gift') {
+                document.getElementById('giftSection').classList.add('active');
+            }

@@ -1,0 +1,5 @@
+            categoryE: [
+                { name: 'Trust Radar', icon: '🎯', description: 'Who and what you actually trust vs think you do', file: 'trust-radar.html', badge: 'Relational' },
+                { name: 'Authority Imprint', icon: '👤', description: 'How childhood authority figures shape you now', file: 'authority-imprint.html', badge: 'Psychological' },
+                { name: 'Relationship Dynamic', icon: '💞', description: 'Your unconscious relationship patterns', file: 'relationship-dynamic.html', badge: 'Connection' },
+                { name: 'Visibility Fear Meter', icon: '👁️', description: 'What stops you from being fully seen', file: 'visibility-fear-meter.html', badge: 'Courage' },

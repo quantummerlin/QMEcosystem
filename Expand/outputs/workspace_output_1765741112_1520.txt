@@ -1,0 +1,21 @@
+            // Display results
+            spiritualMessage.textContent = meaning.spiritual;
+            divineGuidance.textContent = meaning.guidance;
+            frequencyConnection.textContent = meaning.frequency;
+
+            // Show result section with animation
+            resultSection.classList.add('active');
+            resultSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function showMessage(message) {
+            // Create a temporary message element
+            const messageEl = document.createElement('div');
+            messageEl.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: rgba(138, 43, 226, 0.9);
+                color: white;
+                padding: 15px 20px;
+                border-radius: 10px;

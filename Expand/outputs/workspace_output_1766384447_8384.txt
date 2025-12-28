@@ -1,0 +1,22 @@
+422-    <!-- Navigation Menu -->
+423-    <div class="nav-menu">
+424-        <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+425-        <div class="nav-dropdown" id="navDropdown">
+426-            <a href="https://quantummerlin.com">🏠 Home</a>
+427-            <a href="https://frequency.quantummerlin.com">🎵 Frequency Generator</a>
+428-            <a href="https://jukebox.quantummerlin.com">📚 Quantum Jukebox</a>
+429-            <a href="https://gematria.quantummerlin.com">🔢 Quantum Gematria</a>
+430-            <a href="https://tarot.quantummerlin.com">🃏 Quantum Tarot</a>
+431-            <a href="https://sigils.quantummerlin.com">✨ Sigil Creator</a>
+432:            <a href="https://astrology.quantummerlin.com">⭐ Western Astrology</a>
+433:            <a href="https://chinese.quantummerlin.com">🐲 Chinese Zodiac</a>
+434-            <a href="https://forecasts.quantummerlin.com">🔮 Zodiac Forecasts</a>
+435-            <a href="https://codes.quantummerlin.com">💫 Reality Codes</a>
+436-            <a href="https://crystals.quantummerlin.com">💎 Quantum Crystals</a>
+437-            <a href="https://water.quantummerlin.com">💧 Water Charging</a>
+438-        </div>
+439-    </div>
+440-
+441-    <div class="container">
+442-        <!-- Header -->
+443-        <div class="header">

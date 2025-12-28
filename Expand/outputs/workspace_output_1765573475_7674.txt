@@ -1,0 +1,3 @@
+  26654 deepseek_frequencies.txt
+   7567 deepseek_frequency_expansion.txt
+  34221 total

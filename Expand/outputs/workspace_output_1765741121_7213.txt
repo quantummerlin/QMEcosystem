@@ -1,0 +1,51 @@
+        <section id="resultSection" class="result-section">
+            <div class="number-display" id="numberDisplay">000</div>
+            
+            <div class="meaning-section">
+                <h3 class="meaning-title">Spiritual Message</h3>
+                <p class="meaning-text" id="spiritualMessage"></p>
+            </div>
+            
+            <div class="meaning-section">
+                <h3 class="meaning-title">Divine Guidance</h3>
+                <p class="meaning-text" id="divineGuidance"></p>
+            </div>
+            
+            <div class="meaning-section">
+                <h3 class="meaning-title">Frequency Connection</h3>
+                <p class="meaning-text" id="frequencyConnection"></p>
+--
+            const resultSection = document.getElementById('resultSection');
+            const numberDisplay = document.getElementById('numberDisplay');
+            const spiritualMessage = document.getElementById('spiritualMessage');
+            const divineGuidance = document.getElementById('divineGuidance');
+            const frequencyConnection = document.getElementById('frequencyConnection');
+
+            // Display the number
+            numberDisplay.textContent = number;
+
+            // Get meaning from database or calculate based on patterns
+            let meaning = angelNumberMeanings[number];
+            
+            if (!meaning) {
+                // Calculate meaning based on number patterns
+                const numStr = number.toString();
+                const digits = numStr.split('');
+--
+            resultSection.classList.add('active');
+            resultSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function showMessage(message) {
+            // Create a temporary message element
+            const messageEl = document.createElement('div');
+            messageEl.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: rgba(138, 43, 226, 0.9);
+                color: white;
+                padding: 15px 20px;
+                border-radius: 10px;
+                z-index: 1000;
+                animation: slideIn 0.3s ease-out;

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Foundation Profile | Quantum Merlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #0a0015 0%, #1a0033 50%, #2d1b4e 100%);
+            color: #e0d4f7;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(13, 0, 26, 0.6);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .profile-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            font-family: 'Cinzel', serif;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3em;
+            color: #fde047;
+            text-shadow: 0 0 20px rgba(253, 224, 71, 0.5);
+            margin-bottom: 15px;
+        }
+
+        .unlock-date {
+            font-size: 1.1em;
+            color: #fef08a;
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2em;
+            color: #fbbf24;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-icon {
+            font-size: 1.2em;
+        }
+
+        .section p {
+            font-size: 1.15em;
+            margin-bottom: 15px;
+            color: #e0d4f7;
+        }
+
+        .insight-box {
+            background: rgba(251, 191, 36, 0.1);
+            border-left: 4px solid #fbbf24;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .insight-box h3 {
+            font-family: 'Cinzel', serif;
+            color: #fde047;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .insight-box p {
+            margin-bottom: 10px;
+        }
+
+        .pattern-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pattern-list li {
+            background: rgba(251, 191, 36, 0.05);
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 3px solid #fbbf24;
+        }
+
+        .pattern-list li strong {
+            color: #fbbf24;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .action-steps {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .action-steps h3 {
+            font-family: 'Cinzel', serif;
+            color: #10b981;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .action-steps ol {
+            padding-left: 25px;
+        }
+
+        .action-steps li {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .action-steps li strong {
+            color: #10b981;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fde047;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            border: 2px solid #fbbf24;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(251, 191, 36, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2em;
+            color: #fef08a;
+            text-align: center;
+            padding: 20px;
+            margin: 30px 0;
+            border-top: 1px solid rgba(251, 191, 36, 0.3);
+            border-bottom: 1px solid rgba(251, 191, 36, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-badge">✨ SYSTEM UNLOCKED</div>
+            <h1>Your Spiritual Foundation Profile</h1>
+            <p class="unlock-date" id="unlockDate">Unlocked on <span id="dateText"></span></p>
+        </header>
+
+        <div id="profileContent">
+            <div class="section">
+                <h2><span class="section-icon">📊</span> Overview</h2>
+                <p id="overviewText">Loading your personalized profile...</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">🔍</span> Key Patterns Identified</h2>
+                <ul class="pattern-list" id="patternsList"></ul>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">🧩</span> Pattern Integration</h2>
+                <div class="insight-box">
+                    <h3>How Your Spiritual Patterns Interact</h3>
+                    <p id="integrationText"></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-icon">💡</span> Core Insights</h2>
+                <div id="insightsContainer"></div>
+            </div>
+
+            <div class="action-steps">
+                <h3>🎯 Your Spiritual Practice Plan</h3>
+                <ol id="actionSteps"></ol>
+            </div>
+
+            <div class="quote" id="closingQuote"></div>
+        </div>
+
+        <div class="navigation">
+            <a href="insight-library-enhanced.html" class="nav-btn">← Back to Library</a>
+            <a href="tools-hub.html" class="nav-btn">Explore More Tools →</a>
+        </div>
+    </div>
+
+    <script src="js/unlock-system.js"></script>
+    <script>
+        const unlockSystem = new UnlockSystem();
+
+        function generateProfile() {
+            const insights = unlockSystem.getSystemInsights('spiritual');
+            
+            const timestamps = JSON.parse(localStorage.getItem('quantumMerlinUnlockTimestamps') || '{}');
+            const unlockDate = timestamps.spiritual ? new Date(timestamps.spiritual) : new Date();
+            document.getElementById('dateText').textContent = unlockDate.toLocaleDateString('en-US', {
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric'
+            });
+
+            const overview = generateOverview(insights);
+            document.getElementById('overviewText').innerHTML = overview;
+
+            const patterns = identifyPatterns(insights);
+            const patternsList = document.getElementById('patternsList');
+            patternsList.innerHTML = patterns.map(p => `
+                <li>
+                    <strong>${p.title}</strong>
+                    ${p.description}
+                </li>
+            `).join('');
+
+            const integration = generateIntegration(patterns);
+            document.getElementById('integrationText').innerHTML = integration;
+
+            const coreInsights = generateCoreInsights(insights);
+            const insightsContainer = document.getElementById('insightsContainer');
+            insightsContainer.innerHTML = coreInsights.map(insight => `
+                <div class="insight-box">
+                    <h3>${insight.title}</h3>
+                    <p>${insight.content}</p>
+                </div>
+            `).join('');
+
+            const actions = generateActionSteps(patterns);
+            const actionSteps = document.getElementById('actionSteps');
+            actionSteps.innerHTML = actions.map(action => `<li>${action}</li>`).join('');
+
+            document.getElementById('closingQuote').textContent = getClosingQuote();
+        }
+
+        function generateOverview(insights) {
+            const toolCount = insights.length;
+            
+            return `
+                <p>You've completed all ${toolCount} tools in the Spiritual Foundation system, revealing the symbolic and archetypal patterns that shape your consciousness. This profile synthesizes your results to show you the deeper meaning woven through your life.</p>
+                
+                <p>Spirituality isn't separate from psychology—it's the deepest layer of it. Your birth sigil, astrological patterns, tarot archetypes, and numerological signatures aren't mystical abstractions. They're symbolic languages that describe the structure of your consciousness and the trajectory of your soul.</p>
+                
+                <p>What follows is a synthesis of these symbolic systems. Not to predict your future, but to illuminate your present. Not to tell you who you are, but to show you who you're becoming. The spiritual path isn't about transcending your humanity—it's about fully embodying it.</p>
+            `;
+        }
+
+        function identifyPatterns(insights) {
+            const patterns = [];
+
+            insights.forEach(insight => {
+                if (insight.tool === 'Birth Sigil Generator') {
+                    patterns.push({
+                        title: 'Sacred Geometry Blueprint',
+                        description: 'Your birth sigil is the geometric signature of your soul—a visual representation of the energetic pattern you incarnated with. It\'s not just symbolic; it\'s a map of your consciousness structure and your life\'s purpose encoded in form.'
+                    });
+                }
+                
+                if (insight.tool === 'Quantum Forecaster') {
+                    patterns.push({
+                        title: 'Astrological Timing Patterns',
+                        description: 'Your astrological forecast reveals the energetic weather of your life. Not fate, but tendency. Not prediction, but probability. The planets don\'t control you—they reflect the archetypal energies moving through your consciousness at any given time.'
+                    });
+                }
+                
+                if (insight.tool === 'Tarot Reading') {
+                    patterns.push({
+                        title: 'Archetypal Journey Map',
+                        description: 'Your tarot reading shows which archetypal energies are active in your life right now. The Fool, the Magician, the High Priestess—these aren\'t external forces. They\'re aspects of your own psyche calling for integration and expression.'
+                    });
+                }
+                
+                if (insight.tool === 'Gematria Calculator') {
+                    patterns.push({
+                        title: 'Numerological Resonance',
+                        description: 'Your gematria patterns reveal the numerical frequencies that resonate with your name and birth date. Numbers aren\'t just quantities—they\'re qualities. Each number carries a specific vibration, and your numbers reveal your soul\'s frequency.'
+                    });
+                }
+            });
+
+            return patterns;
+        }
+
+        function generateIntegration(patterns) {
+            return `
+                <p>Your spiritual patterns form a coherent system. Your birth sigil is the geometric expression of your soul's blueprint. Your astrological patterns show the timing of your unfoldment. Your tarot archetypes reveal which aspects of consciousness you're integrating. Your numerological frequencies show the vibrational signature you're here to embody.</p>
+                
+                <p>These aren't separate systems—they're different languages describing the same reality. Your consciousness. Some people resonate with geometry, others with astrology, others with tarot or numbers. It doesn't matter which language you speak. What matters is that you're listening to what your soul is trying to tell you.</p>
+                
+                <p>The spiritual path isn't about accumulating knowledge or achieving states. It's about remembering who you are beneath the conditioning, the trauma, and the false identities. These symbolic systems are mirrors. They don't tell you who to become—they reflect who you already are. Your work is to recognize yourself in the reflection.</p>
+            `;
+        }
+
+        function generateCoreInsights(insights) {
+            return [
+                {
+                    title: 'Spirituality Is Embodied, Not Transcendent',
+                    content: 'The goal isn\'t to escape your humanity—it\'s to fully inhabit it. Your body isn\'t a prison; it\'s a temple. Your emotions aren\'t obstacles; they\'re guidance. Your desires aren\'t distractions; they\'re directions. True spirituality doesn\'t bypass the human experience—it deepens it.'
+                },
+                {
+                    title: 'Symbols Are Bridges to the Unconscious',
+                    content: 'Your conscious mind thinks in words. Your unconscious thinks in symbols. Sigils, tarot, astrology, numbers—these aren\'t superstitions. They\'re languages that speak directly to your unconscious, bypassing the rational mind\'s defenses. That\'s why they feel true even when they can\'t be proven.'
+                },
+                {
+                    title: 'Your Spiritual Path Is Unique',
+                    content: 'There\'s no one right way. Some people need structure and tradition. Others need freedom and experimentation. Some find God in churches. Others find it in nature, in art, in relationships, in silence. Your path is the one that makes you more alive, more authentic, more you. Trust that.'
+                }
+            ];
+        }
+
+        function generateActionSteps(patterns) {
+            return [
+                '<strong>Create a Daily Practice:</strong> Choose one spiritual practice and do it daily for 30 days. Meditation, journaling, tarot, prayer, movement—whatever resonates. Consistency matters more than duration. 10 minutes daily beats 2 hours weekly.',
+                '<strong>Work With Your Birth Sigil:</strong> Meditate on your birth sigil. Draw it. Visualize it. Let it speak to you. It\'s not just a pretty image—it\'s a key to your consciousness. Use it as a focal point for meditation or manifestation.',
+                '<strong>Track Astrological Patterns:</strong> Notice how you feel during different moon phases and planetary transits. Keep a journal. Over time, you\'ll see patterns. This isn\'t about believing in astrology—it\'s about noticing what\'s true for you.',
+                '<strong>Pull a Daily Tarot Card:</strong> Each morning, pull one card and reflect on its meaning. Don\'t try to predict the future—use it as a mirror for your current state. What aspect of yourself is this card reflecting?',
+                '<strong>Explore Your Numbers:</strong> Research the numerological significance of your life path, expression, and soul urge numbers. Notice where these qualities show up in your life. Numbers are patterns, and patterns reveal truth.',
+                '<strong>Find Your Spiritual Community:</strong> Spirituality isn\'t meant to be solitary. Find others on the path—a teacher, a group, a sangha. You need mirrors, support, and accountability. The lone wolf path is a trap.',
+                '<strong>Integrate, Don\'t Bypass:</strong> Use your spiritual practice to deepen your human experience, not escape it. If you\'re using spirituality to avoid your pain, relationships, or responsibilities, you\'re bypassing. True spirituality makes you more present, not less.'
+            ];
+        }
+
+        function getClosingQuote() {
+            const quotes = [
+                '"The privilege of a lifetime is to become who you truly are." — Carl Jung',
+                '"Your task is not to seek for love, but merely to seek and find all the barriers within yourself that you have built against it." — Rumi',
+                '"The wound is the place where the Light enters you." — Rumi',
+                '"We are not human beings having a spiritual experience. We are spiritual beings having a human experience." — Pierre Teilhard de Chardin',
+                '"The soul always knows what to do to heal itself. The challenge is to silence the mind." — Caroline Myss'
+            ];
+            return quotes[Math.floor(Math.random() * quotes.length)];
+        }
+
+        generateProfile();
+    </script>
+</body>
+</html>

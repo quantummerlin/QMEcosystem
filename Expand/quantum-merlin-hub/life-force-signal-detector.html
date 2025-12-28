@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life-Force Signal Detector | Quantum Merlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #0a0015 0%, #1a0033 50%, #2d1b4e 100%);
+            color: #e0d4f7;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(13, 0, 26, 0.6);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5em;
+            color: #b19cd9;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #9d7ec0;
+            font-style: italic;
+        }
+
+        .intro-section {
+            background: rgba(138, 43, 226, 0.1);
+            border-left: 4px solid #8a2be2;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .intro-section p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .question-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(138, 43, 226, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        .question-label {
+            font-size: 1.2em;
+            color: #b19cd9;
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 600;
+        }
+
+        .scale-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .scale-option {
+            flex: 1;
+            text-align: center;
+        }
+
+        .scale-option input[type="radio"] {
+            display: none;
+        }
+
+        .scale-option label {
+            display: block;
+            padding: 15px 10px;
+            background: rgba(138, 43, 226, 0.1);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            color: #9d7ec0;
+        }
+
+        .scale-option input[type="radio"]:checked + label {
+            background: rgba(138, 43, 226, 0.3);
+            border-color: #8a2be2;
+            color: #e0d4f7;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+        }
+
+        .scale-option label:hover {
+            background: rgba(138, 43, 226, 0.2);
+            border-color: #8a2be2;
+        }
+
+        .scale-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #9d7ec0;
+            font-style: italic;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #8a2be2 0%, #9d4edd 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.3em;
+            font-family: 'Cinzel', serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(138, 43, 226, 0.5);
+            background: linear-gradient(135deg, #9d4edd 0%, #8a2be2 100%);
+        }
+
+        .results-section {
+            display: none;
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(138, 43, 226, 0.1);
+            border: 2px solid #8a2be2;
+            border-radius: 15px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .results-section h2 {
+            font-family: 'Cinzel', serif;
+            color: #b19cd9;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .score-display {
+            text-align: center;
+            font-size: 3em;
+            color: #8a2be2;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .zone-indicator {
+            text-align: center;
+            font-size: 1.5em;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-weight: 600;
+        }
+
+        .zone-red { background: rgba(220, 20, 60, 0.2); color: #ff6b9d; border: 2px solid #dc143c; }
+        .zone-orange { background: rgba(255, 140, 0, 0.2); color: #ffb366; border: 2px solid #ff8c00; }
+        .zone-yellow { background: rgba(255, 215, 0, 0.2); color: #ffd700; border: 2px solid #ffd700; }
+        .zone-green { background: rgba(50, 205, 50, 0.2); color: #7fff7f; border: 2px solid #32cd32; }
+
+        .insight-box {
+            background: rgba(13, 0, 26, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #8a2be2;
+        }
+
+        .insight-box h3 {
+            color: #b19cd9;
+            font-family: 'Cinzel', serif;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .insight-box p {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .insight-box ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .insight-box li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 15px;
+            background: rgba(138, 43, 226, 0.2);
+            color: #b19cd9;
+            border: 2px solid #8a2be2;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            font-family: 'Cinzel', serif;
+        }
+
+        .action-btn:hover {
+            background: rgba(138, 43, 226, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .scale-container {
+                flex-wrap: wrap;
+            }
+
+            .scale-option {
+                flex-basis: calc(33.333% - 10px);
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Life-Force Signal Detector ⚡</h1>
+            <p class="subtitle">Measure Your Vital Energy & Life Force</p>
+        </header>
+
+        <div class="intro-section">
+            <p><strong>Your life-force is the raw energy that powers everything you do.</strong></p>
+            <p>This isn't about motivation or willpower—it's about the fundamental vitality flowing through your system. When your life-force is high, you feel alive, energized, and capable. When it's depleted, everything becomes harder.</p>
+            <p><strong>Answer these 5 questions honestly to measure your current life-force signal.</strong></p>
+        </div>
+
+        <form id="assessmentForm">
+            <div class="question-section">
+                <label class="question-label">1. I wake up feeling energized and ready for the day</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="0" id="q1-0" required>
+                        <label for="q1-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="1" id="q1-1">
+                        <label for="q1-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="2" id="q1-2">
+                        <label for="q1-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="3" id="q1-3">
+                        <label for="q1-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="4" id="q1-4">
+                        <label for="q1-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q1" value="5" id="q1-5">
+                        <label for="q1-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label class="question-label">2. I have consistent energy throughout the day</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="0" id="q2-0" required>
+                        <label for="q2-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="1" id="q2-1">
+                        <label for="q2-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="2" id="q2-2">
+                        <label for="q2-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="3" id="q2-3">
+                        <label for="q2-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="4" id="q2-4">
+                        <label for="q2-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q2" value="5" id="q2-5">
+                        <label for="q2-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label class="question-label">3. I feel physically vibrant and alive</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="0" id="q3-0" required>
+                        <label for="q3-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="1" id="q3-1">
+                        <label for="q3-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="2" id="q3-2">
+                        <label for="q3-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="3" id="q3-3">
+                        <label for="q3-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="4" id="q3-4">
+                        <label for="q3-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q3" value="5" id="q3-5">
+                        <label for="q3-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label class="question-label">4. I recover quickly from stress or exertion</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="0" id="q4-0" required>
+                        <label for="q4-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="1" id="q4-1">
+                        <label for="q4-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="2" id="q4-2">
+                        <label for="q4-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="3" id="q4-3">
+                        <label for="q4-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="4" id="q4-4">
+                        <label for="q4-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q4" value="5" id="q4-5">
+                        <label for="q4-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label class="question-label">5. I feel a sense of vitality and aliveness</label>
+                <div class="scale-container">
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="0" id="q5-0" required>
+                        <label for="q5-0">0</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="1" id="q5-1">
+                        <label for="q5-1">1</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="2" id="q5-2">
+                        <label for="q5-2">2</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="3" id="q5-3">
+                        <label for="q5-3">3</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="4" id="q5-4">
+                        <label for="q5-4">4</label>
+                    </div>
+                    <div class="scale-option">
+                        <input type="radio" name="q5" value="5" id="q5-5">
+                        <label for="q5-5">5</label>
+                    </div>
+                </div>
+                <div class="scale-labels">
+                    <span>Never</span>
+                    <span>Always</span>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">⚡ Detect My Life-Force Signal ⚡</button>
+        </form>
+
+        <div class="results-section" id="resultsSection"></div>
+    </div>
+
+    <script>
+        document.getElementById('assessmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            generateResults();
+        });
+
+        function generateResults() {
+            // Collect answers
+            const answers = {
+                q1: parseInt(document.querySelector('input[name="q1"]:checked').value),
+                q2: parseInt(document.querySelector('input[name="q2"]:checked').value),
+                q3: parseInt(document.querySelector('input[name="q3"]:checked').value),
+                q4: parseInt(document.querySelector('input[name="q4"]:checked').value),
+                q5: parseInt(document.querySelector('input[name="q5"]:checked').value)
+            };
+
+            // Calculate total score
+            const totalScore = answers.q1 + answers.q2 + answers.q3 + answers.q4 + answers.q5;
+
+            // Determine zone and insights
+            let zone, zoneClass, zoneDescription, primaryDrain, recoveryProtocol, vitalityBoosters;
+
+            if (totalScore <= 8) {
+                zone = "DEPLETED (Red Zone)";
+                zoneClass = "zone-red";
+                zoneDescription = "Your life-force is critically low. You're running on fumes, and your system is in survival mode. This isn't sustainable.";
+                primaryDrain = "Chronic stress, poor sleep, or emotional exhaustion";
+                recoveryProtocol = [
+                    "Prioritize 8+ hours of sleep immediately",
+                    "Eliminate non-essential commitments for 2 weeks",
+                    "Daily 20-minute walks in nature",
+                    "Reduce caffeine and sugar intake",
+                    "Consider professional support (doctor, therapist)"
+                ];
+                vitalityBoosters = [
+                    "Morning sunlight exposure (15 minutes)",
+                    "Cold showers or ice baths",
+                    "Breathwork (Wim Hof or Box Breathing)",
+                    "Nutrient-dense whole foods",
+                    "Complete digital detox on weekends"
+                ];
+            } else if (totalScore <= 15) {
+                zone = "LOW (Orange Zone)";
+                zoneClass = "zone-orange";
+                zoneDescription = "Your life-force is below optimal. You have enough energy to function, but you're not thriving. Small changes can make a big difference.";
+                primaryDrain = "Inconsistent sleep, poor boundaries, or energy leaks";
+                recoveryProtocol = [
+                    "Establish consistent sleep schedule (same time daily)",
+                    "Identify and eliminate top 3 energy drains",
+                    "Add 30 minutes of movement daily",
+                    "Practice saying 'no' to non-essential requests",
+                    "Weekly energy audit (what drains vs energizes you)"
+                ];
+                vitalityBoosters = [
+                    "Morning routine with movement + hydration",
+                    "Afternoon power naps (20 minutes max)",
+                    "Weekly nature immersion (hiking, beach, forest)",
+                    "Reduce processed foods by 50%",
+                    "Daily gratitude practice (3 things)"
+                ];
+            } else if (totalScore <= 20) {
+                zone = "MODERATE (Yellow Zone)";
+                zoneClass = "zone-yellow";
+                zoneDescription = "Your life-force is functional but not optimal. You have enough energy to get through the day, but you're not operating at peak capacity.";
+                primaryDrain = "Lack of optimization, minor lifestyle factors";
+                recoveryProtocol = [
+                    "Fine-tune sleep quality (dark room, cool temp, no screens)",
+                    "Add high-intensity interval training 2x/week",
+                    "Optimize nutrition (more vegetables, healthy fats)",
+                    "Practice energy management (work in 90-min cycles)",
+                    "Monthly energy reset day (complete rest)"
+                ];
+                vitalityBoosters = [
+                    "Morning cold exposure (shower or plunge)",
+                    "Intermittent fasting (12-16 hour window)",
+                    "Weekly sauna or steam room sessions",
+                    "Adaptogenic herbs (ashwagandha, rhodiola)",
+                    "Daily meditation or breathwork (10 minutes)"
+                ];
+            } else {
+                zone = "HIGH (Green Zone)";
+                zoneClass = "zone-green";
+                zoneDescription = "Your life-force is strong and vibrant. You're operating at or near peak capacity. The goal now is maintenance and optimization.";
+                primaryDrain = "Minor optimization opportunities";
+                recoveryProtocol = [
+                    "Maintain current sleep and nutrition habits",
+                    "Continue regular movement and exercise",
+                    "Monitor for early signs of depletion",
+                    "Protect your energy boundaries fiercely",
+                    "Quarterly energy audits to stay on track"
+                ];
+                vitalityBoosters = [
+                    "Experiment with advanced biohacking (red light therapy, etc.)",
+                    "Explore peak performance protocols",
+                    "Deepen spiritual or meditation practices",
+                    "Challenge yourself physically (new sports, adventures)",
+                    "Share your vitality (teach, mentor, inspire others)"
+                ];
+            }
+
+            // Find lowest scoring question for specific insight
+            const lowestQuestion = Object.entries(answers).reduce((a, b) => answers[a[0]] < answers[b[0]] ? a : b);
+            const questionInsights = {
+                q1: "Morning energy is your foundation. Low scores here suggest sleep quality issues or circadian rhythm disruption.",
+                q2: "Energy consistency reveals metabolic health. Crashes indicate blood sugar instability or adrenal fatigue.",
+                q3: "Physical vibrancy reflects overall vitality. Low scores suggest inflammation or nutrient deficiencies.",
+                q4: "Recovery speed shows nervous system resilience. Slow recovery indicates chronic stress or overtraining.",
+                q5: "Aliveness is the essence of life-force. Low scores suggest disconnection from purpose or joy."
+            };
+
+            // Generate results HTML
+            const resultsHTML = `
+                <h2>⚡ Your Life-Force Signal ⚡</h2>
+                <div class="score-display">${totalScore}/25</div>
+                <div class="zone-indicator ${zoneClass}">${zone}</div>
+
+                <div class="insight-box">
+                    <h3>📊 What This Means</h3>
+                    <p>${zoneDescription}</p>
+                </div>
+
+                <div class="insight-box">
+                    <h3>🔍 Primary Energy Drain</h3>
+                    <p><strong>${primaryDrain}</strong></p>
+                    <p><em>Specific Insight:</em> ${questionInsights[lowestQuestion[0]]}</p>
+                </div>
+
+                <div class="insight-box">
+                    <h3>🔧 Recovery Protocol</h3>
+                    <ul>
+                        ${recoveryProtocol.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="insight-box">
+                    <h3>⚡ Vitality Boosters</h3>
+                    <ul>
+                        ${vitalityBoosters.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="insight-box">
+                    <h3>🎯 Next Steps</h3>
+                    <p>Your life-force is your most valuable resource. Everything else—your goals, relationships, creativity—depends on it. Treat it as sacred.</p>
+                    <p><strong>Start with ONE change from the Recovery Protocol above. Master it for 2 weeks before adding more.</strong></p>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="insight-library.html" class="action-btn">📚 View All Insights</a>
+                    <a href="tools-hub.html" class="action-btn">🔮 Explore More Tools</a>
+                    <button onclick="location.reload()" class="action-btn">🔄 Retake Assessment</button>
+                </div>
+            `;
+
+            // Display results
+            const resultsSection = document.getElementById('resultsSection');
+            resultsSection.innerHTML = resultsHTML;
+            resultsSection.style.display = 'block';
+            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Save to localStorage
+            saveToLibrary(totalScore, zone);
+        }
+
+        function saveToLibrary(score, zone) {
+            const insight = {
+                tool: 'Life-Force Signal Detector',
+                category: 'energy',
+                timestamp: new Date().toISOString(),
+                score: score,
+                zone: zone,
+                summary: `Life-Force Signal: ${score}/25 (${zone})`
+            };
+
+            let library = JSON.parse(localStorage.getItem('quantumMerlinLibrary') || '[]');
+            
+            // Remove any existing entry for this tool
+            library = library.filter(item => item.tool !== 'Life-Force Signal Detector');
+            
+            // Add new entry
+            library.push(insight);
+            
+            localStorage.setItem('quantumMerlinLibrary', JSON.stringify(library));
+        }
+    </script>
+</body>
+</html>

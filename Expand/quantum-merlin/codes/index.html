@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quantum Reality Codes - Create powerful manifestation codes using gematria calculations and sacred frequencies.">
+    <meta name="keywords" content="reality codes, gematria, manifestation, numerology, sacred geometry, quantum manifestation">
+    
+    <title>Quantum Reality Codes - Manifestation Engine</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="../shared/css/quantum-core.css">
+    <link rel="stylesheet" href="../shared/css/quantum-animations.css">
+    <link rel="stylesheet" href="../shared/css/quantum-components.css">
+    <link rel="stylesheet" href="../shared/css/quantum-backgrounds.css">
+    
+    <!-- Tool Specific Styles -->
+    <style>
+        body {
+            background: linear-gradient(180deg, var(--quantum-dark) 0%, #1a0a20 100%);
+        }
+        
+        .app-header {
+            padding: var(--space-xl) 0;
+            border-bottom: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: var(--z-sticky);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .app-title {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            font-family: var(--font-heading);
+            font-size: var(--text-2xl);
+            color: var(--quantum-magenta);
+            text-decoration: none;
+        }
+        
+        .main-content {
+            padding: var(--space-3xl) 0;
+            min-height: calc(100vh - 200px);
+        }
+        
+        .codes-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .code-input-section {
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .code-input-card {
+            background: var(--glass-bg);
+            border: 2px solid var(--quantum-magenta);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.2);
+        }
+        
+        .input-group {
+            margin-bottom: var(--space-xl);
+        }
+        
+        .code-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: var(--space-lg);
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: var(--quantum-light);
+            background: rgba(255, 0, 255, 0.05);
+            border: 1px solid var(--quantum-magenta);
+            border-radius: var(--radius-lg);
+            resize: vertical;
+            transition: all var(--transition-base);
+        }
+        
+        .code-textarea:focus {
+            outline: none;
+            border-color: var(--quantum-magenta);
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+            background: rgba(255, 0, 255, 0.1);
+        }
+        
+        .code-textarea::placeholder {
+            color: var(--quantum-gray-dark);
+        }
+        
+        .cipher-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .cipher-btn {
+            padding: var(--space-md);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            transition: all var(--transition-base);
+            text-align: center;
+            font-family: var(--font-heading);
+            color: var(--quantum-gray);
+        }
+        
+        .cipher-btn:hover {
+            border-color: var(--quantum-magenta);
+            color: var(--quantum-magenta);
+        }
+        
+        .cipher-btn.active {
+            border-color: var(--quantum-magenta);
+            background: rgba(255, 0, 255, 0.1);
+            color: var(--quantum-magenta);
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+        }
+        
+        .results-section {
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .result-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+        
+        .result-card:hover {
+            border-color: var(--quantum-magenta);
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .result-label {
+            font-size: var(--text-sm);
+            color: var(--quantum-gray);
+            margin-bottom: var(--space-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .result-value {
+            font-family: var(--font-heading);
+            font-size: var(--text-5xl);
+            color: var(--quantum-magenta);
+            text-shadow: 0 0 20px var(--quantum-magenta);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .result-description {
+            font-size: var(--text-sm);
+            color: var(--quantum-gray);
+            line-height: 1.6;
+        }
+        
+        .frequency-suggestion {
+            background: linear-gradient(135deg, rgba(255, 0, 255, 0.1) 0%, rgba(0, 245, 255, 0.1) 100%);
+            border: 1px solid var(--quantum-magenta);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .suggestion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .suggestion-title {
+            font-family: var(--font-heading);
+            font-size: var(--text-xl);
+            color: var(--quantum-magenta);
+        }
+        
+        .suggestion-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .suggestion-item {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            text-align: center;
+        }
+        
+        .suggestion-freq {
+            font-family: var(--font-heading);
+            font-size: var(--text-2xl);
+            color: var(--quantum-cyan);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .suggestion-name {
+            font-size: var(--text-sm);
+            color: var(--quantum-gray);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .saved-codes-section {
+            margin-top: var(--space-3xl);
+        }
+        
+        .saved-codes-grid {
+            display: grid;
+            gap: var(--space-lg);
+        }
+        
+        .saved-code-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            transition: all var(--transition-base);
+        }
+        
+        .saved-code-card:hover {
+            border-color: var(--quantum-magenta);
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
+        }
+        
+        .saved-code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+        
+        .saved-code-text {
+            font-family: var(--font-heading);
+            font-size: var(--text-xl);
+            color: var(--quantum-magenta);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .saved-code-meta {
+            display: flex;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+            font-size: var(--text-sm);
+            color: var(--quantum-gray);
+        }
+        
+        .saved-code-actions {
+            display: flex;
+            gap: var(--space-sm);
+        }
+        
+        @media (max-width: 768px) {
+            .cipher-selector {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../hub/index.html" class="app-title">
+                    <span>✨</span>
+                    <span>Quantum Reality Codes</span>
+                </a>
+                <nav class="flex gap-md">
+                    <a href="../hub/index.html" class="btn btn-ghost btn-sm">← Hub</a>
+                    <a href="../genesis/index.html" class="btn btn-ghost btn-sm">🎵 Frequencies</a>
+                    <a href="../jukebox/index.html" class="btn btn-ghost btn-sm">📻 Jukebox</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container codes-container">
+            <!-- Code Input Section -->
+            <div class="code-input-section animate-fade-in-up">
+                <div class="code-input-card">
+                    <h2 style="color: var(--quantum-magenta); margin-bottom: var(--space-lg);">
+                        ✨ Create Your Reality Code
+                    </h2>
+                    
+                    <div class="input-group">
+                        <label class="form-label" style="color: var(--quantum-magenta);">
+                            Enter Your Intention or Affirmation
+                        </label>
+                        <textarea 
+                            id="codeInput" 
+                            class="code-textarea"
+                            placeholder="I am abundant and prosperous in all areas of my life..."
+                            rows="4"
+                        ></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="form-label" style="color: var(--quantum-magenta);">
+                            Select Gematria Cipher
+                        </label>
+                        <div class="cipher-selector">
+                            <button class="cipher-btn active" data-cipher="english">
+                                English Simple
+                            </button>
+                            <button class="cipher-btn" data-cipher="pythagorean">
+                                Pythagorean
+                            </button>
+                            <button class="cipher-btn" data-cipher="chaldean">
+                                Chaldean
+                            </button>
+                            <button class="cipher-btn" data-cipher="hebrew">
+                                Hebrew
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-lg" id="calculateBtn" style="width: 100%;">
+                        🔮 Calculate Reality Code
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Results Section -->
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h2 style="color: var(--quantum-magenta); margin-bottom: var(--space-xl); text-align: center;">
+                    📊 Your Quantum Signature
+                </h2>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-label">Gematria Value</div>
+                        <div class="result-value" id="gematriaValue">0</div>
+                        <div class="result-description">Numerical essence of your intention</div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-label">Reduced Value</div>
+                        <div class="result-value" id="reducedValue">0</div>
+                        <div class="result-description">Single-digit core vibration</div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-label">Word Count</div>
+                        <div class="result-value" id="wordCount">0</div>
+                        <div class="result-description">Power of expression</div>
+                    </div>
+                </div>
+                
+                <!-- Frequency Suggestions -->
+                <div class="frequency-suggestion">
+                    <div class="suggestion-header">
+                        <h3 class="suggestion-title">🎵 Suggested Frequencies</h3>
+                        <button class="btn btn-ghost btn-sm" id="openFrequencyBtn">
+                            Open in Generator →
+                        </button>
+                    </div>
+                    <div class="suggestion-content" id="frequencySuggestions">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn btn-primary" id="saveCodeBtn">
+                        💾 Save Code
+                    </button>
+                    <button class="btn btn-secondary" id="createSigilBtn">
+                        🔯 Create Sigil
+                    </button>
+                    <button class="btn btn-outline" id="shareCodeBtn">
+                        📤 Share
+                    </button>
+                    <button class="btn btn-ghost" id="resetBtn">
+                        🔄 Reset
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Saved Codes Section -->
+            <div class="saved-codes-section">
+                <div class="section-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xl);">
+                    <h2 style="color: var(--quantum-magenta);">📚 Saved Reality Codes</h2>
+                    <button class="btn btn-ghost btn-sm" id="clearAllCodesBtn">Clear All</button>
+                </div>
+                
+                <div class="saved-codes-grid" id="savedCodesList">
+                    <p style="text-align: center; color: var(--quantum-gray); padding: var(--space-xl);">
+                        No saved codes yet. Create your first reality code!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Shared JavaScript -->
+    <script src="../shared/js/quantum-storage.js"></script>
+    <script src="../shared/js/quantum-guides.js"></script>
+    <script src="../shared/js/quantum-backgrounds.js"></script>
+    <script src="../shared/js/quantum-navigation.js"></script>
+    
+    <!-- Reality Codes JavaScript -->
+    <script src="reality-codes.js"></script>
+</body>
+</html>

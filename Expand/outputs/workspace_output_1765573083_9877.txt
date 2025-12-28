@@ -1,0 +1,5 @@
+total 28
+drwxr-xr-x 3 root root  4096 Dec 12 19:52 .
+drwxr-xr-x 6 user user  4096 Dec 12 20:52 ..
+-rw-r--r-- 1 root root 16271 Dec 12 19:52 index-enhanced.html
+drwxr-xr-x 2 root root  4096 Dec 12 19:56 js

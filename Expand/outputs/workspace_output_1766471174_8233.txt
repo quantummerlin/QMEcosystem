@@ -1,0 +1,100 @@
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+            const elementIndex = dayOfYear % 4;
+            const elementOfDay = elements[elementIndex];
+            
+            // Calculate frequency of day
+            const frequencyOfDay = ((dayOfYear + today.getFullYear()) % 9) || 9;
+            const frequencyMap = {
+                1: '396 Hz - Liberation and Freedom',
+                2: '417 Hz - Positive Change',
+                3: '528 Hz - Transformation and Love',
+                4: '174 Hz - Security and Stability',
+                5: '285 Hz - Healing and Structure',
+                6: '639 Hz - Harmony and Relationships',
+                7: '741 Hz - Intuition and Awakening',
+                8: '852 Hz - Spiritual Order',
+                9: '963 Hz - Divine Connection and Oneness'
+            };
+            
+            const dailyMessages = [
+                'Today\'s cosmic energy supports new beginnings and fresh starts. Embrace change with courage.',
+                'The universe invites you to find balance and harmony in all areas of your life.',
+                'Creative energy flows strongly today. Express yourself authentically and manifest your dreams.',
+                'Focus on building solid foundations for your future. Practical actions lead to lasting success.',
+                'Healing energies are amplified today. Release what no longer serves you and embrace renewal.',
+                'Relationship harmony is highlighted. Nurture your connections and open your heart to love.',
+                'Intuitive insights are available to you. Trust your inner wisdom and spiritual guidance.',
+                'Transformation is in the air. Embrace change as an opportunity for growth and evolution.',
+                'Divine connection is strengthened today. Align with your higher purpose and spiritual truth.'
+            ];
+            
+            // Calculate energy level
+            const energyLevels = ['LOW ENERGY DAY', 'MODERATE ENERGY', 'HIGH ENERGY DAY', 'PEAK COSMIC DAY'];
+            const energyIndex = dayOfYear % 4;
+            const energyLevel = energyLevels[energyIndex];
+
+            // Calculate focus area
+            const focusAreas = ['🎯 Manifestation', '💰 Abundance', '❤️ Relationships', '🧠 Spiritual Growth', '💼 Career', '🏥 Healing', '🎨 Creativity', '🌱 Growth', '⚡ Transformation'];
+            const focusIndex = (dayOfYear + today.getMonth()) % 9;
+            const focusArea = focusAreas[focusIndex];
+
+            // Calculate best time
+            const bestTimes = ['7:11 AM Peak', '11:11 AM Portal', '2:22 PM Window', '3:33 PM Gateway', '5:55 PM Opening', '8:88 PM Infinity', '9:99 PM Mastery'];
+            const timeIndex = (dayOfYear + today.getDate()) % 7;
+            const bestTime = bestTimes[timeIndex];
+
+            document.getElementById('currentDayTitle').textContent = `${dayOfWeek}, ${date}`;
+            document.getElementById('elementOfDay').textContent = `🌟 Element of the Day: ${elementOfDay}`;
+            document.getElementById('frequencyOfDay').textContent = `🎵 Frequency of the Day: ${frequencyMap[frequencyOfDay]}`;
+            document.getElementById('dailyMessage').textContent = dailyMessages[frequencyOfDay - 1];
+
+            // Update new enhanced elements
+            document.getElementById('energyLevel').textContent = `⚡ ${energyLevel}`;
+            document.getElementById('focusArea').textContent = `${focusArea}`;
+            document.getElementById('bestTime').textContent = `⏰ ${bestTime}`;
+
+            // Update energy level color based on type
+            const energyElement = document.getElementById('energyLevel');
+            if (energyLevel === 'PEAK COSMIC DAY') {
+                energyElement.style.background = 'linear-gradient(135deg, rgba(255, 215, 0, 0.4), rgba(255, 165, 0, 0.4))';
+                energyElement.style.animation = 'energyPulse 1s ease-in-out infinite';
+            } else if (energyLevel === 'HIGH ENERGY DAY') {
+                energyElement.style.background = 'linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.2))';
+                energyElement.style.animation = 'energyPulse 2s ease-in-out infinite';
+            } else {
+                energyElement.style.background = 'linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.2))';
+                energyElement.style.animation = 'none';
+            }
+        }
+
+        // Update week overview
+        function updateWeekOverview() {
+            const weekGrid = document.getElementById('weekGrid');
+            weekGrid.innerHTML = '';
+            
+            const today = new Date();
+            const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            
+            for (let i = 0; i < 7; i++) {
+                const date = new Date(today);
+                date.setDate(today.getDate() - today.getDay() + i);
+                
+                const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 86400000);
+                const elementIndex = dayOfYear % 4;
+                const elementOfDay = elements[elementIndex];
+                const frequencyOfDay = ((dayOfYear + date.getFullYear()) % 9) || 9;
+                
+                const dayCard = document.createElement('div');
+                dayCard.className = 'day-card';
+                
+                dayCard.innerHTML = `
+                    <div class="day-name">${weekDays[i]}</div>
+                    <div class="day-element">${elementOfDay}</div>
+                    <div class="day-frequency">${frequencyOfDay} Hz</div>
+                `;
+                
+                weekGrid.appendChild(dayCard);
+            }
+        }
+
+        // Select forecast type

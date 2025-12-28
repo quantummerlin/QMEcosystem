@@ -1,0 +1,4 @@
+-rw-r--r-- 1 root root 26042 Dec 28 05:58 authority-imprint-detector.html
+-rw-r--r-- 1 root root 26561 Dec 28 05:55 life-force-signal-detector.html
+-rw-r--r-- 1 root root 29194 Dec 28 05:59 relationship-dynamic-decoder.html
+-rw-r--r-- 1 root root 25707 Dec 28 05:56 safety-expansion-tension.html

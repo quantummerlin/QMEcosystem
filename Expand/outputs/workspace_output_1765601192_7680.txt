@@ -1,0 +1,15 @@
+8:    <meta name="keywords" content="chinese zodiac, eastern astrology, zodiac compatibility, quantum chinese, quantum merlin">
+9-    
+10-    <!-- Favicon -->
+11-    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
+12-    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
+13-    
+14-    <!-- Open Graph -->
+--
+461:            <a href="astrology.html">⭐ Western Astrology</a>
+462-            <a href="chinese.html">🐲 Chinese Zodiac</a>
+463-            <a href="forecasts.html">🔮 Zodiac Forecasts</a>
+464-            <a href="codes.html">💫 Reality Codes</a>
+465-            <a href="crystals.html">💎 Quantum Crystals</a>
+466-            <a href="water.html">💧 Water Charging</a>
+467-        </div>
