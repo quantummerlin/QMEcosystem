@@ -769,6 +769,26 @@
             </div>
         </div>
 
+        <!-- Recent Activity Feed -->
+        <div style="
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        ">
+            <h3 style="color: #9333ea; margin-bottom: 20px; text-align: center;">
+                🔔 Recent Activity
+            </h3>
+            <div id="activityFeed" style="
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            ">
+                <!-- Activity items will be added here -->
+            </div>
+        </div>
+
         <!-- Email Capture Section -->
         <div class="email-capture" id="emailCapture">
             <h3>🔔 Stay Connected</h3>
@@ -1161,6 +1181,40 @@
 
         // Initialize Library
         const libraryManager = new LibraryManager();
+
+        // Recent Activity Feed
+        const activities = [
+            { name: 'Sarah', location: 'California', tool: 'Unconscious Contract', time: '2 min ago' },
+            { name: 'Michael', location: 'New York', tool: 'Energy Leak Locator', time: '5 min ago' },
+            { name: 'Jennifer', location: 'Texas', tool: 'Manifestation Readiness', time: '8 min ago' },
+            { name: 'David', location: 'Florida', tool: 'Trust Radar', time: '12 min ago' },
+            { name: 'Emma', location: 'Washington', tool: 'Life Phase Decoder', time: '15 min ago' }
+        ];
+
+        function displayActivity() {
+            const feed = document.getElementById('activityFeed');
+            if (!feed) return;
+            
+            const shuffled = activities.sort(() => 0.5 - Math.random()).slice(0, 3);
+            
+            feed.innerHTML = shuffled.map(activity => `
+                <div style="
+                    color: #c4b5fd;
+                    font-size: 0.95em;
+                    padding: 12px;
+                    background: rgba(147, 51, 234, 0.05);
+                    border-radius: 8px;
+                    border-left: 3px solid #9333ea;
+                ">
+                    <strong style="color: #ec4899;">${activity.name}</strong> from ${activity.location} 
+                    used <strong>${activity.tool}</strong>
+                    <span style="color: #a78bfa; font-size: 0.9em; margin-left: 10px;">${activity.time}</span>
+                </div>
+            `).join('');
+        }
+
+        displayActivity();
+        setInterval(displayActivity, 45000); // Update every 45 seconds
 
         // Email Form Handler
         document.getElementById('emailForm')?.addEventListener('submit', async function(e) {
