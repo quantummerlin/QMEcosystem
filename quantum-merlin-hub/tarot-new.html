@@ -906,7 +906,7 @@
 
         // Save individual card
         function saveCardToJukebox(cardName, frequencies, btn) {
-            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            const savedItems = JSON.parse(localStorage.getItem('qm_library') || '[]');
             
             savedItems.push({
                 id: Date.now(),
@@ -917,7 +917,7 @@
                 savedAt: new Date().toISOString()
             });
             
-            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
+            localStorage.setItem('qm_library', JSON.stringify(savedItems));
             
             btn.textContent = '✓ Saved!';
             btn.classList.add('saved');
@@ -937,7 +937,7 @@
                 return card.querySelector('.card-frequencies p').textContent.split(' - ')[0];
             }).join(' | ');
             
-            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            const savedItems = JSON.parse(localStorage.getItem('qm_library') || '[]');
             
             savedItems.push({
                 id: Date.now(),
@@ -948,7 +948,7 @@
                 savedAt: new Date().toISOString()
             });
             
-            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
+            localStorage.setItem('qm_library', JSON.stringify(savedItems));
             
             const btn = event.target;
             btn.textContent = '✓ Reading Saved!';

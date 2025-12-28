@@ -960,7 +960,7 @@
         }
 
         function saveFrequencyToJukebox(frequency, purpose) {
-            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            const savedItems = JSON.parse(localStorage.getItem('qm_library') || '[]');
             
             const newItem = {
                 id: Date.now(),
@@ -976,7 +976,7 @@
             };
             
             savedItems.push(newItem);
-            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
+            localStorage.setItem('qm_library', JSON.stringify(savedItems));
             
             // Show confirmation
             const btn = event.target;

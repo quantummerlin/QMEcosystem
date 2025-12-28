@@ -544,7 +544,7 @@
         
         // Load items from localStorage
         function loadItems() {
-            const jukebox = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            const jukebox = JSON.parse(localStorage.getItem('qm_library') || '[]');
             allItems = jukebox;
             updateStats();
             displayItems(allItems);
@@ -671,7 +671,7 @@
         function deleteItem(index) {
             if (confirm('Are you sure you want to delete this item?')) {
                 allItems.splice(index, 1);
-                localStorage.setItem('quantumJukebox', JSON.stringify(allItems));
+                localStorage.setItem('qm_library', JSON.stringify(allItems));
                 loadItems();
             }
         }
@@ -700,7 +700,7 @@
                 }
             ];
             
-            localStorage.setItem('quantumJukebox', JSON.stringify(sampleItems));
+            localStorage.setItem('qm_library', JSON.stringify(sampleItems));
         }
         
         // Initialize

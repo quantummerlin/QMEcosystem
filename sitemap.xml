@@ -7,21 +7,21 @@
     
     <url>
         <loc>https://quantummerlin.com/</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     
     <url>
         <loc>https://quantummerlin.com/about-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://quantummerlin.com/contact-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -32,7 +32,7 @@
     
     <url>
         <loc>https://quantummerlin.com/genesis/index-enhanced.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -43,70 +43,70 @@
     
     <url>
         <loc>https://quantummerlin.com/quantum-merlin-hub/codes-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
         <loc>https://quantummerlin.com/quantum-merlin-hub/tarot-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
         <loc>https://quantummerlin.com/quantum-merlin-hub/gematria-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://quantummerlin.com/quantum-merlin-hub/sigils-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://quantummerlin.com/quantum-merlin-hub/astrology-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://quantummerlin.com/quantum-merlin-hub/chinese-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
         <loc>https://quantummerlin.com/quantum-merlin-hub/forecasts-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://quantummerlin.com/quantum-merlin-hub/crystals-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://quantummerlin.com/quantum-merlin-hub/water-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
         <loc>https://quantummerlin.com/quantum-merlin-hub/jukebox-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -117,16 +117,65 @@
     
     <url>
         <loc>https://quantummerlin.com/angel-number-calculator-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://quantummerlin.com/quantum-sigil-generator-new.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/contract.html</loc>
+        <lastmod>2025-12-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/energyleak.html</loc>
+        <lastmod>2025-12-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/manifest.html</loc>
+        <lastmod>2025-12-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/birth-sigil.html</loc>
+        <lastmod>2025-12-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/forecasts.html</loc>
+        <lastmod>2025-12-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/compatabilty.html</loc>
+        <lastmod>2025-12-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/library.html</loc>
+        <lastmod>2025-12-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
     </url>
     
     <!-- ═══════════════════════════════════════════════════════════════

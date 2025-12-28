@@ -5621,7 +5621,7 @@
             // Get existing jukebox items
             let jukebox = [];
             try {
-                jukebox = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+                jukebox = JSON.parse(localStorage.getItem('qm_library') || '[]');
             } catch(e) {
                 jukebox = [];
             }
@@ -5639,7 +5639,7 @@
             }
             
             jukebox.push(jukeboxItem);
-            localStorage.setItem('quantumJukebox', JSON.stringify(jukebox));
+            localStorage.setItem('qm_library', JSON.stringify(jukebox));
             
             showNotification('📚 Sigil added to your library!', 'success');
             
@@ -5729,7 +5729,7 @@
         function loadSavedSigils() {
             let jukebox = [];
             try {
-                jukebox = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+                jukebox = JSON.parse(localStorage.getItem('qm_library') || '[]');
             } catch(e) {
                 jukebox = [];
             }
@@ -5759,7 +5759,7 @@
 
         function loadSigil(index) {
             try {
-                const jukebox = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+                const jukebox = JSON.parse(localStorage.getItem('qm_library') || '[]');
                 const birthSigils = jukebox.filter(item => item.type === 'birth-sigil');
                 const sigil = birthSigils[index];
                 

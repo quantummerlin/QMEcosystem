@@ -8,7 +8,88 @@
     'use strict';
 
     const QM_USER_PROFILE_KEY = 'qm_user_profile';
-    const QM_LIBRARY_KEY = 'quantumJukebox';
+    const QM_LIBRARY_KEY = 'qm_library';
+    const LEGACY_JUKEBOX_KEY = 'quantumJukebox';
+    const LEGACY_INSIGHTS_KEY = 'quantumMerlinInsights';
+    const MIGRATION_FLAG = 'qm_storage_migrated';
+
+    /**
+     * Migrate legacy storage to unified qm_library
+     * Runs once on first load after update
+     */
+    function migrateStorage() {
+        // Check if already migrated
+        if (localStorage.getItem(MIGRATION_FLAG)) {
+            return;
+        }
+
+        console.log('🔄 Migrating Quantum Merlin storage...');
+        
+        let existingLibrary = [];
+        
+        // Get existing qm_library items if any
+        try {
+            const existing = localStorage.getItem(QM_LIBRARY_KEY);
+            if (existing) {
+                existingLibrary = JSON.parse(existing);
+            }
+        } catch (e) {
+            console.error('Error reading existing library:', e);
+        }
+
+        // Migrate from quantumJukebox (legacy main storage)
+        try {
+            const jukeboxData = localStorage.getItem(LEGACY_JUKEBOX_KEY);
+            if (jukeboxData) {
+                const jukeboxItems = JSON.parse(jukeboxData);
+                if (Array.isArray(jukeboxItems) && jukeboxItems.length > 0) {
+                    // Merge, avoiding duplicates by timestamp
+                    const existingTimestamps = new Set(existingLibrary.map(item => item.timestamp));
+                    jukeboxItems.forEach(item => {
+                        if (!existingTimestamps.has(item.timestamp)) {
+                            existingLibrary.push(item);
+                        }
+                    });
+                    console.log(`✅ Migrated ${jukeboxItems.length} items from quantumJukebox`);
+                }
+            }
+        } catch (e) {
+            console.error('Error migrating quantumJukebox:', e);
+        }
+
+        // Migrate from quantumMerlinInsights (legacy Expand tools)
+        try {
+            const insightsData = localStorage.getItem(LEGACY_INSIGHTS_KEY);
+            if (insightsData) {
+                const insightsItems = JSON.parse(insightsData);
+                if (Array.isArray(insightsItems) && insightsItems.length > 0) {
+                    const existingTimestamps = new Set(existingLibrary.map(item => item.timestamp));
+                    insightsItems.forEach(item => {
+                        if (!existingTimestamps.has(item.timestamp)) {
+                            existingLibrary.push(item);
+                        }
+                    });
+                    console.log(`✅ Migrated ${insightsItems.length} items from quantumMerlinInsights`);
+                }
+            }
+        } catch (e) {
+            console.error('Error migrating quantumMerlinInsights:', e);
+        }
+
+        // Sort by timestamp (newest first)
+        existingLibrary.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+
+        // Save unified library
+        localStorage.setItem(QM_LIBRARY_KEY, JSON.stringify(existingLibrary));
+        
+        // Mark migration complete
+        localStorage.setItem(MIGRATION_FLAG, Date.now().toString());
+        
+        console.log(`✨ Storage migration complete. Total items: ${existingLibrary.length}`);
+    }
+
+    // Run migration on load
+    migrateStorage();
 
     /**
      * User Profile Manager

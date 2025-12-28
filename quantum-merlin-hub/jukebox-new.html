@@ -572,7 +572,7 @@
 
         // Load items from localStorage
         function loadItems() {
-            const jukebox = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            const jukebox = JSON.parse(localStorage.getItem('qm_library') || '[]');
             allItems = jukebox;
             updateStats();
             displayItems(allItems);
@@ -747,7 +747,7 @@
             if (confirm('Are you sure you want to delete this item?')) {
                 const item = allItems[index];
                 allItems.splice(index, 1);
-                localStorage.setItem('quantumJukebox', JSON.stringify(allItems));
+                localStorage.setItem('qm_library', JSON.stringify(allItems));
                 loadItems();
                 showNotification(`🗑 Deleted: ${item.name}`);
                 
@@ -800,7 +800,7 @@
                         const newItems = importedItems.filter(item => !existingIds.includes(item.id));
                         
                         allItems = [...allItems, ...newItems];
-                        localStorage.setItem('quantumJukebox', JSON.stringify(allItems));
+                        localStorage.setItem('qm_library', JSON.stringify(allItems));
                         loadItems();
                         
                         showNotification(`📥 Imported ${newItems.length} new items`);
@@ -831,7 +831,7 @@
             
             if (confirm(`Are you sure you want to delete all ${allItems.length} items? This cannot be undone.`)) {
                 allItems = [];
-                localStorage.setItem('quantumJukebox', JSON.stringify(allItems));
+                localStorage.setItem('qm_library', JSON.stringify(allItems));
                 loadItems();
                 showNotification('🗑️ Library cleared');
                 

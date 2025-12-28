@@ -883,7 +883,7 @@
         }
         
         function saveSignFrequency(sign, frequencies, type) {
-            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            const savedItems = JSON.parse(localStorage.getItem('qm_library') || '[]');
             
             const newItem = {
                 id: Date.now(),
@@ -900,13 +900,13 @@
             };
             
             savedItems.push(newItem);
-            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
+            localStorage.setItem('qm_library', JSON.stringify(savedItems));
             
             showNotification(`${sign} frequencies saved to Jukebox!`, 'success');
         }
         
         function saveElementFrequency(element, frequencies) {
-            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            const savedItems = JSON.parse(localStorage.getItem('qm_library') || '[]');
             
             const newItem = {
                 id: Date.now(),
@@ -922,7 +922,7 @@
             };
             
             savedItems.push(newItem);
-            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
+            localStorage.setItem('qm_library', JSON.stringify(savedItems));
             
             showNotification(`${element} element frequency saved!`, 'success');
         }
@@ -930,7 +930,7 @@
         function saveMasterFrequency() {
             const frequency = document.getElementById('masterFrequency').textContent;
             
-            const savedItems = JSON.parse(localStorage.getItem('quantumJukebox') || '[]');
+            const savedItems = JSON.parse(localStorage.getItem('qm_library') || '[]');
             
             const newItem = {
                 id: Date.now(),
@@ -945,7 +945,7 @@
             };
             
             savedItems.push(newItem);
-            localStorage.setItem('quantumJukebox', JSON.stringify(savedItems));
+            localStorage.setItem('qm_library', JSON.stringify(savedItems));
             
             showNotification('Master frequency saved to Jukebox!', 'success');
         }
