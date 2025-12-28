@@ -6,6 +6,13 @@
     <title>Identity Split Detector | Quantum Merlin</title>
     <meta name="description" content="Reveal conflicts between your different identities and integrate them with deep psychological and astrological insights.">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Cormorant+Garamond:wght@400;500;600&family=Orbitron:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    
+    <!-- Shared Quantum Styles -->
+    <link rel="stylesheet" href="shared/css/quantum-variables.css">
+    <link rel="stylesheet" href="shared/css/quantum-base.css">
+    <link rel="stylesheet" href="shared/css/quantum-backgrounds.css">
+    <link rel="stylesheet" href="shared/css/quantum-intro.css">
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -533,7 +540,33 @@
     <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-    <div class="container">
+    <!-- Quantum Intro Animation -->
+    <div class="quantum-intro" id="quantumIntro">
+        <div class="intro-symbol" id="introSymbol">🔮</div>
+        <div id="intro-title">IDENTITY INTEGRATION</div>
+        <button class="skip-intro" onclick="skipIntro()">Skip Intro →</button>
+    </div>
+
+    <!-- Floating Particles -->
+    <div id="particles" class="particles-container"></div>
+
+    <!-- QM Header -->
+    <header class="qm-header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 10, 15, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(147, 51, 234, 0.3); padding: 15px 30px;">
+        <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <a href="/index.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
+                <div style="font-size: 1.8rem;">🧙‍♂️</div>
+                <span style="font-family: 'Orbitron', monospace; font-size: 1.2rem; font-weight: 700; background: linear-gradient(135deg, #9333ea, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Quantum Merlin</span>
+            </a>
+            <nav style="display: flex; gap: 20px; align-items: center;">
+                <a href="/library.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem;">📚 Library</a>
+                <a href="/genesis" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem;">🎵 Frequencies</a>
+                <a href="/index.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem;">🏠 Hub</a>
+                <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank" style="background: linear-gradient(135deg, #FFDD00, #FFA500); color: #000; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem;">☕ Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container" style="margin-top: 80px;">
         <header>
             <h1>🎭 Identity Split Detector Enhanced 🎭</h1>
             <p class="subtitle">Reveal conflicts between your different identities and integrate them</p>
@@ -1237,5 +1270,10 @@
             localStorage.setItem('quantumMerlinInsights', JSON.stringify(insights));
         }
     </script>
+    
+    <!-- Shared Quantum Scripts -->
+    <script src="shared/js/quantum-effects.js"></script>
+    <script src="shared/js/quantum-intro.js"></script>
+    <script src="shared/js/quantum-analytics.js"></script>
 </body>
 </html>
