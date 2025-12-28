@@ -130,6 +130,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Shared Quantum Styles -->
+    <link rel="stylesheet" href="shared/css/quantum-variables.css">
+    <link rel="stylesheet" href="shared/css/quantum-base.css">
+    <link rel="stylesheet" href="shared/css/quantum-backgrounds.css">
+    <link rel="stylesheet" href="shared/css/quantum-components.css">
+    <link rel="stylesheet" href="shared/css/quantum-animations.css">
+    <link rel="stylesheet" href="shared/css/quantum-navigation.css">
+    <link rel="stylesheet" href="shared/css/quantum-intro.css">
+
     <style>
         * {
             margin: 0;
@@ -1385,166 +1394,38 @@
                 margin-top: 15px;
             }
         }
-
-        /* ========================================
-           INTRO ANIMATION
-           ======================================== */
-        
-        .intro-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10000;
-            overflow: hidden;
-            transition: opacity 0.5s ease;
-        }
-
-        #lines-canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .emoji-layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-        }
-
-        .emoji {
-            position: absolute;
-            font-size: 60px;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transform-origin: center;
-            will-change: transform, opacity;
-            opacity: 0;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        #quantum {
-            color: #FFD700;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
-        }
-
-        #wizard {
-            color: #00F0FF;
-            text-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
-        }
-
-        #rose {
-            color: #FF0066;
-            text-shadow: 0 0 20px rgba(255, 0, 102, 0.8);
-        }
-
-        #singularity {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 4px;
-            height: 4px;
-            background: radial-gradient(circle, #FFD700, #00F0FF, #FF0066);
-            border-radius: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            opacity: 0;
-            z-index: 3;
-            box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
-        }
-
-        #title {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            font-size: 1px;
-            font-weight: 900;
-            background: linear-gradient(135deg, #00F0FF 0%, #FFD700 50%, #FF0066 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            white-space: nowrap;
-            opacity: 0;
-            z-index: 4;
-            letter-spacing: 0.05em;
-            max-width: 95vw;
-            font-family: 'Orbitron', monospace;
-        }
-
-        .skip-btn {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            color: #fff;
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 10001;
-            pointer-events: all;
-        }
-
-        .skip-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: #00f5ff;
-            box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
-        }
-
-        .intro-overlay.hidden {
-            display: none !important;
-            opacity: 0;
-        }
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-    <!-- Intro Animation Overlay (First Visit) -->
-    <div id="introOverlay" class="intro-overlay">
-        <canvas id="lines-canvas"></canvas>
-        
-        <div class="emoji-layer">
-            <div class="emoji" id="quantum">⚛️</div>
-            <div class="emoji" id="wizard">🧙‍♂️</div>
-            <div class="emoji" id="rose">🌹</div>
-        </div>
+    <!-- Quantum Intro Animation -->
+    <div class="quantum-intro" id="quantumIntro">
+        <div class="intro-symbol" id="introSymbol">👼</div>
+        <div id="intro-title">ANGEL NUMBERS</div>
+        <button class="skip-intro" onclick="skipIntro()">Skip Intro →</button>
+    </div>
 
-        <div id="singularity"></div>
-        <div id="title">QUANTUM MERLIN</div>
-        
-        <button id="skipIntro" class="skip-btn">Skip →</button>
-    </div>
-    
-    <div id="app-content">
-    <!-- Header -->
-    <div class="qm-header">
-        <div class="qm-header-content">
-            <a href="index.html" class="qm-logo">QUANTUM MERLIN</a>
+    <!-- Floating Particles -->
+    <div id="particles" class="particles-container"></div>
+
+    <!-- QM Header -->
+    <header class="qm-header">
+        <div class="qm-header-inner">
+            <a href="/index.html" class="qm-logo">
+                <div class="qm-logo-icon">🧙‍♂️</div>
+                <span class="qm-logo-text">Quantum Merlin</span>
+            </a>
             <nav class="qm-nav">
-                <a href="library.html">📚 Library</a>
-                <a href="index.html">🏠 Home</a>
+                <a href="/library.html">📚 Library</a>
+                <a href="/genesis">🎵 Frequencies</a>
+                <a href="/soulcard.html">🎴 Tarot</a>
+                <a href="/index.html">🏠 Hub</a>
             </nav>
+            <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank" class="qm-coffee-btn">
+                ☕ Support
+            </a>
         </div>
-    </div>
+    </header>
 
     <div class="quantum-grid"></div>
     
@@ -3443,267 +3324,11 @@
             }
         };
     </script>
-    </div><!-- End app-content -->
-    
-    <!-- Intro Animation -->
-    <script>
-        const STORAGE_KEY = 'qm_intro_watched';
-        const hasVisited = localStorage.getItem(STORAGE_KEY) === 'true';
-        const introOverlay = document.getElementById('introOverlay');
-        const skipBtn = document.getElementById('skipIntro');
-        const canvas = document.getElementById('lines-canvas');
-        const ctx = canvas ? canvas.getContext('2d', { alpha: true }) : null;
-        
-        const quantum = document.getElementById('quantum');
-        const wizard = document.getElementById('wizard');
-        const rose = document.getElementById('rose');
-        const singularity = document.getElementById('singularity');
-        const title = document.getElementById('title');
 
-        let width, height, centerX, centerY;
-        let time = 0;
-        let isRunning = false;
-        let wizardOrbitStart = 0;
-        let roseOrbitStart = Math.PI;
-        const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-
-        function resizeCanvas() {
-            if (!canvas) return;
-            width = window.innerWidth;
-            height = window.innerHeight;
-            centerX = width / 2;
-            centerY = height / 2;
-            canvas.width = width * dpr;
-            canvas.height = height * dpr;
-            canvas.style.width = width + 'px';
-            canvas.style.height = height + 'px';
-            ctx.scale(dpr, dpr);
-        }
-
-        function easeInOutCubic(t) {
-            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-        }
-
-        function clamp(value, min, max) {
-            return Math.max(min, Math.min(max, value));
-        }
-
-        function updateAnimation() {
-            if (!isRunning || !ctx) return;
-            
-            const t = time / 60;
-            ctx.clearRect(0, 0, width, height);
-
-            if (t < 1) {
-                const progress = clamp(t / 1, 0, 1);
-                const ease = easeInOutCubic(progress);
-                quantum.style.left = centerX + 'px';
-                quantum.style.top = centerY + 'px';
-                quantum.style.transform = `translate(-50%, -50%) scale(${ease})`;
-                quantum.style.opacity = ease;
-                wizard.style.opacity = 0;
-                rose.style.opacity = 0;
-            }
-            else if (t < 2) {
-                const progress = clamp((t - 1) / 1, 0, 1);
-                const ease = easeInOutCubic(progress);
-                quantum.style.left = centerX + 'px';
-                quantum.style.top = centerY + 'px';
-                quantum.style.transform = 'translate(-50%, -50%) scale(1)';
-                quantum.style.opacity = 1;
-                const wizardX = ease * (centerX - 80);
-                wizard.style.left = wizardX + 'px';
-                wizard.style.top = centerY + 'px';
-                wizard.style.transform = 'translate(-50%, -50%) scale(1)';
-                wizard.style.opacity = ease;
-                const roseX = width - ease * (width - centerX - 80);
-                rose.style.left = roseX + 'px';
-                rose.style.top = centerY + 'px';
-                rose.style.transform = 'translate(-50%, -50%) scale(1)';
-                rose.style.opacity = ease;
-            }
-            else if (t < 3) {
-                quantum.style.left = centerX + 'px';
-                quantum.style.top = centerY + 'px';
-                quantum.style.transform = 'translate(-50%, -50%) scale(1)';
-                wizard.style.left = (centerX - 80) + 'px';
-                wizard.style.top = centerY + 'px';
-                wizard.style.transform = 'translate(-50%, -50%) scale(1)';
-                rose.style.left = (centerX + 80) + 'px';
-                rose.style.top = centerY + 'px';
-                rose.style.transform = 'translate(-50%, -50%) scale(1)';
-            }
-            else if (t < 4.5) {
-                const progress = clamp((t - 3) / 1.5, 0, 1);
-                const rotation = progress * Math.PI * 2 * 0.5;
-                ctx.strokeStyle = 'rgba(0, 240, 255, ' + (progress * 0.6) + ')';
-                ctx.lineWidth = 2;
-                ctx.beginPath();
-                ctx.arc(centerX, centerY, 80, rotation, rotation + Math.PI);
-                ctx.stroke();
-                ctx.strokeStyle = 'rgba(255, 0, 255, ' + (progress * 0.6) + ')';
-                ctx.beginPath();
-                ctx.arc(centerX, centerY, 80, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
-                ctx.stroke();
-                ctx.strokeStyle = 'rgba(157, 0, 255, ' + (progress * 0.6) + ')';
-                ctx.beginPath();
-                ctx.arc(centerX, centerY, 80, rotation + Math.PI, rotation + Math.PI * 2);
-                ctx.stroke();
-                if (t < 4.51) {
-                    wizardOrbitStart = Math.PI;
-                    roseOrbitStart = 0;
-                }
-            }
-            else if (t < 6.5) {
-                const progress = clamp((t - 4.5) / 2, 0, 1);
-                const speedMultiplier = 1 + progress * 8;
-                const rotation = ((t - 3) * speedMultiplier) * Math.PI * 2 * 0.5;
-                ctx.strokeStyle = 'rgba(0, 240, 255, 0.6)';
-                ctx.lineWidth = 2;
-                ctx.beginPath();
-                ctx.arc(centerX, centerY, 80, rotation, rotation + Math.PI);
-                ctx.stroke();
-                ctx.strokeStyle = 'rgba(255, 0, 255, 0.6)';
-                ctx.beginPath();
-                ctx.arc(centerX, centerY, 80, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
-                ctx.stroke();
-                ctx.strokeStyle = 'rgba(157, 0, 255, 0.6)';
-                ctx.beginPath();
-                ctx.arc(centerX, centerY, 80, rotation + Math.PI, rotation + Math.PI * 2);
-                ctx.stroke();
-                quantum.style.left = centerX + 'px';
-                quantum.style.top = centerY + 'px';
-                quantum.style.transform = 'translate(-50%, -50%) scale(1)';
-                const orbitProgress = (t - 4.5) * speedMultiplier * 0.5;
-                const orbitRadius = 80;
-                const wizardAngle = wizardOrbitStart + orbitProgress * Math.PI * 2;
-                const wizardX = centerX + Math.cos(wizardAngle) * orbitRadius;
-                const wizardY = centerY + Math.sin(wizardAngle) * orbitRadius;
-                wizard.style.left = wizardX + 'px';
-                wizard.style.top = wizardY + 'px';
-                wizard.style.transform = 'translate(-50%, -50%) scale(1)';
-                const roseAngle = roseOrbitStart + orbitProgress * Math.PI * 2;
-                const roseX = centerX + Math.cos(roseAngle) * orbitRadius;
-                const roseY = centerY + Math.sin(roseAngle) * orbitRadius;
-                rose.style.left = roseX + 'px';
-                rose.style.top = roseY + 'px';
-                rose.style.transform = 'translate(-50%, -50%) scale(1)';
-            }
-            else if (t < 7.5) {
-                const progress = clamp((t - 6.5) / 1, 0, 1);
-                const ease = easeInOutCubic(progress);
-                const rotation = ((t - 3) * 9) * Math.PI * 2 * 0.5;
-                const lineOpacity = 0.6 * (1 - ease);
-                const lineRadius = 80 * (1 - ease);
-                ctx.strokeStyle = 'rgba(0, 240, 255, ' + lineOpacity + ')';
-                ctx.lineWidth = 2;
-                ctx.beginPath();
-                ctx.arc(centerX, centerY, lineRadius, rotation, rotation + Math.PI);
-                ctx.stroke();
-                ctx.strokeStyle = 'rgba(255, 0, 255, ' + lineOpacity + ')';
-                ctx.beginPath();
-                ctx.arc(centerX, centerY, lineRadius, rotation + Math.PI / 2, rotation + Math.PI * 1.5);
-                ctx.stroke();
-                const orbitProgress = (t - 4.5) * 9 * 0.5;
-                const orbitRadius = 80 * (1 - ease);
-                const wizardAngle = wizardOrbitStart + orbitProgress * Math.PI * 2;
-                const wizardX = centerX + Math.cos(wizardAngle) * orbitRadius;
-                const wizardY = centerY + Math.sin(wizardAngle) * orbitRadius;
-                const roseAngle = roseOrbitStart + orbitProgress * Math.PI * 2;
-                const roseX = centerX + Math.cos(roseAngle) * orbitRadius;
-                const roseY = centerY + Math.sin(roseAngle) * orbitRadius;
-                const emojiScale = 1 - ease * 0.9;
-                wizard.style.left = wizardX + 'px';
-                wizard.style.top = wizardY + 'px';
-                wizard.style.transform = `translate(-50%, -50%) scale(${emojiScale})`;
-                wizard.style.opacity = 1 - ease;
-                rose.style.left = roseX + 'px';
-                rose.style.top = roseY + 'px';
-                rose.style.transform = `translate(-50%, -50%) scale(${emojiScale})`;
-                rose.style.opacity = 1 - ease;
-                const quantumScale = 1 + (ease < 0.3 ? ease * 0.5 : (1 - ease) * 1.5);
-                quantum.style.left = centerX + 'px';
-                quantum.style.top = centerY + 'px';
-                quantum.style.transform = `translate(-50%, -50%) scale(${quantumScale})`;
-                quantum.style.opacity = 1 - ease;
-                singularity.style.transform = `translate(-50%, -50%) scale(${ease})`;
-                singularity.style.opacity = ease;
-            }
-            else if (t < 8) {
-                quantum.style.opacity = 0;
-                wizard.style.opacity = 0;
-                rose.style.opacity = 0;
-                const pulse = Math.sin((t - 7.5) * Math.PI * 4) * 0.2 + 1;
-                singularity.style.transform = `translate(-50%, -50%) scale(${pulse})`;
-                singularity.style.opacity = 1;
-            }
-            else if (t < 10) {
-                const progress = clamp((t - 8) / 2, 0, 1);
-                const ease = easeInOutCubic(progress);
-                singularity.style.transform = `translate(-50%, -50%) scale(1)`;
-                singularity.style.opacity = 1 - ease;
-                const maxFontSize = Math.min(width * 0.065, 42);
-                const fontSize = ease * maxFontSize;
-                title.style.fontSize = fontSize + 'px';
-                title.style.transform = `translate(-50%, -50%)`;
-                title.style.opacity = ease;
-            }
-            else if (t < 11) {
-                singularity.style.opacity = 0;
-                const maxFontSize = Math.min(width * 0.065, 42);
-                title.style.fontSize = maxFontSize + 'px';
-                title.style.opacity = 1;
-                if (t > 10.5) {
-                    const fadeProgress = (t - 10.5) / 0.5;
-                    introOverlay.style.opacity = 1 - fadeProgress;
-                }
-            }
-            else if (t >= 11) {
-                if (isRunning) {
-                    isRunning = false;
-                    hideIntro();
-                    return;
-                }
-            }
-
-            time++;
-            if (isRunning) {
-                requestAnimationFrame(updateAnimation);
-            }
-        }
-
-        function hideIntro() {
-            isRunning = false;
-            if (introOverlay) {
-                introOverlay.classList.add('hidden');
-            }
-            localStorage.setItem(STORAGE_KEY, 'true');
-        }
-        
-        if (skipBtn) {
-            if (hasVisited) {
-                skipBtn.style.display = 'block';
-            } else {
-                skipBtn.style.display = 'none';
-            }
-            
-            skipBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                hideIntro();
-            });
-        }
-        
-        if (canvas && ctx && introOverlay) {
-            resizeCanvas();
-            window.addEventListener('resize', resizeCanvas);
-            setTimeout(() => {
-                isRunning = true;
-                updateAnimation();
-            }, 100);
-        } else {
-            hideIntro();
-        }
-    </script>
+    <!-- Shared Quantum Scripts -->
+    <script src="shared/js/quantum-effects.js"></script>
+    <script src="shared/js/quantum-intro.js"></script>
+    <script src="shared/js/quantum-nav.js"></script>
+    <script src="shared/js/quantum-analytics.js"></script>
 </body>
 </html>
