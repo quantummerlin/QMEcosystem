@@ -449,22 +449,21 @@
 
         .scale-container {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
             width: 100%;
         }
 
         .scale-label {
-            font-size: 0.9em;
+            font-size: 0.95em;
             color: #ec4899;
             text-align: center;
             font-weight: 700;
             font-family: 'Orbitron', monospace;
             letter-spacing: 0.5px;
-            min-width: 80px;
-            max-width: 100px;
+            width: 100%;
         }
 
         .scale-options {
@@ -829,7 +828,7 @@
                     <div class="question-body">
                         <div class="question-full-text">I am comfortable with rapid, unexpected change</div>
                         <div class="scale-container">
-                            <span class="scale-label">Not at all</span>
+                            <span class="scale-label">← Not at all</span>
                             <div class="scale-options">
                                 <div class="scale-option" onclick="selectAnswer('q1', 0)">0</div>
                                 <div class="scale-option" onclick="selectAnswer('q1', 1)">1</div>
@@ -838,7 +837,7 @@
                                 <div class="scale-option" onclick="selectAnswer('q1', 4)">4</div>
                                 <div class="scale-option" onclick="selectAnswer('q1', 5)">5</div>
                             </div>
-                            <span class="scale-label">Completely</span>
+                            <span class="scale-label">Completely →</span>
                         </div>
                     </div>
                 </div>
@@ -854,7 +853,7 @@
                     <div class="question-body">
                         <div class="question-full-text">I believe I deserve what I want without needing to earn it through suffering</div>
                         <div class="scale-container">
-                            <span class="scale-label">Not at all</span>
+                            <span class="scale-label">? Not at all</span>
                             <div class="scale-options">
                                 <div class="scale-option" onclick="selectAnswer('q2', 0)">0</div>
                                 <div class="scale-option" onclick="selectAnswer('q2', 1)">1</div>
@@ -863,7 +862,7 @@
                                 <div class="scale-option" onclick="selectAnswer('q2', 4)">4</div>
                                 <div class="scale-option" onclick="selectAnswer('q2', 5)">5</div>
                             </div>
-                            <span class="scale-label">Completely</span>
+                            <span class="scale-label">Completely ?</span>
                         </div>
                     </div>
                 </div>
@@ -879,7 +878,7 @@
                     <div class="question-body">
                         <div class="question-full-text">I can let go of controlling exactly how things unfold</div>
                         <div class="scale-container">
-                            <span class="scale-label">Not at all</span>
+                            <span class="scale-label">? Not at all</span>
                             <div class="scale-options">
                                 <div class="scale-option" onclick="selectAnswer('q3', 0)">0</div>
                                 <div class="scale-option" onclick="selectAnswer('q3', 1)">1</div>
@@ -888,7 +887,7 @@
                                 <div class="scale-option" onclick="selectAnswer('q3', 4)">4</div>
                                 <div class="scale-option" onclick="selectAnswer('q3', 5)">5</div>
                             </div>
-                            <span class="scale-label">Completely</span>
+                            <span class="scale-label">Completely ?</span>
                         </div>
                     </div>
                 </div>
@@ -904,7 +903,7 @@
                     <div class="question-body">
                         <div class="question-full-text">I trust that what's meant for me will find me</div>
                         <div class="scale-container">
-                            <span class="scale-label">Not at all</span>
+                            <span class="scale-label">? Not at all</span>
                             <div class="scale-options">
                                 <div class="scale-option" onclick="selectAnswer('q4', 0)">0</div>
                                 <div class="scale-option" onclick="selectAnswer('q4', 1)">1</div>
@@ -913,7 +912,7 @@
                                 <div class="scale-option" onclick="selectAnswer('q4', 4)">4</div>
                                 <div class="scale-option" onclick="selectAnswer('q4', 5)">5</div>
                             </div>
-                            <span class="scale-label">Completely</span>
+                            <span class="scale-label">Completely ?</span>
                         </div>
                     </div>
                 </div>
@@ -929,7 +928,7 @@
                     <div class="question-body">
                         <div class="question-full-text">I am willing to release what no longer serves me, even if it's comfortable</div>
                         <div class="scale-container">
-                            <span class="scale-label">Not at all</span>
+                            <span class="scale-label">? Not at all</span>
                             <div class="scale-options">
                                 <div class="scale-option" onclick="selectAnswer('q5', 0)">0</div>
                                 <div class="scale-option" onclick="selectAnswer('q5', 1)">1</div>
@@ -938,7 +937,7 @@
                                 <div class="scale-option" onclick="selectAnswer('q5', 4)">4</div>
                                 <div class="scale-option" onclick="selectAnswer('q5', 5)">5</div>
                             </div>
-                            <span class="scale-label">Completely</span>
+                            <span class="scale-label">Completely ?</span>
                         </div>
                     </div>
                 </div>
@@ -954,7 +953,7 @@
                     <div class="question-body">
                         <div class="question-full-text">I feel energetically aligned with my desires (not desperate or forcing)</div>
                         <div class="scale-container">
-                            <span class="scale-label">Not at all</span>
+                            <span class="scale-label">? Not at all</span>
                             <div class="scale-options">
                                 <div class="scale-option" onclick="selectAnswer('q6', 0)">0</div>
                                 <div class="scale-option" onclick="selectAnswer('q6', 1)">1</div>
@@ -963,7 +962,7 @@
                                 <div class="scale-option" onclick="selectAnswer('q6', 4)">4</div>
                                 <div class="scale-option" onclick="selectAnswer('q6', 5)">5</div>
                             </div>
-                            <span class="scale-label">Completely</span>
+                            <span class="scale-label">Completely ?</span>
                         </div>
                     </div>
                 </div>
@@ -1332,3 +1331,4 @@
     </script>
 </body>
 </html>
+
