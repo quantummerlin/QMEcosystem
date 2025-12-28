@@ -38,7 +38,7 @@ const TOOL_PAGES = [
     '/quantum-merlin-hub/jukebox-new.html',
     '/angel-number-calculator-new.html',
     '/quantum-sigil-generator-new.html',
-    '/genesis/index-enhanced.html'
+    '/genesis'
 ];
 
 // Install event - precache essential assets

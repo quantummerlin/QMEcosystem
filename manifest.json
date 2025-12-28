@@ -64,7 +64,7 @@
       "name": "Frequency Generator",
       "short_name": "Frequencies",
       "description": "674 healing frequencies",
-      "url": "/genesis/index-enhanced.html",
+      "url": "/genesis",
       "icons": [{"src": "/assets/tarot/QMTarot.png", "sizes": "96x96"}]
     },
     {
