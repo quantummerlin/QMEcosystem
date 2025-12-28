@@ -577,6 +577,10 @@
                 <div class="stat-number" id="total-tools">0</div>
                 <div class="stat-label">Tools Used</div>
             </div>
+            <div class="stat">
+                <div class="stat-number" id="streakDays">0</div>
+                <div class="stat-label">Day Streak 🔥</div>
+            </div>
         </div>
 
         <!-- Achievements Section -->
@@ -693,6 +697,41 @@
         if (spotsLeftElement) {
             spotsLeftElement.textContent = Math.floor(Math.random() * 8) + 8;
         }
+
+        // Track daily streak
+        function updateStreak() {
+            const lastVisit = localStorage.getItem('lastVisitDate');
+            const today = new Date().toDateString();
+            let streak = parseInt(localStorage.getItem('visitStreak') || '0');
+            
+            if (lastVisit === today) {
+                // Same day, keep streak
+            } else if (lastVisit) {
+                const lastDate = new Date(lastVisit);
+                const todayDate = new Date(today);
+                const diffDays = Math.floor((todayDate - lastDate) / (1000 * 60 * 60 * 24));
+                
+                if (diffDays === 1) {
+                    // Consecutive day
+                    streak++;
+                } else if (diffDays > 1) {
+                    // Streak broken
+                    streak = 1;
+                }
+            } else {
+                // First visit
+                streak = 1;
+            }
+            
+            localStorage.setItem('visitStreak', streak);
+            localStorage.setItem('lastVisitDate', today);
+            const streakElement = document.getElementById('streakDays');
+            if (streakElement) {
+                streakElement.textContent = streak;
+            }
+        }
+
+        updateStreak();
 
         // Library Management
         class LibraryManager {
