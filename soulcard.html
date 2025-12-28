@@ -261,6 +261,17 @@
         /* Enhanced Reading Display */
         .enhanced-reading {
             display: none;
+            margin-top: 20px;
+        }
+        
+        .enhanced-reading.show {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .cosmic-profile {
@@ -373,14 +384,14 @@
                 <div class="section-content" id="mysticalInsight"></div>
             </div>
 
-            <!-- Enhanced Reading Offer -->
-            <div class="enhanced-reading-offer" id="enhancedOffer">
-                <h2 class="enhanced-title">✨ Unlock Your Complete Cosmic Profile ✨</h2>
-                <p style="color: #e9d5ff; font-size: 1.2em; margin-bottom: 30px;">
-                    Get a deep mystical reading that combines your card with numerology, astrology, gematria, and quantum frequencies
+            <!-- Enhanced Reading -->
+            <div class="reading-section" style="margin-top: 40px; background: linear-gradient(135deg, rgba(147, 51, 234, 0.15), rgba(236, 72, 153, 0.1)); border: 2px solid rgba(147, 51, 234, 0.4);">
+                <h3 class="section-title" style="font-size: 1.8em; text-align: center; margin-bottom: 20px;">🌌 Explore Your Complete Cosmic Profile</h3>
+                <p style="color: #e9d5ff; font-size: 1.1em; margin-bottom: 30px; text-align: center;">
+                    Dive deeper into your mystical ecosystem with integrated numerology, astrology, gematria, and quantum frequencies
                 </p>
                 
-                <div class="enhanced-features">
+                <div class="enhanced-features" style="margin-bottom: 30px;">
                     <div class="feature-card">
                         <div class="feature-icon">🔢</div>
                         <strong>Numerology Analysis</strong>
@@ -403,12 +414,12 @@
                     </div>
                 </div>
 
-                <button class="unlock-btn" onclick="unlockEnhancedReading()">
-                    🔓 Unlock Enhanced Reading
+                <button class="unlock-btn" onclick="showEnhancedReading()" style="background: linear-gradient(135deg, #9333ea, #ec4899); color: white;">
+                    ✨ Explore Deeper Integration
                 </button>
             </div>
 
-            <!-- Enhanced Reading (Initially Hidden) -->
+            <!-- Enhanced Reading Details -->
             <div class="enhanced-reading" id="enhancedReading">
                 <div class="reading-section" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(147, 51, 234, 0.2)); border-color: #f59e0b;">
                     <h3 class="section-title">✨ YOUR COMPLETE COSMIC PROFILE</h3>
@@ -582,12 +593,11 @@
             }, 1000);
         }
 
-        // Display reading
-        function displayReading(card) {
-            document.getElementById('bigCardImg').src = `assets/tarot/${card.image}`;
-            document.getElementById('cardName').textContent = card.name;
-            document.getElementById('cardSubtitle').textContent = getCardSubtitle(card);
-            document.getElementById('basicReading').textContent = getBasicReading(card);
+        // DisplashowEnhancedReading() {
+            const enhancedSection = document.getElementById('enhancedReading');
+            enhancedSection.classList.add('show');
+            generateEnhancedReading(selectedCard);
+            enhancedSection.scrollIntoView({ behavior: 'smooth', block: 'nearest
             document.getElementById('soulMessage').textContent = getSoulMessage(card);
             document.getElementById('mysticalInsight').textContent = getMysticalInsight(card);
         }
@@ -725,8 +735,7 @@
             document.getElementById('readingContainer').style.display = 'none';
             document.getElementById('cardSelectionPhase').style.display = 'block';
             document.getElementById('enhancedOffer').style.display = 'block';
-            document.getElementById('enhancedReading').style.display = 'none';
-            selectedCard = null;
+            document.getElementById('enhancedReading').classList.remove('show')
             initializeCardSpread();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
