@@ -615,6 +615,23 @@
             </div>
         </div>
 
+        <!-- Limited Availability Banner -->
+        <div style="
+            background: rgba(236, 72, 153, 0.1);
+            border: 2px solid #ec4899;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        ">
+            <p style="color: #ec4899; font-size: 1.2em; font-weight: bold; margin-bottom: 10px;">
+                ⏰ Limited Availability
+            </p>
+            <p style="color: #c4b5fd; font-size: 1em; margin: 0;">
+                Only <strong id="spotsLeft">12</strong> reading spots available this week
+            </p>
+        </div>
+
         <!-- Filter Buttons -->
         <div class="filter-bar">
             <button class="filter-btn active" data-filter="all">All</button>
@@ -670,6 +687,12 @@
                 liveCountElement.textContent = Math.floor(Math.random() * 300) + 100;
             }
         }, 30000);
+
+        // Limited Spots - Randomize between 8-15
+        const spotsLeftElement = document.getElementById('spotsLeft');
+        if (spotsLeftElement) {
+            spotsLeftElement.textContent = Math.floor(Math.random() * 8) + 8;
+        }
 
         // Library Management
         class LibraryManager {
