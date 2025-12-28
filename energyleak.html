@@ -1285,6 +1285,8 @@
                         <a href="/library.html" target="_blank" class="action-btn">📚 View Library</a>
                     </div>
                     
+                    ${getPersonalizedRecommendation(topLeaks)}
+                    
                     <div class="next-tools-section" style="margin-top: 40px; padding: 30px; background: rgba(147, 51, 234, 0.1); border: 2px solid rgba(147, 51, 234, 0.3); border-radius: 20px;">
                         <h3 style="color: #9333ea; text-align: center; margin-bottom: 20px; font-family: 'Orbitron', monospace;">Continue Your Journey</h3>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
@@ -1374,13 +1376,50 @@
         }
 
         // ========================================
+        // PERSONALIZED RECOMMENDATIONS
+        // ========================================
+        function getPersonalizedRecommendation(topLeaks) {
+            const topLeak = topLeaks[0].name;
+            let rec = { icon: '', tool: '', link: '', reason: '' };
+            
+            // Based on top energy leak, recommend specific tool
+            if (topLeak === 'Emotional Suppression') {
+                rec = { icon: '📜', tool: 'Unconscious Contract Reveal', link: '/contract.html', reason: 'Emotional suppression often stems from unconscious agreements about what feelings are "allowed." Discovering your hidden contract can reveal why you learned to suppress emotions in the first place.' };
+            } else if (topLeak === 'Toxic Relationships') {
+                rec = { icon: '💫', tool: 'Compatibility Calculator', link: '/compatibility.html', reason: 'Understanding relationship dynamics can help you identify which connections drain you and why. Seeing the energetic patterns can make boundaries clearer.' };
+            } else if (topLeak === 'Unfinished Business') {
+                rec = { icon: '🎯', tool: 'Manifestation Readiness', link: '/manifest.html', reason: 'Unfinished business often signals a deeper pattern of not completing what you start. Check your manifestation readiness to understand what\'s blocking your ability to follow through.' };
+            } else if (topLeak === 'Misaligned Commitments') {
+                rec = { icon: '📜', tool: 'Unconscious Contract Reveal', link: '/contract.html', reason: 'Saying yes when you mean no often comes from an unconscious contract about your worth or what you\'re allowed to have. Find the hidden agreement driving these patterns.' };
+            } else if (topLeak === 'Mental Time Travel') {
+                rec = { icon: '🔮', tool: 'Quantum Forecaster', link: '/forecasts', reason: 'If you\'re constantly in the past or future, understanding your cosmic timing can help anchor you to what\'s actually relevant NOW. See what the universe has in store.' };
+            } else {
+                rec = { icon: '🌙', tool: 'Birth Sigil Generator', link: '/birth-sigil.html', reason: 'Reconnecting with your cosmic blueprint can help you remember your inherent energy signature—the natural flow state you were born with.' };
+            }
+            
+            return `
+                <div class="insight-box" style="border-left-color: #ec4899;">
+                    <div class="insight-title">⚡ Personalized Recommendation</div>
+                    <div class="insight-text">
+                        <strong>Based on your #1 leak (${topLeak}):</strong> ${rec.reason}
+                        <div style="margin-top: 20px; text-align: center;">
+                            <a href="${rec.link}" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; background: linear-gradient(135deg, #9333ea, #ec4899); color: white; text-decoration: none; border-radius: 25px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(147, 51, 234, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                <span style="font-size: 1.3em;">${rec.icon}</span> Try ${rec.tool}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // ========================================
         // KEYBOARD SHORTCUTS
         // ========================================
         document.addEventListener('keydown', (e) => {
             // Press 'h' to go home
             if (e.key === 'h' && !e.ctrlKey && !e.metaKey) {
                 if (!document.activeElement || document.activeElement.tagName !== 'INPUT') {
-                    window.location.href = '/index.html';
+                    window.open('/index.html', '_blank');
                 }
             }
 

@@ -969,6 +969,8 @@
                         <a href="/library.html" target="_blank" class="action-btn">📚 View Library</a>
                     </div>
                     
+                    ${getPersonalizedRecommendation(score, answers)}
+                    
                     <div class="next-tools-section" style="margin-top: 40px; padding: 30px; background: rgba(147, 51, 234, 0.1); border: 2px solid rgba(147, 51, 234, 0.3); border-radius: 20px;">
                         <h3 style="color: #9333ea; text-align: center; margin-bottom: 20px; font-family: 'Orbitron', monospace;">Continue Your Journey</h3>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
@@ -1055,6 +1057,47 @@
                 btn.textContent = originalText;
                 btn.style.background = '';
             }, 2000);
+        }
+
+        // ========================================
+        // PERSONALIZED RECOMMENDATIONS
+        // ========================================
+        function getPersonalizedRecommendation(score, answers) {
+            let rec = { icon: '', tool: '', link: '', reason: '' };
+            
+            // Based on score level and specific weak areas
+            if (score < 40) {
+                // Groundwork - need to find root blocks
+                rec = { icon: '📜', tool: 'Unconscious Contract Reveal', link: '/contract.html', reason: 'Your readiness score suggests deep patterns may be running the show. Discovering your unconscious contract can reveal the root beliefs keeping your nervous system in protection mode.' };
+            } else if (score < 60) {
+                // Foundation building - need to clear energy drains
+                rec = { icon: '🔋', tool: 'Energy Leak Locator', link: '/energyleak.html', reason: 'You\'re building capacity, but energy leaks may be slowing your progress. Finding where your energy drains can free up resources for manifestation.' };
+            } else if (score < 80) {
+                // Expansion ready - need timing
+                if (answers.q3 <= 2) {
+                    // Low on letting go of control
+                    rec = { icon: '🔮', tool: 'Quantum Forecaster', link: '/forecasts', reason: 'Your score suggests difficulty releasing control. Understanding cosmic timing can help you trust the process and let go of micromanaging your manifestations.' };
+                } else {
+                    rec = { icon: '📜', tool: 'Unconscious Contract Reveal', link: '/contract.html', reason: 'You\'re almost ready. Finding any remaining unconscious agreements can clear the final blocks to quantum-level manifestation.' };
+                }
+            } else {
+                // Quantum ready - go for cosmic alignment
+                rec = { icon: '🔮', tool: 'Quantum Forecaster', link: '/forecasts', reason: 'You\'re ready for quantum leaps! The Quantum Forecaster can help you identify the optimal cosmic timing to launch your manifestations into reality.' };
+            }
+            
+            return `
+                <div class="insight-box" style="border-left-color: #ec4899;">
+                    <div class="insight-title">⚡ Personalized Recommendation</div>
+                    <div class="insight-text">
+                        <strong>Based on your ${score}% readiness:</strong> ${rec.reason}
+                        <div style="margin-top: 20px; text-align: center;">
+                            <a href="${rec.link}" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; background: linear-gradient(135deg, #9333ea, #ec4899); color: white; text-decoration: none; border-radius: 25px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(147, 51, 234, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                <span style="font-size: 1.3em;">${rec.icon}</span> Try ${rec.tool}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
         }
 
         // ========================================

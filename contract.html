@@ -1204,6 +1204,8 @@
                         <a href="/library.html" target="_blank" class="action-btn">📚 View Library</a>
                     </div>
                     
+                    ${getPersonalizedRecommendation(q1, q2, q3, q4)}
+                    
                     <div class="next-tools-section" style="margin-top: 40px; padding: 30px; background: rgba(147, 51, 234, 0.1); border: 2px solid rgba(147, 51, 234, 0.3); border-radius: 20px;">
                         <h3 style="color: #9333ea; text-align: center; margin-bottom: 20px; font-family: 'Orbitron', monospace;">Continue Your Journey</h3>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
@@ -1360,13 +1362,55 @@
         }
 
         // ========================================
+        // PERSONALIZED RECOMMENDATIONS
+        // ========================================
+        function getPersonalizedRecommendation(q1, q2, q3, q4) {
+            let rec = { icon: '', tool: '', link: '', reason: '' };
+            
+            // Low power/visibility - recommend Birth Sigil to reclaim cosmic identity
+            if (q4 <= 2) {
+                rec = { icon: '🌙', tool: 'Birth Sigil Generator', link: '/birth-sigil.html', reason: 'Your power score suggests you may have dimmed your light. Generating your Birth Sigil can help you reconnect with your inherent cosmic identity and the power you were born with.' };
+            }
+            // Low permanence - recommend Forecaster for timing
+            else if (q2 <= 2) {
+                rec = { icon: '🔮', tool: 'Quantum Forecaster', link: '/forecasts', reason: 'Your permanence score suggests anxiety about things lasting. The Quantum Forecaster can help you understand cosmic timing and build trust that good things are meant to stay.' };
+            }
+            // Low abundance - recommend Energy Leak to find blocks
+            else if (q3 <= 2) {
+                rec = { icon: '🔋', tool: 'Energy Leak Locator', link: '/energyleak.html', reason: 'Your abundance score suggests energy is being diverted. Finding your energy leaks can reveal what\'s blocking the flow of multiple good things into your life.' };
+            }
+            // Low permission - recommend Manifestation Readiness
+            else if (q1 <= 2) {
+                rec = { icon: '🎯', tool: 'Manifestation Readiness', link: '/manifest.html', reason: 'Your permission score is low. The Manifestation Readiness assessment can help you understand what\'s needed before you can fully receive what you want.' };
+            }
+            // General recommendation
+            else {
+                rec = { icon: '💫', tool: 'Compatibility Calculator', link: '/compatibility.html', reason: 'Your scores suggest you\'re ready to explore how your energy interacts with others. Understanding relationship dynamics can accelerate your growth.' };
+            }
+            
+            return `
+                <div class="insight-box" style="border-left-color: #ec4899;">
+                    <div class="insight-title">⚡ Personalized Recommendation</div>
+                    <div class="insight-text">
+                        <strong>Based on your contract:</strong> ${rec.reason}
+                        <div style="margin-top: 20px; text-align: center;">
+                            <a href="${rec.link}" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; background: linear-gradient(135deg, #9333ea, #ec4899); color: white; text-decoration: none; border-radius: 25px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(147, 51, 234, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                <span style="font-size: 1.3em;">${rec.icon}</span> Try ${rec.tool}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // ========================================
         // KEYBOARD SHORTCUTS
         // ========================================
         document.addEventListener('keydown', (e) => {
             // Press 'h' to go home
             if (e.key === 'h' && !e.ctrlKey && !e.metaKey) {
                 if (!document.activeElement || document.activeElement.tagName !== 'INPUT') {
-                    window.location.href = '/index.html';
+                    window.open('/index.html', '_blank');
                 }
             }
 
