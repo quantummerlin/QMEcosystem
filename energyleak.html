@@ -393,6 +393,156 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             animation: fadeInUp 0.6s ease-out backwards;
             text-align: center;
+            display: none; /* Hide old style */
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            background: rgba(147, 51, 234, 0.1);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: rgba(147, 51, 234, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #9333ea, #ec4899);
+            border-radius: 10px;
+            transition: width 0.4s ease;
+            width: 0%;
+        }
+
+        .progress-text {
+            text-align: center;
+            color: #c4b5fd;
+            font-size: 0.9em;
+            font-family: 'Orbitron', monospace;
+        }
+
+        /* Accordion Questions */
+        .questions-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .question-accordion-item {
+            background: linear-gradient(145deg, rgba(30, 25, 45, 0.9), rgba(20, 20, 30, 0.8));
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .question-accordion-item:hover {
+            border-color: rgba(147, 51, 234, 0.5);
+        }
+
+        .question-accordion-item.active {
+            border-color: #9333ea;
+            box-shadow: 0 5px 25px rgba(147, 51, 234, 0.3);
+        }
+
+        .question-accordion-item.answered {
+            border-color: rgba(52, 211, 153, 0.5);
+        }
+
+        .question-accordion-item.answered .question-header {
+            background: rgba(52, 211, 153, 0.1);
+        }
+
+        .question-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            gap: 15px;
+        }
+
+        .question-header:hover {
+            background: rgba(147, 51, 234, 0.1);
+        }
+
+        .question-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .question-num {
+            background: linear-gradient(135deg, #9333ea, #7c3aed);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9em;
+            flex-shrink: 0;
+        }
+
+        .question-accordion-item.answered .question-num {
+            background: linear-gradient(135deg, #10b981, #34d399);
+        }
+
+        .question-preview {
+            color: #c4b5fd;
+            font-size: 0.95em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .question-accordion-item.answered .question-preview {
+            color: #34d399;
+        }
+
+        .accordion-icon {
+            color: #9333ea;
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .question-accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .question-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 20px;
+        }
+
+        .question-accordion-item.active .question-body {
+            max-height: 400px;
+            padding: 0 20px 25px;
+        }
+
+        .question-full-text {
+            font-size: clamp(1.1em, 3vw, 1.3em);
+            color: #e0d4f7;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            padding-top: 5px;
         }
 
         .question-section:hover {
@@ -437,25 +587,28 @@
         }
 
         .scale-label {
-            font-size: 0.85em;
-            color: #a78bfa;
+            font-size: 1em;
+            color: #ec4899;
             text-align: center;
-            font-weight: 500;
+            font-weight: 700;
             width: 100%;
+            font-family: 'Orbitron', monospace;
+            letter-spacing: 0.5px;
         }
 
         .scale-options {
-            display: flex;
-            gap: 8px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 6px;
             justify-content: center;
-            flex-wrap: wrap;
             width: 100%;
-            max-width: 400px;
+            max-width: 280px;
         }
 
         .scale-option {
-            width: 55px;
-            height: 55px;
+            aspect-ratio: 1;
+            max-width: 38px;
+            width: 100%;
             border: 2px solid rgba(147, 51, 234, 0.3);
             border-radius: 12px;
             background: rgba(147, 51, 234, 0.1);
@@ -905,88 +1058,144 @@
             </div>
 
             <div id="questionsContainer">
-                <div class="question-section">
-                    <div class="question-number">Question 1 of 5</div>
-                    <div class="question-text">I have unfinished tasks or projects that weigh on my mind</div>
-                    <div class="scale-container">
-                        <span class="scale-label">Not at all</span>
-                        <div class="scale-options">
-                            <div class="scale-option" data-question="q1" data-value="0" onclick="selectAnswer('q1', 0)">0</div>
-                            <div class="scale-option" data-question="q1" data-value="1" onclick="selectAnswer('q1', 1)">1</div>
-                            <div class="scale-option" data-question="q1" data-value="2" onclick="selectAnswer('q1', 2)">2</div>
-                            <div class="scale-option" data-question="q1" data-value="3" onclick="selectAnswer('q1', 3)">3</div>
-                            <div class="scale-option" data-question="q1" data-value="4" onclick="selectAnswer('q1', 4)">4</div>
-                            <div class="scale-option" data-question="q1" data-value="5" onclick="selectAnswer('q1', 5)">5</div>
-                        </div>
-                        <span class="scale-label">Constantly</span>
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
                     </div>
+                    <div class="progress-text"><span id="answeredCount">0</span> of 5 questions answered</div>
                 </div>
 
-                <div class="question-section">
-                    <div class="question-number">Question 2 of 5</div>
-                    <div class="question-text">I spend time with people who drain rather than energize me</div>
-                    <div class="scale-container">
-                        <span class="scale-label">Never</span>
-                        <div class="scale-options">
-                            <div class="scale-option" data-question="q2" data-value="0" onclick="selectAnswer('q2', 0)">0</div>
-                            <div class="scale-option" data-question="q2" data-value="1" onclick="selectAnswer('q2', 1)">1</div>
-                            <div class="scale-option" data-question="q2" data-value="2" onclick="selectAnswer('q2', 2)">2</div>
-                            <div class="scale-option" data-question="q2" data-value="3" onclick="selectAnswer('q2', 3)">3</div>
-                            <div class="scale-option" data-question="q2" data-value="4" onclick="selectAnswer('q2', 4)">4</div>
-                            <div class="scale-option" data-question="q2" data-value="5" onclick="selectAnswer('q2', 5)">5</div>
+                <!-- Accordion Questions -->
+                <div class="questions-accordion">
+                    <!-- Question 1 -->
+                    <div class="question-accordion-item active" id="accordion-q1">
+                        <div class="question-header" onclick="toggleAccordion('q1')">
+                            <div class="question-header-left">
+                                <div class="question-num">1</div>
+                                <div class="question-preview">Unfinished tasks or projects</div>
+                            </div>
+                            <div class="accordion-icon">▼</div>
                         </div>
-                        <span class="scale-label">Frequently</span>
+                        <div class="question-body">
+                            <div class="question-full-text">I have unfinished tasks or projects that weigh on my mind</div>
+                            <div class="scale-container">
+                                <span class="scale-label">Not at all</span>
+                                <div class="scale-options">
+                                    <div class="scale-option" data-question="q1" data-value="0" onclick="selectAnswer('q1', 0)">0</div>
+                                    <div class="scale-option" data-question="q1" data-value="1" onclick="selectAnswer('q1', 1)">1</div>
+                                    <div class="scale-option" data-question="q1" data-value="2" onclick="selectAnswer('q1', 2)">2</div>
+                                    <div class="scale-option" data-question="q1" data-value="3" onclick="selectAnswer('q1', 3)">3</div>
+                                    <div class="scale-option" data-question="q1" data-value="4" onclick="selectAnswer('q1', 4)">4</div>
+                                    <div class="scale-option" data-question="q1" data-value="5" onclick="selectAnswer('q1', 5)">5</div>
+                                </div>
+                                <span class="scale-label">Constantly</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="question-section">
-                    <div class="question-number">Question 3 of 5</div>
-                    <div class="question-text">I suppress emotions rather than processing them</div>
-                    <div class="scale-container">
-                        <span class="scale-label">Rarely</span>
-                        <div class="scale-options">
-                            <div class="scale-option" data-question="q3" data-value="0" onclick="selectAnswer('q3', 0)">0</div>
-                            <div class="scale-option" data-question="q3" data-value="1" onclick="selectAnswer('q3', 1)">1</div>
-                            <div class="scale-option" data-question="q3" data-value="2" onclick="selectAnswer('q3', 2)">2</div>
-                            <div class="scale-option" data-question="q3" data-value="3" onclick="selectAnswer('q3', 3)">3</div>
-                            <div class="scale-option" data-question="q3" data-value="4" onclick="selectAnswer('q3', 4)">4</div>
-                            <div class="scale-option" data-question="q3" data-value="5" onclick="selectAnswer('q3', 5)">5</div>
+                    <!-- Question 2 -->
+                    <div class="question-accordion-item" id="accordion-q2">
+                        <div class="question-header" onclick="toggleAccordion('q2')">
+                            <div class="question-header-left">
+                                <div class="question-num">2</div>
+                                <div class="question-preview">People who drain rather than energize</div>
+                            </div>
+                            <div class="accordion-icon">▼</div>
                         </div>
-                        <span class="scale-label">Always</span>
+                        <div class="question-body">
+                            <div class="question-full-text">I spend time with people who drain rather than energize me</div>
+                            <div class="scale-container">
+                                <span class="scale-label">Never</span>
+                                <div class="scale-options">
+                                    <div class="scale-option" data-question="q2" data-value="0" onclick="selectAnswer('q2', 0)">0</div>
+                                    <div class="scale-option" data-question="q2" data-value="1" onclick="selectAnswer('q2', 1)">1</div>
+                                    <div class="scale-option" data-question="q2" data-value="2" onclick="selectAnswer('q2', 2)">2</div>
+                                    <div class="scale-option" data-question="q2" data-value="3" onclick="selectAnswer('q2', 3)">3</div>
+                                    <div class="scale-option" data-question="q2" data-value="4" onclick="selectAnswer('q2', 4)">4</div>
+                                    <div class="scale-option" data-question="q2" data-value="5" onclick="selectAnswer('q2', 5)">5</div>
+                                </div>
+                                <span class="scale-label">Frequently</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="question-section">
-                    <div class="question-number">Question 4 of 5</div>
-                    <div class="question-text">I say yes to commitments I don't actually want to do</div>
-                    <div class="scale-container">
-                        <span class="scale-label">Never</span>
-                        <div class="scale-options">
-                            <div class="scale-option" data-question="q4" data-value="0" onclick="selectAnswer('q4', 0)">0</div>
-                            <div class="scale-option" data-question="q4" data-value="1" onclick="selectAnswer('q4', 1)">1</div>
-                            <div class="scale-option" data-question="q4" data-value="2" onclick="selectAnswer('q4', 2)">2</div>
-                            <div class="scale-option" data-question="q4" data-value="3" onclick="selectAnswer('q4', 3)">3</div>
-                            <div class="scale-option" data-question="q4" data-value="4" onclick="selectAnswer('q4', 4)">4</div>
-                            <div class="scale-option" data-question="q4" data-value="5" onclick="selectAnswer('q4', 5)">5</div>
+                    <!-- Question 3 -->
+                    <div class="question-accordion-item" id="accordion-q3">
+                        <div class="question-header" onclick="toggleAccordion('q3')">
+                            <div class="question-header-left">
+                                <div class="question-num">3</div>
+                                <div class="question-preview">Suppress emotions rather than processing</div>
+                            </div>
+                            <div class="accordion-icon">▼</div>
                         </div>
-                        <span class="scale-label">Often</span>
+                        <div class="question-body">
+                            <div class="question-full-text">I suppress emotions rather than processing them</div>
+                            <div class="scale-container">
+                                <span class="scale-label">Rarely</span>
+                                <div class="scale-options">
+                                    <div class="scale-option" data-question="q3" data-value="0" onclick="selectAnswer('q3', 0)">0</div>
+                                    <div class="scale-option" data-question="q3" data-value="1" onclick="selectAnswer('q3', 1)">1</div>
+                                    <div class="scale-option" data-question="q3" data-value="2" onclick="selectAnswer('q3', 2)">2</div>
+                                    <div class="scale-option" data-question="q3" data-value="3" onclick="selectAnswer('q3', 3)">3</div>
+                                    <div class="scale-option" data-question="q3" data-value="4" onclick="selectAnswer('q3', 4)">4</div>
+                                    <div class="scale-option" data-question="q3" data-value="5" onclick="selectAnswer('q3', 5)">5</div>
+                                </div>
+                                <span class="scale-label">Always</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="question-section">
-                    <div class="question-number">Question 5 of 5</div>
-                    <div class="question-text">I ruminate on past events or worry about the future</div>
-                    <div class="scale-container">
-                        <span class="scale-label">Rarely</span>
-                        <div class="scale-options">
-                            <div class="scale-option" data-question="q5" data-value="0" onclick="selectAnswer('q5', 0)">0</div>
-                            <div class="scale-option" data-question="q5" data-value="1" onclick="selectAnswer('q5', 1)">1</div>
-                            <div class="scale-option" data-question="q5" data-value="2" onclick="selectAnswer('q5', 2)">2</div>
-                            <div class="scale-option" data-question="q5" data-value="3" onclick="selectAnswer('q5', 3)">3</div>
-                            <div class="scale-option" data-question="q5" data-value="4" onclick="selectAnswer('q5', 4)">4</div>
-                            <div class="scale-option" data-question="q5" data-value="5" onclick="selectAnswer('q5', 5)">5</div>
+                    <!-- Question 4 -->
+                    <div class="question-accordion-item" id="accordion-q4">
+                        <div class="question-header" onclick="toggleAccordion('q4')">
+                            <div class="question-header-left">
+                                <div class="question-num">4</div>
+                                <div class="question-preview">Say yes to unwanted commitments</div>
+                            </div>
+                            <div class="accordion-icon">▼</div>
                         </div>
-                        <span class="scale-label">Constantly</span>
+                        <div class="question-body">
+                            <div class="question-full-text">I say yes to commitments I don't actually want to do</div>
+                            <div class="scale-container">
+                                <span class="scale-label">Never</span>
+                                <div class="scale-options">
+                                    <div class="scale-option" data-question="q4" data-value="0" onclick="selectAnswer('q4', 0)">0</div>
+                                    <div class="scale-option" data-question="q4" data-value="1" onclick="selectAnswer('q4', 1)">1</div>
+                                    <div class="scale-option" data-question="q4" data-value="2" onclick="selectAnswer('q4', 2)">2</div>
+                                    <div class="scale-option" data-question="q4" data-value="3" onclick="selectAnswer('q4', 3)">3</div>
+                                    <div class="scale-option" data-question="q4" data-value="4" onclick="selectAnswer('q4', 4)">4</div>
+                                    <div class="scale-option" data-question="q4" data-value="5" onclick="selectAnswer('q4', 5)">5</div>
+                                </div>
+                                <span class="scale-label">Often</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="question-accordion-item" id="accordion-q5">
+                        <div class="question-header" onclick="toggleAccordion('q5')">
+                            <div class="question-header-left">
+                                <div class="question-num">5</div>
+                                <div class="question-preview">Ruminate on past or worry about future</div>
+                            </div>
+                            <div class="accordion-icon">▼</div>
+                        </div>
+                        <div class="question-body">
+                            <div class="question-full-text">I ruminate on past events or worry about the future</div>
+                            <div class="scale-container">
+                                <span class="scale-label">Rarely</span>
+                                <div class="scale-options">
+                                    <div class="scale-option" data-question="q5" data-value="0" onclick="selectAnswer('q5', 0)">0</div>
+                                    <div class="scale-option" data-question="q5" data-value="1" onclick="selectAnswer('q5', 1)">1</div>
+                                    <div class="scale-option" data-question="q5" data-value="2" onclick="selectAnswer('q5', 2)">2</div>
+                                    <div class="scale-option" data-question="q5" data-value="3" onclick="selectAnswer('q5', 3)">3</div>
+                                    <div class="scale-option" data-question="q5" data-value="4" onclick="selectAnswer('q5', 4)">4</div>
+                                    <div class="scale-option" data-question="q5" data-value="5" onclick="selectAnswer('q5', 5)">5</div>
+                                </div>
+                                <span class="scale-label">Constantly</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1153,6 +1362,31 @@
         // ENERGY LEAK ASSESSMENT
         // ========================================
         let answers = {};
+        const totalQuestions = 5;
+
+        // Toggle accordion - open one, close others
+        function toggleAccordion(questionId) {
+            const allItems = document.querySelectorAll('.question-accordion-item');
+            const clickedItem = document.getElementById('accordion-' + questionId);
+            const isActive = clickedItem.classList.contains('active');
+            
+            // Close all
+            allItems.forEach(item => item.classList.remove('active'));
+            
+            // Open clicked if it wasn't already open
+            if (!isActive) {
+                clickedItem.classList.add('active');
+            }
+        }
+
+        // Update progress bar
+        function updateProgress() {
+            const answered = Object.keys(answers).length;
+            const percentage = (answered / totalQuestions) * 100;
+            
+            document.getElementById('progressFill').style.width = percentage + '%';
+            document.getElementById('answeredCount').textContent = answered;
+        }
 
         function selectAnswer(question, value) {
             answers[question] = value;
@@ -1162,6 +1396,34 @@
                 option.classList.remove('selected');
             });
             document.querySelector(`[data-question="${question}"][data-value="${value}"]`).classList.add('selected');
+            
+            // Mark accordion as answered
+            const accordionItem = document.getElementById('accordion-' + question);
+            accordionItem.classList.add('answered');
+            
+            // Update progress
+            updateProgress();
+            
+            // Auto-advance to next unanswered question
+            setTimeout(() => {
+                const questionNum = parseInt(question.replace('q', ''));
+                let nextQuestion = null;
+                
+                // Find next unanswered question
+                for (let i = 1; i <= totalQuestions; i++) {
+                    if (!answers['q' + i]) {
+                        nextQuestion = 'q' + i;
+                        break;
+                    }
+                }
+                
+                if (nextQuestion) {
+                    toggleAccordion(nextQuestion);
+                } else {
+                    // All answered - close current
+                    accordionItem.classList.remove('active');
+                }
+            }, 300);
             
             // Enable submit button when all questions answered
             if (Object.keys(answers).length === 5) {
