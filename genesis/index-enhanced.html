@@ -372,6 +372,97 @@
         .email-form button { padding: 15px 30px; background: linear-gradient(135deg, #ffd700, #ff9500); border: none; border-radius: 25px; color: #000; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; }
         .email-form button:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 215, 0, 0.5); }
         .email-benefits { display: flex; justify-content: center; gap: 30px; margin-top: 20px; flex-wrap: wrap; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; }
+
+        /* Playlist Styles */
+        .preset-playlist-card {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 1.25rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .preset-playlist-card:hover {
+            background: rgba(147, 51, 234, 0.2);
+            border-color: rgba(147, 51, 234, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(147, 51, 234, 0.3);
+        }
+
+        .preset-playlist-card.active {
+            background: rgba(147, 51, 234, 0.25);
+            border-color: #9333ea;
+            box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+        }
+
+        .playlist-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .playlist-card-icon {
+            font-size: 2rem;
+        }
+
+        .playlist-card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            margin: 0;
+        }
+
+        .playlist-card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 0.5rem;
+        }
+
+        .playlist-card-description {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.4;
+        }
+
+        .selected-track-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 245, 255, 0.1);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 8px;
+            padding: 0.75rem;
+        }
+
+        .selected-track-name {
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        .remove-track-btn {
+            background: rgba(255, 0, 0, 0.2);
+            border: 1px solid rgba(255, 0, 0, 0.4);
+            color: #ff4444;
+            padding: 0.25rem 0.75rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .remove-track-btn:hover {
+            background: rgba(255, 0, 0, 0.3);
+            border-color: #ff4444;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
@@ -602,6 +693,101 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- PLAYLIST SYSTEM -->
+                <section class="playlist-section" style="margin-top: 2rem;">
+                    <div class="playlist-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--quantum-magenta); font-size: 1.3rem; margin: 0;">🎵 Quantum Playlists</h3>
+                        <button class="quantum-btn quantum-btn-primary" id="toggle-playlist-view" onclick="togglePlaylistView()">
+                            📋 View Playlists
+                        </button>
+                    </div>
+
+                    <!-- Playlist View (Initially Hidden) -->
+                    <div id="playlist-view" style="display: none;">
+                        
+                        <!-- Preset Playlists -->
+                        <div class="preset-playlists" style="margin-bottom: 2rem;">
+                            <h4 style="color: var(--quantum-cyan); margin-bottom: 1rem; font-size: 1.1rem;">⭐ Preset Playlists</h4>
+                            <div id="preset-playlist-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Custom Playlist Builder -->
+                        <div class="custom-playlist-builder" style="background: rgba(0, 245, 255, 0.05); border: 2px solid rgba(0, 245, 255, 0.2); border-radius: 15px; padding: 1.5rem; margin-top: 2rem;">
+                            <h4 style="color: var(--quantum-cyan); margin-bottom: 1rem; font-size: 1.1rem;">🎨 Create Custom Playlist</h4>
+                            
+                            <div style="display: grid; gap: 1rem; margin-bottom: 1rem;">
+                                <input type="text" 
+                                       id="custom-playlist-name" 
+                                       placeholder="Playlist Name..." 
+                                       style="padding: 0.75rem; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: white;">
+                                <textarea id="custom-playlist-description" 
+                                          placeholder="Description (optional)..." 
+                                          rows="2" 
+                                          style="padding: 0.75rem; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: white; resize: vertical;"></textarea>
+                            </div>
+
+                            <div id="selected-tracks" style="min-height: 60px; background: rgba(0, 0, 0, 0.3); border: 1px dashed rgba(255, 255, 255, 0.3); border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+                                <p style="color: rgba(255, 255, 255, 0.5); text-align: center; margin: 0;" id="no-tracks-msg">
+                                    Click tracks from the library to add them to your playlist
+                                </p>
+                                <div id="selected-tracks-list" style="display: none; flex-direction: column; gap: 0.5rem;"></div>
+                            </div>
+
+                            <div style="display: flex; gap: 1rem;">
+                                <button class="quantum-btn quantum-btn-primary" id="create-playlist-btn" onclick="createCustomPlaylist()" style="flex: 1;">
+                                    ✨ Create Playlist
+                                </button>
+                                <button class="quantum-btn quantum-btn-secondary" id="clear-selection-btn" onclick="clearTrackSelection()">
+                                    🗑️ Clear
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Now Playing -->
+                        <div id="now-playing-section" style="display: none; background: linear-gradient(135deg, rgba(147, 51, 234, 0.15), rgba(236, 72, 153, 0.15)); border: 2px solid rgba(147, 51, 234, 0.4); border-radius: 15px; padding: 1.5rem; margin-top: 2rem;">
+                            <h4 style="color: #9333ea; margin-bottom: 1rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">
+                                <span class="pulse-dot" style="width: 10px; height: 10px; background: #9333ea; border-radius: 50%; animation: pulse 2s infinite;"></span>
+                                Now Playing
+                            </h4>
+                            
+                            <div style="display: grid; gap: 1rem;">
+                                <div id="current-playlist-info" style="display: flex; align-items: center; gap: 1rem;">
+                                    <div id="playlist-icon" style="font-size: 3rem;">🎵</div>
+                                    <div style="flex: 1;">
+                                        <div id="playlist-name" style="font-size: 1.2rem; font-weight: 600; color: white; margin-bottom: 0.25rem;">—</div>
+                                        <div id="playlist-description" style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">—</div>
+                                    </div>
+                                </div>
+
+                                <div id="current-track-info" style="background: rgba(0, 0, 0, 0.3); padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin-bottom: 0.5rem;">CURRENT TRACK:</div>
+                                    <div id="current-track-name" style="font-size: 1.1rem; font-weight: 600; color: var(--quantum-cyan); margin-bottom: 0.25rem;">—</div>
+                                    <div id="current-track-number" style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6);">Track — of —</div>
+                                </div>
+
+                                <div id="playlist-progress" style="width: 100%;">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.85rem;">
+                                        <span style="color: rgba(255, 255, 255, 0.7);">Progress</span>
+                                        <span id="progress-percentage" style="color: var(--quantum-magenta); font-weight: 600;">0%</span>
+                                    </div>
+                                    <div style="width: 100%; height: 8px; background: rgba(0, 0, 0, 0.3); border-radius: 10px; overflow: hidden;">
+                                        <div id="progress-bar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #9333ea, #ec4899); transition: width 0.3s;"></div>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; gap: 0.75rem; margin-top: 0.5rem;">
+                                    <button class="quantum-btn quantum-btn-secondary" onclick="playlistPrevious()" style="flex: 1;">⏮️ Prev</button>
+                                    <button class="quantum-btn quantum-btn-primary" id="playlist-play-pause-btn" onclick="playlistPlayPause()" style="flex: 2;">▶️ Play</button>
+                                    <button class="quantum-btn quantum-btn-secondary" onclick="playlistNext()" style="flex: 1;">⏭️ Next</button>
+                                    <button class="quantum-btn quantum-btn-secondary" onclick="playlistStop()" style="flex: 1;">⏹️ Stop</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
@@ -729,6 +915,295 @@
             submitBtn.disabled = false;
         }
     });
+    </script>
+
+    <!-- Playlist System Scripts -->
+    <script src="js/audio-engine.js"></script>
+    <script src="js/frequency-database.js"></script>
+    <script src="js/playlist-system.js"></script>
+    
+    <script>
+        // Global variables
+        let audioEngine;
+        let playlistSystem;
+        let selectedTracks = [];
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializePlaylistSystem();
+            loadPresetPlaylists();
+        });
+
+        function initializePlaylistSystem() {
+            // Initialize audio engine (simplified for playlist demo)
+            audioEngine = {
+                stopAll: () => console.log('Audio stopped'),
+                fadeOut: (duration) => console.log('Fading out:', duration),
+                fadeIn: (duration) => console.log('Fading in:', duration),
+                loadPreset: (preset) => console.log('Loading preset:', preset),
+                startAll: () => console.log('Audio started'),
+                isPlaying: false
+            };
+            
+            // Initialize playlist system
+            playlistSystem = new QuantumPlaylistSystem(audioEngine);
+            
+            // Set up event listeners
+            playlistSystem.onTrackChange = handleTrackChange;
+            playlistSystem.onPlaylistComplete = handlePlaylistComplete;
+        }
+
+        function togglePlaylistView() {
+            const view = document.getElementById('playlist-view');
+            const btn = document.getElementById('toggle-playlist-view');
+            
+            if (view.style.display === 'none') {
+                view.style.display = 'block';
+                btn.textContent = '❌ Hide Playlists';
+            } else {
+                view.style.display = 'none';
+                btn.textContent = '📋 View Playlists';
+            }
+        }
+
+        function loadPresetPlaylists() {
+            const grid = document.getElementById('preset-playlist-grid');
+            const presets = playlistSystem.getPresets();
+            
+            grid.innerHTML = presets.map(preset => `
+                <div class="preset-playlist-card" onclick="loadPresetPlaylist('${preset.id}')">
+                    <div class="playlist-card-header">
+                        <div class="playlist-card-icon">${preset.icon}</div>
+                        <h5 class="playlist-card-title">${preset.name}</h5>
+                    </div>
+                    <div class="playlist-card-meta">
+                        <span>${preset.tracks.length} tracks</span>
+                        <span>${formatDuration(preset.duration)}</span>
+                    </div>
+                    <p class="playlist-card-description">${preset.description}</p>
+                </div>
+            `).join('');
+        }
+
+        function loadPresetPlaylist(presetId) {
+            if (!playlistSystem) return;
+            
+            const success = playlistSystem.loadPreset(presetId);
+            
+            if (success) {
+                // Remove active class from all cards
+                document.querySelectorAll('.preset-playlist-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+                
+                // Add active class to clicked card
+                event.target.closest('.preset-playlist-card')?.classList.add('active');
+                
+                // Show now playing section
+                updateNowPlayingDisplay();
+                document.getElementById('now-playing-section').style.display = 'block';
+                
+                showNotification(`✅ Loaded: ${playlistSystem.currentPlaylist.name}`);
+            }
+        }
+
+        function createCustomPlaylist() {
+            const nameInput = document.getElementById('custom-playlist-name');
+            const descInput = document.getElementById('custom-playlist-description');
+            
+            const name = nameInput.value.trim();
+            const description = descInput.value.trim();
+            
+            if (!name) {
+                alert('Please enter a playlist name');
+                return;
+            }
+            
+            if (selectedTracks.length === 0) {
+                alert('Please select at least one track');
+                return;
+            }
+            
+            const trackIds = selectedTracks.map(t => t.id);
+            const success = playlistSystem.createCustomPlaylist(name, trackIds, description);
+            
+            if (success) {
+                // Clear form
+                nameInput.value = '';
+                descInput.value = '';
+                clearTrackSelection();
+                
+                // Show now playing
+                updateNowPlayingDisplay();
+                document.getElementById('now-playing-section').style.display = 'block';
+                
+                showNotification(`✅ Created: ${name}`);
+            }
+        }
+
+        function clearTrackSelection() {
+            selectedTracks = [];
+            updateSelectedTracksDisplay();
+        }
+
+        function updateSelectedTracksDisplay() {
+            const list = document.getElementById('selected-tracks-list');
+            const noMsg = document.getElementById('no-tracks-msg');
+            
+            if (selectedTracks.length === 0) {
+                list.style.display = 'none';
+                noMsg.style.display = 'block';
+            } else {
+                list.style.display = 'flex';
+                noMsg.style.display = 'none';
+                
+                list.innerHTML = selectedTracks.map((track, index) => `
+                    <div class="selected-track-item">
+                        <span class="selected-track-name">${index + 1}. ${track.name}</span>
+                        <button class="remove-track-btn" onclick="removeSelectedTrack(${index})">Remove</button>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function removeSelectedTrack(index) {
+            selectedTracks.splice(index, 1);
+            updateSelectedTracksDisplay();
+        }
+
+        function updateNowPlayingDisplay() {
+            if (!playlistSystem || !playlistSystem.currentPlaylist) return;
+            
+            const playlist = playlistSystem.currentPlaylist;
+            
+            document.getElementById('playlist-icon').textContent = playlist.icon;
+            document.getElementById('playlist-name').textContent = playlist.name;
+            document.getElementById('playlist-description').textContent = playlist.description || 'Custom playlist';
+            
+            const currentTrack = playlistSystem.getCurrentTrack();
+            if (currentTrack) {
+                document.getElementById('current-track-name').textContent = currentTrack.name;
+            }
+            
+            const progress = playlistSystem.getProgress();
+            document.getElementById('current-track-number').textContent = 
+                `Track ${progress.currentTrack} of ${progress.totalTracks}`;
+            document.getElementById('progress-percentage').textContent = 
+                `${Math.round(progress.percentage)}%`;
+            document.getElementById('progress-bar').style.width = 
+                `${progress.percentage}%`;
+        }
+
+        function playlistPlayPause() {
+            if (!playlistSystem || !playlistSystem.currentPlaylist) {
+                alert('Please load a playlist first');
+                return;
+            }
+            
+            const btn = document.getElementById('playlist-play-pause-btn');
+            
+            if (playlistSystem.isPlaying) {
+                playlistSystem.pause();
+                btn.textContent = '▶️ Play';
+                audioEngine.isPlaying = false;
+            } else {
+                playlistSystem.play();
+                btn.textContent = '⏸️ Pause';
+                audioEngine.isPlaying = true;
+                
+                // Start progress simulation
+                simulateProgress();
+            }
+        }
+
+        function playlistNext() {
+            if (!playlistSystem) return;
+            playlistSystem.next();
+        }
+
+        function playlistPrevious() {
+            if (!playlistSystem) return;
+            playlistSystem.previous();
+        }
+
+        function playlistStop() {
+            if (!playlistSystem) return;
+            playlistSystem.stop();
+            document.getElementById('playlist-play-pause-btn').textContent = '▶️ Play';
+            audioEngine.isPlaying = false;
+            updateNowPlayingDisplay();
+        }
+
+        function handleTrackChange(track, index) {
+            console.log('Track changed:', track.name);
+            updateNowPlayingDisplay();
+        }
+
+        function handlePlaylistComplete() {
+            console.log('Playlist complete!');
+            document.getElementById('playlist-play-pause-btn').textContent = '▶️ Play';
+            showNotification('✅ Playlist complete!');
+        }
+
+        function simulateProgress() {
+            // This would be replaced with actual audio playback progress
+            if (!playlistSystem || !playlistSystem.isPlaying) return;
+            
+            setTimeout(() => {
+                const progress = playlistSystem.getProgress();
+                updateNowPlayingDisplay();
+                simulateProgress();
+            }, 1000);
+        }
+
+        function formatDuration(seconds) {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            
+            if (hours > 0) {
+                return `${hours}h ${minutes}m`;
+            }
+            return `${minutes}m`;
+        }
+
+        function showNotification(message) {
+            // Simple notification (could be enhanced with a toast library)
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #9333ea, #ec4899);
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 10px;
+                box-shadow: 0 4px 20px rgba(147, 51, 234, 0.4);
+                z-index: 10000;
+                animation: slideIn 0.3s ease;
+            `;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // Add animation styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(400px); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(400px); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 
 </body>
