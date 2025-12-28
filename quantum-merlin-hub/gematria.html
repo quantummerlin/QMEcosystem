@@ -6,544 +6,642 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Gematria - Numerology Engine | Quantum Merlin</title>
+    <title>Gematria Calculator - Numerology Engine | Quantum Reality Codes</title>
     <meta name="description" content="Discover the numerical patterns in your name and birthdate with quantum gematria. Calculate life path, destiny, and soul numbers.">
-    <meta name="keywords" content="gematria, numerology, life path number, destiny number, quantum merlin">
-    
+    <meta name="keywords" content="gematria, numerology, life path number, destiny number, quantum merlin, quantum rose">
+
     <!-- Favicon -->
-    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
-    
+    <link rel="icon" href="/shared/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/shared/images/apple-touch-icon.png">
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Quantum Gematria - Numerology Engine">
-    <meta property="og:description" content="Discover the numerical patterns in your name and birthdate with quantum gematria.">
+    <meta property="og:title" content="Gematria Calculator - Numerology Engine">
+    <meta property="og:description" content="Discover the numerical patterns in your name and birthdate.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gematria.quantummerlin.com">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-VW4LGE7L1T');
-    </script>
-    
+
+    <!-- PWA -->
+    <meta name="theme-color" content="#0a0a0f">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Quantum Core CSS -->
+    <link rel="stylesheet" href="../shared/css/quantum-core.css">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #000014 100%);
-            min-height: 100vh;
-            color: #ffffff;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Quantum Grid Background */
-        .quantum-grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: gridMove 20s linear infinite;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-
-        /* Quantum Sun */
-        .quantum-sun {
-            position: fixed;
-            top: 10%;
-            right: 10%;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, rgba(255, 165, 0, 0.1) 40%, transparent 70%);
-            border-radius: 50%;
-            filter: blur(40px);
-            animation: pulse 4s ease-in-out infinite;
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.6; }
-            50% { transform: scale(1.2); opacity: 0.8; }
-        }
-
-        /* Navigation Menu */
-        .nav-menu {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-
-        .nav-toggle {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.8), rgba(75, 0, 130, 0.8));
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-toggle:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5);
-        }
-
-        .nav-dropdown {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            margin-top: 10px;
-            background: linear-gradient(135deg, rgba(25, 0, 51, 0.95), rgba(10, 0, 25, 0.95));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 15px;
-            min-width: 200px;
-            display: none;
-            backdrop-filter: blur(20px);
-        }
-
-        .nav-dropdown.active {
-            display: block;
-            animation: slideDown 0.3s ease;
-        }
-
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .nav-dropdown a {
-            display: block;
-            color: #fff;
-            text-decoration: none;
-            padding: 12px 20px;
-            transition: all 0.3s ease;
-            border-radius: 10px;
-            margin: 5px;
-        }
-
-        .nav-dropdown a:hover {
-            background: rgba(138, 43, 226, 0.3);
-            transform: translateX(5px);
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            position: relative;
-            z-index: 10;
-        }
-
-        /* Header */
-        .header {
+        /* Page-Specific Styles */
+        .gematria-hero {
             text-align: center;
-            margin-bottom: 50px;
+            padding: var(--space-16) 0 var(--space-8);
         }
 
-        .title {
-            font-size: 3em;
-            background: linear-gradient(135deg, #ffd700, #ff6b6b, #4ecdc4);
+        .gematria-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            background: var(--glass-bg);
+            border: 1px solid var(--neon-cyan);
+            border-radius: var(--radius-full);
+            padding: var(--space-2) var(--space-4);
+            font-family: var(--font-display);
+            font-size: var(--text-xs);
+            color: var(--neon-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-4);
+            animation: electricPulse 3s ease-in-out infinite;
+        }
+
+        .gematria-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            margin-bottom: var(--space-4);
+            background: var(--gradient-cyan);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            background-clip: text;
+            text-shadow: var(--glow-cyan);
         }
 
-        .subtitle {
-            color: #b8b8b8;
-            font-size: 1.2em;
+        .gematria-hero p {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         /* Input Section */
         .input-section {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            backdrop-filter: blur(10px);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-8);
+            backdrop-filter: blur(20px);
+            margin-bottom: var(--space-8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .input-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-cyan);
+        }
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-5);
         }
 
         .input-group {
-            margin-bottom: 20px;
+            margin-bottom: var(--space-4);
         }
 
         .input-group label {
             display: block;
-            margin-bottom: 8px;
-            color: #ffd700;
-            font-weight: 500;
+            margin-bottom: var(--space-2);
+            font-family: var(--font-display);
+            font-size: var(--text-sm);
+            color: var(--neon-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        .input-group input, .input-group select {
+        .input-group input {
             width: 100%;
-            padding: 12px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 10px;
-            color: #fff;
-            font-size: 16px;
-            transition: all 0.3s ease;
+            padding: var(--space-3) var(--space-4);
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            transition: all var(--transition-normal);
         }
 
-        .input-group input:focus, .input-group select:focus {
+        .input-group input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .input-group input:focus {
             outline: none;
-            border-color: #ffd700;
-            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
         }
 
         .calculate-btn {
-            background: linear-gradient(135deg, #ffd700, #ff6b6b);
-            border: none;
-            padding: 15px 40px;
-            border-radius: 25px;
-            color: #000;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
             width: 100%;
-            margin-top: 20px;
+            margin-top: var(--space-6);
+            padding: var(--space-4) var(--space-6);
+            background: var(--gradient-cyan);
+            border: none;
+            border-radius: var(--radius-full);
+            color: var(--bg-darker);
+            font-family: var(--font-display);
+            font-size: var(--text-lg);
+            font-weight: 700;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-3);
         }
 
         .calculate-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+            box-shadow: 0 10px 40px rgba(0, 245, 255, 0.4);
         }
 
         /* Results Section */
         .results-section {
             display: none;
-            margin-top: 30px;
+            animation: fadeInUp 0.6s ease-out;
         }
 
         .results-section.active {
             display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .result-card {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 20px;
-            backdrop-filter: blur(10px);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-6);
+            margin-bottom: var(--space-6);
+            backdrop-filter: blur(20px);
+            transition: all var(--transition-normal);
+        }
+
+        .result-card:hover {
+            border-color: var(--neon-cyan);
         }
 
         .result-title {
-            font-size: 1.5em;
-            color: #ffd700;
-            margin-bottom: 15px;
+            font-family: var(--font-display);
+            font-size: var(--text-xl);
+            color: var(--neon-gold);
+            margin-bottom: var(--space-4);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
         }
 
         .number-display {
-            font-size: 3em;
-            font-weight: bold;
+            font-family: var(--font-display);
+            font-size: 4rem;
+            font-weight: 900;
             text-align: center;
-            margin: 20px 0;
-            background: linear-gradient(135deg, #ffd700, #ff6b6b);
+            margin: var(--space-6) 0;
+            background: var(--gradient-gold);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: var(--glow-gold);
+            animation: goldPulse 3s ease-in-out infinite;
         }
 
         .meaning-text {
-            line-height: 1.6;
-            color: #e0e0e0;
-            margin-bottom: 15px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: var(--space-4);
         }
 
-        .frequency-recommendation {
-            background: rgba(255, 215, 0, 0.1);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
+        .frequency-box {
+            background: rgba(0, 245, 255, 0.1);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: var(--radius-xl);
+            padding: var(--space-5);
+            margin-top: var(--space-4);
         }
 
-        .frequency-recommendation h4 {
-            color: #ffd700;
-            margin-bottom: 10px;
+        .frequency-box h4 {
+            font-family: var(--font-display);
+            font-size: var(--text-base);
+            color: var(--neon-cyan);
+            margin-bottom: var(--space-3);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .frequency-box p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--space-4);
         }
 
         .save-btn {
-            background: linear-gradient(135deg, #4ecdc4, #44a08d);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 15px;
-            color: #fff;
-            font-size: 14px;
+            padding: var(--space-2) var(--space-5);
+            background: transparent;
+            border: 1px solid var(--neon-cyan);
+            border-radius: var(--radius-full);
+            color: var(--neon-cyan);
+            font-family: var(--font-display);
+            font-size: var(--text-sm);
             cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 15px;
+            transition: all var(--transition-fast);
         }
 
         .save-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+            background: var(--neon-cyan);
+            color: var(--bg-darker);
+        }
+
+        .save-btn.saved {
+            background: var(--neon-green);
+            border-color: var(--neon-green);
+            color: var(--bg-darker);
         }
 
         /* Synchronicity Map */
         .synchronicity-map {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: var(--space-4);
+            margin: var(--space-6) 0;
         }
 
         .sync-number {
-            background: rgba(138, 43, 226, 0.2);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 15px;
-            padding: 15px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-4);
             text-align: center;
-            transition: all 0.3s ease;
+            transition: all var(--transition-normal);
         }
 
         .sync-number:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5);
+            border-color: var(--neon-purple);
+            box-shadow: 0 10px 30px rgba(157, 0, 255, 0.3);
         }
 
         .sync-value {
-            font-size: 2em;
-            font-weight: bold;
-            color: #ffd700;
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            color: var(--neon-purple);
+            text-shadow: var(--glow-purple);
         }
 
         .sync-label {
-            font-size: 0.9em;
-            color: #b8b8b8;
-            margin-top: 5px;
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+            margin-top: var(--space-2);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        /* Responsive Design */
+        /* Ad Container */
+        .ad-container {
+            background: var(--glass-bg);
+            border: 1px dashed var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+            margin: var(--space-6) 0;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .title {
-                font-size: 2em;
+            .gematria-hero {
+                padding: var(--space-12) 0 var(--space-6);
+            }
+
+            .input-section {
+                padding: var(--space-5);
+            }
+
+            .number-display {
+                font-size: 3rem;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .gematria-hero h1 {
+                font-size: 1.8rem;
             }
             
-            .container {
-                padding: 20px 15px;
+            .gematria-hero p {
+                font-size: 0.95rem;
+                padding: 0 10px;
             }
             
-            .input-section, .result-card {
-                padding: 20px;
+            .input-section,
+            .result-card {
+                padding: var(--space-4);
             }
             
             .number-display {
-                font-size: 2.5em;
+                font-size: 2.5rem;
+            }
+            
+            .calculate-btn {
+                font-size: 0.9rem;
+                padding: var(--space-3);
             }
         }
-
-        /* Email Capture */
-        .email-capture { background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(0, 245, 255, 0.1) 100%); border: 2px solid #ffd700; border-radius: 20px; padding: 35px; margin: 40px 0; text-align: center; }
-        .email-capture h3 { font-family: 'Orbitron', monospace; color: #ffd700; margin-bottom: 10px; font-size: 1.4rem; }
-        .email-capture .subtitle { color: rgba(255, 255, 255, 0.7); margin-bottom: 25px; font-size: 1.1rem; }
-        .email-form { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; max-width: 500px; margin: 0 auto; }
-        .email-form input[type="email"] { flex: 1; min-width: 250px; padding: 15px 20px; border: 2px solid rgba(0, 245, 255, 0.3); border-radius: 25px; background: rgba(0, 0, 0, 0.5); color: white; font-size: 1rem; }
-        .email-form input[type="email"]:focus { outline: none; border-color: #00f5ff; }
-        .email-form button { padding: 15px 30px; background: linear-gradient(135deg, #ffd700, #ff9500); border: none; border-radius: 25px; color: #000; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; }
-        .email-form button:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 215, 0, 0.5); }
-        .email-benefits { display: flex; justify-content: center; gap: 30px; margin-top: 20px; flex-wrap: wrap; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; }
     </style>
-    <!-- Quantum Intro Animation -->
-    <link rel="stylesheet" href="../shared/css/quantum-intro.css">
-<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-    <!-- Quantum Intro Animation -->
-    <div id="intro-container">
-        <canvas id="lines-canvas"></canvas>
-        <div class="emoji-layer">
-            <div class="intro-emoji" data-symbol="⚛️"></div>
-            <div class="intro-emoji" data-symbol="🧙‍♂️"></div>
-            <div class="intro-emoji" data-symbol="🌹"></div>
-        </div>
-        <div id="singularity"></div>
-        <div id="intro-title">Quantum Merlin</div>
-    </div>
-    
-    <div id="app-content">
-    <div class="quantum-grid"></div>
-    <div class="quantum-sun"></div>
-    
-    <!-- Navigation Menu -->
-    <div class="nav-menu">
-        <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
-        <div class="nav-dropdown" id="navDropdown">
-            <a href="https://quantummerlin.com">🏠 Home</a>
-            <a href="https://frequency.quantummerlin.com">🎵 Frequency Generator</a>
-            <a href="https://jukebox.quantummerlin.com">📚 Quantum Jukebox</a>
-            <a href="https://gematria.quantummerlin.com">🔢 Quantum Gematria</a>
-            <a href="https://tarot.quantummerlin.com">🃏 Quantum Tarot</a>
-            <a href="https://sigils.quantummerlin.com">✨ Sigil Creator</a>
-            <a href="https://astrology.quantummerlin.com">⭐ Western Astrology</a>
-            <a href="https://chinese.quantummerlin.com">🐲 Chinese Zodiac</a>
-            <a href="/forecasts">🔮 Zodiac Forecasts</a>
-            <a href="/compatibility.html">💫 Compatibility</a>
-            <a href="https://codes.quantummerlin.com">💫 Reality Codes</a>
-            <a href="https://crystals.quantummerlin.com">💎 Quantum Crystals</a>
-            <a href="https://water.quantummerlin.com">💧 Water Charging</a>
-        </div>
+    <!-- Quantum Background -->
+    <div class="quantum-bg">
+        <div class="quantum-grid"></div>
+        <div class="grid-floor"></div>
+        <div class="quantum-sun"></div>
+        <div class="horizon-glow"></div>
+        <div class="glow-orb glow-orb-tr cyan"></div>
+        <div class="glow-orb glow-orb-bl purple"></div>
     </div>
 
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1 class="title">Quantum Gematria</h1>
-            <p class="subtitle">Discover the numerical patterns and synchronicities in your life</p>
-        </div>
-
-        <!-- Input Section -->
-        <div class="input-section">
-            <div class="input-group">
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" placeholder="Enter your full name">
-            </div>
+    <!-- Header -->
+    <header class="qrc-header">
+        <div class="qrc-header-inner">
+            <a href="/" class="qrc-logo">
+                <div class="qrc-logo-icon">🔮</div>
+                <div class="qrc-logo-text">
+                    Quantum Reality Codes
+                    <span>Sacred Mathematics</span>
+                </div>
+            </a>
             
-            <div class="input-group">
-                <label for="nickname">Nickname (Optional)</label>
-                <input type="text" id="nickname" placeholder="Enter your nickname">
-            </div>
-            
-            <div class="input-group">
-                <label for="birthDate">Date of Birth</label>
-                <input type="date" id="birthDate">
-            </div>
-            
-            <div class="input-group">
-                <label for="significantDate">Significant Date (Optional)</label>
-                <input type="date" id="significantDate" placeholder="Anniversary, graduation, etc.">
-            </div>
-            
-            <div class="input-group">
-                <label for="luckyNumber">Lucky Number (Optional)</label>
-                <input type="number" id="luckyNumber" placeholder="Your lucky number">
-            </div>
-            
-            <button class="calculate-btn" onclick="calculateGematria()">Calculate Quantum Patterns</button>
-        </div>
-
-        <!-- Results Section -->
-        <div class="results-section" id="resultsSection">
-            <div class="result-card">
-                <h3 class="result-title">Core Gematria Number</h3>
-                <div class="number-display" id="coreNumber">-</div>
-                <p class="meaning-text" id="coreMeaning">Your core numerological vibration...</p>
+            <div class="qrc-nav-actions">
+                <a href="#" class="qrc-support-btn" onclick="QRC_DONATIONS.openBuyMeACoffee(); return false;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/>
+                    </svg>
+                    <span>Support</span>
+                </a>
                 
-                <div class="frequency-recommendation">
-                    <h4>🎵 Recommended Frequencies</h4>
-                    <p id="coreFrequencies">Frequencies that align with your core vibration...</p>
-                    <button class="save-btn" onclick="saveToFrequencies('Core Number', document.getElementById('coreNumber').textContent, document.getElementById('coreFrequencies').textContent)">Save to Jukebox</button>
+                <div class="nav-menu">
+                    <button class="qrc-nav-toggle">
+                        <div class="qrc-nav-toggle-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                    
+                    <nav class="qrc-nav-dropdown">
+                        <div class="qrc-nav-section">
+                            <div class="qrc-nav-section-title">Core Tools</div>
+                            <a href="/quantum-merlin-hub/codes.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">✨</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Reality Codes</span>
+                                </span>
+                            </a>
+                            <a href="/genesis/index-enhanced.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">🎵</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Frequency Generator</span>
+                                </span>
+                            </a>
+                        </div>
+                        
+                        <div class="qrc-nav-divider"></div>
+                        
+                        <div class="qrc-nav-section">
+                            <div class="qrc-nav-section-title">Divination</div>
+                            <a href="/quantum-merlin-hub/tarot.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">🃏</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Quantum Tarot</span>
+                                </span>
+                            </a>
+                            <a href="/quantum-merlin-hub/gematria.html" class="qrc-nav-link active">
+                                <span class="qrc-nav-link-icon">🔢</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Gematria</span>
+                                </span>
+                            </a>
+                            <a href="/quantum-merlin-hub/astrology.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">⭐</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Astrology</span>
+                                </span>
+                            </a>
+                            <a href="/quantum-merlin-hub/sigils.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">🔯</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Sigil Creator</span>
+                                </span>
+                            </a>
+                        </div>
+                        
+                        <div class="qrc-nav-divider"></div>
+                        
+                        <div class="qrc-nav-section">
+                            <a href="/quantum-merlin-hub/jukebox.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">📚</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">My Jukebox</span>
+                                </span>
+                            </a>
+                            <a href="/" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">🏠</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Home</span>
+                                </span>
+                            </a>
+                        </div>
+                    </nav>
                 </div>
-            </div>
-
-            <div class="result-card">
-                <h3 class="result-title">Life Path Number</h3>
-                <div class="number-display" id="lifePathNumber">-</div>
-                <p class="meaning-text" id="lifePathMeaning">Your life's journey and purpose...</p>
-                
-                <div class="frequency-recommendation">
-                    <h4>🎵 Life Path Frequencies</h4>
-                    <p id="lifePathFrequencies">Frequencies for your life path...</p>
-                    <button class="save-btn" onclick="saveToFrequencies('Life Path', document.getElementById('lifePathNumber').textContent, document.getElementById('lifePathFrequencies').textContent)">Save to Jukebox</button>
-                </div>
-            </div>
-
-            <div class="result-card">
-                <h3 class="result-title">Destiny Number</h3>
-                <div class="number-display" id="destinyNumber">-</div>
-                <p class="meaning-text" id="destinyMeaning">Your destiny and life purpose...</p>
-                
-                <div class="frequency-recommendation">
-                    <h4>🎵 Destiny Frequencies</h4>
-                    <p id="destinyFrequencies">Frequencies for your destiny...</p>
-                    <button class="save-btn" onclick="saveToFrequencies('Destiny', document.getElementById('destinyNumber').textContent, document.getElementById('destinyFrequencies').textContent)">Save to Jukebox</button>
-                </div>
-            </div>
-
-            <div class="result-card">
-                <h3 class="result-title">Synchronicity Map</h3>
-                <div class="synchronicity-map" id="synchronicityMap">
-                    <!-- Will be populated dynamically -->
-                </div>
-                <p class="meaning-text">These numbers appear in your life's patterns and reveal hidden connections...</p>
-            </div>
-
-            <div class="result-card">
-                <h3 class="result-title">Quantum Interpretation</h3>
-                <p class="meaning-text" id="quantumInterpretation">The quantum meaning behind your numerical patterns...</p>
-                
-                <div class="frequency-recommendation">
-                    <h4>🎵 Quantum Alignment Frequency</h4>
-                    <p id="quantumFrequencies">Master frequency for your quantum alignment...</p>
-                    <button class="save-btn" onclick="saveToFrequencies('Quantum Alignment', 'Master', document.getElementById('quantumFrequencies').textContent)">Save to Jukebox</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Email Capture Section -->
-        <div class="email-capture" id="emailCapture">
-            <h3>🔔 Stay Connected</h3>
-            <p class="subtitle">Get updates on new tools and cosmic insights</p>
-            <form class="email-form" id="emailForm" action="https://formspree.io/f/mgowrolb" method="POST">
-                <input type="email" name="email" id="emailInput" placeholder="Enter your email" required>
-                <button type="submit">Subscribe ✨</button>
-            </form>
-            <div class="email-benefits">
-                <span>✓ Free</span>
-                <span>✓ No Spam</span>
-                <span>✓ Unsubscribe Anytime</span>
             </div>
         </div>
-    </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-wrapper">
+        <div class="container">
+            <!-- Hero -->
+            <div class="gematria-hero scroll-reveal">
+                <div class="gematria-hero-badge">
+                    <span>🔢</span>
+                    <span>Numerology Engine</span>
+                </div>
+                <h1>Quantum Gematria</h1>
+                <p>Discover the numerical patterns and synchronicities hidden in your name and birthdate</p>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section scroll-reveal">
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="nickname">Nickname (Optional)</label>
+                        <input type="text" id="nickname" placeholder="Enter your nickname">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="birthDate">Date of Birth</label>
+                        <input type="date" id="birthDate">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="luckyNumber">Lucky Number (Optional)</label>
+                        <input type="number" id="luckyNumber" placeholder="Your lucky number">
+                    </div>
+                </div>
+                
+                <button class="calculate-btn" onclick="calculateGematria()">
+                    <span>🔮</span>
+                    Calculate Quantum Patterns
+                </button>
+            </div>
+
+            <!-- Ad Space -->
+            <div class="ad-container">
+                <p>[ Ad Space - Google AdSense ]</p>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="resultsSection">
+                <div class="result-card scroll-reveal">
+                    <h3 class="result-title"><span>✨</span> Core Gematria Number</h3>
+                    <div class="number-display" id="coreNumber">-</div>
+                    <p class="meaning-text" id="coreMeaning">Your core numerological vibration...</p>
+                    
+                    <div class="frequency-box">
+                        <h4><span>🎵</span> Recommended Frequencies</h4>
+                        <p id="coreFrequencies">Frequencies that align with your core vibration...</p>
+                        <button class="save-btn" onclick="saveToJukebox('Core Number', document.getElementById('coreNumber').textContent, document.getElementById('coreFrequencies').textContent, this)">Save to Jukebox</button>
+                    </div>
+                </div>
+
+                <div class="result-card scroll-reveal">
+                    <h3 class="result-title"><span>🛤️</span> Life Path Number</h3>
+                    <div class="number-display" id="lifePathNumber">-</div>
+                    <p class="meaning-text" id="lifePathMeaning">Your life's journey and purpose...</p>
+                    
+                    <div class="frequency-box">
+                        <h4><span>🎵</span> Life Path Frequencies</h4>
+                        <p id="lifePathFrequencies">Frequencies for your life path...</p>
+                        <button class="save-btn" onclick="saveToJukebox('Life Path', document.getElementById('lifePathNumber').textContent, document.getElementById('lifePathFrequencies').textContent, this)">Save to Jukebox</button>
+                    </div>
+                </div>
+
+                <div class="result-card scroll-reveal">
+                    <h3 class="result-title"><span>🌟</span> Destiny Number</h3>
+                    <div class="number-display" id="destinyNumber">-</div>
+                    <p class="meaning-text" id="destinyMeaning">Your destiny and life purpose...</p>
+                    
+                    <div class="frequency-box">
+                        <h4><span>🎵</span> Destiny Frequencies</h4>
+                        <p id="destinyFrequencies">Frequencies for your destiny...</p>
+                        <button class="save-btn" onclick="saveToJukebox('Destiny', document.getElementById('destinyNumber').textContent, document.getElementById('destinyFrequencies').textContent, this)">Save to Jukebox</button>
+                    </div>
+                </div>
+
+                <div class="result-card scroll-reveal">
+                    <h3 class="result-title"><span>🔗</span> Synchronicity Map</h3>
+                    <div class="synchronicity-map" id="synchronicityMap">
+                        <!-- Will be populated dynamically -->
+                    </div>
+                    <p class="meaning-text">These numbers appear in your life's patterns and reveal hidden connections...</p>
+                </div>
+
+                <div class="result-card scroll-reveal">
+                    <h3 class="result-title"><span>⚛️</span> Quantum Interpretation</h3>
+                    <p class="meaning-text" id="quantumInterpretation">The quantum meaning behind your numerical patterns...</p>
+                    
+                    <div class="frequency-box">
+                        <h4><span>🎵</span> Quantum Alignment Frequency</h4>
+                        <p id="quantumFrequencies">Master frequency for your quantum alignment...</p>
+                        <button class="save-btn" onclick="saveToJukebox('Quantum Alignment', 'Master', document.getElementById('quantumFrequencies').textContent, this)">Save to Jukebox</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Space -->
+            <div class="ad-container">
+                <p>[ Ad Space - Google AdSense ]</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="qrc-footer">
+        <div class="qrc-footer-inner">
+            <div class="qrc-footer-grid">
+                <div class="qrc-footer-brand">
+                    <a href="/" class="qrc-logo">
+                        <div class="qrc-logo-icon">🔮</div>
+                        <div class="qrc-logo-text">Quantum Reality Codes</div>
+                    </a>
+                    <p class="qrc-footer-tagline">
+                        Transform your intentions into reality through sacred mathematics.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="qrc-footer-title">Tools</h4>
+                    <ul class="qrc-footer-links">
+                        <li><a href="/quantum-merlin-hub/codes.html">Reality Codes</a></li>
+                        <li><a href="/genesis/index-enhanced.html">Frequencies</a></li>
+                        <li><a href="/quantum-merlin-hub/tarot.html">Tarot</a></li>
+                        <li><a href="/quantum-merlin-hub/gematria.html">Gematria</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="qrc-footer-title">Explore</h4>
+                    <ul class="qrc-footer-links">
+                        <li><a href="/quantum-merlin-hub/astrology.html">Astrology</a></li>
+                        <li><a href="/quantum-merlin-hub/sigils.html">Sigils</a></li>
+                        <li><a href="/quantum-merlin-hub/crystals.html">Crystals</a></li>
+                        <li><a href="/quantum-forum.html">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="qrc-footer-title">Support</h4>
+                    <ul class="qrc-footer-links">
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="#" onclick="QRC_DONATIONS.openBuyMeACoffee(); return false;">Buy Me a Coffee</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="qrc-footer-bottom">
+                <p class="qrc-footer-copyright">
+                    © 2025 Quantum Reality Codes. All tools free forever.
+                </p>
+                <div class="qrc-footer-legal">
+                    <a href="/genesis/disclaimer.html">Disclaimer</a>
+                    <a href="/genesis/terms.html">Terms</a>
+                    <a href="/genesis/privacy.html">Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../shared/js/quantum-nav.js"></script>
+    <script src="../shared/js/quantum-effects.js"></script>
+    <script src="../shared/js/quantum-analytics.js"></script>
+    <script src="../shared/js/quantum-donations.js"></script>
 
     <script>
-        // Navigation toggle
-        function toggleNav() {
-            const dropdown = document.getElementById('navDropdown');
-            dropdown.classList.toggle('active');
-        }
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(event) {
-            const navMenu = document.querySelector('.nav-menu');
-            const dropdown = document.getElementById('navDropdown');
-            
-            if (!navMenu.contains(event.target)) {
-                dropdown.classList.remove('active');
-            }
-        });
+        // Track page view
+        QRC_ANALYTICS.pageView('Gematria Calculator');
 
         // Numerology calculations
         function calculateGematria() {
@@ -551,16 +649,16 @@
             const birthDate = document.getElementById('birthDate').value;
             
             if (!fullName || !birthDate) {
-                alert('Please enter your full name and date of birth');
+                showToast('Please enter your full name and date of birth', 'error');
                 return;
             }
 
-            // Calculate core numbers
+            QRC_ANALYTICS.trackTool('Gematria', 'calculate');
+
             const coreNumber = calculateNameNumber(fullName);
             const lifePathNumber = calculateLifePathNumber(birthDate);
             const destinyNumber = calculateDestinyNumber(fullName);
             
-            // Display results
             displayResults(coreNumber, lifePathNumber, destinyNumber, fullName, birthDate);
         }
 
@@ -583,19 +681,14 @@
 
         function calculateLifePathNumber(birthDate) {
             const date = new Date(birthDate);
-            const day = date.getDate();
-            const month = date.getMonth() + 1;
-            const year = date.getFullYear();
-            
-            const total = day + month + year;
+            const total = date.getDate() + (date.getMonth() + 1) + date.getFullYear();
             return reduceToSingleDigit(total);
         }
 
         function calculateDestinyNumber(name) {
-            // Destiny number uses vowels only
             const vowels = 'AEIOU';
-            let total = 0;
             const vowelValues = {A:1, E:5, I:9, O:6, U:3};
+            let total = 0;
             
             for (let letter of name.toUpperCase()) {
                 if (vowels.includes(letter)) {
@@ -619,73 +712,24 @@
         }
 
         function displayResults(coreNumber, lifePathNumber, destinyNumber, name, birthDate) {
-            // Show results section
             document.getElementById('resultsSection').classList.add('active');
             
-            // Display numbers
             document.getElementById('coreNumber').textContent = coreNumber;
             document.getElementById('lifePathNumber').textContent = lifePathNumber;
             document.getElementById('destinyNumber').textContent = destinyNumber;
             
-            // Number meanings database
             const meanings = {
-                1: {
-                    core: "Leadership, independence, and new beginnings. You are a natural pioneer with strong willpower and determination.",
-                    lifePath: "Your path involves leadership and innovation. You're here to blaze new trails and inspire others.",
-                    destiny: "Your destiny is to lead and initiate change. You have the power to create new opportunities.",
-                    frequencies: "396 Hz - Liberating Guilt, 174 Hz - Pain Relief, 741 Hz - Awakening Intuition"
-                },
-                2: {
-                    core: "Cooperation, diplomacy, and sensitivity. You are a natural peacemaker with strong intuition.",
-                    lifePath: "Your path involves partnerships and harmony. You're here to bring people together and create balance.",
-                    destiny: "Your destiny is to create harmony and understanding through cooperation and empathy.",
-                    frequencies: "417 Hz - Undoing Situations, 528 Hz - Transformation, 639 Hz - Connecting Relationships"
-                },
-                3: {
-                    core: "Creativity, self-expression, and communication. You are a natural artist with joy and optimism.",
-                    lifePath: "Your path involves creative expression and joy. You're here to inspire others through your creativity.",
-                    destiny: "Your destiny is to express yourself creatively and bring joy to others.",
-                    frequencies: "528 Hz - Transformation, 741 Hz - Awakening Intuition, 963 Hz - Divine Connection"
-                },
-                4: {
-                    core: "Stability, practicality, and hard work. You are a natural builder with strong foundation skills.",
-                    lifePath: "Your path involves building solid foundations and creating order. You're here to manifest ideas into reality.",
-                    destiny: "Your destiny is to create stability and structure in the world.",
-                    frequencies: "174 Hz - Pain Relief, 285 Hz - Tissue Healing, 396 Hz - Liberating Guilt"
-                },
-                5: {
-                    core: "Freedom, adventure, and versatility. You are a natural explorer with curiosity and adaptability.",
-                    lifePath: "Your path involves freedom and change. You're here to experience variety and share wisdom.",
-                    destiny: "Your destiny is to explore and expand horizons, embracing change and adventure.",
-                    frequencies: "417 Hz - Undoing Situations, 741 Hz - Awakening Intuition, 852 Hz - Returning to Spiritual Order"
-                },
-                6: {
-                    core: "Nurturing, responsibility, and love. You are a natural caregiver with compassion and healing energy.",
-                    lifePath: "Your path involves service and healing. You're here to nurture and protect others.",
-                    destiny: "Your destiny is to create harmony and beauty through love and service.",
-                    frequencies: "528 Hz - Transformation, 639 Hz - Connecting Relationships, 741 Hz - Awakening Intuition"
-                },
-                7: {
-                    core: "Spirituality, analysis, and wisdom. You are a natural seeker with deep intuition and knowledge.",
-                    lifePath: "Your path involves spiritual growth and wisdom. You're here to seek truth and share knowledge.",
-                    destiny: "Your destiny is to uncover deeper truths and guide others spiritually.",
-                    frequencies: "741 Hz - Awakening Intuition, 963 Hz - Divine Connection, 174 Hz - Pain Relief"
-                },
-                8: {
-                    core: "Abundance, power, and achievement. You are a natural leader with strong business sense.",
-                    lifePath: "Your path involves material and spiritual abundance. You're here to master the material world.",
-                    destiny: "Your destiny is to achieve success and empower others through abundance.",
-                    frequencies: "396 Hz - Liberating Guilt, 528 Hz - Transformation, 963 Hz - Divine Connection"
-                },
-                9: {
-                    core: "Humanitarianism, completion, and wisdom. You are a natural healer with universal love.",
-                    lifePath: "Your path involves humanitarian service and completion. You're here to serve humanity.",
-                    destiny: "Your destiny is to bring healing and completion to the world through compassion.",
-                    frequencies: "639 Hz - Connecting Relationships, 741 Hz - Awakening Intuition, 963 Hz - Divine Connection"
-                }
+                1: { core: "Leadership, independence, and new beginnings. You are a natural pioneer with strong willpower.", lifePath: "Your path involves leadership and innovation. You're here to blaze new trails.", destiny: "Your destiny is to lead and initiate change.", frequencies: "396 Hz - Liberating Guilt, 174 Hz - Grounding, 741 Hz - Intuition" },
+                2: { core: "Cooperation, diplomacy, and sensitivity. You are a natural peacemaker.", lifePath: "Your path involves partnerships and harmony.", destiny: "Your destiny is to create harmony through cooperation.", frequencies: "417 Hz - Facilitating Change, 528 Hz - Transformation, 639 Hz - Relationships" },
+                3: { core: "Creativity, self-expression, and communication. You are a natural artist.", lifePath: "Your path involves creative expression and joy.", destiny: "Your destiny is to express yourself creatively.", frequencies: "528 Hz - Transformation, 741 Hz - Intuition, 963 Hz - Divine Connection" },
+                4: { core: "Stability, practicality, and hard work. You are a natural builder.", lifePath: "Your path involves building solid foundations.", destiny: "Your destiny is to create stability and structure.", frequencies: "174 Hz - Grounding, 285 Hz - Healing, 396 Hz - Liberation" },
+                5: { core: "Freedom, adventure, and versatility. You are a natural explorer.", lifePath: "Your path involves freedom and change.", destiny: "Your destiny is to explore and expand horizons.", frequencies: "417 Hz - Change, 741 Hz - Intuition, 852 Hz - Spiritual Order" },
+                6: { core: "Nurturing, responsibility, and love. You are a natural caregiver.", lifePath: "Your path involves service and healing.", destiny: "Your destiny is to create harmony through love.", frequencies: "528 Hz - Love, 639 Hz - Relationships, 741 Hz - Intuition" },
+                7: { core: "Spirituality, analysis, and wisdom. You are a natural seeker.", lifePath: "Your path involves spiritual growth and wisdom.", destiny: "Your destiny is to uncover deeper truths.", frequencies: "741 Hz - Intuition, 963 Hz - Divine Connection, 174 Hz - Grounding" },
+                8: { core: "Abundance, power, and achievement. You are a natural leader.", lifePath: "Your path involves material and spiritual abundance.", destiny: "Your destiny is to achieve success and empower others.", frequencies: "396 Hz - Liberation, 528 Hz - Transformation, 963 Hz - Divine" },
+                9: { core: "Humanitarianism, completion, and wisdom. You are a natural healer.", lifePath: "Your path involves humanitarian service.", destiny: "Your destiny is to bring healing through compassion.", frequencies: "639 Hz - Relationships, 741 Hz - Intuition, 963 Hz - Divine" }
             };
             
-            // Update meanings
             const coreMeaning = meanings[coreNumber];
             const lifeMeaning = meanings[lifePathNumber];
             const destinyMeaning = meanings[destinyNumber];
@@ -698,18 +742,17 @@
             document.getElementById('lifePathFrequencies').textContent = lifeMeaning.frequencies;
             document.getElementById('destinyFrequencies').textContent = destinyMeaning.frequencies;
             
-            // Generate synchronicity map
             generateSynchronicityMap(coreNumber, lifePathNumber, destinyNumber);
+            generateQuantumInterpretation(coreNumber, lifePathNumber, destinyNumber);
             
-            // Generate quantum interpretation
-            generateQuantumInterpretation(coreNumber, lifePathNumber, destinyNumber, name);
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
         }
 
         function generateSynchronicityMap(coreNumber, lifePathNumber, destinyNumber) {
             const mapContainer = document.getElementById('synchronicityMap');
             mapContainer.innerHTML = '';
             
-            const synchronicityNumbers = [
+            const syncNumbers = [
                 { value: coreNumber, label: 'Core' },
                 { value: lifePathNumber, label: 'Life Path' },
                 { value: destinyNumber, label: 'Destiny' },
@@ -718,112 +761,76 @@
                 { value: (lifePathNumber + destinyNumber) % 9 || 9, label: 'Growth' }
             ];
             
-            synchronicityNumbers.forEach(num => {
+            syncNumbers.forEach(num => {
                 const div = document.createElement('div');
                 div.className = 'sync-number';
-                div.innerHTML = `
-                    <div class="sync-value">${num.value}</div>
-                    <div class="sync-label">${num.label}</div>
-                `;
+                div.innerHTML = `<div class="sync-value">${num.value}</div><div class="sync-label">${num.label}</div>`;
                 mapContainer.appendChild(div);
             });
         }
 
-        function generateQuantumInterpretation(coreNumber, lifePathNumber, destinyNumber, name) {
+        function generateQuantumInterpretation(coreNumber, lifePathNumber, destinyNumber) {
             const interpretations = {
-                1: "Your quantum signature aligns with initiation and leadership. You emit frequencies of new beginnings and pioneering energy.",
-                2: "Your quantum signature resonates with cooperation and balance. You naturally create harmonic fields and attract partnerships.",
-                3: "Your quantum signature vibrates with creative expression. You channel joy and inspiration through your energetic field.",
-                4: "Your quantum signature grounds stability and order. You create energetic foundations that support collective manifestation.",
-                5: "Your quantum signature pulses with freedom and adventure. You naturally shift energies and create new possibilities.",
-                6: "Your quantum signature radiates nurturing and healing. You create loving energetic environments and support growth.",
-                7: "Your quantum signature attunes to spiritual wisdom. You access higher dimensional information and guide others.",
-                8: "Your quantum signature amplifies abundance and power. You manifest resources and empower collective success.",
-                9: "Your quantum signature embodies universal love and completion. You transmute energies and bring healing to the whole."
+                1: "Your quantum signature aligns with initiation and leadership.",
+                2: "Your quantum signature resonates with cooperation and balance.",
+                3: "Your quantum signature vibrates with creative expression.",
+                4: "Your quantum signature grounds stability and order.",
+                5: "Your quantum signature pulses with freedom and adventure.",
+                6: "Your quantum signature radiates nurturing and healing.",
+                7: "Your quantum signature attunes to spiritual wisdom.",
+                8: "Your quantum signature amplifies abundance and power.",
+                9: "Your quantum signature embodies universal love."
             };
             
             const primaryInfluence = Math.max(coreNumber, lifePathNumber, destinyNumber);
-            const quantumInterpretation = interpretations[primaryInfluence] + ` Your numerical pattern creates a unique quantum field that attracts corresponding synchronicities and opportunities. The combination of ${coreNumber}-${lifePathNumber}-${destinyNumber} forms a specific vibrational signature that resonates with your soul's purpose.`;
+            document.getElementById('quantumInterpretation').textContent = interpretations[primaryInfluence] + ` Your pattern ${coreNumber}-${lifePathNumber}-${destinyNumber} forms a unique vibrational signature that resonates with your soul's purpose.`;
             
-            document.getElementById('quantumInterpretation').textContent = quantumInterpretation;
-            
-            // Master frequency based on primary influence
             const masterFrequencies = {
                 1: "174 Hz - Grounding and Foundation",
-                2: "285 Hz - Tissue Healing and Structure",
-                3: "396 Hz - Liberating Guilt and Fear",
-                4: "417 Hz - Undoing Negative Patterns",
-                5: "528 Hz - DNA Repair and Transformation",
+                2: "285 Hz - Tissue Healing",
+                3: "396 Hz - Liberating Fear",
+                4: "417 Hz - Undoing Patterns",
+                5: "528 Hz - DNA Transformation",
                 6: "639 Hz - Harmonizing Relationships",
                 7: "741 Hz - Awakening Intuition",
                 8: "852 Hz - Spiritual Order",
-                9: "963 Hz - Divine Connection and Oneness"
+                9: "963 Hz - Divine Connection"
             };
             
             document.getElementById('quantumFrequencies').textContent = masterFrequencies[primaryInfluence];
         }
 
-        function saveToFrequencies(type, number, frequencies) {
-            // Save to localStorage for the Jukebox
+        function saveToJukebox(type, number, frequencies, btn) {
             const savedItems = JSON.parse(localStorage.getItem('qm_library') || '[]');
             
-            const newItem = {
+            savedItems.push({
                 id: Date.now(),
                 type: 'frequency',
                 name: `Gematria ${type}: ${number}`,
                 description: frequencies,
-                data: {
-                    frequency: frequencies.split(' - ')[0] || frequencies,
-                    type: 'gematria',
-                    gematriaType: type,
-                    gematriaNumber: number
-                },
+                data: { frequency: frequencies.split(' - ')[0], type: 'gematria', gematriaType: type, gematriaNumber: number },
                 savedAt: new Date().toISOString()
-            };
+            });
             
-            savedItems.push(newItem);
             localStorage.setItem('qm_library', JSON.stringify(savedItems));
             
-            // Show confirmation
-            const btn = event.target;
-            const originalText = btn.textContent;
-            btn.textContent = '✓ Saved to Jukebox';
-            btn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+            btn.textContent = '✓ Saved!';
+            btn.classList.add('saved');
+            QRC_ANALYTICS.trackFeature('Gematria', 'save_frequency');
             
             setTimeout(() => {
-                btn.textContent = originalText;
-                btn.style.background = '';
+                btn.textContent = 'Save to Jukebox';
+                btn.classList.remove('saved');
             }, 2000);
         }
 
-        // Initialize with today's date for significant date placeholder
-        document.getElementById('significantDate').valueAsDate = new Date();
-
-        // Email Form Handler
-        document.getElementById('emailForm')?.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const email = document.getElementById('emailInput').value;
-            const form = this;
-            const submitBtn = form.querySelector('button[type="submit"]');
-            submitBtn.innerHTML = 'Joining...';
-            submitBtn.disabled = true;
-            try {
-                const response = await fetch('https://formspree.io/f/mgowrolb', {
-                    method: 'POST',
-                    body: new FormData(form),
-                    headers: { 'Accept': 'application/json' }
-                });
-                if (response.ok) {
-                    localStorage.setItem('qm_subscribed', 'true');
-                    form.innerHTML = '<div style="color: #ffd700; font-size: 1.2rem; padding: 15px;">✅ Thanks for subscribing!</div>';
-                } else { throw new Error('Failed'); }
-            } catch (error) {
-                submitBtn.innerHTML = 'Subscribe ✨';
-                submitBtn.disabled = false;
-            }
-        });
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.style.cssText = `position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); padding: 12px 24px; background: ${type === 'error' ? 'var(--neon-red)' : 'var(--neon-cyan)'}; color: var(--bg-darker); border-radius: 50px; font-family: var(--font-display); font-size: 14px; font-weight: 600; z-index: 9999;`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2500);
+        }
     </script>
-    </div><!-- End app-content -->
-    <script src="../shared/js/quantum-intro-animation.js"></script>
 </body>
 </html>

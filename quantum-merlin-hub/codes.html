@@ -6,698 +6,1030 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Reality Codes - Goal Amplification | Quantum Merlin</title>
-    <meta name="description" content="Generate powerful quantum reality codes to amplify your goals and transform your consciousness.">
-    <meta name="keywords" content="reality codes, goal amplification, quantum codes, consciousness transformation, quantum merlin">
-    
+    <title>Reality Codes - Generate Manifestation Codes | Quantum Reality Codes</title>
+    <meta name="description" content="Generate powerful quantum reality codes to amplify your goals and transform your consciousness. Free tool for manifestation and goal setting.">
+    <meta name="keywords" content="reality codes, manifestation codes, quantum codes, goal amplification, consciousness transformation, numerology, quantum merlin">
+
     <!-- Favicon -->
-    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
-    
-    <!-- Quantum Intro Animation -->
-    <link rel="stylesheet" href="../shared/css/quantum-intro.css">
-    
+    <link rel="icon" href="/shared/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/shared/images/apple-touch-icon.png">
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Quantum Reality Codes - Goal Amplification">
+    <meta property="og:title" content="Reality Codes - Generate Manifestation Codes">
     <meta property="og:description" content="Generate powerful quantum reality codes to amplify your goals.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://codes.quantummerlin.com">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-VW4LGE7L1T');
-    </script>
-    
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Reality Codes Generator">
+    <meta name="twitter:description" content="Generate quantum reality codes for manifestation">
+
+    <!-- PWA -->
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Quantum Core CSS -->
+    <link rel="stylesheet" href="../shared/css/quantum-core.css">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #000014 100%);
-            min-height: 100vh;
-            color: #ffffff;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Quantum Grid Background */
-        .quantum-grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: gridMove 20s linear infinite;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-
-        /* Quantum Sun */
-        .quantum-sun {
-            position: fixed;
-            top: 10%;
-            right: 10%;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, rgba(255, 165, 0, 0.1) 40%, transparent 70%);
-            border-radius: 50%;
-            filter: blur(40px);
-            animation: pulse 4s ease-in-out infinite;
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.6; }
-            50% { transform: scale(1.2); opacity: 0.8; }
-        }
-
-        /* Navigation Menu */
-        .nav-menu {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-
-        .nav-toggle {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.8), rgba(75, 0, 130, 0.8));
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-toggle:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5);
-        }
-
-        .nav-dropdown {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            margin-top: 10px;
-            background: linear-gradient(135deg, rgba(25, 0, 51, 0.95), rgba(10, 0, 25, 0.95));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 15px;
-            min-width: 200px;
-            display: none;
-            backdrop-filter: blur(20px);
-        }
-
-        .nav-dropdown.active {
-            display: block;
-            animation: slideDown 0.3s ease;
-        }
-
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .nav-dropdown a {
-            display: block;
-            color: #fff;
-            text-decoration: none;
-            padding: 12px 20px;
-            transition: all 0.3s ease;
-            border-radius: 10px;
-            margin: 5px;
-        }
-
-        .nav-dropdown a:hover {
-            background: rgba(138, 43, 226, 0.3);
-            transform: translateX(5px);
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            position: relative;
-            z-index: 10;
-        }
-
-        /* Header */
-        .header {
+        /* Page-Specific Styles */
+        .codes-hero {
             text-align: center;
-            margin-bottom: 50px;
+            padding: var(--space-16) 0 var(--space-8);
         }
 
-        .title {
-            font-size: 3em;
-            background: linear-gradient(135deg, #ffd700, #ff6b6b, #4ecdc4);
+        .codes-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            background: var(--glass-bg);
+            border: 1px solid var(--neon-gold);
+            border-radius: var(--radius-full);
+            padding: var(--space-2) var(--space-4);
+            font-family: var(--font-display);
+            font-size: var(--text-xs);
+            color: var(--neon-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-4);
+            animation: goldPulse 3s ease-in-out infinite;
+        }
+
+        .codes-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            margin-bottom: var(--space-4);
+            background: var(--gradient-gold);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            background-clip: text;
+            text-shadow: var(--glow-gold);
         }
 
-        .subtitle {
-            color: #b8b8b8;
-            font-size: 1.2em;
+        .codes-hero p {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        /* Code Generator Section */
-        .code-generator {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            backdrop-filter: blur(10px);
+        /* Generator Card */
+        .generator-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-8);
+            backdrop-filter: blur(20px);
+            margin-bottom: var(--space-8);
+            position: relative;
+            overflow: hidden;
         }
 
-        .input-group {
-            margin-bottom: 25px;
+        .generator-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-gold);
         }
 
-        .input-group label {
-            display: block;
-            margin-bottom: 10px;
-            color: #ffd700;
-            font-weight: 500;
-            font-size: 1.1em;
+        .generator-title {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            font-family: var(--font-display);
+            font-size: var(--text-xl);
+            color: var(--neon-gold);
+            margin-bottom: var(--space-6);
         }
 
-        .input-group textarea {
+        .generator-title span {
+            font-size: var(--text-2xl);
+        }
+
+        .goal-input {
             width: 100%;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 10px;
-            color: #fff;
-            font-size: 16px;
+            min-height: 120px;
+            padding: var(--space-4);
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: var(--text-base);
             resize: vertical;
-            min-height: 100px;
-            transition: all 0.3s ease;
+            transition: all var(--transition-normal);
         }
 
-        .input-group textarea:focus {
+        .goal-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .goal-input:focus {
             outline: none;
-            border-color: #ffd700;
-            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+        }
+
+        .goal-label {
+            display: block;
+            margin-bottom: var(--space-2);
+            font-family: var(--font-display);
+            font-size: var(--text-sm);
+            color: var(--neon-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .generate-btn {
-            background: linear-gradient(135deg, #ffd700, #ff6b6b);
-            border: none;
-            padding: 15px 40px;
-            border-radius: 25px;
-            color: #000;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
             width: 100%;
+            margin-top: var(--space-6);
+            padding: var(--space-4) var(--space-6);
+            background: var(--gradient-gold);
+            border: none;
+            border-radius: var(--radius-full);
+            color: var(--bg-darker);
+            font-family: var(--font-display);
+            font-size: var(--text-lg);
+            font-weight: 700;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-3);
         }
 
         .generate-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+            box-shadow: var(--shadow-gold-lg);
+        }
+
+        .generate-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .generate-btn .icon {
+            font-size: var(--text-xl);
+            animation: pulse 2s ease-in-out infinite;
         }
 
         /* Code Display */
-        .code-display {
+        .code-result {
             display: none;
-            margin-top: 30px;
+            animation: fadeInUp 0.6s ease-out;
         }
 
-        .code-display.active {
+        .code-result.active {
             display: block;
-            animation: fadeIn 0.5s ease;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .reality-code {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 30px;
-            backdrop-filter: blur(10px);
-            margin-bottom: 30px;
+        .code-display-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--neon-cyan);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-8);
             text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: var(--space-8);
         }
 
-        .code-title {
-            font-size: 2em;
-            color: #ffd700;
-            margin-bottom: 20px;
+        .code-display-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(0, 245, 255, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .code-result-title {
+            font-family: var(--font-display);
+            font-size: var(--text-xl);
+            color: var(--neon-cyan);
+            margin-bottom: var(--space-6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
         }
 
         .code-pattern {
-            font-size: 3em;
-            font-weight: bold;
             font-family: 'Courier New', monospace;
-            background: linear-gradient(135deg, #4ecdc4, #44a08d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 20px 0;
-            letter-spacing: 5px;
-            text-shadow: 0 0 20px rgba(78, 205, 196, 0.5);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: bold;
+            letter-spacing: 0.15em;
+            color: var(--neon-gold);
+            text-shadow: var(--glow-gold);
+            margin: var(--space-6) 0;
+            padding: var(--space-4);
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: var(--radius-lg);
+            animation: goldPulse 3s ease-in-out infinite;
         }
 
         .code-meaning {
-            color: #e0e0e0;
-            line-height: 1.6;
-            font-size: 1.1em;
-            margin-bottom: 20px;
+            color: var(--text-secondary);
+            font-size: var(--text-base);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto var(--space-6);
         }
 
-        .code-numerology {
-            background: rgba(255, 215, 0, 0.1);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 15px;
-            padding: 20px;
-            margin-top: 20px;
+        .code-actions {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .code-numerology h4 {
-            color: #ffd700;
-            margin-bottom: 10px;
+        .code-action-btn {
+            padding: var(--space-3) var(--space-6);
+            border-radius: var(--radius-full);
+            font-family: var(--font-display);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .code-action-btn.primary {
+            background: var(--gradient-cyan);
+            border: none;
+            color: var(--bg-darker);
+        }
+
+        .code-action-btn.secondary {
+            background: transparent;
+            border: 1px solid var(--neon-magenta);
+            color: var(--neon-magenta);
+        }
+
+        .code-action-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Numerology Grid */
+        .numerology-section {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            margin-top: var(--space-6);
+        }
+
+        .numerology-title {
+            font-family: var(--font-display);
+            font-size: var(--text-lg);
+            color: var(--neon-gold);
+            margin-bottom: var(--space-4);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
         }
 
         .numerology-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: var(--space-4);
         }
 
         .numerology-item {
-            background: rgba(138, 43, 226, 0.2);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 10px;
-            padding: 15px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
             text-align: center;
+            transition: all var(--transition-normal);
+        }
+
+        .numerology-item:hover {
+            border-color: var(--neon-cyan);
+            transform: translateY(-2px);
         }
 
         .numerology-value {
-            font-size: 2em;
-            font-weight: bold;
-            color: #ffd700;
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            color: var(--neon-cyan);
+            text-shadow: var(--glow-cyan);
         }
 
         .numerology-label {
-            color: #b8b8b8;
-            font-size: 0.9em;
-            margin-top: 5px;
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: var(--space-2);
         }
 
-        /* Amplification Instructions */
+        /* Amplification Section */
         .amplification-section {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 30px;
-            backdrop-filter: blur(10px);
-            margin-bottom: 30px;
+            display: none;
+            margin-bottom: var(--space-8);
+        }
+
+        .amplification-section.active {
+            display: block;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+
+        .section-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-8);
+            backdrop-filter: blur(20px);
         }
 
         .section-title {
-            font-size: 1.8em;
-            color: #ffd700;
-            margin-bottom: 20px;
+            font-family: var(--font-display);
+            font-size: var(--text-2xl);
+            color: var(--neon-magenta);
+            margin-bottom: var(--space-6);
             text-align: center;
-        }
-
-        .instruction-steps {
-            margin-top: 20px;
-        }
-
-        .step {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-            background: rgba(255, 215, 0, 0.05);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 15px;
-            padding: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .step:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
-        }
-
-        .step-number {
-            background: linear-gradient(135deg, #ffd700, #ff6b6b);
-            color: #000;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            margin-right: 15px;
+            gap: var(--space-3);
+        }
+
+        .steps-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-4);
+            padding: var(--space-4);
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-normal);
+        }
+
+        .step-item:hover {
+            border-color: var(--neon-magenta);
+            transform: translateX(5px);
+        }
+
+        .step-number {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient-magenta);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 700;
+            color: var(--text-primary);
             flex-shrink: 0;
         }
 
         .step-content {
-            color: #e0e0e0;
-            line-height: 1.5;
+            flex: 1;
         }
 
-        /* Frequency Alignment */
+        .step-content strong {
+            color: var(--neon-magenta);
+            font-family: var(--font-display);
+        }
+
+        .step-content p {
+            color: var(--text-secondary);
+            margin-top: var(--space-1);
+            line-height: 1.6;
+        }
+
+        /* Frequency Section */
         .frequency-section {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 30px;
-            backdrop-filter: blur(10px);
-            margin-bottom: 30px;
+            display: none;
+            margin-bottom: var(--space-8);
+        }
+
+        .frequency-section.active {
+            display: block;
+            animation: fadeInUp 0.6s ease-out 0.4s both;
         }
 
         .frequency-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-4);
+            margin-top: var(--space-6);
         }
 
         .frequency-card {
-            background: rgba(255, 215, 0, 0.1);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 15px;
-            padding: 20px;
-            transition: all 0.3s ease;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-5);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .frequency-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-purple);
         }
 
         .frequency-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            border-color: var(--neon-purple);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(157, 0, 255, 0.2);
         }
 
-        .frequency-card h4 {
-            color: #ffd700;
-            margin-bottom: 10px;
+        .frequency-card-title {
+            font-family: var(--font-display);
+            font-size: var(--text-base);
+            color: var(--neon-purple);
+            margin-bottom: var(--space-2);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
         }
 
         .frequency-card p {
-            color: #e0e0e0;
-            line-height: 1.5;
-            margin-bottom: 15px;
+            color: var(--text-secondary);
+            font-size: var(--text-sm);
+            line-height: 1.6;
+            margin-bottom: var(--space-4);
         }
 
-        .save-btn {
-            background: linear-gradient(135deg, #4ecdc4, #44a08d);
-            border: none;
-            padding: 8px 16px;
-            border-radius: 15px;
-            color: #fff;
-            font-size: 12px;
+        .save-freq-btn {
+            padding: var(--space-2) var(--space-4);
+            background: transparent;
+            border: 1px solid var(--neon-purple);
+            border-radius: var(--radius-full);
+            color: var(--neon-purple);
+            font-family: var(--font-display);
+            font-size: var(--text-xs);
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all var(--transition-fast);
         }
 
-        .save-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+        .save-freq-btn:hover {
+            background: var(--neon-purple);
+            color: var(--bg-darker);
+        }
+
+        .save-freq-btn.saved {
+            background: var(--neon-green);
+            border-color: var(--neon-green);
+            color: var(--bg-darker);
         }
 
         /* Saved Codes Section */
-        .saved-codes {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 30px;
-            backdrop-filter: blur(10px);
+        .saved-codes-section {
+            margin-bottom: var(--space-8);
         }
 
-        .codes-list {
+        .saved-codes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            gap: var(--space-4);
+            margin-top: var(--space-6);
         }
 
-        .saved-code-item {
-            background: rgba(255, 215, 0, 0.05);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 15px;
-            padding: 20px;
-            transition: all 0.3s ease;
+        .saved-code-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-5);
+            transition: all var(--transition-normal);
         }
 
-        .saved-code-item:hover {
+        .saved-code-card:hover {
+            border-color: var(--neon-gold);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
         }
 
         .saved-code-pattern {
-            font-size: 1.5em;
+            font-family: 'Courier New', monospace;
+            font-size: var(--text-xl);
             font-weight: bold;
-            color: #4ecdc4;
-            margin-bottom: 10px;
+            color: var(--neon-cyan);
+            text-shadow: var(--glow-cyan);
+            margin-bottom: var(--space-2);
         }
 
         .saved-code-goal {
-            color: #e0e0e0;
-            margin-bottom: 10px;
+            color: var(--text-secondary);
+            font-size: var(--text-sm);
+            line-height: 1.5;
+            margin-bottom: var(--space-2);
         }
 
         .saved-code-date {
-            color: #b8b8b8;
-            font-size: 0.9em;
+            color: var(--text-muted);
+            font-size: var(--text-xs);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
         }
 
-        /* Responsive Design */
+        .empty-state {
+            text-align: center;
+            padding: var(--space-8);
+            color: var(--text-muted);
+        }
+
+        .empty-state-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-4);
+            opacity: 0.5;
+        }
+
+        /* AdSense Placeholder */
+        .ad-container {
+            background: var(--glass-bg);
+            border: 1px dashed var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+            margin: var(--space-6) 0;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .title {
-                font-size: 2em;
+            .codes-hero {
+                padding: var(--space-12) 0 var(--space-6);
+            }
+
+            .generator-card,
+            .section-card {
+                padding: var(--space-5);
+            }
+
+            .code-pattern {
+                font-size: 1.5rem;
+                letter-spacing: 0.08em;
+            }
+
+            .code-actions {
+                flex-direction: column;
+            }
+
+            .code-action-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .step-item {
+                flex-direction: column;
+                gap: var(--space-3);
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .codes-hero h1 {
+                font-size: 1.8rem;
             }
             
-            .container {
-                padding: 20px 15px;
+            .codes-hero p {
+                font-size: 0.95rem;
+                padding: 0 10px;
+            }
+            
+            .generator-card,
+            .section-card {
+                padding: var(--space-4);
+                margin: 0 -5px;
+                border-radius: var(--radius-lg);
             }
             
             .code-pattern {
-                font-size: 2em;
+                font-size: 1.2rem;
+                letter-spacing: 0.05em;
             }
             
-            .frequency-grid, .codes-list {
-                grid-template-columns: 1fr;
+            .generate-btn,
+            .code-action-btn {
+                padding: var(--space-3) var(--space-4);
+                font-size: 0.9rem;
             }
         }
-
-        /* Email Capture */
-        .email-capture { background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(0, 245, 255, 0.1) 100%); border: 2px solid #ffd700; border-radius: 20px; padding: 35px; margin: 40px 0; text-align: center; }
-        .email-capture h3 { font-family: 'Orbitron', monospace; color: #ffd700; margin-bottom: 10px; font-size: 1.4rem; }
-        .email-capture .subtitle { color: rgba(255, 255, 255, 0.7); margin-bottom: 25px; font-size: 1.1rem; }
-        .email-form { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; max-width: 500px; margin: 0 auto; }
-        .email-form input[type="email"] { flex: 1; min-width: 250px; padding: 15px 20px; border: 2px solid rgba(0, 245, 255, 0.3); border-radius: 25px; background: rgba(0, 0, 0, 0.5); color: white; font-size: 1rem; }
-        .email-form input[type="email"]:focus { outline: none; border-color: #00f5ff; }
-        .email-form button { padding: 15px 30px; background: linear-gradient(135deg, #ffd700, #ff9500); border: none; border-radius: 25px; color: #000; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; }
-        .email-form button:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 215, 0, 0.5); }
-        .email-benefits { display: flex; justify-content: center; gap: 30px; margin-top: 20px; flex-wrap: wrap; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; }
     </style>
-<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-    <!-- Quantum Intro Animation -->
-    <div id="intro-container">
-        <canvas id="lines-canvas"></canvas>
-        <div class="emoji-layer">
-            <div class="intro-emoji" data-symbol="⚛️"></div>
-            <div class="intro-emoji" data-symbol="🧙‍♂️"></div>
-            <div class="intro-emoji" data-symbol="🌹"></div>
-        </div>
-        <div id="singularity"></div>
-        <div id="intro-title">Quantum Merlin</div>
-    </div>
-    
-    <div id="app-content">
-    <div class="quantum-grid"></div>
-    <div class="quantum-sun"></div>
-    
-    <!-- Navigation Menu -->
-    <div class="nav-menu">
-        <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
-        <div class="nav-dropdown" id="navDropdown">
-            <a href="https://quantummerlin.com">🏠 Home</a>
-            <a href="https://frequency.quantummerlin.com">🎵 Frequency Generator</a>
-            <a href="https://jukebox.quantummerlin.com">📚 Quantum Jukebox</a>
-            <a href="https://gematria.quantummerlin.com">🔢 Quantum Gematria</a>
-            <a href="https://tarot.quantummerlin.com">🃏 Quantum Tarot</a>
-            <a href="https://sigils.quantummerlin.com">✨ Sigil Creator</a>
-            <a href="https://astrology.quantummerlin.com">⭐ Western Astrology</a>
-            <a href="https://chinese.quantummerlin.com">🐲 Chinese Zodiac</a>
-            <a href="/forecasts">🔮 Zodiac Forecasts</a>
-            <a href="/compatibility.html">💫 Compatibility</a>
-            <a href="https://codes.quantummerlin.com">💫 Reality Codes</a>
-            <a href="https://crystals.quantummerlin.com">💎 Quantum Crystals</a>
-            <a href="https://water.quantummerlin.com">💧 Water Charging</a>
-        </div>
+    <!-- Quantum Background -->
+    <div class="quantum-bg">
+        <div class="quantum-grid"></div>
+        <div class="grid-floor"></div>
+        <div class="quantum-sun"></div>
+        <div class="horizon-glow"></div>
+        <div class="glow-orb glow-orb-tr cyan"></div>
+        <div class="glow-orb glow-orb-bl magenta"></div>
     </div>
 
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1 class="title">Quantum Reality Codes</h1>
-            <p class="subtitle">Amplify your goals with quantum number patterns</p>
-        </div>
-
-        <!-- Code Generator Section -->
-        <div class="code-generator">
-            <h3 style="color: #ffd700; margin-bottom: 20px;">🎯 Generate Your Reality Code</h3>
+    <!-- Header -->
+    <header class="qrc-header">
+        <div class="qrc-header-inner">
+            <a href="/" class="qrc-logo">
+                <div class="qrc-logo-icon">🔮</div>
+                <div class="qrc-logo-text">
+                    Quantum Reality Codes
+                    <span>Sacred Mathematics</span>
+                </div>
+            </a>
             
-            <div class="input-group">
-                <label for="goalInput">Your Goal or Intention</label>
-                <textarea id="goalInput" placeholder="What do you want to manifest? Be specific and positive... (e.g., I am financially abundant and successful in my career)">I am financially abundant and successful in my career</textarea>
+            <div class="qrc-nav-actions">
+                <a href="#" class="qrc-support-btn" onclick="QRC_DONATIONS.openBuyMeACoffee(); return false;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/>
+                    </svg>
+                    <span>Support</span>
+                </a>
+                
+                <div class="nav-menu">
+                    <button class="qrc-nav-toggle">
+                        <div class="qrc-nav-toggle-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                    
+                    <nav class="qrc-nav-dropdown">
+                        <div class="qrc-nav-section">
+                            <div class="qrc-nav-section-title">Core Tools</div>
+                            <a href="/quantum-merlin-hub/codes.html" class="qrc-nav-link active">
+                                <span class="qrc-nav-link-icon">✨</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Reality Codes</span>
+                                    <span class="qrc-nav-link-desc">Generate manifestation codes</span>
+                                </span>
+                            </a>
+                            <a href="/genesis/index-enhanced.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">🎵</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Frequency Generator</span>
+                                    <span class="qrc-nav-link-desc">674 healing frequencies</span>
+                                </span>
+                            </a>
+                        </div>
+                        
+                        <div class="qrc-nav-divider"></div>
+                        
+                        <div class="qrc-nav-section">
+                            <div class="qrc-nav-section-title">Divination</div>
+                            <a href="/quantum-merlin-hub/tarot.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">🃏</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Quantum Tarot</span>
+                                </span>
+                            </a>
+                            <a href="/quantum-merlin-hub/gematria.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">🔢</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Gematria</span>
+                                </span>
+                            </a>
+                            <a href="/quantum-merlin-hub/astrology.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">⭐</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Astrology</span>
+                                </span>
+                            </a>
+                            <a href="/quantum-merlin-hub/sigils.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">🔯</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Sigil Creator</span>
+                                </span>
+                            </a>
+                        </div>
+                        
+                        <div class="qrc-nav-divider"></div>
+                        
+                        <div class="qrc-nav-section">
+                            <div class="qrc-nav-section-title">More Tools</div>
+                            <a href="/quantum-merlin-hub/chinese.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">🐉</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Chinese Zodiac</span>
+                                </span>
+                            </a>
+                            <a href="/quantum-merlin-hub/crystals.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">💎</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Crystal Guide</span>
+                                </span>
+                            </a>
+                            <a href="/quantum-merlin-hub/water.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">💧</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Water Charging</span>
+                                </span>
+                            </a>
+                            <a href="/angel-number-calculator.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">👼</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Angel Numbers</span>
+                                </span>
+                            </a>
+                        </div>
+                        
+                        <div class="qrc-nav-divider"></div>
+                        
+                        <div class="qrc-nav-section">
+                            <a href="/quantum-merlin-hub/jukebox.html" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">📚</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">My Jukebox</span>
+                                    <span class="qrc-nav-link-desc">Your saved items</span>
+                                </span>
+                            </a>
+                            <a href="/" class="qrc-nav-link">
+                                <span class="qrc-nav-link-icon">🏠</span>
+                                <span class="qrc-nav-link-text">
+                                    <span class="qrc-nav-link-title">Home</span>
+                                </span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-wrapper">
+        <div class="container">
+            <!-- Hero -->
+            <div class="codes-hero scroll-reveal">
+                <div class="codes-hero-badge">
+                    <span>✨</span>
+                    <span>Core Manifestation Tool</span>
+                </div>
+                <h1>Reality Codes</h1>
+                <p>Transform your intentions into quantum number patterns that amplify manifestation through sacred mathematics</p>
+            </div>
+
+            <!-- Generator Card -->
+            <div class="generator-card scroll-reveal">
+                <div class="generator-title">
+                    <span>🎯</span>
+                    Generate Your Reality Code
+                </div>
+                
+                <label for="goalInput" class="goal-label">Your Goal or Intention</label>
+                <textarea 
+                    id="goalInput" 
+                    class="goal-input" 
+                    placeholder="What do you want to manifest? Be specific and positive...&#10;&#10;Example: I am financially abundant and successful in my career"
+                >I am financially abundant and successful in my career</textarea>
+                
+                <button class="generate-btn" onclick="generateRealityCode()">
+                    <span class="icon">🚀</span>
+                    Generate Quantum Reality Code
+                </button>
+            </div>
+
+            <!-- AdSense Placeholder -->
+            <div class="ad-container scroll-reveal">
+                <p>[ Ad Space - Google AdSense ]</p>
+            </div>
+
+            <!-- Code Result -->
+            <div class="code-result" id="codeDisplay">
+                <div class="code-display-card">
+                    <div class="code-result-title">
+                        <span>✨</span>
+                        Your Quantum Reality Code
+                    </div>
+                    
+                    <div class="code-pattern" id="codePattern">---</div>
+                    
+                    <div class="code-meaning" id="codeMeaning">
+                        Your personalized code will appear here...
+                    </div>
+                    
+                    <div class="code-actions">
+                        <button class="code-action-btn primary" onclick="copyCode()">
+                            <span>📋</span> Copy Code
+                        </button>
+                        <button class="code-action-btn secondary" onclick="shareCode()">
+                            <span>🔗</span> Share
+                        </button>
+                    </div>
+                    
+                    <!-- Numerology Section -->
+                    <div class="numerology-section">
+                        <div class="numerology-title">
+                            <span>🔢</span>
+                            Numerological Analysis
+                        </div>
+                        <div class="numerology-grid" id="numerologyGrid">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Amplification Instructions -->
+            <div class="amplification-section section-card" id="amplificationSection">
+                <h3 class="section-title">
+                    <span>🔊</span>
+                    Amplification Instructions
+                </h3>
+                
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Write Down Your Code</strong>
+                            <p>Keep your quantum reality code visible where you'll see it daily - on your mirror, desk, or phone wallpaper.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Daily Meditation</strong>
+                            <p>Spend 5-10 minutes daily focusing on your code while visualizing your goal as already achieved.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Frequency Amplification</strong>
+                            <p>Listen to your aligned frequencies while working with your code to enhance the quantum field.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <strong>Embody the Feeling</strong>
+                            <p>Feel the emotions of having already achieved your goal while focusing on your code.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <strong>Take Inspired Action</strong>
+                            <p>Follow intuitive nudges and opportunities that arise while working with your code.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frequency Section -->
+            <div class="frequency-section section-card" id="frequencySection">
+                <h3 class="section-title">
+                    <span>🎵</span>
+                    Aligned Frequencies
+                </h3>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: var(--space-4);">
+                    Listen to these frequencies while focusing on your reality code
+                </p>
+                <div class="frequency-grid" id="frequencyGrid">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+
+            <!-- Saved Codes Section -->
+            <div class="saved-codes-section section-card scroll-reveal">
+                <h3 class="section-title">
+                    <span>📚</span>
+                    Your Reality Codes
+                </h3>
+                <div class="saved-codes-grid" id="savedCodesList">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+
+            <!-- AdSense Placeholder -->
+            <div class="ad-container">
+                <p>[ Ad Space - Google AdSense ]</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="qrc-footer">
+        <div class="qrc-footer-inner">
+            <div class="qrc-footer-grid">
+                <div class="qrc-footer-brand">
+                    <a href="/" class="qrc-logo">
+                        <div class="qrc-logo-icon">🔮</div>
+                        <div class="qrc-logo-text">Quantum Reality Codes</div>
+                    </a>
+                    <p class="qrc-footer-tagline">
+                        Transform your intentions into reality through sacred mathematics. 
+                        Free tools for the quantum-curious.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="qrc-footer-title">Tools</h4>
+                    <ul class="qrc-footer-links">
+                        <li><a href="/quantum-merlin-hub/codes.html">Reality Codes</a></li>
+                        <li><a href="/genesis/index-enhanced.html">Frequencies</a></li>
+                        <li><a href="/quantum-merlin-hub/tarot.html">Tarot</a></li>
+                        <li><a href="/quantum-merlin-hub/gematria.html">Gematria</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="qrc-footer-title">Explore</h4>
+                    <ul class="qrc-footer-links">
+                        <li><a href="/quantum-merlin-hub/astrology.html">Astrology</a></li>
+                        <li><a href="/quantum-merlin-hub/sigils.html">Sigils</a></li>
+                        <li><a href="/quantum-merlin-hub/crystals.html">Crystals</a></li>
+                        <li><a href="/quantum-forum.html">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="qrc-footer-title">Support</h4>
+                    <ul class="qrc-footer-links">
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="#" onclick="QRC_DONATIONS.openBuyMeACoffee(); return false;">Buy Me a Coffee</a></li>
+                        <li><a href="#" onclick="QRC_EMAIL.showSignupModal(); return false;">Newsletter</a></li>
+                    </ul>
+                </div>
             </div>
             
-            <button class="generate-btn" onclick="generateRealityCode()">🚀 Generate Quantum Reality Code</button>
-        </div>
-
-        <!-- Code Display -->
-        <div class="code-display" id="codeDisplay">
-            <div class="reality-code">
-                <h2 class="code-title">Your Quantum Reality Code</h2>
-                <div class="code-pattern" id="codePattern">-</div>
-                <div class="code-meaning" id="codeMeaning">-</div>
-                
-                <div class="code-numerology">
-                    <h4>🔢 Numerological Analysis</h4>
-                    <div class="numerology-grid" id="numerologyGrid">
-                        <!-- Numerology items will be added here -->
-                    </div>
+            <div class="qrc-footer-bottom">
+                <p class="qrc-footer-copyright">
+                    © 2025 Quantum Reality Codes. All tools free forever.
+                </p>
+                <div class="qrc-footer-legal">
+                    <a href="/genesis/disclaimer.html">Disclaimer</a>
+                    <a href="/genesis/terms.html">Terms</a>
+                    <a href="/genesis/privacy.html">Privacy</a>
                 </div>
             </div>
         </div>
+    </footer>
 
-        <!-- Amplification Instructions -->
-        <div class="amplification-section" id="amplificationSection" style="display: none;">
-            <h3 class="section-title">🔊 Amplification Instructions</h3>
-            
-            <div class="instruction-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <strong>Write Down Your Code:</strong> Keep your quantum reality code visible where you'll see it daily - on your mirror, desk, or phone wallpaper.
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <strong>Daily Meditation:</strong> Spend 5-10 minutes daily focusing on your code while visualizing your goal as already achieved.
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <strong>Frequency Amplification:</strong> Listen to your aligned frequencies while working with your code to enhance the quantum field.
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <strong>Embody the Feeling:</strong> Feel the emotions of having already achieved your goal while focusing on your code.
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <div class="step-content">
-                        <strong>Take Inspired Action:</strong> Follow intuitive nudges and opportunities that arise while working with your code.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Frequency Alignment -->
-        <div class="frequency-section" id="frequencySection" style="display: none;">
-            <h3 class="section-title">🎵 Aligned Frequencies</h3>
-            <div class="frequency-grid" id="frequencyGrid">
-                <!-- Frequency cards will be dynamically added here -->
-            </div>
-        </div>
-
-        <!-- Saved Codes -->
-        <div class="saved-codes">
-            <h3 class="section-title">📚 Your Reality Codes</h3>
-            <div class="codes-list" id="savedCodesList">
-                <!-- Saved codes will be displayed here -->
-            </div>
-        </div>
-
-        <!-- Email Capture Section -->
-        <div class="email-capture" id="emailCapture">
-            <h3>🔔 Stay Connected</h3>
-            <p class="subtitle">Get updates on new tools and cosmic insights</p>
-            <form class="email-form" id="emailForm" action="https://formspree.io/f/mgowrolb" method="POST">
-                <input type="email" name="email" id="emailInput" placeholder="Enter your email" required>
-                <button type="submit">Subscribe ✨</button>
-            </form>
-            <div class="email-benefits">
-                <span>✓ Free</span>
-                <span>✓ No Spam</span>
-                <span>✓ Unsubscribe Anytime</span>
-            </div>
-        </div>
-    </div>
+    <!-- Scripts -->
+    <script src="../shared/js/quantum-nav.js"></script>
+    <script src="../shared/js/quantum-effects.js"></script>
+    <script src="../shared/js/quantum-analytics.js"></script>
+    <script src="../shared/js/quantum-donations.js"></script>
 
     <script>
-        // Navigation toggle
-        function toggleNav() {
-            const dropdown = document.getElementById('navDropdown');
-            dropdown.classList.toggle('active');
-        }
+        // Track page view
+        QRC_ANALYTICS.pageView('Reality Codes');
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(event) {
-            const navMenu = document.querySelector('.nav-menu');
-            const dropdown = document.getElementById('navDropdown');
-            
-            if (!navMenu.contains(event.target)) {
-                dropdown.classList.remove('active');
-            }
-        });
+        // Current code data
+        let currentCode = null;
 
         // Generate reality code
         function generateRealityCode() {
             const goal = document.getElementById('goalInput').value.trim();
             
             if (!goal) {
-                alert('Please enter your goal or intention');
+                showToast('Please enter your goal or intention', 'error');
                 return;
             }
+            
+            // Track tool usage
+            QRC_ANALYTICS.trackTool('Reality Codes', 'generate');
             
             // Generate code based on goal
             const code = createRealityCode(goal);
             const numerology = calculateNumerology(goal);
             const meaning = interpretCode(code, goal);
+            
+            // Store current code
+            currentCode = { code, goal, meaning };
             
             // Display results
             displayCodeResults(code, meaning, numerology, goal);
@@ -706,8 +1038,8 @@
             saveRealityCode(goal, code);
             
             // Show additional sections
-            document.getElementById('amplificationSection').style.display = 'block';
-            document.getElementById('frequencySection').style.display = 'block';
+            document.getElementById('amplificationSection').classList.add('active');
+            document.getElementById('frequencySection').classList.add('active');
             
             // Generate frequencies
             generateAlignedFrequencies(goal, code);
@@ -717,25 +1049,22 @@
         }
 
         function createRealityCode(goal) {
-            // Convert goal to numerical pattern
             const cleanGoal = goal.replace(/[^a-zA-Z0-9\s]/g, '').toLowerCase();
             let numbers = [];
             
             for (let char of cleanGoal) {
                 if (/[a-z]/.test(char)) {
-                    numbers.push(char.charCodeAt(0) - 96); // a=1, b=2, etc.
+                    numbers.push(char.charCodeAt(0) - 96);
                 } else if (/[0-9]/.test(char)) {
                     numbers.push(parseInt(char));
                 }
             }
             
-            // Create quantum pattern
             const seed = numbers.reduce((sum, num) => sum + num, 0);
             const pattern1 = ((seed * 7) % 999) || 111;
             const pattern2 = ((seed * 13) % 999) || 222;
             const pattern3 = ((seed * 21) % 999) || 333;
             
-            // Create master code
             const masterNumber = reduceToSingleDigit(seed);
             const quantumKey = ((Date.now() % 1000) || 777);
             
@@ -761,26 +1090,22 @@
         function calculateVowels(text) {
             const vowels = 'aeiou';
             let total = 0;
-            
             for (let char of text) {
                 if (vowels.includes(char)) {
                     total += char.charCodeAt(0) - 96;
                 }
             }
-            
             return total;
         }
 
         function calculateConsonants(text) {
             const vowels = 'aeiou';
             let total = 0;
-            
             for (let char of text) {
                 if (!vowels.includes(char)) {
                     total += char.charCodeAt(0) - 96;
                 }
             }
-            
             return total;
         }
 
@@ -815,18 +1140,14 @@
             
             const baseMeaning = meanings[masterNumber] || 'This quantum code aligns with your highest good and manifestation potential.';
             
-            return `${baseMeaning} The numerical pattern ${code} creates a unique quantum field that attracts circumstances, opportunities, and synchronicities aligned with "${goal}". Each repetition of this code strengthens its manifestation power in the quantum field.`;
+            return `${baseMeaning} The numerical pattern ${code} creates a unique quantum field that attracts circumstances, opportunities, and synchronicities aligned with your intention.`;
         }
 
         function displayCodeResults(code, meaning, numerology, goal) {
-            // Show code display
             document.getElementById('codeDisplay').classList.add('active');
-            
-            // Display code
             document.getElementById('codePattern').textContent = code;
             document.getElementById('codeMeaning').textContent = meaning;
             
-            // Display numerology
             const numerologyGrid = document.getElementById('numerologyGrid');
             numerologyGrid.innerHTML = `
                 <div class="numerology-item">
@@ -847,7 +1168,6 @@
                 </div>
             `;
             
-            // Scroll to results
             document.getElementById('codeDisplay').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -855,10 +1175,8 @@
             const frequencyGrid = document.getElementById('frequencyGrid');
             frequencyGrid.innerHTML = '';
             
-            // Extract keywords from goal
             const keywords = extractKeywords(goal);
             
-            // Frequency recommendations based on keywords
             const frequencyMap = {
                 'abundance': ['528 Hz - Abundance Activation', '639 Hz - Wealth Harmony', '174 Hz - Financial Security'],
                 'success': ['528 Hz - Success Energy', '741 Hz - Achievement Focus', '396 Hz - Goal Alignment'],
@@ -874,7 +1192,6 @@
             
             let recommendedFreqs = ['528 Hz - General Manifestation', '639 Hz - Goal Harmony', '741 Hz - Manifestation Clarity'];
             
-            // Find matching frequencies
             for (let keyword of keywords) {
                 if (frequencyMap[keyword.toLowerCase()]) {
                     recommendedFreqs = frequencyMap[keyword.toLowerCase()];
@@ -882,15 +1199,19 @@
                 }
             }
             
-            // Create frequency cards
             recommendedFreqs.forEach((freq, index) => {
                 const card = document.createElement('div');
                 card.className = 'frequency-card';
                 card.innerHTML = `
-                    <h4>🎵 Amplification Frequency ${index + 1}</h4>
+                    <div class="frequency-card-title">
+                        <span>🎵</span>
+                        Amplification Frequency ${index + 1}
+                    </div>
                     <p>${freq}</p>
-                    <p>Listen to this frequency while focusing on your reality code to amplify its manifestation power.</p>
-                    <button class="save-btn" onclick="saveFrequencyToJukebox('${freq}', 'Reality Code Amplification')">Save to Jukebox</button>
+                    <p>Listen while focusing on your reality code to amplify manifestation power.</p>
+                    <button class="save-freq-btn" onclick="saveFrequencyToJukebox('${freq}', 'Reality Code Amplification', this)">
+                        Save to Jukebox
+                    </button>
                 `;
                 frequencyGrid.appendChild(card);
             });
@@ -898,16 +1219,9 @@
 
         function extractKeywords(text) {
             const words = text.toLowerCase().split(/\s+/);
-            const keywords = [];
-            
             const targetWords = ['abundance', 'success', 'love', 'health', 'peace', 'career', 'creativity', 'confidence', 'transformation', 'intuition', 'money', 'wealth', 'happiness', 'joy', 'freedom'];
             
-            for (let word of words) {
-                if (targetWords.includes(word)) {
-                    keywords.push(word);
-                }
-            }
-            
+            const keywords = words.filter(word => targetWords.includes(word));
             return keywords.length > 0 ? keywords : ['general'];
         }
 
@@ -923,7 +1237,6 @@
             
             savedCodes.unshift(newCode);
             
-            // Keep only last 10 codes
             if (savedCodes.length > 10) {
                 savedCodes.pop();
             }
@@ -936,7 +1249,12 @@
             const codesList = document.getElementById('savedCodesList');
             
             if (savedCodes.length === 0) {
-                codesList.innerHTML = '<p style="color: #b8b8b8; text-align: center;">No reality codes generated yet. Create your first code above!</p>';
+                codesList.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">✨</div>
+                        <p>No reality codes generated yet.<br>Create your first code above!</p>
+                    </div>
+                `;
                 return;
             }
             
@@ -944,22 +1262,25 @@
             
             savedCodes.forEach(code => {
                 const item = document.createElement('div');
-                item.className = 'saved-code-item';
+                item.className = 'saved-code-card';
                 
                 const date = new Date(code.createdAt);
                 const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
                 
                 item.innerHTML = `
                     <div class="saved-code-pattern">${code.code}</div>
-                    <div class="saved-code-goal">Goal: ${code.goal}</div>
-                    <div class="saved-code-date">Created: ${dateStr}</div>
+                    <div class="saved-code-goal">${code.goal}</div>
+                    <div class="saved-code-date">
+                        <span>📅</span>
+                        ${dateStr}
+                    </div>
                 `;
                 
                 codesList.appendChild(item);
             });
         }
 
-        function saveFrequencyToJukebox(frequency, purpose) {
+        function saveFrequencyToJukebox(frequency, purpose, btn) {
             const savedItems = JSON.parse(localStorage.getItem('qm_library') || '[]');
             
             const newItem = {
@@ -978,48 +1299,73 @@
             savedItems.push(newItem);
             localStorage.setItem('qm_library', JSON.stringify(savedItems));
             
-            // Show confirmation
-            const btn = event.target;
-            const originalText = btn.textContent;
-            btn.textContent = '✓ Saved to Jukebox';
-            btn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+            btn.textContent = '✓ Saved!';
+            btn.classList.add('saved');
+            
+            QRC_ANALYTICS.trackFeature('Reality Codes', 'save_frequency');
             
             setTimeout(() => {
-                btn.textContent = originalText;
-                btn.style.background = '';
+                btn.textContent = 'Save to Jukebox';
+                btn.classList.remove('saved');
             }, 2000);
+        }
+
+        function copyCode() {
+            if (currentCode) {
+                navigator.clipboard.writeText(currentCode.code).then(() => {
+                    showToast('Code copied to clipboard!', 'success');
+                    QRC_ANALYTICS.trackFeature('Reality Codes', 'copy_code');
+                });
+            }
+        }
+
+        function shareCode() {
+            if (currentCode && navigator.share) {
+                navigator.share({
+                    title: 'My Quantum Reality Code',
+                    text: `My Reality Code: ${currentCode.code}\n\nGoal: ${currentCode.goal}\n\nGenerated at Quantum Reality Codes`,
+                    url: window.location.href
+                }).then(() => {
+                    QRC_ANALYTICS.trackShare('Reality Codes', 'native');
+                });
+            } else if (currentCode) {
+                const text = `My Reality Code: ${currentCode.code}\n\nGoal: ${currentCode.goal}`;
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast('Copied to clipboard for sharing!', 'success');
+                });
+            }
+        }
+
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 12px 24px;
+                background: ${type === 'success' ? 'var(--neon-green)' : type === 'error' ? 'var(--neon-red)' : 'var(--neon-cyan)'};
+                color: var(--bg-darker);
+                border-radius: 50px;
+                font-family: var(--font-display);
+                font-size: 14px;
+                font-weight: 600;
+                z-index: 9999;
+                animation: fadeInUp 0.3s ease;
+            `;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 2500);
         }
 
         // Initialize on load
         window.addEventListener('load', function() {
             displaySavedCodes();
         });
-
-        // Email Form Handler
-        document.getElementById('emailForm')?.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const email = document.getElementById('emailInput').value;
-            const form = this;
-            const submitBtn = form.querySelector('button[type="submit"]');
-            submitBtn.innerHTML = 'Joining...';
-            submitBtn.disabled = true;
-            try {
-                const response = await fetch('https://formspree.io/f/mgowrolb', {
-                    method: 'POST',
-                    body: new FormData(form),
-                    headers: { 'Accept': 'application/json' }
-                });
-                if (response.ok) {
-                    localStorage.setItem('qm_subscribed', 'true');
-                    form.innerHTML = '<div style="color: #ffd700; font-size: 1.2rem; padding: 15px;">✅ Thanks for subscribing!</div>';
-                } else { throw new Error('Failed'); }
-            } catch (error) {
-                submitBtn.innerHTML = 'Subscribe ✨';
-                submitBtn.disabled = false;
-            }
-        });
     </script>
-    </div><!-- End app-content -->
-    <script src="../shared/js/quantum-intro-animation.js"></script>
 </body>
 </html>
