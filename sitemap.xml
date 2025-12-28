@@ -203,4 +203,11 @@
         <priority>0.3</priority>
     </url>
     
+    <url>
+        <loc>https://quantummerlin.com/soulcard.html</loc>
+        <lastmod>2025-12-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
 </urlset>

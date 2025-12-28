@@ -5,15 +5,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trust Radar | Quantum Merlin</title>
     <meta name="description" content="Discover who and what you actually trust vs think you trust.">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Cinzel:wght@400;600;700&family=Exo+2:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Quantum Intro Animation */
+        .quantum-intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, #1a0033 0%, #0a0015 70%, #000000 100%);
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        .quantum-intro.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .intro-symbol {
+            font-size: 5rem;
+            animation: symbolPulse 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px rgba(147, 51, 234, 0.8));
+        }
+        @keyframes symbolPulse {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 30px rgba(147, 51, 234, 0.8)); }
+            50% { transform: scale(1.15); filter: drop-shadow(0 0 50px rgba(236, 72, 153, 1)); }
+        }
+        #intro-title {
+            margin-top: 30px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 8px;
+            background: linear-gradient(135deg, #9333ea, #ec4899, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+        @keyframes titleGlow {
+            0% { opacity: 0.7; filter: blur(0px); }
+            100% { opacity: 1; filter: blur(0px); }
+        }
+        .skip-intro {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            padding: 12px 25px;
+            background: rgba(147, 51, 234, 0.3);
+            border: 1px solid rgba(147, 51, 234, 0.5);
+            border-radius: 25px;
+            color: #c4b5fd;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10001;
+        }
+        .skip-intro:hover {
+            background: rgba(147, 51, 234, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Header Styles */
+        .qm-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 15px 25px;
+            background: rgba(10, 0, 21, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(147, 51, 234, 0.3);
+        }
+        .qm-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .qm-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .qm-logo-icon {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            border-radius: 12px;
+            font-size: 1.5rem;
+            box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+            animation: logoGlow 3s ease-in-out infinite;
+        }
+        @keyframes logoGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(147, 51, 234, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(147, 51, 234, 0.8); }
+        }
+        .qm-logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 50%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .qm-coffee-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.3), rgba(236, 72, 153, 0.3));
+            border: 1px solid rgba(147, 51, 234, 0.5);
+            border-radius: 25px;
+            color: #c4b5fd;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        .qm-coffee-btn:hover {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.5), rgba(236, 72, 153, 0.5));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(147, 51, 234, 0.4);
+        }
+
+        /* Floating Particles */
+        .particles-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: floatUp linear infinite;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
         body {
             font-family: 'Cinzel', serif;
             background: linear-gradient(135deg, #0a0015 0%, #1a0033 50%, #2d1b4e 100%);
             color: #e0d4f7;
             min-height: 100vh;
             padding: 20px;
+            padding-top: 90px;
         }
         .container { max-width: 800px; margin: 0 auto; }
         header { text-align: center; padding: 40px 20px; margin-bottom: 40px; }
@@ -34,15 +192,113 @@
             line-height: 1.8;
             color: #c4b5fd;
         }
-        .question-section {
-            background: rgba(147, 51, 234, 0.1);
-            border: 2px solid rgba(147, 51, 234, 0.3);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 25px;
+        
+        /* Progress Bar */
+        .progress-container { margin-bottom: 30px; }
+        .progress-bar {
+            height: 10px;
+            background: rgba(147, 51, 234, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
         }
-        .question-number { color: #9333ea; font-size: 1.1em; font-weight: bold; margin-bottom: 15px; }
-        .question-text { font-size: 1.3em; color: #e0d4f7; margin-bottom: 20px; line-height: 1.5; }
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #9333ea, #ec4899);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+        .progress-text {
+            text-align: center;
+            color: #c4b5fd;
+            font-size: 0.95em;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Accordion Styles */
+        .questions-accordion { display: flex; flex-direction: column; gap: 15px; }
+
+        .question-accordion-item {
+            background: rgba(147, 51, 234, 0.08);
+            border: 2px solid rgba(147, 51, 234, 0.25);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .question-accordion-item:hover { border-color: rgba(147, 51, 234, 0.5); }
+        .question-accordion-item.active {
+            border-color: #9333ea;
+            box-shadow: 0 0 25px rgba(147, 51, 234, 0.3);
+        }
+        .question-accordion-item.answered {
+            border-color: rgba(52, 211, 153, 0.5);
+        }
+        .question-accordion-item.answered .question-num {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+        }
+
+        .question-header {
+            padding: 18px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+        .question-header:hover { background: rgba(147, 51, 234, 0.15); }
+        .question-header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .question-num {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+        .question-preview {
+            color: #c4b5fd;
+            font-size: 1em;
+            font-family: 'Exo 2', sans-serif;
+        }
+        .accordion-icon {
+            color: #9333ea;
+            font-size: 0.9em;
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        .question-accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .question-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 25px;
+        }
+        .question-accordion-item.active .question-body {
+            max-height: 400px;
+            padding: 0 25px 25px;
+        }
+
+        .question-full-text {
+            font-size: 1.2em;
+            color: #e0d4f7;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-family: 'Cinzel', serif;
+        }
+        
         .scale-container { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 20px; }
         .scale-label { font-size: 0.95em; color: #ec4899; font-family: 'Orbitron', sans-serif; font-weight: bold; text-align: center; }
         .scale-options { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; max-width: 280px; width: 100%; }
@@ -88,6 +344,14 @@
         }
         .submit-btn:hover { transform: scale(1.02); box-shadow: 0 10px 40px rgba(147, 51, 234, 0.6); }
         .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        @keyframes loadingPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        .submit-btn.loading-pulse {
+            animation: loadingPulse 1.5s ease-in-out infinite;
+            pointer-events: none;
+        }
         .results-section { display: none; }
         .results-section.active { display: block; animation: fadeIn 0.5s ease; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -167,17 +431,83 @@
             border-color: #9333ea;
             transform: translateY(-2px);
         }
+        /* Next Tools Section */
+        .next-tools-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+        }
+        .next-tools-section h3 {
+            color: #9333ea;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+        }
+        .tool-card {
+            display: block;
+            padding: 20px 15px;
+            background: rgba(147, 51, 234, 0.15);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 12px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .tool-card:hover {
+            border-color: #9333ea;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(147, 51, 234, 0.3);
+        }
+        .tool-card .tool-icon { font-size: 2em; margin-bottom: 8px; }
+        .tool-card .tool-name { color: #c4b5fd; font-weight: 600; font-size: 0.9em; }
+        .tool-card .tool-desc { color: #a78bfa; font-size: 0.75em; margin-top: 5px; }
+
         @media (max-width: 768px) {
             h1 { font-size: 2em; }
             .scale-options { gap: 5px; max-width: 250px; }
             .scale-option { max-width: 35px; height: 35px; font-size: 1em; }
             .action-buttons { flex-direction: column; }
             .action-btn { min-width: 100%; }
+            .qm-coffee-btn span { display: none; }
+            .qm-header { padding: 12px 15px; }
+            .qm-logo-text { font-size: 1rem; }
+            .intro-symbol { font-size: 3.5rem; }
+            #intro-title { font-size: 1.1rem; letter-spacing: 4px; }
+            .skip-intro { bottom: 20px; right: 20px; padding: 10px 20px; font-size: 0.75rem; }
         }
     </style>
-<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
+    <!-- Quantum Intro Animation -->
+    <div class="quantum-intro" id="quantumIntro">
+        <div class="intro-symbol" id="introSymbol">🎯</div>
+        <div id="intro-title">TRUST RADAR</div>
+        <button class="skip-intro" onclick="skipIntro()">Skip Intro →</button>
+    </div>
+
+    <!-- Floating Particles Background -->
+    <div class="particles-bg" id="particlesBg"></div>
+
+    <!-- Header -->
+    <header class="qm-header">
+        <div class="qm-header-inner">
+            <a href="/index.html" class="qm-logo">
+                <div class="qm-logo-icon">🧙‍♂️</div>
+                <span class="qm-logo-text">Quantum Merlin</span>
+            </a>
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="qm-coffee-btn">
+                ☕ <span>Support</span>
+            </a>
+        </div>
+    </header>
+
     <div class="container">
         <header>
             <h1>🎯 Trust Radar 🎯</h1>
@@ -191,88 +521,137 @@
         </div>
 
         <div id="questionsContainer">
-            <div class="question-section">
-                <div class="question-number">Question 1 of 5</div>
-                <div class="question-text">I follow my intuition even when it doesn't make logical sense</div>
-                <div class="scale-container">
-                    <span class="scale-label">Never</span>
-                    <div class="scale-options">
-                        <div class="scale-option" data-question="q1" data-value="0" onclick="selectAnswer('q1', 0)">0</div>
-                        <div class="scale-option" data-question="q1" data-value="1" onclick="selectAnswer('q1', 1)">1</div>
-                        <div class="scale-option" data-question="q1" data-value="2" onclick="selectAnswer('q1', 2)">2</div>
-                        <div class="scale-option" data-question="q1" data-value="3" onclick="selectAnswer('q1', 3)">3</div>
-                        <div class="scale-option" data-question="q1" data-value="4" onclick="selectAnswer('q1', 4)">4</div>
-                        <div class="scale-option" data-question="q1" data-value="5" onclick="selectAnswer('q1', 5)">5</div>
-                    </div>
-                    <span class="scale-label">Always &#9654;</span>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
                 </div>
+                <div class="progress-text"><span id="answeredCount">0</span> of 5 questions answered</div>
             </div>
 
-            <div class="question-section">
-                <div class="question-number">Question 2 of 5</div>
-                <div class="question-text">I can let go of control and trust things will work out</div>
-                <div class="scale-container">
-                    <span class="scale-label">&#9664; Not at all</span>
-                    <div class="scale-options">
-                        <div class="scale-option" data-question="q2" data-value="0" onclick="selectAnswer('q2', 0)">0</div>
-                        <div class="scale-option" data-question="q2" data-value="1" onclick="selectAnswer('q2', 1)">1</div>
-                        <div class="scale-option" data-question="q2" data-value="2" onclick="selectAnswer('q2', 2)">2</div>
-                        <div class="scale-option" data-question="q2" data-value="3" onclick="selectAnswer('q2', 3)">3</div>
-                        <div class="scale-option" data-question="q2" data-value="4" onclick="selectAnswer('q2', 4)">4</div>
-                        <div class="scale-option" data-question="q2" data-value="5" onclick="selectAnswer('q2', 5)">5</div>
+            <div class="questions-accordion">
+                <div class="question-accordion-item active" data-question="q1">
+                    <div class="question-header" onclick="toggleAccordion('q1')">
+                        <div class="question-header-left">
+                            <div class="question-num">1</div>
+                            <div class="question-preview">Following your intuition</div>
+                        </div>
+                        <div class="accordion-icon">▼</div>
                     </div>
-                    <span class="scale-label">Completely &#9654;</span>
+                    <div class="question-body">
+                        <div class="question-full-text">I follow my intuition even when it doesn't make logical sense</div>
+                        <div class="scale-container">
+                            <span class="scale-label">Never</span>
+                            <div class="scale-options">
+                                <div class="scale-option" onclick="selectAnswer('q1', 0)">0</div>
+                                <div class="scale-option" onclick="selectAnswer('q1', 1)">1</div>
+                                <div class="scale-option" onclick="selectAnswer('q1', 2)">2</div>
+                                <div class="scale-option" onclick="selectAnswer('q1', 3)">3</div>
+                                <div class="scale-option" onclick="selectAnswer('q1', 4)">4</div>
+                                <div class="scale-option" onclick="selectAnswer('q1', 5)">5</div>
+                            </div>
+                            <span class="scale-label">Always &#9654;</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question-section">
-                <div class="question-number">Question 3 of 5</div>
-                <div class="question-text">I ask for help when I need it</div>
-                <div class="scale-container">
-                    <span class="scale-label">&#9664; Never</span>
-                    <div class="scale-options">
-                        <div class="scale-option" data-question="q3" data-value="0" onclick="selectAnswer('q3', 0)">0</div>
-                        <div class="scale-option" data-question="q3" data-value="1" onclick="selectAnswer('q3', 1)">1</div>
-                        <div class="scale-option" data-question="q3" data-value="2" onclick="selectAnswer('q3', 2)">2</div>
-                        <div class="scale-option" data-question="q3" data-value="3" onclick="selectAnswer('q3', 3)">3</div>
-                        <div class="scale-option" data-question="q3" data-value="4" onclick="selectAnswer('q3', 4)">4</div>
-                        <div class="scale-option" data-question="q3" data-value="5" onclick="selectAnswer('q3', 5)">5</div>
+                <div class="question-accordion-item" data-question="q2">
+                    <div class="question-header" onclick="toggleAccordion('q2')">
+                        <div class="question-header-left">
+                            <div class="question-num">2</div>
+                            <div class="question-preview">Letting go of control</div>
+                        </div>
+                        <div class="accordion-icon">▼</div>
                     </div>
-                    <span class="scale-label">Always &#9654;</span>
+                    <div class="question-body">
+                        <div class="question-full-text">I can let go of control and trust things will work out</div>
+                        <div class="scale-container">
+                            <span class="scale-label">&#9664; Not at all</span>
+                            <div class="scale-options">
+                                <div class="scale-option" onclick="selectAnswer('q2', 0)">0</div>
+                                <div class="scale-option" onclick="selectAnswer('q2', 1)">1</div>
+                                <div class="scale-option" onclick="selectAnswer('q2', 2)">2</div>
+                                <div class="scale-option" onclick="selectAnswer('q2', 3)">3</div>
+                                <div class="scale-option" onclick="selectAnswer('q2', 4)">4</div>
+                                <div class="scale-option" onclick="selectAnswer('q2', 5)">5</div>
+                            </div>
+                            <span class="scale-label">Completely &#9654;</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question-section">
-                <div class="question-number">Question 4 of 5</div>
-                <div class="question-text">I share my vulnerabilities with people I care about</div>
-                <div class="scale-container">
-                    <span class="scale-label">&#9664; Never</span>
-                    <div class="scale-options">
-                        <div class="scale-option" data-question="q4" data-value="0" onclick="selectAnswer('q4', 0)">0</div>
-                        <div class="scale-option" data-question="q4" data-value="1" onclick="selectAnswer('q4', 1)">1</div>
-                        <div class="scale-option" data-question="q4" data-value="2" onclick="selectAnswer('q4', 2)">2</div>
-                        <div class="scale-option" data-question="q4" data-value="3" onclick="selectAnswer('q4', 3)">3</div>
-                        <div class="scale-option" data-question="q4" data-value="4" onclick="selectAnswer('q4', 4)">4</div>
-                        <div class="scale-option" data-question="q4" data-value="5" onclick="selectAnswer('q4', 5)">5</div>
+                <div class="question-accordion-item" data-question="q3">
+                    <div class="question-header" onclick="toggleAccordion('q3')">
+                        <div class="question-header-left">
+                            <div class="question-num">3</div>
+                            <div class="question-preview">Asking for help</div>
+                        </div>
+                        <div class="accordion-icon">▼</div>
                     </div>
-                    <span class="scale-label">Freely &#9654;</span>
+                    <div class="question-body">
+                        <div class="question-full-text">I ask for help when I need it</div>
+                        <div class="scale-container">
+                            <span class="scale-label">&#9664; Never</span>
+                            <div class="scale-options">
+                                <div class="scale-option" onclick="selectAnswer('q3', 0)">0</div>
+                                <div class="scale-option" onclick="selectAnswer('q3', 1)">1</div>
+                                <div class="scale-option" onclick="selectAnswer('q3', 2)">2</div>
+                                <div class="scale-option" onclick="selectAnswer('q3', 3)">3</div>
+                                <div class="scale-option" onclick="selectAnswer('q3', 4)">4</div>
+                                <div class="scale-option" onclick="selectAnswer('q3', 5)">5</div>
+                            </div>
+                            <span class="scale-label">Always &#9654;</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question-section">
-                <div class="question-number">Question 5 of 5</div>
-                <div class="question-text">I believe that what's meant for me will find me</div>
-                <div class="scale-container">
-                    <span class="scale-label">&#9664; Not at all</span>
-                    <div class="scale-options">
-                        <div class="scale-option" data-question="q5" data-value="0" onclick="selectAnswer('q5', 0)">0</div>
-                        <div class="scale-option" data-question="q5" data-value="1" onclick="selectAnswer('q5', 1)">1</div>
-                        <div class="scale-option" data-question="q5" data-value="2" onclick="selectAnswer('q5', 2)">2</div>
-                        <div class="scale-option" data-question="q5" data-value="3" onclick="selectAnswer('q5', 3)">3</div>
-                        <div class="scale-option" data-question="q5" data-value="4" onclick="selectAnswer('q5', 4)">4</div>
-                        <div class="scale-option" data-question="q5" data-value="5" onclick="selectAnswer('q5', 5)">5</div>
+                <div class="question-accordion-item" data-question="q4">
+                    <div class="question-header" onclick="toggleAccordion('q4')">
+                        <div class="question-header-left">
+                            <div class="question-num">4</div>
+                            <div class="question-preview">Sharing vulnerabilities</div>
+                        </div>
+                        <div class="accordion-icon">▼</div>
                     </div>
-                    <span class="scale-label">Deeply &#9654;</span>
+                    <div class="question-body">
+                        <div class="question-full-text">I share my vulnerabilities with people I care about</div>
+                        <div class="scale-container">
+                            <span class="scale-label">&#9664; Never</span>
+                            <div class="scale-options">
+                                <div class="scale-option" onclick="selectAnswer('q4', 0)">0</div>
+                                <div class="scale-option" onclick="selectAnswer('q4', 1)">1</div>
+                                <div class="scale-option" onclick="selectAnswer('q4', 2)">2</div>
+                                <div class="scale-option" onclick="selectAnswer('q4', 3)">3</div>
+                                <div class="scale-option" onclick="selectAnswer('q4', 4)">4</div>
+                                <div class="scale-option" onclick="selectAnswer('q4', 5)">5</div>
+                            </div>
+                            <span class="scale-label">Freely &#9654;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-accordion-item" data-question="q5">
+                    <div class="question-header" onclick="toggleAccordion('q5')">
+                        <div class="question-header-left">
+                            <div class="question-num">5</div>
+                            <div class="question-preview">Believing in divine timing</div>
+                        </div>
+                        <div class="accordion-icon">▼</div>
+                    </div>
+                    <div class="question-body">
+                        <div class="question-full-text">I believe that what's meant for me will find me</div>
+                        <div class="scale-container">
+                            <span class="scale-label">&#9664; Not at all</span>
+                            <div class="scale-options">
+                                <div class="scale-option" onclick="selectAnswer('q5', 0)">0</div>
+                                <div class="scale-option" onclick="selectAnswer('q5', 1)">1</div>
+                                <div class="scale-option" onclick="selectAnswer('q5', 2)">2</div>
+                                <div class="scale-option" onclick="selectAnswer('q5', 3)">3</div>
+                                <div class="scale-option" onclick="selectAnswer('q5', 4)">4</div>
+                                <div class="scale-option" onclick="selectAnswer('q5', 5)">5</div>
+                            </div>
+                            <span class="scale-label">Deeply &#9654;</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -285,7 +664,56 @@
     </div>
 
     <script>
+        // Intro Animation
+        const symbols = ['🎯', '⚛️', '🔮', '✨'];
+        let symbolIndex = 0;
+        const introSymbol = document.getElementById('introSymbol');
+
+        const symbolInterval = setInterval(() => {
+            symbolIndex = (symbolIndex + 1) % symbols.length;
+            introSymbol.style.transform = 'scale(0.5)';
+            introSymbol.style.opacity = '0.5';
+            setTimeout(() => {
+                introSymbol.textContent = symbols[symbolIndex];
+                introSymbol.style.transform = 'scale(1)';
+                introSymbol.style.opacity = '1';
+            }, 200);
+        }, 1500);
+
+        setTimeout(() => {
+            skipIntro();
+        }, 4000);
+
+        function skipIntro() {
+            clearInterval(symbolInterval);
+            document.getElementById('quantumIntro').classList.add('fade-out');
+            setTimeout(() => {
+                document.getElementById('quantumIntro').style.display = 'none';
+            }, 800);
+        }
+
         let answers = {};
+        const totalQuestions = 5;
+
+        function toggleAccordion(questionId) {
+            const allItems = document.querySelectorAll('.question-accordion-item');
+            const clickedItem = document.querySelector(`[data-question="${questionId}"]`);
+            
+            allItems.forEach(item => {
+                if (item !== clickedItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            clickedItem.classList.toggle('active');
+        }
+
+        function updateProgress() {
+            const answered = Object.keys(answers).length;
+            const percentage = (answered / totalQuestions) * 100;
+            document.getElementById('progressFill').style.width = percentage + '%';
+            document.getElementById('answeredCount').textContent = answered;
+        }
 
         function goToEnhanced() {
             const enhancedData = {
@@ -299,11 +727,26 @@
 
         function selectAnswer(question, value) {
             answers[question] = value;
-            document.querySelectorAll(`[data-question="${question}"]`).forEach(option => {
-                option.classList.remove('selected');
+            
+            const accordionItem = document.querySelector(`[data-question="${question}"]`);
+            accordionItem.querySelectorAll('.scale-option').forEach((option, index) => {
+                option.classList.toggle('selected', index === value);
             });
-            document.querySelector(`[data-question="${question}"][data-value="${value}"]`).classList.add('selected');
-            if (Object.keys(answers).length === 5) {
+            
+            accordionItem.classList.add('answered');
+            updateProgress();
+            
+            setTimeout(() => {
+                const nextQ = 'q' + (parseInt(question.replace('q', '')) + 1);
+                const nextItem = document.querySelector(`[data-question="${nextQ}"]`);
+                if (nextItem && !nextItem.classList.contains('answered')) {
+                    toggleAccordion(nextQ);
+                } else if (Object.keys(answers).length === totalQuestions) {
+                    accordionItem.classList.remove('active');
+                }
+            }, 400);
+            
+            if (Object.keys(answers).length === totalQuestions) {
                 document.getElementById('submitBtn').disabled = false;
             }
         }
@@ -434,6 +877,32 @@
                     <button class="enhanced-btn" onclick="goToEnhanced()">Get Enhanced Reading</button>
                 </div>
 
+                <div class="next-tools-section">
+                    <h3>Continue Your Journey</h3>
+                    <div class="tools-grid">
+                        <a href="identity-split-detector.html" class="tool-card">
+                            <div class="tool-icon">🎭</div>
+                            <div class="tool-name">Identity Split</div>
+                            <div class="tool-desc">Integrate your selves</div>
+                        </a>
+                        <a href="hidden-strengths-revealer.html" class="tool-card">
+                            <div class="tool-icon">💪</div>
+                            <div class="tool-name">Hidden Strengths</div>
+                            <div class="tool-desc">Your dormant superpowers</div>
+                        </a>
+                        <a href="power-avoidance-pattern.html" class="tool-card">
+                            <div class="tool-icon">👑</div>
+                            <div class="tool-name">Power Avoidance</div>
+                            <div class="tool-desc">Why you self-sabotage</div>
+                        </a>
+                        <a href="manifest.html" class="tool-card">
+                            <div class="tool-icon">✨</div>
+                            <div class="tool-name">Manifestation</div>
+                            <div class="tool-desc">Create your reality</div>
+                        </a>
+                    </div>
+                </div>
+
                 <div class="action-buttons">
                     <a href="index.html" class="action-btn">🏠 Home</a>
                     <a href="library.html" class="action-btn">📚 View Library</a>
@@ -464,6 +933,29 @@
             insights.unshift(insight);
             localStorage.setItem('quantumMerlinInsights', JSON.stringify(insights));
         }
+
+        // Create floating particles
+        function createParticles() {
+            const container = document.getElementById('particlesBg');
+            const colors = [
+                'radial-gradient(circle, rgba(147, 51, 234, 0.8), transparent)',
+                'radial-gradient(circle, rgba(236, 72, 153, 0.8), transparent)',
+                'radial-gradient(circle, rgba(251, 191, 36, 0.6), transparent)'
+            ];
+            
+            for (let i = 0; i < 25; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (15 + Math.random() * 20) + 's';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.width = (3 + Math.random() * 5) + 'px';
+                particle.style.height = particle.style.width;
+                container.appendChild(particle);
+            }
+        }
+        createParticles();
     </script>
 </body>
 </html>
