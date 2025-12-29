@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Trust Reading | Quantum Merlin</title>
+    <meta name="description" content="Your complete trust calibration blueprint with birth numerology, cosmic patterns, and personalized trust development protocols.">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Orbitron:wght@400;600;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 50%, #0a0a0f 100%);
+            color: #e0d4f7;
+            font-family: 'Exo 2', sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding-top: 80px; }
+        
+        .qm-header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(10, 10, 15, 0.95); backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3); padding: 15px 20px;
+        }
+        .qm-header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .qm-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .qm-logo-icon { font-size: 1.5rem; }
+        .qm-logo-text { font-family: 'Orbitron', monospace; font-size: 1.1rem; font-weight: 700; background: linear-gradient(135deg, #3b82f6, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .qm-support { background: linear-gradient(135deg, #FFDD00, #FFA500); color: #000; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
+        
+        .page-header { text-align: center; margin-bottom: 40px; }
+        .page-icon { font-size: 4rem; margin-bottom: 20px; }
+        .page-title { font-family: 'Cinzel', serif; font-size: 2.2rem; background: linear-gradient(135deg, #3b82f6, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; }
+        .page-subtitle { color: #f59e0b; font-size: 1.1rem; max-width: 500px; margin: 0 auto; }
+        
+        .previous-reading { background: linear-gradient(145deg, rgba(59, 130, 246, 0.1), rgba(245, 158, 11, 0.15)); border: 2px solid rgba(59, 130, 246, 0.4); border-radius: 20px; padding: 25px; margin-bottom: 30px; text-align: center; }
+        .profile-name { font-size: 1.6rem; font-weight: 800; font-family: 'Orbitron', monospace; background: linear-gradient(135deg, #3b82f6, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .profile-icon { font-size: 3rem; margin-bottom: 10px; }
+        
+        .profile-section { background: rgba(59, 130, 246, 0.1); border: 2px solid rgba(59, 130, 246, 0.3); border-radius: 20px; padding: 30px; margin-bottom: 30px; }
+        .section-title { font-family: 'Orbitron', monospace; color: #3b82f6; font-size: 1.2rem; margin-bottom: 20px; text-align: center; }
+        
+        .profile-options { display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
+        .profile-option { flex: 1; min-width: 200px; padding: 20px; background: rgba(59, 130, 246, 0.15); border: 2px solid rgba(59, 130, 246, 0.3); border-radius: 15px; cursor: pointer; transition: all 0.3s ease; text-align: center; }
+        .profile-option:hover { border-color: #3b82f6; transform: translateY(-3px); }
+        .profile-option.selected { border-color: #f59e0b; background: rgba(245, 158, 11, 0.2); }
+        .profile-option-icon { font-size: 2rem; margin-bottom: 10px; }
+        .profile-option-title { color: #93c5fd; font-weight: 600; }
+        .profile-option-desc { color: #3b82f6; font-size: 0.85rem; margin-top: 5px; }
+        
+        .birth-form, .saved-profiles { display: none; }
+        .birth-form.active, .saved-profiles.active { display: block; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; color: #93c5fd; margin-bottom: 8px; font-weight: 500; }
+        .form-input { width: 100%; padding: 15px; background: rgba(59, 130, 246, 0.1); border: 2px solid rgba(59, 130, 246, 0.3); border-radius: 12px; color: #e0d4f7; font-size: 1rem; font-family: 'Exo 2', sans-serif; }
+        .form-input:focus { outline: none; border-color: #3b82f6; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        
+        .profile-card { padding: 20px; background: rgba(59, 130, 246, 0.15); border: 2px solid rgba(59, 130, 246, 0.3); border-radius: 15px; margin-bottom: 15px; cursor: pointer; transition: all 0.3s ease; }
+        .profile-card:hover { border-color: #3b82f6; transform: translateY(-2px); }
+        .profile-card.selected { border-color: #22c55e; background: rgba(34, 197, 94, 0.15); }
+        .profile-name-card { color: #3b82f6; font-weight: 600; font-size: 1.1rem; }
+        .profile-details { color: #9ca3af; font-size: 0.9rem; margin-top: 5px; }
+        .no-profiles { text-align: center; color: #3b82f6; padding: 30px; }
+        
+        .generate-btn { width: 100%; padding: 20px; background: linear-gradient(135deg, #3b82f6, #f59e0b); color: white; border: none; border-radius: 30px; font-size: 1.3rem; font-weight: 700; font-family: 'Orbitron', monospace; cursor: pointer; transition: all 0.3s ease; margin-top: 20px; }
+        .generate-btn:hover:not(:disabled) { transform: scale(1.02); box-shadow: 0 10px 40px rgba(59, 130, 246, 0.5); }
+        .generate-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        
+        .results-section { display: none; }
+        .results-section.active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .reading-card { background: linear-gradient(145deg, rgba(59, 130, 246, 0.1), rgba(245, 158, 11, 0.1)); border: 2px solid rgba(59, 130, 246, 0.4); border-radius: 20px; padding: 30px; margin-bottom: 25px; }
+        .card-header { text-align: center; margin-bottom: 25px; }
+        .card-icon { font-size: 3rem; margin-bottom: 10px; }
+        .card-title { font-family: 'Cinzel', serif; font-size: 1.5rem; color: #3b82f6; }
+        
+        .forecast-section { background: rgba(0,0,0,0.2); border-radius: 15px; padding: 20px; margin-bottom: 20px; }
+        .forecast-label { font-weight: 700; font-size: 0.9em; letter-spacing: 1px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .forecast-text { color: #e0d4f7; line-height: 1.8; }
+        
+        .action-buttons { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin: 30px 0; }
+        .action-btn { padding: 15px 25px; border-radius: 25px; border: 2px solid rgba(59, 130, 246, 0.3); background: rgba(59, 130, 246, 0.2); color: #93c5fd; text-decoration: none; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+        .action-btn:hover { border-color: #3b82f6; transform: translateY(-2px); }
+        
+        .next-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; }
+        .tool-link { display: block; padding: 20px 15px; background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease; }
+        .tool-link:hover { border-color: #3b82f6; transform: translateY(-3px); }
+        .tool-icon { font-size: 2rem; margin-bottom: 8px; }
+        .tool-name { color: #93c5fd; font-weight: 600; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header class="qm-header">
+        <div class="qm-header-inner">
+            <a href="/index.html" class="qm-logo">
+                <div class="qm-logo-icon">🧙‍♂️</div>
+                <span class="qm-logo-text">Quantum Merlin</span>
+            </a>
+            <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank" class="qm-support">☕ Support</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <div class="page-icon">🎯</div>
+            <h1 class="page-title">Full Trust Reading</h1>
+            <p class="page-subtitle">Add your birth details for a complete trust calibration blueprint</p>
+        </div>
+
+        <div class="previous-reading" id="previousReading">
+            <div style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 10px;">YOUR TRUST PROFILE</div>
+            <div class="profile-icon" id="trustIcon">🎯</div>
+            <div class="profile-name" id="trustProfile">Loading...</div>
+        </div>
+
+        <div id="inputSection">
+            <div class="profile-section">
+                <div class="section-title">Choose Your Path</div>
+                
+                <div class="profile-options">
+                    <div class="profile-option" onclick="selectOption('saved')" id="optionSaved">
+                        <div class="profile-option-icon">📚</div>
+                        <div class="profile-option-title">Load from Library</div>
+                        <div class="profile-option-desc">Use a saved profile</div>
+                    </div>
+                    <div class="profile-option" onclick="selectOption('new')" id="optionNew">
+                        <div class="profile-option-icon">✏️</div>
+                        <div class="profile-option-title">Enter Details</div>
+                        <div class="profile-option-desc">Input birth information</div>
+                    </div>
+                </div>
+
+                <div class="saved-profiles" id="savedProfiles">
+                    <div id="profilesList"></div>
+                </div>
+
+                <div class="birth-form" id="birthForm">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" id="fullName" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Birth Date</label>
+                        <input type="date" class="form-input" id="birthDate">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Birth Time (optional)</label>
+                            <input type="time" class="form-input" id="birthTime">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Birth Place (optional)</label>
+                            <input type="text" class="form-input" id="birthPlace" placeholder="City, Country">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                            <input type="checkbox" id="saveProfile" checked>
+                            <span class="form-label" style="margin: 0;">Save this profile to Library</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="generate-btn" id="generateBtn" onclick="generateFullReading()" disabled>
+                    🎯 Generate Trust Blueprint
+                </button>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection"></div>
+    </div>
+
+    <script>
+        let previousData = null;
+        let selectedProfile = null;
+        let selectedOption = null;
+        let detectedProfile = null;
+        let trustScores = { self: 0, universe: 0, others: 0 };
+
+        const trustProfiles = {
+            'Integrated Truster': { icon: '🌟', work: 'Maintenance and modeling' },
+            'Self-Reliant Isolator': { icon: '🏔️', work: 'Selective trust in others' },
+            'External Validator': { icon: '🪞', work: 'Self-trust development' },
+            'Spiritual Bypasser': { icon: '☁️', work: 'Grounding and practical trust' },
+            'Wounded Truster': { icon: '💔', work: 'Trust rehabilitation' },
+            'Skeptical Analyst': { icon: '🔬', work: 'Opening to faith' }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const storedData = sessionStorage.getItem('qm_enhanced_data');
+            if (storedData) {
+                previousData = JSON.parse(storedData);
+                displayPreviousReading();
+            } else {
+                document.getElementById('previousReading').innerHTML = `
+                    <div style="color: #fbbf24;">⚠️ No previous reading found</div>
+                    <p style="color: #3b82f6; margin-top: 10px;">
+                        <a href="/trust-radar.html" style="color: #3b82f6;">Take the Trust Radar test</a> first for the complete experience.
+                    </p>
+                `;
+            }
+            loadSavedProfiles();
+        });
+
+        function displayPreviousReading() {
+            if (!previousData || !previousData.answers) return;
+            const answers = previousData.answers;
+            
+            const q1 = answers.q1 || 0, q2 = answers.q2 || 0, q3 = answers.q3 || 0, q4 = answers.q4 || 0, q5 = answers.q5 || 0;
+            trustScores = { self: q1, universe: (q2 + q5) / 2, others: (q3 + q4) / 2 };
+            
+            if (trustScores.self >= 4 && trustScores.universe >= 4 && trustScores.others >= 4) detectedProfile = 'Integrated Truster';
+            else if (trustScores.self >= 4 && trustScores.others <= 2) detectedProfile = 'Self-Reliant Isolator';
+            else if (trustScores.others >= 4 && trustScores.self <= 2) detectedProfile = 'External Validator';
+            else if (trustScores.universe >= 4 && trustScores.self <= 2 && trustScores.others <= 2) detectedProfile = 'Spiritual Bypasser';
+            else if (trustScores.self <= 2 && trustScores.universe <= 2 && trustScores.others <= 2) detectedProfile = 'Wounded Truster';
+            else detectedProfile = 'Skeptical Analyst';
+            
+            const profileData = trustProfiles[detectedProfile];
+            document.getElementById('trustIcon').textContent = profileData.icon;
+            document.getElementById('trustProfile').textContent = 'The ' + detectedProfile;
+        }
+
+        function selectOption(option) {
+            selectedOption = option;
+            document.querySelectorAll('.profile-option').forEach(el => el.classList.remove('selected'));
+            document.getElementById('option' + option.charAt(0).toUpperCase() + option.slice(1)).classList.add('selected');
+            
+            if (option === 'saved') {
+                document.getElementById('savedProfiles').classList.add('active');
+                document.getElementById('birthForm').classList.remove('active');
+            } else {
+                document.getElementById('savedProfiles').classList.remove('active');
+                document.getElementById('birthForm').classList.add('active');
+                checkFormValidity();
+            }
+        }
+
+        function loadSavedProfiles() {
+            const library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            const profiles = library.filter(item => item.type === 'profile' || item.birthDate);
+            const container = document.getElementById('profilesList');
+            
+            if (profiles.length === 0) {
+                container.innerHTML = `<div class="no-profiles"><div style="font-size: 2rem; margin-bottom: 10px;">📭</div><div>No saved profiles found</div></div>`;
+                return;
+            }
+            
+            container.innerHTML = profiles.map((profile, index) => `
+                <div class="profile-card" onclick="selectProfile(${index})" id="profile-${index}">
+                    <div class="profile-name-card">${profile.name || profile.fullName || 'Unnamed'}</div>
+                    <div class="profile-details">${profile.birthDate ? new Date(profile.birthDate).toLocaleDateString() : 'No birth date'}</div>
+                </div>
+            `).join('');
+        }
+
+        function selectProfile(index) {
+            const library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            const profiles = library.filter(item => item.type === 'profile' || item.birthDate);
+            selectedProfile = profiles[index];
+            document.querySelectorAll('.profile-card').forEach(el => el.classList.remove('selected'));
+            document.getElementById('profile-' + index).classList.add('selected');
+            document.getElementById('generateBtn').disabled = false;
+        }
+
+        function checkFormValidity() {
+            const name = document.getElementById('fullName').value;
+            const birthDate = document.getElementById('birthDate').value;
+            document.getElementById('generateBtn').disabled = !(name && birthDate);
+        }
+
+        document.getElementById('fullName')?.addEventListener('input', checkFormValidity);
+        document.getElementById('birthDate')?.addEventListener('change', checkFormValidity);
+
+        function generateFullReading() {
+            let profileData;
+            if (selectedOption === 'saved' && selectedProfile) {
+                profileData = selectedProfile;
+            } else {
+                profileData = {
+                    fullName: document.getElementById('fullName').value,
+                    birthDate: document.getElementById('birthDate').value,
+                    birthTime: document.getElementById('birthTime').value,
+                    birthPlace: document.getElementById('birthPlace').value
+                };
+                if (document.getElementById('saveProfile').checked) saveProfileToLibrary(profileData);
+            }
+            
+            const birthDate = new Date(profileData.birthDate);
+            const lifePath = calculateLifePath(birthDate);
+            const zodiac = getZodiacSign(birthDate);
+            const element = getElement(zodiac);
+            
+            generateResultsHTML(profileData, lifePath, zodiac, element);
+        }
+
+        function calculateLifePath(date) {
+            const dateStr = date.toISOString().split('T')[0].replace(/-/g, '');
+            let sum = dateStr.split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+            while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
+                sum = sum.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+            }
+            return sum;
+        }
+
+        function getZodiacSign(date) {
+            const month = date.getMonth() + 1, day = date.getDate();
+            if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) return 'Aries';
+            if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) return 'Taurus';
+            if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) return 'Gemini';
+            if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) return 'Cancer';
+            if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) return 'Leo';
+            if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) return 'Virgo';
+            if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) return 'Libra';
+            if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) return 'Scorpio';
+            if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) return 'Sagittarius';
+            if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) return 'Capricorn';
+            if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) return 'Aquarius';
+            return 'Pisces';
+        }
+
+        function getElement(zodiac) {
+            const elements = { Aries: 'Fire', Leo: 'Fire', Sagittarius: 'Fire', Taurus: 'Earth', Virgo: 'Earth', Capricorn: 'Earth', Gemini: 'Air', Libra: 'Air', Aquarius: 'Air', Cancer: 'Water', Scorpio: 'Water', Pisces: 'Water' };
+            return elements[zodiac] || 'Fire';
+        }
+
+        function getTrustFrequency(profile) {
+            const frequencies = {
+                'Integrated Truster': '963 Hz',
+                'Self-Reliant Isolator': '639 Hz',
+                'External Validator': '396 Hz',
+                'Spiritual Bypasser': '285 Hz',
+                'Wounded Truster': '528 Hz',
+                'Skeptical Analyst': '852 Hz'
+            };
+            return frequencies[profile] || '528 Hz';
+        }
+
+        function getTrustOrigin(lifePath, profile, element) {
+            const origins = {
+                'Integrated Truster': `As Life Path ${lifePath}, you've done the work. Your ${element} nature supports balanced trust—you know when to hold on and when to let go. Your trust isn't naïve; it's earned and conscious.`,
+                'Self-Reliant Isolator': `Life Path ${lifePath} often develops hyper-independence. ${element === 'Fire' ? 'Your fire learned early that it had to burn alone.' : element === 'Earth' ? 'Your earth learned it could only rely on itself.' : element === 'Air' ? 'Your air learned that connection means compromise.' : 'Your water learned that depth frightens others.'} Asking for help feels like weakness—but it's actually strength.`,
+                'External Validator': `Life Path ${lifePath} may have been taught to distrust internal guidance. ${element} signs especially can lose connection to their inner compass when outer voices were always louder. Your intuition is valid—you just need to practice hearing it.`,
+                'Spiritual Bypasser': `Life Path ${lifePath} found refuge in the cosmic. It's easier to trust the universe than to trust messy humans or unpredictable self. But spirituality without grounding becomes escapism. The divine works through the mundane.`,
+                'Wounded Truster': `Life Path ${lifePath} has been hurt. ${element === 'Fire' ? 'Your fire was extinguished by betrayal.' : element === 'Earth' ? 'Your earth was shaken by instability.' : element === 'Air' ? 'Your air was silenced by broken promises.' : 'Your water was poisoned by emotional harm.'} Trust feels dangerous. But isolation is its own kind of prison.`,
+                'Skeptical Analyst': `Life Path ${lifePath} prefers evidence to faith. Your ${element} nature wants proof before commitment. This protects you but also limits you. Some truths can only be discovered by leaping first.`
+            };
+            return origins[profile] || origins['Skeptical Analyst'];
+        }
+
+        function generateResultsHTML(profile, lifePath, zodiac, element) {
+            document.getElementById('inputSection').style.display = 'none';
+            const trustType = detectedProfile || 'Skeptical Analyst';
+            const typeData = trustProfiles[trustType];
+            const frequency = getTrustFrequency(trustType);
+            const origin = getTrustOrigin(lifePath, trustType, element);
+
+            const resultsHTML = `
+                <div class="reading-card">
+                    <div class="card-header">
+                        <div class="card-icon">${typeData.icon}</div>
+                        <h2 class="card-title">Your Complete Trust Blueprint</h2>
+                        <div style="color: #3b82f6; margin-top: 10px;">For ${profile.fullName || profile.name}</div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #3b82f6;">
+                        <div class="forecast-label" style="color: #3b82f6;">📿 YOUR TRUST PATTERN ORIGIN</div>
+                        <div class="forecast-text">
+                            <p>${origin}</p>
+                            <p style="margin-top: 15px;">Your profile—<strong style="color: #f59e0b;">The ${trustType}</strong>—developed for good reasons. Now the work is <strong style="color: #3b82f6;">${typeData.work}</strong>. Not replacing who you are, but expanding what's possible.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #22c55e;">
+                        <div class="forecast-label" style="color: #22c55e;">🎵 YOUR TRUST CALIBRATION FREQUENCY</div>
+                        <div class="forecast-text">
+                            <p>Your trust development frequency is <strong style="color: #22c55e;">${frequency}</strong></p>
+                            <p style="margin-top: 10px;">${
+                                frequency === '963 Hz' ? 'The "Divine Connection" frequency - maintains your integrated trust and deepens spiritual connection.' :
+                                frequency === '639 Hz' ? 'The "Relationship Harmony" frequency - opens you to healthy interdependence and selective trust.' :
+                                frequency === '396 Hz' ? 'The "Self-Liberation" frequency - releases self-doubt and builds internal authority.' :
+                                frequency === '285 Hz' ? 'The "Root Grounding" frequency - anchors spiritual trust in practical reality.' :
+                                frequency === '528 Hz' ? 'The "Heart Healing" frequency - repairs trust wounds and restores faith in connection.' :
+                                'The "Third Eye" frequency - opens intuitive trust while honoring analytical wisdom.'
+                            }</p>
+                            <p style="margin-top: 10px;">As a ${zodiac}, develop trust through ${element === 'Fire' ? 'action—trust is built by doing' : element === 'Earth' ? 'consistency—trust is built through reliable repetition' : element === 'Air' ? 'communication—trust is built through honest dialogue' : 'feeling—trust is built through emotional attunement'}.</p>
+                        </div>
+                        <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px; flex-wrap: wrap;">
+                            <a href="/genesis" style="padding: 10px 20px; background: linear-gradient(135deg, #22c55e, #059669); color: white; text-decoration: none; border-radius: 20px; font-weight: 600;">🎵 Play in Genesis</a>
+                            <button onclick="saveFrequencyToLibrary('${frequency}')" style="padding: 10px 20px; background: rgba(34, 197, 94, 0.2); border: 1px solid #22c55e; color: #22c55e; border-radius: 20px; font-weight: 600; cursor: pointer;">💾 Save Frequency</button>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #8b5cf6;">
+                        <div class="forecast-label" style="color: #8b5cf6;">🧘 YOUR TRUST DEVELOPMENT RITUAL</div>
+                        <div class="forecast-text">
+                            <p><strong>21-Day Trust Calibration for The ${trustType}:</strong></p>
+                            ${getRitualContent(trustType, element, zodiac)}
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #ec4899;">
+                        <div class="forecast-label" style="color: #ec4899;">🃏 TAROT GUIDANCE</div>
+                        <div class="forecast-text">
+                            ${getTarotGuidance(trustType, element)}
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #a855f7;">
+                        <div class="forecast-label" style="color: #a855f7;">📅 YOUR POWER TIMING</div>
+                        <div class="forecast-text">
+                            <p><strong>Best Days for Trust Work:</strong> ${getPowerDays(lifePath)}</p>
+                            <p style="margin-top: 10px;"><strong>Moon Phase:</strong> New Moon for planting trust seeds, Waxing Moon for building trust, Full Moon for trust revelations.</p>
+                            <p style="margin-top: 10px;"><strong>Power Hours:</strong> ${
+                                element === 'Fire' ? 'Morning hours when courage is fresh—trust requires brave first steps' :
+                                element === 'Earth' ? 'Stable afternoon hours when you feel grounded—trust from stability' :
+                                element === 'Air' ? 'Late morning when communication flows—trust through honest expression' :
+                                'Evening hours when intuition deepens—trust through feeling'
+                            }</p>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #fbbf24;">
+                        <div class="forecast-label" style="color: #fbbf24;">💡 KEY INSIGHT</div>
+                        <div class="forecast-text" style="font-size: 1.2em; font-style: italic; color: #fde68a; text-align: center;">
+                            "${getKeyInsight(trustType)}"
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="/index.html" class="action-btn">🏠 Hub</a>
+                    <a href="/genesis" class="action-btn">🎵 Frequencies</a>
+                    <a href="/library.html" class="action-btn">📚 Library</a>
+                    <button class="action-btn" onclick="saveFullReading()" style="background: rgba(34, 197, 94, 0.2); border-color: #22c55e; color: #22c55e;">💾 Save Reading</button>
+                </div>
+                
+                <div style="background: rgba(59, 130, 246, 0.1); border: 2px solid rgba(59, 130, 246, 0.3); border-radius: 20px; padding: 30px; margin-top: 30px;">
+                    <h3 style="color: #3b82f6; text-align: center; margin-bottom: 20px; font-family: 'Orbitron', monospace;">Continue Your Journey</h3>
+                    <div class="next-tools">
+                        <a href="/hidden-strengths-revealer.html" class="tool-link"><div class="tool-icon">💎</div><div class="tool-name">Hidden Strengths</div></a>
+                        <a href="/power-avoidance-pattern.html" class="tool-link"><div class="tool-icon">👑</div><div class="tool-name">Power Patterns</div></a>
+                        <a href="/identity-split-detector.html" class="tool-link"><div class="tool-icon">🎭</div><div class="tool-name">Identity Split</div></a>
+                        <a href="/quantum-merlin-hub/forecasts.html" class="tool-link"><div class="tool-icon">🔮</div><div class="tool-name">Cosmic Forecast</div></a>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('resultsSection').innerHTML = resultsHTML;
+            document.getElementById('resultsSection').classList.add('active');
+            autoSaveReading(profile, trustType, lifePath);
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function getRitualContent(trustType, element, zodiac) {
+            const rituals = {
+                'Integrated Truster': `
+                    <p style="margin: 10px 0;"><strong>Week 1 - Trust Audit:</strong> Where is your trust working well? Where could it be more discerning? Refinement, not rebuilding.</p>
+                    <p style="margin: 10px 0;"><strong>Week 2 - Model Trust:</strong> Consciously model healthy trust for someone who struggles with it. Your example is medicine.</p>
+                    <p style="margin: 10px 0;"><strong>Week 3 - Deepen:</strong> Where is your trust edge? What would require even more faith? Lean into that growth edge.</p>
+                `,
+                'Self-Reliant Isolator': `
+                    <p style="margin: 10px 0;"><strong>Week 1 - Micro-Asks:</strong> Ask for one small thing daily. Directions, a recommendation, help with something trivial. Build the muscle.</p>
+                    <p style="margin: 10px 0;"><strong>Week 2 - Share One Thing:</strong> Tell one person one vulnerable truth. Notice that connection deepens, not weakens.</p>
+                    <p style="margin: 10px 0;"><strong>Week 3 - Accept Help:</strong> Let someone help you with something you could do yourself. Receiving is a gift to givers.</p>
+                `,
+                'External Validator': `
+                    <p style="margin: 10px 0;"><strong>Week 1 - Solo Decisions:</strong> Make one decision daily without consulting anyone. Trust your own judgment.</p>
+                    <p style="margin: 10px 0;"><strong>Week 2 - Intuition Log:</strong> Write down three gut feelings daily. Later, check accuracy. Your intuition is more reliable than you think.</p>
+                    <p style="margin: 10px 0;"><strong>Week 3 - Inner Authority:</strong> When you want to ask advice, pause. Ask yourself first. Only seek external input after you have your own answer.</p>
+                `,
+                'Spiritual Bypasser': `
+                    <p style="margin: 10px 0;"><strong>Week 1 - Ground Daily:</strong> Barefoot on earth for 5 minutes. The divine works through the physical.</p>
+                    <p style="margin: 10px 0;"><strong>Week 2 - Human Connection:</strong> Have one vulnerable conversation with a real human. Trust isn't just vertical—it's horizontal too.</p>
+                    <p style="margin: 10px 0;"><strong>Week 3 - Self-Trust Actions:</strong> Make three practical decisions from your own wisdom. Not channeled guidance—your own knowing.</p>
+                `,
+                'Wounded Truster': `
+                    <p style="margin: 10px 0;"><strong>Week 1 - Safe Spaces:</strong> Identify one genuinely safe person. Spend time with them. Not everyone is dangerous.</p>
+                    <p style="margin: 10px 0;"><strong>Week 2 - Small Risks:</strong> Take one micro-trust risk daily. Share something small. Ask for something minor. Notice survival.</p>
+                    <p style="margin: 10px 0;"><strong>Week 3 - Trust Yourself:</strong> Before trusting others, rebuild self-trust. Keep three promises to yourself. You are reliable.</p>
+                `,
+                'Skeptical Analyst': `
+                    <p style="margin: 10px 0;"><strong>Week 1 - Faith Experiments:</strong> Try one thing without full evidence. Small stakes. Notice what happens when you leap first.</p>
+                    <p style="margin: 10px 0;"><strong>Week 2 - Feel Before Think:</strong> Before analyzing, feel. What does your body know? Logic is powerful but not complete.</p>
+                    <p style="margin: 10px 0;"><strong>Week 3 - Trust Timeline:</strong> Some truths reveal themselves over time. Plant a trust seed and wait. Not everything needs immediate proof.</p>
+                `
+            };
+            return rituals[trustType] || rituals['Skeptical Analyst'];
+        }
+
+        function getTarotGuidance(trustType, element) {
+            const guidance = {
+                'Integrated Truster': 'The World and The Star bless your path. The World confirms your integration. The Star keeps hope flowing. Your work now: maintain what you\'ve built and light the way for others.',
+                'Self-Reliant Isolator': 'The Hermit and The Lovers appear. The Hermit is your comfort zone—wise but alone. The Lovers say: "True strength includes connection." Interdependence isn\'t weakness—it\'s evolution.',
+                'External Validator': 'The High Priestess and Strength guide you. The High Priestess holds inner wisdom you\'ve been ignoring. Strength says: "Your power comes from within, not from others\' approval."',
+                'Spiritual Bypasser': 'The Tower and The Emperor appear. The Tower grounds lofty spirituality in reality. The Emperor says: "Build trust in the practical world." Heaven and earth need each other.',
+                'Wounded Truster': 'The Star and The Empress bless your healing. The Star pours hope into dried-up trust wells. The Empress says: "You deserve nurturing—receive it." Trust can be rebuilt, one small act at a time.',
+                'Skeptical Analyst': 'The Fool and The Hanged Man guide you. The Fool invites the leap of faith. The Hanged Man says: "Sometimes the best perspective comes from surrender." Not all wisdom is rational.'
+            };
+            return guidance[trustType] || guidance['Skeptical Analyst'];
+        }
+
+        function getPowerDays(lifePath) {
+            const days = { 1: 'Sundays', 2: 'Mondays', 3: 'Thursdays', 4: 'Saturdays', 5: 'Wednesdays', 6: 'Fridays', 7: 'Mondays', 8: 'Saturdays', 9: 'Tuesdays', 11: 'The 11th of each month', 22: 'The 22nd of each month' };
+            return days[lifePath] || 'Sundays';
+        }
+
+        function getKeyInsight(trustType) {
+            const insights = {
+                'Integrated Truster': 'Your balanced trust is rare. Protect it, refine it, and most importantly—model it. The world needs examples of healthy trust.',
+                'Self-Reliant Isolator': 'You\'ve proven you can handle things alone. Now prove you can handle connection. Real strength includes the courage to need others.',
+                'External Validator': 'Every answer you\'ve ever needed is already inside you. The external world can confirm—but only you can know. Trust the inner voice.',
+                'Spiritual Bypasser': 'The universe works through humans, including you. Grounded spirituality is more powerful than floating above the mess. Come down and engage.',
+                'Wounded Truster': 'Your caution made sense. But the prison of protection has become smaller than the original wound. One small trust at a time, you can rebuild.',
+                'Skeptical Analyst': 'Analysis is a gift. But some truths can only be felt, not proven. The next level of your wisdom includes trusting what you cannot yet verify.'
+            };
+            return insights[trustType] || insights['Skeptical Analyst'];
+        }
+
+        function saveProfileToLibrary(profile) {
+            const item = { id: Date.now(), type: 'profile', name: profile.fullName, fullName: profile.fullName, birthDate: profile.birthDate, birthTime: profile.birthTime, birthPlace: profile.birthPlace, timestamp: Date.now(), savedAt: new Date().toISOString() };
+            let library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+        }
+
+        function saveFrequencyToLibrary(frequency) {
+            const item = { id: Date.now(), type: 'frequency', name: frequency + ' - Trust Frequency', frequency: frequency, source: 'Full Trust Reading', timestamp: Date.now(), savedAt: new Date().toISOString() };
+            let library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+            showNotification('Frequency saved to Library!');
+        }
+
+        function autoSaveReading(profile, trustType, lifePath) {
+            const item = { id: Date.now(), type: 'trust-full', name: 'Full Trust Reading', title: `Trust Blueprint: The ${trustType}`, trustProfile: trustType, lifePath: lifePath, profile: profile.fullName || profile.name, timestamp: Date.now(), savedAt: new Date().toISOString() };
+            let library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+        }
+
+        function saveFullReading() { showNotification('Reading saved to Library!'); }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.cssText = 'position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #22c55e, #059669); color: white; padding: 15px 30px; border-radius: 30px; font-weight: 600; z-index: 9999; box-shadow: 0 10px 30px rgba(34, 197, 94, 0.5);';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 3000);
+        }
+    </script>
+    <script src="shared/js/quantum-analytics.js"></script>
+</body>
+</html>

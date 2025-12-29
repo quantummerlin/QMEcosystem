@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Power Reading | Quantum Merlin</title>
+    <meta name="description" content="Your complete power reclamation blueprint with birth numerology, cosmic patterns, and personalized activation protocols.">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Orbitron:wght@400;600;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 50%, #0a0a0f 100%);
+            color: #e0d4f7;
+            font-family: 'Exo 2', sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding-top: 80px; }
+        
+        .qm-header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(10, 10, 15, 0.95); backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(245, 158, 11, 0.3); padding: 15px 20px;
+        }
+        .qm-header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .qm-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .qm-logo-icon { font-size: 1.5rem; }
+        .qm-logo-text { font-family: 'Orbitron', monospace; font-size: 1.1rem; font-weight: 700; background: linear-gradient(135deg, #f59e0b, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .qm-support { background: linear-gradient(135deg, #FFDD00, #FFA500); color: #000; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
+        
+        .page-header { text-align: center; margin-bottom: 40px; }
+        .page-icon { font-size: 4rem; margin-bottom: 20px; }
+        .page-title { font-family: 'Cinzel', serif; font-size: 2.2rem; background: linear-gradient(135deg, #f59e0b, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; }
+        .page-subtitle { color: #f59e0b; font-size: 1.1rem; max-width: 500px; margin: 0 auto; }
+        
+        .previous-reading { background: linear-gradient(145deg, rgba(245, 158, 11, 0.1), rgba(239, 68, 68, 0.15)); border: 2px solid rgba(245, 158, 11, 0.4); border-radius: 20px; padding: 25px; margin-bottom: 30px; text-align: center; }
+        .pattern-name { font-size: 1.6rem; font-weight: 800; font-family: 'Orbitron', monospace; background: linear-gradient(135deg, #f59e0b, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .pattern-icon { font-size: 3rem; margin-bottom: 10px; }
+        
+        .profile-section { background: rgba(245, 158, 11, 0.1); border: 2px solid rgba(245, 158, 11, 0.3); border-radius: 20px; padding: 30px; margin-bottom: 30px; }
+        .section-title { font-family: 'Orbitron', monospace; color: #f59e0b; font-size: 1.2rem; margin-bottom: 20px; text-align: center; }
+        
+        .profile-options { display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
+        .profile-option { flex: 1; min-width: 200px; padding: 20px; background: rgba(245, 158, 11, 0.15); border: 2px solid rgba(245, 158, 11, 0.3); border-radius: 15px; cursor: pointer; transition: all 0.3s ease; text-align: center; }
+        .profile-option:hover { border-color: #f59e0b; transform: translateY(-3px); }
+        .profile-option.selected { border-color: #ef4444; background: rgba(239, 68, 68, 0.2); }
+        .profile-option-icon { font-size: 2rem; margin-bottom: 10px; }
+        .profile-option-title { color: #fcd34d; font-weight: 600; }
+        .profile-option-desc { color: #f59e0b; font-size: 0.85rem; margin-top: 5px; }
+        
+        .birth-form, .saved-profiles { display: none; }
+        .birth-form.active, .saved-profiles.active { display: block; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; color: #fcd34d; margin-bottom: 8px; font-weight: 500; }
+        .form-input { width: 100%; padding: 15px; background: rgba(245, 158, 11, 0.1); border: 2px solid rgba(245, 158, 11, 0.3); border-radius: 12px; color: #e0d4f7; font-size: 1rem; font-family: 'Exo 2', sans-serif; }
+        .form-input:focus { outline: none; border-color: #f59e0b; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        
+        .profile-card { padding: 20px; background: rgba(245, 158, 11, 0.15); border: 2px solid rgba(245, 158, 11, 0.3); border-radius: 15px; margin-bottom: 15px; cursor: pointer; transition: all 0.3s ease; }
+        .profile-card:hover { border-color: #f59e0b; transform: translateY(-2px); }
+        .profile-card.selected { border-color: #22c55e; background: rgba(34, 197, 94, 0.15); }
+        .profile-name { color: #f59e0b; font-weight: 600; font-size: 1.1rem; }
+        .profile-details { color: #9ca3af; font-size: 0.9rem; margin-top: 5px; }
+        .no-profiles { text-align: center; color: #f59e0b; padding: 30px; }
+        
+        .generate-btn { width: 100%; padding: 20px; background: linear-gradient(135deg, #f59e0b, #ef4444); color: white; border: none; border-radius: 30px; font-size: 1.3rem; font-weight: 700; font-family: 'Orbitron', monospace; cursor: pointer; transition: all 0.3s ease; margin-top: 20px; }
+        .generate-btn:hover:not(:disabled) { transform: scale(1.02); box-shadow: 0 10px 40px rgba(245, 158, 11, 0.5); }
+        .generate-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        
+        .results-section { display: none; }
+        .results-section.active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .reading-card { background: linear-gradient(145deg, rgba(245, 158, 11, 0.1), rgba(239, 68, 68, 0.1)); border: 2px solid rgba(245, 158, 11, 0.4); border-radius: 20px; padding: 30px; margin-bottom: 25px; }
+        .card-header { text-align: center; margin-bottom: 25px; }
+        .card-icon { font-size: 3rem; margin-bottom: 10px; }
+        .card-title { font-family: 'Cinzel', serif; font-size: 1.5rem; color: #f59e0b; }
+        
+        .forecast-section { background: rgba(0,0,0,0.2); border-radius: 15px; padding: 20px; margin-bottom: 20px; }
+        .forecast-label { font-weight: 700; font-size: 0.9em; letter-spacing: 1px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .forecast-text { color: #e0d4f7; line-height: 1.8; }
+        
+        .action-buttons { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin: 30px 0; }
+        .action-btn { padding: 15px 25px; border-radius: 25px; border: 2px solid rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.2); color: #fcd34d; text-decoration: none; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+        .action-btn:hover { border-color: #f59e0b; transform: translateY(-2px); }
+        
+        .next-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; }
+        .tool-link { display: block; padding: 20px 15px; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease; }
+        .tool-link:hover { border-color: #f59e0b; transform: translateY(-3px); }
+        .tool-icon { font-size: 2rem; margin-bottom: 8px; }
+        .tool-name { color: #fcd34d; font-weight: 600; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header class="qm-header">
+        <div class="qm-header-inner">
+            <a href="/index.html" class="qm-logo">
+                <div class="qm-logo-icon">🧙‍♂️</div>
+                <span class="qm-logo-text">Quantum Merlin</span>
+            </a>
+            <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank" class="qm-support">☕ Support</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <div class="page-icon">👑</div>
+            <h1 class="page-title">Full Power Reading</h1>
+            <p class="page-subtitle">Add your birth details for a complete power reclamation blueprint</p>
+        </div>
+
+        <div class="previous-reading" id="previousReading">
+            <div style="color: #f59e0b; font-size: 0.9rem; margin-bottom: 10px;">YOUR POWER AVOIDANCE PATTERN</div>
+            <div class="pattern-icon" id="patternIcon">👑</div>
+            <div class="pattern-name" id="patternName">Loading...</div>
+        </div>
+
+        <div id="inputSection">
+            <div class="profile-section">
+                <div class="section-title">Choose Your Path</div>
+                
+                <div class="profile-options">
+                    <div class="profile-option" onclick="selectOption('saved')" id="optionSaved">
+                        <div class="profile-option-icon">📚</div>
+                        <div class="profile-option-title">Load from Library</div>
+                        <div class="profile-option-desc">Use a saved profile</div>
+                    </div>
+                    <div class="profile-option" onclick="selectOption('new')" id="optionNew">
+                        <div class="profile-option-icon">✏️</div>
+                        <div class="profile-option-title">Enter Details</div>
+                        <div class="profile-option-desc">Input birth information</div>
+                    </div>
+                </div>
+
+                <div class="saved-profiles" id="savedProfiles">
+                    <div id="profilesList"></div>
+                </div>
+
+                <div class="birth-form" id="birthForm">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" id="fullName" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Birth Date</label>
+                        <input type="date" class="form-input" id="birthDate">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Birth Time (optional)</label>
+                            <input type="time" class="form-input" id="birthTime">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Birth Place (optional)</label>
+                            <input type="text" class="form-input" id="birthPlace" placeholder="City, Country">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                            <input type="checkbox" id="saveProfile" checked>
+                            <span class="form-label" style="margin: 0;">Save this profile to Library</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="generate-btn" id="generateBtn" onclick="generateFullReading()" disabled>
+                    👑 Generate Reclamation Blueprint
+                </button>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection"></div>
+    </div>
+
+    <script>
+        let previousData = null;
+        let selectedProfile = null;
+        let selectedOption = null;
+        let detectedPattern = null;
+
+        const patterns = {
+            'Invisible Achiever': { icon: '👻', reclaim: 'Visibility without vulnerability' },
+            'Self-Saboteur': { icon: '💣', reclaim: 'Completion without catastrophe' },
+            'Relationship Protector': { icon: '🛡️', reclaim: 'Power with connection' },
+            'Eternal Helper': { icon: '🤲', reclaim: 'Leadership through receiving' },
+            'Empowered Leader': { icon: '👑', reclaim: 'Conscious power mastery' }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const storedData = sessionStorage.getItem('qm_enhanced_data');
+            if (storedData) {
+                previousData = JSON.parse(storedData);
+                displayPreviousReading();
+            } else {
+                document.getElementById('previousReading').innerHTML = `
+                    <div style="color: #fbbf24;">⚠️ No previous reading found</div>
+                    <p style="color: #f59e0b; margin-top: 10px;">
+                        <a href="/power-avoidance-pattern.html" style="color: #f59e0b;">Take the Power Avoidance test</a> first for the complete experience.
+                    </p>
+                `;
+            }
+            loadSavedProfiles();
+        });
+
+        function displayPreviousReading() {
+            if (!previousData || !previousData.answers) return;
+            const answers = previousData.answers;
+            
+            // Determine pattern based on answers
+            const q1 = answers.q1 || 0, q2 = answers.q2 || 0, q3 = answers.q3 || 0, q4 = answers.q4 || 0, q5 = answers.q5 || 0;
+            
+            if (q1 >= 4 && q3 >= 4) detectedPattern = 'Invisible Achiever';
+            else if (q2 >= 4) detectedPattern = 'Self-Saboteur';
+            else if (q4 >= 4 && q5 >= 3) detectedPattern = 'Relationship Protector';
+            else if (q5 >= 4) detectedPattern = 'Eternal Helper';
+            else if (q1 <= 2 && q2 <= 2 && q3 <= 2) detectedPattern = 'Empowered Leader';
+            else detectedPattern = 'Self-Saboteur'; // Default
+            
+            const patternData = patterns[detectedPattern];
+            document.getElementById('patternIcon').textContent = patternData.icon;
+            document.getElementById('patternName').textContent = 'The ' + detectedPattern;
+        }
+
+        function selectOption(option) {
+            selectedOption = option;
+            document.querySelectorAll('.profile-option').forEach(el => el.classList.remove('selected'));
+            document.getElementById('option' + option.charAt(0).toUpperCase() + option.slice(1)).classList.add('selected');
+            
+            if (option === 'saved') {
+                document.getElementById('savedProfiles').classList.add('active');
+                document.getElementById('birthForm').classList.remove('active');
+            } else {
+                document.getElementById('savedProfiles').classList.remove('active');
+                document.getElementById('birthForm').classList.add('active');
+                checkFormValidity();
+            }
+        }
+
+        function loadSavedProfiles() {
+            const library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            const profiles = library.filter(item => item.type === 'profile' || item.birthDate);
+            const container = document.getElementById('profilesList');
+            
+            if (profiles.length === 0) {
+                container.innerHTML = `<div class="no-profiles"><div style="font-size: 2rem; margin-bottom: 10px;">📭</div><div>No saved profiles found</div></div>`;
+                return;
+            }
+            
+            container.innerHTML = profiles.map((profile, index) => `
+                <div class="profile-card" onclick="selectProfile(${index})" id="profile-${index}">
+                    <div class="profile-name">${profile.name || profile.fullName || 'Unnamed'}</div>
+                    <div class="profile-details">${profile.birthDate ? new Date(profile.birthDate).toLocaleDateString() : 'No birth date'}</div>
+                </div>
+            `).join('');
+        }
+
+        function selectProfile(index) {
+            const library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            const profiles = library.filter(item => item.type === 'profile' || item.birthDate);
+            selectedProfile = profiles[index];
+            document.querySelectorAll('.profile-card').forEach(el => el.classList.remove('selected'));
+            document.getElementById('profile-' + index).classList.add('selected');
+            document.getElementById('generateBtn').disabled = false;
+        }
+
+        function checkFormValidity() {
+            const name = document.getElementById('fullName').value;
+            const birthDate = document.getElementById('birthDate').value;
+            document.getElementById('generateBtn').disabled = !(name && birthDate);
+        }
+
+        document.getElementById('fullName')?.addEventListener('input', checkFormValidity);
+        document.getElementById('birthDate')?.addEventListener('change', checkFormValidity);
+
+        function generateFullReading() {
+            let profileData;
+            if (selectedOption === 'saved' && selectedProfile) {
+                profileData = selectedProfile;
+            } else {
+                profileData = {
+                    fullName: document.getElementById('fullName').value,
+                    birthDate: document.getElementById('birthDate').value,
+                    birthTime: document.getElementById('birthTime').value,
+                    birthPlace: document.getElementById('birthPlace').value
+                };
+                if (document.getElementById('saveProfile').checked) saveProfileToLibrary(profileData);
+            }
+            
+            const birthDate = new Date(profileData.birthDate);
+            const lifePath = calculateLifePath(birthDate);
+            const zodiac = getZodiacSign(birthDate);
+            const element = getElement(zodiac);
+            
+            generateResultsHTML(profileData, lifePath, zodiac, element);
+        }
+
+        function calculateLifePath(date) {
+            const dateStr = date.toISOString().split('T')[0].replace(/-/g, '');
+            let sum = dateStr.split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+            while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
+                sum = sum.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+            }
+            return sum;
+        }
+
+        function getZodiacSign(date) {
+            const month = date.getMonth() + 1, day = date.getDate();
+            if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) return 'Aries';
+            if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) return 'Taurus';
+            if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) return 'Gemini';
+            if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) return 'Cancer';
+            if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) return 'Leo';
+            if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) return 'Virgo';
+            if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) return 'Libra';
+            if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) return 'Scorpio';
+            if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) return 'Sagittarius';
+            if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) return 'Capricorn';
+            if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) return 'Aquarius';
+            return 'Pisces';
+        }
+
+        function getElement(zodiac) {
+            const elements = { Aries: 'Fire', Leo: 'Fire', Sagittarius: 'Fire', Taurus: 'Earth', Virgo: 'Earth', Capricorn: 'Earth', Gemini: 'Air', Libra: 'Air', Aquarius: 'Air', Cancer: 'Water', Scorpio: 'Water', Pisces: 'Water' };
+            return elements[zodiac] || 'Fire';
+        }
+
+        function getPowerFrequency(pattern) {
+            const frequencies = {
+                'Invisible Achiever': '741 Hz',
+                'Self-Saboteur': '528 Hz',
+                'Relationship Protector': '639 Hz',
+                'Eternal Helper': '396 Hz',
+                'Empowered Leader': '852 Hz'
+            };
+            return frequencies[pattern] || '528 Hz';
+        }
+
+        function getPowerOrigin(lifePath, pattern, element) {
+            const origins = {
+                'Invisible Achiever': `As Life Path ${lifePath}, you learned early that being seen was dangerous. ${element === 'Fire' ? 'Your fire was too bright for others—they couldn\'t handle your intensity.' : element === 'Earth' ? 'Your stability made others jealous—they attacked what they couldn\'t match.' : element === 'Air' ? 'Your ideas threatened the status quo—you were silenced for being ahead.' : 'Your depth exposed others\' shallowness—they resented your perception.'}`,
+                'Self-Saboteur': `Life Path ${lifePath} often carries success trauma. You may have witnessed power corrupt, or success destroy relationships. Your psyche learned: "It's safer to fail than to succeed and lose everything."`,
+                'Relationship Protector': `As a ${element} sign, connection is sacred to you. Life Path ${lifePath} may have learned that power and love are mutually exclusive. You dim your light to keep others comfortable—but you're suffocating your own flame.`,
+                'Eternal Helper': `Life Path ${lifePath} often develops a "helper" identity early. Your value became tied to service. But there's a difference between giving from overflow and giving from depletion. You've been doing the latter.`,
+                'Empowered Leader': `Life Path ${lifePath} has integrated their power. This doesn't mean you're done growing—it means you've done the foundational work. Your journey now is about using power wisely and helping others reclaim theirs.`
+            };
+            return origins[pattern] || origins['Self-Saboteur'];
+        }
+
+        function generateResultsHTML(profile, lifePath, zodiac, element) {
+            document.getElementById('inputSection').style.display = 'none';
+            const pattern = detectedPattern || 'Self-Saboteur';
+            const patternData = patterns[pattern];
+            const frequency = getPowerFrequency(pattern);
+            const origin = getPowerOrigin(lifePath, pattern, element);
+
+            const resultsHTML = `
+                <div class="reading-card">
+                    <div class="card-header">
+                        <div class="card-icon">${patternData.icon}</div>
+                        <h2 class="card-title">Your Complete Power Blueprint</h2>
+                        <div style="color: #f59e0b; margin-top: 10px;">For ${profile.fullName || profile.name}</div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #f59e0b;">
+                        <div class="forecast-label" style="color: #f59e0b;">📿 YOUR POWER WOUND ORIGIN</div>
+                        <div class="forecast-text">
+                            <p>${origin}</p>
+                            <p style="margin-top: 15px;">Your pattern—<strong style="color: #ef4444;">The ${pattern}</strong>—isn't a flaw. It was a <em>brilliant survival strategy</em>. It kept you safe when safety was needed. But what protected you then is limiting you now. The reclamation path is <strong style="color: #f59e0b;">${patternData.reclaim}</strong>.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #22c55e;">
+                        <div class="forecast-label" style="color: #22c55e;">🎵 YOUR POWER RECLAMATION FREQUENCY</div>
+                        <div class="forecast-text">
+                            <p>Your power activation frequency is <strong style="color: #22c55e;">${frequency}</strong></p>
+                            <p style="margin-top: 10px;">${
+                                frequency === '741 Hz' ? 'The "Expression" frequency - activates your authentic voice and visibility. Perfect for stepping out of the shadows.' :
+                                frequency === '528 Hz' ? 'The "Transformation" frequency - repairs the success-trauma circuit. Perfect for allowing completion without catastrophe.' :
+                                frequency === '639 Hz' ? 'The "Connection" frequency - harmonizes power with love. Perfect for proving you can have both.' :
+                                frequency === '396 Hz' ? 'The "Liberation" frequency - releases guilt around receiving. Perfect for shifting from depletion to overflow.' :
+                                'The "Intuition" frequency - deepens conscious leadership. Perfect for wielding power with wisdom.'
+                            }</p>
+                            <p style="margin-top: 10px;">As a ${zodiac}, activate this frequency ${element === 'Fire' ? 'during bold action—listen while doing something that scares you' : element === 'Earth' ? 'while standing your ground—literal grounding during power work' : element === 'Air' ? 'while speaking your truth—listen while practicing assertive communication' : 'during emotional release—listen while letting yourself feel the power you\'ve been suppressing'}.</p>
+                        </div>
+                        <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px; flex-wrap: wrap;">
+                            <a href="/genesis" style="padding: 10px 20px; background: linear-gradient(135deg, #22c55e, #059669); color: white; text-decoration: none; border-radius: 20px; font-weight: 600;">🎵 Play in Genesis</a>
+                            <button onclick="saveFrequencyToLibrary('${frequency}')" style="padding: 10px 20px; background: rgba(34, 197, 94, 0.2); border: 1px solid #22c55e; color: #22c55e; border-radius: 20px; font-weight: 600; cursor: pointer;">💾 Save Frequency</button>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #8b5cf6;">
+                        <div class="forecast-label" style="color: #8b5cf6;">🧘 YOUR POWER RECLAMATION RITUAL</div>
+                        <div class="forecast-text">
+                            <p><strong>21-Day Power Reclamation for The ${pattern}:</strong></p>
+                            ${getRitualContent(pattern, element, zodiac)}
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #3b82f6;">
+                        <div class="forecast-label" style="color: #3b82f6;">🃏 TAROT GUIDANCE</div>
+                        <div class="forecast-text">
+                            ${getTarotGuidance(pattern, element)}
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #a855f7;">
+                        <div class="forecast-label" style="color: #a855f7;">📅 YOUR POWER TIMING</div>
+                        <div class="forecast-text">
+                            <p><strong>Best Days for Power Work:</strong> ${getPowerDays(lifePath)}</p>
+                            <p style="margin-top: 10px;"><strong>Moon Phase:</strong> Waxing Moon for building power, Full Moon for visibility, Waning Moon for releasing old patterns.</p>
+                            <p style="margin-top: 10px;"><strong>Power Hours:</strong> ${
+                                element === 'Fire' ? 'Solar noon—the sun at its zenith mirrors your power at its peak' :
+                                element === 'Earth' ? 'Midmorning when practical energy is highest—ground your power in action' :
+                                element === 'Air' ? 'Late morning when communication flows—speak your power into existence' :
+                                'Evening tide changes—harness emotional power during transitions'
+                            }</p>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #fbbf24;">
+                        <div class="forecast-label" style="color: #fbbf24;">💡 KEY INSIGHT</div>
+                        <div class="forecast-text" style="font-size: 1.2em; font-style: italic; color: #fde68a; text-align: center;">
+                            "${getKeyInsight(pattern)}"
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="/index.html" class="action-btn">🏠 Hub</a>
+                    <a href="/genesis" class="action-btn">🎵 Frequencies</a>
+                    <a href="/library.html" class="action-btn">📚 Library</a>
+                    <button class="action-btn" onclick="saveFullReading()" style="background: rgba(34, 197, 94, 0.2); border-color: #22c55e; color: #22c55e;">💾 Save Reading</button>
+                </div>
+                
+                <div style="background: rgba(245, 158, 11, 0.1); border: 2px solid rgba(245, 158, 11, 0.3); border-radius: 20px; padding: 30px; margin-top: 30px;">
+                    <h3 style="color: #f59e0b; text-align: center; margin-bottom: 20px; font-family: 'Orbitron', monospace;">Continue Your Journey</h3>
+                    <div class="next-tools">
+                        <a href="/hidden-strengths-revealer.html" class="tool-link"><div class="tool-icon">💎</div><div class="tool-name">Hidden Strengths</div></a>
+                        <a href="/trust-radar.html" class="tool-link"><div class="tool-icon">🎯</div><div class="tool-name">Trust Radar</div></a>
+                        <a href="/contract.html" class="tool-link"><div class="tool-icon">📜</div><div class="tool-name">Unconscious Contract</div></a>
+                        <a href="/quantum-merlin-hub/forecasts.html" class="tool-link"><div class="tool-icon">🔮</div><div class="tool-name">Cosmic Forecast</div></a>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('resultsSection').innerHTML = resultsHTML;
+            document.getElementById('resultsSection').classList.add('active');
+            autoSaveReading(profile, pattern, lifePath);
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function getRitualContent(pattern, element, zodiac) {
+            const rituals = {
+                'Invisible Achiever': `
+                    <p style="margin: 10px 0;"><strong>Week 1 - Micro-Visibility:</strong> Sign your name to one thing you created. Take credit for one contribution. Share one win publicly. Small steps into the light.</p>
+                    <p style="margin: 10px 0;"><strong>Week 2 - Tolerate Acknowledgment:</strong> When praised, say only "Thank you." No deflecting. No "It was nothing." Let the acknowledgment land.</p>
+                    <p style="margin: 10px 0;"><strong>Week 3 - Claim Space:</strong> Lead one meeting. Make one decision without consensus. Take up more physical space. Speak first instead of last.</p>
+                `,
+                'Self-Saboteur': `
+                    <p style="margin: 10px 0;"><strong>Week 1 - Witness the Pattern:</strong> Journal every sabotage urge. Don't resist it—just notice. "I feel like quitting right now because..."</p>
+                    <p style="margin: 10px 0;"><strong>Week 2 - Complete One Thing:</strong> Finish one small project completely. Cross the finish line. Notice what happens. (Hint: nothing bad.)</p>
+                    <p style="margin: 10px 0;"><strong>Week 3 - Success Tolerance:</strong> Let something go well without creating drama. Sit in the discomfort of success. Prove to your nervous system that completion is safe.</p>
+                `,
+                'Relationship Protector': `
+                    <p style="margin: 10px 0;"><strong>Week 1 - Notice the Dimming:</strong> When do you make yourself smaller? Track every instance of shrinking for others' comfort.</p>
+                    <p style="margin: 10px 0;"><strong>Week 2 - Shine Anyway:</strong> Share one achievement even if it might trigger someone. Their reaction is their responsibility.</p>
+                    <p style="margin: 10px 0;"><strong>Week 3 - Relationship Audit:</strong> Who celebrates your success vs who resents it? Invest energy accordingly. Real love survives your power.</p>
+                `,
+                'Eternal Helper': `
+                    <p style="margin: 10px 0;"><strong>Week 1 - Receive Practice:</strong> Accept help once daily. Ask for something you could do yourself. Let someone support you.</p>
+                    <p style="margin: 10px 0;"><strong>Week 2 - Strategic No:</strong> Decline one request that depletes you. Notice the world doesn't end. Notice you're still lovable.</p>
+                    <p style="margin: 10px 0;"><strong>Week 3 - Lead, Don't Serve:</strong> Take a leadership role, not a helper role. Direct instead of support. Your guidance is needed, not just your labor.</p>
+                `,
+                'Empowered Leader': `
+                    <p style="margin: 10px 0;"><strong>Week 1 - Power Audit:</strong> Where are you using power well? Where could you be more conscious? Refine, don't rebuild.</p>
+                    <p style="margin: 10px 0;"><strong>Week 2 - Mentor Others:</strong> Identify someone avoiding their power. Model healthy power. Your example is medicine.</p>
+                    <p style="margin: 10px 0;"><strong>Week 3 - Power Edge:</strong> Where is your next growth edge? Mastery is never complete. What's the next level of conscious leadership?</p>
+                `
+            };
+            return rituals[pattern] || rituals['Self-Saboteur'];
+        }
+
+        function getTarotGuidance(pattern, element) {
+            const guidance = {
+                'Invisible Achiever': 'The Sun and The Emperor guide your reclamation. The Sun says: "You were made to be seen." The Emperor says: "Claim your throne." Together: visibility is not vanity—it\'s your birthright.',
+                'Self-Saboteur': 'The Wheel of Fortune and Death appear. The Wheel says: "Success and failure are both temporary." Death says: "Let the fear of success die so you can live." Completion won\'t destroy you—avoidance will.',
+                'Relationship Protector': 'The Empress and Strength bless your path. The Empress says: "Your fullness nurtures others." Strength says: "Real love doesn\'t need you to be small." Power and love are not opposites—they\'re partners.',
+                'Eternal Helper': 'The Star and The Hermit guide you. The Star says: "Pour from overflow, not from emptiness." The Hermit says: "Sometimes the greatest service is leading, not helping." Receiving is a gift to givers.',
+                'Empowered Leader': 'The Magician and The World celebrate your integration. The Magician channels power through intention. The World completes cycles with wisdom. Your work now: conscious mastery and modeling for others.'
+            };
+            return guidance[pattern] || guidance['Self-Saboteur'];
+        }
+
+        function getPowerDays(lifePath) {
+            const days = { 1: 'Sundays', 2: 'Mondays', 3: 'Thursdays', 4: 'Saturdays', 5: 'Wednesdays', 6: 'Fridays', 7: 'Mondays', 8: 'Saturdays', 9: 'Tuesdays', 11: 'The 11th of each month', 22: 'The 22nd of each month' };
+            return days[lifePath] || 'Sundays';
+        }
+
+        function getKeyInsight(pattern) {
+            const insights = {
+                'Invisible Achiever': 'You\'ve been hiding genius. The world has been deprived of your full contribution. Step into the light—not for ego, but for service.',
+                'Self-Saboteur': 'You\'re not afraid of failure—you\'re afraid of success. What if it works? What if you get what you want? That\'s the real question.',
+                'Relationship Protector': 'The relationships worth keeping will celebrate your power. The ones that can\'t handle your full self were never meant to last.',
+                'Eternal Helper': 'You cannot pour from an empty cup. But more importantly—you deserve to be filled, not just useful. Receive first, then give from overflow.',
+                'Empowered Leader': 'Power without consciousness is dangerous. Power with consciousness is medicine. You have the medicine—now distribute it wisely.'
+            };
+            return insights[pattern] || insights['Self-Saboteur'];
+        }
+
+        function saveProfileToLibrary(profile) {
+            const item = { id: Date.now(), type: 'profile', name: profile.fullName, fullName: profile.fullName, birthDate: profile.birthDate, birthTime: profile.birthTime, birthPlace: profile.birthPlace, timestamp: Date.now(), savedAt: new Date().toISOString() };
+            let library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+        }
+
+        function saveFrequencyToLibrary(frequency) {
+            const item = { id: Date.now(), type: 'frequency', name: frequency + ' - Power Frequency', frequency: frequency, source: 'Full Power Reading', timestamp: Date.now(), savedAt: new Date().toISOString() };
+            let library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+            showNotification('Frequency saved to Library!');
+        }
+
+        function autoSaveReading(profile, pattern, lifePath) {
+            const item = { id: Date.now(), type: 'power-full', name: 'Full Power Reading', title: `Power Blueprint: The ${pattern}`, pattern: pattern, lifePath: lifePath, profile: profile.fullName || profile.name, timestamp: Date.now(), savedAt: new Date().toISOString() };
+            let library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+        }
+
+        function saveFullReading() { showNotification('Reading saved to Library!'); }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.cssText = 'position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #22c55e, #059669); color: white; padding: 15px 30px; border-radius: 30px; font-weight: 600; z-index: 9999; box-shadow: 0 10px 30px rgba(34, 197, 94, 0.5);';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 3000);
+        }
+    </script>
+    <script src="shared/js/quantum-analytics.js"></script>
+</body>
+</html>
