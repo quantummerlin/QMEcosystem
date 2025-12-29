@@ -115,6 +115,98 @@
             text-decoration: none;
         }
 
+        /* Header Navigation */
+        .qm-nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .qm-nav-item {
+            position: relative;
+            color: #00f5ff;
+            font-family: 'Orbitron', monospace;
+            font-weight: 500;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .qm-nav-item:hover {
+            color: #fff;
+        }
+
+        /* Tools Dropdown */
+        .tools-dropdown {
+            position: absolute;
+            top: calc(100% + 20px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(10, 10, 15, 0.98);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 20px;
+            padding: 25px;
+            min-width: 800px;
+            display: none;
+            z-index: 10000;
+            box-shadow: 0 15px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        .tools-dropdown.active {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .tools-dropdown-category {
+            padding: 15px;
+        }
+
+        .tools-dropdown-category h4 {
+            color: #ffd700;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tools-dropdown-category a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .tools-dropdown-category a:hover {
+            background: rgba(0, 245, 255, 0.1);
+            color: #00f5ff;
+            transform: translateX(5px);
+        }
+
+        .tools-dropdown-category a .emoji {
+            font-size: 1.2rem;
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+        }
+
+        .qm-nav-item:hover .dropdown-arrow {
+            transform: translateY(2px);
+        }
+
         .qm-logo-icon {
             width: 48px;
             height: 48px;
@@ -221,6 +313,257 @@
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 40px rgba(0, 245, 255, 0.6);
+        }
+
+        /* Social Proof */
+        .social-proof {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .social-proof h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: #00f5ff;
+            margin-bottom: 30px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            padding: 25px;
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            border-color: #00f5ff;
+            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            display: block;
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00f5ff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            display: block;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        /* Quick Start Quiz */
+        .quick-start {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.05), rgba(157, 0, 255, 0.05));
+        }
+
+        .quick-start h2 {
+            text-align: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffd700, #00f5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .quick-start > p {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .quiz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .quiz-option {
+            padding: 30px;
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .quiz-option:hover {
+            border-color: #00f5ff;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.4);
+        }
+
+        .quiz-option .icon {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .quiz-option h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            color: #00f5ff;
+            margin-bottom: 12px;
+        }
+
+        .quiz-option p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Featured Tools Section */
+        .featured-section {
+            padding: 80px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .featured-section h2 {
+            text-align: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffd700, #00f5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .featured-section > p {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .featured-card {
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid rgba(0, 245, 255, 0.4);
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .featured-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0, 245, 255, 0.15), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .featured-card:hover::before {
+            opacity: 1;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-10px);
+            border-color: #00f5ff;
+            box-shadow: 0 20px 50px rgba(0, 245, 255, 0.5);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #ffd700, #ff6ec7);
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .featured-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .featured-card h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.6rem;
+            color: #00f5ff;
+            margin-bottom: 15px;
+        }
+
+        .featured-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .featured-stats {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 245, 255, 0.2);
+        }
+
+        .featured-stat {
+            text-align: center;
+        }
+
+        .featured-stat-value {
+            display: block;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffd700;
+        }
+
+        .featured-stat-label {
+            display: block;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 5px;
         }
 
         /* Section Styling */
@@ -582,12 +925,43 @@
                 font-size: 1.1rem;
             }
 
+            .qm-nav {
+                gap: 10px;
+            }
+
+            .qm-nav-item span:first-child {
+                display: none;
+            }
+
+            .qm-nav-item {
+                font-size: 1.3rem;
+            }
+
+            .tools-dropdown {
+                min-width: 90vw;
+                left: 5vw;
+                transform: none;
+                grid-template-columns: 1fr;
+            }
+
             .qm-coffee-btn span:last-child {
                 display: none;
             }
 
             .tool-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .quiz-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .all-tools-grid {
@@ -678,9 +1052,46 @@
                 <div class="qm-logo-icon">🧙‍♂️</div>
                 <div class="qm-logo-text">Quantum Merlin</div>
             </a>
-            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="qm-coffee-btn" title="Buy Me a Coffee">
-                <span style="font-size: 1.8rem;">☕</span>
-            </a>
+            
+            <nav class="qm-nav">
+                <div class="qm-nav-item" id="toolsNavBtn">
+                    <span>Tools</span>
+                    <span class="dropdown-arrow">▼</span>
+                    
+                    <div class="tools-dropdown" id="toolsDropdown">
+                        <div class="tools-dropdown-category">
+                            <h4>⭐ Most Popular</h4>
+                            <a href="./compatibility.html"><span class="emoji">💫</span> Compatibility Calculator</a>
+                            <a href="/forecasts"><span class="emoji">🔮</span> Quantum Forecaster</a>
+                            <a href="./contract.html"><span class="emoji">📜</span> Unconscious Contract</a>
+                        </div>
+                        
+                        <div class="tools-dropdown-category">
+                            <h4>🔯 Core Tools</h4>
+                            <a href="./birth-sigil.html"><span class="emoji">🌙</span> Birth Sigil</a>
+                            <a href="./soulcard.html"><span class="emoji">🎴</span> Soul Card</a>
+                            <a href="./library.html"><span class="emoji">📚</span> My Library</a>
+                            <a href="/angel-number-calculator.html"><span class="emoji">👼</span> Angel Numbers</a>
+                        </div>
+                        
+                        <div class="tools-dropdown-category">
+                            <h4>🧠 Micro-Tools</h4>
+                            <a href="/manifest.html"><span class="emoji">🎯</span> Manifestation Readiness</a>
+                            <a href="/energyleak.html"><span class="emoji">🔋</span> Energy Leak Locator</a>
+                            <a href="/identity-split-detector.html"><span class="emoji">🎭</span> Identity Split</a>
+                            <a href="/hidden-strengths-revealer.html"><span class="emoji">💪</span> Hidden Strengths</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="./quantum-rose.html" class="qm-nav-item" style="color: #ff6ec7;">
+                    <span>🌹 Quantum Rose</span>
+                </a>
+                
+                <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="qm-coffee-btn" title="Buy Me a Coffee">
+                    <span style="font-size: 1.8rem;">☕</span>
+                </a>
+            </nav>
         </div>
     </header>
 
@@ -689,9 +1100,123 @@
         <h1>QUANTUM MERLIN</h1>
         <p class="tagline">Where Ancient Wisdom Meets Quantum Possibilities</p>
         <p class="subtitle">Your Free Mystical Toolkit for Spiritual Transformation</p>
-        <a href="#story" class="cta-button">
-            Discover the Magic ✨
+        <a href="#quick-start" class="cta-button">
+            Discover Your Perfect Tool ✨
         </a>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <h3>🌟 Join 10,000+ Spiritual Seekers</h3>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">10K+</span>
+                <span class="stat-label">Readings Generated</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">25+</span>
+                <span class="stat-label">Mystical Tools</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4.8/5</span>
+                <span class="stat-label">Average Rating</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Free Forever</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Quiz -->
+    <section class="quick-start" id="quick-start">
+        <h2>🔮 Not Sure Where to Start?</h2>
+        <p>Choose what you're seeking right now, and we'll guide you to the perfect tool:</p>
+        
+        <div class="quiz-grid">
+            <a href="./compatibility.html" class="quiz-option">
+                <span class="icon">💕</span>
+                <h3>Relationship Insights</h3>
+                <p>Understand your connections with partners, family, or friends through 12 mystical systems</p>
+            </a>
+            
+            <a href="/forecasts" class="quiz-option">
+                <span class="icon">🔮</span>
+                <h3>Future Guidance</h3>
+                <p>Get your complete cosmic forecast across 8 ancient wisdom traditions</p>
+            </a>
+            
+            <a href="./contract.html" class="quiz-option">
+                <span class="icon">🎭</span>
+                <h3>Self-Discovery</h3>
+                <p>Reveal hidden patterns, unconscious agreements, and unlock your true power</p>
+            </a>
+            
+            <a href="./birth-sigil.html" class="quiz-option">
+                <span class="icon">⚡</span>
+                <h3>Energy & Vitality</h3>
+                <p>Discover your unique energetic signature and sacred frequencies</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Tools Section -->
+    <section class="featured-section" id="featured">
+        <h2>🌟 Most Popular Tools</h2>
+        <p>Start with these proven favorites—loved by thousands of seekers worldwide</p>
+        
+        <div class="featured-grid">
+            <a href="./compatibility.html" class="featured-card">
+                <span class="featured-badge">Most Popular</span>
+                <span class="featured-icon">💫</span>
+                <h3>Compatibility Calculator</h3>
+                <p>Analyze any relationship through 12 mystical systems including Numerology, Astrology, Chinese Zodiac, and Tarot. Discover soul connections in 2 minutes.</p>
+                <div class="featured-stats">
+                    <div class="featured-stat">
+                        <span class="featured-stat-value">75%</span>
+                        <span class="featured-stat-label">Continue Exploring</span>
+                    </div>
+                    <div class="featured-stat">
+                        <span class="featured-stat-value">2.5</span>
+                        <span class="featured-stat-label">Avg Interactions</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="/forecasts" class="featured-card">
+                <span class="featured-badge">Highest Rated</span>
+                <span class="featured-icon">🔮</span>
+                <h3>Quantum Forecaster</h3>
+                <p>Your personalized cosmic forecast across 8 mystical systems with daily, weekly, and monthly insights. The most comprehensive reading available.</p>
+                <div class="featured-stats">
+                    <div class="featured-stat">
+                        <span class="featured-stat-value">53%</span>
+                        <span class="featured-stat-label">Engagement Rate</span>
+                    </div>
+                    <div class="featured-stat">
+                        <span class="featured-stat-value">2.7</span>
+                        <span class="featured-stat-label">Avg Interactions</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="./contract.html" class="featured-card">
+                <span class="featured-badge">Most Transformative</span>
+                <span class="featured-icon">📜</span>
+                <h3>Unconscious Contract Revealer</h3>
+                <p>Discover the hidden agreements running your life. Reveal unconscious patterns and receive a powerful liberation protocol.</p>
+                <div class="featured-stats">
+                    <div class="featured-stat">
+                        <span class="featured-stat-value">67%</span>
+                        <span class="featured-stat-label">Continue Exploring</span>
+                    </div>
+                    <div class="featured-stat">
+                        <span class="featured-stat-value">3.1</span>
+                        <span class="featured-stat-label">Highest Engagement</span>
+                    </div>
+                </div>
+            </a>
+        </div>
     </section>
 
     <!-- The Story -->
@@ -849,7 +1374,7 @@
 
     <!-- Featured Tools -->
     <section id="tools" class="featured-tools">
-        <h2>✨ Live Tools</h2>
+        <h2>🧰 Complete Toolkit</h2>
         <div class="tool-grid">
             <a href="./birth-sigil.html" class="tool-card live">
                 <div class="tool-icon">🌙</div>
@@ -1182,6 +1707,38 @@
     <!-- Scripts -->
     <script src="./shared/js/quantum-intro-animation.js"></script>
     <script>
+        // Tools Dropdown Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const toolsNavBtn = document.getElementById('toolsNavBtn');
+            const toolsDropdown = document.getElementById('toolsDropdown');
+            
+            if (toolsNavBtn && toolsDropdown) {
+                let timeout;
+                
+                toolsNavBtn.addEventListener('mouseenter', function() {
+                    clearTimeout(timeout);
+                    toolsDropdown.classList.add('active');
+                });
+                
+                toolsNavBtn.addEventListener('mouseleave', function() {
+                    timeout = setTimeout(() => {
+                        toolsDropdown.classList.remove('active');
+                    }, 300);
+                });
+                
+                toolsDropdown.addEventListener('mouseenter', function() {
+                    clearTimeout(timeout);
+                    toolsDropdown.classList.add('active');
+                });
+                
+                toolsDropdown.addEventListener('mouseleave', function() {
+                    timeout = setTimeout(() => {
+                        toolsDropdown.classList.remove('active');
+                    }, 300);
+                });
+            }
+        });
+        
         async function subscribeNewsletter(e) {
             e.preventDefault();
             const form = e.target;
