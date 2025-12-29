@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Contract Reading | Quantum Merlin</title>
+    <meta name="description" content="Your complete unconscious contract reading with birth numerology, cosmic origins, and liberation rituals.">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Orbitron:wght@400;600;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 50%, #0a0a0f 100%);
+            color: #e0d4f7;
+            font-family: 'Exo 2', sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding-top: 80px; }
+        
+        .qm-header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(10, 10, 15, 0.95); backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(147, 51, 234, 0.3); padding: 15px 20px;
+        }
+        .qm-header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .qm-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .qm-logo-icon { font-size: 1.5rem; }
+        .qm-logo-text { font-family: 'Orbitron', monospace; font-size: 1.1rem; font-weight: 700; background: linear-gradient(135deg, #9333ea, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .qm-support { background: linear-gradient(135deg, #FFDD00, #FFA500); color: #000; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
+        
+        .page-header { text-align: center; margin-bottom: 40px; }
+        .page-icon { font-size: 4rem; margin-bottom: 20px; }
+        .page-title { font-family: 'Cinzel', serif; font-size: 2.2rem; background: linear-gradient(135deg, #a78bfa, #9333ea); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; }
+        .page-subtitle { color: #a78bfa; font-size: 1.1rem; max-width: 500px; margin: 0 auto; }
+        
+        .previous-reading { background: linear-gradient(145deg, rgba(147, 51, 234, 0.1), rgba(167, 139, 250, 0.15)); border: 2px solid rgba(147, 51, 234, 0.4); border-radius: 20px; padding: 25px; margin-bottom: 30px; text-align: center; }
+        .contract-statement { font-size: 1.3rem; font-style: italic; color: #c4b5fd; line-height: 1.6; }
+        
+        .profile-section { background: rgba(147, 51, 234, 0.1); border: 2px solid rgba(147, 51, 234, 0.3); border-radius: 20px; padding: 30px; margin-bottom: 30px; }
+        .section-title { font-family: 'Orbitron', monospace; color: #a78bfa; font-size: 1.2rem; margin-bottom: 20px; text-align: center; }
+        
+        .profile-options { display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
+        .profile-option { flex: 1; min-width: 200px; padding: 20px; background: rgba(147, 51, 234, 0.15); border: 2px solid rgba(147, 51, 234, 0.3); border-radius: 15px; cursor: pointer; transition: all 0.3s ease; text-align: center; }
+        .profile-option:hover { border-color: #9333ea; transform: translateY(-3px); }
+        .profile-option.selected { border-color: #a78bfa; background: rgba(167, 139, 250, 0.2); }
+        .profile-option-icon { font-size: 2rem; margin-bottom: 10px; }
+        .profile-option-title { color: #c4b5fd; font-weight: 600; }
+        .profile-option-desc { color: #a78bfa; font-size: 0.85rem; margin-top: 5px; }
+        
+        .birth-form, .saved-profiles { display: none; }
+        .birth-form.active, .saved-profiles.active { display: block; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; color: #c4b5fd; margin-bottom: 8px; font-weight: 500; }
+        .form-input { width: 100%; padding: 15px; background: rgba(147, 51, 234, 0.1); border: 2px solid rgba(147, 51, 234, 0.3); border-radius: 12px; color: #e0d4f7; font-size: 1rem; font-family: 'Exo 2', sans-serif; }
+        .form-input:focus { outline: none; border-color: #a78bfa; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        
+        .profile-card { padding: 20px; background: rgba(147, 51, 234, 0.15); border: 2px solid rgba(147, 51, 234, 0.3); border-radius: 15px; margin-bottom: 15px; cursor: pointer; transition: all 0.3s ease; }
+        .profile-card:hover { border-color: #a78bfa; transform: translateY(-2px); }
+        .profile-card.selected { border-color: #22c55e; background: rgba(34, 197, 94, 0.15); }
+        .profile-name { color: #a78bfa; font-weight: 600; font-size: 1.1rem; }
+        .profile-details { color: #9ca3af; font-size: 0.9rem; margin-top: 5px; }
+        .no-profiles { text-align: center; color: #a78bfa; padding: 30px; }
+        
+        .generate-btn { width: 100%; padding: 20px; background: linear-gradient(135deg, #9333ea, #a78bfa); color: white; border: none; border-radius: 30px; font-size: 1.3rem; font-weight: 700; font-family: 'Orbitron', monospace; cursor: pointer; transition: all 0.3s ease; margin-top: 20px; }
+        .generate-btn:hover:not(:disabled) { transform: scale(1.02); box-shadow: 0 10px 40px rgba(147, 51, 234, 0.5); }
+        .generate-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        
+        .results-section { display: none; }
+        .results-section.active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .reading-card { background: linear-gradient(145deg, rgba(147, 51, 234, 0.1), rgba(167, 139, 250, 0.1)); border: 2px solid rgba(147, 51, 234, 0.4); border-radius: 20px; padding: 30px; margin-bottom: 25px; }
+        .card-header { text-align: center; margin-bottom: 25px; }
+        .card-icon { font-size: 3rem; margin-bottom: 10px; }
+        .card-title { font-family: 'Cinzel', serif; font-size: 1.5rem; color: #a78bfa; }
+        
+        .forecast-section { background: rgba(0,0,0,0.2); border-radius: 15px; padding: 20px; margin-bottom: 20px; }
+        .forecast-label { font-weight: 700; font-size: 0.9em; letter-spacing: 1px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .forecast-text { color: #e0d4f7; line-height: 1.8; }
+        
+        .action-buttons { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin: 30px 0; }
+        .action-btn { padding: 15px 25px; border-radius: 25px; border: 2px solid rgba(147, 51, 234, 0.3); background: rgba(147, 51, 234, 0.2); color: #c4b5fd; text-decoration: none; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+        .action-btn:hover { border-color: #9333ea; transform: translateY(-2px); }
+        
+        .next-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; }
+        .tool-link { display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease; }
+        .tool-link:hover { border-color: #9333ea; transform: translateY(-3px); }
+        .tool-icon { font-size: 2rem; margin-bottom: 8px; }
+        .tool-name { color: #c4b5fd; font-weight: 600; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header class="qm-header">
+        <div class="qm-header-inner">
+            <a href="/index.html" class="qm-logo">
+                <div class="qm-logo-icon">🧙‍♂️</div>
+                <span class="qm-logo-text">Quantum Merlin</span>
+            </a>
+            <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank" class="qm-support">☕ Support</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <div class="page-icon">📜</div>
+            <h1 class="page-title">Full Contract Reading</h1>
+            <p class="page-subtitle">Add your birth details for a complete liberation blueprint</p>
+        </div>
+
+        <div class="previous-reading" id="previousReading">
+            <div style="color: #a78bfa; font-size: 0.9rem; margin-bottom: 10px;">YOUR UNCONSCIOUS CONTRACT</div>
+            <div class="contract-statement" id="contractStatement">Loading...</div>
+        </div>
+
+        <div id="inputSection">
+            <div class="profile-section">
+                <div class="section-title">Choose Your Path</div>
+                
+                <div class="profile-options">
+                    <div class="profile-option" onclick="selectOption('saved')" id="optionSaved">
+                        <div class="profile-option-icon">📚</div>
+                        <div class="profile-option-title">Load from Library</div>
+                        <div class="profile-option-desc">Use a saved profile</div>
+                    </div>
+                    <div class="profile-option" onclick="selectOption('new')" id="optionNew">
+                        <div class="profile-option-icon">✏️</div>
+                        <div class="profile-option-title">Enter Details</div>
+                        <div class="profile-option-desc">Input birth information</div>
+                    </div>
+                </div>
+
+                <div class="saved-profiles" id="savedProfiles">
+                    <div id="profilesList"></div>
+                </div>
+
+                <div class="birth-form" id="birthForm">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" id="fullName" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Birth Date</label>
+                        <input type="date" class="form-input" id="birthDate">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Birth Time (optional)</label>
+                            <input type="time" class="form-input" id="birthTime">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Birth Place (optional)</label>
+                            <input type="text" class="form-input" id="birthPlace" placeholder="City, Country">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                            <input type="checkbox" id="saveProfile" checked>
+                            <span class="form-label" style="margin: 0;">Save this profile to Library</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="generate-btn" id="generateBtn" onclick="generateFullReading()" disabled>
+                    🔓 Generate Liberation Reading
+                </button>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection"></div>
+    </div>
+
+    <script>
+        let previousData = null;
+        let selectedProfile = null;
+        let selectedOption = null;
+        let detectedContract = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const storedData = sessionStorage.getItem('qm_enhanced_data');
+            if (storedData) {
+                previousData = JSON.parse(storedData);
+                displayPreviousReading();
+            } else {
+                document.getElementById('previousReading').innerHTML = `
+                    <div style="color: #fbbf24;">⚠️ No previous reading found</div>
+                    <p style="color: #a78bfa; margin-top: 10px;">
+                        <a href="/contract.html" style="color: #a78bfa;">Take the Unconscious Contract test</a> first for the complete experience.
+                    </p>
+                `;
+            }
+            loadSavedProfiles();
+        });
+
+        function displayPreviousReading() {
+            if (!previousData || !previousData.answers) return;
+            const { q1, q2, q3, q4 } = previousData.answers;
+            detectedContract = determineContract(q1 || 0, q2 || 0, q3 || 0, q4 || 0);
+            document.getElementById('contractStatement').textContent = `"${detectedContract.statement}"`;
+        }
+
+        function determineContract(q1, q2, q3, q4) {
+            if (q1 <= 2 && q2 <= 2) return { statement: "I am allowed to survive, but not to thrive", type: 'survival' };
+            if (q3 <= 2) return { statement: "I can have success OR happiness, but not both", type: 'scarcity' };
+            if (q4 <= 2) return { statement: "I am allowed to be capable, but not powerful", type: 'power' };
+            if (q2 <= 2) return { statement: "I am allowed temporary joy, but not lasting fulfillment", type: 'permanence' };
+            const avg = (q1 + q2 + q3 + q4) / 4;
+            if (avg <= 3.5) return { statement: "I am allowed progress, but not completion", type: 'completion' };
+            return { statement: "I am allowed everything, but not ease", type: 'ease' };
+        }
+
+        function selectOption(option) {
+            selectedOption = option;
+            document.querySelectorAll('.profile-option').forEach(el => el.classList.remove('selected'));
+            document.getElementById('option' + option.charAt(0).toUpperCase() + option.slice(1)).classList.add('selected');
+            
+            if (option === 'saved') {
+                document.getElementById('savedProfiles').classList.add('active');
+                document.getElementById('birthForm').classList.remove('active');
+            } else {
+                document.getElementById('savedProfiles').classList.remove('active');
+                document.getElementById('birthForm').classList.add('active');
+                checkFormValidity();
+            }
+        }
+
+        function loadSavedProfiles() {
+            const library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            const profiles = library.filter(item => item.type === 'profile' || item.birthDate);
+            const container = document.getElementById('profilesList');
+            
+            if (profiles.length === 0) {
+                container.innerHTML = `<div class="no-profiles"><div style="font-size: 2rem; margin-bottom: 10px;">📭</div><div>No saved profiles found</div></div>`;
+                return;
+            }
+            
+            container.innerHTML = profiles.map((profile, index) => `
+                <div class="profile-card" onclick="selectProfile(${index})" id="profile-${index}">
+                    <div class="profile-name">${profile.name || profile.fullName || 'Unnamed'}</div>
+                    <div class="profile-details">${profile.birthDate ? new Date(profile.birthDate).toLocaleDateString() : 'No birth date'}</div>
+                </div>
+            `).join('');
+        }
+
+        function selectProfile(index) {
+            const library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            const profiles = library.filter(item => item.type === 'profile' || item.birthDate);
+            selectedProfile = profiles[index];
+            document.querySelectorAll('.profile-card').forEach(el => el.classList.remove('selected'));
+            document.getElementById('profile-' + index).classList.add('selected');
+            document.getElementById('generateBtn').disabled = false;
+        }
+
+        function checkFormValidity() {
+            const name = document.getElementById('fullName').value;
+            const birthDate = document.getElementById('birthDate').value;
+            document.getElementById('generateBtn').disabled = !(name && birthDate);
+        }
+
+        document.getElementById('fullName')?.addEventListener('input', checkFormValidity);
+        document.getElementById('birthDate')?.addEventListener('change', checkFormValidity);
+
+        function generateFullReading() {
+            let profileData;
+            if (selectedOption === 'saved' && selectedProfile) {
+                profileData = selectedProfile;
+            } else {
+                profileData = {
+                    fullName: document.getElementById('fullName').value,
+                    birthDate: document.getElementById('birthDate').value,
+                    birthTime: document.getElementById('birthTime').value,
+                    birthPlace: document.getElementById('birthPlace').value
+                };
+                if (document.getElementById('saveProfile').checked) saveProfileToLibrary(profileData);
+            }
+            
+            const birthDate = new Date(profileData.birthDate);
+            const lifePath = calculateLifePath(birthDate);
+            const zodiac = getZodiacSign(birthDate);
+            const element = getElement(zodiac);
+            
+            generateResultsHTML(profileData, lifePath, zodiac, element);
+        }
+
+        function calculateLifePath(date) {
+            const dateStr = date.toISOString().split('T')[0].replace(/-/g, '');
+            let sum = dateStr.split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+            while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
+                sum = sum.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+            }
+            return sum;
+        }
+
+        function getZodiacSign(date) {
+            const month = date.getMonth() + 1, day = date.getDate();
+            if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) return 'Aries';
+            if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) return 'Taurus';
+            if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) return 'Gemini';
+            if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) return 'Cancer';
+            if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) return 'Leo';
+            if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) return 'Virgo';
+            if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) return 'Libra';
+            if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) return 'Scorpio';
+            if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) return 'Sagittarius';
+            if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) return 'Capricorn';
+            if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) return 'Aquarius';
+            return 'Pisces';
+        }
+
+        function getElement(zodiac) {
+            const elements = { Aries: 'Fire', Leo: 'Fire', Sagittarius: 'Fire', Taurus: 'Earth', Virgo: 'Earth', Capricorn: 'Earth', Gemini: 'Air', Libra: 'Air', Aquarius: 'Air', Cancer: 'Water', Scorpio: 'Water', Pisces: 'Water' };
+            return elements[zodiac] || 'Fire';
+        }
+
+        function getContractOrigin(lifePath, type) {
+            const origins = {
+                survival: { 1: 'independence was punished', 2: 'needing others felt unsafe', 3: 'joy was seen as frivolous', 4: 'stability required sacrifice', 5: 'freedom threatened belonging', 6: 'your needs came last', 7: 'wisdom brought isolation', 8: 'success meant losing love', 9: 'completion triggered loss' },
+                scarcity: { 1: 'success isolated you from others', 2: 'choosing yourself felt selfish', 3: 'joy and responsibility seemed opposites', 4: 'you could have security OR freedom', 5: 'happiness meant irresponsibility', 6: 'love and ambition competed', 7: 'knowledge and connection were mutually exclusive', 8: 'power corrupted relationships', 9: 'giving to self meant taking from others' },
+                power: { 1: 'leadership was dangerous', 2: 'visibility threatened harmony', 3: 'expressing power felt aggressive', 4: 'authority required coldness', 5: 'power meant losing freedom', 6: 'strength threatened love', 7: 'being seen blocked inner peace', 8: 'full power was destructive', 9: 'leadership required isolation' }
+            };
+            return origins[type]?.[lifePath] || 'your authentic expression threatened your sense of belonging';
+        }
+
+        function getLiberationFrequency(type) {
+            const frequencies = { survival: '528 Hz', scarcity: '639 Hz', power: '741 Hz', permanence: '417 Hz', completion: '852 Hz', ease: '963 Hz' };
+            return frequencies[type] || '528 Hz';
+        }
+
+        function generateResultsHTML(profile, lifePath, zodiac, element) {
+            document.getElementById('inputSection').style.display = 'none';
+            const contract = detectedContract || { statement: 'Contract not detected', type: 'survival' };
+            const frequency = getLiberationFrequency(contract.type);
+            const origin = getContractOrigin(lifePath, contract.type);
+
+            const resultsHTML = `
+                <div class="reading-card">
+                    <div class="card-header">
+                        <div class="card-icon">📜</div>
+                        <h2 class="card-title">Your Complete Liberation Blueprint</h2>
+                        <div style="color: #a78bfa; margin-top: 10px;">For ${profile.fullName || profile.name}</div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #a78bfa;">
+                        <div class="forecast-label" style="color: #a78bfa;">📿 YOUR CONTRACT ORIGIN</div>
+                        <div class="forecast-text">
+                            <p style="font-style: italic; color: #c4b5fd; font-size: 1.2em; margin-bottom: 15px;">"${contract.statement}"</p>
+                            <p>As a <strong style="color: #a78bfa;">Life Path ${lifePath}</strong> ${zodiac} (${element}), this contract likely formed because <strong>${origin}</strong>.</p>
+                            <p style="margin-top: 15px;">Your ${element} nature made you particularly sensitive to ${
+                                element === 'Fire' ? 'having your light dimmed or passion suppressed' :
+                                element === 'Earth' ? 'instability and lack of security in your environment' :
+                                element === 'Air' ? 'being silenced or having your ideas dismissed' :
+                                'emotional rejection or having your feelings invalidated'
+                            }. The contract was a survival adaptation, not a truth.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #22c55e;">
+                        <div class="forecast-label" style="color: #22c55e;">🎵 YOUR LIBERATION FREQUENCY</div>
+                        <div class="forecast-text">
+                            <p>Your contract-breaking frequency is <strong style="color: #22c55e;">${frequency}</strong></p>
+                            <p style="margin-top: 10px;">${
+                                frequency === '528 Hz' ? 'The "Miracle Tone" - transforms fear into love and limitation into expansion.' :
+                                frequency === '639 Hz' ? 'The "Connection Frequency" - heals relationship wounds and restores balance.' :
+                                frequency === '741 Hz' ? 'The "Awakening Frequency" - dissolves illusions and empowers authentic expression.' :
+                                frequency === '417 Hz' ? 'The "Change Frequency" - facilitates transformation and releases stuck patterns.' :
+                                frequency === '852 Hz' ? 'The "Intuition Frequency" - returns you to spiritual order and completion.' :
+                                'The "Divine Connection" - opens you to ease, grace, and effortless receiving.'
+                            }</p>
+                        </div>
+                        <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px; flex-wrap: wrap;">
+                            <a href="/genesis" style="padding: 10px 20px; background: linear-gradient(135deg, #22c55e, #059669); color: white; text-decoration: none; border-radius: 20px; font-weight: 600;">🎵 Play in Genesis</a>
+                            <button onclick="saveFrequencyToLibrary('${frequency}')" style="padding: 10px 20px; background: rgba(34, 197, 94, 0.2); border: 1px solid #22c55e; color: #22c55e; border-radius: 20px; font-weight: 600; cursor: pointer;">💾 Save Frequency</button>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #ec4899;">
+                        <div class="forecast-label" style="color: #ec4899;">🧘 CONTRACT-BREAKING RITUAL</div>
+                        <div class="forecast-text">
+                            <p><strong>21-Day Liberation Practice:</strong></p>
+                            <p style="margin: 10px 0;">1. <strong>Morning Declaration:</strong> Upon waking, place hand on heart. Say aloud: "I revoke the contract that says: ${contract.statement}. I am now free to choose differently."</p>
+                            <p style="margin: 10px 0;">2. <strong>Midday Frequency Bath:</strong> Play ${frequency} for 5 minutes. Visualize the old contract dissolving like mist in sunlight.</p>
+                            <p style="margin: 10px 0;">3. <strong>Evening New Permission:</strong> Before sleep, whisper: "I now give myself permission to ${
+                                contract.type === 'survival' ? 'thrive beyond mere survival' :
+                                contract.type === 'scarcity' ? 'have it all, without sacrifice' :
+                                contract.type === 'power' ? 'be fully visible and powerful' :
+                                contract.type === 'permanence' ? 'have lasting joy and fulfillment' :
+                                contract.type === 'completion' ? 'complete and arrive' :
+                                'receive with ease and grace'
+                            }."</p>
+                            <p style="margin-top: 15px; color: #c4b5fd; font-style: italic;">Your ${zodiac} energy responds best to ${
+                                element === 'Fire' ? 'bold, passionate declarations' :
+                                element === 'Earth' ? 'grounded, physical practices' :
+                                element === 'Air' ? 'written affirmations and breathwork' :
+                                'emotional visualization and water rituals'
+                            }.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #3b82f6;">
+                        <div class="forecast-label" style="color: #3b82f6;">🃏 TAROT GUIDANCE</div>
+                        <div class="forecast-text">
+                            ${getTarotGuidance(contract.type, lifePath)}
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #f59e0b;">
+                        <div class="forecast-label" style="color: #f59e0b;">📅 YOUR LIBERATION TIMING</div>
+                        <div class="forecast-text">
+                            <p><strong>Best Days for Contract Work:</strong> ${getPowerDays(lifePath)}</p>
+                            <p style="margin-top: 10px;"><strong>Moon Phase:</strong> New Moon for setting new permissions, Waning Moon for releasing old contracts.</p>
+                            <p style="margin-top: 10px;"><strong>Power Hours:</strong> ${
+                                element === 'Fire' ? 'Sunrise when solar energy ignites transformation' :
+                                element === 'Earth' ? 'Dusk when the day settles and grounds' :
+                                element === 'Air' ? 'Late morning when mental clarity peaks' :
+                                'Midnight when intuition flows deepest'
+                            }</p>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #fbbf24;">
+                        <div class="forecast-label" style="color: #fbbf24;">💡 YOUR NEW PERMISSION</div>
+                        <div class="forecast-text" style="font-size: 1.2em; font-style: italic; color: #fde68a; text-align: center;">
+                            "${getNewPermission(contract.type, lifePath)}"
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="/index.html" class="action-btn">🏠 Hub</a>
+                    <a href="/genesis" class="action-btn">🎵 Frequencies</a>
+                    <a href="/library.html" class="action-btn">📚 Library</a>
+                    <button class="action-btn" onclick="saveFullReading()" style="background: rgba(34, 197, 94, 0.2); border-color: #22c55e; color: #22c55e;">💾 Save Reading</button>
+                </div>
+                
+                <div style="background: rgba(147, 51, 234, 0.1); border: 2px solid rgba(147, 51, 234, 0.3); border-radius: 20px; padding: 30px; margin-top: 30px;">
+                    <h3 style="color: #9333ea; text-align: center; margin-bottom: 20px; font-family: 'Orbitron', monospace;">Continue Your Journey</h3>
+                    <div class="next-tools">
+                        <a href="/manifest.html" class="tool-link"><div class="tool-icon">✨</div><div class="tool-name">Manifestation</div></a>
+                        <a href="/energyleak.html" class="tool-link"><div class="tool-icon">🔋</div><div class="tool-name">Energy Leak</div></a>
+                        <a href="/identity-split-detector.html" class="tool-link"><div class="tool-icon">🎭</div><div class="tool-name">Identity Split</div></a>
+                        <a href="/quantum-merlin-hub/forecasts.html" class="tool-link"><div class="tool-icon">🔮</div><div class="tool-name">Cosmic Forecast</div></a>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('resultsSection').innerHTML = resultsHTML;
+            document.getElementById('resultsSection').classList.add('active');
+            autoSaveReading(profile, contract, lifePath);
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function getTarotGuidance(type, lifePath) {
+            const guidance = {
+                survival: 'The Empress and The Star guide your liberation. The Empress reminds you that you deserve abundance, not just survival. The Star promises that hope and fulfillment are your birthright.',
+                scarcity: 'The Wheel of Fortune and The World appear for you. The Wheel says "both/and" is possible. The World confirms that wholeness includes all good things simultaneously.',
+                power: 'The Sun and Strength are your liberation cards. The Sun says: "Shine without apology." Strength reminds you that true power is gentle and unstoppable.',
+                permanence: 'The Nine of Cups and The Star bless your path. The Nine promises wishes fulfilled and lasting. The Star confirms that good things are meant to stay.',
+                completion: 'The World and The Chariot drive your liberation. The World says: "You are allowed to arrive." The Chariot moves you forward to completion.',
+                ease: 'The Ace of Pentacles and The Magician guide you. The Ace offers new beginnings with grace. The Magician reminds you that manifestation can be effortless.'
+            };
+            return guidance[type] || guidance.survival;
+        }
+
+        function getPowerDays(lifePath) {
+            const days = { 1: 'Sundays', 2: 'Mondays', 3: 'Thursdays', 4: 'Saturdays', 5: 'Wednesdays', 6: 'Fridays', 7: 'Mondays', 8: 'Saturdays', 9: 'Tuesdays', 11: 'The 11th of each month', 22: 'The 22nd of each month' };
+            return days[lifePath] || 'Sundays';
+        }
+
+        function getNewPermission(type, lifePath) {
+            const permissions = {
+                survival: 'I am allowed to thrive, expand, and claim abundance. My growth enhances everything around me.',
+                scarcity: 'I am allowed to have success AND happiness, love AND freedom, all good things simultaneously.',
+                power: 'I am allowed to be fully visible, powerful, and seen. My light gives others permission to shine.',
+                permanence: 'I am allowed to build lasting joy. Good things in my life are permanent, not borrowed.',
+                completion: 'I am allowed to complete, arrive, and rest. My value exists independent of my progress.',
+                ease: 'I am allowed to receive with grace and ease. Struggle is not a prerequisite for worthiness.'
+            };
+            return permissions[type] || permissions.survival;
+        }
+
+        function saveProfileToLibrary(profile) {
+            const item = { id: Date.now(), type: 'profile', name: profile.fullName, fullName: profile.fullName, birthDate: profile.birthDate, birthTime: profile.birthTime, birthPlace: profile.birthPlace, timestamp: Date.now(), savedAt: new Date().toISOString() };
+            let library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+        }
+
+        function saveFrequencyToLibrary(frequency) {
+            const item = { id: Date.now(), type: 'frequency', name: frequency + ' - Liberation Frequency', frequency: frequency, source: 'Full Contract Reading', timestamp: Date.now(), savedAt: new Date().toISOString() };
+            let library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+            showNotification('Frequency saved to Library!');
+        }
+
+        function autoSaveReading(profile, contract, lifePath) {
+            const item = { id: Date.now(), type: 'contract-full', name: 'Full Contract Reading', title: `Liberation Blueprint: ${contract.statement}`, contract: contract.statement, contractType: contract.type, lifePath: lifePath, profile: profile.fullName || profile.name, timestamp: Date.now(), savedAt: new Date().toISOString() };
+            let library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+        }
+
+        function saveFullReading() { showNotification('Reading saved to Library!'); }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.cssText = 'position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #22c55e, #059669); color: white; padding: 15px 30px; border-radius: 30px; font-weight: 600; z-index: 9999; box-shadow: 0 10px 30px rgba(34, 197, 94, 0.5);';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 3000);
+        }
+    </script>
+    <script src="shared/js/quantum-analytics.js"></script>
+</body>
+</html>
