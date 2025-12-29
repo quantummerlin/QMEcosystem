@@ -1,0 +1,45 @@
+# Jekyll Configuration for GitHub Pages
+# Enables clean URLs without .html extensions
+
+# Markdown and rendering
+markdown: kramdown
+highlighter: rouge
+
+# Permalinks - enables clean URLs
+permalink: pretty
+
+# Exclude files from processing
+exclude:
+  - node_modules/
+  - vendor/
+  - .git/
+  - .gitignore
+  - README.md
+  - LICENSE
+
+# Include special files
+include:
+  - _headers
+  - .nojekyll
+
+# Collections (if needed in future)
+collections_dir: .
+
+# Disable Jekyll's default collections we don't use
+collections: {}
+
+# Enable incremental builds for faster regeneration
+incremental: true
+
+# Timezone
+timezone: America/New_York
+
+# Base URL (empty for custom domain)
+url: "https://quantummerlin.com"
+baseurl: ""
+
+# Liquid options
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false
