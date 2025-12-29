@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Hreflang tags for multilingual SEO -->
+    <link rel="alternate" hreflang="en" href="https://quantummerlin.com/soulcard.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://quantummerlin.com/pt/cartao-alma.html" />
+    <link rel="alternate" hreflang="x-default" href="https://quantummerlin.com/soulcard.html" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph locale for social media -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    
+    <title>Leitura Interativa do Cartão da Alma - Escolha Seu Destino | Quantum Merlin</title>
+    <meta name="description" content="Experimente uma leitura interativa do cartão da alma do tarô. Escolha suas cartas do baralho completo de 78 cartas e receba insights místicos profundos combinando numerologia, astrologia e frequências quânticas.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://quantummerlin.com/pt/cartao-alma">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../shared/css/quantum-variables.css">
+    <link rel="stylesheet" href="../shared/css/quantum-base.css">
+    <link rel="stylesheet" href="../shared/css/quantum-backgrounds.css">
+    <link rel="stylesheet" href="../shared/css/quantum-components.css">
+    <link rel="stylesheet" href="../shared/css/quantum-animations.css">
+    <link rel="stylesheet" href="../shared/css/quantum-navigation.css">
+    <link rel="stylesheet" href="../shared/css/quantum-intro.css">
+    
+    <style>
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 100px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            background: linear-gradient(45deg, #9333ea, #ec4899, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #b794f6;
+            margin-bottom: 30px;
+        }
+        
+        /* Card Spread Styles */
+        .card-spread {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(147, 51, 234, 0.3);
+        }
+        
+        .tarot-card {
+            aspect-ratio: 2/3;
+            background: linear-gradient(135deg, #9333ea, #ec4899);
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 4px 15px rgba(147, 51, 234, 0.3);
+            overflow: hidden;
+        }
+        
+        .tarot-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../assets/tarot/QMTarot.png') center/cover;
+            opacity: 1;
+            transition: opacity 0.6s;
+        }
+        
+        .tarot-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(147, 51, 234, 0.6);
+            z-index: 10;
+        }
+        
+        .tarot-card.selected {
+            animation: cardFlip 0.8s ease;
+            background: white;
+        }
+        
+        .tarot-card.selected::before {
+            opacity: 0;
+        }
+        
+        .tarot-card.selected .card-image {
+            opacity: 1;
+        }
+        
+        .card-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.6s;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        @keyframes cardFlip {
+            0% { transform: rotateY(0deg); }
+            50% { transform: rotateY(90deg); }
+            100% { transform: rotateY(0deg); }
+        }
+        
+        .instruction {
+            text-align: center;
+            font-size: 1.3em;
+            color: #f59e0b;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        
+        /* Reading Display */
+        .reading-container {
+            display: none;
+            margin-top: 40px;
+        }
+        
+        .chosen-card-display {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(147, 51, 234, 0.4);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .big-card-image {
+            width: 250px;
+            height: 417px;
+            margin: 0 auto 30px;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(147, 51, 234, 0.5);
+            overflow: hidden;
+        }
+        
+        .big-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .card-name {
+            font-size: 2.5em;
+            color: #f59e0b;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .card-subtitle {
+            font-size: 1.3em;
+            color: #e9d5ff;
+            margin-bottom: 30px;
+        }
+        
+        /* Reading Sections */
+        .reading-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            color: #f59e0b;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-content {
+            line-height: 1.8;
+            color: #e9d5ff;
+            font-size: 1.1em;
+        }
+        
+        /* Enhanced Reading Section */
+        .enhanced-reading-offer {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2));
+            border: 2px solid #f59e0b;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .enhanced-title {
+            font-size: 2em;
+            color: #f59e0b;
+            margin-bottom: 15px;
+        }
+        
+        .enhanced-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(147, 51, 234, 0.3);
+        }
+        
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .unlock-btn {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #000;
+            border: none;
+            padding: 20px 50px;
+            border-radius: 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+        }
+        
+        .unlock-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+        }
+        
+        /* Enhanced Reading Display */
+        .enhanced-reading {
+            display: none;
+            margin-top: 20px;
+        }
+        
+        .enhanced-reading.show {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .cosmic-profile {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .profile-card {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.1));
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(147, 51, 234, 0.4);
+        }
+        
+        .profile-label {
+            font-size: 0.9em;
+            color: #f59e0b;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .profile-value {
+            font-size: 1.5em;
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        /* Reset Button */
+        .reset-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px auto;
+            display: block;
+        }
+        
+        .reset-btn:hover {
+            background: rgba(147, 51, 234, 0.3);
+            border-color: #9333ea;
+        }
+    </style>
+</head>
+<body>
+    <!-- Quantum Intro Animation -->
+    <div class="quantum-intro" id="quantumIntro">
+        <div class="intro-symbol" id="introSymbol">🎴</div>
+        <div id="intro-title">LEITURA DO CARTÃO DA ALMA</div>
+        <button class="skip-intro" onclick="skipIntro()">Pular Intro →</button>
+    </div>
+
+    <!-- Floating Particles -->
+    <div id="particles" class="particles-container"></div>
+
+    <!-- QM Header -->
+    <header class="qm-header">
+        <div class="qm-header-inner">
+            <a href="/pt/index-pt.html" class="qm-logo">
+                <div class="qm-logo-icon">🧙‍♂️</div>
+                <span class="qm-logo-text">Quantum Merlin</span>
+            </a>
+            <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank" class="qm-coffee-btn">
+                ☕ Apoiar
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <header>
+            <h1>🎴 Leitura Interativa do Cartão da Alma</h1>
+            <p class="subtitle">Escolha sua carta do místico baralho de 78 cartas do tarô<br>Experimente a magia da seleção e revelação</p>
+        </header>
+
+        <!-- Card Selection Phase -->
+        <div id="cardSelectionPhase">
+            <p class="instruction" id="instruction">✨ Confie na sua intuição. Passe o mouse sobre as cartas e escolha a que te chama ✨</p>
+            <div class="card-spread" id="cardSpread">
+                <!-- Cards populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Reading Display -->
+        <div class="reading-container" id="readingContainer">
+            <div class="chosen-card-display">
+                <div class="big-card-image" id="bigCardImage">
+                    <img id="bigCardImg" src="" alt="">
+                </div>
+                <h2 class="card-name" id="cardName"></h2>
+                <p class="card-subtitle" id="cardSubtitle"></p>
+            </div>
+
+            <div class="reading-section">
+                <h3 class="section-title">🌟 Leitura Básica</h3>
+                <div class="section-content" id="basicReading"></div>
+            </div>
+
+            <div class="reading-section">
+                <h3 class="section-title">🎯 Mensagem da Sua Alma</h3>
+                <div class="section-content" id="soulMessage"></div>
+            </div>
+
+            <div class="reading-section">
+                <h3 class="section-title">🔮 Insight Místico</h3>
+                <div class="section-content" id="mysticalInsight"></div>
+            </div>
+
+            <!-- Enhanced Reading -->
+            <div class="reading-section" style="margin-top: 40px; background: linear-gradient(135deg, rgba(147, 51, 234, 0.15), rgba(236, 72, 153, 0.1)); border: 2px solid rgba(147, 51, 234, 0.4);">
+                <h3 class="section-title" style="font-size: 1.8em; text-align: center; margin-bottom: 20px;">🌌 Explore Seu Perfil Cósmico Completo</h3>
+                <p style="color: #e9d5ff; font-size: 1.1em; margin-bottom: 30px; text-align: center;">
+                    Mergulhe mais fundo no seu ecossistema místico com numerologia, astrologia, gematria e frequências quânticas integradas
+                </p>
+                
+                <div class="enhanced-features" style="margin-bottom: 30px;">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔢</div>
+                        <strong>Análise Numerológica</strong>
+                        <p style="font-size: 0.9em; margin-top: 10px;">Caminho de vida, expressão e números do destino</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⭐</div>
+                        <strong>Integração Astrológica</strong>
+                        <p style="font-size: 0.9em; margin-top: 10px;">Alinhamento de Sol, Lua e Ascendente</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧮</div>
+                        <strong>Sabedoria da Gematria</strong>
+                        <p style="font-size: 0.9em; margin-top: 10px;">Padrões numéricos sagrados em seu nome</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎵</div>
+                        <strong>Alinhamento de Frequências</strong>
+                        <p style="font-size: 0.9em; margin-top: 10px;">Frequências curativas personalizadas</p>
+                    </div>
+                </div>
+
+                <button class="unlock-btn" onclick="showEnhancedReading()" style="background: linear-gradient(135deg, #9333ea, #ec4899); color: white;">
+                    ✨ Explorar Integração Profunda
+                </button>
+            </div>
+
+            <!-- Enhanced Reading Details -->
+            <div class="enhanced-reading" id="enhancedReading">
+                <div class="reading-section" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(147, 51, 234, 0.2)); border-color: #f59e0b;">
+                    <h3 class="section-title">✨ SEU PERFIL CÓSMICO COMPLETO</h3>
+                    
+                    <div class="cosmic-profile" id="cosmicProfile">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="reading-section">
+                    <h3 class="section-title">🔢 Destino Numerológico</h3>
+                    <div class="section-content" id="numerologyReading"></div>
+                </div>
+
+                <div class="reading-section">
+                    <h3 class="section-title">⭐ Alinhamento Astrológico</h3>
+                    <div class="section-content" id="astrologyReading"></div>
+                </div>
+
+                <div class="reading-section">
+                    <h3 class="section-title">🧮 Revelação da Gematria</h3>
+                    <div class="section-content" id="gematriaReading"></div>
+                </div>
+
+                <div class="reading-section">
+                    <h3 class="section-title">🎵 Suas Frequências da Alma</h3>
+                    <div class="section-content" id="frequencyReading"></div>
+                </div>
+
+                <div class="reading-section">
+                    <h3 class="section-title">🌈 Integração & Passos de Ação</h3>
+                    <div class="section-content" id="integrationSteps"></div>
+                </div>
+            </div>
+
+            <button class="reset-btn" onclick="resetReading()">🔄 Escolher Outra Carta</button>
+        </div>
+    </div>
+
+    <script src="../shared/js/quantum-effects.js"></script>
+    <script src="../shared/js/quantum-intro.js"></script>
+    <script src="../shared/js/quantum-nav.js"></script>
+    
+    <script>
+        // Full 78-card Tarot Deck with Portuguese names
+        const tarotDeck = [
+            // Major Arcana
+            { id: 0, name: "O Louco", nameEn: "The Fool", image: "The_Fool.jpg", arcana: "major", suit: null },
+            { id: 1, name: "O Mago", nameEn: "The Magician", image: "The_Magician.jpg", arcana: "major", suit: null },
+            { id: 2, name: "A Sacerdotisa", nameEn: "The High Priestess", image: "The_High_Priestess.jpg", arcana: "major", suit: null },
+            { id: 3, name: "A Imperatriz", nameEn: "The Empress", image: "The_Empress.jpg", arcana: "major", suit: null },
+            { id: 4, name: "O Imperador", nameEn: "The Emperor", image: "The_Emperor.jpg", arcana: "major", suit: null },
+            { id: 5, name: "O Hierofante", nameEn: "The Hierophant", image: "The_Hierophant.jpg", arcana: "major", suit: null },
+            { id: 6, name: "Os Amantes", nameEn: "The Lovers", image: "The_Lovers.jpg", arcana: "major", suit: null },
+            { id: 7, name: "O Carro", nameEn: "The Chariot", image: "The_Chariot.jpg", arcana: "major", suit: null },
+            { id: 8, name: "A Força", nameEn: "Strength", image: "Strength.jpg", arcana: "major", suit: null },
+            { id: 9, name: "O Eremita", nameEn: "The Hermit", image: "The_Hermit.jpg", arcana: "major", suit: null },
+            { id: 10, name: "Roda da Fortuna", nameEn: "Wheel of Fortune", image: "Wheel_of_Fortune.jpg", arcana: "major", suit: null },
+            { id: 11, name: "A Justiça", nameEn: "Justice", image: "Justice.jpg", arcana: "major", suit: null },
+            { id: 12, name: "O Enforcado", nameEn: "The Hanged Man", image: "The_Hanged_Man.jpg", arcana: "major", suit: null },
+            { id: 13, name: "A Morte", nameEn: "Death", image: "Death.jpg", arcana: "major", suit: null },
+            { id: 14, name: "A Temperança", nameEn: "Temperance", image: "Temperance.jpg", arcana: "major", suit: null },
+            { id: 15, name: "O Diabo", nameEn: "The Devil", image: "The_Devil.jpg", arcana: "major", suit: null },
+            { id: 16, name: "A Torre", nameEn: "The Tower", image: "The_Tower.jpg", arcana: "major", suit: null },
+            { id: 17, name: "A Estrela", nameEn: "The Star", image: "The_Star.jpg", arcana: "major", suit: null },
+            { id: 18, name: "A Lua", nameEn: "The Moon", image: "The_Moon.jpg", arcana: "major", suit: null },
+            { id: 19, name: "O Sol", nameEn: "The Sun", image: "The_Sun.jpg", arcana: "major", suit: null },
+            { id: 20, name: "O Julgamento", nameEn: "Judgement", image: "Judgement.jpg", arcana: "major", suit: null },
+            { id: 21, name: "O Mundo", nameEn: "The World", image: "The_World.jpg", arcana: "major", suit: null },
+            
+            // Paus (Wands)
+            { id: 22, name: "Ás de Paus", nameEn: "Ace of Wands", image: "Ace_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            { id: 23, name: "Dois de Paus", nameEn: "Two of Wands", image: "Two_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            { id: 24, name: "Três de Paus", nameEn: "Three of Wands", image: "Three_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            { id: 25, name: "Quatro de Paus", nameEn: "Four of Wands", image: "Four_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            { id: 26, name: "Cinco de Paus", nameEn: "Five of Wands", image: "Five_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            { id: 27, name: "Seis de Paus", nameEn: "Six of Wands", image: "Six_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            { id: 28, name: "Sete de Paus", nameEn: "Seven of Wands", image: "Seven_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            { id: 29, name: "Oito de Paus", nameEn: "Eight of Wands", image: "Eight_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            { id: 30, name: "Nove de Paus", nameEn: "Nine of Wands", image: "Nine_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            { id: 31, name: "Dez de Paus", nameEn: "Ten of Wands", image: "Ten_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            { id: 32, name: "Pajem de Paus", nameEn: "Page of Wands", image: "Page_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            { id: 33, name: "Cavaleiro de Paus", nameEn: "Knight of Wands", image: "Knight_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            { id: 34, name: "Rainha de Paus", nameEn: "Queen of Wands", image: "Queen_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            { id: 35, name: "Rei de Paus", nameEn: "King of Wands", image: "King_of_Wands.jpg", arcana: "minor", suit: "paus" },
+            
+            // Copas (Cups)
+            { id: 36, name: "Ás de Copas", nameEn: "Ace of Cups", image: "Ace_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            { id: 37, name: "Dois de Copas", nameEn: "Two of Cups", image: "Two_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            { id: 38, name: "Três de Copas", nameEn: "Three of Cups", image: "Three_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            { id: 39, name: "Quatro de Copas", nameEn: "Four of Cups", image: "Four_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            { id: 40, name: "Cinco de Copas", nameEn: "Five of Cups", image: "Five_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            { id: 41, name: "Seis de Copas", nameEn: "Six of Cups", image: "Six_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            { id: 42, name: "Sete de Copas", nameEn: "Seven of Cups", image: "Seven_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            { id: 43, name: "Oito de Copas", nameEn: "Eight of Cups", image: "Eight_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            { id: 44, name: "Nove de Copas", nameEn: "Nine of Cups", image: "Nine_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            { id: 45, name: "Dez de Copas", nameEn: "Ten of Cups", image: "Ten_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            { id: 46, name: "Pajem de Copas", nameEn: "Page of Cups", image: "Page_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            { id: 47, name: "Cavaleiro de Copas", nameEn: "Knight of Cups", image: "Knight_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            { id: 48, name: "Rainha de Copas", nameEn: "Queen of Cups", image: "Queen_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            { id: 49, name: "Rei de Copas", nameEn: "King of Cups", image: "King_of_Cups.jpg", arcana: "minor", suit: "copas" },
+            
+            // Espadas (Swords)
+            { id: 50, name: "Ás de Espadas", nameEn: "Ace of Swords", image: "Aces_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            { id: 51, name: "Dois de Espadas", nameEn: "Two of Swords", image: "Two_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            { id: 52, name: "Três de Espadas", nameEn: "Three of Swords", image: "Three_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            { id: 53, name: "Quatro de Espadas", nameEn: "Four of Swords", image: "Four_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            { id: 54, name: "Cinco de Espadas", nameEn: "Five of Swords", image: "Five_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            { id: 55, name: "Seis de Espadas", nameEn: "Six of Swords", image: "Six_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            { id: 56, name: "Sete de Espadas", nameEn: "Seven of Swords", image: "Seven_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            { id: 57, name: "Oito de Espadas", nameEn: "Eight of Swords", image: "Eight_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            { id: 58, name: "Nove de Espadas", nameEn: "Nine of Swords", image: "Nine_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            { id: 59, name: "Dez de Espadas", nameEn: "Ten of Swords", image: "Ten_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            { id: 60, name: "Pajem de Espadas", nameEn: "Page of Swords", image: "Page_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            { id: 61, name: "Cavaleiro de Espadas", nameEn: "Knight of Swords", image: "Knight_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            { id: 62, name: "Rainha de Espadas", nameEn: "Queen of Swords", image: "Queen_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            { id: 63, name: "Rei de Espadas", nameEn: "King of Swords", image: "King_of_Swords.jpg", arcana: "minor", suit: "espadas" },
+            
+            // Ouros (Pentacles)
+            { id: 64, name: "Ás de Ouros", nameEn: "Ace of Pentacles", image: "Ace_of_Pentacles.jpg", arcana: "minor", suit: "ouros" },
+            { id: 65, name: "Dois de Ouros", nameEn: "Two of Pentacles", image: "Two_of_Pentacles.jpg", arcana: "minor", suit: "ouros" },
+            { id: 66, name: "Três de Ouros", nameEn: "Three of Pentacles", image: "Three_of_Pentacles.jpg", arcana: "minor", suit: "ouros" },
+            { id: 67, name: "Quatro de Ouros", nameEn: "Four of Pentacles", image: "Four_of_Pentacles.jpg", arcana: "minor", suit: "ouros" },
+            { id: 68, name: "Cinco de Ouros", nameEn: "Five of Pentacles", image: "Five_of_Pentacles.jpg", arcana: "minor", suit: "ouros" },
+            { id: 69, name: "Seis de Ouros", nameEn: "Six of Pentacles", image: "Six_of_Pentacles.jpg", arcana: "minor", suit: "ouros" },
+            { id: 70, name: "Sete de Ouros", nameEn: "Seven of Pentacles", image: "Seven_of_Pentacles.jpg", arcana: "minor", suit: "ouros" },
+            { id: 71, name: "Oito de Ouros", nameEn: "Eight of Pentacles", image: "Eight_of_Pentacles.jpg", arcana: "minor", suit: "ouros" },
+            { id: 72, name: "Nove de Ouros", nameEn: "Nine of Pentacles", image: "Nine_of_Pentacles.jpg", arcana: "minor", suit: "ouros" },
+            { id: 73, name: "Dez de Ouros", nameEn: "Ten of Pentacles", image: "Ten_of_Pentacles.jpg", arcana: "minor", suit: "ouros" },
+            { id: 74, name: "Pajem de Ouros", nameEn: "Page of Pentacles", image: "Page_of_Pentacles.jpg", arcana: "minor", suit: "ouros" },
+            { id: 75, name: "Cavaleiro de Ouros", nameEn: "Knight of Pentacles", image: "Knight_of_Pentacles.jpg", arcana: "minor", suit: "ouros" },
+            { id: 76, name: "Rainha de Ouros", nameEn: "Queen of Pentacles", image: "Queen_of_Pentacles.jpg", arcana: "minor", suit: "ouros" },
+            { id: 77, name: "Rei de Ouros", nameEn: "King of Pentacles", image: "King_of_Pentacles.jpg", arcana: "minor", suit: "ouros" }
+        ];
+
+        // Suit translations
+        const suitTranslations = {
+            "paus": "Paus",
+            "copas": "Copas", 
+            "espadas": "Espadas",
+            "ouros": "Ouros"
+        };
+
+        let shuffledDeck = [];
+        let selectedCard = null;
+
+        // Shuffle and display cards
+        function initializeCardSpread() {
+            shuffledDeck = [...tarotDeck].sort(() => Math.random() - 0.5);
+            const spread = document.getElementById('cardSpread');
+            spread.innerHTML = '';
+            
+            shuffledDeck.forEach((card, index) => {
+                const cardEl = document.createElement('div');
+                cardEl.className = 'tarot-card';
+                cardEl.dataset.index = index;
+                
+                const imgDiv = document.createElement('div');
+                imgDiv.className = 'card-image';
+                imgDiv.innerHTML = `<img src="../assets/tarot/${card.image}" alt="${card.name}">`;
+                cardEl.appendChild(imgDiv);
+                
+                cardEl.onclick = () => selectCard(index);
+                spread.appendChild(cardEl);
+            });
+        }
+
+        // Select card with animation
+        function selectCard(index) {
+            selectedCard = shuffledDeck[index];
+            const cardEl = document.querySelectorAll('.tarot-card')[index];
+            cardEl.classList.add('selected');
+            
+            setTimeout(() => {
+                document.getElementById('cardSelectionPhase').style.display = 'none';
+                displayReading(selectedCard);
+                document.getElementById('readingContainer').style.display = 'block';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 1000);
+        }
+
+        // Display reading
+        function displayReading(card) {
+            document.getElementById('bigCardImg').src = `../assets/tarot/${card.image}`;
+            document.getElementById('bigCardImg').alt = card.name;
+            document.getElementById('cardName').textContent = card.name;
+            document.getElementById('cardSubtitle').textContent = getCardSubtitle(card);
+            document.getElementById('basicReading').textContent = getBasicReading(card);
+            document.getElementById('soulMessage').textContent = getSoulMessage(card);
+            document.getElementById('mysticalInsight').textContent = getMysticalInsight(card);
+        }
+
+        function showEnhancedReading() {
+            const enhancedSection = document.getElementById('enhancedReading');
+            enhancedSection.classList.add('show');
+            generateEnhancedReading(selectedCard);
+            enhancedSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function generateEnhancedReading(card) {
+            // Would integrate actual user data in production
+            const mockUserData = {
+                name: "Buscador",
+                birthDate: "1990-05-15",
+                lifePath: 3,
+                expression: 7,
+                soulUrge: 5,
+                zodiacSign: "Touro",
+                moonSign: "Peixes",
+                risingSign: "Escorpião"
+            };
+
+            // Cosmic Profile
+            document.getElementById('cosmicProfile').innerHTML = `
+                <div class="profile-card">
+                    <div class="profile-label">Número do Caminho de Vida</div>
+                    <div class="profile-value">${mockUserData.lifePath}</div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-label">Número de Expressão</div>
+                    <div class="profile-value">${mockUserData.expression}</div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-label">Desejo da Alma</div>
+                    <div class="profile-value">${mockUserData.soulUrge}</div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-label">Signo do Zodíaco</div>
+                    <div class="profile-value">${mockUserData.zodiacSign}</div>
+                </div>
+            `;
+
+            // Enhanced readings
+            document.getElementById('numerologyReading').innerHTML = getNumerologyReading(card, mockUserData);
+            document.getElementById('astrologyReading').innerHTML = getAstrologyReading(card, mockUserData);
+            document.getElementById('gematriaReading').innerHTML = getGematriaReading(card, mockUserData);
+            document.getElementById('frequencyReading').innerHTML = getFrequencyReading(card);
+            document.getElementById('integrationSteps').innerHTML = getIntegrationSteps(card, mockUserData);
+        }
+
+        // Reading generation functions
+        function getCardSubtitle(card) {
+            if (card.arcana === 'major') {
+                return `Arcano Maior • Carta ${card.id} • Energia Arquetípica`;
+            } else {
+                return `${suitTranslations[card.suit]} • Arcano Menor • Magia do Cotidiano`;
+            }
+        }
+
+        function getBasicReading(card) {
+            const readings = {
+                "O Louco": "Você está no limiar de uma nova aventura. O universo está te convidando a dar um salto de fé, confiar no desconhecido e abraçar a mente de principiante. Este é um momento de possibilidade infinita.",
+                "O Mago": "Você tem todas as ferramentas que precisa para manifestar seus desejos. Esta carta sinaliza maestria, habilidade e o poder de transformar sua realidade através de intenção focada e vontade divina.",
+                "A Sacerdotisa": "Confie na sua intuição. Sabedoria sagrada flui através de você. Esta carta te chama para ouvir sua voz interior e honrar os mistérios que não podem ser explicados, apenas experienciados.",
+                "A Imperatriz": "Abundância e nutrição fluem em sua direção. A Imperatriz representa fertilidade, criatividade e conexão com a Mãe Terra. É hora de cultivar e nutrir seus sonhos.",
+                "O Imperador": "Estrutura e autoridade são necessárias. O Imperador traz estabilidade e ordem. É hora de tomar as rédeas e estabelecer fundações sólidas.",
+                "O Hierofante": "Tradição e sabedoria espiritual te guiam. O Hierofante representa ensinamentos sagrados e mentoria. Busque conhecimento de fontes confiáveis.",
+                "Os Amantes": "Escolhas do coração estão diante de você. Os Amantes falam de harmonia, relacionamentos e alinhamento de valores. Siga o que seu coração verdadeiramente deseja.",
+                "O Carro": "Vitória através de determinação. O Carro representa triunfo sobre obstáculos. Mantenha o foco e avance com confiança.",
+                "A Força": "Coragem gentil e força interior. A Força mostra que você pode superar desafios através de paciência e compaixão, não força bruta.",
+                "O Eremita": "Tempo de introspecção e busca interior. O Eremita convida você a se afastar do ruído externo e encontrar sua própria luz interior.",
+                "Roda da Fortuna": "Ciclos de mudança estão em movimento. A Roda lembra que a sorte está girando a seu favor. Aceite as transformações.",
+                "A Justiça": "Equilíbrio e verdade são necessários. A Justiça pede honestidade consigo mesmo e com os outros. Decisões importantes requerem clareza.",
+                "O Enforcado": "Uma nova perspectiva é necessária. O Enforcado convida você a ver as coisas de um ângulo diferente. Às vezes pausar é avançar.",
+                "A Morte": "Transformação profunda está acontecendo. A Morte representa fins que permitem novos começos. Deixe ir o que não te serve mais.",
+                "A Temperança": "Equilíbrio e moderação são a chave. A Temperança ensina a arte da paciência e da integração de opostos.",
+                "O Diabo": "Examine suas sombras e apegos. O Diabo revela onde você pode estar se limitando. Liberte-se de padrões destrutivos.",
+                "A Torre": "Mudança súbita e revelação. A Torre derruba estruturas falsas para revelar a verdade. Da destruição vem a libertação.",
+                "A Estrela": "Esperança e inspiração divina. A Estrela traz cura e renovação. Confie que o universo está te guiando.",
+                "A Lua": "Intuição e o mundo dos sonhos. A Lua convida você a explorar o subconsciente e confiar em sua percepção interior.",
+                "O Sol": "Alegria, sucesso e vitalidade. O Sol brilha sobre você trazendo clareza, energia e celebração da vida.",
+                "O Julgamento": "Renascimento e chamado espiritual. O Julgamento anuncia um despertar. É hora de responder ao seu propósito maior.",
+                "O Mundo": "Completude e realização. O Mundo celebra a conclusão de um ciclo. Você alcançou um nível de integração e sucesso."
+            };
+            return readings[card.name] || `${card.name} aparece para guiá-lo em sua jornada. Esta carta traz ${card.suit ? 'sabedoria prática no reino de ' + suitTranslations[card.suit] : 'energia arquetípica'} para iluminar seu caminho.`;
+        }
+
+        function getSoulMessage(card) {
+            return `Sua alma escolheu esta carta porque você está pronto para incorporar sua energia. ${card.name} não é aleatória - ela reflete o que seu eu superior sabe que você precisa ouvir agora. Preste atenção em como a energia desta carta aparece em sua vida nas próximas 24 horas.`;
+        }
+
+        function getMysticalInsight(card) {
+            return `No campo quântico de possibilidades infinitas, sua consciência colapsou a função de onda para revelar ${card.name}. Esta é sua alma falando através da sincronicidade, usando a linguagem antiga dos símbolos para comunicar o que as palavras não podem expressar.`;
+        }
+
+        function getNumerologyReading(card, userData) {
+            return `<p><strong>Seu Caminho de Vida ${userData.lifePath}</strong> combina com ${card.name} para criar uma ressonância poderosa. Esta combinação sugere que seu propósito de vida central se alinha com a energia da sabedoria dos ${card.arcana === 'major' ? 'arcanos maiores' : 'arcanos menores'}.</p>
+            <p>A assinatura numérica do seu Número de Expressão ${userData.expression} harmoniza com a vibração desta carta, indicando que você está destinado a se expressar através de ${card.suit ? suitTranslations[card.suit] : 'transformação arquetípica'}.</p>`;
+        }
+
+        function getAstrologyReading(card, userData) {
+            return `<p>Como <strong>${userData.zodiacSign}</strong> com Lua em ${userData.moonSign} e ${userData.risingSign} Ascendente, ${card.name} fala diretamente à sua ${userData.zodiacSign === 'Touro' ? 'natureza terrena e sensual' : 'configuração celestial'}.</p>
+            <p>Esta ativação de carta se alinha com sua paisagem emocional de ${userData.moonSign}, sugerindo que um profundo trabalho subconsciente está ocorrendo.</p>`;
+        }
+
+        function getGematriaReading(card, userData) {
+            const nameValue = calculateGematria(userData.name);
+            return `<p>O valor de gematria de "${userData.name}" é <strong>${nameValue}</strong>, que ressoa com a assinatura numérica de ${card.name}.</p>
+            <p>Esta conexão de número sagrado revela padrões ocultos entre a vibração do seu nome e a energia arquetípica que você tirou.</p>`;
+        }
+
+        function getFrequencyReading(card) {
+            const frequencies = {
+                major: ["432 Hz (Harmonia Universal)", "528 Hz (Transformação)", "963 Hz (Conexão Divina)"],
+                paus: ["396 Hz (Libertação)", "417 Hz (Mudança)", "741 Hz (Expressão)"],
+                copas: ["528 Hz (Amor)", "639 Hz (Conexão)", "852 Hz (Intuição)"],
+                espadas: ["417 Hz (Clareza)", "741 Hz (Verdade)", "852 Hz (Despertar)"],
+                ouros: ["396 Hz (Aterramento)", "417 Hz (Manifestação)", "528 Hz (Abundância)"]
+            };
+            
+            const cardFreqs = card.arcana === 'major' ? frequencies.major : frequencies[card.suit];
+            return `<p><strong>Suas Frequências da Alma:</strong></p>
+            <ul>${cardFreqs.map(f => `<li>${f}</li>`).join('')}</ul>
+            <p>Ouça essas frequências enquanto medita sobre ${card.name} para aprofundar a integração.</p>
+            <p><a href="/genesis?freq=${cardFreqs[0].split(' ')[0]}" style="color: #f59e0b;">🎵 Tocar essas frequências agora</a></p>`;
+        }
+
+        function getIntegrationSteps(card, userData) {
+            return `<p><strong>Prática de Integração de 7 Dias:</strong></p>
+            <ol style="line-height: 2;">
+                <li><strong>Dia 1-2:</strong> Medite sobre ${card.name} por 10 minutos diariamente</li>
+                <li><strong>Dia 3-4:</strong> Escreva em seu diário sobre como a energia desta carta aparece em sua vida</li>
+                <li><strong>Dia 5:</strong> Ouça suas frequências da alma enquanto visualiza a carta</li>
+                <li><strong>Dia 6:</strong> Tome uma ação alinhada com a sabedoria de ${card.name}</li>
+                <li><strong>Dia 7:</strong> Reflita e integre - o que mudou?</li>
+            </ol>
+            <p><strong>Integração do Kit de Ferramentas:</strong> Use suas ferramentas de Gematria, Astrologia e Frequências Genesis para aprofundar esta leitura durante a semana.</p>`;
+        }
+
+        function calculateGematria(name) {
+            // Simple gematria calculation
+            return name.toUpperCase().split('').reduce((sum, char) => {
+                const code = char.charCodeAt(0);
+                return sum + (code >= 65 && code <= 90 ? code - 64 : 0);
+            }, 0);
+        }
+
+        function resetReading() {
+            document.getElementById('readingContainer').style.display = 'none';
+            document.getElementById('cardSelectionPhase').style.display = 'block';
+            document.getElementById('enhancedReading').classList.remove('show');
+            initializeCardSpread();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeCardSpread();
+        });
+    </script>
+    <script src="../shared/js/quantum-analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,2322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Hreflang tags for multilingual SEO -->
+    <link rel="alternate" hreflang="en" href="https://quantummerlin.com/library.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://quantummerlin.com/biblioteca.html" />
+    <link rel="alternate" hreflang="x-default" href="https://quantummerlin.com/library.html" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <!-- Open Graph locale for social media -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <title>Biblioteca Quântica | Quantum Merlin</title>
+    <meta name="description" content="Sua coleção pessoal de sigilos de nascimento, leituras de tarô, afirmações e itens místicos salvos.">
+    <meta name="keywords" content="quantum library, saved sigils, tarot readings, mystical collection, quantum merlin">
+    <meta name="author" content="Quantum Merlin">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://quantummerlin.com/library">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Biblioteca Quântica - Sua Coleção Mística">
+    <meta property="og:description" content="Sua coleção pessoal de sigilos de nascimento, leituras de tarô, afirmações e itens místicos salvos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/library">
+    <meta property="og:site_name" content="Quantum Merlin">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Quantum Library | Quantum Merlin">
+    <meta name="twitter:description" content="Sua coleção pessoal de sigilos de nascimento, leituras de tarô e itens místicos salvos.">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Quantum Intro Animation -->
+    <link rel="stylesheet" href="../shared/css/quantum-intro.css">
+    
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        html {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+        
+        body {
+            background: #0a0a0f;
+            color: #fff;
+            overflow-x: hidden;
+            max-width: 100vw;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        /* Header */
+        .qm-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 18px 40px;
+            background: rgba(10, 10, 15, 0.92);
+            backdrop-filter: blur(25px) saturate(180%);
+            border-bottom: 1px solid rgba(0, 245, 255, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .qm-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .qm-logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+        }
+
+        .qm-logo-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #00f5ff 0%, #9d00ff 100%);
+            border-radius: 14px;
+            font-size: 1.8rem;
+            box-shadow: 0 0 25px rgba(0, 245, 255, 0.5);
+            animation: logoGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes logoGlow {
+            0%, 100% { box-shadow: 0 0 25px rgba(0, 245, 255, 0.5); }
+            50% { box-shadow: 0 0 35px rgba(0, 245, 255, 0.7); }
+        }
+
+        /* Floating Particles Background */
+        .particles-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.8), transparent);
+            border-radius: 50%;
+            animation: floatParticle 15s infinite linear;
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Smooth Page Load Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(147, 51, 234, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(147, 51, 234, 0.6); }
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { border-color: rgba(147, 51, 234, 0.3); }
+            50% { border-color: rgba(147, 51, 234, 0.8); }
+        }
+
+        /* Enhanced Page Elements */
+        h1 {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .subtitle {
+            animation: fadeInUp 0.8s ease-out 0.1s backwards;
+        }
+
+        .stats-bar {
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        /* Glassmorphism Enhancement */
+        .glass-card {
+            background: rgba(20, 20, 30, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Skeleton Loading Animation */
+        .skeleton {
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.05) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0.05) 100%
+            );
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 8px;
+        }
+
+        /* Enhanced Stat Cards */
+        .stat {
+            background: rgba(147, 51, 234, 0.05);
+            padding: 20px 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(147, 51, 234, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(147, 51, 234, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: #9333ea;
+            box-shadow: 0 10px 40px rgba(147, 51, 234, 0.3);
+        }
+
+        .stat:hover::before {
+            left: 100%;
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, #9333ea, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            transition: transform 0.3s ease;
+        }
+
+        .stat:hover .stat-number {
+            transform: scale(1.1);
+        }
+
+        .qm-logo-text {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00f5ff 0%, #ff00ff 50%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .qm-coffee-btn {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #FFDD00, #FFA500);
+            color: #000;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 221, 0, 0.3);
+        }
+
+        .qm-coffee-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255, 221, 0, 0.5);
+            background: linear-gradient(135deg, #FFE44D, #FFB84D);
+        }
+
+        /* Main Content */
+        main {
+            padding: 120px 20px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            text-align: center;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffd700, #00f5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 50px;
+            font-size: 1.2rem;
+        }
+
+        /* Filter Buttons */
+        .filter-bar {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease-out 0.3s backwards;
+        }
+
+        .filter-btn {
+            padding: 12px 28px;
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 30px;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: 'Orbitron', monospace;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.4), transparent);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: #9333ea;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(147, 51, 234, 0.3);
+        }
+
+        .filter-btn:hover::before {
+            width: 200%;
+            height: 200%;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #9333ea, #ec4899);
+            border-color: transparent;
+            color: #fff;
+            box-shadow: 0 8px 30px rgba(147, 51, 234, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Library Grid */
+        .library-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .library-item {
+            background: linear-gradient(145deg, rgba(20, 20, 30, 0.9), rgba(30, 25, 45, 0.8));
+            border: 2px solid rgba(147, 51, 234, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .library-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #9333ea, #ec4899, #00f5ff);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .library-item::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.1), transparent);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s ease;
+        }
+
+        .library-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: #9333ea;
+            box-shadow: 
+                0 20px 60px rgba(147, 51, 234, 0.3),
+                0 0 40px rgba(147, 51, 234, 0.1),
+                inset 0 0 60px rgba(147, 51, 234, 0.05);
+        }
+
+        .library-item:hover::before {
+            opacity: 1;
+        }
+
+        .library-item:hover::after {
+            width: 300%;
+            height: 300%;
+        }
+
+        /* Staggered animation for grid items */
+        .library-item:nth-child(1) { animation-delay: 0.1s; }
+        .library-item:nth-child(2) { animation-delay: 0.15s; }
+        .library-item:nth-child(3) { animation-delay: 0.2s; }
+        .library-item:nth-child(4) { animation-delay: 0.25s; }
+        .library-item:nth-child(5) { animation-delay: 0.3s; }
+        .library-item:nth-child(6) { animation-delay: 0.35s; }
+        .library-item:nth-child(7) { animation-delay: 0.4s; }
+        .library-item:nth-child(8) { animation-delay: 0.45s; }
+        .library-item:nth-child(9) { animation-delay: 0.5s; }
+
+        .library-item-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .library-item-type {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(0, 245, 255, 0.2);
+            color: #00f5ff;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .delete-btn {
+            background: rgba(255, 50, 50, 0.1);
+            border: 1px solid rgba(255, 50, 50, 0.3);
+            color: #ff6b6b;
+            padding: 8px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 500;
+        }
+
+        .delete-btn:hover {
+            background: rgba(255, 50, 50, 0.3);
+            border-color: #ff5555;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 50, 50, 0.3);
+        }
+
+        .delete-btn:active {
+            transform: scale(0.95);
+        }
+
+        .load-btn {
+            background: rgba(147, 51, 234, 0.2);
+            border: 1px solid rgba(147, 51, 234, 0.5);
+            color: #c4b5fd;
+            padding: 8px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 500;
+        }
+
+        .load-btn:hover {
+            background: rgba(147, 51, 234, 0.4);
+            border-color: #9333ea;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(147, 51, 234, 0.3);
+        }
+
+        .load-btn:active {
+            transform: scale(0.95);
+        }
+
+        .library-item-content {
+            margin: 20px 0;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .library-item-content h3 {
+            font-family: 'Orbitron', monospace;
+            background: linear-gradient(135deg, #ffd700, #ffaa00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+        }
+
+        .library-item:hover .library-item-content h3 {
+            transform: translateX(5px);
+        }
+
+        .library-item-content p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        .library-item-date {
+            color: rgba(196, 181, 253, 0.6);
+            font-size: 0.9rem;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .library-item-date::before {
+            content: '📅';
+        }
+
+        /* Sigil Display */
+        .sigil-container {
+            width: 100%;
+            height: 200px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .sigil-svg {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .empty-state-icon {
+            font-size: 6rem;
+            margin-bottom: 30px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .empty-state h2 {
+            font-family: 'Orbitron', monospace;
+            background: linear-gradient(135deg, #9333ea, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .empty-state p {
+            color: rgba(196, 181, 253, 0.7);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: linear-gradient(135deg, #9333ea, #ec4899);
+            color: #fff;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            border-radius: 35px;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .explore-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .explore-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 45px rgba(147, 51, 234, 0.6);
+        }
+
+        .explore-btn:hover::before {
+            left: 100%;
+        }
+
+        .explore-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Stats */
+        .stats-bar {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            color: #00f5ff;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .qm-header {
+                padding: 15px 20px;
+            }
+
+            .qm-logo-text {
+                font-size: 1.1rem;
+            }
+
+            .qm-coffee-btn span:last-child {
+                display: none;
+            }
+
+            .library-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-bar {
+                gap: 8px;
+            }
+
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Email Capture */
+        .email-capture {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(0, 245, 255, 0.1) 100%);
+            border: 2px solid var(--qm-gold, #ffd700);
+            border-radius: 20px;
+            padding: 35px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .email-capture h3 {
+            font-family: 'Orbitron', monospace;
+            color: var(--qm-gold, #ffd700);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        .email-capture .subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        .email-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .email-form input[type="email"] {
+            flex: 1;
+            min-width: 250px;
+            padding: 15px 20px;
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 25px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1rem;
+        }
+        .email-form input[type="email"]:focus {
+            outline: none;
+            border-color: var(--qm-cyan, #00f5ff);
+        }
+        .email-form button {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ffd700, #ff9500);
+            border: none;
+            border-radius: 25px;
+            color: #000;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .email-form button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+        .email-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Live User Count */
+        .live-users-banner {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px auto;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .live-users-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #c4b5fd;
+            font-size: 1.1em;
+        }
+
+        .pulse-dot {
+            width: 10px;
+            height: 10px;
+            background: #ec4899;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                opacity: 1; 
+                transform: scale(1); 
+            }
+            50% { 
+                opacity: 0.5; 
+                transform: scale(1.2); 
+            }
+        }
+
+        /* Achievement Badges */
+        .achievement-badge {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 16px;
+            padding: 20px 25px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-badge::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(147, 51, 234, 0.1), transparent 60%);
+            animation: rotateBadge 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        @keyframes rotateBadge {
+            100% { transform: rotate(360deg); }
+        }
+
+        .achievement-badge.active {
+            background: linear-gradient(145deg, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.1));
+            border: 2px solid #9333ea;
+            box-shadow: 0 0 30px rgba(147, 51, 234, 0.4);
+        }
+
+        .achievement-badge.active::before {
+            opacity: 1;
+        }
+
+        .achievement-badge.locked {
+            background: rgba(50, 50, 60, 0.3);
+            border: 2px solid rgba(100, 100, 120, 0.2);
+            opacity: 0.6;
+            filter: grayscale(0.5);
+        }
+
+        .achievement-badge:hover {
+            transform: translateY(-8px) scale(1.05);
+        }
+
+        .achievement-badge.active:hover {
+            box-shadow: 0 10px 50px rgba(147, 51, 234, 0.6);
+        }
+
+        .achievement-badge .badge-icon {
+            font-size: 2.5em;
+            margin-bottom: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .achievement-badge:hover .badge-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+    </style>
+    <!-- Schema.org structured data for rich snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Biblioteca Quântica | Quantum Merlin",
+      "description": "Sua coleção pessoal de sigilos de nascimento, leituras de tarô, afirmações e itens místicos salvos.",
+      "inLanguage": "pt-BR",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock"
+      },
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "applicationSubCategory": "Self-Development"
+    }
+    </script>
+
+<body>
+    <!-- Quantum Intro Animation -->
+    <div id="intro-container">
+        <canvas id="lines-canvas"></canvas>
+        <div class="emoji-layer">
+            <div class="intro-emoji" id="intro-quantum">⚛️</div>
+            <div class="intro-emoji" id="intro-wizard">🧙‍♂️</div>
+            <div class="intro-emoji" id="intro-rose">🌹</div>
+        </div>
+        <div id="singularity"></div>
+        <div id="intro-title">QUANTUM MERLIN</div>
+    </div>
+    
+    <div id="app-content">
+    <!-- Floating Particles Background -->
+    <div class="particles-bg" id="particlesBg"></div>
+
+    <!-- Header -->
+    <header class="qm-header">
+        <div class="qm-header-inner">
+            <a href="/" class="qm-logo" target="_blank">
+                <div class="qm-logo-icon">🧙‍♂️</div>
+                <div class="qm-logo-text">Quantum Merlin</div>
+            </a>
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="qm-coffee-btn" title="Buy Me a Coffee">
+                <span style="font-size: 1.8rem;">☕</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>📚 Quantum Library</h1>
+        <p class="subtitle">Your personal collection of saved mystical items ✨</p>
+
+        <!-- Welcome Message -->
+        <div id="welcomeMessage" style="
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.15), rgba(236, 72, 153, 0.1));
+            border: 2px solid rgba(147, 51, 234, 0.4);
+            border-radius: 20px;
+            padding: 25px 35px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out;
+            position: relative;
+            overflow: hidden;
+        ">
+            <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #9333ea, #ec4899, #ffd700);"></div>
+            <h3 style="color: #c4b5fd; font-family: 'Cinzel', serif; margin-bottom: 10px; font-size: 1.3em;">
+                🌟 Welcome back, Quantum Explorador(a)!
+            </h3>
+            <p style="color: rgba(196, 181, 253, 0.8); margin: 0;">Your journey through the cosmos continues...</p>
+        </div>
+
+        <!-- Live Users Banner -->
+        <div class="live-users-banner">
+            <div class="live-users-content">
+                <span class="pulse-dot"></span>
+                <span><strong id="liveCount">247</strong> people exploring tools right now</span>
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar" id="stats-bar">
+            <div class="stat">
+                <div class="stat-number" id="total-items">0</div>
+                <div class="stat-label">Total de Itens</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="total-tools">0</div>
+                <div class="stat-label">Tools Used</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="streakDays">0</div>
+                <div class="stat-label">Day Streak 🔥</div>
+            </div>
+        </div>
+
+        <!-- Achievements Section -->
+        <div style="
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 25px;
+        ">
+            <h3 style="color: #9333ea; text-align: center; margin-bottom: 20px; font-family: 'Cinzel', serif;">
+                🏆 Your Achievements
+            </h3>
+            <div style="
+                display: flex;
+                gap: 15px;
+                justify-content: center;
+                flex-wrap: wrap;
+            ">
+                <div class="achievement-badge active" id="achievement-first">
+                    <div style="font-size: 2em; margin-bottom: 5px;">🌱</div>
+                    <div style="color: #c4b5fd; font-size: 0.9em;">First Steps</div>
+                </div>
+                
+                <div class="achievement-badge locked" id="achievement-seeker">
+                    <div style="font-size: 2em; margin-bottom: 5px;">🔮</div>
+                    <div style="color: #c4b5fd; font-size: 0.9em;">Pattern Seeker</div>
+                    <div style="color: #a78bfa; font-size: 0.8em; margin-top: 5px;">Use 5 tools</div>
+                </div>
+                
+                <div class="achievement-badge locked" id="achievement-master">
+                    <div style="font-size: 2em; margin-bottom: 5px;">👑</div>
+                    <div style="color: #c4b5fd; font-size: 0.9em;">Quantum Master</div>
+                    <div style="color: #a78bfa; font-size: 0.8em; margin-top: 5px;">Use all 33 tools</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Limited Availability Banner -->
+        <div style="
+            background: rgba(236, 72, 153, 0.1);
+            border: 2px solid #ec4899;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        ">
+            <p style="color: #ec4899; font-size: 1.2em; font-weight: bold; margin-bottom: 10px;">
+                ⏰ Limited Availability
+            </p>
+            <p style="color: #c4b5fd; font-size: 1em; margin: 0;">
+                Only <strong id="spotsLeft">12</strong> reading spots available this week
+            </p>
+        </div>
+
+        <!-- Quick Search Bar -->
+        <div style="
+            background: rgba(147, 51, 234, 0.05);
+            border: 2px solid rgba(147, 51, 234, 0.2);
+            border-radius: 30px;
+            padding: 5px;
+            margin: 30px auto;
+            max-width: 500px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        \" id=\"searchContainer\">
+            <span style=\"padding: 0 15px; font-size: 1.2em;\">🔍</span>
+            <input type=\"text\" id=\"librarySearch\" placeholder=\"Buscar na sua biblioteca... (Press / to focus)\" style=\"
+                flex: 1;
+                background: transparent;
+                border: none;
+                color: #c4b5fd;
+                font-size: 1em;
+                padding: 12px 0;
+                outline: none;
+            \">
+            <kbd style=\"
+                background: rgba(147, 51, 234, 0.2);
+                border: 1px solid rgba(147, 51, 234, 0.3);
+                border-radius: 6px;
+                padding: 4px 8px;
+                font-size: 0.75em;
+                color: #a78bfa;
+                margin-right: 15px;
+            \">/</kbd>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="forecast">📊 Previsões</button>
+            <button class="filter-btn" data-filter="birth-sigil">🌙 Sigilos de Nascimento</button>
+            <button class="filter-btn" data-filter="tarot">🃏 Tarot</button>
+            <button class="filter-btn" data-filter="affirmation">🔮 Afirmações</button>
+            <button class="filter-btn" data-filter="astrology">⭐ Astrology</button>
+            <button class="filter-btn" data-filter="gematria">🔢 Gematria</button>
+            <button class="filter-btn" data-filter="angel">👼 Números dos Anjos</button>
+        </div>
+
+        <!-- Library Grid -->
+        <div class="library-grid" id="library-grid">
+            <!-- Items will be dynamically inserted here -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="empty-state" style="display: none;">
+            <div class="empty-state-icon">📖</div>
+            <h2>Sua biblioteca está vazia</h2>
+            <p>Start exploring our tools and save your favorite items to build your personal collection</p>
+            <a href="/index.html" class="explore-btn" target="_blank">Explorar Ferramentas ✨</a>
+        </div>
+
+        <!-- Recommended For You Section -->
+        <div style="
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+        ">
+            <h2 style="
+                font-size: 2.2em;
+                color: #9333ea;
+                text-align: center;
+                margin-bottom: 15px;
+                font-family: 'Cinzel', serif;
+            ">✨ Recommended For You</h2>
+            
+            <p style="
+                color: #c4b5fd;
+                text-align: center;
+                font-size: 1.1em;
+                margin-bottom: 30px;
+            ">Based on what others with your interests explored</p>
+            
+            <div style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            ">
+                <a href="contract.html" target="_blank" style="
+                    background: rgba(147, 51, 234, 0.1);
+                    border: 2px solid rgba(147, 51, 234, 0.3);
+                    border-radius: 12px;
+                    padding: 20px;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    display: block;
+                " onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" 
+                   onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">📜</div>
+                    <h4 style="color: #9333ea; margin-bottom: 10px; font-size: 1.2em;">Unconscious Contract</h4>
+                    <p style="color: #c4b5fd; font-size: 0.9em; line-height: 1.5;">
+                        Most popular tool this week
+                    </p>
+                    <span style="
+                        display: inline-block;
+                        background: rgba(251, 191, 36, 0.3);
+                        color: #fbbf24;
+                        padding: 5px 12px;
+                        border-radius: 15px;
+                        font-size: 0.8em;
+                        margin-top: 10px;
+                    ">🔥 Trending</span>
+                </a>
+                
+                <a href="energyleak.html" target="_blank" style="
+                    background: rgba(147, 51, 234, 0.1);
+                    border: 2px solid rgba(147, 51, 234, 0.3);
+                    border-radius: 12px;
+                    padding: 20px;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    display: block;
+                " onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" 
+                   onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">⚠️</div>
+                    <h4 style="color: #9333ea; margin-bottom: 10px; font-size: 1.2em;">Energy Leak Locator</h4>
+                    <p style="color: #c4b5fd; font-size: 0.9em; line-height: 1.5;">
+                        Perfect for beginners
+                    </p>
+                    <span style="
+                        display: inline-block;
+                        background: rgba(147, 51, 234, 0.3);
+                        color: #c4b5fd;
+                        padding: 5px 12px;
+                        border-radius: 15px;
+                        font-size: 0.8em;
+                        margin-top: 10px;
+                    ">⭐ Essential</span>
+                </a>
+                
+                <a href="manifest.html" target="_blank" style="
+                    background: rgba(147, 51, 234, 0.1);
+                    border: 2px solid rgba(147, 51, 234, 0.3);
+                    border-radius: 12px;
+                    padding: 20px;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    display: block;
+                " onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" 
+                   onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">🎯</div>
+                    <h4 style="color: #9333ea; margin-bottom: 10px; font-size: 1.2em;">Manifestação Readiness</h4>
+                    <p style="color: #c4b5fd; font-size: 0.9em; line-height: 1.5;">
+                        See if you're ready to manifest
+                    </p>
+                    <span style="
+                        display: inline-block;
+                        background: rgba(236, 72, 153, 0.3);
+                        color: #ec4899;
+                        padding: 5px 12px;
+                        border-radius: 15px;
+                        font-size: 0.8em;
+                        margin-top: 10px;
+                    ">✨ New</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Atividade Recente Feed -->
+        <div style="
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        ">
+            <h3 style="color: #9333ea; margin-bottom: 20px; text-align: center;">
+                🔔 Atividade Recente
+            </h3>
+            <div id="activityFeed" style="
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            ">
+                <!-- Activity items will be added here -->
+            </div>
+        </div>
+
+        <!-- Social Sharing Section -->
+        <div style="
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin: 50px 0;
+        ">
+            <h2 style="color: #9333ea; font-size: 2em; margin-bottom: 15px;">
+                💫 Compartilhar Quantum Merlin
+            </h2>
+            <p style="color: #c4b5fd; font-size: 1.1em; margin-bottom: 25px;">
+                Ajude outros a descobrir seus padrões
+            </p>
+            
+            <div style="
+                display: flex;
+                gap: 15px;
+                justify-content: center;
+                flex-wrap: wrap;
+            ">
+                <button onclick="shareTwitter()" style="
+                    background: rgba(29, 161, 242, 0.2);
+                    border: 2px solid #1DA1F2;
+                    color: #1DA1F2;
+                    padding: 12px 25px;
+                    border-radius: 25px;
+                    font-size: 1em;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.background='rgba(29, 161, 242, 0.3)'" 
+                   onmouseout="this.style.background='rgba(29, 161, 242, 0.2)'">
+                    🐦 Compartilhar on Twitter
+                </button>
+                
+                <button onclick="shareFacebook()" style="
+                    background: rgba(24, 119, 242, 0.2);
+                    border: 2px solid #1877F2;
+                    color: #1877F2;
+                    padding: 12px 25px;
+                    border-radius: 25px;
+                    font-size: 1em;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.background='rgba(24, 119, 242, 0.3)'" 
+                   onmouseout="this.style.background='rgba(24, 119, 242, 0.2)'">
+                    📘 Compartilhar on Facebook
+                </button>
+                
+                <button onclick="copyLink()" style="
+                    background: rgba(147, 51, 234, 0.2);
+                    border: 2px solid #9333ea;
+                    color: #9333ea;
+                    padding: 12px 25px;
+                    border-radius: 25px;
+                    font-size: 1em;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.background='rgba(147, 51, 234, 0.3)'" 
+                   onmouseout="this.style.background='rgba(147, 51, 234, 0.2)'">
+                    🔗 Copiar Link
+                </button>
+            </div>
+        </div>
+
+        <!-- Email Capture Section -->
+        <div class="email-capture" id="emailCapture">
+            <h3>🔔 Stay Connected</h3>
+            <p class="subtitle">Get updates on new tools and cosmic insights</p>
+            <form class="email-form" id="emailForm" action="https://formspree.io/f/mgowrolb" method="POST">
+                <input type="email" name="email" id="emailInput" placeholder="Enter your email" required>
+                <button type="submit">Subscribe ✨</button>
+            </form>
+            <div class="email-benefits">
+                <span>✓ Free</span>
+                <span>✓ No Spam</span>
+                <span>✓ Unsubscribe Anytime</span>
+            </div>
+        </div>
+    </main>
+
+    </div>
+    
+    <!-- Quantum Profile System -->
+    <script src="../shared/js/quantum-profile.js"></script>
+    <script src="../shared/js/quantum-intro-animation.js"></script>
+    
+    <script>
+        // ========================================
+        // FLOATING PARTICLES SYSTEM
+        // ========================================
+        function createParticles() {
+            const container = document.getElementById('particlesBg');
+            if (!container) return;
+            
+            const particleCount = 30;
+            const colors = ['rgba(147, 51, 234, 0.6)', 'rgba(236, 72, 153, 0.5)', 'rgba(0, 245, 255, 0.4)', 'rgba(255, 215, 0, 0.4)'];
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particle.style.width = (Math.random() * 4 + 2) + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.background = `radial-gradient(circle, ${colors[Math.floor(Math.random() * colors.length)]}, transparent)`;
+                container.appendChild(particle);
+            }
+        }
+        createParticles();
+
+        // ========================================
+        // SMOOTH NUMBER COUNTER ANIMATION
+        // ========================================
+        function animateCounter(element, target, duration = 1000) {
+            if (!element) return;
+            const start = parseInt(element.textContent) || 0;
+            const range = target - start;
+            const startTime = performance.now();
+            
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+                element.textContent = Math.round(start + range * eased);
+                
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            requestAnimationFrame(update);
+        }
+
+        // ========================================
+        // QUICK SEARCH FUNCTIONALITY
+        // ========================================
+        const searchInput = document.getElementById('librarySearch');
+        const searchContainer = document.getElementById('searchContainer');
+        let searchDebounce;
+
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                clearTimeout(searchDebounce);
+                searchDebounce = setTimeout(() => {
+                    const query = e.target.value.toLowerCase().trim();
+                    filterLibraryBySearch(query);
+                }, 200);
+            });
+
+            searchInput.addEventListener('focus', () => {
+                searchContainer.style.borderColor = '#9333ea';
+                searchContainer.style.boxShadow = '0 0 30px rgba(147, 51, 234, 0.3)';
+            });
+
+            searchInput.addEventListener('blur', () => {
+                searchContainer.style.borderColor = 'rgba(147, 51, 234, 0.2)';
+                searchContainer.style.boxShadow = 'none';
+            });
+        }
+
+        function filterLibraryBySearch(query) {
+            const items = document.querySelectorAll('.library-item');
+            let visibleCount = 0;
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (query === '' || text.includes(query)) {
+                    item.style.display = '';
+                    item.style.animation = 'fadeInUp 0.3s ease forwards';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Show/hide empty state based on search results
+            const emptyState = document.getElementById('empty-state');
+            const grid = document.getElementById('library-grid');
+            if (visibleCount === 0 && query !== '') {
+                grid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: #c4b5fd;">
+                        <div style="font-size: 4em; margin-bottom: 20px; opacity: 0.5;">🔍</div>
+                        <h3 style="color: #9333ea; margin-bottom: 10px;">Nenhum resultado encontrado</h3>
+                        <p>Tente um termo de busca diferente</p>
+                    </div>
+                `;
+            }
+        }
+
+        // ========================================
+        // KEYBOARD SHORTCUTS
+        // ========================================
+        document.addEventListener('keydown', (e) => {
+            // Press "/" to focus search
+            if (e.key === '/' && document.activeElement !== searchInput) {
+                e.preventDefault();
+                searchInput?.focus();
+            }
+            
+            // Press "Escape" to clear search and blur
+            if (e.key === 'Escape' && document.activeElement === searchInput) {
+                searchInput.value = '';
+                searchInput.blur();
+                libraryManager?.loadLibrary();
+            }
+            
+            // Press "h" to go home
+            if (e.key === 'h' && !e.ctrlKey && !e.metaKey && document.activeElement !== searchInput) {
+                window.location.href = '/';
+            }
+        });
+
+        // ========================================
+        // LIVE USER COUNT - Smooth updates
+        // ========================================
+        let currentLiveCount = Math.floor(Math.random() * 300) + 100;
+        const liveCountElement = document.getElementById('liveCount');
+        if (liveCountElement) {
+            liveCountElement.textContent = currentLiveCount;
+        }
+        
+        setInterval(() => {
+            if (liveCountElement) {
+                const newCount = Math.floor(Math.random() * 300) + 100;
+                animateCounter(liveCountElement, newCount, 800);
+                currentLiveCount = newCount;
+            }
+        }, 30000);
+
+        // ========================================
+        // LIMITED SPOTS - Smooth countdown feel
+        // ========================================
+        const spotsLeftElement = document.getElementById('spotsLeft');
+        if (spotsLeftElement) {
+            const spots = Math.floor(Math.random() * 8) + 8;
+            animateCounter(spotsLeftElement, spots, 600);
+        }
+
+        // ========================================
+        // TRACK DAILY STREAK
+        // ========================================
+        function updateStreak() {
+            const lastVisit = localStorage.getItem('lastVisitDate');
+            const today = new Date().toDateString();
+            let streak = parseInt(localStorage.getItem('visitStreak') || '0');
+            
+            if (lastVisit === today) {
+                // Same day, keep streak
+            } else if (lastVisit) {
+                const lastDate = new Date(lastVisit);
+                const todayDate = new Date(today);
+                const diffDays = Math.floor((todayDate - lastDate) / (1000 * 60 * 60 * 24));
+                
+                if (diffDays === 1) {
+                    // Consecutive day
+                    streak++;
+                } else if (diffDays > 1) {
+                    // Streak broken
+                    streak = 1;
+                }
+            } else {
+                // First visit
+                streak = 1;
+            }
+            
+            localStorage.setItem('visitStreak', streak);
+            localStorage.setItem('lastVisitDate', today);
+            const streakElement = document.getElementById('streakDays');
+            if (streakElement) {
+                streakElement.textContent = streak;
+            }
+        }
+
+        updateStreak();
+
+        // Library Management
+        class LibraryManager {
+            constructor() {
+                this.storageKey = 'qm_library';
+                this.forecastKey = 'quantumMerlin_forecastLibrary';
+                this.currentFilter = 'all';
+                this.init();
+            }
+
+            init() {
+                this.loadLibrary();
+                this.setupFilters();
+            }
+
+            getLibraryData() {
+                try {
+                    // Get general library items and normalize them
+                    const generalData = localStorage.getItem(this.storageKey);
+                    const generalItems = generalData ? JSON.parse(generalData).map(item => ({
+                        ...item,
+                        // Normalize timestamp - handle savedAt, timestamp, or use id as fallback
+                        timestamp: item.timestamp || (item.savedAt ? new Date(item.savedAt).getTime() : item.id) || Date.now()
+                    })) : [];
+                    
+                    // Get forecast items and normalize them
+                    const forecastData = localStorage.getItem(this.forecastKey);
+                    const forecastItems = forecastData ? JSON.parse(forecastData).map(f => ({
+                        ...f,
+                        type: 'forecast',
+                        timestamp: f.timestamp || (f.savedAt ? new Date(f.savedAt).getTime() : f.id) || Date.now(),
+                        title: `${f.timeframe} Forecast`,
+                        name: f.profile?.name || 'Seeker'
+                    })) : [];
+                    
+                    // Combine both
+                    return [...generalItems, ...forecastItems];
+                } catch (error) {
+                    console.error('Error loading library:', error);
+                    return [];
+                }
+            }
+
+            saveLibraryData(data) {
+                try {
+                    // Separate forecasts from general items
+                    const forecasts = data.filter(item => item.type === 'forecast');
+                    const generalItems = data.filter(item => item.type !== 'forecast');
+                    
+                    localStorage.setItem(this.storageKey, JSON.stringify(generalItems));
+                    // Note: forecasts are saved separately to maintain compatibility
+                } catch (error) {
+                    console.error('Error saving library:', error);
+                }
+            }
+
+            loadLibrary() {
+                const library = this.getLibraryData();
+                this.renderLibrary(library);
+                this.updateStats(library);
+            }
+
+            renderLibrary(items) {
+                const grid = document.getElementById('library-grid');
+                const emptyState = document.getElementById('empty-state');
+                
+                // Filter items
+                const filteredItems = this.currentFilter === 'all' 
+                    ? items 
+                    : items.filter(item => item.type === this.currentFilter);
+
+                // Show empty state if no items
+                if (filteredItems.length === 0) {
+                    grid.style.display = 'none';
+                    emptyState.style.display = 'block';
+                    return;
+                }
+
+                grid.style.display = 'grid';
+                emptyState.style.display = 'none';
+                
+                // Sort by date (newest first)
+                filteredItems.sort((a, b) => b.timestamp - a.timestamp);
+
+                // Render items
+                grid.innerHTML = filteredItems.map((item, index) => this.renderItem(item, index)).join('');
+            }
+
+            renderItem(item, index) {
+                const date = new Date(item.timestamp).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+
+                const typeLabels = {
+                    'forecast': '📊 Forecast',
+                    'birth-sigil': '🌙 Birth Sigil',
+                    'sigil': '🔮 Sigil',
+                    'tarot': '🃏 Tarot',
+                    'affirmation': '💫 Affirmation',
+                    'astrology': '⭐ Astrology',
+                    'gematria': '🔢 Gematria',
+                    'angel': '👼 Angel Number',
+                    'water': '💧 Water Charging',
+                    'code': '🔑 Reality Code'
+                };
+
+                let contentHTML = '';
+                
+                // Render based on type
+                if (item.type === 'forecast') {
+                    contentHTML = `
+                        <h3>${item.timeframe || 'Daily'} Forecast</h3>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">For: ${item.profile?.name || 'Seeker'}</p>
+                        ${item.profile?.birthDate ? `<p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">🎂 ${item.profile.birthDate}</p>` : ''}
+                        <div style="margin-top: 10px; max-height: 150px; overflow: hidden; position: relative;">
+                            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">${item.content?.substring(0, 300) || ''}...</div>
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(20,20,30,1));"></div>
+                        </div>
+                        <button onclick="libraryManager.viewForecast('${item.id}')" style="margin-top: 15px; padding: 8px 16px; background: linear-gradient(135deg, #00f5ff, #9d00ff); border: none; border-radius: 8px; color: white; font-weight: 600; cursor: pointer;">
+                            👁️ View Full Forecast
+                        </button>
+                    `;
+                } else if ((item.type === 'birth-sigil' || item.type === 'sigil') && item.sigil) {
+                    contentHTML = `
+                        <div class="sigil-container">
+                            ${item.sigil}
+                        </div>
+                        <h3>${item.name || 'Sigilo de Nascimento'}</h3>
+                        ${item.birthDate ? `<p>Born: ${item.birthDate}</p>` : ''}
+                        ${item.description ? `<p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: 8px;">${item.description}</p>` : ''}
+                    `;
+                } else if ((item.type === 'birth-sigil' || item.type === 'sigil') && item.data?.sigilData) {
+                    // Handle sigils saved with data structure
+                    contentHTML = `
+                        <div class="sigil-container" style="padding: 20px; background: rgba(255,255,255,0.05); border-radius: 12px; margin-bottom: 15px;">
+                            <div style="font-size: 3rem; text-align: center;">${item.data.sigilData}</div>
+                        </div>
+                        <h3>${item.name || 'Sigil'}</h3>
+                        ${item.description ? `<p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">${item.description}</p>` : ''}
+                        ${item.data.intention ? `<p style="color: rgba(0,245,255,0.8); font-size: 0.85rem; margin-top: 8px;">Intention: ${item.data.intention}</p>` : ''}
+                    `;
+                } else if (item.type === 'affirmation') {
+                    contentHTML = `
+                        <h3>${item.title || 'Afirmação'}</h3>
+                        <p>${item.content || item.affirmation || ''}</p>
+                    `;
+                } else if (item.type === 'tarot') {
+                    contentHTML = `
+                        <h3>${item.spread || 'Leitura de Tarô'}</h3>
+                        <p>${item.cards ? item.cards.join(', ') : ''}</p>
+                    `;
+                } else {
+                    contentHTML = `
+                        <h3>${item.title || item.name || 'Salvo Item'}</h3>
+                        <p>${item.content || item.description || ''}</p>
+                    `;
+                }
+
+                return `
+                    <div class="library-item" data-type="${item.type}" data-id="${item.id || index}">
+                        <div class="library-item-header">
+                            <span class="library-item-type">${typeLabels[item.type] || item.type}</span>
+                            <button class="load-btn" onclick="libraryManager.loadItem('${item.id || index}', '${item.type}')">📂 Load</button>
+                            <button class="delete-btn" onclick="libraryManager.deleteItem('${item.id || index}', '${item.type}')">🗑️ Excluir</button>
+                        </div>
+                        <div class="library-item-content">
+                            ${contentHTML}
+                        </div>
+                        <div class="library-item-date">Salvo on ${date}</div>
+                    </div>
+                `;
+            }
+
+            viewForecast(forecastId) {
+                const forecastData = localStorage.getItem(this.forecastKey);
+                const forecasts = forecastData ? JSON.parse(forecastData) : [];
+                const forecast = forecasts.find(f => f.id === forecastId);
+                
+                if (!forecast) {
+                    alert('Forecast not found.');
+                    return;
+                }
+                
+                // Create modal to view full forecast
+                const modal = document.createElement('div');
+                modal.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.98);
+                    z-index: 10002;
+                    overflow-y: auto;
+                    padding: 20px;
+                `;
+                
+                modal.innerHTML = `
+                    <div style="max-width: 1200px; margin: 0 auto; position: relative; padding-top: 20px;">
+                        <!-- Floating close button -->
+                        <button onclick="this.closest('[style*=fixed]').remove()" style="position: fixed; top: 20px; right: 20px; background: rgba(0, 0, 0, 0.8); border: 2px solid #00f5ff; color: #00f5ff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; z-index: 10004; display: flex; align-items: center; justify-content: center;">
+                            ✕
+                        </button>
+                        
+                        <!-- Floating action buttons -->
+                        <div style="position: fixed; bottom: 20px; right: 20px; display: flex; gap: 10px; z-index: 10004;">
+                            <button onclick="libraryManager.loadProfileFromForecast('${forecastId}')" style="background: linear-gradient(135deg, #ffd700, #ff8c00); border: none; color: #000; padding: 12px 20px; border-radius: 25px; cursor: pointer; font-weight: 600; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);">
+                                📊 Generate New Forecast
+                            </button>
+                        </div>
+                        
+                        <!-- Header info -->
+                        <div style="text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid rgba(0, 245, 255, 0.2);">
+                            <h2 style="font-family: 'Orbitron', monospace; font-size: 1.8rem; color: #00f5ff; margin-bottom: 10px;">
+                                ${forecast.timeframe} Forecast
+                            </h2>
+                            <p style="color: rgba(255, 255, 255, 0.6);">For: ${forecast.profile?.name || 'Seeker'} • ${forecast.date}</p>
+                        </div>
+                        
+                        <!-- Forecast content -->
+                        <div style="line-height: 1.8; padding-bottom: 80px;">
+                            ${forecast.content}
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(modal);
+            }
+            
+            loadProfileFromForecast(forecastId) {
+                const forecastData = localStorage.getItem(this.forecastKey);
+                const forecasts = forecastData ? JSON.parse(forecastData) : [];
+                const forecast = forecasts.find(f => f.id === forecastId);
+                
+                if (!forecast || !forecast.profile) {
+                    window.location.href = '/forecasts';
+                    return;
+                }
+                
+                // Store profile data in sessionStorage to load on forecasts page
+                sessionStorage.setItem('loadProfile', JSON.stringify(forecast.profile));
+                window.location.href = '/forecasts';
+            }
+
+            loadItem(itemId, itemTipo) {
+                try {
+                    let itemData = null;
+                    
+                    // Get the item data
+                    if (itemTipo === 'forecast') {
+                        const forecastData = localStorage.getItem(this.forecastKey);
+                        const forecasts = forecastData ? JSON.parse(forecastData) : [];
+                        itemData = forecasts.find(f => f.id === itemId);
+                    } else {
+                        const library = JSON.parse(localStorage.getItem(this.storageKey) || '[]');
+                        itemData = library.find(item => {
+                            const id = item.id || item.timestamp;
+                            return id === itemId || id === parseInt(itemId);
+                        });
+                    }
+                    
+                    if (!itemData) {
+                        this.showToast('Item not found', 'error');
+                        return;
+                    }
+                    
+                    // Determine where to redirect based on type
+                    const toolUrls = {
+                        'forecast': '/forecasts.html',
+                        'birth-sigil': '/birth-sigil.html',
+                        'sigil': '/quantum-sigil-generator.html',
+                        'tarot': '/quantum-merlin-hub/tarot.html',
+                        'affirmation': '/quantum-merlin-hub/affirmations.html',
+                        'astrology': '/quantum-merlin-hub/astrology.html',
+                        'gematria': '/quantum-merlin-hub/gematria.html',
+                        'angel': '/angel-number-calculator.html',
+                        'water': '/quantum-merlin-hub/water.html',
+                        'code': '/quantum-merlin-hub/codes.html'
+                    };
+                    
+                    const url = toolUrls[itemTipo];
+                    if (!url) {
+                        this.showToast('Cannot load this item type', 'error');
+                        return;
+                    }
+                    
+                    // Store data in sessionStorage for the target page to load
+                    sessionStorage.setItem('qm_load_item', JSON.stringify(itemData));
+                    
+                    // Show loading toast
+                    this.showToast('Loading reading...', 'info');
+                    
+                    // Redirect to the tool page
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 500);
+                    
+                } catch (error) {
+                    console.error('Error loading item:', error);
+                    this.showToast('Failed to load item', 'error');
+                }
+            }
+
+            deleteItem(itemId, itemTipo) {
+                // Find the item element and animate it out
+                const itemElement = document.querySelector(`[data-id="${itemId}"]`);
+                
+                // Create custom confirmation modal
+                const confirmModal = document.createElement('div');
+                confirmModal.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.8);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 10005;
+                    animation: fadeIn 0.2s ease;
+                `;
+                confirmModal.innerHTML = `
+                    <div style="
+                        background: linear-gradient(145deg, rgba(30, 25, 45, 0.98), rgba(20, 20, 30, 0.98));
+                        border: 2px solid rgba(255, 100, 100, 0.4);
+                        border-radius: 20px;
+                        padding: 35px;
+                        text-align: center;
+                        max-width: 400px;
+                        animation: scaleIn 0.3s ease;
+                    ">
+                        <div style="font-size: 3em; margin-bottom: 15px;">🗑️</div>
+                        <h3 style="color: #ff6b6b; font-family: 'Orbitron', monospace; margin-bottom: 15px;">Excluir Item?</h3>
+                        <p style="color: rgba(196, 181, 253, 0.8); margin-bottom: 25px;">Esta ação não pode ser desfeita.</p>
+                        <div style="display: flex; gap: 15px; justify-content: center;">
+                            <button id="cancelExcluir" style="
+                                padding: 12px 30px;
+                                background: rgba(100, 100, 120, 0.3);
+                                border: 2px solid rgba(100, 100, 120, 0.5);
+                                color: #c4b5fd;
+                                border-radius: 25px;
+                                cursor: pointer;
+                                font-weight: 600;
+                                transition: all 0.3s ease;
+                            ">Cancelar</button>
+                            <button id="confirmExcluir" style="
+                                padding: 12px 30px;
+                                background: linear-gradient(135deg, #ff4444, #ff6b6b);
+                                border: none;
+                                color: white;
+                                border-radius: 25px;
+                                cursor: pointer;
+                                font-weight: 600;
+                                transition: all 0.3s ease;
+                            ">Excluir</button>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(confirmModal);
+                
+                confirmModal.querySelector('#cancelExcluir').onclick = () => confirmModal.remove();
+                confirmModal.querySelector('#confirmExcluir').onclick = () => {
+                    confirmModal.remove();
+                    
+                    // Animate item out
+                    if (itemElement) {
+                        itemElement.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+                        itemElement.style.transform = 'scale(0.8) translateY(-20px)';
+                        itemElement.style.opacity = '0';
+                    }
+                    
+                    setTimeout(() => {
+                        try {
+                            if (itemTipo === 'forecast') {
+                                const forecastData = localStorage.getItem(this.forecastKey);
+                                let forecasts = forecastData ? JSON.parse(forecastData) : [];
+                                forecasts = forecasts.filter(f => f.id !== itemId && f.id !== parseInt(itemId));
+                                localStorage.setItem(this.forecastKey, JSON.stringify(forecasts));
+                            } else {
+                                const library = JSON.parse(localStorage.getItem(this.storageKey) || '[]');
+                                const newLibrary = library.filter(item => {
+                                    const id = item.id || item.timestamp;
+                                    return id !== itemId && id !== parseInt(itemId);
+                                });
+                                localStorage.setItem(this.storageKey, JSON.stringify(newLibrary));
+                            }
+                            
+                            this.loadLibrary();
+                            this.showToast('Item deleted successfully', 'success');
+                        } catch (error) {
+                            console.error('Error deleting item:', error);
+                            this.showToast('Failed to delete item', 'error');
+                        }
+                    }, 300);
+                };
+            }
+
+            showToast(message, type = 'info') {
+                const toast = document.createElement('div');
+                const icons = { success: '✅', error: '❌', info: 'ℹ️' };
+                const colors = { 
+                    success: 'rgba(34, 197, 94, 0.9)', 
+                    error: 'rgba(239, 68, 68, 0.9)', 
+                    info: 'rgba(147, 51, 234, 0.9)' 
+                };
+                
+                toast.style.cssText = `
+                    position: fixed;
+                    bottom: 30px;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(100px);
+                    background: ${colors[type]};
+                    color: white;
+                    padding: 15px 30px;
+                    border-radius: 30px;
+                    font-weight: 500;
+                    z-index: 10006;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+                    animation: slideUpToast 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+                `;
+                toast.innerHTML = `<span>${icons[type]}</span><span>${message}</span>`;
+                
+                // Add animation keyframes if not exists
+                if (!document.getElementById('toastStyles')) {
+                    const style = document.createElement('style');
+                    style.id = 'toastStyles';
+                    style.textContent = `
+                        @keyframes slideUpToast {
+                            to { transform: translateX(-50%) translateY(0); }
+                        }
+                        @keyframes slideDownToast {
+                            to { transform: translateX(-50%) translateY(100px); opacity: 0; }
+                        }
+                        @keyframes fadeIn {
+                            from { opacity: 0; }
+                            to { opacity: 1; }
+                        }
+                        @keyframes scaleIn {
+                            from { transform: scale(0.8); opacity: 0; }
+                            to { transform: scale(1); opacity: 1; }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+                
+                document.body.appendChild(toast);
+                
+                setTimeout(() => {
+                    toast.style.animation = 'slideDownToast 0.3s ease forwards';
+                    setTimeout(() => toast.remove(), 300);
+                }, 3000);
+            }
+
+            setupFilters() {
+                const filterBtns = document.querySelectorAll('.filter-btn');
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        this.currentFilter = btn.dataset.filter;
+                        this.loadLibrary();
+                    });
+                });
+            }
+
+            updateStats(library) {
+                const totalItems = library.length;
+                const uniqueTools = new Set(library.map(item => item.type)).size;
+
+                // Animate the counters
+                animateCounter(document.getElementById('total-items'), totalItems, 800);
+                animateCounter(document.getElementById('total-tools'), uniqueTools, 800);
+                
+                // Update achievements
+                this.updateAchievements(uniqueTools);
+            }
+
+            updateAchievements(toolsUsed) {
+                // First Steps - unlocked by default (already using the library)
+                const firstSteps = document.getElementById('achievement-first');
+                if (firstSteps) {
+                    firstSteps.classList.add('active');
+                    firstSteps.classList.remove('locked');
+                }
+
+                // Pattern Seeker - unlock at 5 tools
+                const patternSeeker = document.getElementById('achievement-seeker');
+                if (patternSeeker && toolsUsed >= 5) {
+                    patternSeeker.classList.add('active');
+                    patternSeeker.classList.remove('locked');
+                }
+
+                // Quantum Master - unlock at 33 tools (all tools)
+                const quantumMaster = document.getElementById('achievement-master');
+                if (quantumMaster && toolsUsed >= 33) {
+                    quantumMaster.classList.add('active');
+                    quantumMaster.classList.remove('locked');
+                }
+            }
+        }
+
+        // Initialize Library
+        const libraryManager = new LibraryManager();
+
+        // Atividade Recente Feed
+        const activities = [
+            { name: 'Sarah', location: 'California, USA', tool: 'Contrato Inconsciente', time: '1 min ago' },
+            { name: 'Yuki', location: 'Tokyo, Japan', tool: 'Energy Leak Locator', time: '3 min ago' },
+            { name: 'Miguel', location: 'Barcelona, Spain', tool: 'Manifestação Readiness', time: '5 min ago' },
+            { name: 'Priya', location: 'Mumbai, India', tool: 'Radar de Confiança', time: '7 min ago' },
+            { name: 'Emma', location: 'London, UK', tool: 'Life Phase Decoder', time: '9 min ago' },
+            { name: 'Lars', location: 'Oslo, Norway', tool: 'Quantum Rose', time: '11 min ago' },
+            { name: 'Sofia', location: 'Rome, Italy', tool: 'Angel Number Calculator', time: '14 min ago' },
+            { name: 'Chen', location: 'Shanghai, China', tool: 'Compatibilidade Calculator', time: '16 min ago' },
+            { name: 'Isabella', location: 'São Paulo, Brazil', tool: 'Sigilo de Nascimento', time: '18 min ago' },
+            { name: 'Ahmed', location: 'Dubai, UAE', tool: 'Chinese Zodiac', time: '21 min ago' },
+            { name: 'Marie', location: 'Paris, France', tool: 'Leitura de Tarô', time: '23 min ago' },
+            { name: 'Lucas', location: 'Sydney, Australia', tool: 'Astrology Chart', time: '26 min ago' },
+            { name: 'Nina', location: 'Berlin, Germany', tool: 'Sacred Codes', time: '28 min ago' },
+            { name: 'Carlos', location: 'Mexico City, Mexico', tool: 'Crystal Guide', time: '31 min ago' },
+            { name: 'Amara', location: 'Lagos, Nigeria', tool: 'Water Blessing', time: '33 min ago' },
+            { name: 'Sven', location: 'Stockholm, Sweden', tool: 'Gematria Calculator', time: '36 min ago' },
+            { name: 'Aya', location: 'Cairo, Egypt', tool: 'Sigil Generator', time: '38 min ago' },
+            { name: 'Diego', location: 'Buenos Aires, Argentina', tool: 'Contrato Inconsciente', time: '41 min ago' },
+            { name: 'Hana', location: 'Seoul, South Korea', tool: 'Energy Leak Locator', time: '43 min ago' },
+            { name: 'Oliver', location: 'Toronto, Canada', tool: 'Manifestação Readiness', time: '46 min ago' },
+            { name: 'Zara', location: 'Cape Town, South Africa', tool: 'Radar de Confiança', time: '48 min ago' },
+            { name: 'Liam', location: 'Dublin, Ireland', tool: 'Life Phase Decoder', time: '51 min ago' },
+            { name: 'Aisha', location: 'Istanbul, Turkey', tool: 'Quantum Rose', time: '53 min ago' },
+            { name: 'Marco', location: 'Milan, Italy', tool: 'Angel Number Calculator', time: '56 min ago' },
+            { name: 'Lily', location: 'Singapore', tool: 'Compatibilidade Calculator', time: '58 min ago' },
+            { name: 'Rafael', location: 'Lisbon, Portugal', tool: 'Sigilo de Nascimento', time: '1 hr ago' },
+            { name: 'Anna', location: 'Vienna, Austria', tool: 'Chinese Zodiac', time: '1 hr ago' },
+            { name: 'Kai', location: 'Bangkok, Thailand', tool: 'Leitura de Tarô', time: '1 hr ago' },
+            { name: 'Sophia', location: 'Athens, Greece', tool: 'Astrology Chart', time: '1 hr ago' },
+            { name: 'Hassan', location: 'Casablanca, Morocco', tool: 'Sacred Codes', time: '1 hr ago' },
+            { name: 'Elena', location: 'Moscow, Russia', tool: 'Crystal Guide', time: '2 hrs ago' },
+            { name: 'Tom', location: 'Amsterdam, Netherlands', tool: 'Water Blessing', time: '2 hrs ago' },
+            { name: 'Mia', location: 'Copenhagen, Denmark', tool: 'Gematria Calculator', time: '2 hrs ago' },
+            { name: 'Paulo', location: 'Rio de Janeiro, Brazil', tool: 'Sigil Generator', time: '2 hrs ago' },
+            { name: 'Fatima', location: 'Riyadh, Saudi Arabia', tool: 'Contrato Inconsciente', time: '2 hrs ago' },
+            { name: 'Jack', location: 'Melbourne, Australia', tool: 'Energy Leak Locator', time: '2 hrs ago' },
+            { name: 'Leah', location: 'Tel Aviv, Israel', tool: 'Manifestação Readiness', time: '3 hrs ago' },
+            { name: 'Anders', location: 'Helsinki, Finland', tool: 'Radar de Confiança', time: '3 hrs ago' },
+            { name: 'Camila', location: 'Santiago, Chile', tool: 'Life Phase Decoder', time: '3 hrs ago' },
+            { name: 'Raj', location: 'New Delhi, India', tool: 'Quantum Rose', time: '3 hrs ago' },
+            { name: 'Maya', location: 'Vancouver, Canada', tool: 'Angel Number Calculator', time: '3 hrs ago' },
+            { name: 'Felix', location: 'Zurich, Switzerland', tool: 'Compatibilidade Calculator', time: '3 hrs ago' },
+            { name: 'Nora', location: 'Brussels, Belgium', tool: 'Sigilo de Nascimento', time: '4 hrs ago' },
+            { name: 'Jin', location: 'Hong Kong', tool: 'Chinese Zodiac', time: '4 hrs ago' },
+            { name: 'Eva', location: 'Prague, Czech Republic', tool: 'Leitura de Tarô', time: '4 hrs ago' },
+            { name: 'Omar', location: 'Doha, Qatar', tool: 'Astrology Chart', time: '4 hrs ago' },
+            { name: 'Luna', location: 'Manila, Philippines', tool: 'Sacred Codes', time: '4 hrs ago' },
+            { name: 'Max', location: 'Warsaw, Poland', tool: 'Crystal Guide', time: '5 hrs ago' },
+            { name: 'Aria', location: 'Kuala Lumpur, Malaysia', tool: 'Water Blessing', time: '5 hrs ago' },
+            { name: 'Daniel', location: 'Bogotá, Colombia', tool: 'Gematria Calculator', time: '5 hrs ago' }
+        ];
+
+        function displayActivity() {
+            const feed = document.getElementById('activityFeed');
+            if (!feed) return;
+            
+            const shuffled = activities.sort(() => 0.5 - Math.random()).slice(0, 3);
+            
+            feed.innerHTML = shuffled.map(activity => `
+                <div style="
+                    color: #c4b5fd;
+                    font-size: 0.95em;
+                    padding: 12px;
+                    background: rgba(147, 51, 234, 0.05);
+                    border-radius: 8px;
+                    border-left: 3px solid #9333ea;
+                ">
+                    <strong style="color: #ec4899;">${activity.name}</strong> from ${activity.location} 
+                    used <strong>${activity.tool}</strong>
+                    <span style="color: #a78bfa; font-size: 0.9em; margin-left: 10px;">${activity.time}</span>
+                </div>
+            `).join('');
+        }
+
+        displayActivity();
+        setInterval(displayActivity, 45000); // Update every 45 seconds
+
+        // Celebrate milestones
+        function getCompletedTools() {
+            const library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            return new Set(library.map(item => item.type));
+        }
+
+        function checkMilestones() {
+            const completed = getCompletedTools().size;
+            const milestones = {
+                1: { emoji: '✨', message: 'Welcome to your Quantum Journey!' },
+                5: { emoji: '🌟', message: 'Amazing! You\'ve explored 5 tools!' },
+                10: { emoji: '🔥', message: 'You\'re on fire! 10 tools completed!' },
+                15: { emoji: '💫', message: 'Incredible! Halfway there!' },
+                25: { emoji: '👑', message: 'You\'re a Quantum Master in training!' },
+                33: { emoji: '🎉', message: 'LEGENDARY! You\'ve mastered all 33 tools!' }
+            };
+            
+            const lastCelebrated = parseInt(localStorage.getItem('lastCelebrated') || '0');
+            
+            if (milestones[completed] && completed > lastCelebrated) {
+                const milestone = milestones[completed];
+                
+                // Show celebration
+                const celebration = document.createElement('div');
+                celebration.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+                    color: white;
+                    padding: 40px 60px;
+                    border-radius: 20px;
+                    font-size: 1.5em;
+                    text-align: center;
+                    z-index: 10000;
+                    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+                    animation: celebrationPop 0.5s ease;
+                `;
+                celebration.innerHTML = `
+                    <div style="font-size: 3em; margin-bottom: 15px;">${milestone.emoji}</div>
+                    <div style="font-weight: bold; margin-bottom: 10px;">${milestone.message}</div>
+                    <div style="font-size: 0.8em; opacity: 0.9;">Keep exploring!</div>
+                `;
+                
+                document.body.appendChild(celebration);
+                
+                setTimeout(() => {
+                    celebration.style.animation = 'celebrationFade 0.5s ease';
+                    setTimeout(() => celebration.remove(), 500);
+                }, 3000);
+                
+                localStorage.setItem('lastCelebrated', completed);
+            }
+        }
+
+        // Add animation styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes celebrationPop {
+                0% { transform: translate(-50%, -50%) scale(0); }
+                100% { transform: translate(-50%, -50%) scale(1); }
+            }
+            @keyframes celebrationFade {
+                0% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Check on page load
+        window.addEventListener('load', checkMilestones);
+
+        // Social Sharing Functions
+        function shareTwitter() {
+            const text = "I just discovered Quantum Merlin - 33 free spiritual tools for self-discovery! 🔮";
+            const url = window.location.origin;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+        }
+
+        function shareFacebook() {
+            const url = window.location.origin;
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+        }
+
+        function copyLink() {
+            const url = window.location.origin;
+            navigator.clipboard.writeText(url).then(() => {
+                // Show toast instead of alert
+                if (libraryManager) {
+                    libraryManager.showToast('Link copied! Compartilhar it with friends 💫', 'success');
+                } else {
+                    alert('Link copied! Compartilhar it with friends 💫');
+                }
+            }).catch(() => {
+                alert('Failed to copy link. Please copy manually: ' + url);
+            });
+        }
+
+        // ========================================
+        // SCROLL TO TOP BUTTON
+        // ========================================
+        const scrollBtn = document.createElement('button');
+        scrollBtn.innerHTML = '↑';
+        scrollBtn.id = 'scrollTopBtn';
+        scrollBtn.style.cssText = `
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #9333ea, #ec4899);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1000;
+            box-shadow: 0 5px 25px rgba(147, 51, 234, 0.4);
+        `;
+        document.body.appendChild(scrollBtn);
+
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollBtn.style.opacity = '1';
+                scrollBtn.style.visibility = 'visible';
+            } else {
+                scrollBtn.style.opacity = '0';
+                scrollBtn.style.visibility = 'hidden';
+            }
+        });
+
+        scrollBtn.addEventListener('mouseenter', () => {
+            scrollBtn.style.transform = 'scale(1.1) translateY(-3px)';
+        });
+        scrollBtn.addEventListener('mouseleave', () => {
+            scrollBtn.style.transform = 'scale(1) translateY(0)';
+        });
+
+        // ========================================
+        // SMOOTH REVEAL ON SCROLL
+        // ========================================
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections for reveal
+        document.querySelectorAll('.email-capture, [style*="border-radius: 20px"], [style*="border-radius: 15px"]').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            revealObserver.observe(el);
+        });
+
+        // Email Form Handler
+        document.getElementById('emailForm')?.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = 'Joining...';
+            submitBtn.disabled = true;
+            
+            try {
+                const response = await fetch('https://formspree.io/f/mgowrolb', {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                
+                if (response.ok) {
+                    let emails = JSON.parse(localStorage.getItem('qm_subscribers') || '[]');
+                    if (!emails.includes(email)) {
+                        emails.push(email);
+                        localStorage.setItem('qm_subscribers', JSON.stringify(emails));
+                    }
+                    form.innerHTML = '<div style="color: #ffd700; font-size: 1.2rem; padding: 15px;">✅ Thanks for subscribing!</div>';
+                } else {
+                    throw new Error('Subscription failed');
+                }
+            } catch (error) {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                alert('There was a problem. Please try again.');
+            }
+        });
+    </script>
+    
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid rgba(0, 245, 255, 0.15);">
+        <p style="color: rgba(255, 255, 255, 0.7);">&copy; 2024 Quantum Merlin. Conectando sabedoria ancestral com possibilidades quânticas.</p>
+        <p style="margin-top: 15px;">
+            <a href="../genesis/privacy.html" target="_blank" style="color: #00f5ff; text-decoration: none; margin: 0 15px;">Política de Privacidade</a>
+            <a href="../genesis/terms.html" target="_blank" style="color: #00f5ff; text-decoration: none; margin: 0 15px;">Termos de Serviço</a>
+            <a href="../genesis/disclaimer.html" target="_blank" style="color: #00f5ff; text-decoration: none; margin: 0 15px;">Aviso Legal</a>
+        </p>
+        <p style="margin-top: 15px;">
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" style="color: #00f5ff; text-decoration: none;">☕ Apoie Este Projeto</a>
+        </p>
+    </footer>
+</body>
+</html>
