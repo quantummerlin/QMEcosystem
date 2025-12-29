@@ -3,7 +3,7 @@
  * Provides offline support and caching for PWA functionality
  */
 
-const CACHE_NAME = 'qrc-cache-v1';
+const CACHE_NAME = 'qrc-cache-v2';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache immediately on install
