@@ -537,7 +537,6 @@
             .score-value { font-size: 3em; }
         }
     </style>
-    <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
     <!-- Quantum Intro Animation -->
@@ -711,6 +710,18 @@
         document.getElementById('birthDate').addEventListener('change', saveBirthData);
         document.getElementById('birthTime').addEventListener('change', saveBirthData);
         document.getElementById('birthLocation').addEventListener('change', saveBirthData);
+        
+        // Skip intro animation
+        function skipIntro() {
+            const intro = document.getElementById('quantumIntro');
+            if (intro) {
+                intro.classList.add('fade-out');
+                setTimeout(() => { intro.style.display = 'none'; }, 800);
+            }
+        }
+        
+        // Auto-fade intro after 3 seconds
+        setTimeout(skipIntro, 3000);
         
         function toggleBirthData() {
             const section = document.getElementById('birthDataSection');
@@ -1183,64 +1194,43 @@
                     </div>
                 </div>
                 
-                <div class="email-capture">
-                    <h3>📧 Get Your Integration Reminders</h3>
-                    <p>Receive weekly integration practices, progress check-ins, and transformation insights directly to your inbox.</p>
-                    <input type="email" id="emailInput" class="email-input" placeholder="your@email.com">
-                    <button class="email-submit" onclick="submitEmail()">Send Me Integration Practices</button>
-                </div>
-                
                 <div class="premium-upsell">
-                    <div class="premium-title">🔮 Get Your Complete Quantum Merlin Blueprint</div>
+                    <div class="premium-title">✨ Continue Your Journey</div>
                     
                     <div class="value-comparison">
                         <div class="comparison-option">
-                            <div class="comparison-title">Free Tool</div>
+                            <div class="comparison-title">🎵 Genesis Frequencies</div>
                             <ul class="comparison-list">
-                                <li class="check">Primary split identified</li>
-                                <li class="check">Basic integration plan</li>
-                                <li class="check">Zodiac & numerology insights</li>
-                                <li class="cross">Multiple splits mapped</li>
-                                <li class="cross">Ancestral origins revealed</li>
-                                <li class="cross">12-week transformation</li>
-                                <li class="cross">Personalized rituals</li>
+                                <li class="check">Healing sound frequencies</li>
+                                <li class="check">Integration meditation music</li>
+                                <li class="check">Chakra balancing tones</li>
+                                <li class="check">Numerology-based frequencies</li>
                             </ul>
                         </div>
                         <div class="comparison-option premium">
-                            <div class="comparison-title">✨ Complete Blueprint ($60)</div>
+                            <div class="comparison-title">📚 Your Insight Library</div>
                             <ul class="comparison-list">
-                                <li class="check">ALL identity splits mapped</li>
-                                <li class="check">Ancestral patterns revealed</li>
-                                <li class="check">12-week transformation roadmap</li>
-                                <li class="check">Astrological transit timing</li>
-                                <li class="check">Personalized affirmations</li>
-                                <li class="check">Integration rituals</li>
-                                <li class="check">Milestone tracking</li>
+                                <li class="check">Save all your readings</li>
+                                <li class="check">Track your progress</li>
+                                <li class="check">Review past insights</li>
+                                <li class="check">Export your journey</li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="premium-description">
-                        <strong>🔥 Limited: Only 5 blueprint readings available this week</strong><br><br>
-                        This free tool has revealed your primary identity split and provided a foundational integration plan. 
-                        But your identity system is complex, with multiple interconnected splits affecting every area of your life.<br><br>
-                        A <strong>Complete Quantum Merlin Reading ($60)</strong> will:<br>
-                        • Map ALL your identity splits (professional/personal, performer/private, obligation/desire, strong/vulnerable)<br>
-                        • Reveal the ancestral patterns and childhood origins of each split<br>
-                        • Provide specific integration protocols for each split with weekly practices<br>
-                        • Align your integration work with your astrological transits and numerological cycles<br>
-                        • Generate personalized affirmations and rituals for each phase of integration<br>
-                        • Include a 12-week transformation roadmap with milestone tracking<br><br>
-                        <strong>✅ 30-day money-back guarantee:</strong> If you don't experience deeper integration, full refund—no questions asked.<br><br>
-                        Transform fragmentation into wholeness. Get your complete blueprint today.
+                        Your identity split reading has been saved to your Library. 
+                        Continue your integration journey with our other mystical tools. 
+                        Use Genesis Frequencies to support your healing, or explore the Hub for more psychological insights.<br><br>
+                        <strong>If you find value in these tools, consider supporting the project!</strong>
                     </div>
-                    <a href="premium-assessment.html" class="premium-btn">Get Complete Blueprint - $60</a>
+                    <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank" class="premium-btn">☕ Support Quantum Merlin</a>
                 </div>
                 
                 <div class="action-buttons">
-                    <a href="../tools-hub.html" class="action-btn">🎰 Explore More Tools</a>
-                    <a href="../premium-assessment.html" class="action-btn">🔮 Get Complete Reading</a>
-                    <a href="insight-library.html" class="action-btn">📚 View Library</a>
+                    <a href="/index.html" class="action-btn">🏠 Explore More Tools</a>
+                    <a href="/genesis" class="action-btn">🎵 Genesis Frequencies</a>
+                    <a href="/library.html" class="action-btn">📚 View Library</a>
                 </div>
             `;
             
@@ -1253,21 +1243,36 @@
         }
         
         function saveToLibrary(split, score) {
-            const insight = {
-                toolName: 'Identity Split Detector Enhanced',
-                category: 'psychological',
+            const item = {
+                id: Date.now(),
+                type: 'identity-split',
+                title: 'Identity Split: ' + split.name,
                 summary: split.name + ' (Integration: ' + score + '%)',
-                content: `${split.name}\\n\\nIntegration Score: ${score}%\\n\\n${split.description}\\n\\nIdentity #1: ${split.identity1}\\nIdentity #2: ${split.identity2}\\n\\nConflict: ${split.conflict}\\n\\nIntegration: ${split.integration}`,
+                content: {
+                    splitType: split.name,
+                    description: split.description,
+                    identity1: split.identity1,
+                    identity2: split.identity2,
+                    conflict: split.conflict,
+                    integration: split.integration,
+                    integrationScore: score
+                },
                 tags: ['identity', 'integration', 'authenticity', 'wholeness', 'psychological'],
-                score: score
+                timestamp: new Date().toISOString()
             };
             
-            let insights = localStorage.getItem('quantumMerlinInsights');
-            insights = insights ? JSON.parse(insights) : [];
-            insight.id = Date.now();
-            insight.timestamp = new Date().toISOString();
-            insights.unshift(insight);
-            localStorage.setItem('quantumMerlinInsights', JSON.stringify(insights));
+            let library = localStorage.getItem('qm_library');
+            library = library ? JSON.parse(library) : [];
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+            
+            // Show save confirmation
+            const btn = document.querySelector('.action-btn[href="/library.html"]');
+            if (btn) {
+                btn.innerHTML = '✅ Saved to Library!';
+                btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                btn.style.borderColor = '#10b981';
+            }
         }
     </script>
     
