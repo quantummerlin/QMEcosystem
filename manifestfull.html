@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Manifestation Reading | Quantum Merlin</title>
+    <meta name="description" content="Your complete manifestation reading with birth numerology, cosmic timing, and personalized rituals.">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Orbitron:wght@400;600;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 50%, #0a0a0f 100%);
+            color: #e0d4f7;
+            font-family: 'Exo 2', sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 80px;
+        }
+        
+        /* Header */
+        .qm-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(236, 72, 153, 0.3);
+            padding: 15px 20px;
+        }
+        .qm-header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .qm-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .qm-logo-icon { font-size: 1.5rem; }
+        .qm-logo-text {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ec4899, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .qm-support {
+            background: linear-gradient(135deg, #FFDD00, #FFA500);
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .page-icon { font-size: 4rem; margin-bottom: 20px; }
+        .page-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            background: linear-gradient(135deg, #ec4899, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+        .page-subtitle {
+            color: #a78bfa;
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        /* Previous Reading Summary */
+        .previous-reading {
+            background: linear-gradient(145deg, rgba(236, 72, 153, 0.1), rgba(147, 51, 234, 0.15));
+            border: 2px solid rgba(236, 72, 153, 0.4);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .reading-score {
+            font-size: 3rem;
+            font-weight: 800;
+            font-family: 'Orbitron', monospace;
+            background: linear-gradient(135deg, #ec4899, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .reading-level {
+            color: #ec4899;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+        
+        /* Profile Section */
+        .profile-section {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            color: #a78bfa;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .profile-options {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        .profile-option {
+            flex: 1;
+            min-width: 200px;
+            padding: 20px;
+            background: rgba(147, 51, 234, 0.15);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .profile-option:hover {
+            border-color: #9333ea;
+            transform: translateY(-3px);
+        }
+        .profile-option.selected {
+            border-color: #ec4899;
+            background: rgba(236, 72, 153, 0.2);
+        }
+        .profile-option-icon { font-size: 2rem; margin-bottom: 10px; }
+        .profile-option-title { color: #c4b5fd; font-weight: 600; }
+        .profile-option-desc { color: #a78bfa; font-size: 0.85rem; margin-top: 5px; }
+        
+        /* Birth Details Form */
+        .birth-form {
+            display: none;
+        }
+        .birth-form.active { display: block; }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            display: block;
+            color: #c4b5fd;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 12px;
+            color: #e0d4f7;
+            font-size: 1rem;
+            font-family: 'Exo 2', sans-serif;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #ec4899;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        /* Saved Profiles */
+        .saved-profiles {
+            display: none;
+        }
+        .saved-profiles.active { display: block; }
+        
+        .profile-card {
+            padding: 20px;
+            background: rgba(147, 51, 234, 0.15);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .profile-card:hover {
+            border-color: #ec4899;
+            transform: translateY(-2px);
+        }
+        .profile-card.selected {
+            border-color: #22c55e;
+            background: rgba(34, 197, 94, 0.15);
+        }
+        .profile-name {
+            color: #ec4899;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .profile-details {
+            color: #a78bfa;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        
+        .no-profiles {
+            text-align: center;
+            color: #a78bfa;
+            padding: 30px;
+        }
+        
+        /* Generate Button */
+        .generate-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #ec4899, #9333ea);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: 'Orbitron', monospace;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        .generate-btn:hover:not(:disabled) {
+            transform: scale(1.02);
+            box-shadow: 0 10px 40px rgba(236, 72, 153, 0.5);
+        }
+        .generate-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Results Section */
+        .results-section {
+            display: none;
+        }
+        .results-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Reading Cards */
+        .reading-card {
+            background: linear-gradient(145deg, rgba(147, 51, 234, 0.1), rgba(236, 72, 153, 0.1));
+            border: 2px solid rgba(147, 51, 234, 0.4);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        .card-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .card-icon { font-size: 3rem; margin-bottom: 10px; }
+        .card-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: #ec4899;
+        }
+        
+        /* Forecast Sections */
+        .forecast-section {
+            background: rgba(0,0,0,0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .forecast-label {
+            font-weight: 700;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .forecast-text {
+            color: #e0d4f7;
+            line-height: 1.8;
+        }
+        
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .action-btn {
+            padding: 15px 25px;
+            border-radius: 25px;
+            border: 2px solid rgba(147, 51, 234, 0.3);
+            background: rgba(147, 51, 234, 0.2);
+            color: #c4b5fd;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .action-btn:hover {
+            border-color: #9333ea;
+            transform: translateY(-2px);
+        }
+        
+        /* Next Tools Grid */
+        .next-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .tool-link {
+            display: block;
+            padding: 20px 15px;
+            background: rgba(147, 51, 234, 0.15);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 12px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .tool-link:hover {
+            border-color: #9333ea;
+            transform: translateY(-3px);
+        }
+        .tool-icon { font-size: 2rem; margin-bottom: 8px; }
+        .tool-name { color: #c4b5fd; font-weight: 600; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="qm-header">
+        <div class="qm-header-inner">
+            <a href="/index.html" class="qm-logo">
+                <div class="qm-logo-icon">🧙‍♂️</div>
+                <span class="qm-logo-text">Quantum Merlin</span>
+            </a>
+            <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank" class="qm-support">☕ Support</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="page-icon">✨</div>
+            <h1 class="page-title">Full Manifestation Reading</h1>
+            <p class="page-subtitle">Add your birth details for a complete cosmic manifestation blueprint</p>
+        </div>
+
+        <!-- Previous Reading Summary -->
+        <div class="previous-reading" id="previousReading">
+            <div style="color: #a78bfa; font-size: 0.9rem; margin-bottom: 10px;">YOUR BASIC READING</div>
+            <div class="reading-score" id="readingScore">--</div>
+            <div class="reading-level" id="readingLevel">Loading...</div>
+        </div>
+
+        <!-- Input Section -->
+        <div id="inputSection">
+            <!-- Profile Options -->
+            <div class="profile-section">
+                <div class="section-title">Choose Your Path</div>
+                
+                <div class="profile-options">
+                    <div class="profile-option" onclick="selectOption('saved')" id="optionSaved">
+                        <div class="profile-option-icon">📚</div>
+                        <div class="profile-option-title">Load from Library</div>
+                        <div class="profile-option-desc">Use a saved profile</div>
+                    </div>
+                    <div class="profile-option" onclick="selectOption('new')" id="optionNew">
+                        <div class="profile-option-icon">✏️</div>
+                        <div class="profile-option-title">Enter Details</div>
+                        <div class="profile-option-desc">Input birth information</div>
+                    </div>
+                </div>
+
+                <!-- Saved Profiles -->
+                <div class="saved-profiles" id="savedProfiles">
+                    <div id="profilesList"></div>
+                </div>
+
+                <!-- Birth Form -->
+                <div class="birth-form" id="birthForm">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" id="fullName" placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Birth Date</label>
+                        <input type="date" class="form-input" id="birthDate">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Birth Time (optional)</label>
+                            <input type="time" class="form-input" id="birthTime">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Birth Place (optional)</label>
+                            <input type="text" class="form-input" id="birthPlace" placeholder="City, Country">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                            <input type="checkbox" id="saveProfile" checked>
+                            <span class="form-label" style="margin: 0;">Save this profile to Library</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="generate-btn" id="generateBtn" onclick="generateFullReading()" disabled>
+                    🌟 Generate Full Reading
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-section" id="resultsSection"></div>
+    </div>
+
+    <script>
+        let previousData = null;
+        let selectedProfile = null;
+        let selectedOption = null;
+
+        // Load previous reading data
+        document.addEventListener('DOMContentLoaded', () => {
+            const storedData = sessionStorage.getItem('qm_enhanced_data');
+            if (storedData) {
+                previousData = JSON.parse(storedData);
+                displayPreviousReading();
+            } else {
+                document.getElementById('previousReading').innerHTML = `
+                    <div style="color: #fbbf24;">⚠️ No previous reading found</div>
+                    <p style="color: #a78bfa; margin-top: 10px;">
+                        <a href="/manifest.html" style="color: #ec4899;">Take the Manifestation Readiness test</a> first for the complete experience.
+                    </p>
+                `;
+            }
+            
+            loadSavedProfiles();
+        });
+
+        function displayPreviousReading() {
+            if (!previousData || !previousData.answers) return;
+            
+            const answers = previousData.answers;
+            const totalScore = Object.values(answers).reduce((sum, val) => sum + val, 0);
+            const maxScore = Object.keys(answers).length * 5;
+            const score = Math.round((totalScore / maxScore) * 100);
+            
+            let level;
+            if (score >= 80) level = "QUANTUM READY";
+            else if (score >= 60) level = "EXPANSION READY";
+            else if (score >= 40) level = "FOUNDATION BUILDING";
+            else level = "GROUNDWORK PHASE";
+            
+            document.getElementById('readingScore').textContent = score + '%';
+            document.getElementById('readingLevel').textContent = level;
+        }
+
+        function selectOption(option) {
+            selectedOption = option;
+            document.querySelectorAll('.profile-option').forEach(el => el.classList.remove('selected'));
+            document.getElementById('option' + option.charAt(0).toUpperCase() + option.slice(1)).classList.add('selected');
+            
+            if (option === 'saved') {
+                document.getElementById('savedProfiles').classList.add('active');
+                document.getElementById('birthForm').classList.remove('active');
+            } else {
+                document.getElementById('savedProfiles').classList.remove('active');
+                document.getElementById('birthForm').classList.add('active');
+                checkFormValidity();
+            }
+        }
+
+        function loadSavedProfiles() {
+            const library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            const profiles = library.filter(item => item.type === 'profile' || item.birthDate);
+            
+            const container = document.getElementById('profilesList');
+            
+            if (profiles.length === 0) {
+                container.innerHTML = `
+                    <div class="no-profiles">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">📭</div>
+                        <div>No saved profiles found</div>
+                        <div style="margin-top: 10px; font-size: 0.9rem;">Enter your details below to create one</div>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = profiles.map((profile, index) => `
+                <div class="profile-card" onclick="selectProfile(${index})" id="profile-${index}">
+                    <div class="profile-name">${profile.name || profile.fullName || 'Unnamed Profile'}</div>
+                    <div class="profile-details">
+                        ${profile.birthDate ? new Date(profile.birthDate).toLocaleDateString() : 'No birth date'}
+                        ${profile.birthPlace ? ' • ' + profile.birthPlace : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function selectProfile(index) {
+            const library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            const profiles = library.filter(item => item.type === 'profile' || item.birthDate);
+            selectedProfile = profiles[index];
+            
+            document.querySelectorAll('.profile-card').forEach(el => el.classList.remove('selected'));
+            document.getElementById('profile-' + index).classList.add('selected');
+            document.getElementById('generateBtn').disabled = false;
+        }
+
+        function checkFormValidity() {
+            const name = document.getElementById('fullName').value;
+            const birthDate = document.getElementById('birthDate').value;
+            document.getElementById('generateBtn').disabled = !(name && birthDate);
+        }
+
+        document.getElementById('fullName')?.addEventListener('input', checkFormValidity);
+        document.getElementById('birthDate')?.addEventListener('change', checkFormValidity);
+
+        function generateFullReading() {
+            let profileData;
+            
+            if (selectedOption === 'saved' && selectedProfile) {
+                profileData = selectedProfile;
+            } else {
+                profileData = {
+                    fullName: document.getElementById('fullName').value,
+                    birthDate: document.getElementById('birthDate').value,
+                    birthTime: document.getElementById('birthTime').value,
+                    birthPlace: document.getElementById('birthPlace').value
+                };
+                
+                // Save profile if checked
+                if (document.getElementById('saveProfile').checked) {
+                    saveProfileToLibrary(profileData);
+                }
+            }
+            
+            // Get previous reading data
+            const answers = previousData?.answers || {};
+            const totalScore = Object.values(answers).reduce((sum, val) => sum + val, 0);
+            const maxScore = Math.max(Object.keys(answers).length * 5, 1);
+            const score = Math.round((totalScore / maxScore) * 100);
+            
+            // Calculate numerology
+            const birthDate = new Date(profileData.birthDate);
+            const lifePathNumber = calculateLifePath(birthDate);
+            const nameNumber = calculateNameNumber(profileData.fullName);
+            
+            // Determine manifestation archetype
+            const archetype = getManifestationArchetype(lifePathNumber, score);
+            
+            // Generate the full reading
+            generateResultsHTML(profileData, score, lifePathNumber, nameNumber, archetype);
+        }
+
+        function calculateLifePath(date) {
+            const dateStr = date.toISOString().split('T')[0].replace(/-/g, '');
+            let sum = dateStr.split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+            while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
+                sum = sum.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+            }
+            return sum;
+        }
+
+        function calculateNameNumber(name) {
+            const values = { a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:1,k:2,l:3,m:4,n:5,o:6,p:7,q:8,r:9,s:1,t:2,u:3,v:4,w:5,x:6,y:7,z:8 };
+            let sum = name.toLowerCase().split('').reduce((acc, char) => acc + (values[char] || 0), 0);
+            while (sum > 9 && sum !== 11 && sum !== 22) {
+                sum = sum.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+            }
+            return sum;
+        }
+
+        function getManifestationArchetype(lifePath, score) {
+            const archetypes = {
+                1: { name: 'The Pioneer', style: 'Direct manifestation through bold action', frequency: '528 Hz' },
+                2: { name: 'The Harmonizer', style: 'Manifestation through partnership and alignment', frequency: '639 Hz' },
+                3: { name: 'The Creator', style: 'Manifestation through creative expression and joy', frequency: '528 Hz' },
+                4: { name: 'The Builder', style: 'Manifestation through structure and patience', frequency: '417 Hz' },
+                5: { name: 'The Catalyst', style: 'Manifestation through change and adventure', frequency: '741 Hz' },
+                6: { name: 'The Nurturer', style: 'Manifestation through love and service', frequency: '639 Hz' },
+                7: { name: 'The Mystic', style: 'Manifestation through inner wisdom and faith', frequency: '852 Hz' },
+                8: { name: 'The Alchemist', style: 'Manifestation through power and abundance', frequency: '888 Hz' },
+                9: { name: 'The Visionary', style: 'Manifestation through humanitarian vision', frequency: '963 Hz' },
+                11: { name: 'The Illuminator', style: 'Manifestation through spiritual insight', frequency: '1111 Hz' },
+                22: { name: 'The Master Builder', style: 'Manifestation of large-scale visions', frequency: '2222 Hz' },
+                33: { name: 'The Master Teacher', style: 'Manifestation through healing and wisdom', frequency: '3333 Hz' }
+            };
+            return archetypes[lifePath] || archetypes[1];
+        }
+
+        function generateResultsHTML(profile, score, lifePath, nameNum, archetype) {
+            document.getElementById('inputSection').style.display = 'none';
+            
+            const birthDate = new Date(profile.birthDate);
+            const zodiac = getZodiacSign(birthDate);
+            const element = getElement(zodiac);
+            
+            let level;
+            if (score >= 80) level = "QUANTUM READY";
+            else if (score >= 60) level = "EXPANSION READY";
+            else if (score >= 40) level = "FOUNDATION BUILDING";
+            else level = "GROUNDWORK PHASE";
+
+            const resultsHTML = `
+                <div class="reading-card">
+                    <div class="card-header">
+                        <div class="card-icon">✨</div>
+                        <h2 class="card-title">Your Full Manifestation Blueprint</h2>
+                        <div style="color: #a78bfa; margin-top: 10px;">For ${profile.fullName || profile.name}</div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #ec4899;">
+                        <div class="forecast-label" style="color: #ec4899;">📿 YOUR MANIFESTATION ARCHETYPE</div>
+                        <div class="forecast-text">
+                            <strong style="color: #ec4899; font-size: 1.2em;">${archetype.name}</strong>
+                            <p style="margin-top: 10px;">${archetype.style}</p>
+                            <p style="margin-top: 10px;">As a Life Path ${lifePath}, your soul chose this incarnation to master manifestation through ${
+                                lifePath === 1 ? 'pioneering new paths and bold leadership' :
+                                lifePath === 2 ? 'partnership, patience, and divine timing' :
+                                lifePath === 3 ? 'creative expression and joyful creation' :
+                                lifePath === 4 ? 'building solid foundations and steady progress' :
+                                lifePath === 5 ? 'embracing change and using freedom as a catalyst' :
+                                lifePath === 6 ? 'love, nurturing, and service to others' :
+                                lifePath === 7 ? 'inner wisdom, faith, and spiritual insight' :
+                                lifePath === 8 ? 'material mastery and abundance alchemy' :
+                                lifePath === 9 ? 'humanitarian vision and letting go' :
+                                lifePath === 11 ? 'spiritual illumination and intuitive guidance' :
+                                lifePath === 22 ? 'turning dreams into reality on a grand scale' :
+                                'healing wisdom and compassionate teaching'
+                            }.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #22c55e;">
+                        <div class="forecast-label" style="color: #22c55e;">🎵 YOUR MANIFESTATION FREQUENCY</div>
+                        <div class="forecast-text">
+                            <p>Your optimal manifestation frequency is <strong style="color: #22c55e;">${archetype.frequency}</strong></p>
+                            <p style="margin-top: 10px;">Combined with your ${zodiac} ${element} energy, listen to this frequency during visualization for amplified results. Your ${element} nature means you manifest best through ${
+                                element === 'Fire' ? 'passion, action, and enthusiasm' :
+                                element === 'Earth' ? 'patience, grounding, and practical steps' :
+                                element === 'Air' ? 'mental clarity, communication, and ideas' :
+                                'emotional depth, intuition, and flow'
+                            }.</p>
+                        </div>
+                        <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px; flex-wrap: wrap;">
+                            <a href="/genesis" style="padding: 10px 20px; background: linear-gradient(135deg, #22c55e, #059669); color: white; text-decoration: none; border-radius: 20px; font-weight: 600;">🎵 Play in Genesis</a>
+                            <button onclick="saveFrequencyToLibrary('${archetype.frequency}')" style="padding: 10px 20px; background: rgba(34, 197, 94, 0.2); border: 1px solid #22c55e; color: #22c55e; border-radius: 20px; font-weight: 600; cursor: pointer;">💾 Save Frequency</button>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #a855f7;">
+                        <div class="forecast-label" style="color: #a855f7;">🧘 YOUR MANIFESTATION RITUAL</div>
+                        <div class="forecast-text">
+                            <p><strong>Daily Practice for ${archetype.name}:</strong></p>
+                            <p style="margin: 10px 0;">1. <strong>Morning Activation (${lifePath} minutes):</strong> ${
+                                lifePath <= 3 ? 'Visualize your desire as already complete. Feel the emotions of having it now.' :
+                                lifePath <= 6 ? 'Write your intention as if thanking the universe for its arrival.' :
+                                'Meditate on the feeling state of your manifestation before taking any action.'
+                            }</p>
+                            <p style="margin: 10px 0;">2. <strong>Midday Alignment:</strong> Play ${archetype.frequency} for 5 minutes while breathing deeply. Reconnect with your vision.</p>
+                            <p style="margin: 10px 0;">3. <strong>Evening Release:</strong> Before sleep, release attachment to the "how." Trust that your ${element} nature knows the perfect path.</p>
+                            <p style="margin-top: 15px; color: #c4b5fd; font-style: italic;">Your Expression Number ${nameNum} adds the energy of ${
+                                nameNum === 1 ? 'independence' : nameNum === 2 ? 'cooperation' : nameNum === 3 ? 'creativity' :
+                                nameNum === 4 ? 'stability' : nameNum === 5 ? 'freedom' : nameNum === 6 ? 'responsibility' :
+                                nameNum === 7 ? 'wisdom' : nameNum === 8 ? 'achievement' : 'completion'
+                            } to your manifestation style.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #3b82f6;">
+                        <div class="forecast-label" style="color: #3b82f6;">🃏 YOUR TAROT GUIDANCE</div>
+                        <div class="forecast-text">
+                            ${getTarotGuidance(lifePath, score)}
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #f59e0b;">
+                        <div class="forecast-label" style="color: #f59e0b;">📅 YOUR POWER DAYS</div>
+                        <div class="forecast-text">
+                            <p>Based on your Life Path ${lifePath} and ${zodiac} Sun:</p>
+                            <p style="margin-top: 10px;"><strong style="color: #f59e0b;">Best Days for Manifestation:</strong> ${getPowerDays(lifePath)}</p>
+                            <p style="margin-top: 10px;"><strong style="color: #f59e0b;">Moon Phase:</strong> ${
+                                score >= 60 ? 'New Moon for new intentions, Full Moon for completion' :
+                                'Waxing Moon for building momentum, Waning Moon for releasing blocks'
+                            }</p>
+                            <p style="margin-top: 10px;"><strong style="color: #f59e0b;">Power Hours:</strong> ${
+                                element === 'Fire' ? 'Sunrise and noon when solar energy peaks' :
+                                element === 'Earth' ? 'Dawn and dusk during grounding transitions' :
+                                element === 'Air' ? 'Mid-morning when mental clarity is highest' :
+                                'Moonrise and midnight when intuition flows'
+                            }</p>
+                        </div>
+                    </div>
+                    
+                    <div class="forecast-section" style="border-left: 3px solid #fbbf24;">
+                        <div class="forecast-label" style="color: #fbbf24;">💡 KEY INSIGHT</div>
+                        <div class="forecast-text" style="font-size: 1.1em; font-style: italic; color: #fde68a;">
+                            "${getKeyInsight(lifePath, score)}"
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="/index.html" class="action-btn">🏠 Hub</a>
+                    <a href="/genesis" class="action-btn">🎵 Frequencies</a>
+                    <a href="/library.html" class="action-btn">📚 Library</a>
+                    <button class="action-btn" onclick="saveFullReading()" style="background: rgba(34, 197, 94, 0.2); border-color: #22c55e; color: #22c55e;">💾 Save Reading</button>
+                </div>
+                
+                <div style="background: rgba(147, 51, 234, 0.1); border: 2px solid rgba(147, 51, 234, 0.3); border-radius: 20px; padding: 30px; margin-top: 30px;">
+                    <h3 style="color: #9333ea; text-align: center; margin-bottom: 20px; font-family: 'Orbitron', monospace;">Continue Your Journey</h3>
+                    <div class="next-tools">
+                        <a href="/contract.html" class="tool-link">
+                            <div class="tool-icon">📜</div>
+                            <div class="tool-name">Unconscious Contract</div>
+                        </a>
+                        <a href="/energyleak.html" class="tool-link">
+                            <div class="tool-icon">🔋</div>
+                            <div class="tool-name">Energy Leak</div>
+                        </a>
+                        <a href="/identity-split-detector.html" class="tool-link">
+                            <div class="tool-icon">🎭</div>
+                            <div class="tool-name">Identity Split</div>
+                        </a>
+                        <a href="/quantum-merlin-hub/forecasts.html" class="tool-link">
+                            <div class="tool-icon">🔮</div>
+                            <div class="tool-name">Cosmic Forecast</div>
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('resultsSection').innerHTML = resultsHTML;
+            document.getElementById('resultsSection').classList.add('active');
+            
+            // Auto-save to library
+            autoSaveReading(profile, score, lifePath, archetype);
+            
+            // Scroll to results
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function getZodiacSign(date) {
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) return 'Aries';
+            if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) return 'Taurus';
+            if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) return 'Gemini';
+            if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) return 'Cancer';
+            if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) return 'Leo';
+            if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) return 'Virgo';
+            if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) return 'Libra';
+            if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) return 'Scorpio';
+            if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) return 'Sagittarius';
+            if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) return 'Capricorn';
+            if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) return 'Aquarius';
+            return 'Pisces';
+        }
+
+        function getElement(zodiac) {
+            const elements = {
+                Aries: 'Fire', Leo: 'Fire', Sagittarius: 'Fire',
+                Taurus: 'Earth', Virgo: 'Earth', Capricorn: 'Earth',
+                Gemini: 'Air', Libra: 'Air', Aquarius: 'Air',
+                Cancer: 'Water', Scorpio: 'Water', Pisces: 'Water'
+            };
+            return elements[zodiac] || 'Fire';
+        }
+
+        function getTarotGuidance(lifePath, score) {
+            const cards = {
+                1: 'The Magician - All tools are at your disposal. You are the channel between intention and reality.',
+                2: 'The High Priestess - Trust your intuition. What you seek is already known within.',
+                3: 'The Empress - Abundance flows through creative expression. Birth your visions into reality.',
+                4: 'The Emperor - Structure supports manifestation. Build the foundation, the castle will follow.',
+                5: 'The Hierophant reversed - Break free from limiting traditions. Your path is unconventional.',
+                6: 'The Lovers - Align your choices with your highest values. Harmony attracts abundance.',
+                7: 'The Hermit - Inner wisdom illuminates the path. Solitude strengthens your signal.',
+                8: 'Strength - Gentle persistence overcomes all obstacles. Your power is quiet but unstoppable.',
+                9: 'The World - You are completing a major cycle. Release the old to receive the new.',
+                11: 'Justice & The Star - Balance and hope guide you. Your manifestations affect the collective.',
+                22: 'The Fool & The World - Beginning and completion merge. You build bridges between realms.'
+            };
+            return cards[lifePath] || cards[1];
+        }
+
+        function getPowerDays(lifePath) {
+            const days = {
+                1: 'Sundays and the 1st, 10th, 19th, 28th of each month',
+                2: 'Mondays and the 2nd, 11th, 20th, 29th of each month',
+                3: 'Thursdays and the 3rd, 12th, 21st, 30th of each month',
+                4: 'Saturdays and the 4th, 13th, 22nd, 31st of each month',
+                5: 'Wednesdays and the 5th, 14th, 23rd of each month',
+                6: 'Fridays and the 6th, 15th, 24th of each month',
+                7: 'Mondays and the 7th, 16th, 25th of each month',
+                8: 'Saturdays and the 8th, 17th, 26th of each month',
+                9: 'Tuesdays and the 9th, 18th, 27th of each month',
+                11: 'The 11th and 22nd of each month, and during 11:11',
+                22: 'The 22nd of each month, and master number days'
+            };
+            return days[lifePath] || days[1];
+        }
+
+        function getKeyInsight(lifePath, score) {
+            if (score >= 80) {
+                return `As ${lifePath === 11 || lifePath === 22 ? 'a Master Number' : 'a Life Path ' + lifePath}, you are quantum ready. Your only work now is to stay in alignment and trust. The universe is already conspiring in your favor.`;
+            } else if (score >= 60) {
+                return `Your Life Path ${lifePath} energy is ready for expansion. The gap between where you are and where you're going is smaller than you think. Trust the process.`;
+            } else if (score >= 40) {
+                return `Your Life Path ${lifePath} is building foundations. This isn't delay—it's preparation. Every master was once a student. Your time is coming.`;
+            } else {
+                return `Life Path ${lifePath} teaches that manifestation begins with self-worth. Before you can receive, you must believe you deserve. That's your current work.`;
+            }
+        }
+
+        function saveProfileToLibrary(profile) {
+            const item = {
+                id: Date.now(),
+                type: 'profile',
+                name: profile.fullName,
+                fullName: profile.fullName,
+                birthDate: profile.birthDate,
+                birthTime: profile.birthTime,
+                birthPlace: profile.birthPlace,
+                timestamp: Date.now(),
+                savedAt: new Date().toISOString()
+            };
+            
+            let library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+        }
+
+        function saveFrequencyToLibrary(frequency) {
+            const item = {
+                id: Date.now(),
+                type: 'frequency',
+                name: frequency + ' - Manifestation Frequency',
+                frequency: frequency,
+                source: 'Full Manifestation Reading',
+                timestamp: Date.now(),
+                savedAt: new Date().toISOString()
+            };
+            
+            let library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+            
+            showNotification('Frequency saved to Library!');
+        }
+
+        function autoSaveReading(profile, score, lifePath, archetype) {
+            const item = {
+                id: Date.now(),
+                type: 'manifestation-full',
+                name: 'Full Manifestation Reading',
+                title: `Manifestation Blueprint: ${archetype.name}`,
+                score: score,
+                lifePath: lifePath,
+                archetype: archetype.name,
+                frequency: archetype.frequency,
+                profile: profile.fullName || profile.name,
+                timestamp: Date.now(),
+                savedAt: new Date().toISOString()
+            };
+            
+            let library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+        }
+
+        function saveFullReading() {
+            showNotification('Reading saved to Library!');
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.cssText = 'position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #22c55e, #059669); color: white; padding: 15px 30px; border-radius: 30px; font-weight: 600; z-index: 9999; box-shadow: 0 10px 30px rgba(34, 197, 94, 0.5);';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 3000);
+        }
+    </script>
+    
+    <script src="shared/js/quantum-analytics.js"></script>
+</body>
+</html>

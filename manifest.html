@@ -1280,6 +1280,20 @@
                               ' You\'re ready—stay in alignment and trust the process.'}
                         </div>
                     </div>
+                    
+                    <!-- Enhanced Reading CTA -->
+                    <div style="background: linear-gradient(145deg, rgba(236, 72, 153, 0.15), rgba(147, 51, 234, 0.2)); border: 2px solid rgba(236, 72, 153, 0.5); border-radius: 20px; padding: 30px; text-align: center; margin-bottom: 30px;">
+                        <div style="font-size: 2.5em; margin-bottom: 15px;">🌟</div>
+                        <h3 style="color: #ec4899; font-family: 'Orbitron', monospace; font-size: 1.3em; margin-bottom: 15px;">Unlock Your Full Cosmic Reading</h3>
+                        <p style="color: #e0d4f7; line-height: 1.7; margin-bottom: 20px;">
+                            Add your <strong style="color: #ec4899;">birth details</strong> to reveal how your personal numerology, 
+                            astrology, and cosmic timing affect your manifestation potential. Get personalized rituals, 
+                            power days, and alignment strategies based on YOUR unique blueprint.
+                        </p>
+                        <button onclick="goToEnhanced()" style="padding: 18px 40px; background: linear-gradient(135deg, #ec4899, #9333ea); color: white; border: none; border-radius: 30px; font-size: 1.2em; font-weight: 700; font-family: 'Orbitron', monospace; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);">
+                            ✨ Get Enhanced Reading
+                        </button>
+                    </div>
 
                     <div class="action-buttons" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
                         <button class="action-btn" onclick="saveToLibrary()" style="padding: 15px 30px; background: linear-gradient(135deg, #8b5cf6, #6366f1); color: white; border: none; border-radius: 25px; font-weight: 600; cursor: pointer; font-size: 1em;">💾 Save Reading</button>
@@ -1439,7 +1453,7 @@
             sessionStorage.setItem('qm_enhanced_data', JSON.stringify(enhancedData));
             
             // Navigate to enhanced page
-            window.location.href = '/manifest-enhanced.html';
+            window.location.href = '/manifestfull.html';
             
             // Track in analytics
             if (typeof gtag !== 'undefined') {
