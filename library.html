@@ -1585,10 +1585,41 @@
                     'gematria': '🔢 Gematria',
                     'angel': '👼 Angel Number',
                     'water': '💧 Water Charging',
-                    'code': '🔑 Reality Code'
+                    'code': '🔑 Reality Code',
+                    'manifestation': '🎯 Manifestation',
+                    'unconscious-contract': '📜 Unconscious Contract',
+                    'energy-leak': '🔋 Energy Leak',
+                    'identity-split': '🎭 Identity Split',
+                    'hidden-strengths': '💪 Hidden Strengths',
+                    'power-avoidance': '👑 Power Avoidance',
+                    'trust-radar': '🎯 Trust Radar'
+                };
+
+                // Tools that have full reading pages
+                const fullReadingUrls = {
+                    'manifestation': './manifestfull.html',
+                    'unconscious-contract': './contractfull.html',
+                    'energy-leak': './energyleakfull.html',
+                    'identity-split': './identityfull.html',
+                    'hidden-strengths': './strengthsfull.html',
+                    'power-avoidance': './powerfull.html',
+                    'trust-radar': './trustfull.html'
                 };
 
                 let contentHTML = '';
+                let fullReadingButton = '';
+                
+                // Check if this item type has a full reading available
+                if (fullReadingUrls[item.type]) {
+                    fullReadingButton = `
+                        <button onclick="libraryManager.goToFullReading('${item.id || index}', '${item.type}')" 
+                            style="margin-top: 10px; padding: 10px 18px; background: linear-gradient(135deg, #ffd700, #ff8c00); border: none; border-radius: 20px; color: #000; font-weight: 700; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; margin-left: auto; margin-right: auto; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);"
+                            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(255, 215, 0, 0.5)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(255, 215, 0, 0.3)';">
+                            ✨ Get Full Reading
+                        </button>
+                    `;
+                }
                 
                 // Render based on type
                 if (item.type === 'forecast') {
@@ -1650,6 +1681,7 @@
                         <div class="library-item-content">
                             ${contentHTML}
                         </div>
+                        ${fullReadingButton}
                         <div class="library-item-date">Saved on ${date}</div>
                     </div>
                 `;
@@ -1878,6 +1910,53 @@
                         }
                     }, 300);
                 };
+            }
+
+            goToFullReading(itemId, itemType) {
+                // Tools that have full reading pages
+                const fullReadingUrls = {
+                    'manifestation': './manifestfull.html',
+                    'unconscious-contract': './contractfull.html',
+                    'energy-leak': './energyleakfull.html',
+                    'identity-split': './identityfull.html',
+                    'hidden-strengths': './strengthsfull.html',
+                    'power-avoidance': './powerfull.html',
+                    'trust-radar': './trustfull.html'
+                };
+
+                const url = fullReadingUrls[itemType];
+                if (!url) {
+                    this.showToast('Full reading not available for this type', 'error');
+                    return;
+                }
+
+                // Get the item data to pass to the full reading page
+                try {
+                    const library = JSON.parse(localStorage.getItem(this.storageKey) || '[]');
+                    const item = library.find(i => {
+                        const id = i.id || i.timestamp;
+                        return id === itemId || id === parseInt(itemId);
+                    });
+
+                    if (item && item.data) {
+                        // Store data in sessionStorage for the full reading page
+                        sessionStorage.setItem('qm_enhanced_data', JSON.stringify({
+                            tool: itemType,
+                            answers: item.data.answers || {},
+                            result: item.data.result || item.data,
+                            timestamp: item.timestamp
+                        }));
+                    }
+
+                    this.showToast('Opening full reading...', 'info');
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 500);
+                } catch (error) {
+                    console.error('Error loading full reading:', error);
+                    // Still navigate even without data
+                    window.location.href = url;
+                }
             }
 
             showToast(message, type = 'info') {

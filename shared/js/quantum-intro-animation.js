@@ -63,9 +63,10 @@
     const ctx = canvas.getContext('2d', { alpha: true });
     
     // Support both old (.intro-emoji) and new (#quantum, #wizard, #rose) element structures
-    const quantum = document.getElementById('quantum') || document.querySelector('.intro-emoji[data-symbol="⚛️"]');
-    const wizard = document.getElementById('wizard') || document.querySelector('.intro-emoji[data-symbol="🧙‍♂️"]');
-    const rose = document.getElementById('rose') || document.querySelector('.intro-emoji[data-symbol="🌹"]');
+    // Also support #intro-quantum, #intro-wizard, #intro-rose naming
+    const quantum = document.getElementById('quantum') || document.getElementById('intro-quantum') || document.querySelector('.intro-emoji[data-symbol="⚛️"]');
+    const wizard = document.getElementById('wizard') || document.getElementById('intro-wizard') || document.querySelector('.intro-emoji[data-symbol="🧙‍♂️"]');
+    const rose = document.getElementById('rose') || document.getElementById('intro-rose') || document.querySelector('.intro-emoji[data-symbol="🌹"]');
     const singularity = document.getElementById('singularity');
     const introTitle = document.getElementById('title') || document.getElementById('intro-title');
 
