@@ -787,6 +787,24 @@
             font-size: 1.1em;
         }
 
+        /* Forecast-style sections */
+        .forecast-section {
+            margin-bottom: 22px;
+        }
+        .forecast-label {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            color: #a78bfa;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .forecast-text {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
         .insight-box {
             background: linear-gradient(145deg, rgba(147, 51, 234, 0.15), rgba(236, 72, 153, 0.1));
             border: 2px solid rgba(147, 51, 234, 0.4);
@@ -1397,67 +1415,116 @@
                 // Determine contract type
                 let contract = determineContract(q1, q2, q3, q4);
                 
+                // Frequency based on contract type
+                const contractFrequencies = {
+                    'survive': '396 Hz - Liberation from Fear',
+                    'success OR happiness': '639 Hz - Harmonizing Relationships & Self',
+                    'capable, but not powerful': '741 Hz - Self-Expression & Power',
+                    'temporary joy': '528 Hz - Transformation & Miracles',
+                    'progress, but not completion': '417 Hz - Facilitating Change',
+                    'not ease': '852 Hz - Awakening Intuition'
+                };
+                
+                let frequency = '528 Hz - Transformation & Miracles';
+                for (const [key, value] of Object.entries(contractFrequencies)) {
+                    if (contract.statement.toLowerCase().includes(key.toLowerCase())) {
+                        frequency = value;
+                        break;
+                    }
+                }
+                
+                // Tarot connection based on contract
+                const tarotConnections = {
+                    'survive': 'The Star card illuminates your path from survival to thriving. The Ace of Pentacles offers new beginnings in abundance.',
+                    'success OR happiness': 'The World card shows that completion includes joy. The Two of Cups proves love and success coexist.',
+                    'capable, but not powerful': 'The Magician card reminds you that your power is already present. The Sun card invites you to shine without fear.',
+                    'temporary joy': 'The Wheel of Fortune shows that good cycles can be sustained. The Ten of Cups promises lasting emotional fulfillment.',
+                    'progress, but not completion': 'The World card represents sacred completion. The Four of Swords gives permission to rest.',
+                    'not ease': 'The Empress card embodies receptive abundance. The Nine of Pentacles shows ease can be earned and enjoyed.'
+                };
+                
+                let tarotConnection = 'The Fool card invites you to release old contracts and begin anew. The High Priestess guides your inner knowing.';
+                for (const [key, value] of Object.entries(tarotConnections)) {
+                    if (contract.statement.toLowerCase().includes(key.toLowerCase())) {
+                        tarotConnection = value;
+                        break;
+                    }
+                }
+                
                 // Generate results
                 const resultsHTML = `
-                    <div class="result-title">Your Unconscious Contract Revealed</div>
+                    <div class="result-title">📜 Your Unconscious Contract Reading</div>
                     
-                    <div class="contract-reveal">
+                    <!-- Main Reading Card -->
+                    <div class="contract-reveal" style="background: linear-gradient(135deg, rgba(147, 51, 234, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%); border: 3px solid #9333ea; border-radius: 20px; padding: 40px; margin-bottom: 30px;">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
+                            <div style="font-size: 3rem; filter: drop-shadow(0 0 15px rgba(147, 51, 234, 0.8));">📜</div>
+                            <div>
+                                <div style="font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: #a78bfa; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;">Your Hidden Contract</div>
+                            </div>
+                        </div>
+                        
                         <div class="contract-text">"${contract.statement}"</div>
-                        <p class="contract-subtext">
-                            This is the invisible agreement limiting your potential
-                        </p>
+                        <p class="contract-subtext">This is the invisible agreement limiting your potential</p>
+                        
+                        <div class="forecast-section" style="margin-top: 25px;">
+                            <div class="forecast-label">📿 What This Means</div>
+                            <div class="forecast-text">${contract.meaning}</div>
+                        </div>
+                        
+                        <div class="forecast-section">
+                            <div class="forecast-label">🌟 How It Shows Up</div>
+                            <div class="forecast-text">${contract.manifestation}</div>
+                        </div>
+                        
+                        <div class="frequency-alignment" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(6, 182, 212, 0.1)); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 15px; padding: 22px; margin: 20px 0;">
+                            <h4 style="font-family: 'Orbitron', sans-serif; font-size: 1rem; color: #10b981; margin-bottom: 12px;">🎵 Aligned Healing Frequency</h4>
+                            <p style="font-size: 1.1em; margin-bottom: 15px; color: #e0d4f7;">${frequency}</p>
+                            <p style="color: #c4b5fd; line-height: 1.7; margin-bottom: 15px;">
+                                Listen while repeating your new permission. Let the frequency rewrite your unconscious programming.
+                            </p>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="/genesis?freq=${frequency.split(' ')[0]}" class="save-btn" style="text-decoration: none; display: inline-block; background: linear-gradient(135deg, #9333ea, #ec4899); border: none; border-radius: 10px; padding: 12px 20px; font-family: 'Orbitron', sans-serif; font-size: 0.85rem; color: #fff; cursor: pointer;">
+                                    🎵 Play in Genesis
+                                </a>
+                                <button class="save-btn" onclick="saveFrequencyToLibrary('${contract.statement}', '${frequency}')" style="background: linear-gradient(135deg, #9333ea, #ec4899); border: none; border-radius: 10px; padding: 12px 20px; font-family: 'Orbitron', sans-serif; font-size: 0.85rem; color: #fff; cursor: pointer;">
+                                    💾 Save Frequency
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="ritual-section" style="background: linear-gradient(135deg, rgba(0, 245, 255, 0.08), rgba(147, 51, 234, 0.08)); border: 1px solid rgba(0, 245, 255, 0.3); border-radius: 15px; padding: 22px; margin: 20px 0;">
+                            <h4 style="font-family: 'Orbitron', sans-serif; font-size: 1rem; color: #00f5ff; margin-bottom: 12px;">🧘 Liberation Practice</h4>
+                            <p style="color: #c4b5fd; line-height: 1.8;">${contract.liberation}</p>
+                        </div>
+                        
+                        <div class="forecast-section">
+                            <div class="forecast-label">🃏 Tarot Connection</div>
+                            <div class="forecast-text">${tarotConnection}</div>
+                        </div>
+                        
+                        <div class="forecast-section">
+                            <div class="forecast-label">🔢 Numerology Connection</div>
+                            <div class="forecast-text">
+                                ${q1 + q2 + q3 + q4 <= 8 ? 'Your contract energy resonates with Life Path 4 - a need for security that can become a cage. Freedom comes through structured release.' :
+                                  q1 + q2 + q3 + q4 <= 12 ? 'Your contract energy resonates with Life Path 7 - deep inner work is your path. Trust your intuition to rewrite the agreement.' :
+                                  'Your contract energy resonates with Life Path 9 - you\'re ready for completion and release. This is a transformational threshold.'}
+                            </div>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, rgba(251, 191, 36, 0.08), rgba(147, 51, 234, 0.08)); border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 15px; padding: 22px; margin: 20px 0;">
+                            <h4 style="font-family: 'Orbitron', sans-serif; font-size: 1rem; color: #fbbf24; margin-bottom: 12px;">💫 Your New Permission</h4>
+                            <p style="color: #e0d4f7; line-height: 1.8; font-size: 1.1em; font-style: italic;">"${contract.newPermission}"</p>
+                        </div>
                     </div>
 
-                    <div class="insight-box">
-                        <div class="insight-title">🎯 What This Means</div>
-                        <div class="insight-text">${contract.meaning}</div>
-                    </div>
-
-                    <div class="insight-box">
-                        <div class="insight-title">🌟 How It Shows Up</div>
-                        <div class="insight-text">${contract.manifestation}</div>
-                    </div>
-
-                    <div class="insight-box">
-                        <div class="insight-title">🔓 Breaking Free</div>
-                        <div class="insight-text">${contract.liberation}</div>
-                    </div>
-
-                    <div class="insight-box">
-                        <div class="insight-title">💫 Your New Permission</div>
-                        <div class="insight-text">${contract.newPermission}</div>
-                    </div>
-
-                    <div class="action-buttons">
-                        <button class="action-btn" onclick="saveToLibrary()">💾 Save to Library</button>
-                        <a href="/library.html" target="_blank" class="action-btn">📚 View Library</a>
+                    <div class="action-buttons" style="display: flex; gap: 15px; margin: 30px 0; flex-wrap: wrap;">
+                        <a href="/index.html" class="action-btn" style="flex: 1; min-width: 150px; padding: 15px 25px; border-radius: 25px; border: 2px solid rgba(147, 51, 234, 0.3); background: rgba(147, 51, 234, 0.2); color: #c4b5fd; text-decoration: none; text-align: center;">🏠 Explore More Tools</a>
+                        <a href="/genesis" class="action-btn" style="flex: 1; min-width: 150px; padding: 15px 25px; border-radius: 25px; border: 2px solid rgba(147, 51, 234, 0.3); background: rgba(147, 51, 234, 0.2); color: #c4b5fd; text-decoration: none; text-align: center;">🎵 Genesis Frequencies</a>
+                        <a href="/library.html" class="action-btn" style="flex: 1; min-width: 150px; padding: 15px 25px; border-radius: 25px; border: 2px solid rgba(147, 51, 234, 0.3); background: rgba(147, 51, 234, 0.2); color: #c4b5fd; text-decoration: none; text-align: center;">📚 View Library</a>
                     </div>
                     
                     ${getPersonalizedRecommendation(q1, q2, q3, q4)}
-                    
-                    <div style="margin-top: 40px; padding: 35px; background: linear-gradient(145deg, rgba(236, 72, 153, 0.15), rgba(147, 51, 234, 0.15)); border: 2px solid rgba(236, 72, 153, 0.5); border-radius: 20px; text-align: center;">
-                        <div style="font-size: 2.5em; margin-bottom: 15px;">✨</div>
-                        <h3 style="color: #ec4899; margin-bottom: 15px; font-family: 'Cinzel', serif; font-size: 1.5em;">This Reading May Have Astounded You...</h3>
-                        <p style="color: #e0d4f7; font-size: 1.1em; line-height: 1.7; margin-bottom: 25px;">
-                            But your <strong style="color: #ec4899;">birth numbers</strong> alongside this contract reveal will deepen the reading exponentially. 
-                            Combine your Unconscious Contract with your personal numerology for a truly transformative experience.
-                        </p>
-                        <button onclick="goToEnhanced()" style="
-                            padding: 18px 40px;
-                            background: linear-gradient(135deg, #ec4899, #9333ea);
-                            color: white;
-                            border: none;
-                            border-radius: 30px;
-                            font-size: 1.2em;
-                            font-weight: 700;
-                            font-family: 'Orbitron', monospace;
-                            cursor: pointer;
-                            transition: all 0.3s ease;
-                            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
-                        " onmouseover="this.style.transform='translateY(-3px) scale(1.05)'; this.style.boxShadow='0 12px 35px rgba(236, 72, 153, 0.6)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 25px rgba(236, 72, 153, 0.4)'">
-                            🌟 Get Enhanced Reading
-                        </button>
-                    </div>
                     
                     <div class="next-tools-section" style="margin-top: 40px; padding: 30px; background: rgba(147, 51, 234, 0.1); border: 2px solid rgba(147, 51, 234, 0.3); border-radius: 20px;">
                         <h3 style="color: #9333ea; text-align: center; margin-bottom: 20px; font-family: 'Orbitron', monospace;">Continue Your Journey</h3>
@@ -1465,32 +1532,18 @@
                             <a href="/energyleak.html" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
                                 <div style="font-size: 2em; margin-bottom: 8px;">🔋</div>
                                 <div style="color: #c4b5fd; font-weight: 600; font-size: 0.9em;">Energy Leak</div>
-                                <div style="color: #a78bfa; font-size: 0.75em; margin-top: 5px;">Find drains</div>
                             </a>
                             <a href="/manifest.html" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
                                 <div style="font-size: 2em; margin-bottom: 8px;">✨</div>
                                 <div style="color: #c4b5fd; font-weight: 600; font-size: 0.9em;">Manifestation</div>
-                                <div style="color: #a78bfa; font-size: 0.75em; margin-top: 5px;">Readiness check</div>
                             </a>
-                            <a href="/identity-split-detector.html" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
+                            <a href="/identity-split-detector-enhanced.html" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
                                 <div style="font-size: 2em; margin-bottom: 8px;">🎭</div>
                                 <div style="color: #c4b5fd; font-weight: 600; font-size: 0.9em;">Identity Split</div>
-                                <div style="color: #a78bfa; font-size: 0.75em; margin-top: 5px;">Reveal masks</div>
                             </a>
                             <a href="/trust-radar.html" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
                                 <div style="font-size: 2em; margin-bottom: 8px;">🎯</div>
                                 <div style="color: #c4b5fd; font-weight: 600; font-size: 0.9em;">Trust Radar</div>
-                                <div style="color: #a78bfa; font-size: 0.75em; margin-top: 5px;">Trust patterns</div>
-                            </a>
-                            <a href="/hidden-strengths-revealer.html" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
-                                <div style="font-size: 2em; margin-bottom: 8px;">💎</div>
-                                <div style="color: #c4b5fd; font-weight: 600; font-size: 0.9em;">Hidden Strengths</div>
-                                <div style="color: #a78bfa; font-size: 0.75em; margin-top: 5px;">Superpowers</div>
-                            </a>
-                            <a href="/power-avoidance-pattern.html" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
-                                <div style="font-size: 2em; margin-bottom: 8px;">👑</div>
-                                <div style="color: #c4b5fd; font-weight: 600; font-size: 0.9em;">Power Patterns</div>
-                                <div style="color: #a78bfa; font-size: 0.75em; margin-top: 5px;">Success blocks</div>
                             </a>
                         </div>
                     </div>
@@ -1709,12 +1762,59 @@
                 }
             }
         });
-    </script>
-    
-    <!-- Shared Quantum Scripts -->
-    <script src="shared/js/quantum-effects.js"></script>
-    <script src="shared/js/quantum-analytics.js"></script>
-</body>
-</html>
-
-
+        
+        // ========================================
+        // SAVE FREQUENCY TO LIBRARY
+        // ========================================
+        function saveFrequencyToLibrary(contractStatement, frequency) {
+            const item = {
+                id: Date.now(),
+                type: 'frequency',
+                title: 'Contract Release Frequency',
+                summary: frequency,
+                content: {
+                    frequency: frequency.split(' - ')[0] || frequency,
+                    purpose: 'Unconscious Contract Release',
+                    contract: contractStatement,
+                    practice: 'Listen while repeating your new permission to rewrite unconscious programming'
+                },
+                tags: ['frequency', 'contract', 'liberation', 'healing'],
+                timestamp: new Date().toISOString()
+            };
+            
+            let library = localStorage.getItem('qm_library');
+            library = library ? JSON.parse(library) : [];
+            library.unshift(item);
+            localStorage.setItem('qm_library', JSON.stringify(library));
+            
+            // Show notification
+            showNotification('Frequency saved to Library!', 'success');
+        }
+        
+        function showNotification(message, type = 'info') {
+            const existing = document.querySelector('.qm-notification');
+            if (existing) existing.remove();
+            
+            const notification = document.createElement('div');
+            notification.className = 'qm-notification';
+            notification.innerHTML = `<span>${message}</span><button onclick="this.parentElement.remove()">&times;</button>`;
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                padding: 15px 25px;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                z-index: 10000;
+                animation: slideIn 0.3s ease;
+                font-family: 'Orbitron', sans-serif;
+                background: ${type === 'success' ? 'rgba(16, 185, 129, 0.2)' : 'rgba(147, 51, 234, 0.2)'};
+                border: 1px solid ${type === 'success' ? 'rgba(16, 185, 129, 0.5)' : 'rgba(147, 51, 234, 0.5)'};
+                color: ${type === 'success' ? '#10b981' : '#a78bfa'};
+            `;
+            
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 3000);
+        }
