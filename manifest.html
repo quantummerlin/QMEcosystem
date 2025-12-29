@@ -1144,31 +1144,135 @@
                     nextSteps = "Prioritize nervous system healing. Work with a therapist or somatic practitioner. Build basic safety and stability in your life. Practice small acts of self-trust. Manifestation will become natural once your foundation is solid.";
                 }
 
+                // Frequency mapping based on manifestation level
+                const manifestFrequencies = {
+                    'QUANTUM READY': '528 Hz - Miracle Manifestation',
+                    'EXPANSION READY': '639 Hz - Connecting & Relationships',
+                    'FOUNDATION BUILDING': '417 Hz - Facilitating Change',
+                    'GROUNDWORK PHASE': '396 Hz - Liberating Fear'
+                };
+                
+                // Tarot connections based on readiness level
+                const tarotConnections = {
+                    'QUANTUM READY': 'The Magician appears for you—all elements are aligned and ready. You have the power to manifest your will into reality. The Star also blesses this reading, indicating hope, inspiration, and divine timing.',
+                    'EXPANSION READY': 'The Wheel of Fortune spins in your favor—expansion is inevitable, but timing matters. The High Priestess reminds you to trust your intuition and the unseen forces working on your behalf.',
+                    'FOUNDATION BUILDING': 'The Hermit guides you inward—true manifestation begins with self-knowledge. The Four of Pentacles suggests releasing control and building from a place of security, not scarcity.',
+                    'GROUNDWORK PHASE': 'The Tower may have recently visited—old structures are clearing for new foundations. The Ace of Pentacles promises new beginnings once your groundwork is complete.'
+                };
+                
+                const currentFrequency = manifestFrequencies[level];
+                const manifestationNumber = score >= 80 ? 11 : score >= 60 ? 7 : score >= 40 ? 4 : 1;
+                
                 const resultsHTML = `
-                    <div class="result-title">Your Manifestation Readiness</div>
-                    
-                    <div class="score-display">
-                        <div class="score-number">${score}%</div>
-                        <div class="score-label">${level}</div>
-                        <div class="readiness-meter">
-                            <div class="readiness-fill" style="width: ${score}%">${score}%</div>
+                    <div class="reading-card" style="background: linear-gradient(145deg, rgba(236, 72, 153, 0.1), rgba(147, 51, 234, 0.15)); border: 2px solid rgba(236, 72, 153, 0.4); border-radius: 20px; padding: 30px; margin-bottom: 25px;">
+                        <div class="card-header" style="text-align: center; margin-bottom: 25px;">
+                            <div style="font-size: 3em; margin-bottom: 10px;">✨</div>
+                            <h2 style="color: #ec4899; font-family: 'Cinzel', serif; font-size: 1.8em; margin: 0;">Your Manifestation Readiness</h2>
                         </div>
-                        <div class="score-description">${description}</div>
+                        
+                        <div class="score-display" style="text-align: center; margin-bottom: 30px;">
+                            <div class="score-number" style="font-size: 4em; font-weight: 800; background: linear-gradient(135deg, #ec4899, #9333ea); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron', monospace;">${score}%</div>
+                            <div class="score-label" style="color: #ec4899; font-size: 1.4em; font-weight: 700; font-family: 'Orbitron', monospace; letter-spacing: 3px; margin: 10px 0;">${level}</div>
+                            <div class="readiness-meter" style="height: 12px; background: rgba(147, 51, 234, 0.2); border-radius: 6px; overflow: hidden; margin: 15px auto; max-width: 300px;">
+                                <div class="readiness-fill" style="width: ${score}%; height: 100%; background: linear-gradient(90deg, #ec4899, #9333ea); border-radius: 6px; transition: width 1s ease;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="forecast-section" style="margin-bottom: 20px;">
+                            <div class="forecast-label" style="color: #ec4899; font-weight: 700; font-size: 0.9em; letter-spacing: 1px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                                📿 YOUR CURRENT STATE
+                            </div>
+                            <div class="forecast-text" style="color: #e0d4f7; line-height: 1.8; font-size: 1.05em;">
+                                ${description}
+                            </div>
+                        </div>
+                        
+                        <div class="forecast-section" style="margin-bottom: 20px;">
+                            <div class="forecast-label" style="color: #a78bfa; font-weight: 700; font-size: 0.9em; letter-spacing: 1px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                                🔮 WHAT THIS MEANS
+                            </div>
+                            <div class="forecast-text" style="color: #e0d4f7; line-height: 1.8; font-size: 1.05em;">
+                                ${guidance}
+                            </div>
+                        </div>
+                        
+                        <div class="forecast-section" style="margin-bottom: 20px;">
+                            <div class="forecast-label" style="color: #818cf8; font-weight: 700; font-size: 0.9em; letter-spacing: 1px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                                🚀 YOUR NEXT STEPS
+                            </div>
+                            <div class="forecast-text" style="color: #e0d4f7; line-height: 1.8; font-size: 1.05em;">
+                                ${nextSteps}
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="insight-box">
-                        <div class="insight-title">What This Means</div>
-                        <div class="insight-text">${guidance}</div>
+                    
+                    <div class="frequency-alignment" style="background: linear-gradient(145deg, rgba(34, 197, 94, 0.1), rgba(16, 185, 129, 0.15)); border: 2px solid rgba(34, 197, 94, 0.4); border-radius: 20px; padding: 25px; margin-bottom: 25px; text-align: center;">
+                        <div class="forecast-label" style="color: #22c55e; font-weight: 700; font-size: 0.9em; letter-spacing: 1px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            🎵 YOUR MANIFESTATION FREQUENCY
+                        </div>
+                        <div style="font-size: 1.5em; color: #4ade80; font-weight: 700; font-family: 'Orbitron', monospace; margin-bottom: 15px;">
+                            ${currentFrequency}
+                        </div>
+                        <p style="color: #a7f3d0; font-size: 0.95em; margin-bottom: 20px;">
+                            This frequency supports your manifestation level and helps calibrate your nervous system for receiving.
+                        </p>
+                        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                            <a href="/genesis/index-enhanced.html" target="_blank" class="save-btn" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 25px; background: linear-gradient(135deg, #22c55e, #10b981); color: white; text-decoration: none; border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">
+                                🎧 Play in Genesis
+                            </a>
+                            <button onclick="saveFrequencyToLibrary('${currentFrequency}', '${level}')" class="save-btn" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 25px; background: linear-gradient(135deg, #8b5cf6, #6366f1); color: white; border: none; border-radius: 25px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
+                                💾 Save to Library
+                            </button>
+                        </div>
                     </div>
-
-                    <div class="insight-box">
-                        <div class="insight-title">Next Steps</div>
-                        <div class="insight-text">${nextSteps}</div>
+                    
+                    <div class="ritual-section" style="background: linear-gradient(145deg, rgba(168, 85, 247, 0.1), rgba(139, 92, 246, 0.15)); border: 2px solid rgba(168, 85, 247, 0.4); border-radius: 20px; padding: 25px; margin-bottom: 25px;">
+                        <div class="forecast-label" style="color: #a855f7; font-weight: 700; font-size: 0.9em; letter-spacing: 1px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                            🧘 MANIFESTATION PRACTICE
+                        </div>
+                        <div style="color: #e0d4f7; line-height: 1.9;">
+                            <p style="margin-bottom: 15px;"><strong style="color: #c4b5fd;">Daily Alignment Ritual:</strong></p>
+                            <ol style="margin: 0; padding-left: 20px;">
+                                <li style="margin-bottom: 10px;">Play your frequency (${currentFrequency.split(' - ')[0]}) for 5-10 minutes</li>
+                                <li style="margin-bottom: 10px;">${score >= 80 ? 'Visualize your desire as already complete—feel it in your body' : score >= 60 ? 'Practice releasing control—say "I trust the timing and the how"' : score >= 40 ? 'Focus on one small thing you can receive today without earning it' : 'Ground yourself—feel your feet on the earth and say "I am safe to expand"'}</li>
+                                <li style="margin-bottom: 10px;">Place your hands on your heart and breathe deeply</li>
+                                <li style="margin-bottom: 10px;">State: "I am ${score >= 80 ? 'ready to receive' : score >= 60 ? 'expanding my capacity' : score >= 40 ? 'building my foundation' : 'creating safety for growth'}"</li>
+                                <li style="margin-bottom: 10px;">Notice any resistance without judgment</li>
+                                <li>Complete with gratitude for what is already manifesting</li>
+                            </ol>
+                        </div>
                     </div>
-
-                    <div class="insight-box">
-                        <div class="insight-title">Key Insight</div>
-                        <div class="insight-text">
+                    
+                    <div class="tarot-section" style="background: linear-gradient(145deg, rgba(236, 72, 153, 0.1), rgba(219, 39, 119, 0.15)); border: 2px solid rgba(236, 72, 153, 0.4); border-radius: 20px; padding: 25px; margin-bottom: 25px;">
+                        <div class="forecast-label" style="color: #ec4899; font-weight: 700; font-size: 0.9em; letter-spacing: 1px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                            🃏 TAROT CONNECTION
+                        </div>
+                        <div class="forecast-text" style="color: #f9a8d4; line-height: 1.8; font-size: 1.05em;">
+                            ${tarotConnections[level]}
+                        </div>
+                        <a href="/quantum-merlin-hub/tarot.html" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 15px; color: #f472b6; text-decoration: none; font-size: 0.95em; transition: color 0.3s;">
+                            → Explore your full Tarot reading
+                        </a>
+                    </div>
+                    
+                    <div class="numerology-section" style="background: linear-gradient(145deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.15)); border: 2px solid rgba(59, 130, 246, 0.4); border-radius: 20px; padding: 25px; margin-bottom: 25px;">
+                        <div class="forecast-label" style="color: #3b82f6; font-weight: 700; font-size: 0.9em; letter-spacing: 1px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                            🔢 NUMEROLOGY CONNECTION
+                        </div>
+                        <div class="forecast-text" style="color: #93c5fd; line-height: 1.8; font-size: 1.05em;">
+                            Your manifestation score of <strong>${score}%</strong> resonates with the number <strong>${manifestationNumber}</strong>.
+                            ${manifestationNumber === 11 ? ' Master Number 11 represents spiritual illumination and manifestation mastery. You are a natural conduit for bringing vision into reality.' : 
+                              manifestationNumber === 7 ? ' Number 7 is the seeker of truth—your manifestations require inner alignment before outer results. Trust the process.' : 
+                              manifestationNumber === 4 ? ' Number 4 represents building solid foundations. Your manifestations need structure and patience to materialize.' : 
+                              ' Number 1 is about new beginnings. You are at the starting point of your manifestation journey—all potential lies ahead.'}
+                        </div>
+                    </div>
+                    
+                    <div class="key-insight" style="background: linear-gradient(145deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.15)); border: 2px solid rgba(251, 191, 36, 0.4); border-radius: 20px; padding: 25px; margin-bottom: 25px;">
+                        <div class="forecast-label" style="color: #fbbf24; font-weight: 700; font-size: 0.9em; letter-spacing: 1px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                            💡 KEY INSIGHT
+                        </div>
+                        <div class="forecast-text" style="color: #fde68a; line-height: 1.8; font-size: 1.05em;">
                             Manifestation readiness isn't about being "spiritual enough" or wanting something badly enough. 
                             It's about nervous system capacity, worthiness, and surrender. You can't force readiness, but you can cultivate it.
                             ${score < 60 ? ' Right now, focus on building foundation rather than forcing manifestation.' : 
@@ -1177,69 +1281,38 @@
                         </div>
                     </div>
 
-                    <div class="action-buttons">
-                        <button class="action-btn" onclick="saveToLibrary()">💾 Save to Library</button>
-                        <a href="/library.html" target="_blank" class="action-btn">📚 View Library</a>
-                    </div>
-                    
-                    ${getPersonalizedRecommendation(score, answers)}
-                    
-                    <div style="margin-top: 40px; padding: 35px; background: linear-gradient(145deg, rgba(236, 72, 153, 0.15), rgba(147, 51, 234, 0.15)); border: 2px solid rgba(236, 72, 153, 0.5); border-radius: 20px; text-align: center;">
-                        <div style="font-size: 2.5em; margin-bottom: 15px;">✨</div>
-                        <h3 style="color: #ec4899; margin-bottom: 15px; font-family: 'Cinzel', serif; font-size: 1.5em;">This Reading May Have Astounded You...</h3>
-                        <p style="color: #e0d4f7; font-size: 1.1em; line-height: 1.7; margin-bottom: 25px;">
-                            But your <strong style="color: #ec4899;">birth numbers</strong> alongside this analysis will deepen the reading exponentially. 
-                            Combine your Manifestation Readiness with your personal numerology for a truly transformative experience.
-                        </p>
-                        <button onclick="goToEnhanced()" style="
-                            padding: 18px 40px;
-                            background: linear-gradient(135deg, #ec4899, #9333ea);
-                            color: white;
-                            border: none;
-                            border-radius: 30px;
-                            font-size: 1.2em;
-                            font-weight: 700;
-                            font-family: 'Orbitron', monospace;
-                            cursor: pointer;
-                            transition: all 0.3s ease;
-                            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
-                        " onmouseover="this.style.transform='translateY(-3px) scale(1.05)'; this.style.boxShadow='0 12px 35px rgba(236, 72, 153, 0.6)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 25px rgba(236, 72, 153, 0.4)'">
-                            🌟 Get Enhanced Reading
-                        </button>
+                    <div class="action-buttons" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
+                        <button class="action-btn" onclick="saveToLibrary()" style="padding: 15px 30px; background: linear-gradient(135deg, #8b5cf6, #6366f1); color: white; border: none; border-radius: 25px; font-weight: 600; cursor: pointer; font-size: 1em;">💾 Save Reading</button>
+                        <a href="/" class="action-btn" style="padding: 15px 30px; background: linear-gradient(135deg, #ec4899, #9333ea); color: white; border: none; border-radius: 25px; font-weight: 600; text-decoration: none; font-size: 1em;">🏠 Return to Hub</a>
+                        <a href="/genesis/index-enhanced.html" target="_blank" class="action-btn" style="padding: 15px 30px; background: linear-gradient(135deg, #22c55e, #10b981); color: white; border: none; border-radius: 25px; font-weight: 600; text-decoration: none; font-size: 1em;">🎧 Genesis Frequencies</a>
                     </div>
                     
                     <div class="next-tools-section" style="margin-top: 40px; padding: 30px; background: rgba(147, 51, 234, 0.1); border: 2px solid rgba(147, 51, 234, 0.3); border-radius: 20px;">
                         <h3 style="color: #9333ea; text-align: center; margin-bottom: 20px; font-family: 'Orbitron', monospace;">Continue Your Journey</h3>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px;">
-                            <a href="/contract.html" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
+                            <a href="/contract.html" class="tool-link" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
                                 <div style="font-size: 2em; margin-bottom: 8px;">📜</div>
                                 <div style="color: #c4b5fd; font-weight: 600; font-size: 0.9em;">Unconscious Contract</div>
-                                <div style="color: #a78bfa; font-size: 0.75em; margin-top: 5px;">Hidden agreements</div>
                             </a>
-                            <a href="/energyleak.html" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
+                            <a href="/energyleak.html" class="tool-link" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
                                 <div style="font-size: 2em; margin-bottom: 8px;">🔋</div>
                                 <div style="color: #c4b5fd; font-weight: 600; font-size: 0.9em;">Energy Leak</div>
-                                <div style="color: #a78bfa; font-size: 0.75em; margin-top: 5px;">Find drains</div>
                             </a>
-                            <a href="/identity-split-detector.html" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
+                            <a href="/identity-split-detector-enhanced.html" class="tool-link" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
                                 <div style="font-size: 2em; margin-bottom: 8px;">🎭</div>
                                 <div style="color: #c4b5fd; font-weight: 600; font-size: 0.9em;">Identity Split</div>
-                                <div style="color: #a78bfa; font-size: 0.75em; margin-top: 5px;">Reveal your masks</div>
                             </a>
-                            <a href="/trust-radar.html" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
+                            <a href="/trust-radar.html" class="tool-link" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
                                 <div style="font-size: 2em; margin-bottom: 8px;">🎯</div>
                                 <div style="color: #c4b5fd; font-weight: 600; font-size: 0.9em;">Trust Radar</div>
-                                <div style="color: #a78bfa; font-size: 0.75em; margin-top: 5px;">Trust patterns</div>
                             </a>
-                            <a href="/hidden-strengths-revealer.html" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
+                            <a href="/hidden-strengths-revealer.html" class="tool-link" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
                                 <div style="font-size: 2em; margin-bottom: 8px;">💎</div>
                                 <div style="color: #c4b5fd; font-weight: 600; font-size: 0.9em;">Hidden Strengths</div>
-                                <div style="color: #a78bfa; font-size: 0.75em; margin-top: 5px;">Superpowers</div>
                             </a>
-                            <a href="/power-avoidance-pattern.html" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#9333ea'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(147, 51, 234, 0.3)'; this.style.transform='translateY(0)'">
+                            <a href="/power-avoidance-pattern.html" class="tool-link" style="display: block; padding: 20px 15px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
                                 <div style="font-size: 2em; margin-bottom: 8px;">👑</div>
                                 <div style="color: #c4b5fd; font-weight: 600; font-size: 0.9em;">Power Patterns</div>
-                                <div style="color: #a78bfa; font-size: 0.75em; margin-top: 5px;">Success blocks</div>
                             </a>
                         </div>
                     </div>
@@ -1309,6 +1382,51 @@
                 btn.textContent = originalText;
                 btn.style.background = '';
             }, 2000);
+        }
+
+        function saveFrequencyToLibrary(frequency, level) {
+            try {
+                const library = JSON.parse(localStorage.getItem('qm_library') || '[]');
+                const item = {
+                    type: 'frequency',
+                    tool: 'manifestation-readiness',
+                    title: `Manifestation Frequency - ${level}`,
+                    frequency: frequency,
+                    timestamp: Date.now(),
+                    date: new Date().toLocaleDateString()
+                };
+                library.push(item);
+                localStorage.setItem('qm_library', JSON.stringify(library));
+                showNotification('Frequency saved to your library! 🎵');
+            } catch (error) {
+                console.error('Error saving frequency:', error);
+                showNotification('Could not save frequency', true);
+            }
+        }
+
+        function showNotification(message, isError = false) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 15px 30px;
+                background: ${isError ? 'linear-gradient(135deg, #ef4444, #dc2626)' : 'linear-gradient(135deg, #22c55e, #16a34a)'};
+                color: white;
+                border-radius: 25px;
+                font-weight: 600;
+                z-index: 10000;
+                animation: slideUp 0.3s ease;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transition = 'opacity 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
         }
 
         function goToEnhanced() {
