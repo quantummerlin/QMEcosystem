@@ -391,6 +391,109 @@
             margin: 0;
         }
 
+        /* Clean Tools List Styles */
+        .tools-category {
+            margin-bottom: 40px;
+        }
+
+        .category-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            color: #ffd700;
+            margin-bottom: 16px;
+            padding-left: 5px;
+            border-left: 3px solid #ffd700;
+            padding-left: 15px;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .tool-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 16px 20px;
+            background: rgba(15, 15, 25, 0.8);
+            border: 1px solid rgba(0, 245, 255, 0.15);
+            border-radius: 12px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .tool-item:hover {
+            background: rgba(0, 245, 255, 0.1);
+            border-color: rgba(0, 245, 255, 0.4);
+            transform: translateX(5px);
+        }
+
+        .tool-item:active {
+            transform: translateX(2px);
+        }
+
+        .tool-item.rose {
+            border-color: rgba(255, 110, 199, 0.3);
+        }
+
+        .tool-item.rose:hover {
+            background: rgba(255, 110, 199, 0.1);
+            border-color: rgba(255, 110, 199, 0.5);
+        }
+
+        .tool-emoji {
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+
+        .tool-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            min-width: 0;
+        }
+
+        .tool-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #00f5ff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .tool-desc {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .tool-arrow {
+            font-size: 1.2rem;
+            color: rgba(0, 245, 255, 0.5);
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .tool-item:hover .tool-arrow {
+            color: #00f5ff;
+            transform: translateX(3px);
+        }
+
         /* About Section */
         .about {
             background: rgba(20, 20, 30, 0.5);
@@ -493,6 +596,63 @@
 
             .newsletter form {
                 flex-direction: column;
+            }
+
+            /* Mobile Tools List */
+            .tools-category {
+                margin-bottom: 30px;
+            }
+
+            .category-title {
+                font-size: 1rem;
+            }
+
+            .tools-list {
+                gap: 6px;
+            }
+
+            .tool-item {
+                padding: 14px 16px;
+                gap: 12px;
+            }
+
+            .tool-emoji {
+                font-size: 1.6rem;
+                width: 44px;
+                height: 44px;
+            }
+
+            .tool-name {
+                font-size: 0.9rem;
+            }
+
+            .tool-desc {
+                font-size: 0.8rem;
+            }
+
+            .tool-arrow {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .tool-item {
+                padding: 12px 14px;
+                gap: 10px;
+            }
+
+            .tool-emoji {
+                font-size: 1.4rem;
+                width: 40px;
+                height: 40px;
+            }
+
+            .tool-name {
+                font-size: 0.85rem;
+            }
+
+            .tool-desc {
+                font-size: 0.75rem;
             }
         }
     </style>
@@ -721,150 +881,230 @@
         </div>
     </section>
 
-    <!-- All Tools -->
-    <section class="all-tools">
-        <h2>🔮 Full Toolkit (In Development)</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 1.1rem; opacity: 0.8;">
-            We're building 15+ interconnected tools. The live tools above are just the beginning—more launching soon.
+    <!-- All Tools - Clean Mobile-Friendly List -->
+    <section class="all-tools" id="all-tools">
+        <h2>🔮 Complete Toolkit</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; opacity: 0.8;">
+            25+ mystical tools for your spiritual journey
         </p>
-        <div class="all-tools-grid">
-            <a href="./birth-sigil.html" class="mini-tool-card">
-                <div class="icon">🌙</div>
-                <h4>Birth Sigil</h4>
-                <p>Cosmic Signature</p>
-            </a>
-            
-            <a href="/forecasts" class="mini-tool-card">
-                <div class="icon">🔮</div>
-                <h4>Quantum Forecaster</h4>
-                <p>Daily Cosmic Insights</p>
-            </a>
-            
-            <a href="./library.html" class="mini-tool-card">
-                <div class="icon">📚</div>
-                <h4>My Library</h4>
-                <p>Saved Collection</p>
-            </a>
-            
-            <a href="./compatibility.html" class="mini-tool-card">
-                <div class="icon">💫</div>
-                <h4>Compatibility</h4>
-                <p>Relationship Analysis</p>
-            </a>
-            
-            <a href="./quantum-rose.html" class="mini-tool-card">
-                <div class="icon">🌹</div>
-                <h4>Quantum Rose</h4>
-                <p>Her Sacred Story</p>
-            </a>
-            
-            <a href="/quantum-merlin-hub/codes-new.html" class="mini-tool-card">
-                <div class="icon">⚡</div>
-                <h4>Reality Codes</h4>
-                <p>Quantum Affirmations</p>
-            </a>
-            
-            <a href="/genesis" class="mini-tool-card">
-                <div class="icon">🎵</div>
-                <h4>Genesis</h4>
-                <p>Sacred Frequencies</p>
-            </a>
-            
-            <a href="/quantum-merlin-hub/tarot-new.html" class="mini-tool-card">
-                <div class="icon">🃏</div>
-                <h4>Tarot</h4>
-                <p>Divine Guidance</p>
-            </a>
-            
-            <a href="/quantum-merlin-hub/gematria-new.html" class="mini-tool-card">
-                <div class="icon">🔢</div>
-                <h4>Gematria</h4>
-                <p>Sacred Numbers</p>
-            </a>
-            
-            <a href="/quantum-merlin-hub/sigils-new.html" class="mini-tool-card">
-                <div class="icon">🔯</div>
-                <h4>Sigil Creator</h4>
-                <p>Intention Symbols</p>
-            </a>
-            
-            <a href="/quantum-merlin-hub/astrology-new.html" class="mini-tool-card">
-                <div class="icon">⭐</div>
-                <h4>Full Astrology</h4>
-                <p>Deep Birth Charts</p>
-            </a>
-            
-            <a href="/quantum-merlin-hub/chinese-new.html" class="mini-tool-card">
-                <div class="icon">🐉</div>
-                <h4>Chinese Zodiac</h4>
-                <p>Eastern Wisdom</p>
-            </a>
-            
-            <a href="/quantum-merlin-hub/crystals-new.html" class="mini-tool-card">
-                <div class="icon">💎</div>
-                <h4>Crystals</h4>
-                <p>Healing Stones</p>
-            </a>
-            
-            <a href="/quantum-merlin-hub/water-new.html" class="mini-tool-card">
-                <div class="icon">💧</div>
-                <h4>Water Charging</h4>
-                <p>Structured Intent</p>
-            </a>
-            
-            <a href="/angel-number-calculator.html" class="mini-tool-card">
-                <div class="icon">👼</div>
-                <h4>Angel Numbers</h4>
-                <p>Divine Messages</p>
-            </a>
-            
-            <a href="/energyleak.html" class="mini-tool-card">
-                <div class="icon">🔋</div>
-                <h4>Energy Leak Locator</h4>
-                <p>Find Your Drains</p>
-            </a>
-            
-            <a href="/contract.html" class="mini-tool-card">
-                <div class="icon">📜</div>
-                <h4>Unconscious Contract</h4>
-                <p>Hidden Agreements</p>
-            </a>
-            
-            <a href="/manifest.html" class="mini-tool-card">
-                <div class="icon">🎯</div>
-                <h4>Manifestation Ready</h4>
-                <p>Check Your Readiness</p>
-            </a>
-            
-            <a href="/soulcard.html" class="mini-tool-card">
-                <div class="icon">🃏</div>
-                <h4>Soul Card</h4>
-                <p>Your Tarot Archetype</p>
-            </a>
-            
-            <a href="/identity-split-detector-enhanced.html" class="mini-tool-card">
-                <div class="icon">🎭</div>
-                <h4>Identity Split</h4>
-                <p>Reveal Your Masks</p>
-            </a>
-            
-            <a href="/trust-radar.html" class="mini-tool-card">
-                <div class="icon">🎯</div>
-                <h4>Trust Radar</h4>
-                <p>Trust Patterns</p>
-            </a>
-            
-            <a href="/hidden-strengths-revealer.html" class="mini-tool-card">
-                <div class="icon">💎</div>
-                <h4>Hidden Strengths</h4>
-                <p>Dormant Superpowers</p>
-            </a>
-            
-            <a href="/power-avoidance-pattern.html" class="mini-tool-card">
-                <div class="icon">👑</div>
-                <h4>Power Patterns</h4>
-                <p>Success Sabotage</p>
-            </a>
+        
+        <!-- Category: Core Tools -->
+        <div class="tools-category">
+            <h3 class="category-title">⭐ Core Tools</h3>
+            <div class="tools-list">
+                <a href="./birth-sigil.html" class="tool-item">
+                    <span class="tool-emoji">🌙</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Birth Sigil Generator</span>
+                        <span class="tool-desc">Your unique cosmic signature</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/forecasts" class="tool-item">
+                    <span class="tool-emoji">🔮</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Quantum Forecaster</span>
+                        <span class="tool-desc">Complete 8-system cosmic profile</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="./compatibility.html" class="tool-item">
+                    <span class="tool-emoji">💫</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Compatibility Calculator</span>
+                        <span class="tool-desc">12-system relationship analysis</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="./library.html" class="tool-item">
+                    <span class="tool-emoji">📚</span>
+                    <div class="tool-info">
+                        <span class="tool-name">My Library</span>
+                        <span class="tool-desc">Your saved readings & profiles</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Category: Mystical Systems -->
+        <div class="tools-category">
+            <h3 class="category-title">🔯 Mystical Systems</h3>
+            <div class="tools-list">
+                <a href="/quantum-merlin-hub/tarot-new.html" class="tool-item">
+                    <span class="tool-emoji">🃏</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Tarot Readings</span>
+                        <span class="tool-desc">Divine archetypal guidance</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/soulcard.html" class="tool-item">
+                    <span class="tool-emoji">🎴</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Soul Card Calculator</span>
+                        <span class="tool-desc">Your lifetime tarot archetype</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/quantum-merlin-hub/astrology-new.html" class="tool-item">
+                    <span class="tool-emoji">⭐</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Full Astrology</span>
+                        <span class="tool-desc">Deep birth chart analysis</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/quantum-merlin-hub/chinese-new.html" class="tool-item">
+                    <span class="tool-emoji">🐉</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Chinese Zodiac</span>
+                        <span class="tool-desc">Eastern cosmic wisdom</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/quantum-merlin-hub/gematria-new.html" class="tool-item">
+                    <span class="tool-emoji">🔢</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Gematria Calculator</span>
+                        <span class="tool-desc">Sacred numbers in names</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/angel-number-calculator.html" class="tool-item">
+                    <span class="tool-emoji">👼</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Angel Numbers</span>
+                        <span class="tool-desc">Divine numerical messages</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Category: Creation & Manifestation -->
+        <div class="tools-category">
+            <h3 class="category-title">✨ Creation & Manifestation</h3>
+            <div class="tools-list">
+                <a href="/quantum-merlin-hub/codes-new.html" class="tool-item">
+                    <span class="tool-emoji">⚡</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Reality Codes</span>
+                        <span class="tool-desc">Quantum affirmation generator</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/quantum-merlin-hub/sigils-new.html" class="tool-item">
+                    <span class="tool-emoji">🔯</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Sigil Creator</span>
+                        <span class="tool-desc">Intention symbol generator</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/genesis" class="tool-item">
+                    <span class="tool-emoji">🎵</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Genesis Frequencies</span>
+                        <span class="tool-desc">Sacred sound healing</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/quantum-merlin-hub/water-new.html" class="tool-item">
+                    <span class="tool-emoji">💧</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Water Charging</span>
+                        <span class="tool-desc">Structured water intentions</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/quantum-merlin-hub/crystals-new.html" class="tool-item">
+                    <span class="tool-emoji">💎</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Crystal Guide</span>
+                        <span class="tool-desc">Healing stone recommendations</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Category: Psychological Tools -->
+        <div class="tools-category">
+            <h3 class="category-title">🧠 Micro-Tools (Self-Discovery)</h3>
+            <div class="tools-list">
+                <a href="/manifest.html" class="tool-item">
+                    <span class="tool-emoji">🎯</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Manifestation Readiness</span>
+                        <span class="tool-desc">Check if you're ready to manifest</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/contract.html" class="tool-item">
+                    <span class="tool-emoji">📜</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Unconscious Contract</span>
+                        <span class="tool-desc">Reveal hidden agreements</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/energyleak.html" class="tool-item">
+                    <span class="tool-emoji">🔋</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Energy Leak Locator</span>
+                        <span class="tool-desc">Find where you lose energy</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/identity-split-detector.html" class="tool-item">
+                    <span class="tool-emoji">🎭</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Identity Split Detector</span>
+                        <span class="tool-desc">Reveal your hidden masks</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/hidden-strengths-revealer.html" class="tool-item">
+                    <span class="tool-emoji">💪</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Hidden Strengths</span>
+                        <span class="tool-desc">Unlock dormant superpowers</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/power-avoidance-pattern.html" class="tool-item">
+                    <span class="tool-emoji">👑</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Power Avoidance Pattern</span>
+                        <span class="tool-desc">Why you sabotage success</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <a href="/trust-radar.html" class="tool-item">
+                    <span class="tool-emoji">🎯</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Trust Radar</span>
+                        <span class="tool-desc">Calibrate your trust patterns</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Category: Special -->
+        <div class="tools-category">
+            <h3 class="category-title">🌹 Special</h3>
+            <div class="tools-list">
+                <a href="./quantum-rose.html" class="tool-item rose">
+                    <span class="tool-emoji">🌹</span>
+                    <div class="tool-info">
+                        <span class="tool-name">Quantum Rose</span>
+                        <span class="tool-desc">Meet the Divine Feminine guide</span>
+                    </div>
+                    <span class="tool-arrow">→</span>
+                </a>
+            </div>
         </div>
     </section>
 
