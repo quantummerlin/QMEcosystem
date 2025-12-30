@@ -920,8 +920,18 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            body {
+                text-align: center;
+            }
+            
             .qm-header {
                 padding: 15px 20px;
+            }
+
+            .qm-header-inner {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
             }
 
             .qm-logo-text {
@@ -957,14 +967,26 @@
             
             .quiz-grid {
                 grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
             }
             
             .featured-grid {
                 grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
             }
             
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .tools-category {
+                text-align: center;
+            }
+            
+            .tool-item {
+                justify-content: center;
+            }
+            
+            .tool-info {
+                text-align: left;
             }
 
             .all-tools-grid {
@@ -1108,29 +1130,6 @@
         </a>
     </section>
 
-    <!-- Social Proof -->
-    <section class="social-proof">
-        <h3>🌟 Join 10,000+ Spiritual Seekers</h3>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number">10K+</span>
-                <span class="stat-label">Readings Generated</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">25+</span>
-                <span class="stat-label">Mystical Tools</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">4.8/5</span>
-                <span class="stat-label">Average Rating</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Free Forever</span>
-            </div>
-        </div>
-    </section>
-
     <!-- Quick Start Quiz -->
     <section class="quick-start" id="quick-start">
         <h2>🔮 Not Sure Where to Start?</h2>
@@ -1166,7 +1165,7 @@
     <!-- Featured Tools Section -->
     <section class="featured-section" id="featured">
         <h2>🌟 Most Popular Tools</h2>
-        <p>Start with these proven favorites—loved by thousands of seekers worldwide</p>
+        <p>Start with these proven favorites</p>
         
         <div class="featured-grid">
             <a href="./compatibility.html" class="featured-card">
