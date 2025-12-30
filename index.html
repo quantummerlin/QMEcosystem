@@ -153,51 +153,93 @@
             backdrop-filter: blur(25px);
             border: 1px solid rgba(0, 245, 255, 0.3);
             border-radius: 20px;
-            padding: 25px;
-            min-width: 800px;
+            padding: 20px;
+            min-width: 400px;
+            max-width: 500px;
             display: none;
             z-index: 10000;
             box-shadow: 0 15px 60px rgba(0, 0, 0, 0.6);
+            max-height: 70vh;
+            overflow-y: auto;
         }
 
         .tools-dropdown.active {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            display: block;
         }
 
         .tools-dropdown-category {
-            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(20, 20, 30, 0.5);
         }
 
-        .tools-dropdown-category h4 {
+        .category-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .category-header:hover {
+            background: rgba(0, 245, 255, 0.1);
+        }
+
+        .category-header h4 {
             color: #ffd700;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            margin-bottom: 12px;
+            margin: 0;
             text-transform: uppercase;
             letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .tools-dropdown-category a {
+        .category-arrow {
+            color: #00f5ff;
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .tools-dropdown-category.expanded .category-arrow {
+            transform: rotate(180deg);
+        }
+
+        .category-items {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .tools-dropdown-category.expanded .category-items {
+            max-height: 500px;
+        }
+
+        .category-items a {
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 8px 12px;
+            padding: 10px 16px;
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
-            border-radius: 10px;
             transition: all 0.3s ease;
             font-size: 0.9rem;
+            border-top: 1px solid rgba(0, 245, 255, 0.1);
         }
 
-        .tools-dropdown-category a:hover {
-            background: rgba(0, 245, 255, 0.1);
+        .category-items a:hover {
+            background: rgba(0, 245, 255, 0.15);
             color: #00f5ff;
-            transform: translateX(5px);
+            padding-left: 20px;
         }
 
-        .tools-dropdown-category a .emoji {
+        .category-items a .emoji {
             font-size: 1.2rem;
         }
 
@@ -1086,27 +1128,70 @@
                     <span class="dropdown-arrow">▼</span>
                     
                     <div class="tools-dropdown" id="toolsDropdown">
-                        <div class="tools-dropdown-category">
-                            <h4>⭐ Most Popular</h4>
-                            <a href="./compatibility.html"><span class="emoji">💫</span> Compatibility Calculator</a>
-                            <a href="/forecasts"><span class="emoji">🔮</span> Quantum Forecaster</a>
-                            <a href="./contract.html"><span class="emoji">📜</span> Unconscious Contract</a>
+                        <div class="tools-dropdown-category expanded">
+                            <div class="category-header">
+                                <h4>⭐ Most Popular</h4>
+                                <span class="category-arrow">▼</span>
+                            </div>
+                            <div class="category-items">
+                                <a href="./compatibility.html"><span class="emoji">💫</span> Compatibility Calculator</a>
+                                <a href="/forecasts"><span class="emoji">🔮</span> Quantum Forecaster</a>
+                                <a href="./contract.html"><span class="emoji">📜</span> Unconscious Contract</a>
+                            </div>
                         </div>
                         
                         <div class="tools-dropdown-category">
-                            <h4>🔯 Core Tools</h4>
-                            <a href="./birth-sigil.html"><span class="emoji">🌙</span> Birth Sigil</a>
-                            <a href="./soulcard.html"><span class="emoji">🎴</span> Soul Card</a>
-                            <a href="./library.html"><span class="emoji">📚</span> My Library</a>
-                            <a href="/angel-number-calculator.html"><span class="emoji">👼</span> Angel Numbers</a>
+                            <div class="category-header">
+                                <h4>🔯 Core Tools</h4>
+                                <span class="category-arrow">▼</span>
+                            </div>
+                            <div class="category-items">
+                                <a href="./birth-sigil.html"><span class="emoji">🌙</span> Birth Sigil</a>
+                                <a href="./soulcard.html"><span class="emoji">🎴</span> Soul Card</a>
+                                <a href="./library.html"><span class="emoji">📚</span> My Library</a>
+                                <a href="/angel-number-calculator.html"><span class="emoji">👼</span> Angel Numbers</a>
+                            </div>
                         </div>
                         
                         <div class="tools-dropdown-category">
-                            <h4>🧠 Micro-Tools</h4>
-                            <a href="/manifest.html"><span class="emoji">🎯</span> Manifestation Readiness</a>
-                            <a href="/energyleak.html"><span class="emoji">🔋</span> Energy Leak Locator</a>
-                            <a href="/identity-split-detector.html"><span class="emoji">🎭</span> Identity Split</a>
-                            <a href="/hidden-strengths-revealer.html"><span class="emoji">💪</span> Hidden Strengths</a>
+                            <div class="category-header">
+                                <h4>🔯 Mystical Systems</h4>
+                                <span class="category-arrow">▼</span>
+                            </div>
+                            <div class="category-items">
+                                <a href="/quantum-merlin-hub/tarot-new.html"><span class="emoji">🎴</span> Tarot Readings</a>
+                                <a href="/quantum-merlin-hub/astrology-new.html"><span class="emoji">⭐</span> Astrology</a>
+                                <a href="/quantum-merlin-hub/chinese-new.html"><span class="emoji">🐉</span> Chinese Zodiac</a>
+                                <a href="/quantum-merlin-hub/gematria-new.html"><span class="emoji">🔢</span> Gematria</a>
+                            </div>
+                        </div>
+                        
+                        <div class="tools-dropdown-category">
+                            <div class="category-header">
+                                <h4>✨ Creation & Manifestation</h4>
+                                <span class="category-arrow">▼</span>
+                            </div>
+                            <div class="category-items">
+                                <a href="/quantum-merlin-hub/codes-new.html"><span class="emoji">⚡</span> Reality Codes</a>
+                                <a href="/quantum-merlin-hub/sigils-new.html"><span class="emoji">🔯</span> Sigil Creator</a>
+                                <a href="/genesis"><span class="emoji">🎵</span> Genesis Frequencies</a>
+                                <a href="/quantum-merlin-hub/crystals-new.html"><span class="emoji">💎</span> Crystal Guide</a>
+                            </div>
+                        </div>
+                        
+                        <div class="tools-dropdown-category">
+                            <div class="category-header">
+                                <h4>🧠 Micro-Tools</h4>
+                                <span class="category-arrow">▼</span>
+                            </div>
+                            <div class="category-items">
+                                <a href="/manifest.html"><span class="emoji">🎯</span> Manifestation Readiness</a>
+                                <a href="/energyleak.html"><span class="emoji">🔋</span> Energy Leak Locator</a>
+                                <a href="/identity-split-detector.html"><span class="emoji">🎭</span> Identity Split</a>
+                                <a href="/hidden-strengths-revealer.html"><span class="emoji">💪</span> Hidden Strengths</a>
+                                <a href="/power-avoidance-pattern.html"><span class="emoji">👑</span> Power Avoidance</a>
+                                <a href="/trust-radar.html"><span class="emoji">🎯</span> Trust Radar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1756,6 +1841,15 @@
                     timeout = setTimeout(() => {
                         toolsDropdown.classList.remove('active');
                     }, 300);
+                });
+                
+                // Collapsible Categories
+                const categoryHeaders = toolsDropdown.querySelectorAll('.category-header');
+                categoryHeaders.forEach(header => {
+                    header.addEventListener('click', function() {
+                        const category = this.parentElement;
+                        category.classList.toggle('expanded');
+                    });
                 });
             }
         });
