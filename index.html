@@ -929,13 +929,16 @@
             }
 
             .qm-header-inner {
+                justify-content: space-between;
+            }
+            
+            .qm-logo {
+                flex: 1;
                 justify-content: center;
-                flex-wrap: wrap;
-                gap: 15px;
             }
 
             .qm-logo-text {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
 
             .qm-nav {
@@ -1073,14 +1076,13 @@
     <!-- Header -->
     <header class="qm-header">
         <div class="qm-header-inner">
-            <a href="/" class="qm-logo">
-                <div class="qm-logo-icon">🧙‍♂️</div>
+            <div class="qm-logo">
                 <div class="qm-logo-text">Quantum Merlin</div>
-            </a>
+            </div>
             
             <nav class="qm-nav">
                 <div class="qm-nav-item" id="toolsNavBtn">
-                    <span>Tools</span>
+                    <span>🧰</span>
                     <span class="dropdown-arrow">▼</span>
                     
                     <div class="tools-dropdown" id="toolsDropdown">
@@ -1108,14 +1110,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <a href="./quantum-rose.html" class="qm-nav-item" style="color: #ff6ec7;">
-                    <span>🌹 Quantum Rose</span>
-                </a>
-                
-                <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="qm-coffee-btn" title="Buy Me a Coffee">
-                    <span style="font-size: 1.8rem;">☕</span>
-                </a>
             </nav>
         </div>
     </header>
@@ -1699,6 +1693,24 @@
         </div>
     </section>
 
+    <!-- Support Card -->
+    <section style="padding: 60px 20px; max-width: 800px; margin: 0 auto;">
+        <div style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 245, 255, 0.1)); border: 2px solid rgba(255, 215, 0, 0.4); border-radius: 25px; padding: 40px; text-align: center;">
+            <h2 style="font-family: 'Orbitron', monospace; font-size: 2rem; color: #ffd700; margin-bottom: 20px;">💫 Keep Quantum Merlin Free</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: rgba(255, 255, 255, 0.9); margin-bottom: 25px;">
+                We're committed to keeping all our tools <strong style="color: #00f5ff;">100% free forever</strong>. While ads will eventually be added to sustain the platform, your support through donations and premium readings can help us stay ad-free and continue expanding our mystical toolkit.
+            </p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+                <a href="https://buymeacoffee.com/quantummerlin" target="_blank" style="padding: 15px 30px; background: linear-gradient(135deg, #FFDD00, #FFA500); color: #000; font-family: 'Orbitron', monospace; font-weight: 700; border-radius: 25px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 221, 0, 0.3);">
+                    <span style="font-size: 1.5rem;">☕</span> Support Us
+                </a>
+                <a href="./quantum-rose.html" style="padding: 15px 30px; background: linear-gradient(135deg, rgba(255, 110, 199, 0.3), rgba(196, 113, 237, 0.3)); border: 2px solid #ff6ec7; color: #ff6ec7; font-family: 'Orbitron', monospace; font-weight: 700; border-radius: 25px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease;">
+                    <span>🌹</span> Premium Readings
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Quantum Merlin. Bridging ancient wisdom with quantum possibilities.</p>
@@ -1706,10 +1718,9 @@
             <a href="./genesis/privacy.html" style="color: #00f5ff; text-decoration: none; margin: 0 15px;">Privacy Policy</a>
             <a href="./genesis/terms.html" style="color: #00f5ff; text-decoration: none; margin: 0 15px;">Terms of Service</a>
             <a href="./genesis/disclaimer.html" style="color: #00f5ff; text-decoration: none; margin: 0 15px;">Disclaimer</a>
-            <a href="./quantum-rose.html" style="color: #ff6ec7; text-decoration: none; margin: 0 15px;">🌹 Quantum Rose</a>
         </p>
         <p style="margin-top: 15px;">
-            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" style="color: #00f5ff; text-decoration: none;">☕ Support This Project</a>
+            <a href="/" style="color: #00f5ff; text-decoration: none; font-family: 'Orbitron', monospace; font-weight: 600;">quantummerlin.com</a>
         </p>
     </footer>
     </div>
