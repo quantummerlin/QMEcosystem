@@ -19,6 +19,8 @@
             --neon-purple: #9d00ff;
             --rose-pink: #ff6ec7;
             --rose-magenta: #c471ed;
+            --sparkle-white: #ffffff;
+            --star-blue: #4fc3f7;
         }
         
         * {
@@ -39,6 +41,20 @@
             padding: 40px 20px;
             overflow-x: hidden;
             position: relative;
+        }
+        
+        /* Sparkle Cursor Trail */
+        .sparkle-cursor {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            font-size: 12px;
+            animation: sparkleTrail 1s ease-out forwards;
+        }
+        
+        @keyframes sparkleTrail {
+            0% { opacity: 1; transform: scale(1) translateY(0); }
+            100% { opacity: 0; transform: scale(0) translateY(-30px); }
         }
         
         /* Animated Background */
@@ -71,8 +87,76 @@
         }
         
         @keyframes floatSymbol {
-            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.15; }
-            50% { transform: translateY(-30px) rotate(10deg); opacity: 0.25; }
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.15; }
+            25% { transform: translateY(-15px) rotate(5deg) scale(1.1); opacity: 0.3; }
+            50% { transform: translateY(-30px) rotate(10deg) scale(1); opacity: 0.25; }
+            75% { transform: translateY(-15px) rotate(-5deg) scale(1.1); opacity: 0.35; }
+        }
+        
+        /* Shooting Stars */
+        .shooting-star {
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-cyan), transparent);
+            border-radius: 50%;
+            animation: shootingStar 3s ease-in-out infinite;
+            opacity: 0;
+        }
+        
+        .shooting-star::before {
+            content: '⭐';
+            position: absolute;
+            left: -5px;
+            top: -8px;
+            font-size: 14px;
+        }
+        
+        @keyframes shootingStar {
+            0% { transform: translateX(-100px) translateY(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(calc(100vw + 100px)) translateY(200px); opacity: 0; }
+        }
+        
+        /* Twinkling Stars Background */
+        .twinkle-container {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        
+        .twinkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; transform: scale(1); box-shadow: 0 0 3px white; }
+            50% { opacity: 1; transform: scale(1.5); box-shadow: 0 0 10px white, 0 0 20px var(--neon-cyan); }
+        }
+        
+        /* Magic Dust Particles */
+        .dust-particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: var(--neon-gold);
+            border-radius: 50%;
+            animation: dustFloat 8s ease-in-out infinite;
+            box-shadow: 0 0 6px var(--neon-gold);
+        }
+        
+        @keyframes dustFloat {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 0.8; }
+            50% { transform: translateY(-100px) translateX(20px); opacity: 0.6; }
+            90% { opacity: 0.2; }
+            100% { transform: translateY(-200px) translateX(-10px); opacity: 0; }
         }
         
         /* Main Content */
@@ -94,22 +178,98 @@
         
         .guide {
             font-size: 4rem;
-            animation: gentlePulse 3s ease-in-out infinite;
+            animation: gentlePulse 3s ease-in-out infinite, floatGuide 4s ease-in-out infinite;
+            position: relative;
+        }
+        
+        .guide::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+            animation: sparkleRing 2s linear infinite;
+        }
+        
+        .guide::after {
+            content: '✨';
+            position: absolute;
+            font-size: 1rem;
+            top: -10px;
+            right: -5px;
+            animation: miniSparkle 1s ease-in-out infinite;
+        }
+        
+        @keyframes floatGuide {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes sparkleRing {
+            0% { transform: rotate(0deg) scale(1); opacity: 0.5; }
+            50% { transform: rotate(180deg) scale(1.1); opacity: 0.8; }
+            100% { transform: rotate(360deg) scale(1); opacity: 0.5; }
+        }
+        
+        @keyframes miniSparkle {
+            0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+            50% { opacity: 0.5; transform: scale(1.3) rotate(20deg); }
         }
         
         .guide.merlin {
-            filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.6));
+            filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.6)) drop-shadow(0 0 40px rgba(0, 245, 255, 0.3));
+        }
+        
+        .guide.merlin::after {
+            content: '💜';
         }
         
         .guide.rose {
-            filter: drop-shadow(0 0 20px rgba(255, 110, 199, 0.6));
+            filter: drop-shadow(0 0 20px rgba(255, 110, 199, 0.6)) drop-shadow(0 0 40px rgba(255, 110, 199, 0.3));
             animation-delay: 1.5s;
+        }
+        
+        .guide.rose::after {
+            content: '💖';
+            left: -5px;
+            right: auto;
         }
         
         .portal {
             width: 80px;
             height: 80px;
             position: relative;
+        }
+        
+        .portal::before {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            background: radial-gradient(circle, rgba(0,245,255,0.3) 0%, transparent 70%);
+            animation: portalGlow 2s ease-in-out infinite;
+            border-radius: 50%;
+        }
+        
+        .portal::after {
+            content: '✦';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2rem;
+            color: white;
+            animation: portalCore 1.5s ease-in-out infinite;
+            text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+        }
+        
+        @keyframes portalGlow {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        @keyframes portalCore {
+            0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+            50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.3) rotate(180deg); }
         }
         
         .portal-ring {
@@ -123,6 +283,7 @@
         .portal-ring:nth-child(1) {
             border-top-color: var(--neon-cyan);
             border-right-color: var(--neon-cyan);
+            box-shadow: 0 0 15px var(--neon-cyan);
         }
         
         .portal-ring:nth-child(2) {
@@ -131,12 +292,14 @@
             border-left-color: var(--rose-pink);
             animation-direction: reverse;
             animation-duration: 3s;
+            box-shadow: 0 0 10px var(--rose-pink);
         }
         
         .portal-ring:nth-child(3) {
             inset: 20px;
             border-top-color: var(--neon-gold);
             animation-duration: 5s;
+            box-shadow: 0 0 8px var(--neon-gold);
         }
         
         @keyframes portalSpin {
@@ -158,6 +321,29 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin-bottom: 25px;
+            animation: shimmerTitle 3s ease-in-out infinite;
+            position: relative;
+        }
+        
+        .title::after {
+            content: '✨';
+            position: absolute;
+            right: -30px;
+            top: 0;
+            -webkit-text-fill-color: initial;
+            animation: titleSparkle 2s ease-in-out infinite;
+        }
+        
+        @keyframes shimmerTitle {
+            0%, 100% { filter: brightness(1) drop-shadow(0 0 5px rgba(0,245,255,0.3)); }
+            50% { filter: brightness(1.2) drop-shadow(0 0 20px rgba(255,110,199,0.5)); }
+        }
+        
+        @keyframes titleSparkle {
+            0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+            25% { opacity: 0.7; transform: scale(1.2) rotate(10deg); }
+            50% { opacity: 1; transform: scale(1) rotate(0deg); }
+            75% { opacity: 0.7; transform: scale(1.2) rotate(-10deg); }
         }
         
         .message {
@@ -183,6 +369,48 @@
             border-radius: 20px;
             padding: 30px;
             margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            animation: cardGlow 4s ease-in-out infinite;
+        }
+        
+        .notify-section::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, var(--neon-cyan), transparent, var(--rose-pink), transparent, var(--neon-gold), transparent);
+            background-size: 400% 400%;
+            animation: borderShimmer 8s linear infinite;
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        
+        .notify-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: sectionShine 4s ease-in-out infinite;
+        }
+        
+        @keyframes cardGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0,245,255,0.1); }
+            50% { box-shadow: 0 0 40px rgba(255,110,199,0.2), 0 0 60px rgba(0,245,255,0.1); }
+        }
+        
+        @keyframes borderShimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes sectionShine {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
         }
         
         .notify-title {
@@ -238,11 +466,35 @@
             font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .notify-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: btnShine 3s ease-in-out infinite;
+        }
+        
+        @keyframes btnShine {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
         }
         
         .notify-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 110, 199, 0.4);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 110, 199, 0.4), 0 0 40px rgba(255, 110, 199, 0.3);
+            animation: btnPulse 0.5s ease-in-out;
+        }
+        
+        @keyframes btnPulse {
+            0%, 100% { box-shadow: 0 8px 25px rgba(255, 110, 199, 0.4); }
+            50% { box-shadow: 0 8px 40px rgba(255, 110, 199, 0.6), 0 0 60px rgba(0, 245, 255, 0.3); }
         }
         
         /* Live Tools Section */
@@ -278,17 +530,67 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tool-link::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0,245,255,0.15) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .tool-link:hover::before {
+            opacity: 1;
+        }
+        
+        .tool-link::after {
+            content: '✨';
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 0.7rem;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease;
+        }
+        
+        .tool-link:hover::after {
+            opacity: 1;
+            transform: scale(1);
+            animation: linkSparkle 0.5s ease-out;
+        }
+        
+        @keyframes linkSparkle {
+            0% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1.5) rotate(180deg); }
+            100% { opacity: 1; transform: scale(1) rotate(360deg); }
         }
         
         .tool-link:hover {
             border-color: var(--neon-cyan);
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.2), 0 0 30px rgba(0, 245, 255, 0.1);
             background: rgba(0, 245, 255, 0.08);
         }
         
         .tool-link .emoji {
             font-size: 1.3rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .tool-link:hover .emoji {
+            transform: scale(1.2) rotate(10deg);
+            animation: emojiPop 0.4s ease-out;
+        }
+        
+        @keyframes emojiPop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.4) rotate(15deg); }
+            100% { transform: scale(1.2) rotate(10deg); }
         }
         
         /* Action Buttons */
@@ -316,17 +618,42 @@
         .action-btn.primary {
             background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
             color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .action-btn.primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: primaryShine 4s ease-in-out infinite;
+        }
+        
+        @keyframes primaryShine {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
         }
         
         .action-btn.secondary {
             background: transparent;
             border: 2px solid rgba(255, 255, 255, 0.3);
             color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .action-btn.secondary:hover {
+            border-color: var(--rose-pink);
+            color: var(--rose-pink);
+            text-shadow: 0 0 10px var(--rose-pink);
         }
         
         .action-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3), 0 0 40px rgba(0, 245, 255, 0.2);
         }
         
         /* Footer Quote */
@@ -335,10 +662,60 @@
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.5);
             font-style: italic;
+            position: relative;
+            animation: quoteGlow 4s ease-in-out infinite;
+        }
+        
+        .footer-quote::before {
+            content: '「';
+            color: var(--neon-cyan);
+            opacity: 0.5;
+            margin-right: 5px;
+        }
+        
+        .footer-quote::after {
+            content: '」';
+            color: var(--rose-pink);
+            opacity: 0.5;
+            margin-left: 5px;
         }
         
         .footer-quote span {
             color: var(--rose-pink);
+            text-shadow: 0 0 10px rgba(255, 110, 199, 0.5);
+            animation: nameGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes quoteGlow {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes nameGlow {
+            0%, 100% { text-shadow: 0 0 10px rgba(255, 110, 199, 0.5); }
+            50% { text-shadow: 0 0 20px rgba(255, 110, 199, 0.8), 0 0 30px rgba(255, 110, 199, 0.4); }
+        }
+        
+        /* Magical Orbs Floating */
+        .magic-orb {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: orbFloat 10s ease-in-out infinite;
+        }
+        
+        .magic-orb.cyan { background: var(--neon-cyan); box-shadow: 0 0 15px var(--neon-cyan); }
+        .magic-orb.pink { background: var(--rose-pink); box-shadow: 0 0 15px var(--rose-pink); }
+        .magic-orb.gold { background: var(--neon-gold); box-shadow: 0 0 15px var(--neon-gold); }
+        .magic-orb.purple { background: var(--neon-purple); box-shadow: 0 0 15px var(--neon-purple); }
+        
+        @keyframes orbFloat {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.4; }
+            25% { transform: translateY(-50px) translateX(30px) scale(1.2); opacity: 0.8; }
+            50% { transform: translateY(-20px) translateX(-20px) scale(0.8); opacity: 0.6; }
+            75% { transform: translateY(-70px) translateX(10px) scale(1.1); opacity: 0.7; }
         }
         
         /* Mobile */
@@ -370,6 +747,8 @@
     <!-- Animated Background -->
     <div class="bg-container">
         <div class="bg-gradient"></div>
+        
+        <!-- Floating Symbols -->
         <div class="floating-symbols">
             <div class="symbol" style="left: 10%; top: 20%; animation-delay: 0s;">✨</div>
             <div class="symbol" style="left: 85%; top: 15%; animation-delay: 2s;">🌙</div>
@@ -378,7 +757,39 @@
             <div class="symbol" style="left: 50%; top: 85%; animation-delay: 8s;">💫</div>
             <div class="symbol" style="left: 5%; top: 50%; animation-delay: 3s;">🌹</div>
             <div class="symbol" style="left: 90%; top: 45%; animation-delay: 5s;">⚛️</div>
+            <div class="symbol" style="left: 40%; top: 10%; animation-delay: 1s;">🌟</div>
+            <div class="symbol" style="left: 60%; top: 90%; animation-delay: 7s;">💜</div>
+            <div class="symbol" style="left: 15%; top: 40%; animation-delay: 9s;">🔯</div>
         </div>
+        
+        <!-- Twinkling Stars -->
+        <div class="twinkle-container" id="twinkles"></div>
+        
+        <!-- Shooting Stars -->
+        <div class="shooting-star" style="top: 10%; animation-delay: 0s;"></div>
+        <div class="shooting-star" style="top: 25%; animation-delay: 4s;"></div>
+        <div class="shooting-star" style="top: 45%; animation-delay: 8s;"></div>
+        <div class="shooting-star" style="top: 70%; animation-delay: 12s;"></div>
+        
+        <!-- Magic Dust Particles -->
+        <div class="dust-particle" style="left: 15%; bottom: 20%; animation-delay: 0s;"></div>
+        <div class="dust-particle" style="left: 30%; bottom: 10%; animation-delay: 1.5s;"></div>
+        <div class="dust-particle" style="left: 50%; bottom: 15%; animation-delay: 3s;"></div>
+        <div class="dust-particle" style="left: 70%; bottom: 8%; animation-delay: 4.5s;"></div>
+        <div class="dust-particle" style="left: 85%; bottom: 25%; animation-delay: 6s;"></div>
+        <div class="dust-particle" style="left: 25%; bottom: 5%; animation-delay: 2s;"></div>
+        <div class="dust-particle" style="left: 60%; bottom: 30%; animation-delay: 5s;"></div>
+        <div class="dust-particle" style="left: 40%; bottom: 0%; animation-delay: 7s;"></div>
+        
+        <!-- Magical Floating Orbs -->
+        <div class="magic-orb cyan" style="left: 20%; top: 30%; animation-delay: 0s;"></div>
+        <div class="magic-orb pink" style="left: 80%; top: 25%; animation-delay: 2s;"></div>
+        <div class="magic-orb gold" style="left: 10%; top: 60%; animation-delay: 4s;"></div>
+        <div class="magic-orb purple" style="left: 90%; top: 70%; animation-delay: 6s;"></div>
+        <div class="magic-orb cyan" style="left: 50%; top: 15%; animation-delay: 1s;"></div>
+        <div class="magic-orb pink" style="left: 35%; top: 80%; animation-delay: 3s;"></div>
+        <div class="magic-orb gold" style="left: 65%; top: 45%; animation-delay: 5s;"></div>
+        <div class="magic-orb purple" style="left: 5%; top: 85%; animation-delay: 7s;"></div>
     </div>
     
     <!-- Main Content -->
@@ -442,14 +853,58 @@
         // Capture the requested page for the form
         document.getElementById('requestedPage').value = window.location.href;
         
-        // Form submission
+        // Create twinkling stars
+        function createTwinkles() {
+            const container = document.getElementById('twinkles');
+            for (let i = 0; i < 50; i++) {
+                const twinkle = document.createElement('div');
+                twinkle.className = 'twinkle';
+                twinkle.style.left = Math.random() * 100 + '%';
+                twinkle.style.top = Math.random() * 100 + '%';
+                twinkle.style.animationDelay = Math.random() * 3 + 's';
+                twinkle.style.animationDuration = (1.5 + Math.random() * 2) + 's';
+                container.appendChild(twinkle);
+            }
+        }
+        createTwinkles();
+        
+        // Sparkle cursor trail effect
+        const sparkleEmojis = ['✨', '⭐', '💫', '🌟', '✦', '❋'];
+        let lastSparkle = 0;
+        document.addEventListener('mousemove', (e) => {
+            const now = Date.now();
+            if (now - lastSparkle < 80) return;
+            lastSparkle = now;
+            
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle-cursor';
+            sparkle.textContent = sparkleEmojis[Math.floor(Math.random() * sparkleEmojis.length)];
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 1000);
+        });
+        
+        // Tool link hover glow effect
+        document.querySelectorAll('.tool-link').forEach(link => {
+            link.addEventListener('mousemove', (e) => {
+                const rect = link.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                link.style.setProperty('--mouse-x', x + '%');
+                link.style.setProperty('--mouse-y', y + '%');
+            });
+        });
+        
+        // Form submission with sparkle burst
         document.getElementById('notifyForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             const form = e.target;
             const btn = form.querySelector('.notify-btn');
             const originalText = btn.textContent;
             
-            btn.textContent = 'Sending...';
+            btn.textContent = '✨ Sending...';
             btn.disabled = true;
             
             try {
@@ -460,14 +915,28 @@
                 });
                 
                 if (response.ok) {
-                    btn.textContent = '✓ You\'re on the list!';
+                    btn.textContent = '🎉 You\'re on the list!';
                     btn.style.background = 'linear-gradient(135deg, #00f5ff, #00ff88)';
                     form.querySelector('.email-input').value = '';
+                    
+                    // Create sparkle burst on success
+                    for (let i = 0; i < 20; i++) {
+                        setTimeout(() => {
+                            const sparkle = document.createElement('div');
+                            sparkle.className = 'sparkle-cursor';
+                            sparkle.textContent = sparkleEmojis[Math.floor(Math.random() * sparkleEmojis.length)];
+                            const rect = btn.getBoundingClientRect();
+                            sparkle.style.left = (rect.left + rect.width/2 + (Math.random() - 0.5) * 100) + 'px';
+                            sparkle.style.top = (rect.top + rect.height/2 + (Math.random() - 0.5) * 60) + 'px';
+                            document.body.appendChild(sparkle);
+                            setTimeout(() => sparkle.remove(), 1000);
+                        }, i * 50);
+                    }
                 } else {
                     throw new Error('Failed');
                 }
             } catch (error) {
-                btn.textContent = 'Try again';
+                btn.textContent = '💔 Try again';
                 btn.style.background = 'linear-gradient(135deg, #ff4444, #ff0000)';
                 setTimeout(() => {
                     btn.textContent = originalText;
@@ -476,6 +945,22 @@
                 }, 2000);
             }
         });
+        
+        // Periodic sparkle bursts around the guides
+        function createGuideSparkles() {
+            const guides = document.querySelectorAll('.guide');
+            guides.forEach(guide => {
+                const rect = guide.getBoundingClientRect();
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle-cursor';
+                sparkle.textContent = sparkleEmojis[Math.floor(Math.random() * sparkleEmojis.length)];
+                sparkle.style.left = (rect.left + Math.random() * rect.width) + 'px';
+                sparkle.style.top = (rect.top + Math.random() * rect.height) + 'px';
+                document.body.appendChild(sparkle);
+                setTimeout(() => sparkle.remove(), 1000);
+            });
+        }
+        setInterval(createGuideSparkles, 2000);
     </script>
 </body>
 </html>
