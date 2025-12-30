@@ -147,15 +147,14 @@
         .tools-dropdown {
             position: absolute;
             top: calc(100% + 20px);
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
             background: rgba(10, 10, 15, 0.98);
             backdrop-filter: blur(25px);
             border: 1px solid rgba(0, 245, 255, 0.3);
             border-radius: 20px;
             padding: 20px;
-            min-width: 400px;
-            max-width: 500px;
+            min-width: 320px;
+            max-width: 400px;
             display: none;
             z-index: 10000;
             box-shadow: 0 15px 60px rgba(0, 0, 0, 0.6);
@@ -168,30 +167,27 @@
         }
 
         .tools-dropdown-category {
-            margin-bottom: 10px;
-            border: 1px solid rgba(0, 245, 255, 0.2);
-            border-radius: 12px;
-            overflow: hidden;
-            background: rgba(20, 20, 30, 0.5);
+            margin-bottom: 8px;
         }
 
         .category-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 12px 16px;
+            padding: 10px 12px;
             cursor: pointer;
             transition: all 0.3s ease;
             user-select: none;
+            border-radius: 8px;
         }
 
         .category-header:hover {
-            background: rgba(0, 245, 255, 0.1);
+            background: rgba(0, 245, 255, 0.08);
         }
 
         .category-header h4 {
             color: #ffd700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             margin: 0;
             text-transform: uppercase;
@@ -203,7 +199,7 @@
 
         .category-arrow {
             color: #00f5ff;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             transition: transform 0.3s ease;
         }
 
@@ -225,22 +221,23 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 10px 16px;
+            padding: 8px 12px;
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: all 0.3s ease;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(0, 245, 255, 0.1);
+            font-size: 0.88rem;
+            margin-left: 8px;
+            border-radius: 6px;
         }
 
         .category-items a:hover {
-            background: rgba(0, 245, 255, 0.15);
+            background: rgba(0, 245, 255, 0.12);
             color: #00f5ff;
-            padding-left: 20px;
+            padding-left: 16px;
         }
 
         .category-items a .emoji {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .dropdown-arrow {
@@ -988,6 +985,10 @@
             }
 
             .qm-nav-item span:first-child {
+                /* Keep icons visible */
+            }
+            
+            .library-text {
                 display: none;
             }
 
@@ -1195,6 +1196,11 @@
                         </div>
                     </div>
                 </div>
+                
+                <a href="./library.html" class="qm-nav-item" style="color: #c471ed;">
+                    <span>📚</span>
+                    <span class="library-text">Library</span>
+                </a>
             </nav>
         </div>
     </header>
