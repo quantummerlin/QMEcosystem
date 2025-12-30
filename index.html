@@ -111,11 +111,16 @@
             margin: 0 auto;
         }
 
-        .qm-logo {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            text-decoration: none;
+        /* Menu Button */
+        .menu-text {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00f5ff 0%, #ff00ff 50%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-right: 4px;
         }
 
         /* Header Navigation */
@@ -126,7 +131,7 @@
         }
 
         .qm-nav-item {
-            position:  relative;
+            position: relative;
             color: #00f5ff;
             font-family: 'Orbitron', monospace;
             font-weight: 500;
@@ -139,8 +144,11 @@
             gap: 6px;
         }
 
-        .qm-nav-item:hover {
-            color: #fff;
+        .qm-nav-item:hover .menu-text {
+            background: linear-gradient(135deg, #00f5ff 0%, #ffffff 50%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         /* Tools Dropdown */
@@ -971,13 +979,8 @@
                 justify-content: space-between;
             }
             
-            .qm-logo {
-                flex: 1;
-                justify-content: center;
-            }
-
-            .qm-logo-text {
-                font-size: 1rem;
+            .menu-text {
+                font-size: 0.95rem;
             }
 
             .qm-nav {
@@ -1119,13 +1122,9 @@
     <!-- Header -->
     <header class="qm-header">
         <div class="qm-header-inner">
-            <div class="qm-logo">
-                <div class="qm-logo-text">Quantum Merlin</div>
-            </div>
-            
             <nav class="qm-nav">
                 <div class="qm-nav-item" id="toolsNavBtn">
-                    <span>🧰</span>
+                    <span class="menu-text">MENU</span>
                     <span class="dropdown-arrow">▼</span>
                     
                     <div class="tools-dropdown" id="toolsDropdown">
