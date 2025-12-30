@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Reality Code Generator | Quantum Merlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #1a0033 0%, #330066 50%, #4d0099 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffd700, #ffed4e, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .quick-version-link {
+            display: inline-block;
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(0, 245, 255, 0.5);
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .quick-version-link:hover {
+            background: rgba(0, 245, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .quick-version-link {
+            display: inline-block;
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(0, 245, 255, 0.5);
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .quick-version-link:hover {
+            background: rgba(0, 245, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .step-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: none;
+        }
+
+        .step-container.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-header {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .step-number {
+            font-size: 0.8em;
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .category-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1em;
+        }
+
+        .category-btn:hover {
+            background: rgba(255, 215, 0, 0.2);
+            border-color: #ffd700;
+            transform: translateY(-5px);
+        }
+
+        .category-btn.selected {
+            background: rgba(255, 215, 0, 0.3);
+            border-color: #ffd700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .category-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .input-group {
+            margin: 25px 0;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .input-group input[type="text"],
+        .input-group input[type="number"],
+        .input-group textarea,
+        .input-group select {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1em;
+        }
+
+        .input-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .checkbox-label:hover {
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .slider-container {
+            margin: 30px 0;
+        }
+
+        .slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: linear-gradient(to right, 
+                #ff4444 0%, #ff4444 30%,
+                #ffaa00 30%, #ffaa00 60%,
+                #44ff44 60%, #44ff44 80%,
+                #ffaa00 80%, #ffaa00 90%,
+                #ff4444 90%, #ff4444 100%);
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #ffd700;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #ffd700;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .slider-value {
+            text-align: center;
+            font-size: 2em;
+            color: #ffd700;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .feedback-box {
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+
+        .feedback-box.warning {
+            background: rgba(255, 68, 68, 0.2);
+            border: 2px solid #ff4444;
+        }
+
+        .feedback-box.success {
+            background: rgba(68, 255, 68, 0.2);
+            border: 2px solid #44ff44;
+        }
+
+        .feedback-box.info {
+            background: rgba(255, 170, 0, 0.2);
+            border: 2px solid #ffaa00;
+        }
+
+        .intention-display {
+            background: rgba(255, 215, 0, 0.1);
+            border: 3px solid #ffd700;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .intention-text {
+            font-size: 1.5em;
+            font-weight: 600;
+            line-height: 1.6;
+            color: #ffd700;
+            margin: 20px 0;
+        }
+
+        .reality-code-display {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+            border: 4px solid #ffd700;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .reality-code-number {
+            font-family: 'Cinzel', serif;
+            font-size: 4em;
+            font-weight: 700;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            margin: 20px 0;
+        }
+
+        .calculation-details {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            max-height: 300px;
+            overflow-y: auto;
+            text-align: left;
+        }
+
+        .calculation-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #1a0033;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 10px;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px 5px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .checklist {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .checklist li {
+            padding: 12px;
+            margin: 8px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .checklist li::before {
+            content: '✓';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: #44ff44;
+            color: #1a0033;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .checklist li.unchecked::before {
+            content: '✗';
+            background: #ff4444;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ffd700, #ffed4e);
+            transition: width 0.5s ease;
+        }
+
+        .info-box {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid #ffd700;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .info-box h4 {
+            font-family: 'Cinzel', serif;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .exponential-chart {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .chart-row {
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr;
+            gap: 15px;
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            align-items: center;
+        }
+
+        .chart-row.header {
+            font-weight: 600;
+            color: #ffd700;
+            border-bottom: 2px solid #ffd700;
+        }
+
+        .threshold-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .threshold-baseline { background: rgba(255, 255, 255, 0.2); }
+        .threshold-probable { background: rgba(255, 215, 0, 0.3); }
+        .threshold-inevitable { background: rgba(255, 140, 0, 0.3); }
+        .threshold-earth { background: rgba(255, 68, 68, 0.3); }
+        .threshold-cosmic { background: rgba(138, 43, 226, 0.3); }
+        .threshold-universal { background: rgba(0, 0, 0, 0.5); }
+        .threshold-omniversal { background: linear-gradient(135deg, #ffd700, #ff00ff); }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .reality-code-number {
+                font-size: 2.5em;
+            }
+            
+            .chart-row {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔮 Quantum Reality Code Generator</h1>
+            <p>Transform your intention into a quantum frequency that manifests through exponential collective power</p>
+            <a href="/qrcodes.html" class="quick-version-link">⚡ Switch to Quick Version (60 seconds)</a>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Step 1: Welcome -->
+        <div class="step-container active" id="step1">
+            <h2 class="step-header">Welcome to the Intention Crafting System</h2>
+            <p class="step-number">STEP 1 OF 10</p>
+            
+            <div class="info-box">
+                <h4>What You'll Create:</h4>
+                <p>In the next 10 minutes, you'll craft a quantum-optimized intention statement and generate your personalized Reality Code - a numerical frequency that becomes exponentially more powerful as others amplify it.</p>
+            </div>
+
+            <div class="info-box">
+                <h4>The Exponential Power Formula:</h4>
+                <p><strong>2^n - 1</strong> (where n = number of people who comment your code)</p>
+                <ul style="margin-top: 15px; line-height: 1.8;">
+                    <li>10 comments = 2,047 realities affected (PROBABLE manifestation)</li>
+                    <li>20 comments = 2,097,151 realities affected (INEVITABLE manifestation)</li>
+                    <li>33 comments = 17,179,869,183 realities affected (EARTH SCALE)</li>
+                    <li>111 comments = 2.6 DECILLION realities affected (COSMIC SCALE)</li>
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn" onclick="nextStep(2)">Start Intention Builder</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Category Selection -->
+        <div class="step-container" id="step2">
+            <h2 class="step-header">Choose Your Desire Category</h2>
+            <p class="step-number">STEP 2 OF 10</p>
+            
+            <p style="margin-bottom: 30px;">What area of life is this intention for?</p>
+
+            <div class="category-grid">
+                <div class="category-btn" onclick="selectCategory('financial')">
+                    <div class="category-icon">💰</div>
+                    <div>Financial/Career</div>
+                </div>
+                <div class="category-btn" onclick="selectCategory('relationships')">
+                    <div class="category-icon">❤️</div>
+                    <div>Relationships</div>
+                </div>
+                <div class="category-btn" onclick="selectCategory('living')">
+                    <div class="category-icon">🏠</div>
+                    <div>Living Situation</div>
+                </div>
+                <div class="category-btn" onclick="selectCategory('health')">
+                    <div class="category-icon">💪</div>
+                    <div>Health/Body</div>
+                </div>
+                <div class="category-btn" onclick="selectCategory('creative')">
+                    <div class="category-icon">🎨</div>
+                    <div>Creative/Purpose</div>
+                </div>
+                <div class="category-btn" onclick="selectCategory('growth')">
+                    <div class="category-icon">🧠</div>
+                    <div>Personal Growth</div>
+                </div>
+                <div class="category-btn" onclick="selectCategory('energy')">
+                    <div class="category-icon">⚡</div>
+                    <div>Energy/State</div>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="prevStep(1)">Back</button>
+                <button class="btn" onclick="nextStep(3)" id="categoryNextBtn" disabled>Continue</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Specific Outcome -->
+        <div class="step-container" id="step3">
+            <h2 class="step-header">Define Your Specific Outcome</h2>
+            <p class="step-number">STEP 3 OF 10</p>
+            
+            <div id="outcomeQuestions"></div>
+
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="prevStep(2)">Back</button>
+                <button class="btn" onclick="nextStep(4)">Continue</button>
+            </div>
+        </div>
+
+        <!-- Step 4: Emotional Fuel -->
+        <div class="step-container" id="step4">
+            <h2 class="step-header">Add Emotional Fuel</h2>
+            <p class="step-number">STEP 4 OF 10</p>
+            
+            <p style="margin-bottom: 20px;">How will you FEEL when you have this? Select 1-3 feeling words:</p>
+
+            <div class="checkbox-group" id="feelingWords">
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="joy"> Joy</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="peace"> Peace</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="freedom"> Freedom</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="gratitude"> Gratitude</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="love"> Love</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="excitement"> Excitement</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="ease"> Ease</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="flow"> Flow</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="delight"> Delight</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="fulfillment"> Fulfillment</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="bliss"> Bliss</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="wonder"> Wonder</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="confidence"> Confidence</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="power"> Power</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="safety"> Safety</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="abundance"> Abundance</label>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="prevStep(3)">Back</button>
+                <button class="btn" onclick="nextStep(5)">Continue</button>
+            </div>
+        </div>
+
+        <!-- Step 5: Timeframe -->
+        <div class="step-container" id="step5">
+            <h2 class="step-header">Set Your Timeframe (Optional)</h2>
+            <p class="step-number">STEP 5 OF 10</p>
+            
+            <p style="margin-bottom: 20px;">When do you want this to manifest?</p>
+
+            <div class="info-box">
+                <p>⚠️ Only add a timeframe if it feels exciting, not pressured.</p>
+            </div>
+
+            <div class="category-grid">
+                <div class="category-btn" onclick="selectTimeframe('now')">NOW<br>(immediate)</div>
+                <div class="category-btn" onclick="selectTimeframe('week')">THIS WEEK<br>(within 7 days)</div>
+                <div class="category-btn" onclick="selectTimeframe('month')">THIS MONTH<br>(within 30 days)</div>
+                <div class="category-btn" onclick="selectTimeframe('quarter')">THIS QUARTER<br>(within 90 days)</div>
+                <div class="category-btn" onclick="selectTimeframe('year')">THIS YEAR<br>(within 12 months)</div>
+                <div class="category-btn" onclick="selectTimeframe('perfect')">AT THE PERFECT TIME<br>(divine timing)</div>
+                <div class="category-btn" onclick="selectTimeframe('none')">NO TIMEFRAME<br>(remove time pressure)</div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="prevStep(4)">Back</button>
+                <button class="btn" onclick="nextStep(6)">Continue</button>
+            </div>
+        </div>
+
+        <!-- Step 6: Draft Intention -->
+        <div class="step-container" id="step6">
+            <h2 class="step-header">Your Draft Intention</h2>
+            <p class="step-number">STEP 6 OF 10</p>
+            
+            <p style="margin-bottom: 20px;">Based on your answers, here's your draft intention:</p>
+
+            <div class="intention-display">
+                <div class="intention-text" id="draftIntention"></div>
+            </div>
+
+            <div class="input-group">
+                <label>Want to edit it? Make changes below:</label>
+                <textarea id="intentionEdit" rows="4"></textarea>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="prevStep(5)">Back</button>
+                <button class="btn" onclick="nextStep(7)">This is Perfect</button>
+            </div>
+        </div>
+
+        <!-- Step 7: Nervous System Check -->
+        <div class="step-container" id="step7">
+            <h2 class="step-header">Nervous System Check</h2>
+            <p class="step-number">STEP 7 OF 10</p>
+            
+            <div class="info-box">
+                <h4>Say your intention out loud right now:</h4>
+                <div class="intention-text" id="nervousSystemIntention"></div>
+            </div>
+
+            <p style="margin: 30px 0 20px;">How does your body feel when you say this? Rate from 1-10:</p>
+
+            <div class="slider-container">
+                <input type="range" min="1" max="10" value="5" class="slider" id="nervousSystemSlider">
+                <div class="slider-labels">
+                    <span>Shut down</span>
+                    <span>Excited</span>
+                    <span>Terrified</span>
+                </div>
+                <div class="slider-value" id="sliderValue">5</div>
+            </div>
+
+            <div id="nervousSystemFeedback"></div>
+
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="prevStep(6)">Back</button>
+                <button class="btn" onclick="nextStep(8)">Continue</button>
+            </div>
+        </div>
+
+        <!-- Step 8: Principle Check -->
+        <div class="step-container" id="step8">
+            <h2 class="step-header">Quantum Optimization Check</h2>
+            <p class="step-number">STEP 8 OF 10</p>
+            
+            <div class="intention-display">
+                <div class="intention-text" id="principleCheckIntention"></div>
+            </div>
+
+            <p style="margin: 30px 0 20px;">Checking against 7 Quantum Principles:</p>
+
+            <ul class="checklist" id="principleChecklist">
+                <li>Present tense (I AM, not I WILL)</li>
+                <li>Positive framing (what you want, not what you don't want)</li>
+                <li>Specific but flexible (clear desire with room for "or better")</li>
+                <li>Emotionally charged (includes feeling words)</li>
+                <li>Believable stretch (7-8 on nervous system scale)</li>
+                <li>Aligned with values (authentic to who you are)</li>
+                <li>Singular focus (one clear outcome)</li>
+            </ul>
+
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="prevStep(7)">Back</button>
+                <button class="btn" onclick="nextStep(9)">Generate Reality Code</button>
+            </div>
+        </div>
+
+        <!-- Step 9: Reality Code Calculation -->
+        <div class="step-container" id="step9">
+            <h2 class="step-header">Generating Your Reality Code</h2>
+            <p class="step-number">STEP 9 OF 10</p>
+            
+            <div class="info-box">
+                <p>Converting your intention to numerical frequency using English Ordinal Gematria (A=1, B=2, C=3... Z=26)</p>
+                <p style="margin-top: 10px;"><strong>Note:</strong> If your intention contains numbers, each digit is added separately (e.g., "10000" = 1+0+0+0+0 = 1)</p>
+            </div>
+
+            <div class="calculation-details" id="calculationDetails"></div>
+
+            <div class="reality-code-display">
+                <h3 style="font-family: 'Cinzel', serif; margin-bottom: 10px;">🔮 YOUR REALITY CODE:</h3>
+                <div class="reality-code-number" id="realityCodeNumber"></div>
+                <p style="margin-top: 20px; opacity: 0.9;">This is your quantum signature. This is your manifestation frequency. This is your permission slip.</p>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="prevStep(8)">Back</button>
+                <button class="btn" onclick="nextStep(10)">Continue to Activation</button>
+            </div>
+        </div>
+
+        <!-- Step 10: Activation & Next Steps -->
+        <div class="step-container" id="step10">
+            <h2 class="step-header">Activate Your Reality Code</h2>
+            <p class="step-number">STEP 10 OF 10</p>
+            
+            <div class="reality-code-display">
+                <h3 style="font-family: 'Cinzel', serif;">Your Intention:</h3>
+                <div class="intention-text" id="finalIntention"></div>
+                <h3 style="font-family: 'Cinzel', serif; margin-top: 30px;">Your Reality Code:</h3>
+                <div class="reality-code-number" id="finalCode"></div>
+            </div>
+
+            <div class="info-box">
+                <h4>ACTIVATION RITUAL:</h4>
+                <ol style="line-height: 2; margin-top: 15px;">
+                    <li>Place your hand on your heart</li>
+                    <li>Say your intention out loud 3 times</li>
+                    <li>Say "My Reality Code is [your number]" 3 times</li>
+                    <li>Say "I activate this frequency now"</li>
+                    <li>Feel where this activates in your body</li>
+                </ol>
+            </div>
+
+            <div class="exponential-chart">
+                <h3 style="font-family: 'Cinzel', serif; text-align: center; margin-bottom: 20px;">The Exponential Power Curve</h3>
+                <div class="chart-row header">
+                    <div>Comments</div>
+                    <div>Realities Affected</div>
+                    <div>Threshold</div>
+                </div>
+                <div class="chart-row">
+                    <div>1</div>
+                    <div>1</div>
+                    <div><span class="threshold-badge threshold-baseline">⚪ Baseline</span></div>
+                </div>
+                <div class="chart-row">
+                    <div>10</div>
+                    <div>2,047</div>
+                    <div><span class="threshold-badge threshold-probable">🟡 PROBABLE</span></div>
+                </div>
+                <div class="chart-row">
+                    <div>20</div>
+                    <div>2,097,151</div>
+                    <div><span class="threshold-badge threshold-inevitable">🟠 INEVITABLE</span></div>
+                </div>
+                <div class="chart-row">
+                    <div>33</div>
+                    <div>17,179,869,183</div>
+                    <div><span class="threshold-badge threshold-earth">🔴 EARTH SCALE</span></div>
+                </div>
+                <div class="chart-row">
+                    <div>50</div>
+                    <div>2.25 Quadrillion</div>
+                    <div><span class="threshold-badge threshold-cosmic">🟣 COSMIC</span></div>
+                </div>
+                <div class="chart-row">
+                    <div>80</div>
+                    <div>2.42 Septillion</div>
+                    <div><span class="threshold-badge threshold-universal">⚫ UNIVERSAL</span></div>
+                </div>
+                <div class="chart-row">
+                    <div>111</div>
+                    <div>2.6 DECILLION</div>
+                    <div><span class="threshold-badge threshold-omniversal">⭐ OMNIVERSAL</span></div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>YOUR 28-DAY PROTOCOL:</h4>
+                <p><strong>DAILY:</strong></p>
+                <ul style="line-height: 1.8; margin: 10px 0;">
+                    <li>Say your intention 3x (morning)</li>
+                    <li>Say your Reality Code 3x (morning & evening)</li>
+                    <li>Comment on 5-10 codes in the Quantum Reality Codes community</li>
+                    <li>Track synchronicities (seeing your code number, unexpected opportunities)</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>IMPORTANT:</strong> Before posting your code, comment on 10 other codes first. This seeds the quantum field with generosity and opens your receiving channels.</p>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn" onclick="downloadResults()">📥 Download My Code</button>
+                <button class="btn" onclick="saveToLibrary()">💾 Save to Insight Library</button>
+                <button class="btn" onclick="startOver()">🔄 Create Another Code</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+        let userData = {
+            category: '',
+            outcome: {},
+            feelings: [],
+            timeframe: '',
+            intention: '',
+            nervousSystemScore: 5,
+            realityCode: 0
+        };
+
+        function updateProgress() {
+            const progress = (currentStep / 10) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function nextStep(step) {
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep = step;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+            updateProgress();
+            window.scrollTo(0, 0);
+            
+            if (step === 3) populateOutcomeQuestions();
+            if (step === 6) generateDraftIntention();
+            if (step === 7) populateNervousSystemCheck();
+            if (step === 8) populatePrincipleCheck();
+            if (step === 9) calculateRealityCode();
+            if (step === 10) populateFinalStep();
+        }
+
+        function prevStep(step) {
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep = step;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+            updateProgress();
+            window.scrollTo(0, 0);
+        }
+
+        function selectCategory(category) {
+            userData.category = category;
+            document.querySelectorAll('#step2 .category-btn').forEach(btn => btn.classList.remove('selected'));
+            event.target.closest('.category-btn').classList.add('selected');
+            document.getElementById('categoryNextBtn').disabled = false;
+        }
+
+        function populateOutcomeQuestions() {
+            const container = document.getElementById('outcomeQuestions');
+            let html = '';
+
+            switch(userData.category) {
+                case 'financial':
+                    html = `
+                        <div class="input-group">
+                            <label>How much money do you want to earn per month?</label>
+                            <input type="number" id="amount" placeholder="e.g., 10000">
+                        </div>
+                        <div class="input-group">
+                            <label>From what source?</label>
+                            <select id="source">
+                                <option value="online business">Online business</option>
+                                <option value="job">Job/Career</option>
+                                <option value="investments">Investments</option>
+                                <option value="multiple streams">Multiple streams</option>
+                                <option value="unexpected income">Unexpected/Divine source</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Doing what kind of work? (Optional)</label>
+                            <input type="text" id="work" placeholder="e.g., coaching, writing, consulting">
+                        </div>
+                    `;
+                    break;
+                case 'relationships':
+                    html = `
+                        <div class="input-group">
+                            <label>What type of relationship?</label>
+                            <input type="text" id="relType" placeholder="e.g., romantic partner, deep friendships">
+                        </div>
+                        <div class="input-group">
+                            <label>What qualities does this person/people have?</label>
+                            <textarea id="qualities" placeholder="e.g., loving, supportive, adventurous"></textarea>
+                        </div>
+                    `;
+                    break;
+                case 'living':
+                    html = `
+                        <div class="input-group">
+                            <label>Where do you want to live?</label>
+                            <input type="text" id="location" placeholder="e.g., beach town, mountain retreat">
+                        </div>
+                        <div class="input-group">
+                            <label>What type of home?</label>
+                            <input type="text" id="homeType" placeholder="e.g., cozy cottage, modern apartment">
+                        </div>
+                    `;
+                    break;
+                case 'health':
+                    html = `
+                        <div class="input-group">
+                            <label>What specific health outcome?</label>
+                            <input type="text" id="healthGoal" placeholder="e.g., vibrant energy, ideal weight">
+                        </div>
+                        <div class="input-group">
+                            <label>How do you want to FEEL physically?</label>
+                            <input type="text" id="physicalFeeling" placeholder="e.g., strong, energized">
+                        </div>
+                    `;
+                    break;
+                case 'creative':
+                    html = `
+                        <div class="input-group">
+                            <label>What are you creating?</label>
+                            <input type="text" id="creation" placeholder="e.g., book, business, art">
+                        </div>
+                        <div class="input-group">
+                            <label>Who are you serving?</label>
+                            <input type="text" id="audience" placeholder="e.g., thousands of people">
+                        </div>
+                    `;
+                    break;
+                case 'growth':
+                    html = `
+                        <div class="input-group">
+                            <label>What skill/knowledge/state?</label>
+                            <input type="text" id="growthGoal" placeholder="e.g., confidence, public speaking">
+                        </div>
+                        <div class="input-group">
+                            <label>What will this allow you to DO?</label>
+                            <input type="text" id="capability" placeholder="e.g., lead, teach, create">
+                        </div>
+                    `;
+                    break;
+                case 'energy':
+                    html = `
+                        <div class="input-group">
+                            <label>What state do you want to embody?</label>
+                            <input type="text" id="energyState" placeholder="e.g., peace, joy, confidence">
+                        </div>
+                        <div class="input-group">
+                            <label>In what situations?</label>
+                            <input type="text" id="situations" placeholder="e.g., daily life, work">
+                        </div>
+                    `;
+                    break;
+            }
+
+            container.innerHTML = html;
+        }
+
+        function selectTimeframe(timeframe) {
+            userData.timeframe = timeframe;
+            document.querySelectorAll('#step5 .category-btn').forEach(btn => btn.classList.remove('selected'));
+            event.target.closest('.category-btn').classList.add('selected');
+        }
+
+        function generateDraftIntention() {
+            const feelings = Array.from(document.querySelectorAll('input[name="feeling"]:checked'))
+                .map(cb => cb.value)
+                .join(' and ');
+            
+            userData.feelings = feelings;
+
+            let intention = 'I AM ';
+            
+            switch(userData.category) {
+                case 'financial':
+                    const amount = document.getElementById('amount').value;
+                    const source = document.getElementById('source').value;
+                    const work = document.getElementById('work').value;
+                    intention += `EARNING $${amount} PER MONTH FROM MY ${source.toUpperCase()}`;
+                    if (work) intention += ` DOING ${work.toUpperCase()}`;
+                    break;
+                case 'relationships':
+                    const relType = document.getElementById('relType').value;
+                    intention += `ATTRACTING MY IDEAL ${relType.toUpperCase()}`;
+                    break;
+                case 'living':
+                    const location = document.getElementById('location').value;
+                    const homeType = document.getElementById('homeType').value;
+                    intention += `LIVING IN MY ${homeType.toUpperCase()} IN ${location.toUpperCase()}`;
+                    break;
+                case 'health':
+                    const healthGoal = document.getElementById('healthGoal').value;
+                    intention += `EXPERIENCING ${healthGoal.toUpperCase()}`;
+                    break;
+                case 'creative':
+                    const creation = document.getElementById('creation').value;
+                    intention += `CREATING MY ${creation.toUpperCase()}`;
+                    break;
+                case 'growth':
+                    const growthGoal = document.getElementById('growthGoal').value;
+                    intention += `EMBODYING ${growthGoal.toUpperCase()}`;
+                    break;
+                case 'energy':
+                    const energyState = document.getElementById('energyState').value;
+                    intention += `EXPERIENCING ${energyState.toUpperCase()}`;
+                    break;
+            }
+
+            if (feelings) {
+                intention += ` WITH ${feelings.toUpperCase()}`;
+            }
+
+            const timeframeMap = {
+                'now': 'NOW',
+                'week': 'THIS WEEK',
+                'month': 'THIS MONTH',
+                'quarter': 'THIS QUARTER',
+                'year': 'THIS YEAR',
+                'perfect': 'AT THE PERFECT TIME',
+                'none': ''
+            };
+
+            if (userData.timeframe && userData.timeframe !== 'none') {
+                intention += ` ${timeframeMap[userData.timeframe]}`;
+            }
+
+            userData.intention = intention;
+            document.getElementById('draftIntention').textContent = intention;
+            document.getElementById('intentionEdit').value = intention;
+        }
+
+        function populateNervousSystemCheck() {
+            const intention = document.getElementById('intentionEdit').value || userData.intention;
+            userData.intention = intention;
+            document.getElementById('nervousSystemIntention').textContent = intention;
+            
+            const slider = document.getElementById('nervousSystemSlider');
+            const valueDisplay = document.getElementById('sliderValue');
+            const feedback = document.getElementById('nervousSystemFeedback');
+
+            slider.oninput = function() {
+                valueDisplay.textContent = this.value;
+                userData.nervousSystemScore = parseInt(this.value);
+                
+                let feedbackHTML = '';
+                if (this.value <= 3) {
+                    feedbackHTML = `
+                        <div class="feedback-box warning">
+                            <strong>⚠️ Too Big or Not Authentic</strong>
+                            <p>Your intention might be too big for your current nervous system capacity, or it may not be authentically aligned with your values. Consider scaling it down or checking if this is truly what you want.</p>
+                        </div>
+                    `;
+                } else if (this.value <= 6) {
+                    feedbackHTML = `
+                        <div class="feedback-box info">
+                            <strong>💡 Too Small</strong>
+                            <p>Your intention might be too comfortable. Consider stretching it bigger to create more growth and excitement. You want to feel a bit nervous, not completely calm.</p>
+                        </div>
+                    `;
+                } else if (this.value <= 8) {
+                    feedbackHTML = `
+                        <div class="feedback-box success">
+                            <strong>✅ PERFECT!</strong>
+                            <p>This is the sweet spot! You're excited and slightly nervous, which means your nervous system is stretched but not broken. This is optimal for manifestation.</p>
+                        </div>
+                    `;
+                } else {
+                    feedbackHTML = `
+                        <div class="feedback-box warning">
+                            <strong>⚠️ Too Big</strong>
+                            <p>Your intention is too big for your current capacity. Your nervous system is in panic mode, which will block manifestation. Scale it down to a 7-8 level.</p>
+                        </div>
+                    `;
+                }
+                
+                feedback.innerHTML = feedbackHTML;
+            };
+            
+            slider.oninput();
+        }
+
+        function populatePrincipleCheck() {
+            document.getElementById('principleCheckIntention').textContent = userData.intention;
+            
+            const checklist = document.getElementById('principleChecklist');
+            const items = checklist.querySelectorAll('li');
+            
+            const intention = userData.intention.toLowerCase();
+            
+            if (intention.includes('i am') || intention.includes('i have')) {
+                items[0].classList.remove('unchecked');
+            } else {
+                items[0].classList.add('unchecked');
+            }
+            
+            if (!intention.includes('not') && !intention.includes('no ') && !intention.includes('never')) {
+                items[1].classList.remove('unchecked');
+            } else {
+                items[1].classList.add('unchecked');
+            }
+            
+            items[2].classList.remove('unchecked');
+            
+            if (userData.feelings) {
+                items[3].classList.remove('unchecked');
+            } else {
+                items[3].classList.add('unchecked');
+            }
+            
+            if (userData.nervousSystemScore >= 7 && userData.nervousSystemScore <= 8) {
+                items[4].classList.remove('unchecked');
+            } else {
+                items[4].classList.add('unchecked');
+            }
+            
+            items[5].classList.remove('unchecked');
+            items[6].classList.remove('unchecked');
+        }
+
+        function calculateRealityCode() {
+            const intention = userData.intention.toUpperCase();
+            let total = 0;
+            let details = '';
+            
+            for (let char of intention) {
+                if (char >= 'A' && char <= 'Z') {
+                    const value = char.charCodeAt(0) - 64;
+                    total += value;
+                    details += `<div class="calculation-row"><span>${char}</span><span>${value}</span></div>`;
+                } else if (char >= '0' && char <= '9') {
+                    const digit = parseInt(char);
+                    total += digit;
+                    details += `<div class="calculation-row"><span>${char}</span><span>${digit}</span></div>`;
+                }
+            }
+            
+            userData.realityCode = total;
+            
+            document.getElementById('calculationDetails').innerHTML = details + 
+                `<div class="calculation-row" style="border-top: 2px solid #ffd700; margin-top: 10px; padding-top: 10px; font-weight: bold;"><span>TOTAL</span><span>${total}</span></div>`;
+            document.getElementById('realityCodeNumber').textContent = total;
+        }
+
+        function populateFinalStep() {
+            document.getElementById('finalIntention').textContent = userData.intention;
+            document.getElementById('finalCode').textContent = userData.realityCode;
+        }
+
+        function downloadResults() {
+            const content = `QUANTUM REALITY CODE
+═══════════════════════════════════════
+
+YOUR INTENTION:
+${userData.intention}
+
+YOUR REALITY CODE: ${userData.realityCode}
+
+═══════════════════════════════════════
+ACTIVATION RITUAL:
+1. Place your hand on your heart
+2. Say your intention out loud 3 times
+3. Say "My Reality Code is ${userData.realityCode}" 3 times
+4. Say "I activate this frequency now"
+5. Feel where this activates in your body
+
+═══════════════════════════════════════
+28-DAY PROTOCOL:
+
+DAILY:
+✓ Say your intention 3x (morning)
+✓ Say your Reality Code 3x (morning & evening)
+✓ Comment on 5-10 codes in the community
+✓ Track synchronicities
+
+═══════════════════════════════════════
+Generated: ${new Date().toLocaleDateString()}
+            `;
+            
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `reality-code-${userData.realityCode}.txt`;
+            a.click();
+        }
+
+        function saveToLibrary() {
+            const insight = {
+                tool: 'Quantum Reality Code Generator',
+                category: 'quantum',
+                timestamp: new Date().toISOString(),
+                intention: userData.intention,
+                realityCode: userData.realityCode,
+                summary: `Reality Code ${userData.realityCode}: ${userData.intention.substring(0, 100)}...`
+            };
+            
+            let insights = JSON.parse(localStorage.getItem('quantumInsights') || '[]');
+            insights.push(insight);
+            localStorage.setItem('quantumInsights', JSON.stringify(insights));
+            
+            alert('✅ Your Reality Code has been saved to your Insight Library!');
+        }
+
+        function startOver() {
+            if (confirm('Are you sure you want to create a new Reality Code?')) {
+                userData = {
+                    category: '',
+                    outcome: {},
+                    feelings: [],
+                    timeframe: '',
+                    intention: '',
+                    nervousSystemScore: 5,
+                    realityCode: 0
+                };
+                currentStep = 1;
+                document.querySelectorAll('.step-container').forEach(step => step.classList.remove('active'));
+                document.getElementById('step1').classList.add('active');
+                updateProgress();
+                window.scrollTo(0, 0);
+            }
+        }
+
+        updateProgress();
+    </script>
+</body>
+</html>
