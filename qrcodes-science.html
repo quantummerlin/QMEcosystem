@@ -408,14 +408,21 @@
         }
 
         .merlin-sigil {
-            font-size: 3.5rem;
+            font-size: clamp(2rem, 5vw, 3.5rem);
             margin-bottom: 25px;
             animation: pulse-sigil 3s ease-in-out infinite;
             filter: drop-shadow(0 0 20px rgba(218, 165, 32, 0.5));
-            letter-spacing: 20px;
+            letter-spacing: clamp(5px, 2vw, 20px);
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: clamp(5px, 2vw, 15px);
+        }
+
+        @media (max-width: 768px) {
+            .merlin-sigil {
+                gap: 8px;
+                letter-spacing: 8px;
+            }
         }
 
         @keyframes pulse-sigil {
@@ -2049,13 +2056,13 @@
         }
         
         // TOC Category Toggle
-        function toggleCategory(header) {
+        window.toggleCategory = function(header) {
             const category = header.closest('.toc-category');
             category.classList.toggle('collapsed');
         }
         
         // Scroll to Section from TOC
-        function scrollToSection(sectionId) {
+        window.scrollToSection = function(sectionId) {
             const section = document.getElementById(sectionId);
             if (section) {
                 // Expand the section if collapsed
@@ -2068,7 +2075,7 @@
         }
         
         // Mark Section as Read
-        function markAsRead(sectionId, btn) {
+        window.markAsRead = function(sectionId, btn) {
             const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
             
             if (!readSections.includes(sectionId)) {
