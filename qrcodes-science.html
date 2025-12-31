@@ -2037,32 +2037,19 @@
 
     <!-- JavaScript for Scroll Reveal and Section Toggle (Optimized) -->
     <script>
-        // Scroll Reveal Animation
-        const revealElements = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        revealElements.forEach(el => observer.observe(el));
-        
-        // Section Toggle (Collapsible)
-        function toggleSection(header) {
+        // Make all functions globally accessible BEFORE DOM loads
+        window.toggleSection = function(header) {
             const section = header.closest('.section');
             section.classList.toggle('collapsed');
-        }
+        };
         
-        // TOC Category Toggle
         window.toggleCategory = function(header) {
             const category = header.closest('.toc-category');
             category.classList.toggle('collapsed');
-        }
+        };
         
-        // Scroll to Section from TOC
         window.scrollToSection = function(sectionId) {
+            console.log('Scrolling to:', sectionId);
             const section = document.getElementById(sectionId);
             if (section) {
                 // Expand the section if collapsed
@@ -2071,11 +2058,13 @@
                 const yOffset = -20;
                 const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 window.scrollTo({top: y, behavior: 'smooth'});
+            } else {
+                console.error('Section not found:', sectionId);
             }
-        }
+        };
         
-        // Mark Section as Read
         window.markAsRead = function(sectionId, btn) {
+            console.log('Marking as read:', sectionId);
             const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
             
             if (!readSections.includes(sectionId)) {
@@ -2095,9 +2084,8 @@
             
             // Update progress
             updateProgress();
-        }
+        };
         
-        // Update Progress Bar
         function updateProgress() {
             const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
             const totalSections = document.querySelectorAll('.section[id]').length;
@@ -2110,7 +2098,6 @@
             document.getElementById('progress-fill').style.width = percentage + '%';
         }
         
-        // Load Read State on Page Load
         function loadReadState() {
             const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
             
@@ -2135,8 +2122,21 @@
             updateProgress();
         }
         
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        revealElements.forEach(el => observer.observe(el));
+        
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing...');
             loadReadState();
             
             // Start all TOC categories collapsed on mobile
@@ -2145,24 +2145,10 @@
                     cat.classList.add('collapsed');
                 });
             }
+            
+            // Log all section IDs for debugging
+            console.log('Available sections:', Array.from(document.querySelectorAll('.section[id]')).map(s => s.id));
         });
-        
-        // Category Filter (keeping for backward compatibility)
-        function filterSections(category) {
-            const sections = document.querySelectorAll('.section[data-category]');
-            const buttons = document.querySelectorAll('.category-btn');
-            
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            sections.forEach(section => {
-                if (category === 'all' || section.dataset.category === category) {
-                    section.style.display = 'block';
-                } else {
-                    section.style.display = 'none';
-                }
-            });
-        }
     </script>
 </body>
 </html>
