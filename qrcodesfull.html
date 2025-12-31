@@ -1246,6 +1246,192 @@
                 </div>
             </div>
 
+            <!-- Interactive Reality Calculator -->
+            <div style="background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(0, 245, 255, 0.2)); border-radius: 20px; padding: 35px; margin-top: 30px; backdrop-filter: blur(20px); border: 2px solid var(--quantum-cyan);">
+                <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 15px; text-align: center; font-size: 1.3rem;">🧮 Interactive Reality Calculator</h4>
+                <p style="text-align: center; margin-bottom: 30px; opacity: 0.9; font-size: 1.05rem;">Move the slider to see the exponential power in <strong style="color: var(--quantum-gold);">real-time</strong></p>
+                
+                <div style="background: rgba(0,0,0,0.4); border-radius: 15px; padding: 30px;">
+                    <label for="calcSliderFull" style="display: block; text-align: center; font-size: 1.1rem; margin-bottom: 20px; color: var(--quantum-gold); font-family: 'Orbitron', monospace;">
+                        Number of Amplifiers (Comments):
+                    </label>
+                    
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
+                        <input type="range" id="calcSliderFull" min="1" max="111" value="1" 
+                               style="flex: 1; height: 8px; border-radius: 5px; background: linear-gradient(90deg, #888 0%, var(--quantum-cyan) 33%, var(--quantum-gold) 66%, var(--quantum-magenta) 100%); outline: none; cursor: pointer;">
+                        <input type="number" id="calcNumberFull" min="1" max="111" value="1" 
+                               style="width: 80px; padding: 10px; background: rgba(0,0,0,0.5); border: 2px solid var(--quantum-cyan); border-radius: 8px; color: var(--quantum-cyan); font-family: 'Orbitron', monospace; font-size: 1.1rem; text-align: center;">
+                    </div>
+
+                    <div id="calcResultsFull" style="text-align: center; padding: 25px; background: rgba(0,245,255,0.08); border-radius: 12px; border: 2px solid var(--quantum-cyan);">
+                        <div style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 10px;">Realities Affected:</div>
+                        <div id="calcRealitiesFull" style="font-size: 2.8rem; font-family: 'Orbitron', monospace; color: var(--quantum-cyan); font-weight: 700; text-shadow: 0 0 20px rgba(0,245,255,0.5); margin-bottom: 15px;">
+                            1
+                        </div>
+                        <div id="calcThresholdFull" style="font-size: 1.1rem; font-family: 'Orbitron', monospace; color: var(--quantum-gold); font-weight: 600; padding: 12px; background: rgba(255,215,0,0.1); border-radius: 8px; margin-top: 15px;">
+                            Solo Practice
+                        </div>
+                        <div id="calcTimelineFull" style="margin-top: 15px; font-size: 0.95rem; opacity: 0.85; line-height: 1.6;">
+                            Begin your journey by sharing your code in the community
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 25px; text-align: center;">
+                        <div style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 15px;">Join the community to amplify your code:</div>
+                        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                            <a href="https://t.me/+BIChXgOqFH9iMmU1" target="_blank" rel="noopener noreferrer" 
+                               style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: linear-gradient(135deg, #0088cc, #00aaff); color: white; border-radius: 25px; text-decoration: none; font-weight: 600; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                               onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 20px rgba(0,170,255,0.4)'"
+                               onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                                <span style="font-size: 1.3rem;">📱</span>
+                                <span>Telegram Community</span>
+                            </a>
+                            <a href="https://www.facebook.com/share/g/1G8zmzjrKC/" target="_blank" rel="noopener noreferrer"
+                               style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: linear-gradient(135deg, #1877f2, #4267B2); color: white; border-radius: 25px; text-decoration: none; font-weight: 600; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                               onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 20px rgba(24,119,242,0.4)'"
+                               onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                                <span style="font-size: 1.3rem;">👥</span>
+                                <span>Facebook Group</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 25px; padding: 20px; background: rgba(255,215,0,0.08); border-radius: 12px; text-align: center; border-left: 4px solid var(--quantum-gold);">
+                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
+                        <strong style="color: var(--quantum-gold);">Reciprocity Formula:</strong> For every 10 codes you amplify (comment), you'll receive 3-5 amplifications back. Give first, receive exponentially. 🔄
+                    </p>
+                </div>
+            </div>
+
+            <script>
+                // Interactive Reality Calculator for Full Version
+                const sliderFull = document.getElementById('calcSliderFull');
+                const numberInputFull = document.getElementById('calcNumberFull');
+                const realitiesDisplayFull = document.getElementById('calcRealitiesFull');
+                const thresholdDisplayFull = document.getElementById('calcThresholdFull');
+                const timelineDisplayFull = document.getElementById('calcTimelineFull');
+                const resultsBoxFull = document.getElementById('calcResultsFull');
+
+                function calculateRealities(n) {
+                    return Math.pow(2, n) - 1;
+                }
+
+                function formatNumber(num) {
+                    if (num < 1000) return num.toLocaleString();
+                    if (num < 1000000) return (num / 1000).toFixed(1) + 'K';
+                    if (num < 1000000000) return (num / 1000000).toFixed(1) + 'M';
+                    if (num < 1000000000000) return (num / 1000000000).toFixed(1) + 'B';
+                    if (num < 1000000000000000) return (num / 1000000000000).toFixed(1) + 'T';
+                    if (num < 1000000000000000000) return (num / 1000000000000000).toFixed(1) + 'Q';
+                    return num.toExponential(2);
+                }
+
+                function getThresholdInfo(n) {
+                    if (n >= 111) {
+                        return {
+                            badge: '⭐ OMNIVERSAL THRESHOLD',
+                            color: '#FFD700',
+                            bgColor: 'rgba(255,215,0,0.15)',
+                            borderColor: '#FFD700',
+                            timeline: 'Manifestation is instantaneous. Thought = Reality.',
+                            glow: '0 0 30px rgba(255,215,0,0.8)'
+                        };
+                    } else if (n >= 80) {
+                        return {
+                            badge: '⚫ UNIVERSAL THRESHOLD',
+                            color: '#C0C0C0',
+                            bgColor: 'rgba(192,192,192,0.15)',
+                            borderColor: '#C0C0C0',
+                            timeline: 'Manifestation occurs within hours. Reality bends to your will.',
+                            glow: '0 0 25px rgba(192,192,192,0.6)'
+                        };
+                    } else if (n >= 50) {
+                        return {
+                            badge: '🟣 COSMIC THRESHOLD',
+                            color: '#8A2BE2',
+                            bgColor: 'rgba(138,43,226,0.15)',
+                            borderColor: '#8A2BE2',
+                            timeline: 'Manifestation within hours to days. Cosmic forces align.',
+                            glow: '0 0 20px rgba(138,43,226,0.6)'
+                        };
+                    } else if (n >= 33) {
+                        return {
+                            badge: '🔴 EARTH SCALE THRESHOLD',
+                            color: '#FF00FF',
+                            bgColor: 'rgba(255,0,255,0.15)',
+                            borderColor: '#FF00FF',
+                            timeline: 'Manifestation within 24-72 hours. Affecting more realities than humans on Earth.',
+                            glow: '0 0 20px rgba(255,0,255,0.6)'
+                        };
+                    } else if (n >= 21) {
+                        return {
+                            badge: '🟠 INEVITABLE THRESHOLD',
+                            color: '#FFA500',
+                            bgColor: 'rgba(255,165,0,0.15)',
+                            borderColor: '#FFA500',
+                            timeline: 'Manifestation within 3-7 days. Your intention is now inevitable.',
+                            glow: '0 0 15px rgba(255,165,0,0.5)'
+                        };
+                    } else if (n >= 11) {
+                        return {
+                            badge: '🟡 PROBABLE THRESHOLD',
+                            color: '#00F5FF',
+                            bgColor: 'rgba(0,245,255,0.15)',
+                            borderColor: '#00F5FF',
+                            timeline: 'Manifestation within 7-14 days. You\'ve crossed into probability.',
+                            glow: '0 0 15px rgba(0,245,255,0.5)'
+                        };
+                    } else {
+                        return {
+                            badge: 'Solo Practice',
+                            color: '#888',
+                            bgColor: 'rgba(136,136,136,0.1)',
+                            borderColor: '#888',
+                            timeline: 'Share your code in the community to activate exponential power.',
+                            glow: 'none'
+                        };
+                    }
+                }
+
+                function updateCalculatorFull(value) {
+                    const n = parseInt(value);
+                    const realities = calculateRealities(n);
+                    const threshold = getThresholdInfo(n);
+
+                    // Update displays
+                    realitiesDisplayFull.textContent = formatNumber(realities);
+                    realitiesDisplayFull.style.color = threshold.color;
+                    realitiesDisplayFull.style.textShadow = threshold.glow;
+                    
+                    thresholdDisplayFull.textContent = threshold.badge;
+                    thresholdDisplayFull.style.color = threshold.color;
+                    thresholdDisplayFull.style.background = threshold.bgColor;
+                    thresholdDisplayFull.style.border = `2px solid ${threshold.borderColor}`;
+                    
+                    timelineDisplayFull.textContent = threshold.timeline;
+                    
+                    resultsBoxFull.style.background = threshold.bgColor;
+                    resultsBoxFull.style.borderColor = threshold.borderColor;
+                }
+
+                // Event listeners
+                sliderFull.addEventListener('input', function() {
+                    numberInputFull.value = this.value;
+                    updateCalculatorFull(this.value);
+                });
+
+                numberInputFull.addEventListener('input', function() {
+                    if (this.value > 111) this.value = 111;
+                    if (this.value < 1) this.value = 1;
+                    sliderFull.value = this.value;
+                    updateCalculatorFull(this.value);
+                });
+
+                // Initialize
+                updateCalculatorFull(1);
+            </script>
+
             <div class="btn-group">
                 <button class="btn" onclick="nextStep(10)">Next: Activation Steps →</button>
             </div>
