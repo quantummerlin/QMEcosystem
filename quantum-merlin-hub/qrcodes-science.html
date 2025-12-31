@@ -192,39 +192,179 @@
         }
 
         /* Category Navigation */
-        .category-nav {
-            position: sticky;
-            top: 10px;
-            z-index: 100;
-            background: rgba(10, 0, 21, 0.9);
-            backdrop-filter: blur(20px);
+        /* Table of Contents Navigation */
+        .toc-nav {
+            background: linear-gradient(135deg, rgba(45, 27, 78, 0.8), rgba(10, 0, 21, 0.95));
             border-radius: 20px;
-            padding: 15px 20px;
-            margin-bottom: 30px;
+            padding: 25px;
+            margin-bottom: 40px;
             border: 1px solid rgba(218, 165, 32, 0.3);
+            backdrop-filter: blur(20px);
+        }
+
+        .toc-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4em;
+            color: var(--quantum-gold);
+            text-align: center;
+            margin-bottom: 20px;
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: center;
             gap: 10px;
         }
 
-        .category-btn {
-            background: linear-gradient(135deg, rgba(218, 165, 32, 0.2), rgba(138, 43, 226, 0.2));
-            border: 1px solid rgba(218, 165, 32, 0.3);
+        .toc-category {
+            margin-bottom: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(218, 165, 32, 0.2);
+        }
+
+        .toc-category-header {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.15), rgba(138, 43, 226, 0.15));
+            padding: 12px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1em;
             color: var(--quantum-gold);
+        }
+
+        .toc-category-header:hover {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.25), rgba(138, 43, 226, 0.25));
+        }
+
+        .toc-category-header .cat-icon {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+
+        .toc-category-header .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .toc-category.collapsed .toc-category-header .arrow {
+            transform: rotate(-90deg);
+        }
+
+        .toc-category-items {
+            max-height: 500px;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 10px 15px;
+            background: rgba(10, 0, 21, 0.5);
+        }
+
+        .toc-category.collapsed .toc-category-items {
+            max-height: 0;
+            padding: 0 15px;
+        }
+
+        .toc-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--ethereal-white);
+            font-size: 0.95em;
+            gap: 10px;
+        }
+
+        .toc-item:hover {
+            background: rgba(218, 165, 32, 0.15);
+            color: var(--quantum-gold);
+        }
+
+        .toc-item .item-icon {
+            font-size: 1.1em;
+            min-width: 25px;
+        }
+
+        .toc-item .item-title {
+            flex: 1;
+        }
+
+        .toc-item .read-badge {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .toc-item.is-read {
+            opacity: 0.7;
+        }
+
+        .toc-item.is-read .item-title {
+            text-decoration: line-through;
+            text-decoration-color: rgba(218, 165, 32, 0.5);
+        }
+
+        /* Mark as Read Button */
+        .mark-read-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.2), rgba(32, 201, 151, 0.2));
+            border: 1px solid rgba(40, 167, 69, 0.4);
+            color: #20c997;
             padding: 8px 16px;
             border-radius: 20px;
             font-family: 'Cinzel', serif;
             font-size: 0.85em;
             cursor: pointer;
             transition: all 0.3s ease;
+            margin-top: 20px;
         }
 
-        .category-btn:hover, .category-btn.active {
-            background: linear-gradient(135deg, var(--quantum-gold), var(--rose-pink));
-            color: var(--deep-void);
+        .mark-read-btn:hover {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
             transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(218, 165, 32, 0.3);
+        }
+
+        .mark-read-btn.is-read {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+        }
+
+        .progress-bar {
+            background: rgba(218, 165, 32, 0.2);
+            border-radius: 10px;
+            height: 8px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, var(--quantum-gold), var(--rose-pink));
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            font-size: 0.9em;
+            color: var(--quantum-gold);
+            margin-bottom: 10px;
+        }
+
+        /* Sections start collapsed */
+        .section.collapsed .section-content {
+            max-height: 0;
+            opacity: 0;
+            padding: 0;
         }
 
         /* Mystical Header */
@@ -914,16 +1054,6 @@
     <div class="magical-orb orb-2"></div>
 
     <div class="container">
-        <!-- Category Navigation -->
-        <nav class="category-nav">
-            <button class="category-btn active" onclick="filterSections('all')">✨ All Mysteries</button>
-            <button class="category-btn" onclick="filterSections('science')">🔬 Quantum Science</button>
-            <button class="category-btn" onclick="filterSections('psychology')">🧠 Mind Power</button>
-            <button class="category-btn" onclick="filterSections('spiritual')">🌹 Ancient Wisdom</button>
-            <button class="category-btn" onclick="filterSections('history')">📜 Timeline</button>
-            <button class="category-btn" onclick="filterSections('practical')">⚡ Practical Magic</button>
-        </nav>
-
         <header>
             <div class="merlin-sigil">🧙‍♂️ ⚛️ 🌹</div>
             <h1>The Ancient Science of Reality Codes</h1>
@@ -940,8 +1070,112 @@
             </div>
         </header>
 
+        <!-- Table of Contents Navigation -->
+        <nav class="toc-nav">
+            <div class="toc-title">📜 Explore the Ancient Knowledge</div>
+            
+            <div class="progress-text">Your Journey: <span id="progress-count">0</span> of <span id="total-sections">11</span> sections explored</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+            </div>
+
+            <!-- Quantum Science Category -->
+            <div class="toc-category" data-cat="science">
+                <div class="toc-category-header" onclick="toggleCategory(this)">
+                    <span><span class="cat-icon">🔬</span> Quantum Science</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="toc-category-items">
+                    <div class="toc-item" onclick="scrollToSection('section-quantum')" data-section="section-quantum">
+                        <span class="item-icon">⚛️</span>
+                        <span class="item-title">The Quantum Mysteries: Observer & Entanglement</span>
+                    </div>
+                    <div class="toc-item" onclick="scrollToSection('section-biology')" data-section="section-biology">
+                        <span class="item-icon">🧬</span>
+                        <span class="item-title">The Alchemy of Belief: Mind Shapes Matter</span>
+                    </div>
+                    <div class="toc-item" onclick="scrollToSection('section-group')" data-section="section-group">
+                        <span class="item-icon">👥</span>
+                        <span class="item-title">The Circle of Eight: Knights of Intention</span>
+                    </div>
+                    <div class="toc-item" onclick="scrollToSection('section-formula')" data-section="section-formula">
+                        <span class="item-icon">📐</span>
+                        <span class="item-title">Sacred Mathematics: The Power of 2^n - 1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mind Power Category -->
+            <div class="toc-category" data-cat="psychology">
+                <div class="toc-category-header" onclick="toggleCategory(this)">
+                    <span><span class="cat-icon">🧠</span> Mind Power</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="toc-category-items">
+                    <div class="toc-item" onclick="scrollToSection('section-nlp')" data-section="section-nlp">
+                        <span class="item-icon">🧠</span>
+                        <span class="item-title">The Art of Enchantment: NLP & Anchoring</span>
+                    </div>
+                    <div class="toc-item" onclick="scrollToSection('section-neural')" data-section="section-neural">
+                        <span class="item-icon">🧩</span>
+                        <span class="item-title">Neural Enchantment: Rewiring the Mind</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ancient Wisdom Category -->
+            <div class="toc-category" data-cat="spiritual">
+                <div class="toc-category-header" onclick="toggleCategory(this)">
+                    <span><span class="cat-icon">🌹</span> Ancient Wisdom</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="toc-category-items">
+                    <div class="toc-item" onclick="scrollToSection('section-vibration')" data-section="section-vibration">
+                        <span class="item-icon">🧲</span>
+                        <span class="item-title">The Rose's Frequency: Vibration & Attraction</span>
+                    </div>
+                    <div class="toc-item" onclick="scrollToSection('section-morphic')" data-section="section-morphic">
+                        <span class="item-icon">🌊</span>
+                        <span class="item-title">The Wizard's Web: Morphic Fields</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Category -->
+            <div class="toc-category" data-cat="history">
+                <div class="toc-category-header" onclick="toggleCategory(this)">
+                    <span><span class="cat-icon">📜</span> Timeline</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="toc-category-items">
+                    <div class="toc-item" onclick="scrollToSection('section-timeline')" data-section="section-timeline">
+                        <span class="item-icon">📅</span>
+                        <span class="item-title">Through the Ages: A Timeline of Discovery</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practical Magic Category -->
+            <div class="toc-category" data-cat="practical">
+                <div class="toc-category-header" onclick="toggleCategory(this)">
+                    <span><span class="cat-icon">⚡</span> Practical Magic</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="toc-category-items">
+                    <div class="toc-item" onclick="scrollToSection('section-convergence')" data-section="section-convergence">
+                        <span class="item-icon">⚙️</span>
+                        <span class="item-title">The Grand Convergence: All Magic Unified</span>
+                    </div>
+                    <div class="toc-item" onclick="scrollToSection('section-references')" data-section="section-references">
+                        <span class="item-icon">📚</span>
+                        <span class="item-title">The Ancient Scrolls: Scholarly References</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
         <!-- SECTION 1: NLP & ANCHORING -->
-        <div class="section reveal" data-category="psychology">
+        <div id="section-nlp" class="section reveal collapsed" data-category="psychology">
             <h2 onclick="toggleSection(this)">
                 <span class="icon">🧠</span>
                 The Art of Enchantment: NLP & Anchoring
@@ -1018,11 +1252,13 @@
                 information, bringing relevant stimuli to conscious attention. When you set a Reality Code, you're programming 
                 your RAS to notice that specific number—creating frequent synchronistic encounters that reinforce your intention.
             </p>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-nlp', this)">☐ Mark as Explored</button>
             </div>
         </div>
 
         <!-- SECTION 2: GROUP INTENTION (8 Person Threshold) -->
-        <div class="section reveal" data-category="science">
+        <div id="section-group" class="section reveal collapsed" data-category="science">
             <h2 onclick="toggleSection(this)">
                 <span class="icon">👥</span>
                 The Circle of Eight: Knights of Intention
@@ -1076,11 +1312,13 @@
                 if not more than, the receiver."
                 <div class="citation">— Lynne McTaggart, The Power of Eight</div>
             </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-group', this)">☐ Mark as Explored</button>
             </div>
         </div>
 
         <!-- SECTION 3: QUANTUM PHYSICS -->
-        <div class="section reveal" data-category="science">
+        <div id="section-quantum" class="section reveal collapsed" data-category="science">
             <h2 onclick="toggleSection(this)">
                 <span class="icon">⚛️</span>
                 The Quantum Mysteries: Observer & Entanglement
@@ -1127,11 +1365,13 @@
                 <br>
                 Where n = number of observers (commenters)
             </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-quantum', this)">☐ Mark as Explored</button>
             </div>
         </div>
 
         <!-- SECTION 4: BIOLOGY OF BELIEF -->
-        <div class="section reveal" data-category="science">
+        <div id="section-biology" class="section reveal collapsed" data-category="science">
             <h2 onclick="toggleSection(this)">
                 <span class="icon">🧬</span>
                 The Alchemy of Belief: Where Mind Shapes Matter
@@ -1183,11 +1423,13 @@
                 </ol>
                 When multiple people focus on the same code, these biological signals synchronize and amplify.
             </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-biology', this)">☐ Mark as Explored</button>
             </div>
         </div>
 
         <!-- SECTION 5: LAW OF ATTRACTION -->
-        <div class="section reveal" data-category="spiritual">
+        <div id="section-vibration" class="section reveal collapsed" data-category="spiritual">
             <h2 onclick="toggleSection(this)">
                 <span class="icon">🧲</span>
                 The Rose's Frequency: Vibration & Attraction
@@ -1222,11 +1464,13 @@
                 that match that frequency. The more people focus on the same code with the same positive emotion, the 
                 stronger the collective frequency field becomes.
             </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-vibration', this)">☐ Mark as Explored</button>
             </div>
         </div>
 
         <!-- SECTION 6: MORPHIC RESONANCE -->
-        <div class="section reveal" data-category="spiritual">
+        <div id="section-morphic" class="section reveal collapsed" data-category="spiritual">
             <h2 onclick="toggleSection(this)">
                 <span class="icon">🌊</span>
                 The Wizard's Web: Morphic Fields That Connect All Minds
@@ -1314,402 +1558,13 @@
                 if not more than, the receiver."
                 <div class="citation">— Lynne McTaggart, The Power of Eight</div>
             </div>
-        </div>
 
-        <!-- SECTION 3: QUANTUM PHYSICS -->
-        <div class="section" data-category="science">
-            <h2 onclick="toggleSection(this)">
-                <span class="icon">⚛️</span>
-                The Quantum Mysteries: Observer & Entanglement
-            </h2>
-            <div class="section-content">
-            
-            <div class="evidence-box">
-                <h3>The Double-Slit Experiment</h3>
-                <p>
-                    The most famous experiment in quantum physics demonstrates that <strong>observation affects reality</strong>. 
-                    Particles behave differently when observed versus when unobserved, proving that consciousness plays a role 
-                    in collapsing quantum possibilities into physical reality.
-                </p>
-            </div>
-
-            <div class="study">
-                <div class="study-title">📚 The Double-Slit Experiment (1927)</div>
-                <div class="study-details">Clinton Davisson & Lester Germer, confirmed by countless replications</div>
-                <div class="study-result">
-                    <strong>Finding:</strong> When electrons are observed, they behave as particles. When unobserved, they 
-                    behave as waves of probability. The act of observation collapses the wave function into a definite state.
-                    <br><br>
-                    <strong>Implication:</strong> Consciousness is not separate from physical reality—it actively participates 
-                    in creating it.
-                </div>
-            </div>
-
-            <div class="study">
-                <div class="study-title">📚 The Quantum Zeno Effect (1977)</div>
-                <div class="study-details">Misra & Sudarshan, experimentally confirmed by Itano et al. (1990)</div>
-                <div class="study-result">
-                    <strong>Finding:</strong> Frequent observation of a quantum system can freeze its evolution. Continuous 
-                    measurement prevents quantum state changes.
-                    <br><br>
-                    <strong>Application:</strong> When multiple people "observe" your intention (by commenting your Reality Code), 
-                    they're collapsing the quantum probability wave toward your desired outcome. More observers = faster collapse 
-                    into physical reality.
-                </div>
-            </div>
-
-            <h3>Quantum Entanglement</h3>
-            <p>
-                When two particles become entangled, they remain connected regardless of distance. Measuring one instantly 
-                affects the other—faster than light, defying classical physics.
-            </p>
-
-            <div class="study">
-                <div class="study-title">📚 Bell's Theorem & Aspect's Experiment (1982)</div>
-                <div class="study-details">Alain Aspect, proving Einstein's "spooky action at a distance"</div>
-                <div class="study-result">
-                    <strong>Finding:</strong> Entangled particles remain connected across any distance. Measuring one particle 
-                    instantly affects its entangled partner, even if they're on opposite sides of the universe.
-                    <br><br>
-                    <strong>Application:</strong> When someone comments your Reality Code, they become quantum entangled with 
-                    your intention. Their consciousness becomes linked to yours, creating a non-local connection that amplifies 
-                    manifestation power.
-                </div>
-            </div>
-
-            <div class="study">
-                <div class="study-title">📚 Human Quantum Entanglement Research</div>
-                <div class="study-details">Dean Radin, Institute of Noetic Sciences (2004-2013)</div>
-                <div class="study-result">
-                    <strong>Study Design:</strong> Pairs of people meditated together, then were separated into electromagnetically 
-                    shielded rooms. One person was shown emotional images while the other's brain activity was monitored.
-                    <br><br>
-                    <strong>Finding:</strong> When one person experienced an emotional response, the other person's brain showed 
-                    correlated activity—despite being isolated and unaware of what the first person was experiencing.
-                    <br><br>
-                    <strong>Conclusion:</strong> Human consciousness can become entangled, creating non-local connections between 
-                    minds.
-                    <br><br>
-                    <strong>Application:</strong> Every person who comments your Reality Code becomes entangled with your intention, 
-                    creating a web of consciousness all pulling toward the same outcome.
-                </div>
-            </div>
-
-            <div class="key-point">
-                <strong>🎯 Why This Matters:</strong> The exponential formula (2^n - 1) isn't arbitrary—it represents the 
-                exponential growth of quantum entanglement connections. With 2 people, you have 3 connections (A, B, and A-B). 
-                With 3 people, you have 7 connections (A, B, C, A-B, A-C, B-C, A-B-C). Each new person doesn't just add—they 
-                multiply the entanglement network.
-            </div>
-
-            <div class="formula">
-                Entanglement Connections = 2^n - 1
-                <br>
-                Where n = number of observers (commenters)
-            </div>
-            </div>
-        </div>
-
-        <!-- SECTION 4: BIOLOGY OF BELIEF -->
-        <div class="section" data-category="science">
-            <h2 onclick="toggleSection(this)">
-                <span class="icon">🧬</span>
-                The Alchemy of Belief: Where Mind Shapes Matter
-            </h2>
-            <div class="section-content">
-            
-            <div class="evidence-box">
-                <h3>What is Epigenetics?</h3>
-                <p>
-                    <strong>Epigenetics</strong> is the study of how behaviors and environment can cause changes in gene expression 
-                    without altering DNA sequence. Your beliefs, thoughts, and emotions literally change which genes are turned 
-                    on or off.
-                </p>
-            </div>
-
-            <div class="study">
-                <div class="study-title">📚 The Biology of Belief (2005)</div>
-                <div class="study-details">Dr. Bruce Lipton, cellular biologist, former Stanford researcher</div>
-                <div class="study-result">
-                    <strong>Research:</strong> Lipton's experiments with stem cells demonstrated that the environment (including 
-                    thoughts and beliefs) controls gene expression, not the genes themselves.
-                    <br><br>
-                    <strong>Key Finding:</strong> Cells respond to environmental signals, including the electromagnetic field 
-                    generated by thoughts and emotions. Positive beliefs create growth-promoting signals; negative beliefs 
-                    create protection-mode signals.
-                    <br><br>
-                    <strong>Implication:</strong> Your intention (anchored to your Reality Code) sends continuous signals to 
-                    your cells, literally reprogramming your biology to align with your desired outcome.
-                </div>
-            </div>
-
-            <div class="study">
-                <div class="study-title">📚 Epigenetic Changes from Meditation</div>
-                <div class="study-details">Davidson et al., University of Wisconsin (2013)</div>
-                <div class="study-result">
-                    <strong>Study:</strong> Measured gene expression in experienced meditators vs. control group after 8 hours 
-                    of intensive practice.
-                    <br><br>
-                    <strong>Finding:</strong> Meditators showed:
-                    <ul>
-                        <li>Reduced expression of pro-inflammatory genes</li>
-                        <li>Increased expression of genes that promote cellular recovery</li>
-                        <li>Changes occurred within hours, not years</li>
-                    </ul>
-                    <br>
-                    <strong>Application:</strong> Focused intention (like repeating your Reality Code) creates measurable 
-                    biological changes rapidly.
-                </div>
-            </div>
-
-            <div class="study">
-                <div class="study-title">📚 The Placebo Effect: Mind Over Medicine</div>
-                <div class="study-details">Dr. Joe Dispenza, neuroscientist & researcher</div>
-                <div class="study-result">
-                    <strong>Research:</strong> Documented cases where belief alone created measurable physiological changes:
-                    <ul>
-                        <li>Placebo surgeries as effective as real surgeries (knee surgery study, 2002)</li>
-                        <li>Placebo antidepressants showing 75% effectiveness of real drugs</li>
-                        <li>Patients with Parkinson's producing dopamine when given placebo</li>
-                    </ul>
-                    <br>
-                    <strong>Conclusion:</strong> Belief changes biology. If belief can heal disease, it can certainly manifest 
-                    desired outcomes.
-                </div>
-            </div>
-
-            <h3>The Heart-Brain Connection</h3>
-            <p>
-                The heart generates an electromagnetic field 5,000 times stronger than the brain. This field extends several 
-                feet beyond the body and can be measured by magnetometers.
-            </p>
-
-            <div class="study">
-                <div class="study-title">📚 HeartMath Institute Research (1991-present)</div>
-                <div class="study-details">Dr. Rollin McCraty, Director of Research</div>
-                <div class="study-result">
-                    <strong>Findings:</strong>
-                    <ul>
-                        <li>The heart's electromagnetic field changes based on emotional state</li>
-                        <li>Coherent heart rhythms (achieved through positive emotion) synchronize brain waves</li>
-                        <li>Heart coherence improves intuition, decision-making, and manifestation ability</li>
-                        <li>One person's heart field can affect another person's brain waves when in proximity</li>
-                    </ul>
-                    <br>
-                    <strong>Application:</strong> When you place your hand on your heart and activate your Reality Code, you're 
-                    engaging the heart's electromagnetic field to amplify your intention. When multiple people do this for the 
-                    same code, their fields entangle and amplify exponentially.
-                </div>
-            </div>
-
-            <div class="key-point">
-                <strong>🎯 The Biological Mechanism:</strong> Your Reality Code isn't just a mental concept—it's a biological 
-                signal that:
-                <ol>
-                    <li>Changes gene expression (epigenetics)</li>
-                    <li>Alters electromagnetic field (heart coherence)</li>
-                    <li>Reprograms neural pathways (neuroplasticity)</li>
-                    <li>Shifts cellular environment (biology of belief)</li>
-                </ol>
-                When multiple people focus on the same code, these biological signals synchronize and amplify.
-            </div>
-            </div>
-        </div>
-
-        <!-- SECTION 5: LAW OF ATTRACTION -->
-        <div class="section" data-category="spiritual">
-            <h2 onclick="toggleSection(this)">
-                <span class="icon">🧲</span>
-                The Rose's Frequency: Vibration & Attraction
-            </h2>
-            <div class="section-content">
-            
-            <div class="evidence-box">
-                <h3>What is the Law of Attraction?</h3>
-                <p>
-                    The <strong>Law of Attraction</strong> states that like attracts like—your dominant thoughts, emotions, 
-                    and beliefs attract corresponding experiences. While often dismissed as pseudoscience, emerging research 
-                    in quantum physics and neuroscience provides mechanisms that explain how it works.
-                </p>
-            </div>
-
-            <h3>The Vibrational Universe</h3>
-            <p>
-                Everything in the universe is energy vibrating at different frequencies. This isn't metaphysical—it's physics. 
-                Atoms are 99.9999% empty space with electrons vibrating around a nucleus. Solid matter is an illusion created 
-                by vibration.
-            </p>
-
-            <div class="study">
-                <div class="study-title">📚 Cymatics: The Study of Visible Sound</div>
-                <div class="study-details">Hans Jenny (1967) - "Cymatics: A Study of Wave Phenomena & Vibration"</div>
-                <div class="study-result">
-                    <strong>Experiment:</strong> Jenny placed sand, water, and other substances on metal plates and vibrated 
-                    them at different frequencies. Each frequency created distinct geometric patterns.
-                    <br><br>
-                    <strong>Finding:</strong> Vibration organizes matter into specific patterns. Different frequencies create 
-                    different structures.
-                    <br><br>
-                    <strong>Application:</strong> Your intention has a vibrational frequency. Your Reality Code anchors that 
-                    frequency. When multiple people focus on the same code, they're all vibrating at the same frequency, 
-                    organizing reality into the pattern that matches your intention.
-                </div>
-            </div>
-
-            <div class="study">
-                <div class="study-title">📚 Water Crystal Experiments</div>
-                <div class="study-details">Dr. Masaru Emoto (1994-2014) - "The Hidden Messages in Water"</div>
-                <div class="study-result">
-                    <strong>Experiment:</strong> Exposed water to different words, music, and intentions, then froze it and 
-                    photographed the crystals under microscope.
-                    <br><br>
-                    <strong>Finding:</strong> 
-                    <ul>
-                        <li>Water exposed to positive words (love, gratitude) formed beautiful, symmetrical crystals</li>
-                        <li>Water exposed to negative words (hate, fear) formed chaotic, broken crystals</li>
-                        <li>The effect was consistent across thousands of trials</li>
-                    </ul>
-                    <br>
-                    <strong>Implication:</strong> If intention can change the molecular structure of water (which makes up 70% 
-                    of your body), it can certainly change your reality.
-                </div>
-            </div>
-
-            <h3>The Reticular Activating System (RAS) & Selective Attention</h3>
-            <p>
-                The scientific mechanism behind "you attract what you focus on" is the <strong>Reticular Activating System</strong>—
-                a bundle of nerves in your brainstem that filters sensory information.
-            </p>
-
-            <div class="study">
-                <div class="study-title">📚 Selective Attention Research</div>
-                <div class="study-details">Simons & Chabris (1999) - "Gorillas in Our Midst"</div>
-                <div class="study-result">
-                    <strong>Famous Experiment:</strong> Participants watched a video of people passing basketballs and were 
-                    asked to count passes. A person in a gorilla suit walked through the scene, but 50% of participants didn't 
-                    see it.
-                    <br><br>
-                    <strong>Finding:</strong> We only see what we're looking for. Our attention filters reality based on what 
-                    we've programmed as important.
-                    <br><br>
-                    <strong>Application:</strong> Your Reality Code programs your RAS to notice opportunities, resources, and 
-                    synchronicities related to your intention. You're not "attracting" them—you're finally seeing what was 
-                    always there.
-                </div>
-            </div>
-
-            <div class="study">
-                <div class="study-title">📚 Frequency Following Response (FFR)</div>
-                <div class="study-details">Neuroscience research on brainwave entrainment</div>
-                <div class="study-result">
-                    <strong>Finding:</strong> When exposed to external rhythmic stimuli (sound, light, electromagnetic pulses), 
-                    the brain synchronizes its own electrical activity to match that frequency.
-                    <br><br>
-                    <strong>Application:</strong> When you focus on your Reality Code (especially if it matches a healing 
-                    frequency like 528 Hz), your brain entrains to that frequency. When multiple people focus on the same code, 
-                    their brains synchronize, creating a collective frequency field.
-                </div>
-            </div>
-
-            <div class="key-point">
-                <strong>🎯 The Attraction Mechanism:</strong> The Law of Attraction works through:
-                <ol>
-                    <li><strong>RAS Programming:</strong> Your focus determines what you notice</li>
-                    <li><strong>Frequency Matching:</strong> Your vibration attracts matching vibrations</li>
-                    <li><strong>Quantum Observation:</strong> Your attention collapses possibilities into reality</li>
-                    <li><strong>Neuroplasticity:</strong> Your repeated thoughts create neural pathways that guide behavior</li>
-                </ol>
-                Reality Codes amplify all four mechanisms simultaneously.
-            </div>
-            </div>
-        </div>
-
-        <!-- SECTION 6: MORPHIC RESONANCE -->
-        <div class="section" data-category="spiritual">
-            <h2 onclick="toggleSection(this)">
-                <span class="icon">🌊</span>
-                The Wizard's Web: Morphic Fields That Connect All Minds
-            </h2>
-            <div class="section-content">
-            
-            <div class="evidence-box">
-                <h3>What is Morphic Resonance?</h3>
-                <p>
-                    <strong>Morphic Resonance</strong> is a theory proposed by biologist Rupert Sheldrake that suggests there's 
-                    a field of information (morphic field) that connects all members of a species. When one member learns 
-                    something, it becomes easier for others to learn it—even without direct contact.
-                </p>
-            </div>
-
-            <div class="study">
-                <div class="study-title">📚 The Hundredth Monkey Phenomenon</div>
-                <div class="study-details">Observed by Japanese primatologists (1952-1958)</div>
-                <div class="study-result">
-                    <strong>Observation:</strong> Scientists studying macaque monkeys on Koshima Island taught one monkey to 
-                    wash sweet potatoes in water. Gradually, other monkeys learned by observation. But then something strange 
-                    happened: monkeys on other islands (with no contact) spontaneously started washing potatoes.
-                    <br><br>
-                    <strong>Implication:</strong> Once a critical mass learns a behavior, it becomes available to the entire 
-                    species through a non-physical field.
-                    <br><br>
-                    <strong>Application:</strong> When enough people focus on the same Reality Code, it creates a morphic field 
-                    that makes manifestation easier for everyone using that code. The field strengthens with each person who 
-                    joins.
-                </div>
-            </div>
-
-            <div class="study">
-                <div class="study-title">📚 Sheldrake's Morphic Field Experiments</div>
-                <div class="study-details">Rupert Sheldrake, PhD (1981-present)</div>
-                <div class="study-result">
-                    <strong>Experiments:</strong>
-                    <ul>
-                        <li><strong>Crossword Puzzle Test:</strong> People solved published crosswords faster than unpublished 
-                        ones—even though they'd never seen either. The published ones had been solved by thousands, creating 
-                        a morphic field.</li>
-                        <li><strong>Telephone Telepathy:</strong> People guessed who was calling before answering with 45% 
-                        accuracy (chance = 25%), suggesting non-local connection.</li>
-                        <li><strong>The Sense of Being Stared At:</strong> People detected when they were being stared at from 
-                        behind with 60% accuracy, suggesting field awareness.</li>
-                    </ul>
-                    <br>
-                    <strong>Conclusion:</strong> There's a field of information that connects minds, making learned behaviors 
-                    and focused intentions accessible to others.
-                </div>
-            </div>
-
-            <div class="study">
-                <div class="study-title">📚 The Global Consciousness Project</div>
-                <div class="study-details">Princeton University (1998-present), Dr. Roger Nelson</div>
-                <div class="study-result">
-                    <strong>Study Design:</strong> Random number generators (RNGs) placed around the world continuously generate 
-                    random data. During major global events (9/11, tsunamis, royal weddings), the RNGs become less random—they 
-                    show coherent patterns.
-                    <br><br>
-                    <strong>Finding:</strong> When millions of people focus attention on the same event, it creates a measurable 
-                    disturbance in the quantum field. The odds of this happening by chance are less than 1 in 1 trillion.
-                    <br><br>
-                    <strong>Application:</strong> When multiple people focus on the same Reality Code, they're creating a 
-                    coherent field that affects physical reality. The more people, the stronger the field.
-                </div>
-            </div>
-
-            <div class="key-point">
-                <strong>🎯 The Morphic Field Mechanism:</strong> Each Reality Code creates its own morphic field. Every person 
-                who comments on your code:
-                <ol>
-                    <li>Strengthens the field around that specific intention</li>
-                    <li>Makes manifestation easier for you (the field does the work)</li>
-                    <li>Becomes connected to everyone else who's commented that code</li>
-                    <li>Contributes to a collective field that bends reality toward the intention</li>
-                </ol>
-                At 111 comments, the morphic field is so strong that physical reality has no choice but to conform.
-            </div>
+            <button class="mark-read-btn" onclick="markAsRead('section-morphic', this)">☐ Mark as Explored</button>
             </div>
         </div>
 
         <!-- SECTION 7: NEUROPLASTICITY -->
-        <div class="section" data-category="psychology">
+        <div id="section-neural" class="section collapsed" data-category="psychology">
             <h2 onclick="toggleSection(this)">
                 <span class="icon">🧩</span>
                 Rewiring the Mind: The Art of Neural Enchantment
@@ -1783,11 +1638,13 @@
                 When multiple people focus on your code, they're all reinforcing the same neural pattern in the collective 
                 consciousness, making manifestation inevitable.
             </key-point>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-neural', this)">☐ Mark as Explored</button>
             </div>
         </div>
 
         <!-- SECTION 8: TIMELINE OF EVIDENCE -->
-        <div class="section" data-category="history">
+        <div id="section-timeline" class="section collapsed" data-category="history">
             <h2 onclick="toggleSection(this)">
                 <span class="icon">📅</span>
                 Through the Ages: A Timeline of Discovery
@@ -1898,11 +1755,13 @@
                     entanglement + morphic fields = exponential manifestation.</p>
                 </div>
             </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-timeline', this)">☐ Mark as Explored</button>
             </div>
         </div>
 
         <!-- SECTION 9: THE INTEGRATED MECHANISM -->
-        <div class="section" data-category="practical">
+        <div id="section-convergence" class="section collapsed" data-category="practical">
             <h2 onclick="toggleSection(this)">
                 <span class="icon">⚙️</span>
                 The Grand Convergence: All Magic Unified
@@ -1978,11 +1837,13 @@
                 <br><br>
                 <strong>This isn't one technique—it's nine proven mechanisms working together to create inevitable manifestation.</strong>
             </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-convergence', this)">☐ Mark as Explored</button>
             </div>
         </div>
 
         <!-- SECTION 10: WHY THE EXPONENTIAL FORMULA -->
-        <div class="section" data-category="science">
+        <div id="section-formula" class="section collapsed" data-category="science">
             <h2 onclick="toggleSection(this)">
                 <span class="icon">📐</span>
                 Sacred Mathematics: The Power of 2^n - 1
@@ -2068,11 +1929,13 @@
                 The quantum field has no choice but to collapse in favor of your intention because you're affecting every 
                 possible timeline simultaneously.
             </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-formula', this)">☐ Mark as Explored</button>
             </div>
         </div>
 
         <!-- SECTION 11: PEER-REVIEWED SOURCES -->
-        <div class="section" data-category="practical">
+        <div id="section-references" class="section collapsed" data-category="practical">
             <h2 onclick="toggleSection(this)">
                 <span class="icon">📚</span>
                 The Ancient Scrolls: Scholarly References
@@ -2135,6 +1998,8 @@
             <ul>
                 <li>Simons, D. J., & Chabris, C. F. (1999). "Gorillas in Our Midst: Sustained Inattentional Blindness for Dynamic Events." <em>Perception</em>, 28(9), 1059-1074.</li>
             </ul>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-references', this)">☐ Mark as Explored</button>
             </div>
         </div>
 
@@ -2173,7 +2038,99 @@
             section.classList.toggle('collapsed');
         }
         
-        // Category Filter
+        // TOC Category Toggle
+        function toggleCategory(header) {
+            const category = header.closest('.toc-category');
+            category.classList.toggle('collapsed');
+        }
+        
+        // Scroll to Section from TOC
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                // Expand the section if collapsed
+                section.classList.remove('collapsed');
+                // Scroll to section with offset for fixed elements
+                const yOffset = -20;
+                const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
+        }
+        
+        // Mark Section as Read
+        function markAsRead(sectionId, btn) {
+            const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
+            
+            if (!readSections.includes(sectionId)) {
+                readSections.push(sectionId);
+                localStorage.setItem('qrcodes-read-sections', JSON.stringify(readSections));
+            }
+            
+            // Update button appearance
+            btn.classList.add('is-read');
+            btn.innerHTML = '✓ Explored';
+            
+            // Update TOC item
+            const tocItem = document.querySelector(`.toc-item[data-section="${sectionId}"]`);
+            if (tocItem) {
+                tocItem.classList.add('is-read');
+            }
+            
+            // Update progress
+            updateProgress();
+        }
+        
+        // Update Progress Bar
+        function updateProgress() {
+            const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
+            const totalSections = document.querySelectorAll('.section[id]').length;
+            const readCount = readSections.length;
+            
+            document.getElementById('progress-count').textContent = readCount;
+            document.getElementById('total-sections').textContent = totalSections;
+            
+            const percentage = (readCount / totalSections) * 100;
+            document.getElementById('progress-fill').style.width = percentage + '%';
+        }
+        
+        // Load Read State on Page Load
+        function loadReadState() {
+            const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
+            
+            readSections.forEach(sectionId => {
+                // Update TOC item
+                const tocItem = document.querySelector(`.toc-item[data-section="${sectionId}"]`);
+                if (tocItem) {
+                    tocItem.classList.add('is-read');
+                }
+                
+                // Update mark-read button
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const btn = section.querySelector('.mark-read-btn');
+                    if (btn) {
+                        btn.classList.add('is-read');
+                        btn.innerHTML = '✓ Explored';
+                    }
+                }
+            });
+            
+            updateProgress();
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadReadState();
+            
+            // Start all TOC categories collapsed on mobile
+            if (window.innerWidth <= 768) {
+                document.querySelectorAll('.toc-category').forEach(cat => {
+                    cat.classList.add('collapsed');
+                });
+            }
+        });
+        
+        // Category Filter (keeping for backward compatibility)
         function filterSections(category) {
             const sections = document.querySelectorAll('.section[data-category]');
             const buttons = document.querySelectorAll('.category-btn');
