@@ -1278,31 +1278,32 @@
 
                     <!-- Community Power Stats -->
                     <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,0,255,0.15)); border-radius: 15px; border: 2px solid var(--quantum-gold);">
-                        <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); text-align: center; margin-bottom: 20px; font-size: 1.1rem;">🌍 Community Quantum Power</h4>
+                        <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); text-align: center; margin-bottom: 20px; font-size: 1.2rem;">🌍 Our Collective Quantum Power</h4>
                         
-                        <div style="display: grid; gap: 15px; margin-bottom: 20px;">
-                            <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; text-align: center;">
-                                <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 5px;">📱 Telegram Members:</div>
-                                <div style="font-family: 'Orbitron', monospace; color: #00aaff; font-size: 1.3rem; font-weight: 700;">
-                                    <span id="telegramCountFull">Update this number →</span>
-                                </div>
-                            </div>
-                            
-                            <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; text-align: center;">
-                                <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 5px;">👥 Facebook Members:</div>
-                                <div style="font-family: 'Orbitron', monospace; color: #1877f2; font-size: 1.3rem; font-weight: 700;">
-                                    <span id="facebookCountFull">Update this number →</span>
-                                </div>
+                        <div style="background: rgba(0,0,0,0.4); padding: 25px; border-radius: 12px; text-align: center; margin-bottom: 20px;">
+                            <div style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 8px;">Community Members:</div>
+                            <div style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); font-size: 2.5rem; font-weight: 700; text-shadow: 0 0 20px rgba(0,245,255,0.6);">
+                                <span id="totalMembersFull">22</span>
                             </div>
                         </div>
 
-                        <div style="background: rgba(255,215,0,0.1); padding: 20px; border-radius: 12px; border: 2px solid var(--quantum-gold); text-align: center;">
-                            <div style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 8px;">If ALL members comment one code:</div>
+                        <div style="background: rgba(255,215,0,0.1); padding: 20px; border-radius: 12px; border: 2px solid var(--quantum-gold); text-align: center; margin-bottom: 20px;">
+                            <div style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 8px;">If ALL members unite on one code:</div>
                             <div id="totalCommunityPowerFull" style="font-size: 2rem; font-family: 'Orbitron', monospace; color: var(--quantum-gold); font-weight: 700; text-shadow: 0 0 20px rgba(255,215,0,0.6); margin-bottom: 10px;">
-                                ∞ INFINITE REALITIES
+                                4.2M REALITIES
                             </div>
                             <div style="font-size: 0.85rem; opacity: 0.7; line-height: 1.5;">
                                 This is the collective power when we unite as one field
+                            </div>
+                        </div>
+
+                        <div style="background: rgba(255,0,255,0.1); padding: 20px; border-radius: 12px; border: 2px solid var(--quantum-magenta); text-align: center;">
+                            <div style="font-size: 1rem; color: var(--quantum-magenta); font-weight: 600; margin-bottom: 12px;">⚡ INVITE FRIENDS & FAMILY</div>
+                            <div style="font-size: 0.9rem; line-height: 1.6; opacity: 0.9;">
+                                The more people who share and amplify codes, the <strong style="color: var(--quantum-cyan);">FASTER manifestations become reality</strong>. Each new member exponentially increases the power of the entire field!
+                            </div>
+                            <div style="margin-top: 12px; font-size: 0.85rem; opacity: 0.75; font-style: italic;">
+                                50 members = 1.1 quadrillion realities • 100 members = beyond measurement
                             </div>
                         </div>
                     </div>
@@ -1463,41 +1464,22 @@
                 updateCalculatorFull(1);
 
                 // Community Member Count Configuration
-                // UPDATE THESE NUMBERS AS YOUR COMMUNITY GROWS
-                const TELEGRAM_MEMBERS_FULL = 6;  // ← Update this with actual Telegram member count
-                const FACEBOOK_MEMBERS_FULL = 16;  // ← Update this with actual Facebook member count
+                // UPDATE THIS NUMBER AS YOUR COMMUNITY GROWS
+                const TOTAL_MEMBERS_FULL = 22;  // ← Update this with total member count across all platforms
 
                 function updateCommunityStatsFull() {
-                    const telegramDisplay = document.getElementById('telegramCountFull');
-                    const facebookDisplay = document.getElementById('facebookCountFull');
+                    const totalMembersDisplay = document.getElementById('totalMembersFull');
                     const totalPowerDisplay = document.getElementById('totalCommunityPowerFull');
 
-                    // Update member counts
-                    if (TELEGRAM_MEMBERS_FULL > 0) {
-                        telegramDisplay.textContent = TELEGRAM_MEMBERS_FULL.toLocaleString() + ' members';
-                    } else {
-                        telegramDisplay.textContent = 'Growing...';
-                    }
-
-                    if (FACEBOOK_MEMBERS_FULL > 0) {
-                        facebookDisplay.textContent = FACEBOOK_MEMBERS_FULL.toLocaleString() + ' members';
-                    } else {
-                        facebookDisplay.textContent = 'Growing...';
-                    }
+                    // Update total count
+                    totalMembersDisplay.textContent = TOTAL_MEMBERS_FULL.toLocaleString();
 
                     // Calculate total community power
-                    const totalMembers = TELEGRAM_MEMBERS_FULL + FACEBOOK_MEMBERS_FULL;
-                    if (totalMembers > 0) {
-                        const totalRealities = calculateRealities(totalMembers);
-                        totalPowerDisplay.innerHTML = `
-                            <div style="font-size: 2rem; margin-bottom: 5px;">${formatNumber(totalRealities)}</div>
-                            <div style="font-size: 0.9rem; opacity: 0.8;">realities affected with ${totalMembers.toLocaleString()} amplifiers</div>
-                        `;
+                    if (TOTAL_MEMBERS_FULL > 0) {
+                        const totalRealities = calculateRealities(TOTAL_MEMBERS_FULL);
+                        totalPowerDisplay.textContent = formatNumber(totalRealities) + ' REALITIES';
                     } else {
-                        totalPowerDisplay.innerHTML = `
-                            <div style="font-size: 1.5rem; margin-bottom: 5px;">∞ INFINITE POTENTIAL</div>
-                            <div style="font-size: 0.9rem; opacity: 0.8;">Waiting for our first members to unite the field</div>
-                        `;
+                        totalPowerDisplay.textContent = '∞ INFINITE POTENTIAL';
                     }
                 }
 
