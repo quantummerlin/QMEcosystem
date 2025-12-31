@@ -1280,10 +1280,19 @@
                     <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,0,255,0.15)); border-radius: 15px; border: 2px solid var(--quantum-gold);">
                         <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); text-align: center; margin-bottom: 20px; font-size: 1.2rem;">🌍 Our Collective Quantum Power</h4>
                         
-                        <div style="background: rgba(0,0,0,0.4); padding: 25px; border-radius: 12px; text-align: center; margin-bottom: 20px;">
-                            <div style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 8px;">Community Members:</div>
-                            <div style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); font-size: 2.5rem; font-weight: 700; text-shadow: 0 0 20px rgba(0,245,255,0.6);">
-                                <span id="totalMembersFull">22</span>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                            <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; text-align: center;">
+                                <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 5px;">📱 Telegram</div>
+                                <div style="font-family: 'Orbitron', monospace; color: #00aaff; font-size: 1.5rem; font-weight: 700;" id="telegramCountFull">
+                                    6
+                                </div>
+                            </div>
+                            
+                            <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; text-align: center;">
+                                <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 5px;">👥 Facebook</div>
+                                <div style="font-family: 'Orbitron', monospace; color: #1877f2; font-size: 1.5rem; font-weight: 700;" id="facebookCountFull">
+                                    16
+                                </div>
                             </div>
                         </div>
 
@@ -1464,19 +1473,23 @@
                 updateCalculatorFull(1);
 
                 // Community Member Count Configuration
-                // UPDATE THIS NUMBER AS YOUR COMMUNITY GROWS
-                const TOTAL_MEMBERS_FULL = 22;  // ← Update this with total member count across all platforms
+                // UPDATE THESE NUMBERS AS YOUR COMMUNITY GROWS
+                const TELEGRAM_MEMBERS_FULL = 6;  // ← Update this with Telegram count
+                const FACEBOOK_MEMBERS_FULL = 16;  // ← Update this with Facebook count
 
                 function updateCommunityStatsFull() {
-                    const totalMembersDisplay = document.getElementById('totalMembersFull');
+                    const telegramDisplay = document.getElementById('telegramCountFull');
+                    const facebookDisplay = document.getElementById('facebookCountFull');
                     const totalPowerDisplay = document.getElementById('totalCommunityPowerFull');
 
-                    // Update total count
-                    totalMembersDisplay.textContent = TOTAL_MEMBERS_FULL.toLocaleString();
+                    // Update counts
+                    telegramDisplay.textContent = TELEGRAM_MEMBERS_FULL;
+                    facebookDisplay.textContent = FACEBOOK_MEMBERS_FULL;
 
                     // Calculate total community power
-                    if (TOTAL_MEMBERS_FULL > 0) {
-                        const totalRealities = calculateRealities(TOTAL_MEMBERS_FULL);
+                    const totalMembers = TELEGRAM_MEMBERS_FULL + FACEBOOK_MEMBERS_FULL;
+                    if (totalMembers > 0) {
+                        const totalRealities = calculateRealities(totalMembers);
                         totalPowerDisplay.textContent = formatNumber(totalRealities) + ' REALITIES';
                     } else {
                         totalPowerDisplay.textContent = '∞ INFINITE POTENTIAL';
