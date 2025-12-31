@@ -258,10 +258,14 @@
         }
 
         .merlin-sigil {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 3.5rem;
+            margin-bottom: 25px;
             animation: pulse-sigil 3s ease-in-out infinite;
             filter: drop-shadow(0 0 20px rgba(218, 165, 32, 0.5));
+            letter-spacing: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
 
         @keyframes pulse-sigil {
@@ -312,7 +316,7 @@
             font-size: 1.2em;
             color: rgba(240, 230, 255, 0.9);
             max-width: 800px;
-            margin: 25px auto;
+            margin: 0 auto 15px auto;
             line-height: 2;
             font-style: italic;
             position: relative;
@@ -327,6 +331,27 @@
             line-height: 0.8;
             color: var(--quantum-gold);
             text-shadow: 0 0 20px rgba(218, 165, 32, 0.5);
+        }
+
+        .intro-card {
+            background: linear-gradient(135deg, rgba(45, 27, 78, 0.6), rgba(10, 0, 21, 0.8));
+            border: 1px solid rgba(218, 165, 32, 0.2);
+            border-radius: 20px;
+            padding: 30px 40px;
+            margin: 30px auto;
+            max-width: 900px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro-highlight {
+            font-size: 1.15em;
+            color: var(--quantum-gold);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.9;
+            font-weight: 500;
+            text-align: center;
         }
 
         /* Section Styling */
@@ -900,15 +925,19 @@
         </nav>
 
         <header>
-            <div class="merlin-sigil">🌹⚡🔮</div>
+            <div class="merlin-sigil">🧙‍♂️ ⚛️ 🌹</div>
             <h1>The Ancient Science of Reality Codes</h1>
             <p class="subtitle">Where Merlin's Wisdom Meets Quantum Physics</p>
-            <p class="intro">
-                In the mists of Avalon, Merlin knew what modern science is only now discovering—that consciousness shapes reality, 
-                that intention bends probability, and that collective focus can move mountains. These are not mere legends. 
-                They are truths encoded in the very fabric of spacetime, now validated by decades of peer-reviewed research 
-                in quantum physics, neuroscience, and the biology of belief.
-            </p>
+            <div class="intro-card">
+                <p class="intro">
+                    In the mists of Avalon, Merlin knew what modern science is only now discovering—that consciousness shapes reality, 
+                    that intention bends probability, and that collective focus can move mountains.
+                </p>
+                <p class="intro-highlight">
+                    These are not mere legends. They are truths encoded in the very fabric of spacetime, 
+                    now validated by decades of peer-reviewed research in quantum physics, neuroscience, and the biology of belief.
+                </p>
+            </div>
         </header>
 
         <!-- SECTION 1: NLP & ANCHORING -->
@@ -2118,7 +2147,7 @@
             </p>
             <a href="qrcodes.html" class="cta-button">Create Your Reality Code Now</a>
             <p style="margin-top: 30px; color: var(--rose-pink); font-style: italic;">
-                🌹 The Rose and the Wizard await... 🔮
+                🧙‍♂️ The Wizard and the Rose await... 🌹
             </p>
         </div>
 
