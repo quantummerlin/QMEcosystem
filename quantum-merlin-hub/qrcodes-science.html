@@ -884,36 +884,9 @@
     </style>
 </head>
 <body>
-    <!-- Magical Background Elements -->
-    <canvas id="particles-canvas"></canvas>
-    <div class="aurora"></div>
+    <!-- Subtle Background Elements -->
     <div class="magical-orb orb-1"></div>
     <div class="magical-orb orb-2"></div>
-    <div class="magical-orb orb-3"></div>
-    <div class="magical-orb orb-4"></div>
-    <div class="magic-line magic-line-1"></div>
-    <div class="magic-line magic-line-2"></div>
-
-    <!-- Rune Circle SVG -->
-    <svg class="rune-circle" viewBox="0 0 400 400">
-        <circle cx="200" cy="200" r="190" fill="none" stroke="rgba(218,165,32,0.8)" stroke-width="1" stroke-dasharray="10,5"/>
-        <text fill="rgba(218,165,32,0.6)" font-size="14" font-family="serif">
-            <textPath href="#runePath">✧ QUANTUM ✧ MERLIN ✧ ROSE ✧ AVALON ✧ CONSCIOUSNESS ✧ REALITY ✧</textPath>
-        </text>
-        <defs>
-            <path id="runePath" d="M200,10 a190,190 0 1,1 0,380 a190,190 0 1,1 0,-380"/>
-        </defs>
-    </svg>
-
-    <!-- Sacred Geometry SVG -->
-    <svg class="sacred-geometry" viewBox="0 0 400 400">
-        <circle cx="200" cy="200" r="180" fill="none" stroke="rgba(218,165,32,0.5)" stroke-width="0.5"/>
-        <circle cx="200" cy="200" r="140" fill="none" stroke="rgba(255,107,157,0.5)" stroke-width="0.5"/>
-        <circle cx="200" cy="200" r="100" fill="none" stroke="rgba(0,245,255,0.5)" stroke-width="0.5"/>
-        <polygon points="200,20 380,290 20,290" fill="none" stroke="rgba(218,165,32,0.3)" stroke-width="0.5"/>
-        <polygon points="200,380 380,110 20,110" fill="none" stroke="rgba(255,107,157,0.3)" stroke-width="0.5"/>
-        <circle cx="200" cy="200" r="60" fill="none" stroke="rgba(218,165,32,0.4)" stroke-width="0.5"/>
-    </svg>
 
     <div class="container">
         <!-- Category Navigation -->
@@ -2151,73 +2124,8 @@
 
     </div>
 
-    <!-- JavaScript for Particle System, Scroll Reveal, and Section Toggle -->
+    <!-- JavaScript for Scroll Reveal and Section Toggle (Optimized) -->
     <script>
-        // Particle System
-        const canvas = document.getElementById('particles-canvas');
-        const ctx = canvas.getContext('2d');
-        
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = document.documentElement.scrollHeight;
-        }
-        
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-        
-        const particles = [];
-        const particleCount = 80;
-        
-        for (let i = 0; i < particleCount; i++) {
-            particles.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                vx: (Math.random() - 0.5) * 0.3,
-                vy: (Math.random() - 0.5) * 0.3,
-                size: Math.random() * 2 + 1,
-                color: ['#daa520', '#ff6b9d', '#00f5ff', '#8a2be2'][Math.floor(Math.random() * 4)]
-            });
-        }
-        
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            particles.forEach((p, i) => {
-                p.x += p.vx;
-                p.y += p.vy;
-                
-                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-                
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                ctx.fillStyle = p.color;
-                ctx.globalAlpha = 0.6;
-                ctx.fill();
-                
-                // Connection lines
-                particles.slice(i + 1).forEach(p2 => {
-                    const dx = p.x - p2.x;
-                    const dy = p.y - p2.y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-                    
-                    if (dist < 120) {
-                        ctx.beginPath();
-                        ctx.moveTo(p.x, p.y);
-                        ctx.lineTo(p2.x, p2.y);
-                        ctx.strokeStyle = p.color;
-                        ctx.globalAlpha = 0.1 * (1 - dist / 120);
-                        ctx.stroke();
-                    }
-                });
-            });
-            
-            ctx.globalAlpha = 1;
-            requestAnimationFrame(animateParticles);
-        }
-        
-        animateParticles();
-        
         // Scroll Reveal Animation
         const revealElements = document.querySelectorAll('.reveal');
         const observer = new IntersectionObserver((entries) => {
@@ -2252,31 +2160,6 @@
                 }
             });
         }
-        
-        // Sparkle Cursor Effect
-        document.addEventListener('mousemove', (e) => {
-            if (Math.random() > 0.92) {
-                const sparkle = document.createElement('div');
-                sparkle.className = 'sparkle';
-                sparkle.style.left = e.pageX + 'px';
-                sparkle.style.top = e.pageY + 'px';
-                sparkle.innerHTML = ['✧', '✦', '⋆', '✶', '✹'][Math.floor(Math.random() * 5)];
-                sparkle.style.color = ['#daa520', '#ff6b9d', '#00f5ff'][Math.floor(Math.random() * 3)];
-                document.body.appendChild(sparkle);
-                
-                setTimeout(() => sparkle.remove(), 1000);
-            }
-        });
-        
-        // Enhanced Hover Effects
-        document.querySelectorAll('.section').forEach(section => {
-            section.addEventListener('mouseenter', () => {
-                section.style.transform = 'scale(1.01)';
-            });
-            section.addEventListener('mouseleave', () => {
-                section.style.transform = 'scale(1)';
-            });
-        });
     </script>
 </body>
 </html>
