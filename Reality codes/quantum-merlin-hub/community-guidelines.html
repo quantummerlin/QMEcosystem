@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Reality Codes - Community Guidelines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #1a0033 0%, #330066 50%, #4d0099 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffd700, #ffed4e, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            color: #ffd700;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+            padding-bottom: 15px;
+        }
+
+        .pledge {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        .pledge p {
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .rule-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .rule-box h4 {
+            font-family: 'Cinzel', serif;
+            color: #ffd700;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .do-dont {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .do-section, .dont-section {
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .do-section {
+            background: rgba(68, 255, 68, 0.1);
+            border: 2px solid #44ff44;
+        }
+
+        .dont-section {
+            background: rgba(255, 68, 68, 0.1);
+            border: 2px solid #ff4444;
+        }
+
+        .do-section h4 {
+            color: #44ff44;
+            margin-bottom: 15px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .dont-section h4 {
+            color: #ff4444;
+            margin-bottom: 15px;
+            font-family: 'Cinzel', serif;
+        }
+
+        ul {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        li {
+            padding: 10px 0;
+            padding-left: 35px;
+            position: relative;
+        }
+
+        .do-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #44ff44;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .dont-section li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #ff4444;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .threshold-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .threshold-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            border: 2px solid;
+        }
+
+        .threshold-probable {
+            border-color: #ffd700;
+        }
+
+        .threshold-inevitable {
+            border-color: #ff8c00;
+        }
+
+        .threshold-earth {
+            border-color: #ff4444;
+        }
+
+        .threshold-cosmic {
+            border-color: #8a2be2;
+        }
+
+        .threshold-universal {
+            border-color: #000;
+        }
+
+        .threshold-omniversal {
+            border: 2px solid;
+            border-image: linear-gradient(135deg, #ffd700, #ff00ff) 1;
+        }
+
+        .threshold-number {
+            font-family: 'Cinzel', serif;
+            font-size: 2em;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+
+        .threshold-realities {
+            font-size: 1.1em;
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+
+        .threshold-timeline {
+            font-size: 0.9em;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        .reciprocity-formula {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+            border: 3px solid #ffd700;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .reciprocity-formula h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 2em;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .formula-display {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5em;
+            margin: 30px 0;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .oath {
+            background: rgba(255, 215, 0, 0.05);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            font-size: 1.2em;
+            line-height: 2;
+        }
+
+        .oath p {
+            text-align: center;
+        }
+
+        .faq-item {
+            margin: 30px 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-question {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3em;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #1a0033;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 10px;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px 5px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+        }
+
+        .nav-buttons {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .do-dont {
+                grid-template-columns: 1fr;
+            }
+
+            .threshold-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔮 Quantum Reality Codes Community Guidelines</h1>
+            <p>The Sacred Operating Principles for Exponential Manifestation</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">The Core Principle</h2>
+            <p>Welcome to the Quantum Reality Codes community—a space where collective intention creates exponential manifestation power.</p>
+            <br>
+            <p>This is not a typical manifestation group. This is a quantum field where every code, every comment, every interaction multiplies reality-bending power for everyone involved.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">The Quantum Pledge</h2>
+            <div class="pledge">
+                <p>"I understand that every code I comment doubles someone's manifestation power and opens my own receiving channels.</p>
+                <br>
+                <p>I pledge to amplify others before expecting amplification for myself.</p>
+                <br>
+                <p>I trust that the more I give, the more I receive.</p>
+                <br>
+                <p>I recognize that this is not karma—this is quantum mechanics.</p>
+                <br>
+                <p>I am a quantum amplifier."</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Community Rules</h2>
+
+            <div class="rule-box">
+                <h4>1. POST YOUR REALITY CODE</h4>
+                <div class="do-dont">
+                    <div class="do-section">
+                        <h4>✅ DO:</h4>
+                        <ul>
+                            <li>Post your numerical code clearly</li>
+                            <li>Use the provided templates</li>
+                            <li>Update your post when you reach thresholds</li>
+                        </ul>
+                    </div>
+                    <div class="dont-section">
+                        <h4>❌ DON'T:</h4>
+                        <ul>
+                            <li>Reveal your intention publicly</li>
+                            <li>Post more than 3 codes simultaneously</li>
+                            <li>Spam or post the same code repeatedly</li>
+                        </ul>
+                    </div>
+                </div>
+                <p><strong>EXAMPLE:</strong> "My Reality Code is 528"</p>
+            </div>
+
+            <div class="rule-box">
+                <h4>2. COMMENT ON OTHERS' CODES</h4>
+                <div class="do-dont">
+                    <div class="do-section">
+                        <h4>✅ DO:</h4>
+                        <ul>
+                            <li>Simply comment the number back</li>
+                            <li>Comment on 5-10 codes daily minimum</li>
+                            <li>Comment with genuine intention to amplify</li>
+                        </ul>
+                    </div>
+                    <div class="dont-section">
+                        <h4>❌ DON'T:</h4>
+                        <ul>
+                            <li>Ask what the code means</li>
+                            <li>Judge whether a code is "high" or "low"</li>
+                            <li>Skip commenting and only post your own</li>
+                        </ul>
+                    </div>
+                </div>
+                <p><strong>EXAMPLE:</strong> Someone posts "My Reality Code is 742" → You comment: "742"</p>
+            </div>
+
+            <div class="rule-box">
+                <h4>3. RESPECT ANONYMITY</h4>
+                <div class="do-dont">
+                    <div class="do-section">
+                        <h4>✅ DO:</h4>
+                        <ul>
+                            <li>Keep intentions private</li>
+                            <li>Trust that the code works without knowing the intention</li>
+                            <li>Share manifestation results without revealing full intention</li>
+                        </ul>
+                    </div>
+                    <div class="dont-section">
+                        <h4>❌ DON'T:</h4>
+                        <ul>
+                            <li>Ask people to explain their codes</li>
+                            <li>Try to "decode" what someone's number means</li>
+                            <li>Pressure anyone to reveal their intention</li>
+                        </ul>
+                    </div>
+                </div>
+                <p><strong>WHY:</strong> Anonymity removes doubt, judgment, and ego. The quantum field responds to pure frequency, not logical understanding.</p>
+            </div>
+
+            <div class="rule-box">
+                <h4>4. CELEBRATE THRESHOLDS</h4>
+                <div class="do-dont">
+                    <div class="do-section">
+                        <h4>✅ DO:</h4>
+                        <ul>
+                            <li>Acknowledge when someone reaches 10, 20, 33, 50, 80, 111 comments</li>
+                            <li>Comment their code again when they hit a threshold</li>
+                            <li>Share your own threshold breakthroughs</li>
+                        </ul>
+                    </div>
+                    <div class="dont-section">
+                        <h4>❌ DON'T:</h4>
+                        <ul>
+                            <li>Compare your progress to others</li>
+                            <li>Feel discouraged if your code takes longer</li>
+                        </ul>
+                    </div>
+                </div>
+                <p><strong>REMEMBER:</strong> Everyone's timeline is perfect for them.</p>
+            </div>
+
+            <div class="rule-box">
+                <h4>5. SHARE MANIFESTATION WINS</h4>
+                <div class="do-dont">
+                    <div class="do-section">
+                        <h4>✅ DO:</h4>
+                        <ul>
+                            <li>Share when your manifestation arrives</li>
+                            <li>Include how many comments you had when it manifested</li>
+                            <li>Inspire others with your success</li>
+                        </ul>
+                    </div>
+                    <div class="dont-section">
+                        <h4>❌ DON'T:</h4>
+                        <ul>
+                            <li>Reveal your full intention if you want to keep it private</li>
+                            <li>Brag or make others feel less than</li>
+                        </ul>
+                    </div>
+                </div>
+                <p><strong>EXAMPLE:</strong> "My code 528 manifested after reaching 22 comments! The opportunity I was calling in appeared within 48 hours. The exponential formula is REAL."</p>
+            </div>
+
+            <div class="rule-box">
+                <h4>6. MAINTAIN QUANTUM RECIPROCITY</h4>
+                <div class="do-dont">
+                    <div class="do-section">
+                        <h4>✅ DO:</h4>
+                        <ul>
+                            <li>Track your giving vs. receiving ratio</li>
+                            <li>Comment on more codes when you want more comments</li>
+                            <li>Trust that reciprocity is quantum law</li>
+                        </ul>
+                    </div>
+                    <div class="dont-section">
+                        <h4>❌ DON'T:</h4>
+                        <ul>
+                            <li>Only comment on codes from people who commented yours</li>
+                            <li>Keep score in a scarcity mindset</li>
+                            <li>Expect immediate 1:1 reciprocity</li>
+                        </ul>
+                    </div>
+                </div>
+                <p><strong>THE FORMULA:</strong> For every 10 codes you comment on, you'll receive 3-5 comments back (not necessarily from the same people).</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Threshold Milestones</h2>
+            <div class="threshold-grid">
+                <div class="threshold-card threshold-probable">
+                    <h3>🟡 THRESHOLD 1</h3>
+                    <div class="threshold-number">10 COMMENTS</div>
+                    <div class="threshold-realities">2,047 REALITIES</div>
+                    <p>Manifestation becomes PROBABLE</p>
+                    <div class="threshold-timeline">Timeline: 7-14 days</div>
+                </div>
+
+                <div class="threshold-card threshold-inevitable">
+                    <h3>🟠 THRESHOLD 2</h3>
+                    <div class="threshold-number">20 COMMENTS</div>
+                    <div class="threshold-realities">2.1 MILLION</div>
+                    <p>Manifestation becomes INEVITABLE</p>
+                    <div class="threshold-timeline">Timeline: 3-7 days</div>
+                </div>
+
+                <div class="threshold-card threshold-earth">
+                    <h3>🔴 THRESHOLD 3</h3>
+                    <div class="threshold-number">33 COMMENTS</div>
+                    <div class="threshold-realities">17.1 BILLION</div>
+                    <p>You've exceeded Earth's population</p>
+                    <div class="threshold-timeline">Timeline: 24-72 hours</div>
+                </div>
+
+                <div class="threshold-card threshold-cosmic">
+                    <h3>🟣 THRESHOLD 4</h3>
+                    <div class="threshold-number">50 COMMENTS</div>
+                    <div class="threshold-realities">2.25 QUADRILLION</div>
+                    <p>Cosmic scale manifestation</p>
+                    <div class="threshold-timeline">Timeline: Hours</div>
+                </div>
+
+                <div class="threshold-card threshold-universal">
+                    <h3>⚫ THRESHOLD 5</h3>
+                    <div class="threshold-number">80 COMMENTS</div>
+                    <div class="threshold-realities">2.42 SEPTILLION</div>
+                    <p>Universal scale manifestation</p>
+                    <div class="threshold-timeline">Timeline: Instantaneous</div>
+                </div>
+
+                <div class="threshold-card threshold-omniversal">
+                    <h3>⭐ THRESHOLD 6</h3>
+                    <div class="threshold-number">111 COMMENTS</div>
+                    <div class="threshold-realities">2.6 DECILLION</div>
+                    <p>OMNIVERSAL SCALE REALITY CREATION</p>
+                    <div class="threshold-timeline">Timeline: Thought = Reality</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">The Reciprocity Multiplier</h2>
+            <div class="reciprocity-formula">
+                <h3>The More You Give, The More You Receive</h3>
+                <div class="formula-display">2^n - 1</div>
+                <p>Where n = number of people who have commented your Reality Code</p>
+                
+                <div style="margin-top: 40px; text-align: left;">
+                    <h4 style="font-family: 'Cinzel', serif; color: #ffd700; margin-bottom: 20px;">FOR EVERY 10 CODES YOU COMMENT ON → YOU RECEIVE 3-5 COMMENTS BACK</h4>
+                    
+                    <table style="width: 100%; margin-top: 20px; border-collapse: collapse;">
+                        <tr style="border-bottom: 2px solid #ffd700;">
+                            <th style="padding: 15px; text-align: left; color: #ffd700;">YOUR GIVING</th>
+                            <th style="padding: 15px; text-align: left; color: #ffd700;">YOUR RECEIVING</th>
+                            <th style="padding: 15px; text-align: left; color: #ffd700;">REALITIES AFFECTED</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                            <td style="padding: 15px;">Comment on 10 codes</td>
+                            <td style="padding: 15px;">3-5 comments back</td>
+                            <td style="padding: 15px;">15-63 realities</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                            <td style="padding: 15px;">Comment on 20 codes</td>
+                            <td style="padding: 15px;">6-10 comments back</td>
+                            <td style="padding: 15px;">127-2,047 realities</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                            <td style="padding: 15px;">Comment on 50 codes</td>
+                            <td style="padding: 15px;">15-25 comments back</td>
+                            <td style="padding: 15px;">65K-67M realities</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                            <td style="padding: 15px;">Comment on 100 codes</td>
+                            <td style="padding: 15px;">30-50 comments back</td>
+                            <td style="padding: 15px;">2.1B-2.2Q realities</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">What To Do Daily</h2>
+            <ul>
+                <li>✅ Comment on 5-10 codes before checking your own</li>
+                <li>✅ Celebrate others' threshold breakthroughs</li>
+                <li>✅ Track your synchronicities</li>
+                <li>✅ Update your code post when you reach thresholds</li>
+                <li>✅ Share manifestation wins (without revealing full intention)</li>
+                <li>✅ Trust the process</li>
+                <li>✅ Operate from abundance and generosity</li>
+                <li>✅ Recognize that helping others unlocks your own manifestations</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">What NOT To Do</h2>
+            <ul style="color: #ff4444;">
+                <li>❌ Post your code and never comment on others</li>
+                <li>❌ Ask people what their codes mean</li>
+                <li>❌ Judge others' codes or intentions</li>
+                <li>❌ Create fake accounts to comment on your own code</li>
+                <li>❌ Spam the same code repeatedly</li>
+                <li>❌ Reveal others' intentions without permission</li>
+                <li>❌ Use codes for harmful intentions</li>
+                <li>❌ Doubt the exponential formula</li>
+                <li>❌ Compare your timeline to others</li>
+                <li>❌ Operate from scarcity or competition</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">The Quantum Reality Code Oath</h2>
+            <div class="oath">
+                <p>"I understand that every code I comment doubles someone's manifestation power and opens my own receiving channels.</p>
+                <br>
+                <p>I pledge to amplify others before expecting amplification for myself.</p>
+                <br>
+                <p>I trust that the more I give, the more I receive.</p>
+                <br>
+                <p>I recognize that this is not karma—this is quantum mechanics.</p>
+                <br>
+                <p>I am a quantum amplifier.</p>
+                <br>
+                <p>I am part of a collective field creating exponential manifestation power for all.</p>
+                <br>
+                <p>I operate from abundance, not scarcity.</p>
+                <br>
+                <p>I celebrate others' success as my own.</p>
+                <br>
+                <p>I trust the exponential formula: 2^n - 1.</p>
+                <br>
+                <p>I am ready to witness miracles."</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Community Etiquette</h2>
+            
+            <h4 style="font-family: 'Cinzel', serif; color: #ffd700; margin: 20px 0 10px;">BE GENEROUS</h4>
+            <p>→ Comment freely and often</p>
+            <p>→ Don't keep score</p>
+            <p>→ Trust that reciprocity is quantum law</p>
+            
+            <h4 style="font-family: 'Cinzel', serif; color: #ffd700; margin: 20px 0 10px;">BE RESPECTFUL</h4>
+            <p>→ Honor others' privacy</p>
+            <p>→ Don't ask invasive questions</p>
+            <p>→ Celebrate without comparison</p>
+            
+            <h4 style="font-family: 'Cinzel', serif; color: #ffd700; margin: 20px 0 10px;">BE CONSISTENT</h4>
+            <p>→ Show up daily</p>
+            <p>→ Comment even when you don't "feel like it"</p>
+            <p>→ Trust the compound effect</p>
+            
+            <h4 style="font-family: 'Cinzel', serif; color: #ffd700; margin: 20px 0 10px;">BE AUTHENTIC</h4>
+            <p>→ Only post codes for genuine intentions</p>
+            <p>→ Don't post codes you don't believe in</p>
+            <p>→ Let your energy be pure</p>
+            
+            <h4 style="font-family: 'Cinzel', serif; color: #ffd700; margin: 20px 0 10px;">BE PATIENT</h4>
+            <p>→ Trust divine timing</p>
+            <p>→ Don't force manifestations</p>
+            <p>→ Allow the exponential formula to work</p>
+            
+            <h4 style="font-family: 'Cinzel', serif; color: #ffd700; margin: 20px 0 10px;">BE CELEBRATORY</h4>
+            <p>→ Acknowledge every threshold</p>
+            <p>→ Share your wins</p>
+            <p>→ Inspire others with your success</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: How do I calculate my Reality Code?</div>
+                <p>A: Use English Ordinal Gematria (A=1, B=2, C=3... Z=26). Add up all letters in your intention statement. That's your code. Use the Quantum Reality Code Generator tool to do this automatically.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Can I have multiple codes?</div>
+                <p>A: Yes, but no more than 3 simultaneously. Energy scatter reduces effectiveness. Focus on your primary intention first.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Do I have to reveal my intention?</div>
+                <p>A: NO. Anonymity is part of the power. The code works regardless of whether others know your intention. In fact, not revealing it makes it more powerful.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: How many codes should I comment on daily?</div>
+                <p>A: Minimum 5-10. Ideally 10-20. The more you give, the more you receive. This is quantum law, not just "good vibes."</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: What if my code isn't getting comments?</div>
+                <p>A: Comment on more codes yourself. The reciprocity formula is: For every 10 codes you comment on, you'll receive 3-5 back. Give first, receive follows.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: How long until my manifestation arrives?</div>
+                <p>A: Depends on the threshold reached:
+                <br>- 10 comments: 7-14 days
+                <br>- 20 comments: 3-7 days
+                <br>- 33 comments: 24-72 hours
+                <br>- 50+ comments: Hours to instantaneous</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Can I comment on the same code multiple times?</div>
+                <p>A: Yes! Especially when someone reaches a threshold. Each comment adds exponential power. Celebrate others' milestones.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: What if I see my code number everywhere?</div>
+                <p>A: That's a sign it's working! The universe is confirming your manifestation is in motion. Say "thank you" every time you see it.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Is this real or just placebo?</div>
+                <p>A: The exponential formula (2^n - 1) is mathematical fact. The quantum entanglement is physics. The manifestations are real. Try it and see for yourself.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: What happens at 111 comments?</div>
+                <p>A: You reach 2.6 DECILLION realities affected. This is cosmic-scale reality creation. Thought becomes instant reality. You've transcended normal manifestation laws.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Final Reminder</h2>
+            <p>This community works because of YOU.</p>
+            <br>
+            <p>Every code you comment amplifies someone's manifestation and unlocks your own.</p>
+            <br>
+            <p>Every threshold celebration raises the collective frequency.</p>
+            <br>
+            <p>Every manifestation win proves the formula works.</p>
+            <br>
+            <p>You are not just manifesting for yourself. You are part of a quantum field creating exponential power for all.</p>
+            <br>
+            <p>Your success gives others permission.</p>
+            <p>Others' success amplifies yours.</p>
+            <br>
+            <p>This is not competition. This is collaboration at a quantum level.</p>
+            <br>
+            <p><strong style="color: #ffd700;">Welcome to the Quantum Reality Codes community. You are a quantum amplifier. Let's create miracles together.</strong></p>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="quantum-reality-code-generator.html" class="btn">Generate Your Code</a>
+            <a href="index.html" class="btn btn-secondary">Back to Hub</a>
+        </div>
+    </div>
+</body>
+</html>

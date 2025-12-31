@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Reading Generator | Quantum Merlin</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="shared/css/quantum-core.css">
+    
+    <style>
+        body {
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .generator-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .generator-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .generator-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+        
+        .generator-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .editor-panel {
+            background: rgba(20, 20, 35, 0.95);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .panel-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: var(--neon-gold);
+            margin-bottom: 25px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.9rem;
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 8px;
+            padding: 12px 15px;
+            color: var(--text-primary);
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+        }
+        
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+        
+        .section-editor {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(157, 0, 255, 0.3);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .section-editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            color: var(--neon-magenta);
+            font-weight: 600;
+        }
+        
+        .btn-remove-section {
+            background: transparent;
+            border: 1px solid #ff4444;
+            color: #ff4444;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-remove-section:hover {
+            background: rgba(255, 68, 68, 0.2);
+        }
+        
+        .btn-add-section {
+            width: 100%;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(157, 0, 255, 0.1));
+            border: 2px dashed rgba(0, 245, 255, 0.4);
+            color: var(--neon-cyan);
+            padding: 15px;
+            border-radius: 12px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-add-section:hover {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.25), rgba(157, 0, 255, 0.15));
+            border-color: var(--neon-cyan);
+        }
+        
+        .style-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .style-option {
+            padding: 8px 12px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .style-option.active {
+            border-color: var(--neon-cyan);
+            background: rgba(0, 245, 255, 0.15);
+            color: var(--neon-cyan);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .btn {
+            padding: 15px 40px;
+            border-radius: 12px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--neon-gold);
+            color: var(--neon-gold);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .preview-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            overflow-y: auto;
+            padding: 40px 20px;
+        }
+        
+        .preview-modal.active {
+            display: block;
+        }
+        
+        .preview-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .preview-close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 68, 68, 0.9);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-family: 'Orbitron', monospace;
+            cursor: pointer;
+            z-index: 10001;
+        }
+        
+        @media (max-width: 768px) {
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="generator-container">
+        <!-- HEADER -->
+        <div class="generator-header">
+            <h1 class="generator-title">Quantum Reading Generator</h1>
+            <p class="generator-subtitle">Create beautiful, printable quantum readings</p>
+        </div>
+        
+        <!-- BASIC INFO -->
+        <div class="editor-panel">
+            <h2 class="panel-title">📋 Basic Information</h2>
+            
+            <div class="form-group">
+                <label class="form-label">Reading Title</label>
+                <input type="text" class="form-input" id="readingTitle" placeholder="e.g., Global Meditation & Press Release">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Subtitle</label>
+                <input type="text" class="form-input" id="readingSubtitle" placeholder="e.g., For Family Reunification & Truth">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Client Name</label>
+                <input type="text" class="form-input" id="clientName" placeholder="e.g., A family seeking truth">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Date</label>
+                <input type="text" class="form-input" id="readingDate" placeholder="e.g., December 30, 2024">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Location</label>
+                <input type="text" class="form-input" id="location" placeholder="e.g., Italy">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Introduction</label>
+                <textarea class="form-textarea" id="introduction" placeholder="Opening paragraph that sets the context for the reading..."></textarea>
+            </div>
+        </div>
+        
+        <!-- SECTIONS -->
+        <div class="editor-panel">
+            <h2 class="panel-title">📝 Reading Sections</h2>
+            
+            <div id="sectionsContainer"></div>
+            
+            <button class="btn-add-section" onclick="addSection()">+ Add Section</button>
+        </div>
+        
+        <!-- REALITY CODE -->
+        <div class="editor-panel">
+            <h2 class="panel-title">✨ Reality Code (Optional)</h2>
+            
+            <div class="form-group">
+                <label class="form-label">Code Text</label>
+                <input type="text" class="form-input" id="realityCode" placeholder="e.g., Truth protects the innocent">
+            </div>
+        </div>
+        
+        <!-- ACTIONS -->
+        <div class="action-buttons">
+            <button class="btn btn-primary" onclick="generateReading()">⚡ Generate Reading</button>
+            <button class="btn btn-secondary" onclick="previewReading()">👁️ Preview</button>
+        </div>
+    </div>
+    
+    <!-- PREVIEW MODAL -->
+    <div id="previewModal" class="preview-modal">
+        <button class="preview-close" onclick="closePreview()">✕ Close Preview</button>
+        <div class="preview-container" id="previewContainer"></div>
+    </div>
+    
+    <script>
+        let sectionCount = 0;
+        
+        // Add initial section on load
+        window.addEventListener('DOMContentLoaded', () => {
+            addSection();
+        });
+        
+        function addSection() {
+            sectionCount++;
+            const container = document.getElementById('sectionsContainer');
+            
+            const sectionDiv = document.createElement('div');
+            sectionDiv.className = 'section-editor';
+            sectionDiv.dataset.sectionId = sectionCount;
+            
+            sectionDiv.innerHTML = `
+                <div class="section-editor-header">
+                    <span class="section-number">SECTION ${sectionCount}</span>
+                    <button class="btn-remove-section" onclick="removeSection(${sectionCount})">Remove</button>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Section Icon (Emoji)</label>
+                    <input type="text" class="form-input" placeholder="e.g., 🌟" data-field="icon">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Section Title</label>
+                    <input type="text" class="form-input" placeholder="e.g., Astrological Structure" data-field="title">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Section Subtitle (Optional)</label>
+                    <input type="text" class="form-input" placeholder="Optional subtitle" data-field="subtitle">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Content</label>
+                    <textarea class="form-textarea" placeholder="Section content..." data-field="content"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Style</label>
+                    <div class="style-selector">
+                        <div class="style-option active" data-style="normal" onclick="selectStyle(this)">Normal</div>
+                        <div class="style-option" data-style="highlight" onclick="selectStyle(this)">Highlight</div>
+                        <div class="style-option" data-style="cyan" onclick="selectStyle(this)">Cyan Box</div>
+                        <div class="style-option" data-style="magenta" onclick="selectStyle(this)">Magenta Box</div>
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(sectionDiv);
+        }
+        
+        function removeSection(id) {
+            const section = document.querySelector(`[data-section-id="${id}"]`);
+            if (section) {
+                section.remove();
+            }
+        }
+        
+        function selectStyle(element) {
+            const parent = element.parentElement;
+            parent.querySelectorAll('.style-option').forEach(opt => opt.classList.remove('active'));
+            element.classList.add('active');
+        }
+        
+        function collectData() {
+            const data = {
+                title: document.getElementById('readingTitle').value,
+                subtitle: document.getElementById('readingSubtitle').value,
+                clientName: document.getElementById('clientName').value,
+                date: document.getElementById('readingDate').value,
+                location: document.getElementById('location').value,
+                introduction: document.getElementById('introduction').value,
+                realityCode: document.getElementById('realityCode').value,
+                sections: []
+            };
+            
+            document.querySelectorAll('.section-editor').forEach(section => {
+                const sectionData = {
+                    icon: section.querySelector('[data-field="icon"]').value,
+                    title: section.querySelector('[data-field="title"]').value,
+                    subtitle: section.querySelector('[data-field="subtitle"]').value,
+                    content: section.querySelector('[data-field="content"]').value,
+                    style: section.querySelector('.style-option.active').dataset.style
+                };
+                data.sections.push(sectionData);
+            });
+            
+            return data;
+        }
+        
+        function generateHTML(data) {
+            // Generate sections HTML
+            let sectionsHTML = '';
+            data.sections.forEach((section, index) => {
+                if (index > 0) {
+                    sectionsHTML += '<div class="section-divider"></div>';
+                }
+                
+                let contentClass = 'section-content';
+                let wrapperClass = '';
+                
+                if (section.style === 'highlight') {
+                    wrapperClass = 'highlight-box';
+                } else if (section.style === 'cyan') {
+                    wrapperClass = 'highlight-box highlight-box-cyan';
+                } else if (section.style === 'magenta') {
+                    wrapperClass = 'highlight-box highlight-box-magenta';
+                }
+                
+                const subtitle = section.subtitle ? `<p class="section-subtitle">${section.subtitle}</p>` : '';
+                const icon = section.icon ? `<div class="section-icon">${section.icon}</div>` : '';
+                
+                const contentHTML = section.content.split('\\n\\n').map(p => `<p>${p.trim()}</p>`).join('');
+                
+                sectionsHTML += `
+                    <div class="section">
+                        <div class="section-header">
+                            ${icon}
+                            <h2 class="section-title">${section.title}</h2>
+                            ${subtitle}
+                        </div>
+                        <div class="${wrapperClass}">
+                            <div class="${contentClass}">
+                                ${contentHTML}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            // Reality Code HTML
+            let realityCodeHTML = '';
+            if (data.realityCode) {
+                realityCodeHTML = `
+                    <div class="reality-code">
+                        <div class="reality-code-title">Your Reality Code</div>
+                        <div class="reality-code-text">"${data.realityCode}"</div>
+                    </div>
+                `;
+            }
+            
+            // Load template and replace placeholders
+            const template = \`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>\${data.title} | Quantum Merlin Reading</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>${getStyles()}</style>
+</head>
+<body>
+    <div class="reading-container">
+        <div class="reading-header">
+            <h1 class="reading-title">\${data.title}</h1>
+            <h2 class="reading-subtitle">\${data.subtitle}</h2>
+            <div class="reading-meta">
+                <div class="meta-item"><span class="meta-label">Generated for:</span><span>\${data.clientName}</span></div>
+                <div class="meta-item"><span class="meta-label">Date:</span><span>\${data.date}</span></div>
+                <div class="meta-item"><span class="meta-label">Location:</span><span>\${data.location}</span></div>
+            </div>
+        </div>
+        <div class="introduction">\${data.introduction}</div>
+        \${sectionsHTML}
+        \${realityCodeHTML}
+        <div class="reading-footer">
+            <div class="footer-logo">QUANTUM MERLIN</div>
+            <p>Generated with Quantum Timing | \${data.date}</p>
+        </div>
+    </div>
+</body>
+</html>\`;
+            
+            return template;
+        }
+        
+        function getStyles() {
+            return \`:root{--neon-cyan:#00f5ff;--neon-magenta:#ff00ff;--neon-gold:#ffd700;--neon-purple:#9d00ff;--neon-pink:#ff1493;--bg-dark:#0a0a0f;--text-primary:#fff;--text-secondary:rgba(255,255,255,.85);--text-muted:rgba(255,255,255,.65)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Exo 2',sans-serif;background:linear-gradient(135deg,#0a0a0f 0%,#1a0a2e 50%,#0a0a0f 100%);color:var(--text-primary);line-height:1.7;padding:40px 20px;min-height:100vh}.reading-container{max-width:900px;margin:0 auto;background:rgba(20,20,35,.95);border-radius:20px;padding:60px;box-shadow:0 20px 60px rgba(0,0,0,.5)}.reading-header{text-align:center;margin-bottom:50px;padding-bottom:40px;border-bottom:2px solid rgba(0,245,255,.3)}.reading-title{font-family:'Orbitron',monospace;font-size:clamp(2rem,5vw,3rem);font-weight:800;background:linear-gradient(135deg,var(--neon-cyan),var(--neon-magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:15px;letter-spacing:2px;text-transform:uppercase}.reading-subtitle{font-family:'Orbitron',monospace;font-size:1.2rem;color:var(--neon-gold);margin-bottom:25px;letter-spacing:1px}.reading-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;font-size:.95rem;color:var(--text-muted)}.meta-item{display:flex;align-items:center;gap:8px}.meta-label{color:var(--neon-cyan);font-weight:600}.introduction{background:linear-gradient(135deg,rgba(0,245,255,.08),rgba(157,0,255,.08));border-left:4px solid var(--neon-cyan);padding:30px;margin-bottom:50px;border-radius:12px;font-size:1.05rem;line-height:1.8}.section{margin-bottom:50px}.section-divider{height:2px;background:linear-gradient(90deg,transparent,var(--neon-cyan),transparent);margin:60px 0 40px;opacity:.5}.section-header{margin-bottom:30px}.section-icon{font-size:2rem;margin-bottom:10px}.section-title{font-family:'Orbitron',monospace;font-size:1.8rem;font-weight:700;color:var(--neon-gold);margin-bottom:10px;letter-spacing:1px}.section-subtitle{font-size:1rem;color:var(--text-muted);font-style:italic}.section-content{font-size:1.05rem;color:var(--text-secondary);line-height:1.8}.section-content p{margin-bottom:20px}.section-content p:last-child{margin-bottom:0}.highlight-box{background:linear-gradient(135deg,rgba(255,215,0,.12),rgba(157,0,255,.1));border:1px solid rgba(255,215,0,.4);border-radius:12px;padding:25px;margin:25px 0}.highlight-box-cyan{background:linear-gradient(135deg,rgba(0,245,255,.12),rgba(157,0,255,.08));border:1px solid rgba(0,245,255,.4)}.highlight-box-magenta{background:linear-gradient(135deg,rgba(255,0,255,.12),rgba(255,20,147,.08));border:1px solid rgba(255,0,255,.4)}.reality-code{background:rgba(0,0,0,.6);border:2px solid var(--neon-cyan);border-radius:12px;padding:30px;text-align:center;margin:30px 0}.reality-code-title{font-family:'Orbitron',monospace;font-size:.9rem;color:var(--neon-cyan);margin-bottom:15px;letter-spacing:2px;text-transform:uppercase}.reality-code-text{font-family:'Orbitron',monospace;font-size:1.8rem;font-weight:700;background:linear-gradient(135deg,var(--neon-cyan),var(--neon-gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:1px}.reading-footer{margin-top:60px;padding-top:40px;border-top:2px solid rgba(0,245,255,.3);text-align:center;color:var(--text-muted);font-size:.9rem}.footer-logo{font-family:'Orbitron',monospace;font-size:1.3rem;background:linear-gradient(135deg,var(--neon-cyan),var(--neon-magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px;font-weight:700}@media print{body{background:#fff;color:#000;padding:20px}.reading-container{background:#fff;box-shadow:none;padding:40px}.section{page-break-inside:avoid}.section-divider{page-break-after:avoid}.reading-header{page-break-after:avoid}.highlight-box,.reality-code{page-break-inside:avoid}.reading-title,.reality-code-text,.footer-logo{-webkit-text-fill-color:initial;background:none;color:#00008b}.section-title{color:#000080}}@media (max-width:768px){.reading-container{padding:30px 25px}.reading-meta{flex-direction:column;align-items:center}}\`;
+        }
+        
+        function previewReading() {
+            const data = collectData();
+            const html = generateHTML(data);
+            
+            const modal = document.getElementById('previewModal');
+            const container = document.getElementById('previewContainer');
+            container.innerHTML = html;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closePreview() {
+            const modal = document.getElementById('previewModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function generateReading() {
+            const data = collectData();
+            const html = generateHTML(data);
+            
+            // Create download
+            const blob = new Blob([html], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = \`quantum-reading-\${Date.now()}.html\`;
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            alert('✨ Reading generated! File downloaded successfully. Open it in your browser to view and print.');
+        }
+        
+        // Close preview with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closePreview();
+            }
+        });
+    </script>
+</body>
+</html>

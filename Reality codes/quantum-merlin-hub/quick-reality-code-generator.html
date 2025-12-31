@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Reality Code Generator | Quantum Merlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #1a0033 0%, #330066 50%, #4d0099 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #ffd700, #ffed4e, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1em;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .full-version-link {
+            display: inline-block;
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .full-version-link:hover {
+            background: rgba(255, 215, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .step-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: none;
+        }
+
+        .step-container.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-header {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4em;
+            margin-bottom: 8px;
+            color: #ffd700;
+        }
+
+        .step-number {
+            font-size: 0.8em;
+            opacity: 0.7;
+            margin-bottom: 15px;
+        }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .template-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .template-card:hover {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: #ffd700;
+            transform: translateY(-3px);
+        }
+
+        .template-card.selected {
+            background: rgba(255, 215, 0, 0.2);
+            border-color: #ffd700;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .template-icon {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .template-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #ffd700;
+        }
+
+        .template-intention {
+            font-size: 0.95em;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .input-group {
+            margin: 20px 0;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #ffd700;
+        }
+
+        .input-group input[type="text"],
+        .input-group input[type="number"],
+        .input-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1em;
+        }
+
+        .intention-preview {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid #ffd700;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .intention-text {
+            font-size: 1.3em;
+            font-weight: 600;
+            line-height: 1.6;
+            color: #ffd700;
+            margin: 15px 0;
+        }
+
+        .reality-code-display {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+            border: 3px solid #ffd700;
+            border-radius: 15px;
+            padding: 35px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .reality-code-number {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #ffd700;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+            margin: 15px 0;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #1a0033;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 8px;
+            font-family: 'Cinzel', serif;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 8px 5px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .quick-stats {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-box {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid #ffd700;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.6em;
+            }
+            
+            .template-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .reality-code-number {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Quick Reality Code Generator</h1>
+            <p>Get your Quantum Reality Code in 60 seconds</p>
+            <a href="quantum-reality-code-generator.html" class="full-version-link">🔮 Switch to Enhanced Version</a>
+        </div>
+
+        <!-- Step 1: Choose Template -->
+        <div class="step-container active" id="step1">
+            <h2 class="step-header">Choose Your Template</h2>
+            <p class="step-number">STEP 1 OF 3</p>
+            
+            <p style="margin-bottom: 15px;">Select a template closest to your intention:</p>
+
+            <div class="template-grid">
+                <div class="template-card" onclick="selectTemplate(this, 'financial')">
+                    <div class="template-icon">💰</div>
+                    <div class="template-title">Financial Abundance</div>
+                    <div class="template-intention">I AM EARNING [AMOUNT] PER MONTH WITH EASE AND JOY</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'relationship')">
+                    <div class="template-icon">❤️</div>
+                    <div class="template-title">Love & Relationships</div>
+                    <div class="template-intention">I AM ATTRACTING MY IDEAL PARTNER WHO LOVES ME DEEPLY</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'health')">
+                    <div class="template-icon">💪</div>
+                    <div class="template-title">Health & Vitality</div>
+                    <div class="template-intention">I AM EXPERIENCING VIBRANT HEALTH AND ENERGY IN MY BODY NOW</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'home')">
+                    <div class="template-icon">🏠</div>
+                    <div class="template-title">Dream Home</div>
+                    <div class="template-intention">I AM LIVING IN MY DREAM HOME FEELING PEACEFUL AND GRATEFUL</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'career')">
+                    <div class="template-icon">🎯</div>
+                    <div class="template-title">Dream Career</div>
+                    <div class="template-intention">I AM THRIVING IN MY DREAM CAREER WITH FULFILLMENT AND ABUNDANCE</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'peace')">
+                    <div class="template-icon">🕊️</div>
+                    <div class="template-title">Inner Peace</div>
+                    <div class="template-intention">I AM EXPERIENCING DEEP PEACE AND CALM IN EVERY MOMENT</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'freedom')">
+                    <div class="template-icon">🦋</div>
+                    <div class="template-title">Complete Freedom</div>
+                    <div class="template-intention">I AM LIVING IN TOTAL FREEDOM DOING WHAT I LOVE</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'purpose')">
+                    <div class="template-icon">✨</div>
+                    <div class="template-title">Life Purpose</div>
+                    <div class="template-intention">I AM LIVING MY PURPOSE AND IMPACTING THOUSANDS WITH JOY</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'confidence')">
+                    <div class="template-icon">🦁</div>
+                    <div class="template-title">Unshakeable Confidence</div>
+                    <div class="template-intention">I AM EMBODYING UNSHAKEABLE CONFIDENCE IN ALL AREAS OF MY LIFE</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'creativity')">
+                    <div class="template-icon">🎨</div>
+                    <div class="template-title">Creative Expression</div>
+                    <div class="template-intention">I AM CREATING BEAUTIFUL WORK THAT TOUCHES THOUSANDS OF LIVES</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'success')">
+                    <div class="template-icon">🏆</div>
+                    <div class="template-title">Total Success</div>
+                    <div class="template-intention">I AM EXPERIENCING MASSIVE SUCCESS IN ALL AREAS OF MY LIFE</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'healing')">
+                    <div class="template-icon">💫</div>
+                    <div class="template-title">Complete Healing</div>
+                    <div class="template-intention">I AM COMPLETELY HEALED AND WHOLE IN BODY MIND AND SPIRIT</div>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn" onclick="nextStep(2)" id="templateNextBtn" disabled>Continue</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Customize -->
+        <div class="step-container" id="step2">
+            <h2 class="step-header">Customize Your Intention</h2>
+            <p class="step-number">STEP 2 OF 3</p>
+            
+            <div id="customizationFields"></div>
+
+            <div class="intention-preview">
+                <p style="margin-bottom: 10px; opacity: 0.8;">Your Intention:</p>
+                <div class="intention-text" id="previewIntention"></div>
+            </div>
+
+            <div class="input-group">
+                <label>Want to edit the full intention?</label>
+                <textarea id="fullIntentionEdit" rows="3" placeholder="Edit your intention above or leave as is..."></textarea>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="prevStep(1)">Back</button>
+                <button class="btn" onclick="generateCode()">Generate My Code</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Your Code -->
+        <div class="step-container" id="step3">
+            <h2 class="step-header">Your Quantum Reality Code</h2>
+            <p class="step-number">STEP 3 OF 3</p>
+
+            <div class="intention-preview">
+                <p style="margin-bottom: 10px; opacity: 0.8;">Your Intention:</p>
+                <div class="intention-text" id="finalIntention"></div>
+            </div>
+
+            <div class="reality-code-display">
+                <h3 style="font-family: 'Cinzel', serif; margin-bottom: 10px;">🔮 YOUR REALITY CODE:</h3>
+                <div class="reality-code-number" id="finalCode"></div>
+                <p style="margin-top: 15px; opacity: 0.9;">This is your quantum signature</p>
+            </div>
+
+            <div class="quick-stats">
+                <h4 style="font-family: 'Cinzel', serif; color: #ffd700; margin-bottom: 15px;">Exponential Power</h4>
+                <div class="stat-row">
+                    <span>10 comments:</span>
+                    <span>2,047 realities</span>
+                </div>
+                <div class="stat-row">
+                    <span>20 comments:</span>
+                    <span>2.1 million realities</span>
+                </div>
+                <div class="stat-row">
+                    <span>33 comments:</span>
+                    <span>17.1 billion realities</span>
+                </div>
+                <div class="stat-row">
+                    <span>111 comments:</span>
+                    <span>2.6 decillion realities</span>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <p><strong>Next Steps:</strong></p>
+                <ul style="margin-top: 10px; line-height: 1.8;">
+                    <li>Post "My Reality Code is [your number]" in the community</li>
+                    <li>Comment on 10 other codes first (giving amplifies receiving)</li>
+                    <li>Say your code 3x daily</li>
+                    <li>Watch the magic unfold</li>
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn" onclick="downloadCode()">📥 Download Code</button>
+                <button class="btn" onclick="saveCode()">💾 Save to Library</button>
+                <button class="btn btn-secondary" onclick="startOver()">🔄 Create Another</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+        let selectedTemplate = '';
+        let userData = {
+            template: '',
+            intention: '',
+            realityCode: 0
+        };
+
+        const templates = {
+            financial: {
+                base: 'I AM EARNING',
+                fields: [
+                    { name: 'amount', label: 'Monthly Amount ($)', type: 'number', placeholder: '10000' }
+                ],
+                suffix: 'PER MONTH WITH EASE AND JOY'
+            },
+            relationship: {
+                base: 'I AM ATTRACTING MY IDEAL PARTNER WHO',
+                fields: [
+                    { name: 'qualities', label: 'Qualities', type: 'text', placeholder: 'loves me deeply and authentically' }
+                ],
+                suffix: ''
+            },
+            health: {
+                base: 'I AM EXPERIENCING',
+                fields: [
+                    { name: 'health', label: 'Health State', type: 'text', placeholder: 'vibrant health and energy' }
+                ],
+                suffix: 'IN MY BODY NOW'
+            },
+            home: {
+                base: 'I AM LIVING IN MY DREAM HOME',
+                fields: [
+                    { name: 'feeling', label: 'Feeling', type: 'text', placeholder: 'feeling peaceful and grateful' }
+                ],
+                suffix: ''
+            },
+            career: {
+                base: 'I AM THRIVING IN MY',
+                fields: [
+                    { name: 'career', label: 'Career/Work', type: 'text', placeholder: 'dream career' }
+                ],
+                suffix: 'WITH FULFILLMENT AND ABUNDANCE'
+            },
+            peace: {
+                base: 'I AM EXPERIENCING',
+                fields: [
+                    { name: 'peace', label: 'Type of Peace', type: 'text', placeholder: 'deep peace and calm' }
+                ],
+                suffix: 'IN EVERY MOMENT'
+            },
+            freedom: {
+                base: 'I AM LIVING IN',
+                fields: [
+                    { name: 'freedom', label: 'Type of Freedom', type: 'text', placeholder: 'total freedom' }
+                ],
+                suffix: 'DOING WHAT I LOVE'
+            },
+            purpose: {
+                base: 'I AM LIVING MY PURPOSE AND',
+                fields: [
+                    { name: 'impact', label: 'Impact', type: 'text', placeholder: 'impacting thousands' }
+                ],
+                suffix: 'WITH JOY'
+            },
+            confidence: {
+                base: 'I AM EMBODYING',
+                fields: [
+                    { name: 'confidence', label: 'Type of Confidence', type: 'text', placeholder: 'unshakeable confidence' }
+                ],
+                suffix: 'IN ALL AREAS OF MY LIFE'
+            },
+            creativity: {
+                base: 'I AM CREATING',
+                fields: [
+                    { name: 'creative', label: 'Creative Work', type: 'text', placeholder: 'beautiful work' }
+                ],
+                suffix: 'THAT TOUCHES THOUSANDS OF LIVES'
+            },
+            success: {
+                base: 'I AM EXPERIENCING',
+                fields: [
+                    { name: 'success', label: 'Type of Success', type: 'text', placeholder: 'massive success' }
+                ],
+                suffix: 'IN ALL AREAS OF MY LIFE'
+            },
+            healing: {
+                base: 'I AM',
+                fields: [
+                    { name: 'healing', label: 'Healing State', type: 'text', placeholder: 'completely healed and whole' }
+                ],
+                suffix: 'IN BODY MIND AND SPIRIT'
+            }
+        };
+
+        function selectTemplate(element, template) {
+            selectedTemplate = template;
+            userData.template = template;
+            
+            document.querySelectorAll('.template-card').forEach(card => card.classList.remove('selected'));
+            element.classList.add('selected');
+            document.getElementById('templateNextBtn').disabled = false;
+        }
+
+        function nextStep(step) {
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep = step;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+            window.scrollTo(0, 0);
+            
+            if (step === 2) populateCustomization();
+        }
+
+        function prevStep(step) {
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep = step;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function populateCustomization() {
+            const template = templates[selectedTemplate];
+            let html = '';
+
+            template.fields.forEach(field => {
+                html += `
+                    <div class="input-group">
+                        <label>${field.label}</label>
+                        <input type="${field.type}" id="${field.name}" placeholder="${field.placeholder}" oninput="updatePreview()">
+                    </div>
+                `;
+            });
+
+            document.getElementById('customizationFields').innerHTML = html;
+            updatePreview();
+        }
+
+        function updatePreview() {
+            const template = templates[selectedTemplate];
+            let intention = template.base;
+
+            template.fields.forEach(field => {
+                const value = document.getElementById(field.name).value;
+                if (value) {
+                    intention += ' ' + value.toUpperCase();
+                }
+            });
+
+            intention += ' ' + template.suffix;
+            
+            userData.intention = intention;
+            document.getElementById('previewIntention').textContent = intention;
+            document.getElementById('fullIntentionEdit').value = intention;
+        }
+
+        function generateCode() {
+            const editedIntention = document.getElementById('fullIntentionEdit').value;
+            if (editedIntention) {
+                userData.intention = editedIntention;
+            }
+
+            const code = calculateGematria(userData.intention);
+            userData.realityCode = code;
+
+            document.getElementById('finalIntention').textContent = userData.intention;
+            document.getElementById('finalCode').textContent = code;
+
+            nextStep(3);
+        }
+
+        function calculateGematria(text) {
+            let total = 0;
+            
+            for (let char of text.toUpperCase()) {
+                if (char >= 'A' && char <= 'Z') {
+                    total += char.charCodeAt(0) - 64;
+                } else if (char >= '0' && char <= '9') {
+                    total += parseInt(char);
+                }
+            }
+            
+            return total;
+        }
+
+        function downloadCode() {
+            const content = `QUANTUM REALITY CODE
+═══════════════════════════════════════
+
+YOUR INTENTION:
+${userData.intention}
+
+YOUR REALITY CODE: ${userData.realityCode}
+
+═══════════════════════════════════════
+NEXT STEPS:
+✓ Post "My Reality Code is ${userData.realityCode}" in the community
+✓ Comment on 10 other codes first
+✓ Say your code 3x daily
+✓ Track synchronicities
+
+═══════════════════════════════════════
+Generated: ${new Date().toLocaleDateString()}
+            `;
+            
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `quick-reality-code-${userData.realityCode}.txt`;
+            a.click();
+        }
+
+        function saveCode() {
+            const insight = {
+                tool: 'Quick Reality Code Generator',
+                category: 'quantum',
+                timestamp: new Date().toISOString(),
+                intention: userData.intention,
+                realityCode: userData.realityCode,
+                summary: `Reality Code ${userData.realityCode}`
+            };
+            
+            let insights = JSON.parse(localStorage.getItem('quantumInsights') || '[]');
+            insights.push(insight);
+            localStorage.setItem('quantumInsights', JSON.stringify(insights));
+            
+            alert('✅ Your Reality Code has been saved to your Insight Library!');
+        }
+
+        function startOver() {
+            if (confirm('Create another Reality Code?')) {
+                userData = {
+                    template: '',
+                    intention: '',
+                    realityCode: 0
+                };
+                selectedTemplate = '';
+                currentStep = 1;
+                document.querySelectorAll('.step-container').forEach(step => step.classList.remove('active'));
+                document.querySelectorAll('.template-card').forEach(card => card.classList.remove('selected'));
+                document.getElementById('step1').classList.add('active');
+                document.getElementById('templateNextBtn').disabled = true;
+                window.scrollTo(0, 0);
+            }
+        }
+    </script>
+</body>
+</html>

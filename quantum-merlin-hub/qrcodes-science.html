@@ -324,7 +324,17 @@
             font-size: 0.85em;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-top: 20px;
+            margin: 20px auto 0;
+        }
+
+        .section-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-content > *:not(.mark-read-btn) {
+            width: 100%;
         }
 
         .mark-read-btn:hover {

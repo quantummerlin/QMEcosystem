@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{{READING_TITLE}} | Quantum Merlin Reading</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ═══════════════════════════════════════════════════════════════════════
+           QUANTUM READING TEMPLATE - ENHANCED FORECASTS STYLE
+           Center Aligned | Mobile Optimized | Print Ready | High Quality
+           ═══════════════════════════════════════════════════════════════════════ */
+        
+        :root {
+            --neon-cyan: #00f5ff;
+            --neon-magenta: #ff00ff;
+            --neon-gold: #ffd700;
+            --neon-purple: #9d00ff;
+            --neon-pink: #ff1493;
+            --neon-blue: #00a8ff;
+            --neon-green: #00ff88;
+            --bg-dark: #0a0a0f;
+            --bg-surface: rgba(20, 20, 35, 0.95);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.85);
+            --text-muted: rgba(255, 255, 255, 0.6);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 50%, #0a0a0f 100%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* ═══ QUANTUM BACKGROUND ═══ */
+        .quantum-bg {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .quantum-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 20s linear infinite;
+        }
+        
+        @keyframes gridMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 60px; }
+        }
+        
+        .energy-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.5;
+            animation: orbFloat 20s ease-in-out infinite;
+        }
+        
+        .energy-orb-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 245, 255, 0.4) 0%, transparent 70%);
+            top: -10%;
+            right: -15%;
+        }
+        
+        .energy-orb-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 0, 255, 0.3) 0%, transparent 70%);
+            bottom: 10%;
+            left: -15%;
+            animation-delay: -7s;
+        }
+        
+        .energy-orb-3 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.25) 0%, transparent 70%);
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: -14s;
+        }
+        
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+            25% { transform: translate(40px, -40px) scale(1.15); opacity: 0.6; }
+            50% { transform: translate(-30px, 30px) scale(0.9); opacity: 0.4; }
+            75% { transform: translate(25px, 15px) scale(1.1); opacity: 0.55; }
+        }
+        
+        /* ═══ MAIN CONTAINER ═══ */
+        .reading-container {
+            position: relative;
+            z-index: 1;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 30px 20px 100px;
+        }
+        
+        .reading-panel {
+            background: var(--bg-surface);
+            border: 1px solid rgba(0, 245, 255, 0.25);
+            border-radius: 24px;
+            padding: 45px 40px;
+            box-shadow: 
+                0 25px 80px rgba(0, 0, 0, 0.6),
+                0 0 60px rgba(0, 245, 255, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+        }
+        
+        /* ═══ HEADER ═══ */
+        .reading-header {
+            text-align: center;
+            margin-bottom: 45px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(0, 245, 255, 0.15);
+        }
+        
+        .reading-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 30px rgba(0, 245, 255, 0.6));
+            animation: iconFloat 4s ease-in-out infinite;
+        }
+        
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        .reading-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.6rem, 6vw, 2.5rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta), var(--neon-cyan));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: titleShimmer 3s linear infinite;
+        }
+        
+        @keyframes titleShimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+        
+        .reading-subtitle {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(0.95rem, 3vw, 1.15rem);
+            color: var(--neon-gold);
+            margin-bottom: 28px;
+            letter-spacing: 1.5px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        }
+        
+        .reading-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 10px 18px;
+            border-radius: 25px;
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .meta-item:hover {
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+        }
+        
+        .meta-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            color: var(--neon-cyan);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .meta-value {
+            color: var(--text-secondary);
+        }
+        
+        /* ═══ INTRODUCTION ═══ */
+        .introduction {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(157, 0, 255, 0.08));
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 16px;
+            padding: 28px 25px;
+            margin-bottom: 45px;
+            text-align: center;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-secondary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .introduction::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);
+            animation: introShine 4s ease-in-out infinite;
+        }
+        
+        @keyframes introShine {
+            0%, 100% { left: -100%; }
+            50% { left: 100%; }
+        }
+        
+        .introduction p {
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .introduction p:last-child { margin-bottom: 0; }
+        
+        .intro-highlight {
+            color: var(--neon-cyan);
+            font-weight: 600;
+        }
+        
+        /* ═══ SECTIONS ═══ */
+        .section {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-cyan), var(--neon-magenta), var(--neon-cyan), transparent);
+            margin: 55px auto 50px;
+            max-width: 80%;
+            opacity: 0.6;
+            border-radius: 2px;
+        }
+        
+        .section-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .section-icon {
+            font-size: 2.5rem;
+            filter: drop-shadow(0 0 15px var(--neon-cyan));
+            animation: iconPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes iconPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.9; }
+        }
+        
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.3rem, 4vw, 1.6rem);
+            font-weight: 700;
+            color: var(--neon-gold);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+        
+        .section-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        /* ═══ CONTENT CARDS ═══ */
+        .content-card {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.08), rgba(157, 0, 255, 0.06));
+            border: 1px solid rgba(0, 245, 255, 0.25);
+            border-radius: 18px;
+            padding: 28px 25px;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .content-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 245, 255, 0.1) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-cyan);
+            box-shadow: 
+                0 15px 40px rgba(0, 245, 255, 0.15),
+                0 0 30px rgba(0, 245, 255, 0.1);
+        }
+        
+        .content-card:hover::before {
+            opacity: 1;
+        }
+        
+        .content-card.gold {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(255, 140, 0, 0.08));
+            border-color: rgba(255, 215, 0, 0.35);
+        }
+        
+        .content-card.gold:hover {
+            border-color: var(--neon-gold);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15), 0 0 30px rgba(255, 215, 0, 0.1);
+        }
+        
+        .content-card.magenta {
+            background: linear-gradient(135deg, rgba(255, 0, 255, 0.1), rgba(255, 20, 147, 0.06));
+            border-color: rgba(255, 0, 255, 0.35);
+        }
+        
+        .content-card.magenta:hover {
+            border-color: var(--neon-magenta);
+            box-shadow: 0 15px 40px rgba(255, 0, 255, 0.15), 0 0 30px rgba(255, 0, 255, 0.1);
+        }
+        
+        .content-card.purple {
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.1), rgba(0, 168, 255, 0.06));
+            border-color: rgba(157, 0, 255, 0.35);
+        }
+        
+        .content-card.purple:hover {
+            border-color: var(--neon-purple);
+            box-shadow: 0 15px 40px rgba(157, 0, 255, 0.15);
+        }
+        
+        /* ═══ FORECAST LABELS ═══ */
+        .forecast-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.8rem;
+            color: var(--neon-cyan);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .forecast-label::before,
+        .forecast-label::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-cyan));
+        }
+        
+        .forecast-label::after {
+            background: linear-gradient(90deg, var(--neon-cyan), transparent);
+        }
+        
+        .forecast-text {
+            color: var(--text-secondary);
+            line-height: 1.85;
+            font-size: 1rem;
+        }
+        
+        .forecast-text p {
+            margin-bottom: 15px;
+        }
+        
+        .forecast-text p:last-child { margin-bottom: 0; }
+        
+        /* ═══ SPECIAL BOXES ═══ */
+        .frequency-box {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.06));
+            border: 1px solid rgba(255, 215, 0, 0.35);
+            border-radius: 14px;
+            padding: 22px 20px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .frequency-box h4 {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            color: var(--neon-gold);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        
+        .frequency-box p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+        
+        .ritual-box {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(0, 168, 255, 0.06));
+            border: 1px solid rgba(0, 245, 255, 0.35);
+            border-radius: 14px;
+            padding: 22px 20px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .ritual-box h4 {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            color: var(--neon-cyan);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        
+        .ritual-box p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+        
+        /* ═══ WARNING BOX ═══ */
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 68, 68, 0.12), rgba(255, 0, 100, 0.06));
+            border: 1px solid rgba(255, 68, 68, 0.4);
+            border-radius: 14px;
+            padding: 22px 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .warning-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            color: #ff6666;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        
+        /* ═══ LISTS ═══ */
+        .content-list {
+            list-style: none;
+            margin: 20px auto;
+            text-align: left;
+            max-width: 550px;
+            display: inline-block;
+        }
+        
+        .content-list li {
+            position: relative;
+            padding-left: 32px;
+            margin-bottom: 14px;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+        
+        .content-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--neon-cyan);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .content-list.gold li:before { color: var(--neon-gold); }
+        .content-list.magenta li:before { color: var(--neon-magenta); }
+        .content-list.check li:before { content: "✓"; color: var(--neon-green); }
+        .content-list.cross li:before { content: "✗"; color: #ff4444; }
+        .content-list.star li:before { content: "★"; color: var(--neon-gold); }
+        
+        /* ═══ TIMING GRID ═══ */
+        .timing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .timing-card {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 245, 255, 0.25);
+            border-radius: 14px;
+            padding: 20px 15px;
+            text-align: center;
+            transition: all 0.35s ease;
+        }
+        
+        .timing-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.2);
+        }
+        
+        .timing-card.primary {
+            border-color: var(--neon-gold);
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(0, 0, 0, 0.5));
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+        }
+        
+        .timing-card.primary:hover {
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.25);
+        }
+        
+        .timing-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.75rem;
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .timing-card.primary .timing-title {
+            color: var(--neon-gold);
+        }
+        
+        .timing-value {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.1rem, 4vw, 1.4rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+        
+        .timing-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        /* ═══ QUOTE BLOCK ═══ */
+        .quote-block {
+            border-left: 3px solid var(--neon-magenta);
+            border-right: 3px solid var(--neon-magenta);
+            padding: 25px 30px;
+            margin: 35px auto;
+            max-width: 700px;
+            background: rgba(255, 0, 255, 0.05);
+            border-radius: 12px;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            line-height: 1.85;
+            text-align: center;
+            position: relative;
+        }
+        
+        .quote-block::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--neon-magenta);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+        
+        /* ═══ REALITY CODE ═══ */
+        .reality-code {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+            animation: codeGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes codeGlow {
+            0%, 100% { box-shadow: 0 0 30px rgba(0, 245, 255, 0.2); }
+            50% { box-shadow: 0 0 50px rgba(0, 245, 255, 0.4), 0 0 80px rgba(0, 245, 255, 0.2); }
+        }
+        
+        .reality-code::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(0, 245, 255, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        
+        .reality-code-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.8rem;
+            color: var(--neon-cyan);
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        
+        .reality-code-text {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.4rem, 5vw, 2.2rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-gold), var(--neon-cyan));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+            animation: codeShimmer 2s linear infinite;
+        }
+        
+        @keyframes codeShimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+        
+        .reality-code-sub {
+            margin-top: 22px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* ═══ SUMMARY GRID ═══ */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+            margin: 30px 0;
+        }
+        
+        .summary-item {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            border-radius: 12px;
+            padding: 18px 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .summary-item:hover {
+            border-color: var(--neon-cyan);
+            transform: translateY(-3px);
+        }
+        
+        .summary-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            color: var(--neon-cyan);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .summary-value {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            color: var(--neon-gold);
+            font-weight: 600;
+        }
+        
+        /* ═══ FOOTER ═══ */
+        .reading-footer {
+            margin-top: 55px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(0, 245, 255, 0.15);
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+        
+        .footer-date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+        
+        .footer-tagline {
+            font-style: italic;
+            color: var(--neon-gold);
+            font-size: 1rem;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+        
+        /* ═══ PRINT BUTTON ═══ */
+        .print-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+            border: none;
+            border-radius: 50px;
+            padding: 14px 28px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 8px 30px rgba(0, 245, 255, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(0, 245, 255, 0.5);
+        }
+        
+        .print-btn:active {
+            transform: scale(0.98);
+        }
+        
+        /* ═══ PRINT STYLES ═══ */
+        @media print {
+            body {
+                background: white !important;
+                color: #1a1a1a !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .quantum-bg, .print-btn { display: none !important; }
+            .reading-container { padding: 15px; max-width: 100%; }
+            
+            .reading-panel {
+                background: white !important;
+                border: 2px solid #333;
+                box-shadow: none;
+                padding: 30px;
+            }
+            
+            .reading-title, .reality-code-text, .footer-logo {
+                -webkit-text-fill-color: #00008b !important;
+                background: none !important;
+                color: #00008b !important;
+            }
+            
+            .section-title, .timing-title, .timing-value, .summary-value { color: #000080 !important; }
+            .forecast-label, .meta-label, .reality-code-title, .summary-label { color: #006666 !important; }
+            
+            .content-card, .frequency-box, .ritual-box, .timing-card, .summary-item, .introduction {
+                border: 1px solid #ccc !important;
+                background: #f8f8f8 !important;
+            }
+            
+            .section { page-break-inside: avoid; }
+            .content-card, .reality-code { page-break-inside: avoid; }
+        }
+        
+        /* ═══ MOBILE RESPONSIVE ═══ */
+        @media (max-width: 768px) {
+            .reading-container { padding: 15px 12px 90px; }
+            .reading-panel { padding: 30px 20px; border-radius: 18px; }
+            .reading-icon { font-size: 3rem; }
+            .reading-meta { gap: 8px; }
+            .meta-item { padding: 8px 14px; font-size: 0.85rem; }
+            .introduction { padding: 22px 18px; font-size: 0.98rem; }
+            .section-icon { font-size: 2rem; }
+            .content-card { padding: 22px 18px; }
+            .timing-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .timing-card { padding: 16px 12px; }
+            .summary-grid { grid-template-columns: repeat(2, 1fr); }
+            .quote-block { padding: 20px; font-size: 1rem; margin: 25px 10px; }
+            .reality-code { padding: 30px 20px; }
+            .print-btn { bottom: 15px; right: 15px; padding: 12px 20px; font-size: 0.8rem; }
+            .content-list { padding-left: 5px; }
+        }
+        
+        @media (max-width: 480px) {
+            .reading-panel { padding: 25px 16px; }
+            .reading-title { font-size: 1.4rem; letter-spacing: 1px; }
+            .reading-subtitle { font-size: 0.9rem; }
+            .meta-item { width: 100%; justify-content: center; }
+            .section-title { font-size: 1.15rem; }
+            .content-card { padding: 18px 15px; border-radius: 14px; }
+            .timing-grid { grid-template-columns: repeat(2, 1fr); }
+            .timing-value { font-size: 1rem; }
+            .summary-grid { grid-template-columns: repeat(2, 1fr); }
+            .forecast-label { font-size: 0.7rem; }
+            .forecast-label::before, .forecast-label::after { width: 15px; }
+            .quote-block::before { display: none; }
+            .reality-code-text { font-size: 1.2rem; }
+            .warning-box { padding: 18px 15px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Quantum Background -->
+    <div class="quantum-bg">
+        <div class="quantum-grid"></div>
+        <div class="energy-orb energy-orb-1"></div>
+        <div class="energy-orb energy-orb-2"></div>
+        <div class="energy-orb energy-orb-3"></div>
+    </div>
+    
+    <!-- Print Button -->
+    <button class="print-btn" onclick="window.print()">
+        <span>🖨️</span> Print
+    </button>
+    
+    <div class="reading-container">
+        <div class="reading-panel">
+            
+            <!-- ═══════════════════════════════════════════════════════════════════
+                 HEADER - Replace placeholders with actual values
+                 ═══════════════════════════════════════════════════════════════════ -->
+            <div class="reading-header">
+                <div class="reading-icon">🔮</div>
+                <h1 class="reading-title">{{READING_TITLE}}</h1>
+                <h2 class="reading-subtitle">{{READING_SUBTITLE}}</h2>
+                <div class="reading-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">For</span>
+                        <span class="meta-value">{{CLIENT_NAME}}</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Date</span>
+                        <span class="meta-value">{{READING_DATE}}</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Location</span>
+                        <span class="meta-value">{{LOCATION}}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ═══════════════════════════════════════════════════════════════════
+                 INTRODUCTION
+                 ═══════════════════════════════════════════════════════════════════ -->
+            <div class="introduction">
+                {{INTRODUCTION}}
+            </div>
+            
+            <!-- ═══════════════════════════════════════════════════════════════════
+                 SECTIONS - Copy and modify these blocks as needed
+                 ═══════════════════════════════════════════════════════════════════ -->
+            
+            {{SECTIONS}}
+            
+            <!-- ═══════════════════════════════════════════════════════════════════
+                 REALITY CODE
+                 ═══════════════════════════════════════════════════════════════════ -->
+            
+            {{REALITY_CODE}}
+            
+            <!-- ═══════════════════════════════════════════════════════════════════
+                 FOOTER
+                 ═══════════════════════════════════════════════════════════════════ -->
+            <div class="reading-footer">
+                <div class="footer-logo">QUANTUM MERLIN</div>
+                <p class="footer-date">Generated with Quantum Timing | {{READING_DATE}}</p>
+                <p class="footer-tagline">✨ The cosmos is aligned. Trust the timing. ✨</p>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script>
+        // Keyboard shortcut for printing (Ctrl+P)
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════════
+     COMPONENT REFERENCE - Use these HTML snippets when building sections
+     ═══════════════════════════════════════════════════════════════════════════════
+
+     SECTION STRUCTURE:
+     ─────────────────────────────────────────────────────────────────────────────
+     <div class="section-divider"></div>
+     
+     <div class="section">
+         <div class="section-header">
+             <span class="section-icon">⚡</span>
+             <h2 class="section-title">Section Title</h2>
+             <p class="section-subtitle">Optional subtitle</p>
+         </div>
+         
+         <!-- Content goes here -->
+     </div>
+
+     CONTENT CARD (variants: gold, magenta, purple):
+     ─────────────────────────────────────────────────────────────────────────────
+     <div class="content-card gold">
+         <div class="forecast-label">Label Text</div>
+         <div class="forecast-text">
+             <p>Content paragraph...</p>
+         </div>
+     </div>
+
+     LISTS (variants: gold, magenta, check, cross, star):
+     ─────────────────────────────────────────────────────────────────────────────
+     <ul class="content-list check">
+         <li>List item one</li>
+         <li>List item two</li>
+     </ul>
+
+     TIMING GRID:
+     ─────────────────────────────────────────────────────────────────────────────
+     <div class="timing-grid">
+         <div class="timing-card primary">
+             <div class="timing-title">Title</div>
+             <div class="timing-value">Value</div>
+             <div class="timing-desc">Description</div>
+         </div>
+         <div class="timing-card">
+             <div class="timing-title">Title</div>
+             <div class="timing-value">Value</div>
+             <div class="timing-desc">Description</div>
+         </div>
+     </div>
+
+     SUMMARY GRID:
+     ─────────────────────────────────────────────────────────────────────────────
+     <div class="summary-grid">
+         <div class="summary-item">
+             <div class="summary-label">Label</div>
+             <div class="summary-value">Value</div>
+         </div>
+     </div>
+
+     SPECIAL BOXES:
+     ─────────────────────────────────────────────────────────────────────────────
+     <div class="frequency-box">
+         <h4>🔐 Box Title</h4>
+         <p>Box content...</p>
+     </div>
+     
+     <div class="ritual-box">
+         <h4>✨ Ritual Title</h4>
+         <p>Ritual content...</p>
+     </div>
+     
+     <div class="warning-box">
+         <div class="warning-title">Warning Title</div>
+         <ul class="content-list cross">
+             <li>Warning item</li>
+         </ul>
+     </div>
+
+     QUOTE BLOCK:
+     ─────────────────────────────────────────────────────────────────────────────
+     <div class="quote-block">
+         Quote text goes here...
+     </div>
+
+     REALITY CODE:
+     ─────────────────────────────────────────────────────────────────────────────
+     <div class="reality-code">
+         <div class="reality-code-title">🔑 Your Reality Code</div>
+         <div class="reality-code-text">"Your reality code text"</div>
+         <div class="reality-code-sub">Additional info...</div>
+     </div>
+
+═══════════════════════════════════════════════════════════════════════════════ -->

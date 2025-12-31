@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Reality Code Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%);
+            color: #f0e6ff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            color: #a890d4;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .code-input-section {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .code-input {
+            width: 100%;
+            max-width: 300px;
+            padding: 12px 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            text-align: center;
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .save-btn {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #1a0a2e;
+            border: none;
+            padding: 12px 30px;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .save-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .tracker-section {
+            display: none;
+        }
+
+        .tracker-section.active {
+            display: block;
+        }
+
+        .current-code {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .counter-section {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .comment-counter {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+
+        .counter-label {
+            color: #a890d4;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .add-btn {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #1a0a2e;
+            border: none;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            font-size: 2.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .add-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
+        }
+
+        .add-btn:active {
+            transform: scale(0.95);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #a890d4;
+        }
+
+        .threshold-section {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .current-threshold {
+            font-size: 1.2rem;
+            color: #a890d4;
+            margin-bottom: 10px;
+        }
+
+        .threshold-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .threshold-badge.start { background: #4a4a4a; color: #fff; }
+        .threshold-badge.yellow { background: #ffd700; color: #1a0a2e; }
+        .threshold-badge.orange { background: #ff8c00; color: #fff; }
+        .threshold-badge.red { background: #dc143c; color: #fff; }
+        .threshold-badge.purple { background: #9b59b6; color: #fff; }
+        .threshold-badge.black { background: #2c2c2c; color: #ffd700; border: 2px solid #ffd700; }
+        .threshold-badge.star { background: linear-gradient(135deg, #ffd700, #ff8c00, #dc143c); color: #fff; }
+
+        .next-milestone {
+            font-size: 1rem;
+            color: #a890d4;
+        }
+
+        .celebration {
+            display: none;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 140, 0, 0.2));
+            border: 2px solid #ffd700;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+            animation: pulse 1s ease-in-out;
+        }
+
+        .celebration.show {
+            display: block;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .celebration-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .celebration-text {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .copy-btn {
+            background: rgba(255, 215, 0, 0.2);
+            color: #ffd700;
+            border: 1px solid #ffd700;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 215, 0, 0.3);
+        }
+
+        .timeline-section {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .timeline-title {
+            font-family: 'Cinzel', serif;
+            color: #a890d4;
+            margin-bottom: 10px;
+        }
+
+        .timeline-estimate {
+            font-size: 1.2rem;
+            color: #ffd700;
+        }
+
+        .reset-btn {
+            background: rgba(220, 20, 60, 0.2);
+            color: #dc143c;
+            border: 1px solid #dc143c;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            transition: all 0.2s;
+        }
+
+        .reset-btn:hover {
+            background: rgba(220, 20, 60, 0.3);
+        }
+
+        .instructions {
+            background: rgba(168, 144, 212, 0.1);
+            border-left: 3px solid #a890d4;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Quantum Reality Code Tracker</h1>
+        <p class="subtitle">Track your amplification journey</p>
+
+        <div class="instructions">
+            <strong>How it works:</strong> Enter your Reality Code once, then tap the + button each time someone comments on your community post. The system calculates how many realities are being affected!
+        </div>
+
+        <!-- Code Input Section -->
+        <div class="card code-input-section" id="codeInputSection">
+            <label style="display: block; margin-bottom: 10px; color: #a890d4;">Enter Your Reality Code:</label>
+            <input type="text" class="code-input" id="codeInput" placeholder="1234" maxlength="6">
+            <br>
+            <button class="save-btn" onclick="saveCode()">Start Tracking</button>
+        </div>
+
+        <!-- Tracker Section -->
+        <div class="tracker-section" id="trackerSection">
+            <div class="current-code">
+                Code: <span id="displayCode">1234</span>
+            </div>
+
+            <div class="counter-section">
+                <div class="comment-counter" id="commentCount">0</div>
+                <div class="counter-label">Comments Received</div>
+                <button class="add-btn" onclick="addComment()">+</button>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" id="realitiesAffected">1</div>
+                    <div class="stat-label">Realities Affected</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="exponentialPower">1x</div>
+                    <div class="stat-label">Power Multiplier</div>
+                </div>
+            </div>
+
+            <div class="threshold-section">
+                <div class="current-threshold">Current Threshold</div>
+                <div class="threshold-badge start" id="thresholdBadge">🌱 BEGINNING</div>
+                <div class="next-milestone" id="nextMilestone">Next milestone: 10 comments</div>
+            </div>
+
+            <!-- Celebration Section -->
+            <div class="celebration" id="celebration">
+                <div class="celebration-title" id="celebrationTitle">🎉 Threshold Reached!</div>
+                <div class="celebration-text" id="celebrationText"></div>
+                <button class="copy-btn" onclick="copyCelebration()">Copy Celebration Post</button>
+            </div>
+
+            <div class="timeline-section">
+                <div class="timeline-title">Manifestation Timeline</div>
+                <div class="timeline-estimate" id="timelineEstimate">Active</div>
+            </div>
+
+            <div style="text-align: center;">
+                <button class="reset-btn" onclick="resetTracker()">Start New Code</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let commentCount = 0;
+        let currentCode = '';
+
+        // Threshold definitions
+        const thresholds = [
+            { comments: 10, badge: '🟡 PROBABLE', class: 'yellow', label: 'Highly Probable', timeline: '7-14 days', post: '🟡 PROBABLE REALITY! My code has reached 10 comments! 2,047 realities are now aligning with my intention. Quantum amplification in progress!' },
+            { comments: 20, badge: '🟠 INEVITABLE', class: 'orange', label: 'Inevitable', timeline: '3-7 days', post: '🟠 INEVITABLE REALITY! 20 comments achieved! 2,097,151 realities are now bending to my intention. Manifestation imminent!' },
+            { comments: 33, badge: '🔴 EARTH SCALE', class: 'red', label: 'Earth Scale', timeline: '24-72 hours', post: '🔴 EARTH SCALE ACTIVATED! 33 comments! 17.18 billion realities are now quantum-entangled with my intention. The earth itself is responding!' },
+            { comments: 50, badge: '🟣 COSMIC', class: 'purple', label: 'Cosmic', timeline: 'Hours', post: '🟣 COSMIC SCALE! 50 comments! 2.25 quadrillion realities are now aligned with my intention. The universe has received my request!' },
+            { comments: 80, badge: '⚫ UNIVERSAL', class: 'black', label: 'Universal', timeline: 'Instantaneous', post: '⚫ UNIVERSAL ALIGNMENT! 80 comments! 2.42 septillion realities are now quantum-collapsed into my timeline. It is done!' },
+            { comments: 111, badge: '⭐ OMNIVERSAL', class: 'star', label: 'Omniversal', timeline: 'Thought = Reality', post: '⭐ OMNIVERSAL POWER! 111 comments! 2.6 decillion realities have collapsed into my chosen timeline. Thought equals reality. I AM.' }
+        ];
+
+        // Load saved data
+        function loadData() {
+            const savedCode = localStorage.getItem('realityCode');
+            const savedCount = localStorage.getItem('commentCount');
+            
+            if (savedCode && savedCount !== null) {
+                currentCode = savedCode;
+                commentCount = parseInt(savedCount);
+                document.getElementById('codeInputSection').style.display = 'none';
+                document.getElementById('trackerSection').classList.add('active');
+                document.getElementById('displayCode').textContent = currentCode;
+                updateDisplay();
+            }
+        }
+
+        // Save Reality Code
+        function saveCode() {
+            const codeInput = document.getElementById('codeInput').value.trim();
+            if (!codeInput) {
+                alert('Please enter a Reality Code');
+                return;
+            }
+            
+            currentCode = codeInput;
+            commentCount = 0;
+            localStorage.setItem('realityCode', currentCode);
+            localStorage.setItem('commentCount', commentCount);
+            
+            document.getElementById('codeInputSection').style.display = 'none';
+            document.getElementById('trackerSection').classList.add('active');
+            document.getElementById('displayCode').textContent = currentCode;
+            updateDisplay();
+        }
+
+        // Add comment
+        function addComment() {
+            commentCount++;
+            localStorage.setItem('commentCount', commentCount);
+            updateDisplay();
+            checkThresholds();
+        }
+
+        // Update display
+        function updateDisplay() {
+            document.getElementById('commentCount').textContent = commentCount;
+            
+            const realitiesAffected = Math.pow(2, commentCount) - 1;
+            document.getElementById('realitiesAffected').textContent = formatNumber(realitiesAffected);
+            document.getElementById('exponentialPower').textContent = Math.pow(2, commentCount) + 'x';
+            
+            updateThresholdDisplay();
+        }
+
+        // Update threshold display
+        function updateThresholdDisplay() {
+            const thresholdBadge = document.getElementById('thresholdBadge');
+            const nextMilestone = document.getElementById('nextMilestone');
+            const timelineEstimate = document.getElementById('timelineEstimate');
+            
+            let currentThreshold = thresholds[0];
+            let nextThreshold = null;
+            
+            for (let i = thresholds.length - 1; i >= 0; i--) {
+                if (commentCount >= thresholds[i].comments) {
+                    currentThreshold = thresholds[i];
+                    nextThreshold = thresholds[i + 1] || null;
+                    break;
+                } else if (commentCount < thresholds[i].comments) {
+                    nextThreshold = thresholds[i];
+                }
+            }
+            
+            // Reset all classes
+            thresholdBadge.className = 'threshold-badge';
+            thresholdBadge.classList.add(currentThreshold.class);
+            thresholdBadge.textContent = currentThreshold.badge;
+            
+            timelineEstimate.textContent = currentThreshold.timeline;
+            
+            if (nextThreshold) {
+                nextMilestone.textContent = `Next milestone: ${nextThreshold.comments} comments (${nextThreshold.comments - commentCount} more)`;
+            } else {
+                nextMilestone.textContent = 'All thresholds reached! You have achieved omniversal power!';
+            }
+        }
+
+        // Check if threshold reached
+        function checkThresholds() {
+            const celebration = document.getElementById('celebration');
+            const celebrationTitle = document.getElementById('celebrationTitle');
+            const celebrationText = document.getElementById('celebrationText');
+            
+            for (const threshold of thresholds) {
+                if (commentCount === threshold.comments) {
+                    celebrationTitle.textContent = `${threshold.badge} REACHED!`;
+                    celebrationText.textContent = `${threshold.label} manifestation achieved! ${formatNumber(Math.pow(2, commentCount) - 1)} realities are now quantum-entangled with your intention. Timeline: ${threshold.timeline}`;
+                    celebration.classList.add('show');
+                    
+                    // Store celebration post for copying
+                    localStorage.setItem('celebrationPost', threshold.post.replace(/\n/g, ' '));
+                    
+                    setTimeout(() => {
+                        celebration.classList.remove('show');
+                    }, 10000);
+                    break;
+                }
+            }
+        }
+
+        // Copy celebration post
+        function copyCelebration() {
+            const post = localStorage.getItem('celebrationPost');
+            if (post) {
+                navigator.clipboard.writeText(post).then(() => {
+                    alert('Celebration post copied to clipboard!');
+                });
+            }
+        }
+
+        // Reset tracker
+        function resetTracker() {
+            if (confirm('Are you sure you want to start tracking a new code? This will reset your current progress.')) {
+                localStorage.removeItem('realityCode');
+                localStorage.removeItem('commentCount');
+                localStorage.removeItem('celebrationPost');
+                location.reload();
+            }
+        }
+
+        // Format large numbers
+        function formatNumber(num) {
+            if (num >= 1e33) return (num / 1e33).toFixed(2) + ' decillion';
+            if (num >= 1e30) return (num / 1e30).toFixed(2) + ' nonillion';
+            if (num >= 1e27) return (num / 1e27).toFixed(2) + ' octillion';
+            if (num >= 1e24) return (num / 1e24).toFixed(2) + ' septillion';
+            if (num >= 1e21) return (num / 1e21).toFixed(2) + ' sextillion';
+            if (num >= 1e18) return (num / 1e18).toFixed(2) + ' quintillion';
+            if (num >= 1e15) return (num / 1e15).toFixed(2) + ' quadrillion';
+            if (num >= 1e12) return (num / 1e12).toFixed(2) + ' trillion';
+            if (num >= 1e9) return (num / 1e9).toFixed(2) + ' billion';
+            if (num >= 1e6) return (num / 1e6).toFixed(2) + ' million';
+            return num.toLocaleString();
+        }
+
+        // Load data on page load
+        loadData();
+    </script>
+</body>
+</html>
