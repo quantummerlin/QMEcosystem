@@ -342,6 +342,31 @@
             box-shadow: 0 15px 40px rgba(218, 165, 32, 0.4);
         }
 
+        .mark-read-btn {
+            background: linear-gradient(135deg, var(--rose-pink), var(--quantum-gold));
+            color: var(--deep-void);
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-family: 'Cinzel', serif;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(218, 165, 32, 0.3);
+            transition: all 0.3s;
+        }
+
+        .mark-read-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(218, 165, 32, 0.5);
+        }
+
+        .mark-read-btn.is-read {
+            background: linear-gradient(135deg, rgba(0, 255, 157, 0.3), rgba(0, 200, 100, 0.3));
+            color: var(--ethereal-white);
+            cursor: default;
+        }
+
         @media (max-width: 768px) {
             body {
                 font-size: 16px;
@@ -362,6 +387,31 @@
             .magical-orb {
                 display: none;
             }
+        }
+
+        .mark-read-btn {
+            background: linear-gradient(135deg, var(--rose-pink), var(--quantum-gold));
+            color: var(--deep-void);
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-family: 'Cinzel', serif;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(218, 165, 32, 0.3);
+            transition: all 0.3s;
+        }
+
+        .mark-read-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(218, 165, 32, 0.5);
+        }
+
+        .mark-read-btn.is-read {
+            background: linear-gradient(135deg, rgba(0, 255, 157, 0.3), rgba(0, 200, 100, 0.3));
+            color: var(--ethereal-white);
+            cursor: default;
         }
     </style>
 </head>
@@ -448,6 +498,12 @@
             <a href="law-of-attraction.html" class="nav-btn">Next: Law of Attraction →</a>
         </nav>
 
+        <div style="text-align: center; margin: 40px auto;">
+            <button onclick="markAsRead('biology-of-belief')" class="mark-read-btn" id="mark-read-btn">
+                ✓ Mark as Explored
+            </button>
+        </div>
+
         <div class="cta-box">
             <h3>✨ Create Your Reality Code ✨</h3>
             <p style="font-size: 1.1em; margin: 20px 0; color: var(--ethereal-white);">
@@ -490,5 +546,238 @@
             </p>
         </div>
     </div>
+
+    <script>
+        const articleSummaries = {
+            'biology-of-belief': {
+                title: 'Epigenetics & Cellular Memory',
+                keyPoints: [
+                    '🧠 Your beliefs control gene expression',
+                    '🔄 Cells respond to environmental signals, not just DNA',
+                    '💭 Thoughts trigger chemical cascades in your body',
+                    '🌟 Reality Codes reprogram your cellular blueprint'
+                ],
+                highlight: 'Your body is listening to every thought you think!'
+            }
+        };
+
+        function markAsRead(articleId) {
+            const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
+            
+            if (!readSections.includes(articleId)) {
+                readSections.push(articleId);
+                localStorage.setItem('qrcodes-read-sections', JSON.stringify(readSections));
+                
+                showSummary(articleId, readSections.length);
+                
+                const btn = document.getElementById('mark-read-btn');
+                btn.classList.add('is-read');
+                btn.innerHTML = '✓ Explored';
+                btn.style.background = 'linear-gradient(135deg, rgba(0, 255, 157, 0.3), rgba(0, 200, 100, 0.3))';
+                btn.style.cursor = 'default';
+                btn.onclick = null;
+            }
+        }
+
+        function showSummary(articleId, totalRead) {
+            const summary = articleSummaries[articleId];
+            if (!summary) return;
+            
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.85);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10000;
+                animation: fadeIn 0.3s;
+            `;
+            
+            const pointsHTML = summary.keyPoints.map(point => 
+                `<li style="margin: 12px 0; font-size: 1.1em; text-align: left;">${point}</li>`
+            ).join('');
+            
+            modal.innerHTML = `
+                <div style="
+                    background: linear-gradient(135deg, rgba(138, 43, 226, 0.95), rgba(45, 27, 78, 0.95));
+                    border: 2px solid var(--ancient-gold);
+                    border-radius: 25px;
+                    padding: 40px;
+                    max-width: 650px;
+                    text-align: center;
+                    box-shadow: 0 0 40px rgba(218, 165, 32, 0.4);
+                ">
+                    <div style="font-size: 3em; margin-bottom: 15px;">✨</div>
+                    <h2 style="font-family: 'Cinzel', serif; color: var(--ancient-gold); font-size: 1.8em; margin-bottom: 20px;">
+                        ${summary.title} - Explored!
+                    </h2>
+                    <p style="font-size: 1.15em; margin-bottom: 25px; color: var(--mystic-cyan);">
+                        📖 Progress: <strong>${totalRead} of 11</strong> teachings mastered
+                    </p>
+                    <div style="background: rgba(0, 0, 0, 0.3); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                        <h3 style="color: var(--rose-pink); margin-bottom: 15px; font-size: 1.3em;">Key Insights:</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            ${pointsHTML}
+                        </ul>
+                    </div>
+                    <p style="font-size: 1.2em; color: var(--ancient-gold); font-style: italic; margin-bottom: 30px;">
+                        💫 ${summary.highlight}
+                    </p>
+                    <button onclick="this.closest('div').parentElement.remove()" style="
+                        background: linear-gradient(135deg, var(--rose-pink), var(--quantum-gold));
+                        color: var(--deep-void);
+                        border: none;
+                        padding: 12px 35px;
+                        font-size: 1.1em;
+                        font-family: 'Cinzel', serif;
+                        border-radius: 25px;
+                        cursor: pointer;
+                        font-weight: 600;
+                        box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
+                    ">
+                        Continue Journey 🚀
+                    </button>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
+            if (readSections.includes('biology-of-belief')) {
+                const btn = document.getElementById('mark-read-btn');
+                btn.classList.add('is-read');
+                btn.innerHTML = '✓ Explored';
+                btn.style.background = 'linear-gradient(135deg, rgba(0, 255, 157, 0.3), rgba(0, 200, 100, 0.3))';
+                btn.style.cursor = 'default';
+                btn.onclick = null;
+            }
+        });
+    </script>
+
+    <script>
+        const articleSummaries = {
+            'biology-of-belief': {
+                title: 'Epigenetics & Cellular Memory',
+                keyPoints: [
+                    '🧬 Your beliefs control gene expression',
+                    '🔄 Cells respond to environmental signals, not just DNA',
+                    '💭 Thoughts trigger chemical cascades in your body',
+                    '🌟 Reality Codes reprogram your cellular blueprint'
+                ],
+                highlight: 'Your body is listening to every thought you think!'
+            }
+        };
+
+        function markAsRead(articleId) {
+            const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
+            
+            if (!readSections.includes(articleId)) {
+                readSections.push(articleId);
+                localStorage.setItem('qrcodes-read-sections', JSON.stringify(readSections));
+                
+                // Show summary popup
+                showSummary(articleId, readSections.length);
+                
+                // Update button
+                const btn = document.getElementById('mark-read-btn');
+                btn.classList.add('is-read');
+                btn.innerHTML = '✓ Explored';
+                btn.style.background = 'linear-gradient(135deg, rgba(0, 255, 157, 0.3), rgba(0, 200, 100, 0.3))';
+                btn.style.cursor = 'default';
+                btn.onclick = null;
+            }
+        }
+
+        function showSummary(articleId, totalRead) {
+            const summary = articleSummaries[articleId];
+            if (!summary) return;
+            
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.85);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10000;
+                animation: fadeIn 0.3s;
+            `;
+            
+            const pointsHTML = summary.keyPoints.map(point => 
+                `<li style="margin: 12px 0; font-size: 1.1em; text-align: left;">${point}</li>`
+            ).join('');
+            
+            modal.innerHTML = `
+                <div style="
+                    background: linear-gradient(135deg, rgba(138, 43, 226, 0.95), rgba(45, 27, 78, 0.95));
+                    border: 2px solid var(--ancient-gold);
+                    border-radius: 25px;
+                    padding: 40px;
+                    max-width: 650px;
+                    text-align: center;
+                    box-shadow: 0 0 40px rgba(218, 165, 32, 0.4);
+                ">
+                    <div style="font-size: 3em; margin-bottom: 15px;">✨</div>
+                    <h2 style="font-family: 'Cinzel', serif; color: var(--ancient-gold); font-size: 1.8em; margin-bottom: 20px;">
+                        ${summary.title} - Explored!
+                    </h2>
+                    <p style="font-size: 1.15em; margin-bottom: 25px; color: var(--mystic-cyan);">
+                        📖 Progress: <strong>${totalRead} of 11</strong> teachings mastered
+                    </p>
+                    <div style="background: rgba(0, 0, 0, 0.3); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                        <h3 style="color: var(--rose-pink); margin-bottom: 15px; font-size: 1.3em;">Key Insights:</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            ${pointsHTML}
+                        </ul>
+                    </div>
+                    <p style="font-size: 1.2em; color: var(--ancient-gold); font-style: italic; margin-bottom: 30px;">
+                        💫 ${summary.highlight}
+                    </p>
+                    <button onclick="this.closest('div').parentElement.remove()" style="
+                        background: linear-gradient(135deg, var(--rose-pink), var(--quantum-gold));
+                        color: var(--deep-void);
+                        border: none;
+                        padding: 12px 35px;
+                        font-size: 1.1em;
+                        font-family: 'Cinzel', serif;
+                        border-radius: 25px;
+                        cursor: pointer;
+                        font-weight: 600;
+                        box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
+                    ">
+                        Continue Journey 🚀
+                    </button>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+        }
+
+        // Check if already read
+        document.addEventListener('DOMContentLoaded', function() {
+            const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
+            if (readSections.includes('biology-of-belief')) {
+                const btn = document.getElementById('mark-read-btn');
+                btn.classList.add('is-read');
+                btn.innerHTML = '✓ Explored';
+                btn.style.background = 'linear-gradient(135deg, rgba(0, 255, 157, 0.3), rgba(0, 200, 100, 0.3))';
+                btn.style.cursor = 'default';
+                btn.onclick = null;
+            }
+        });
+    </script>
 </body>
 </html>
