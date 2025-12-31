@@ -672,6 +672,57 @@
                     </div>
                 </div>
 
+                <!-- Share Your Code Template Generator -->
+                <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, rgba(0,245,255,0.1), rgba(255,0,255,0.1)); border-radius: 15px; border: 2px solid var(--quantum-cyan);">
+                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); text-align: center; margin-bottom: 20px; font-size: 1.2rem;">📱 Share Your Code</h4>
+                    
+                    <div style="background: rgba(0,0,0,0.4); padding: 20px; border-radius: 12px; margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 10px; font-size: 0.9rem; opacity: 0.8;">Your Reality Code Number:</label>
+                        <input type="number" id="shareCodeNumber" placeholder="Enter your code (e.g., 1091)" 
+                               style="width: 100%; padding: 12px; background: rgba(0,0,0,0.5); border: 2px solid var(--quantum-cyan); border-radius: 8px; color: white; font-family: 'Orbitron', monospace; font-size: 1.1rem; text-align: center;"
+                               oninput="generateShareTemplate()">
+                        
+                        <label style="display: block; margin-top: 15px; margin-bottom: 10px; font-size: 0.9rem; opacity: 0.8;">Current Comments (optional):</label>
+                        <input type="number" id="currentComments" placeholder="0" min="0" max="111"
+                               style="width: 100%; padding: 12px; background: rgba(0,0,0,0.5); border: 2px solid var(--quantum-cyan); border-radius: 8px; color: white; font-family: 'Orbitron', monospace; font-size: 1.1rem; text-align: center;"
+                               oninput="generateShareTemplate()">
+                    </div>
+
+                    <div style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 12px; margin-bottom: 20px; min-height: 150px;">
+                        <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 10px; text-align: center;">Generated Template:</div>
+                        <div id="generatedTemplate" style="white-space: pre-wrap; font-family: monospace; font-size: 0.9rem; line-height: 1.6; color: var(--quantum-cyan);">
+                            Enter your code number above to generate your share template
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                        <button onclick="copyTemplate()" 
+                                style="flex: 1; min-width: 140px; padding: 14px 20px; background: linear-gradient(135deg, var(--quantum-gold), #ff8c00); border: none; border-radius: 25px; color: black; font-weight: 700; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; font-size: 0.95rem;"
+                                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 20px rgba(255,215,0,0.5)'"
+                                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                            📋 Copy Template
+                        </button>
+                        
+                        <button onclick="shareToTelegram()" 
+                                style="flex: 1; min-width: 140px; padding: 14px 20px; background: linear-gradient(135deg, #0088cc, #00aaff); border: none; border-radius: 25px; color: white; font-weight: 700; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; font-size: 0.95rem;"
+                                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 20px rgba(0,170,255,0.5)'"
+                                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                            📱 Share to Telegram
+                        </button>
+                        
+                        <button onclick="shareToFacebook()" 
+                                style="flex: 1; min-width: 140px; padding: 14px 20px; background: linear-gradient(135deg, #1877f2, #4267B2); border: none; border-radius: 25px; color: white; font-weight: 700; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; font-size: 0.95rem;"
+                                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 20px rgba(24,119,242,0.5)'"
+                                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                            👥 Share to Facebook
+                        </button>
+                    </div>
+                    
+                    <div id="copyNotification" style="margin-top: 15px; padding: 10px; background: rgba(0,245,0,0.2); border: 1px solid #00ff00; border-radius: 8px; text-align: center; font-size: 0.9rem; display: none;">
+                        ✅ Template copied! Now paste it in your community.
+                    </div>
+                </div>
+
                 <!-- Community Power Stats -->
                 <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,0,255,0.15)); border-radius: 15px; border: 2px solid var(--quantum-gold);">
                     <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); text-align: center; margin-bottom: 20px; font-size: 1.2rem;">🌍 Our Collective Quantum Power</h4>
@@ -894,6 +945,122 @@
 
             // Initialize community stats
             updateCommunityStats();
+
+            // Share Template Generator Functions
+            let currentTemplate = '';
+
+            function generateShareTemplate() {
+                const codeNumber = document.getElementById('shareCodeNumber').value;
+                const currentComments = parseInt(document.getElementById('currentComments').value) || 0;
+                const templateDiv = document.getElementById('generatedTemplate');
+
+                if (!codeNumber) {
+                    templateDiv.textContent = 'Enter your code number above to generate your share template';
+                    currentTemplate = '';
+                    return;
+                }
+
+                // Get threshold info for current comments
+                const thresholdInfo = getThresholdInfo(currentComments);
+                const nextThreshold = getNextThreshold(currentComments);
+                const progress = nextThreshold ? Math.floor((currentComments / nextThreshold.level) * 100) : 100;
+
+                // Generate template
+                let template = `🌟 QUANTUM REALITY CODE: ${codeNumber} 🌟\n\n`;
+                template += `✨ Comment my code '${codeNumber}' below to amplify my manifestation!\n\n`;
+                
+                if (currentComments > 0) {
+                    template += `📊 PROGRESS: ${currentComments} of ${nextThreshold ? nextThreshold.level : '111+'} comments (${progress}% to ${nextThreshold ? nextThreshold.badge : 'MAXIMUM'}!)\n\n`;
+                }
+                
+                template += `🔮 IMPORTANT: By supporting my code, you CLEAR BLOCKAGES in your own manifestation field!\n\n`;
+                template += `⚡ THRESHOLDS:\n`;
+                template += `• 11 comments = PROBABLE (7-14 days)\n`;
+                template += `• 21 comments = INEVITABLE (3-7 days)\n`;
+                template += `• 33 comments = EARTH SCALE (24-72 hours)\n\n`;
+                template += `💫 RECIPROCITY: For every 10 codes I amplify, 3-5 come back to support mine. The quantum field balances itself!\n\n`;
+                template += `👉 Drop my code below, then POST YOURS so I can amplify it back! 🚀`;
+
+                templateDiv.textContent = template;
+                currentTemplate = template;
+            }
+
+            function getNextThreshold(current) {
+                const thresholds = [
+                    { level: 11, badge: 'PROBABLE' },
+                    { level: 21, badge: 'INEVITABLE' },
+                    { level: 33, badge: 'EARTH SCALE' },
+                    { level: 50, badge: 'COSMIC' },
+                    { level: 80, badge: 'UNIVERSAL' },
+                    { level: 111, badge: 'OMNIVERSAL' }
+                ];
+                
+                for (let threshold of thresholds) {
+                    if (current < threshold.level) {
+                        return threshold;
+                    }
+                }
+                return null;
+            }
+
+            function copyTemplate() {
+                if (!currentTemplate) {
+                    alert('Please enter your code number first!');
+                    return;
+                }
+
+                navigator.clipboard.writeText(currentTemplate).then(() => {
+                    const notification = document.getElementById('copyNotification');
+                    notification.style.display = 'block';
+                    setTimeout(() => {
+                        notification.style.display = 'none';
+                    }, 3000);
+                }).catch(err => {
+                    alert('Copy failed. Please select and copy the text manually.');
+                });
+            }
+
+            function shareToTelegram() {
+                if (!currentTemplate) {
+                    alert('Please enter your code number first!');
+                    return;
+                }
+                
+                // Copy to clipboard first
+                navigator.clipboard.writeText(currentTemplate).catch(() => {});
+                
+                // Open Telegram group
+                window.open('https://t.me/+BIChXgOqFH9iMmU1', '_blank');
+                
+                // Show notification
+                const notification = document.getElementById('copyNotification');
+                notification.innerHTML = '✅ Template copied! Opening Telegram - paste it in the group.';
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 4000);
+            }
+
+            function shareToFacebook() {
+                if (!currentTemplate) {
+                    alert('Please enter your code number first!');
+                    return;
+                }
+                
+                // Copy to clipboard first
+                navigator.clipboard.writeText(currentTemplate).catch(() => {});
+                
+                // Open Facebook group
+                window.open('https://www.facebook.com/share/g/1G8zmzjrKC/', '_blank');
+                
+                // Show notification
+                const notification = document.getElementById('copyNotification');
+                notification.innerHTML = '✅ Template copied! Opening Facebook - paste it in the group.';
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 4000);
+            }
         </script>
 
         <!-- The Science Behind Reality Codes -->
