@@ -1095,63 +1095,6 @@
             50% { transform: scale(1.1); box-shadow: 0 0 25px rgba(0, 245, 255, 0.8); }
         }
 
-        /* Collapsible Sections */
-        .collapsible-section {
-            margin: 30px 0;
-        }
-
-        .collapsible-header {
-            background: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(255, 0, 255, 0.15));
-            border: 2px solid rgba(0, 245, 255, 0.3);
-            border-radius: 15px;
-            padding: 20px 25px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: all 0.3s ease;
-            user-select: none;
-        }
-
-        .collapsible-header:hover {
-            background: linear-gradient(135deg, rgba(0, 245, 255, 0.25), rgba(255, 0, 255, 0.25));
-            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
-        }
-
-        .collapsible-title {
-            font-family: 'Orbitron', monospace;
-            font-size: 1.3rem;
-            color: var(--quantum-cyan);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .collapsible-arrow {
-            font-size: 1.5rem;
-            color: var(--quantum-gold);
-            transition: transform 0.3s ease;
-        }
-
-        .collapsible-section.collapsed .collapsible-arrow {
-            transform: rotate(-90deg);
-        }
-
-        .collapsible-content {
-            max-height: 5000px;
-            overflow: hidden;
-            transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease;
-            padding-top: 20px;
-            opacity: 1;
-        }
-
-        .collapsible-section.collapsed .collapsible-content {
-            max-height: 0;
-            opacity: 0;
-            padding-top: 0;
-            overflow: hidden;
-        }
-
         /* Save/Resume indicator */
         .save-indicator {
             position: fixed;
@@ -2106,99 +2049,26 @@
             <div class="progress-bar">
                 <div class="progress-fill" id="progressBar" style="width: 0%"></div>
             </div>
-        </div>
 
-        <!-- The Consciousness & Resonance Model (COLLAPSIBLE) -->
-        <div class="collapsible-section collapsed">
-            <div class="collapsible-header">
-                <div class="collapsible-title">The Consciousness & Resonance Model</div>
-                <div class="collapsible-arrow">▼</div>
-            </div>
-            <div class="collapsible-content">
-                <div style="background: var(--card-bg); border-radius: 25px; padding: 40px; backdrop-filter: blur(25px); border: 1px solid rgba(255,0,255,0.25);">
-                    <p style="text-align: center; margin-bottom: 35px; opacity: 0.9; font-size: 1.1rem; line-height: 1.6;">This isn't random chance or passive hoping—<br>this is <strong style="color: var(--quantum-cyan); font-size: 1.2rem;">structured intention amplification</strong></p>
-            
-            <div style="display: grid; gap: 20px;">
-                <div style="padding: 25px; background: rgba(0,245,255,0.06); border-radius: 15px; border-left: 4px solid var(--quantum-cyan);">
-                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 12px; font-size: 1.1rem;"><span class="tooltip">Consciousness Linking<span class="tooltiptext">The practice of connecting multiple minds toward a shared focus, creating a unified field of intention that amplifies individual manifestation power.</span></span></h4>
-                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">When you amplify someone's code by commenting the number, you become <strong>psychologically and symbolically linked</strong> within a shared intention field. Your focus becomes woven into their manifestation practice, and theirs into yours. This creates a web of mutual reinforcement that strengthens with each participant.</p>
+            <!-- Quick Science Overview & Link -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 25px;">
+                <div style="background: rgba(0,245,255,0.08); padding: 18px; border-radius: 12px; border-left: 3px solid var(--quantum-cyan);">
+                    <div style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); font-size: 0.85rem; margin-bottom: 8px;">Consciousness Linking</div>
+                    <div style="font-size: 0.9rem; opacity: 0.85; line-height: 1.5;">Each amplifier weaves their focus into your intention field</div>
                 </div>
-                
-                <div style="padding: 25px; background: rgba(255,215,0,0.06); border-radius: 15px; border-left: 4px solid var(--quantum-gold);">
-                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); margin-bottom: 12px; font-size: 1.1rem;">The Attention Effect</h4>
-                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">Attention stabilizes intention. The more people consciously acknowledge a symbol, the faster it integrates into lived experience. Each person who sees and engages with your code <strong>reinforces the pattern recognition</strong> in your own subconscious mind, accelerating the transition from intention to action to result.</p>
+                <div style="background: rgba(255,215,0,0.08); padding: 18px; border-radius: 12px; border-left: 3px solid var(--quantum-gold);">
+                    <div style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); font-size: 0.85rem; margin-bottom: 8px;">Morphic Resonance</div>
+                    <div style="font-size: 0.9rem; opacity: 0.85; line-height: 1.5;">Patterns strengthen through collective repetition</div>
                 </div>
-                
-                <div style="padding: 25px; background: rgba(255,0,255,0.06); border-radius: 15px; border-left: 4px solid var(--quantum-magenta);">
-                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); margin-bottom: 12px; font-size: 1.1rem;"><span class="tooltip">Morphic Resonance<span class="tooltiptext">Biologist Rupert Sheldrake's theory that patterns of behavior and thought strengthen through repetition across a shared field, making similar patterns easier to establish over time.</span></span></h4>
-                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">As described in consciousness and systems theory, biologist Rupert Sheldrake proposed that patterns strengthen through repetition across a <strong class="tooltip">morphic field<span class="tooltiptext">An invisible field of information and memory that connects similar forms and behaviors across space and time, allowing patterns to strengthen through collective resonance.</span></strong>. Each engagement with your code strengthens the vibrational pattern of your intention. Like tuning forks resonating in harmony, multiple people holding your code number creates ripples of <strong class="tooltip">coherent focus<span class="tooltiptext">When multiple minds hold the same intention simultaneously, creating a unified wave pattern that amplifies manifestation probability.</span></strong>.</p>
+                <div style="background: rgba(255,0,255,0.08); padding: 18px; border-radius: 12px; border-left: 3px solid var(--quantum-magenta);">
+                    <div style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); font-size: 0.85rem; margin-bottom: 8px;">Exponential Math</div>
+                    <div style="font-size: 0.9rem; opacity: 0.85; line-height: 1.5;">2ⁿ - 1 formula creates multiplicative coherence</div>
                 </div>
-                
-                <div style="padding: 25px; background: rgba(138,43,226,0.06); border-radius: 15px; border-left: 4px solid #8A2BE2;">
-                    <h4 style="font-family: 'Orbitron', monospace; color: #8A2BE2; margin-bottom: 12px; font-size: 1.1rem;">Exponential Amplification</h4>
-                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">Why does 1+1=3 instead of 2? Because <strong>2² - 1 = 3 influence states</strong>. Each new person doesn't just <em>add</em> one unit—they <strong>multiply the coherence of the shared field</strong>. At 11 people, you're not creating 11 separate intentions—you're creating 2,047 interconnected influence points. The exponential model is mathematical; its application to consciousness is symbolic and experiential.</p>
-                </div>
-            </div>
-            
-            <div style="margin-top: 30px; padding: 25px; background: rgba(255,215,0,0.1); border-radius: 15px; text-align: center;">
-                <p style="margin: 0; font-size: 1.05rem; line-height: 1.6;"><strong style="color: var(--quantum-gold);">Bottom line:</strong> This system works because it's built on <strong>exponential mathematics</strong>, <strong>social reinforcement psychology</strong>, and <strong>consciousness coherence models</strong>. Your job is simply to participate with clear intention.</p>
             </div>
 
-            <div style="text-align: center; margin-top: 35px; padding: 30px; background: linear-gradient(135deg, rgba(218, 165, 32, 0.2), rgba(138, 43, 226, 0.2)); border-radius: 18px; border: 2px solid var(--quantum-gold);">
-                <p style="margin-bottom: 18px; font-size: 1.15rem; color: var(--quantum-cyan); font-weight: 600;">Want to dive deeper into the inspiration?</p>
-                <p style="margin-bottom: 20px; opacity: 0.9; font-size: 1.05rem;">Explore research from psychology, systems theory, neuroscience, and consciousness studies</p>
-                <a href="quantum-merlin-hub/qrcodes-science.html" style="display: inline-block; padding: 15px 40px; background: linear-gradient(135deg, #daa520, #ffd700); color: #1a0033; font-weight: bold; border-radius: 30px; text-decoration: none; font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 30px rgba(218, 165, 32, 0.5)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
-                    📚 Explore The Science & Inspiration
-                </a>
-                <p style="margin-top: 15px; font-size: 0.95rem; opacity: 0.8;">Draws from psychology • Systems theory • Neuroscience • Consciousness studies</p>
-            </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Common Intention Mistakes (COLLAPSIBLE) -->
-        <div class="collapsible-section collapsed">
-            <div class="collapsible-header">
-                <div class="collapsible-title">Common Intention Mistakes (& How to Fix Them)</div>
-                <div class="collapsible-arrow">▼</div>
-            </div>
-            <div class="collapsible-content">
-                <div style="background: var(--card-bg); border-radius: 25px; padding: 40px; backdrop-filter: blur(25px); border: 1px solid rgba(255,165,0,0.25);">
-                    <p style="text-align: center; margin-bottom: 30px; opacity: 0.9; font-size: 1.05rem;">Learn from these examples to craft powerful intentions that work</p>
-            
-            <div style="display: grid; gap: 18px; margin-top: 25px;">
-                <div style="padding: 20px; background: rgba(0,0,0,0.35); border-radius: 12px;">
-                    <div style="color: #ff6666; font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">❌ WEAK: "I will have more money"</div>
-                    <div style="color: #44ff88; font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">✅ POWERFUL: "I AM RECEIVING $10,000 THIS MONTH WITH EASE"</div>
-                    <div style="opacity: 0.75; font-size: 0.95rem; line-height: 1.6;"><strong>Why:</strong> Future tense ("will") keeps manifestation perpetually in the future. "I AM" collapses it into present reality. The quantum field only recognizes NOW.</div>
-                </div>
-                
-                <div style="padding: 20px; background: rgba(0,0,0,0.35); border-radius: 12px;">
-                    <div style="color: #ff6666; font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">❌ WEAK: "I'm not broke anymore" / "I'm no longer in debt"</div>
-                    <div style="color: #44ff88; font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">✅ POWERFUL: "I AM FINANCIALLY ABUNDANT AND FREE"</div>
-                    <div style="opacity: 0.75; font-size: 0.95rem; line-height: 1.6;"><strong>Why:</strong> Negative framing. The quantum field doesn't process negatives—it just hears "broke" and "debt." Always focus on what you're moving TOWARD, not what you're leaving behind.</div>
-                </div>
-                
-                <div style="padding: 20px; background: rgba(0,0,0,0.35); border-radius: 12px;">
-                    <div style="color: #ff6666; font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">❌ WEAK: "I'm happy" (too vague)</div>
-                    <div style="color: #44ff88; font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">✅ POWERFUL: "I AM EXPERIENCING DEEP JOY AND FULFILLMENT IN MY DAILY LIFE"</div>
-                    <div style="opacity: 0.75; font-size: 0.95rem; line-height: 1.6;"><strong>Why:</strong> Too vague gives the universe no clear direction. "Happy" could mean anything. Be specific about the emotional state and where you experience it.</div>
-                </div>
-                
-                <div style="padding: 20px; background: rgba(0,0,0,0.35); border-radius: 12px;">
-                    <div style="color: #ff6666; font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">❌ WEAK: "I am a billionaire" (if currently earning $30k/year)</div>
-                    <div style="color: #44ff88; font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">✅ POWERFUL: "I AM EARNING $10,000 PER MONTH" (then ladder up)</div>
-                    <div style="opacity: 0.75; font-size: 0.95rem; line-height: 1.6;"><strong>Why:</strong> Too big for your nervous system = rejection and shutdown. Start with a 7-8/10 believable stretch. Once manifested, create a new code for the next level. Ladder up to your ultimate goal.</div>
-                </div>
-                
-                <div style="padding: 20px; background: rgba(0,0,0,0.35); border-radius: 12px;">
-                    <div style="color: #ff6666; font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">❌ WEAK: "I have $50,000" (no feeling)</div>
-                    <div style="color: #44ff88; font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">✅ POWERFUL: "I AM EXPERIENCING THE FREEDOM AND JOY OF HAVING $50,000"</div>
-                    <div style="opacity: 0.75; font-size: 0.95rem; line-height: 1.6;"><strong>Why:</strong> Emotion is the fuel of manifestation. Without feeling words (joy, freedom, peace, gratitude), there's no frequency for the quantum field to lock onto.</div>
-                </div>
-            </div>
-                </div>
-            </div>
+            <a href="quantum-merlin-hub/qrcodes-science.html" style="display: inline-block; margin-top: 20px; padding: 12px 30px; background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(138,43,226,0.2)); border: 2px solid var(--quantum-gold); border-radius: 25px; color: var(--quantum-gold); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease;" onmouseover="this.style.background='linear-gradient(135deg, #daa520, #ffd700)'; this.style.color='#1a0033'" onmouseout="this.style.background='linear-gradient(135deg, rgba(255,215,0,0.2), rgba(138,43,226,0.2))'; this.style.color='var(--quantum-gold)'">
+                📚 Explore The Full Science & Research
+            </a>
         </div>
 
         <!-- Step 1: Welcome -->
@@ -3182,7 +3052,6 @@
 
         // Initialize all features when DOM is ready
         document.addEventListener('DOMContentLoaded', function() {
-            initCollapsibles();
             initProgressIndicator();
             initOnboarding();
             loadProgress();
@@ -3327,7 +3196,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             initProgressIndicator();
             loadProgress();
-            initCollapsibles();
         });
 
         // Initialize Progress Indicator
@@ -3512,15 +3380,6 @@
             setTimeout(() => {
                 indicator.classList.remove('show');
             }, 2000);
-        }
-
-        // Initialize Collapsibles
-        function initCollapsibles() {
-            document.querySelectorAll('.collapsible-header').forEach(header => {
-                header.addEventListener('click', function() {
-                    this.closest('.collapsible-section').classList.toggle('collapsed');
-                });
-            });
         }
 
         // Real-time Intention Validation
