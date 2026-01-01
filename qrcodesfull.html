@@ -1953,8 +1953,6 @@
         }
 
         @media (max-width: 768px) {
-            .testimonials-section h3 { font-size: 1.5rem; }
-            .testimonial-text { font-size: 1rem; }
             .exit-modal-content { padding: 30px 20px; }
             .share-btn { padding: 10px 18px; font-size: 0.85rem; }
         }
@@ -3101,47 +3099,6 @@
             </div>
         </div>
 
-        <!-- Testimonials Carousel -->
-        <div class="testimonials-section" style="margin-top: 60px;">
-            <h3>Community Experiences</h3>
-            <div class="testimonials-carousel" id="testimonialsCarousel">
-                <div class="testimonial-card active">
-                    <div class="testimonial-text">
-                        "I created a Reality Code for financial abundance. Within 3 weeks of getting 21 amplifications, I received an unexpected $12,000 contract. This system is REAL."
-                    </div>
-                    <div class="testimonial-author">— Sarah M.</div>
-                    <div class="testimonial-meta">Code: 847 | 21 Amplifiers</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "The validation system helped me refine my intention from 'I want to be happy' to 'I AM radiating joy and attracting aligned relationships.' The specificity made all the difference."
-                    </div>
-                    <div class="testimonial-author">— Marcus T.</div>
-                    <div class="testimonial-meta">Code: 1,234 | 15 Amplifiers</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "I was skeptical until I hit 33 amplifiers. The synchronicities became undeniable—doors opened, opportunities appeared, my intention manifested in 67 days."
-                    </div>
-                    <div class="testimonial-author">— Jennifer K.</div>
-                    <div class="testimonial-meta">Code: 555 | 33 Amplifiers</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "The 7-step science explanation finally made sense of why my previous manifestation attempts failed. Present tense + specificity + emotional charge = quantum magic."
-                    </div>
-                    <div class="testimonial-author">— David R.</div>
-                    <div class="testimonial-meta">Code: 999 | 18 Amplifiers</div>
-                </div>
-            </div>
-            <div class="carousel-dots" id="carouselDots">
-                <div class="carousel-dot active" onclick="goToTestimonial(0)"></div>
-                <div class="carousel-dot" onclick="goToTestimonial(1)"></div>
-                <div class="carousel-dot" onclick="goToTestimonial(2)"></div>
-                <div class="carousel-dot" onclick="goToTestimonial(3)"></div>
-            </div>
-        </div>
-
         <div class="home-link">
             <a href="/">← Back to Quantum Merlin</a>
         </div>
@@ -3208,7 +3165,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             initCollapsibles();
             initProgressIndicator();
-            initTestimonialsCarousel();
             initOnboarding();
             loadProgress();
         });
@@ -3393,15 +3349,28 @@
             }
         }
 
-        // Step Navigation (NO scroll to top for zero friction!)
+        // Step Navigation with smooth scroll to question
         function nextStep(step) {
             const previousStep = currentStep;
             document.getElementById(`step${currentStep}`).classList.remove('active');
             currentStep = step;
-            document.getElementById(`step${currentStep}`).classList.add('active');
+            const newStepEl = document.getElementById(`step${currentStep}`);
+            newStepEl.classList.add('active');
             updateProgress();
             updateProgressIndicator();
             saveProgress();
+
+            // Smooth scroll to the step header so user sees the question clearly
+            setTimeout(() => {
+                const header = newStepEl.querySelector('.step-header');
+                if (header) {
+                    header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Add a little offset from top
+                    setTimeout(() => {
+                        window.scrollBy({ top: -30, behavior: 'smooth' });
+                    }, 300);
+                }
+            }, 100);
 
             // Show completion popup for the step just completed (not when going to step 1)
             if (previousStep >= 1 && previousStep < 10 && step > previousStep) {
@@ -3419,10 +3388,22 @@
         function prevStep(step) {
             document.getElementById(`step${currentStep}`).classList.remove('active');
             currentStep = step;
-            document.getElementById(`step${currentStep}`).classList.add('active');
+            const newStepEl = document.getElementById(`step${currentStep}`);
+            newStepEl.classList.add('active');
             updateProgress();
             updateProgressIndicator();
             saveProgress();
+
+            // Smooth scroll to the step header
+            setTimeout(() => {
+                const header = newStepEl.querySelector('.step-header');
+                if (header) {
+                    header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    setTimeout(() => {
+                        window.scrollBy({ top: -30, behavior: 'smooth' });
+                    }, 300);
+                }
+            }, 100);
         }
 
         function updateProgress() {
@@ -3887,37 +3868,6 @@ quantummerlin.com/qrcodesfull
             if (!wasActive) {
                 faqItem.classList.add('active');
             }
-        }
-
-        // Testimonials Carousel (initialized after DOM loaded)
-        let currentTestimonial = 0;
-        let testimonials;
-        let dots;
-
-        function initTestimonialsCarousel() {
-            testimonials = document.querySelectorAll('.testimonial-card');
-            dots = document.querySelectorAll('.carousel-dot');
-            
-            if (testimonials.length > 0) {
-                // Auto-rotate testimonials every 6 seconds
-                setInterval(() => {
-                    const nextIndex = (currentTestimonial + 1) % testimonials.length;
-                    goToTestimonial(nextIndex);
-                }, 6000);
-            }
-        }
-
-        function goToTestimonial(index) {
-            if (!testimonials || testimonials.length === 0) return;
-            
-            // Remove active class from current testimonial and dot
-            testimonials[currentTestimonial].classList.remove('active');
-            dots[currentTestimonial].classList.remove('active');
-            
-            // Add active class to new testimonial and dot
-            currentTestimonial = index;
-            testimonials[currentTestimonial].classList.add('active');
-            dots[currentTestimonial].classList.add('active');
         }
 
         // Exit Intent Detection
