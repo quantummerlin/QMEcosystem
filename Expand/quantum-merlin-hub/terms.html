@@ -3,414 +3,667 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use - Quantum Merlin</title>
-    <meta name="description" content="Quantum Merlin's terms of use - legal terms and conditions for using our spiritual exploration tools and services.">
-    
+    <title>Terms of Service | Quantum Merlin - Sacred Agreements</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --merlin-purple: #2d1b4e;
+            --rose-pink: #ff6b9d;
+            --quantum-gold: #daa520;
+            --ancient-gold: #ffd700;
+            --mystic-cyan: #00f5ff;
+            --deep-void: #0a0015;
+            --ethereal-white: #f0e6ff;
+            --scroll-amber: #d4a574;
         }
-        
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0e27 0%, #1a0b2e 50%, #2a1b3e 100%);
-            color: #ffffff;
-            line-height: 1.7;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: var(--deep-void);
+            color: var(--ethereal-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+            font-size: 18px;
             min-height: 100vh;
         }
-        
-        .quantum-grid {
+
+        /* Floating Orbs */
+        .magical-orb {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: gridMove 20s linear infinite;
-            z-index: 1;
-        }
-        
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-        
-        .quantum-sun {
-            position: fixed;
-            top: 10%;
-            right: 10%;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(255, 204, 0, 0.3) 0%, rgba(147, 51, 234, 0.2) 50%, transparent 70%);
             border-radius: 50%;
-            filter: blur(40px);
-            animation: sunPulse 4s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 1;
+            filter: blur(60px);
+            animation: float-orb 20s infinite ease-in-out;
+        }
+
+        .orb-1 {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(212, 165, 116, 0.25) 0%, transparent 70%);
+            top: 5%; left: -15%;
+        }
+
+        .orb-2 {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, transparent 70%);
+            top: 50%; right: -10%;
+            animation-delay: -7s;
+        }
+
+        .orb-3 {
+            width: 350px; height: 350px;
+            background: radial-gradient(circle, rgba(218, 165, 32, 0.2) 0%, transparent 70%);
+            bottom: 10%; left: 20%;
+            animation-delay: -14s;
+        }
+
+        @keyframes float-orb {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+            25% { transform: translate(50px, -30px) scale(1.1); opacity: 0.8; }
+            50% { transform: translate(-30px, 40px) scale(0.9); opacity: 0.5; }
+            75% { transform: translate(40px, 20px) scale(1.05); opacity: 0.7; }
+        }
+
+        /* Aurora Effect */
+        .aurora {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: 
+                linear-gradient(45deg, transparent 40%, rgba(212, 165, 116, 0.04) 45%, transparent 50%),
+                linear-gradient(-45deg, transparent 40%, rgba(138, 43, 226, 0.03) 45%, transparent 50%);
+            background-size: 400% 400%;
+            animation: aurora-flow 20s ease-in-out infinite;
+        }
+
+        @keyframes aurora-flow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Floating Scroll Particles */
+        .scroll-particle {
+            position: fixed;
+            pointer-events: none;
             z-index: 2;
+            opacity: 0;
+            animation: scroll-float 14s infinite ease-in-out;
         }
-        
-        @keyframes sunPulse {
-            0%, 100% { transform: scale(1); opacity: 0.7; }
-            50% { transform: scale(1.2); opacity: 0.9; }
+
+        .scroll-particle::before {
+            content: '📜';
+            font-size: 1.2rem;
+            filter: drop-shadow(0 0 10px rgba(212, 165, 116, 0.5));
         }
-        
+
+        .scroll-particle:nth-child(1) { left: 5%; animation-delay: 0s; }
+        .scroll-particle:nth-child(2) { left: 25%; animation-delay: 3.5s; }
+        .scroll-particle:nth-child(3) { left: 50%; animation-delay: 7s; }
+        .scroll-particle:nth-child(4) { left: 75%; animation-delay: 2s; }
+        .scroll-particle:nth-child(5) { left: 92%; animation-delay: 5.5s; }
+
+        @keyframes scroll-float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+
+        /* Container */
         .container {
             position: relative;
             z-index: 10;
             max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 40px 25px;
         }
-        
-        header {
+
+        /* Header */
+        .page-header {
             text-align: center;
-            margin-bottom: 50px;
+            padding: 60px 20px 50px;
+            animation: fadeSlideDown 1s ease-out;
         }
-        
+
+        @keyframes fadeSlideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: unroll 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px rgba(212, 165, 116, 0.5));
+        }
+
+        @keyframes unroll {
+            0%, 100% { transform: scale(1) rotate(0deg); filter: drop-shadow(0 0 30px rgba(212, 165, 116, 0.5)); }
+            50% { transform: scale(1.1) rotate(5deg); filter: drop-shadow(0 0 50px rgba(212, 165, 116, 0.8)); }
+        }
+
         h1 {
-            font-size: 3em;
-            background: linear-gradient(45deg, #9333ea, #ec4899, #f59e0b);
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--scroll-amber), var(--quantum-gold), var(--ancient-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-            text-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+            background-clip: text;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
         }
-        
+
         .subtitle {
-            font-size: 1.3em;
-            color: #b794f6;
-            margin-bottom: 30px;
+            font-size: 1.3rem;
+            color: rgba(240, 230, 255, 0.7);
+            font-style: italic;
         }
-        
-        .content-section {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(147, 51, 234, 0.3);
+
+        .last-updated {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 25px;
+            background: rgba(212, 165, 116, 0.15);
+            border: 1px solid rgba(212, 165, 116, 0.3);
+            border-radius: 30px;
+            font-size: 0.95rem;
+            color: var(--scroll-amber);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { box-shadow: 0 0 15px rgba(212, 165, 116, 0.2); }
+            50% { box-shadow: 0 0 25px rgba(212, 165, 116, 0.4); }
+        }
+
+        /* Summary Card */
+        .summary-card {
+            background: linear-gradient(145deg, rgba(212, 165, 116, 0.1), rgba(45, 27, 78, 0.3));
+            border: 1px solid rgba(212, 165, 116, 0.25);
             border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 30px;
+            padding: 35px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            animation: fadeSlideUp 1s ease-out 0.3s both;
         }
-        
-        h2 {
-            font-size: 2em;
-            color: #f59e0b;
-            margin-bottom: 20px;
+
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .summary-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.1), transparent);
+            animation: card-shimmer 4s ease-in-out infinite;
+        }
+
+        @keyframes card-shimmer {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
+        }
+
+        .summary-card h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            color: var(--quantum-gold);
+            margin-bottom: 25px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .summary-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--scroll-amber);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+        }
+
+        .summary-section ul { list-style: none; }
+
+        .summary-section li {
+            padding: 8px 0;
+            font-size: 1.05rem;
             display: flex;
-            align-items: center;
-            gap: 15px;
+            align-items: flex-start;
+            gap: 10px;
+            transition: transform 0.3s ease;
         }
-        
-        h3 {
-            font-size: 1.5em;
-            color: #e9d5ff;
-            margin: 30px 0 15px 0;
-        }
-        
-        p {
-            color: #b794f6;
-            margin-bottom: 20px;
-            font-size: 1.1em;
-        }
-        
-        ul, ol {
-            color: #b794f6;
-            margin-left: 30px;
-            margin-bottom: 20px;
-        }
-        
-        li {
-            margin-bottom: 10px;
-        }
-        
-        .warning-box {
-            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(147, 51, 234, 0.2));
-            border: 1px solid rgba(239, 68, 68, 0.4);
+
+        .summary-section li:hover { transform: translateX(5px); }
+
+        /* Content Sections */
+        .content-section {
+            background: rgba(45, 27, 78, 0.2);
+            border: 1px solid rgba(218, 165, 32, 0.15);
             border-radius: 15px;
             padding: 30px;
             margin: 30px 0;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(30px);
         }
-        
-        .emphasis {
-            color: #f59e0b;
-            font-weight: bold;
+
+        .content-section.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
-        
-        .footer-nav {
+
+        .content-section:hover {
+            border-color: rgba(218, 165, 32, 0.35);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .content-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--quantum-gold);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .content-section h2 .section-icon {
+            font-size: 1.8rem;
+            animation: gentle-bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes gentle-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .content-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            color: var(--mystic-cyan);
+            margin: 25px 0 12px;
+        }
+
+        .content-section p {
+            margin-bottom: 15px;
+            color: rgba(240, 230, 255, 0.85);
+            font-size: 1.1rem;
+        }
+
+        .content-section ul { margin: 15px 0 15px 25px; }
+        .content-section li { margin-bottom: 10px; color: rgba(240, 230, 255, 0.8); }
+
+        /* Warning Box */
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 193, 7, 0.05));
+            border-left: 4px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .warning-box::after {
+            content: '⚡';
+            position: absolute;
+            right: 15px; top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            opacity: 0.15;
+        }
+
+        .warning-box p { margin: 0; color: var(--ethereal-white); }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(138, 43, 226, 0.05));
+            border-left: 4px solid #8a2be2;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .highlight-box p { margin: 0; color: var(--ethereal-white); }
+
+        /* Contact Box */
+        .contact-box {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.15), rgba(218, 165, 32, 0.05));
+            border: 1px solid rgba(218, 165, 32, 0.3);
+            border-radius: 15px;
+            padding: 25px 30px;
+            margin: 30px 0;
             text-align: center;
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(147, 51, 234, 0.3);
         }
-        
-        .footer-nav a {
-            color: #e9d5ff;
+
+        .contact-box h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--quantum-gold);
+            margin-bottom: 15px;
+        }
+
+        .contact-box a {
+            color: var(--mystic-cyan);
             text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
-        
-        .footer-nav a:hover {
-            color: #f59e0b;
+
+        .contact-box a:hover {
+            color: var(--quantum-gold);
+            text-shadow: 0 0 15px rgba(218, 165, 32, 0.5);
         }
-        
-        .last-updated {
+
+        /* Navigation */
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 50px 0;
+        }
+
+        .nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--merlin-purple), rgba(45, 27, 78, 0.8));
+            border: 1px solid rgba(218, 165, 32, 0.3);
+            border-radius: 50px;
+            color: var(--ethereal-white);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(218, 165, 32, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-btn:hover::before { left: 100%; }
+
+        .nav-btn:hover {
+            border-color: var(--quantum-gold);
+            box-shadow: 0 5px 25px rgba(218, 165, 32, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .page-footer {
             text-align: center;
-            color: #9333ea;
-            font-style: italic;
+            padding: 50px 20px;
+            margin-top: 80px;
+            background: linear-gradient(135deg, rgba(45, 27, 78, 0.95), rgba(212, 165, 116, 0.4));
+            border-top: 3px solid var(--quantum-gold);
+            border-radius: 15px 15px 0 0;
+            box-shadow: 
+                0 -10px 50px rgba(218, 165, 32, 0.3),
+                inset 0 1px 0 rgba(218, 165, 32, 0.5);
+        }
+
+        .page-footer p { 
+            color: #ffffff; 
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-shadow: 0 0 20px rgba(218, 165, 32, 0.8);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
             margin-top: 20px;
         }
+
+        .footer-links a {
+            color: var(--quantum-gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1rem;
+            text-shadow: 0 0 15px rgba(218, 165, 32, 0.6);
+        }
+
+        .footer-links a:hover { 
+            color: var(--mystic-cyan); 
+            text-shadow: 0 0 20px rgba(0, 245, 255, 0.8); 
+        }
         
+        .footer-links span { 
+            color: #ffffff; 
+            font-weight: bold;
+        }
+
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2em;
+            h1 { font-size: 2rem; letter-spacing: 1px; }
+            .summary-grid { grid-template-columns: 1fr; }
+            .container { padding: 20px 15px 60px; }
+            .content-section { padding: 20px; }
+            .summary-card { padding: 25px 20px; }
+            .nav-buttons { 
+                flex-direction: column; 
+                align-items: center;
+                gap: 15px;
             }
-            .container {
-                padding: 20px 15px;
+            .nav-btn {
+                width: 90%;
+                max-width: 300px;
+                justify-content: center;
             }
-            .content-section {
-                padding: 25px;
+            .page-footer {
+                padding: 30px 15px;
             }
         }
     </style>
-<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-    <div class="quantum-grid"></div>
-    <div class="quantum-sun"></div>
-    
+    <div class="aurora"></div>
+    <div class="magical-orb orb-1"></div>
+    <div class="magical-orb orb-2"></div>
+    <div class="magical-orb orb-3"></div>
+    <div class="scroll-particle"></div>
+    <div class="scroll-particle"></div>
+    <div class="scroll-particle"></div>
+    <div class="scroll-particle"></div>
+    <div class="scroll-particle"></div>
+
     <div class="container">
-        <header>
-            <h1>Terms of Use</h1>
-            <p class="subtitle">Legal Terms and Conditions</p>
+        <header class="page-header">
+            <div class="header-icon">📜</div>
+            <h1>TERMS OF SERVICE</h1>
+            <p class="subtitle">The Sacred Covenant Between Wizard and Seeker</p>
+            <span class="last-updated">✨ Last Updated: January 1, 2026</span>
         </header>
-        
-        <section class="content-section">
-            <h2>📜 Agreement to Terms</h2>
-            
-            <p>
-                Welcome to Quantum Merlin. These Terms of Use govern your access to and use of our website, tools, and services. By accessing or using Quantum Merlin, you agree to be bound by these terms.
-            </p>
-            
-            <p>
-                <strong>Last Updated:</strong> December 2024
-            </p>
-        </section>
-        
-        <section class="content-section">
-            <h2>🎯 Purpose and Intended Use</h2>
-            
-            <div class="warning-box">
-                <p class="emphasis">
-                    <strong>IMPORTANT:</strong> Quantum Merlin and all its tools are designed for <strong>educational, entertainment, and reflective purposes only</strong>. They are not intended for medical, psychological, financial, or life-altering decisions.
-                </p>
+
+        <div class="summary-card">
+            <h2>⚡ The Seeker's Quick Guide</h2>
+            <div class="summary-grid">
+                <div class="summary-section">
+                    <h3>What You're Agreeing To</h3>
+                    <ul>
+                        <li><span>✅</span> Use for personal, non-commercial purposes</li>
+                        <li><span>✅</span> Entertainment & spiritual exploration</li>
+                        <li><span>✅</span> Not medical, legal, or financial advice</li>
+                        <li><span>✅</span> Respect intellectual property</li>
+                    </ul>
+                </div>
+                <div class="summary-section">
+                    <h3>What We Provide</h3>
+                    <ul>
+                        <li><span>🌟</span> Free mystical tools & insights</li>
+                        <li><span>🔮</span> Personalized cosmic analysis</li>
+                        <li><span>📚</span> Educational spiritual content</li>
+                        <li><span>🎁</span> No account or payment needed</li>
+                    </ul>
+                </div>
+                <div class="summary-section">
+                    <h3>What We Don't Do</h3>
+                    <ul>
+                        <li><span>❌</span> Provide professional advice</li>
+                        <li><span>❌</span> Guarantee specific outcomes</li>
+                        <li><span>❌</span> Store your personal data</li>
+                        <li><span>❌</span> Sell your information</li>
+                    </ul>
+                </div>
             </div>
-            
-            <h3>What Our Tools Are For:</h3>
-            <ul>
-                <li><strong>Personal reflection and exploration</strong></li>
-                <li><strong>Creative inspiration and focus</strong></li>
-                <li><strong>Symbolic and meaningful engagement</strong></li>
-                <li><strong>Educational understanding of various systems</strong></li>
-                <li><strong>Entertainment and personal growth</strong></li>
-            </ul>
-            
-            <h3>What Our Tools Are NOT For:</h3>
-            <ul>
-                <li><strong>Medical diagnosis or treatment</strong></li>
-                <li><strong>Psychological therapy or counseling</strong></li>
-                <li><strong>Financial or investment advice</strong></li>
-                <li><strong>Legal advice or guidance</strong></li>
-                <li><strong>Predicting the future with certainty</strong></li>
-                <li><strong>Making life-critical decisions</strong></li>
-            </ul>
-        </section>
-        
-        <section class="content-section">
-            <h2>⚠️ Important Disclaimers</h2>
-            
-            <h3>No Guaranteed Outcomes</h3>
-            <p>
-                We make no guarantees, promises, or warranties about the effectiveness, accuracy, or outcomes of using our tools. Results and experiences vary greatly among individuals and are subjective in nature.
-            </p>
-            
-            <h3>Not Professional Advice</h3>
-            <p>
-                Nothing on Quantum Merlin constitutes professional advice. If you need medical, psychological, financial, legal, or other professional assistance, please consult qualified professionals in those fields.
-            </p>
-            
-            <h3>Belief and Interpretation</h3>
-            <p>
-                Our tools work through symbolic systems and personal interpretation. Any insights, feelings, or experiences arise from your own engagement with the tools, not from the tools themselves having independent power or agency.
-            </p>
-        </section>
-        
-        <section class="content-section">
-            <h2>👤 User Responsibilities</h2>
-            
-            <p>
-                As a user of Quantum Merlin, you agree to:
-            </p>
-            
-            <ul>
-                <li><strong>Use tools responsibly</strong> and for their intended purposes</li>
-                <li><strong>Maintain critical thinking</strong> and personal judgment</li>
-                <li><strong>Not rely on our tools</strong> for important life decisions</li>
-                <li><strong>Seek professional help</strong> when needed for medical, psychological, or other serious concerns</li>
-                <li><strong>Respect others</strong> in any community features or interactions</li>
-                <li><strong>Use the service lawfully</strong> and in accordance with these terms</li>
-            </ul>
-        </section>
-        
-        <section class="content-section">
-            <h2>🔒 Privacy and Data</h2>
-            
-            <p>
-                Your privacy is important to us. Please review our Privacy Policy to understand:
-            </p>
-            
-            <ul>
-                <li>What information we collect</li>
-                <li>How we use and protect your data</li>
-                <li>Your rights regarding your personal information</li>
-            </ul>
-            
-            <p>
-                By using our service, you consent to the collection and use of information as described in our Privacy Policy.
-            </p>
-        </section>
-        
-        <section class="content-section">
-            <h2>💰 Payments and Premium Features</h2>
-            
-            <h3>Free Services</h3>
-            <p>
-                Most Quantum Merlin tools are provided free of charge. We may display advertisements or use other monetization methods to support our free services.
-            </p>
-            
-            <h3>Premium Features</h3>
-            <p>
-                Some features may require payment. By purchasing premium features, you agree to:
-            </p>
-            
-            <ul>
-                <li>Provide accurate payment information</li>
-                <li>Pay all applicable fees and taxes</li>
-                <li>Not share or distribute premium content</li>
-                <li>Respect intellectual property rights</li>
-            </ul>
-            
-            <h3>Refund Policy</h3>
-            <p>
-                Premium purchases are generally non-refundable except as required by law or in cases of technical issues that prevent use of the service.
-            </p>
-        </section>
-        
-        <section class="content-section">
-            <h2>🚫 Prohibited Activities</h2>
-            
-            <p>
-                You may not use Quantum Merlin to:
-            </p>
-            
-            <ul>
-                <li><strong>Violate laws</strong> or regulations</li>
-                <li><strong>Harm, exploit, or endanger others</strong></li>
-                <li><strong>Attempt unauthorized access</strong> to our systems</li>
-                <li><strong>Copy, modify, or distribute</strong> our content without permission</li>
-                <li><strong>Use automated tools</strong> to access our service excessively</li>
-                <li><strong>Spam, harass, or abuse</strong> other users</li>
-                <li><strong>Reverse engineer</strong> our tools or systems</li>
-            </ul>
-        </section>
-        
-        <section class="content-section">
-            <h2>📄 Intellectual Property</h2>
-            
-            <h3>Our Content</h3>
-            <p>
-                Quantum Merlin and all its content, tools, designs, and materials are owned by us or our licensors and are protected by copyright, trademark, and other intellectual property laws.
-            </p>
-            
-            <h3>Your Content</h3>
-            <p>
-                You retain ownership of any personal information you provide. By using our service, you grant us a license to use, process, and store your information solely to provide and improve our services.
-            </p>
-            
-            <h3>Usage Rights</h3>
-            <p>
-                You may use our services for personal, non-commercial purposes. Commercial use, redistribution, or republication of our content requires explicit permission.
-            </p>
-        </section>
-        
-        <section class="content-section">
-            <h2>⚖️ Limitation of Liability</h2>
-            
-            <div class="warning-box">
-                <p class="emphasis">
-                    <strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong> Quantum Merlin shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, use, or goodwill, arising from your use of our services.
-                </p>
-            </div>
-            
-            <p>
-                Our total liability for any claims relating to the service shall not exceed the amount you paid to us, if any, for the service during the twelve months preceding the claim.
-            </p>
-        </section>
-        
-        <section class="content-section">
-            <h2>🔄 Service Changes and Termination</h2>
-            
-            <h3>Service Modifications</h3>
-            <p>
-                We reserve the right to modify, suspend, or discontinue any part of our service at any time, with or without notice.
-            </p>
-            
-            <h3>Account Termination</h3>
-            <p>
-                We may terminate or suspend your account at our sole discretion, especially if you violate these terms or use the service inappropriately.
-            </p>
-            
-            <h3>Effect of Termination</h3>
-            <p>
-                Upon termination, your right to use the service ceases immediately. Any premium features will not be refunded except as required by law.
-            </p>
-        </section>
-        
-        <section class="content-section">
-            <h2>🌐 Governing Law</h2>
-            
-            <p>
-                These Terms of Use are governed by and construed in accordance with applicable laws. Any disputes arising from these terms shall be resolved through good faith negotiation and, if necessary, through appropriate legal channels.
-            </p>
-        </section>
-        
-        <section class="content-section">
-            <h2>📧 Contact Information</h2>
-            
-            <p>
-                If you have questions about these Terms of Use, please contact us:
-            </p>
-            
-            <ul>
-                <li><strong>Email:</strong> legal@quantummerlin.com</li>
-                <li><strong>Contact Form:</strong> Available on our Contact page</li>
-                <li><strong>Response Time:</strong> We typically respond within 48 hours</li>
-            </ul>
-        </section>
-        
-        <div class="last-updated">
-            <p>These terms are effective as of December 2024 and constitute the entire agreement between you and Quantum Merlin.</p>
         </div>
-        
-        <nav class="footer-nav">
-            <a href="about.html">About</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="contact.html">Contact</a>
-            <a href="https://quantummerlin.com">Home</a>
+
+        <section class="content-section">
+            <h2><span class="section-icon">🏰</span> 1. Welcome to the Realm</h2>
+            <p>Greetings, Seeker! By entering Quantum Merlin's mystical domain, you enter into a sacred agreement. These Terms of Service ("Terms") govern your use of quantummerlin.com and all its magical offerings.</p>
+            <div class="highlight-box">
+                <p><strong>The Wizard's Oath:</strong> We commit to providing you with authentic mystical tools, honest guidance, and respect for your personal journey. In return, we ask that you use these gifts wisely.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2><span class="section-icon">✨</span> 2. Nature of Our Services</h2>
+            <p>Quantum Merlin provides mystical and spiritual tools including:</p>
+            <ul>
+                <li><strong>Numerology Analysis:</strong> Personal frequency and life path calculations</li>
+                <li><strong>Astrology Insights:</strong> Cosmic alignments and celestial guidance</li>
+                <li><strong>Tarot Readings:</strong> Card-based wisdom and reflection</li>
+                <li><strong>Sigil Generation:</strong> Personalized magical symbols</li>
+                <li><strong>Educational Content:</strong> Articles on spiritual traditions</li>
+            </ul>
+            <div class="warning-box">
+                <p><strong>Important Understanding:</strong> Our services are for entertainment, personal growth, and spiritual exploration. They are not substitutes for professional medical, legal, financial, or psychological advice.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2><span class="section-icon">📖</span> 3. Acceptable Use</h2>
+            <h3>You Agree To:</h3>
+            <ul>
+                <li>Use our services for personal, non-commercial purposes</li>
+                <li>Provide accurate information when using our tools</li>
+                <li>Respect the intellectual property contained within</li>
+                <li>Not attempt to reverse-engineer or copy our systems</li>
+                <li>Not use our services for any illegal purposes</li>
+            </ul>
+            <h3>You Agree NOT To:</h3>
+            <ul>
+                <li>Redistribute our content without permission</li>
+                <li>Create derivative works from our proprietary systems</li>
+                <li>Use automated tools to scrape or harvest data</li>
+                <li>Interfere with the operation of our services</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2><span class="section-icon">🎨</span> 4. Intellectual Property</h2>
+            <p>All content on Quantum Merlin, including but not limited to:</p>
+            <ul>
+                <li>Original numerology algorithms and interpretations</li>
+                <li>Custom artwork, sigils, and visual designs</li>
+                <li>Written content, articles, and educational materials</li>
+                <li>Software code and interactive tools</li>
+            </ul>
+            <p>...remains the exclusive property of Quantum Merlin. You may share links to our content but may not reproduce it without explicit permission.</p>
+        </section>
+
+        <section class="content-section">
+            <h2><span class="section-icon">🌙</span> 5. Your Readings & Data</h2>
+            <p>When you generate readings, sigils, or analyses:</p>
+            <ul>
+                <li><strong>Ownership:</strong> Your personal readings belong to you</li>
+                <li><strong>Storage:</strong> Data is stored locally on your device only</li>
+                <li><strong>Privacy:</strong> We cannot see or access your individual readings</li>
+                <li><strong>Sharing:</strong> You may share your personal readings as you wish</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2><span class="section-icon">⚖️</span> 6. Disclaimers & Limitations</h2>
+            <p>Our services are provided "AS IS" without warranties of any kind. We do not guarantee:</p>
+            <ul>
+                <li>Accuracy of predictions or interpretations</li>
+                <li>Specific outcomes from following our guidance</li>
+                <li>Uninterrupted or error-free service</li>
+                <li>Compatibility with all devices or browsers</li>
+            </ul>
+            <p>To the maximum extent permitted by law, Quantum Merlin shall not be liable for any indirect, incidental, or consequential damages arising from your use of our services.</p>
+        </section>
+
+        <section class="content-section">
+            <h2><span class="section-icon">🔮</span> 7. Modifications</h2>
+            <p>We may update these Terms at any time. Changes will be posted on this page with an updated effective date. Your continued use of Quantum Merlin after changes constitutes acceptance of the new Terms.</p>
+        </section>
+
+        <section class="content-section">
+            <h2><span class="section-icon">🌍</span> 8. Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with applicable laws. Any disputes arising from these Terms shall be resolved through good faith negotiation first.</p>
+        </section>
+
+        <div class="contact-box">
+            <h3>📬 Questions About These Terms?</h3>
+            <p>The Wizard's counsel is always available.</p>
+            <p>Reach us at: <a href="mailto:terms@quantummerlin.com">terms@quantummerlin.com</a></p>
+        </div>
+
+        <nav class="nav-buttons">
+            <a href="../quantum-merlin-hub/qrcodes-science.html" class="nav-btn"><span>🏠</span> Return to Science Hub</a>
+            <a href="privacy.html" class="nav-btn"><span>🔒</span> Privacy Policy</a>
+            <a href="disclaimer.html" class="nav-btn"><span>⚠️</span> Disclaimer</a>
         </nav>
+
+        <footer class="page-footer">
+            <p>© 2026 Quantum Merlin | All Rights Reserved</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <span>•</span>
+                <a href="terms.html">Terms of Service</a>
+                <span>•</span>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+        </footer>
     </div>
+
+    <script>
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.content-section').forEach(section => observer.observe(section));
+
+        // Parallax orbs
+        document.addEventListener('mousemove', (e) => {
+            const orbs = document.querySelectorAll('.magical-orb');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            orbs.forEach((orb, i) => {
+                const speed = (i + 1) * 20;
+                orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            });
+        });
+    </script>
 </body>
 </html>

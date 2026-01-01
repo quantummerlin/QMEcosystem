@@ -3,358 +3,653 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Quantum Merlin</title>
-    <meta name="description" content="Privacy Policy for Quantum Merlin metaphysical tools and platform.">
-    
+    <title>Privacy Policy | Quantum Merlin - Your Data Protected by Ancient Wisdom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --merlin-purple: #2d1b4e;
+            --rose-pink: #ff6b9d;
+            --quantum-gold: #daa520;
+            --ancient-gold: #ffd700;
+            --mystic-cyan: #00f5ff;
+            --deep-void: #0a0015;
+            --ethereal-white: #f0e6ff;
+            --shield-blue: #4a90d9;
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0a0a0a;
-            color: #ffffff;
-            line-height: 1.6;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: var(--deep-void);
+            color: var(--ethereal-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+            font-size: 18px;
             min-height: 100vh;
         }
 
-        .quantum-grid {
+        /* Floating Orbs */
+        .magical-orb {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: gridMove 20s linear infinite;
-            z-index: -1;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+            filter: blur(60px);
+            animation: float-orb 20s infinite ease-in-out;
         }
 
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
+        .orb-1 {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(74, 144, 217, 0.25) 0%, transparent 70%);
+            top: 5%; left: -15%;
         }
 
+        .orb-2 {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(218, 165, 32, 0.2) 0%, transparent 70%);
+            top: 50%; right: -10%;
+            animation-delay: -7s;
+        }
+
+        .orb-3 {
+            width: 350px; height: 350px;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, transparent 70%);
+            bottom: 10%; left: 20%;
+            animation-delay: -14s;
+        }
+
+        @keyframes float-orb {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+            25% { transform: translate(50px, -30px) scale(1.1); opacity: 0.8; }
+            50% { transform: translate(-30px, 40px) scale(0.9); opacity: 0.5; }
+            75% { transform: translate(40px, 20px) scale(1.05); opacity: 0.7; }
+        }
+
+        /* Aurora Effect */
+        .aurora {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: 
+                linear-gradient(45deg, transparent 40%, rgba(74, 144, 217, 0.04) 45%, transparent 50%),
+                linear-gradient(-45deg, transparent 40%, rgba(218, 165, 32, 0.03) 45%, transparent 50%);
+            background-size: 400% 400%;
+            animation: aurora-flow 20s ease-in-out infinite;
+        }
+
+        @keyframes aurora-flow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Floating Shield Particles */
+        .shield-particle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 2;
+            opacity: 0;
+            animation: shield-float 12s infinite ease-in-out;
+        }
+
+        .shield-particle::before {
+            content: '🛡️';
+            font-size: 1.2rem;
+            filter: drop-shadow(0 0 10px rgba(74, 144, 217, 0.5));
+        }
+
+        .shield-particle:nth-child(1) { left: 8%; animation-delay: 0s; }
+        .shield-particle:nth-child(2) { left: 22%; animation-delay: 3s; }
+        .shield-particle:nth-child(3) { left: 48%; animation-delay: 6s; }
+        .shield-particle:nth-child(4) { left: 68%; animation-delay: 2s; }
+        .shield-particle:nth-child(5) { left: 88%; animation-delay: 5s; }
+
+        @keyframes shield-float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+
+        /* Container */
         .container {
-            max-width: 800px;
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 2rem;
-            background: rgba(20, 20, 40, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            border: 1px solid rgba(138, 43, 226, 0.3);
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+            padding: 40px 25px;
         }
 
-        header {
+        /* Header */
+        .page-header {
             text-align: center;
-            padding: 3rem 0 2rem;
+            padding: 60px 20px 50px;
+            animation: fadeSlideDown 1s ease-out;
+        }
+
+        @keyframes fadeSlideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: pulse-glow 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px rgba(74, 144, 217, 0.5));
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 30px rgba(74, 144, 217, 0.5)); }
+            50% { transform: scale(1.1); filter: drop-shadow(0 0 50px rgba(74, 144, 217, 0.8)); }
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #8a2be2, #00ffff);
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--shield-blue), var(--quantum-gold), var(--mystic-cyan));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
         }
 
         .subtitle {
-            color: #00ffff;
-            font-size: 1.2rem;
-        }
-
-        .privacy-section {
-            margin: 2rem 0;
-            padding: 1.5rem;
-            background: rgba(138, 43, 226, 0.1);
-            border-radius: 10px;
-            border-left: 4px solid #8a2be2;
-        }
-
-        .privacy-section h2 {
-            color: #ffd700;
-            margin-bottom: 1rem;
             font-size: 1.3rem;
+            color: rgba(240, 230, 255, 0.7);
+            font-style: italic;
         }
 
-        .privacy-section h3 {
-            color: #00ffff;
-            margin-bottom: 0.5rem;
+        .last-updated {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 25px;
+            background: rgba(74, 144, 217, 0.15);
+            border: 1px solid rgba(74, 144, 217, 0.3);
+            border-radius: 30px;
+            font-size: 0.95rem;
+            color: var(--shield-blue);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { box-shadow: 0 0 15px rgba(74, 144, 217, 0.2); }
+            50% { box-shadow: 0 0 25px rgba(74, 144, 217, 0.4); }
+        }
+
+        /* Summary Card */
+        .summary-card {
+            background: linear-gradient(145deg, rgba(74, 144, 217, 0.1), rgba(45, 27, 78, 0.3));
+            border: 1px solid rgba(74, 144, 217, 0.25);
+            border-radius: 20px;
+            padding: 35px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            animation: fadeSlideUp 1s ease-out 0.3s both;
+        }
+
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .summary-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(74, 144, 217, 0.1), transparent);
+            animation: card-shimmer 4s ease-in-out infinite;
+        }
+
+        @keyframes card-shimmer {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
+        }
+
+        .summary-card h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            color: var(--quantum-gold);
+            margin-bottom: 25px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .summary-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--shield-blue);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(74, 144, 217, 0.2);
+        }
+
+        .summary-section ul { list-style: none; }
+
+        .summary-section li {
+            padding: 8px 0;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .summary-section li:hover { transform: translateX(5px); }
+
+        /* Content Sections */
+        .content-section {
+            background: rgba(45, 27, 78, 0.2);
+            border: 1px solid rgba(218, 165, 32, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .content-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content-section:hover {
+            border-color: rgba(218, 165, 32, 0.35);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .content-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--quantum-gold);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .content-section h2 .section-icon {
+            font-size: 1.8rem;
+            animation: gentle-bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes gentle-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .content-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            color: var(--mystic-cyan);
+            margin: 25px 0 12px;
+        }
+
+        .content-section p {
+            margin-bottom: 15px;
+            color: rgba(240, 230, 255, 0.85);
             font-size: 1.1rem;
         }
 
-        .privacy-section p {
-            margin-bottom: 1rem;
-            color: #cccccc;
+        .content-section ul { margin: 15px 0 15px 25px; }
+        .content-section li { margin-bottom: 10px; color: rgba(240, 230, 255, 0.8); }
+        .content-section a { color: var(--mystic-cyan); text-decoration: none; transition: color 0.3s; }
+        .content-section a:hover { color: var(--quantum-gold); }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(74, 144, 217, 0.15), rgba(74, 144, 217, 0.05));
+            border-left: 4px solid var(--shield-blue);
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        .privacy-section ul {
-            margin-left: 2rem;
-            color: #cccccc;
+        .highlight-box::after {
+            content: '🛡️';
+            position: absolute;
+            right: 15px; top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            opacity: 0.15;
         }
 
-        .privacy-section li {
-            margin-bottom: 0.5rem;
+        .highlight-box p { margin: 0; color: var(--ethereal-white); }
+
+        /* Contact Box */
+        .contact-box {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.15), rgba(218, 165, 32, 0.05));
+            border: 1px solid rgba(218, 165, 32, 0.3);
+            border-radius: 15px;
+            padding: 25px 30px;
+            margin: 30px 0;
+            text-align: center;
         }
 
-        .highlight {
-            background: rgba(255, 215, 0, 0.1);
-            border-left: 4px solid #ffd700;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 2rem 0;
+        .contact-box h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--quantum-gold);
+            margin-bottom: 15px;
         }
 
-        .highlight h3 {
-            color: #ffd700;
-            margin-bottom: 1rem;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 0.8rem 1.5rem;
-            background: linear-gradient(135deg, #8a2be2, #00ffff);
-            color: white;
+        .contact-box a {
+            color: var(--mystic-cyan);
             text-decoration: none;
-            border-radius: 25px;
             transition: all 0.3s ease;
         }
 
-        .back-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.4);
+        .contact-box a:hover {
+            color: var(--quantum-gold);
+            text-shadow: 0 0 15px rgba(218, 165, 32, 0.5);
         }
 
-        footer {
+        /* Navigation */
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 50px 0;
+        }
+
+        .nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--merlin-purple), rgba(45, 27, 78, 0.8));
+            border: 1px solid rgba(218, 165, 32, 0.3);
+            border-radius: 50px;
+            color: var(--ethereal-white);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(218, 165, 32, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-btn:hover::before { left: 100%; }
+
+        .nav-btn:hover {
+            border-color: var(--quantum-gold);
+            box-shadow: 0 5px 25px rgba(218, 165, 32, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .page-footer {
             text-align: center;
-            padding: 2rem;
-            color: #999999;
-            font-size: 0.9rem;
+            padding: 50px 20px;
+            margin-top: 80px;
+            background: linear-gradient(135deg, rgba(45, 27, 78, 0.95), rgba(74, 144, 217, 0.4));
+            border-top: 3px solid var(--quantum-gold);
+            border-radius: 15px 15px 0 0;
+            box-shadow: 
+                0 -10px 50px rgba(218, 165, 32, 0.3),
+                inset 0 1px 0 rgba(218, 165, 32, 0.5);
+        }
+
+        .page-footer p { 
+            color: #ffffff; 
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-shadow: 0 0 20px rgba(218, 165, 32, 0.8);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: var(--quantum-gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1rem;
+            text-shadow: 0 0 15px rgba(218, 165, 32, 0.6);
+        }
+
+        .footer-links a:hover { 
+            color: var(--mystic-cyan); 
+            text-shadow: 0 0 20px rgba(0, 245, 255, 0.8); 
+        }
+        
+        .footer-links span { 
+            color: #ffffff; 
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; letter-spacing: 1px; }
+            .summary-grid { grid-template-columns: 1fr; }
+            .container { padding: 20px 15px 60px; }
+            .content-section { padding: 20px; }
+            .summary-card { padding: 25px 20px; }
+            .nav-buttons { 
+                flex-direction: column; 
+                align-items: center;
+                gap: 15px;
+            }
+            .nav-btn {
+                width: 90%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            .page-footer {
+                padding: 30px 15px;
+            }
         }
     </style>
-<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-    <div class="quantum-grid"></div>
-
-    <header>
-        <h1>🔒 Privacy Policy</h1>
-        <p class="subtitle">How we protect and handle your data at Quantum Merlin</p>
-    </header>
+    <div class="aurora"></div>
+    <div class="magical-orb orb-1"></div>
+    <div class="magical-orb orb-2"></div>
+    <div class="magical-orb orb-3"></div>
+    <div class="shield-particle"></div>
+    <div class="shield-particle"></div>
+    <div class="shield-particle"></div>
+    <div class="shield-particle"></div>
+    <div class="shield-particle"></div>
 
     <div class="container">
-        <div class="highlight">
-            <h3>🎯 Our Privacy Commitment</h3>
-            <p>At Quantum Merlin, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains what data we collect, how we use it, and your rights regarding your data.</p>
+        <header class="page-header">
+            <div class="header-icon">🔒</div>
+            <h1>PRIVACY POLICY</h1>
+            <p class="subtitle">Your Sacred Data, Protected by Ancient Wisdom</p>
+            <span class="last-updated">✨ Last Updated: January 1, 2026</span>
+        </header>
+
+        <div class="summary-card">
+            <h2>📋 The Mystic's Quick Guide</h2>
+            <div class="summary-grid">
+                <div class="summary-section">
+                    <h3>What We Collect</h3>
+                    <ul>
+                        <li><span>✅</span> Birth data (stored locally on YOUR device)</li>
+                        <li><span>✅</span> Anonymous usage analytics</li>
+                        <li><span>✅</span> Ad interaction data via partners</li>
+                    </ul>
+                </div>
+                <div class="summary-section">
+                    <h3>What We DON'T Do</h3>
+                    <ul>
+                        <li><span>❌</span> Sell your personal data</li>
+                        <li><span>❌</span> Store birth data on servers</li>
+                        <li><span>❌</span> Require account creation</li>
+                        <li><span>❌</span> Collect payment info</li>
+                    </ul>
+                </div>
+                <div class="summary-section">
+                    <h3>Your Magical Control</h3>
+                    <ul>
+                        <li><span>🔒</span> All data stays on YOUR device</li>
+                        <li><span>🗑️</span> Clear your data anytime</li>
+                        <li><span>🚫</span> Opt-out of tracking</li>
+                        <li><span>📥</span> Export your readings</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="privacy-section">
-            <h2>📅 Last Updated</h2>
-            <p>This Privacy Policy was last updated on January 1, 2024. We may update this policy from time to time, and changes will be posted on this page with an updated revision date.</p>
-        </div>
+        <section class="content-section">
+            <h2><span class="section-icon">🏰</span> 1. The Wizard's Commitment</h2>
+            <p>Welcome, Seeker of Cosmic Wisdom! At Quantum Merlin, we believe that your personal data is as sacred as the ancient scrolls themselves. This Privacy Policy explains how we collect, protect, and honor the information you entrust to us on your mystical journey.</p>
+            <div class="highlight-box">
+                <p><strong>Our Core Promise:</strong> Your birth data and personal readings never leave your device. We have no access to your individual cosmic calculations—they belong to you alone.</p>
+            </div>
+        </section>
 
-        <div class="privacy-section">
-            <h2>🔍 Information We Collect</h2>
-            
-            <h3>Information You Provide</h3>
-            <p>Quantum Merlin is designed to minimize data collection. We may collect:</p>
+        <section class="content-section">
+            <h2><span class="section-icon">📜</span> 2. Information We Collect</h2>
+            <h3>2.1 Information You Provide</h3>
             <ul>
-                <li><strong>Email Address:</strong> Only if you voluntarily provide it for contact or newsletter purposes</li>
-                <li><strong>Feedback and Communications:</strong> When you contact us with questions or feedback</li>
-                <li><strong>Saved Preferences:</strong> Stored locally in your browser (not on our servers)</li>
+                <li><strong>Birth Data:</strong> Date, time, and location of birth for numerology calculations</li>
+                <li><strong>Names:</strong> For numerology analysis and sigil generation</li>
+                <li><strong>Questions:</strong> Topics you explore within our mystical tools</li>
             </ul>
-
-            <h3>Automatically Collected Information</h3>
-            <p>We may automatically collect certain technical information:</p>
+            <p><em>Important: All this data is stored locally in your browser's localStorage and never transmitted to our servers.</em></p>
+            <h3>2.2 Automatically Collected Data</h3>
             <ul>
-                <li><strong>Browser Information:</strong> Browser type, version, and operating system</li>
-                <li><strong>Usage Data:</strong> Pages visited, time spent, and interaction patterns</li>
-                <li><strong>Technical Data:</strong> IP address (anonymized), device type, and referring URLs</li>
+                <li><strong>Analytics:</strong> Anonymous usage patterns via Google Analytics</li>
+                <li><strong>Device Info:</strong> Browser type, screen size, general location</li>
+                <li><strong>Ad Data:</strong> Interaction with advertisements through Google AdSense</li>
             </ul>
+        </section>
 
-            <h3>LocalStorage Data</h3>
-            <p>Many Quantum Merlin features use your browser's localStorage to save:</p>
+        <section class="content-section">
+            <h2><span class="section-icon">🛡️</span> 3. How We Protect Your Data</h2>
+            <p>Like the protective wards around Merlin's tower, we employ multiple layers of security:</p>
             <ul>
-                <li>Your saved items in the Quantum Jukebox</li>
-                <li>Tool preferences and settings</li>
-                <li>Recent calculations and results</li>
+                <li><strong>Local Storage:</strong> Personal data never leaves your device</li>
+                <li><strong>No Accounts:</strong> No passwords to hack, no databases to breach</li>
+                <li><strong>Encrypted Connections:</strong> All site traffic uses HTTPS encryption</li>
+                <li><strong>Minimal Collection:</strong> We only gather what's necessary</li>
             </ul>
-            <p><strong>Important:</strong> LocalStorage data is stored ONLY on your device and is never transmitted to our servers unless you explicitly choose to share it.</p>
-        </div>
+        </section>
 
-        <div class="privacy-section">
-            <h2>🎯 How We Use Your Information</h2>
-            <p>We use collected information for the following purposes:</p>
-            
-            <h3>Service Operation</h3>
-            <ul>
-                <li>To provide and maintain the Quantum Merlin platform</li>
-                <li>To save your preferences and personalizations</li>
-                <li>To enable features like the Quantum Jukebox</li>
-                <li>To troubleshoot technical issues and improve performance</li>
-            </ul>
-
-            <h3>Analytics and Improvement</h3>
-            <ul>
-                <li>To understand how users interact with our tools</li>
-                <li>To improve user experience and functionality</li>
-                <li>To develop new features based on usage patterns</li>
-                <li>To measure the effectiveness of our spiritual exploration tools</li>
-            </ul>
-
-            <h3>Communication</h3>
-            <ul>
-                <li>To respond to your questions and support requests</li>
-                <li>To send important updates about the Service (if you provided email)</li>
-                <li>To share relevant spiritual exploration content (optional newsletter)</li>
-            </ul>
-        </div>
-
-        <div class="privacy-section">
-            <h2>🍪 Cookies and Tracking Technologies</h2>
-            
+        <section class="content-section">
+            <h2><span class="section-icon">🍪</span> 4. Cookies & Tracking</h2>
             <h3>Essential Cookies</h3>
-            <p>We use essential cookies to:</p>
-            <ul>
-                <li>Remember your preferences and settings</li>
-                <li>Maintain your session and saved data</li>
-                <li>Enable interactive features and functionality</li>
-            </ul>
-
+            <p>Required for the site to function properly, including remembering your preferences and progress.</p>
             <h3>Analytics Cookies</h3>
-            <p>We may use Google Analytics or similar services to:</p>
-            <ul>
-                <li>Analyze website traffic and user behavior</li>
-                <li>Understand which tools are most popular</li>
-                <li>Identify areas for improvement</li>
-            </ul>
+            <p>Google Analytics helps us understand how seekers use our tools. This data is anonymized and aggregated.</p>
+            <h3>Advertising Cookies</h3>
+            <p>Google AdSense uses cookies to display relevant advertisements. You can opt out through Google's Ad Settings.</p>
+            <div class="highlight-box">
+                <p><strong>Your Choice:</strong> You can disable cookies in your browser settings, though some features may not work as intended.</p>
+            </div>
+        </section>
 
-            <h3>Third-Party Services</h3>
-            <p>Quantum Merlin may integrate with third-party services that have their own privacy policies:</p>
+        <section class="content-section">
+            <h2><span class="section-icon">🤝</span> 5. Third-Party Services</h2>
             <ul>
-                <li><strong>Google Analytics:</strong> For website analytics</li>
-                <li><strong>Google AdSense:</strong> For displaying relevant advertisements</li>
-                <li><strong>Email Services:</strong> For newsletter delivery (if subscribed)</li>
+                <li><strong>Google Analytics:</strong> Usage patterns (<a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>)</li>
+                <li><strong>Google AdSense:</strong> Advertisements (<a href="https://policies.google.com/technologies/ads" target="_blank">Ad Policy</a>)</li>
+                <li><strong>Cloudflare:</strong> Security & performance (<a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Privacy Policy</a>)</li>
             </ul>
+        </section>
+
+        <section class="content-section">
+            <h2><span class="section-icon">⚡</span> 6. Your Sacred Rights</h2>
+            <ul>
+                <li><strong>Access:</strong> View all data stored in your browser's localStorage</li>
+                <li><strong>Delete:</strong> Clear your data with one click in our settings</li>
+                <li><strong>Export:</strong> Download your readings and calculations</li>
+                <li><strong>Opt-Out:</strong> Disable analytics and personalized ads</li>
+                <li><strong>Portability:</strong> Your data is in standard formats</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2><span class="section-icon">👶</span> 7. Children's Privacy</h2>
+            <p>Quantum Merlin is designed for users aged 13 and older. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal data, please contact us immediately.</p>
+        </section>
+
+        <section class="content-section">
+            <h2><span class="section-icon">🔄</span> 8. Policy Updates</h2>
+            <p>As the cosmic energies shift, so too may this policy. We will notify you of significant changes through:</p>
+            <ul>
+                <li>Updated "Last Modified" date at the top of this page</li>
+                <li>Prominent notice on our homepage for major changes</li>
+            </ul>
+        </section>
+
+        <div class="contact-box">
+            <h3>📬 Questions About Your Privacy?</h3>
+            <p>The Wizard welcomes your inquiries about data protection.</p>
+            <p>Reach us at: <a href="mailto:privacy@quantummerlin.com">privacy@quantummerlin.com</a></p>
         </div>
 
-        <div class="privacy-section">
-            <h2>🔐 Data Security</h2>
-            <p>We implement appropriate security measures to protect your information:</p>
-            
-            <h3>Technical Security</h3>
-            <ul>
-                <li>HTTPS encryption for all data transmission</li>
-                <li>Secure hosting infrastructure</li>
-                <li>Regular security updates and monitoring</li>
-                <li>Access controls and authentication systems</li>
-            </ul>
+        <nav class="nav-buttons">
+            <a href="../quantum-merlin-hub/qrcodes-science.html" class="nav-btn"><span>🏠</span> Return to Science Hub</a>
+            <a href="terms.html" class="nav-btn"><span>📜</span> Terms of Service</a>
+            <a href="disclaimer.html" class="nav-btn"><span>⚠️</span> Disclaimer</a>
+        </nav>
 
-            <h3>Data Minimization</h3>
-            <ul>
-                <li>We collect only the minimum data necessary</li>
-                <li>LocalStorage keeps data on your device</li>
-                <li>No sensitive personal or medical information is requested</li>
-                <li>Data retention periods are limited to business needs</li>
-            </ul>
-        </div>
-
-        <div class="privacy-section">
-            <h2>🌐 Third-Party Sharing</h2>
-            
-            <h3>We Do NOT Sell Your Data</h3>
-            <p>Quantum Merlin never sells, rents, or shares your personal information with third parties for marketing purposes.</p>
-
-            <h3>Limited Sharing</h3>
-            <p>We may share information only in these specific circumstances:</p>
-            <ul>
-                <li><strong>Service Providers:</strong> With trusted third-party vendors who help operate our Service (e.g., hosting, analytics)</li>
-                <li><strong>Legal Requirements:</strong> When required by law, court order, or government request</li>
-                <li><strong>Business Transfers:</strong> In connection with mergers, acquisitions, or sales of assets</li>
-                <li><strong>Safety Protection:</strong> To protect our rights, property, or safety, or that of our users</li>
-            </ul>
-        </div>
-
-        <div class="privacy-section">
-            <h2>👤 Your Privacy Rights</h2>
-            <p>Depending on your location, you may have the following rights:</p>
-            
-            <h3>Access and Portability</h3>
-            <ul>
-                <li>Request a copy of your personal data</li>
-                <li>Request data in a machine-readable format</li>
-                <li>Export your localStorage data at any time</li>
-            </ul>
-
-            <h3>Correction and Deletion</h3>
-            <ul>
-                <li>Request correction of inaccurate personal data</li>
-                <li>Request deletion of your personal data</li>
-                <li>Clear your localStorage data in browser settings</li>
-            </ul>
-
-            <h3>Opt-Out and Control</h3>
-            <ul>
-                <li>Opt out of email communications</li>
-                <li>Disable cookies in browser settings</li>
-                <li>Control tracking preferences through browser tools</li>
-            </ul>
-        </div>
-
-        <div class="privacy-section">
-            <h2>🌍 International Data Transfers</h2>
-            <p>Quantum Merlin may store and process data in various countries. When we transfer data internationally, we ensure appropriate protection measures are in place, including:</p>
-            <ul>
-                <li>Standard contractual clauses where required</li>
-                <li>Adequacy decisions for approved countries</li>
-                <li>Compliance with applicable data protection laws</li>
-            </ul>
-        </div>
-
-        <!-- Children's privacy section removed -->
-
-        <div class="privacy-section">
-            <h2>🔄 Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or business operations. Significant changes will be communicated through:</p>
-            <ul>
-                <li>Email notifications (if you provided contact information)</li>
-                <li>Website notices or pop-ups</li>
-                <li>Updated policy date and revision tracking</li>
-            </ul>
-        </div>
-
-        <div class="privacy-section">
-            <h2>📞 Contact Information</h2>
-            <p>If you have questions about this Privacy Policy or want to exercise your privacy rights, please contact us:</p>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:privacy@quantummerlin.com" style="color: #00ffff;">privacy@quantummerlin.com</a></li>
-                <li><strong>Response Time:</strong> We will respond to privacy inquiries within 30 days</li>
-                <li><strong>Data Protection Officer:</strong> Available for complex privacy matters</li>
-            </ul>
-        </div>
-
-        <div class="highlight">
-            <h3>🔒 Your Privacy Matters</h3>
-            <p>We are committed to protecting your privacy while providing powerful spiritual exploration tools. Our approach is to collect minimal data, be transparent about our practices, and give you control over your information.</p>
-        </div>
-
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="https://quantummerlin.com" class="back-link">← Return to Quantum Merlin</a>
-        </div>
+        <footer class="page-footer">
+            <p>© 2026 Quantum Merlin | All Rights Reserved</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <span>•</span>
+                <a href="terms.html">Terms of Service</a>
+                <span>•</span>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+        </footer>
     </div>
 
-    <footer>
-        <p>© 2024 Quantum Merlin. All rights reserved.</p>
-        <p>This Privacy Policy complies with GDPR, CCPA, and other applicable privacy regulations.</p>
-    </footer>
+    <script>
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.content-section').forEach(section => observer.observe(section));
+
+        // Parallax orbs
+        document.addEventListener('mousemove', (e) => {
+            const orbs = document.querySelectorAll('.magical-orb');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            orbs.forEach((orb, i) => {
+                const speed = (i + 1) * 20;
+                orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            });
+        });
+    </script>
 </body>
 </html>
