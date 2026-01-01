@@ -583,6 +583,87 @@
             .btn { width: 100%; margin: 5px 0; }
             .btn-group { flex-direction: column; }
         }
+
+        /* Progress Indicator */
+        .progress-indicator {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .progress-step {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.9rem;
+            font-weight: 700;
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.4);
+            transition: all 0.4s ease;
+        }
+
+        .progress-step.active {
+            background: var(--quantum-cyan);
+            border-color: var(--quantum-cyan);
+            color: #0a0a0f;
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+        }
+
+        .progress-step.completed {
+            background: var(--quantum-gold);
+            border-color: var(--quantum-gold);
+            color: #0a0a0f;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .progress-line {
+            width: 30px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.2);
+            align-self: center;
+            transition: background 0.4s ease;
+        }
+
+        .progress-line.completed {
+            background: var(--quantum-gold);
+        }
+
+        /* Collapsible Educational Content */
+        .learn-more-toggle {
+            display: inline-block;
+            padding: 10px 25px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 25px;
+            color: var(--quantum-cyan);
+            font-family: 'Orbitron', monospace;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .learn-more-toggle:hover {
+            background: rgba(0, 245, 255, 0.1);
+            border-color: var(--quantum-cyan);
+        }
+
+        .educational-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .educational-content.expanded {
+            max-height: 5000px;
+            transition: max-height 0.8s ease-in;
+        }
     </style>
 </head>
 <body>
@@ -593,17 +674,36 @@
     <div class="container">
         <div class="header">
             <h1>⚡ Quick Reality Code</h1>
-            <p style="font-size: 1.15rem; margin-bottom: 25px;">When <strong style="color: var(--quantum-gold);">11 people amplify your code</strong>, you don't affect 11 realities—you affect <strong style="color: var(--quantum-cyan);">2,047</strong></p>
-            <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 20px;">At <strong style="color: var(--quantum-gold);">111 amplifiers</strong> = <strong style="color: var(--rose-pink);">2.6 DECILLION realities</strong> (more atoms than in billions of universes)</p>
-            <div style="display: inline-flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 20px;">
-                <span style="padding: 6px 14px; background: rgba(0,245,255,0.15); border-radius: 20px; font-size: 0.8rem; font-family: 'Orbitron', monospace; border: 1px solid rgba(0,245,255,0.3);">🟡 11 = 2K</span>
-                <span style="padding: 6px 14px; background: rgba(255,165,0,0.15); border-radius: 20px; font-size: 0.8rem; font-family: 'Orbitron', monospace; border: 1px solid rgba(255,165,0,0.3);">🟠 21 = 2M</span>
-                <span style="padding: 6px 14px; background: rgba(255,0,255,0.15); border-radius: 20px; font-size: 0.8rem; font-family: 'Orbitron', monospace; border: 1px solid rgba(255,0,255,0.3);">🔴 33 = 8.6B</span>
-                <span style="padding: 6px 14px; background: rgba(138,43,226,0.15); border-radius: 20px; font-size: 0.8rem; font-family: 'Orbitron', monospace; border: 1px solid rgba(138,43,226,0.3);">🟣 50 = 1.1Q</span>
-                <span style="padding: 6px 14px; background: linear-gradient(135deg, var(--quantum-gold), var(--quantum-magenta)); border-radius: 20px; font-size: 0.8rem; font-family: 'Orbitron', monospace; color: #000; font-weight: 600;">⭐ 111 = 2.6D</span>
+            <p style="font-size: 1.2rem; margin-bottom: 12px; color: rgba(255,255,255,0.95);">Generate your quantum frequency code in <strong style="color: var(--quantum-gold);">60 seconds</strong></p>
+            <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 25px;">Transform your intention into sacred mathematics</p>
+            
+            <!-- Upgrade CTA -->
+            <div style="background: linear-gradient(135deg, rgba(255,0,255,0.15), rgba(0,245,255,0.15)); border: 2px solid rgba(255,0,255,0.4); border-radius: 15px; padding: 18px 25px; margin-bottom: 0; display: inline-block;">
+                <p style="margin: 0 0 12px 0; font-size: 0.9rem; opacity: 0.9;">Want the <strong style="color: var(--quantum-cyan);">full guided experience</strong> with 10 steps, validation & community amplification?</p>
+                <a href="qrcodesfull.html" class="version-link" style="border-color: var(--quantum-magenta); color: var(--quantum-magenta);">
+                    🔮 Try the Enhanced 10-Step Generator
+                </a>
             </div>
-            <a href="/qrcodesfull.html" class="version-link">🔮 Enhanced 10-Step Version</a>
         </div>
+
+        <!-- Progress Indicator -->
+        <div class="progress-indicator" id="progressIndicator">
+            <div class="progress-step active" id="prog1">1</div>
+            <div class="progress-line" id="line1"></div>
+            <div class="progress-step" id="prog2">2</div>
+            <div class="progress-line" id="line2"></div>
+            <div class="progress-step" id="prog3">3</div>
+        </div>
+
+        <!-- Learn More Toggle (shows educational content) -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            <button class="learn-more-toggle" onclick="toggleEducationalContent()" id="learnMoreBtn">
+                📚 Learn How This Works ▼
+            </button>
+        </div>
+
+        <!-- Collapsible Educational Content -->
+        <div class="educational-content" id="educationalContent">
 
         <!-- Exponential Power Explanation -->
         <div style="background: var(--card-bg); border-radius: 20px; padding: 35px; margin-bottom: 25px; backdrop-filter: blur(20px); border: 1px solid rgba(255,215,0,0.2);">
@@ -1130,6 +1230,8 @@
             </div>
         </div>
 
+        </div><!-- End of educational-content -->
+
         <!-- Step 1: Choose Template -->
         <div class="step-container active" id="step1">
             <h2 class="step-header">Choose Your Template</h2>
@@ -1322,6 +1424,15 @@
                 <p>💡 <strong>Next Step:</strong> Share your code in the Quantum Merlin community. Each person who amplifies your code doubles its power.</p>
             </div>
 
+            <!-- Upgrade CTA -->
+            <div style="background: linear-gradient(135deg, rgba(255,0,255,0.15), rgba(0,245,255,0.15)); border: 2px solid var(--quantum-magenta); border-radius: 15px; padding: 25px; margin: 25px 0; text-align: center;">
+                <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); margin-bottom: 12px; font-size: 1.1rem;">🔮 Want a More Powerful Code?</h4>
+                <p style="margin-bottom: 18px; opacity: 0.9; line-height: 1.6;">The <strong style="color: var(--quantum-cyan);">10-Step Enhanced Generator</strong> adds emotional resonance, timeframe selection, and community amplification tools to make your intention even more powerful.</p>
+                <a href="qrcodesfull.html" style="display: inline-block; padding: 14px 30px; background: linear-gradient(135deg, var(--quantum-magenta), var(--quantum-cyan)); color: #fff; font-family: 'Orbitron', monospace; font-weight: 600; font-size: 0.95rem; border-radius: 30px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(255,0,255,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    ✨ Try the Enhanced 10-Step Generator
+                </a>
+            </div>
+
             <!-- Community Amplification Guide -->
             <div style="background: rgba(0,245,255,0.08); border: 2px solid rgba(0,245,255,0.3); border-radius: 15px; padding: 25px; margin: 25px 0;">
                 <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 18px; font-size: 1.1rem; text-align: center;">🌐 How to Amplify Your Reality Code</h4>
@@ -1452,13 +1563,54 @@
             document.querySelectorAll('.template-card').forEach(card => card.classList.remove('selected'));
             element.classList.add('selected');
             document.getElementById('templateNextBtn').disabled = false;
+            
+            // Auto-advance after brief delay
+            setTimeout(() => {
+                nextStep(2);
+            }, 400);
+        }
+
+        // Toggle educational content visibility
+        function toggleEducationalContent() {
+            const content = document.getElementById('educationalContent');
+            const btn = document.getElementById('learnMoreBtn');
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                btn.innerHTML = '📚 Learn How This Works ▼';
+            } else {
+                content.classList.add('expanded');
+                btn.innerHTML = '📚 Hide Educational Content ▲';
+            }
+        }
+
+        // Update progress indicator
+        function updateProgress(step) {
+            // Reset all steps
+            for (let i = 1; i <= 3; i++) {
+                const stepEl = document.getElementById(`prog${i}`);
+                stepEl.classList.remove('active', 'completed');
+                if (i < step) {
+                    stepEl.classList.add('completed');
+                    stepEl.innerHTML = '✓';
+                } else if (i === step) {
+                    stepEl.classList.add('active');
+                    stepEl.innerHTML = i;
+                } else {
+                    stepEl.innerHTML = i;
+                }
+            }
+            
+            // Update lines
+            document.getElementById('line1').classList.toggle('completed', step > 1);
+            document.getElementById('line2').classList.toggle('completed', step > 2);
         }
 
         function nextStep(step) {
             document.getElementById(`step${currentStep}`).classList.remove('active');
             currentStep = step;
             document.getElementById(`step${currentStep}`).classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            updateProgress(step);
             if (step === 2) populateCustomization();
         }
 
@@ -1466,7 +1618,7 @@
             document.getElementById(`step${currentStep}`).classList.remove('active');
             currentStep = step;
             document.getElementById(`step${currentStep}`).classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            updateProgress(step);
         }
 
         function populateCustomization() {
@@ -1539,6 +1691,7 @@
             document.querySelectorAll('.template-card').forEach(card => card.classList.remove('selected'));
             document.getElementById('step1').classList.add('active');
             document.getElementById('templateNextBtn').disabled = true;
+            updateProgress(1);
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
