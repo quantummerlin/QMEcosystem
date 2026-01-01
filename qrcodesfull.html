@@ -231,7 +231,7 @@
             font-size: 1.1rem;
             opacity: 0.9;
             margin-bottom: 20px;
-            color: rgba(255, 255, 255, 0.85);
+            color: rgba(0, 245, 255, 0.85);
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
@@ -346,21 +346,17 @@
         }
 
         .step-header {
-            font-family: 'Orbitron', monospace;
+            font-family: 'Cinzel Decorative', serif;
             font-size: 1.6rem;
-            margin-bottom: 8px;
+            margin-bottom: 20px;
             text-align: center;
             color: var(--quantum-gold);
             text-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+            letter-spacing: 2px;
         }
 
         .step-number {
-            font-family: 'Orbitron', monospace;
-            font-size: 0.8rem;
-            opacity: 0.6;
-            margin-bottom: 25px;
-            letter-spacing: 0.2em;
-            color: var(--quantum-cyan);
+            display: none; /* Removed per user preference */
         }
 
         /* Category Grid */
@@ -862,7 +858,7 @@
         }
 
         .footer-links span {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(0, 245, 255, 0.5);
         }
 
         /* Responsive - Tablet */
@@ -925,7 +921,6 @@
             .header p { font-size: 0.9rem !important; line-height: 1.5; }
             .step-container { padding: 20px 12px; margin-bottom: 18px; }
             .step-header { font-size: 1.1rem; }
-            .step-number { font-size: 0.7rem; margin-bottom: 18px; }
             .category-btn { padding: 18px 12px; }
             .category-icon { font-size: 1.5rem; margin-bottom: 8px; }
             .category-name { font-size: 0.95rem; }
@@ -1036,7 +1031,7 @@
 
         .step-popup-remaining {
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(0, 245, 255, 0.7);
         }
 
         .step-popup-message {
@@ -1426,12 +1421,12 @@
         .onboarding-modal {
             background: linear-gradient(135deg, rgba(10, 15, 30, 0.98), rgba(20, 10, 35, 0.98));
             border: 2px solid var(--quantum-gold);
-            border-radius: 20px;
-            padding: 40px 35px;
-            max-width: 480px;
-            width: 92%;
+            border-radius: 16px;
+            padding: 30px 25px;
+            max-width: 380px;
+            width: 88%;
             position: relative;
-            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3), 0 0 80px rgba(255, 0, 255, 0.15);
+            box-shadow: 0 15px 50px rgba(255, 215, 0, 0.3), 0 0 60px rgba(255, 0, 255, 0.15);
             animation: modalFloat 0.5s ease;
         }
 
@@ -1456,17 +1451,17 @@
         }
 
         .onboarding-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            font-size: 2rem;
+            margin-bottom: 12px;
             display: block;
         }
 
         .onboarding-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.25rem;
             font-weight: 600;
             color: var(--quantum-gold);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
             letter-spacing: 1px;
         }
@@ -1474,7 +1469,7 @@
         .onboarding-text {
             font-size: 1rem;
             line-height: 1.6;
-            color: rgba(255, 255, 255, 0.85);
+            color: rgba(0, 245, 255, 0.85);
             margin-bottom: 20px;
         }
 
@@ -1543,8 +1538,8 @@
 
         .onboarding-btn.secondary {
             background: transparent;
-            color: rgba(255, 255, 255, 0.7);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: rgba(0, 245, 255, 0.7);
+            border: 2px solid rgba(0, 245, 255, 0.3);
         }
 
         .onboarding-btn.secondary:hover {
@@ -1559,7 +1554,7 @@
             gap: 10px;
             margin-top: 20px;
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(0, 245, 255, 0.6);
         }
 
         .onboarding-checkbox input {
@@ -1740,7 +1735,7 @@
             overflow: hidden;
             transition: max-height 0.4s ease, padding 0.4s ease;
             padding: 0 25px;
-            color: rgba(255, 255, 255, 0.85);
+            color: rgba(0, 245, 255, 0.85);
             line-height: 1.7;
         }
 
@@ -1795,7 +1790,7 @@
         .testimonial-text {
             font-size: 1.15rem;
             font-style: italic;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(0, 245, 255, 0.9);
             margin-bottom: 20px;
             line-height: 1.8;
         }
@@ -1807,7 +1802,7 @@
         }
 
         .testimonial-meta {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(0, 245, 255, 0.5);
             font-size: 0.9rem;
             margin-top: 5px;
         }
@@ -1884,7 +1879,7 @@
             top: 15px;
             right: 20px;
             font-size: 2rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(0, 245, 255, 0.6);
             cursor: pointer;
             transition: all 0.3s ease;
             background: none;
@@ -1905,7 +1900,7 @@
         }
 
         .exit-modal-content p {
-            color: rgba(255, 255, 255, 0.85);
+            color: rgba(0, 245, 255, 0.85);
             margin-bottom: 25px;
             text-align: center;
             line-height: 1.6;
@@ -1952,7 +1947,7 @@
 
         .modal-disclaimer {
             font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(0, 245, 255, 0.4);
             text-align: center;
             margin-top: 15px;
         }
@@ -2084,7 +2079,7 @@
         </div>
 
         <!-- The Consciousness & Resonance Model (COLLAPSIBLE) -->
-        <div class="collapsible-section">
+        <div class="collapsible-section collapsed">
             <div class="collapsible-header">
                 <div class="collapsible-title">The Consciousness & Resonance Model</div>
                 <div class="collapsible-arrow">▼</div>
@@ -2132,7 +2127,7 @@
         </div>
 
         <!-- Common Intention Mistakes (COLLAPSIBLE) -->
-        <div class="collapsible-section">
+        <div class="collapsible-section collapsed">
             <div class="collapsible-header">
                 <div class="collapsible-title">Common Intention Mistakes (& How to Fix Them)</div>
                 <div class="collapsible-arrow">▼</div>
