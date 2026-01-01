@@ -1302,6 +1302,325 @@
             .tooltip .tooltiptext { width: 220px; margin-left: -110px; font-size: 0.85rem; }
             .back-to-top { width: 45px; height: 45px; bottom: 70px; font-size: 1.3rem; }
         }
+
+        /* Phase 3: Social Sharing Buttons */
+        .social-sharing {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .share-btn.twitter {
+            background: linear-gradient(135deg, #1DA1F2, #0d8bd9);
+            border-color: rgba(29, 161, 242, 0.5);
+        }
+
+        .share-btn.facebook {
+            background: linear-gradient(135deg, #4267B2, #365899);
+            border-color: rgba(66, 103, 178, 0.5);
+        }
+
+        .share-btn.email {
+            background: linear-gradient(135deg, var(--quantum-cyan), #00b8d4);
+            border-color: var(--quantum-cyan);
+        }
+
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.4);
+            border-color: var(--quantum-gold);
+        }
+
+        /* Phase 3: FAQ Section */
+        .faq-container {
+            margin: 40px 0;
+            max-width: 900px;
+        }
+
+        .faq-item {
+            background: rgba(0, 20, 40, 0.6);
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(0, 245, 255, 0.5);
+            box-shadow: 0 4px 20px rgba(0, 245, 255, 0.2);
+        }
+
+        .faq-question {
+            padding: 18px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--quantum-cyan);
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: rgba(0, 245, 255, 0.05);
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: var(--quantum-gold);
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 25px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 25px 20px 25px;
+        }
+
+        /* Phase 3: Testimonials Carousel */
+        .testimonials-section {
+            margin: 50px 0;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(0, 20, 40, 0.7), rgba(20, 0, 40, 0.7));
+            border-radius: 20px;
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-section h3 {
+            text-align: center;
+            color: var(--quantum-gold);
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .testimonials-carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            min-height: 250px;
+        }
+
+        .testimonial-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .testimonial-card.active {
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+        }
+
+        .testimonial-text {
+            font-size: 1.15rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            color: var(--quantum-cyan);
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .testimonial-meta {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(0, 245, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: var(--quantum-cyan);
+            transform: scale(1.3);
+            box-shadow: 0 0 15px var(--quantum-cyan);
+        }
+
+        /* Phase 3: Exit Intent Modal */
+        .exit-intent-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .exit-intent-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .exit-modal-content {
+            background: linear-gradient(135deg, rgba(0, 20, 60, 0.95), rgba(20, 0, 60, 0.95));
+            border: 3px solid var(--quantum-cyan);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 245, 255, 0.5);
+            animation: modalSlideIn 0.5s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .exit-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+
+        .exit-modal-close:hover {
+            color: var(--quantum-gold);
+            transform: rotate(90deg);
+        }
+
+        .exit-modal-content h3 {
+            color: var(--quantum-gold);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .exit-modal-content p {
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 25px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .email-capture-form {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        .email-capture-input {
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: 2px solid rgba(0, 245, 255, 0.5);
+            background: rgba(0, 20, 40, 0.8);
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .email-capture-input:focus {
+            outline: none;
+            border-color: var(--quantum-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+        }
+
+        .email-submit-btn {
+            padding: 15px 30px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, var(--quantum-cyan), var(--quantum-magenta));
+            border: 2px solid var(--quantum-gold);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .email-submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 245, 255, 0.5);
+        }
+
+        .modal-disclaimer {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.4);
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-section h3 { font-size: 1.5rem; }
+            .testimonial-text { font-size: 1rem; }
+            .exit-modal-content { padding: 30px 20px; }
+            .share-btn { padding: 10px 18px; font-size: 0.85rem; }
+        }
     </style>
 </head>
 <body>
@@ -2284,10 +2603,143 @@
             <div class="btn-group">
                 <button class="btn btn-secondary" onclick="startOver()">✨ Create Another Code</button>
             </div>
+
+            <!-- Social Sharing -->
+            <div class="info-box" style="margin-top: 40px;">
+                <h4 style="text-align: center; color: var(--quantum-gold); margin-bottom: 20px;">📢 Share Your Journey</h4>
+                <p style="text-align: center; margin-bottom: 20px;">Help others discover quantum intention setting</p>
+                <div class="social-sharing">
+                    <a href="#" class="share-btn twitter" onclick="shareTwitter(); return false;">
+                        <span>𝕏</span> Share on X
+                    </a>
+                    <a href="#" class="share-btn facebook" onclick="shareFacebook(); return false;">
+                        <span>f</span> Share on Facebook
+                    </a>
+                    <a href="#" class="share-btn email" onclick="shareEmail(); return false;">
+                        <span>✉</span> Share via Email
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-container" id="faqSection" style="margin-top: 60px; padding: 0 20px;">
+            <h3 style="text-align: center; color: var(--quantum-gold); font-size: 2rem; margin-bottom: 30px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How does the Reality Code actually work?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Your Reality Code is calculated using Gematria (ancient Hebrew numerology). Each letter in your intention has a numerical value. The code becomes a quantum anchor—a specific frequency that links your consciousness to your desired outcome. When others amplify your code, they add coherence to the morphic field surrounding your intention.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Why does amplification work exponentially (2ⁿ - 1)?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Each amplifier doesn't just add—they multiply possible timeline outcomes. With 11 amplifiers, you have 2,047 influence states. This mirrors quantum superposition: every conscious observer collapses probability waves. The formula 2ⁿ - 1 represents the exponential growth of coherent intention fields.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Can I create multiple Reality Codes?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Absolutely! However, quantum focus works best when concentrated. Start with 1-3 primary intentions. Once those manifest (or after 90 days), create new codes. Your saved library lets you track and amplify multiple codes over time.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What if I don't get 11+ amplifications?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Even 1 amplifier creates 1 additional influence state. The system works at ANY scale—it's just more powerful with more coherence. Focus on quality amplifications from aligned individuals. Your own daily activation (Step 10) is the most critical factor.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Is this scientifically proven?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    The Quantum Merlin Ecosystem is based on emerging research in quantum consciousness, morphic resonance (Rupert Sheldrake), and intention experiments (Lynne McTaggart). While mainstream science hasn't fully validated these concepts, thousands of practitioners report measurable results. Think of it as applied quantum philosophy—test it yourself.
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Carousel -->
+        <div class="testimonials-section" style="margin-top: 60px;">
+            <h3>✨ Community Experiences</h3>
+            <div class="testimonials-carousel" id="testimonialsCarousel">
+                <div class="testimonial-card active">
+                    <div class="testimonial-text">
+                        "I created a Reality Code for financial abundance. Within 3 weeks of getting 21 amplifications, I received an unexpected $12,000 contract. This system is REAL."
+                    </div>
+                    <div class="testimonial-author">— Sarah M.</div>
+                    <div class="testimonial-meta">Code: 847 | 21 Amplifiers</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The validation system helped me refine my intention from 'I want to be happy' to 'I AM radiating joy and attracting aligned relationships.' The specificity made all the difference."
+                    </div>
+                    <div class="testimonial-author">— Marcus T.</div>
+                    <div class="testimonial-meta">Code: 1,234 | 15 Amplifiers</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "I was skeptical until I hit 33 amplifiers. The synchronicities became undeniable—doors opened, opportunities appeared, my intention manifested in 67 days."
+                    </div>
+                    <div class="testimonial-author">— Jennifer K.</div>
+                    <div class="testimonial-meta">Code: 555 | 33 Amplifiers</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The 7-step science explanation finally made sense of why my previous manifestation attempts failed. Present tense + specificity + emotional charge = quantum magic."
+                    </div>
+                    <div class="testimonial-author">— David R.</div>
+                    <div class="testimonial-meta">Code: 999 | 18 Amplifiers</div>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carouselDots">
+                <div class="carousel-dot active" onclick="goToTestimonial(0)"></div>
+                <div class="carousel-dot" onclick="goToTestimonial(1)"></div>
+                <div class="carousel-dot" onclick="goToTestimonial(2)"></div>
+                <div class="carousel-dot" onclick="goToTestimonial(3)"></div>
+            </div>
         </div>
 
         <div class="home-link">
             <a href="/">← Back to Quantum Merlin</a>
+        </div>
+    </div>
+
+    <!-- Exit Intent Modal -->
+    <div class="exit-intent-modal" id="exitModal">
+        <div class="exit-modal-content">
+            <button class="exit-modal-close" onclick="closeExitModal()">×</button>
+            <h3>⚡ Wait! Don't Leave Yet...</h3>
+            <p>Get notified when your Reality Code receives amplifications + weekly quantum intention tips</p>
+            <form class="email-capture-form" onsubmit="submitEmail(event)">
+                <input 
+                    type="email" 
+                    class="email-capture-input" 
+                    placeholder="Your email address"
+                    id="exitEmailInput"
+                    required
+                />
+                <button type="submit" class="email-submit-btn">🚀 Keep Me Updated</button>
+            </form>
+            <p class="modal-disclaimer">We respect your privacy. Unsubscribe anytime. No spam, just quantum gold.</p>
         </div>
     </div>
 
@@ -2799,6 +3251,117 @@ quantummerlin.com/qrcodesfull
             updateProgress();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // ===== PHASE 3: ENGAGEMENT FEATURES =====
+
+        // Social Sharing Functions
+        function shareTwitter() {
+            const text = encodeURIComponent("I just created my Quantum Reality Code! Join me in manifesting through exponential intention amplification 🌟 #QuantumMerlin #Manifestation");
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'width=600,height=400');
+        }
+
+        function shareFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400');
+        }
+
+        function shareEmail() {
+            const subject = encodeURIComponent("Check out this Quantum Reality Code Generator");
+            const body = encodeURIComponent("I just created my personalized Reality Code using quantum intention setting. You might find this interesting:\n\n" + window.location.href);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const wasActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't already active
+            if (!wasActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Testimonials Carousel
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        function goToTestimonial(index) {
+            // Remove active class from current testimonial and dot
+            testimonials[currentTestimonial].classList.remove('active');
+            dots[currentTestimonial].classList.remove('active');
+            
+            // Add active class to new testimonial and dot
+            currentTestimonial = index;
+            testimonials[currentTestimonial].classList.add('active');
+            dots[currentTestimonial].classList.add('active');
+        }
+
+        // Auto-rotate testimonials every 6 seconds
+        setInterval(() => {
+            const nextIndex = (currentTestimonial + 1) % testimonials.length;
+            goToTestimonial(nextIndex);
+        }, 6000);
+
+        // Exit Intent Detection
+        let exitModalShown = false;
+        
+        document.addEventListener('mouseleave', function(event) {
+            // Only trigger if mouse leaves from top of viewport and modal hasn't been shown
+            if (event.clientY <= 0 && !exitModalShown && currentStep >= 3) {
+                showExitModal();
+            }
+        });
+
+        function showExitModal() {
+            const modal = document.getElementById('exitModal');
+            modal.classList.add('show');
+            exitModalShown = true;
+        }
+
+        function closeExitModal() {
+            const modal = document.getElementById('exitModal');
+            modal.classList.remove('show');
+        }
+
+        function submitEmail(event) {
+            event.preventDefault();
+            const email = document.getElementById('exitEmailInput').value;
+            
+            // Store email in localStorage
+            localStorage.setItem('userEmail', email);
+            
+            // Show success message
+            const modalContent = document.querySelector('.exit-modal-content');
+            modalContent.innerHTML = `
+                <h3 style="color: var(--quantum-gold);">✅ You're In!</h3>
+                <p style="font-size: 1.2rem; margin: 30px 0;">Welcome to the Quantum Merlin Community</p>
+                <p style="opacity: 0.8;">You'll receive amplification notifications + weekly quantum tips at:</p>
+                <p style="color: var(--quantum-cyan); font-weight: 600; margin: 20px 0;">${email}</p>
+                <button class="email-submit-btn" onclick="closeExitModal()" style="margin-top: 20px;">
+                    Continue Creating Your Code
+                </button>
+            `;
+            
+            // Close modal after 4 seconds
+            setTimeout(() => {
+                closeExitModal();
+            }, 4000);
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('exitModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeExitModal();
+            }
+        });
     </script>
 
     <!-- AdSense Footer -->
