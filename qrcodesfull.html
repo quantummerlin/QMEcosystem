@@ -1298,6 +1298,52 @@
             box-shadow: 0 8px 30px rgba(0, 245, 255, 0.6);
         }
 
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .loading-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(0, 245, 255, 0.2);
+            border-top: 4px solid var(--quantum-cyan);
+            border-right: 4px solid var(--quantum-gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: var(--quantum-cyan);
+            font-family: 'Orbitron', monospace;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
         @media (max-width: 768px) {
             .tooltip .tooltiptext { width: 220px; margin-left: -110px; font-size: 0.85rem; }
             .back-to-top { width: 45px; height: 45px; bottom: 70px; font-size: 1.3rem; }
@@ -1643,6 +1689,12 @@
     <!-- Back to Top Button -->
     <div class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</div>
 
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Calculating Your Reality Code...</div>
+    </div>
+
     <div class="container">
         <div class="header">
             <div style="margin-bottom: 30px;">
@@ -1937,15 +1989,17 @@
             <p style="margin-bottom: 20px; opacity: 0.85;">Select the feelings you'll experience when this manifests:</p>
 
             <div class="checkbox-group">
-                <label class="checkbox-label"><input type="checkbox" name="feeling" value="joy"> Joy</label>
-                <label class="checkbox-label"><input type="checkbox" name="feeling" value="peace"> Peace</label>
-                <label class="checkbox-label"><input type="checkbox" name="feeling" value="freedom"> Freedom</label>
-                <label class="checkbox-label"><input type="checkbox" name="feeling" value="gratitude"> Gratitude</label>
-                <label class="checkbox-label"><input type="checkbox" name="feeling" value="love"> Love</label>
-                <label class="checkbox-label"><input type="checkbox" name="feeling" value="excitement"> Excitement</label>
-                <label class="checkbox-label"><input type="checkbox" name="feeling" value="confidence"> Confidence</label>
-                <label class="checkbox-label"><input type="checkbox" name="feeling" value="abundance"> Abundance</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="joy" onchange="checkFeelingSelection()"> Joy</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="peace" onchange="checkFeelingSelection()"> Peace</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="freedom" onchange="checkFeelingSelection()"> Freedom</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="gratitude" onchange="checkFeelingSelection()"> Gratitude</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="love" onchange="checkFeelingSelection()"> Love</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="excitement" onchange="checkFeelingSelection()"> Excitement</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="confidence" onchange="checkFeelingSelection()"> Confidence</label>
+                <label class="checkbox-label"><input type="checkbox" name="feeling" value="abundance" onchange="checkFeelingSelection()"> Abundance</label>
             </div>
+
+            <p id="feelingHint" style="text-align: center; color: var(--quantum-cyan); font-size: 0.9rem; margin-top: 15px; opacity: 0.8;">Select 1-3 feelings that resonate most strongly</p>
 
             <div class="btn-group">
                 <button class="btn btn-secondary" onclick="prevStep(3)">← Back</button>
@@ -2780,6 +2834,14 @@
         createStars();
         createParticles();
 
+        // Initialize all features when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            initCollapsibles();
+            initProgressIndicator();
+            initTestimonialsCarousel();
+            loadProgress();
+        });
+
         // App State
         let currentStep = 1;
         let userData = {
@@ -3068,6 +3130,48 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
+        // Feeling Selection Auto-Advance (after 2 selections or 1.5s delay)
+        let feelingTimeout = null;
+        function checkFeelingSelection() {
+            const selected = document.querySelectorAll('input[name="feeling"]:checked').length;
+            const hint = document.getElementById('feelingHint');
+            
+            clearTimeout(feelingTimeout);
+            
+            if (selected >= 1) {
+                hint.textContent = `${selected} feeling${selected > 1 ? 's' : ''} selected ✓`;
+                hint.style.color = 'var(--quantum-gold)';
+                
+                // Auto-advance after 2 selections or 1.5 second delay
+                if (selected >= 2) {
+                    feelingTimeout = setTimeout(() => nextStep(5), 600);
+                } else {
+                    feelingTimeout = setTimeout(() => nextStep(5), 1500);
+                }
+            } else {
+                hint.textContent = 'Select 1-3 feelings that resonate most strongly';
+                hint.style.color = 'var(--quantum-cyan)';
+            }
+        }
+
+        // Enter Key Navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                const activeStep = document.querySelector('.step-container.active');
+                if (!activeStep) return;
+                
+                // Don't advance if in textarea
+                if (e.target.tagName === 'TEXTAREA') return;
+                
+                // Find the primary action button
+                const nextBtn = activeStep.querySelector('.btn:not(.btn-secondary)');
+                if (nextBtn && !nextBtn.disabled) {
+                    e.preventDefault();
+                    nextBtn.click();
+                }
+            }
+        });
+
         // Build Draft Intention
         function buildDraftIntention() {
             userData.desire = document.getElementById('specificDesire').value;
@@ -3129,22 +3233,33 @@
             });
         }
 
-        // Generate Code
+        // Generate Code with Loading Animation
         function generateCode() {
             const editedIntention = document.getElementById('intentionEdit').value;
             if (editedIntention) {
                 userData.intention = editedIntention.toUpperCase();
             }
 
-            const code = calculateGematria(userData.intention);
-            userData.realityCode = code;
+            // Show loading overlay
+            const loading = document.getElementById('loadingOverlay');
+            loading.classList.add('show');
 
-            document.getElementById('finalCode').textContent = code;
-            document.getElementById('displayIntention').textContent = userData.intention;
-            document.getElementById('activationCode').textContent = code;
+            // Simulate processing time for dramatic effect
+            setTimeout(() => {
+                const code = calculateGematria(userData.intention);
+                userData.realityCode = code;
 
-            celebrate(); // Celebration animation when code is generated
-            nextStep(9);
+                document.getElementById('finalCode').textContent = code;
+                document.getElementById('displayIntention').textContent = userData.intention;
+                document.getElementById('activationCode').textContent = code;
+
+                // Hide loading
+                loading.classList.remove('show');
+
+                // Celebration animation
+                celebrate();
+                nextStep(9);
+            }, 1200);
         }
 
         // Calculate Gematria
@@ -3288,12 +3403,27 @@ quantummerlin.com/qrcodesfull
             }
         }
 
-        // Testimonials Carousel
+        // Testimonials Carousel (initialized after DOM loaded)
         let currentTestimonial = 0;
-        const testimonials = document.querySelectorAll('.testimonial-card');
-        const dots = document.querySelectorAll('.carousel-dot');
+        let testimonials;
+        let dots;
+
+        function initTestimonialsCarousel() {
+            testimonials = document.querySelectorAll('.testimonial-card');
+            dots = document.querySelectorAll('.carousel-dot');
+            
+            if (testimonials.length > 0) {
+                // Auto-rotate testimonials every 6 seconds
+                setInterval(() => {
+                    const nextIndex = (currentTestimonial + 1) % testimonials.length;
+                    goToTestimonial(nextIndex);
+                }, 6000);
+            }
+        }
 
         function goToTestimonial(index) {
+            if (!testimonials || testimonials.length === 0) return;
+            
             // Remove active class from current testimonial and dot
             testimonials[currentTestimonial].classList.remove('active');
             dots[currentTestimonial].classList.remove('active');
@@ -3303,12 +3433,6 @@ quantummerlin.com/qrcodesfull
             testimonials[currentTestimonial].classList.add('active');
             dots[currentTestimonial].classList.add('active');
         }
-
-        // Auto-rotate testimonials every 6 seconds
-        setInterval(() => {
-            const nextIndex = (currentTestimonial + 1) % testimonials.length;
-            goToTestimonial(nextIndex);
-        }, 6000);
 
         // Exit Intent Detection
         let exitModalShown = false;
