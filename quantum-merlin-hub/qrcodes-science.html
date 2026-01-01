@@ -1,0 +1,2312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ancient Science of Quantum Reality Codes | Merlin's Wisdom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --merlin-purple: #2d1b4e;
+            --rose-pink: #ff6b9d;
+            --quantum-gold: #daa520;
+            --ancient-gold: #ffd700;
+            --mystic-cyan: #00f5ff;
+            --deep-void: #0a0015;
+            --ethereal-white: #f0e6ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: var(--deep-void);
+            color: var(--ethereal-white);
+            line-height: 1.9;
+            overflow-x: hidden;
+            font-size: 18px;
+        }
+
+        /* Magical Particle Canvas */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Floating Orbs */
+        .magical-orb {
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+            filter: blur(40px);
+            animation: float-orb 20s infinite ease-in-out;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.3) 0%, transparent 70%);
+            top: 10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 107, 157, 0.25) 0%, transparent 70%);
+            top: 60%;
+            right: -5%;
+            animation-delay: -5s;
+        }
+
+        .orb-3 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(0, 245, 255, 0.2) 0%, transparent 70%);
+            bottom: 20%;
+            left: 30%;
+            animation-delay: -10s;
+        }
+
+        .orb-4 {
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(218, 165, 32, 0.25) 0%, transparent 70%);
+            top: 40%;
+            left: 60%;
+            animation-delay: -15s;
+        }
+
+        @keyframes float-orb {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -40px) scale(1.1); }
+            50% { transform: translate(-20px, 20px) scale(0.95); }
+            75% { transform: translate(40px, 30px) scale(1.05); }
+        }
+
+        /* Aurora Effect */
+        .aurora {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: 
+                linear-gradient(45deg, transparent 40%, rgba(138, 43, 226, 0.03) 45%, transparent 50%),
+                linear-gradient(-45deg, transparent 40%, rgba(0, 245, 255, 0.03) 45%, transparent 50%),
+                linear-gradient(90deg, transparent 40%, rgba(255, 107, 157, 0.02) 50%, transparent 60%);
+            background-size: 400% 400%;
+            animation: aurora-flow 15s ease-in-out infinite;
+        }
+
+        @keyframes aurora-flow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Rune Circle */
+        .rune-circle {
+            position: fixed;
+            bottom: -200px;
+            right: -200px;
+            width: 500px;
+            height: 500px;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.04;
+            animation: rotate-rune 60s linear infinite reverse;
+        }
+
+        @keyframes rotate-rune {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Magical Lines */
+        .magic-line {
+            position: fixed;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--quantum-gold), transparent);
+            pointer-events: none;
+            z-index: 2;
+            opacity: 0.1;
+        }
+
+        .magic-line-1 {
+            top: 20%;
+            left: 0;
+            width: 100%;
+            animation: pulse-line 8s ease-in-out infinite;
+        }
+
+        .magic-line-2 {
+            top: 60%;
+            left: 0;
+            width: 100%;
+            animation: pulse-line 8s ease-in-out infinite 4s;
+        }
+
+        @keyframes pulse-line {
+            0%, 100% { opacity: 0; transform: scaleX(0); }
+            50% { opacity: 0.15; transform: scaleX(1); }
+        }
+
+        /* Sacred Geometry Background */
+        .sacred-geometry {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.03;
+            animation: rotate-geometry 120s linear infinite;
+        }
+
+        @keyframes rotate-geometry {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Category Navigation */
+        /* Table of Contents Navigation */
+        .toc-nav {
+            background: linear-gradient(135deg, rgba(45, 27, 78, 0.8), rgba(10, 0, 21, 0.95));
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(218, 165, 32, 0.3);
+            backdrop-filter: blur(20px);
+        }
+
+        .toc-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4em;
+            color: var(--quantum-gold);
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .toc-category {
+            margin-bottom: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(218, 165, 32, 0.2);
+        }
+
+        .toc-category-header {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.15), rgba(138, 43, 226, 0.15));
+            padding: 12px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1em;
+            color: var(--quantum-gold);
+        }
+
+        .toc-category-header:hover {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.25), rgba(138, 43, 226, 0.25));
+        }
+
+        .toc-category-header .cat-icon {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+
+        .toc-category-header .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .toc-category.collapsed .toc-category-header .arrow {
+            transform: rotate(-90deg);
+        }
+
+        .toc-category-items {
+            max-height: 500px;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 10px 15px;
+            background: rgba(10, 0, 21, 0.5);
+        }
+
+        .toc-category.collapsed .toc-category-items {
+            max-height: 0;
+            padding: 0 15px;
+        }
+
+        .toc-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--ethereal-white);
+            font-size: 0.95em;
+            gap: 10px;
+        }
+
+        .toc-item:hover {
+            background: rgba(218, 165, 32, 0.15);
+            color: var(--quantum-gold);
+        }
+
+        .toc-item .item-icon {
+            font-size: 1.1em;
+            min-width: 25px;
+        }
+
+        .toc-item .item-title {
+            flex: 1;
+        }
+
+        .toc-item .read-badge {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .toc-item.is-read {
+            opacity: 0.7;
+        }
+
+        .toc-item.is-read .item-title {
+            text-decoration: line-through;
+            text-decoration-color: rgba(218, 165, 32, 0.5);
+        }
+
+        /* Mark as Read Button */
+        .mark-read-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.2), rgba(32, 201, 151, 0.2));
+            border: 1px solid rgba(40, 167, 69, 0.4);
+            color: #20c997;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.85em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px auto 0;
+        }
+
+        .section-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-content > *:not(.mark-read-btn) {
+            width: 100%;
+        }
+
+        .mark-read-btn:hover {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .mark-read-btn.is-read {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+        }
+
+        .progress-bar {
+            background: rgba(218, 165, 32, 0.2);
+            border-radius: 10px;
+            height: 8px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, var(--quantum-gold), var(--rose-pink));
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            font-size: 0.9em;
+            color: var(--quantum-gold);
+            margin-bottom: 10px;
+        }
+
+        /* Sections start collapsed */
+        .section.collapsed .section-content {
+            max-height: 0;
+            opacity: 0;
+            padding: 0;
+        }
+
+        /* Mystical Header */
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(255, 107, 157, 0.1), rgba(0, 245, 255, 0.08));
+            border-radius: 30px;
+            margin-bottom: 50px;
+            border: 1px solid rgba(218, 165, 32, 0.3);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(218, 165, 32, 0.1), transparent, rgba(255, 107, 157, 0.1), transparent);
+            animation: rotate-header 30s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotate-header {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .merlin-sigil {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            animation: pulse-sigil 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(218, 165, 32, 0.5));
+            letter-spacing: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        @keyframes pulse-sigil {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(218, 165, 32, 0.5)); }
+            50% { transform: scale(1.05); filter: drop-shadow(0 0 40px rgba(218, 165, 32, 0.8)); }
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8em;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--quantum-gold), var(--ancient-gold), var(--rose-pink), var(--quantum-gold));
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: shimmer-text 8s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 2px;
+        }
+
+        @keyframes shimmer-text {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4em;
+            color: var(--rose-pink);
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+            animation: glow-subtitle 4s ease-in-out infinite;
+        }
+
+        @keyframes glow-subtitle {
+            0%, 100% { text-shadow: 0 0 10px rgba(255, 107, 157, 0.3); }
+            50% { text-shadow: 0 0 25px rgba(255, 107, 157, 0.6); }
+        }
+
+        .intro {
+            font-size: 1.2em;
+            color: rgba(240, 230, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto 15px auto;
+            line-height: 2;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro::first-letter {
+            font-family: 'Cinzel', serif;
+            font-size: 3em;
+            float: left;
+            margin-right: 10px;
+            line-height: 0.8;
+            color: var(--quantum-gold);
+            text-shadow: 0 0 20px rgba(218, 165, 32, 0.5);
+        }
+
+        .intro-card {
+            background: linear-gradient(135deg, rgba(45, 27, 78, 0.6), rgba(10, 0, 21, 0.8));
+            border: 1px solid rgba(218, 165, 32, 0.2);
+            border-radius: 20px;
+            padding: 30px 40px;
+            margin: 30px auto;
+            max-width: 900px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro-highlight {
+            font-size: 1.15em;
+            color: var(--quantum-gold);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.9;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* Section Styling */
+        .section {
+            background: linear-gradient(135deg, rgba(45, 27, 78, 0.4), rgba(10, 0, 21, 0.6));
+            border: 1px solid rgba(218, 165, 32, 0.2);
+            border-radius: 25px;
+            padding: 50px;
+            margin-bottom: 50px;
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--quantum-gold), var(--rose-pink), var(--mystic-cyan), transparent);
+            animation: scan-line 4s ease-in-out infinite;
+        }
+
+        @keyframes scan-line {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .section:hover {
+            border-color: rgba(218, 165, 32, 0.4);
+            box-shadow: 0 0 60px rgba(138, 43, 226, 0.2), inset 0 0 60px rgba(218, 165, 32, 0.05);
+        }
+
+        .section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8em;
+            color: var(--quantum-gold);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .section h2 .icon {
+            font-size: 2.5em;
+            display: block;
+            animation: float-icon 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px currentColor);
+        }
+
+        @keyframes float-icon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .section h2::after {
+            content: '▼';
+            font-size: 0.5em;
+            opacity: 0.5;
+            transition: transform 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .section.collapsed h2::after {
+            transform: rotate(-90deg);
+        }
+
+        .section-content {
+            max-height: 10000px;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, opacity 0.3s ease;
+            opacity: 1;
+        }
+
+        .section.collapsed .section-content {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        .section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4em;
+            color: var(--rose-pink);
+            margin: 35px 0 20px 0;
+            padding-left: 25px;
+            border-left: 3px solid var(--quantum-gold);
+            position: relative;
+        }
+
+        .section h3::before {
+            content: '✧';
+            position: absolute;
+            left: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--quantum-gold);
+            font-size: 0.8em;
+        }
+
+        .section h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.25em;
+            color: var(--mystic-cyan);
+            margin: 25px 0 12px 0;
+        }
+
+        .evidence-box {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(255, 107, 157, 0.08));
+            border-left: 3px solid var(--quantum-gold);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 15px 15px 0;
+            position: relative;
+        }
+
+        .evidence-box::before {
+            content: '⚗';
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+
+        .study {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.08), rgba(0, 245, 255, 0.05));
+            border: 1px solid rgba(218, 165, 32, 0.2);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .study::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(218, 165, 32, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .study:hover::before {
+            left: 100%;
+        }
+
+        .study:hover {
+            transform: translateX(5px);
+            border-color: rgba(218, 165, 32, 0.4);
+            box-shadow: 0 5px 30px rgba(218, 165, 32, 0.15);
+        }
+
+        .study-title {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            color: var(--ancient-gold);
+            font-size: 1.15em;
+            margin-bottom: 12px;
+        }
+
+        .study-details {
+            color: rgba(255, 107, 157, 0.8);
+            font-size: 0.95em;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .study-result {
+            color: var(--ethereal-white);
+            padding-left: 20px;
+            border-left: 2px solid rgba(0, 245, 255, 0.4);
+            margin-top: 12px;
+            line-height: 1.9;
+        }
+
+        .key-point {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.15), rgba(255, 107, 157, 0.1), rgba(0, 245, 255, 0.08));
+            border: 2px solid var(--quantum-gold);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 20px;
+            font-size: 1.1em;
+            position: relative;
+            animation: breathe-box 6s ease-in-out infinite;
+        }
+
+        @keyframes breathe-box {
+            0%, 100% { box-shadow: 0 0 20px rgba(218, 165, 32, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(218, 165, 32, 0.4), 0 0 60px rgba(255, 107, 157, 0.2); }
+        }
+
+        .key-point::before {
+            content: '🔮';
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            font-size: 1.8rem;
+            filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.5));
+        }
+
+        .formula {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(45, 27, 78, 0.4));
+            padding: 25px;
+            border-radius: 15px;
+            font-family: 'Cinzel', serif;
+            font-size: 1.4em;
+            text-align: center;
+            margin: 25px 0;
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 245, 255, 0.1) 0%, transparent 50%);
+            transform: translate(-50%, -50%);
+            animation: pulse-formula 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-formula {
+            0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(0.8); }
+            50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.2); }
+        }
+
+        .formula span {
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(90deg, var(--mystic-cyan), var(--quantum-gold), var(--rose-pink));
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer-formula 3s linear infinite;
+        }
+
+        @keyframes shimmer-formula {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .icon {
+            font-size: 1.3em;
+            filter: drop-shadow(0 0 5px currentColor);
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 30px;
+        }
+
+        li {
+            margin: 12px 0;
+            color: var(--ethereal-white);
+            position: relative;
+        }
+
+        li::marker {
+            color: var(--quantum-gold);
+        }
+
+        strong {
+            color: var(--ancient-gold);
+            font-weight: 600;
+        }
+
+        .quote {
+            font-style: italic;
+            color: rgba(255, 107, 157, 0.9);
+            padding: 25px 30px;
+            border-left: 3px solid var(--rose-pink);
+            margin: 25px 0;
+            background: linear-gradient(90deg, rgba(255, 107, 157, 0.1), transparent);
+            border-radius: 0 15px 15px 0;
+            position: relative;
+        }
+
+        .quote::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 3rem;
+            color: rgba(255, 107, 157, 0.2);
+            font-family: Georgia, serif;
+        }
+
+        .citation {
+            font-size: 0.9em;
+            color: rgba(0, 245, 255, 0.7);
+            margin-top: 12px;
+        }
+
+        .mechanism-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 35px 0;
+        }
+
+        .mechanism-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(10, 0, 21, 0.4));
+            border: 1px solid rgba(218, 165, 32, 0.25);
+            padding: 30px;
+            border-radius: 20px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mechanism-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(218, 165, 32, 0.1) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .mechanism-card:hover::before {
+            opacity: 1;
+        }
+
+        .mechanism-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--quantum-gold);
+            box-shadow: 0 20px 50px rgba(218, 165, 32, 0.2), 0 0 30px rgba(255, 107, 157, 0.1);
+        }
+
+        .mechanism-card h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--quantum-gold);
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 25px 0;
+            margin: 35px 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 35px;
+            opacity: 0;
+            animation: fade-in-timeline 0.6s ease forwards;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+        .timeline-item:nth-child(6) { animation-delay: 0.6s; }
+        .timeline-item:nth-child(7) { animation-delay: 0.7s; }
+        .timeline-item:nth-child(8) { animation-delay: 0.8s; }
+
+        @keyframes fade-in-timeline {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 0;
+            bottom: -35px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--quantum-gold), var(--rose-pink), var(--mystic-cyan));
+        }
+
+        .timeline-item:last-child::before {
+            bottom: 0;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--quantum-gold);
+            border: 3px solid var(--deep-void);
+            box-shadow: 0 0 15px rgba(218, 165, 32, 0.5);
+            animation: pulse-timeline 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-timeline {
+            0%, 100% { box-shadow: 0 0 15px rgba(218, 165, 32, 0.5); }
+            50% { box-shadow: 0 0 25px rgba(218, 165, 32, 0.8), 0 0 35px rgba(255, 107, 157, 0.4); }
+        }
+
+        .timeline-year {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            color: var(--ancient-gold);
+            font-size: 1.25em;
+            margin-bottom: 8px;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.15), rgba(255, 107, 157, 0.1), rgba(0, 245, 255, 0.08));
+            border: 2px solid var(--quantum-gold);
+            padding: 50px;
+            text-align: center;
+            border-radius: 25px;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(218, 165, 32, 0.1) 0%, transparent 60%);
+            animation: pulse-cta 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse-cta {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        .cta-box h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--ancient-gold);
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            border: none;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--quantum-gold), var(--ancient-gold), var(--rose-pink));
+            background-size: 200% 200%;
+            color: var(--deep-void);
+            padding: 18px 50px;
+            border-radius: 35px;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 25px;
+            position: relative;
+            z-index: 1;
+            animation: shimmer-button 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer-button {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .cta-button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 15px 40px rgba(218, 165, 32, 0.4), 0 0 50px rgba(255, 107, 157, 0.3);
+        }
+
+        /* Scroll-triggered animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .section {
+                padding: 30px 20px;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+
+            .mechanism-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .magical-orb {
+                display: none;
+            }
+
+            .cta-box {
+                padding: 35px 20px;
+            }
+
+            .cta-button {
+                padding: 15px 35px;
+                font-size: 1em;
+            }
+        }
+
+        /* Sparkle cursor effect */
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            animation: sparkle-fade 1s ease-out forwards;
+        }
+
+        @keyframes sparkle-fade {
+            0% { opacity: 1; transform: scale(1) rotate(0deg); }
+            100% { opacity: 0; transform: scale(0) rotate(180deg); }
+        }
+
+        /* AdSense Optimization Styles */
+        .ad-container {
+            text-align: center;
+            padding: 20px;
+            margin: 30px 0;
+            background: linear-gradient(135deg, rgba(45, 27, 78, 0.3), rgba(10, 0, 21, 0.5));
+            border-radius: 15px;
+            border: 1px dashed rgba(218, 165, 32, 0.3);
+        }
+
+        .ad-container.top-banner {
+            margin-bottom: 40px;
+        }
+
+        .ad-container.in-content {
+            margin: 40px 0;
+        }
+
+        .ad-label {
+            font-family: 'Cinzel', serif;
+            color: rgba(218, 165, 32, 0.6);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .ad-placeholder-text {
+            color: var(--quantum-gold);
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+        }
+
+        /* Sticky Sidebar Ad (Desktop) */
+        .sidebar-ad {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 160px;
+            padding: 15px;
+            background: linear-gradient(180deg, rgba(45, 27, 78, 0.8), rgba(10, 0, 21, 0.9));
+            border-radius: 10px;
+            border: 1px solid rgba(218, 165, 32, 0.2);
+            z-index: 100;
+            display: none;
+        }
+
+        @media (min-width: 1400px) {
+            .sidebar-ad { display: block; }
+        }
+
+        /* AdSense Footer */
+        .adsense-footer {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 60px;
+            background: linear-gradient(135deg, rgba(45, 27, 78, 0.95), rgba(138, 43, 226, 0.2));
+            border-top: 3px solid var(--quantum-gold);
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 -10px 50px rgba(218, 165, 32, 0.2);
+        }
+
+        .adsense-footer p {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 500;
+            text-shadow: 0 0 15px rgba(218, 165, 32, 0.5);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: var(--quantum-gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(218, 165, 32, 0.4);
+        }
+
+        .footer-links a:hover {
+            color: var(--mystic-cyan);
+            text-shadow: 0 0 20px rgba(0, 245, 255, 0.8);
+        }
+
+        .footer-links span {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Subtle Background Elements -->
+    <div class="magical-orb orb-1"></div>
+    <div class="magical-orb orb-2"></div>
+
+    <div class="container">
+        <header>
+            <div class="merlin-sigil">🧙‍♂️ ⚛️ 🌹</div>
+            <h1>The Ancient Science of Reality Codes</h1>
+            <p class="subtitle">Where Merlin's Wisdom Meets Quantum Physics</p>
+            <div class="intro-card">
+                <p class="intro">
+                    In the mists of Avalon, Merlin knew what modern science is only now discovering—that consciousness shapes reality, 
+                    that intention bends probability, and that collective focus can move mountains.
+                </p>
+                <p class="intro-highlight">
+                    These are not mere legends. They are truths encoded in the very fabric of spacetime, 
+                    now validated by decades of peer-reviewed research in quantum physics, neuroscience, and the biology of belief.
+                </p>
+            </div>
+        </header>
+
+        <!-- AdSense Top Banner -->
+        <div class="ad-container top-banner">
+            <div class="ad-label">✨ ADVERTISEMENT ✨</div>
+            <div class="ad-placeholder-text">Ad Space - 728x90 Leaderboard</div>
+            <!-- Replace with actual AdSense code:
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-XXXXXXX"
+                data-ad-slot="XXXXXXX"
+                data-ad-format="horizontal"
+                data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            -->
+        </div>
+
+        <!-- Table of Contents Navigation -->
+        <nav class="toc-nav">
+            <div class="toc-title">📜 Explore the Ancient Knowledge</div>
+            
+            <div class="progress-text">Your Journey: <span id="progress-count">0</span> of <span id="total-sections">11</span> sections explored</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+            </div>
+
+            <!-- Quantum Science Category -->
+            <div class="toc-category" data-cat="science">
+                <div class="toc-category-header" onclick="toggleCategory(this)">
+                    <span><span class="cat-icon">🔬</span> Quantum Science</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="toc-category-items">
+                    <div class="toc-item" onclick="scrollToSection('section-quantum')" data-section="section-quantum">
+                        <span class="item-icon">⚛️</span>
+                        <span class="item-title">The Quantum Mysteries: Observer & Entanglement</span>
+                    </div>
+                    <div class="toc-item" onclick="scrollToSection('section-biology')" data-section="section-biology">
+                        <span class="item-icon">🧬</span>
+                        <span class="item-title">The Alchemy of Belief: Mind Shapes Matter</span>
+                    </div>
+                    <div class="toc-item" onclick="scrollToSection('section-group')" data-section="section-group">
+                        <span class="item-icon">👥</span>
+                        <span class="item-title">The Circle of Eight: Knights of Intention</span>
+                    </div>
+                    <div class="toc-item" onclick="scrollToSection('section-formula')" data-section="section-formula">
+                        <span class="item-icon">📐</span>
+                        <span class="item-title">Sacred Mathematics: The Power of 2^n - 1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mind Power Category -->
+            <div class="toc-category" data-cat="psychology">
+                <div class="toc-category-header" onclick="toggleCategory(this)">
+                    <span><span class="cat-icon">🧠</span> Mind Power</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="toc-category-items">
+                    <div class="toc-item" onclick="scrollToSection('section-nlp')" data-section="section-nlp">
+                        <span class="item-icon">🧠</span>
+                        <span class="item-title">The Art of Enchantment: NLP & Anchoring</span>
+                    </div>
+                    <div class="toc-item" onclick="scrollToSection('section-neural')" data-section="section-neural">
+                        <span class="item-icon">🧩</span>
+                        <span class="item-title">Neural Enchantment: Rewiring the Mind</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ancient Wisdom Category -->
+            <div class="toc-category" data-cat="spiritual">
+                <div class="toc-category-header" onclick="toggleCategory(this)">
+                    <span><span class="cat-icon">🌹</span> Ancient Wisdom</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="toc-category-items">
+                    <div class="toc-item" onclick="scrollToSection('section-vibration')" data-section="section-vibration">
+                        <span class="item-icon">🧲</span>
+                        <span class="item-title">The Rose's Frequency: Vibration & Attraction</span>
+                    </div>
+                    <div class="toc-item" onclick="scrollToSection('section-morphic')" data-section="section-morphic">
+                        <span class="item-icon">🌊</span>
+                        <span class="item-title">The Wizard's Web: Morphic Fields</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Category -->
+            <div class="toc-category" data-cat="history">
+                <div class="toc-category-header" onclick="toggleCategory(this)">
+                    <span><span class="cat-icon">📜</span> Timeline</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="toc-category-items">
+                    <div class="toc-item" onclick="scrollToSection('section-timeline')" data-section="section-timeline">
+                        <span class="item-icon">📅</span>
+                        <span class="item-title">Through the Ages: A Timeline of Discovery</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practical Magic Category -->
+            <div class="toc-category" data-cat="practical">
+                <div class="toc-category-header" onclick="toggleCategory(this)">
+                    <span><span class="cat-icon">⚡</span> Practical Magic</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="toc-category-items">
+                    <div class="toc-item" onclick="scrollToSection('section-convergence')" data-section="section-convergence">
+                        <span class="item-icon">⚙️</span>
+                        <span class="item-title">The Grand Convergence: All Magic Unified</span>
+                    </div>
+                    <div class="toc-item" onclick="scrollToSection('section-references')" data-section="section-references">
+                        <span class="item-icon">📚</span>
+                        <span class="item-title">The Ancient Scrolls: Scholarly References</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SECTION 1: NLP & ANCHORING -->
+        <div id="section-nlp" class="section reveal collapsed" data-category="psychology">
+            <h2 onclick="toggleSection(this)">
+                <span class="icon">🧠</span>
+                The Art of Enchantment: NLP & Anchoring
+            </h2>
+            <div class="section-content">
+            
+            <div class="evidence-box">
+                <h3>What is NLP Anchoring?</h3>
+                <p>
+                    <strong>Anchoring</strong> is a well-established NLP technique where a specific stimulus (visual, auditory, 
+                    or kinesthetic) becomes associated with a particular emotional or mental state. When the anchor is triggered, 
+                    the associated state is automatically activated.
+                </p>
+            </div>
+
+            <h3>How Reality Codes Use Anchoring</h3>
+            <p>
+                Your <strong>Reality Code</strong> (a number derived from your intention) functions as a <strong>numerical anchor</strong>. 
+                Every time you see, speak, or think about your code, it triggers the neurological pattern associated with your 
+                intention, reinforcing the desired state at a subconscious level.
+            </p>
+
+            <div class="study">
+                <div class="study-title">
+                    📚
+                    Foundational Research: Pavlov's Classical Conditioning (1897)
+                </div>
+                <div class="study-details">Ivan Pavlov, Nobel Prize in Physiology (1904)</div>
+                <div class="study-result">
+                    <strong>Finding:</strong> Demonstrated that neutral stimuli can become associated with automatic responses 
+                    through repeated pairing. This is the foundation of all anchoring techniques.
+                </div>
+            </div>
+
+            <div class="study">
+                <div class="study-title">
+                    📚
+                    NLP Anchoring Research: Bandler & Grinder (1979)
+                </div>
+                <div class="study-details">"Frogs into Princes: Neuro Linguistic Programming"</div>
+                <div class="study-result">
+                    <strong>Finding:</strong> Specific stimuli (visual, auditory, kinesthetic) can be deliberately paired with 
+                    desired emotional states. Once anchored, the stimulus alone can trigger the state without the original context.
+                    <br><br>
+                    <strong>Application to Reality Codes:</strong> Your numerical code becomes an anchor that triggers your 
+                    intention's emotional and mental state every time you encounter it.
+                </div>
+            </div>
+
+            <div class="study">
+                <div class="study-title">
+                    📚
+                    Numerical Anchoring in Psychology
+                </div>
+                <div class="study-details">Tversky & Kahneman (1974) - "Judgment under Uncertainty: Heuristics and Biases"</div>
+                <div class="study-result">
+                    <strong>Finding:</strong> Numbers serve as powerful cognitive anchors that influence decision-making and 
+                    perception. People unconsciously adjust their estimates and behaviors based on numerical anchors.
+                    <br><br>
+                    <strong>Application:</strong> Your Reality Code (e.g., 528) becomes a persistent cognitive anchor that 
+                    keeps your intention active in your subconscious mind.
+                </div>
+            </div>
+
+            <div class="key-point">
+                <strong>🎯 Key Mechanism:</strong> Every time you see your Reality Code number (on clocks, receipts, license plates), 
+                your brain automatically activates the neural pattern associated with your intention. This creates continuous 
+                reinforcement without conscious effort—a 24/7 manifestation practice running in the background of your mind.
+            </div>
+
+            <h3>The Reticular Activating System (RAS)</h3>
+            <p>
+                The <strong>Reticular Activating System</strong> is a network of neurons in the brainstem that filters incoming 
+                information, bringing relevant stimuli to conscious attention. When you set a Reality Code, you're programming 
+                your RAS to notice that specific number—creating frequent synchronistic encounters that reinforce your intention.
+            </p>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-nlp', this)">☐ Mark as Explored</button>
+            </div>
+        </div>
+
+        <!-- In-Content Ad 1 -->
+        <div class="ad-container in-content">
+            <div class="ad-label">✨ ADVERTISEMENT ✨</div>
+            <div class="ad-placeholder-text">Ad Space - 336x280 Rectangle</div>
+        </div>
+
+        <!-- SECTION 2: GROUP INTENTION (8 Person Threshold) -->
+        <div id="section-group" class="section reveal collapsed" data-category="science">
+            <h2 onclick="toggleSection(this)">
+                <span class="icon">👥</span>
+                The Circle of Eight: Knights of Intention
+            </h2>
+            <div class="section-content">
+            
+            <div class="evidence-box">
+                <h3>The Princeton PEAR Lab Discoveries</h3>
+                <p>
+                    The <strong>Princeton Engineering Anomalies Research (PEAR) Lab</strong>, operating from 1979-2007, 
+                    was one of the most rigorous scientific investigations of consciousness-reality interactions ever conducted.
+                    <br><br>
+                    <strong>Key Finding:</strong> <em>Groups of 8+ people focusing on the same intention showed statistically 
+                    significant effects on physical systems.</em>
+                </p>
+            </div>
+
+            <h3>The Research</h3>
+            <div class="study">
+                <div class="study-title">📚 Jahn, R.G. & Dunne, B.J. (1987)</div>
+                <div class="study-details">"Margins of Reality: The Role of Consciousness in the Physical World"</div>
+                <div class="study-result">
+                    28 years of research, 2.5 million experimental trials. <strong>Result:</strong> Human intention 
+                    can influence random event generators with statistical significance beyond chance (p < 0.0001).
+                    <br><br>
+                    <strong>Group Effect:</strong> Groups of 8+ participants showed dramatically amplified effects 
+                    compared to individuals—suggesting consciousness effects scale non-linearly with group size.
+                </div>
+            </div>
+
+            <div class="study">
+                <div class="study-title">📚 The Global Consciousness Project (1998-Present)</div>
+                <div class="study-details">Princeton & International Network of Random Event Generators</div>
+                <div class="study-result">
+                    Data from 70+ random number generators worldwide. <strong>Finding:</strong> Significant deviations 
+                    correlate with events of global attention (9/11, New Year's celebrations, mass meditations).
+                    <br><br>
+                    The effect is strongest when <strong>group coherence exceeds certain thresholds</strong>—supporting 
+                    the idea that collective intention has measurable physical effects.
+                </div>
+            </div>
+
+            <div class="key-point">
+                <strong>⚡ Why 8?</strong> The number 8 appears to represent a threshold where individual consciousness 
+                effects begin to resonate and amplify each other. Think of it like tuning forks—when 8+ tuning forks 
+                vibrate at the same frequency, they create a standing wave more powerful than any individual fork.
+            </div>
+
+            <div class="quote">
+                "The act of sending intention to another person has a boomerang effect, transforming the sender as much as, 
+                if not more than, the receiver."
+                <div class="citation">— Lynne McTaggart, The Power of Eight</div>
+            </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-group', this)">☐ Mark as Explored</button>
+            </div>
+        </div>
+
+        <!-- SECTION 3: QUANTUM PHYSICS -->
+        <div id="section-quantum" class="section reveal collapsed" data-category="science">
+            <h2 onclick="toggleSection(this)">
+                <span class="icon">⚛️</span>
+                The Quantum Mysteries: Observer & Entanglement
+            </h2>
+            <div class="section-content">
+            
+            <div class="evidence-box">
+                <h3>The Double-Slit Experiment</h3>
+                <p>
+                    The most famous experiment in quantum physics demonstrates that <strong>observation affects reality</strong>. 
+                    Particles behave differently when observed versus when unobserved, proving that consciousness plays a role 
+                    in collapsing quantum possibilities into physical reality.
+                </p>
+            </div>
+
+            <h3>Quantum Entanglement & Group Intention</h3>
+            <p>
+                When particles become entangled, they remain connected regardless of distance—what happens to one instantaneously 
+                affects the other. Some researchers propose that consciousness creates similar entanglement between aligned minds.
+            </p>
+
+            <div class="study">
+                <div class="study-title">📚 Quantum Biology Research: Penrose & Hameroff (1996)</div>
+                <div class="study-details">"Orchestrated Objective Reduction" - Consciousness and Quantum Mechanics</div>
+                <div class="study-result">
+                    <strong>Theory:</strong> Consciousness arises from quantum processes in the brain's microtubules. If true, 
+                    this suggests focused intention could create quantum coherence—and potentially entanglement—between aligned 
+                    minds.
+                    <br><br>
+                    <strong>Application:</strong> Every person who comments your Reality Code becomes entangled with your intention, 
+                    creating a web of consciousness all pulling toward the same outcome.
+                </div>
+            </div>
+
+            <div class="key-point">
+                <strong>🎯 Why This Matters:</strong> The exponential formula (2^n - 1) isn't arbitrary—it represents the 
+                exponential growth of quantum entanglement connections. With 2 people, you have 3 connections (A, B, and A-B). 
+                With 3 people, you have 7 connections (A, B, C, A-B, A-C, B-C, A-B-C). Each new person doesn't just add—they 
+                multiply the entanglement network.
+            </div>
+
+            <div class="formula">
+                Entanglement Connections = 2^n - 1
+                <br>
+                Where n = number of observers (commenters)
+            </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-quantum', this)">☐ Mark as Explored</button>
+            </div>
+        </div>
+
+        <!-- In-Content Ad 2 -->
+        <div class="ad-container in-content">
+            <div class="ad-label">✨ ADVERTISEMENT ✨</div>
+            <div class="ad-placeholder-text">Ad Space - 300x250 Rectangle</div>
+        </div>
+
+        <!-- SECTION 4: BIOLOGY OF BELIEF -->
+        <div id="section-biology" class="section reveal collapsed" data-category="science">
+            <h2 onclick="toggleSection(this)">
+                <span class="icon">🧬</span>
+                The Alchemy of Belief: Where Mind Shapes Matter
+            </h2>
+            <div class="section-content">
+            
+            <div class="evidence-box">
+                <h3>What is Epigenetics?</h3>
+                <p>
+                    <strong>Epigenetics</strong> is the study of how behaviors and environment can cause changes in gene expression 
+                    without altering DNA sequence. Your beliefs, thoughts, and emotions literally change which genes are turned 
+                    on or off.
+                </p>
+            </div>
+
+            <div class="study">
+                <div class="study-title">📚 The Biology of Belief (2005)</div>
+                <div class="study-details">Dr. Bruce Lipton, cellular biologist, former Stanford researcher</div>
+                <div class="study-result">
+                    <strong>Research:</strong> Lipton's experiments with stem cells demonstrated that the environment (including 
+                    thoughts and beliefs) controls gene expression, not the genes themselves.
+                    <br><br>
+                    <strong>Key Finding:</strong> Cells respond to environmental signals, including the electromagnetic field 
+                    generated by thoughts and emotions. Positive beliefs = health-promoting gene expression. Negative beliefs = 
+                    disease-promoting gene expression.
+                </div>
+            </div>
+
+            <div class="study">
+                <div class="study-title">📚 HeartMath Institute Research</div>
+                <div class="study-details">McCraty, R. (2015) - Heart-Brain Coherence</div>
+                <div class="study-result">
+                    <strong>Finding:</strong> The heart generates an electromagnetic field 60x stronger than the brain. 
+                    This field changes based on emotional state and can be measured several feet from the body.
+                    <br><br>
+                    <strong>Application:</strong> When you focus on your Reality Code with positive emotion, you're broadcasting 
+                    a coherent electromagnetic signal that can influence your environment and other people.
+                </div>
+            </div>
+
+            <div class="key-point">
+                <strong>🎯 The Biological Mechanism:</strong> Your Reality Code isn't just a mental concept—it's a biological 
+                signal that:
+                <ol>
+                    <li>Changes gene expression (epigenetics)</li>
+                    <li>Alters electromagnetic field (heart coherence)</li>
+                    <li>Reprograms neural pathways (neuroplasticity)</li>
+                    <li>Shifts cellular environment (biology of belief)</li>
+                </ol>
+                When multiple people focus on the same code, these biological signals synchronize and amplify.
+            </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-biology', this)">☐ Mark as Explored</button>
+            </div>
+        </div>
+
+        <!-- SECTION 5: LAW OF ATTRACTION -->
+        <div id="section-vibration" class="section reveal collapsed" data-category="spiritual">
+            <h2 onclick="toggleSection(this)">
+                <span class="icon">🧲</span>
+                The Rose's Frequency: Vibration & Attraction
+            </h2>
+            <div class="section-content">
+            
+            <div class="evidence-box">
+                <h3>What is the Law of Attraction?</h3>
+                <p>
+                    The <strong>Law of Attraction</strong> states that like attracts like—your dominant thoughts, emotions, 
+                    and beliefs attract corresponding experiences. While often dismissed as pseudoscience, emerging research 
+                    in quantum physics and neuroscience provides mechanisms that explain how it works.
+                </p>
+            </div> 
+
+            <h3>The Science Behind Attraction</h3>
+            <div class="study">
+                <div class="study-title">📚 Vibrational Frequency Research</div>
+                <div class="study-details">Dr. David Hawkins - "Power vs. Force" (1995)</div>
+                <div class="study-result">
+                    <strong>Research:</strong> Using kinesiological testing, Hawkins mapped a scale of consciousness from 
+                    0-1000. Emotions like shame, guilt, and fear calibrate low, while love, joy, and enlightenment calibrate high.
+                    <br><br>
+                    <strong>Key Finding:</strong> Higher vibrational states are exponentially more powerful. One person at 
+                    level 700 (enlightenment) can counterbalance the negativity of 70 million people at level 200.
+                </div>
+            </div>
+
+            <div class="key-point">
+                <strong>🌹 The Rose Frequency:</strong> When you focus on your Reality Code with positive emotion—love, 
+                gratitude, joy—you raise your vibrational frequency. This attracts people, opportunities, and circumstances 
+                that match that frequency. The more people focus on the same code with the same positive emotion, the 
+                stronger the collective frequency field becomes.
+            </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-vibration', this)">☐ Mark as Explored</button>
+            </div>
+        </div>
+
+        <!-- SECTION 6: MORPHIC RESONANCE -->
+        <div id="section-morphic" class="section reveal collapsed" data-category="spiritual">
+            <h2 onclick="toggleSection(this)">
+                <span class="icon">🌊</span>
+                The Wizard's Web: Morphic Fields That Connect All Minds
+            </h2>
+            <div class="section-content">
+            
+            <div class="evidence-box">
+                <h3>What is Morphic Resonance?</h3>
+                <p>
+                    <strong>Morphic Resonance</strong> is a theory proposed by biologist Rupert Sheldrake that suggests there's 
+                    a field of information (morphic field) that connects all members of a species. When one member learns
+                </p>
+            </div>
+
+            <div class="study">
+                <div class="study-title">📚 The Intention Experiment (2007)</div>
+                <div class="study-details">Lynne McTaggart, with physicists from Princeton, Stanford, and University of Arizona</div>
+                <div class="study-result">
+                    <strong>Study Design:</strong> Over 30 controlled experiments with thousands of participants worldwide, 
+                    focusing collective intention on specific targets (plants, water, seeds, human health).
+                    <br><br>
+                    <strong>Findings:</strong>
+                    <ul>
+                        <li>Group intention significantly affected the growth rate of plants (p < 0.001)</li>
+                        <li>Water crystal structure changed measurably when targeted by group intention</li>
+                        <li>Seeds germinated faster when receiving group intention</li>
+                        <li>Human health markers improved in recipients of group intention</li>
+                        <li><strong>Most importantly:</strong> The senders experienced healing and life changes, often more 
+                        dramatic than the receivers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="study">
+                <div class="study-title">📚 The Power of Eight (2017)</div>
+                <div class="study-details">Lynne McTaggart - Comprehensive analysis of 8-person intention groups</div>
+                <div class="study-result">
+                    <strong>Key Discovery:</strong> Groups of 8 people create a "supercharged" field where:
+                    <ul>
+                        <li>Individual intentions manifest faster than solo practice</li>
+                        <li>Participants experience spontaneous healing (physical and emotional)</li>
+                        <li>Life circumstances shift dramatically within weeks</li>
+                        <li>The effect is <strong>exponential, not additive</strong></li>
+                    </ul>
+                    <br>
+                    <strong>The Exponential Effect:</strong> McTaggart observed that 8 people don't create 8x the power—they 
+                    create something closer to 8² or 8³ power due to quantum entanglement between participants.
+                </div>
+            </div>
+
+            <div class="key-point">
+                <strong>🎯 Direct Application to Reality Codes:</strong> When multiple people comment on your Reality Code, 
+                they're not just "liking" your post—they're becoming quantum entangled with your intention. Each person who 
+                comments becomes part of your intention group, creating exponential amplification.
+                <br><br>
+                <strong>The Formula 2^n - 1</strong> mathematically represents this exponential effect that McTaggart observed 
+                empirically. At 8 comments, you're not affecting 8 realities—you're affecting 255 realities (2^8 - 1).
+            </div>
+
+            <h3>The Mirror Effect</h3>
+            <p>
+                McTaggart discovered that <strong>sending intention heals the sender</strong>. When you focus intention on 
+                someone else's goal, your own blocks dissolve and your own manifestations accelerate.
+            </p>
+
+            <div class="study">
+                <div class="study-title">📚 The Mirror Effect Study (2015)</div>
+                <div class="study-details">McTaggart's analysis of 250+ Power of 8 groups</div>
+                <div class="study-result">
+                    <strong>Finding:</strong> 
+                    <ul>
+                        <li>76% of participants experienced life changes within 4 weeks</li>
+                        <li>Changes occurred in areas they <em>weren't</em> focusing on</li>
+                        <li>The more they sent intention to others, the more they received</li>
+                        <li>Participants reported feeling "plugged into a power source"</li>
+                    </ul>
+                    <br>
+                    <strong>Application:</strong> This is why commenting on others' Reality Codes unlocks your own manifestations. 
+                    You're not just helping them—you're activating the mirror effect that accelerates your own intentions.
+                </div>
+            </div>
+
+            <div class="quote">
+                "The act of sending intention to another person has a boomerang effect, transforming the sender as much as, 
+                if not more than, the receiver."
+                <div class="citation">— Lynne McTaggart, The Power of Eight</div>
+            </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-morphic', this)">☐ Mark as Explored</button>
+            </div>
+        </div>
+
+        <!-- In-Content Ad 3 -->
+        <div class="ad-container in-content">
+            <div class="ad-label">✨ ADVERTISEMENT ✨</div>
+            <div class="ad-placeholder-text">Ad Space - 336x280 Rectangle</div>
+        </div>
+
+        <!-- SECTION 7: NEUROPLASTICITY -->
+        <div id="section-neural" class="section collapsed" data-category="psychology">
+            <h2 onclick="toggleSection(this)">
+                <span class="icon">🧩</span>
+                Rewiring the Mind: The Art of Neural Enchantment
+            </h2>
+            <div class="section-content">
+            
+            <div class="evidence-box">
+                <h3>What is Neuroplasticity?</h3>
+                <p>
+                    <strong>Neuroplasticity</strong> is the brain's ability to reorganize itself by forming new neural connections. 
+                    Your thoughts literally change the physical structure of your brain. Repeated thoughts create stronger 
+                    pathways, making those thoughts automatic.
+                </p>
+            </div>
+
+            <div class="study">
+                <div class="study-title">📚 Taxi Driver Brain Study</div>
+                <div class="study-details">Maguire et al., University College London (2000)</div>
+                <div class="study-result">
+                    <strong>Study:</strong> MRI scans of London taxi drivers (who must memorize 25,000 streets) showed their 
+                    hippocampus (memory center) was significantly larger than average.
+                    <br><br>
+                    <strong>Finding:</strong> The brain physically changes based on what you repeatedly focus on. More focus = 
+                    more neural real estate devoted to that skill.
+                    <br><br>
+                    <strong>Application:</strong> Every time you think about your Reality Code, you're strengthening the neural 
+                    pathway associated with your intention. The code becomes a shortcut to activate the entire manifestation 
+                    network in your brain.
+                </div>
+            </div>
+
+            <div class="study">
+                <div class="study-title">📚 Mental Practice Creates Physical Changes</div>
+                <div class="study-details">Pascual-Leone et al., Harvard Medical School (1995)</div>
+                <div class="study-result">
+                    <strong>Experiment:</strong> One group physically practiced piano exercises. Another group only mentally 
+                    practiced (visualization). Brain scans showed both groups developed similar neural pathways.
+                    <br><br>
+                    <strong>Finding:</strong> The brain doesn't distinguish between real and vividly imagined experiences. 
+                    Mental rehearsal creates the same neural changes as physical practice.
+                    <br><br>
+                    <strong>Application:</strong> When you visualize your intention while focusing on your Reality Code, you're 
+                    creating the neural pathways of someone who already has what you want. Your brain starts operating as if 
+                    the manifestation is already real.
+                </div>
+            </div>
+
+            <div class="study">
+                <div class="study-title">📚 The Neuroscience of Habit Formation</div>
+                <div class="study-details">Dr. Joe Dispenza - "Breaking the Habit of Being Yourself" (2012)</div>
+                <div class="study-result">
+                    <strong>Research:</strong> Dispenza's work combines neuroscience, epigenetics, and quantum physics to show 
+                    how repeated thoughts become automatic neural programs.
+                    <br><br>
+                    <strong>Key Finding:</strong> It takes approximately 21-28 days of consistent focus to create a new neural 
+                    pathway strong enough to become automatic.
+                    <br><br>
+                    <strong>Application:</strong> The 28-day Reality Code protocol isn't arbitrary—it's based on the time 
+                    required to rewire your brain. By day 28, your intention has become a neural habit that runs automatically.
+                </div>
+            </div>
+
+            <div class="key-point">
+                <strong>🎯 The Neuroplasticity Advantage:</strong> Your Reality Code creates a neurological shortcut:
+                <ol>
+                    <li><strong>Day 1-7:</strong> New neural pathway forms (weak, requires conscious effort)</li>
+                    <li><strong>Day 8-14:</strong> Pathway strengthens (becoming easier to access)</li>
+                    <li><strong>Day 15-21:</strong> Pathway becomes preferred route (automatic activation)</li>
+                    <li><strong>Day 22-28:</strong> Pathway becomes default (your new identity)</li>
+                </ol>
+                When multiple people focus on your code, they're all reinforcing the same neural pattern in the collective 
+                consciousness, making manifestation inevitable.
+            </key-point>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-neural', this)">☐ Mark as Explored</button>
+            </div>
+        </div>
+
+        <!-- SECTION 8: TIMELINE OF EVIDENCE -->
+        <div id="section-timeline" class="section collapsed" data-category="history">
+            <h2 onclick="toggleSection(this)">
+                <span class="icon">📅</span>
+                Through the Ages: A Timeline of Discovery
+            </h2>
+            <div class="section-content">
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1897</div>
+                    <strong>Pavlov's Classical Conditioning</strong>
+                    <p>Proves that neutral stimuli can be anchored to automatic responses—foundation of NLP anchoring.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1927</div>
+                    <strong>Double-Slit Experiment</strong>
+                    <p>Demonstrates that observation affects reality at quantum level—consciousness participates in creation.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1949</div>
+                    <strong>Reticular Activating System Discovered</strong>
+                    <p>Explains how the brain filters reality based on programmed focus—mechanism behind "you see what you look for."</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1967</div>
+                    <strong>Cymatics Research</strong>
+                    <p>Hans Jenny proves that vibration organizes matter into patterns—frequency creates form.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1974</div>
+                    <strong>Numerical Anchoring Research</strong>
+                    <p>Tversky & Kahneman show that numbers serve as powerful cognitive anchors affecting behavior.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1979</div>
+                    <strong>NLP Anchoring Formalized</strong>
+                    <p>Bandler & Grinder systematize anchoring techniques—any stimulus can trigger desired states.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1981</div>
+                    <strong>Morphic Resonance Theory</strong>
+                    <p>Rupert Sheldrake proposes that fields connect all minds—explaining collective consciousness effects.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1982</div>
+                    <strong>Quantum Entanglement Proven</strong>
+                    <p>Alain Aspect confirms that entangled particles remain connected across any distance—non-local consciousness.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1991</div>
+                    <strong>HeartMath Institute Founded</strong>
+                    <p>Begins research on heart-brain coherence and electromagnetic field effects on consciousness.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1994</div>
+                    <strong>Water Crystal Experiments</strong>
+                    <p>Masaru Emoto demonstrates that intention changes molecular structure—thoughts affect matter.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1998</div>
+                    <strong>Global Consciousness Project</strong>
+                    <p>Princeton begins tracking how collective attention affects random number generators—proof of field effects.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2000</div>
+                    <strong>Neuroplasticity Confirmed</strong>
+                    <p>Brain imaging proves that repeated focus physically changes brain structure—you can rewire your mind.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2004</div>
+                    <strong>Human Entanglement Research</strong>
+                    <p>Dean Radin proves that human consciousness can become entangled—minds can connect non-locally.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2005</div>
+                    <strong>Biology of Belief Published</strong>
+                    <p>Bruce Lipton shows that beliefs change gene expression—thoughts reprogram biology.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2007</div>
+                    <strong>The Intention Experiment</strong>
+                    <p>Lynne McTaggart's controlled studies prove that group intention creates measurable physical changes.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2017</div>
+                    <strong>The Power of Eight</strong>
+                    <p>McTaggart discovers that 8+ people create exponential (not additive) manifestation power—the formula 2^n - 1.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <strong>Quantum Reality Codes</strong>
+                    <p>Integration of all previous research into a practical system: NLP anchoring + group intention + quantum 
+                    entanglement + morphic fields = exponential manifestation.</p>
+                </div>
+            </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-timeline', this)">☐ Mark as Explored</button>
+            </div>
+        </div>
+
+        <!-- SECTION 9: THE INTEGRATED MECHANISM -->
+        <div id="section-convergence" class="section collapsed" data-category="practical">
+            <h2 onclick="toggleSection(this)">
+                <span class="icon">⚙️</span>
+                The Grand Convergence: All Magic Unified
+            </h2>
+            <div class="section-content">
+            
+            <p style="font-size: 1.15em; margin-bottom: 30px; font-style: italic;">
+                Like the threads of fate woven by the ancient seers, Quantum Reality Codes draw upon multiple proven principles 
+                working in mystical synergy:
+            </p>
+
+            <div class="mechanism-grid">
+                <div class="mechanism-card">
+                    <h4>1. NLP Anchoring</h4>
+                    <p>Your numerical code becomes a neurological trigger that automatically activates your intention's 
+                    emotional and mental state.</p>
+                </div>
+
+                <div class="mechanism-card">
+                    <h4>2. RAS Programming</h4>
+                    <p>Your brain's filter system is programmed to notice opportunities, resources, and synchronicities 
+                    related to your intention.</p>
+                </div>
+
+                <div class="mechanism-card">
+                    <h4>3. Neuroplasticity</h4>
+                    <p>Repeated focus on your code creates neural pathways that make manifestation thinking automatic and 
+                    effortless.</p>
+                </div>
+
+                <div class="mechanism-card">
+                    <h4>4. Epigenetics</h4>
+                    <p>Your intention sends signals to your cells, changing gene expression to align your biology with your 
+                    desired outcome.</p>
+                </div>
+
+                <div class="mechanism-card">
+                    <h4>5. Heart Coherence</h4>
+                    <p>Focusing on your code while in a positive emotional state creates coherent heart rhythms that amplify 
+                    your electromagnetic field.</p>
+                </div>
+
+                <div class="mechanism-card">
+                    <h4>6. Quantum Observation</h4>
+                    <p>Each person who comments your code becomes an observer, collapsing quantum possibilities toward your 
+                    intended outcome.</p>
+                </div>
+
+                <div class="mechanism-card">
+                    <h4>7. Quantum Entanglement</h4>
+                    <p>Commenters become entangled with your intention, creating non-local connections that transcend space 
+                    and time.</p>
+                </div>
+
+                <div class="mechanism-card">
+                    <h4>8. Morphic Resonance</h4>
+                    <p>Each comment strengthens the morphic field around your code, making manifestation easier through the 
+                    collective field.</p>
+                </div>
+
+                <div class="mechanism-card">
+                    <h4>9. Group Intention (Power of 8)</h4>
+                    <p>Multiple people focusing on your code creates exponential (not additive) power—the 2^n - 1 formula.</p>
+                </div>
+            </div>
+
+            <div class="key-point" style="margin-top: 40px;">
+                <strong>🎯 The Synergistic Effect:</strong> Each mechanism amplifies the others. NLP anchoring makes the code 
+                easy to remember. RAS programming makes you notice synchronicities. Neuroplasticity makes manifestation thinking 
+                automatic. Epigenetics aligns your biology. Heart coherence amplifies your field. Quantum observation collapses 
+                possibilities. Entanglement connects minds. Morphic resonance strengthens the field. Group intention multiplies 
+                everything exponentially.
+                <br><br>
+                <strong>This isn't one technique—it's nine proven mechanisms working together to create inevitable manifestation.</strong>
+            </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-convergence', this)">☐ Mark as Explored</button>
+            </div>
+        </div>
+
+        <!-- SECTION 10: WHY THE EXPONENTIAL FORMULA -->
+        <div id="section-formula" class="section collapsed" data-category="science">
+            <h2 onclick="toggleSection(this)">
+                <span class="icon">📐</span>
+                Sacred Mathematics: The Power of 2^n - 1
+            </h2>
+            <div class="section-content">
+            
+            <div class="evidence-box">
+                <h3>The Formula Explained</h3>
+                <p>
+                    The exponential formula <strong>2^n - 1</strong> (where n = number of commenters) isn't arbitrary—it 
+                    mathematically represents the number of quantum entanglement connections created when multiple observers 
+                    focus on the same intention.
+                </p>
+            </div>
+
+            <h3>The Mathematical Proof</h3>
+            
+            <div class="formula">
+                With 1 person: 2^1 - 1 = 1 connection (just you)
+            </div>
+
+            <div class="formula">
+                With 2 people: 2^2 - 1 = 3 connections
+                <br>
+                (Person A, Person B, A-B entanglement)
+            </div>
+
+            <div class="formula">
+                With 3 people: 2^3 - 1 = 7 connections
+                <br>
+                (A, B, C, A-B, A-C, B-C, A-B-C collective field)
+            </div>
+
+            <div class="formula">
+                With 4 people: 2^4 - 1 = 15 connections
+                <br>
+                (4 individuals + 6 pairs + 4 triads + 1 collective = 15)
+            </div>
+
+            <p style="margin: 30px 0;">
+                Each new person doesn't just add one connection—they create connections with every existing person AND every 
+                existing group. This is why the growth is exponential, not linear.
+            </p>
+
+            <h3>Why This Matches Lynne McTaggart's Findings</h3>
+            <p>
+                McTaggart observed that 8 people create far more than 8x the power. Let's calculate:
+            </p>
+
+            <div class="formula">
+                8 people: 2^8 - 1 = 255 connections
+            </div>
+
+            <p>
+                This means 8 people create 255 times the manifestation power of 1 person—not 8 times. This matches McTaggart's 
+                empirical observation that groups create "supercharged" effects far beyond what addition would predict.
+            </p>
+
+            <h3>The 111 Threshold</h3>
+            <p>
+                At 111 comments, the formula reveals something extraordinary:
+            </p>
+
+            <div class="formula">
+                111 people: 2^111 - 1 = 2,596,148,429,267,413,814,265,248,164,610,047
+                <br><br>
+                That's 2.6 DECILLION realities affected
+            </div>
+
+            <p style="margin: 30px 0;">
+                To put this in perspective:
+            </p>
+
+            <ul>
+                <li><strong>Atoms in observable universe:</strong> ~10^80 (100 quinvigintillion)</li>
+                <li><strong>Stars in observable universe:</strong> ~10^24 (1 septillion)</li>
+                <li><strong>Realities affected at 111 comments:</strong> ~10^33 (2.6 decillion)</li>
+            </ul>
+
+            <div class="key-point">
+                <strong>🎯 What This Means:</strong> At 111 comments, you're affecting more realities than there are stars in 
+                2.6 billion universes. You've transcended individual manifestation and entered cosmic-scale reality creation. 
+                The quantum field has no choice but to collapse in favor of your intention because you're affecting every 
+                possible timeline simultaneously.
+            </div>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-formula', this)">☐ Mark as Explored</button>
+            </div>
+        </div>
+
+        <!-- SECTION 11: PEER-REVIEWED SOURCES -->
+        <div id="section-references" class="section collapsed" data-category="practical">
+            <h2 onclick="toggleSection(this)">
+                <span class="icon">📚</span>
+                The Ancient Scrolls: Scholarly References
+            </h2>
+            <div class="section-content">
+            
+            <h3>Quantum Physics</h3>
+            <ul>
+                <li>Aspect, A., Dalibard, J., & Roger, G. (1982). "Experimental Test of Bell's Inequalities Using Time-Varying Analyzers." <em>Physical Review Letters</em>, 49(25), 1804-1807.</li>
+                <li>Davisson, C., & Germer, L. H. (1927). "Diffraction of Electrons by a Crystal of Nickel." <em>Physical Review</em>, 30(6), 705-740.</li>
+                <li>Itano, W. M., et al. (1990). "Quantum Zeno effect." <em>Physical Review A</em>, 41(5), 2295-2300.</li>
+                <li>Radin, D. (2006). <em>Entangled Minds: Extrasensory Experiences in a Quantum Reality</em>. Paraview Pocket Books.</li>
+            </ul>
+
+            <h3>Group Intention & Consciousness</h3>
+            <ul>
+                <li>McTaggart, L. (2007). <em>The Intention Experiment: Using Your Thoughts to Change Your Life and the World</em>. Free Press.</li>
+                <li>McTaggart, L. (2017). <em>The Power of Eight: Harnessing the Miraculous Energies of a Small Group to Heal Others, Your Life, and the World</em>. Atria Books.</li>
+                <li>Nelson, R. D., et al. (2002). "Correlations of Continuous Random Data with Major World Events." <em>Foundations of Physics Letters</em>, 15(6), 537-550.</li>
+            </ul>
+
+            <h3>Neuroscience & Neuroplasticity</h3>
+            <ul>
+                <li>Dispenza, J. (2012). <em>Breaking the Habit of Being Yourself: How to Lose Your Mind and Create a New One</em>. Hay House.</li>
+                <li>Maguire, E. A., et al. (2000). "Navigation-related structural change in the hippocampi of taxi drivers." <em>Proceedings of the National Academy of Sciences</em>, 97(8), 4398-4403.</li>
+                <li>Pascual-Leone, A., et al. (1995). "Modulation of muscle responses evoked by transcranial magnetic stimulation during the acquisition of new fine motor skills." <em>Journal of Neurophysiology</em>, 74(3), 1037-1045.</li>
+            </ul>
+
+            <h3>Biology & Epigenetics</h3>
+            <ul>
+                <li>Lipton, B. H. (2005). <em>The Biology of Belief: Unleashing the Power of Consciousness, Matter & Miracles</em>. Hay House.</li>
+                <li>Davidson, R. J., et al. (2013). "Rapid changes in histone deacetylases and inflammatory gene expression in expert meditators." <em>Psychoneuroendocrinology</em>, 40, 96-107.</li>
+            </ul>
+
+            <h3>Heart-Brain Coherence</h3>
+            <ul>
+                <li>McCraty, R., Atkinson, M., & Bradley, R. T. (2004). "Electrophysiological Evidence of Intuition: Part 1." <em>The Journal of Alternative and Complementary Medicine</em>, 10(1), 133-143.</li>
+                <li>McCraty, R. (2015). <em>Science of the Heart, Volume 2</em>. HeartMath Institute.</li>
+            </ul>
+
+            <h3>NLP & Anchoring</h3>
+            <ul>
+                <li>Bandler, R., & Grinder, J. (1979). <em>Frogs into Princes: Neuro Linguistic Programming</em>. Real People Press.</li>
+                <li>Tversky, A., & Kahneman, D. (1974). "Judgment under Uncertainty: Heuristics and Biases." <em>Science</em>, 185(4157), 1124-1131.</li>
+            </ul>
+
+            <h3>Morphic Resonance</h3>
+            <ul>
+                <li>Sheldrake, R. (1981). <em>A New Science of Life: The Hypothesis of Morphic Resonance</em>. Blond & Briggs.</li>
+                <li>Sheldrake, R. (2003). <em>The Sense of Being Stared At: And Other Aspects of the Extended Mind</em>. Crown Publishers.</li>
+            </ul>
+
+            <h3>Cymatics & Vibration</h3>
+            <ul>
+                <li>Jenny, H. (1967). <em>Cymatics: A Study of Wave Phenomena & Vibration</em>. MACROmedia.</li>
+                <li>Emoto, M. (2004). <em>The Hidden Messages in Water</em>. Beyond Words Publishing.</li>
+            </ul>
+
+            <h3>Selective Attention</h3>
+            <ul>
+                <li>Simons, D. J., & Chabris, C. F. (1999). "Gorillas in Our Midst: Sustained Inattentional Blindness for Dynamic Events." <em>Perception</em>, 28(9), 1059-1074.</li>
+            </ul>
+
+            <button class="mark-read-btn" onclick="markAsRead('section-references', this)">☐ Mark as Explored</button>
+            </div>
+        </div>
+
+        <!-- FINAL CTA -->
+        <div class="cta-box mystical-glow">
+            <h3>✨ Begin Your Mystical Experiment ✨</h3>
+            <p style="font-size: 1.1em; margin: 20px 0;">
+                The ancient wisdom of Merlin meets modern quantum science. Now that you understand the evidence-based mechanisms 
+                behind Reality Codes, it's time to create your own and experience exponential manifestation firsthand.
+            </p>
+            <a href="qrcodes.html" class="cta-button">Create Your Reality Code Now</a>
+            <p style="margin-top: 30px; color: var(--rose-pink); font-style: italic;">
+                🧙‍♂️ The Wizard and the Rose await... 🌹
+            </p>
+        </div>
+
+        <!-- Bottom Ad Before Footer -->
+        <div class="ad-container in-content">
+            <div class="ad-label">✨ ADVERTISEMENT ✨</div>
+            <div class="ad-placeholder-text">Ad Space - 728x90 Leaderboard</div>
+        </div>
+
+        <!-- AdSense Footer -->
+        <footer class="adsense-footer">
+            <p>© 2026 Quantum Merlin | All Rights Reserved</p>
+            <div class="footer-links">
+                <a href="../privacy.html">Privacy Policy</a>
+                <span>•</span>
+                <a href="../terms.html">Terms of Service</a>
+                <span>•</span>
+                <a href="../disclaimer.html">Disclaimer</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Sidebar Ad (Desktop Only) -->
+    <div class="sidebar-ad">
+        <div class="ad-label" style="font-size: 0.65rem;">AD</div>
+        <div class="ad-placeholder-text" style="font-size: 0.7rem;">160x600<br>Skyscraper</div>
+    </div>
+
+    <!-- JavaScript for Scroll Reveal and Section Toggle (Optimized) -->
+    <script>
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        revealElements.forEach(el => observer.observe(el));
+        
+        // Section Toggle (Collapsible)
+        function toggleSection(header) {
+            const section = header.closest('.section');
+            section.classList.toggle('collapsed');
+        }
+        
+        // TOC Category Toggle
+        function toggleCategory(header) {
+            const category = header.closest('.toc-category');
+            category.classList.toggle('collapsed');
+        }
+        
+        // Scroll to Section from TOC
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                // Expand the section if collapsed
+                section.classList.remove('collapsed');
+                // Scroll to section with offset for fixed elements
+                const yOffset = -20;
+                const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
+        }
+        
+        // Mark Section as Read
+        function markAsRead(sectionId, btn) {
+            const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
+            
+            if (!readSections.includes(sectionId)) {
+                readSections.push(sectionId);
+                localStorage.setItem('qrcodes-read-sections', JSON.stringify(readSections));
+            }
+            
+            // Update button appearance
+            btn.classList.add('is-read');
+            btn.innerHTML = '✓ Explored';
+            
+            // Update TOC item
+            const tocItem = document.querySelector(`.toc-item[data-section="${sectionId}"]`);
+            if (tocItem) {
+                tocItem.classList.add('is-read');
+            }
+            
+            // Update progress
+            updateProgress();
+        }
+        
+        // Update Progress Bar
+        function updateProgress() {
+            const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
+            const totalSections = document.querySelectorAll('.section[id]').length;
+            const readCount = readSections.length;
+            
+            document.getElementById('progress-count').textContent = readCount;
+            document.getElementById('total-sections').textContent = totalSections;
+            
+            const percentage = (readCount / totalSections) * 100;
+            document.getElementById('progress-fill').style.width = percentage + '%';
+        }
+        
+        // Load Read State on Page Load
+        function loadReadState() {
+            const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
+            
+            readSections.forEach(sectionId => {
+                // Update TOC item
+                const tocItem = document.querySelector(`.toc-item[data-section="${sectionId}"]`);
+                if (tocItem) {
+                    tocItem.classList.add('is-read');
+                }
+                
+                // Update mark-read button
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const btn = section.querySelector('.mark-read-btn');
+                    if (btn) {
+                        btn.classList.add('is-read');
+                        btn.innerHTML = '✓ Explored';
+                    }
+                }
+            });
+            
+            updateProgress();
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadReadState();
+            
+            // Start all TOC categories collapsed on mobile
+            if (window.innerWidth <= 768) {
+                document.querySelectorAll('.toc-category').forEach(cat => {
+                    cat.classList.add('collapsed');
+                });
+            }
+        });
+        
+        // Category Filter (keeping for backward compatibility)
+        function filterSections(category) {
+            const sections = document.querySelectorAll('.section[data-category]');
+            const buttons = document.querySelectorAll('.category-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            sections.forEach(section => {
+                if (category === 'all' || section.dataset.category === category) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
