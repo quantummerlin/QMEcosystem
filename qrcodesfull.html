@@ -1344,6 +1344,179 @@
             animation: pulse 1.5s ease-in-out infinite;
         }
 
+        /* Onboarding Modal */
+        .onboarding-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .onboarding-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .onboarding-modal {
+            background: linear-gradient(135deg, rgba(10, 20, 50, 0.98), rgba(30, 10, 50, 0.98));
+            border: 3px solid var(--quantum-cyan);
+            border-radius: 25px;
+            padding: 50px 40px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 30px 80px rgba(0, 245, 255, 0.4), 0 0 100px rgba(255, 0, 255, 0.2);
+            animation: modalFloat 0.6s ease;
+        }
+
+        @keyframes modalFloat {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .onboarding-slide {
+            display: none;
+            text-align: center;
+            animation: slideIn 0.4s ease;
+        }
+
+        .onboarding-slide.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(30px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .onboarding-icon {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .onboarding-title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.8rem;
+            color: var(--quantum-gold);
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .onboarding-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+        }
+
+        .onboarding-highlight {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(255, 0, 255, 0.2));
+            padding: 15px 25px;
+            border-radius: 15px;
+            border: 1px solid var(--quantum-cyan);
+            margin: 15px 0;
+            font-family: 'Orbitron', monospace;
+            color: var(--quantum-cyan);
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .onboarding-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 30px 0 25px;
+        }
+
+        .onboarding-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(0, 245, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .onboarding-dot.active {
+            background: var(--quantum-cyan);
+            transform: scale(1.3);
+            box-shadow: 0 0 15px var(--quantum-cyan);
+        }
+
+        .onboarding-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .onboarding-btn {
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .onboarding-btn.primary {
+            background: linear-gradient(135deg, var(--quantum-cyan), var(--quantum-magenta));
+            color: #fff;
+            border: 2px solid var(--quantum-gold);
+        }
+
+        .onboarding-btn.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 245, 255, 0.5);
+        }
+
+        .onboarding-btn.secondary {
+            background: transparent;
+            color: rgba(255, 255, 255, 0.7);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .onboarding-btn.secondary:hover {
+            border-color: var(--quantum-cyan);
+            color: var(--quantum-cyan);
+        }
+
+        .onboarding-checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .onboarding-checkbox input {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--quantum-cyan);
+        }
+
+        @media (max-width: 768px) {
+            .onboarding-modal { padding: 35px 25px; }
+            .onboarding-title { font-size: 1.5rem; }
+            .onboarding-text { font-size: 1rem; }
+            .onboarding-highlight { font-size: 1.1rem; padding: 12px 20px; }
+            .onboarding-icon { font-size: 3rem; }
+        }
+
         @media (max-width: 768px) {
             .tooltip .tooltiptext { width: 220px; margin-left: -110px; font-size: 0.85rem; }
             .back-to-top { width: 45px; height: 45px; bottom: 70px; font-size: 1.3rem; }
@@ -1693,6 +1866,71 @@
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-spinner"></div>
         <div class="loading-text">Calculating Your Reality Code...</div>
+    </div>
+
+    <!-- Onboarding Modal -->
+    <div class="onboarding-overlay" id="onboardingOverlay">
+        <div class="onboarding-modal">
+            <!-- Slide 1: Welcome -->
+            <div class="onboarding-slide active" data-slide="1">
+                <span class="onboarding-icon">✨</span>
+                <h2 class="onboarding-title">Welcome to Quantum Reality Codes</h2>
+                <p class="onboarding-text">
+                    You're about to create a powerful intention code that gains <strong style="color: var(--quantum-cyan);">exponential strength</strong> through community amplification.
+                </p>
+                <div class="onboarding-highlight">2ⁿ - 1 = Exponential Power</div>
+                <p class="onboarding-text" style="margin-top: 20px; font-size: 0.95rem;">
+                    11 amplifiers = 2,047 influence states<br>
+                    33 amplifiers = 8.6 BILLION influence states
+                </p>
+            </div>
+
+            <!-- Slide 2: How It Works -->
+            <div class="onboarding-slide" data-slide="2">
+                <span class="onboarding-icon">🎯</span>
+                <h2 class="onboarding-title">Craft The Perfect Intention</h2>
+                <p class="onboarding-text">
+                    Our <strong style="color: var(--quantum-gold);">real-time validation</strong> helps you write powerful intentions:
+                </p>
+                <div style="text-align: left; max-width: 400px; margin: 0 auto 25px; font-size: 0.95rem; line-height: 1.8;">
+                    <div style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><span style="color: #44ff88;">✓</span> Use "I AM" (present tense)</div>
+                    <div style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><span style="color: #44ff88;">✓</span> Add feeling words (joy, freedom, peace)</div>
+                    <div style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><span style="color: #44ff88;">✓</span> Be specific with numbers</div>
+                    <div style="padding: 8px 0;"><span style="color: #44ff88;">✓</span> Frame positively (no "not" or "don't")</div>
+                </div>
+                <p style="font-size: 0.9rem; opacity: 0.7; font-style: italic;">Watch the strength meter fill as you improve!</p>
+            </div>
+
+            <!-- Slide 3: Amplify -->
+            <div class="onboarding-slide" data-slide="3">
+                <span class="onboarding-icon">🚀</span>
+                <h2 class="onboarding-title">Share & Amplify</h2>
+                <p class="onboarding-text">
+                    After creating your code, share it in our community. When others comment your number, they <strong style="color: var(--quantum-magenta);">multiply your manifestation power</strong>.
+                </p>
+                <div class="onboarding-highlight">🔄 Give 10, Receive 3-5</div>
+                <p class="onboarding-text" style="margin-top: 20px; font-size: 0.95rem;">
+                    The quantum reciprocity formula: amplify others first, <br>and the universe amplifies you back.
+                </p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="onboarding-dots">
+                <div class="onboarding-dot active" onclick="goToOnboardingSlide(1)"></div>
+                <div class="onboarding-dot" onclick="goToOnboardingSlide(2)"></div>
+                <div class="onboarding-dot" onclick="goToOnboardingSlide(3)"></div>
+            </div>
+
+            <div class="onboarding-buttons">
+                <button class="onboarding-btn secondary" onclick="skipOnboarding()">Skip</button>
+                <button class="onboarding-btn primary" id="onboardingNextBtn" onclick="nextOnboardingSlide()">Next →</button>
+            </div>
+
+            <label class="onboarding-checkbox">
+                <input type="checkbox" id="dontShowAgain">
+                Don't show this again
+            </label>
+        </div>
     </div>
 
     <div class="container">
@@ -2839,8 +3077,73 @@
             initCollapsibles();
             initProgressIndicator();
             initTestimonialsCarousel();
+            initOnboarding();
             loadProgress();
         });
+
+        // Onboarding System
+        let currentOnboardingSlide = 1;
+        const totalOnboardingSlides = 3;
+
+        function initOnboarding() {
+            // Check if user has dismissed onboarding before
+            const dismissed = localStorage.getItem('onboardingDismissed');
+            if (!dismissed) {
+                showOnboarding();
+            }
+        }
+
+        function showOnboarding() {
+            const overlay = document.getElementById('onboardingOverlay');
+            overlay.classList.add('show');
+        }
+
+        function hideOnboarding() {
+            const overlay = document.getElementById('onboardingOverlay');
+            overlay.classList.remove('show');
+            
+            // Check if "don't show again" is checked
+            const dontShow = document.getElementById('dontShowAgain').checked;
+            if (dontShow) {
+                localStorage.setItem('onboardingDismissed', 'true');
+            }
+        }
+
+        function goToOnboardingSlide(slideNum) {
+            // Hide current slide
+            document.querySelector(`.onboarding-slide[data-slide="${currentOnboardingSlide}"]`).classList.remove('active');
+            document.querySelectorAll('.onboarding-dot')[currentOnboardingSlide - 1].classList.remove('active');
+            
+            // Show new slide
+            currentOnboardingSlide = slideNum;
+            document.querySelector(`.onboarding-slide[data-slide="${currentOnboardingSlide}"]`).classList.add('active');
+            document.querySelectorAll('.onboarding-dot')[currentOnboardingSlide - 1].classList.add('active');
+            
+            // Update button text
+            updateOnboardingButton();
+        }
+
+        function nextOnboardingSlide() {
+            if (currentOnboardingSlide < totalOnboardingSlides) {
+                goToOnboardingSlide(currentOnboardingSlide + 1);
+            } else {
+                // On last slide, close onboarding
+                hideOnboarding();
+            }
+        }
+
+        function skipOnboarding() {
+            hideOnboarding();
+        }
+
+        function updateOnboardingButton() {
+            const btn = document.getElementById('onboardingNextBtn');
+            if (currentOnboardingSlide === totalOnboardingSlides) {
+                btn.textContent = 'Start Creating ✨';
+            } else {
+                btn.textContent = 'Next →';
+            }
+        }
 
         // App State
         let currentStep = 1;
