@@ -977,6 +977,160 @@
             .btn-group { flex-direction: row; flex-wrap: wrap; }
             .btn { width: auto; flex: 1 1 45%; }
         }
+
+        /* Sticky Progress Indicator */
+        .progress-indicator {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 15, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 15px 20px;
+            border-bottom: 2px solid var(--quantum-cyan);
+            box-shadow: 0 4px 20px rgba(0, 245, 255, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .progress-text {
+            font-family: 'Orbitron', monospace;
+            color: var(--quantum-cyan);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .progress-steps {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .progress-step {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-family: 'Orbitron', monospace;
+            transition: all 0.3s ease;
+        }
+
+        .progress-step.completed {
+            background: linear-gradient(135deg, #44ff88, #00cc66);
+            border-color: #44ff88;
+            color: #000;
+            font-weight: 700;
+        }
+
+        .progress-step.current {
+            background: linear-gradient(135deg, var(--quantum-cyan), var(--quantum-magenta));
+            border-color: var(--quantum-cyan);
+            color: #fff;
+            font-weight: 700;
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); box-shadow: 0 0 25px rgba(0, 245, 255, 0.8); }
+        }
+
+        /* Collapsible Sections */
+        .collapsible-section {
+            margin: 30px 0;
+        }
+
+        .collapsible-header {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(255, 0, 255, 0.15));
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .collapsible-header:hover {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.25), rgba(255, 0, 255, 0.25));
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+        }
+
+        .collapsible-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            color: var(--quantum-cyan);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .collapsible-arrow {
+            font-size: 1.5rem;
+            color: var(--quantum-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .collapsible-section.collapsed .collapsible-arrow {
+            transform: rotate(-90deg);
+        }
+
+        .collapsible-content {
+            max-height: 5000px;
+            overflow: hidden;
+            transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease;
+            padding-top: 20px;
+            opacity: 1;
+        }
+
+        .collapsible-section.collapsed .collapsible-content {
+            max-height: 0;
+            opacity: 0;
+            padding-top: 0;
+            overflow: hidden;
+        }
+
+        /* Save/Resume indicator */
+        .save-indicator {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.9), rgba(138, 43, 226, 0.9));
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            color: #fff;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(0, 245, 255, 0.4);
+            z-index: 999;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .save-indicator.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .progress-indicator { padding: 12px 15px; }
+            .progress-step { width: 28px; height: 28px; font-size: 0.7rem; }
+            .progress-text { font-size: 0.8rem; }
+            .collapsible-title { font-size: 1.1rem; }
+        }
     </style>
 </head>
 <body>
@@ -984,6 +1138,17 @@
     <div class="star-field" id="starField"></div>
     <div class="particle-container" id="particleContainer"></div>
     <div class="sacred-geometry"></div>
+
+    <!-- Sticky Progress Indicator -->
+    <div class="progress-indicator" id="progressIndicator" style="display: none;">
+        <div class="progress-text">
+            <span id="currentStepText">Step 1 of 10</span> • <span id="stepDescription">Welcome</span>
+        </div>
+        <div class="progress-steps" id="progressSteps"></div>
+    </div>
+
+    <!-- Save Indicator -->
+    <div class="save-indicator" id="saveIndicator">💾 Progress Saved</div>
 
     <div class="container">
         <div class="header">
@@ -998,10 +1163,15 @@
             </div>
         </div>
 
-        <!-- The Science Behind Reality Codes -->
-        <div style="background: var(--card-bg); border-radius: 25px; padding: 40px; margin-bottom: 30px; backdrop-filter: blur(25px); border: 1px solid rgba(255,0,255,0.25);">
-            <h3 style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); margin-bottom: 25px; text-align: center; font-size: 1.5rem;">🔬 The Consciousness & Resonance Model</h3>
-            <p style="text-align: center; margin-bottom: 35px; opacity: 0.9; font-size: 1.1rem; line-height: 1.6;">This isn't random chance or passive hoping—<br>this is <strong style="color: var(--quantum-cyan); font-size: 1.2rem;">structured intention amplification</strong></p>
+        <!-- The Consciousness & Resonance Model (COLLAPSIBLE) -->
+        <div class="collapsible-section">
+            <div class="collapsible-header">
+                <div class="collapsible-title">🔬 The Consciousness & Resonance Model</div>
+                <div class="collapsible-arrow">▼</div>
+            </div>
+            <div class="collapsible-content">
+                <div style="background: var(--card-bg); border-radius: 25px; padding: 40px; backdrop-filter: blur(25px); border: 1px solid rgba(255,0,255,0.25);">
+                    <p style="text-align: center; margin-bottom: 35px; opacity: 0.9; font-size: 1.1rem; line-height: 1.6;">This isn't random chance or passive hoping—<br>this is <strong style="color: var(--quantum-cyan); font-size: 1.2rem;">structured intention amplification</strong></p>
             
             <div style="display: grid; gap: 20px;">
                 <div style="padding: 25px; background: rgba(0,245,255,0.06); border-radius: 15px; border-left: 4px solid var(--quantum-cyan);">
@@ -1037,12 +1207,19 @@
                 </a>
                 <p style="margin-top: 15px; font-size: 0.95rem; opacity: 0.8;">Draws from psychology • Systems theory • Neuroscience • Consciousness studies</p>
             </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Common Intention Mistakes -->
-        <div style="background: var(--card-bg); border-radius: 25px; padding: 40px; margin-bottom: 30px; backdrop-filter: blur(25px); border: 1px solid rgba(255,165,0,0.25);">
-            <h3 style="font-family: 'Orbitron', monospace; color: #FFA500; margin-bottom: 25px; text-align: center; font-size: 1.5rem;">⚠️ Common Intention Mistakes (& How to Fix Them)</h3>
-            <p style="text-align: center; margin-bottom: 30px; opacity: 0.9; font-size: 1.05rem;">Learn from these examples to craft powerful intentions that work</p>
+        <!-- Common Intention Mistakes (COLLAPSIBLE) -->
+        <div class="collapsible-section">
+            <div class="collapsible-header">
+                <div class="collapsible-title">⚠️ Common Intention Mistakes (& How to Fix Them)</div>
+                <div class="collapsible-arrow">▼</div>
+            </div>
+            <div class="collapsible-content">
+                <div style="background: var(--card-bg); border-radius: 25px; padding: 40px; backdrop-filter: blur(25px); border: 1px solid rgba(255,165,0,0.25);">
+                    <p style="text-align: center; margin-bottom: 30px; opacity: 0.9; font-size: 1.05rem;">Learn from these examples to craft powerful intentions that work</p>
             
             <div style="display: grid; gap: 18px; margin-top: 25px;">
                 <div style="padding: 20px; background: rgba(0,0,0,0.35); border-radius: 12px;">
@@ -1073,6 +1250,8 @@
                     <div style="color: #ff6666; font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">❌ WEAK: "I have $50,000" (no feeling)</div>
                     <div style="color: #44ff88; font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">✅ POWERFUL: "I AM EXPERIENCING THE FREEDOM AND JOY OF HAVING $50,000"</div>
                     <div style="opacity: 0.75; font-size: 0.95rem; line-height: 1.6;"><strong>Why:</strong> Emotion is the fuel of manifestation. Without feeling words (joy, freedom, peace, gratitude), there's no frequency for the quantum field to lock onto.</div>
+                </div>
+            </div>
                 </div>
             </div>
         </div>
@@ -1155,7 +1334,6 @@
 
             <div class="btn-group">
                 <button class="btn btn-secondary" onclick="prevStep(1)">← Back</button>
-                <button class="btn" id="step2Next" disabled onclick="nextStep(3)">Continue →</button>
             </div>
         </div>
 
@@ -1293,7 +1471,6 @@
 
             <div class="btn-group">
                 <button class="btn btn-secondary" onclick="prevStep(4)">← Back</button>
-                <button class="btn" onclick="nextStep(6)">Continue →</button>
             </div>
         </div>
 
@@ -1980,13 +2157,73 @@
             realityCode: 0
         };
 
-        // Step Navigation
+        // Step descriptions for progress indicator
+        const stepDescriptions = {
+            1: 'Welcome',
+            2: 'Category',
+            3: 'Define Desire',
+            4: 'Add Feelings',
+            5: 'Timeframe',
+            6: 'Draft Intention',
+            7: 'Belief Check',
+            8: 'Final Intention',
+            9: 'Your Code',
+            10: 'Activation'
+        };
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initProgressIndicator();
+            loadProgress();
+            initCollapsibles();
+        });
+
+        // Initialize Progress Indicator
+        function initProgressIndicator() {
+            const stepsContainer = document.getElementById('progressSteps');
+            for (let i = 1; i <= 10; i++) {
+                const step = document.createElement('div');
+                step.className = 'progress-step';
+                step.textContent = i;
+                step.id = `progress-step-${i}`;
+                stepsContainer.appendChild(step);
+            }
+            updateProgressIndicator();
+        }
+
+        // Update Progress Indicator
+        function updateProgressIndicator() {
+            document.getElementById('currentStepText').textContent = `Step ${currentStep} of 10`;
+            document.getElementById('stepDescription').textContent = stepDescriptions[currentStep];
+            
+            // Update step circles
+            for (let i = 1; i <= 10; i++) {
+                const stepEl = document.getElementById(`progress-step-${i}`);
+                stepEl.classList.remove('completed', 'current');
+                if (i < currentStep) {
+                    stepEl.classList.add('completed');
+                } else if (i === currentStep) {
+                    stepEl.classList.add('current');
+                }
+            }
+
+            // Show progress indicator after step 1
+            const indicator = document.getElementById('progressIndicator');
+            if (currentStep > 1) {
+                indicator.style.display = 'flex';
+            } else {
+                indicator.style.display = 'none';
+            }
+        }
+
+        // Step Navigation (NO scroll to top for zero friction!)
         function nextStep(step) {
             document.getElementById(`step${currentStep}`).classList.remove('active');
             currentStep = step;
             document.getElementById(`step${currentStep}`).classList.add('active');
             updateProgress();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            updateProgressIndicator();
+            saveProgress();
 
             // Step-specific logic
             if (step === 6) buildDraftIntention();
@@ -2001,7 +2238,8 @@
             currentStep = step;
             document.getElementById(`step${currentStep}`).classList.add('active');
             updateProgress();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            updateProgressIndicator();
+            saveProgress();
         }
 
         function updateProgress() {
@@ -2009,19 +2247,97 @@
             document.getElementById('progressBar').style.width = progress + '%';
         }
 
-        // Category Selection
+        // Category Selection (AUTO-ADVANCE!)
         function selectCategory(element, category) {
             userData.category = category;
             document.querySelectorAll('#step2 .category-btn').forEach(btn => btn.classList.remove('selected'));
             element.classList.add('selected');
-            document.getElementById('step2Next').disabled = false;
+            saveProgress();
+            
+            // Auto-advance after short delay for visual feedback
+            setTimeout(() => {
+                nextStep(3);
+            }, 400);
         }
 
-        // Timeframe Selection
+        // Timeframe Selection (AUTO-ADVANCE!)
         function selectTimeframe(element, timeframe) {
             userData.timeframe = timeframe;
             document.querySelectorAll('#step5 .category-btn').forEach(btn => btn.classList.remove('selected'));
             element.classList.add('selected');
+            saveProgress();
+            
+            // Auto-advance after short delay
+            setTimeout(() => {
+                buildDraftIntention();
+                nextStep(6);
+            }, 400);
+        }
+
+        // Save Progress to localStorage
+        function saveProgress() {
+            const saveData = {
+                currentStep: currentStep,
+                userData: userData,
+                timestamp: new Date().toISOString()
+            };
+            localStorage.setItem('quantumRealityCodeProgress', JSON.stringify(saveData));
+            showSaveIndicator();
+        }
+
+        // Load Progress from localStorage
+        function loadProgress() {
+            const saved = localStorage.getItem('quantumRealityCodeProgress');
+            if (saved) {
+                try {
+                    const saveData = JSON.parse(saved);
+                    const savedTime = new Date(saveData.timestamp);
+                    const now = new Date();
+                    const hoursSince = (now - savedTime) / (1000 * 60 * 60);
+
+                    // Only resume if less than 24 hours old
+                    if (hoursSince < 24 && saveData.currentStep > 1) {
+                        if (confirm('Resume your previous Reality Code session?')) {
+                            userData = saveData.userData;
+                            currentStep = saveData.currentStep;
+                            
+                            // Hide step 1, show current step
+                            document.getElementById('step1').classList.remove('active');
+                            document.getElementById(`step${currentStep}`).classList.add('active');
+                            
+                            updateProgress();
+                            updateProgressIndicator();
+                            
+                            // Restore UI state
+                            if (userData.category) {
+                                const catBtn = Array.from(document.querySelectorAll('#step2 .category-btn'))
+                                    .find(btn => btn.textContent.includes(userData.category.toUpperCase()));
+                                if (catBtn) catBtn.classList.add('selected');
+                            }
+                        }
+                    }
+                } catch (e) {
+                    console.log('Could not load saved progress');
+                }
+            }
+        }
+
+        // Show Save Indicator
+        function showSaveIndicator() {
+            const indicator = document.getElementById('saveIndicator');
+            indicator.classList.add('show');
+            setTimeout(() => {
+                indicator.classList.remove('show');
+            }, 2000);
+        }
+
+        // Initialize Collapsibles
+        function initCollapsibles() {
+            document.querySelectorAll('.collapsible-header').forEach(header => {
+                header.addEventListener('click', function() {
+                    this.closest('.collapsible-section').classList.toggle('collapsed');
+                });
+            });
         }
 
         // Build Draft Intention
@@ -2182,6 +2498,9 @@ quantummerlin.com/qrcodesfull
 
         // Start Over
         function startOver() {
+            // Clear saved progress
+            localStorage.removeItem('quantumRealityCodeProgress');
+            
             userData = {
                 category: '',
                 desire: '',
