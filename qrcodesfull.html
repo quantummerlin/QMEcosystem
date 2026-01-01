@@ -978,21 +978,78 @@
             .btn { width: auto; flex: 1 1 45%; }
         }
 
-        /* Sticky Progress Indicator */
+        /* Sticky Progress Indicator - HIDDEN */
         .progress-indicator {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(10, 10, 15, 0.98);
-            backdrop-filter: blur(20px);
-            padding: 15px 20px;
-            border-bottom: 2px solid var(--quantum-cyan);
-            box-shadow: 0 4px 20px rgba(0, 245, 255, 0.3);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            display: none; /* Removed sticky header per user request */
+        }
+
+        /* Step Completion Popup */
+        .step-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: linear-gradient(135deg, rgba(10, 15, 30, 0.98), rgba(20, 10, 40, 0.98));
+            border: 2px solid var(--quantum-gold);
+            border-radius: 20px;
+            padding: 35px 50px;
+            text-align: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.4), 0 0 100px rgba(255, 0, 255, 0.2);
+        }
+
+        .step-popup.active {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .step-popup-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--quantum-gold), var(--quantum-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 10px;
+            animation: popNumber 0.6s ease;
+        }
+
+        @keyframes popNumber {
+            0% { transform: scale(0) rotate(-10deg); }
+            60% { transform: scale(1.2) rotate(5deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+
+        .step-popup-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--quantum-gold);
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+        }
+
+        .step-popup-remaining {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .step-popup-message {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            color: var(--quantum-cyan);
+            margin-top: 12px;
+            opacity: 0;
+            animation: fadeInMessage 0.5s ease 0.3s forwards;
+        }
+
+        @keyframes fadeInMessage {
+            to { opacity: 1; }
         }
 
         .progress-text {
@@ -1367,15 +1424,15 @@
         }
 
         .onboarding-modal {
-            background: linear-gradient(135deg, rgba(10, 20, 50, 0.98), rgba(30, 10, 50, 0.98));
-            border: 3px solid var(--quantum-cyan);
-            border-radius: 25px;
-            padding: 50px 40px;
-            max-width: 600px;
-            width: 90%;
+            background: linear-gradient(135deg, rgba(10, 15, 30, 0.98), rgba(20, 10, 35, 0.98));
+            border: 2px solid var(--quantum-gold);
+            border-radius: 20px;
+            padding: 40px 35px;
+            max-width: 480px;
+            width: 92%;
             position: relative;
-            box-shadow: 0 30px 80px rgba(0, 245, 255, 0.4), 0 0 100px rgba(255, 0, 255, 0.2);
-            animation: modalFloat 0.6s ease;
+            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3), 0 0 80px rgba(255, 0, 255, 0.15);
+            animation: modalFloat 0.5s ease;
         }
 
         @keyframes modalFloat {
@@ -1399,51 +1456,53 @@
         }
 
         .onboarding-icon {
-            font-size: 4rem;
-            margin-bottom: 25px;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
             display: block;
         }
 
         .onboarding-title {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 1.8rem;
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
             color: var(--quantum-gold);
-            margin-bottom: 20px;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            margin-bottom: 15px;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+            letter-spacing: 1px;
         }
 
         .onboarding-text {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 30px;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 20px;
         }
 
         .onboarding-highlight {
             display: inline-block;
-            background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(255, 0, 255, 0.2));
-            padding: 15px 25px;
-            border-radius: 15px;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(255, 0, 255, 0.15));
+            padding: 12px 20px;
+            border-radius: 12px;
             border: 1px solid var(--quantum-cyan);
-            margin: 15px 0;
+            margin: 12px 0;
             font-family: 'Orbitron', monospace;
             color: var(--quantum-cyan);
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: 600;
         }
 
         .onboarding-dots {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            margin: 30px 0 25px;
+            gap: 10px;
+            margin: 20px 0 18px;
         }
 
         .onboarding-dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
-            background: rgba(0, 245, 255, 0.3);
+            background: rgba(255, 215, 0, 0.3);
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -1462,9 +1521,9 @@
         }
 
         .onboarding-btn {
-            padding: 14px 35px;
-            border-radius: 50px;
-            font-size: 1rem;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -1926,6 +1985,14 @@
     <!-- Back to Top Button -->
     <div class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</div>
 
+    <!-- Step Completion Popup -->
+    <div class="step-popup" id="stepPopup">
+        <div class="step-popup-number" id="popupStepNumber">1</div>
+        <div class="step-popup-text">STEP COMPLETE</div>
+        <div class="step-popup-remaining" id="popupRemaining">9 steps remaining</div>
+        <div class="step-popup-message" id="popupMessage">Keep going, you're building momentum!</div>
+    </div>
+
     <!-- Loading Overlay -->
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-spinner"></div>
@@ -1937,7 +2004,6 @@
         <div class="onboarding-modal">
             <!-- Slide 1: The Promise (Emotion-First) -->
             <div class="onboarding-slide active" data-slide="1">
-                <span class="onboarding-icon">✨</span>
                 <h2 class="onboarding-title">Your Intentions, Amplified</h2>
                 <p class="onboarding-text">
                     Create a powerful intention code. Share it with the community.<br>
@@ -1945,38 +2011,37 @@
                 </p>
                 <div class="onboarding-flow">
                     <div class="flow-step" style="background: rgba(0,245,255,0.1);">
-                        <div style="font-size: 1.5rem;">1️⃣</div>
-                        <div style="font-size: 0.85rem; margin-top: 5px;">You alone</div>
+                        <div style="font-size: 1.3rem; font-weight: 600; color: var(--quantum-cyan);">1</div>
+                        <div style="font-size: 0.8rem; margin-top: 5px;">You alone</div>
                     </div>
                     <div class="flow-arrow">→</div>
                     <div class="flow-step" style="background: rgba(255,215,0,0.15);">
-                        <div style="font-size: 1.5rem;">👥 11</div>
-                        <div style="font-size: 0.85rem; margin-top: 5px;">2,047x power</div>
+                        <div style="font-size: 1.3rem; font-weight: 600; color: var(--quantum-gold);">11</div>
+                        <div style="font-size: 0.8rem; margin-top: 5px;">2,047x power</div>
                     </div>
                     <div class="flow-arrow">→</div>
                     <div class="flow-step" style="background: rgba(255,0,255,0.15);">
-                        <div style="font-size: 1.5rem;">🚀 33</div>
-                        <div style="font-size: 0.85rem; margin-top: 5px;">8.6 billion</div>
+                        <div style="font-size: 1.3rem; font-weight: 600; color: var(--quantum-magenta);">33</div>
+                        <div style="font-size: 0.8rem; margin-top: 5px;">8.6 billion</div>
                     </div>
                 </div>
-                <p style="font-size: 0.9rem; opacity: 0.7; text-align: center;">More people = exponentially faster results</p>
+                <p style="font-size: 0.85rem; opacity: 0.6; text-align: center;">More people = exponentially faster results</p>
             </div>
 
             <!-- Slide 2: How to Do It Right -->
             <div class="onboarding-slide" data-slide="2">
-                <span class="onboarding-icon">🎯</span>
                 <h2 class="onboarding-title">Write Intentions That Work</h2>
                 <p class="onboarding-text" style="margin-bottom: 15px;">
                     Our system checks your intention in <strong style="color: var(--quantum-gold);">real-time</strong> and shows you how to improve it:
                 </p>
-                <div style="text-align: left; max-width: 380px; margin: 0 auto 20px; font-size: 1rem; line-height: 2;">
+                <div style="text-align: left; max-width: 340px; margin: 0 auto 20px; font-size: 0.95rem; line-height: 1.9;">
                     <div><span style="color: #44ff88; font-weight: bold;">✓</span> Start with <strong>"I AM"</strong> (not "I want")</div>
                     <div><span style="color: #44ff88; font-weight: bold;">✓</span> Add <strong>feeling words</strong> (joy, freedom, peace)</div>
                     <div><span style="color: #44ff88; font-weight: bold;">✓</span> Be <strong>specific</strong> with numbers & details</div>
                     <div><span style="color: #44ff88; font-weight: bold;">✓</span> <strong>Positive only</strong> (avoid "not", "don't")</div>
                 </div>
-                <div style="background: rgba(0,245,255,0.1); padding: 12px 20px; border-radius: 10px; display: inline-block;">
-                    <span style="color: var(--quantum-cyan);">💡</span> Watch the strength meter fill as you type!
+                <div style="background: rgba(255,215,0,0.1); padding: 10px 18px; border-radius: 10px; display: inline-block; font-size: 0.9rem;">
+                    Watch the strength meter fill as you type!
                 </div>
             </div>
 
@@ -2021,7 +2086,7 @@
         <!-- The Consciousness & Resonance Model (COLLAPSIBLE) -->
         <div class="collapsible-section">
             <div class="collapsible-header">
-                <div class="collapsible-title">🔬 The Consciousness & Resonance Model</div>
+                <div class="collapsible-title">The Consciousness & Resonance Model</div>
                 <div class="collapsible-arrow">▼</div>
             </div>
             <div class="collapsible-content">
@@ -2030,22 +2095,22 @@
             
             <div style="display: grid; gap: 20px;">
                 <div style="padding: 25px; background: rgba(0,245,255,0.06); border-radius: 15px; border-left: 4px solid var(--quantum-cyan);">
-                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 12px; font-size: 1.1rem;">⚛️ <span class="tooltip">Consciousness Linking<span class="tooltiptext">The practice of connecting multiple minds toward a shared focus, creating a unified field of intention that amplifies individual manifestation power.</span></span></h4>
+                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 12px; font-size: 1.1rem;"><span class="tooltip">Consciousness Linking<span class="tooltiptext">The practice of connecting multiple minds toward a shared focus, creating a unified field of intention that amplifies individual manifestation power.</span></span></h4>
                     <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">When you amplify someone's code by commenting the number, you become <strong>psychologically and symbolically linked</strong> within a shared intention field. Your focus becomes woven into their manifestation practice, and theirs into yours. This creates a web of mutual reinforcement that strengthens with each participant.</p>
                 </div>
                 
                 <div style="padding: 25px; background: rgba(255,215,0,0.06); border-radius: 15px; border-left: 4px solid var(--quantum-gold);">
-                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); margin-bottom: 12px; font-size: 1.1rem;">👁️ The Attention Effect</h4>
+                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); margin-bottom: 12px; font-size: 1.1rem;">The Attention Effect</h4>
                     <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">Attention stabilizes intention. The more people consciously acknowledge a symbol, the faster it integrates into lived experience. Each person who sees and engages with your code <strong>reinforces the pattern recognition</strong> in your own subconscious mind, accelerating the transition from intention to action to result.</p>
                 </div>
                 
                 <div style="padding: 25px; background: rgba(255,0,255,0.06); border-radius: 15px; border-left: 4px solid var(--quantum-magenta);">
-                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); margin-bottom: 12px; font-size: 1.1rem;">🌊 <span class="tooltip">Morphic Resonance<span class="tooltiptext">Biologist Rupert Sheldrake's theory that patterns of behavior and thought strengthen through repetition across a shared field, making similar patterns easier to establish over time.</span></span></h4>
+                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); margin-bottom: 12px; font-size: 1.1rem;"><span class="tooltip">Morphic Resonance<span class="tooltiptext">Biologist Rupert Sheldrake's theory that patterns of behavior and thought strengthen through repetition across a shared field, making similar patterns easier to establish over time.</span></span></h4>
                     <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">As described in consciousness and systems theory, biologist Rupert Sheldrake proposed that patterns strengthen through repetition across a <strong class="tooltip">morphic field<span class="tooltiptext">An invisible field of information and memory that connects similar forms and behaviors across space and time, allowing patterns to strengthen through collective resonance.</span></strong>. Each engagement with your code strengthens the vibrational pattern of your intention. Like tuning forks resonating in harmony, multiple people holding your code number creates ripples of <strong class="tooltip">coherent focus<span class="tooltiptext">When multiple minds hold the same intention simultaneously, creating a unified wave pattern that amplifies manifestation probability.</span></strong>.</p>
                 </div>
                 
                 <div style="padding: 25px; background: rgba(138,43,226,0.06); border-radius: 15px; border-left: 4px solid #8A2BE2;">
-                    <h4 style="font-family: 'Orbitron', monospace; color: #8A2BE2; margin-bottom: 12px; font-size: 1.1rem;">📈 Exponential Amplification</h4>
+                    <h4 style="font-family: 'Orbitron', monospace; color: #8A2BE2; margin-bottom: 12px; font-size: 1.1rem;">Exponential Amplification</h4>
                     <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">Why does 1+1=3 instead of 2? Because <strong>2² - 1 = 3 influence states</strong>. Each new person doesn't just <em>add</em> one unit—they <strong>multiply the coherence of the shared field</strong>. At 11 people, you're not creating 11 separate intentions—you're creating 2,047 interconnected influence points. The exponential model is mathematical; its application to consciousness is symbolic and experiential.</p>
                 </div>
             </div>
@@ -2069,7 +2134,7 @@
         <!-- Common Intention Mistakes (COLLAPSIBLE) -->
         <div class="collapsible-section">
             <div class="collapsible-header">
-                <div class="collapsible-title">⚠️ Common Intention Mistakes (& How to Fix Them)</div>
+                <div class="collapsible-title">Common Intention Mistakes (& How to Fix Them)</div>
                 <div class="collapsible-arrow">▼</div>
             </div>
             <div class="collapsible-content">
@@ -2117,12 +2182,12 @@
             <p class="step-number">STEP 1 OF 10</p>
             
             <div class="info-box">
-                <h4>⚡ What You'll Create:</h4>
+                <h4>What You'll Create:</h4>
                 <p>In the next 10 minutes, you'll craft a quantum-optimized intention statement and generate your personalized Reality Code — a numerical frequency that becomes exponentially more powerful as others amplify it.</p>
             </div>
 
             <div class="info-box">
-                <h4>📈 The Exponential Influence Model:</h4>
+                <h4>The Exponential Influence Model:</h4>
                 <p><strong style="color: var(--quantum-gold); font-size: 1.3rem;">2ⁿ - 1</strong> <span style="opacity: 0.7;">(where n = number of amplifiers)</span></p>
                 <p style="margin-top: 10px; margin-bottom: 5px;">Each person who amplifies your code doesn't just add 1—they <strong style="color: var(--quantum-cyan);">multiply the coherence of the shared intention field</strong></p>
                 <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 15px; font-style: italic;">These figures represent potential influence states, not literal parallel universes.</p>
@@ -2137,7 +2202,7 @@
             </div>
 
             <div style="background: rgba(255,215,0,0.08); border-left: 4px solid var(--quantum-gold); padding: 20px; margin: 20px 0; border-radius: 0 12px 12px 0;">
-                <p style="margin: 0;"><strong>💡 How This Works:</strong> After you generate your code, share it in the community. Each person who engages with your code number strengthens the coherence of your intention field. The formula is exponential mathematics applied to <strong>consciousness and social reinforcement</strong>.</p>
+                <p style="margin: 0;"><strong>How This Works:</strong> After you generate your code, share it in the community. Each person who engages with your code number strengthens the coherence of your intention field. The formula is exponential mathematics applied to <strong>consciousness and social reinforcement</strong>.</p>
             </div>
 
             <div class="btn-group">
@@ -2198,7 +2263,7 @@
             <p class="step-number">STEP 3 OF 10</p>
 
             <div style="background: rgba(0,245,255,0.06); border: 1px solid rgba(0,245,255,0.25); border-radius: 15px; padding: 25px; margin-bottom: 25px;">
-                <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 18px; font-size: 1.1rem; text-align: center;">✨ The 7 Principles of Powerful Intentions</h4>
+                <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 18px; font-size: 1.1rem; text-align: center;">The 7 Principles of Powerful Intentions</h4>
                 <div style="display: grid; gap: 10px; font-size: 0.95rem;">
                     <div style="display: flex; align-items: flex-start; gap: 12px; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 8px;">
                         <span style="color: #44ff88; font-size: 1.2rem; flex-shrink: 0;">✓</span>
@@ -2912,7 +2977,7 @@
 
             <!-- Community Amplification Guide -->
             <div style="background: rgba(0,245,255,0.08); border: 2px solid rgba(0,245,255,0.35); border-radius: 18px; padding: 30px; margin: 30px 0;">
-                <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 22px; font-size: 1.2rem; text-align: center;">🌐 How to Amplify Your Reality Code in the Community</h4>
+                <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 22px; font-size: 1.2rem; text-align: center;">How to Amplify Your Reality Code in the Community</h4>
                 
                 <div style="display: grid; gap: 16px; margin-bottom: 25px;">
                     <div style="display: flex; align-items: flex-start; gap: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 10px;">
@@ -2988,7 +3053,7 @@
 
         <!-- FAQ Section -->
         <div class="faq-container" id="faqSection" style="margin-top: 60px; padding: 0 20px;">
-            <h3 style="text-align: center; color: var(--quantum-gold); font-size: 2rem; margin-bottom: 30px;">❓ Frequently Asked Questions</h3>
+            <h3 style="text-align: center; color: var(--quantum-gold); font-size: 2rem; margin-bottom: 30px;">Frequently Asked Questions</h3>
             
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
@@ -3043,7 +3108,7 @@
 
         <!-- Testimonials Carousel -->
         <div class="testimonials-section" style="margin-top: 60px;">
-            <h3>✨ Community Experiences</h3>
+            <h3>Community Experiences</h3>
             <div class="testimonials-carousel" id="testimonialsCarousel">
                 <div class="testimonial-card active">
                     <div class="testimonial-text">
@@ -3091,7 +3156,7 @@
     <div class="exit-intent-modal" id="exitModal">
         <div class="exit-modal-content">
             <button class="exit-modal-close" onclick="closeExitModal()">×</button>
-            <h3>⚡ Wait! Don't Leave Yet...</h3>
+            <h3>Wait! Don't Leave Yet...</h3>
             <p>Get notified when your Reality Code receives amplifications + weekly quantum intention tips</p>
             <form class="email-capture-form" onsubmit="submitEmail(event)">
                 <input 
@@ -3101,7 +3166,7 @@
                     id="exitEmailInput"
                     required
                 />
-                <button type="submit" class="email-submit-btn">🚀 Keep Me Updated</button>
+                <button type="submit" class="email-submit-btn">Keep Me Updated</button>
             </form>
             <p class="modal-disclaimer">We respect your privacy. Unsubscribe anytime. No spam, just quantum gold.</p>
         </div>
@@ -3253,6 +3318,41 @@
             10: 'Activation'
         };
 
+        // Step Popup Messages (motivational + progress)
+        const stepMessages = [
+            "You're on your way!",
+            "Building momentum...",
+            "The universe is listening!",
+            "Clarity is power",
+            "Almost halfway there!",
+            "Your intention is taking shape",
+            "Belief amplifies everything",
+            "Energy is building...",
+            "Your code awaits!",
+            "Activation complete!"
+        ];
+
+        // Show Step Completion Popup
+        function showStepPopup(completedStep) {
+            const popup = document.getElementById('stepPopup');
+            const numberEl = document.getElementById('popupStepNumber');
+            const remainingEl = document.getElementById('popupRemaining');
+            const messageEl = document.getElementById('popupMessage');
+            
+            const remaining = 10 - completedStep;
+            
+            numberEl.textContent = completedStep;
+            remainingEl.textContent = remaining === 0 ? "Journey Complete!" : remaining + (remaining === 1 ? " step to go" : " steps remaining");
+            messageEl.textContent = stepMessages[completedStep - 1];
+            
+            popup.classList.add('active');
+            
+            // Auto-hide after 1.4 seconds
+            setTimeout(() => {
+                popup.classList.remove('active');
+            }, 1400);
+        }
+
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
             initProgressIndicator();
@@ -3300,12 +3400,18 @@
 
         // Step Navigation (NO scroll to top for zero friction!)
         function nextStep(step) {
+            const previousStep = currentStep;
             document.getElementById(`step${currentStep}`).classList.remove('active');
             currentStep = step;
             document.getElementById(`step${currentStep}`).classList.add('active');
             updateProgress();
             updateProgressIndicator();
             saveProgress();
+
+            // Show completion popup for the step just completed (not when going to step 1)
+            if (previousStep >= 1 && previousStep < 10 && step > previousStep) {
+                showStepPopup(previousStep);
+            }
 
             // Step-specific logic
             if (step === 6) buildDraftIntention();
