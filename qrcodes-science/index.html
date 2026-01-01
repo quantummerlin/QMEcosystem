@@ -273,6 +273,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             color: var(--ethereal-white);
+            text-decoration: none;
             font-size: 0.95em;
             gap: 10px;
         }
@@ -1199,102 +1200,112 @@
             </div>
 
             <!-- Quantum Science Category -->
-            <div class="toc-category" data-cat="science">
+            <div class="toc-category collapsed" data-cat="science">
                 <div class="toc-category-header" onclick="toggleCategory(this)">
                     <span><span class="cat-icon">🔬</span> Quantum Science</span>
                     <span class="arrow">▼</span>
                 </div>
                 <div class="toc-category-items">
-                    <div class="toc-item" onclick="scrollToSection('section-quantum')" data-section="section-quantum">
+                    <a href="quantum-mysteries.html" class="toc-item">
                         <span class="item-icon">⚛️</span>
                         <span class="item-title">The Quantum Mysteries: Observer & Entanglement</span>
-                    </div>
-                    <div class="toc-item" onclick="scrollToSection('section-biology')" data-section="section-biology">
+                    </a>
+                    <a href="biology-of-belief.html" class="toc-item">
                         <span class="item-icon">🧬</span>
                         <span class="item-title">The Alchemy of Belief: Mind Shapes Matter</span>
-                    </div>
-                    <div class="toc-item" onclick="scrollToSection('section-group')" data-section="section-group">
+                    </a>
+                    <a href="circle-of-eight.html" class="toc-item">
                         <span class="item-icon">👥</span>
                         <span class="item-title">The Circle of Eight: Knights of Intention</span>
-                    </div>
-                    <div class="toc-item" onclick="scrollToSection('section-formula')" data-section="section-formula">
+                    </a>
+                    <a href="sacred-mathematics.html" class="toc-item">
                         <span class="item-icon">📐</span>
                         <span class="item-title">Sacred Mathematics: The Power of 2^n - 1</span>
-                    </div>
+                    </a>
                 </div>
             </div>
 
             <!-- Mind Power Category -->
-            <div class="toc-category" data-cat="psychology">
+            <div class="toc-category collapsed" data-cat="psychology">
                 <div class="toc-category-header" onclick="toggleCategory(this)">
                     <span><span class="cat-icon">🧠</span> Mind Power</span>
                     <span class="arrow">▼</span>
                 </div>
                 <div class="toc-category-items">
-                    <div class="toc-item" onclick="scrollToSection('section-nlp')" data-section="section-nlp">
+                    <a href="nlp-anchoring.html" class="toc-item">
                         <span class="item-icon">🧠</span>
                         <span class="item-title">The Art of Enchantment: NLP & Anchoring</span>
-                    </div>
-                    <div class="toc-item" onclick="scrollToSection('section-neural')" data-section="section-neural">
+                    </a>
+                    <a href="neuroplasticity.html" class="toc-item">
                         <span class="item-icon">🧩</span>
                         <span class="item-title">Neural Enchantment: Rewiring the Mind</span>
-                    </div>
+                    </a>
                 </div>
             </div>
 
             <!-- Ancient Wisdom Category -->
-            <div class="toc-category" data-cat="spiritual">
+            <div class="toc-category collapsed" data-cat="spiritual">
                 <div class="toc-category-header" onclick="toggleCategory(this)">
                     <span><span class="cat-icon">🌹</span> Ancient Wisdom</span>
                     <span class="arrow">▼</span>
                 </div>
                 <div class="toc-category-items">
-                    <div class="toc-item" onclick="scrollToSection('section-vibration')" data-section="section-vibration">
+                    <a href="law-of-attraction.html" class="toc-item">
                         <span class="item-icon">🧲</span>
                         <span class="item-title">The Rose's Frequency: Vibration & Attraction</span>
-                    </div>
-                    <div class="toc-item" onclick="scrollToSection('section-morphic')" data-section="section-morphic">
+                    </a>
+                    <a href="morphic-resonance.html" class="toc-item">
                         <span class="item-icon">🌊</span>
                         <span class="item-title">The Wizard's Web: Morphic Fields</span>
-                    </div>
+                    </a>
                 </div>
             </div>
 
             <!-- Timeline Category -->
-            <div class="toc-category" data-cat="history">
+            <div class="toc-category collapsed" data-cat="history">
                 <div class="toc-category-header" onclick="toggleCategory(this)">
                     <span><span class="cat-icon">📜</span> Timeline</span>
                     <span class="arrow">▼</span>
                 </div>
                 <div class="toc-category-items">
-                    <div class="toc-item" onclick="scrollToSection('section-timeline')" data-section="section-timeline">
+                    <a href="timeline-evidence.html" class="toc-item">
                         <span class="item-icon">📅</span>
                         <span class="item-title">Through the Ages: A Timeline of Discovery</span>
-                    </div>
+                    </a>
                 </div>
             </div>
 
             <!-- Practical Magic Category -->
-            <div class="toc-category" data-cat="practical">
+            <div class="toc-category collapsed" data-cat="practical">
                 <div class="toc-category-header" onclick="toggleCategory(this)">
                     <span><span class="cat-icon">⚡</span> Practical Magic</span>
                     <span class="arrow">▼</span>
                 </div>
                 <div class="toc-category-items">
-                    <div class="toc-item" onclick="scrollToSection('section-convergence')" data-section="section-convergence">
+                    <a href="integrated-mechanism.html" class="toc-item">
                         <span class="item-icon">⚙️</span>
                         <span class="item-title">The Grand Convergence: All Magic Unified</span>
-                    </div>
-                    <div class="toc-item" onclick="scrollToSection('section-references')" data-section="section-references">
+                    </a>
+                    <a href="scholarly-references.html" class="toc-item">
                         <span class="item-icon">📚</span>
                         <span class="item-title">The Ancient Scrolls: Scholarly References</span>
-                    </div>
+                    </a>
                 </div>
             </div>
         </nav>
 
-        <!-- SECTION 1: NLP & ANCHORING -->
-        <div id="section-nlp" class="section reveal collapsed" data-category="psychology">
+        <!-- FINAL CTA -->
+        <div class="cta-box mystical-glow">
+            <h3>✨ Begin Your Mystical Experiment ✨</h3>
+            <p style="font-size: 1.1em; margin: 20px 0;">
+                The ancient wisdom of Merlin meets modern quantum science. Now that you understand the evidence-based mechanisms 
+                behind Reality Codes, it's time to create your own and experience exponential manifestation firsthand.
+            </p>
+            <a href="../qrcodesfull.html" class="cta-button">Create Your Reality Code Now</a>
+            <p style="margin-top: 30px; color: var(--rose-pink); font-style: italic;">
+                🧙‍♂️ The Wizard and the Rose await... 🌹
+            </p>
+        </div>
             <h2 onclick="toggleSection(this)">
                 <span class="icon">🧠</span>
                 The Art of Enchantment: NLP & Anchoring
@@ -2138,19 +2149,6 @@
 
             <button class="mark-read-btn" onclick="markAsRead('section-references', this)">☐ Mark as Explored</button>
             </div>
-        </div>
-
-        <!-- FINAL CTA -->
-        <div class="cta-box mystical-glow">
-            <h3>✨ Begin Your Mystical Experiment ✨</h3>
-            <p style="font-size: 1.1em; margin: 20px 0;">
-                The ancient wisdom of Merlin meets modern quantum science. Now that you understand the evidence-based mechanisms 
-                behind Reality Codes, it's time to create your own and experience exponential manifestation firsthand.
-            </p>
-            <a href="../qrcodesfull.html" class="cta-button">Create Your Reality Code Now</a>
-            <p style="margin-top: 30px; color: var(--rose-pink); font-style: italic;">
-                🧙‍♂️ The Wizard and the Rose await... 🌹
-            </p>
         </div>
 
         <!-- Bottom Ad Before Footer -->
