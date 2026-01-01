@@ -9,7 +9,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Exo+2:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Orbitron:wght@400;500;600;700;800&family=Exo+2:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
         *, *::before, *::after {
@@ -789,6 +789,79 @@
             text-shadow: 0 0 15px var(--quantum-cyan);
         }
 
+        /* Title Glow Animation */
+        @keyframes titleGlow {
+            0%, 100% { filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.6)); }
+            50% { filter: drop-shadow(0 0 60px rgba(0, 245, 255, 0.8)) drop-shadow(0 0 80px rgba(255, 0, 255, 0.4)); }
+        }
+
+        /* AdSense Optimization Styles */
+        .ad-container {
+            text-align: center;
+            padding: 20px;
+            margin: 30px 0;
+            background: linear-gradient(135deg, rgba(45, 27, 78, 0.3), rgba(10, 0, 21, 0.5));
+            border-radius: 15px;
+            border: 1px dashed rgba(218, 165, 32, 0.3);
+        }
+
+        .ad-label {
+            font-family: 'Cinzel', serif;
+            color: rgba(218, 165, 32, 0.6);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .ad-placeholder-text {
+            color: var(--quantum-gold);
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+        }
+
+        /* AdSense Footer */
+        .adsense-footer {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 60px;
+            background: linear-gradient(135deg, rgba(45, 27, 78, 0.95), rgba(138, 43, 226, 0.2));
+            border-top: 3px solid var(--quantum-gold);
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 -10px 50px rgba(218, 165, 32, 0.2);
+        }
+
+        .adsense-footer p {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 500;
+            text-shadow: 0 0 15px rgba(218, 165, 32, 0.5);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: var(--quantum-gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(218, 165, 32, 0.4);
+        }
+
+        .footer-links a:hover {
+            color: var(--quantum-cyan);
+            text-shadow: 0 0 20px rgba(0, 245, 255, 0.8);
+        }
+
+        .footer-links span {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .container { padding: 15px; }
@@ -815,10 +888,12 @@
 
     <div class="container">
         <div class="header">
-            <h1>🔮 Quantum Reality Code Generator</h1>
-            <p style="font-size: 1.2rem; margin-bottom: 20px; line-height: 1.5;">When <strong style="color: var(--quantum-gold);">11 people amplify your code</strong>, you don't affect 11 realities—<br>you affect <strong style="color: var(--quantum-cyan); font-size: 1.3rem;">2,047 realities</strong></p>
-            <p style="font-size: 1rem; opacity: 0.85; margin-bottom: 25px;">At <strong style="color: var(--quantum-gold);">111 amplifiers</strong> = <strong style="color: var(--rose-pink); font-size: 1.15rem;">2.6 DECILLION realities</strong><br><span style="font-size: 0.9rem; opacity: 0.7;">(more atoms than in billions of universes)</span></p>
-            <a href="/qrcodes.html" class="version-link">⚡ Quick Version (60 seconds)</a>
+            <div style="margin-bottom: 30px;">
+                <h1 style="font-family: 'Cinzel Decorative', serif; font-size: 3.5rem; font-weight: 900; background: linear-gradient(135deg, #ffd700, #00f5ff, #ff00ff, #ffd700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-shadow: none; filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.6)); letter-spacing: 6px; animation: titleGlow 3s ease-in-out infinite;">QUANTUM REALITY CODES</h1>
+                <p style="font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--quantum-gold); letter-spacing: 4px; margin-top: 10px; opacity: 0.9;">✧ Transform Intention Into Reality ✧</p>
+            </div>
+            <p style="font-size: 1.2rem; margin-bottom: 20px; line-height: 1.5;">When <strong style="color: var(--quantum-gold);">11 people amplify your code</strong>, you don't affect 11 realities—<br>you affect <strong style="color: var(--quantum-cyan); font-size: 1.3rem;">2,047 potential influence states</strong></p>
+            <p style="font-size: 1rem; opacity: 0.85; margin-bottom: 25px;">At <strong style="color: var(--quantum-gold);">111 amplifiers</strong> = <strong style="color: var(--rose-pink); font-size: 1.15rem;">2.6 DECILLION influence states</strong><br><span style="font-size: 0.9rem; opacity: 0.7;">(representing exponential intention coherence)</span></p>
             <div class="progress-bar">
                 <div class="progress-fill" id="progressBar" style="width: 0%"></div>
             </div>
@@ -826,42 +901,42 @@
 
         <!-- The Science Behind Reality Codes -->
         <div style="background: var(--card-bg); border-radius: 25px; padding: 40px; margin-bottom: 30px; backdrop-filter: blur(25px); border: 1px solid rgba(255,0,255,0.25);">
-            <h3 style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); margin-bottom: 25px; text-align: center; font-size: 1.5rem;">🔬 The Science Behind Reality Codes</h3>
-            <p style="text-align: center; margin-bottom: 35px; opacity: 0.9; font-size: 1.1rem; line-height: 1.6;">This isn't belief, luck, or wishful thinking—<br>this is <strong style="color: var(--quantum-cyan); font-size: 1.2rem;">quantum physics</strong></p>
+            <h3 style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); margin-bottom: 25px; text-align: center; font-size: 1.5rem;">🔬 The Consciousness & Resonance Model</h3>
+            <p style="text-align: center; margin-bottom: 35px; opacity: 0.9; font-size: 1.1rem; line-height: 1.6;">This isn't random chance or passive hoping—<br>this is <strong style="color: var(--quantum-cyan); font-size: 1.2rem;">structured intention amplification</strong></p>
             
             <div style="display: grid; gap: 20px;">
                 <div style="padding: 25px; background: rgba(0,245,255,0.06); border-radius: 15px; border-left: 4px solid var(--quantum-cyan);">
-                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 12px; font-size: 1.1rem;">⚛️ Quantum Entanglement</h4>
-                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">When you amplify someone's code by commenting the number, you become <strong>quantum entangled</strong> with that reality. Your consciousness becomes woven into their manifestation field, and theirs into yours. This creates a web of mutual amplification that transcends linear time and space.</p>
+                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 12px; font-size: 1.1rem;">⚛️ Consciousness Linking</h4>
+                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">When you amplify someone's code by commenting the number, you become <strong>psychologically and symbolically linked</strong> within a shared intention field. Your focus becomes woven into their manifestation practice, and theirs into yours. This creates a web of mutual reinforcement that strengthens with each participant.</p>
                 </div>
                 
                 <div style="padding: 25px; background: rgba(255,215,0,0.06); border-radius: 15px; border-left: 4px solid var(--quantum-gold);">
-                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); margin-bottom: 12px; font-size: 1.1rem;">👁️ The Observer Effect</h4>
-                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">In quantum mechanics, the act of observation collapses the wave function of infinite possibilities into one physical reality. More observers = <strong>faster collapse into manifestation</strong>. Each person who sees and comments your code accelerates the transition from potential to actual.</p>
+                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); margin-bottom: 12px; font-size: 1.1rem;">👁️ The Attention Effect</h4>
+                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">Attention stabilizes intention. The more people consciously acknowledge a symbol, the faster it integrates into lived experience. Each person who sees and engages with your code <strong>reinforces the pattern recognition</strong> in your own subconscious mind, accelerating the transition from intention to action to result.</p>
                 </div>
                 
                 <div style="padding: 25px; background: rgba(255,0,255,0.06); border-radius: 15px; border-left: 4px solid var(--quantum-magenta);">
                     <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); margin-bottom: 12px; font-size: 1.1rem;">🌊 Morphic Resonance</h4>
-                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">Biologist Rupert Sheldrake discovered that patterns strengthen through repetition across a <strong>morphic field</strong>. Each comment on your code strengthens the vibrational pattern of your intention. Like tuning forks resonating in harmony, multiple people holding your code number creates ripples across all parallel realities.</p>
+                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">As described in consciousness and systems theory, biologist Rupert Sheldrake proposed that patterns strengthen through repetition across a <strong>morphic field</strong>. Each engagement with your code strengthens the vibrational pattern of your intention. Like tuning forks resonating in harmony, multiple people holding your code number creates ripples of coherent focus.</p>
                 </div>
                 
                 <div style="padding: 25px; background: rgba(138,43,226,0.06); border-radius: 15px; border-left: 4px solid #8A2BE2;">
                     <h4 style="font-family: 'Orbitron', monospace; color: #8A2BE2; margin-bottom: 12px; font-size: 1.1rem;">📈 Exponential Amplification</h4>
-                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">Why does 1+1=3 instead of 2? Because <strong>2² - 1 = 3 realities</strong>. Each new person doesn't just <em>add</em> one reality—they <strong>double the entire quantum field</strong>. At 11 people, you're not affecting 11 realities, you're affecting 2,047. This is pure mathematics, not metaphor. The formula is 2^n - 1, where n = number of amplifiers.</p>
+                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">Why does 1+1=3 instead of 2? Because <strong>2² - 1 = 3 influence states</strong>. Each new person doesn't just <em>add</em> one unit—they <strong>multiply the coherence of the shared field</strong>. At 11 people, you're not creating 11 separate intentions—you're creating 2,047 interconnected influence points. The exponential model is mathematical; its application to consciousness is symbolic and experiential.</p>
                 </div>
             </div>
             
             <div style="margin-top: 30px; padding: 25px; background: rgba(255,215,0,0.1); border-radius: 15px; text-align: center;">
-                <p style="margin: 0; font-size: 1.05rem; line-height: 1.6;"><strong style="color: var(--quantum-gold);">Bottom line:</strong> This system works because it's built on <strong>quantum mechanics</strong>, <strong>exponential mathematics</strong>, and <strong>morphic field theory</strong>—not belief systems. Your job is simply to participate.</p>
+                <p style="margin: 0; font-size: 1.05rem; line-height: 1.6;"><strong style="color: var(--quantum-gold);">Bottom line:</strong> This system works because it's built on <strong>exponential mathematics</strong>, <strong>social reinforcement psychology</strong>, and <strong>consciousness coherence models</strong>. Your job is simply to participate with clear intention.</p>
             </div>
 
             <div style="text-align: center; margin-top: 35px; padding: 30px; background: linear-gradient(135deg, rgba(218, 165, 32, 0.2), rgba(138, 43, 226, 0.2)); border-radius: 18px; border: 2px solid var(--quantum-gold);">
-                <p style="margin-bottom: 18px; font-size: 1.15rem; color: var(--quantum-cyan); font-weight: 600;">Want to dive deeper into the science?</p>
-                <p style="margin-bottom: 20px; opacity: 0.9; font-size: 1.05rem;">See the full peer-reviewed research, Nobel Prize studies, and complete scientific explanations</p>
+                <p style="margin-bottom: 18px; font-size: 1.15rem; color: var(--quantum-cyan); font-weight: 600;">Want to dive deeper into the inspiration?</p>
+                <p style="margin-bottom: 20px; opacity: 0.9; font-size: 1.05rem;">Explore research from psychology, systems theory, neuroscience, and consciousness studies</p>
                 <a href="quantum-merlin-hub/qrcodes-science.html" style="display: inline-block; padding: 15px 40px; background: linear-gradient(135deg, #daa520, #ffd700); color: #1a0033; font-weight: bold; border-radius: 30px; text-decoration: none; font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 30px rgba(218, 165, 32, 0.5)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
-                    📚 Read The Complete Science Behind Reality Codes
+                    📚 Explore The Science & Inspiration
                 </a>
-                <p style="margin-top: 15px; font-size: 0.95rem; opacity: 0.8;">40+ peer-reviewed studies • 17 scientific mechanisms • Nobel Prize research • Complete bibliography</p>
+                <p style="margin-top: 15px; font-size: 0.95rem; opacity: 0.8;">Draws from psychology • Systems theory • Neuroscience • Consciousness studies</p>
             </div>
         </div>
 
@@ -914,21 +989,22 @@
             </div>
 
             <div class="info-box">
-                <h4>📈 The Exponential Power Formula:</h4>
+                <h4>📈 The Exponential Influence Model:</h4>
                 <p><strong style="color: var(--quantum-gold); font-size: 1.3rem;">2ⁿ - 1</strong> <span style="opacity: 0.7;">(where n = number of amplifiers)</span></p>
-                <p style="margin-top: 10px; margin-bottom: 15px;">Each person who amplifies your code doesn't just add 1—they <strong style="color: var(--quantum-cyan);">double the entire reality field</strong></p>
+                <p style="margin-top: 10px; margin-bottom: 5px;">Each person who amplifies your code doesn't just add 1—they <strong style="color: var(--quantum-cyan);">multiply the coherence of the shared intention field</strong></p>
+                <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 15px; font-style: italic;">These figures represent potential influence states, not literal parallel universes.</p>
                 <ul>
-                    <li><strong style="color: var(--quantum-cyan);">🟡 11 comments</strong> = 2,047 realities affected (PROBABLE — 7-14 days)</li>
-                    <li><strong style="color: #FFA500;">🟠 21 comments</strong> = 2,097,151 realities affected (INEVITABLE — 3-7 days)</li>
-                    <li><strong style="color: var(--quantum-magenta);">🔴 33 comments</strong> = 8.6 billion realities affected (EARTH SCALE — 24-72 hrs)</li>
-                    <li><strong style="color: #8A2BE2;">🟣 50 comments</strong> = 1.1 quadrillion realities (COSMIC — hours)</li>
-                    <li><strong style="color: #444;">⚫ 80 comments</strong> = 1.2 septillion realities (UNIVERSAL — instantaneous)</li>
-                    <li><strong style="color: var(--quantum-gold); text-shadow: 0 0 10px rgba(255,215,0,0.5);">⭐ 111 comments</strong> = 2.6 DECILLION realities (OMNIVERSAL — thought = reality)</li>
+                    <li><strong style="color: var(--quantum-cyan);">🟡 11 comments</strong> = 2,047 influence states (PROBABLE — alignment strengthens)</li>
+                    <li><strong style="color: #FFA500;">🟠 21 comments</strong> = 2,097,151 influence states (STRONG — momentum building)</li>
+                    <li><strong style="color: var(--quantum-magenta);">🔴 33 comments</strong> = 8.6 billion influence states (POWERFUL — coherence peak)</li>
+                    <li><strong style="color: #8A2BE2;">🟣 50 comments</strong> = 1.1 quadrillion states (COSMIC — deep alignment)</li>
+                    <li><strong style="color: #444;">⚫ 80 comments</strong> = 1.2 septillion states (UNIVERSAL — maximum coherence)</li>
+                    <li><strong style="color: var(--quantum-gold); text-shadow: 0 0 10px rgba(255,215,0,0.5);">⭐ 111 comments</strong> = 2.6 DECILLION states (OMNIVERSAL — full integration)</li>
                 </ul>
             </div>
 
             <div style="background: rgba(255,215,0,0.08); border-left: 4px solid var(--quantum-gold); padding: 20px; margin: 20px 0; border-radius: 0 12px 12px 0;">
-                <p style="margin: 0;"><strong>💡 How This Works:</strong> After you generate your code, share it in the community. Each person who comments your code number doubles your manifestation power. The formula is pure mathematics—not belief, not luck, but <strong>quantum mechanics</strong>.</p>
+                <p style="margin: 0;"><strong>💡 How This Works:</strong> After you generate your code, share it in the community. Each person who engages with your code number strengthens the coherence of your intention field. The formula is exponential mathematics applied to <strong>consciousness and social reinforcement</strong>.</p>
             </div>
 
             <div class="btn-group">
@@ -1426,7 +1502,7 @@
                             color: '#FFD700',
                             bgColor: 'rgba(255,215,0,0.15)',
                             borderColor: '#FFD700',
-                            timeline: 'Manifestation is instantaneous. Thought = Reality.',
+                            timeline: 'Maximum intention alignment achieved. Full integration with your desired reality.',
                             glow: '0 0 30px rgba(255,215,0,0.8)'
                         };
                     } else if (n >= 80) {
@@ -1435,7 +1511,7 @@
                             color: '#C0C0C0',
                             bgColor: 'rgba(192,192,192,0.15)',
                             borderColor: '#C0C0C0',
-                            timeline: 'Manifestation occurs within hours. Reality bends to your will.',
+                            timeline: 'Deep coherence achieved. Results often feel immediate and unavoidable.',
                             glow: '0 0 25px rgba(192,192,192,0.6)'
                         };
                     } else if (n >= 50) {
@@ -1444,25 +1520,25 @@
                             color: '#8A2BE2',
                             bgColor: 'rgba(138,43,226,0.15)',
                             borderColor: '#8A2BE2',
-                            timeline: 'Manifestation within hours to days. Cosmic forces align.',
+                            timeline: 'Strong alignment forming. Synchronicities accelerate.',
                             glow: '0 0 20px rgba(138,43,226,0.6)'
                         };
                     } else if (n >= 33) {
                         return {
-                            badge: '🔴 EARTH SCALE THRESHOLD',
+                            badge: '🔴 POWERFUL THRESHOLD',
                             color: '#FF00FF',
                             bgColor: 'rgba(255,0,255,0.15)',
                             borderColor: '#FF00FF',
-                            timeline: 'Manifestation within 24-72 hours. Affecting more realities than humans on Earth.',
+                            timeline: 'Significant coherence. Intention momentum building rapidly.',
                             glow: '0 0 20px rgba(255,0,255,0.6)'
                         };
                     } else if (n >= 21) {
                         return {
-                            badge: '🟠 INEVITABLE THRESHOLD',
+                            badge: '🟠 STRONG THRESHOLD',
                             color: '#FFA500',
                             bgColor: 'rgba(255,165,0,0.15)',
                             borderColor: '#FFA500',
-                            timeline: 'Manifestation within 3-7 days. Your intention is now inevitable.',
+                            timeline: 'Solid intention field. Alignment strengthening daily.',
                             glow: '0 0 15px rgba(255,165,0,0.5)'
                         };
                     } else if (n >= 11) {
@@ -1471,7 +1547,7 @@
                             color: '#00F5FF',
                             bgColor: 'rgba(0,245,255,0.15)',
                             borderColor: '#00F5FF',
-                            timeline: 'Manifestation within 7-14 days. You\'ve crossed into probability.',
+                            timeline: 'Intention field activated. You\'ve crossed into probability.',
                             glow: '0 0 15px rgba(0,245,255,0.5)'
                         };
                     } else {
@@ -2029,5 +2105,18 @@ quantummerlin.com/qrcodesfull
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
+
+    <!-- AdSense Footer -->
+    <footer class="adsense-footer">
+        <p>© 2026 Quantum Merlin | All Rights Reserved</p>
+        <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 10px;">This platform models how attention, belief, and social reinforcement shape lived outcomes.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <span>•</span>
+            <a href="terms.html">Terms of Service</a>
+            <span>•</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+    </footer>
 </body>
 </html>
