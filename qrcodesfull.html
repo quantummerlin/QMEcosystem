@@ -1131,6 +1131,177 @@
             .progress-text { font-size: 0.8rem; }
             .collapsible-title { font-size: 1.1rem; }
         }
+
+        /* Real-time Validation Styles */
+        .validation-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: 'Orbitron', monospace;
+            margin: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .validation-badge.good {
+            background: linear-gradient(135deg, #44ff88, #00cc66);
+            color: #000;
+            box-shadow: 0 0 15px rgba(68, 255, 136, 0.4);
+        }
+
+        .validation-badge.warning {
+            background: linear-gradient(135deg, #ff9800, #ff5722);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(255, 152, 0, 0.4);
+        }
+
+        .validation-badge.bad {
+            background: linear-gradient(135deg, #ff4444, #cc0000);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(255, 68, 68, 0.4);
+        }
+
+        .intention-strength-meter {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            border: 2px solid rgba(0, 245, 255, 0.2);
+        }
+
+        .strength-bar {
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+
+        .strength-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #ff4444, #ff9800, #44ff88);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+            box-shadow: 0 0 15px rgba(68, 255, 136, 0.5);
+        }
+
+        /* Celebration Animations */
+        @keyframes celebrate {
+            0% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.2) rotate(-5deg); }
+            50% { transform: scale(1.3) rotate(5deg); }
+            75% { transform: scale(1.2) rotate(-3deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+
+        @keyframes confetti {
+            0% { transform: translateY(-100%) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+
+        .celebration {
+            animation: celebrate 0.6s ease-in-out;
+        }
+
+        .confetti-piece {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: var(--quantum-gold);
+            top: 0;
+            animation: confetti 3s linear forwards;
+            z-index: 9999;
+        }
+
+        /* Tooltip Styles */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 2px dotted var(--quantum-cyan);
+            cursor: help;
+            color: var(--quantum-cyan);
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 280px;
+            background: linear-gradient(135deg, rgba(10, 10, 15, 0.98), rgba(45, 27, 78, 0.98));
+            color: #fff;
+            text-align: center;
+            border-radius: 12px;
+            padding: 15px;
+            position: absolute;
+            z-index: 1000;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -140px;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            transform: translateY(10px);
+            box-shadow: 0 8px 30px rgba(0, 245, 255, 0.4);
+            border: 2px solid var(--quantum-cyan);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            pointer-events: none;
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -8px;
+            border-width: 8px;
+            border-style: solid;
+            border-color: var(--quantum-cyan) transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--quantum-cyan), var(--quantum-magenta));
+            border: 2px solid var(--quantum-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #fff;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 998;
+            box-shadow: 0 4px 20px rgba(0, 245, 255, 0.4);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 245, 255, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .tooltip .tooltiptext { width: 220px; margin-left: -110px; font-size: 0.85rem; }
+            .back-to-top { width: 45px; height: 45px; bottom: 70px; font-size: 1.3rem; }
+        }
     </style>
 </head>
 <body>
@@ -1149,6 +1320,9 @@
 
     <!-- Save Indicator -->
     <div class="save-indicator" id="saveIndicator">💾 Progress Saved</div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</div>
 
     <div class="container">
         <div class="header">
@@ -1175,7 +1349,7 @@
             
             <div style="display: grid; gap: 20px;">
                 <div style="padding: 25px; background: rgba(0,245,255,0.06); border-radius: 15px; border-left: 4px solid var(--quantum-cyan);">
-                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 12px; font-size: 1.1rem;">⚛️ Consciousness Linking</h4>
+                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 12px; font-size: 1.1rem;">⚛️ <span class="tooltip">Consciousness Linking<span class="tooltiptext">The practice of connecting multiple minds toward a shared focus, creating a unified field of intention that amplifies individual manifestation power.</span></span></h4>
                     <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">When you amplify someone's code by commenting the number, you become <strong>psychologically and symbolically linked</strong> within a shared intention field. Your focus becomes woven into their manifestation practice, and theirs into yours. This creates a web of mutual reinforcement that strengthens with each participant.</p>
                 </div>
                 
@@ -1185,8 +1359,8 @@
                 </div>
                 
                 <div style="padding: 25px; background: rgba(255,0,255,0.06); border-radius: 15px; border-left: 4px solid var(--quantum-magenta);">
-                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); margin-bottom: 12px; font-size: 1.1rem;">🌊 Morphic Resonance</h4>
-                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">As described in consciousness and systems theory, biologist Rupert Sheldrake proposed that patterns strengthen through repetition across a <strong>morphic field</strong>. Each engagement with your code strengthens the vibrational pattern of your intention. Like tuning forks resonating in harmony, multiple people holding your code number creates ripples of coherent focus.</p>
+                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); margin-bottom: 12px; font-size: 1.1rem;">🌊 <span class="tooltip">Morphic Resonance<span class="tooltiptext">Biologist Rupert Sheldrake's theory that patterns of behavior and thought strengthen through repetition across a shared field, making similar patterns easier to establish over time.</span></span></h4>
+                    <p style="margin: 0; opacity: 0.95; line-height: 1.7; font-size: 1.05rem;">As described in consciousness and systems theory, biologist Rupert Sheldrake proposed that patterns strengthen through repetition across a <strong class="tooltip">morphic field<span class="tooltiptext">An invisible field of information and memory that connects similar forms and behaviors across space and time, allowing patterns to strengthen through collective resonance.</span></strong>. Each engagement with your code strengthens the vibrational pattern of your intention. Like tuning forks resonating in harmony, multiple people holding your code number creates ripples of <strong class="tooltip">coherent focus<span class="tooltiptext">When multiple minds hold the same intention simultaneously, creating a unified wave pattern that amplifies manifestation probability.</span></strong>.</p>
                 </div>
                 
                 <div style="padding: 25px; background: rgba(138,43,226,0.06); border-radius: 15px; border-left: 4px solid #8A2BE2;">
@@ -1414,7 +1588,16 @@
 
             <div class="input-group">
                 <label>What specifically do you want to manifest?</label>
-                <textarea id="specificDesire" rows="4" placeholder="Be as specific as possible. For example: 'I want to earn $15,000 per month from my online business while working only 4 hours a day'"></textarea>
+                <textarea id="specificDesire" rows="4" placeholder="Be as specific as possible. For example: 'I want to earn $15,000 per month from my online business while working only 4 hours a day'" oninput="validateIntention()"></textarea>
+            </div>
+
+            <!-- Real-time Intention Validation -->
+            <div class="intention-strength-meter" id="strengthMeter" style="display: none;">
+                <div style="font-family: 'Orbitron', monospace; font-size: 0.9rem; color: var(--quantum-cyan); margin-bottom: 10px;">💪 INTENTION STRENGTH:</div>
+                <div class="strength-bar">
+                    <div class="strength-fill" id="strengthFill"></div>
+                </div>
+                <div id="validationBadges" style="margin-top: 15px;"></div>
             </div>
 
             <div class="info-box">
@@ -1529,7 +1712,7 @@
             </div>
 
             <div class="info-box">
-                <p>🔮 Your Reality Code will be calculated using Gematria — the ancient practice of assigning numerical values to letters. Each letter A-Z corresponds to 1-26.</p>
+                <p>🔮 Your Reality Code will be calculated using <span class="tooltip">Gematria<span class="tooltiptext">An ancient practice originating from Hebrew mysticism that assigns numerical values to letters, revealing hidden meanings and connections in words and phrases.</span></span> — the ancient practice of assigning numerical values to letters. Each letter A-Z corresponds to 1-26.</p>
             </div>
 
             <div class="btn-group">
@@ -2340,6 +2523,99 @@
             });
         }
 
+        // Real-time Intention Validation
+        function validateIntention() {
+            const text = document.getElementById('specificDesire').value.toLowerCase();
+            const meter = document.getElementById('strengthMeter');
+            const fill = document.getElementById('strengthFill');
+            const badges = document.getElementById('validationBadges');
+            
+            if (!text || text.length < 10) {
+                meter.style.display = 'none';
+                return;
+            }
+            
+            meter.style.display = 'block';
+            let score = 0;
+            let badgeHTML = '';
+            
+            // Power words check
+            const powerWords = ['joy', 'freedom', 'peace', 'gratitude', 'love', 'abundance', 'ease', 'fulfillment', 'thriving', 'prospering'];
+            const hasPowerWords = powerWords.some(word => text.includes(word));
+            if (hasPowerWords) {
+                score += 25;
+                badgeHTML += '<span class="validation-badge good">✓ Emotionally Charged</span>';
+            } else {
+                badgeHTML += '<span class="validation-badge warning">⚠ Add Feeling Words</span>';
+            }
+            
+            // Present tense check
+            if (text.includes('i am') || text.includes('i\'m')) {
+                score += 25;
+                badgeHTML += '<span class="validation-badge good">✓ Present Tense</span>';
+            } else if (text.includes('i will') || text.includes('i want')) {
+                badgeHTML += '<span class="validation-badge bad">✗ Use "I AM" not "I will"</span>';
+            }
+            
+            // Negative words check
+            const negativeWords = ['not', 'never', 'don\'t', 'won\'t', 'can\'t', 'no more', 'stop', 'quit'];
+            const hasNegatives = negativeWords.some(word => text.includes(word));
+            if (!hasNegatives) {
+                score += 25;
+                badgeHTML += '<span class="validation-badge good">✓ Positive Framing</span>';
+            } else {
+                badgeHTML += '<span class="validation-badge bad">✗ Remove Negative Words</span>';
+            }
+            
+            // Specificity check (has numbers)
+            if (/\d/.test(text)) {
+                score += 25;
+                badgeHTML += '<span class="validation-badge good">✓ Specific & Clear</span>';
+            } else {
+                badgeHTML += '<span class="validation-badge warning">⚠ Add Specific Numbers</span>';
+            }
+            
+            fill.style.width = score + '%';
+            badges.innerHTML = badgeHTML;
+        }
+
+        // Celebration Animation
+        function celebrate() {
+            const container = document.querySelector('.container');
+            container.classList.add('celebration');
+            
+            // Create confetti
+            const colors = ['#ffd700', '#00f5ff', '#ff00ff', '#ff6ec7', '#44ff88'];
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti-piece';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 3000);
+                }, i * 50);
+            }
+            
+            setTimeout(() => container.classList.remove('celebration'), 600);
+        }
+
+        // Back to Top Button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
         // Build Draft Intention
         function buildDraftIntention() {
             userData.desire = document.getElementById('specificDesire').value;
@@ -2415,6 +2691,7 @@
             document.getElementById('displayIntention').textContent = userData.intention;
             document.getElementById('activationCode').textContent = code;
 
+            celebrate(); // Celebration animation when code is generated
             nextStep(9);
         }
 
