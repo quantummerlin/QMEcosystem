@@ -421,7 +421,7 @@
 
     <div class="container">
         <nav class="breadcrumb">
-            <a href="../qrcodes-science.html">Science of Reality Codes</a>
+            <a href="index.html">Science of Reality Codes</a>
             <span>></span>
             <span class="current">Quantum Mysteries</span>
         </nav>
@@ -486,7 +486,7 @@
 
         <nav class="article-nav">
             <a href="circle-of-eight.html" class="nav-btn">← Previous: Circle of Eight</a>
-            <a href="../qrcodes-science.html" class="nav-btn hub">📚 Back to Science Hub</a>
+            <a href="index.html" class="nav-btn hub">📚 Back to Science Hub</a>
             <a href="biology-of-belief.html" class="nav-btn">Next: Biology of Belief →</a>
         </nav>
 
@@ -590,110 +590,7 @@
             if (!summary) return;
             
             const modal = document.createElement('div');
-             = summary.keyPoints.map(point => 
-                `<li style="margin: 8px 0; font-size: 0.95em; text-align: left;">${point}</li>`
-            ).join('');
-            
-            modal.innerHTML = `
-                <div style="
-                    background: linear-gradient(135deg, rgba(138, 43, 226, 0.95), rgba(45, 27, 78, 0.95));
-                    border: 2px solid var(--ancient-gold);
-                    border-radius: 25px;
-                    padding: 25px 20px; max-width: 550px; width: 100%; max-height: 90vh; overflow-y: auto;
-                    text-align: center;
-                    box-shadow: 0 0 40px rgba(218, 165, 32, 0.4);
-                ">
-                    <div style="font-size: 2.5em; margin-bottom: 15px;">✨</div>
-                    <h2 style="font-family: 'Cinzel', serif; color: var(--ancient-gold); font-size: 1.4em; margin-bottom: 12px; line-height: 1.3;">
-                        ${summary.title} - Explored!
-                    </h2>
-                    <p style="font-size: 1em; margin-bottom: 15px; color: var(--mystic-cyan);">
-                        📖 Progress: <strong>${totalRead} of 11</strong> teachings mastered
-                    </p>
-                    <div style="background: rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 15px; margin-bottom: 25px;">
-                        <h3 style="color: var(--rose-pink); margin-bottom: 15px; font-size: 1.1em;">Key Insights:</h3>
-                        <ul style="list-style: none; padding: 0;">
-                            ${pointsHTML}
-                        </ul>
-                    </div>
-                    <p style="font-size: 1em; color: var(--ancient-gold); font-style: italic; margin-bottom: 20px; line-height: 1.4;">
-                        💫 ${summary.highlight}
-                    </p>
-                    <button onclick="this.closest('div').parentElement.remove()" style="
-                        background: linear-gradient(135deg, var(--rose-pink), var(--quantum-gold));
-                        color: var(--deep-void);
-                        border: none;
-                        padding: 12px 35px;
-                        font-size: 1.1em;
-                        font-family: 'Cinzel', serif;
-                        border-radius: 25px;
-                        cursor: pointer;
-                        font-weight: 600;
-                        box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
-                    ">
-                        Continue Journey 🚀
-                    </button>
-                </div>
-            `;
-            
-            document.body.appendChild(modal);
-            modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
-        }
-
-        // Check if already read
-        document.addEventListener('DOMContentLoaded', function() {
-            const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
-            if (readSections.includes('quantum-mysteries')) {
-                const btn = document.getElementById('mark-read-btn');
-                btn.classList.add('is-read');
-                btn.innerHTML = '✓ Explored';
-                btn.style.background = 'linear-gradient(135deg, rgba(0, 255, 157, 0.3), rgba(0, 200, 100, 0.3))';
-                btn.style.cursor = 'default';
-                btn.onclick = null;
-            }
-        });
-    </script>
-
-    <script>
-        const articleSummaries = {
-            'quantum-mysteries': {
-                title: 'Quantum Observer Effect',
-                keyPoints: [
-                    '👁️ Observation collapses quantum waves into particles',
-                    '🔬 Double-slit experiments prove consciousness affects matter',
-                    '⚛️ Your attention literally shapes reality at quantum level',
-                    '🎯 Reality Codes focus your observation power'
-                ],
-                highlight: 'You are not just observing reality—you are creating it!'
-            }
-        };
-
-        function markAsRead(articleId) {
-            const readSections = JSON.parse(localStorage.getItem('qrcodes-read-sections') || '[]');
-            
-            if (!readSections.includes(articleId)) {
-                readSections.push(articleId);
-                localStorage.setItem('qrcodes-read-sections', JSON.stringify(readSections));
-                
-                // Show summary popup
-                showSummary(articleId, readSections.length);
-                
-                // Update button
-                const btn = document.getElementById('mark-read-btn');
-                btn.classList.add('is-read');
-                btn.innerHTML = '✓ Explored';
-                btn.style.background = 'linear-gradient(135deg, rgba(0, 255, 157, 0.3), rgba(0, 200, 100, 0.3))';
-                btn.style.cursor = 'default';
-                btn.onclick = null;
-            }
-        }
-
-        function showSummary(articleId, totalRead) {
-            const summary = articleSummaries[articleId];
-            if (!summary) return;
-            
-            const modal = document.createElement('div');
-             = summary.keyPoints.map(point => 
+            const pointsHTML = summary.keyPoints.map(point => 
                 `<li style="margin: 8px 0; font-size: 0.95em; text-align: left;">${point}</li>`
             ).join('');
             
