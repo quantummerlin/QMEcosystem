@@ -54,6 +54,8 @@
     
     <!-- Swiss Ephemeris for accurate astronomical calculations -->
     <script src="https://cdn.jsdelivr.net/npm/swisseph@2.10.3-2/dist/swisseph.min.js"></script>
+    <!-- SunCalc for additional moon/sun calculations -->
+    <script src="https://cdn.jsdelivr.net/npm/suncalc@1.9.0/suncalc.js"></script>
     
     <style>
         :root {
@@ -2049,6 +2051,91 @@
         .aspect-meaning {
             color: var(--text-secondary);
             line-height: 1.6;
+        }
+
+        /* Planetary Grid for Real Positions */
+        .planetary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .planet-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(218, 165, 32, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .planet-item:hover {
+            border-color: var(--quantum-gold);
+            transform: translateY(-2px);
+        }
+
+        .planet-item strong {
+            color: var(--quantum-gold);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .planet-item p {
+            font-size: 0.9em;
+            color: var(--rose-pink);
+            margin: 0;
+        }
+
+        /* Lucky Elements Grid */
+        .lucky-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .lucky-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        .lucky-label {
+            display: block;
+            font-size: 0.85em;
+            color: var(--rose-pink);
+            margin-bottom: 5px;
+        }
+
+        .lucky-value {
+            display: block;
+            font-weight: 600;
+            font-size: 1.1em;
+            color: var(--ethereal-white);
+        }
+
+        /* Moon Energy Description */
+        .moon-energy {
+            font-style: italic;
+            color: var(--rose-pink);
+            margin-bottom: 10px;
+        }
+
+        .zodiac-info {
+            color: var(--rose-pink);
+            margin-bottom: 10px;
+        }
+
+        /* Dynamic Affirmations */
+        .affirmations-container p {
+            font-style: italic;
+            margin: 10px 0;
+            padding-left: 20px;
+            border-left: 2px solid var(--quantum-gold);
+            color: var(--ethereal-white);
         }
 
         /* Best Day Banner */
@@ -6017,7 +6104,227 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
         }
 
         // ========================================
-        // PLANETARY ASPECTS (Simplified)
+        // REAL PLANETARY POSITIONS (Orbital Mechanics)
+        // ========================================
+        
+        function calculateRealPlanetaryPositions(date) {
+            const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+            const year = date.getFullYear();
+            
+            // J2000 epoch offsets (degrees at Jan 1, 2000)
+            const epochOffsets = {
+                mercury: 252.25,
+                venus: 181.98,
+                mars: 355.45,
+                jupiter: 34.40,
+                saturn: 50.07
+            };
+            
+            // Orbital periods in days
+            const orbitalPeriods = {
+                mercury: 87.969,
+                venus: 224.701,
+                mars: 686.980,
+                jupiter: 4332.59,
+                saturn: 10759.22
+            };
+            
+            // Calculate days since J2000 epoch
+            const j2000 = new Date(2000, 0, 1);
+            const daysSinceEpoch = (date - j2000) / (1000 * 60 * 60 * 24);
+            
+            function calculateDegree(planet) {
+                const offset = epochOffsets[planet];
+                const period = orbitalPeriods[planet];
+                return ((offset + (daysSinceEpoch / period) * 360) % 360 + 360) % 360;
+            }
+            
+            function degreeToZodiac(degree) {
+                const signs = [
+                    { name: 'Aries', symbol: '♈' }, { name: 'Taurus', symbol: '♉' },
+                    { name: 'Gemini', symbol: '♊' }, { name: 'Cancer', symbol: '♋' },
+                    { name: 'Leo', symbol: '♌' }, { name: 'Virgo', symbol: '♍' },
+                    { name: 'Libra', symbol: '♎' }, { name: 'Scorpio', symbol: '♏' },
+                    { name: 'Sagittarius', symbol: '♐' }, { name: 'Capricorn', symbol: '♑' },
+                    { name: 'Aquarius', symbol: '♒' }, { name: 'Pisces', symbol: '♓' }
+                ];
+                const signIndex = Math.floor(degree / 30);
+                const degreeInSign = Math.floor(degree % 30);
+                return { ...signs[signIndex], degree: degreeInSign };
+            }
+            
+            const mercuryDeg = calculateDegree('mercury');
+            const venusDeg = calculateDegree('venus');
+            const marsDeg = calculateDegree('mars');
+            const jupiterDeg = calculateDegree('jupiter');
+            const saturnDeg = calculateDegree('saturn');
+            
+            return {
+                mercury: { ...degreeToZodiac(mercuryDeg), rawDegree: mercuryDeg, influence: 'Communication, thinking, short travel' },
+                venus: { ...degreeToZodiac(venusDeg), rawDegree: venusDeg, influence: 'Love, beauty, relationships, values' },
+                mars: { ...degreeToZodiac(marsDeg), rawDegree: marsDeg, influence: 'Action, energy, passion, drive' },
+                jupiter: { ...degreeToZodiac(jupiterDeg), rawDegree: jupiterDeg, influence: 'Expansion, luck, growth, wisdom' },
+                saturn: { ...degreeToZodiac(saturnDeg), rawDegree: saturnDeg, influence: 'Structure, discipline, karmic lessons' }
+            };
+        }
+
+        // ========================================
+        // DYNAMIC CONTENT POOLS (Moon Phase Based)
+        // ========================================
+        
+        const energyByMoonPhase = {
+            'New Moon': [
+                'Today marks a powerful new beginning. The universe is clearing space for your fresh intentions.',
+                'A blank canvas awaits. This is your moment to plant seeds for the cycle ahead.',
+                'The darkness before dawn holds infinite potential. Set your intentions with clarity.'
+            ],
+            'Waxing Crescent': [
+                'Momentum is building. Your intentions are taking root beneath the surface.',
+                'Small actions today create powerful ripples. Trust the process of growth.',
+                'The universe is responding to your recent intentions. Keep moving forward.'
+            ],
+            'First Quarter': [
+                'Decision time. The universe is asking you to commit fully to your path.',
+                'Obstacles are opportunities in disguise. Your determination is being tested.',
+                'Half-way to manifestation. Double down on what\'s working, release what isn\'t.'
+            ],
+            'Waxing Gibbous': [
+                'Refinement is key. Polish your plans and adjust your approach.',
+                'Almost there. Patience and fine-tuning will bring your vision into reality.',
+                'The universe is preparing you for the culmination ahead. Stay focused.'
+            ],
+            'Full Moon': [
+                'Peak illumination! Everything hidden is now revealed. Celebrate your progress.',
+                'The universe is showing you the full picture. Release what no longer serves.',
+                'Maximum power and clarity. This is your moment of truth and transformation.'
+            ],
+            'Waning Gibbous': [
+                'Share your wisdom. What you\'ve learned is meant to be passed on.',
+                'Gratitude opens doors. Acknowledge how far you\'ve come.',
+                'The harvest is in. Now is the time to distribute your abundance.'
+            ],
+            'Last Quarter': [
+                'Release and let go. The universe is making space for your next chapter.',
+                'Forgiveness frees you. Release old patterns and outdated beliefs.',
+                'Rest is productive. Allow yourself to decompress and integrate.'
+            ],
+            'Waning Crescent': [
+                'Surrender to the void. Trust that endings make space for new beginnings.',
+                'Deep reflection reveals hidden truths. Listen to your inner wisdom.',
+                'The cycle is completing. Prepare your heart for the renewal ahead.'
+            ]
+        };
+
+        const guidanceByElement = {
+            'Fire': [
+                'Your passion is your power today. Take bold action on what excites you.',
+                'Leadership opportunities arise. Step into your natural confidence.',
+                'Creative fire burns bright. Channel your energy into inspired projects.'
+            ],
+            'Earth': [
+                'Practical magic is in the details. Ground your visions in tangible steps.',
+                'Your body is your temple. Honor it with nourishing choices today.',
+                'Stability creates freedom. Build strong foundations for future growth.'
+            ],
+            'Air': [
+                'Communication is your superpower. Share your ideas with clarity.',
+                'Mental clarity comes through movement. Take a walk to clear your mind.',
+                'Connections matter. Reach out to someone who inspires you.'
+            ],
+            'Water': [
+                'Your intuition is heightened. Trust your emotional guidance system.',
+                'Emotional honesty creates healing. Express what you truly feel.',
+                'Flow with change rather than resist it. Adaptability is your strength.'
+            ]
+        };
+
+        const magicByDayOfWeek = {
+            0: [ // Sunday - Sun Day
+                'Sun Ritual: Spend 10 minutes in sunlight (or visualize it). Absorb vitality and confidence.',
+                'Gold Magic: Wear or carry something gold today to amplify your personal power.',
+                'Success Spell: Write your biggest goal on yellow paper and place it where you\'ll see it.'
+            ],
+            1: [ // Monday - Moon Day
+                'Moon Water: Place water under moonlight (or intention) to charge for emotional healing.',
+                'Silver Magic: Wear silver to enhance intuition and emotional clarity.',
+                'Dream Work: Set an intention before sleep to receive guidance through dreams.'
+            ],
+            2: [ // Tuesday - Mars Day
+                'Action Ritual: Do 10 jumping jacks to activate Mars energy and courage.',
+                'Red Magic: Wear red to boost confidence and take decisive action.',
+                'Courage Spell: Light a red candle and speak your boldest intention aloud.'
+            ],
+            3: [ // Wednesday - Mercury Day
+                'Communication Ritual: Write a letter (even if you don\'t send it) to clarify your thoughts.',
+                'Yellow Magic: Wear yellow to enhance mental clarity and communication.',
+                'Learning Spell: Read something new for 15 minutes to activate Mercury\'s wisdom.'
+            ],
+            4: [ // Thursday - Jupiter Day
+                'Abundance Ritual: List 10 things you\'re grateful for to open channels of prosperity.',
+                'Purple Magic: Wear purple to attract expansion and good fortune.',
+                'Growth Spell: Plant a seed (literal or metaphorical) for future abundance.'
+            ],
+            5: [ // Friday - Venus Day
+                'Love Ritual: Do something beautiful for yourself - you deserve it.',
+                'Pink/Green Magic: Wear these colors to attract love and harmony.',
+                'Beauty Spell: Arrange flowers or create something aesthetically pleasing.'
+            ],
+            6: [ // Saturday - Saturn Day
+                'Structure Ritual: Organize one area of your space to create mental clarity.',
+                'Black Magic: Wear black to ground yourself and set healthy boundaries.',
+                'Discipline Spell: Complete one task you\'ve been avoiding to honor Saturn\'s lessons.'
+            ]
+        };
+
+        const luckyElementsBySign = {
+            'Aries': { color: 'Red', number: 9, crystal: 'Carnelian', herb: 'Ginger' },
+            'Taurus': { color: 'Green', number: 6, crystal: 'Rose Quartz', herb: 'Thyme' },
+            'Gemini': { color: 'Yellow', number: 5, crystal: 'Citrine', herb: 'Lavender' },
+            'Cancer': { color: 'Silver', number: 2, crystal: 'Moonstone', herb: 'Chamomile' },
+            'Leo': { color: 'Gold', number: 1, crystal: 'Tiger\'s Eye', herb: 'Sunflower' },
+            'Virgo': { color: 'Navy', number: 5, crystal: 'Amazonite', herb: 'Dill' },
+            'Libra': { color: 'Pink', number: 6, crystal: 'Jade', herb: 'Rose' },
+            'Scorpio': { color: 'Burgundy', number: 8, crystal: 'Obsidian', herb: 'Basil' },
+            'Sagittarius': { color: 'Purple', number: 3, crystal: 'Turquoise', herb: 'Sage' },
+            'Capricorn': { color: 'Brown', number: 8, crystal: 'Garnet', herb: 'Rosemary' },
+            'Aquarius': { color: 'Electric Blue', number: 4, crystal: 'Amethyst', herb: 'Mint' },
+            'Pisces': { color: 'Sea Green', number: 7, crystal: 'Aquamarine', herb: 'Jasmine' }
+        };
+
+        // Helper function to get dynamic content based on date
+        // Helper function to get element from zodiac sign
+        function getElementFromSign(signName) {
+            const fireSignals = ['Aries', 'Leo', 'Sagittarius'];
+            const earthSigns = ['Taurus', 'Virgo', 'Capricorn'];
+            const airSigns = ['Gemini', 'Libra', 'Aquarius'];
+            const waterSigns = ['Cancer', 'Scorpio', 'Pisces'];
+            
+            if (fireSignals.includes(signName)) return 'Fire';
+            if (earthSigns.includes(signName)) return 'Earth';
+            if (airSigns.includes(signName)) return 'Air';
+            if (waterSigns.includes(signName)) return 'Water';
+            return 'Fire';
+        }
+
+        function getDynamicContent(moonPhase, zodiacElement, dayOfWeek, zodiacName) {
+            const today = new Date();
+            const dayOfMonth = today.getDate();
+            
+            const energyMessages = energyByMoonPhase[moonPhase] || energyByMoonPhase['New Moon'];
+            const guidanceMessages = guidanceByElement[zodiacElement] || guidanceByElement['Fire'];
+            const magicMessages = magicByDayOfWeek[dayOfWeek] || magicByDayOfWeek[0];
+            const luckyElements = luckyElementsBySign[zodiacName] || luckyElementsBySign['Aries'];
+            
+            return {
+                energy: energyMessages[dayOfMonth % energyMessages.length],
+                guidance: guidanceMessages[Math.floor(dayOfMonth / 10) % guidanceMessages.length],
+                magic: magicMessages[Math.floor(dayOfMonth / 7) % magicMessages.length],
+                lucky: luckyElements
+            };
+        }
+
+        // ========================================
+        // PLANETARY ASPECTS (Real Orbital Calculations)
         // ========================================
         
         function getPlanetaryAspects(birthDate) {
@@ -6025,42 +6332,93 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
             const dateParts = birthDate.split('-');
             const birth = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
             const today = new Date();
-            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
             
-            // Simplified aspect calculation based on day of year
+            // Get real planetary positions
+            const planets = calculateRealPlanetaryPositions(today);
             const aspects = [];
             
-            // Sun aspects (changes daily)
-            if (dayOfYear % 30 < 10) {
-                aspects.push({ 
-                    type: 'Conjunction', 
-                    planets: 'Sun ☉ conjunct Mercury ☿', 
-                    meaning: 'Clear communication, mental clarity, important messages',
-                    symbol: '☌'
-                });
-            } else if (dayOfYear % 30 < 20) {
-                aspects.push({ 
-                    type: 'Trine', 
-                    planets: 'Sun ☉ trine Jupiter ♃', 
-                    meaning: 'Opportunity, expansion, good fortune, optimism',
-                    symbol: '△'
-                });
-            } else {
-                aspects.push({ 
-                    type: 'Square', 
-                    planets: 'Sun ☉ square Saturn ♄', 
-                    meaning: 'Challenges requiring discipline, patience, and hard work',
-                    symbol: '□'
+            // Calculate real aspects based on angular distances between planets
+            function getAspect(degree1, degree2) {
+                let diff = Math.abs(degree1 - degree2);
+                if (diff > 180) diff = 360 - diff;
+                
+                // Orb tolerance of 8 degrees for major aspects
+                if (diff <= 8) return { type: 'Conjunction', symbol: '☌', meaning: 'fusion of energies, new beginnings' };
+                if (Math.abs(diff - 60) <= 6) return { type: 'Sextile', symbol: '⚹', meaning: 'opportunities, easy flow' };
+                if (Math.abs(diff - 90) <= 8) return { type: 'Square', symbol: '□', meaning: 'tension, challenge, growth' };
+                if (Math.abs(diff - 120) <= 8) return { type: 'Trine', symbol: '△', meaning: 'harmony, ease, blessing' };
+                if (Math.abs(diff - 180) <= 8) return { type: 'Opposition', symbol: '☍', meaning: 'awareness, balance needed' };
+                return null;
+            }
+            
+            // Check Mercury-Venus aspect
+            const mercVenus = getAspect(planets.mercury.rawDegree, planets.venus.rawDegree);
+            if (mercVenus) {
+                aspects.push({
+                    type: mercVenus.type,
+                    planets: `Mercury ☿ ${mercVenus.type.toLowerCase()} Venus ♀`,
+                    meaning: `${mercVenus.meaning} - Love communications, artistic expression, pleasant exchanges`,
+                    symbol: mercVenus.symbol
                 });
             }
             
-            // Venus aspects (changes every 3 days)
-            if (Math.floor(dayOfYear / 3) % 2 === 0) {
-                aspects.push({ 
-                    type: 'Sextile', 
-                    planets: 'Venus ♀ sextile Mars ♂', 
-                    meaning: 'Attraction, passion, creative energy, social connections',
-                    symbol: '⚹'
+            // Check Mars-Jupiter aspect
+            const marsJup = getAspect(planets.mars.rawDegree, planets.jupiter.rawDegree);
+            if (marsJup) {
+                aspects.push({
+                    type: marsJup.type,
+                    planets: `Mars ♂ ${marsJup.type.toLowerCase()} Jupiter ♃`,
+                    meaning: `${marsJup.meaning} - Bold action, confident expansion, successful initiatives`,
+                    symbol: marsJup.symbol
+                });
+            }
+            
+            // Check Venus-Saturn aspect
+            const venSat = getAspect(planets.venus.rawDegree, planets.saturn.rawDegree);
+            if (venSat) {
+                aspects.push({
+                    type: venSat.type,
+                    planets: `Venus ♀ ${venSat.type.toLowerCase()} Saturn ♄`,
+                    meaning: `${venSat.meaning} - Serious commitments, lasting love, karmic relationships`,
+                    symbol: venSat.symbol
+                });
+            }
+            
+            // Check Mercury-Mars aspect
+            const mercMars = getAspect(planets.mercury.rawDegree, planets.mars.rawDegree);
+            if (mercMars) {
+                aspects.push({
+                    type: mercMars.type,
+                    planets: `Mercury ☿ ${mercMars.type.toLowerCase()} Mars ♂`,
+                    meaning: `${mercMars.meaning} - Sharp thinking, decisive words, mental energy`,
+                    symbol: mercMars.symbol
+                });
+            }
+            
+            // Check Jupiter-Saturn aspect (slower, major influence)
+            const jupSat = getAspect(planets.jupiter.rawDegree, planets.saturn.rawDegree);
+            if (jupSat) {
+                aspects.push({
+                    type: jupSat.type,
+                    planets: `Jupiter ♃ ${jupSat.type.toLowerCase()} Saturn ♄`,
+                    meaning: `${jupSat.meaning} - Major societal shifts, balancing growth with structure`,
+                    symbol: jupSat.symbol
+                });
+            }
+            
+            // If no aspects found, add current planetary influences based on signs
+            if (aspects.length === 0) {
+                aspects.push({
+                    type: 'Transit',
+                    planets: `Mercury ☿ in ${planets.mercury.name} ${planets.mercury.symbol}`,
+                    meaning: `Communication style influenced by ${planets.mercury.name} energy today`,
+                    symbol: '→'
+                });
+                aspects.push({
+                    type: 'Transit',
+                    planets: `Venus ♀ in ${planets.venus.name} ${planets.venus.symbol}`,
+                    meaning: `Love and values colored by ${planets.venus.name} themes`,
+                    symbol: '→'
                 });
             }
             
@@ -7286,6 +7644,38 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                             </div>
                         </div>
 
+                        <div class="planets-section" style="margin-top: 25px;">
+                            <h4>🪐 REAL PLANETARY POSITIONS - Current Zodiac Transits</h4>
+                            <p style="color: var(--rose-pink); font-style: italic; margin-bottom: 15px;">Calculated from actual orbital mechanics</p>
+                            ${(() => {
+                                const planets = calculateRealPlanetaryPositions(new Date());
+                                return `
+                                <div class="planetary-grid">
+                                    <div class="planet-item">
+                                        <strong>☿ Mercury in ${planets.mercury.name} ${planets.mercury.symbol}</strong>
+                                        <p>${planets.mercury.degree}° - ${planets.mercury.influence}</p>
+                                    </div>
+                                    <div class="planet-item">
+                                        <strong>♀ Venus in ${planets.venus.name} ${planets.venus.symbol}</strong>
+                                        <p>${planets.venus.degree}° - ${planets.venus.influence}</p>
+                                    </div>
+                                    <div class="planet-item">
+                                        <strong>♂ Mars in ${planets.mars.name} ${planets.mars.symbol}</strong>
+                                        <p>${planets.mars.degree}° - ${planets.mars.influence}</p>
+                                    </div>
+                                    <div class="planet-item">
+                                        <strong>♃ Jupiter in ${planets.jupiter.name} ${planets.jupiter.symbol}</strong>
+                                        <p>${planets.jupiter.degree}° - ${planets.jupiter.influence}</p>
+                                    </div>
+                                    <div class="planet-item">
+                                        <strong>♄ Saturn in ${planets.saturn.name} ${planets.saturn.symbol}</strong>
+                                        <p>${planets.saturn.degree}° - ${planets.saturn.influence}</p>
+                                    </div>
+                                </div>
+                                `;
+                            })()}
+                        </div>
+
                         ${planetaryAspects.length > 0 ? `
                         <div class="aspects-section" style="margin-top: 25px;">
                             <h4>🌌 PLANETARY ASPECTS - Today's Celestial Geometry</h4>
@@ -7504,6 +7894,59 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                         </div>
                     </div>
                 </div>
+
+                ${(() => {
+                    const dynamicContent = getDynamicContent(moonPhase.phase, getElementFromSign(zodiac.name), new Date().getDay(), zodiac.name);
+                    return `
+                <div class="system-section">
+                    <div class="system-header" onclick="toggleSystem(this)">
+                        <h3>✨ PRACTICAL MAGIC FOR TODAY</h3>
+                        <span class="system-toggle">▼</span>
+                    </div>
+                    <div class="system-content">
+                        <div style="background: rgba(138, 43, 226, 0.15); border-left: 4px solid var(--rose-pink); padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                            <h4 style="color: var(--quantum-gold); margin-bottom: 10px;">🌙 ${moonPhase.phase} Energy Message</h4>
+                            <p style="line-height: 1.8; font-style: italic;">${dynamicContent.energy}</p>
+                        </div>
+                        <div style="background: rgba(218, 165, 32, 0.15); border-left: 4px solid var(--quantum-gold); padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                            <h4 style="color: var(--rose-pink); margin-bottom: 10px;">🔥 Element Guidance (${getElementFromSign(zodiac.name)})</h4>
+                            <p style="line-height: 1.8;">${dynamicContent.guidance}</p>
+                        </div>
+                        <div style="background: rgba(0, 245, 255, 0.15); border-left: 4px solid var(--mystic-cyan); padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                            <h4 style="color: var(--mystic-cyan); margin-bottom: 10px;">🪄 Today's Ritual Practice</h4>
+                            <p style="line-height: 1.8;">${dynamicContent.magic}</p>
+                        </div>
+                        <div style="background: rgba(255, 215, 0, 0.1); border-radius: 12px; padding: 20px;">
+                            <h4 style="color: var(--quantum-gold); margin-bottom: 15px;">🍀 Your Lucky Elements (${zodiac.name})</h4>
+                            <div class="lucky-grid">
+                                <div class="lucky-item">
+                                    <span class="lucky-label">Color</span>
+                                    <span class="lucky-value">${dynamicContent.lucky.color}</span>
+                                </div>
+                                <div class="lucky-item">
+                                    <span class="lucky-label">Number</span>
+                                    <span class="lucky-value">${dynamicContent.lucky.number}</span>
+                                </div>
+                                <div class="lucky-item">
+                                    <span class="lucky-label">Crystal</span>
+                                    <span class="lucky-value">${dynamicContent.lucky.crystal}</span>
+                                </div>
+                                <div class="lucky-item">
+                                    <span class="lucky-label">Herb</span>
+                                    <span class="lucky-value">${dynamicContent.lucky.herb}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="affirmations-container" style="margin-top: 20px; padding: 20px; background: rgba(157, 0, 255, 0.1); border-radius: 12px;">
+                            <h4 style="color: var(--rose-pink); margin-bottom: 15px;">💫 Daily Affirmations</h4>
+                            <p>"I am aligned with the cosmic flow of ${moonPhase.phase} energy."</p>
+                            <p>"I embody the ${getElementFromSign(zodiac.name)} element with grace and power."</p>
+                            <p>"Today, I manifest through the vibration of Life Path ${lifePath}."</p>
+                        </div>
+                    </div>
+                </div>
+                `;
+                })()}
 
                 <div class="system-section">
                     <div class="system-header" onclick="toggleSystem(this)">
