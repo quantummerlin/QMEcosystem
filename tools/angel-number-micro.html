@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Number Quick Calculator | Quantum Merlin</title>
+    <meta name="description" content="Quick angel number calculator widget. Discover divine messages instantly.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --qm-cyan: #00f5ff;
+            --qm-purple: #9d00ff;
+            --qm-gold: #ffd700;
+            --qm-dark: #0a0a0f;
+        }
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle background effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(157, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 245, 255, 0.1) 0%, transparent 50%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .widget-container {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(20, 20, 35, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 35px 30px;
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 10;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .widget-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .widget-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--qm-cyan), var(--qm-purple), var(--qm-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .quick-numbers {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .quick-number {
+            padding: 12px 8px;
+            background: rgba(157, 0, 255, 0.15);
+            border: 1px solid rgba(157, 0, 255, 0.4);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            text-align: center;
+            color: #fff;
+        }
+
+        .quick-number:hover {
+            background: rgba(157, 0, 255, 0.3);
+            border-color: var(--qm-purple);
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(157, 0, 255, 0.5);
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        input[type="number"] {
+            flex: 1;
+            padding: 14px 18px;
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            font-size: 1rem;
+            font-family: 'Exo 2', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--qm-cyan);
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+        }
+
+        .calc-btn {
+            padding: 14px 30px;
+            background: linear-gradient(135deg, var(--qm-purple), #ff0066);
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .calc-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(157, 0, 255, 0.5);
+        }
+
+        .result-box {
+            display: none;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 245, 255, 0.1));
+            border: 2px solid var(--qm-gold);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            animation: slideIn 0.4s ease-out;
+        }
+
+        .result-box.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient(135deg, var(--qm-cyan), var(--qm-purple), var(--qm-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .result-meaning {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .result-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .action-btn.primary {
+            background: linear-gradient(135deg, var(--qm-gold), #ffa500);
+            color: #000;
+            border: none;
+        }
+
+        .action-btn.secondary {
+            background: transparent;
+            border: 1px solid var(--qm-cyan);
+            color: var(--qm-cyan);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .widget-footer {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-link {
+            color: var(--qm-cyan);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--qm-gold);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 480px) {
+            .widget-container {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .quick-numbers {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+
+            .quick-number {
+                padding: 10px 6px;
+                font-size: 0.9rem;
+            }
+
+            .result-number {
+                font-size: 2.5rem;
+            }
+
+            .input-group {
+                flex-direction: column;
+            }
+
+            .calc-btn {
+                width: 100%;
+            }
+
+            .result-actions {
+                flex-direction: column;
+            }
+
+            .action-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="widget-container">
+        <div class="widget-header">
+            <div class="widget-icon">👼</div>
+            <h1>Angel Number Calculator</h1>
+            <p class="subtitle">Discover divine messages instantly</p>
+        </div>
+
+        <div class="quick-numbers">
+            <div class="quick-number" onclick="calculate('111')">111</div>
+            <div class="quick-number" onclick="calculate('222')">222</div>
+            <div class="quick-number" onclick="calculate('333')">333</div>
+            <div class="quick-number" onclick="calculate('444')">444</div>
+            <div class="quick-number" onclick="calculate('555')">555</div>
+            <div class="quick-number" onclick="calculate('777')">777</div>
+            <div class="quick-number" onclick="calculate('888')">888</div>
+            <div class="quick-number" onclick="calculate('999')">999</div>
+            <div class="quick-number" onclick="calculate('1111')">1111</div>
+            <div class="quick-number" onclick="calculate('1234')">1234</div>
+        </div>
+
+        <div class="input-group">
+            <input type="number" id="numberInput" placeholder="Or enter any number..." min="0" max="99999">
+            <button class="calc-btn" onclick="calculateFromInput()">✨ Reveal</button>
+        </div>
+
+        <div class="result-box" id="resultBox">
+            <div class="result-number" id="resultNumber"></div>
+            <div class="result-meaning" id="resultMeaning"></div>
+            <div class="result-actions">
+                <a href="/angel-number-calculator.html" class="action-btn primary" id="fullReadingLink" target="_blank">
+                    📖 Full Reading
+                </a>
+                <button class="action-btn secondary" onclick="share()">🔗 Share</button>
+            </div>
+        </div>
+
+        <div class="widget-footer">
+            <a href="https://quantummerlin.com" class="footer-link" target="_blank">
+                🧙‍♂️ Powered by Quantum Merlin
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Condensed angel number meanings for micro widget
+        const meanings = {
+            111: "Manifestation portal. Your thoughts are creating reality rapidly. Focus on what you want!",
+            222: "Divine timing. Trust the process. Everything is unfolding perfectly for you.",
+            333: "Ascended masters are near. You're surrounded by divine guidance and support.",
+            444: "Angels surround you. You're completely protected and on the right path.",
+            555: "Major change is coming. Embrace transformation - it's divinely guided.",
+            666: "Balance spiritual and material. Refocus on what truly matters in life.",
+            777: "Profound blessings! Miracles and synchronicities are flowing into your life.",
+            888: "Infinite abundance. Prosperity is flowing to you in all areas of life.",
+            999: "Completion. A major chapter is ending. Your purpose involves serving humanity.",
+            1111: "Ultimate manifestation gateway. The universe is listening to your every thought!",
+            11: "Master intuition number. Trust your psychic abilities and spiritual insight.",
+            22: "Master builder. Your dreams can manifest into physical reality. Take action!",
+            33: "Master teacher. Share your wisdom and heal others with unconditional love.",
+            1010: "New beginnings with divine support. Angels guide your fresh start.",
+            1212: "Spiritual growth and awakening. You're ascending to higher consciousness.",
+            1234: "Step-by-step progress. You're on the right path. Keep moving forward!",
+            1: "New beginnings and leadership. The universe supports your fresh start.",
+            2: "Partnership and balance. Divine timing is at work in your life.",
+            3: "Creativity and expression. Share your unique gifts with the world.",
+            4: "Stability and foundation. Build your dreams on solid ground.",
+            5: "Change and freedom. Major life transformations are coming.",
+            6: "Love and harmony. Nurture your relationships and serve others.",
+            7: "Spiritual awakening. Divine knowledge is flowing to you now.",
+            8: "Abundance and success. Prosperity is your birthright - claim it!",
+            9: "Completion and wisdom. Share your knowledge to serve humanity."
+        };
+
+        function calculate(number) {
+            const resultBox = document.getElementById('resultBox');
+            const resultNumber = document.getElementById('resultNumber');
+            const resultMeaning = document.getElementById('resultMeaning');
+            const fullReadingLink = document.getElementById('fullReadingLink');
+            
+            let meaning = meanings[number];
+            
+            if (!meaning) {
+                // Calculate digital root for unknown numbers
+                const root = getDigitalRoot(number);
+                meaning = meanings[root] || "This number carries divine significance. Every number is a message from the universe!";
+            }
+            
+            resultNumber.textContent = number;
+            resultMeaning.textContent = meaning;
+            fullReadingLink.href = `/angel-number-calculator.html?number=${number}`;
+            resultBox.classList.add('active');
+            
+            // Track event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'micro_calculator_use', {
+                    'angel_number': number.toString(),
+                    'event_category': 'engagement'
+                });
+            }
+        }
+
+        function calculateFromInput() {
+            const input = document.getElementById('numberInput');
+            const number = input.value.trim();
+            
+            if (!number || number < 0) {
+                alert('⚠️ Please enter a valid number');
+                return;
+            }
+            
+            calculate(number);
+        }
+
+        function getDigitalRoot(num) {
+            let sum = parseInt(num);
+            while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
+                sum = sum.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+            }
+            return sum;
+        }
+
+        function share() {
+            const number = document.getElementById('resultNumber').textContent;
+            const meaning = document.getElementById('resultMeaning').textContent;
+            const url = `https://quantummerlin.com/angel-number-calculator.html?number=${number}`;
+            const text = `✨ My Angel Number is ${number}!\n\n${meaning}\n\nDiscover yours: ${url}`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: `Angel Number ${number}`,
+                    text: text,
+                    url: url
+                }).catch(() => {
+                    copyToClipboard(text);
+                });
+            } else {
+                copyToClipboard(text);
+            }
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('📋 Share text copied! Paste anywhere.');
+            }).catch(() => {
+                alert('⚠️ Could not copy text');
+            });
+        }
+
+        // Handle Enter key
+        document.getElementById('numberInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calculateFromInput();
+            }
+        });
+
+        // Auto-calculate if number in URL
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const number = urlParams.get('number');
+            if (number) {
+                calculate(number);
+            }
+        };
+    </script>
+</body>
+</html>

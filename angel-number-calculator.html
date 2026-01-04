@@ -1136,6 +1136,64 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
 
+        /* Ecosystem Tools Section */
+        .ecosystem-tools-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.08), rgba(157, 0, 255, 0.08));
+            border-radius: 20px;
+            border: 1px solid rgba(0, 245, 255, 0.2);
+        }
+
+        .ecosystem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .ecosystem-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            border-radius: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .ecosystem-card:hover {
+            background: rgba(0, 245, 255, 0.1);
+            border-color: var(--qm-cyan);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+        }
+
+        .ecosystem-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.5));
+        }
+
+        .ecosystem-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--qm-cyan);
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .ecosystem-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            line-height: 1.4;
+        }
+
         /* Frequency Card */
         .frequency-card {
             margin-top: 25px;
@@ -1351,6 +1409,15 @@
             .frequency-btn {
                 width: 100%;
                 min-height: 48px;
+            }
+
+            /* Ecosystem tools mobile */
+            .ecosystem-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ecosystem-card {
+                min-height: auto;
             }
 
             /* Action buttons mobile */
@@ -1654,6 +1721,34 @@
                         <span class="share-icon">📋</span>
                         <span class="share-label">Copy Text</span>
                     </button>
+                </div>
+            </div>
+
+            <!-- Ecosystem Tools Connection -->
+            <div class="ecosystem-tools-section">
+                <h3 class="share-title">🧙‍♂️ Deepen Your Journey with Quantum Merlin</h3>
+                <p class="share-subtitle">Explore complementary tools to amplify your spiritual insights</p>
+                <div class="ecosystem-grid">
+                    <a href="/soulcard.html" class="ecosystem-card">
+                        <div class="ecosystem-icon">🎴</div>
+                        <div class="ecosystem-title">Tarot Reading</div>
+                        <div class="ecosystem-desc">Get deeper insight into your current situation</div>
+                    </a>
+                    <a href="/birth-sigil.html" class="ecosystem-card">
+                        <div class="ecosystem-icon">🔯</div>
+                        <div class="ecosystem-title">Birth Sigil</div>
+                        <div class="ecosystem-desc">Create your personal power symbol</div>
+                    </a>
+                    <a href="/genesis" class="ecosystem-card">
+                        <div class="ecosystem-icon">🎵</div>
+                        <div class="ecosystem-title">Frequency Generator</div>
+                        <div class="ecosystem-desc">674 healing frequencies aligned to your number</div>
+                    </a>
+                    <a href="/quantum-merlin-hub/codes.html" class="ecosystem-card">
+                        <div class="ecosystem-icon">✨</div>
+                        <div class="ecosystem-title">Reality Codes</div>
+                        <div class="ecosystem-desc">Manifest with quantum reality codes</div>
+                    </a>
                 </div>
             </div>
 
