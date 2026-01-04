@@ -2968,7 +2968,7 @@
         }
 
         .email-capture h3 {
-            font-family: 'Orbitron', monospace;
+            font-family: 'Cinzel Decorative', serif;
             color: var(--neon-gold);
             margin-bottom: 10px;
             font-size: 1.4rem;
@@ -4095,8 +4095,8 @@
             <!-- Tier 1: Required -->
             <div class="input-group">
                 <label for="birthDate">Birth Date *</label>
-                <input type="date" id="birthDate" required>
-                <p class="help-text">Required - determines your sun sign, life path, and Chinese zodiac</p>
+                <input type="text" id="birthDate" placeholder="YYYY-MM-DD (e.g., 1990-05-15)" pattern="\d{4}-\d{2}-\d{2}" required>
+                <p class="help-text">Required - determines your sun sign, life path, and Chinese zodiac. Format: YYYY-MM-DD</p>
             </div>
 
             <!-- Tier 2: Enhanced Accuracy -->
@@ -4240,7 +4240,7 @@
 
         <!-- Explore More Tools -->
         <div class="explore-tools" style="padding: 40px 20px;">
-            <h3 style="font-family: 'Orbitron', monospace; font-size: 1.4rem; color: #a855f7; text-align: center; margin-bottom: 25px;">✨ Continue Your Journey</h3>
+            <h3 style="font-family: 'Cinzel Decorative', serif; font-size: 1.4rem; color: #a855f7; text-align: center; margin-bottom: 25px;">✨ Continue Your Journey</h3>
             <p style="text-align: center; color: #ccc; margin-bottom: 30px;">Your forecast reveals the cosmic currents. Explore these tools to deepen your understanding:</p>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 900px; margin: 0 auto;">
                 <a href="/birth-sigil.html" style="display: block; padding: 20px; background: rgba(147, 51, 234, 0.15); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
@@ -5758,6 +5758,47 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                     e.preventDefault();
                     toggleAdvanced();
                 }, { passive: false });
+            }
+            
+            // Birth date validation and formatting help
+            const birthDateInput = document.getElementById('birthDate');
+            if (birthDateInput) {
+                birthDateInput.addEventListener('input', function(e) {
+                    const value = e.target.value;
+                    const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+                    
+                    // Remove any existing error styling
+                    e.target.classList.remove('input-error');
+                    let helpText = e.target.nextElementSibling;
+                    if (helpText && helpText.classList.contains('error-message')) {
+                        helpText.remove();
+                    }
+                    
+                    // Only validate if there's a value and it doesn't match
+                    if (value && !datePattern.test(value)) {
+                        e.target.classList.add('input-error');
+                        helpText = e.target.parentElement.querySelector('.help-text');
+                        if (helpText && !helpText.classList.contains('error-message')) {
+                            const errorMsg = document.createElement('p');
+                            errorMsg.className = 'error-message';
+                            errorMsg.textContent = 'Please use format YYYY-MM-DD (e.g., 1990-05-15)';
+                            helpText.parentElement.insertBefore(errorMsg, helpText.nextSibling);
+                        }
+                    } else if (value && datePattern.test(value)) {
+                        // Validate it's a real date
+                        const testDate = new Date(value);
+                        if (isNaN(testDate.getTime())) {
+                            e.target.classList.add('input-error');
+                            helpText = e.target.parentElement.querySelector('.help-text');
+                            if (helpText && !helpText.classList.contains('error-message')) {
+                                const errorMsg = document.createElement('p');
+                                errorMsg.className = 'error-message';
+                                errorMsg.textContent = 'Please enter a valid date';
+                                helpText.parentElement.insertBefore(errorMsg, helpText.nextSibling);
+                            }
+                        }
+                    }
+                });
             }
         });
 
