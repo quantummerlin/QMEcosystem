@@ -206,7 +206,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 100px 20px 40px;
+            padding: 140px 20px 40px;
             position: relative;
             z-index: 10;
         }
@@ -319,6 +319,7 @@
             border: 1px solid rgba(0, 245, 255, 0.2);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             animation: slideUp 1s ease-out 0.3s both;
+            text-align: center;
         }
 
         @keyframes slideUp {
@@ -346,6 +347,7 @@
             margin-bottom: 30px;
             border-bottom: 2px solid rgba(0, 245, 255, 0.2);
             padding-bottom: 10px;
+            justify-content: center;
         }
 
         .tab {
@@ -385,6 +387,7 @@
             gap: 15px;
             margin-bottom: 20px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         input[type="number"],
@@ -532,6 +535,7 @@
             box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2);
             display: none;
             animation: fadeIn 0.5s ease-out;
+            text-align: center;
         }
 
         .result-section.active {
@@ -561,6 +565,7 @@
             background: rgba(255, 255, 255, 0.03);
             border-radius: 15px;
             border-left: 4px solid var(--qm-cyan);
+            text-align: center;
         }
 
         .meaning-title {
@@ -570,13 +575,18 @@
             color: var(--ancient-gold);
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
+            flex-wrap: wrap;
         }
 
         .meaning-text {
             line-height: 1.8;
             color: rgba(255, 255, 255, 0.85);
             font-size: 1.05rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .actions-bar {
@@ -625,6 +635,7 @@
             padding: 40px;
             margin-bottom: 30px;
             border: 1px solid rgba(157, 0, 255, 0.2);
+            text-align: center;
         }
 
         .education-section h2 {
@@ -1281,7 +1292,7 @@
 
         @media (max-width: 768px) {
             .container {
-                padding: 80px 15px 30px;
+                padding: 120px 15px 30px;
             }
 
             .qm-header {
@@ -1302,7 +1313,9 @@
             }
 
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+                line-height: 1.2;
+                padding: 0 10px;
             }
 
             .angel-emoji {
@@ -1350,8 +1363,13 @@
         }
 
         @media (max-width: 480px) {
+            .container {
+                padding: 110px 10px 20px;
+            }
+
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                letter-spacing: 1px;
             }
 
             .subtitle {
