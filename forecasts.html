@@ -4182,8 +4182,8 @@
             <!-- Tier 1: Required -->
             <div class="input-group">
                 <label for="birthDate">Birth Date *</label>
-                <input type="text" id="birthDate" placeholder="DD-MM-YYYY (e.g., 15-05-1990)" pattern="\d{2}-\d{2}-\d{4}" required>
-                <p class="help-text">Required - determines your sun sign, life path, and Chinese zodiac. Format: DD-MM-YYYY</p>
+                <input type="text" id="birthDate" placeholder="15 05 1990" inputmode="numeric" maxlength="10" required>
+                <p class="help-text">Required - Just type numbers, we'll format it for you!</p>
             </div>
 
             <!-- Tier 2: Enhanced Accuracy -->
@@ -5850,45 +5850,75 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                 }, { passive: false });
             }
             
-            // Birth date validation and formatting help
+            // Birth date auto-formatting (inserts dashes automatically)
             const birthDateInput = document.getElementById('birthDate');
             if (birthDateInput) {
                 birthDateInput.addEventListener('input', function(e) {
-                    const value = e.target.value;
-                    const datePattern = /^\d{2}-\d{2}-\d{4}$/;
+                    let value = e.target.value;
+                    
+                    // Remove all non-digits
+                    let digits = value.replace(/\D/g, '');
+                    
+                    // Limit to 8 digits (DDMMYYYY)
+                    digits = digits.substring(0, 8);
+                    
+                    // Auto-format with dashes
+                    let formatted = '';
+                    if (digits.length > 0) {
+                        formatted = digits.substring(0, 2);
+                    }
+                    if (digits.length > 2) {
+                        formatted += '-' + digits.substring(2, 4);
+                    }
+                    if (digits.length > 4) {
+                        formatted += '-' + digits.substring(4, 8);
+                    }
+                    
+                    e.target.value = formatted;
                     
                     // Remove any existing error styling
                     e.target.classList.remove('input-error');
-                    let helpText = e.target.nextElementSibling;
-                    if (helpText && helpText.classList.contains('error-message')) {
-                        helpText.remove();
-                    }
+                    const errorMsg = e.target.parentElement.querySelector('.error-message');
+                    if (errorMsg) errorMsg.remove();
                     
-                    // Only validate if there's a value and it doesn't match
-                    if (value && !datePattern.test(value)) {
-                        e.target.classList.add('input-error');
-                        helpText = e.target.parentElement.querySelector('.help-text');
-                        if (helpText && !helpText.classList.contains('error-message')) {
-                            const errorMsg = document.createElement('p');
-                            errorMsg.className = 'error-message';
-                            errorMsg.textContent = 'Please use format DD-MM-YYYY (e.g., 15-05-1990)';
-                            helpText.parentElement.insertBefore(errorMsg, helpText.nextSibling);
-                        }
-                    } else if (value && datePattern.test(value)) {
-                        // Validate it's a real date - convert DD-MM-YYYY to YYYY-MM-DD for parsing
-                        const parts = value.split('-');
-                        const testDate = new Date(parts[2], parts[1] - 1, parts[0]);
-                        if (isNaN(testDate.getTime())) {
+                    // Only validate when complete (10 characters: DD-MM-YYYY)
+                    if (formatted.length === 10) {
+                        const parts = formatted.split('-');
+                        const day = parseInt(parts[0], 10);
+                        const month = parseInt(parts[1], 10);
+                        const year = parseInt(parts[2], 10);
+                        const testDate = new Date(year, month - 1, day);
+                        
+                        // Check if it's a valid date
+                        if (isNaN(testDate.getTime()) || 
+                            testDate.getDate() !== day || 
+                            testDate.getMonth() !== month - 1 ||
+                            year < 1900 || year > new Date().getFullYear()) {
                             e.target.classList.add('input-error');
-                            helpText = e.target.parentElement.querySelector('.help-text');
-                            if (helpText && !helpText.classList.contains('error-message')) {
-                                const errorMsg = document.createElement('p');
-                                errorMsg.className = 'error-message';
-                                errorMsg.textContent = 'Please enter a valid date';
-                                helpText.parentElement.insertBefore(errorMsg, helpText.nextSibling);
+                            const helpText = e.target.parentElement.querySelector('.help-text');
+                            if (helpText) {
+                                const errorEl = document.createElement('p');
+                                errorEl.className = 'error-message';
+                                errorEl.textContent = 'Please enter a valid date';
+                                helpText.parentElement.insertBefore(errorEl, helpText.nextSibling);
                             }
                         }
                     }
+                });
+                
+                // Handle paste events
+                birthDateInput.addEventListener('paste', function(e) {
+                    e.preventDefault();
+                    const pastedText = (e.clipboardData || window.clipboardData).getData('text');
+                    const digits = pastedText.replace(/\D/g, '').substring(0, 8);
+                    
+                    let formatted = '';
+                    if (digits.length > 0) formatted = digits.substring(0, 2);
+                    if (digits.length > 2) formatted += '-' + digits.substring(2, 4);
+                    if (digits.length > 4) formatted += '-' + digits.substring(4, 8);
+                    
+                    e.target.value = formatted;
+                    e.target.dispatchEvent(new Event('input'));
                 });
             }
         });
