@@ -5353,28 +5353,28 @@ Together we manifest faster. The more we support each other, the more powerful w
         
         function shareSectionInsight(sectionType, details) {
             const messages = {
-                'tarot': `🃏 Just pulled "${details}" in my daily forecast!\n\nThis FREE tool combines 8 mystical systems (Astrology, Tarot, Numerology, Chinese Zodiac, Gematria & more) for scary-accurate cosmic guidance.\n\nGet yours now:`,
-                'chinese': `🐉 I'm a ${details}!\n\nJust discovered this with a FREE multi-system forecast tool that combines ancient wisdom from 8 different traditions.\n\nFind your cosmic identity:`,
-                'astrology': `⭐ ${details}\n\nThis multi-system forecast tool is INSANELY accurate. It combines Astrology, Tarot, Numerology, Chinese Zodiac, Gematria, Frequencies & more.\n\n100% FREE. Try it:`,
-                'numerology': `🔢 My Life Path is ${details}!\n\nCalculate yours with this FREE tool that combines 8 ancient systems for incredibly accurate cosmic guidance.\n\nDiscover your path:`,
-                'reality-code': `✨ My Reality Code: ${details}\n\nJoin the quantum manifestation revolution. When multiple people use the same code, manifestation power exponentially amplifies!\n\nGet your code:`,
-                'planetary': `🪐 My cosmic timing: ${details}\n\nPerfect timing = maximum manifestation. Get your personalized celestial forecast combining 8 mystical systems.\n\n100% FREE:`,
-                'gematria': `📜 My name's gematria value: ${details}\n\nDiscover the hidden code in YOUR name with this FREE multi-system forecast tool.\n\nUnlock your code:`,
-                'frequency': `🔊 My healing frequency: ${details}\n\nFind YOUR healing frequency with this free cosmic calculator combining 8 ancient wisdom systems.\n\nGet yours:`
+                'tarot': `🃏 My Quantum Forecast pulled "${details}"\n\nThis card spoke directly to where I am right now. The 8-system forecast (Astrology, Tarot, Numerology, Chinese Zodiac, Gematria & more) is eerily accurate!\n\nGet your FREE reading:`,
+                'chinese': `🐉 I'm a ${details} in Chinese Astrology!\n\nMy Quantum Forecast revealed this plus my Tarot card, numerology, healing frequency & more. 8 ancient systems in one reading.\n\n100% FREE - Discover yours:`,
+                'astrology': `⭐ ${details}\n\nMy personalized Quantum Forecast combines Astrology + Tarot + Numerology + Chinese Zodiac + Gematria + Frequencies for crazy-accurate cosmic guidance.\n\nGet your FREE multi-system reading:`,
+                'numerology': `🔢 My Life Path is ${details}!\n\nJust got my Quantum Forecast - it calculated this plus my Tarot card, Chinese zodiac, healing frequency & more. 8 systems working together = mind-blowing accuracy.\n\nCalculate yours FREE:`,
+                'reality-code': `✨ My Quantum Reality Code: ${details}\n\n"${currentShareDetails}"\n\nJoin the manifestation revolution. When groups focus on the same code, quantum entanglement amplifies results exponentially!\n\nGet your FREE code:`,
+                'planetary': `🪐 My cosmic timing: ${details}\n\nPerfect timing = maximum manifestation. My Quantum Forecast revealed the best hours for me to take action today.\n\nFind YOUR perfect timing FREE:`,
+                'gematria': `📜 My name's sacred code: ${details}\n\nThe Quantum Forecast decoded the hidden frequencies in my name + gave me my Tarot card, Life Path, healing frequency & more.\n\nUnlock YOUR hidden code FREE:`,
+                'frequency': `🔊 My healing frequency is ${details}\n\nMy Quantum Forecast calculated this from my birthdate - plus revealed my Tarot card, Life Path, Chinese zodiac & more. 8 systems in perfect harmony.\n\nDiscover YOUR frequency FREE:`
             };
             
             const titles = {
                 'tarot': 'My Tarot Card',
                 'chinese': 'My Chinese Zodiac',
                 'astrology': 'My Cosmic Identity',
-                'numerology': 'My Life Path',
-                'reality-code': 'My Reality Code',
-                'planetary': 'My Cosmic Timing',
-                'gematria': 'My Gematria',
+                'numerology': 'My Life Path Number',
+                'reality-code': 'My Quantum Reality Code',
+                'planetary': 'My Perfect Timing',
+                'gematria': 'My Sacred Number',
                 'frequency': 'My Healing Frequency'
             };
             
-            currentShareMessage = messages[sectionType] || `✨ Just discovered something amazing about myself with this FREE multi-system forecast tool!`;
+            currentShareMessage = messages[sectionType] || `✨ Just discovered something amazing about myself with this FREE 8-system Quantum Forecast!\n\nGet yours:`;
             currentShareTitle = titles[sectionType] || 'My Quantum Discovery';
             currentShareType = sectionType;
             currentShareDetails = details;
@@ -5385,7 +5385,7 @@ Together we manifest faster. The more we support each other, the more powerful w
         
         // Floating share button - shares general forecast
         function shareGeneralForecast() {
-            currentShareMessage = '✨ I just got my FREE personalized Quantum Forecast!\n\nThis tool combines 8 mystical systems (Astrology, Tarot, Numerology, Chinese Zodiac, Gematria, Frequencies & more) for scary-accurate cosmic guidance.\n\nTry it yourself:';
+            currentShareMessage = '✨ I just got my FREE personalized Quantum Forecast!\n\nIt combines 8 mystical systems (Astrology, Tarot, Numerology, Chinese Zodiac, Gematria, Healing Frequencies, Moon Phases & Planetary Hours) for scary-accurate cosmic guidance.\n\nMy results were spot-on. Get yours:';
             currentShareTitle = 'My Quantum Forecast';
             currentShareType = 'general';
             currentShareDetails = '';
@@ -10719,10 +10719,6 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
             <span class="share-modal-close" onclick="closeShareModal()">&times;</span>
             <h3>✨ Share Your Discovery</h3>
             <div class="share-options">
-                <button class="share-option-btn visual-card" onclick="downloadShareCard()">
-                    <span class="icon">🎴</span>
-                    <span><strong>Download Image</strong><br><small>For Instagram, Stories, TikTok</small></span>
-                </button>
                 <button class="share-option-btn whatsapp" onclick="shareToWhatsAppModal()">
                     <span class="icon">💬</span>
                     <span>WhatsApp</span>
