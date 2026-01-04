@@ -4095,8 +4095,8 @@
             <!-- Tier 1: Required -->
             <div class="input-group">
                 <label for="birthDate">Birth Date *</label>
-                <input type="text" id="birthDate" placeholder="YYYY-MM-DD (e.g., 1990-05-15)" pattern="\d{4}-\d{2}-\d{2}" required>
-                <p class="help-text">Required - determines your sun sign, life path, and Chinese zodiac. Format: YYYY-MM-DD</p>
+                <input type="text" id="birthDate" placeholder="DD-MM-YYYY (e.g., 15-05-1990)" pattern="\d{2}-\d{2}-\d{4}" required>
+                <p class="help-text">Required - determines your sun sign, life path, and Chinese zodiac. Format: DD-MM-YYYY</p>
             </div>
 
             <!-- Tier 2: Enhanced Accuracy -->
@@ -5340,7 +5340,10 @@ Together we manifest faster. The more we support each other, the more powerful w
             const birthDate = document.getElementById('birthDate').value;
             if (!birthDate) return window.location.href;
             
-            const sign = getZodiacSign(new Date(birthDate).getMonth() + 1, new Date(birthDate).getDate());
+            // Convert DD-MM-YYYY to Date object
+            const dateParts = birthDate.split('-');
+            const birth = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
+            const sign = getZodiacSign(birth.getMonth() + 1, birth.getDate());
             return `${window.location.origin}/forecasts?sign=${sign.name}`;
         }
 
@@ -5765,7 +5768,7 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
             if (birthDateInput) {
                 birthDateInput.addEventListener('input', function(e) {
                     const value = e.target.value;
-                    const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+                    const datePattern = /^\d{2}-\d{2}-\d{4}$/;
                     
                     // Remove any existing error styling
                     e.target.classList.remove('input-error');
@@ -5781,12 +5784,13 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
                         if (helpText && !helpText.classList.contains('error-message')) {
                             const errorMsg = document.createElement('p');
                             errorMsg.className = 'error-message';
-                            errorMsg.textContent = 'Please use format YYYY-MM-DD (e.g., 1990-05-15)';
+                            errorMsg.textContent = 'Please use format DD-MM-YYYY (e.g., 15-05-1990)';
                             helpText.parentElement.insertBefore(errorMsg, helpText.nextSibling);
                         }
                     } else if (value && datePattern.test(value)) {
-                        // Validate it's a real date
-                        const testDate = new Date(value);
+                        // Validate it's a real date - convert DD-MM-YYYY to YYYY-MM-DD for parsing
+                        const parts = value.split('-');
+                        const testDate = new Date(parts[2], parts[1] - 1, parts[0]);
                         if (isNaN(testDate.getTime())) {
                             e.target.classList.add('input-error');
                             helpText = e.target.parentElement.querySelector('.help-text');
@@ -6017,7 +6021,9 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
         // ========================================
         
         function getPlanetaryAspects(birthDate) {
-            const birth = new Date(birthDate);
+            // Convert DD-MM-YYYY to Date object
+            const dateParts = birthDate.split('-');
+            const birth = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
             const today = new Date();
             const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
             
@@ -6391,7 +6397,9 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
         }
 
         function getPersonalYear(birthDate) {
-            const birth = new Date(birthDate);
+            // Convert DD-MM-YYYY to Date object
+            const dateParts = birthDate.split('-');
+            const birth = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
             const today = new Date();
             const month = birth.getMonth() + 1;
             const day = birth.getDate();
@@ -6423,7 +6431,9 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
 
         function getSpecialDateInfo(birthDate, coords = null) {
             const today = new Date();
-            const birth = new Date(birthDate);
+            // Convert DD-MM-YYYY to Date object
+            const dateParts = birthDate.split('-');
+            const birth = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
             const month = today.getMonth() + 1;
             const day = today.getDate();
             const year = today.getFullYear();
@@ -6614,7 +6624,9 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
             }
             
             // Fallback: Simplified calculation
-            const birth = new Date(birthDate);
+            // Convert DD-MM-YYYY to Date object
+            const dateParts = birthDate.split('-');
+            const birth = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
             const month = birth.getMonth() + 1;
             const day = birth.getDate();
             const sunSign = getZodiacSign(month, day);
@@ -6703,7 +6715,9 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
             }
             
             // Fallback: Simplified calculation
-            const birth = new Date(birthDate);
+            // Convert DD-MM-YYYY to Date object
+            const dateParts = birthDate.split('-');
+            const birth = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
             const epoch = new Date('2000-01-06');
             const daysSinceEpoch = Math.floor((birth - epoch) / (1000 * 60 * 60 * 24));
             
@@ -7014,7 +7028,9 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
             const middleName = document.getElementById('middleName').value;
             const lastName = document.getElementById('lastName').value;
             
-            const birth = new Date(birthDate);
+            // Convert DD-MM-YYYY to Date object
+            const dateParts = birthDate.split('-');
+            const birth = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
             const month = birth.getMonth() + 1;
             const day = birth.getDate();
             const year = birth.getFullYear();
@@ -9624,7 +9640,9 @@ The more you give, the faster YOUR code manifests. This is quantum law, not phil
 
         function getNumerologyForecast(lifePath, personalYear, birthDate) {
             const today = new Date();
-            const birth = new Date(birthDate);
+            // Convert DD-MM-YYYY to Date object
+            const dateParts = birthDate.split('-');
+            const birth = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
             const personalDay = (birth.getDate() + today.getDate() + (today.getMonth() + 1)) % 9 || 9;
             
             return `
