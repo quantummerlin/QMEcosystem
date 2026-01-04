@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Number Full Reading | Quantum Merlin</title>
+    <meta name="description" content="Complete angel number analysis across 9 mystical systems - astrology, numerology, tarot, frequencies, and more.">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --deep-void: #0a0015;
+            --quantum-gold: #daa520;
+            --ancient-gold: #ffd700;
+            --rose-pink: #ff6b9d;
+            --merlin-purple: #2d1b4e;
+            --mystic-cyan: #00f5ff;
+            --ethereal-white: #f0e6ff;
+            --card-bg: rgba(20, 20, 35, 0.95);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: linear-gradient(135deg, var(--deep-void) 0%, var(--merlin-purple) 50%, var(--deep-void) 100%);
+            color: var(--ethereal-white);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            line-height: 1.9;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        /* Header */
+        .qm-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 18px 40px;
+            background: rgba(10, 0, 21, 0.92);
+            backdrop-filter: blur(25px) saturate(180%);
+            border-bottom: 1px solid rgba(0, 245, 255, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .qm-header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .qm-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--ancient-gold), var(--rose-pink), #8a2be2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        
+        .qm-nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        
+        .qm-nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+        
+        .qm-nav a:hover {
+            color: var(--mystic-cyan);
+            background: rgba(0, 245, 255, 0.1);
+            transform: translateY(-1px);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 140px 20px 40px;
+            text-align: center;
+        }
+        
+        /* Page Header */
+        .page-header {
+            margin-bottom: 50px;
+        }
+        
+        .page-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .page-title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--ancient-gold), var(--rose-pink), #8a2be2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+        
+        .page-subtitle {
+            color: var(--quantum-gold);
+            font-size: 1.3rem;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Previous Reading */
+        .previous-reading {
+            background: linear-gradient(145deg, rgba(218, 165, 32, 0.15), rgba(255, 107, 157, 0.15));
+            border: 2px solid rgba(218, 165, 32, 0.4);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .previous-label {
+            color: var(--quantum-gold);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        
+        .angel-number-display {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--ancient-gold), var(--rose-pink), #8a2be2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 20px 0;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .angel-meaning-preview {
+            color: rgba(240, 230, 255, 0.8);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Profile Section */
+        .profile-section {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(218, 165, 32, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-family: 'Cinzel', serif;
+            color: var(--quantum-gold);
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        
+        .profile-options {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .profile-option {
+            flex: 1;
+            min-width: 220px;
+            max-width: 300px;
+            padding: 25px;
+            background: rgba(218, 165, 32, 0.1);
+            border: 2px solid rgba(218, 165, 32, 0.3);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .profile-option:hover {
+            border-color: var(--quantum-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(218, 165, 32, 0.3);
+        }
+        
+        .profile-option.selected {
+            border-color: var(--rose-pink);
+            background: rgba(255, 107, 157, 0.15);
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
+        }
+        
+        .profile-option-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .profile-option-title {
+            font-family: 'Cinzel', serif;
+            color: var(--quantum-gold);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        
+        .profile-option-desc {
+            color: rgba(240, 230, 255, 0.7);
+            font-size: 0.95rem;
+        }
+        
+        /* Forms */
+        .birth-form,
+        .saved-profiles {
+            display: none;
+        }
+        
+        .birth-form.active,
+        .saved-profiles.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            color: var(--quantum-gold);
+            font-family: 'Cinzel', serif;
+            margin-bottom: 10px;
+            font-weight: 500;
+            text-align: left;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(218, 165, 32, 0.1);
+            border: 2px solid rgba(218, 165, 32, 0.3);
+            border-radius: 12px;
+            color: var(--ethereal-white);
+            font-size: 1rem;
+            font-family: 'Cormorant Garamond', serif;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--quantum-gold);
+            box-shadow: 0 0 20px rgba(218, 165, 32, 0.3);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .profile-card {
+            padding: 20px;
+            background: rgba(218, 165, 32, 0.1);
+            border: 2px solid rgba(218, 165, 32, 0.3);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .profile-card:hover {
+            border-color: var(--quantum-gold);
+            transform: translateY(-3px);
+        }
+        
+        .profile-card.selected {
+            border-color: var(--rose-pink);
+            background: rgba(255, 107, 157, 0.15);
+        }
+        
+        .profile-name {
+            font-family: 'Cinzel', serif;
+            color: var(--quantum-gold);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .profile-details {
+            color: rgba(240, 230, 255, 0.6);
+            font-size: 0.95rem;
+        }
+        
+        .no-profiles {
+            padding: 40px;
+            color: var(--quantum-gold);
+        }
+        
+        .no-profiles-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Generate Button */
+        .generate-btn {
+            width: 100%;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, var(--quantum-gold), var(--ancient-gold));
+            color: var(--deep-void);
+            border: none;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: 'Cinzel', serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(218, 165, 32, 0.4);
+        }
+        
+        .generate-btn:hover:not(:disabled) {
+            transform: scale(1.02);
+            box-shadow: 0 8px 30px rgba(218, 165, 32, 0.6);
+        }
+        
+        .generate-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Results Section */
+        .results-section {
+            display: none;
+        }
+        
+        .results-section.active {
+            display: block;
+            animation: fadeIn 0.7s ease;
+        }
+        
+        /* Systems Intro */
+        .systems-intro {
+            background: linear-gradient(145deg, rgba(218, 165, 32, 0.15), rgba(255, 107, 157, 0.1));
+            border: 2px solid rgba(218, 165, 32, 0.4);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 40px;
+        }
+        
+        .systems-intro h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--ancient-gold), var(--rose-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+        
+        .systems-intro p {
+            color: rgba(240, 230, 255, 0.85);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* System Cards */
+        .system-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(218, 165, 32, 0.3);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+        
+        .system-card:hover {
+            border-color: var(--quantum-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(218, 165, 32, 0.2);
+        }
+        
+        .system-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .system-icon {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .system-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--quantum-gold);
+            margin-bottom: 10px;
+        }
+        
+        .system-subtitle {
+            color: var(--rose-pink);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        .system-content {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .system-label {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--quantum-gold);
+        }
+        
+        .system-text {
+            color: var(--ethereal-white);
+            line-height: 1.9;
+            font-size: 1.05rem;
+        }
+        
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        
+        .action-btn {
+            padding: 15px 30px;
+            border-radius: 25px;
+            border: 2px solid rgba(218, 165, 32, 0.4);
+            background: rgba(218, 165, 32, 0.15);
+            color: var(--quantum-gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Cinzel', serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .action-btn:hover {
+            border-color: var(--quantum-gold);
+            background: rgba(218, 165, 32, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(218, 165, 32, 0.3);
+        }
+        
+        .action-btn.primary {
+            background: linear-gradient(135deg, var(--quantum-gold), var(--ancient-gold));
+            border: none;
+            color: var(--deep-void);
+        }
+        
+        .action-btn.primary:hover {
+            box-shadow: 0 6px 25px rgba(218, 165, 32, 0.5);
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(218, 165, 32, 0.2);
+            text-align: center;
+        }
+        
+        .footer-tagline {
+            color: var(--quantum-gold);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: rgba(240, 230, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--quantum-gold);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 120px 15px 30px;
+            }
+            
+            .page-title {
+                font-size: 2.2rem;
+            }
+            
+            .page-icon {
+                font-size: 3.5rem;
+            }
+            
+            .angel-number-display {
+                font-size: 3.5rem;
+            }
+            
+            .profile-options {
+                flex-direction: column;
+            }
+            
+            .profile-option {
+                max-width: 100%;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .system-card {
+                padding: 25px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 110px 10px 20px;
+            }
+            
+            .page-title {
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+            }
+            
+            .generate-btn {
+                font-size: 1.1rem;
+                padding: 16px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="qm-header">
+        <div class="qm-header-content">
+            <a href="index.html" class="qm-logo">Quantum Merlin</a>
+            <nav class="qm-nav">
+                <a href="library.html">📚 Library</a>
+                <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank">☕ Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <div class="page-icon">👼</div>
+            <h1 class="page-title">Angel Number<br>Full Reading</h1>
+            <p class="page-subtitle">See your divine message through all 9 mystical systems</p>
+        </div>
+
+        <div class="previous-reading" id="previousReading">
+            <div class="previous-label">Your Angel Number</div>
+            <div class="angel-number-display" id="angelNumberDisplay">...</div>
+            <p class="angel-meaning-preview" id="angelMeaningPreview">Loading your divine message...</p>
+        </div>
+
+        <div id="inputSection">
+            <div class="profile-section">
+                <h2 class="section-title">Choose Your Path</h2>
+                
+                <div class="profile-options">
+                    <div class="profile-option" onclick="selectOption('saved')" id="optionSaved">
+                        <div class="profile-option-icon">📚</div>
+                        <div class="profile-option-title">Load from Library</div>
+                        <div class="profile-option-desc">Use a saved birth profile</div>
+                    </div>
+                    <div class="profile-option" onclick="selectOption('new')" id="optionNew">
+                        <div class="profile-option-icon">✏️</div>
+                        <div class="profile-option-title">Enter Birth Details</div>
+                        <div class="profile-option-desc">Create new profile</div>
+                    </div>
+                </div>
+
+                <div class="saved-profiles" id="savedProfiles">
+                    <div id="profilesList"></div>
+                </div>
+
+                <div class="birth-form" id="birthForm">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" id="fullName" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Birth Date</label>
+                        <input type="date" class="form-input" id="birthDate">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Birth Time (optional)</label>
+                            <input type="time" class="form-input" id="birthTime">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Birth Place (optional)</label>
+                            <input type="text" class="form-input" id="birthPlace" placeholder="City, Country">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                            <input type="checkbox" id="saveProfile" checked>
+                            <span class="form-label" style="margin: 0;">Save this profile to Library</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="generate-btn" id="generateBtn" onclick="generateFullReading()" disabled>
+                    👼 Generate 9-System Reading
+                </button>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection"></div>
+
+        <div class="footer">
+            <p class="footer-tagline">✨ The Wizard & The Rose ✨</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="angel-number-full-reading-engine.js"></script>
+</body>
+</html>

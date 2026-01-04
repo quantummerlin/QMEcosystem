@@ -1073,6 +1073,112 @@
             color: var(--qm-cyan);
         }
 
+        /* Full Reading CTA */
+        .full-reading-cta {
+            margin-top: 40px;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(255, 107, 157, 0.15), rgba(0, 245, 255, 0.1));
+            border-radius: 20px;
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .full-reading-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.05), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .cta-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .cta-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, #ffd700, #ff6b9d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-description {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .full-reading-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #8a2be2, #ff6b9d);
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
+        }
+
+        .full-reading-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(138, 43, 226, 0.6);
+            border-color: rgba(255, 215, 0, 0.8);
+        }
+
+        .full-reading-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .btn-icon {
+            font-size: 1.3rem;
+            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+        }
+
+        .btn-arrow {
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .full-reading-btn:hover .btn-arrow {
+            transform: translateX(5px);
+        }
+
         /* Social Sharing Section */
         .social-share-section {
             margin-top: 30px;
@@ -1359,6 +1465,24 @@
                 left: 20px;
                 right: 20px;
                 text-align: center;
+            }
+
+            .full-reading-cta {
+                padding: 30px 20px;
+            }
+
+            .cta-title {
+                font-size: 1.4rem;
+            }
+
+            .cta-description {
+                font-size: 0.95rem;
+            }
+
+            .full-reading-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 25px;
             }
         }
 
@@ -1722,6 +1846,22 @@
                     <button class="feedback-btn no" onclick="submitFeedback('no')">💭 Not quite</button>
                 </div>
                 <div id="feedbackResponse" class="feedback-response" style="display: none;"></div>
+            </div>
+
+            <!-- Full Reading CTA -->
+            <div class="full-reading-cta">
+                <div class="cta-icon">🔮</div>
+                <h3 class="cta-title">Unlock Your Complete Angel Number Reading</h3>
+                <p class="cta-description">
+                    Discover how your Angel Number connects with all 9 mystical systems including Astrology, 
+                    Numerology, Lunar Phases, Tarot, Gematria, Solfeggio Frequencies, Chinese Zodiac, 
+                    Planetary Alignments, and Reality Codes—personalized to your birth data.
+                </p>
+                <button class="full-reading-btn" onclick="goToFullReading()">
+                    <span class="btn-icon">✨</span>
+                    <span class="btn-text">Get Your Full 9-System Reading</span>
+                    <span class="btn-arrow">→</span>
+                </button>
             </div>
 
             <!-- Social Sharing Section -->
@@ -3272,6 +3412,39 @@
             document.getElementById('angelNumber').value = '';
             document.getElementById('angelNumber').focus();
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Navigate to Full Reading
+        function goToFullReading() {
+            if (!currentReading) {
+                showMessage('⚠️ Calculate your angel number first');
+                return;
+            }
+
+            // Store current reading data in sessionStorage for the full reading page
+            const readingData = {
+                toolName: 'Angel Number Calculator',
+                angelNumber: currentReading.number,
+                basicMeaning: currentReading.meaning.spiritual,
+                guidance: currentReading.meaning.guidance,
+                affirmation: currentReading.meaning.affirmation,
+                frequency: currentReading.meaning.frequency,
+                luckyElements: currentReading.meaning.lucky,
+                timestamp: new Date().toISOString()
+            };
+            
+            sessionStorage.setItem('qm_angel_reading_data', JSON.stringify(readingData));
+            
+            // Track navigation
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'full_reading_click', {
+                    angel_number: currentReading.number,
+                    source: 'angel_calculator'
+                });
+            }
+            
+            // Navigate to full reading page
+            window.location.href = 'angel-number-full-reading.html';
         }
 
         function showMessage(message) {
