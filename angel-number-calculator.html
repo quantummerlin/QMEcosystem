@@ -125,7 +125,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
     <!-- Shared Quantum Styles -->
     <link rel="stylesheet" href="shared/css/quantum-variables.css">
@@ -144,18 +144,29 @@
         }
 
         :root {
+            --merlin-purple: #2d1b4e;
+            --rose-pink: #ff6b9d;
+            --quantum-gold: #daa520;
+            --ancient-gold: #ffd700;
+            --mystic-cyan: #00f5ff;
+            --deep-void: #0a0015;
+            --ethereal-white: #f0e6ff;
+            --quantum-magenta: #ff00ff;
+            /* Legacy aliases for compatibility */
             --qm-cyan: #00f5ff;
-            --qm-purple: #9d00ff;
-            --qm-gold: #ffd700;
-            --qm-pink: #ff0066;
-            --qm-dark: #0a0a0f;
+            --qm-purple: #8a2be2;
+            --qm-gold: #daa520;
+            --qm-pink: #ff6b9d;
+            --qm-dark: #0a0015;
             --qm-card: rgba(255, 255, 255, 0.05);
         }
 
         body {
-            font-family: 'Exo 2', sans-serif;
-            background: var(--qm-dark);
-            color: #ffffff;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: var(--deep-void);
+            color: var(--ethereal-white);
+            font-size: 18px;
+            line-height: 1.9;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
@@ -223,16 +234,15 @@
         }
 
         .qm-logo {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Cinzel', serif;
             font-size: 24px;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--qm-cyan), var(--qm-purple), var(--qm-gold));
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffd700, #ff6b9d, #8a2be2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-decoration: none;
             letter-spacing: 1px;
-            text-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
         }
 
         .qm-nav {
@@ -269,15 +279,16 @@
         }
 
         h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 900;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 3rem;
+            font-weight: 700;
             margin-bottom: 15px;
-            background: linear-gradient(135deg, var(--qm-cyan), var(--qm-purple), var(--qm-gold));
+            text-align: center;
+            background: linear-gradient(135deg, #ffd700, #ff6b9d, #8a2be2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 60px rgba(0, 245, 255, 0.4);
-            letter-spacing: 2px;
+            background-clip: text;
+            letter-spacing: 3px;
         }
 
         .subtitle {
@@ -316,10 +327,10 @@
         }
 
         .calculator-section h2 {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Cinzel', serif;
             font-size: 1.8rem;
             margin-bottom: 15px;
-            color: var(--qm-cyan);
+            color: var(--ancient-gold);
             text-align: center;
         }
 
@@ -406,23 +417,23 @@
 
         .calculate-btn {
             padding: 16px 40px;
-            background: linear-gradient(135deg, var(--qm-purple), var(--qm-pink));
-            color: #ffffff;
+            background: linear-gradient(135deg, var(--quantum-gold), var(--ancient-gold));
+            color: var(--deep-void);
             border: none;
-            border-radius: 12px;
+            border-radius: 25px;
             font-size: 1.1rem;
-            font-weight: 700;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            font-family: 'Orbitron', sans-serif;
-            box-shadow: 0 4px 15px rgba(157, 0, 255, 0.4);
+            font-family: 'Cinzel', serif;
+            box-shadow: 0 4px 15px rgba(218, 165, 32, 0.4);
         }
 
         .calculate-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(157, 0, 255, 0.6);
+            box-shadow: 0 6px 25px rgba(218, 165, 32, 0.6);
         }
 
         .calculate-btn:active {
@@ -479,9 +490,9 @@
         }
 
         .category-section h3 {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Cinzel', serif;
             font-size: 1.3rem;
-            color: var(--qm-gold);
+            color: var(--ancient-gold);
             margin-bottom: 15px;
             display: flex;
             align-items: center;
@@ -528,16 +539,15 @@
         }
 
         .number-display {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Cinzel Decorative', serif;
             font-size: 4.5rem;
             font-weight: 900;
             text-align: center;
             margin-bottom: 30px;
-            background: linear-gradient(135deg, var(--qm-cyan), var(--qm-purple), var(--qm-gold));
+            background: linear-gradient(135deg, #ffd700, #ff6b9d, #8a2be2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: pulse 2s ease-in-out infinite;
-            text-shadow: 0 0 40px rgba(0, 245, 255, 0.5);
         }
 
         @keyframes pulse {
@@ -554,10 +564,10 @@
         }
 
         .meaning-title {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Cinzel', serif;
             font-size: 1.4rem;
             margin-bottom: 12px;
-            color: var(--qm-cyan);
+            color: var(--ancient-gold);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -618,15 +628,15 @@
         }
 
         .education-section h2 {
-            font-family: 'Orbitron', sans-serif;
-            color: var(--qm-purple);
+            font-family: 'Cinzel', serif;
+            color: var(--ancient-gold);
             margin-bottom: 25px;
             font-size: 2rem;
         }
 
         .education-section h3 {
-            font-family: 'Orbitron', sans-serif;
-            color: var(--qm-cyan);
+            font-family: 'Cinzel', serif;
+            color: var(--quantum-gold);
             margin-top: 25px;
             margin-bottom: 12px;
             font-size: 1.3rem;
@@ -1062,9 +1072,9 @@
         }
 
         .share-title {
-            color: var(--qm-gold);
+            color: var(--ancient-gold);
             text-align: center;
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Cinzel', serif;
             font-size: 1.3rem;
             margin-bottom: 10px;
         }
@@ -1209,17 +1219,17 @@
         }
 
         .frequency-title {
-            color: var(--qm-cyan);
-            font-family: 'Orbitron', sans-serif;
+            color: var(--mystic-cyan);
+            font-family: 'Cinzel', serif;
             font-size: 1.2rem;
             margin-bottom: 15px;
         }
 
         .frequency-hz {
-            font-family: 'Orbitron', monospace;
+            font-family: 'Cinzel Decorative', monospace;
             font-size: 2.5em;
             font-weight: 900;
-            color: var(--qm-cyan);
+            color: var(--mystic-cyan);
             text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
             margin: 10px 0;
         }
@@ -1914,12 +1924,58 @@
             </div>
         </div>
 
+        <!-- Explore Quantum Merlin Hub -->
+        <div style="background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(45, 27, 78, 0.3)); border: 1px solid rgba(218, 165, 32, 0.3); border-radius: 20px; padding: 40px; margin: 40px auto; max-width: 800px; text-align: center;">
+            <h3 style="font-family: 'Cinzel', serif; color: var(--ancient-gold); margin-bottom: 20px; font-size: 1.6rem;">
+                🔮 Explore the Quantum Merlin Universe 🔮
+            </h3>
+            <p style="font-size: 1.1em; margin-bottom: 25px; line-height: 1.8; color: var(--ethereal-white);">
+                Beyond Angel Numbers, discover a complete mystical ecosystem: Tarot readings infused with quantum consciousness, 
+                birth sigil generators, soul card revelations, and the legendary Quantum Rose divination system.
+            </p>
+            <a href="https://quantummerlin.com" style="display: inline-block; padding: 15px 40px; background: linear-gradient(135deg, #8a2be2, #ff1493); color: #ffffff; text-decoration: none; border-radius: 25px; font-family: 'Cinzel', serif; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4); margin: 10px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(138, 43, 226, 0.6)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(138, 43, 226, 0.4)'">
+                Enter the Quantum Merlin Hub
+            </a>
+            <p style="margin-top: 30px; color: var(--rose-pink); font-style: italic; font-size: 1.1em;">
+                🧙‍♂️ The Wizard and the Rose await... 🌹
+            </p>
+        </div>
+
+        <!-- Coffee Support -->
+        <div style="background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(218, 165, 32, 0.15)); border: 1px solid rgba(218, 165, 32, 0.3); border-radius: 20px; padding: 35px; margin: 40px auto 60px; max-width: 600px; text-align: center;">
+            <h3 style="font-family: 'Cinzel', serif; color: var(--rose-pink); margin-bottom: 15px; font-size: 1.5em;">
+                ☕ Support This Sacred Work
+            </h3>
+            <p style="font-size: 1.05em; margin-bottom: 20px; line-height: 1.7; color: var(--ethereal-white);">
+                This calculator took years to compile. If these divine messages have illuminated your path, 
+                consider supporting the continued exploration of consciousness and manifestation.
+            </p>
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" style="display: inline-block; padding: 15px 40px; background: linear-gradient(135deg, #ff6b9d, #daa520); color: #0a0015; text-decoration: none; border-radius: 25px; font-family: 'Cinzel', serif; font-weight: 600; font-size: 1.1em; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(255, 107, 157, 0.6)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.4)'">
+                ☕ Buy Merlin a Coffee
+            </a>
+            <p style="margin-top: 15px; font-size: 0.95em; color: rgba(240, 230, 255, 0.7); font-style: italic;">
+                Every contribution fuels more mystical discoveries 🌹✨
+            </p>
+        </div>
+
         <div class="navigation-buttons">
             <a href="forecasts.html" class="nav-btn">🔮 Cosmic Forecasts</a>
             <a href="birth-sigil.html" class="nav-btn">✨ Birth Sigil</a>
             <a href="library.html" class="nav-btn">📚 My Library</a>
             <a href="index.html" class="nav-btn">🏠 Home</a>
         </div>
+
+        <!-- Footer -->
+        <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid rgba(255, 215, 0, 0.2); margin-top: 50px;">
+            <p style="color: var(--ethereal-white); margin-bottom: 15px;">© 2026 Quantum Merlin | All Rights Reserved</p>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="privacy.html" style="color: var(--quantum-gold); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--ancient-gold)'" onmouseout="this.style.color='var(--quantum-gold)'">Privacy Policy</a>
+                <span style="color: var(--ethereal-white);">•</span>
+                <a href="terms.html" style="color: var(--quantum-gold); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--ancient-gold)'" onmouseout="this.style.color='var(--quantum-gold)'">Terms of Service</a>
+                <span style="color: var(--ethereal-white);">•</span>
+                <a href="disclaimer.html" style="color: var(--quantum-gold); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--ancient-gold)'" onmouseout="this.style.color='var(--quantum-gold)'">Disclaimer</a>
+            </div>
+        </footer>
     </div>
 
     <script>
