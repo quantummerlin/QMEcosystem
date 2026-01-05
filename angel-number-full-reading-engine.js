@@ -188,54 +188,106 @@ function checkFormValidity() {
 document.getElementById('fullName')?.addEventListener('input', checkFormValidity);
 document.getElementById('birthDate')?.addEventListener('change', checkFormValidity);
 
+// Show loading overlay
+function showLoading() {
+    const overlay = document.getElementById('loadingOverlay');
+    const btn = document.getElementById('generateBtn');
+    if (overlay) overlay.classList.add('active');
+    if (btn) btn.classList.add('loading');
+    
+    // Cycle through systems during loading
+    const systems = [
+        '♈ Connecting to Astrology...',
+        '🔢 Calculating Numerology...',
+        '🪐 Aligning Planetary Forces...',
+        '🌙 Consulting Lunar Wisdom...',
+        '✡️ Decoding Gematria...',
+        '🎵 Tuning Frequencies...',
+        '🐉 Invoking Chinese Zodiac...',
+        '🌌 Activating Reality Codes...',
+        '🃏 Drawing Tarot Insights...'
+    ];
+    
+    let index = 0;
+    const loadingSystem = document.getElementById('loadingSystem');
+    
+    const interval = setInterval(() => {
+        if (loadingSystem) {
+            loadingSystem.textContent = systems[index];
+        }
+        index++;
+        if (index >= systems.length) {
+            clearInterval(interval);
+        }
+    }, 300);
+    
+    return interval;
+}
+
+// Hide loading overlay
+function hideLoading(interval) {
+    clearInterval(interval);
+    const overlay = document.getElementById('loadingOverlay');
+    const btn = document.getElementById('generateBtn');
+    if (overlay) overlay.classList.remove('active');
+    if (btn) btn.classList.remove('loading');
+}
+
 // Generate the full reading
 function generateFullReading() {
-    let profileData;
+    // Show loading state
+    const loadingInterval = showLoading();
     
-    if (selectedOption === 'saved' && selectedProfile) {
-        profileData = selectedProfile;
-    } else {
-        profileData = {
-            fullName: document.getElementById('fullName').value,
-            birthDate: document.getElementById('birthDate').value,
-            birthTime: document.getElementById('birthTime').value,
-            birthPlace: document.getElementById('birthPlace').value
+    // Delay to show loading animation
+    setTimeout(() => {
+        let profileData;
+        
+        if (selectedOption === 'saved' && selectedProfile) {
+            profileData = selectedProfile;
+        } else {
+            profileData = {
+                fullName: document.getElementById('fullName').value,
+                birthDate: document.getElementById('birthDate').value,
+                birthTime: document.getElementById('birthTime').value,
+                birthPlace: document.getElementById('birthPlace').value
+            };
+            
+            if (document.getElementById('saveProfile').checked) {
+                saveProfileToLibrary(profileData);
+            }
+        }
+        
+        const birthDate = new Date(profileData.birthDate);
+        
+        // Generate readings for all systems
+        const readings = {
+            astrology: generateAstrologyReading(birthDate, profileData, angelNumber),
+            numerology: generateNumerologyReading(birthDate, profileData.fullName, angelNumber),
+            planetary: generatePlanetaryReading(birthDate, angelNumber),
+            lunar: generateLunarReading(angelNumber),
+            gematria: generateGematriaReading(profileData.fullName, angelNumber),
+            frequency: generateFrequencyReading(birthDate, profileData.fullName, angelNumber),
+            chinese: generateChineseZodiacReading(birthDate, angelNumber),
+            reality: generateRealityCodesReading(angelNumber),
+            tarot: generateTarotReading(birthDate, angelNumber)
         };
         
-        if (document.getElementById('saveProfile').checked) {
-            saveProfileToLibrary(profileData);
+        hideLoading(loadingInterval);
+        displayFullReading(readings);
+        
+        document.getElementById('inputSection').style.display = 'none';
+        document.getElementById('resultsSection').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        // Track event
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'full_reading_generated', {
+                'tool': 'angel_number',
+                'angel_number': angelNumber,
+                'profile_source': selectedOption
+            });
         }
-    }
-    
-    const birthDate = new Date(profileData.birthDate);
-    
-    // Generate readings for all systems
-    const readings = {
-        astrology: generateAstrologyReading(birthDate, profileData, angelNumber),
-        numerology: generateNumerologyReading(birthDate, profileData.fullName, angelNumber),
-        planetary: generatePlanetaryReading(birthDate, angelNumber),
-        lunar: generateLunarReading(angelNumber),
-        gematria: generateGematriaReading(profileData.fullName, angelNumber),
-        frequency: generateFrequencyReading(birthDate, profileData.fullName, angelNumber),
-        chinese: generateChineseZodiacReading(birthDate, angelNumber),
-        reality: generateRealityCodesReading(angelNumber),
-        tarot: generateTarotReading(birthDate, angelNumber)
-    };
-    
-    displayFullReading(readings);
-    
-    document.getElementById('inputSection').style.display = 'none';
-    document.getElementById('resultsSection').classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    
-    // Track event
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'full_reading_generated', {
-            'tool': 'angel_number',
-            'angel_number': angelNumber,
-            'profile_source': selectedOption
-        });
-    }
+    }, 2800); // Allow loading animation to cycle through systems
 }
 
 // Display the full reading
