@@ -273,7 +273,7 @@ function generateFullReading() {
             gematria: generateGematriaReading(profileData.fullName, angelNumber),
             frequency: generateFrequencyReading(birthDate, profileData.fullName, angelNumber),
             chinese: generateChineseZodiacReading(birthDate, angelNumber),
-            reality: generateRealityCodesReading(angelNumber),
+            reality: generateRealityCodesReading(birthDate, angelNumber),
             tarot: generateTarotReading(birthDate, angelNumber)
         };
         
