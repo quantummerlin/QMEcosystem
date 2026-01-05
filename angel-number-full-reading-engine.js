@@ -16,19 +16,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Load previous angel number from sessionStorage
 function loadPreviousReading() {
-    const storedData = sessionStorage.getItem('qm_angel_number_data');
+    const storedData = sessionStorage.getItem('qm_angel_reading_data');
     if (storedData) {
-        previousData = JSON.parse(storedData);
-        angelNumber = previousData.number;
-        displayPreviousReading();
+        try {
+            previousData = JSON.parse(storedData);
+            angelNumber = previousData.angelNumber;
+            displayPreviousReading();
+        } catch(e) {
+            // Invalid data, show manual entry
+            showManualEntry();
+        }
     } else {
-        document.getElementById('previousReading').innerHTML = `
-            <div class="previous-label">⚠️ No Angel Number Found</div>
-            <p style="color: var(--quantum-gold); margin-top: 15px;">
-                <a href="angel-number-calculator.html" style="color: var(--quantum-gold);">Calculate your angel number</a> first to unlock the full 9-system reading.
-            </p>
-        `;
+        // No previous data - show manual entry
+        showManualEntry();
     }
+}
+
+function showManualEntry() {
+    document.getElementById('previousReading').innerHTML = `
+        <div class="manual-entry">
+            <div class="previous-label">✨ Enter Your Angel Number</div>
+            <p style="color: rgba(255,255,255,0.7); margin: 15px 0; font-size: 0.95rem;">
+                Enter the angel number you've been seeing repeatedly
+            </p>
+            <div style="display: flex; gap: 15px; align-items: center; max-width: 400px; margin: 20px auto;">
+                <input type="text" id="manualAngelNumber" placeholder="e.g., 111, 222, 1111" 
+                    style="flex: 1; padding: 15px 20px; background: rgba(255,255,255,0.1); border: 2px solid var(--quantum-gold); border-radius: 12px; color: white; font-size: 1.2rem; text-align: center; font-family: 'Orbitron', monospace;"
+                    maxlength="4" />
+                <button onclick="setManualAngelNumber()" 
+                    style="padding: 15px 30px; background: linear-gradient(135deg, #8a2be2, #ff6b9d); border: none; border-radius: 12px; color: white; font-weight: 600; cursor: pointer; font-size: 1rem;">
+                    Continue →
+                </button>
+            </div>
+            <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 10px;">
+                Or <a href="angel-number-calculator.html" style="color: var(--quantum-gold);">discover your angel number</a> first
+            </p>
+        </div>
+    `;
+}
+
+function setManualAngelNumber() {
+    const input = document.getElementById('manualAngelNumber');
+    const number = input.value.trim();
+    
+    // Validate angel number
+    if (!number || !/^\d+$/.test(number)) {
+        alert('Please enter a valid angel number (digits only)');
+        return;
+    }
+    
+    angelNumber = parseInt(number);
+    document.getElementById('angelNumberDisplay').textContent = angelNumber;
+    
+    const meanings = getAngelNumberMeanings(angelNumber);
+    if (meanings) {
+        document.getElementById('angelMeaningPreview').textContent = meanings.spiritual.substring(0, 150) + '...';
+    }
+    
+    // Show confirmation
+    document.getElementById('previousReading').innerHTML = `
+        <div class="angel-display">
+            <div class="angel-number-large">${angelNumber}</div>
+            <div class="previous-label">Your Angel Number</div>
+        </div>
+    `;
+    
+    // Auto-select 'new' option
+    selectOption('new');
 }
 
 // Display the angel number
@@ -39,20 +93,34 @@ function displayPreviousReading() {
     if (meanings) {
         document.getElementById('angelMeaningPreview').textContent = meanings.spiritual.substring(0, 150) + '...';
     }
+    
+    document.getElementById('previousReading').innerHTML = `
+        <div class="angel-display">
+            <div class="angel-number-large">${angelNumber}</div>
+            <div class="previous-label">Your Angel Number</div>
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-top: 10px;">
+                ${meanings ? meanings.spiritual.substring(0, 100) + '...' : ''}
+            </p>
+        </div>
+    `;
 }
 
 // Profile option selection
 function selectOption(option) {
     selectedOption = option;
     document.querySelectorAll('.profile-option').forEach(el => el.classList.remove('selected'));
-    document.getElementById('option' + option.charAt(0).toUpperCase() + option.slice(1)).classList.add('selected');
+    const optionEl = document.getElementById('option' + option.charAt(0).toUpperCase() + option.slice(1));
+    if (optionEl) optionEl.classList.add('selected');
+    
+    const savedProfiles = document.getElementById('savedProfiles');
+    const birthForm = document.getElementById('birthForm');
     
     if (option === 'saved') {
-        document.getElementById('savedProfiles').classList.add('active');
-        document.getElementById('birthForm').classList.remove('active');
+        if (savedProfiles) savedProfiles.classList.add('active');
+        if (birthForm) birthForm.classList.remove('active');
     } else {
-        document.getElementById('savedProfiles').classList.remove('active');
-        document.getElementById('birthForm').classList.add('active');
+        if (savedProfiles) savedProfiles.classList.remove('active');
+        if (birthForm) birthForm.classList.add('active');
         checkFormValidity();
     }
 }
@@ -95,9 +163,26 @@ function selectProfile(index) {
 
 // Check if form is valid
 function checkFormValidity() {
-    const name = document.getElementById('fullName').value;
-    const birthDate = document.getElementById('birthDate').value;
-    document.getElementById('generateBtn').disabled = !(name && birthDate);
+    const name = document.getElementById('fullName')?.value;
+    const birthDate = document.getElementById('birthDate')?.value;
+    const generateBtn = document.getElementById('generateBtn');
+    
+    // Also check if we have an angel number
+    const hasAngelNumber = angelNumber !== null && angelNumber !== undefined;
+    
+    if (generateBtn) {
+        const isValid = name && birthDate && hasAngelNumber;
+        generateBtn.disabled = !isValid;
+        generateBtn.style.opacity = isValid ? '1' : '0.5';
+        generateBtn.style.cursor = isValid ? 'pointer' : 'not-allowed';
+        
+        if (!hasAngelNumber && name && birthDate) {
+            // Show message that angel number is needed
+            generateBtn.title = 'Please enter your angel number above first';
+        } else {
+            generateBtn.title = '';
+        }
+    }
 }
 
 document.getElementById('fullName')?.addEventListener('input', checkFormValidity);
