@@ -66,11 +66,14 @@ function setManualAngelNumber() {
     }
     
     angelNumber = parseInt(number);
-    document.getElementById('angelNumberDisplay').textContent = angelNumber;
+    
+    const displayEl = document.getElementById('angelNumberDisplay');
+    if (displayEl) displayEl.textContent = angelNumber;
     
     const meanings = getAngelNumberMeanings(angelNumber);
     if (meanings) {
-        document.getElementById('angelMeaningPreview').textContent = meanings.spiritual.substring(0, 150) + '...';
+        const previewEl = document.getElementById('angelMeaningPreview');
+        if (previewEl) previewEl.textContent = meanings.spiritual.substring(0, 150) + '...';
     }
     
     // Show confirmation
@@ -87,11 +90,13 @@ function setManualAngelNumber() {
 
 // Display the angel number
 function displayPreviousReading() {
-    document.getElementById('angelNumberDisplay').textContent = angelNumber;
+    const displayEl = document.getElementById('angelNumberDisplay');
+    if (displayEl) displayEl.textContent = angelNumber;
     
     const meanings = getAngelNumberMeanings(angelNumber);
     if (meanings) {
-        document.getElementById('angelMeaningPreview').textContent = meanings.spiritual.substring(0, 150) + '...';
+        const previewEl = document.getElementById('angelMeaningPreview');
+        if (previewEl) previewEl.textContent = meanings.spiritual.substring(0, 150) + '...';
     }
     
     document.getElementById('previousReading').innerHTML = `
