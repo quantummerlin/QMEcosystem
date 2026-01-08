@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Merlin Life Strategy - Your 2026 Strategic Timing Calendar</title>
+    <meta name="description" content="Get your personalized 2026 strategic timing calendar. Know when to push, wait, or pivot across health, creativity, relationships, money, strategy, and visibility.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <header class="hero">
+            <div class="logo">
+                <span class="icon">🔮</span>
+                <h1>QUANTUM MERLIN</h1>
+                <p class="tagline">Life Strategy Intelligence</p>
+            </div>
+            <p class="hero-quote">"Millionaires watch price. Billionaires watch phase."</p>
+            <p class="hero-description">Your personalized 2026 strategic timing calendar. Know exactly when to push, wait, or pivot across every domain of your life.</p>
+        </header>
+
+        <section class="value-props">
+            <div class="prop">
+                <span class="prop-icon">🎯</span>
+                <h3>Multi-Layered Intelligence</h3>
+                <p>15+ data layers synthesized into one clear signal: numerology, astronomy, geography, and archetypal patterns.</p>
+            </div>
+            <div class="prop">
+                <span class="prop-icon">🚦</span>
+                <h3>Traffic Light Clarity</h3>
+                <p>Every day scored 0-100. Green means go. Yellow means soft go. Red means conserve energy.</p>
+            </div>
+            <div class="prop">
+                <span class="prop-icon">📅</span>
+                <h3>Year-Long Roadmap</h3>
+                <p>See your entire 2026 at a glance. Best weeks highlighted. Red flags warned. Quarterly themes revealed.</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Generate Your 2026 Calendar</h2>
+            <p class="form-intro">Enter your details below. Takes 90 seconds. 100% free. No login required.</p>
+            
+            <form id="calendar-form">
+                <div class="form-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="firstName" required placeholder="Wayne">
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="lastName" required placeholder="Michael">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="birth-month">Birth Month *</label>
+                        <select id="birth-month" name="birthMonth" required>
+                            <option value="">Select...</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-day">Birth Day *</label>
+                        <input type="number" id="birth-day" name="birthDay" min="1" max="31" required placeholder="3">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-year">Birth Year *</label>
+                        <input type="number" id="birth-year" name="birthYear" min="1900" max="2024" required placeholder="1981">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="birth-time">Birth Time (Optional)</label>
+                        <input type="time" id="birth-time" name="birthTime" placeholder="13:30">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-place">Birth Place *</label>
+                        <input type="text" id="birth-place" name="birthPlace" required placeholder="Abu Dhabi, UAE">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="current-location">Current Location *</label>
+                    <input type="text" id="current-location" name="currentLocation" required placeholder="Melbourne, Australia">
+                </div>
+
+                <div class="form-group priority-section">
+                    <label>Rank Your Priorities (Drag to Reorder)</label>
+                    <p class="priority-hint">Drag the most important to the top. This affects your daily scores.</p>
+                    <ul id="priority-list" class="priority-list">
+                        <li draggable="true" data-category="health">
+                            <span class="drag-handle">☰</span>
+                            <span class="priority-icon">❤️</span>
+                            <span class="priority-name">Health</span>
+                        </li>
+                        <li draggable="true" data-category="creativity">
+                            <span class="drag-handle">☰</span>
+                            <span class="priority-icon">🎨</span>
+                            <span class="priority-name">Creativity</span>
+                        </li>
+                        <li draggable="true" data-category="relationships">
+                            <span class="drag-handle">☰</span>
+                            <span class="priority-icon">🤝</span>
+                            <span class="priority-name">Relationships</span>
+                        </li>
+                        <li draggable="true" data-category="money">
+                            <span class="drag-handle">☰</span>
+                            <span class="priority-icon">💰</span>
+                            <span class="priority-name">Money</span>
+                        </li>
+                        <li draggable="true" data-category="strategy">
+                            <span class="drag-handle">☰</span>
+                            <span class="priority-icon">🧠</span>
+                            <span class="priority-name">Strategy</span>
+                        </li>
+                        <li draggable="true" data-category="visibility">
+                            <span class="drag-handle">☰</span>
+                            <span class="priority-icon">👁️</span>
+                            <span class="priority-name">Visibility</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <button type="submit" class="cta-button">
+                    <span class="button-icon">✨</span>
+                    Generate My 2026 Calendar
+                    <span class="button-icon">✨</span>
+                </button>
+            </form>
+        </section>
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Multi-Layer Analysis</h3>
+                    <p>We calculate your Life Path, Destiny, Soul Urge, Personal Year, Moon phases, planetary transits, and geographic resonance.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Friction Detection</h3>
+                    <p>Our algorithm identifies when different layers contradict, creating high-resistance periods you should avoid.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Personalized Scoring</h3>
+                    <p>Every day gets a 0-100 score for each of your 6 life categories, weighted by your personal priorities.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Actionable Guidance</h3>
+                    <p>You get a color-coded calendar with one-line daily guidance: "Create today" or "Rest today" or "Connect today".</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What People Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="quote">"I launched my business in a green week and it took off immediately. The red flag warnings saved me from a terrible partnership."</p>
+                    <p class="author">— Sarah K., Entrepreneur</p>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"Finally, a timing system that doesn't feel like fortune telling. It's honest about friction and gives me real decision intelligence."</p>
+                    <p class="author">— Marcus T., Executive</p>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"My creativity scores were spot-on. I wrote my best work during the green weeks and rested during red. Game changer."</p>
+                    <p class="author">— Elena R., Writer</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>Is this astrology?</h3>
+                <p>No. We use astronomical data (moon phases, planetary positions) as timing markers, but we don't claim causation. Think of it as pattern recognition, not prediction.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How accurate is this?</h3>
+                <p>We synthesize 15+ data layers into one signal. Users report 70-80% alignment with their lived experience. It's timing intelligence, not fortune telling.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is it really free?</h3>
+                <p>Yes. 100% free. No credit card. No login. We monetize through optional deep-dive readings ($199-299) and contextual affiliate links.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What if I don't know my birth time?</h3>
+                <p>That's okay. Birth time is optional. We'll use noon as default. The calendar will still be 85-90% accurate.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I change my priorities later?</h3>
+                <p>Yes. Your calendar URL is permanent. You can regenerate with different priorities anytime.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Quantum Merlin. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="about.html">About</a> | 
+                <a href="../privacy.html">Privacy</a> | 
+                <a href="../terms.html">Terms</a> | 
+                <a href="../disclaimer.html">Disclaimer</a>
+            </p>
+            <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: rgba(255, 215, 0, 0.6);">
+                We're continually improving. <a href="#" onclick="openFeedbackModal(event)" style="color: rgba(255, 215, 0, 0.8); text-decoration: underline; cursor: pointer;">Have feedback? Click here ✨</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../shared/js/quantum-feedback.js"></script>
+</body>
+</html>

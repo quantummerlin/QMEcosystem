@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your 2026 Strategic Calendar | Quantum Merlin</title>
+    <meta name="description" content="Your personalized 2026 strategic timing calendar with day-by-day guidance.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calendar-styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <header class="calendar-header">
+            <div class="logo-small">
+                <span class="icon">🔮</span>
+                <h1>QUANTUM MERLIN</h1>
+            </div>
+            <a href="index.html" class="back-link">← Generate New Calendar</a>
+        </header>
+
+        <section class="calendar-hero">
+            <h2 id="user-name">Your 2026 Strategic Calendar</h2>
+            <div class="core-numbers">
+                <div class="number-card">
+                    <span class="number-label">Life Path</span>
+                    <span class="number-value" id="life-path">-</span>
+                </div>
+                <div class="number-card">
+                    <span class="number-label">Destiny</span>
+                    <span class="number-value" id="destiny">-</span>
+                </div>
+                <div class="number-card">
+                    <span class="number-label">Soul Urge</span>
+                    <span class="number-value" id="soul-urge">-</span>
+                </div>
+                <div class="number-card">
+                    <span class="number-label">Personality</span>
+                    <span class="number-value" id="personality">-</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="year-overview">
+            <h3>2026 Year-at-a-Glance</h3>
+            <div class="year-chart" id="year-chart">
+                <!-- Monthly bars will be generated here -->
+            </div>
+            <div class="legend">
+                <span class="legend-item"><span class="dot green"></span> 80-100: GO</span>
+                <span class="legend-item"><span class="dot yellow"></span> 60-79: SOFT GO</span>
+                <span class="legend-item"><span class="dot neutral"></span> 40-59: NEUTRAL</span>
+                <span class="legend-item"><span class="dot red"></span> 0-39: PULL BACK</span>
+            </div>
+        </section>
+
+        <section class="best-worst">
+            <div class="highlight-box best">
+                <h4>🌟 Best Months of 2026</h4>
+                <ul id="best-months"></ul>
+            </div>
+            <div class="highlight-box worst">
+                <h4>⚠️ Red Flag Periods</h4>
+                <ul id="red-flag-months"></ul>
+            </div>
+        </section>
+
+        <section class="monthly-breakdown">
+            <h3>Monthly Breakdown</h3>
+            <div id="monthly-cards">
+                <!-- Monthly cards will be generated here -->
+            </div>
+        </section>
+
+        <section class="priority-scores">
+            <h3>Your Priority Rankings</h3>
+            <div id="priority-display">
+                <!-- Priority list will be displayed here -->
+            </div>
+        </section>
+
+        <section class="deep-dive-cta">
+            <div class="cta-box">
+                <h3>Want Deeper Insights?</h3>
+                <p>Book a 1-hour personalized strategy session with a Quantum Merlin analyst. We'll dive deep into your specific questions, timing conflicts, and decision points.</p>
+                <ul class="benefits">
+                    <li>✓ Week-by-week breakdown for critical months</li>
+                    <li>✓ Day-by-day guidance for major decisions</li>
+                    <li>✓ Friction analysis and mitigation strategies</li>
+                    <li>✓ Historical validation (past years review)</li>
+                    <li>✓ Custom action plan for your 2026 goals</li>
+                </ul>
+                <p class="price">$299 <span class="price-note">(One-time, 60-minute session)</span></p>
+                <button class="cta-button" onclick="window.location.href='booking.html'">
+                    <span class="button-icon">📞</span>
+                    Book Your Deep-Dive Session
+                    <span class="button-icon">📞</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="share-section">
+            <h3>Share Your Calendar</h3>
+            <div class="share-buttons">
+                <button class="share-btn twitter" onclick="shareOnTwitter()">
+                    <span>🐦</span> Share on Twitter
+                </button>
+                <button class="share-btn facebook" onclick="shareOnFacebook()">
+                    <span>📘</span> Share on Facebook
+                </button>
+                <button class="share-btn linkedin" onclick="shareOnLinkedIn()">
+                    <span>💼</span> Share on LinkedIn
+                </button>
+                <button class="share-btn copy" onclick="copyLink()">
+                    <span>🔗</span> Copy Link
+                </button>
+            </div>
+        </section>
+
+        <section class="export-section">
+            <h3>Export Your Calendar</h3>
+            <div class="export-buttons">
+                <button class="export-btn" onclick="exportToPDF()">
+                    <span>📄</span> Download PDF
+                </button>
+                <button class="export-btn" onclick="exportToICS()">
+                    <span>📅</span> Add to Google Calendar
+                </button>
+                <button class="export-btn" onclick="window.print()">
+                    <span>🖨️</span> Print Calendar
+                </button>
+            </div>
+        </section>
+
+        <section class="validation-section">
+            <h3>Historical Validation</h3>
+            <p>See how our timing patterns have aligned with past years (2023-2025).</p>
+            <button class="validation-button" onclick="showHistoricalValidation()">
+                <span class="validation-icon">📊</span>
+                View Historical Patterns
+                <span class="validation-icon">📊</span>
+            </button>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Quantum Merlin. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="about.html">About</a> | 
+                <a href="../privacy.html">Privacy</a> | 
+                <a href="../terms.html">Terms</a> | 
+                <a href="../disclaimer.html">Disclaimer</a>
+            </p>
+            <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: rgba(255, 215, 0, 0.6);">
+                We're continually improving. <a href="#" onclick="openFeedbackModal(event)" style="color: rgba(255, 215, 0, 0.8); text-decoration: underline; cursor: pointer;">Have feedback? Click here ✨</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="calendar-script.js"></script>
+    <script src="../shared/js/quantum-feedback.js"></script>
+</body>
+</html>
