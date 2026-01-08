@@ -319,8 +319,10 @@ function getMoonSign(birthYear, birthMonth, birthDay) {
     const daysSinceEpoch = Math.floor((birthDate - epoch) / (1000 * 60 * 60 * 24));
     const moonCycle = 27.3; // Sidereal month
     const degreesPerDay = 360 / moonCycle;
-    const totalDegrees = (daysSinceEpoch * degreesPerDay) % 360;
-    const signIndex = Math.floor(totalDegrees / 30) % 12;
+    let totalDegrees = (daysSinceEpoch * degreesPerDay) % 360;
+    if (totalDegrees < 0) totalDegrees += 360; // Handle dates before epoch
+    let signIndex = Math.floor(totalDegrees / 30) % 12;
+    if (signIndex < 0) signIndex += 12; // Ensure positive index
     
     const signs = [
         { name: 'Aries', symbol: '♈', element: 'Fire' },
@@ -337,7 +339,7 @@ function getMoonSign(birthYear, birthMonth, birthDay) {
         { name: 'Pisces', symbol: '♓', element: 'Water' }
     ];
     
-    return signs[signIndex];
+    return signs[signIndex] || signs[0]; // Fallback to Aries if undefined
 }
 
 // ===== MOON PHASE (Accurate calculation) =====
@@ -1006,10 +1008,10 @@ if (calendarForm) {
         extendedData: {
             chinese,
             gematria,
-            sunSign: { name: sunSign.name, symbol: sunSign.symbol, element: sunSign.element },
-            moonSign: { name: moonSign.name, symbol: moonSign.symbol, element: moonSign.element },
+            sunSign: sunSign ? { name: sunSign.name, symbol: sunSign.symbol, element: sunSign.element } : null,
+            moonSign: moonSign ? { name: moonSign.name, symbol: moonSign.symbol, element: moonSign.element } : null,
             risingSign: risingSign ? { name: risingSign.name, symbol: risingSign.symbol, element: risingSign.element } : null,
-            crossSystemBonus: crossSystemAnalysis.netModifier
+            crossSystemBonus: crossSystemAnalysis ? crossSystemAnalysis.netModifier : 0
         },
         calendar2026
     }));
