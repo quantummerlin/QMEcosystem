@@ -83,6 +83,18 @@ body {
     z-index: 1;
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: var(--space-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+}
+
 /* ===== HERO SECTION ===== */
 .hero {
     text-align: center;
@@ -658,6 +670,10 @@ footer {
         font-size: 2.5rem;
     }
     
+    .hero {
+        padding: var(--space-md);
+    }
+    
     .hero-quote {
         font-size: 1.4rem;
     }
@@ -678,13 +694,27 @@ footer {
     }
     
     .cta-button {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        padding: 12px 30px;
     }
     
     .calendar-header {
         flex-direction: column;
         gap: var(--space-sm);
         text-align: center;
+    }
+    
+    .value-props {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+    
+    .steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -694,14 +724,47 @@ footer {
     }
     
     .logo h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .tagline {
         font-size: 0.9rem;
     }
     
+    .hero {
+        padding: var(--space-sm);
+    }
+    
     .hero-quote {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    
+    .cta-button {
+        font-size: 0.95rem;
+        padding: 10px 25px;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .prop,
+    .step,
+    .testimonial,
+    .faq-item {
+        padding: var(--space-sm);
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    input[type="time"],
+    select {
+        font-size: 16px; /* Prevents zoom on iOS */
     }
 }
