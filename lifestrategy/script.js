@@ -264,15 +264,24 @@ function getZodiacSign(month, day) {
         { name: 'Capricorn', symbol: '♑', element: 'Earth', modality: 'Cardinal' }
     ];
     
-    const dates = [20, 19, 20, 20, 21, 21, 22, 23, 23, 23, 22, 22, 20];
+    // Cusp dates for each month (day when sign changes)
+    const dates = [20, 19, 20, 20, 21, 21, 22, 23, 23, 23, 22, 22];
     
-    let signIndex = month;
-    if (day < dates[month]) {
+    // Month is 1-12, need to handle as 0-11 for array indexing
+    const monthIndex = month - 1;
+    let signIndex = month; // Start with next sign index
+    
+    if (monthIndex >= 0 && monthIndex < 12 && day < dates[monthIndex]) {
         signIndex = month - 1;
         if (signIndex < 0) signIndex = 11;
     }
     
-    return signs[signIndex];
+    // Ensure signIndex is valid
+    if (signIndex < 0 || signIndex >= signs.length) {
+        signIndex = 0;
+    }
+    
+    return signs[signIndex] || signs[0];
 }
 
 // ===== RISING SIGN (Simplified - requires birth time) =====
