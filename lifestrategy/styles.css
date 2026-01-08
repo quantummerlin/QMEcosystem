@@ -294,6 +294,8 @@ input::placeholder {
     border: 1px solid rgba(212, 175, 55, 0.3);
     border-radius: var(--border-radius);
     padding: var(--space-sm);
+    touch-action: none; /* Prevent browser touch gestures */
+    user-select: none; /* Prevent text selection while dragging */
 }
 
 .priority-list li {
@@ -306,6 +308,7 @@ input::placeholder {
     margin-bottom: var(--space-xs);
     cursor: move;
     transition: background 0.3s ease, transform 0.2s ease;
+    min-height: 50px; /* Ensure touch-friendly tap targets */
 }
 
 .priority-list li:hover {
@@ -316,23 +319,28 @@ input::placeholder {
 .priority-list li.dragging {
     opacity: 0.5;
     transform: scale(1.05);
+    z-index: 1000;
 }
 
 .drag-handle {
     color: var(--dim-text);
     margin-right: var(--space-sm);
     font-size: 1.2rem;
+    flex-shrink: 0;
 }
 
 .priority-icon {
     font-size: 1.5rem;
     margin-right: var(--space-sm);
+    flex-shrink: 0;
 }
 
 .priority-name {
     font-family: var(--font-heading);
     font-size: 1.2rem;
     color: var(--silver-text);
+    flex-grow: 1;
+    word-wrap: break-word;
 }
 
 /* ===== CTA BUTTON ===== */
@@ -716,6 +724,30 @@ footer {
     .testimonial-grid {
         grid-template-columns: 1fr;
     }
+    
+    /* Mobile priority list improvements */
+    .priority-list {
+        padding: 10px;
+    }
+    
+    .priority-list li {
+        padding: 12px 10px;
+        min-height: 55px;
+    }
+    
+    .priority-name {
+        font-size: 1.1rem;
+    }
+    
+    .priority-icon {
+        font-size: 1.3rem;
+        margin-right: 8px;
+    }
+    
+    .drag-handle {
+        font-size: 1.1rem;
+        margin-right: 8px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -766,5 +798,35 @@ footer {
     input[type="time"],
     select {
         font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    /* Extra small mobile priority list */
+    .priority-hint {
+        font-size: 0.9rem;
+        padding: 0 5px;
+    }
+    
+    .priority-list {
+        padding: 8px;
+    }
+    
+    .priority-list li {
+        padding: 10px 8px;
+        min-height: 60px; /* Larger touch target */
+    }
+    
+    .priority-name {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+    
+    .priority-icon {
+        font-size: 1.2rem;
+        margin-right: 6px;
+    }
+    
+    .drag-handle {
+        font-size: 1rem;
+        margin-right: 6px;
     }
 }

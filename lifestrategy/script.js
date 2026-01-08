@@ -1,15 +1,23 @@
 // QUANTUM MERLIN LIFE STRATEGY - JAVASCRIPT
 
-// ===== PRIORITY DRAG & DROP =====
+// ===== PRIORITY DRAG & DROP WITH TOUCH SUPPORT =====
 const priorityList = document.getElementById('priority-list');
 let draggedElement = null;
+let touchStartY = 0;
+let touchCurrentY = 0;
 
 // Add drag event listeners to all priority items
 document.querySelectorAll('.priority-list li').forEach(item => {
+    // Desktop drag events
     item.addEventListener('dragstart', handleDragStart);
     item.addEventListener('dragover', handleDragOver);
     item.addEventListener('drop', handleDrop);
     item.addEventListener('dragend', handleDragEnd);
+    
+    // Mobile touch events
+    item.addEventListener('touchstart', handleTouchStart, { passive: false });
+    item.addEventListener('touchmove', handleTouchMove, { passive: false });
+    item.addEventListener('touchend', handleTouchEnd, { passive: false });
 });
 
 function handleDragStart(e) {
@@ -43,6 +51,36 @@ function handleDrop(e) {
 
 function handleDragEnd(e) {
     this.classList.remove('dragging');
+}
+
+// Touch event handlers for mobile
+function handleTouchStart(e) {
+    draggedElement = this;
+    touchStartY = e.touches[0].clientY;
+    this.classList.add('dragging');
+    e.preventDefault();
+}
+
+function handleTouchMove(e) {
+    if (!draggedElement) return;
+    
+    e.preventDefault();
+    touchCurrentY = e.touches[0].clientY;
+    
+    const afterElement = getDragAfterElement(priorityList, touchCurrentY);
+    if (afterElement == null) {
+        priorityList.appendChild(draggedElement);
+    } else {
+        priorityList.insertBefore(draggedElement, afterElement);
+    }
+}
+
+function handleTouchEnd(e) {
+    if (!draggedElement) return;
+    
+    e.preventDefault();
+    draggedElement.classList.remove('dragging');
+    draggedElement = null;
 }
 
 function getDragAfterElement(container, y) {
