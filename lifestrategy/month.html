@@ -476,6 +476,165 @@
         .coffee-button {
             background: linear-gradient(135deg, #ff6b9d, #daa520);
         }
+        
+        /* Responsive Styles for Month Page */
+        @media (max-width: 768px) {
+            .month-hero h1 {
+                font-size: 1.8rem;
+                line-height: 1.4;
+                word-wrap: break-word;
+            }
+            
+            .score-circle {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .score-circle .score-number {
+                font-size: 2rem;
+            }
+            
+            .month-nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .month-nav a {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .month-meta-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .guidance-box h3,
+            .category-section h3,
+            .weeks-section h3,
+            .days-section h3 {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                word-wrap: break-word;
+            }
+            
+            .highlight-card h4 {
+                font-size: 1rem;
+                line-height: 1.4;
+            }
+            
+            .explore-hub h3,
+            .coffee-support h3 {
+                font-size: 1.2rem;
+                line-height: 1.4;
+            }
+            
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .days-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .month-hero h1 {
+                font-size: 1.4rem;
+                line-height: 1.4;
+                padding: 0 10px;
+            }
+            
+            .score-circle {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .score-circle .score-number {
+                font-size: 1.7rem;
+            }
+            
+            .month-theme {
+                font-size: 1.1rem;
+            }
+            
+            .month-meta-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            
+            .meta-card {
+                padding: 12px;
+            }
+            
+            .meta-card .value {
+                font-size: 1rem;
+            }
+            
+            .guidance-box h3,
+            .category-section h3,
+            .weeks-section h3,
+            .days-section h3 {
+                font-size: 1rem;
+                line-height: 1.4;
+            }
+            
+            .highlight-card h4 {
+                font-size: 0.9rem;
+            }
+            
+            .explore-hub h3,
+            .coffee-support h3 {
+                font-size: 1.05rem;
+            }
+            
+            .explore-hub,
+            .coffee-support {
+                padding: 25px 15px;
+            }
+            
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            
+            .category-card {
+                padding: 12px;
+            }
+            
+            .category-card .icon {
+                font-size: 1.5rem;
+            }
+            
+            .category-card .name {
+                font-size: 0.85rem;
+            }
+            
+            .week-card {
+                padding: 15px;
+            }
+            
+            .week-number {
+                font-size: 1rem;
+            }
+            
+            .days-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .day-card {
+                padding: 12px;
+            }
+            
+            .day-guidance {
+                font-size: 0.8rem;
+            }
+            
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 0.95rem;
+            }
+        }
     </style>
 </head>
 <body>

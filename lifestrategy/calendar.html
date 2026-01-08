@@ -524,12 +524,90 @@
         }
         
         @media (max-width: 768px) {
-            .calendar-hero h2 { font-size: 1.8rem; }
+            .calendar-hero h2 { font-size: 1.6rem; line-height: 1.4; word-wrap: break-word; }
             .core-numbers { gap: 10px; }
             .number-card { padding: 15px 20px; min-width: 100px; }
             .number-value { font-size: 1.5rem; }
             .bar { width: 20px; }
             .month-label { font-size: 0.65rem; }
+            
+            /* Emoji title fixes */
+            .year-overview h3,
+            .monthly-grid h3,
+            .priority-section h3,
+            .export-section h3,
+            .explore-hub h3,
+            .coffee-support h3 {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                word-wrap: break-word;
+                text-align: center;
+            }
+            
+            .highlight-box h4 {
+                font-size: 1.1rem;
+                line-height: 1.4;
+            }
+            
+            .month-card-header {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .month-name {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .calendar-hero h2 { font-size: 1.3rem; line-height: 1.4; padding: 0 5px; }
+            .logo-small h1 { font-size: 1.2rem; }
+            .logo-small .icon { font-size: 1.5rem; }
+            
+            .year-overview h3,
+            .monthly-grid h3,
+            .priority-section h3,
+            .export-section h3 {
+                font-size: 1rem;
+            }
+            
+            .explore-hub h3,
+            .coffee-support h3 {
+                font-size: 1.1rem;
+            }
+            
+            .highlight-box h4 {
+                font-size: 0.95rem;
+            }
+            
+            .month-theme {
+                font-size: 0.85rem;
+            }
+            
+            .month-meta {
+                font-size: 0.75rem;
+            }
+            
+            .priority-item {
+                padding: 10px 15px;
+            }
+            
+            .priority-rank {
+                font-size: 1.2rem;
+            }
+            
+            .priority-name-display {
+                font-size: 0.9rem;
+            }
+            
+            .number-label { font-size: 0.7rem; }
+            .number-value { font-size: 1.3rem; }
+            .number-card { min-width: 80px; padding: 10px 15px; }
+            
+            .back-link {
+                font-size: 0.85rem;
+                padding: 8px 15px;
+            }
         }
     </style>
 </head>

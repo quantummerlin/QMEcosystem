@@ -6,19 +6,21 @@ let draggedElement = null;
 let touchStartY = 0;
 let touchCurrentY = 0;
 
-// Add drag event listeners to all priority items
-document.querySelectorAll('.priority-list li').forEach(item => {
-    // Desktop drag events
-    item.addEventListener('dragstart', handleDragStart);
-    item.addEventListener('dragover', handleDragOver);
-    item.addEventListener('drop', handleDrop);
-    item.addEventListener('dragend', handleDragEnd);
-    
-    // Mobile touch events
-    item.addEventListener('touchstart', handleTouchStart, { passive: false });
-    item.addEventListener('touchmove', handleTouchMove, { passive: false });
-    item.addEventListener('touchend', handleTouchEnd, { passive: false });
-});
+// Add drag event listeners to all priority items (only if on form page)
+if (priorityList) {
+    document.querySelectorAll('.priority-list li').forEach(item => {
+        // Desktop drag events
+        item.addEventListener('dragstart', handleDragStart);
+        item.addEventListener('dragover', handleDragOver);
+        item.addEventListener('drop', handleDrop);
+        item.addEventListener('dragend', handleDragEnd);
+        
+        // Mobile touch events
+        item.addEventListener('touchstart', handleTouchStart, { passive: false });
+        item.addEventListener('touchmove', handleTouchMove, { passive: false });
+        item.addEventListener('touchend', handleTouchEnd, { passive: false });
+    });
+}
 
 function handleDragStart(e) {
     draggedElement = this;
@@ -937,27 +939,29 @@ function getDailyGuidance(dailyFunction, score, personalYear, personalMonth, ast
 
 // ===== FORM SUBMISSION =====
 
-document.getElementById('calendar-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = {
-        firstName: document.getElementById('first-name').value.trim(),
-        lastName: document.getElementById('last-name').value.trim(),
-        birthMonth: parseInt(document.getElementById('birth-month').value),
-        birthDay: parseInt(document.getElementById('birth-day').value),
-        birthYear: parseInt(document.getElementById('birth-year').value),
-        birthTime: document.getElementById('birth-time').value,
-        birthPlace: document.getElementById('birth-place').value.trim(),
-        currentLocation: document.getElementById('current-location').value.trim()
-    };
-    
-    // Get priority order
-    const priorityElements = document.querySelectorAll('.priority-list li');
-    const priorities = Array.from(priorityElements).map(el => el.dataset.category);
-    
-    // Calculate core numerology numbers
-    const lifePath = calculateLifePath(formData.birthMonth, formData.birthDay, formData.birthYear);
+const calendarForm = document.getElementById('calendar-form');
+if (calendarForm) {
+    calendarForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = {
+            firstName: document.getElementById('first-name').value.trim(),
+            lastName: document.getElementById('last-name').value.trim(),
+            birthMonth: parseInt(document.getElementById('birth-month').value),
+            birthDay: parseInt(document.getElementById('birth-day').value),
+            birthYear: parseInt(document.getElementById('birth-year').value),
+            birthTime: document.getElementById('birth-time').value,
+            birthPlace: document.getElementById('birth-place').value.trim(),
+            currentLocation: document.getElementById('current-location').value.trim()
+        };
+        
+        // Get priority order
+        const priorityElements = document.querySelectorAll('.priority-list li');
+        const priorities = Array.from(priorityElements).map(el => el.dataset.category);
+        
+        // Calculate core numerology numbers
+        const lifePath = calculateLifePath(formData.birthMonth, formData.birthDay, formData.birthYear);
     const destiny = calculateDestinyNumber(formData.firstName, formData.lastName);
     const soulUrge = calculateSoulUrge(formData.firstName, formData.lastName);
     const personality = calculatePersonality(formData.firstName, formData.lastName);
@@ -1019,7 +1023,8 @@ document.getElementById('calendar-form').addEventListener('submit', function(e) 
     
     // Redirect to calendar page
     window.location.href = 'calendar.html';
-});
+    });
+}
 
 function generate2026Calendar(formData, lifePath, destiny, priorities, extendedData = null) {
     const calendar = [];
@@ -1255,31 +1260,38 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===== FORM VALIDATION =====
-document.getElementById('birth-day').addEventListener('input', function() {
-    const month = parseInt(document.getElementById('birth-month').value);
-    const day = parseInt(this.value);
-    
-    if (month && day) {
-        const daysInMonth = new Date(2000, month, 0).getDate();
-        if (day > daysInMonth) {
-            this.setCustomValidity(`${getMonthName(month)} only has ${daysInMonth} days`);
-        } else {
-            this.setCustomValidity('');
+const birthDayInput = document.getElementById('birth-day');
+if (birthDayInput) {
+    birthDayInput.addEventListener('input', function() {
+        const month = parseInt(document.getElementById('birth-month').value);
+        const day = parseInt(this.value);
+        
+        if (month && day) {
+            const daysInMonth = new Date(2000, month, 0).getDate();
+            if (day > daysInMonth) {
+                this.setCustomValidity(`${getMonthName(month)} only has ${daysInMonth} days`);
+            } else {
+                this.setCustomValidity('');
+            }
         }
-    }
-});
+    });
+}
 
 // ===== LOADING ANIMATION =====
 function showLoading() {
     const button = document.querySelector('.cta-button');
-    button.innerHTML = '<span class="button-icon">⏳</span> Calculating Your 2026... <span class="button-icon">⏳</span>';
-    button.disabled = true;
+    if (button) {
+        button.innerHTML = '<span class="button-icon">⏳</span> Calculating Your 2026... <span class="button-icon">⏳</span>';
+        button.disabled = true;
+    }
 }
 
 // Add loading state to form submission
-document.getElementById('calendar-form').addEventListener('submit', function() {
-    showLoading();
-});
+if (calendarForm) {
+    calendarForm.addEventListener('submit', function() {
+        showLoading();
+    });
+}
 
 // ===== LOAD PREVIOUS DETAILS =====
 (function checkForSavedDetails() {

@@ -1013,6 +1013,18 @@
         padding: var(--space-md);
     }
     
+    /* Fix emoji titles on tablet */
+    .year-overview h3,
+    .best-worst h4,
+    .monthly-breakdown h3,
+    .priority-scores h3,
+    .highlight-box h4 {
+        font-size: 1.3rem;
+        word-wrap: break-word;
+        text-align: center;
+        line-height: 1.4;
+    }
+    
     .share-buttons,
     .export-buttons {
         flex-direction: column;
@@ -1075,9 +1087,10 @@
     }
     
     .calendar-hero h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         padding: 0 5px;
         line-height: 1.3;
+        word-break: break-word;
     }
     
     .calendar-header {
@@ -1088,7 +1101,7 @@
     }
     
     .logo-small h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     
     .core-numbers {
@@ -1101,7 +1114,7 @@
     }
     
     .number-value {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .year-overview,
@@ -1122,7 +1135,7 @@
     }
     
     .month-name {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
     
     .toggle-btn {
@@ -1133,5 +1146,26 @@
     .cta-box,
     .deep-dive-cta .cta-box {
         padding: var(--space-sm);
+    }
+    
+    /* Fix emoji titles on small mobile */
+    .year-overview h3,
+    .monthly-breakdown h3,
+    .priority-scores h3 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+        text-align: center;
+        word-wrap: break-word;
+    }
+    
+    .highlight-box h4,
+    .best-worst h4 {
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: center;
+    }
+    
+    .number-label {
+        font-size: 0.75rem;
     }
 }
