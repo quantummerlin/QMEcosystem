@@ -497,74 +497,74 @@ function calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, p
     // Base score from personal year alignment
     let baseScore = 50;
     
-    // Personal Year modifiers (more nuanced)
+    // Personal Year modifiers (balanced for realistic distribution)
     const pyModifiers = {
-        1: 12,  // New beginnings - high energy
-        2: -8,  // Patience - lower energy
-        3: 18,  // Creativity - very high energy
-        4: -2,  // Building - slightly below neutral
-        5: 22,  // Change - very high energy
-        6: 3,   // Responsibility - slightly above neutral
-        7: -12, // Introspection - low energy
-        8: 20,  // Power - very high energy
-        9: -6,  // Completion - moderate-low energy
-        11: 25, // Master number - extremely high
-        22: 18, // Master number - very high
-        33: 12  // Master number - high
+        1: 6,   // New beginnings - moderate boost
+        2: -4,  // Patience - slight reduction
+        3: 8,   // Creativity - good energy
+        4: -1,  // Building - near neutral
+        5: 10,  // Change - high energy
+        6: 2,   // Responsibility - slight boost
+        7: -6,  // Introspection - reduced energy
+        8: 9,   // Power - good energy
+        9: -3,  // Completion - winding down
+        11: 12, // Master number - elevated
+        22: 10, // Master number - strong
+        33: 8   // Master number - meaningful
     };
     
     baseScore += pyModifiers[personalYear] || 0;
     
-    // Personal Month modifiers
+    // Personal Month modifiers (scaled for realistic variance)
     const pmModifiers = {
-        1: 12,
-        2: -8,
-        3: 18,
-        4: -2,
-        5: 22,
-        6: 3,
-        7: -12,
-        8: 20,
-        9: -6,
-        11: 25,
-        22: 18,
-        33: 12
+        1: 5,
+        2: -3,
+        3: 7,
+        4: 0,
+        5: 9,
+        6: 2,
+        7: -5,
+        8: 8,
+        9: -2,
+        11: 10,
+        22: 8,
+        33: 6
     };
     
     baseScore += pmModifiers[personalMonth] || 0;
     
-    // Life Path alignment bonus (stronger)
+    // Life Path alignment bonus (moderate)
     if (lifePath === personalMonth) {
-        baseScore += 15;
+        baseScore += 8;
     }
     
-    // Destiny alignment bonus (stronger)
+    // Destiny alignment bonus (moderate)
     if (destiny === personalYear) {
-        baseScore += 15;
+        baseScore += 7;
     }
     
     // Birthday month bonus (transition energy)
     if (month === birthMonth) {
-        baseScore += 8; // Transition month has special energy
+        baseScore += 5; // Transition month has special energy
     }
     
     // Friction detection: conflicting energies
     // PY7 + PM5 = introspection vs change (friction)
     if ((personalYear === 7 && personalMonth === 5) || 
         (personalYear === 5 && personalMonth === 7)) {
-        baseScore -= 10;
+        baseScore -= 6;
     }
     
     // PY2 + PM8 = patience vs power (friction)
     if ((personalYear === 2 && personalMonth === 8) || 
         (personalYear === 8 && personalMonth === 2)) {
-        baseScore -= 8;
+        baseScore -= 5;
     }
     
     // PY9 + PM1 = completion vs beginning (friction)
     if ((personalYear === 9 && personalMonth === 1) || 
         (personalYear === 1 && personalMonth === 9)) {
-        baseScore -= 12;
+        baseScore -= 7;
     }
     
     // Seasonal modifiers (Northern Hemisphere bias - can be adjusted)
@@ -639,44 +639,123 @@ function getWeeklyTheme(score) {
     return '🔴 Release';
 }
 
-function getMonthlyGuidance(personalYear, personalMonth, score, month, birthdayMonth) {
-    const baseGuidance = {
-        1: "New beginnings favor bold moves. Plant seeds for the year ahead.",
-        2: "Patience and partnership. Build relationships, not empires.",
-        3: "Creative expression peaks. Share your work with the world.",
-        4: "Foundation building. Structure and systems over spontaneity.",
-        5: "Change and freedom. Embrace uncertainty and pivot quickly.",
-        6: "Responsibility and service. Focus on family and community.",
-        7: "Introspection and analysis. Research, don't rush.",
-        8: "Power and authority. Revenue generation and strategic visibility.",
-        9: "Completion and release. Finish strong, start nothing new.",
-        11: "Intuitive insights. Trust your signal, share your vision.",
-        22: "Master builder. Large-scale projects and legacy work.",
-        33: "Master teacher. Healing, teaching, and service."
+function getMonthlyGuidance(personalYear, personalMonth, score, month, birthdayMonth, lifePath = null, extendedData = null) {
+    // Personal Month themes with richer descriptions
+    const monthThemes = {
+        1: {
+            theme: "New Beginnings",
+            action: "Initiate projects, assert your vision, take leadership roles",
+            avoid: "Following others' agendas, hesitation, waiting for permission"
+        },
+        2: {
+            theme: "Cooperation & Patience",
+            action: "Build partnerships, negotiate deals, nurture relationships",
+            avoid: "Going solo, forcing outcomes, impatience with slow progress"
+        },
+        3: {
+            theme: "Creative Expression",
+            action: "Launch creative projects, speak publicly, socialize actively",
+            avoid: "Criticism, negativity, hiding your talents"
+        },
+        4: {
+            theme: "Foundation Building",
+            action: "Create systems, organize finances, establish routines",
+            avoid: "Shortcuts, disorganization, neglecting health"
+        },
+        5: {
+            theme: "Freedom & Change",
+            action: "Travel, experiment, pivot strategies, embrace uncertainty",
+            avoid: "Rigidity, over-commitment, resisting necessary change"
+        },
+        6: {
+            theme: "Responsibility & Service",
+            action: "Focus on family, beautify spaces, serve community",
+            avoid: "Self-neglect, perfectionism, controlling others"
+        },
+        7: {
+            theme: "Introspection & Analysis",
+            action: "Research deeply, meditate, develop expertise privately",
+            avoid: "Superficial socializing, rushed decisions, ignoring intuition"
+        },
+        8: {
+            theme: "Power & Achievement",
+            action: "Negotiate deals, seek promotions, make financial moves",
+            avoid: "Undervaluing yourself, avoiding money matters, power plays"
+        },
+        9: {
+            theme: "Completion & Release",
+            action: "Finish projects, let go of what's done, serve humanity",
+            avoid: "Starting new ventures, holding grudges, attachment"
+        },
+        11: {
+            theme: "Spiritual Awakening",
+            action: "Trust intuition, inspire others, follow divine guidance",
+            avoid: "Ignoring inner signals, excessive rationality, fear"
+        },
+        22: {
+            theme: "Master Building",
+            action: "Scale up, build institutions, manifest large visions",
+            avoid: "Thinking small, practical pessimism, self-doubt"
+        },
+        33: {
+            theme: "Divine Service",
+            action: "Heal, teach, uplift others unconditionally",
+            avoid: "Martyrdom, over-giving, ignoring personal needs"
+        }
     };
     
-    let guidance = baseGuidance[personalMonth] || baseGuidance[personalYear] || "Navigate with awareness.";
+    const pmTheme = monthThemes[personalMonth] || monthThemes[personalYear] || { theme: "Navigation", action: "Stay aware", avoid: "Unconscious patterns" };
     
-    // Add score-based context
-    if (score >= 80) {
-        guidance += " This is a peak month—maximize your leverage.";
-    } else if (score >= 70) {
-        guidance += " Strong momentum—push forward with confidence.";
+    // Build guidance with specific actions
+    let guidance = `**${pmTheme.theme} Month.** Focus on: ${pmTheme.action}. Avoid: ${pmTheme.avoid}.`;
+    
+    // Life Path specific amplification
+    if (lifePath) {
+        const lpAmplifiers = {
+            1: " Your leadership instinct guides all decisions this month.",
+            2: " Your diplomatic gifts are especially valuable now.",
+            3: " Creative expression is your key to progress.",
+            4: " Your practical wisdom builds lasting results.",
+            5: " Your adaptability turns chaos into opportunity.",
+            6: " Service to others brings unexpected rewards.",
+            7: " Deep analysis reveals hidden opportunities.",
+            8: " Your authority and business sense peak now.",
+            9: " Your humanitarian vision inspires action.",
+            11: " Intuitive downloads accelerate all progress.",
+            22: " Your master builder energy manifests rapidly.",
+            33: " Your healing presence transforms situations."
+        };
+        guidance += lpAmplifiers[lifePath] || "";
+    }
+    
+    // Add Chinese element context if available
+    if (extendedData && extendedData.chinese) {
+        const elementMonthly = {
+            'Wood': " Growth and expansion dominate this lunar cycle.",
+            'Fire': " Visibility and passion fuel this month.",
+            'Earth': " Stability and grounding essential this period.",
+            'Metal': " Precision and discernment serve you now.",
+            'Water': " Flow and intuition guide monthly decisions."
+        };
+        guidance += elementMonthly[extendedData.chinese.element] || "";
+    }
+    
+    // Add score-based intensity
+    if (score >= 75) {
+        guidance += " ⚡ HIGH ENERGY MONTH—maximize output and visibility.";
     } else if (score >= 60) {
-        guidance += " Steady progress—maintain consistency.";
-    } else if (score >= 50) {
-        guidance += " Neutral energy—focus on maintenance and preparation.";
-    } else if (score >= 40) {
-        guidance += " Lower energy—conserve resources and avoid overextension.";
+        guidance += " ✨ Good momentum—advance important priorities.";
+    } else if (score >= 45) {
+        guidance += " 🔄 Moderate flow—maintain steady progress.";
     } else if (score >= 30) {
-        guidance += " High friction—minimize new commitments and rest.";
+        guidance += " 🌙 Lower energy—focus on essentials only.";
     } else {
-        guidance += " Critical rest period—do not launch anything new.";
+        guidance += " 🌑 Rest cycle—consolidate and prepare for next phase.";
     }
     
     // Birthday month special note
     if (month === birthdayMonth) {
-        guidance += " ⚡ Your Personal Year transitions this month—expect a shift in energy and direction.";
+        guidance += " 🎂 PERSONAL NEW YEAR—major transitions and fresh energy arrive!";
     }
     
     return guidance;
@@ -686,36 +765,31 @@ function calculateWeeklyScore(month, weekIndex, personalYear, personalMonth, lif
     // Start with monthly base score
     let baseScore = calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, priorities, month, birthMonth, extendedData);
     
-    // Weekly modifiers based on week position in month
+    // Weekly modifiers based on week position in month (scaled down)
     const weeklyModifiers = [
-        5,   // Week 1: Building momentum
-        10,  // Week 2: Peak energy
-        8,   // Week 3: Sustaining
-        3,   // Week 4: Winding down
-        -5   // Week 5: Transition to next month
+        3,   // Week 1: Building momentum
+        6,   // Week 2: Peak energy
+        4,   // Week 3: Sustaining
+        1,   // Week 4: Winding down
+        -3   // Week 5: Transition to next month
     ];
     
     baseScore += weeklyModifiers[weekIndex] || 0;
     
-    // Week of year influences
+    // Week of year influences (scaled down)
     const weekOfYear = Math.floor((new Date(2026, month - 1, 1) - new Date(2026, 0, 1)) / (7 * 24 * 60 * 60 * 1000)) + weekIndex + 1;
     
     // Seasonal week influences
     if (weekOfYear >= 17 && weekOfYear <= 22) {
-        baseScore += 8; // Late April to late May - peak spring
+        baseScore += 4; // Late April to late May - peak spring
     } else if (weekOfYear >= 31 && weekOfYear <= 34) {
-        baseScore -= 10; // Early August - friction zone
+        baseScore -= 5; // Early August - friction zone
     } else if (weekOfYear >= 43 && weekOfYear <= 45) {
-        baseScore += 6; // Late October - authority peak
+        baseScore += 3; // Late October - authority peak
     }
     
-    // Extended data weekly modifiers
+    // Extended data weekly modifiers (cross-system already in monthly base)
     if (extendedData) {
-        // Cross-system analysis affects weekly flow
-        if (extendedData.crossSystemAnalysis) {
-            baseScore += extendedData.crossSystemAnalysis.netModifier || 0;
-        }
-        
         // Chinese element harmony with week number
         if (extendedData.chinese && extendedData.chinese.element) {
             const weekElement = ['Wood', 'Fire', 'Earth', 'Metal', 'Water'][weekIndex % 5];
@@ -741,41 +815,41 @@ function calculateDailyScore(month, day, dayOfWeek, personalYear, personalMonth,
     // Start with monthly score as base
     let baseScore = calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, priorities, month, birthMonth, extendedData);
     
-    // Day of week modifiers
+    // Day of week modifiers (scaled for variety)
     const dayModifiers = {
-        1: 3,   // Monday - Strategy energy
-        2: 5,   // Tuesday - Execution energy
-        3: 8,   // Wednesday - Creative peak
-        4: 6,   // Thursday - Connection energy
-        5: 7,   // Friday - Value energy
-        6: 2,   // Saturday - Integration
-        0: -2   // Sunday - Recovery
+        1: 2,   // Monday - Strategy energy
+        2: 3,   // Tuesday - Execution energy
+        3: 5,   // Wednesday - Creative peak
+        4: 4,   // Thursday - Connection energy
+        5: 4,   // Friday - Value energy
+        6: 1,   // Saturday - Integration
+        0: -1   // Sunday - Recovery
     };
     
     baseScore += dayModifiers[dayOfWeek] || 0;
     
-    // Astronomical influence - now using real calculations
+    // Astronomical influence - scaled down for realistic variance
     if (astronomicalData) {
-        // Moon Phase (real calculation)
+        // Moon Phase (real calculation) - reduced impact
         if (astronomicalData.moonPhase) {
-            baseScore += astronomicalData.moonPhase.modifier || 0;
+            baseScore += Math.round((astronomicalData.moonPhase.modifier || 0) * 0.6);
         }
         
-        // Planetary Hour
+        // Planetary Hour - reduced impact
         if (astronomicalData.planetaryHour) {
-            baseScore += astronomicalData.planetaryHour.modifier || 0;
+            baseScore += Math.round((astronomicalData.planetaryHour.modifier || 0) * 0.5);
         }
         
-        // Mercury Retrograde
+        // Mercury Retrograde - reduced penalty
         if (astronomicalData.mercuryRetrograde) {
-            baseScore -= 8; // Retrograde penalty
+            baseScore -= 5; // Retrograde penalty
         }
     }
     
-    // Personal day number (based on day of month)
+    // Personal day number (based on day of month) - scaled for variance
     const personalDay = reduceToSingleDigit(day);
     const personalDayModifiers = {
-        1: 8, 2: -5, 3: 10, 4: 2, 5: 12, 6: 5, 7: -8, 8: 10, 9: -6, 11: 15, 22: 12, 33: 8
+        1: 4, 2: -3, 3: 5, 4: 1, 5: 6, 6: 3, 7: -4, 8: 5, 9: -3, 11: 7, 22: 6, 33: 4
     };
     baseScore += personalDayModifiers[personalDay] || 0;
     
@@ -791,13 +865,13 @@ function calculateDailyScore(month, day, dayOfWeek, personalYear, personalMonth,
         };
         if (elementHarmony[extendedData.chinese.element] && 
             elementHarmony[extendedData.chinese.element].includes(dayElement)) {
-            baseScore += 5;
+            baseScore += 3;
         }
     }
     
-    // Birthday bonus
+    // Birthday bonus (special but not extreme)
     if (extendedData && extendedData.birthDay && month === birthMonth && day === extendedData.birthDay) {
-        baseScore += 20; // Birthday is powerful
+        baseScore += 12; // Birthday is powerful
     }
     
     return Math.max(0, Math.min(100, Math.round(baseScore)));
@@ -908,45 +982,198 @@ function getWeeklyGuidance(weekNumber, personalYear, personalMonth, score) {
     return guidance;
 }
 
-function getDailyGuidance(dailyFunction, score, personalYear, personalMonth, astronomicalData) {
-    const functionGuidance = {
-        'Strategy': 'Plan, research, architect systems.',
-        'Execute': 'Complete tasks, move projects forward.',
-        'Create': 'Write, design, brainstorm, innovate.',
-        'Connect': 'Network, negotiate, build relationships.',
-        'Value': 'Financial decisions, pricing, revenue.',
-        'Integrate': 'Review, synthesize, organize.',
-        'Recover': 'Rest, reflect, recharge energy.'
+function getDailyGuidance(dailyFunction, score, personalYear, personalMonth, astronomicalData, extendedData = null, lifePath = null) {
+    // Rich, personalized function guidance based on Life Path
+    const lifePathGuidance = {
+        1: {
+            'Strategy': 'Pioneer new approaches. Your independent vision needs a bold framework today.',
+            'Execute': 'Lead by example—take decisive action that showcases your originality.',
+            'Create': 'Channel your innovative fire. Original ideas want to emerge through you.',
+            'Connect': 'Network as a leader, not a follower. Share your vision with potential allies.',
+            'Value': 'Price your independence appropriately. Don\'t undersell your unique perspective.',
+            'Integrate': 'Consolidate your wins. Review what\'s working and cut what dilutes your power.',
+            'Recover': 'Recharge your pioneering spirit. Solitude restores your clarity.'
+        },
+        2: {
+            'Strategy': 'Consider all perspectives. Your diplomatic insight sees what others miss.',
+            'Execute': 'Collaborate today—your power multiplies through partnership.',
+            'Create': 'Co-create or refine others\' work. Your sensitivity elevates everything.',
+            'Connect': 'Deep one-on-one conversations over broad networking. Quality matters.',
+            'Value': 'Negotiate with patience. The best deals emerge from mutual understanding.',
+            'Integrate': 'Harmonize conflicting elements in your work and relationships.',
+            'Recover': 'Peaceful environments restore you. Avoid conflict and harsh energies.'
+        },
+        3: {
+            'Strategy': 'Let creativity lead your planning. Your imagination is your compass.',
+            'Execute': 'Express yourself through your work. Joy and productivity aren\'t separate.',
+            'Create': 'This is YOUR day. Pour everything into creative expression—it\'s your superpower.',
+            'Connect': 'Charm, entertain, inspire. Your social gifts open doors others can\'t.',
+            'Value': 'Monetize your creativity. Your expressive talents have real market value.',
+            'Integrate': 'Curate your creative portfolio. Prune what doesn\'t spark joy.',
+            'Recover': 'Play without purpose. Let your inner child roam free today.'
+        },
+        4: {
+            'Strategy': 'Build systems that last. Your practical wisdom creates enduring foundations.',
+            'Execute': 'Systematic work wins. Follow proven processes and improve them step by step.',
+            'Create': 'Create frameworks, templates, and structures. Practical creativity serves you.',
+            'Connect': 'Reliability is your networking currency. Show up consistently for others.',
+            'Value': 'Financial discipline shines today. Budget, track, and optimize resources.',
+            'Integrate': 'Organize everything. Physical and digital decluttering empowers you.',
+            'Recover': 'Rest through routine. Familiar comforts restore your energy best.'
+        },
+        5: {
+            'Strategy': 'Embrace flexibility in your plans. The best path will reveal itself.',
+            'Execute': 'Variety fuels you. Switch between tasks and environments to stay energized.',
+            'Create': 'Experiment wildly. Your best innovations come from breaking conventional rules.',
+            'Connect': 'Expand your network dramatically. New connections bring unexpected opportunities.',
+            'Value': 'Multiple income streams suit you. Diversify your revenue sources.',
+            'Integrate': 'Organize your adventures. Create systems that support your freedom.',
+            'Recover': 'Change your environment. Travel or try something completely new.'
+        },
+        6: {
+            'Strategy': 'Plan with your community in mind. Service to others guides your success.',
+            'Execute': 'Work that helps family or community flows easiest today.',
+            'Create': 'Create beauty and harmony. Your aesthetic sense serves others.',
+            'Connect': 'Nurture your network. Check in on people who need support.',
+            'Value': 'Financial decisions should consider family impact. Think long-term.',
+            'Integrate': 'Create harmony at home. Domestic organization supports all else.',
+            'Recover': 'Quality time with loved ones restores you completely.'
+        },
+        7: {
+            'Strategy': 'Research deeply before acting. Your analytical mind needs full data.',
+            'Execute': 'Work in focused solitude. Interruptions derail your depth.',
+            'Create': 'Intellectual and spiritual creativity—writing, analysis, philosophical work.',
+            'Connect': 'Deep conversations with few people over broad socializing.',
+            'Value': 'Investment research excels today. Trust your analytical instincts.',
+            'Integrate': 'Mental organization. Process and synthesize what you\'ve learned.',
+            'Recover': 'Complete solitude in nature or meditation restores you.'
+        },
+        8: {
+            'Strategy': 'Think big. Your strategic vision should target significant outcomes.',
+            'Execute': 'Command your work environment. Leadership and authority serve you.',
+            'Create': 'Create assets with lasting value. Build business and material success.',
+            'Connect': 'Network with power players. Your executive energy attracts equals.',
+            'Value': 'This is YOUR domain. Major financial decisions and negotiations favor you.',
+            'Integrate': 'Consolidate power and resources. Eliminate inefficiencies ruthlessly.',
+            'Recover': 'Rest in luxury. You need quality environments to recharge.'
+        },
+        9: {
+            'Strategy': 'Plan with humanitarian scope. Your vision should serve the greater good.',
+            'Execute': 'Work on legacy projects. What you do today should outlive you.',
+            'Create': 'Create for universal themes. Art that touches all human hearts.',
+            'Connect': 'Serve your network. Give without expectation of immediate return.',
+            'Value': 'Generosity brings abundance. Release attachment to money.',
+            'Integrate': 'Complete and release old projects. Make space for new cycles.',
+            'Recover': 'Spiritual practices and nature restore your humanitarian spirit.'
+        },
+        11: {
+            'Strategy': 'Trust your intuition completely. Your insights come from higher sources.',
+            'Execute': 'Inspire others through action. You\'re meant to illuminate the path.',
+            'Create': 'Channel inspired creativity. What comes through you serves collective awakening.',
+            'Connect': 'You naturally attract seekers. Share your vision with those ready to hear.',
+            'Value': 'Your spiritual gifts have material value. Don\'t undervalue your guidance.',
+            'Integrate': 'Balance spiritual downloads with practical grounding.',
+            'Recover': 'Meditation and dream work. Your rest time receives guidance.'
+        },
+        22: {
+            'Strategy': 'Think in terms of legacy and global impact. Your vision builds civilizations.',
+            'Execute': 'Master builder energy—tackle the most ambitious projects on your list.',
+            'Create': 'Create institutions, systems, and structures that serve humanity.',
+            'Connect': 'Gather a team for your vision. You need capable lieutenants.',
+            'Value': 'Abundance flows when your work serves the collective good.',
+            'Integrate': 'Scale what works. Transform successful experiments into systems.',
+            'Recover': 'Physical grounding essential. Your spiritual power needs earthly rest.'
+        },
+        33: {
+            'Strategy': 'Plan from unconditional love. Your wisdom serves healing and teaching.',
+            'Execute': 'Healing and teaching work flows powerfully today.',
+            'Create': 'Create content that heals, teaches, and uplifts consciousness.',
+            'Connect': 'You are a beacon. Those who need you will find you.',
+            'Value': 'Abundance serves your mission. Accept support for your sacred work.',
+            'Integrate': 'Balance giving with receiving. You cannot pour from an empty cup.',
+            'Recover': 'Sacred rest is mandatory. Your energy serves many—replenish it.'
+        }
     };
     
-    let guidance = functionGuidance[dailyFunction] || "Navigate with awareness.";
+    // Default guidance if no life path match
+    const defaultGuidance = {
+        'Strategy': 'Plan your next moves with intention and awareness.',
+        'Execute': 'Focus on completing tasks and moving projects forward.',
+        'Create': 'Express yourself through creative work and innovation.',
+        'Connect': 'Build and nurture meaningful relationships.',
+        'Value': 'Attend to financial matters and material resources.',
+        'Integrate': 'Review, organize, and synthesize your progress.',
+        'Recover': 'Rest deeply and restore your energy reserves.'
+    };
     
-    // Add score context
-    if (score >= 85) {
-        guidance += " Exceptional day—major breakthroughs possible.";
-    } else if (score >= 75) {
-        guidance += " High-energy day—important progress.";
-    } else if (score >= 65) {
-        guidance += " Good energy—steady advancement.";
-    } else if (score >= 55) {
-        guidance += " Moderate energy—maintain routines.";
-    } else if (score >= 45) {
-        guidance += " Lower energy—focus on essentials only.";
-    } else if (score >= 35) {
-        guidance += " Low energy—avoid new commitments.";
+    // Get personalized guidance
+    const lpNum = lifePath || 1;
+    const lpGuidance = lifePathGuidance[lpNum] || defaultGuidance;
+    let guidance = lpGuidance[dailyFunction] || defaultGuidance[dailyFunction];
+    
+    // Add Personal Year context (what's emphasized this year)
+    const pyContext = {
+        1: ' New beginnings amplify today.',
+        2: ' Partnership energy surrounds this.',
+        3: ' Creative expression multiplies impact.',
+        4: ' Structure and discipline serve you.',
+        5: ' Expect and embrace change.',
+        6: ' Family and service duties call.',
+        7: ' Deep analysis before action.',
+        8: ' Authority and abundance available.',
+        9: ' Completion and release themes.',
+        11: ' Intuitive downloads possible.',
+        22: ' Master building potential.',
+        33: ' Healing energy amplified.'
+    };
+    
+    // Add score-based action level
+    if (score >= 80) {
+        guidance += ' PEAK DAY—push hard on priorities.';
+    } else if (score >= 70) {
+        guidance += ' Strong energy—tackle important work.';
+    } else if (score >= 60) {
+        guidance += ' Good momentum—advance key projects.';
+    } else if (score >= 50) {
+        guidance += ' Moderate flow—focus on essentials.';
+    } else if (score >= 40) {
+        guidance += ' Lower energy—conserve and prepare.';
+    } else if (score >= 30) {
+        guidance += ' Challenging energy—minimize risk.';
     } else {
-        guidance += " Rest day—minimal activity only.";
+        guidance += ' Rest mode—avoid major decisions.';
     }
     
     // Add astronomical context
     if (astronomicalData) {
         if (astronomicalData.mercuryRetrograde) {
-            guidance += " Mercury retrograde—review, don't initiate.";
+            guidance += ' ☿ Rx: Revise, don\'t initiate.';
         }
-        if (astronomicalData.moonPhase < 0.125) {
-            guidance += " New Moon energy—plant seeds.";
-        } else if (astronomicalData.moonPhase >= 0.375 && astronomicalData.moonPhase <= 0.625) {
-            guidance += " Full Moon illumination—celebrate wins.";
+        if (astronomicalData.moonPhase) {
+            if (astronomicalData.moonPhase.phase === 'new') {
+                guidance += ' 🌑 New Moon: Set intentions.';
+            } else if (astronomicalData.moonPhase.phase === 'full') {
+                guidance += ' 🌕 Full Moon: Harvest results.';
+            } else if (astronomicalData.moonPhase.phase === 'first_quarter') {
+                guidance += ' 🌓 Waxing: Build momentum.';
+            } else if (astronomicalData.moonPhase.phase === 'last_quarter') {
+                guidance += ' 🌗 Waning: Release and complete.';
+            }
+        }
+    }
+    
+    // Add Chinese element context if available
+    if (extendedData && extendedData.chinese) {
+        const elementTips = {
+            'Wood': ' 🌳 Wood day—growth and expansion favor you.',
+            'Fire': ' 🔥 Fire day—passion and visibility peak.',
+            'Earth': ' 🏔️ Earth day—stability and grounding essential.',
+            'Metal': ' ⚔️ Metal day—precision and boundaries serve you.',
+            'Water': ' 🌊 Water day—flow and intuition guide you.'
+        };
+        const dayElement = getDayElement(extendedData.birthMonth || 1, 1);
+        if (dayElement === extendedData.chinese.element) {
+            guidance += elementTips[dayElement] || '';
         }
     }
     
@@ -1068,7 +1295,7 @@ function generate2026Calendar(formData, lifePath, destiny, priorities, extendedD
         const score = calculateMonthlyScore(activePersonalYear, personalMonth, lifePath, destiny, priorities, month, birthdayMonth, extendedData);
         const trafficLight = getTrafficLight(score);
         const theme = getWeeklyTheme(score);
-        const guidance = getMonthlyGuidance(activePersonalYear, personalMonth, score, month, birthdayMonth);
+        const guidance = getMonthlyGuidance(activePersonalYear, personalMonth, score, month, birthdayMonth, lifePath, extendedData);
         const categoryScores = calculateCategoryScores(score, priorities, activePersonalYear, personalMonth);
         
         // Generate weeks for this month
@@ -1182,7 +1409,7 @@ function generateDailyData(month, weeks, personalYear, personalMonth, lifePath, 
         const dailyScore = calculateDailyScore(month, day, dayOfWeek, personalYear, personalMonth, lifePath, destiny, priorities, birthdayMonth, astronomicalData, extendedData);
         const dailyTrafficLight = getTrafficLight(dailyScore);
         
-        const dailyGuidance = getDailyGuidance(dailyFunction, dailyScore, personalYear, personalMonth, astronomicalData);
+        const dailyGuidance = getDailyGuidance(dailyFunction, dailyScore, personalYear, personalMonth, astronomicalData, extendedData, lifePath);
         const categoryScores = calculateCategoryScores(dailyScore, priorities, personalYear, personalMonth);
         
         // Get the week data for this day
@@ -1448,7 +1675,7 @@ function showTodaySnapshot(savedData) {
     };
     
     const dailyFunction = dailyFunctions[dayOfWeek];
-    const dailyGuidance = getDailyGuidance(dailyFunction.name, dailyScore, personalYear, personalMonth, astronomicalData);
+    const dailyGuidance = getDailyGuidance(dailyFunction.name, dailyScore, personalYear, personalMonth, astronomicalData, null, lifePath);
     
     // Format date
     const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
