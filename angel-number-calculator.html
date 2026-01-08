@@ -3524,10 +3524,21 @@
     </script>
 
     <!-- Shared Quantum Scripts -->
+    <script src="shared/js/quantum-onboarding.js?v=2.0.0"></script>
     <script src="shared/js/quantum-effects.js"></script>
     <script src="shared/js/quantum-intro.js"></script>
     <script src="shared/js/quantum-nav.js"></script>
     <script src="shared/js/quantum-analytics.js"></script>
     <script src="shared/js/quantum-feedback.js"></script>
+    
+    <script>
+        // Initialize angel number onboarding on first visit
+        window.addEventListener('DOMContentLoaded', function() {
+            initQuantumOnboarding('angel-number', function() {
+                // Scroll to calculator after onboarding
+                document.querySelector('.calculator-section').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
