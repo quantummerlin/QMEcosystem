@@ -203,20 +203,20 @@ function calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, p
     
     // Friction detection: conflicting energies
     // PY7 + PM5 = introspection vs change (friction)
-    if ((personalYear === 7 &amp;&amp; personalMonth === 5) || 
-        (personalYear === 5 &amp;&amp; personalMonth === 7)) {
+    if ((personalYear === 7 && personalMonth === 5) || 
+        (personalYear === 5 && personalMonth === 7)) {
         baseScore -= 10;
     }
     
     // PY2 + PM8 = patience vs power (friction)
-    if ((personalYear === 2 &amp;&amp; personalMonth === 8) || 
-        (personalYear === 8 &amp;&amp; personalMonth === 2)) {
+    if ((personalYear === 2 && personalMonth === 8) || 
+        (personalYear === 8 && personalMonth === 2)) {
         baseScore -= 8;
     }
     
     // PY9 + PM1 = completion vs beginning (friction)
-    if ((personalYear === 9 &amp;&amp; personalMonth === 1) || 
-        (personalYear === 1 &amp;&amp; personalMonth === 9)) {
+    if ((personalYear === 9 && personalMonth === 1) || 
+        (personalYear === 1 && personalMonth === 9)) {
         baseScore -= 12;
     }
     
