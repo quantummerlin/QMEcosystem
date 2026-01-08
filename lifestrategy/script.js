@@ -290,6 +290,8 @@ function getRisingSign(month, day, birthHour, birthMinute) {
     if (birthHour === null || birthHour === undefined) return null;
     
     const sunSign = getZodiacSign(month, day);
+    if (!sunSign || !sunSign.name) return null;
+    
     const signOrder = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 
                        'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
     const sunSignIndex = signOrder.indexOf(sunSign.name);
@@ -447,11 +449,14 @@ function getCrossSystemAnalysis(sunSign, moonSign, risingSign, chinese, lifePath
     const seekerSigns = ['Sagittarius', 'Aquarius', 'Pisces', 'Scorpio'];
     const builderSigns = ['Taurus', 'Virgo', 'Capricorn'];
     
-    if ((leaderPaths.includes(lifePath) && leaderSigns.includes(sunSign.name)) ||
-        (creativePaths.includes(lifePath) && creativeSigns.includes(sunSign.name)) ||
-        (seekerPaths.includes(lifePath) && seekerSigns.includes(sunSign.name)) ||
-        (builderPaths.includes(lifePath) && builderSigns.includes(sunSign.name))) {
-        agreementBonus += 10; // Strong alignment
+    // Only check alignment if sunSign exists
+    if (sunSign && sunSign.name) {
+        if ((leaderPaths.includes(lifePath) && leaderSigns.includes(sunSign.name)) ||
+            (creativePaths.includes(lifePath) && creativeSigns.includes(sunSign.name)) ||
+            (seekerPaths.includes(lifePath) && seekerSigns.includes(sunSign.name)) ||
+            (builderPaths.includes(lifePath) && builderSigns.includes(sunSign.name))) {
+            agreementBonus += 10; // Strong alignment
+        }
     }
     
     // Moon-Chinese element harmony
