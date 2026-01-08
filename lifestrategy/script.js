@@ -182,9 +182,300 @@ function calculatePersonalMonth(personalYear, currentMonth) {
     return reduceToSingleDigit(total);
 }
 
+// ===== CHINESE ZODIAC =====
+
+function getChineseZodiac(birthYear, birthMonth, birthDay) {
+    const animals = [
+        'Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake',
+        'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig'
+    ];
+    
+    // Elements based on last digit of year (Heavenly Stems)
+    // 0-1: Metal, 2-3: Water, 4-5: Wood, 6-7: Fire, 8-9: Earth
+    const elements = ['Metal', 'Metal', 'Water', 'Water', 'Wood', 'Wood', 'Fire', 'Fire', 'Earth', 'Earth'];
+    
+    // Chinese New Year dates for accurate calculation
+    const cnyDates = {
+        1980: [2, 16], 1981: [2, 5], 1982: [1, 25], 1983: [2, 13], 1984: [2, 2],
+        1985: [2, 20], 1986: [2, 9], 1987: [1, 29], 1988: [2, 17], 1989: [2, 6],
+        1990: [1, 27], 1991: [2, 15], 1992: [2, 4], 1993: [1, 23], 1994: [2, 10],
+        1995: [1, 31], 1996: [2, 19], 1997: [2, 7], 1998: [1, 28], 1999: [2, 16],
+        2000: [2, 5], 2001: [1, 24], 2002: [2, 12], 2003: [2, 1], 2004: [1, 22],
+        2005: [2, 9], 2006: [1, 29], 2007: [2, 18], 2008: [2, 7], 2009: [1, 26],
+        2010: [2, 14], 2011: [2, 3], 2012: [1, 23], 2013: [2, 10], 2014: [1, 31],
+        2015: [2, 19], 2016: [2, 8], 2017: [1, 28], 2018: [2, 16], 2019: [2, 5],
+        2020: [1, 25], 2021: [2, 12], 2022: [2, 1], 2023: [1, 22], 2024: [2, 10],
+        2025: [1, 29], 2026: [2, 17], 2027: [2, 6], 2028: [1, 26], 2029: [2, 13],
+        2030: [2, 3]
+    };
+    
+    // Adjust year if born before Chinese New Year
+    let year = birthYear;
+    if (cnyDates[birthYear]) {
+        const [cnyMonth, cnyDay] = cnyDates[birthYear];
+        if (birthMonth < cnyMonth || (birthMonth === cnyMonth && birthDay < cnyDay)) {
+            year = birthYear - 1;
+        }
+    }
+    
+    // Animal calculation (12-year cycle, 1924 = Rat year 0)
+    const animalIndex = (year - 1924) % 12;
+    // Element calculation (10-year cycle based on year's last digit)
+    const elementIndex = year % 10;
+    
+    return {
+        animal: animals[animalIndex >= 0 ? animalIndex : animalIndex + 12],
+        element: elements[elementIndex],
+        year: year
+    };
+}
+
+// ===== GEMATRIA =====
+
+function calculateGematria(name) {
+    if (!name) return 0;
+    let sum = 0;
+    for (let char of name.toUpperCase()) {
+        if (char >= 'A' && char <= 'Z') {
+            sum += char.charCodeAt(0) - 64; // A=1, B=2, etc.
+        }
+    }
+    return sum;
+}
+
+// ===== WESTERN ZODIAC (SUN SIGN) =====
+
+function getZodiacSign(month, day) {
+    const signs = [
+        { name: 'Capricorn', symbol: '♑', element: 'Earth', modality: 'Cardinal' },
+        { name: 'Aquarius', symbol: '♒', element: 'Air', modality: 'Fixed' },
+        { name: 'Pisces', symbol: '♓', element: 'Water', modality: 'Mutable' },
+        { name: 'Aries', symbol: '♈', element: 'Fire', modality: 'Cardinal' },
+        { name: 'Taurus', symbol: '♉', element: 'Earth', modality: 'Fixed' },
+        { name: 'Gemini', symbol: '♊', element: 'Air', modality: 'Mutable' },
+        { name: 'Cancer', symbol: '♋', element: 'Water', modality: 'Cardinal' },
+        { name: 'Leo', symbol: '♌', element: 'Fire', modality: 'Fixed' },
+        { name: 'Virgo', symbol: '♍', element: 'Earth', modality: 'Mutable' },
+        { name: 'Libra', symbol: '♎', element: 'Air', modality: 'Cardinal' },
+        { name: 'Scorpio', symbol: '♏', element: 'Water', modality: 'Fixed' },
+        { name: 'Sagittarius', symbol: '♐', element: 'Fire', modality: 'Mutable' },
+        { name: 'Capricorn', symbol: '♑', element: 'Earth', modality: 'Cardinal' }
+    ];
+    
+    const dates = [20, 19, 20, 20, 21, 21, 22, 23, 23, 23, 22, 22, 20];
+    
+    let signIndex = month;
+    if (day < dates[month]) {
+        signIndex = month - 1;
+        if (signIndex < 0) signIndex = 11;
+    }
+    
+    return signs[signIndex];
+}
+
+// ===== RISING SIGN (Simplified - requires birth time) =====
+
+function getRisingSign(month, day, birthHour, birthMinute) {
+    if (birthHour === null || birthHour === undefined) return null;
+    
+    const sunSign = getZodiacSign(month, day);
+    const signOrder = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 
+                       'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
+    const sunSignIndex = signOrder.indexOf(sunSign.name);
+    
+    // Each sign rises for ~2 hours, starting from 6am = sun sign
+    const totalMinutes = birthHour * 60 + birthMinute;
+    const sunriseMinutes = 6 * 60; // Assume 6am sunrise
+    const minutesSinceSunrise = (totalMinutes - sunriseMinutes + 1440) % 1440;
+    const risingOffset = Math.floor(minutesSinceSunrise / 120);
+    const risingIndex = (sunSignIndex + risingOffset) % 12;
+    
+    const signs = [
+        { name: 'Aries', symbol: '♈', element: 'Fire' },
+        { name: 'Taurus', symbol: '♉', element: 'Earth' },
+        { name: 'Gemini', symbol: '♊', element: 'Air' },
+        { name: 'Cancer', symbol: '♋', element: 'Water' },
+        { name: 'Leo', symbol: '♌', element: 'Fire' },
+        { name: 'Virgo', symbol: '♍', element: 'Earth' },
+        { name: 'Libra', symbol: '♎', element: 'Air' },
+        { name: 'Scorpio', symbol: '♏', element: 'Water' },
+        { name: 'Sagittarius', symbol: '♐', element: 'Fire' },
+        { name: 'Capricorn', symbol: '♑', element: 'Earth' },
+        { name: 'Aquarius', symbol: '♒', element: 'Air' },
+        { name: 'Pisces', symbol: '♓', element: 'Water' }
+    ];
+    
+    return signs[risingIndex];
+}
+
+// ===== MOON SIGN (Simplified calculation) =====
+
+function getMoonSign(birthYear, birthMonth, birthDay) {
+    // Simplified: Moon moves ~13° per day, completes zodiac in ~27.3 days
+    const epoch = new Date(2000, 0, 6); // Known Aries Moon
+    const birthDate = new Date(birthYear, birthMonth - 1, birthDay);
+    const daysSinceEpoch = Math.floor((birthDate - epoch) / (1000 * 60 * 60 * 24));
+    const moonCycle = 27.3; // Sidereal month
+    const degreesPerDay = 360 / moonCycle;
+    const totalDegrees = (daysSinceEpoch * degreesPerDay) % 360;
+    const signIndex = Math.floor(totalDegrees / 30) % 12;
+    
+    const signs = [
+        { name: 'Aries', symbol: '♈', element: 'Fire' },
+        { name: 'Taurus', symbol: '♉', element: 'Earth' },
+        { name: 'Gemini', symbol: '♊', element: 'Air' },
+        { name: 'Cancer', symbol: '♋', element: 'Water' },
+        { name: 'Leo', symbol: '♌', element: 'Fire' },
+        { name: 'Virgo', symbol: '♍', element: 'Earth' },
+        { name: 'Libra', symbol: '♎', element: 'Air' },
+        { name: 'Scorpio', symbol: '♏', element: 'Water' },
+        { name: 'Sagittarius', symbol: '♐', element: 'Fire' },
+        { name: 'Capricorn', symbol: '♑', element: 'Earth' },
+        { name: 'Aquarius', symbol: '♒', element: 'Air' },
+        { name: 'Pisces', symbol: '♓', element: 'Water' }
+    ];
+    
+    return signs[signIndex];
+}
+
+// ===== MOON PHASE (Accurate calculation) =====
+
+function getMoonPhase(date) {
+    const epoch = new Date('2000-01-06'); // Known new moon
+    const daysSince = (date - epoch) / (1000 * 60 * 60 * 24);
+    const lunation = daysSince % 29.53;
+    
+    if (lunation < 1.85) return { phase: 'New Moon', symbol: '🌑', modifier: 8, energy: 'initiation' };
+    if (lunation < 7.38) return { phase: 'Waxing Crescent', symbol: '🌒', modifier: 5, energy: 'momentum' };
+    if (lunation < 9.23) return { phase: 'First Quarter', symbol: '🌓', modifier: 3, energy: 'action' };
+    if (lunation < 14.77) return { phase: 'Waxing Gibbous', symbol: '🌔', modifier: 6, energy: 'refinement' };
+    if (lunation < 16.62) return { phase: 'Full Moon', symbol: '🌕', modifier: 10, energy: 'manifestation' };
+    if (lunation < 22.15) return { phase: 'Waning Gibbous', symbol: '🌖', modifier: 2, energy: 'gratitude' };
+    if (lunation < 23.99) return { phase: 'Last Quarter', symbol: '🌗', modifier: -3, energy: 'release' };
+    return { phase: 'Waning Crescent', symbol: '🌘', modifier: -5, energy: 'rest' };
+}
+
+// ===== PLANETARY HOURS =====
+
+function getPlanetaryHour(date) {
+    const dayOfWeek = date.getDay();
+    const hour = date.getHours();
+    
+    // Chaldean order of planets
+    const planets = ['Saturn', 'Jupiter', 'Mars', 'Sun', 'Venus', 'Mercury', 'Moon'];
+    // Day rulers: Sunday=Sun, Monday=Moon, Tuesday=Mars, etc.
+    const dayRulers = ['Sun', 'Moon', 'Mars', 'Mercury', 'Jupiter', 'Venus', 'Saturn'];
+    
+    const dayRulerIndex = planets.indexOf(dayRulers[dayOfWeek]);
+    const hoursFromSunrise = (hour - 6 + 24) % 24;
+    const planetaryHourIndex = (dayRulerIndex + hoursFromSunrise) % 7;
+    
+    const planetData = {
+        'Saturn': { symbol: '♄', modifier: -5, energy: 'discipline', activity: 'structure' },
+        'Jupiter': { symbol: '♃', modifier: 8, energy: 'expansion', activity: 'learning' },
+        'Mars': { symbol: '♂', modifier: 6, energy: 'action', activity: 'initiative' },
+        'Sun': { symbol: '☉', modifier: 10, energy: 'vitality', activity: 'leadership' },
+        'Venus': { symbol: '♀', modifier: 5, energy: 'harmony', activity: 'relationships' },
+        'Mercury': { symbol: '☿', modifier: 4, energy: 'communication', activity: 'writing' },
+        'Moon': { symbol: '☽', modifier: 2, energy: 'intuition', activity: 'reflection' }
+    };
+    
+    return { planet: planets[planetaryHourIndex], ...planetData[planets[planetaryHourIndex]] };
+}
+
+// ===== CROSS-SYSTEM ANALYSIS =====
+
+function getCrossSystemAnalysis(sunSign, moonSign, risingSign, chinese, lifePath, personalYear) {
+    let agreementBonus = 0;
+    let tensionPenalty = 0;
+    
+    // Element mapping for Western signs
+    function getWesternElement(sign) {
+        if (!sign) return null;
+        const fireSignals = ['Aries', 'Leo', 'Sagittarius'];
+        const earthSigns = ['Taurus', 'Virgo', 'Capricorn'];
+        const airSigns = ['Gemini', 'Libra', 'Aquarius'];
+        const waterSigns = ['Cancer', 'Scorpio', 'Pisces'];
+        
+        if (fireSignals.includes(sign.name)) return 'Fire';
+        if (earthSigns.includes(sign.name)) return 'Earth';
+        if (airSigns.includes(sign.name)) return 'Air';
+        if (waterSigns.includes(sign.name)) return 'Water';
+        return null;
+    }
+    
+    const sunElement = getWesternElement(sunSign);
+    const moonElement = moonSign ? getWesternElement(moonSign) : null;
+    const risingElement = risingSign ? getWesternElement(risingSign) : null;
+    
+    // Chinese element compatibility with Western element
+    const elementHarmony = {
+        'Fire': ['Fire', 'Wood'],
+        'Earth': ['Earth', 'Metal'],
+        'Air': ['Metal', 'Water'],
+        'Water': ['Water', 'Wood']
+    };
+    
+    // Western-Chinese element harmony
+    if (elementHarmony[sunElement] && chinese && elementHarmony[sunElement].includes(chinese.element)) {
+        agreementBonus += 8; // Systems agree
+    } else if (chinese) {
+        tensionPenalty += 4; // Dynamic tension
+    }
+    
+    // Life Path alignment with Sun Sign
+    const leaderPaths = [1, 8];
+    const creativePaths = [3, 6];
+    const seekerPaths = [7, 11];
+    const builderPaths = [4, 22];
+    
+    const leaderSigns = ['Aries', 'Leo', 'Capricorn'];
+    const creativeSigns = ['Taurus', 'Leo', 'Libra', 'Pisces'];
+    const seekerSigns = ['Sagittarius', 'Aquarius', 'Pisces', 'Scorpio'];
+    const builderSigns = ['Taurus', 'Virgo', 'Capricorn'];
+    
+    if ((leaderPaths.includes(lifePath) && leaderSigns.includes(sunSign.name)) ||
+        (creativePaths.includes(lifePath) && creativeSigns.includes(sunSign.name)) ||
+        (seekerPaths.includes(lifePath) && seekerSigns.includes(sunSign.name)) ||
+        (builderPaths.includes(lifePath) && builderSigns.includes(sunSign.name))) {
+        agreementBonus += 10; // Strong alignment
+    }
+    
+    // Moon-Chinese element harmony
+    if (moonElement && chinese) {
+        if ((moonElement === 'Water' && ['Water', 'Wood'].includes(chinese.element)) ||
+            (moonElement === 'Fire' && ['Fire', 'Wood'].includes(chinese.element)) ||
+            (moonElement === 'Earth' && ['Earth', 'Metal'].includes(chinese.element)) ||
+            (moonElement === 'Air' && ['Metal', 'Water'].includes(chinese.element))) {
+            agreementBonus += 5;
+        }
+    }
+    
+    // Sun-Moon-Rising element alignment
+    if (sunElement && moonElement && sunElement === moonElement) {
+        agreementBonus += 6; // Inner-outer harmony
+    }
+    if (risingElement && sunElement && risingElement === sunElement) {
+        agreementBonus += 4; // Public-private alignment
+    }
+    
+    // Chinese year alignment (current year element matches birth element)
+    const currentYear = new Date().getFullYear();
+    const currentChinese = getChineseZodiac(currentYear, 6, 15); // Mid-year check
+    if (chinese && chinese.element === currentChinese.element) {
+        agreementBonus += 12; // Element year boost
+    }
+    
+    return {
+        bonus: agreementBonus,
+        penalty: tensionPenalty,
+        netModifier: agreementBonus - tensionPenalty
+    };
+}
+
 // ===== SCORING SYSTEM =====
 
-function calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, priorities, month, birthMonth) {
+function calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, priorities, month, birthMonth, extendedData = null) {
     // Base score from personal year alignment
     let baseScore = 50;
     
@@ -276,6 +567,34 @@ function calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, p
     
     baseScore += seasonalModifiers[month] || 0;
     
+    // NEW: Cross-System Analysis bonus/penalty
+    if (extendedData && extendedData.crossSystemAnalysis) {
+        baseScore += extendedData.crossSystemAnalysis.netModifier;
+    }
+    
+    // NEW: Chinese Zodiac element modifiers
+    if (extendedData && extendedData.chinese) {
+        const chineseModifiers = {
+            'Wood': { 3: 8, 4: 8, 5: 5 },     // Spring months
+            'Fire': { 5: 8, 6: 10, 7: 8 },    // Summer months
+            'Earth': { 3: 3, 6: 3, 9: 3, 12: 3 }, // Transition months
+            'Metal': { 8: 8, 9: 10, 10: 8 },  // Autumn months
+            'Water': { 11: 8, 12: 10, 1: 8 }  // Winter months
+        };
+        const elementMod = chineseModifiers[extendedData.chinese.element];
+        if (elementMod && elementMod[month]) {
+            baseScore += elementMod[month];
+        }
+    }
+    
+    // NEW: Gematria name resonance with personal year
+    if (extendedData && extendedData.gematria) {
+        const gematriaReduced = reduceToSingleDigit(extendedData.gematria, false);
+        if (gematriaReduced === personalYear || gematriaReduced === personalMonth) {
+            baseScore += 6; // Name resonates with current energy
+        }
+    }
+    
     // Priority weighting influence (subtle)
     const priorityWeights = [1.4, 1.25, 1.15, 1.0, 0.9, 0.8];
     const avgWeight = priorityWeights.reduce((a, b) => a + b, 0) / priorityWeights.length;
@@ -345,9 +664,9 @@ function getMonthlyGuidance(personalYear, personalMonth, score, month, birthdayM
     return guidance;
 }
 
-function calculateWeeklyScore(month, weekIndex, personalYear, personalMonth, lifePath, destiny, priorities, birthMonth) {
+function calculateWeeklyScore(month, weekIndex, personalYear, personalMonth, lifePath, destiny, priorities, birthMonth, extendedData = null) {
     // Start with monthly base score
-    let baseScore = calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, priorities, month, birthMonth);
+    let baseScore = calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, priorities, month, birthMonth, extendedData);
     
     // Weekly modifiers based on week position in month
     const weeklyModifiers = [
@@ -372,12 +691,37 @@ function calculateWeeklyScore(month, weekIndex, personalYear, personalMonth, lif
         baseScore += 6; // Late October - authority peak
     }
     
+    // Extended data weekly modifiers
+    if (extendedData) {
+        // Cross-system analysis affects weekly flow
+        if (extendedData.crossSystemAnalysis) {
+            baseScore += extendedData.crossSystemAnalysis.netModifier || 0;
+        }
+        
+        // Chinese element harmony with week number
+        if (extendedData.chinese && extendedData.chinese.element) {
+            const weekElement = ['Wood', 'Fire', 'Earth', 'Metal', 'Water'][weekIndex % 5];
+            const elementHarmony = {
+                'Wood': { boost: 'Water', drain: 'Metal' },
+                'Fire': { boost: 'Wood', drain: 'Water' },
+                'Earth': { boost: 'Fire', drain: 'Wood' },
+                'Metal': { boost: 'Earth', drain: 'Fire' },
+                'Water': { boost: 'Metal', drain: 'Earth' }
+            };
+            const harmony = elementHarmony[extendedData.chinese.element];
+            if (harmony) {
+                if (weekElement === harmony.boost) baseScore += 3;
+                if (weekElement === harmony.drain) baseScore -= 2;
+            }
+        }
+    }
+    
     return Math.max(0, Math.min(100, Math.round(baseScore)));
 }
 
-function calculateDailyScore(month, day, dayOfWeek, personalYear, personalMonth, lifePath, destiny, priorities, birthMonth, astronomicalData) {
+function calculateDailyScore(month, day, dayOfWeek, personalYear, personalMonth, lifePath, destiny, priorities, birthMonth, astronomicalData, extendedData = null) {
     // Start with monthly score as base
-    let baseScore = calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, priorities, month, birthMonth);
+    let baseScore = calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, priorities, month, birthMonth, extendedData);
     
     // Day of week modifiers
     const dayModifiers = {
@@ -392,65 +736,101 @@ function calculateDailyScore(month, day, dayOfWeek, personalYear, personalMonth,
     
     baseScore += dayModifiers[dayOfWeek] || 0;
     
-    // Astronomical influence
+    // Astronomical influence - now using real calculations
     if (astronomicalData) {
-        baseScore += astronomicalData.moonPhaseModifier || 0;
-        baseScore += astronomicalData.planetaryModifier || 0;
-        baseScore += astronomicalData.transitModifier || 0;
-    }
-    
-    // Lunar cycle influence (rough approximation)
-    const dayOfMonth = day;
-    if (dayOfMonth <= 7 || dayOfMonth >= 28) {
-        baseScore += 5; // New Moon period - new beginnings
-    } else if (dayOfMonth >= 14 && dayOfMonth <= 21) {
-        baseScore += 3; // Full Moon period - illumination
+        // Moon Phase (real calculation)
+        if (astronomicalData.moonPhase) {
+            baseScore += astronomicalData.moonPhase.modifier || 0;
+        }
+        
+        // Planetary Hour
+        if (astronomicalData.planetaryHour) {
+            baseScore += astronomicalData.planetaryHour.modifier || 0;
+        }
+        
+        // Mercury Retrograde
+        if (astronomicalData.mercuryRetrograde) {
+            baseScore -= 8; // Retrograde penalty
+        }
     }
     
     // Personal day number (based on day of month)
-    const personalDay = reduceToSingleDigit(dayOfMonth);
+    const personalDay = reduceToSingleDigit(day);
     const personalDayModifiers = {
         1: 8, 2: -5, 3: 10, 4: 2, 5: 12, 6: 5, 7: -8, 8: 10, 9: -6, 11: 15, 22: 12, 33: 8
     };
     baseScore += personalDayModifiers[personalDay] || 0;
     
+    // NEW: Chinese Zodiac day element harmony
+    if (extendedData && extendedData.chinese) {
+        const dayElement = getDayElement(month, day);
+        const elementHarmony = {
+            'Wood': ['Water', 'Wood'],
+            'Fire': ['Wood', 'Fire'],
+            'Earth': ['Fire', 'Earth'],
+            'Metal': ['Earth', 'Metal'],
+            'Water': ['Metal', 'Water']
+        };
+        if (elementHarmony[extendedData.chinese.element] && 
+            elementHarmony[extendedData.chinese.element].includes(dayElement)) {
+            baseScore += 5;
+        }
+    }
+    
     // Birthday bonus
-    if (month === birthMonth && day === 3) { // Assuming day 3 is birthday
-        baseScore += 15;
+    if (extendedData && extendedData.birthDay && month === birthMonth && day === extendedData.birthDay) {
+        baseScore += 20; // Birthday is powerful
     }
     
     return Math.max(0, Math.min(100, Math.round(baseScore)));
 }
 
-function getAstronomicalData(date) {
-    // Simulated astronomical data (would use Swiss Ephemeris API in production)
-    const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / (24 * 60 * 60 * 1000));
+// Helper: Get day element based on 5-day cycle
+function getDayElement(month, day) {
+    const elements = ['Wood', 'Fire', 'Earth', 'Metal', 'Water'];
+    const dayOfYear = Math.floor((new Date(2026, month - 1, day) - new Date(2026, 0, 1)) / (1000 * 60 * 60 * 24));
+    return elements[dayOfYear % 5];
+}
+
+function getAstronomicalData(date, extendedData = null) {
+    // Use real moon phase and planetary hour calculations
+    const moonPhase = getMoonPhase(date);
+    const planetaryHour = getPlanetaryHour(date);
+    const mercuryRetro = isMercuryRetrograde(date);
     
-    // Moon phase simulation (29.53 day cycle)
-    const moonCycle = (dayOfYear % 29.53) / 29.53;
-    let moonPhaseModifier = 0;
+    // Get sun sign for the date (transit sun)
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const transitSunSign = getZodiacSign(month, day);
     
-    if (moonCycle < 0.125 || moonCycle > 0.875) {
-        moonPhaseModifier = 5; // New Moon - new beginnings
-    } else if (moonCycle >= 0.375 && moonCycle <= 0.625) {
-        moonPhaseModifier = 3; // Full Moon - illumination
-    } else if (moonCycle >= 0.625 && moonCycle <= 0.75) {
-        moonPhaseModifier = -2; // Waning Moon - release
+    // Calculate sun sign harmony with birth sun sign
+    let transitHarmony = 0;
+    if (extendedData && extendedData.sunSign) {
+        const birthElement = extendedData.sunSign.element;
+        const transitElement = transitSunSign.element;
+        
+        // Same element = strong harmony
+        if (birthElement === transitElement) {
+            transitHarmony = 8;
+        }
+        // Compatible elements
+        const compatible = {
+            'Fire': ['Fire', 'Air'],
+            'Earth': ['Earth', 'Water'],
+            'Air': ['Air', 'Fire'],
+            'Water': ['Water', 'Earth']
+        };
+        if (compatible[birthElement] && compatible[birthElement].includes(transitElement)) {
+            transitHarmony = 5;
+        }
     }
     
-    // Planetary modifier simulation
-    const planetaryModifier = Math.sin(dayOfYear * 0.0172) * 3; // ~18 day cycle
-    
-    // Transit modifier simulation
-    const transitModifier = Math.cos(dayOfYear * 0.0083) * 4; // ~75 day cycle
-    
     return {
-        moonPhase: moonCycle,
-        moonPhaseModifier,
-        planetaryModifier,
-        transitModifier,
-        sunSign: getSunSign(date),
-        mercuryRetrograde: isMercuryRetrograde(date)
+        moonPhase,
+        planetaryHour,
+        mercuryRetrograde: mercuryRetro,
+        transitSunSign,
+        transitHarmony
     };
 }
 
@@ -576,20 +956,57 @@ document.getElementById('calendar-form').addEventListener('submit', function(e) 
     const priorityElements = document.querySelectorAll('.priority-list li');
     const priorities = Array.from(priorityElements).map(el => el.dataset.category);
     
-    // Calculate core numbers
+    // Calculate core numerology numbers
     const lifePath = calculateLifePath(formData.birthMonth, formData.birthDay, formData.birthYear);
     const destiny = calculateDestinyNumber(formData.firstName, formData.lastName);
     const soulUrge = calculateSoulUrge(formData.firstName, formData.lastName);
     const personality = calculatePersonality(formData.firstName, formData.lastName);
     
-    // Calculate 2026 calendar
-    const calendar2026 = generate2026Calendar(formData, lifePath, destiny, priorities);
+    // NEW: Calculate extended discipline data
+    const chinese = getChineseZodiac(formData.birthYear, formData.birthMonth, formData.birthDay);
+    const fullName = formData.firstName + ' ' + formData.lastName;
+    const gematria = calculateGematria(fullName);
+    const sunSign = getZodiacSign(formData.birthMonth, formData.birthDay);
+    const moonSign = getMoonSign(formData.birthYear, formData.birthMonth, formData.birthDay);
+    
+    // Rising sign (requires birth time)
+    let risingSign = null;
+    if (formData.birthTime) {
+        const [hours, minutes] = formData.birthTime.split(':').map(Number);
+        risingSign = getRisingSign(formData.birthMonth, formData.birthDay, hours, minutes);
+    }
+    
+    // Cross-system analysis
+    const crossSystemAnalysis = getCrossSystemAnalysis(sunSign, moonSign, risingSign, chinese, lifePath, 
+        calculatePersonalYear(formData.birthMonth, formData.birthDay, 2026));
+    
+    // Extended data object for scoring
+    const extendedData = {
+        chinese,
+        gematria,
+        sunSign,
+        moonSign,
+        risingSign,
+        crossSystemAnalysis,
+        birthDay: formData.birthDay
+    };
+    
+    // Calculate 2026 calendar with extended data
+    const calendar2026 = generate2026Calendar(formData, lifePath, destiny, priorities, extendedData);
     
     // Store data in sessionStorage
     sessionStorage.setItem('quantumMerlinData', JSON.stringify({
         formData,
         priorities,
         coreNumbers: { lifePath, destiny, soulUrge, personality },
+        extendedData: {
+            chinese,
+            gematria,
+            sunSign: { name: sunSign.name, symbol: sunSign.symbol, element: sunSign.element },
+            moonSign: { name: moonSign.name, symbol: moonSign.symbol, element: moonSign.element },
+            risingSign: risingSign ? { name: risingSign.name, symbol: risingSign.symbol, element: risingSign.element } : null,
+            crossSystemBonus: crossSystemAnalysis.netModifier
+        },
         calendar2026
     }));
     
@@ -597,7 +1014,7 @@ document.getElementById('calendar-form').addEventListener('submit', function(e) 
     window.location.href = 'calendar.html';
 });
 
-function generate2026Calendar(formData, lifePath, destiny, priorities) {
+function generate2026Calendar(formData, lifePath, destiny, priorities, extendedData = null) {
     const calendar = [];
     const currentYear = 2026;
     
@@ -620,17 +1037,17 @@ function generate2026Calendar(formData, lifePath, destiny, priorities) {
         }
         
         const personalMonth = calculatePersonalMonth(activePersonalYear, month);
-        const score = calculateMonthlyScore(activePersonalYear, personalMonth, lifePath, destiny, priorities, month, birthdayMonth);
+        const score = calculateMonthlyScore(activePersonalYear, personalMonth, lifePath, destiny, priorities, month, birthdayMonth, extendedData);
         const trafficLight = getTrafficLight(score);
         const theme = getWeeklyTheme(score);
         const guidance = getMonthlyGuidance(activePersonalYear, personalMonth, score, month, birthdayMonth);
         const categoryScores = calculateCategoryScores(score, priorities, activePersonalYear, personalMonth);
         
         // Generate weeks for this month
-        const weeks = generateWeeklyData(month, activePersonalYear, personalMonth, lifePath, destiny, priorities, birthdayMonth);
+        const weeks = generateWeeklyData(month, activePersonalYear, personalMonth, lifePath, destiny, priorities, birthdayMonth, extendedData);
         
         // Generate days for this month
-        const days = generateDailyData(month, weeks, activePersonalYear, personalMonth, lifePath, destiny, priorities, birthdayMonth);
+        const days = generateDailyData(month, weeks, activePersonalYear, personalMonth, lifePath, destiny, priorities, birthdayMonth, extendedData);
         
         calendar.push({
             month,
@@ -651,7 +1068,7 @@ function generate2026Calendar(formData, lifePath, destiny, priorities) {
     return calendar;
 }
 
-function generateWeeklyData(month, personalYear, personalMonth, lifePath, destiny, priorities, birthdayMonth) {
+function generateWeeklyData(month, personalYear, personalMonth, lifePath, destiny, priorities, birthdayMonth, extendedData = null) {
     const weeks = [];
     const daysInMonth = new Date(2026, month, 0).getDate();
     const firstDay = new Date(2026, month - 1, 1).getDay(); // 0 = Sunday
@@ -665,7 +1082,7 @@ function generateWeeklyData(month, personalYear, personalMonth, lifePath, destin
     
     while (currentDay <= daysInMonth) {
         const weekNumber = weekOfYear + weekIndex;
-        const weekScore = calculateWeeklyScore(month, weekIndex, personalYear, personalMonth, lifePath, destiny, priorities, birthdayMonth);
+        const weekScore = calculateWeeklyScore(month, weekIndex, personalYear, personalMonth, lifePath, destiny, priorities, birthdayMonth, extendedData);
         const weekTrafficLight = getTrafficLight(weekScore);
         const weekTheme = getWeeklyTheme(weekScore);
         const weekGuidance = getWeeklyGuidance(weekNumber, personalYear, personalMonth, weekScore);
@@ -698,7 +1115,7 @@ function generateWeeklyData(month, personalYear, personalMonth, lifePath, destin
     return weeks;
 }
 
-function generateDailyData(month, weeks, personalYear, personalMonth, lifePath, destiny, priorities, birthdayMonth) {
+function generateDailyData(month, weeks, personalYear, personalMonth, lifePath, destiny, priorities, birthdayMonth, extendedData = null) {
     const days = [];
     const daysInMonth = new Date(2026, month, 0).getDate();
     
@@ -732,9 +1149,9 @@ function generateDailyData(month, weeks, personalYear, personalMonth, lifePath, 
         const dailyFunction = dailyFunctions[dayOfWeek];
         const dailyIcon = dailyFunctionIcons[dailyFunction];
         
-        // Calculate daily score with astronomical influence
+        // Calculate daily score with astronomical influence and extended data
         const astronomicalData = getAstronomicalData(date);
-        const dailyScore = calculateDailyScore(month, day, dayOfWeek, personalYear, personalMonth, lifePath, destiny, priorities, birthdayMonth, astronomicalData);
+        const dailyScore = calculateDailyScore(month, day, dayOfWeek, personalYear, personalMonth, lifePath, destiny, priorities, birthdayMonth, astronomicalData, extendedData);
         const dailyTrafficLight = getTrafficLight(dailyScore);
         
         const dailyGuidance = getDailyGuidance(dailyFunction, dailyScore, personalYear, personalMonth, astronomicalData);
@@ -743,6 +1160,9 @@ function generateDailyData(month, weeks, personalYear, personalMonth, lifePath, 
         // Get the week data for this day
         const weekData = weeks.find(w => w.days.includes(day));
         const weekTheme = weekData ? weekData.theme : getWeeklyTheme(dailyScore);
+        
+        // Get birth day from extendedData if available
+        const actualBirthDay = extendedData && extendedData.birthDay ? extendedData.birthDay : 3;
         
         days.push({
             day,
@@ -757,9 +1177,10 @@ function generateDailyData(month, weeks, personalYear, personalMonth, lifePath, 
             categoryScores,
             weekTheme,
             astronomicalData,
+            extendedData,
             isBestDay: dailyScore >= 85,
             isRedFlagDay: dailyScore < 30,
-            isBirthday: month === birthdayMonth && day === 3 // Assuming day 3 is birthday
+            isBirthday: month === birthdayMonth && day === actualBirthDay
         });
     }
     
