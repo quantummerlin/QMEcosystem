@@ -1010,6 +1010,13 @@ document.getElementById('calendar-form').addEventListener('submit', function(e) 
         calendar2026
     }));
     
+    // Save user details to localStorage for future visits
+    localStorage.setItem('quantumMerlinUserDetails', JSON.stringify({
+        formData,
+        priorities,
+        savedAt: new Date().toISOString()
+    }));
+    
     // Redirect to calendar page
     window.location.href = 'calendar.html';
 });
@@ -1272,4 +1279,76 @@ function showLoading() {
 // Add loading state to form submission
 document.getElementById('calendar-form').addEventListener('submit', function() {
     showLoading();
+});
+
+// ===== LOAD PREVIOUS DETAILS =====
+(function checkForSavedDetails() {
+    const savedData = localStorage.getItem('quantumMerlinUserDetails');
+    
+    if (savedData) {
+        try {
+            const data = JSON.parse(savedData);
+            
+            // Check if data is valid and has required fields
+            if (data.formData && data.formData.firstName && data.formData.lastName) {
+                // Show the load previous button
+                const loadContainer = document.getElementById('load-previous-container');
+                if (loadContainer) {
+                    loadContainer.style.display = 'block';
+                }
+            }
+        } catch (e) {
+            console.log('Error parsing saved details:', e);
+        }
+    }
+})();
+
+// Load Previous Details button handler
+document.getElementById('load-previous-btn')?.addEventListener('click', function() {
+    const savedData = localStorage.getItem('quantumMerlinUserDetails');
+    
+    if (savedData) {
+        try {
+            const data = JSON.parse(savedData);
+            const formData = data.formData;
+            const priorities = data.priorities;
+            
+            // Populate form fields
+            if (formData.firstName) document.getElementById('first-name').value = formData.firstName;
+            if (formData.lastName) document.getElementById('last-name').value = formData.lastName;
+            if (formData.birthMonth) document.getElementById('birth-month').value = formData.birthMonth;
+            if (formData.birthDay) document.getElementById('birth-day').value = formData.birthDay;
+            if (formData.birthYear) document.getElementById('birth-year').value = formData.birthYear;
+            if (formData.birthTime) document.getElementById('birth-time').value = formData.birthTime;
+            if (formData.birthPlace) document.getElementById('birth-place').value = formData.birthPlace;
+            if (formData.currentLocation) document.getElementById('current-location').value = formData.currentLocation;
+            
+            // Restore priority order
+            if (priorities && priorities.length > 0) {
+                const priorityList = document.getElementById('priority-list');
+                const items = Array.from(priorityList.querySelectorAll('li'));
+                
+                // Sort items based on saved priority order
+                priorities.forEach(category => {
+                    const item = items.find(li => li.dataset.category === category);
+                    if (item) {
+                        priorityList.appendChild(item);
+                    }
+                });
+            }
+            
+            // Hide the load button after loading
+            const loadContainer = document.getElementById('load-previous-container');
+            if (loadContainer) {
+                loadContainer.innerHTML = '<p style="color: var(--quantum-gold); font-style: italic;">✨ Your details have been loaded! Review and click Generate. ✨</p>';
+            }
+            
+            // Scroll to form
+            document.getElementById('calendar-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+        } catch (e) {
+            console.log('Error loading saved details:', e);
+            alert('Unable to load saved details. Please enter your information manually.');
+        }
+    }
 });

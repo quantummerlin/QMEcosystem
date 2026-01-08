@@ -377,6 +377,35 @@ input::placeholder {
     font-size: 1.8rem;
 }
 
+/* ===== LOAD PREVIOUS DETAILS BUTTON ===== */
+.load-previous-btn {
+    padding: 15px 40px;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.3), rgba(45, 27, 78, 0.4));
+    border: 2px solid var(--gold-accent);
+    border-radius: var(--border-radius);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.load-previous-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.4), rgba(45, 27, 78, 0.5));
+    border-color: var(--gold-light);
+}
+
+.load-previous-btn:active {
+    transform: translateY(-1px);
+}
+
 /* ===== HOW IT WORKS ===== */
 .how-it-works {
     margin-bottom: var(--space-lg);
