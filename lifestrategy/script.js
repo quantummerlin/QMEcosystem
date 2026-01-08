@@ -1,5 +1,54 @@
 // QUANTUM MERLIN LIFE STRATEGY - JAVASCRIPT
 
+// ===== WELCOME ONBOARDING FLOW =====
+let currentOnboardingStep = 1;
+
+// Show onboarding on first visit
+window.addEventListener('DOMContentLoaded', function() {
+    const hasVisitedBefore = localStorage.getItem('quantumMerlinVisited');
+    
+    if (!hasVisitedBefore) {
+        setTimeout(() => {
+            document.getElementById('onboarding-overlay').classList.add('active');
+        }, 300);
+    }
+});
+
+function nextOnboardingStep(stepNumber) {
+    // Hide current step
+    document.getElementById(`step-${currentOnboardingStep}`).classList.remove('active');
+    
+    // Update dots
+    document.querySelector(`.dot[data-step="${currentOnboardingStep}"]`).classList.remove('active');
+    document.querySelector(`.dot[data-step="${stepNumber}"]`).classList.add('active');
+    
+    // Show next step
+    currentOnboardingStep = stepNumber;
+    document.getElementById(`step-${stepNumber}`).classList.add('active');
+}
+
+function closeOnboarding() {
+    document.getElementById('onboarding-overlay').classList.remove('active');
+    localStorage.setItem('quantumMerlinVisited', 'true');
+    
+    // Smooth scroll to form
+    setTimeout(() => {
+        document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
+    }, 400);
+}
+
+// Allow clicking dots to jump to steps
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.onboarding-dots .dot').forEach(dot => {
+        dot.addEventListener('click', function() {
+            const stepNumber = parseInt(this.getAttribute('data-step'));
+            if (stepNumber < currentOnboardingStep) {
+                nextOnboardingStep(stepNumber);
+            }
+        });
+    });
+});
+
 // ===== PRIORITY DRAG & DROP WITH TOUCH SUPPORT =====
 const priorityList = document.getElementById('priority-list');
 let draggedElement = null;

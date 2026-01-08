@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2.0.0">
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
@@ -271,7 +271,55 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
-    <script src="../shared/js/quantum-feedback.js"></script>
+    <!-- Welcome Onboarding Modal -->
+    <div class="onboarding-overlay" id="onboarding-overlay">
+        <div class="onboarding-modal">
+            <div class="onboarding-step active" id="step-1">
+                <div class="onboarding-icon">🔮</div>
+                <h2>Welcome to Quantum Merlin</h2>
+                <p>Your personalized 2026 Life Strategy Calendar awaits. In just 90 seconds, you'll know exactly when to push forward and when to conserve energy.</p>
+                <button class="onboarding-btn" onclick="nextOnboardingStep(2)">Begin Journey ✨</button>
+            </div>
+            
+            <div class="onboarding-step" id="step-2">
+                <div class="onboarding-icon">📊</div>
+                <h2>15+ Intelligence Layers</h2>
+                <p>We synthesize numerology, astronomy, Chinese zodiac, and archetypal patterns into one clear signal: your monthly, weekly, and daily scores.</p>
+                <button class="onboarding-btn" onclick="nextOnboardingStep(3)">Continue →</button>
+            </div>
+            
+            <div class="onboarding-step" id="step-3">
+                <div class="onboarding-icon">🚦</div>
+                <h2>Traffic Light System</h2>
+                <p>Every period gets a score 0-100. 🟢 Green (80+) = GO. 🟡 Yellow (60-79) = Soft Go. 🔴 Red (<40) = Conserve Energy. Simple clarity for complex timing.</p>
+                <button class="onboarding-btn" onclick="nextOnboardingStep(4)">Got It →</button>
+            </div>
+            
+            <div class="onboarding-step" id="step-4">
+                <div class="onboarding-icon">🎯</div>
+                <h2>6 Life Categories</h2>
+                <p>Rank your priorities: Health, Creativity, Relationships, Money, Strategy, Visibility. Your scores adjust based on what matters most to YOU.</p>
+                <button class="onboarding-btn" onclick="nextOnboardingStep(5)">Perfect →</button>
+            </div>
+            
+            <div class="onboarding-step" id="step-5">
+                <div class="onboarding-icon">🌹</div>
+                <h2>Ready to Begin?</h2>
+                <p>Fill in the form below with your birth details. Takes 90 seconds. 100% free. No login required. Your data stays in your browser.</p>
+                <button class="onboarding-btn" onclick="closeOnboarding()">Let's Go! 🧙‍♂️</button>
+            </div>
+            
+            <div class="onboarding-dots">
+                <span class="dot active" data-step="1"></span>
+                <span class="dot" data-step="2"></span>
+                <span class="dot" data-step="3"></span>
+                <span class="dot" data-step="4"></span>
+                <span class="dot" data-step="5"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=2.0.0"></script>
+    <script src="../shared/js/quantum-feedback.js?v=2.0.0"></script>
 </body>
 </html>
