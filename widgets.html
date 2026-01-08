@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Widgets | Quantum Merlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --merlin-purple: #2d1b4e;
+            --rose-pink: #ff6b9d;
+            --quantum-gold: #daa520;
+            --ancient-gold: #ffd700;
+            --mystic-cyan: #00f5ff;
+            --deep-void: #0a0015;
+            --ethereal-white: #f0e6ff;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: var(--deep-void);
+            color: var(--ethereal-white);
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 18px;
+            line-height: 1.9;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, #ffd700, #ff6b9d, #8a2be2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--quantum-gold);
+            font-style: italic;
+            margin-bottom: 50px;
+        }
+        
+        /* Live Widget Section */
+        .widget-section {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(45, 27, 78, 0.25));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(138, 43, 226, 0.3);
+        }
+        
+        .widget-section h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--ancient-gold);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        /* Lunar Widget */
+        .lunar-widget {
+            background: rgba(10, 0, 21, 0.8);
+            border: 2px solid rgba(218, 165, 32, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto 30px;
+        }
+        
+        .moon-phase {
+            font-size: 5rem;
+            margin-bottom: 15px;
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+        
+        .phase-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--ancient-gold);
+            margin-bottom: 10px;
+        }
+        
+        .countdown-display {
+            font-size: 2rem;
+            font-family: 'Cinzel', serif;
+            color: var(--mystic-cyan);
+            margin: 20px 0;
+            letter-spacing: 2px;
+        }
+        
+        .countdown-label {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .lunar-progress {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        
+        .lunar-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--ancient-gold), var(--rose-pink), var(--mystic-cyan));
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+        
+        .intensity-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+        
+        .intensity-high { background: rgba(255, 107, 157, 0.3); color: var(--rose-pink); }
+        .intensity-medium { background: rgba(255, 215, 0, 0.3); color: var(--ancient-gold); }
+        .intensity-low { background: rgba(0, 245, 255, 0.3); color: var(--mystic-cyan); }
+        
+        /* Embed Code Section */
+        .embed-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .embed-section h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--quantum-gold);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .code-box {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: var(--mystic-cyan);
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        
+        .copy-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, var(--quantum-gold), var(--ancient-gold));
+            border: none;
+            border-radius: 25px;
+            color: var(--deep-void);
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .copy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(218, 165, 32, 0.5);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            margin-top: 60px;
+        }
+        
+        .wizard-tagline {
+            color: var(--rose-pink);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .footer-links a {
+            color: var(--quantum-gold);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .lunar-widget { padding: 20px; }
+            .moon-phase { font-size: 4rem; }
+            .countdown-display { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔮 Cosmic Widgets</h1>
+        <p class="subtitle">Embed Living Cosmic Tools on Any Website</p>
+        
+        <!-- Lunar Countdown Widget -->
+        <div class="widget-section">
+            <h2>🌙 Lunar Countdown Widget</h2>
+            
+            <div class="lunar-widget" id="lunarWidget">
+                <div class="moon-phase" id="moonEmoji">🌕</div>
+                <div class="phase-name" id="phaseName">Loading...</div>
+                <div class="countdown-display" id="countdown">--d --h --m --s</div>
+                <div class="countdown-label" id="countdownLabel">until next Full Moon</div>
+                <div class="lunar-progress">
+                    <div class="lunar-progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+                <div class="intensity-badge intensity-medium" id="intensityBadge">Calculating...</div>
+            </div>
+            
+            <div class="embed-section">
+                <h3>📋 Embed This Widget</h3>
+                <div class="code-box" id="lunarCode">&lt;!-- Quantum Merlin Lunar Widget --&gt;
+&lt;iframe 
+    src="https://quantummerlin.com/widgets/lunar-embed.html" 
+    width="400" 
+    height="350" 
+    frameborder="0"
+    style="border-radius: 16px; max-width: 100%;"
+&gt;&lt;/iframe&gt;</div>
+                <button class="copy-btn" onclick="copyCode('lunarCode')">📋 Copy Embed Code</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p class="wizard-tagline">🧙‍♂️ The Wizard and the Rose await... 🌹</p>
+            <p>© 2026 Quantum Merlin | All Rights Reserved</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <span style="opacity: 0.3;">•</span>
+                <a href="library.html">Library</a>
+                <span style="opacity: 0.3;">•</span>
+                <a href="privacy.html">Privacy</a>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Lunar calculations
+        function getLunarData() {
+            const now = new Date();
+            const knownFullMoon = new Date('2025-01-13T22:27:00Z');
+            const lunarCycle = 29.53059 * 24 * 60 * 60 * 1000;
+            
+            const timeSinceKnown = now - knownFullMoon;
+            const cycleProgress = (timeSinceKnown % lunarCycle) / lunarCycle;
+            
+            // Next full moon
+            const msUntilFull = lunarCycle - (timeSinceKnown % lunarCycle);
+            const nextFullMoon = new Date(now.getTime() + msUntilFull);
+            
+            // Current phase
+            let phase, emoji;
+            if (cycleProgress < 0.03 || cycleProgress > 0.97) { phase = 'Full Moon'; emoji = '🌕'; }
+            else if (cycleProgress < 0.22) { phase = 'Waning Gibbous'; emoji = '🌖'; }
+            else if (cycleProgress < 0.28) { phase = 'Last Quarter'; emoji = '🌗'; }
+            else if (cycleProgress < 0.47) { phase = 'Waning Crescent'; emoji = '🌘'; }
+            else if (cycleProgress < 0.53) { phase = 'New Moon'; emoji = '🌑'; }
+            else if (cycleProgress < 0.72) { phase = 'Waxing Crescent'; emoji = '🌒'; }
+            else if (cycleProgress < 0.78) { phase = 'First Quarter'; emoji = '🌓'; }
+            else { phase = 'Waxing Gibbous'; emoji = '🌔'; }
+            
+            // Intensity (how close to full/new)
+            const fullProximity = Math.min(cycleProgress, 1 - cycleProgress) * 2;
+            const newProximity = Math.abs(cycleProgress - 0.5) * 2;
+            const intensity = Math.max(1 - fullProximity, 1 - newProximity);
+            
+            return {
+                phase, emoji, cycleProgress: cycleProgress * 100,
+                nextFullMoon, msUntilFull, intensity
+            };
+        }
+        
+        function updateWidget() {
+            const data = getLunarData();
+            
+            document.getElementById('moonEmoji').textContent = data.emoji;
+            document.getElementById('phaseName').textContent = data.phase;
+            document.getElementById('progressFill').style.width = data.cycleProgress + '%';
+            
+            // Countdown
+            const diff = data.msUntilFull;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').textContent = 
+                `${days}d ${hours}h ${mins}m ${secs}s`;
+            
+            // Intensity badge
+            const badge = document.getElementById('intensityBadge');
+            if (data.intensity > 0.7) {
+                badge.textContent = '⚡ High Intensity';
+                badge.className = 'intensity-badge intensity-high';
+            } else if (data.intensity > 0.4) {
+                badge.textContent = '✨ Moderate';
+                badge.className = 'intensity-badge intensity-medium';
+            } else {
+                badge.textContent = '🌊 Calm';
+                badge.className = 'intensity-badge intensity-low';
+            }
+        }
+        
+        function copyCode(id) {
+            const code = document.getElementById(id).textContent;
+            navigator.clipboard.writeText(code.replace(/&lt;/g, '<').replace(/&gt;/g, '>'));
+            event.target.textContent = '✅ Copied!';
+            setTimeout(() => event.target.textContent = '📋 Copy Embed Code', 2000);
+        }
+        
+        // Start
+        updateWidget();
+        setInterval(updateWidget, 1000);
+    </script>
+</body>
+</html>

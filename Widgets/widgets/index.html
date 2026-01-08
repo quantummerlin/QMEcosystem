@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Merlin Widget Gallery - Free Embeddable Cosmic Tools</title>
+    <meta name="description" content="Free embeddable widgets for your website. Lunar countdown, daily signals, state detector, and more. Add cosmic intelligence to any site in seconds.">
+    <meta name="keywords" content="free widgets, embeddable tools, lunar widget, astrology widget, website widgets, cosmic tools">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Widget Core -->
+    <script src="../js/quantum-merlin-widget-core.js"></script>
+    
+    <!-- Individual Widgets -->
+    <script src="../js/widgets/lunar-countdown-widget.js"></script>
+    <script src="../js/widgets/daily-signal-widget.js"></script>
+    <script src="../js/widgets/state-detector-widget.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            min-height: 100vh;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.4em;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 600;
+            color: #fbbf24;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.8;
+        }
+        
+        .widget-showcase {
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #fbbf24;
+        }
+        
+        .widgets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .widget-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .widget-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(251, 191, 36, 0.4);
+            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.2);
+        }
+        
+        .widget-preview {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .widget-info {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .widget-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6em;
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+        
+        .widget-description {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .widget-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .widget-features li {
+            padding: 5px 0;
+            font-size: 0.95em;
+            opacity: 0.8;
+        }
+        
+        .widget-features li::before {
+            content: "✓ ";
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .customize-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .customize-title {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #fbbf24;
+        }
+        
+        .option-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .option-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .option-label {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+        
+        .option-select {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            color: #e2e8f0;
+            font-family: inherit;
+        }
+        
+        .embed-section {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .embed-code {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            color: #fbbf24;
+            margin-bottom: 15px;
+            word-break: break-all;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #fbbf24, #f59e0b);
+            color: #0f172a;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #f59e0b, #d97706);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 80px 0;
+            padding: 60px 20px;
+            background: rgba(251, 191, 36, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(251, 191, 36, 0.1);
+        }
+        
+        .cta-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #fbbf24;
+        }
+        
+        .cta-description {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features-showcase {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-item {
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 1.3em;
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+        
+        .feature-description {
+            opacity: 0.9;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+        }
+        
+        .pricing-notice {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero-stats {
+                gap: 30px;
+            }
+            
+            .stat-number {
+                font-size: 2em;
+            }
+            
+            .widgets-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Quantum Merlin Widgets</h1>
+            <p class="subtitle">Add Cosmic Intelligence to Any Website in Seconds</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">Free</span>
+                    <span class="stat-label">Basic Widgets</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3-Sizes</span>
+                    <span class="stat-label">Each Widget</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Active Embeds</span>
+                </div>
+            </div>
+        </header>
+        
+        <section class="widget-showcase">
+            <h2 class="section-title">Available Widgets</h2>
+            
+            <div class="widgets-grid">
+                <!-- Lunar Countdown Widget -->
+                <div class="widget-card">
+                    <div class="widget-preview">
+                        <div id="lunar-preview"></div>
+                    </div>
+                    
+                    <div class="widget-info">
+                        <h3 class="widget-name">🌙 Lunar Countdown</h3>
+                        <p class="widget-description">Real-time countdown to next Full Moon and New Moon with lunar intensity tracking</p>
+                        
+                        <ul class="widget-features">
+                            <li>Live countdown timer</li>
+                            <li>Current moon phase display</li>
+                            <li>Lunar intensity indicator</li>
+                            <li>Automatic updates</li>
+                            <li>Beautiful animations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="customize-section">
+                        <h4 class="customize-title">Customize Your Widget</h4>
+                        <div class="option-grid">
+                            <div class="option-group">
+                                <label class="option-label">Size</label>
+                                <select class="option-select" id="lunar-size">
+                                    <option value="small">Small (200×120px)</option>
+                                    <option value="medium" selected>Medium (300×200px)</option>
+                                    <option value="large">Large (400×300px)</option>
+                                </select>
+                            </div>
+                            <div class="option-group">
+                                <label class="option-label">Theme</label>
+                                <select class="option-select" id="lunar-theme">
+                                    <option value="dark" selected>Dark</option>
+                                    <option value="light">Light</option>
+                                    <option value="minimal">Minimal</option>
+                                </select>
+                            </div>
+                            <div class="option-group">
+                                <label class="option-label">Show Branding</label>
+                                <select class="option-select" id="lunar-branding">
+                                    <option value="true" selected>Yes (Free)</option>
+                                    <option value="false">No (Premium)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="embed-section">
+                        <div class="pricing-notice">
+                            💡 Free version includes "Powered by Quantum Merlin" branding. 
+                            <a href="#premium" style="color: #fbbf24;">Remove branding →</a>
+                        </div>
+                        
+                        <div class="embed-code" id="lunar-code">
+                            <!-- Embed code will be generated here -->
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn btn-primary" onclick="updateLunarWidget()">Update Preview</button>
+                            <button class="btn btn-secondary" onclick="copyEmbedCode('lunar')">Copy Code</button>
+                            <button class="btn btn-secondary" onclick="downloadWidget('lunar')">Download</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Daily Signal Widget -->
+                <div class="widget-card">
+                    <div class="widget-preview">
+                        <div id="signal-preview"></div>
+                    </div>
+                    
+                    <div class="widget-info">
+                        <h3 class="widget-name">📊 Daily Signals Dashboard</h3>
+                        <p class="widget-description">Unified view of lunar, solar, circadian, environmental, geomagnetic, and biorhythmic signals</p>
+                        
+                        <ul class="widget-features">
+                            <li>6 cosmic signals tracked</li>
+                            <li>Overall performance score</li>
+                            <li>Visual radar chart</li>
+                            <li>Personalized recommendations</li>
+                            <li>Daily refresh</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="customize-section">
+                        <h4 class="customize-title">Customize Your Widget</h4>
+                        <div class="option-grid">
+                            <div class="option-group">
+                                <label class="option-label">Size</label>
+                                <select class="option-select" id="signal-size">
+                                    <option value="small">Small (200×120px)</option>
+                                    <option value="medium" selected>Medium (300×200px)</option>
+                                    <option value="large">Large (400×300px)</option>
+                                </select>
+                            </div>
+                            <div class="option-group">
+                                <label class="option-label">Theme</label>
+                                <select class="option-select" id="signal-theme">
+                                    <option value="dark" selected>Dark</option>
+                                    <option value="light">Light</option>
+                                    <option value="minimal">Minimal</option>
+                                </select>
+                            </div>
+                            <div class="option-group">
+                                <label class="option-label">Show Chart</label>
+                                <select class="option-select" id="signal-chart">
+                                    <option value="true" selected>Yes</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="embed-section">
+                        <div class="pricing-notice">
+                            💡 Free version includes "Powered by Quantum Merlin" branding. 
+                            <a href="#premium" style="color: #fbbf24;">Remove branding →</a>
+                        </div>
+                        
+                        <div class="embed-code" id="signal-code">
+                            <!-- Embed code will be generated here -->
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn btn-primary" onclick="updateSignalWidget()">Update Preview</button>
+                            <button class="btn btn-secondary" onclick="copyEmbedCode('signal')">Copy Code</button>
+                            <button class="btn btn-secondary" onclick="downloadWidget('signal')">Download</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- State Detector Widget -->
+                <div class="widget-card">
+                    <div class="widget-preview">
+                        <div id="state-preview"></div>
+                    </div>
+                    
+                    <div class="widget-info">
+                        <h3 class="widget-name">🧠 State Detector</h3>
+                        <p class="widget-description">6-question assessment to discover your current mental and emotional patterns</p>
+                        
+                        <ul class="widget-features">
+                            <li>6 intelligent questions</li>
+                            <li>Psychological state analysis</li>
+                            <li>Personalized guidance</li>
+                            <li>Non-diagnostic approach</li>
+                            <li>Shareable results</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="customize-section">
+                        <h4 class="customize-title">Customize Your Widget</h4>
+                        <div class="option-grid">
+                            <div class="option-group">
+                                <label class="option-label">Size</label>
+                                <select class="option-select" id="state-size">
+                                    <option value="small">Small (200×120px)</option>
+                                    <option value="medium" selected>Medium (300×200px)</option>
+                                    <option value="large">Large (400×300px)</option>
+                                </select>
+                            </div>
+                            <div class="option-group">
+                                <label class="option-label">Theme</label>
+                                <select class="option-select" id="state-theme">
+                                    <option value="dark" selected>Dark</option>
+                                    <option value="light">Light</option>
+                                    <option value="minimal">Minimal</option>
+                                </select>
+                            </div>
+                            <div class="option-group">
+                                <label class="option-label">Show Details</label>
+                                <select class="option-select" id="state-details">
+                                    <option value="true" selected>Yes</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="embed-section">
+                        <div class="pricing-notice">
+                            💡 Free version includes "Powered by Quantum Merlin" branding. 
+                            <a href="#premium" style="color: #fbbf24;">Remove branding →</a>
+                        </div>
+                        
+                        <div class="embed-code" id="state-code">
+                            <!-- Embed code will be generated here -->
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn btn-primary" onclick="updateStateWidget()">Update Preview</button>
+                            <button class="btn btn-secondary" onclick="copyEmbedCode('state')">Copy Code</button>
+                            <button class="btn btn-secondary" onclick="downloadWidget('state')">Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="features-showcase">
+            <h2 class="section-title">Why Choose Quantum Merlin Widgets?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Beautiful Design</h3>
+                    <p class="feature-description">Stunning visuals that enhance any website aesthetic</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Lightning Fast</h3>
+                    <p class="feature-description">Optimized performance with instant loading</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Mobile Perfect</h3>
+                    <p class="feature-description">Fully responsive on all devices and screen sizes</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">Auto-Updating</h3>
+                    <p class="feature-description">Real-time data updates without page refresh</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Easy Setup</h3>
+                    <p class="feature-description">Copy, paste, done. No coding required</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🌟</div>
+                    <h3 class="feature-title">Unique Content</h3>
+                    <p class="feature-description">Stand out with cosmic intelligence no one else has</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section" id="premium">
+            <h2 class="cta-title">Go Premium - Remove Branding</h2>
+            <p class="cta-description">Unlock white-label widgets, advanced customization, priority support, and detailed analytics</p>
+            
+            <div class="action-buttons" style="justify-content: center;">
+                <a href="#" class="btn btn-primary" style="font-size: 1.2em; padding: 15px 30px;">
+                    Upgrade to Premium - $29/month
+                </a>
+            </div>
+            
+            <p style="margin-top: 20px; opacity: 0.8;">
+                🎯 Limited time: Get 50% off your first 3 months
+            </p>
+        </section>
+        
+        <footer>
+            <p>© 2025 Quantum Merlin. Cosmic Intelligence for Everyone.</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                Questions? <a href="mailto:hello@quantummerlin.com" style="color: #fbbf24;">Contact Us</a> | 
+                <a href="#" style="color: #fbbf24;">Documentation</a> | 
+                <a href="#" style="color: #fbbf24;">API Access</a>
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        // Initialize widgets on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize preview widgets
+            updateLunarWidget();
+            updateSignalWidget();
+            updateStateWidget();
+        });
+        
+        // Widget configuration generators
+        function getLunarConfig() {
+            return {
+                containerId: 'lunar-preview',
+                widgetType: 'lunar-countdown',
+                size: document.getElementById('lunar-size').value,
+                theme: document.getElementById('lunar-theme').value,
+                branding: document.getElementById('lunar-branding').value === 'true',
+                shareable: true,
+                analytics: false
+            };
+        }
+        
+        function getSignalConfig() {
+            return {
+                containerId: 'signal-preview',
+                widgetType: 'daily-signal',
+                size: document.getElementById('signal-size').value,
+                theme: document.getElementById('signal-theme').value,
+                branding: true,
+                showData: true,
+                interactive: true
+            };
+        }
+        
+        function getStateConfig() {
+            return {
+                containerId: 'state-preview',
+                widgetType: 'state-detector',
+                size: document.getElementById('state-size').value,
+                theme: document.getElementById('state-theme').value,
+                branding: true,
+                interactive: true
+            };
+        }
+        
+        // Update functions
+        function updateLunarWidget() {
+            const config = getLunarConfig();
+            new window.QuantumMerlin.LunarCountdownWidget(config);
+            generateEmbedCode('lunar', config);
+        }
+        
+        function updateSignalWidget() {
+            const config = getSignalConfig();
+            new window.QuantumMerlin.DailySignalWidget(config);
+            generateEmbedCode('signal', config);
+        }
+        
+        function updateStateWidget() {
+            const config = getStateConfig();
+            new window.QuantumMerlin.StateDetectorWidget(config);
+            generateEmbedCode('state', config);
+        }
+        
+        // Generate embed code
+        function generateEmbedCode(type, config) {
+            const baseUrl = 'https://quantummerlin.com';
+            const widgetScript = `${baseUrl}/js/quantum-merlin-widget-core.js`;
+            const specificWidget = `${baseUrl}/js/widgets/${type}-widget.js`;
+            
+            const embedCode = `<!-- Quantum Merlin ${type} Widget -->
+<div id="qm-${type}-widget"></div>
+<script src="${widgetScript}"></script>
+<script src="${specificWidget}"></script>
+<script>
+new QuantumMerlin.createWidget('${type}', ${JSON.stringify(config, null, 2)});
+</script>`;
+            
+            document.getElementById(`${type}-code`).textContent = embedCode;
+        }
+        
+        // Copy embed code
+        function copyEmbedCode(type) {
+            const code = document.getElementById(`${type}-code`).textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                // Show success message
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.style.background = 'rgba(16, 185, 129, 0.3)';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '';
+                }, 2000);
+            });
+        }
+        
+        // Download widget package
+        function downloadWidget(type) {
+            // Create a downloadable package with the widget files
+            const config = {
+                lunar: getLunarConfig(),
+                signal: getSignalConfig(),
+                state: getStateConfig()
+            }[type];
+            
+            const packageContent = {
+                type: type,
+                config: config,
+                embedCode: document.getElementById(`${type}-code`).textContent,
+                instructions: `How to install the ${type} widget:\n1. Copy the embed code above\n2. Paste it into your website HTML\n3. The widget will appear automatically\n4. Customize by modifying the config object\n\nFor support, visit quantummerlin.com`
+            };
+            
+            const blob = new Blob([JSON.stringify(packageContent, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `quantum-merlin-${type}-widget.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+        
+        // Track widget interactions
+        function trackWidgetAction(widgetType, action) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'widget_interaction', {
+                    widget_type: widgetType,
+                    action: action
+                });
+            }
+        }
+        
+        // Add interaction tracking to all buttons
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('btn')) {
+                const widgetCard = e.target.closest('.widget-card');
+                if (widgetCard) {
+                    const widgetName = widgetCard.querySelector('.widget-name').textContent.split(' ')[1];
+                    trackWidgetAction(widgetName.toLowerCase(), e.target.textContent);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
