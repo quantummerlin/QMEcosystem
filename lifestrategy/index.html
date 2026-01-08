@@ -242,6 +242,35 @@
         </footer>
     </div>
 
+    <!-- Today's Snapshot Popup Modal -->
+    <div id="snapshot-modal" class="snapshot-modal" style="display: none;">
+        <div class="snapshot-overlay" onclick="closeSnapshotModal()"></div>
+        <div class="snapshot-card">
+            <button class="snapshot-close" onclick="closeSnapshotModal()">&times;</button>
+            <div class="snapshot-header">
+                <span class="snapshot-icon">🔮</span>
+                <h2>Today's Snapshot</h2>
+                <p class="snapshot-date" id="snapshot-date"></p>
+            </div>
+            <div class="snapshot-greeting" id="snapshot-greeting"></div>
+            <div class="snapshot-score-container">
+                <div class="snapshot-score-circle" id="snapshot-score-circle">
+                    <span class="snapshot-score-number" id="snapshot-score-number">--</span>
+                    <span class="snapshot-score-label">/100</span>
+                </div>
+                <div class="snapshot-traffic-light" id="snapshot-traffic-light"></div>
+            </div>
+            <div class="snapshot-function" id="snapshot-function"></div>
+            <div class="snapshot-guidance" id="snapshot-guidance"></div>
+            <div class="snapshot-astro" id="snapshot-astro"></div>
+            <div class="snapshot-actions">
+                <button class="snapshot-btn primary" onclick="goToFullCalendar()">View Full Calendar</button>
+                <button class="snapshot-btn secondary" onclick="closeSnapshotModal()">Got It</button>
+            </div>
+            <p class="snapshot-tagline">🧙‍♂️ The Wizard and the Rose await... 🌹</p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
     <script src="../shared/js/quantum-feedback.js"></script>
 </body>

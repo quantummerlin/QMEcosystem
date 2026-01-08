@@ -1352,3 +1352,149 @@ document.getElementById('load-previous-btn')?.addEventListener('click', function
         }
     }
 });
+
+// ===== TODAY'S SNAPSHOT POPUP =====
+(function checkForTodaySnapshot() {
+    const savedData = localStorage.getItem('quantumMerlinUserDetails');
+    const lastSnapshotShown = localStorage.getItem('quantumMerlinLastSnapshot');
+    const today = new Date().toDateString();
+    
+    // Only show if we have saved data AND haven't shown today's snapshot yet
+    if (savedData && lastSnapshotShown !== today) {
+        try {
+            const data = JSON.parse(savedData);
+            
+            if (data.formData && data.formData.firstName) {
+                // Wait a moment for page to load, then show popup
+                setTimeout(() => {
+                    showTodaySnapshot(data);
+                }, 800);
+            }
+        } catch (e) {
+            console.log('Error checking for snapshot:', e);
+        }
+    }
+})();
+
+function showTodaySnapshot(savedData) {
+    const { formData, priorities } = savedData;
+    const today = new Date();
+    
+    // Calculate today's data
+    const lifePath = calculateLifePath(formData.birthMonth, formData.birthDay, formData.birthYear);
+    const destiny = calculateDestinyNumber(formData.firstName, formData.lastName);
+    const personalYear = calculatePersonalYear(formData.birthMonth, formData.birthDay, 2026);
+    const month = today.getMonth() + 1;
+    const day = today.getDate();
+    const personalMonth = calculatePersonalMonth(personalYear, month);
+    const dayOfWeek = today.getDay();
+    
+    // Get astronomical data for today
+    const astronomicalData = getAstronomicalData(today);
+    
+    // Calculate extended data
+    const chinese = getChineseZodiac(formData.birthYear, formData.birthMonth, formData.birthDay);
+    const sunSign = getZodiacSign(formData.birthMonth, formData.birthDay);
+    const moonSign = getMoonSign(formData.birthYear, formData.birthMonth, formData.birthDay);
+    
+    const extendedData = {
+        chinese,
+        sunSign,
+        moonSign,
+        birthDay: formData.birthDay
+    };
+    
+    // Calculate today's score
+    const dailyScore = calculateDailyScore(month, day, dayOfWeek, personalYear, personalMonth, lifePath, destiny, priorities || [], formData.birthMonth, astronomicalData, extendedData);
+    const trafficLight = getTrafficLight(dailyScore);
+    
+    // Daily function
+    const dailyFunctions = {
+        0: { name: 'Recovery', icon: '🌱' },
+        1: { name: 'Strategy', icon: '🧠' },
+        2: { name: 'Execute', icon: '⚙️' },
+        3: { name: 'Create', icon: '🎨' },
+        4: { name: 'Connect', icon: '🤝' },
+        5: { name: 'Value', icon: '💰' },
+        6: { name: 'Integrate', icon: '🔄' }
+    };
+    
+    const dailyFunction = dailyFunctions[dayOfWeek];
+    const dailyGuidance = getDailyGuidance(dailyFunction.name, dailyScore, personalYear, personalMonth, astronomicalData);
+    
+    // Format date
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = today.toLocaleDateString('en-US', dateOptions);
+    
+    // Populate modal
+    document.getElementById('snapshot-date').textContent = formattedDate;
+    document.getElementById('snapshot-greeting').textContent = `Welcome back, ${formData.firstName}!`;
+    document.getElementById('snapshot-score-number').textContent = dailyScore;
+    
+    const scoreCircle = document.getElementById('snapshot-score-circle');
+    scoreCircle.className = `snapshot-score-circle ${trafficLight.class}`;
+    
+    const trafficLightEl = document.getElementById('snapshot-traffic-light');
+    trafficLightEl.textContent = trafficLight.label;
+    trafficLightEl.className = `snapshot-traffic-light ${trafficLight.class}`;
+    
+    document.getElementById('snapshot-function').textContent = `${dailyFunction.icon} Today's Focus: ${dailyFunction.name}`;
+    document.getElementById('snapshot-guidance').textContent = dailyGuidance;
+    
+    // Astro info
+    let astroInfo = '';
+    if (astronomicalData) {
+        if (astronomicalData.moonPhase) {
+            astroInfo += `${astronomicalData.moonPhase.symbol} ${astronomicalData.moonPhase.phase}`;
+        }
+        if (astronomicalData.planetaryHour) {
+            astroInfo += ` • ${astronomicalData.planetaryHour.symbol} ${astronomicalData.planetaryHour.planet} Hour`;
+        }
+        if (astronomicalData.mercuryRetrograde) {
+            astroInfo += ' • ⚠️ Mercury Retrograde';
+        }
+    }
+    document.getElementById('snapshot-astro').textContent = astroInfo;
+    
+    // Show modal
+    document.getElementById('snapshot-modal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    
+    // Mark that we've shown today's snapshot
+    localStorage.setItem('quantumMerlinLastSnapshot', today.toDateString());
+}
+
+function closeSnapshotModal() {
+    document.getElementById('snapshot-modal').style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+function goToFullCalendar() {
+    closeSnapshotModal();
+    
+    // Check if we have calendar data in session storage
+    const sessionData = sessionStorage.getItem('quantumMerlinData');
+    
+    if (sessionData) {
+        // Already have calendar generated, go directly
+        window.location.href = 'calendar.html';
+    } else {
+        // Need to regenerate - load details and prompt user to click generate
+        const loadBtn = document.getElementById('load-previous-btn');
+        if (loadBtn) {
+            loadBtn.click();
+        }
+        // Scroll to form
+        document.getElementById('calendar-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const modal = document.getElementById('snapshot-modal');
+        if (modal && modal.style.display !== 'none') {
+            closeSnapshotModal();
+        }
+    }
+});
