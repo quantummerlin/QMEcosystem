@@ -1,5 +1,33 @@
 /* QUANTUM MERLIN CALENDAR PAGE - STYLES */
 
+/* ===== CALENDAR ANIMATIONS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardGlow {
+    0%, 100% { box-shadow: 0 4px 20px rgba(138, 43, 226, 0.3); }
+    50% { box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4); }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* ===== CALENDAR HEADER ===== */
 .calendar-header {
     display: flex;
@@ -8,6 +36,7 @@
     padding: var(--space-md) 0;
     margin-bottom: var(--space-lg);
     border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    animation: fadeInUp 0.5s ease;
 }
 
 .logo-small {
@@ -18,6 +47,12 @@
 
 .logo-small .icon {
     font-size: 2rem;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 .logo-small h1 {
@@ -35,11 +70,12 @@
     color: var(--gold-accent);
     text-decoration: none;
     font-size: 1.1rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .back-link:hover {
     color: var(--gold-light);
+    transform: translateX(-5px);
 }
 
 /* ===== CALENDAR HERO ===== */
@@ -47,6 +83,7 @@
     text-align: center;
     padding: var(--space-lg) 0;
     margin-bottom: var(--space-lg);
+    animation: fadeInUp 0.6s ease 0.1s both;
 }
 
 .calendar-hero h2 {
@@ -73,6 +110,19 @@
     flex-direction: column;
     align-items: center;
     gap: var(--space-xs);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.5s ease both;
+}
+
+.number-card:nth-child(1) { animation-delay: 0.1s; }
+.number-card:nth-child(2) { animation-delay: 0.2s; }
+.number-card:nth-child(3) { animation-delay: 0.3s; }
+.number-card:nth-child(4) { animation-delay: 0.4s; }
+
+.number-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(138, 43, 226, 0.4), 0 0 20px rgba(212, 175, 55, 0.2);
+    border-color: rgba(212, 175, 55, 0.5);
 }
 
 .number-label {
@@ -267,17 +317,37 @@
     padding: var(--space-md);
     border-radius: var(--border-radius);
     border: 2px solid rgba(212, 175, 55, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.5s ease both;
+    position: relative;
+    overflow: hidden;
+}
+
+.month-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: left 0.6s ease;
+}
+
+.month-card:hover::before {
+    left: 150%;
 }
 
 .month-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 15px 40px rgba(138, 43, 226, 0.35), 0 0 20px rgba(212, 175, 55, 0.15);
+    border-color: rgba(212, 175, 55, 0.5);
 }
 
 .month-card.best-month {
     border-color: var(--green-go);
     box-shadow: 0 4px 16px rgba(0, 255, 136, 0.2);
+    animation: cardGlow 3s infinite ease-in-out;
 }
 
 .month-card.red-flag {

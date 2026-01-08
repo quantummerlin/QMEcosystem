@@ -1684,7 +1684,17 @@ function showTodaySnapshot(savedData) {
     // Populate modal
     document.getElementById('snapshot-date').textContent = formattedDate;
     document.getElementById('snapshot-greeting').textContent = `Welcome back, ${formData.firstName}!`;
-    document.getElementById('snapshot-score-number').textContent = dailyScore;
+    
+    // Animate score number counting up
+    const scoreEl = document.getElementById('snapshot-score-number');
+    scoreEl.textContent = '0';
+    setTimeout(() => {
+        if (window.animateNumber) {
+            window.animateNumber(scoreEl, dailyScore, 800);
+        } else {
+            scoreEl.textContent = dailyScore;
+        }
+    }, 300);
     
     const scoreCircle = document.getElementById('snapshot-score-circle');
     scoreCircle.className = `snapshot-score-circle ${trafficLight.class}`;
@@ -1752,4 +1762,78 @@ document.addEventListener('keydown', function(e) {
             closeSnapshotModal();
         }
     }
+});
+
+// ===== WOW FACTOR SCROLL ANIMATIONS =====
+document.addEventListener('DOMContentLoaded', function() {
+    // Add animate-in class to elements that should animate on scroll
+    const animateElements = document.querySelectorAll('.step, .form-section, .how-it-works h2, .priority-section, .form-group');
+    animateElements.forEach(el => {
+        el.classList.add('animate-in');
+    });
+    
+    // Add stagger-children to step containers
+    const stepsContainer = document.querySelector('.steps');
+    if (stepsContainer) {
+        stepsContainer.classList.add('stagger-children');
+    }
+    
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1
+    };
+    
+    const animationObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Optional: unobserve after animation to save resources
+                // animationObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all animate-in and stagger-children elements
+    document.querySelectorAll('.animate-in, .stagger-children').forEach(el => {
+        animationObserver.observe(el);
+    });
+    
+    // Add floating animation to hero icon
+    const heroIcon = document.querySelector('.logo .icon');
+    if (heroIcon) {
+        heroIcon.classList.add('float');
+    }
+    
+    // Add shimmer effect to main title on page load
+    const mainTitle = document.querySelector('.hero h1');
+    if (mainTitle) {
+        setTimeout(() => {
+            mainTitle.classList.add('shimmer-text');
+        }, 500);
+    }
+    
+    // Animate score numbers counting up
+    function animateNumber(element, target, duration = 1000) {
+        const start = 0;
+        const startTime = performance.now();
+        
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easeOut = 1 - Math.pow(1 - progress, 3); // Cubic ease out
+            const current = Math.round(start + (target - start) * easeOut);
+            element.textContent = current;
+            
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            }
+        }
+        
+        requestAnimationFrame(update);
+    }
+    
+    // Expose for use in snapshot modal
+    window.animateNumber = animateNumber;
 });
