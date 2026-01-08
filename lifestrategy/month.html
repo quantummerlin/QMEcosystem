@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Reading | Quantum Merlin Life Strategy</title>
+    <meta name="description" content="Your personalized monthly strategic timing calendar with day-by-day guidance.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calendar-styles.css">
+    <style>
+        /* Month Page Specific Styles */
+        .month-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(45, 27, 78, 0.25));
+            border-radius: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .month-nav a {
+            color: var(--quantum-gold, #daa520);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .month-nav a:hover {
+            background: rgba(218, 165, 32, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .month-nav a.disabled {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .month-hero {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+        
+        .month-hero h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #ffd700, #ff6b9d, #8a2be2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+        
+        .month-score-hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .score-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            border: 3px solid;
+        }
+        
+        .score-circle.green {
+            background: rgba(76, 175, 80, 0.2);
+            border-color: #4caf50;
+        }
+        
+        .score-circle.yellow {
+            background: rgba(255, 193, 7, 0.2);
+            border-color: #ffc107;
+        }
+        
+        .score-circle.neutral {
+            background: rgba(158, 158, 158, 0.2);
+            border-color: #9e9e9e;
+        }
+        
+        .score-circle.red {
+            background: rgba(244, 67, 54, 0.2);
+            border-color: #f44336;
+        }
+        
+        .score-circle .score-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .score-circle .score-label {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        .month-theme {
+            font-size: 1.3rem;
+            color: var(--quantum-gold, #daa520);
+            margin: 15px 0;
+            font-style: italic;
+        }
+        
+        .month-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .meta-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(45, 27, 78, 0.25));
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            text-align: center;
+        }
+        
+        .meta-card .label {
+            font-size: 0.85rem;
+            color: rgba(240, 230, 255, 0.7);
+            margin-bottom: 5px;
+        }
+        
+        .meta-card .value {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: var(--ancient-gold, #ffd700);
+        }
+        
+        .guidance-box {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.1), rgba(138, 43, 226, 0.1));
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            margin: 30px 0;
+            line-height: 1.9;
+        }
+        
+        .guidance-box h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--ancient-gold, #ffd700);
+            margin-bottom: 15px;
+        }
+        
+        .category-section {
+            margin: 40px 0;
+        }
+        
+        .category-section h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--ancient-gold, #ffd700);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+        }
+        
+        .category-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(45, 27, 78, 0.25));
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            text-align: center;
+        }
+        
+        .category-card .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .category-card .name {
+            font-family: 'Cinzel', serif;
+            color: var(--ethereal-white, #f0e6ff);
+            margin-bottom: 8px;
+        }
+        
+        .category-card .score {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .category-card .score.high { color: #4caf50; }
+        .category-card .score.medium { color: #ffc107; }
+        .category-card .score.low { color: #f44336; }
+        
+        .weeks-section {
+            margin: 40px 0;
+        }
+        
+        .weeks-section h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--ancient-gold, #ffd700);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .week-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(45, 27, 78, 0.25));
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            margin-bottom: 15px;
+        }
+        
+        .week-card.best-week {
+            border-color: #4caf50;
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+        }
+        
+        .week-card.red-flag-week {
+            border-color: #f44336;
+            box-shadow: 0 0 15px rgba(244, 67, 54, 0.3);
+        }
+        
+        .week-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .week-number {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--ancient-gold, #ffd700);
+        }
+        
+        .week-score {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+        }
+        
+        .week-theme {
+            color: var(--rose-pink, #ff6b9d);
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        
+        .week-guidance {
+            line-height: 1.7;
+            color: rgba(240, 230, 255, 0.9);
+        }
+        
+        .days-section {
+            margin: 40px 0;
+        }
+        
+        .days-section h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--ancient-gold, #ffd700);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        
+        .day-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(45, 27, 78, 0.15));
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 215, 0, 0.15);
+        }
+        
+        .day-card.best-day {
+            border-color: #4caf50;
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(45, 27, 78, 0.2));
+        }
+        
+        .day-card.red-flag-day {
+            border-color: #f44336;
+            background: linear-gradient(135deg, rgba(244, 67, 54, 0.15), rgba(45, 27, 78, 0.2));
+        }
+        
+        .day-card.birthday {
+            border-color: #ff6b9d;
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.2), rgba(45, 27, 78, 0.2));
+        }
+        
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .day-date {
+            font-family: 'Cinzel', serif;
+            color: var(--ancient-gold, #ffd700);
+        }
+        
+        .day-score {
+            font-size: 0.9rem;
+        }
+        
+        .day-function {
+            color: var(--rose-pink, #ff6b9d);
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+        
+        .day-guidance {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: rgba(240, 230, 255, 0.8);
+        }
+        
+        .mercury-warning {
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid rgba(255, 193, 7, 0.5);
+            border-radius: 5px;
+            padding: 5px 8px;
+            font-size: 0.8rem;
+            margin-top: 8px;
+            color: #ffc107;
+        }
+        
+        .highlights-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .highlights-box {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .highlight-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(45, 27, 78, 0.25));
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .highlight-card.best {
+            border-color: rgba(76, 175, 80, 0.5);
+        }
+        
+        .highlight-card.warning {
+            border-color: rgba(244, 67, 54, 0.5);
+        }
+        
+        .highlight-card h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--ancient-gold, #ffd700);
+            margin-bottom: 15px;
+        }
+        
+        .highlight-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .highlight-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+        }
+        
+        .highlight-card li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            margin-top: 50px;
+        }
+        
+        .footer-links a {
+            color: var(--quantum-gold, #daa520);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        /* Explore Hub Box */
+        .explore-hub {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(45, 27, 78, 0.3));
+            border: 1px solid rgba(218, 165, 32, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .explore-hub h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--ancient-gold, #ffd700);
+            margin-bottom: 20px;
+        }
+        
+        .explore-hub p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #daa520, #ffd700);
+            color: #0a0015;
+            text-decoration: none;
+            border-radius: 25px;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(218, 165, 32, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(218, 165, 32, 0.6);
+        }
+        
+        .cta-button.purple {
+            background: linear-gradient(135deg, #8a2be2, #ff1493);
+            color: white;
+        }
+        
+        /* Coffee Support */
+        .coffee-support {
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(218, 165, 32, 0.15));
+            border: 1px solid rgba(218, 165, 32, 0.3);
+            border-radius: 20px;
+            padding: 35px;
+            margin: 40px auto 60px;
+            max-width: 600px;
+            text-align: center;
+        }
+        
+        .coffee-support h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--rose-pink, #ff6b9d);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .coffee-support p {
+            font-size: 1.05em;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .coffee-button {
+            background: linear-gradient(135deg, #ff6b9d, #daa520);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="month-nav">
+            <a href="#" id="prev-month" class="disabled">← Previous Month</a>
+            <a href="calendar.html">📅 Year Overview</a>
+            <a href="#" id="next-month" class="disabled">Next Month →</a>
+        </nav>
+        
+        <!-- Month Hero -->
+        <section class="month-hero" id="month-hero">
+            <h1 id="month-title">Loading...</h1>
+            <div class="month-score-hero">
+                <div class="score-circle" id="score-circle">
+                    <span class="score-number" id="score-number">--</span>
+                    <span class="score-label">/ 100</span>
+                </div>
+            </div>
+            <p class="month-theme" id="month-theme"></p>
+        </section>
+        
+        <!-- Month Meta Info -->
+        <section class="month-meta-grid" id="month-meta">
+            <!-- Filled by JavaScript -->
+        </section>
+        
+        <!-- Monthly Guidance -->
+        <section class="guidance-box" id="guidance-box">
+            <h3>✨ Monthly Guidance</h3>
+            <p id="monthly-guidance"></p>
+        </section>
+        
+        <!-- Category Scores -->
+        <section class="category-section" id="category-section">
+            <h3>🎯 Priority Scores</h3>
+            <div class="category-grid" id="category-grid">
+                <!-- Filled by JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Key Highlights -->
+        <section class="highlights-box" id="highlights-box">
+            <div class="highlight-card best">
+                <h4>🌟 Best Days This Month</h4>
+                <ul id="best-days-list"></ul>
+            </div>
+            <div class="highlight-card warning">
+                <h4>⚠️ Red Flag Days</h4>
+                <ul id="red-flag-days-list"></ul>
+            </div>
+        </section>
+        
+        <!-- Weekly Breakdown -->
+        <section class="weeks-section" id="weeks-section">
+            <h3>📅 Weekly Breakdown</h3>
+            <div id="weeks-container">
+                <!-- Filled by JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Day by Day -->
+        <section class="days-section" id="days-section">
+            <h3>📆 Day-by-Day Breakdown</h3>
+            <div class="days-grid" id="days-grid">
+                <!-- Filled by JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Explore Hub -->
+        <div class="explore-hub">
+            <h3>🔮 Explore the Quantum Merlin Universe 🔮</h3>
+            <p>Discover our complete mystical ecosystem: Tarot readings infused with quantum consciousness, 
+            birth sigil generators, soul card revelations, and the legendary Quantum Rose divination system.</p>
+            <a href="https://quantummerlin.com" class="cta-button purple">Enter the Quantum Merlin Hub</a>
+        </div>
+        
+        <!-- Coffee Support -->
+        <div class="coffee-support">
+            <h3>☕ Support This Sacred Work</h3>
+            <p>This research took years to compile. If these teachings have illuminated your path, 
+            consider supporting the continued exploration of consciousness and manifestation.</p>
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="cta-button coffee-button">☕ Buy Merlin a Coffee</a>
+            <p style="margin-top: 15px; font-size: 0.95em; color: rgba(240, 230, 255, 0.7); font-style: italic;">
+                Every contribution fuels more mystical discoveries 🌹✨
+            </p>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Quantum Merlin | All Rights Reserved</p>
+            <p class="footer-links">
+                <a href="../privacy.html">Privacy Policy</a> •
+                <a href="../terms.html">Terms of Service</a> •
+                <a href="../disclaimer.html">Disclaimer</a>
+            </p>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: rgba(255, 215, 0, 0.6);">
+                🧙‍♂️ The Wizard and the Rose await... 🌹
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Get month from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const monthIndex = parseInt(urlParams.get('month')) || 0;
+        
+        // Load data from sessionStorage
+        window.addEventListener('DOMContentLoaded', function() {
+            const data = sessionStorage.getItem('quantumMerlinData');
+            
+            if (!data) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            const calendarData = JSON.parse(data);
+            renderMonthPage(calendarData, monthIndex);
+        });
+        
+        function renderMonthPage(data, monthIdx) {
+            const { formData, priorities, coreNumbers, calendar2026 } = data;
+            
+            if (monthIdx < 0 || monthIdx >= 12) {
+                window.location.href = 'calendar.html';
+                return;
+            }
+            
+            const month = calendar2026[monthIdx];
+            
+            // Update page title
+            document.title = `${month.monthName} 2026 | ${formData.firstName}'s Life Strategy`;
+            
+            // Update hero
+            document.getElementById('month-title').textContent = `${month.monthName} 2026`;
+            document.getElementById('score-number').textContent = month.score;
+            document.getElementById('month-theme').textContent = `"${month.theme}"`;
+            
+            const scoreCircle = document.getElementById('score-circle');
+            scoreCircle.className = `score-circle ${month.trafficLight.class}`;
+            
+            // Update navigation
+            updateNavigation(monthIdx);
+            
+            // Meta grid
+            renderMetaGrid(month, coreNumbers);
+            
+            // Guidance
+            document.getElementById('monthly-guidance').textContent = month.guidance;
+            
+            // Category scores
+            renderCategoryScores(month.categoryScores);
+            
+            // Highlights
+            renderHighlights(month.days);
+            
+            // Weeks
+            renderWeeks(month.weeks);
+            
+            // Days
+            renderDays(month.days, month.month);
+        }
+        
+        function updateNavigation(monthIdx) {
+            const prevBtn = document.getElementById('prev-month');
+            const nextBtn = document.getElementById('next-month');
+            
+            if (monthIdx > 0) {
+                prevBtn.classList.remove('disabled');
+                prevBtn.href = `month.html?month=${monthIdx - 1}`;
+            }
+            
+            if (monthIdx < 11) {
+                nextBtn.classList.remove('disabled');
+                nextBtn.href = `month.html?month=${monthIdx + 1}`;
+            }
+        }
+        
+        function renderMetaGrid(month, coreNumbers) {
+            const container = document.getElementById('month-meta');
+            container.innerHTML = `
+                <div class="meta-card">
+                    <div class="label">Personal Year</div>
+                    <div class="value">${month.personalYear}</div>
+                </div>
+                <div class="meta-card">
+                    <div class="label">Personal Month</div>
+                    <div class="value">${month.personalMonth}</div>
+                </div>
+                <div class="meta-card">
+                    <div class="label">Life Path</div>
+                    <div class="value">${coreNumbers.lifePath}</div>
+                </div>
+                <div class="meta-card">
+                    <div class="label">Destiny</div>
+                    <div class="value">${coreNumbers.destiny}</div>
+                </div>
+                ${month.isBirthdayMonth ? '<div class="meta-card"><div class="label">Special</div><div class="value">🎂 Birthday Month!</div></div>' : ''}
+            `;
+        }
+        
+        function renderCategoryScores(categoryScores) {
+            const container = document.getElementById('category-grid');
+            const icons = {
+                health: '❤️', creativity: '🎨', relationships: '🤝',
+                money: '💰', strategy: '🧠', visibility: '👁️'
+            };
+            const names = {
+                health: 'Health', creativity: 'Creativity', relationships: 'Relationships',
+                money: 'Money', strategy: 'Strategy', visibility: 'Visibility'
+            };
+            
+            container.innerHTML = '';
+            
+            for (const [category, score] of Object.entries(categoryScores)) {
+                const scoreClass = score >= 70 ? 'high' : score >= 50 ? 'medium' : 'low';
+                container.innerHTML += `
+                    <div class="category-card">
+                        <div class="icon">${icons[category]}</div>
+                        <div class="name">${names[category]}</div>
+                        <div class="score ${scoreClass}">${score}</div>
+                    </div>
+                `;
+            }
+        }
+        
+        function renderHighlights(days) {
+            if (!days) return;
+            
+            const bestDays = days.filter(d => d.isBestDay);
+            const redFlagDays = days.filter(d => d.isRedFlagDay);
+            
+            const bestList = document.getElementById('best-days-list');
+            const redList = document.getElementById('red-flag-days-list');
+            
+            if (bestDays.length > 0) {
+                bestList.innerHTML = bestDays.slice(0, 5).map(d => 
+                    `<li>${d.dailyIcon} ${getMonthName(d.month)} ${d.day} - ${d.dailyFunction} (${d.score}/100)</li>`
+                ).join('');
+            } else {
+                bestList.innerHTML = '<li>No standout days this month. Focus on consistency.</li>';
+            }
+            
+            if (redFlagDays.length > 0) {
+                redList.innerHTML = redFlagDays.slice(0, 5).map(d => 
+                    `<li>⚠️ ${getMonthName(d.month)} ${d.day} - Conserve energy (${d.score}/100)</li>`
+                ).join('');
+            } else {
+                redList.innerHTML = '<li>No major red flags. Steady progress ahead.</li>';
+            }
+        }
+        
+        function renderWeeks(weeks) {
+            if (!weeks) return;
+            
+            const container = document.getElementById('weeks-container');
+            container.innerHTML = '';
+            
+            weeks.forEach((week, idx) => {
+                const weekClass = week.isBestWeek ? 'best-week' : week.isRedFlagWeek ? 'red-flag-week' : '';
+                container.innerHTML += `
+                    <div class="week-card ${weekClass}">
+                        <div class="week-header">
+                            <span class="week-number">Week ${idx + 1} (Days ${week.days[0]}-${week.days[week.days.length - 1]})</span>
+                            <span class="week-score">${week.trafficLight.color} ${week.score}/100</span>
+                        </div>
+                        <div class="week-theme">${week.theme}</div>
+                        <div class="week-guidance">${week.guidance}</div>
+                    </div>
+                `;
+            });
+        }
+        
+        function renderDays(days, monthNum) {
+            if (!days) return;
+            
+            const container = document.getElementById('days-grid');
+            container.innerHTML = '';
+            
+            days.forEach(day => {
+                let dayClass = '';
+                if (day.isBirthday) dayClass = 'birthday';
+                else if (day.isBestDay) dayClass = 'best-day';
+                else if (day.isRedFlagDay) dayClass = 'red-flag-day';
+                
+                const dayName = getDayName(new Date(2026, monthNum - 1, day.day).getDay());
+                
+                container.innerHTML += `
+                    <div class="day-card ${dayClass}">
+                        <div class="day-header">
+                            <span class="day-date">${dayName}, ${getMonthName(monthNum)} ${day.day}</span>
+                            <span class="day-score">${day.trafficLight.color} ${day.score}</span>
+                        </div>
+                        <div class="day-function">${day.dailyIcon} ${day.dailyFunction}</div>
+                        <div class="day-guidance">${day.guidance}</div>
+                        ${day.isBirthday ? '<div class="mercury-warning">🎂 Your Birthday!</div>' : ''}
+                        ${day.astronomicalData && day.astronomicalData.mercuryRetrograde ? '<div class="mercury-warning">⚠️ Mercury Retrograde</div>' : ''}
+                    </div>
+                `;
+            });
+        }
+        
+        function getMonthName(month) {
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                           'July', 'August', 'September', 'October', 'November', 'December'];
+            return months[month - 1];
+        }
+        
+        function getDayName(dayOfWeek) {
+            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            return days[dayOfWeek];
+        }
+    </script>
+</body>
+</html>
