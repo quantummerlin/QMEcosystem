@@ -283,6 +283,7 @@
             text-decoration: none;
             color: inherit;
             display: block;
+            text-align: center;
         }
         
         .month-card:hover {
@@ -301,8 +302,9 @@
         
         .month-card-header {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
+            gap: 10px;
             margin-bottom: 15px;
         }
         
@@ -334,6 +336,7 @@
         
         .month-meta {
             display: flex;
+            justify-content: center;
             gap: 15px;
             font-size: 0.85rem;
             color: rgba(240, 230, 255, 0.7);

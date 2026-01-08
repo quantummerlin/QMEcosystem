@@ -495,57 +495,57 @@ function getCrossSystemAnalysis(sunSign, moonSign, risingSign, chinese, lifePath
 
 function calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, priorities, month, birthMonth, extendedData = null) {
     // Base score from personal year alignment
-    let baseScore = 50;
+    let baseScore = 45;
     
-    // Personal Year modifiers (balanced for realistic distribution)
+    // Personal Year modifiers (conservative for realistic distribution)
     const pyModifiers = {
-        1: 6,   // New beginnings - moderate boost
-        2: -4,  // Patience - slight reduction
-        3: 8,   // Creativity - good energy
-        4: -1,  // Building - near neutral
-        5: 10,  // Change - high energy
-        6: 2,   // Responsibility - slight boost
-        7: -6,  // Introspection - reduced energy
-        8: 9,   // Power - good energy
-        9: -3,  // Completion - winding down
-        11: 12, // Master number - elevated
-        22: 10, // Master number - strong
-        33: 8   // Master number - meaningful
+        1: 4,   // New beginnings - modest boost
+        2: -5,  // Patience - reduction
+        3: 5,   // Creativity - moderate energy
+        4: -2,  // Building - slight reduction
+        5: 7,   // Change - good energy
+        6: 1,   // Responsibility - slight boost
+        7: -7,  // Introspection - reduced energy
+        8: 6,   // Power - moderate energy
+        9: -4,  // Completion - winding down
+        11: 8,  // Master number - elevated
+        22: 7,  // Master number - strong
+        33: 5   // Master number - meaningful
     };
     
     baseScore += pyModifiers[personalYear] || 0;
     
-    // Personal Month modifiers (scaled for realistic variance)
+    // Personal Month modifiers (conservative for realistic variance)
     const pmModifiers = {
-        1: 5,
-        2: -3,
-        3: 7,
-        4: 0,
-        5: 9,
-        6: 2,
-        7: -5,
-        8: 8,
-        9: -2,
-        11: 10,
-        22: 8,
-        33: 6
+        1: 3,
+        2: -4,
+        3: 4,
+        4: -1,
+        5: 6,
+        6: 1,
+        7: -6,
+        8: 5,
+        9: -3,
+        11: 7,
+        22: 5,
+        33: 4
     };
     
     baseScore += pmModifiers[personalMonth] || 0;
     
-    // Life Path alignment bonus (moderate)
+    // Life Path alignment bonus (subtle)
     if (lifePath === personalMonth) {
-        baseScore += 8;
+        baseScore += 4;
     }
     
-    // Destiny alignment bonus (moderate)
+    // Destiny alignment bonus (subtle)
     if (destiny === personalYear) {
-        baseScore += 7;
+        baseScore += 3;
     }
     
     // Birthday month bonus (transition energy)
     if (month === birthMonth) {
-        baseScore += 5; // Transition month has special energy
+        baseScore += 2; // Transition month has special energy
     }
     
     // Friction detection: conflicting energies
@@ -567,20 +567,20 @@ function calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, p
         baseScore -= 7;
     }
     
-    // Seasonal modifiers (Northern Hemisphere bias - can be adjusted)
+    // Seasonal modifiers (subtle influence)
     const seasonalModifiers = {
-        1: -5,  // January - low energy
-        2: -3,  // February - building
-        3: 5,   // March - spring energy
-        4: 8,   // April - high spring
-        5: 10,  // May - peak spring
-        6: 8,   // June - summer start
-        7: 5,   // July - mid summer
+        1: -3,  // January - low energy
+        2: -2,  // February - building
+        3: 2,   // March - spring energy
+        4: 4,   // April - high spring
+        5: 5,   // May - peak spring
+        6: 4,   // June - summer start
+        7: 2,   // July - mid summer
         8: 0,   // August - transition
-        9: 3,   // September - fall start
-        10: 5,  // October - peak fall
-        11: -2, // November - winding down
-        12: -8  // December - rest
+        9: 1,   // September - fall start
+        10: 2,  // October - peak fall
+        11: -1, // November - winding down
+        12: -4  // December - rest
     };
     
     baseScore += seasonalModifiers[month] || 0;
@@ -590,14 +590,14 @@ function calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, p
         baseScore += extendedData.crossSystemAnalysis.netModifier;
     }
     
-    // NEW: Chinese Zodiac element modifiers
+    // NEW: Chinese Zodiac element modifiers (subtle)
     if (extendedData && extendedData.chinese) {
         const chineseModifiers = {
-            'Wood': { 3: 8, 4: 8, 5: 5 },     // Spring months
-            'Fire': { 5: 8, 6: 10, 7: 8 },    // Summer months
-            'Earth': { 3: 3, 6: 3, 9: 3, 12: 3 }, // Transition months
-            'Metal': { 8: 8, 9: 10, 10: 8 },  // Autumn months
-            'Water': { 11: 8, 12: 10, 1: 8 }  // Winter months
+            'Wood': { 3: 3, 4: 4, 5: 2 },     // Spring months
+            'Fire': { 5: 3, 6: 4, 7: 3 },    // Summer months
+            'Earth': { 3: 1, 6: 1, 9: 1, 12: 1 }, // Transition months
+            'Metal': { 8: 3, 9: 4, 10: 3 },  // Autumn months
+            'Water': { 11: 3, 12: 4, 1: 3 }  // Winter months
         };
         const elementMod = chineseModifiers[extendedData.chinese.element];
         if (elementMod && elementMod[month]) {
@@ -609,7 +609,7 @@ function calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, p
     if (extendedData && extendedData.gematria) {
         const gematriaReduced = reduceToSingleDigit(extendedData.gematria, false);
         if (gematriaReduced === personalYear || gematriaReduced === personalMonth) {
-            baseScore += 6; // Name resonates with current energy
+            baseScore += 2; // Name resonates with current energy
         }
     }
     
@@ -815,41 +815,41 @@ function calculateDailyScore(month, day, dayOfWeek, personalYear, personalMonth,
     // Start with monthly score as base
     let baseScore = calculateMonthlyScore(personalYear, personalMonth, lifePath, destiny, priorities, month, birthMonth, extendedData);
     
-    // Day of week modifiers (scaled for variety)
+    // Day of week modifiers (subtle variety)
     const dayModifiers = {
-        1: 2,   // Monday - Strategy energy
-        2: 3,   // Tuesday - Execution energy
-        3: 5,   // Wednesday - Creative peak
-        4: 4,   // Thursday - Connection energy
-        5: 4,   // Friday - Value energy
-        6: 1,   // Saturday - Integration
+        1: 1,   // Monday - Strategy energy
+        2: 2,   // Tuesday - Execution energy
+        3: 3,   // Wednesday - Creative peak
+        4: 2,   // Thursday - Connection energy
+        5: 2,   // Friday - Value energy
+        6: 0,   // Saturday - Integration
         0: -1   // Sunday - Recovery
     };
     
     baseScore += dayModifiers[dayOfWeek] || 0;
     
-    // Astronomical influence - scaled down for realistic variance
+    // Astronomical influence - minimal variance
     if (astronomicalData) {
-        // Moon Phase (real calculation) - reduced impact
+        // Moon Phase (real calculation) - subtle impact
         if (astronomicalData.moonPhase) {
-            baseScore += Math.round((astronomicalData.moonPhase.modifier || 0) * 0.6);
+            baseScore += Math.round((astronomicalData.moonPhase.modifier || 0) * 0.3);
         }
         
-        // Planetary Hour - reduced impact
+        // Planetary Hour - subtle impact
         if (astronomicalData.planetaryHour) {
-            baseScore += Math.round((astronomicalData.planetaryHour.modifier || 0) * 0.5);
+            baseScore += Math.round((astronomicalData.planetaryHour.modifier || 0) * 0.25);
         }
         
-        // Mercury Retrograde - reduced penalty
+        // Mercury Retrograde - modest penalty
         if (astronomicalData.mercuryRetrograde) {
-            baseScore -= 5; // Retrograde penalty
+            baseScore -= 3; // Retrograde penalty
         }
     }
     
-    // Personal day number (based on day of month) - scaled for variance
+    // Personal day number (based on day of month) - subtle variance
     const personalDay = reduceToSingleDigit(day);
     const personalDayModifiers = {
-        1: 4, 2: -3, 3: 5, 4: 1, 5: 6, 6: 3, 7: -4, 8: 5, 9: -3, 11: 7, 22: 6, 33: 4
+        1: 2, 2: -2, 3: 3, 4: 0, 5: 3, 6: 1, 7: -3, 8: 2, 9: -2, 11: 4, 22: 3, 33: 2
     };
     baseScore += personalDayModifiers[personalDay] || 0;
     
@@ -865,13 +865,13 @@ function calculateDailyScore(month, day, dayOfWeek, personalYear, personalMonth,
         };
         if (elementHarmony[extendedData.chinese.element] && 
             elementHarmony[extendedData.chinese.element].includes(dayElement)) {
-            baseScore += 3;
+            baseScore += 1;
         }
     }
     
-    // Birthday bonus (special but not extreme)
+    // Birthday bonus (special but balanced)
     if (extendedData && extendedData.birthDay && month === birthMonth && day === extendedData.birthDay) {
-        baseScore += 12; // Birthday is powerful
+        baseScore += 6; // Birthday is meaningful
     }
     
     return Math.max(0, Math.min(100, Math.round(baseScore)));
