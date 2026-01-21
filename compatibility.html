@@ -11,6 +11,10 @@
     <meta name="author" content="Quantum Merlin">
     <meta name="robots" content="index, follow">
     
+    <!-- Welcome Flow Configuration -->
+    <meta name="qm-tool-id" content="compatibility">
+    <meta name="qm-welcome-config" content='{"icon": "💕", "title": "Welcome to Quantum Compatibility", "description": "Discover mystical compatibility between two souls using numerology, astrology, and quantum resonance.", "steps": ["Enter both names and birthdates for the connection", "Click Calculate Compatibility to analyze the relationship", "Explore compatibility across 7 mystical dimensions", "Discover strengths, challenges, and soul lessons"]}'>
+    
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Quantum Compatibility Calculator | All Relationship Types">
     <meta property="og:description" content="Comprehensive compatibility analysis for romantic, platonic, family, and business relationships using 12 mystical systems. Discover the sacred dynamics of any connection.">
@@ -2435,5 +2439,14 @@
         });
     </script>
 <script src="shared/js/quantum-feedback.js"></script>
+
+<!-- Include Welcome Flow Component -->
+<script>
+    fetch('shared/components/welcome-flow.html')
+        .then(response => response.text())
+        .then(html => {
+            document.body.insertAdjacentHTML('beforeend', html);
+        });
+</script>
 </body>
 </html>

@@ -13,6 +13,10 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://quantummerlin.com/energyleak">
     
+    <!-- Welcome Flow Configuration -->
+    <meta name="qm-tool-id" content="energyleak">
+    <meta name="qm-welcome-config" content='{"icon": "⚡", "title": "Welcome to Energy Leak Detector", "description": "Identify where your precious life force energy is being drained and learn how to reclaim it.", "steps": ["Answer the diagnostic questions honestly and thoroughly", "Review your energy leak assessment results", "Identify your top 3 energy drains", "Implement the healing recommendations to restore vitality"]}'>
+    
     <!-- PWA -->
     <meta name="theme-color" content="#9333ea">
     <meta name="mobile-web-app-capable" content="yes">
@@ -1822,6 +1826,15 @@
     <script src="shared/js/quantum-effects.js"></script>
     <script src="shared/js/quantum-intro.js"></script>
     <script src="shared/js/quantum-analytics.js"></script>
+    
+    <!-- Include Welcome Flow Component -->
+    <script>
+        fetch('shared/components/welcome-flow.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>
 </body>
 </html>
 

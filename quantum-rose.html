@@ -12,6 +12,10 @@
     <title>Quantum Rose | The Empress's Legacy | Quantum Merlin</title>
     <meta name="description" content="The sacred story of Quantum Rose - A fierce English Rose, warrior of light, and mother whose wisdom was forged in life's battles. Her spirit continues through Quantum Merlin.">
     
+    <!-- Welcome Flow Configuration -->
+    <meta name="qm-tool-id" content="quantum-rose">
+    <meta name="qm-welcome-config" content='{"icon": "🌹", "title": "Welcome to the Quantum Rose", "description": "The legendary divination system merging quantum consciousness with the wisdom of the Rose.", "steps": ["Focus your intention or question clearly in your mind", "Activate the Quantum Rose interface", "Receive guidance from the Roses quantum consciousness", "Reflect on the message and apply it to your life"]}'>
+    
     <!-- Open Graph -->
     <meta property="og:title" content="Quantum Rose | The Empress's Legacy">
     <meta property="og:description" content="A fierce English Rose whose cultured spirit was forged in the fires of adversity. Her sacred mathematics continue to guide souls through the quantum realm.">
@@ -1008,5 +1012,14 @@ Anguish and beauty, fresh and new.</div>
         });
     </script>
     <script src="shared/js/quantum-feedback.js"></script>
+    
+    <!-- Include Welcome Flow Component -->
+    <script>
+        fetch('shared/components/welcome-flow.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>
 </body>
 </html>

@@ -6,6 +6,10 @@
     <title>Interactive Soul Card Reading - Choose Your Destiny | Quantum Merlin</title>
     <meta name="description" content="Experience an interactive tarot soul card reading. Choose your cards from the full 78-card deck and receive deep mystical insights combining numerology, astrology, and quantum frequencies.">
     
+    <!-- Welcome Flow Configuration -->
+    <meta name="qm-tool-id" content="soulcard">
+    <meta name="qm-welcome-config" content='{"icon": "🎴", "title": "Welcome to Soul Card Reading", "description": "Choose cards from the 78-card tarot deck to reveal deep mystical insights about your soul journey.", "steps": ["Click on cards from the spread to select them", "Choose 1-10 cards for your personalized reading", "Receive your soul card interpretation with numerology and quantum insights", "Reflect on the guidance and save your reading"]}'>
+    
     <!-- Shared Styles -->
     <link rel="stylesheet" href="shared/css/quantum-variables.css">
     <link rel="stylesheet" href="shared/css/quantum-base.css">
@@ -13,7 +17,6 @@
     <link rel="stylesheet" href="shared/css/quantum-components.css">
     <link rel="stylesheet" href="shared/css/quantum-animations.css">
     <link rel="stylesheet" href="shared/css/quantum-navigation.css">
-    <link rel="stylesheet" href="shared/css/quantum-intro.css">
     
     <style>
         .container {
@@ -322,13 +325,6 @@
     </style>
 </head>
 <body>
-    <!-- Quantum Intro Animation -->
-    <div class="quantum-intro" id="quantumIntro">
-        <div class="intro-symbol" id="introSymbol">🎴</div>
-        <div id="intro-title">SOUL CARD READING</div>
-        <button class="skip-intro" onclick="skipIntro()">Skip Intro →</button>
-    </div>
-
     <!-- Floating Particles -->
     <div id="particles" class="particles-container"></div>
 
@@ -754,5 +750,14 @@
     </script>
     <script src="shared/js/quantum-analytics.js"></script>
     <script src="shared/js/quantum-feedback.js"></script>
+    
+    <!-- Include Welcome Flow Component -->
+    <script>
+        fetch('shared/components/welcome-flow.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>
 </body>
 </html>

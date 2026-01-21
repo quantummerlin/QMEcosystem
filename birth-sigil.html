@@ -12,6 +12,10 @@
     <meta name="author" content="Quantum Merlin">
     <meta name="robots" content="index, follow">
     
+    <!-- Welcome Flow Configuration -->
+    <meta name="qm-tool-id" content="birth-sigil">
+    <meta name="qm-welcome-config" content='{"icon": "⭐", "title": "Welcome to Birth Sigil Generator", "description": "Create your unique cosmic signature based on celestial alignments at your birth moment.", "steps": ["Enter your exact birth date, time, and location", "Click Generate Sigil to create your cosmic signature", "Download your sigil for meditation, artwork, or tattoo design", "Explore the meaning of your lunar phase and stellar alignment"]}'>
+    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://quantummerlin.com/birth-sigil">
     
@@ -6233,6 +6237,15 @@
                 submitBtn.disabled = false;
             }
         });
+    </script>
+    
+    <!-- Include Welcome Flow Component -->
+    <script>
+        fetch('shared/components/welcome-flow.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+            });
     </script>
 </body>
 </html>

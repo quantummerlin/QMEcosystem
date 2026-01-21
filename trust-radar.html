@@ -9,8 +9,7 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Quantum Intro Animation */
-        .quantum-intro {
+        body {
             position: fixed;
             top: 0;
             left: 0;
@@ -485,13 +484,6 @@
     </style>
 </head>
 <body>
-    <!-- Quantum Intro Animation -->
-    <div class="quantum-intro" id="quantumIntro">
-        <div class="intro-symbol" id="introSymbol">🎯</div>
-        <div id="intro-title">TRUST RADAR</div>
-        <button class="skip-intro" onclick="skipIntro()">Skip Intro →</button>
-    </div>
-
     <!-- Floating Particles Background -->
     <div class="particles-bg" id="particlesBg"></div>
 
@@ -958,5 +950,14 @@
         createParticles();
     </script>
     <script src="shared/js/quantum-analytics.js"></script>
+    
+    <!-- Include Welcome Flow Component -->
+    <script>
+        fetch('shared/components/welcome-flow.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>
 </body>
 </html>

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Identity Split Detector | Quantum Merlin</title>
     <meta name="description" content="Reveal conflicts between your different identities and integrate them.">
+    
+    <!-- Welcome Flow Configuration -->
+    <meta name="qm-tool-id" content="identity-split-detector">
+    <meta name="qm-welcome-config" content='{"icon": "🎭", "title": "Welcome to Identity Split Detector", "description": "Reveal conflicts between your different identities and integrate them into wholeness.", "steps": ["Identify the various personas you embody in different situations", "Answer questions about each identity honestly", "Discover where conflicts and contradictions exist", "Receive integration strategies to harmonize your identities"]}'>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Orbitron:wght@400;500;700&family=Cinzel:wght@400;600;700&family=Exo+2:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -493,13 +497,6 @@
     </style>
 </head>
 <body>
-    <!-- Quantum Intro Animation -->
-    <div class="quantum-intro" id="quantumIntro">
-        <div class="intro-symbol" id="introSymbol">🎭</div>
-        <div id="intro-title">IDENTITY SPLIT</div>
-        <button class="skip-intro" onclick="skipIntro()">Skip Intro →</button>
-    </div>
-
     <!-- Floating Particles Background -->
     <div class="particles-bg" id="particlesBg"></div>
 
@@ -912,6 +909,15 @@
             }
         }
         createParticles();
+    </script>
+    
+    <!-- Include Welcome Flow Component -->
+    <script>
+        fetch('shared/components/welcome-flow.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+            });
     </script>
 </body>
 </html>

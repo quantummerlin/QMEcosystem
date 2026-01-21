@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Power Avoidance Pattern | Quantum Merlin</title>
     <meta name="description" content="Discover why you sabotage your own success and how to claim your power.">
+    
+    <!-- Welcome Flow Configuration -->
+    <meta name="qm-tool-id" content="power-avoidance-pattern">
+    <meta name="qm-welcome-config" content='{"icon": "🔓", "title": "Welcome to Power Avoidance Detector", "description": "Discover the subconscious patterns preventing you from stepping into your full power.", "steps": ["Answer the pattern recognition questions truthfully", "Identify your specific power avoidance mechanisms", "Understand the root causes of self-sabotage", "Receive personalized breakthrough strategies"]}'>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Orbitron:wght@400;500;700&family=Cinzel:wght@400;600;700&family=Exo+2:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -484,13 +488,6 @@
     </style>
 </head>
 <body>
-    <!-- Quantum Intro Animation -->
-    <div class="quantum-intro" id="quantumIntro">
-        <div class="intro-symbol" id="introSymbol">👑</div>
-        <div id="intro-title">POWER PATTERNS</div>
-        <button class="skip-intro" onclick="skipIntro()">Skip Intro →</button>
-    </div>
-
     <!-- Floating Particles Background -->
     <div class="particles-bg" id="particlesBg"></div>
 
@@ -922,5 +919,14 @@
         createParticles();
     </script>
     <script src="shared/js/quantum-analytics.js"></script>
+    
+    <!-- Include Welcome Flow Component -->
+    <script>
+        fetch('shared/components/welcome-flow.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>
 </body>
 </html>

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Reality Code Generator | Quantum Merlin</title>
+    
+    <!-- Welcome Flow Configuration -->
+    <meta name="qm-tool-id" content="reality-code-generator-hub">
+    <meta name="qm-welcome-config" content='{"icon": "⚛️", "title": "Welcome to Reality Codes", "description": "Generate quantum frequency codes to reprogram your reality and manifest your desires.", "steps": ["Choose your intention category or enter a custom intention", "Click Generate Code to create your personalized reality code", "Save your code image or set it as your phone wallpaper", "Meditate with your code daily for 21 days for manifestation"]}'>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         * {
@@ -1217,6 +1221,15 @@ Generated: ${new Date().toLocaleDateString()}
         }
 
         updateProgress();
+    </script>
+    
+    <!-- Include Welcome Flow Component -->
+    <script>
+        fetch('../shared/components/welcome-flow.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+            });
     </script>
 </body>
 </html>

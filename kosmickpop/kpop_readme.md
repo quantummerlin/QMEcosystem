@@ -25,7 +25,7 @@ Add these lines to the `<head>` of your HTML files:
 ### Step 2: Use the CSS Classes
 ```html
 <div class="kpop-container">
-    <h1 class="kpop-title">Your K-Pot Life Path</h1>
+    <h1 class="kpop-title">Your K-Pop Life Path</h1>
     <div class="kpop-section">
         <form id="kpopForm">
             <input type="text" class="kpop-input" placeholder="Your name">
@@ -53,7 +53,7 @@ revealKPopResult(resultElement);
 
 ```
 /workspace/
-├── kpop_styles.css          # Complete K-Pot design system
+├── kpop_styles.css          # Complete K-Pop design system
 ├── kpop_data.js             # Archetypes, planetary meanings, data
 ├── kpop_branding.js         # Animations, effects, UI enhancements
 ├── kpop_life_path.html      # Life Path calculator (ready to use)
@@ -196,7 +196,7 @@ revealKPopResult(resultElement);
 
 <!-- New -->
 <div class="kpop-container">
-    <h1 class="kpop-title">🎤 K-Pot Life Path: Idol Destiny ✨</h1>
+    <h1 class="kpop-title">🎤 K-Pop Life Path: Idol Destiny ✨</h1>
     <div class="kpop-section">
         <form id="kpopForm">
             <!-- form content -->
@@ -309,7 +309,7 @@ All K-Pop components are fully responsive:
 </head>
 <body>
     <div class="kpop-container">
-        <h1 class="kpop-title">🎤 K-Pot Calculator</h1>
+        <h1 class="kpop-title">🎤 K-Pop Calculator</h1>
         <div class="kpop-section">
             <form id="calcForm">
                 <input type="text" id="name" class="kpop-input" placeholder="Name">
@@ -456,37 +456,37 @@ trackKPopEvent('kpop_calculator_used', {
 
 ### Twitter Post
 ```
-🎤 My K-Pot Life Path is: Golden Leader! 🌟
+🎤 My K-Pop Life Path is: Golden Leader! 🌟
 
 The cosmos revealed my idol destiny through numerology!
-Find YOUR K-Pot archetype: [URL]
+Find YOUR K-Pop archetype: [URL]
 
 #KPopNumerology #KosmicKPop #IdolDestiny
 ```
 
 ### Instagram Caption
 ```
-✨ K-POT ARCHETYPE REVEAL ✨
+✨ K-Pop ARCHETYPE REVEAL ✨
 
-I just discovered my K-Pot Life Path through kosmic numerology!
+I just discovered my K-Pop Life Path through kosmic numerology!
 
 🌟 Archetype: [Name]
 🪐 Planet: [Name]
 💫 Energy: [Description]
 
-Link in bio to find YOUR K-Pot destiny! 🎤
+Link in bio to find YOUR K-Pop destiny! 🎤
 
 #KPop #Numerology #IdolDestiny #KosmicKPop #KPopNumerology
 ```
 
 ### TikTok Script
 ```
-POV: You just found out your K-Pot Life Path 🎤✨
+POV: You just found out your K-Pop Life Path 🎤✨
 
-(0-3s) "POV: You just found out your K-Pot Life Path [archetype]! 🎤✨"
+(0-3s) "POV: You just found out your K-Pop Life Path [archetype]! 🎤✨"
 (3-10s) "I entered my name and birthday and got [archetype]! The cosmos say I'm a natural [position]!"
 (10-25s) "[Archetype] energy means I'm [trait 1], [trait 2], and [trait 3]. [Planet] influence gives me [ability]!"
-(25-30s) "Link in bio to find YOUR K-Pot Life Path! Which archetype are you? 👇"
+(25-30s) "Link in bio to find YOUR K-Pop Life Path! Which archetype are you? 👇"
 ```
 
 ---
@@ -510,7 +510,7 @@ POV: You just found out your K-Pot Life Path 🎤✨
 - Protected trademarks
 
 ### Safe Alternatives
-- Use "K-Pot" instead of "K-Pop" in branding
+- Use "K-Pop" instead of "K-Pop" in branding
 - Use archetypes instead of specific idols
 - Use generic terms (7-member group, 4-member girl group)
 - Focus on kosmic energy, not specific references
@@ -572,7 +572,7 @@ For questions or issues:
 
 ## 🎤 Ready to Launch!
 
-You have everything you need to launch a copyright-safe, viral K-Pot realm:
+You have everything you need to launch a copyright-safe, viral K-Pop realm:
 
 ✅ Complete design system
 ✅ Comprehensive data system
@@ -586,4 +586,4 @@ You have everything you need to launch a copyright-safe, viral K-Pot realm:
 **Expected revenue: $200K-1M/year**
 **Success probability: 75-85%**
 
-**Launch today and let the stars align for your K-Pot success! 🚀🎤✨**
+**Launch today and let the stars align for your K-Pop success! 🚀🎤✨**

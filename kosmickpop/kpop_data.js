@@ -455,7 +455,7 @@ function generateKPopReading(name, lifePathNumber, zodiacSign) {
         <div class="kpop-result-section">
             <h3 class="kpop-result-title">kosmic Wisdom</h3>
             <p class="kpop-result-text">
-                The universe has equipped you with everything needed for K-Pot stardom. 
+                The universe has equipped you with everything needed for K-Pop stardom. 
                 Your <span class="kpop-accent">${archetype.planet}</span> energy provides 
                 <span class="kpop-highlight">${archetype.energy.toLowerCase()}</span>. 
                 Trust your kosmic blueprint and let your star shine. 🌟

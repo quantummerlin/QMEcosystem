@@ -8,8 +8,8 @@
 // ============================================
 
 const KPOP_BRANDING = {
-    siteName: "Quantum Merlin: K-Pot Edition",
-    tagline: "Decode Your K-Pot Destiny",
+    siteName: "Quantum Merlin: K-Pop Edition",
+    tagline: "Decode Your K-Pop Destiny",
     theme: {
         primary: "pink-purple",
         accent: "cyan",
@@ -17,7 +17,7 @@ const KPOP_BRANDING = {
     },
     emojis: ["🎤", "✨", "🌟", "💖", "⭐", "🔥", "💃", "🎵"],
     vocabulary: {
-        calculator: "K-Pot Blueprint",
+        calculator: "K-Pop Blueprint",
         reading: "kosmic Analysis",
         result: "Idol Destiny",
         discover: "Reveal Your Destiny",
@@ -308,10 +308,10 @@ function generateKPopShareText(result) {
     const archetypes = ["Golden Leader", "Mood Maker", "Main Dancer Virtuoso", "Visual Icon", "Rapper Firecracker", "Main Vocal Powerhouse", "All-Rounder Ace"];
     const randomArchetype = archetypes[Math.floor(Math.random() * archetypes.length)];
     
-    return `🎤 My K-Pot Life Path is: ${randomArchetype} ✨
+    return `🎤 My K-Pop Life Path is: ${randomArchetype} ✨
     
     The cosmos revealed my idol destiny! 
-    Find YOUR K-Pot archetype here: [URL]
+    Find YOUR K-Pop archetype here: [URL]
     
     #KPopNumerology #KosmicKPop #IdolDestiny ${KPOP_BRANDING.emojis[0]} ${KPOP_BRANDING.emojis[1]}`;
 }
@@ -322,11 +322,11 @@ function shareOnTwitter(text, url) {
 }
 
 function shareOnInstagram() {
-    alert('Share your K-Pot result screenshot on Instagram and tag us! 📸✨');
+    alert('Share your K-Pop result screenshot on Instagram and tag us! 📸✨');
 }
 
 function shareOnTikTok() {
-    alert('Create a TikTok showing your K-Pot result! Use #KPopNumerology 🎬✨');
+    alert('Create a TikTok showing your K-Pop result! Use #KPopNumerology 🎬✨');
 }
 
 // ============================================
@@ -352,7 +352,7 @@ function showKPopCookieBanner() {
     
     banner.innerHTML = `
         <p style="color: #fff; margin-bottom: 15px;">
-            🎤 We use cookies to enhance your kosmic K-Pot experience. 
+            🎤 We use cookies to enhance your kosmic K-Pop experience. 
             By continuing, you agree to our <a href="/privacy.html" style="color: #00FFFF;">Privacy Policy</a>.
         </p>
         <button id="kpop-accept-cookies" class="kpop-btn-primary" style="padding: 10px 30px;">
@@ -431,7 +431,7 @@ function addKPopDisclaimer() {
             ⚠️ <strong>DISCLAIMER:</strong> This tool provides entertainment-based numerology and 
             astrological interpretations for K-Pop culture enthusiasts. All results are for 
             entertainment purposes only and should not be taken as professional advice, predictions, 
-            or endorsements. References to idol archetypes and K-Pot concepts are general and not 
+            or endorsements. References to idol archetypes and K-Pop concepts are general and not 
             affiliated with any specific groups, agencies, or individuals. 🎤✨
         </p>
     `;

@@ -1,0 +1,45 @@
+{
+    "name": "Kosmic K-Pop (11:11)",
+    "short_name": "Kosmic K-Pop",
+    "description": "Discover your K-Pop idol archetype through kosmic readings. K + K = 11:11",
+    "start_url": "/kosmickpop/",
+    "display": "standalone",
+    "background_color": "#0D0D1A",
+    "theme_color": "#FF69B4",
+    "orientation": "portrait-primary",
+    "scope": "/kosmickpop/",
+    "icons": [
+        {
+            "src": "kpop_icon.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "kpop_icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["entertainment", "lifestyle"],
+    "shortcuts": [
+        {
+            "name": "Archetype Quiz",
+            "short_name": "Quiz",
+            "description": "Find your idol archetype",
+            "url": "/kosmickpop/kpop_archetype_quiz.html",
+            "icons": [{"src": "kpop_mic_icon.png", "sizes": "96x96"}]
+        },
+        {
+            "name": "Life Path Reading",
+            "short_name": "Life Path",
+            "description": "Discover your idol destiny",
+            "url": "/kosmickpop/kpop_life_path.html",
+            "icons": [{"src": "kpop_stage_icon.png", "sizes": "96x96"}]
+        }
+    ],
+    "screenshots": [],
+    "related_applications": [],
+    "prefer_related_applications": false
+}

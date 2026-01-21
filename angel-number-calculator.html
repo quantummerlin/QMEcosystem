@@ -13,6 +13,10 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://quantummerlin.com/angel-number-calculator">
     
+    <!-- Welcome Flow Configuration -->
+    <meta name="qm-tool-id" content="angel-number-calculator">
+    <meta name="qm-welcome-config" content='{"icon": "👼", "title": "Welcome to Angel Numbers", "description": "Discover the divine messages hidden in numbers. The universe speaks in sequences.", "steps": ["Enter any number or let us calculate from your name/birthdate", "Click Calculate to reveal the angel number meaning", "Read your personalized divine message and guidance", "Explore the mystical significance of recurring numbers"]}'>
+    
     <!-- Favicon -->
     <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
@@ -1596,13 +1600,6 @@
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-    <!-- Quantum Intro Animation -->
-    <div class="quantum-intro" id="quantumIntro">
-        <div class="intro-symbol" id="introSymbol">👼</div>
-        <div id="intro-title">ANGEL NUMBERS</div>
-        <button class="skip-intro" onclick="skipIntro()">Skip Intro →</button>
-    </div>
-
     <!-- Floating Particles -->
     <div id="particles" class="particles-container"></div>
 
@@ -3530,6 +3527,15 @@
     <script src="shared/js/quantum-nav.js"></script>
     <script src="shared/js/quantum-analytics.js"></script>
     <script src="shared/js/quantum-feedback.js"></script>
+    
+    <!-- Include Welcome Flow Component -->
+    <script>
+        fetch('shared/components/welcome-flow.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>
     
     <script>
         // Initialize angel number onboarding on first visit

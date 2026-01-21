@@ -10,6 +10,10 @@
     <meta name="description" content="Generate a unique quantum birth sigil based on your exact birth date, time, and location. Discover your cosmic signature through lunar phase and stellar alignment.">
     <meta name="keywords" content="lunar sigil, star date sigil, moon phase art, celestial signature, astrology art, birth sigil, tattoo design">
     
+    <!-- Welcome Flow Configuration -->
+    <meta name="qm-tool-id" content="quantum-sigil-generator">
+    <meta name="qm-welcome-config" content='{"icon": "✨", "title": "Welcome to Quantum Sigil Generator", "description": "Create powerful mystical sigils from intentions using quantum frequency encoding.", "steps": ["Enter your intention or desire clearly", "Customize the sigil style and complexity", "Generate your unique quantum sigil", "Download and use your sigil for meditation and manifestation"]}'>
+    
     <!-- Open Graph -->
     <meta property="og:title" content="Quantum Birth Sigil Generator | Quantum Merlin">
     <meta property="og:description" content="Generate a unique sigil for any date, time, and place based on lunar and stellar alignment">
@@ -5340,5 +5344,12 @@
             });
         }
     </script>
-</body>
-</html>
+    
+    <!-- Include Welcome Flow Component -->
+    <script>
+        fetch('shared/components/welcome-flow.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>

@@ -10,6 +10,10 @@
     <meta name="description" content="Generate powerful quantum reality codes using advanced gematria, numerology, and frequency alignment. Transform your consciousness and manifest your dreams with our comprehensive system.">
     <meta name="keywords" content="quantum reality codes, gematria, numerology, manifestation, frequency healing, consciousness transformation, quantum merlin, spiritual technology">
     
+    <!-- Welcome Flow Configuration -->
+    <meta name="qm-tool-id" content="reality-code-generator">
+    <meta name="qm-welcome-config" content='{"icon": "⚛️", "title": "Welcome to Reality Codes", "description": "Generate quantum frequency codes to reprogram your reality and manifest your desires.", "steps": ["Choose your intention category or enter a custom intention", "Click Generate Code to create your personalized reality code", "Save your code image or set it as your phone wallpaper", "Meditate with your code daily for 21 days for manifestation"]}'>
+    
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚛️</text></svg>" type="image/svg+xml">
     
@@ -1691,6 +1695,15 @@
                 }
             });
         });
+    </script>
+    
+    <!-- Include Welcome Flow Component -->
+    <script>
+        fetch('../shared/components/welcome-flow.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+            });
     </script>
 </body>
 </html>
