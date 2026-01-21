@@ -45,12 +45,16 @@
            ======================================== */
         :root {
             --pink: #FF69B4;
+            --pink-glow: rgba(255, 105, 180, 0.6);
             --purple: #9400D3;
             --cyan: #00FFFF;
+            --cyan-glow: rgba(0, 255, 255, 0.6);
             --gold: #FFD700;
             --dark: #0D0D1A;
             --darker: #1A0A2E;
             --white: #FFFFFF;
+            --glass: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
             --safe-top: env(safe-area-inset-top, 0px);
             --safe-bottom: env(safe-area-inset-bottom, 0px);
         }
@@ -74,7 +78,38 @@
             min-height: 100vh;
             overflow-x: hidden;
             padding-top: var(--safe-top);
-            padding-bottom: var(--safe-bottom);
+            padding-bottom: calc(80px + var(--safe-bottom));
+        }
+        
+        /* ========================================
+           PAGE TRANSITIONS
+           ======================================== */
+        .page-transition {
+            position: fixed;
+            inset: 0;
+            background: var(--dark);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .page-transition.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .page-transition-logo {
+            font-size: 4rem;
+            animation: spinPulse 1s ease-in-out infinite;
+        }
+        
+        @keyframes spinPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(180deg); }
         }
         
         /* ========================================
@@ -109,17 +144,68 @@
         }
         
         @keyframes floatUp {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
             10% { opacity: 0.15; }
             90% { opacity: 0.15; }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
         }
+        
+        /* ========================================
+           GLASSMORPHISM UTILITIES
+           ======================================== */
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+        }
+        
+        .glass-pink {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.15), rgba(148, 0, 211, 0.1));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .glass-cyan {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(148, 0, 211, 0.1));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+        }
+        
+        /* ========================================
+           SKELETON LOADERS
+           ======================================== */
+        .skeleton {
+            background: linear-gradient(90deg, 
+                rgba(255,255,255,0.05) 0%, 
+                rgba(255,255,255,0.1) 50%, 
+                rgba(255,255,255,0.05) 100%);
+            background-size: 200% 100%;
+            animation: skeletonShimmer 1.5s infinite;
+            border-radius: 10px;
+        }
+        
+        @keyframes skeletonShimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        .skeleton-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        
+        .skeleton-text {
+            height: 20px;
+            margin: 10px 0;
+        }
+        
+        .skeleton-text.short { width: 60%; }
+        .skeleton-text.medium { width: 80%; }
+        .skeleton-text.long { width: 100%; }
         
         /* ========================================
            EPIC LOADING SCREEN
@@ -142,43 +228,46 @@
         }
         
         .loading-logo {
-            font-size: 4rem;
+            font-size: 5rem;
             animation: pulse3d 1.5s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px var(--pink-glow));
         }
         
         @keyframes pulse3d {
             0%, 100% { transform: scale(1) rotateY(0deg); }
-            50% { transform: scale(1.1) rotateY(180deg); }
+            50% { transform: scale(1.15) rotateY(180deg); }
         }
         
         .loading-text {
-            margin-top: 20px;
-            font-size: 1.2rem;
+            margin-top: 25px;
+            font-size: 1.3rem;
+            font-weight: 600;
             color: var(--pink);
-            text-shadow: 0 0 20px var(--pink);
+            text-shadow: 0 0 30px var(--pink);
             animation: textGlow 2s ease-in-out infinite;
         }
         
         @keyframes textGlow {
             0%, 100% { text-shadow: 0 0 20px var(--pink); }
-            50% { text-shadow: 0 0 40px var(--pink), 0 0 60px var(--cyan); }
+            50% { text-shadow: 0 0 40px var(--pink), 0 0 80px var(--cyan); }
         }
         
         .loading-bar {
-            width: 200px;
-            height: 4px;
+            width: 220px;
+            height: 6px;
             background: rgba(255,255,255,0.1);
-            border-radius: 4px;
-            margin-top: 30px;
+            border-radius: 6px;
+            margin-top: 35px;
             overflow: hidden;
         }
         
         .loading-progress {
             height: 100%;
             width: 0%;
-            background: linear-gradient(90deg, var(--pink), var(--cyan), var(--purple));
-            background-size: 200% 100%;
+            background: linear-gradient(90deg, var(--pink), var(--cyan), var(--purple), var(--pink));
+            background-size: 300% 100%;
             animation: loadProgress 1.5s ease-out forwards, shimmer 1s linear infinite;
+            border-radius: 6px;
         }
         
         @keyframes loadProgress {
@@ -186,8 +275,112 @@
         }
         
         @keyframes shimmer {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
+            0% { background-position: 300% 0; }
+            100% { background-position: -300% 0; }
+        }
+        
+        .loading-tip {
+            margin-top: 25px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            animation: fadeInOut 3s ease-in-out infinite;
+        }
+        
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+        
+        /* ========================================
+           DAILY READING BANNER
+           ======================================== */
+        .daily-banner {
+            position: relative;
+            z-index: 5;
+            padding: 15px 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .daily-banner-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .daily-icon {
+            font-size: 1.5rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .daily-text {
+            font-size: 0.95rem;
+            color: var(--gold);
+            font-weight: 600;
+        }
+        
+        .daily-energy {
+            color: var(--cyan);
+            font-weight: 700;
+        }
+        
+        /* ========================================
+           STREAK BADGE
+           ======================================== */
+        .streak-badge {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            padding: 10px 18px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: slideInRight 0.5s ease;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .streak-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        .streak-badge.show {
+            display: flex;
+        }
+        
+        @keyframes slideInRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .streak-fire {
+            font-size: 1.3rem;
+            animation: fireFlicker 0.5s ease-in-out infinite alternate;
+        }
+        
+        @keyframes fireFlicker {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        
+        .streak-count {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--gold);
+        }
+        
+        .streak-label {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
         }
         
         /* ========================================
@@ -211,8 +404,8 @@
             position: absolute;
             inset: 0;
             background: 
-                radial-gradient(ellipse at 30% 20%, rgba(255, 105, 180, 0.3) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 80%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(ellipse at 30% 20%, rgba(255, 105, 180, 0.35) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(0, 255, 255, 0.25) 0%, transparent 50%),
                 radial-gradient(ellipse at 50% 50%, rgba(148, 0, 211, 0.2) 0%, transparent 70%);
             animation: heroGlow 8s ease-in-out infinite;
         }
@@ -232,34 +425,31 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255, 215, 0, 0.2);
-            border: 1px solid var(--gold);
-            padding: 8px 20px;
+            padding: 10px 22px;
             border-radius: 50px;
             font-size: 0.9rem;
             color: var(--gold);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             animation: badgePulse 3s ease-in-out infinite;
         }
         
         @keyframes badgePulse {
             0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
+            50% { box-shadow: 0 0 50px rgba(255, 215, 0, 0.6); }
         }
         
         .hero-title {
-            font-size: clamp(2.5rem, 10vw, 4.5rem);
+            font-size: clamp(2.8rem, 11vw, 5rem);
             font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, var(--pink), var(--purple), var(--cyan));
-            background-size: 200% 200%;
+            line-height: 1.05;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--pink), var(--purple), var(--cyan), var(--pink));
+            background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientFlow 5s ease infinite;
-            text-shadow: none;
-            filter: drop-shadow(0 0 30px rgba(255, 105, 180, 0.5));
+            animation: gradientFlow 6s ease infinite;
+            filter: drop-shadow(0 0 40px rgba(255, 105, 180, 0.5));
         }
         
         @keyframes gradientFlow {
@@ -268,15 +458,16 @@
         }
         
         .hero-tagline {
-            font-size: clamp(1rem, 4vw, 1.4rem);
+            font-size: clamp(1.1rem, 4vw, 1.5rem);
             color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 30px;
-            line-height: 1.5;
+            margin-bottom: 35px;
+            line-height: 1.6;
         }
         
         .hero-tagline .highlight {
             color: var(--cyan);
-            font-weight: 600;
+            font-weight: 700;
+            text-shadow: 0 0 20px var(--cyan-glow);
         }
         
         /* Animated 11:11 Display */
@@ -285,30 +476,33 @@
             align-items: center;
             justify-content: center;
             gap: 15px;
-            margin: 30px 0;
+            margin: 35px 0;
+            perspective: 1000px;
         }
         
         .eleven-number {
-            font-size: clamp(3rem, 12vw, 5rem);
+            font-size: clamp(3.5rem, 14vw, 6rem);
             font-weight: 900;
             color: var(--gold);
-            text-shadow: 0 0 30px var(--gold), 0 0 60px var(--gold);
+            text-shadow: 0 0 40px var(--gold), 0 0 80px var(--gold);
             animation: numberPulse 2s ease-in-out infinite;
+            display: inline-block;
         }
         
-        .eleven-number:nth-child(2) {
+        .eleven-number:nth-child(3) {
             animation-delay: 0.5s;
         }
         
         @keyframes numberPulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.8; }
+            0%, 100% { transform: scale(1) rotateX(0deg); }
+            50% { transform: scale(1.08) rotateX(10deg); }
         }
         
         .eleven-colon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: var(--pink);
             animation: colonBlink 1s step-end infinite;
+            text-shadow: 0 0 20px var(--pink);
         }
         
         @keyframes colonBlink {
@@ -320,28 +514,28 @@
         .hero-cta {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            margin-top: 30px;
+            gap: 18px;
+            margin-top: 35px;
             width: 100%;
-            max-width: 320px;
+            max-width: 340px;
         }
         
         .btn-primary {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 18px 35px;
+            gap: 12px;
+            padding: 20px 40px;
             background: linear-gradient(135deg, var(--pink), var(--purple));
             color: white;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 700;
             border: none;
             border-radius: 60px;
             text-decoration: none;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 40px rgba(255, 105, 180, 0.4);
+            box-shadow: 0 15px 50px rgba(255, 105, 180, 0.5);
             position: relative;
             overflow: hidden;
         }
@@ -350,9 +544,9 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(135deg, transparent, rgba(255,255,255,0.3), transparent);
             transform: translateX(-100%);
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
         
         .btn-primary:hover::before,
@@ -361,36 +555,51 @@
         }
         
         .btn-primary:active {
-            transform: scale(0.98);
+            transform: scale(0.97);
+            box-shadow: 0 8px 30px rgba(255, 105, 180, 0.6);
         }
         
         .btn-secondary {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 16px 35px;
+            gap: 12px;
+            padding: 18px 40px;
             background: transparent;
             color: var(--cyan);
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             border: 2px solid var(--cyan);
             border-radius: 60px;
             text-decoration: none;
             cursor: pointer;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
         
-        .btn-secondary:hover,
+        .btn-secondary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--cyan);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .btn-secondary:hover::before,
+        .btn-secondary:active::before {
+            opacity: 0.1;
+        }
+        
         .btn-secondary:active {
-            background: rgba(0, 255, 255, 0.1);
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+            box-shadow: 0 0 40px var(--cyan-glow);
         }
         
         /* Scroll Indicator */
         .scroll-indicator {
             position: absolute;
-            bottom: 30px;
+            bottom: 35px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -398,33 +607,31 @@
             align-items: center;
             gap: 10px;
             color: rgba(255, 255, 255, 0.5);
-            font-size: 0.8rem;
-            animation: bounce 2s ease-in-out infinite;
+            font-size: 0.85rem;
+            animation: bounceDown 2s ease-in-out infinite;
         }
         
-        @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(10px); }
+        @keyframes bounceDown {
+            0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+            50% { transform: translateX(-50%) translateY(12px); opacity: 0.5; }
         }
         
         .scroll-arrow {
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.2rem;
         }
         
         /* ========================================
-           STATS SECTION - ANIMATED COUNTERS
+           STATS SECTION - LIVE COUNTER
            ======================================== */
         .stats-section {
-            padding: 60px 20px;
-            background: rgba(255, 255, 255, 0.02);
-            border-top: 1px solid rgba(255, 105, 180, 0.2);
-            border-bottom: 1px solid rgba(255, 105, 180, 0.2);
+            padding: 70px 20px;
             position: relative;
             z-index: 1;
         }
@@ -432,45 +639,89 @@
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 600px;
+            gap: 15px;
+            max-width: 650px;
             margin: 0 auto;
         }
         
         .stat-card {
             text-align: center;
-            padding: 25px 15px;
-            background: linear-gradient(135deg, rgba(255, 105, 180, 0.1), rgba(148, 0, 211, 0.1));
-            border: 1px solid rgba(255, 105, 180, 0.2);
-            border-radius: 20px;
-            transition: all 0.3s ease;
+            padding: 28px 15px;
+            border-radius: 25px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--pink), var(--purple));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .stat-card:hover::before {
+            opacity: 0.1;
         }
         
         .stat-card:active {
-            transform: scale(0.98);
-            background: linear-gradient(135deg, rgba(255, 105, 180, 0.2), rgba(148, 0, 211, 0.2));
+            transform: scale(0.95);
+        }
+        
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
         }
         
         .stat-number {
-            font-size: clamp(2rem, 8vw, 3rem);
+            font-size: clamp(2.2rem, 9vw, 3.2rem);
             font-weight: 900;
-            background: linear-gradient(135deg, var(--gold), #FFA500);
+            background: linear-gradient(135deg, var(--gold), #FFA500, var(--gold));
+            background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            animation: goldShimmer 3s ease infinite;
+            position: relative;
+            z-index: 1;
+        }
+        
+        @keyframes goldShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
         
         .stat-label {
             font-size: 0.85rem;
             color: rgba(255, 255, 255, 0.7);
-            margin-top: 5px;
+            margin-top: 8px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .live-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #00FF00;
+            border-radius: 50%;
+            margin-right: 5px;
+            animation: livePulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes livePulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
         }
         
         /* ========================================
-           FEATURED TOOLS - SWIPEABLE CARDS
+           FEATURED TOOLS - GLASSMORPHISM CARDS
            ======================================== */
         .featured-section {
-            padding: 60px 0;
+            padding: 70px 0;
             position: relative;
             z-index: 1;
         }
@@ -478,26 +729,29 @@
         .section-header {
             text-align: center;
             padding: 0 20px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
         
         .section-title {
-            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            font-size: clamp(2rem, 7vw, 2.8rem);
             font-weight: 800;
-            color: var(--pink);
-            text-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
-            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--pink), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 0 30px var(--pink-glow));
+            margin-bottom: 12px;
         }
         
         .section-subtitle {
             color: rgba(255, 255, 255, 0.7);
-            font-size: 1rem;
+            font-size: 1.05rem;
         }
         
         .tools-scroll {
             display: flex;
-            gap: 20px;
-            padding: 20px;
+            gap: 22px;
+            padding: 25px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             scrollbar-width: none;
@@ -510,104 +764,206 @@
         }
         
         .tool-card {
-            flex: 0 0 280px;
+            flex: 0 0 290px;
             scroll-snap-align: center;
-            background: linear-gradient(145deg, rgba(26, 10, 46, 0.9), rgba(13, 13, 26, 0.9));
-            border: 2px solid rgba(255, 105, 180, 0.3);
-            border-radius: 25px;
-            padding: 30px 25px;
+            border-radius: 30px;
+            padding: 35px 28px;
             text-align: center;
             position: relative;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
-        .tool-card::before {
+        .tool-card::after {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(from 0deg, transparent, var(--pink), transparent, var(--cyan), transparent);
-            animation: rotateGlow 4s linear infinite;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, var(--pink), var(--purple), var(--cyan), var(--pink));
+            background-size: 400% 400%;
+            border-radius: 32px;
+            z-index: -1;
             opacity: 0;
+            animation: borderRotate 4s linear infinite;
             transition: opacity 0.3s ease;
         }
         
-        .tool-card:active::before {
-            opacity: 0.3;
+        @keyframes borderRotate {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 400% 50%; }
         }
         
-        @keyframes rotateGlow {
-            to { transform: rotate(360deg); }
+        .tool-card:hover::after {
+            opacity: 1;
         }
         
-        .tool-card-inner {
-            position: relative;
-            z-index: 1;
+        .tool-card:active {
+            transform: scale(0.97);
         }
         
         .tool-badge {
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: 18px;
+            right: 18px;
             background: linear-gradient(135deg, var(--gold), #FFA500);
             color: var(--dark);
-            padding: 5px 12px;
-            border-radius: 20px;
+            padding: 6px 14px;
+            border-radius: 25px;
             font-size: 0.7rem;
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
-            z-index: 2;
+            letter-spacing: 0.5px;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
         }
         
         .tool-icon {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-            filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.5));
+            font-size: 4rem;
+            margin-bottom: 18px;
+            filter: drop-shadow(0 0 25px var(--pink-glow));
+            display: block;
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
         }
         
         .tool-title {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--cyan);
-            margin-bottom: 10px;
-            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            margin-bottom: 12px;
+            text-shadow: 0 0 25px var(--cyan-glow);
         }
         
         .tool-desc {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.98rem;
+            line-height: 1.6;
+            margin-bottom: 22px;
         }
         
         .tool-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 12px 25px;
+            gap: 10px;
+            padding: 14px 28px;
             background: linear-gradient(135deg, var(--pink), var(--purple));
             color: white;
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             font-weight: 600;
             border: none;
             border-radius: 50px;
             text-decoration: none;
             transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
         }
         
         .tool-btn:active {
-            transform: scale(0.98);
-            box-shadow: 0 5px 20px rgba(255, 105, 180, 0.5);
+            transform: scale(0.97);
+            box-shadow: 0 5px 20px rgba(255, 105, 180, 0.6);
+        }
+        
+        /* ========================================
+           SAVED RESULTS SECTION
+           ======================================== */
+        .saved-section {
+            padding: 60px 20px;
+            position: relative;
+            z-index: 1;
+            display: none;
+        }
+        
+        .saved-section.has-results {
+            display: block;
+        }
+        
+        .saved-card {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 25px;
+            border-radius: 25px;
+            text-align: center;
+        }
+        
+        .saved-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--cyan);
+            margin-bottom: 15px;
+        }
+        
+        .saved-result {
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .saved-archetype {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .saved-date {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 10px;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .share-btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .share-btn.twitter {
+            background: #1DA1F2;
+            color: white;
+        }
+        
+        .share-btn.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+        
+        .share-btn.copy {
+            background: var(--glass);
+            color: var(--cyan);
+            border: 1px solid var(--cyan);
+        }
+        
+        .share-btn:active {
+            transform: scale(0.95);
         }
         
         /* ========================================
            12 ARCHETYPES - INTERACTIVE GRID
            ======================================== */
         .archetypes-section {
-            padding: 60px 20px;
+            padding: 70px 20px;
             position: relative;
             z-index: 1;
         }
@@ -615,9 +971,9 @@
         .archetypes-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            max-width: 500px;
-            margin: 30px auto 0;
+            gap: 14px;
+            max-width: 520px;
+            margin: 35px auto 0;
         }
         
         @media (max-width: 400px) {
@@ -632,51 +988,70 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 105, 180, 0.2);
-            border-radius: 15px;
-            padding: 10px;
+            border-radius: 18px;
+            padding: 12px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .archetype-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--pink), var(--purple));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .archetype-item:hover::before {
+            opacity: 0.3;
         }
         
         .archetype-item:active {
-            transform: scale(0.95);
-            background: rgba(255, 105, 180, 0.2);
-            border-color: var(--pink);
+            transform: scale(0.92) rotate(5deg);
         }
         
         .archetype-emoji {
-            font-size: 1.8rem;
-            margin-bottom: 5px;
+            font-size: 2rem;
+            margin-bottom: 6px;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+        
+        .archetype-item:hover .archetype-emoji {
+            transform: scale(1.2);
         }
         
         .archetype-name {
-            font-size: 0.65rem;
-            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.85);
             text-align: center;
             line-height: 1.2;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
         }
         
         /* ========================================
            CTA SECTION - FINAL PUSH
            ======================================== */
         .cta-section {
-            padding: 80px 20px;
+            padding: 90px 20px;
             text-align: center;
             position: relative;
             z-index: 1;
-            background: linear-gradient(180deg, transparent, rgba(255, 105, 180, 0.1));
+            background: linear-gradient(180deg, transparent, rgba(255, 105, 180, 0.1), transparent);
         }
         
         .cta-box {
-            max-width: 400px;
+            max-width: 420px;
             margin: 0 auto;
-            padding: 40px 30px;
-            background: linear-gradient(135deg, rgba(255, 105, 180, 0.15), rgba(148, 0, 211, 0.15));
-            border: 2px solid rgba(255, 105, 180, 0.4);
-            border-radius: 30px;
+            padding: 45px 35px;
+            border-radius: 35px;
             position: relative;
             overflow: hidden;
         }
@@ -684,13 +1059,21 @@
         .cta-box::before {
             content: '';
             position: absolute;
-            inset: -2px;
-            background: linear-gradient(135deg, var(--pink), var(--purple), var(--cyan), var(--pink));
-            background-size: 400% 400%;
-            animation: borderGlow 6s linear infinite;
+            inset: -3px;
+            background: linear-gradient(135deg, var(--pink), var(--purple), var(--cyan), var(--gold), var(--pink));
+            background-size: 500% 500%;
+            animation: borderGlow 8s linear infinite;
+            border-radius: 38px;
+            z-index: -1;
+        }
+        
+        .cta-box::after {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            background: var(--darker);
             border-radius: 32px;
             z-index: -1;
-            opacity: 0.5;
         }
         
         @keyframes borderGlow {
@@ -699,34 +1082,111 @@
         }
         
         .cta-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 4.5rem;
+            margin-bottom: 22px;
             animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px var(--gold));
         }
         
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-8px) rotate(5deg); }
+            75% { transform: translateY(-8px) rotate(-5deg); }
         }
         
         .cta-title {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 800;
             color: var(--white);
-            margin-bottom: 15px;
+            margin-bottom: 18px;
+            line-height: 1.2;
         }
         
         .cta-text {
             color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 25px;
-            line-height: 1.6;
+            margin-bottom: 28px;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        /* ========================================
+           BOTTOM NAVIGATION - MOBILE
+           ======================================== */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 12px 20px;
+            padding-bottom: calc(12px + var(--safe-bottom));
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.6);
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 15px;
+        }
+        
+        .nav-item.active {
+            color: var(--pink);
+            background: rgba(255, 105, 180, 0.1);
+        }
+        
+        .nav-item:active {
+            transform: scale(0.95);
+        }
+        
+        .nav-icon {
+            font-size: 1.5rem;
+        }
+        
+        .nav-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        
+        /* ========================================
+           SOUND TOGGLE
+           ======================================== */
+        .sound-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+        
+        .sound-toggle:active {
+            transform: scale(0.9);
+        }
+        
+        .sound-toggle.muted {
+            opacity: 0.5;
         }
         
         /* ========================================
            FOOTER - MINIMAL & CLEAN
            ======================================== */
         .footer {
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
             border-top: 1px solid rgba(255, 105, 180, 0.2);
             position: relative;
@@ -737,25 +1197,26 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
+            gap: 22px;
+            margin-bottom: 22px;
         }
         
         .footer-links a {
             color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
         }
         
+        .footer-links a:hover,
         .footer-links a:active {
             color: var(--pink);
         }
         
         .footer-disclaimer {
             color: rgba(255, 255, 255, 0.4);
-            font-size: 0.8rem;
-            margin-bottom: 15px;
+            font-size: 0.85rem;
+            margin-bottom: 18px;
         }
         
         .back-home {
@@ -764,8 +1225,13 @@
             gap: 8px;
             color: var(--cyan);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .back-home:hover {
+            opacity: 1;
         }
         
         /* ========================================
@@ -773,18 +1239,16 @@
            ======================================== */
         .install-prompt {
             position: fixed;
-            bottom: 20px;
+            bottom: 100px;
             left: 20px;
             right: 20px;
-            background: linear-gradient(135deg, var(--darker), var(--dark));
-            border: 2px solid var(--pink);
-            border-radius: 20px;
-            padding: 20px;
+            border-radius: 25px;
+            padding: 22px;
             display: none;
             align-items: center;
             gap: 15px;
-            z-index: 1000;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
             animation: slideUp 0.5s ease;
         }
         
@@ -798,7 +1262,7 @@
         }
         
         .install-icon {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
         }
         
         .install-content {
@@ -809,30 +1273,67 @@
             font-weight: 700;
             color: var(--white);
             margin-bottom: 5px;
+            font-size: 1.05rem;
         }
         
         .install-text {
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             color: rgba(255, 255, 255, 0.7);
         }
         
         .install-btn {
-            padding: 12px 20px;
+            padding: 14px 22px;
             background: linear-gradient(135deg, var(--pink), var(--purple));
             color: white;
             border: none;
             border-radius: 50px;
             font-weight: 600;
             cursor: pointer;
+            font-size: 0.95rem;
         }
         
         .install-close {
             background: none;
             border: none;
             color: rgba(255, 255, 255, 0.5);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             cursor: pointer;
             padding: 5px;
+        }
+        
+        /* ========================================
+           TOAST NOTIFICATIONS
+           ======================================== */
+        .toast {
+            position: fixed;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100px);
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            z-index: 10001;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+        
+        .toast.success {
+            background: linear-gradient(135deg, #00C853, #00E676);
+            color: white;
+        }
+        
+        .toast.info {
+            background: linear-gradient(135deg, var(--cyan), #00B8D4);
+            color: var(--dark);
         }
         
         /* ========================================
@@ -845,14 +1346,51 @@
         .haptic:active {
             transform: scale(0.97);
         }
+        
+        /* ========================================
+           CONFETTI CONTAINER
+           ======================================== */
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            animation: confettiFall 3s ease-out forwards;
+        }
+        
+        @keyframes confettiFall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
     </style>
 </head>
 <body>
+    <!-- Page Transition -->
+    <div class="page-transition" id="pageTransition">
+        <span class="page-transition-logo">🎤</span>
+    </div>
+    
     <!-- Animated Background -->
     <canvas id="bgCanvas" class="bg-canvas"></canvas>
     
     <!-- Floating Elements -->
     <div class="floating-elements" id="floatingElements"></div>
+    
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+    
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
     
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
@@ -861,12 +1399,35 @@
         <div class="loading-bar">
             <div class="loading-progress"></div>
         </div>
+        <div class="loading-tip">Tip: Take the Archetype Quiz to discover your idol energy!</div>
+    </div>
+    
+    <!-- Sound Toggle -->
+    <button class="sound-toggle glass" id="soundToggle" aria-label="Toggle Sound">
+        🔊
+    </button>
+    
+    <!-- Streak Badge -->
+    <div class="streak-badge glass-pink" id="streakBadge" style="display: none;">
+        <span class="streak-fire">🔥</span>
+        <div>
+            <div class="streak-count" id="streakCount">0</div>
+            <div class="streak-label">day streak</div>
+        </div>
+    </div>
+    
+    <!-- Daily Reading Banner -->
+    <div class="daily-banner glass">
+        <div class="daily-banner-inner">
+            <span class="daily-icon">🌟</span>
+            <span class="daily-text">Today's Kosmic Energy: <span class="daily-energy" id="dailyEnergy">Loading...</span></span>
+        </div>
     </div>
     
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">
+            <div class="hero-badge glass-pink">
                 <span>✨</span>
                 <span>Where K-Pop Meets the Kosmos</span>
             </div>
@@ -885,11 +1446,11 @@
             </div>
             
             <div class="hero-cta">
-                <a href="kpop_archetype_quiz.html" class="btn-primary haptic">
+                <a href="kpop_archetype_quiz.html" class="btn-primary haptic" data-sound="click" onclick="handleNavigation(event)">
                     <span>🧩</span>
                     <span>Find Your Archetype</span>
                 </a>
-                <a href="kpop_tools_index.html" class="btn-secondary haptic">
+                <a href="kpop_tools_index.html" class="btn-secondary haptic" data-sound="click" onclick="handleNavigation(event)">
                     <span>Explore 47+ Tools</span>
                     <span>→</span>
                 </a>
@@ -905,17 +1466,42 @@
     <!-- STATS SECTION -->
     <section class="stats-section">
         <div class="stats-grid">
-            <div class="stat-card haptic">
+            <div class="stat-card glass haptic">
+                <span class="stat-icon">🛠️</span>
                 <div class="stat-number" data-count="47">0</div>
                 <div class="stat-label">Kosmic Tools</div>
             </div>
-            <div class="stat-card haptic">
+            <div class="stat-card glass haptic">
+                <span class="stat-icon">⭐</span>
                 <div class="stat-number" data-count="12">0</div>
                 <div class="stat-label">Archetypes</div>
             </div>
-            <div class="stat-card haptic">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Possibilities</div>
+            <div class="stat-card glass haptic">
+                <span class="stat-icon">📊</span>
+                <div class="stat-number"><span class="live-dot"></span><span id="liveReaders">1,247</span></div>
+                <div class="stat-label">Reading Today</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SAVED RESULTS SECTION -->
+    <section class="saved-section" id="savedSection">
+        <div class="saved-card glass-pink">
+            <h3 class="saved-title">📜 Your Last Result</h3>
+            <div class="saved-result glass">
+                <div class="saved-archetype" id="savedArchetype">
+                    <span id="savedIcon">🌟</span>
+                    <span id="savedName">Golden Leader</span>
+                </div>
+                <div class="saved-date" id="savedDate">Discovered on Jan 20, 2026</div>
+            </div>
+            <div class="share-buttons">
+                <button class="share-btn twitter haptic" onclick="shareToTwitter()">
+                    <span>𝕏</span> Share
+                </button>
+                <button class="share-btn copy haptic" onclick="copyResult()">
+                    <span>📋</span> Copy
+                </button>
             </div>
         </div>
     </section>
@@ -929,47 +1515,39 @@
         
         <div class="tools-scroll">
             <!-- Archetype Quiz -->
-            <article class="tool-card haptic">
+            <article class="tool-card glass-pink haptic">
                 <span class="tool-badge">Viral</span>
-                <div class="tool-card-inner">
-                    <div class="tool-icon">🧩</div>
-                    <h3 class="tool-title">Archetype Quiz</h3>
-                    <p class="tool-desc">Which of the 12 idol archetypes matches your energy? Find out in 10 questions!</p>
-                    <a href="kpop_archetype_quiz.html" class="tool-btn">Take Quiz ✨</a>
-                </div>
+                <span class="tool-icon">🧩</span>
+                <h3 class="tool-title">Archetype Quiz</h3>
+                <p class="tool-desc">Which of the 12 idol archetypes matches your energy? Find out in 10 questions!</p>
+                <a href="kpop_archetype_quiz.html" class="tool-btn" data-sound="click" onclick="handleNavigation(event)">Take Quiz ✨</a>
             </article>
             
             <!-- Life Path -->
-            <article class="tool-card haptic">
+            <article class="tool-card glass-pink haptic">
                 <span class="tool-badge">Deep</span>
-                <div class="tool-card-inner">
-                    <div class="tool-icon">🔮</div>
-                    <h3 class="tool-title">Life Path Reading</h3>
-                    <p class="tool-desc">Discover your idol destiny through numerology and kosmic energy.</p>
-                    <a href="kpop_life_path.html" class="tool-btn">Get Reading 🎤</a>
-                </div>
+                <span class="tool-icon">🔮</span>
+                <h3 class="tool-title">Life Path Reading</h3>
+                <p class="tool-desc">Discover your idol destiny through numerology and kosmic energy.</p>
+                <a href="kpop_life_path.html" class="tool-btn" data-sound="click" onclick="handleNavigation(event)">Get Reading 🎤</a>
             </article>
             
             <!-- Comeback Energy -->
-            <article class="tool-card haptic">
+            <article class="tool-card glass-pink haptic">
                 <span class="tool-badge">New</span>
-                <div class="tool-card-inner">
-                    <div class="tool-icon">💫</div>
-                    <h3 class="tool-title">Comeback Energy</h3>
-                    <p class="tool-desc">What era would your K-Pop comeback be? Reveal your concept!</p>
-                    <a href="kpop_comeback_energy.html" class="tool-btn">Reveal Era ✨</a>
-                </div>
+                <span class="tool-icon">💫</span>
+                <h3 class="tool-title">Comeback Energy</h3>
+                <p class="tool-desc">What era would your K-Pop comeback be? Reveal your concept!</p>
+                <a href="kpop_comeback_energy.html" class="tool-btn" data-sound="click" onclick="handleNavigation(event)">Reveal Era ✨</a>
             </article>
             
             <!-- Stage Name -->
-            <article class="tool-card haptic">
+            <article class="tool-card glass-pink haptic">
                 <span class="tool-badge">Fun</span>
-                <div class="tool-card-inner">
-                    <div class="tool-icon">✍️</div>
-                    <h3 class="tool-title">Stage Name</h3>
-                    <p class="tool-desc">Generate your unique K-Pop stage name based on kosmic energy!</p>
-                    <a href="kpop_stage_name.html" class="tool-btn">Generate 🎤</a>
-                </div>
+                <span class="tool-icon">✍️</span>
+                <h3 class="tool-title">Stage Name</h3>
+                <p class="tool-desc">Generate your unique K-Pop stage name based on kosmic energy!</p>
+                <a href="kpop_stage_name.html" class="tool-btn" data-sound="click" onclick="handleNavigation(event)">Generate 🎤</a>
             </article>
             
             <!-- Spacer for scroll -->
@@ -985,51 +1563,51 @@
         </div>
         
         <div class="archetypes-grid">
-            <a href="kpop_archetype_quiz.html" class="archetype-item haptic">
+            <a href="kpop_archetype_quiz.html" class="archetype-item glass haptic" data-sound="pop" onclick="handleNavigation(event)">
                 <span class="archetype-emoji">🌟</span>
                 <span class="archetype-name">Golden Leader</span>
             </a>
-            <a href="kpop_archetype_quiz.html" class="archetype-item haptic">
+            <a href="kpop_archetype_quiz.html" class="archetype-item glass haptic" data-sound="pop" onclick="handleNavigation(event)">
                 <span class="archetype-emoji">🤝</span>
                 <span class="archetype-name">Diplomat</span>
             </a>
-            <a href="kpop_archetype_quiz.html" class="archetype-item haptic">
+            <a href="kpop_archetype_quiz.html" class="archetype-item glass haptic" data-sound="pop" onclick="handleNavigation(event)">
                 <span class="archetype-emoji">😄</span>
                 <span class="archetype-name">Mood Maker</span>
             </a>
-            <a href="kpop_archetype_quiz.html" class="archetype-item haptic">
+            <a href="kpop_archetype_quiz.html" class="archetype-item glass haptic" data-sound="pop" onclick="handleNavigation(event)">
                 <span class="archetype-emoji">💪</span>
                 <span class="archetype-name">Backbone</span>
             </a>
-            <a href="kpop_archetype_quiz.html" class="archetype-item haptic">
+            <a href="kpop_archetype_quiz.html" class="archetype-item glass haptic" data-sound="pop" onclick="handleNavigation(event)">
                 <span class="archetype-emoji">💃</span>
                 <span class="archetype-name">Dancer</span>
             </a>
-            <a href="kpop_archetype_quiz.html" class="archetype-item haptic">
+            <a href="kpop_archetype_quiz.html" class="archetype-item glass haptic" data-sound="pop" onclick="handleNavigation(event)">
                 <span class="archetype-emoji">✨</span>
                 <span class="archetype-name">Visual</span>
             </a>
-            <a href="kpop_archetype_quiz.html" class="archetype-item haptic">
+            <a href="kpop_archetype_quiz.html" class="archetype-item glass haptic" data-sound="pop" onclick="handleNavigation(event)">
                 <span class="archetype-emoji">🧠</span>
                 <span class="archetype-name">Genius</span>
             </a>
-            <a href="kpop_archetype_quiz.html" class="archetype-item haptic">
+            <a href="kpop_archetype_quiz.html" class="archetype-item glass haptic" data-sound="pop" onclick="handleNavigation(event)">
                 <span class="archetype-emoji">🔥</span>
                 <span class="archetype-name">Rapper</span>
             </a>
-            <a href="kpop_archetype_quiz.html" class="archetype-item haptic">
+            <a href="kpop_archetype_quiz.html" class="archetype-item glass haptic" data-sound="pop" onclick="handleNavigation(event)">
                 <span class="archetype-emoji">🎤</span>
                 <span class="archetype-name">Vocal</span>
             </a>
-            <a href="kpop_archetype_quiz.html" class="archetype-item haptic">
+            <a href="kpop_archetype_quiz.html" class="archetype-item glass haptic" data-sound="pop" onclick="handleNavigation(event)">
                 <span class="archetype-emoji">🏆</span>
                 <span class="archetype-name">All-Rounder</span>
             </a>
-            <a href="kpop_archetype_quiz.html" class="archetype-item haptic">
+            <a href="kpop_archetype_quiz.html" class="archetype-item glass haptic" data-sound="pop" onclick="handleNavigation(event)">
                 <span class="archetype-emoji">🏗️</span>
                 <span class="archetype-name">Builder</span>
             </a>
-            <a href="kpop_archetype_quiz.html" class="archetype-item haptic">
+            <a href="kpop_archetype_quiz.html" class="archetype-item glass haptic" data-sound="pop" onclick="handleNavigation(event)">
                 <span class="archetype-emoji">📚</span>
                 <span class="archetype-name">Teacher</span>
             </a>
@@ -1038,11 +1616,11 @@
     
     <!-- CTA SECTION -->
     <section class="cta-section">
-        <div class="cta-box">
+        <div class="cta-box glass-pink">
             <div class="cta-icon">✨</div>
-            <h2 class="cta-title">Ready to Begin?</h2>
+            <h2 class="cta-title">Ready to Begin Your Kosmic Journey?</h2>
             <p class="cta-text">Start with the Archetype Quiz and discover which of the 12 idol energies matches yours!</p>
-            <a href="kpop_archetype_quiz.html" class="btn-primary haptic" style="width: 100%;">
+            <a href="kpop_archetype_quiz.html" class="btn-primary haptic" style="width: 100%;" data-sound="click" onclick="handleNavigation(event)">
                 <span>Start My Journey</span>
                 <span>→</span>
             </a>
@@ -1052,17 +1630,37 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-links">
-            <a href="kpop_tools_index.html">All Tools</a>
-            <a href="kpop_archetype_quiz.html">Quiz</a>
-            <a href="kpop_life_path.html">Life Path</a>
-            <a href="kpop_stage_name.html">Stage Name</a>
+            <a href="kpop_tools_index.html" onclick="handleNavigation(event)">All Tools</a>
+            <a href="kpop_archetype_quiz.html" onclick="handleNavigation(event)">Quiz</a>
+            <a href="kpop_life_path.html" onclick="handleNavigation(event)">Life Path</a>
+            <a href="kpop_stage_name.html" onclick="handleNavigation(event)">Stage Name</a>
         </div>
         <p class="footer-disclaimer">For entertainment purposes only 🌍</p>
         <a href="/" class="back-home">← Back to Quantum Merlin</a>
     </footer>
     
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav glass">
+        <a href="index.html" class="nav-item active haptic" data-sound="nav">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Home</span>
+        </a>
+        <a href="kpop_archetype_quiz.html" class="nav-item haptic" data-sound="nav" onclick="handleNavigation(event)">
+            <span class="nav-icon">🧩</span>
+            <span class="nav-label">Quiz</span>
+        </a>
+        <a href="kpop_tools_index.html" class="nav-item haptic" data-sound="nav" onclick="handleNavigation(event)">
+            <span class="nav-icon">🛠️</span>
+            <span class="nav-label">Tools</span>
+        </a>
+        <a href="kpop_life_path.html" class="nav-item haptic" data-sound="nav" onclick="handleNavigation(event)">
+            <span class="nav-icon">🔮</span>
+            <span class="nav-label">Reading</span>
+        </a>
+    </nav>
+    
     <!-- PWA Install Prompt -->
-    <div class="install-prompt" id="installPrompt">
+    <div class="install-prompt glass-pink" id="installPrompt">
         <span class="install-icon">📲</span>
         <div class="install-content">
             <div class="install-title">Add to Home Screen</div>
@@ -1074,13 +1672,269 @@
     
     <script>
         // ========================================
+        // AUDIO CONTEXT & SOUNDS
+        // ========================================
+        let audioContext;
+        let soundEnabled = localStorage.getItem('kosmicSound') !== 'false';
+        
+        function initAudio() {
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+        
+        function playSound(type) {
+            if (!soundEnabled || !audioContext) return;
+            
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            switch(type) {
+                case 'click':
+                    oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                    oscillator.frequency.exponentialRampToValueAtTime(1200, audioContext.currentTime + 0.1);
+                    gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+                    oscillator.start(audioContext.currentTime);
+                    oscillator.stop(audioContext.currentTime + 0.1);
+                    break;
+                case 'pop':
+                    oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
+                    oscillator.frequency.exponentialRampToValueAtTime(1000, audioContext.currentTime + 0.05);
+                    gainNode.gain.setValueAtTime(0.08, audioContext.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.08);
+                    oscillator.start(audioContext.currentTime);
+                    oscillator.stop(audioContext.currentTime + 0.08);
+                    break;
+                case 'nav':
+                    oscillator.type = 'sine';
+                    oscillator.frequency.setValueAtTime(523, audioContext.currentTime);
+                    oscillator.frequency.setValueAtTime(659, audioContext.currentTime + 0.05);
+                    gainNode.gain.setValueAtTime(0.06, audioContext.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.12);
+                    oscillator.start(audioContext.currentTime);
+                    oscillator.stop(audioContext.currentTime + 0.12);
+                    break;
+                case 'success':
+                    const notes = [523, 659, 784, 1047];
+                    notes.forEach((freq, i) => {
+                        const osc = audioContext.createOscillator();
+                        const gain = audioContext.createGain();
+                        osc.connect(gain);
+                        gain.connect(audioContext.destination);
+                        osc.frequency.value = freq;
+                        gain.gain.setValueAtTime(0.08, audioContext.currentTime + i * 0.1);
+                        gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + i * 0.1 + 0.15);
+                        osc.start(audioContext.currentTime + i * 0.1);
+                        osc.stop(audioContext.currentTime + i * 0.1 + 0.15);
+                    });
+                    break;
+            }
+        }
+        
+        // Sound toggle button
+        const soundToggle = document.getElementById('soundToggle');
+        soundToggle.textContent = soundEnabled ? '🔊' : '🔇';
+        soundToggle.classList.toggle('muted', !soundEnabled);
+        
+        soundToggle.addEventListener('click', () => {
+            initAudio();
+            soundEnabled = !soundEnabled;
+            localStorage.setItem('kosmicSound', soundEnabled);
+            soundToggle.textContent = soundEnabled ? '🔊' : '🔇';
+            soundToggle.classList.toggle('muted', !soundEnabled);
+            if (soundEnabled) playSound('click');
+            showToast(soundEnabled ? '🔊 Sound On' : '🔇 Sound Off', 'info');
+        });
+        
+        // Init audio on first interaction
+        document.body.addEventListener('click', initAudio, { once: true });
+        document.body.addEventListener('touchstart', initAudio, { once: true });
+        
+        // Add sound to all interactive elements
+        document.querySelectorAll('[data-sound]').forEach(el => {
+            el.addEventListener('click', () => {
+                playSound(el.dataset.sound);
+            });
+        });
+        
+        // ========================================
+        // PAGE TRANSITIONS
+        // ========================================
+        function handleNavigation(e) {
+            e.preventDefault();
+            const href = e.currentTarget.getAttribute('href');
+            const pageTransition = document.getElementById('pageTransition');
+            
+            playSound('nav');
+            pageTransition.classList.add('active');
+            
+            setTimeout(() => {
+                window.location.href = href;
+            }, 400);
+        }
+        
+        // ========================================
         // LOADING SCREEN
         // ========================================
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('loadingScreen').classList.add('hidden');
-            }, 1500);
+                // Check for first visit celebration
+                if (!localStorage.getItem('kosmicVisited')) {
+                    localStorage.setItem('kosmicVisited', 'true');
+                    setTimeout(() => {
+                        triggerConfetti();
+                        showToast('✨ Welcome to Kosmic K-Pop!', 'success');
+                        playSound('success');
+                    }, 500);
+                }
+            }, 1800);
         });
+        
+        // ========================================
+        // STREAK SYSTEM
+        // ========================================
+        function updateStreak() {
+            const today = new Date().toDateString();
+            const lastVisit = localStorage.getItem('kosmicLastVisit');
+            let streak = parseInt(localStorage.getItem('kosmicStreak')) || 0;
+            
+            if (lastVisit === today) {
+                // Already visited today
+            } else if (lastVisit === new Date(Date.now() - 86400000).toDateString()) {
+                // Visited yesterday - continue streak
+                streak++;
+                localStorage.setItem('kosmicStreak', streak);
+                localStorage.setItem('kosmicLastVisit', today);
+                if (streak >= 3) {
+                    setTimeout(() => {
+                        showToast(`🔥 ${streak} day streak!`, 'success');
+                        playSound('success');
+                    }, 2500);
+                }
+            } else if (lastVisit) {
+                // Streak broken
+                streak = 1;
+                localStorage.setItem('kosmicStreak', streak);
+                localStorage.setItem('kosmicLastVisit', today);
+            } else {
+                // First visit
+                streak = 1;
+                localStorage.setItem('kosmicStreak', streak);
+                localStorage.setItem('kosmicLastVisit', today);
+            }
+            
+            // Show streak badge if 2+ days
+            if (streak >= 2) {
+                const badge = document.getElementById('streakBadge');
+                document.getElementById('streakCount').textContent = streak;
+                badge.style.display = 'flex';
+            }
+        }
+        
+        updateStreak();
+        
+        // ========================================
+        // DAILY READING
+        // ========================================
+        const dailyEnergies = [
+            { energy: 'Golden Leader', icon: '🌟' },
+            { energy: 'Harmonious Diplomat', icon: '🤝' },
+            { energy: 'Mood Maker', icon: '😄' },
+            { energy: 'Stable Backbone', icon: '💪' },
+            { energy: 'Dance Virtuoso', icon: '💃' },
+            { energy: 'Visual Center', icon: '✨' },
+            { energy: 'Creative Genius', icon: '🧠' },
+            { energy: 'Fire Rapper', icon: '🔥' },
+            { energy: 'Power Vocalist', icon: '🎤' },
+            { energy: 'All-Rounder', icon: '🏆' },
+            { energy: 'Empire Builder', icon: '🏗️' },
+            { energy: 'Wise Teacher', icon: '📚' }
+        ];
+        
+        function getDailyEnergy() {
+            const today = new Date();
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+            const index = dayOfYear % dailyEnergies.length;
+            return dailyEnergies[index];
+        }
+        
+        const daily = getDailyEnergy();
+        document.getElementById('dailyEnergy').textContent = `${daily.icon} ${daily.energy}`;
+        
+        // ========================================
+        // SAVED RESULTS
+        // ========================================
+        function loadSavedResults() {
+            const saved = localStorage.getItem('kosmicArchetype');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    document.getElementById('savedSection').classList.add('has-results');
+                    document.getElementById('savedIcon').textContent = data.icon || '⭐';
+                    document.getElementById('savedName').textContent = data.name || 'Unknown';
+                    document.getElementById('savedDate').textContent = `Discovered on ${data.date || 'recently'}`;
+                } catch (e) {
+                    console.log('No saved results');
+                }
+            }
+        }
+        
+        loadSavedResults();
+        
+        function shareToTwitter() {
+            const saved = JSON.parse(localStorage.getItem('kosmicArchetype') || '{}');
+            const text = `🎤 My Kosmic K-Pop archetype is ${saved.icon || '⭐'} ${saved.name || 'amazing'}! ✨\n\nDiscover yours at:`;
+            const url = 'https://quantummerlin.com/kosmickpop/';
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+            playSound('success');
+        }
+        
+        function copyResult() {
+            const saved = JSON.parse(localStorage.getItem('kosmicArchetype') || '{}');
+            const text = `🎤 My Kosmic K-Pop archetype is ${saved.icon || '⭐'} ${saved.name || 'amazing'}! ✨\nDiscover yours: https://quantummerlin.com/kosmickpop/`;
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('📋 Copied to clipboard!', 'success');
+                playSound('success');
+            });
+        }
+        
+        // ========================================
+        // TOAST NOTIFICATIONS
+        // ========================================
+        function showToast(message, type = 'info') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = `toast ${type} show`;
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+        
+        // ========================================
+        // CONFETTI
+        // ========================================
+        function triggerConfetti() {
+            const container = document.getElementById('confettiContainer');
+            const colors = ['#FF69B4', '#00FFFF', '#FFD700', '#9400D3', '#00FF00'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                confetti.style.animationDuration = (2 + Math.random()) + 's';
+                container.appendChild(confetti);
+                
+                setTimeout(() => confetti.remove(), 3500);
+            }
+        }
         
         // ========================================
         // ANIMATED BACKGROUND CANVAS
@@ -1088,6 +1942,7 @@
         const canvas = document.getElementById('bgCanvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
+        let mouseX = 0, mouseY = 0;
         
         function resizeCanvas() {
             canvas.width = window.innerWidth;
@@ -1096,16 +1951,17 @@
         
         function createParticles() {
             particles = [];
-            const count = Math.min(50, Math.floor(window.innerWidth / 20));
+            const count = Math.min(60, Math.floor(window.innerWidth / 18));
             for (let i = 0; i < count; i++) {
                 particles.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    radius: Math.random() * 2 + 0.5,
+                    radius: Math.random() * 2.5 + 0.5,
                     speedX: (Math.random() - 0.5) * 0.5,
                     speedY: (Math.random() - 0.5) * 0.5,
                     color: ['#FF69B4', '#00FFFF', '#9400D3', '#FFD700'][Math.floor(Math.random() * 4)],
-                    alpha: Math.random() * 0.5 + 0.2
+                    alpha: Math.random() * 0.5 + 0.2,
+                    pulse: Math.random() * Math.PI * 2
                 });
             }
         }
@@ -1114,11 +1970,29 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
             particles.forEach(p => {
+                p.pulse += 0.02;
+                const pulseFactor = 1 + Math.sin(p.pulse) * 0.3;
+                
                 ctx.beginPath();
-                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.arc(p.x, p.y, p.radius * pulseFactor, 0, Math.PI * 2);
                 ctx.fillStyle = p.color;
-                ctx.globalAlpha = p.alpha;
+                ctx.globalAlpha = p.alpha * (0.7 + Math.sin(p.pulse) * 0.3);
                 ctx.fill();
+                
+                // Draw connecting lines to nearby particles
+                particles.forEach(p2 => {
+                    const dx = p.x - p2.x;
+                    const dy = p.y - p2.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 100 && dist > 0) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = p.color;
+                        ctx.globalAlpha = 0.1 * (1 - dist / 100);
+                        ctx.stroke();
+                    }
+                });
                 
                 p.x += p.speedX;
                 p.y += p.speedY;
@@ -1142,7 +2016,7 @@
         // ========================================
         // FLOATING EMOJIS
         // ========================================
-        const emojis = ['✨', '🎤', '💖', '⭐', '🌟', '💫', '🎵', '🔮'];
+        const emojis = ['✨', '🎤', '💖', '⭐', '🌟', '💫', '🎵', '🔮', '💎', '🦋'];
         const floatingContainer = document.getElementById('floatingElements');
         
         function createFloatingEmoji() {
@@ -1150,18 +2024,18 @@
             emoji.className = 'float-element';
             emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
             emoji.style.left = Math.random() * 100 + '%';
-            emoji.style.animationDuration = (10 + Math.random() * 10) + 's';
-            emoji.style.animationDelay = Math.random() * 5 + 's';
+            emoji.style.animationDuration = (12 + Math.random() * 8) + 's';
+            emoji.style.animationDelay = Math.random() * 3 + 's';
+            emoji.style.fontSize = (1.5 + Math.random()) + 'rem';
             floatingContainer.appendChild(emoji);
             
-            setTimeout(() => emoji.remove(), 20000);
+            setTimeout(() => emoji.remove(), 22000);
         }
         
-        // Create initial floating elements
-        for (let i = 0; i < 8; i++) {
-            setTimeout(createFloatingEmoji, i * 1000);
+        for (let i = 0; i < 10; i++) {
+            setTimeout(createFloatingEmoji, i * 800);
         }
-        setInterval(createFloatingEmoji, 3000);
+        setInterval(createFloatingEmoji, 2500);
         
         // ========================================
         // COUNTER ANIMATION
@@ -1174,7 +2048,7 @@
                     counters.forEach(counter => {
                         const target = parseInt(counter.dataset.count);
                         let current = 0;
-                        const increment = target / 30;
+                        const increment = target / 35;
                         const timer = setInterval(() => {
                             current += increment;
                             if (current >= target) {
@@ -1183,7 +2057,7 @@
                             } else {
                                 counter.textContent = Math.floor(current);
                             }
-                        }, 50);
+                        }, 40);
                     });
                     counterObserver.unobserve(entry.target);
                 }
@@ -1191,6 +2065,14 @@
         }, observerOptions);
         
         document.querySelectorAll('.stats-section').forEach(el => counterObserver.observe(el));
+        
+        // Live readers simulation
+        function updateLiveReaders() {
+            const base = 1000 + Math.floor(Math.random() * 500);
+            const el = document.getElementById('liveReaders');
+            el.textContent = base.toLocaleString();
+        }
+        setInterval(updateLiveReaders, 5000);
         
         // ========================================
         // PWA INSTALL PROMPT
@@ -1205,7 +2087,7 @@
             deferredPrompt = e;
             setTimeout(() => {
                 installPrompt.classList.add('show');
-            }, 3000);
+            }, 5000);
         });
         
         installBtn.addEventListener('click', async () => {
@@ -1214,6 +2096,11 @@
                 const result = await deferredPrompt.userChoice;
                 deferredPrompt = null;
                 installPrompt.classList.remove('show');
+                if (result.outcome === 'accepted') {
+                    showToast('🎉 App installed!', 'success');
+                    playSound('success');
+                    triggerConfetti();
+                }
             }
         });
         
@@ -1231,7 +2118,7 @@
         }
         
         // ========================================
-        // HAPTIC FEEDBACK (where supported)
+        // HAPTIC FEEDBACK
         // ========================================
         document.querySelectorAll('.haptic').forEach(el => {
             el.addEventListener('touchstart', () => {
