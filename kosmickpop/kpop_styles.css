@@ -3,6 +3,9 @@
    Copyright-Safe, Neon-Optimized, Mobile-Ready
    ============================================ */
 
+/* Google Fonts - Poppins (K-Pop Fan Favorite) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
 /* CSS Variables - K-Pop Color Palette */
 :root {
     /* Primary Colors */
@@ -117,7 +120,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     background: var(--gradient-dark);
     background-size: cover;
     background-attachment: fixed;
