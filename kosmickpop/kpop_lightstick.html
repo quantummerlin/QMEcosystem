@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate your unique K-Pop lightstick design based on your kosmic energy">
+    <title>Your K-Pop Lightstick | kosmic Energy Tool</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+    <script src="kpop_data.js"></script>
+    <script src="kpop_branding.js"></script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="kpop-theme">
+    <!-- Star Field Background -->
+    <div id="star-field" class="star-field"></div>
+    
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="kosmic-loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Channeling Lightstick Energy...</div>
+        </div>
+    </div>
+
+    <header class="kosmic-header">
+        <div class="header-content">
+            <h1 class="neon-title">Your K-Pop Lightstick 💡</h1>
+            <p class="header-subtitle">Generate your personalized lightstick design</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Input Form -->
+        <div id="input-section" class="tool-section active">
+            <div class="input-container">
+                <div class="sparkle-icon">✨</div>
+                <h2>What's Your Lightstick Energy?</h2>
+                <p>Every K-Pop fan has their own lightstick energy. Discover yours and see your personalized lightstick design!</p>
+                
+                <form id="lightstick-form" class="kosmic-form">
+                    <div class="form-group">
+                        <label for="preferred-name">
+                            Your Name ✨
+                            <span class="helper-text">For kosmic alignment</span>
+                        </label>
+                        <input type="text" id="preferred-name" name="preferred-name" required placeholder="Enter your name" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-date">
+                            Date of Birth 🎂
+                            <span class="helper-text">For color resonance</span>
+                        </label>
+                        <input type="date" id="birth-date" name="birth-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lightstick-shape">
+                            Preferred Lightstick Shape 🎨
+                            <span class="helper-text">What shape calls to you?</span>
+                        </label>
+                        <select id="lightstick-shape" name="lightstick-shape" required>
+                            <option value="">Select shape...</option>
+                            <option value="heart">💖 Heart-shaped</option>
+                            <option value="star">⭐ Star-shaped</option>
+                            <option value="moon">🌙 Moon-shaped</option>
+                            <option value="flower">🌸 Flower-shaped</option>
+                            <option value="crystal">💎 Crystal/geometric</option>
+                            <option value="wings">🦋 Wings/butterfly</option>
+                            <option value="sphere">🌐 Sphere/ball</option>
+                            <option value="custom">✨ Surprise me!</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="energy-vibe">
+                            Lightstick Energy Vibe 💫
+                            <span class="helper-text">What energy should it radiate?</span>
+                        </label>
+                        <select id="energy-vibe" name="energy-vibe" required>
+                            <option value="">Select vibe...</option>
+                            <option value="passionate">🔥 Passionate & Intense</option>
+                            <option value="dreamy">☁️ Dreamy & Ethereal</option>
+                            <option value="powerful">💪 Powerful & Bold</option>
+                            <option value="gentle">🌸 Gentle & Soft</option>
+                            <option value="mysterious">🌙 Mysterious & Deep</option>
+                            <option value="bright">🌟 Bright & Energetic</option>
+                            <option value="elegant">👑 Elegant & Sophisticated</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="special-feature">
+                            Special Feature Desired ✨
+                            <span class="helper-text">What makes it unique?</span>
+                        </label>
+                        <select id="special-feature" name="special-feature" required>
+                            <option value="">Select feature...</option>
+                            <option value="glow">✨ Glowing pulse effects</option>
+                            <option value="color-change">🌈 Color-changing capabilities</option>
+                            <option value="sound-react">🎵 Sound-reactive lighting</option>
+                            <option value="heart-beat">💓 Heartbeat simulation</option>
+                            <option value="sparkle">💫 Sparkle effects</option>
+                            <option value="dual-color">💕 Dual-tone colors</option>
+                            <option value="gradient">🎨 Gradient blending</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="kosmic-button primary-button">Generate My Lightstick 💡</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Loading Section -->
+        <div id="loading-section" class="tool-section">
+            <div class="kosmic-loader">
+                <div class="loader-ring"></div>
+                <div class="loader-text">Channeling Lightstick Energy...</div>
+                <p class="loading-message">Designing your kosmic lightstick...</p>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result-section" class="tool-section">
+            <div class="result-container">
+                <div class="sparkle-icon">✨</div>
+                <h2>Your Lightstick Revealed!</h2>
+                
+                <div id="lightstick-result" class="lightstick-result">
+                    <!-- Result will be inserted here -->
+                </div>
+
+                <div class="result-actions">
+                    <button id="generate-another" class="kosmic-button secondary-button">Generate Another</button>
+                    <button id="share-lightstick" class="kosmic-button primary-button">Share My Lightstick 💡</button>
+                </div>
+
+                <div class="explore-more">
+                    <p>Want deeper insights? Try our <a href="kpop_life_path.html">Life Path Reading</a>, <a href="kpop_archetype_quiz.html">Archetype Quiz</a>, or <a href="kpop_bias_energy.html">Bias Energy</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies to enhance your kosmic experience ✨</p>
+        <button id="accept-cookies" class="kosmic-button small-button">Got it!</button>
+    </div>
+
+    <footer class="kosmic-footer">
+        <p>For entertainment purposes only • Entertainment for K-Pop fans worldwide 🌍</p>
+        <p class="footer-links">
+            <a href="index.html">Home</a> • 
+            <a href="kpop_tools_index.html">All Tools</a> • 
+            <a href="kpop_life_path.html">Life Path</a>
+        </p>
+    </footer>
+
+    <script>
+        // Lightstick Data
+        const lightstickShapes = {
+            heart: { emoji: "💖", name: "Heart", description: "Represents love, passion, and emotional connection" },
+            star: { emoji: "⭐", name: "Star", description: "Symbolizes guidance, hope, and shining bright" },
+            moon: { emoji: "🌙", name: "Moon", description: "Reflects intuition, dreams, and feminine energy" },
+            flower: { emoji: "🌸", name: "Flower", description: "Signifies beauty, growth, and blooming potential" },
+            crystal: { emoji: "💎", name: "Crystal", description: "Represents clarity, transformation, and inner light" },
+            wings: { emoji: "🦋", name: "Wings", description: "Symbolizes freedom, transformation, and rising above" },
+            sphere: { emoji: "🌐", name: "Sphere", description: "Represents unity, wholeness, and kosmic connection" }
+        };
+
+        const lightstickVibes = {
+            passionate: {
+                colors: ["#FF0055", "#FF4500", "#FF1493"],
+                description: "Intense red and pink hues radiating passion and energy"
+            },
+            dreamy: {
+                colors: ["#E6E6FA", "#DDA0DD", "#FFB6C1"],
+                description: "Soft pastels creating an ethereal, dreamlike atmosphere"
+            },
+            powerful: {
+                colors: ["#1A1A1A", "#FFD700", "#FF0000"],
+                description: "Bold blacks, golds, and reds commanding attention"
+            },
+            gentle: {
+                colors: ["#E0FFFF", "#F0FFF0", "#FFF0F5"],
+                description: "Soft, calming colors creating a peaceful ambiance"
+            },
+            mysterious: {
+                colors: ["#2C3E50", "#4B0082", "#191970"],
+                description: "Deep blues and purples with an air of mystery"
+            },
+            bright: {
+                colors: ["#00FFFF", "#FF00FF", "#FFFF00"],
+                description: "Vibrant, energetic colors that grab attention"
+            },
+            elegant: {
+                colors: ["#D4AF37", "#C0C0C0", "#FFFFFF"],
+                description: "Sophisticated golds, silvers, and whites for elegance"
+            }
+        };
+
+        const specialFeatures = {
+            glow: {
+                name: "Glowing Pulse",
+                description: "Heartbeat-like pulse effects that rhythmically glow brighter and dimmer, creating a living, breathing light effect.",
+                tech: "Advanced LED programming with variable intensity control"
+            },
+            "color-change": {
+                name: "Color-Changing",
+                description: "Smooth transitions between multiple colors, creating a mesmerizing rainbow effect or responding to music tempo.",
+                tech: "RGB LED spectrum with smooth blending algorithms"
+            },
+            "sound-react": {
+                name: "Sound-Reactive",
+                description: "Lights pulse and change in sync with music beats and rhythms, creating an immersive concert experience.",
+                tech: "Built-in microphone with real-time audio processing"
+            },
+            "heart-beat": {
+                name: "Heartbeat Simulation",
+                description: "Realistic heartbeat rhythm that creates an intimate, emotional connection with your favorite songs.",
+                tech: "Programmed pulse patterns simulating human heart rhythms"
+            },
+            sparkle: {
+                name: "Sparkle Effects",
+                description: "Random twinkling and sparkling effects that create a magical, starry atmosphere.",
+                tech: "Multi-zone LED control with randomized sparkle patterns"
+            },
+            "dual-color": {
+                name: "Dual-Tone Colors",
+                description: "Two complementary colors that can blend, separate, or create unique gradient effects.",
+                tech: "Dual-color LED arrays with independent control"
+            },
+            gradient: {
+                name: "Gradient Blending",
+                description: "Smooth, seamless color transitions creating beautiful gradient effects across the entire lightstick.",
+                tech: "High-resolution color blending with smooth transitions"
+            }
+        };
+
+        // Numerology for Color Selection
+        function letterToNumber(letter) {
+            const letters = 'abcdefghiklmnopqrstuvwxyz'.toUpperCase();
+            return letters.indexOf(letter.toUpperCase()) + 1;
+        }
+
+        function reduceToSingleDigit(num) {
+            while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
+                num = String(num).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+            }
+            return num;
+        }
+
+        function calculateNameNumber(name) {
+            let total = 0;
+            for (let letter of name.replace(/[^a-zA-Z]/g, '')) {
+                total += letterToNumber(letter);
+            }
+            return reduceToSingleDigit(total);
+        }
+
+        // Generate Lightstick Design
+        function generateLightstick(name, birthDate, shape, vibe, feature) {
+            const nameNumber = calculateNameNumber(name);
+            const birthNumber = birthDate ? reduceToSingleDigit(birthDate.split('-').reduce((a, b) => parseInt(a) + parseInt(b), 0)) : 1;
+            
+            // Handle custom shape
+            if (shape === 'custom') {
+                const shapes = Object.keys(lightstickShapes);
+                shape = shapes[(nameNumber + birthNumber) % shapes.length];
+            }
+            
+            const shapeData = lightstickShapes[shape];
+            const vibeData = lightstickVibes[vibe];
+            const featureData = specialFeatures[feature];
+            
+            // Select primary color based on numerology
+            const colorIndex = nameNumber % vibeData.colors.length;
+            const primaryColor = vibeData.colors[colorIndex];
+            const secondaryColor = vibeData.colors[(colorIndex + 1) % vibeData.colors.length];
+            
+            // Generate lightstick name
+            const lightstickNames = [
+                "Moonlight Blossom", "Starfire Heart", "Crystal Dream", 
+                "Golden Horizon", "Neon Pulse", "Aurora Glow",
+                "kosmic Wave", "Radiant Spark", "Infinity Light"
+            ];
+            const lightstickName = lightstickNames[(nameNumber + birthNumber) % lightstickNames.length];
+            
+            return {
+                lightstickName,
+                shape: shapeData,
+                vibe: vibeData,
+                feature: featureData,
+                primaryColor,
+                secondaryColor,
+                cosmicMeaning: `The universe has woven your birth energy (${birthNumber}) and name resonance (${nameNumber}) into this design. Your lightstick isn't just a prop - it's an extension of your kosmic energy.`
+            };
+        }
+
+        // Form Submission
+        document.getElementById('lightstick-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('preferred-name').value;
+            const birthDate = document.getElementById('birth-date').value;
+            const shape = document.getElementById('lightstick-shape').value;
+            const vibe = document.getElementById('energy-vibe').value;
+            const feature = document.getElementById('special-feature').value;
+            
+            // Show loading
+            showSection('loading-section');
+            
+            // Generate lightstick
+            setTimeout(() => {
+                const lightstick = generateLightstick(name, birthDate, shape, vibe, feature);
+                displayResult(name, lightstick);
+            }, 1500);
+        });
+
+        // Display Result
+        function displayResult(name, lightstick) {
+            const container = document.getElementById('lightstick-result');
+            
+            container.innerHTML = `
+                <div class="lightstick-visual">
+                    <div class="lightstick-icon" style="color: ${lightstick.primaryColor}; font-size: 120px;">
+                        ${lightstick.shape.emoji}
+                    </div>
+                    <div class="lightstick-name" style="color: ${lightstick.primaryColor}">
+                        ${lightstick.lightstickName}
+                    </div>
+                </div>
+                
+                <div class="lightstick-design">
+                    <h4>✨ Your Design:</h4>
+                    <div class="design-grid">
+                        <div class="design-item">
+                            <h5>Shape:</h5>
+                            <p>${lightstick.shape.emoji} ${lightstick.shape.name}</p>
+                            <p class="design-desc">${lightstick.shape.description}</p>
+                        </div>
+                        
+                        <div class="design-item">
+                            <h5>Energy Vibe:</h5>
+                            <div class="color-swatches">
+                                <div class="color-swatch" style="background-color: ${lightstick.primaryColor}"></div>
+                                <div class="color-swatch" style="background-color: ${lightstick.secondaryColor}"></div>
+                            </div>
+                            <p class="design-desc">${lightstick.vibe.description}</p>
+                        </div>
+                        
+                        <div class="design-item">
+                            <h5>Special Feature:</h5>
+                            <p><strong>${lightstick.feature.name}</strong></p>
+                            <p class="design-desc">${lightstick.feature.description}</p>
+                            <p class="tech-info">🔧 ${lightstick.feature.tech}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lightstick-meaning kosmic-message">
+                    <h4>🌟 kosmic Meaning:</h4>
+                    <p>${lightstick.cosmicMeaning}</p>
+                </div>
+                
+                <div class="lightstick-usage">
+                    <h4>💡 Lightstick Usage Tips:</h4>
+                    <ul>
+                        <li>Hold it high during your bias's parts in songs</li>
+                        <li>Use it to signal your presence at concerts</li>
+                        <li>Create lightstick ocean effects with other fans</li>
+                        <li>Customize it with your fandom's signature colors</li>
+                        <li>Use the special feature to match song moods</li>
+                    </ul>
+                </div>
+                
+                <div class="lightstick-fandom">
+                    <h4>💕 Fandom Integration:</h4>
+                    <p>Your personalized lightstick is designed to work perfectly with your fandom's existing lightstick ocean! Use it alongside your fandom's official lightstick for enhanced effects and to stand out while still being part of the collective energy.</p>
+                </div>
+            `;
+            
+            showSection('result-section');
+            triggerConfetti();
+        }
+
+        // Show Section
+        function showSection(sectionId) {
+            document.querySelectorAll('.tool-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // Generate Another
+        document.getElementById('generate-another').addEventListener('click', () => {
+            document.getElementById('lightstick-form').reset();
+            showSection('input-section');
+        });
+
+        // Share Result
+        document.getElementById('share-lightstick').addEventListener('click', () => {
+            const lightstickName = document.querySelector('.lightstick-name').textContent;
+            const shareText = `My K-Pop lightstick is ${lightstickName}! 💡 Find yours at Kosmic K-Pop!`;
+            const shareUrl = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My K-Pop Lightstick',
+                    text: shareText,
+                    url: shareUrl
+                });
+            } else {
+                navigator.clipboard.writeText(`${shareText} ${shareUrl}`);
+                alert('Lightstick design copied to clipboard! 💡');
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hide loading overlay
+            setTimeout(() => {
+                document.getElementById('loading-overlay').style.display = 'none';
+            }, 1000);
+            
+            // Initialize effects
+            initStarField();
+            initCookieBanner();
+        });
+    </script>
+</body>
+</html>

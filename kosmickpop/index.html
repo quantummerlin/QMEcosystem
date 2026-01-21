@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kosmic K-Pop (11:11) - Discover your K-Pop idol archetype, stage name, and comeback energy through kosmic readings. Where the universe meets K-Pop!">
+    <meta name="keywords" content="kosmic kpop, kpop astrology, kpop numerology, idol archetype, kpop readings, 1111">
+    <meta name="author" content="Quantum Merlin">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://quantummerlin.com/kosmickpop/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kosmic K-Pop (11:11) | Discover Your Idol Energy">
+    <meta property="og:description" content="Unlock your K-Pop potential through kosmic readings. 47+ tools for K-Pop fans and stans!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/kosmickpop/">
+    <meta property="og:site_name" content="Kosmic K-Pop">
+    <meta property="og:image" content="https://quantummerlin.com/kosmickpop/kpop_icon.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kosmic K-Pop (11:11) | Discover Your Idol Energy">
+    <meta name="twitter:description" content="Which of the 12 idol archetypes are you? K + K = 11:11">
+    <meta name="twitter:image" content="https://quantummerlin.com/kosmickpop/kpop_icon.png">
+    
+    <title>Kosmic K-Pop (11:11) | Discover Your Idol Energy</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+    <link rel="icon" href="kpop_icon.png" type="image/png">
+    
+    <style>
+        /* Loading screen */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #1A0A2E 0%, #0D0D1A 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .kosmic-loader {
+            text-align: center;
+        }
+        
+        .loader-ring {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(255, 105, 180, 0.3);
+            border-top: 4px solid #FF69B4;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        .loader-text {
+            color: #FF69B4;
+            font-size: 1.2rem;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Header */
+        .kosmic-header {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.3), rgba(148, 0, 211, 0.3));
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 3px solid rgba(255, 105, 180, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .kosmic-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 105, 180, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(0, 255, 255, 0.2) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+        
+        .neon-title {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #FF69B4, #9400D3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 105, 180, 0.7);
+        }
+        
+        .header-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+        }
+        
+        .eleven-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            color: #1A0A2E;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+        
+        /* Main content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 105, 180, 0.3);
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .sparkle-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .hero-section h2 {
+            color: #00FFFF;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+        }
+        
+        .hero-section p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px 25px;
+            background: rgba(255, 105, 180, 0.1);
+            border: 1px solid rgba(255, 105, 180, 0.3);
+            border-radius: 15px;
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* Featured Section */
+        .featured-section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #FF69B4;
+            margin-bottom: 30px;
+            text-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .tool-card {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.15), rgba(148, 0, 211, 0.15));
+            border: 2px solid rgba(255, 105, 180, 0.3);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4);
+            border-color: rgba(255, 105, 180, 0.7);
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .tool-card:hover::before {
+            left: 100%;
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .tool-card h3 {
+            color: #00FFFF;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+        }
+        
+        .tool-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .card-stats {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: rgba(255, 215, 0, 0.2);
+            color: #FFD700;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .kosmic-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #FF69B4, #9400D3);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .kosmic-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
+        }
+        
+        .small-button {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Archetypes Section */
+        .archetypes-section {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+        }
+        
+        .archetypes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+        }
+        
+        .archetype-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 105, 180, 0.2);
+            border-radius: 15px;
+            padding: 20px 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .archetype-card:hover {
+            border-color: rgba(255, 105, 180, 0.6);
+            transform: translateY(-5px);
+            background: rgba(255, 105, 180, 0.1);
+        }
+        
+        .archetype-emoji {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .archetype-card h3 {
+            color: #00FFFF;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+        
+        .archetype-card p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.2), rgba(148, 0, 211, 0.2));
+            border: 2px solid rgba(255, 105, 180, 0.4);
+            border-radius: 25px;
+            padding: 50px 30px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .cta-section h2 {
+            color: #FF69B4;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+        }
+        
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .primary-button {
+            background: linear-gradient(90deg, #FF69B4, #9400D3);
+        }
+        
+        .secondary-button {
+            background: transparent;
+            border: 2px solid #00FFFF;
+            color: #00FFFF;
+        }
+        
+        .secondary-button:hover {
+            background: rgba(0, 255, 255, 0.1);
+        }
+        
+        /* Footer */
+        .kosmic-footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid rgba(255, 105, 180, 0.2);
+            margin-top: 40px;
+        }
+        
+        .kosmic-footer p {
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 105, 180, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #FF69B4;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: rgba(0, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .back-link:hover {
+            color: #00FFFF;
+        }
+        
+        /* Cookie Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 10, 46, 0.95);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            border-top: 1px solid rgba(255, 105, 180, 0.3);
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-banner.hidden {
+            display: none;
+        }
+        
+        .cookie-banner p {
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .neon-title {
+                font-size: 2rem;
+            }
+            
+            .hero-stats {
+                gap: 15px;
+            }
+            
+            .stat-item {
+                padding: 10px 20px;
+            }
+            
+            .stat-number {
+                font-size: 1.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body class="kpop-theme">
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="kosmic-loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Loading Kosmic K-Pop...</div>
+        </div>
+    </div>
+
+    <header class="kosmic-header">
+        <div class="header-content">
+            <div class="logo">🎤 Kosmic K-Pop</div>
+            <h1 class="neon-title">Discover Your Idol Energy</h1>
+            <p class="header-subtitle">Unlock your K-Pop potential through kosmic readings</p>
+            <span class="eleven-badge">K + K = 11:11 ✨</span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="sparkle-icon">✨</div>
+                <h2>Which Idol Energy Are You?</h2>
+                <p>Discover your K-Pop archetype, stage name, comeback energy, and more through our kosmic reading tools. Perfect for K-Pop fans and stans everywhere!</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">47+</span>
+                        <span class="stat-label">Kosmic Tools</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Idol Archetypes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Possibilities</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Tools -->
+        <section class="featured-section">
+            <h2 class="section-title">🌟 Most Popular Tools</h2>
+            
+            <div class="tools-grid">
+                <!-- Archetype Quiz -->
+                <div class="tool-card featured">
+                    <div class="card-icon">🧩</div>
+                    <h3>Archetype Quiz</h3>
+                    <p>Which of the 12 idol archetypes are you? Answer 10 questions to discover your idol energy!</p>
+                    <div class="card-stats">
+                        <span class="tag">Viral</span>
+                        <span class="tag">10 questions</span>
+                    </div>
+                    <a href="kpop_archetype_quiz.html" class="kosmic-button small-button">Take Quiz ✨</a>
+                </div>
+
+                <!-- Life Path Reading -->
+                <div class="tool-card featured">
+                    <div class="card-icon">🔮</div>
+                    <h3>Life Path Reading</h3>
+                    <p>Discover your idol destiny through numerology and kosmic energy readings.</p>
+                    <div class="card-stats">
+                        <span class="tag">Premium</span>
+                        <span class="tag">Deep Reading</span>
+                    </div>
+                    <a href="kpop_life_path.html" class="kosmic-button small-button">Get Reading 🎤</a>
+                </div>
+
+                <!-- Comeback Energy -->
+                <div class="tool-card featured">
+                    <div class="card-icon">💫</div>
+                    <h3>Comeback Energy</h3>
+                    <p>What era would your K-Pop comeback be? Discover your kosmic comeback concept!</p>
+                    <div class="card-stats">
+                        <span class="tag">New</span>
+                        <span class="tag">8 Concepts</span>
+                    </div>
+                    <a href="kpop_comeback_energy.html" class="kosmic-button small-button">Reveal Era ✨</a>
+                </div>
+
+                <!-- Stage Name Generator -->
+                <div class="tool-card featured">
+                    <div class="card-icon">✍️</div>
+                    <h3>Stage Name Generator</h3>
+                    <p>Generate your unique K-Pop stage name based on kosmic energy and numerology!</p>
+                    <div class="card-stats">
+                        <span class="tag">Popular</span>
+                        <span class="tag">6 Styles</span>
+                    </div>
+                    <a href="kpop_stage_name.html" class="kosmic-button small-button">Generate Name 🎤</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12 Archetypes Preview -->
+        <section class="archetypes-section">
+            <h2 class="section-title">The 12 Idol Archetypes</h2>
+            <p class="section-subtitle">Discover which kosmic energy aligns with you</p>
+            
+            <div class="archetypes-grid">
+                <div class="archetype-card">
+                    <div class="archetype-emoji">🌟</div>
+                    <h3>Golden Leader</h3>
+                    <p>Natural authority</p>
+                </div>
+                <div class="archetype-card">
+                    <div class="archetype-emoji">🤝</div>
+                    <h3>Harmonious Diplomat</h3>
+                    <p>Emotional balance</p>
+                </div>
+                <div class="archetype-card">
+                    <div class="archetype-emoji">😄</div>
+                    <h3>Mood Maker</h3>
+                    <p>Joy & entertainment</p>
+                </div>
+                <div class="archetype-card">
+                    <div class="archetype-emoji">💪</div>
+                    <h3>Reliable Backbone</h3>
+                    <p>Stability & foundation</p>
+                </div>
+                <div class="archetype-card">
+                    <div class="archetype-emoji">💃</div>
+                    <h3>Main Dancer</h3>
+                    <p>Movement & performance</p>
+                </div>
+                <div class="archetype-card">
+                    <div class="archetype-emoji">✨</div>
+                    <h3>Visual Icon</h3>
+                    <p>Beauty & charm</p>
+                </div>
+                <div class="archetype-card">
+                    <div class="archetype-emoji">🧠</div>
+                    <h3>Quiet Genius</h3>
+                    <p>Intellect & innovation</p>
+                </div>
+                <div class="archetype-card">
+                    <div class="archetype-emoji">🔥</div>
+                    <h3>Rapper Firecracker</h3>
+                    <p>Intensity & power</p>
+                </div>
+                <div class="archetype-card">
+                    <div class="archetype-emoji">🎤</div>
+                    <h3>Main Vocal</h3>
+                    <p>Emotion & expression</p>
+                </div>
+                <div class="archetype-card">
+                    <div class="archetype-emoji">🏆</div>
+                    <h3>All-Rounder Ace</h3>
+                    <p>Complete mastery</p>
+                </div>
+                <div class="archetype-card">
+                    <div class="archetype-emoji">🏗️</div>
+                    <h3>Master Builder</h3>
+                    <p>Construction & success</p>
+                </div>
+                <div class="archetype-card">
+                    <div class="archetype-emoji">📚</div>
+                    <h3>Master Teacher</h3>
+                    <p>Wisdom & inspiration</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <div class="sparkle-icon">✨</div>
+                <h2>Ready to Discover Your Idol Energy?</h2>
+                <p>Start with our most popular tool - the Archetype Quiz - and explore all 47+ kosmic readings!</p>
+                <div class="cta-buttons">
+                    <a href="kpop_archetype_quiz.html" class="kosmic-button primary-button">Take Archetype Quiz 🧩</a>
+                    <a href="kpop_tools_index.html" class="kosmic-button secondary-button">Explore All Tools 🎤</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies to enhance your kosmic experience ✨</p>
+        <button id="accept-cookies" class="kosmic-button small-button">Got it!</button>
+    </div>
+
+    <footer class="kosmic-footer">
+        <p>For entertainment purposes only • Entertainment for K-Pop fans worldwide 🌍</p>
+        <p class="footer-links">
+            <a href="kpop_tools_index.html">All Tools</a> • 
+            <a href="kpop_life_path.html">Life Path</a> • 
+            <a href="kpop_archetype_quiz.html">Archetype Quiz</a> • 
+            <a href="kpop_comeback_energy.html">Comeback Energy</a> • 
+            <a href="kpop_stage_name.html">Stage Name</a>
+        </p>
+        <a href="/" class="back-link">← Back to Quantum Merlin</a>
+    </footer>
+
+    <script src="kpop_data.js"></script>
+    <script src="kpop_branding.js"></script>
+    <script>
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hide loading overlay
+            setTimeout(() => {
+                document.getElementById('loading-overlay').classList.add('hidden');
+            }, 800);
+            
+            // Cookie banner
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('accept-cookies');
+            
+            if (localStorage.getItem('cookiesAccepted')) {
+                cookieBanner.classList.add('hidden');
+            }
+            
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Which K-Pop idol archetype are you? Discover your idol energy through this kosmic quiz!">
+    <title>Which K-Pop Idol Archetype Are You? | kosmic Quiz</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+    <script src="kpop_data.js"></script>
+    <script src="kpop_branding.js"></script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="kpop-theme">
+    <!-- Navigation Header -->
+    <header style="
+        background: rgba(26, 10, 46, 0.95);
+        border-bottom: 2px solid rgba(255, 105, 180, 0.3);
+        padding: 15px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+    ">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <a href="index.html" style="color: #FFD700; text-decoration: none; font-size: 1.3rem; font-weight: bold;">🎤 Kosmic K-Pop</a>
+            <nav style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <a href="index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Home</a>
+                <a href="kpop_tools_index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">All Tools</a>
+                <a href="kpop_life_path.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Life Path</a>
+                <a href="kpop_avatar_generator.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Avatar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Star Field Background -->
+    <div id="star-field" class="star-field"></div>
+    
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="kosmic-loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Channeling Idol Energy...</div>
+        </div>
+    </div>
+
+    <header class="kosmic-header">
+        <div class="header-content">
+            <h1 class="neon-title">Which K-Pop Idol Archetype Are You? 🌟</h1>
+            <p class="header-subtitle">Discover your idol energy through 10 kosmic questions</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Quiz Container -->
+        <div id="quiz-container" class="quiz-container">
+            <!-- Welcome Screen -->
+            <div id="welcome-screen" class="quiz-screen active">
+                <div class="quiz-intro">
+                    <div class="sparkle-icon">✨</div>
+                    <h2>Find Your Idol Archetype!</h2>
+                    <p>Answer 10 questions to discover which K-Pop idol energy resonates with you. Each archetype represents different kosmic powers and stage presence.</p>
+                    
+                    <div class="archetype-preview">
+                        <h3>The 12 Archetypes:</h3>
+                        <div class="archetype-grid">
+                            <div class="archetype-mini" data-archetype="Golden Leader">🌟 Golden Leader</div>
+                            <div class="archetype-mini" data-archetype="Harmonious Diplomat">🤝 Harmonious Diplomat</div>
+                            <div class="archetype-mini" data-archetype="Mood Maker">😄 Mood Maker</div>
+                            <div class="archetype-mini" data-archetype="Reliable Backbone">💪 Reliable Backbone</div>
+                            <div class="archetype-mini" data-archetype="Main Dancer Virtuoso">💃 Main Dancer</div>
+                            <div class="archetype-mini" data-archetype="Visual Icon">✨ Visual Icon</div>
+                            <div class="archetype-mini" data-archetype="Quiet Genius">🧠 Quiet Genius</div>
+                            <div class="archetype-mini" data-archetype="Rapper Firecracker">🔥 Rapper</div>
+                            <div class="archetype-mini" data-archetype="Main Vocal Powerhouse">🎤 Main Vocal</div>
+                            <div class="archetype-mini" data-archetype="All-Rounder Ace">🏆 All-Rounder</div>
+                            <div class="archetype-mini" data-archetype="Master Builder">🏗️ Master Builder</div>
+                            <div class="archetype-mini" data-archetype="Master Teacher">📚 Master Teacher</div>
+                        </div>
+                    </div>
+
+                    <button id="start-quiz" class="kosmic-button primary-button">Start Quiz ✨</button>
+                </div>
+            </div>
+
+            <!-- Question Screen -->
+            <div id="question-screen" class="quiz-screen">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                    <span id="question-number">Question 1 of 10</span>
+                </div>
+
+                <div id="question-container" class="question-container">
+                    <!-- Question will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Loading Screen -->
+            <div id="quiz-loading" class="quiz-screen">
+                <div class="quiz-loading-content">
+                    <div class="loader-ring"></div>
+                    <p>Analyzing your idol energy...</p>
+                    <p class="loading-message">Channeling kosmic forces...</p>
+                </div>
+            </div>
+
+            <!-- Result Screen -->
+            <div id="result-screen" class="quiz-screen">
+                <div class="result-container">
+                    <div class="sparkle-icon">✨</div>
+                    <h2>Your Idol Archetype:</h2>
+                    
+                    <div id="archetype-result" class="archetype-result">
+                        <!-- Result will be inserted here -->
+                    </div>
+
+                    <div class="result-actions">
+                        <button id="retake-quiz" class="kosmic-button secondary-button">Retake Quiz</button>
+                        <button id="share-result" class="kosmic-button primary-button">Share Result 🎤</button>
+                    </div>
+
+                    <div class="explore-more">
+                        <p>Want deeper insights? Try our <a href="kpop_life_path.html">Life Path Reading</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies to enhance your kosmic experience ✨</p>
+        <button id="accept-cookies" class="kosmic-button small-button">Got it!</button>
+    </div>
+
+    <footer class="kosmic-footer">
+        <p>For entertainment purposes only • Entertainment for K-Pop fans worldwide 🌍</p>
+        <p class="footer-links">
+            <a href="kpop_landing.html">Home</a> • 
+            <a href="kpop_tools_index.html">All Tools</a> • 
+            <a href="kpop_life_path.html">Life Path</a>
+        </p>
+    </footer>
+
+    <script>
+        // Quiz Questions - Each answer maps to archetype weights
+        const quizQuestions = [
+            {
+                question: "What's your natural role in a group setting?",
+                answers: [
+                    { text: "Taking charge and leading everyone", weights: { "Golden Leader": 3, "Master Builder": 2, "Reliable Backbone": 1 } },
+                    { text: "Making sure everyone gets along", weights: { "Harmonious Diplomat": 3, "Mood Maker": 2, "Main Vocal Powerhouse": 1 } },
+                    { text: "Coming up with creative ideas", weights: { "Quiet Genius": 3, "All-Rounder Ace": 2, "Main Dancer Virtuoso": 1 } },
+                    { text: "Supporting others from behind", weights: { "Reliable Backbone": 3, "Master Teacher": 2, "Harmonious Diplomat": 1 } }
+                ]
+            },
+            {
+                question: "How do you express yourself most naturally?",
+                answers: [
+                    { text: "Through movement and dance", weights: { "Main Dancer Virtuoso": 3, "Rapper Firecracker": 2, "All-Rounder Ace": 1 } },
+                    { text: "Through singing and vocals", weights: { "Main Vocal Powerhouse": 3, "Visual Icon": 2, "Harmonious Diplomat": 1 } },
+                    { text: "Through words and rapping", weights: { "Rapper Firecracker": 3, "Quiet Genius": 2, "Golden Leader": 1 } },
+                    { text: "Through presence and charisma", weights: { "Visual Icon": 3, "Golden Leader": 2, "Mood Maker": 1 } }
+                ]
+            },
+            {
+                question: "What motivates you the most?",
+                answers: [
+                    { text: "Success and achievement", weights: { "Golden Leader": 3, "Master Builder": 2, "All-Rounder Ace": 1 } },
+                    { text: "Making others happy", weights: { "Mood Maker": 3, "Harmonious Diplomat": 2, "Main Vocal Powerhouse": 1 } },
+                    { text: "Creating something meaningful", weights: { "Master Teacher": 3, "Quiet Genius": 2, "Master Builder": 1 } },
+                    { text: "Overcoming challenges", weights: { "Reliable Backbone": 3, "Rapper Firecracker": 2, "Main Dancer Virtuoso": 1 } }
+                ]
+            },
+            {
+                question: "How do you handle conflict?",
+                answers: [
+                    { text: "Address it directly and firmly", weights: { "Golden Leader": 3, "Rapper Firecracker": 2, "Reliable Backbone": 1 } },
+                    { text: "Try to mediate and find compromise", weights: { "Harmonious Diplomat": 3, "Main Vocal Powerhouse": 2, "Master Teacher": 1 } },
+                    { text: "Use humor to diffuse tension", weights: { "Mood Maker": 3, "All-Rounder Ace": 2, "Visual Icon": 1 } },
+                    { text: "Stay calm and observe", weights: { "Quiet Genius": 3, "Master Builder": 2, "Reliable Backbone": 1 } }
+                ]
+            },
+            {
+                question: "What's your biggest strength?",
+                answers: [
+                    { text: "Natural leadership and vision", weights: { "Golden Leader": 3, "Master Builder": 2, "All-Rounder Ace": 1 } },
+                    { text: "Versatility and adaptability", weights: { "All-Rounder Ace": 3, "Main Dancer Virtuoso": 2, "Mood Maker": 1 } },
+                    { text: "Deep knowledge and wisdom", weights: { "Master Teacher": 3, "Quiet Genius": 2, "Golden Leader": 1 } },
+                    { text: "Consistency and reliability", weights: { "Reliable Backbone": 3, "Master Builder": 2, "Harmonious Diplomat": 1 } }
+                ]
+            },
+            {
+                question: "How do you prepare for a big performance?",
+                answers: [
+                    { text: "Intense practice until perfect", weights: { "Main Dancer Virtuoso": 3, "Main Vocal Powerhouse": 2, "Reliable Backbone": 1 } },
+                    { text: "Visualizing success and mental prep", weights: { "Visual Icon": 3, "Golden Leader": 2, "Quiet Genius": 1 } },
+                    { text: "Building team chemistry first", weights: { "Harmonious Diplomat": 3, "Mood Maker": 2, "All-Rounder Ace": 1 } },
+                    { text: "Understanding the deeper meaning", weights: { "Master Teacher": 3, "Quiet Genius": 2, "Main Vocal Powerhouse": 1 } }
+                ]
+            },
+            {
+                question: "What kind of stage presence do you have?",
+                answers: [
+                    { text: "Commanding and powerful", weights: { "Golden Leader": 3, "Main Vocal Powerhouse": 2, "Rapper Firecracker": 1 } },
+                    { text: "Graceful and elegant", weights: { "Visual Icon": 3, "Main Dancer Virtuoso": 2, "Harmonious Diplomat": 1 } },
+                    { text: "Energetic and infectious", weights: { "Mood Maker": 3, "All-Rounder Ace": 2, "Rapper Firecracker": 1 } },
+                    { text: "Mysterious and captivating", weights: { "Quiet Genius": 3, "Visual Icon": 2, "Rapper Firecracker": 1 } }
+                ]
+            },
+            {
+                question: "How do you handle criticism?",
+                answers: [
+                    { text: "Use it as motivation to improve", weights: { "Golden Leader": 3, "Main Dancer Virtuoso": 2, "Master Builder": 1 } },
+                    { text: "Reflect on it internally", weights: { "Quiet Genius": 3, "Master Teacher": 2, "Reliable Backbone": 1 } },
+                    { text: "Discuss with team for feedback", weights: { "Harmonious Diplomat": 3, "All-Rounder Ace": 2, "Mood Maker": 1 } },
+                    { text: "Stay confident in my vision", weights: { "Rapper Firecracker": 3, "Visual Icon": 2, "Golden Leader": 1 } }
+                ]
+            },
+            {
+                question: "What's your ideal team dynamic?",
+                answers: [
+                    { text: "Everyone knows their role perfectly", weights: { "Reliable Backbone": 3, "Master Builder": 2, "Golden Leader": 1 } },
+                    { text: "Free creative exchange and ideas", weights: { "Quiet Genius": 3, "All-Rounder Ace": 2, "Mood Maker": 1 } },
+                    { text: "Strong emotional bonds and support", weights: { "Harmonious Diplomat": 3, "Main Vocal Powerhouse": 2, "Mood Maker": 1 } },
+                    { text: "Pushing each other to excellence", weights: { "Golden Leader": 3, "Main Dancer Virtuoso": 2, "Rapper Firecracker": 1 } }
+                ]
+            },
+            {
+                question: "How do you want to be remembered?",
+                answers: [
+                    { text: "As a visionary who changed things", weights: { "Master Builder": 3, "Golden Leader": 2, "Master Teacher": 1 } },
+                    { text: "As someone who inspired others", weights: { "Master Teacher": 3, "Harmonious Diplomat": 2, "Main Vocal Powerhouse": 1 } },
+                    { text: "As an unforgettable performer", weights: { "Visual Icon": 3, "Main Dancer Virtuoso": 2, "All-Rounder Ace": 1 } },
+                    { text: "As someone who brought joy to many", weights: { "Mood Maker": 3, "Harmonious Diplomat": 2, "Main Vocal Powerhouse": 1 } }
+                ]
+            }
+        ];
+
+        // Quiz State
+        let currentQuestion = 0;
+        let archetypeScores = {};
+        let userResult = null;
+
+        // Initialize archetype scores
+        function initializeScores() {
+            archetypeScores = {
+                "Golden Leader": 0,
+                "Harmonious Diplomat": 0,
+                "Mood Maker": 0,
+                "Reliable Backbone": 0,
+                "Main Dancer Virtuoso": 0,
+                "Visual Icon": 0,
+                "Quiet Genius": 0,
+                "Rapper Firecracker": 0,
+                "Main Vocal Powerhouse": 0,
+                "All-Rounder Ace": 0,
+                "Master Builder": 0,
+                "Master Teacher": 0
+            };
+        }
+
+        // Start Quiz
+        function startQuiz() {
+            initializeScores();
+            currentQuestion = 0;
+            showScreen('question-screen');
+            loadQuestion();
+        }
+
+        // Load Question
+        function loadQuestion() {
+            const question = quizQuestions[currentQuestion];
+            const container = document.getElementById('question-container');
+            
+            // Update progress
+            document.getElementById('question-number').textContent = `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
+            document.getElementById('progress-fill').style.width = `${((currentQuestion) / quizQuestions.length) * 100}%`;
+            
+            // Build question HTML
+            let html = `
+                <div class="question-box">
+                    <h3>${question.question}</h3>
+                    <div class="answers-container">
+            `;
+            
+            question.answers.forEach((answer, index) => {
+                html += `
+                    <button class="answer-button" onclick="selectAnswer(${index})">
+                        <span class="answer-letter">${String.fromCharCode(65 + index)}</span>
+                        <span class="answer-text">${answer.text}</span>
+                    </button>
+                `;
+            });
+            
+            html += `
+                    </div>
+                </div>
+            `;
+            
+            container.innerHTML = html;
+        }
+
+        // Select Answer
+        function selectAnswer(answerIndex) {
+            const question = quizQuestions[currentQuestion];
+            const answer = question.answers[answerIndex];
+            
+            // Add weights to scores
+            for (const [archetype, weight] of Object.entries(answer.weights)) {
+                archetypeScores[archetype] += weight;
+            }
+            
+            currentQuestion++;
+            
+            if (currentQuestion < quizQuestions.length) {
+                loadQuestion();
+            } else {
+                calculateResult();
+            }
+        }
+
+        // Calculate Result
+        function calculateResult() {
+            showScreen('quiz-loading');
+            
+            // Find archetype with highest score
+            let maxScore = 0;
+            let resultArchetype = null;
+            
+            for (const [archetype, score] of Object.entries(archetypeScores)) {
+                if (score > maxScore) {
+                    maxScore = score;
+                    resultArchetype = archetype;
+                }
+            }
+            
+            userResult = resultArchetype;
+            
+            // Simulate processing delay
+            setTimeout(() => {
+                displayResult();
+            }, 1500);
+        }
+
+        // Display Result
+        function displayResult() {
+            const archetypeData = getArchetypeData(userResult);
+            const container = document.getElementById('archetype-result');
+            
+            container.innerHTML = `
+                <div class="archetype-display">
+                    <div class="archetype-emoji">${archetypeData.emoji}</div>
+                    <h3 class="archetype-name">${userResult}</h3>
+                    <p class="archetype-planet">${archetypeData.planet} Energy</p>
+                </div>
+                
+                <div class="archetype-description">
+                    <p>${archetypeData.description}</p>
+                </div>
+                
+                <div class="archetype-traits">
+                    <h4>Stage Presence:</h4>
+                    <p>${archetypeData.stagePresence}</p>
+                    
+                    <h4>Role in Group:</h4>
+                    <p>${archetypeData.groupRole}</p>
+                    
+                    <h4>Growth Area:</h4>
+                    <p>${archetypeData.growthArea}</p>
+                </div>
+            `;
+            
+            showScreen('result-screen');
+            triggerConfetti();
+        }
+
+        // Get Archetype Data
+        function getArchetypeData(archetypeName) {
+            const archetypes = kpopArchetypes || {};
+            return archetypes[archetypeName] || {
+                emoji: "✨",
+                planet: "kosmic",
+                description: "A unique idol energy with special kosmic powers.",
+                stagePresence: "Magnetic and unforgettable",
+                groupRole: "Essential contributor",
+                growthArea: "Embrace your unique path"
+            };
+        }
+
+        // Show Screen
+        function showScreen(screenId) {
+            document.querySelectorAll('.quiz-screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            document.getElementById(screenId).classList.add('active');
+        }
+
+        // Retake Quiz
+        document.getElementById('retake-quiz').addEventListener('click', () => {
+            startQuiz();
+        });
+
+        // Share Result
+        document.getElementById('share-result').addEventListener('click', () => {
+            const shareText = `I'm the ${userResult} archetype! 🌟 Find yours at Kosmic K-Pop!`;
+            const shareUrl = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My K-Pop Idol Archetype',
+                    text: shareText,
+                    url: shareUrl
+                });
+            } else {
+                navigator.clipboard.writeText(`${shareText} ${shareUrl}`);
+                alert('Result copied to clipboard! 🎤');
+            }
+        });
+
+        // Start Button
+        document.getElementById('start-quiz').addEventListener('click', startQuiz);
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hide loading overlay
+            setTimeout(() => {
+                document.getElementById('loading-overlay').style.display = 'none';
+            }, 1000);
+            
+            // Initialize effects
+            initStarField();
+            initCookieBanner();
+        });
+    </script>
+</body>
+</html>

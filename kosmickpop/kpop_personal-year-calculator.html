@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Your Personal Year Number? | Free Numerology Calculator</title>
+    <meta name="description" content="Discover your Personal Year number for 2026. Free numerology calculator reveals your year's energy, themes, and strategic timing.">
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --accent: #e94560;
+            --bg-dark: #1a1a2e;
+            --bg-medium: #16213e;
+            --bg-light: #0f3460;
+            --text: #eaeaea;
+            --text-dim: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--bg-light);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 1rem;
+            background: var(--bg-medium);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: var(--text);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .date-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin-top: 1rem;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .result {
+            display: none;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--bg-medium);
+            border-radius: 16px;
+            border: 2px solid var(--accent);
+            animation: slideIn 0.5s ease;
+        }
+
+        .result.show {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result-number {
+            font-size: 5rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--accent);
+            margin: 1rem 0;
+        }
+
+        .result-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .result-description {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .result-themes {
+            background: var(--bg-dark);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+        }
+
+        .result-themes h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .result-themes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .result-themes li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .result-themes li:before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .share-btn {
+            padding: 0.8rem 1.5rem;
+            background: var(--bg-dark);
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: background 0.2s ease;
+        }
+
+        .share-btn:hover {
+            background: var(--bg-medium);
+        }
+
+        @media (max-width: 640px) {
+            .card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .date-inputs {
+                grid-template-columns: 1fr;
+            }
+
+            .result-number {
+                font-size: 4rem;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="kpop-theme">
+    <div class="container">
+        <div class="card">
+            <h1>🔮 Personal Year Calculator</h1>
+            <p class="subtitle">Discover your numerological energy for 2026</p>
+
+            <form id="calculatorForm">
+                <div class="form-group">
+                    <label>Your Birth Date</label>
+                    <div class="date-inputs">
+                        <select id="month" required>
+                            <option value="">Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <select id="day" required>
+                            <option value="">Day</option>
+                        </select>
+                        <select id="year" required>
+                            <option value="">Year</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit">Calculate My Personal Year</button>
+            </form>
+
+            <div id="result" class="result">
+                <div class="result-number" id="resultNumber"></div>
+                <div class="result-title" id="resultTitle"></div>
+                <div class="result-description" id="resultDescription"></div>
+                
+                <div class="result-themes">
+                    <h3>Key Themes for Your Year</h3>
+                    <ul id="resultThemes"></ul>
+                </div>
+
+                <div class="cta">
+                    <p style="margin-bottom: 1rem; color: var(--text-dim);">Want your complete strategic calendar?</p>
+                    <a href="index.html" class="cta-button">Get Your Full 2026 Calendar →</a>
+                </div>
+
+                <div class="share-buttons">
+                    <a href="#" class="share-btn" onclick="shareTwitter(); return false;">Share on Twitter</a>
+                    <a href="#" class="share-btn" onclick="shareWhatsApp(); return false;">Share on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Personal Year data
+        const personalYearData = {
+            1: {
+                title: "New Beginnings",
+                description: "This is your year of fresh starts and new initiatives. Plant seeds for the future. Take bold action on ideas you've been contemplating. Leadership opportunities arise. Independence and self-reliance are your superpowers.",
+                themes: [
+                    "Starting new projects and ventures",
+                    "Taking initiative and leadership roles",
+                    "Building independence and self-confidence",
+                    "Making bold decisions",
+                    "Pioneering new paths"
+                ]
+            },
+            2: {
+                title: "Patience & Partnership",
+                description: "A year of cooperation, relationships, and patience. Focus on partnerships and collaborations. Diplomacy and sensitivity are key. Details matter more than speed. Build bridges and strengthen connections.",
+                themes: [
+                    "Developing meaningful partnerships",
+                    "Practicing patience and diplomacy",
+                    "Focusing on details and refinement",
+                    "Building emotional intelligence",
+                    "Nurturing relationships"
+                ]
+            },
+            3: {
+                title: "Creative Expression",
+                description: "Your creativity flows freely this year. Express yourself through art, writing, speaking, or any creative outlet. Social connections expand. Joy and optimism are your natural state. Share your gifts with the world.",
+                themes: [
+                    "Unleashing creative potential",
+                    "Expanding social circles",
+                    "Communicating ideas effectively",
+                    "Finding joy in self-expression",
+                    "Embracing optimism"
+                ]
+            },
+            4: {
+                title: "Foundation Building",
+                description: "Time to build solid foundations. Focus on structure, organization, and practical matters. Hard work pays off. Create systems that will support your future. Discipline and persistence are rewarded.",
+                themes: [
+                    "Building strong foundations",
+                    "Creating organizational systems",
+                    "Working diligently toward goals",
+                    "Establishing security and stability",
+                    "Developing practical skills"
+                ]
+            },
+            5: {
+                title: "Change & Freedom",
+                description: "Expect the unexpected! This is your year of change, freedom, and adventure. Embrace new experiences. Travel if possible. Break free from limitations. Adaptability is your greatest asset.",
+                themes: [
+                    "Embracing change and adventure",
+                    "Seeking freedom and variety",
+                    "Exploring new opportunities",
+                    "Adapting to unexpected situations",
+                    "Expanding horizons"
+                ]
+            },
+            6: {
+                title: "Responsibility & Service",
+                description: "A year focused on home, family, and service to others. Nurture relationships and take on responsibilities. Create harmony in your environment. Your caring nature shines. Balance giving with receiving.",
+                themes: [
+                    "Nurturing family and relationships",
+                    "Taking on responsibilities",
+                    "Creating harmony and balance",
+                    "Serving others with love",
+                    "Beautifying your environment"
+                ]
+            },
+            7: {
+                title: "Reflection & Analysis",
+                description: "Turn inward for wisdom and understanding. This is a spiritual and intellectual year. Study, research, and analyze. Seek solitude when needed. Trust your intuition. Inner growth takes priority over outer achievement.",
+                themes: [
+                    "Deepening spiritual understanding",
+                    "Engaging in study and research",
+                    "Trusting intuition",
+                    "Seeking solitude and reflection",
+                    "Analyzing and understanding"
+                ]
+            },
+            8: {
+                title: "Power & Achievement",
+                description: "Your year of material success and achievement. Business and financial matters come into focus. Step into your power. Manifest abundance. Leadership and authority are natural to you now.",
+                themes: [
+                    "Achieving material success",
+                    "Building financial abundance",
+                    "Stepping into leadership",
+                    "Manifesting goals",
+                    "Exercising personal power"
+                ]
+            },
+            9: {
+                title: "Completion & Release",
+                description: "A year of endings and completions. Release what no longer serves you. Finish projects and tie up loose ends. Prepare for a new cycle. Compassion and forgiveness heal. Let go to make space for new beginnings.",
+                themes: [
+                    "Completing unfinished business",
+                    "Releasing the past",
+                    "Practicing forgiveness",
+                    "Preparing for new cycles",
+                    "Serving humanity"
+                ]
+            }
+        };
+
+        // Populate day dropdown
+        const daySelect = document.getElementById('day');
+        for (let i = 1; i <= 31; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = i;
+            daySelect.appendChild(option);
+        }
+
+        // Populate year dropdown (1940-2010)
+        const yearSelect = document.getElementById('year');
+        for (let i = 2010; i >= 1940; i--) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = i;
+            yearSelect.appendChild(option);
+        }
+
+        // Calculate Personal Year
+        function calculatePersonalYear(month, day, currentYear) {
+            function reduceToSingle(num) {
+                while (num > 9) {
+                    num = num.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+                }
+                return num;
+            }
+
+            const total = parseInt(month) + parseInt(day) + parseInt(currentYear);
+            return reduceToSingle(total);
+        }
+
+        // Handle form submission
+        document.getElementById('calculatorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const month = document.getElementById('month').value;
+            const day = document.getElementById('day').value;
+            const year = document.getElementById('year').value;
+
+            if (!month || !day || !year) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            const personalYear = calculatePersonalYear(month, day, 2026);
+            const yearData = personalYearData[personalYear];
+
+            // Display result
+            document.getElementById('resultNumber').textContent = personalYear;
+            document.getElementById('resultTitle').textContent = yearData.title;
+            document.getElementById('resultDescription').textContent = yearData.description;
+
+            // Display themes
+            const themesList = document.getElementById('resultThemes');
+            themesList.innerHTML = '';
+            yearData.themes.forEach(theme => {
+                const li = document.createElement('li');
+                li.textContent = theme;
+                themesList.appendChild(li);
+            });
+
+            // Show result
+            document.getElementById('result').classList.add('show');
+
+            // Scroll to result
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+
+        // Share functions
+        function shareTwitter() {
+            const text = `I just discovered I'm in a Personal Year ${document.getElementById('resultNumber').textContent} for 2026! 🔮 Find out yours:`;
+            const url = window.location.href;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+        }
+
+        function shareWhatsApp() {
+            const text = `I just discovered I'm in a Personal Year ${document.getElementById('resultNumber').textContent} for 2026! 🔮 Check out yours: ${window.location.href}`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        }
+    </script>
+</body>
+</html>

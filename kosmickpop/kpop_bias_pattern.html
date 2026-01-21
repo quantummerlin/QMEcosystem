@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bias Pattern Analyzer | Kosmic K-Pop</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="kosmic-background">
+        <div class="stars"></div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">💖 Bias Pattern Analyzer 💖</h1>
+            <p class="subtitle">What your biases reveal about YOUR psyche</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="tool-content">
+            
+            <!-- Input Section -->
+            <div id="input-section" class="input-section">
+                <div class="tool-intro">
+                    <h3>✨ Discover Your Bias Patterns</h3>
+                    <p>The biases we're drawn to aren't random - they reflect parts of ourselves we want to embody!</p>
+                </div>
+                
+                <div class="bias-input">
+                    <h4>🌟 Who Are Your Top 3 Biases?</h4>
+                    <p class="input-subtext">Enter any idols - they don't have to be K-Pop!</p>
+                    
+                    <div class="bias-fields">
+                        <div class="bias-field">
+                            <label>Bias #1</label>
+                            <input type="text" id="bias1" placeholder="Enter idol name">
+                        </div>
+                        
+                        <div class="bias-field">
+                            <label>Bias #2</label>
+                            <input type="text" id="bias2" placeholder="Enter idol name">
+                        </div>
+                        
+                        <div class="bias-field">
+                            <label>Bias #3</label>
+                            <input type="text" id="bias3" placeholder="Enter idol name">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trait-selection">
+                    <h4>💫 What Do You Love Most About Your Biases?</h4>
+                    <p class="input-subtext">Select up to 5 traits</p>
+                    
+                    <div class="trait-options">
+                        <button class="trait-btn" data-trait="confidence">Confidence</button>
+                        <button class="trait-btn" data-trait="talent">Talent/Skill</button>
+                        <button class="trait-btn" data-trait="kindness">Kindness/Warmth</button>
+                        <button class="trait-btn" data-trait="humor">Humor/Fun</button>
+                        <button class="trait-btn" data-trait="visuals">Visuals/Beauty</button>
+                        <button class="trait-btn" data-trait="hardwork">Hard Work</button>
+                        <button class="trait-btn" data-trait="charisma">Charisma</button>
+                        <button class="trait-btn" data-trait="authenticity">Authenticity</button>
+                        <button class="trait-btn" data-trait="intelligence">Intelligence</button>
+                        <button class="trait-btn" data-trait="creativity">Creativity</button>
+                        <button class="trait-btn" data-trait="leadership">Leadership</button>
+                        <button class="trait-btn" data-trait="vulnerability">Vulnerability</button>
+                    </div>
+                </div>
+                
+                <div class="energy-input">
+                    <h4>🎯 What Draws You to Them?</h4>
+                    <div class="energy-slider-container">
+                        <input type="range" id="attraction" min="1" max="10" value="5" class="energy-slider">
+                        <div class="slider-labels">
+                            <span>Admiration</span>
+                            <span id="attraction-value">5</span>
+                            <span>Deep Attraction</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="action-button kosmic-button" onclick="analyzeBiasPattern()">
+                    💖 Analyze My Bias Patterns 💖
+                </button>
+            </div>
+            
+            <!-- Results Section -->
+            <div id="results-section" class="results-section" style="display: none;">
+                
+                <!-- Pattern Overview -->
+                <div class="pattern-overview">
+                    <h3>✨ Your Bias Pattern Revealed</h3>
+                    <div class="pattern-summary" id="pattern-summary"></div>
+                </div>
+                
+                <!-- What You Seek -->
+                <div class="what-you-seek">
+                    <h3>💫 What Your Biases Say You Seek</h3>
+                    <div class="seek-list" id="seek-list"></div>
+                </div>
+                
+                <!-- Unmet Traits -->
+                <div class="unmet-traits">
+                    <h3>🎭 Traits You Want to Embody</h3>
+                    <div class="traits-grid" id="traits-grid"></div>
+                </div>
+                
+                <!-- Shadow Analysis -->
+                <div class="shadow-analysis">
+                    <h3>🌑 Your Shadow Side</h3>
+                    <div class="shadow-content" id="shadow-content"></div>
+                </div>
+                
+                <!-- Embodiment Guide -->
+                <div class="embodiment-guide">
+                    <h3>💪 How to Embody These Qualities</h3>
+                    <div class="embodiment-steps" id="embodiment-steps"></div>
+                </div>
+                
+                <!-- Psychological Insight -->
+                <div class="psychological-insight">
+                    <h3>🧠 Deep Psychological Insight</h3>
+                    <div class="insight-content" id="insight-content"></div>
+                </div>
+                
+                <!-- Affirmations -->
+                <div class="bias-affirmations">
+                    <h3>✨ Affirmations for Integration</h3>
+                    <div class="affirmations-list" id="affirmations-list"></div>
+                </div>
+                
+                <!-- Viral Features -->
+                <div id="viral-features"></div>
+                
+                <!-- Share Buttons -->
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareResult()">
+                        📱 Share My Bias Pattern
+                    </button>
+                    <button class="share-btn" onclick="downloadCard()">
+                        📸 Download Analysis Card
+                    </button>
+                </div>
+                
+                <!-- Restart Button -->
+                <button class="restart-button" onclick="restartTool()">
+                    💖 Analyze More Biases
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="kpop_data.js"></script>
+    <script src="viral_components.js"></script>
+    <script>
+        let selectedTraits = [];
+        
+        // Initialize trait buttons
+        document.querySelectorAll('.trait-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (selectedTraits.includes(this.dataset.trait)) {
+                    // Remove trait
+                    selectedTraits = selectedTraits.filter(t => t !== this.dataset.trait);
+                    this.classList.remove('active');
+                } else if (selectedTraits.length < 5) {
+                    // Add trait
+                    selectedTraits.push(this.dataset.trait);
+                    this.classList.add('active');
+                } else {
+                    alert('Please select up to 5 traits! ✨');
+                }
+            });
+        });
+        
+        // Initialize attraction slider
+        document.getElementById('attraction').addEventListener('input', function() {
+            document.getElementById('attraction-value').textContent = this.value;
+        });
+        
+        // Analyze bias pattern
+        function analyzeBiasPattern() {
+            const bias1 = document.getElementById('bias1').value || 'Your First Bias';
+            const bias2 = document.getElementById('bias2').value || 'Your Second Bias';
+            const bias3 = document.getElementById('bias3').value || 'Your Third Bias';
+            const attraction = parseInt(document.getElementById('attraction').value);
+            
+            if (selectedTraits.length === 0) {
+                alert('Please select at least 1 trait you love about your biases! 💫');
+                return;
+            }
+            
+            // Generate pattern analysis
+            const analysis = generatePatternAnalysis(selectedTraits, attraction);
+            
+            // Generate what you seek
+            const whatYouSeek = generateWhatYouSeek(selectedTraits);
+            
+            // Generate traits to embody
+            const traitsToEmbody = generateTraitsToEmbody(selectedTraits);
+            
+            // Generate shadow analysis
+            const shadowAnalysis = generateShadowAnalysis(selectedTraits);
+            
+            // Generate embodiment guide
+            const embodimentGuide = generateEmbodimentGuide(selectedTraits);
+            
+            // Generate psychological insight
+            const psychologicalInsight = generatePsychologicalInsight(selectedTraits, attraction);
+            
+            // Generate affirmations
+            const affirmations = generateAffirmations(selectedTraits);
+            
+            // Display results
+            displayResults({
+                patternSummary: analysis,
+                whatYouSeek: whatYouSeek,
+                traitsToEmbody: traitsToEmbody,
+                shadowAnalysis: shadowAnalysis,
+                embodimentGuide: embodimentGuide,
+                psychologicalInsight: psychologicalInsight,
+                affirmations: affirmations,
+                biases: [bias1, bias2, bias3]
+            });
+        }
+        
+        // Generate pattern analysis
+        function generatePatternAnalysis(traits, attraction) {
+            const patterns = {
+                confidence: {
+                    summary: 'You\'re drawn to confidence because you seek to feel more secure in yourself. Your biases model self-assurance you\'re learning to access.',
+                    deep: 'Deep attraction to confidence suggests you\'re ready to step into your own power and claim your worth.'
+                },
+                talent: {
+                    summary: 'You admire talent because you value excellence and mastery. Your biases represent the heights you aspire to reach.',
+                    deep: 'Deep attraction to talent indicates you\'re in a growth phase, hungry to develop your own skills.'
+                },
+                kindness: {
+                    summary: 'You\'re drawn to kindness because you crave more warmth and compassion in your life. Your biases show you what\'s possible.',
+                    deep: 'Deep attraction to kindness reveals your own nurturing nature and desire for gentler connections.'
+                },
+                humor: {
+                    summary: 'You love humor because you need more joy and levity. Your biases remind you not to take life too seriously.',
+                    deep: 'Deep attraction to humor shows you\'re learning to embrace playfulness and lighten up.'
+                },
+                visuals: {
+                    summary: 'You\'re drawn to beauty because you appreciate aesthetics and want to elevate your own presence.',
+                    deep: 'Deep attraction to visuals suggests you\'re exploring your relationship with beauty and self-image.'
+                },
+                hardwork: {
+                    summary: 'You admire hard work because you value dedication and persistence. Your biases inspire your own work ethic.',
+                    deep: 'Deep attraction to hard work indicates you\'re in a building phase of your life.'
+                },
+                charisma: {
+                    summary: 'You\'re drawn to charisma because you want to be more magnetic and influential.',
+                    deep: 'Deep attraction to charisma reveals your desire to impact others and be seen.'
+                },
+                authenticity: {
+                    summary: 'You value authenticity because you\'re learning to be true to yourself.',
+                    deep: 'Deep attraction to authenticity shows you\'re ready to shed masks and embrace who you really are.'
+                },
+                intelligence: {
+                    summary: 'You admire intelligence because you respect wisdom and mental depth.',
+                    deep: 'Deep attraction to intelligence indicates you\'re seeking intellectual growth and understanding.'
+                },
+                creativity: {
+                    summary: 'You\'re drawn to creativity because you want to express yourself more freely.',
+                    deep: 'Deep attraction to creativity reveals your artistic soul waiting to be unleashed.'
+                },
+                leadership: {
+                    summary: 'You admire leadership because you\'re developing your own authority.',
+                    deep: 'Deep attraction to leadership shows you\'re ready to take charge of your life.'
+                },
+                vulnerability: {
+                    summary: 'You\'re drawn to vulnerability because you\'re learning to be open with your emotions.',
+                    deep: 'Deep attraction to vulnerability indicates you\'re ready for deeper emotional connections.'
+                }
+            };
+            
+            // Combine summaries
+            const summaries = traits.map(t => patterns[t]?.summary || '');
+            const summary = summaries.join(' ');
+            
+            return summary;
+        }
+        
+        // Generate what you seek
+        function generateWhatYouSeek(traits) {
+            const seekMap = {
+                confidence: ['Self-assurance', 'Inner security', 'Courage to be yourself'],
+                talent: ['Mastery in your craft', 'Recognition for your skills', 'Personal growth'],
+                kindness: ['More warmth in your life', 'Compassionate connections', 'Gentle relationships'],
+                humor: ['More joy and laughter', 'To not take things so seriously', 'Playful energy'],
+                visuals: ['To feel beautiful/attractive', 'To elevate your presence', 'Aesthetic appreciation'],
+                hardwork: ['Dedication to goals', 'Persistence through challenges', 'Work ethic inspiration'],
+                charisma: ['To be more magnetic', 'To influence others', 'To be seen and remembered'],
+                authenticity: ['To be true to yourself', 'To shed expectations', 'Real connections'],
+                intelligence: ['Intellectual stimulation', 'Wisdom and understanding', 'Mental challenges'],
+                creativity: ['Creative expression', 'Freedom of expression', 'Artistic fulfillment'],
+                leadership: ['To take charge', 'To guide others', 'Authority in your life'],
+                vulnerability: ['Emotional openness', 'Deep connections', 'Authentic relationships']
+            };
+            
+            const seekList = [];
+            traits.forEach(trait => {
+                if (seekMap[trait]) {
+                    seekList.push(...seekMap[trait]);
+                }
+            });
+            
+            // Remove duplicates and limit
+            return [...new Set(seekList)].slice(0, 8);
+        }
+        
+        // Generate traits to embody
+        function generateTraitsToEmbody(traits) {
+            const embodyMap = {
+                confidence: {
+                    trait: 'Self-Confidence',
+                    description: 'Trust in your abilities and worth',
+                    practice: 'Practice positive self-talk and celebrate your wins'
+                },
+                talent: {
+                    trait: 'Skill Mastery',
+                    description: 'Commit to learning and improving',
+                    practice: 'Dedicate daily time to developing your craft'
+                },
+                kindness: {
+                    trait: 'Compassion',
+                    description: 'Show warmth to yourself and others',
+                    practice: 'Practice daily acts of kindness'
+                },
+                humor: {
+                    trait: 'Playfulness',
+                    description: 'Find joy and laughter in daily life',
+                    practice: 'Don\'t take yourself too seriously'
+                },
+                visuals: {
+                    trait: 'Self-Love',
+                    description: 'Appreciate your unique beauty',
+                    practice: 'Practice mirror work and self-affirmations'
+                },
+                hardwork: {
+                    trait: 'Persistence',
+                    description: 'Stay committed to your goals',
+                    practice: 'Create daily habits and stick to them'
+                },
+                charisma: {
+                    trait: 'Presence',
+                    description: 'Be fully present in interactions',
+                    practice: 'Practice active listening and eye contact'
+                },
+                authenticity: {
+                    trait: 'Self-Expression',
+                    description: 'Be true to who you are',
+                    practice: 'Share your authentic opinions and feelings'
+                },
+                intelligence: {
+                    trait: 'Curiosity',
+                    description: 'Stay open to learning and growth',
+                    practice: 'Read, learn, and ask questions daily'
+                },
+                creativity: {
+                    trait: 'Creative Freedom',
+                    description: 'Express yourself without judgment',
+                    practice: 'Create something daily, no matter how small'
+                },
+                leadership: {
+                    trait: 'Self-Trust',
+                    description: 'Trust your decisions and instincts',
+                    practice: 'Make decisions confidently and learn from outcomes'
+                },
+                vulnerability: {
+                    trait: 'Emotional Openness',
+                    description: 'Share your true feelings',
+                    practice: 'Express one real emotion to someone today'
+                }
+            };
+            
+            return traits.map(trait => embodyMap[trait]);
+        }
+        
+        // Generate shadow analysis
+        function generateShadowAnalysis(traits) {
+            const shadowMap = {
+                confidence: 'You may struggle with self-doubt or imposter syndrome. Your biases show you what confidence looks like so you can recognize it in yourself.',
+                talent: 'You might feel inadequate or like you\'re not "enough." Your biases remind you that excellence comes from dedication, not innate talent alone.',
+                kindness: 'You may have experienced harshness or criticism. Your biases offer the warmth and kindness you crave.',
+                humor: 'You might take life too seriously or feel pressure to be "perfect." Your biases show you the freedom of playfulness.',
+                visuals: 'You may struggle with self-image or feel pressure to look a certain way. Your biases remind you that beauty comes in many forms.',
+                hardwork: 'You might feel like you\'re not working hard enough or that you\'re lazy. Your biases validate the value of effort and persistence.',
+                charisma: 'You may feel invisible or overlooked. Your biases model how to be seen and make an impact.',
+                authenticity: 'You might wear masks to fit in or please others. Your biases show you the freedom of being truly yourself.',
+                intelligence: 'You may doubt your intellect or feel less than others. Your biases remind you that wisdom takes many forms.',
+                creativity: 'You might feel blocked or uncreative. Your biases show you that creativity is your birthright.',
+                leadership: 'You may feel unsure of your authority or afraid to take charge. Your biases model how to lead with confidence.',
+                vulnerability: 'You might have been hurt when showing vulnerability. Your biases show you the strength in emotional openness.'
+            };
+            
+            const shadowContent = traits.map(trait => shadowMap[trait]).filter(Boolean);
+            return shadowContent;
+        }
+        
+        // Generate embodiment guide
+        function generateEmbodimentGuide(traits) {
+            const steps = [
+                '💫 Start small - embody one quality at a time',
+                '🌟 Notice moments when you already express these traits',
+                '💪 Practice consciously in low-stakes situations',
+                '🎭 Use your biases as mental models - "What would they do?"',
+                '✨ Be patient - embodiment is a journey, not a destination',
+                '💖 Celebrate your progress, no matter how small',
+                '🎯 Remember: you\'re not becoming someone else, you\'re becoming MORE yourself'
+            ];
+            
+            return steps;
+        }
+        
+        // Generate psychological insight
+        function generatePsychologicalInsight(traits, attraction) {
+            const traitCount = traits.length;
+            const intensity = attraction >= 7 ? 'deep' : 'growing';
+            
+            let insight = `Your bias pattern reveals a ${intensity} desire for growth and self-discovery. `;
+            
+            if (traitCount <= 2) {
+                insight += `You have a clear, focused vision of who you want to become. This clarity is your strength - use it to direct your personal growth intentionally.`;
+            } else if (traitCount <= 4) {
+                insight += `You\'re exploring multiple facets of yourself, seeking balance and wholeness. This exploration is natural and valuable - embrace the journey of self-discovery.`;
+            } else {
+                insight += `You\'re drawn to a wide range of qualities, indicating you\'re a multifaceted person with diverse potential. This richness is your gift - don\'t feel pressured to narrow your focus.`;
+            }
+            
+            if (attraction >= 8) {
+                insight += ` Your deep attraction to these traits suggests you\'re ready for significant personal transformation. Trust this process and take bold steps toward the version of yourself you admire.`;
+            }
+            
+            return insight;
+        }
+        
+        // Generate affirmations
+        function generateAffirmations(traits) {
+            const affirmationMap = {
+                confidence: '✨ I trust in my abilities and worth',
+                talent: '💪 I am capable of mastery and growth',
+                kindness: '💖 I radiate warmth and compassion',
+                humor: '😄 I embrace joy and playfulness',
+                visuals: '✨ I am beautiful in my unique way',
+                hardwork: '🔥 I am dedicated and persistent',
+                charisma: '💫 I am magnetic and impactful',
+                authenticity: '🌟 I am true to myself',
+                intelligence: '🧠 I am wise and curious',
+                creativity: '🎨 I express myself freely',
+                leadership: '👑 I trust my ability to lead',
+                vulnerability: '💖 I am strong enough to be vulnerable'
+            };
+            
+            const baseAffirmations = [
+                '✨ I am becoming the person I admire',
+                '💫 I embody the qualities I love in my biases',
+                '🌟 My growth journey is valid and valuable'
+            ];
+            
+            const traitAffirmations = traits.map(t => affirmationMap[t]).filter(Boolean);
+            
+            return [...baseAffirmations, ...traitAffirmations];
+        }
+        
+        // Display results
+        function displayResults(results) {
+            // Update pattern summary
+            document.getElementById('pattern-summary').innerHTML = `
+                <p class="summary-text">${results.patternSummary}</p>
+                <div class="bias-names">
+                    Your biases: ${results.biases.map(b => `💖 ${b}`).join(' | ')}
+                </div>
+            `;
+            
+            // Update what you seek
+            document.getElementById('seek-list').innerHTML = results.whatYouSeek.map(item => `
+                <div class="seek-item">${item}</div>
+            `).join('');
+            
+            // Update traits to embody
+            document.getElementById('traits-grid').innerHTML = results.traitsToEmbody.map(trait => `
+                <div class="trait-card">
+                    <div class="trait-emoji">✨</div>
+                    <div class="trait-name">${trait.trait}</div>
+                    <div class="trait-description">${trait.description}</div>
+                    <div class="trait-practice"><strong>Practice:</strong> ${trait.practice}</div>
+                </div>
+            `).join('');
+            
+            // Update shadow analysis
+            document.getElementById('shadow-content').innerHTML = results.shadowAnalysis.map(shadow => `
+                <div class="shadow-item">${shadow}</div>
+            `).join('');
+            
+            // Update embodiment guide
+            document.getElementById('embodiment-steps').innerHTML = results.embodimentGuide.map(step => `
+                <div class="embodiment-step">${step}</div>
+            `).join('');
+            
+            // Update psychological insight
+            document.getElementById('insight-content').innerHTML = `
+                <p class="insight-text">${results.psychologicalInsight}</p>
+            `;
+            
+            // Update affirmations
+            document.getElementById('affirmations-list').innerHTML = results.affirmations.map(affirmation => `
+                <div class="affirmation-item">${affirmation}</div>
+            `).join('');
+            
+            // Show results
+            document.getElementById('input-section').style.display = 'none';
+            document.getElementById('results-section').style.display = 'block';
+            
+            // Celebrate
+            celebrateAnalysis();
+        }
+        
+        // Celebrate analysis
+        function celebrateAnalysis() {
+            // Love sparkles
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    createLoveSparkle();
+                }, i * 80);
+            }
+        }
+        
+        function createLoveSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.style.cssText = `
+                position: fixed;
+                top: ${Math.random() * 100}vh;
+                left: ${Math.random() * 100}vw;
+                width: 20px;
+                height: 20px;
+                font-size: 25px;
+                animation: loveFloat 2s ease-out forwards;
+                z-index: 1000;
+                opacity: 0;
+            `;
+            sparkle.textContent = ['💖', '✨', '💫', '🌟'][Math.floor(Math.random() * 4)];
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 2000);
+        }
+        
+        // Share result
+        function shareResult() {
+            const text = `I analyzed my bias patterns and discovered what my biases reveal about me! 💖✨\n\nFind YOUR bias patterns: `;
+            const url = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My Bias Pattern Analysis',
+                    text: text,
+                    url: url
+                });
+            } else {
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+            }
+        }
+        
+        // Download card
+        function downloadCard() {
+            alert('📸 Analysis card generation coming soon! For now, take a screenshot to share! ✨');
+        }
+        
+        // Restart tool
+        function restartTool() {
+            document.getElementById('input-section').style.display = 'block';
+            document.getElementById('results-section').style.display = 'none';
+            
+            // Reset inputs
+            document.querySelectorAll('#bias1, #bias2, #bias3').forEach(input => input.value = '');
+            selectedTraits = [];
+            document.querySelectorAll('.trait-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('attraction').value = 5;
+            document.getElementById('attraction-value').textContent = '5';
+        }
+    </script>
+    
+    <style>
+        .tool-intro {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .tool-intro h3 {
+            color: #FFD700;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .tool-intro p {
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .bias-input {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .bias-input h4 {
+            color: #FFD700;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .input-subtext {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .bias-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .bias-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .bias-field label {
+            color: #FF69B4;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .bias-field input {
+            padding: 15px;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 18px;
+            font-family: inherit;
+        }
+        
+        .trait-selection {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .trait-selection h4 {
+            color: #FFD700;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .trait-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .trait-btn {
+            padding: 15px 10px;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+            border-radius: 10px;
+            background: rgba(255, 105, 180, 0.1);
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+            text-align: center;
+        }
+        
+        .trait-btn:hover {
+            background: rgba(255, 105, 180, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .trait-btn.active {
+            background: linear-gradient(135deg, #FF69B4 0%, #9400D3 100%);
+            border-color: #FFD700;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+        }
+        
+        .energy-input {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .energy-input h4 {
+            color: #FFD700;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .energy-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #FF69B4, #FFD700);
+            outline: none;
+            cursor: pointer;
+        }
+        
+        .energy-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+        }
+        
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .slider-labels span:nth-child(2) {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+        
+        .pattern-overview {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 105, 180, 0.2) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 3px solid #FFD700;
+        }
+        
+        .pattern-overview h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .summary-text {
+            color: white;
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .bias-names {
+            color: #FF69B4;
+            font-size: 18px;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        .what-you-seek, .unmet-traits, .shadow-analysis, .embodiment-guide, .psychological-insight, .bias-affirmations {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .what-you-seek h3, .unmet-traits h3, .shadow-analysis h3, .embodiment-guide h3, .psychological-insight h3, .bias-affirmations h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .seek-list, .embodiment-steps, .affirmations-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .seek-item, .embodiment-step, .affirmation-item {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            border-left: 4px solid #FF69B4;
+        }
+        
+        .traits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .trait-card {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            text-align: center;
+        }
+        
+        .trait-emoji {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+        
+        .trait-name {
+            color: #FFD700;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .trait-description {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .trait-practice {
+            color: #FF69B4;
+            font-size: 16px;
+            font-style: italic;
+        }
+        
+        .shadow-content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .shadow-item {
+            background: rgba(255, 105, 180, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+            border-left: 4px solid rgba(255, 105, 180, 0.5);
+        }
+        
+        .insight-content {
+            text-align: center;
+        }
+        
+        .insight-text {
+            color: white;
+            font-size: 20px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+        
+        @keyframes loveFloat {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px) scale(0);
+            }
+        }
+    </style>
+</body>
+</html>

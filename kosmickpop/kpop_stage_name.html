@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate your unique K-Pop stage name based on kosmic energy and numerology">
+    <title>Your K-Pop Stage Name | kosmic Name Generator</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+    <script src="kpop_data.js"></script>
+    <script src="kpop_branding.js"></script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="kpop-theme">
+    <!-- Navigation Header -->
+    <header style="
+        background: rgba(26, 10, 46, 0.95);
+        border-bottom: 2px solid rgba(255, 105, 180, 0.3);
+        padding: 15px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+    ">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <a href="index.html" style="color: #FFD700; text-decoration: none; font-size: 1.3rem; font-weight: bold;">🎤 Kosmic K-Pop</a>
+            <nav style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <a href="index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Home</a>
+                <a href="kpop_tools_index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">All Tools</a>
+                <a href="kpop_archetype_quiz.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Archetype Quiz</a>
+                <a href="kpop_life_path.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Life Path</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Star Field Background -->
+    <div id="star-field" class="star-field"></div>
+    
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="kosmic-loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Channeling Stage Name Energy...</div>
+        </div>
+    </div>
+
+    <header class="kosmic-header">
+        <div class="header-content">
+            <h1 class="neon-title">Your K-Pop Stage Name 🎤</h1>
+            <p class="header-subtitle">Discover the name that captures your idol energy</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Input Form -->
+        <div id="input-section" class="tool-section active">
+            <div class="input-container">
+                <div class="sparkle-icon">✨</div>
+                <h2>What's Your Stage Name?</h2>
+                <p>Your perfect K-Pop stage name is waiting to be revealed. Enter your details and let the cosmos guide you!</p>
+                
+                <form id="stage-name-form" class="kosmic-form">
+                    <div class="form-group">
+                        <label for="birth-name">
+                            Birth Name 🌟
+                            <span class="helper-text">Your real name for kosmic resonance</span>
+                        </label>
+                        <input type="text" id="birth-name" name="birth-name" required placeholder="Enter your full name" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-date">
+                            Date of Birth 🎂
+                            <span class="helper-text">For numerological alignment</span>
+                        </label>
+                        <input type="date" id="birth-date" name="birth-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name-style">
+                            Preferred Name Style 💫
+                            <span class="helper-text">What vibe do you want?</span>
+                        </label>
+                        <select id="name-style" name="name-style" required>
+                            <option value="">Select your style...</option>
+                            <option value="cool">🔥 Cool & Edgy</option>
+                            <option value="cute">🌸 Cute & Sweet</option>
+                            <option value="mysterious">🌙 Mysterious & Dark</option>
+                            <option value="elegant">👑 Elegant & Sophisticated</option>
+                            <option value="powerful">💪 Powerful & Strong</option>
+                            <option value="dreamy">☁️ Dreamy & Ethereal</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name-length">
+                            Name Length 📏
+                            <span class="helper-text">How long should it be?</span>
+                        </label>
+                        <select id="name-length" name="name-length" required>
+                            <option value="">Select length...</option>
+                            <option value="short">Short (1 syllable)</option>
+                            <option value="medium">Medium (2-3 syllables)</option>
+                            <option value="long">Long (4+ syllables)</option>
+                            <option value="any">Surprise me!</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="kosmic-button primary-button">Reveal My Stage Name ✨</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Loading Section -->
+        <div id="loading-section" class="tool-section">
+            <div class="kosmic-loader">
+                <div class="loader-ring"></div>
+                <div class="loader-text">Channeling Stage Name Energy...</div>
+                <p class="loading-message">Aligning with kosmic forces...</p>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result-section" class="tool-section">
+            <div class="result-container">
+                <div class="sparkle-icon">✨</div>
+                <h2>Your Stage Name Revealed!</h2>
+                
+                <div id="stage-name-result" class="stage-name-result">
+                    <!-- Result will be inserted here -->
+                </div>
+
+                <div class="result-actions">
+                    <button id="generate-another" class="kosmic-button secondary-button">Generate Another</button>
+                    <button id="share-name" class="kosmic-button primary-button">Share My Name 🎤</button>
+                </div>
+
+                <div class="explore-more">
+                    <p>Want deeper insights? Try our <a href="kpop_life_path.html">Life Path Reading</a>, <a href="kpop_archetype_quiz.html">Archetype Quiz</a>, or <a href="kpop_comeback_energy.html">Comeback Energy</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies to enhance your kosmic experience ✨</p>
+        <button id="accept-cookies" class="kosmic-button small-button">Got it!</button>
+    </div>
+
+    <footer class="kosmic-footer">
+        <p>For entertainment purposes only • Entertainment for K-Pop fans worldwide 🌍</p>
+        <p class="footer-links">
+            <a href="kpop_landing.html">Home</a> • 
+            <a href="kpop_tools_index.html">All Tools</a> • 
+            <a href="kpop_life_path.html">Life Path</a>
+        </p>
+    </footer>
+
+    <script>
+        // Stage Name Components
+        const nameComponents = {
+            prefixes: {
+                cool: ["Storm", "Blaze", "Phoenix", "Viper", "Shadow", "Frost", "Raven", "Onyx", "Jett", "Nova"],
+                cute: ["Luna", "Bella", "Stella", "Daisy", "Cherry", "Bambi", "Mimi", "Ruby", "Lily", "Angel"],
+                mysterious: ["Midnight", "Eclipse", "Phantom", "Mystic", "Void", "Enigma", "Shade", "Echo", "Whisper", "Haze"],
+                elegant: ["Celestia", "Aurelia", "Seraphina", "Victoria", "Isabella", "Athena", "Freya", "Diana", "Grace", "Rose"],
+                powerful: ["Titan", "Saber", "Rogue", "Thunder", "Savage", "Legend", "King", "Queen", "Ace", "Max"],
+                dreamy: ["Aura", "Starlight", "Dream", "Cloud", "Mist", "Glimmer", "Halo", "Wish", "Sky", "Rainbow"]
+            },
+            suffixes: {
+                cool: ["X", "Z", "Zero", "Storm", "Blaze", "Wave", "Drift", "Flow", "Spark", "Flame"],
+                cute: ["Pie", "Bean", "Berry", "Belle", "Star", "Moon", "Heart", "Love", "Joy", "Sweet"],
+                mysterious: ["Night", "Dark", "Moon", "Shadow", "Void", "Dream", "Soul", "Ghost", "Spirit", "Secret"],
+                elegant: ["Rose", "Bloom", "Grace", "Light", "Star", "Moon", "Dawn", "Ray", "Gem", "Crown"],
+                powerful: ["Strike", "Power", "Force", "Edge", "Core", "Surge", "Blast", "Wave", "Storm", "Blaze"],
+                dreamy: ["Light", "Breeze", "Soft", "Glow", "Shine", "Bright", "Dew", "Drop", "Sparkle", "Glitter"]
+            },
+            middle: {
+                cool: ["Ice", "Fire", "Dark", "Light", "Sky", "Ocean", "Night", "Day", "Wild", "Free"],
+                cute: ["Little", "Tiny", "Sweet", "Soft", "Lovely", "Precious", "Baby", "Tiny", "Small", "Darling"],
+                mysterious: ["Black", "White", "Red", "Blue", "Silver", "Gold", "Dark", "Light", "Deep", "Void"],
+                elegant: ["Royal", "Noble", "Pure", "True", "Bright", "Clear", "High", "Grand", "Prime", "Elite"],
+                powerful: ["Super", "Ultra", "Mega", "Hyper", "Great", "Mighty", "Strong", "Bold", "Brave", "Fearless"],
+                dreamy: ["Magic", "Happy", "Lovely", "Dreamy", "Peaceful", "Calm", "Gentle", "Kind", "Warm", "Bright"]
+            }
+        };
+
+        // Stage Name Meanings
+        const nameMeanings = {
+            cool: {
+                vibe: "Edgy and confident",
+                description: "Your stage name exudes cool, confidence, and an urban edge. Perfect for hip-hop concepts and girl crush vibes.",
+                archetype: "Rapper or Main Dancer energy"
+            },
+            cute: {
+                vibe: "Sweet and charming",
+                description: "Your stage name radiates cuteness and charm. Perfect for fresh, bubbly concepts and subunit leader energy.",
+                archetype: "Visual or Mood Maker energy"
+            },
+            mysterious: {
+                vibe: "Enigmatic and deep",
+                description: "Your stage name holds mystery and depth. Perfect for dark concepts and powerful storytelling.",
+                archetype: "Main Vocal or Rapper energy"
+            },
+            elegant: {
+                vibe: "Sophisticated and refined",
+                description: "Your stage name speaks of elegance and refinement. Perfect for ballad concepts and sophisticated concepts.",
+                archetype: "Main Vocal or Leader energy"
+            },
+            powerful: {
+                vibe: "Strong and commanding",
+                description: "Your stage name commands attention and respect. Perfect for powerful concepts and center position.",
+                archetype: "Center or Leader energy"
+            },
+            dreamy: {
+                vibe: "Ethereal and enchanting",
+                description: "Your stage name feels like a dream. Perfect for ethereal concepts and fairy tale vibes.",
+                archetype: "Visual or Main Vocal energy"
+            }
+        };
+
+        // Numerology Helper Functions
+        function letterToNumber(letter) {
+            const letters = 'abcdefghiklmnopqrstuvwxyz'.toUpperCase();
+            return letters.indexOf(letter.toUpperCase()) + 1;
+        }
+
+        function reduceToSingleDigit(num) {
+            while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
+                num = String(num).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+            }
+            return num;
+        }
+
+        function calculateNameNumber(name) {
+            let total = 0;
+            for (let letter of name.replace(/[^a-zA-Z]/g, '')) {
+                total += letterToNumber(letter);
+            }
+            return reduceToSingleDigit(total);
+        }
+
+        // Form Submission
+        document.getElementById('stage-name-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const birthName = document.getElementById('birth-name').value;
+            const birthDate = document.getElementById('birth-date').value;
+            const nameStyle = document.getElementById('name-style').value;
+            const nameLength = document.getElementById('name-length').value;
+            
+            // Show loading
+            showSection('loading-section');
+            
+            // Generate stage name
+            setTimeout(() => {
+                const stageName = generateStageName(birthName, birthDate, nameStyle, nameLength);
+                displayResult(birthName, stageName, nameStyle);
+            }, 1500);
+        });
+
+        // Generate Stage Name
+        function generateStageName(birthName, birthDate, style, length) {
+            const stylePrefixes = nameComponents.prefixes[style];
+            const styleSuffixes = nameComponents.suffixes[style];
+            const styleMiddles = nameComponents.middle[style];
+            
+            // Calculate numerological influence
+            const nameNumber = calculateNameNumber(birthName);
+            const birthNumber = birthDate ? reduceToSingleDigit(birthDate.split('-').reduce((a, b) => parseInt(a) + parseInt(b), 0)) : 1;
+            
+            // Seed random function for consistency
+            const seed = nameNumber + birthNumber;
+            let generatedNames = [];
+            
+            // Generate multiple options
+            for (let i = 0; i < 5; i++) {
+                let name = '';
+                
+                // Determine length
+                let actualLength = length === 'any' ? ['short', 'medium', 'long'][Math.floor(Math.random() * 3)] : length;
+                
+                if (actualLength === 'short') {
+                    // Single word name
+                    if (Math.random() > 0.5) {
+                        name = stylePrefixes[Math.floor((seed + i * 7) % stylePrefixes.length)];
+                    } else {
+                        name = styleSuffixes[Math.floor((seed + i * 11) % styleSuffixes.length)];
+                    }
+                } else if (actualLength === 'medium') {
+                    // Two word name
+                    const prefix = stylePrefixes[Math.floor((seed + i * 13) % stylePrefixes.length)];
+                    const suffix = styleSuffixes[Math.floor((seed + i * 17) % styleSuffixes.length)];
+                    name = prefix + suffix;
+                } else {
+                    // Three word name
+                    const prefix = stylePrefixes[Math.floor((seed + i * 19) % stylePrefixes.length)];
+                    const middle = styleMiddles[Math.floor((seed + i * 23) % styleMiddles.length)];
+                    const suffix = styleSuffixes[Math.floor((seed + i * 29) % styleSuffixes.length)];
+                    name = prefix + middle + suffix;
+                }
+                
+                generatedNames.push({
+                    name: name,
+                    meaning: nameMeanings[style]
+                });
+            }
+            
+            // Select the best one based on numerology
+            const selectedIndex = Math.floor((seed + nameNumber) % generatedNames.length);
+            return generatedNames[selectedIndex];
+        }
+
+        // Display Result
+        function displayResult(birthName, stageNameData, style) {
+            const container = document.getElementById('stage-name-result');
+            
+            container.innerHTML = `
+                <div class="stage-name-display">
+                    <div class="sparkle-icon">✨</div>
+                    <h3>Your Stage Name:</h3>
+                    <h2 class="stage-name-title">${stageNameData.name}</h2>
+                    <p class="stage-name-pronunciation">Pronounced as: ${stageNameData.name.split('').join('-').toLowerCase()}</p>
+                </div>
+                
+                <div class="stage-name-meaning">
+                    <div class="meaning-section">
+                        <h4>✨ Vibe:</h4>
+                        <p>${stageNameData.meaning.vibe}</p>
+                    </div>
+                    
+                    <div class="meaning-section">
+                        <h4>📖 Meaning:</h4>
+                        <p>${stageNameData.meaning.description}</p>
+                    </div>
+                    
+                    <div class="meaning-section">
+                        <h4>🎭 Archetype Energy:</h4>
+                        <p>${stageNameData.meaning.archetype}</p>
+                    </div>
+                    
+                    <div class="meaning-section kosmic-message">
+                        <h4>🌟 kosmic Alignment:</h4>
+                        <p>The universe has woven your birth energy into this name. It carries the power to amplify your natural talents and help you shine brightest when you step into the spotlight.</p>
+                    </div>
+                </div>
+                
+                <div class="stage-name-tips">
+                    <h4>💡 Stage Name Tips:</h4>
+                    <ul>
+                        <li>Use this name consistently across all platforms</li>
+                        <li>Practice introducing yourself with this name</li>
+                        <li>Create a signature pose or greeting with this name</li>
+                        <li>Let this name inspire your stage persona</li>
+                    </ul>
+                </div>
+            `;
+            
+            showSection('result-section');
+            triggerConfetti();
+        }
+
+        // Show Section
+        function showSection(sectionId) {
+            document.querySelectorAll('.tool-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // Generate Another
+        document.getElementById('generate-another').addEventListener('click', () => {
+            // Keep form data but regenerate
+            const form = document.getElementById('stage-name-form');
+            const birthName = document.getElementById('birth-name').value;
+            const birthDate = document.getElementById('birth-date').value;
+            const nameStyle = document.getElementById('name-style').value;
+            const nameLength = document.getElementById('name-length').value;
+            
+            if (birthName && birthDate && nameStyle && nameLength) {
+                showSection('loading-section');
+                setTimeout(() => {
+                    const stageName = generateStageName(birthName, birthDate, nameStyle, nameLength);
+                    displayResult(birthName, stageName, nameStyle);
+                }, 1500);
+            } else {
+                showSection('input-section');
+            }
+        });
+
+        // Share Result
+        document.getElementById('share-name').addEventListener('click', () => {
+            const stageName = document.querySelector('.stage-name-title').textContent;
+            const shareText = `My K-Pop stage name is ${stageName}! 🎤 Find yours at Kosmic K-Pop!`;
+            const shareUrl = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My K-Pop Stage Name',
+                    text: shareText,
+                    url: shareUrl
+                });
+            } else {
+                navigator.clipboard.writeText(`${shareText} ${shareUrl}`);
+                alert('Stage name copied to clipboard! 🎤');
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hide loading overlay
+            setTimeout(() => {
+                document.getElementById('loading-overlay').style.display = 'none';
+            }, 1000);
+            
+            // Initialize effects
+            initStarField();
+            initCookieBanner();
+        });
+    </script>
+</body>
+</html>

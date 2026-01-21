@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage Nerves Transmuter | Kosmic K-Pop</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="kosmic-background">
+        <div class="stars"></div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">🎭 Stage Nerves Transmuter 🎭</h1>
+            <p class="subtitle">Transform anxiety into powerful stage energy</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="tool-content">
+            
+            <!-- Input Section -->
+            <div id="input-section" class="input-section">
+                <div class="tool-intro">
+                    <h3>⚡ Transform Your Nerves</h3>
+                    <p>Even idols get nervous. The secret? Transmute that energy into powerful performance fuel!</p>
+                </div>
+                
+                <div class="situation-input">
+                    <h4>🎤 What Situation Are You Facing?</h4>
+                    <select id="situation" class="situation-select">
+                        <option value="performance">Stage Performance</option>
+                        <option value="presentation">Presentation / Speech</option>
+                        <option value="interview">Interview / Audition</option>
+                        <option value="date">Date / Social Event</option>
+                        <option value="social">Social Media Post / Content</option>
+                        <option value="meeting">Important Meeting</option>
+                        <option value="competition">Competition / Contest</option>
+                        <option value="conversation">Difficult Conversation</option>
+                    </select>
+                </div>
+                
+                <div class="energy-input">
+                    <h4>💫 Current Energy Level</h4>
+                    <div class="energy-slider-container">
+                        <input type="range" id="nervous-level" min="1" max="10" value="5" class="energy-slider">
+                        <div class="slider-labels">
+                            <span>Calm</span>
+                            <span id="nervous-value">5</span>
+                            <span>Super Nervous</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="concern-input">
+                    <h4>🤔 What's Your Main Concern?</h4>
+                    <select id="concern" class="concern-select">
+                        <option value="forgetting">Forgetting What to Say</option>
+                        <option value="judgment">Being Judged by Others</option>
+                        <option value="messing-up">Messing Up / Making Mistakes</option>
+                        <option value="blanking">Mind Going Blank</option>
+                        <option value="looking-bad">Looking Unprofessional</option>
+                        <option value="not-good-enough">Not Being Good Enough</option>
+                        <option value="comparison">Comparing to Others</option>
+                        <option value="perfection">Needing to Be Perfect</option>
+                    </select>
+                </div>
+                
+                <div class="optional-input">
+                    <h4>✨ Optional: What Would Make This Easier?</h4>
+                    <textarea id="wish" class="wish-input" placeholder="Example: 'If I just knew I was prepared enough...' or 'If I could just feel confident...'"></textarea>
+                </div>
+                
+                <button class="action-button kosmic-button" onclick="transmuteNerves()">
+                    ⚡ Transmute My Nerves ⚡
+                </button>
+            </div>
+            
+            <!-- Results Section -->
+            <div id="results-section" class="results-section" style="display: none;">
+                
+                <!-- Mental Switch -->
+                <div class="mental-switch">
+                    <h3>🔄 Your Idol Mental Switch</h3>
+                    <div class="switch-card" id="switch-card">
+                        <div class="switch-icon" id="switch-icon">⚡</div>
+                        <div class="switch-text" id="switch-text"></div>
+                    </div>
+                </div>
+                
+                <!-- Energy Transmutation -->
+                <div class="energy-transmutation">
+                    <h3>💫 Energy Transmutation</h3>
+                    <div class="transmutation-visual">
+                        <div class="before-energy">
+                            <div class="energy-label">BEFORE</div>
+                            <div class="energy-emoji" id="before-emoji">😰</div>
+                            <div class="energy-name" id="before-energy-name">Nervous Energy</div>
+                        </div>
+                        <div class="transmutation-arrow">➡️</div>
+                        <div class="after-energy">
+                            <div class="energy-label">AFTER</div>
+                            <div class="energy-emoji" id="after-emoji">🔥</div>
+                            <div class="energy-name" id="after-energy-name">Powerful Energy</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Grounding Ritual -->
+                <div class="grounding-ritual">
+                    <h3>🧘 60-Second Grounding Ritual</h3>
+                    <div class="ritual-steps" id="ritual-steps"></div>
+                    <button class="start-ritual-btn" onclick="startRitual()" id="ritual-btn">
+                        ⏱️ Start 60-Second Ritual
+                    </button>
+                    <div class="ritual-timer" id="ritual-timer" style="display: none;">
+                        <div class="timer-display" id="timer-display">60</div>
+                        <div class="timer-instruction" id="timer-instruction"></div>
+                    </div>
+                </div>
+                
+                <!-- Affirmations -->
+                <div class="affirmations">
+                    <h3>✨ Power Affirmations</h3>
+                    <div class="affirmation-list" id="affirmation-list"></div>
+                </div>
+                
+                <!-- Idol Mindset Shift -->
+                <div class="mindset-shift">
+                    <h3>🌟 Idol Mindset Shift</h3>
+                    <div class="shift-cards">
+                        <div class="shift-card before-shift">
+                            <h4>❌ Old Mindset</h4>
+                            <div class="shift-text" id="old-mindset"></div>
+                        </div>
+                        <div class="shift-arrow">→</div>
+                        <div class="shift-card after-shift">
+                            <h4>✨ New Idol Mindset</h4>
+                            <div class="shift-text" id="new-mindset"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Reset Technique -->
+                <div class="quick-reset">
+                    <h3>⚡ Quick Reset Technique</h3>
+                    <div class="reset-steps" id="reset-steps"></div>
+                </div>
+                
+                <!-- Pro Tip -->
+                <div class="pro-tip">
+                    <div class="tip-icon">💡</div>
+                    <div class="tip-content">
+                        <h4>Pro Idol Tip</h4>
+                        <div class="tip-text" id="pro-tip"></div>
+                    </div>
+                </div>
+                
+                <!-- Viral Features -->
+                <div id="viral-features"></div>
+                
+                <!-- Share Buttons -->
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareResult()">
+                        📱 Share This Ritual!
+                    </button>
+                    <button class="share-btn" onclick="downloadCard()">
+                        📸 Download Ritual Card
+                    </button>
+                </div>
+                
+                <!-- Restart Button -->
+                <button class="restart-button" onclick="restartTool()">
+                    🔄 Transmute More Nerves
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="kpop_data.js"></script>
+    <script src="viral_components.js"></script>
+    <script>
+        // Mental switches for different situations
+        const mentalSwitches = {
+            performance: {
+                icon: '🎤',
+                text: 'This energy is POWER. My body is preparing me to deliver an incredible performance. I channel this into stage presence.'
+            },
+            presentation: {
+                icon: '📊',
+                text: 'This energy means I care about my message. I transform it into passion and conviction that inspires others.'
+            },
+            interview: {
+                icon: '🤝',
+                text: 'This energy shows I\'m engaged and ready. I channel it into authentic connection and memorable impression.'
+            },
+            date: {
+                icon: '💖',
+                text: 'This energy means I\'m excited to connect. I transform it into genuine warmth and magnetic presence.'
+            },
+            social: {
+                icon: '📱',
+                text: 'This energy means I have something valuable to share. I channel it into creative expression that resonates.'
+            },
+            meeting: {
+                icon: '💼',
+                text: 'This energy means I\'m prepared and invested. I transform it into confident contribution and leadership.'
+            },
+            competition: {
+                icon: '🏆',
+                text: 'This energy is competitive fire. I channel it into focused determination and peak performance.'
+            },
+            conversation: {
+                icon: '💬',
+                text: 'This energy means I care about the outcome. I transform it into clear, compassionate communication.'
+            }
+        };
+        
+        // Energy transmutation mappings
+        const energyTransmutations = [
+            {
+                nervous: '😰 Nervous Energy',
+                transformed: '🔥 Powerful Energy'
+            },
+            {
+                nervous: '😰 Anxious Energy',
+                transformed: '⚡ Excited Energy'
+            },
+            {
+                nervous: '😰 Fear Energy',
+                transformed: '🎯 Focused Energy'
+            },
+            {
+                nervous: '😰 Doubt Energy',
+                transformed: '💪 Confident Energy'
+            },
+            {
+                nervous: '😰 Tension Energy',
+                transformed: '✨ Presence Energy'
+            }
+        ];
+        
+        // Ritual steps
+        const ritualSteps = [
+            { time: 0, instruction: 'Close your eyes and take 3 deep breaths' },
+            { time: 10, instruction: 'Feel your feet firmly on the ground' },
+            { time: 20, instruction: 'Visualize your nervous energy as golden light' },
+            { time: 30, instruction: 'Imagine this light filling your body' },
+            { time: 40, instruction: 'Say silently: "I am ready to shine"' },
+            { time: 50, instruction: 'Open your eyes and step forward with confidence' }
+        ];
+        
+        // Initialize slider
+        document.getElementById('nervous-level').addEventListener('input', function() {
+            document.getElementById('nervous-value').textContent = this.value;
+        });
+        
+        // Transmute nerves
+        function transmuteNerves() {
+            const situation = document.getElementById('situation').value;
+            const nervousLevel = parseInt(document.getElementById('nervous-level').value);
+            const concern = document.getElementById('concern').value;
+            const wish = document.getElementById('wish').value;
+            
+            // Get mental switch
+            const mentalSwitch = mentalSwitches[situation];
+            
+            // Get energy transmutation
+            const transmutationIndex = Math.min(Math.floor(nervousLevel / 2), energyTransmutations.length - 1);
+            const transmutation = energyTransmutations[transmutationIndex];
+            
+            // Generate affirmations
+            const affirmations = generateAffirmations(situation, concern);
+            
+            // Generate mindset shift
+            const mindsetShift = generateMindsetShift(concern);
+            
+            // Generate quick reset
+            const quickReset = generateQuickReset(situation);
+            
+            // Get pro tip
+            const proTip = generateProTip(situation);
+            
+            // Display results
+            displayResults({
+                mentalSwitch: mentalSwitch,
+                transmutation: transmutation,
+                affirmations: affirmations,
+                mindsetShift: mindsetShift,
+                quickReset: quickReset,
+                proTip: proTip
+            });
+        }
+        
+        // Generate affirmations
+        function generateAffirmations(situation, concern) {
+            const baseAffirmations = [
+                '✨ I am prepared and ready for this moment',
+                '⚡ I transform nervous energy into powerful performance',
+                '🌟 I trust in my preparation and ability',
+                '💫 I embrace this opportunity to shine',
+                '🔥 My energy is my superpower',
+                '🎯 I am focused, present, and powerful',
+                '💪 I have everything I need within me',
+                '✨ I channel my energy into excellence'
+            ];
+            
+            const situationSpecific = {
+                performance: ['🎤 I own this stage', '💃 I perform with joy and confidence'],
+                presentation: ['📊 My message matters', '💡 I inspire through my words'],
+                interview: ['🤝 I connect authentically', '✨ I make a memorable impression'],
+                date: ['💖 I am genuinely myself', '🌟 I attract positive connections'],
+                social: ['📱 My content resonates', '💫 I express authentically'],
+                meeting: ['💼 I contribute value', '🎯 I communicate with clarity'],
+                competition: ['🏆 I perform at my best', '⚡ I embrace the challenge'],
+                conversation: ['💬 I communicate with compassion', '🤝 I find common ground']
+            };
+            
+            const concernSpecific = {
+                forgetting: ['🧠 I trust my mind', '💡 Key points flow naturally'],
+                judgment: ['✨ I am worthy', '💖 I embrace my authentic self'],
+                messingup: ['🎯 I recover with grace', '💪 Mistakes are growth'],
+                blanking: ['🧠 My mind is clear', '💫 Words flow effortlessly'],
+                lookingbad: ['✨ I project confidence', '🌟 I am enough as I am'],
+                notgoodenough: ['💪 I am capable', '🎯 I prepare, then trust'],
+                comparison: ['✨ I celebrate myself', '🌟 I run my own race'],
+                perfection: ['💫 Progress over perfection', '🎯 I show up fully']
+            };
+            
+            // Combine affirmations
+            let allAffirmations = [...baseAffirmations];
+            if (situationSpecific[situation]) {
+                allAffirmations = [...allAffirmations, ...situationSpecific[situation]];
+            }
+            if (concernSpecific[concern]) {
+                allAffirmations = [...allAffirmations, ...concernSpecific[concern]];
+            }
+            
+            // Return random 6
+            return allAffirmations.sort(() => 0.5 - Math.random()).slice(0, 6);
+        }
+        
+        // Generate mindset shift
+        function generateMindsetShift(concern) {
+            const shifts = {
+                forgetting: {
+                    old: 'I might forget what to say',
+                    new: 'I trust that what I need will come to me'
+                },
+                judgment: {
+                    old: 'People are judging me',
+                    new: 'People are rooting for me to succeed'
+                },
+                messingup: {
+                    old: 'I can\'t make any mistakes',
+                    new: 'Mistakes are part of growth and authenticity'
+                },
+                blanking: {
+                    old: 'My mind might go blank',
+                    new: 'I stay present and words flow naturally'
+                },
+                lookingbad: {
+                    old: 'I need to look perfect',
+                    new: 'I embrace authenticity over perfection'
+                },
+                notgoodenough: {
+                    old: 'I\'m not good enough',
+                    new: 'I am prepared and worthy of this moment'
+                },
+                comparison: {
+                    old: 'Everyone is better than me',
+                    new: 'I celebrate my unique journey and gifts'
+                },
+                perfection: {
+                    old: 'I must be perfect',
+                    new: 'I show up fully and authentically'
+                }
+            };
+            
+            return shifts[concern] || shifts.forgetting;
+        }
+        
+        // Generate quick reset
+        function generateQuickReset(situation) {
+            const resets = {
+                performance: [
+                    '🎤 Take 3 deep breaths, smile, and visualize success',
+                    '💃 Move your body to release tension',
+                    '✨ Repeat: "I was born for this"'
+                ],
+                presentation: [
+                    '📊 Stand tall, make eye contact, and speak slowly',
+                    '💡 Focus on your message, not yourself',
+                    '🎯 Remember: You\'re here to help, not impress'
+                ],
+                interview: [
+                    '🤝 Shake hands confidently, smile genuinely',
+                    '✨ Listen actively, respond thoughtfully',
+                    '💖 Be yourself - they want to know you'
+                ],
+                date: [
+                    '💖 Take a deep breath, smile, and be present',
+                    '🌟 Focus on enjoying the moment, not impressing',
+                    '✨ Ask questions, listen, and be authentic'
+                ],
+                social: [
+                    '📱 Post with intention, not for validation',
+                    '💫 Express authentically, release attachment',
+                    '🌟 Your truth resonates with the right people'
+                ],
+                meeting: [
+                    '💼 Prepare key points, then trust yourself',
+                    '🎯 Speak up, your voice matters',
+                    '✨ Contribute with confidence and clarity'
+                ],
+                competition: [
+                    '🏆 Focus on your performance, not the outcome',
+                    '⚡ Channel nerves into focused energy',
+                    '💪 Trust your training and enjoy the moment'
+                ],
+                conversation: [
+                    '💬 Listen to understand, not to respond',
+                    '🤝 Seek connection, not being right',
+                    '✨ Speak with compassion and clarity'
+                ]
+            };
+            
+            return resets[situation] || resets.performance;
+        }
+        
+        // Generate pro tip
+        function generateProTip(situation) {
+            const tips = {
+                performance: 'Idols visualize their performance going perfectly before stepping on stage. Take 30 seconds to visualize your success!',
+                presentation: 'The audience wants you to succeed. They\'re rooting for you, not judging you.',
+                interview: 'Authenticity beats perfection every time. Be genuinely yourself and you\'ll make a memorable impression.',
+                date: 'Nervous energy shows you care about the outcome. Transform it into genuine warmth and interest.',
+                social: 'Post for yourself, not for engagement. Authentic content resonates more than calculated content.',
+                meeting: 'Preparation builds confidence, but presence builds impact. Prepare, then let go and be in the moment.',
+                competition: 'Competition brings out your best. Embrace the challenge and enjoy the process of pushing your limits.',
+                conversation: 'Difficult conversations are opportunities for growth. Approach with curiosity, not defensiveness.'
+            };
+            
+            return tips[situation] || tips.performance;
+        }
+        
+        // Display results
+        function displayResults(results) {
+            // Update mental switch
+            document.getElementById('switch-icon').textContent = results.mentalSwitch.icon;
+            document.getElementById('switch-text').textContent = results.mentalSwitch.text;
+            
+            // Update energy transmutation
+            const transmutation = results.transmutation;
+            document.getElementById('before-emoji').textContent = transmutation.nervous.split(' ')[0];
+            document.getElementById('before-energy-name').textContent = transmutation.nervous.split(' ').slice(1).join(' ');
+            document.getElementById('after-emoji').textContent = transmutation.transformed.split(' ')[0];
+            document.getElementById('after-energy-name').textContent = transmutation.transformed.split(' ').slice(1).join(' ');
+            
+            // Update ritual steps
+            document.getElementById('ritual-steps').innerHTML = ritualSteps.map((step, index) => `
+                <div class="ritual-step">
+                    <div class="step-time">${step.time}s</div>
+                    <div class="step-instruction">${step.instruction}</div>
+                </div>
+            `).join('');
+            
+            // Update affirmations
+            document.getElementById('affirmation-list').innerHTML = results.affirmations.map(affirmation => `
+                <div class="affirmation-item">${affirmation}</div>
+            `).join('');
+            
+            // Update mindset shift
+            document.getElementById('old-mindset').textContent = results.mindsetShift.old;
+            document.getElementById('new-mindset').textContent = results.mindsetShift.new;
+            
+            // Update quick reset
+            document.getElementById('reset-steps').innerHTML = results.quickReset.map(step => `
+                <div class="reset-step">${step}</div>
+            `).join('');
+            
+            // Update pro tip
+            document.getElementById('pro-tip').textContent = results.proTip;
+            
+            // Show results
+            document.getElementById('input-section').style.display = 'none';
+            document.getElementById('results-section').style.display = 'block';
+            
+            // Celebrate
+            celebrateTransmutation();
+        }
+        
+        // Start ritual
+        function startRitual() {
+            document.getElementById('ritual-btn').style.display = 'none';
+            document.getElementById('ritual-timer').style.display = 'block';
+            
+            let timeLeft = 60;
+            let currentStep = 0;
+            
+            const timer = setInterval(() => {
+                timeLeft--;
+                document.getElementById('timer-display').textContent = timeLeft;
+                
+                // Update instruction
+                const step = ritualSteps.find(s => s.time <= 60 - timeLeft && s.time > 60 - timeLeft - 10);
+                if (step) {
+                    document.getElementById('timer-instruction').textContent = step.instruction;
+                }
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    document.getElementById('timer-display').textContent = '✅';
+                    document.getElementById('timer-instruction').textContent = 'You\'re ready! Go shine! ⭐';
+                    document.getElementById('ritual-btn').style.display = 'block';
+                    document.getElementById('ritual-btn').textContent = '🔄 Reset Ritual';
+                }
+            }, 1000);
+        }
+        
+        // Celebrate transmutation
+        function celebrateTransmutation() {
+            // Energy sparkles
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    createEnergySparkle();
+                }, i * 80);
+            }
+        }
+        
+        function createEnergySparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.style.cssText = `
+                position: fixed;
+                top: ${Math.random() * 100}vh;
+                left: ${Math.random() * 100}vw;
+                width: 15px;
+                height: 15px;
+                background: ${['#FFD700', '#FF69B4', '#00FFFF'][Math.floor(Math.random() * 3)]};
+                border-radius: 50%;
+                animation: energyFloat 1.5s ease-out forwards;
+                z-index: 1000;
+                opacity: 0;
+            `;
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 1500);
+        }
+        
+        // Share result
+        function shareResult() {
+            const text = `I just transmuted my stage nerves into powerful energy! 🎭⚡\n\nThis 60-second ritual changed everything!\n\nTransform YOUR nerves: `;
+            const url = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Stage Nerves Transmutation',
+                    text: text,
+                    url: url
+                });
+            } else {
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+            }
+        }
+        
+        // Download card
+        function downloadCard() {
+            alert('📸 Ritual card generation coming soon! For now, take a screenshot to share! ✨');
+        }
+        
+        // Restart tool
+        function restartTool() {
+            document.getElementById('input-section').style.display = 'block';
+            document.getElementById('results-section').style.display = 'none';
+            document.getElementById('ritual-timer').style.display = 'none';
+            document.getElementById('ritual-btn').style.display = 'block';
+            document.getElementById('ritual-btn').textContent = '⏱️ Start 60-Second Ritual';
+            
+            // Reset inputs
+            document.getElementById('nervous-level').value = 5;
+            document.getElementById('nervous-value').textContent = '5';
+            document.getElementById('wish').value = '';
+        }
+    </script>
+    
+    <style>
+        .tool-intro {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .tool-intro h3 {
+            color: #FFD700;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .tool-intro p {
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .situation-input, .energy-input, .concern-input, .optional-input {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .situation-input h4, .energy-input h4, .concern-input h4, .optional-input h4 {
+            color: #FFD700;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .situation-select, .concern-select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 18px;
+            font-family: inherit;
+        }
+        
+        .energy-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #FF69B4, #FFD700);
+            outline: none;
+            cursor: pointer;
+        }
+        
+        .energy-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+        }
+        
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .slider-labels span:nth-child(2) {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+        
+        .wish-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .mental-switch {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 105, 180, 0.2) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 3px solid #FFD700;
+            text-align: center;
+        }
+        
+        .mental-switch h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        
+        .switch-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+        }
+        
+        .switch-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .switch-text {
+            color: white;
+            font-size: 22px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        
+        .energy-transmutation {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .energy-transmutation h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .transmutation-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .before-energy, .after-energy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .energy-label {
+            color: #FFD700;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .energy-emoji {
+            font-size: 60px;
+        }
+        
+        .energy-name {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .transmutation-arrow {
+            font-size: 50px;
+            color: #FFD700;
+            animation: pulse 2s infinite;
+        }
+        
+        .grounding-ritual {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .grounding-ritual h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .ritual-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .ritual-step {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            border-left: 4px solid #FF69B4;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .step-time {
+            color: #FFD700;
+            font-size: 18px;
+            font-weight: bold;
+            min-width: 50px;
+        }
+        
+        .step-instruction {
+            color: white;
+            font-size: 18px;
+        }
+        
+        .start-ritual-btn {
+            width: 100%;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #FF69B4 0%, #9400D3 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .start-ritual-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .ritual-timer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            border: 2px solid #FFD700;
+        }
+        
+        .timer-display {
+            font-size: 80px;
+            color: #FFD700;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .timer-instruction {
+            color: white;
+            font-size: 24px;
+            font-style: italic;
+        }
+        
+        .affirmations {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .affirmations h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .affirmation-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .affirmation-item {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            border-left: 4px solid #FF69B4;
+        }
+        
+        .mindset-shift {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .mindset-shift h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .shift-cards {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .shift-card {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .shift-card.before-shift {
+            background: rgba(255, 107, 107, 0.1);
+            border: 2px solid rgba(255, 107, 107, 0.5);
+        }
+        
+        .shift-card.after-shift {
+            background: rgba(105, 255, 107, 0.1);
+            border: 2px solid rgba(105, 255, 107, 0.5);
+        }
+        
+        .shift-card h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .shift-card.before-shift h4 {
+            color: #FF6B6B;
+        }
+        
+        .shift-card.after-shift h4 {
+            color: #6BFF6B;
+        }
+        
+        .shift-text {
+            color: white;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        .shift-arrow {
+            font-size: 40px;
+            color: #FFD700;
+        }
+        
+        .quick-reset {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .quick-reset h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .reset-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .reset-step {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            border-left: 4px solid #FF69B4;
+        }
+        
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 105, 180, 0.2) 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 3px solid #FFD700;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .tip-icon {
+            font-size: 50px;
+            animation: pulse 2s infinite;
+        }
+        
+        .tip-content h4 {
+            color: #FFD700;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .tip-text {
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        @keyframes energyFloat {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px) scale(0);
+            }
+        }
+    </style>
+</body>
+</html>

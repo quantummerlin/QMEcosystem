@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate your complete K-Pop idol energy chart with comprehensive kosmic readings">
+    <title>Your K-Pop Idol Chart | Complete Energy Reading</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+    <script src="kpop_data.js"></script>
+    <script src="kpop_branding.js"></script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="kpop-theme">
+    <!-- Star Field Background -->
+    <div id="star-field" class="star-field"></div>
+    
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="kosmic-loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Generating Idol Chart...</div>
+        </div>
+    </div>
+
+    <header class="kosmic-header">
+        <div class="header-content">
+            <h1 class="neon-title">Your K-Pop Idol Chart 📊</h1>
+            <p class="header-subtitle">Complete kosmic energy reading for your idol journey</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Input Form -->
+        <div id="input-section" class="tool-section active">
+            <div class="input-container">
+                <div class="sparkle-icon">✨</div>
+                <h2>Your Complete Idol Energy Chart</h2>
+                <p>Unlock your full idol potential with a comprehensive chart covering all aspects of your kosmic energy. Perfect for understanding your complete idol profile!</p>
+                
+                <form id="idol-chart-form" class="kosmic-form">
+                    <div class="form-group">
+                        <label for="preferred-name">
+                            Preferred Name ✨
+                            <span class="helper-text">What you resonate with most</span>
+                        </label>
+                        <input type="text" id="preferred-name" name="preferred-name" required placeholder="Enter your name" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-name">
+                            Birth Name 🌟
+                            <span class="helper-text">Full legal name (for deeper insights)</span>
+                        </label>
+                        <input type="text" id="birth-name" name="birth-name" placeholder="Enter birth name (optional)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-date">
+                            Date of Birth 🎂
+                            <span class="helper-text">Required for kosmic calculations</span>
+                        </label>
+                        <input type="date" id="birth-date" name="birth-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-time">
+                            Time of Birth ⏰
+                            <span class="helper-text">Optional - for more precise readings</span>
+                        </label>
+                        <input type="time" id="birth-time" name="birth-time" placeholder="HH:MM">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-place">
+                            Place of Birth 🌍
+                            <span class="helper-text">Optional - adds geographic resonance</span>
+                        </label>
+                        <input type="text" id="birth-place" name="birth-place" placeholder="City, Country">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ideal-concept">
+                            Ideal Idol Concept 🎭
+                            <span class="helper-text">What concept do you want to embody?</span>
+                        </label>
+                        <select id="ideal-concept" name="ideal-concept" required>
+                            <option value="">Select concept...</option>
+                            <option value="girlcrush">💥 Girl Crush - Bold & Powerful</option>
+                            <option value="innocent">🌸 Innocent - Fresh & Pure</option>
+                            <option value="sexy">🔥 Sexy - Confident & Alluring</option>
+                            <option value="cute">💝 Cute - Sweet & Charming</option>
+                            <option value="elegant">👑 Elegant - Sophisticated & Graceful</option>
+                            <option value="dark">🌙 Dark - Mysterious & Intense</option>
+                            <option value="retro">💿 Retro - Nostalgic & Fun</option>
+                            <option value="hiphop">🧢 Hip Hop - Cool & Authentic</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="desired-role">
+                            Desired Idol Role 🎯
+                            <span class="helper-text">Your dream position in a group</span>
+                        </label>
+                        <select id="desired-role" name="desired-role" required>
+                            <option value="">Select role...</option>
+                            <option value="leader">👑 Leader</option>
+                            <option value="main-vocal">🎤 Main Vocal</option>
+                            <option value="lead-vocal">🎵 Lead Vocal</option>
+                            <option value="main-dancer">💃 Main Dancer</option>
+                            <option value="lead-dancer">🕺 Lead Dancer</option>
+                            <option value="main-rapper">🔥 Main Rapper</option>
+                            <option value="lead-rapper">⚡ Lead Rapper</option>
+                            <option value="visual">✨ Visual</option>
+                            <option value="center">🌟 Center</option>
+                            <option value="mood-maker">😄 Mood Maker</option>
+                            <option value="sub-vocal">🎶 Sub Vocal</option>
+                            <option value="face">💎 Face of the Group</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="training-focus">
+                            Training Focus Areas 💪
+                            <span class="helper-text">What do you want to develop?</span>
+                        </label>
+                        <select id="training-focus" name="training-focus" required>
+                            <option value="">Select focus...</option>
+                            <option value="vocal">🎤 Vocal Technique & Range</option>
+                            <option value="dance">💃 Dance & Choreography</option>
+                            <option value="rap">🔥 Rap Flow & Delivery</option>
+                            <option value="stage">🎭 Stage Presence & Performance</option>
+                            <option value="variety">😄 Variety & Entertainment</option>
+                            <option value="acting">🎬 Acting & Expression</option>
+                            <option value="songwriting">📝 Songwriting & Composition</option>
+                            <option value="languages">🌍 Languages & Communication</option>
+                            <option value="all">🏆 All-Rounder Development</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="kosmic-button primary-button">Generate My Idol Chart 📊</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Loading Section -->
+        <div id="loading-section" class="tool-section">
+            <div class="kosmic-loader">
+                <div class="loader-ring"></div>
+                <div class="loader-text">Generating Idol Chart...</div>
+                <p class="loading-message">Channeling kosmic energies...</p>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result-section" class="tool-section">
+            <div class="result-container">
+                <div class="sparkle-icon">✨</div>
+                <h2>Your Complete Idol Chart</h2>
+                
+                <div id="idol-chart-result" class="idol-chart-result">
+                    <!-- Result will be inserted here -->
+                </div>
+
+                <div class="result-actions">
+                    <button id="generate-another" class="kosmic-button secondary-button">Generate Another Chart</button>
+                    <button id="share-chart" class="kosmic-button primary-button">Share My Chart 📊</button>
+                </div>
+
+                <div class="explore-more">
+                    <p>Want specific insights? Try our <a href="kpop_life_path.html">Life Path Reading</a>, <a href="kpop_archetype_quiz.html">Archetype Quiz</a>, or <a href="kpop_bias_energy.html">Bias Energy</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies to enhance your kosmic experience ✨</p>
+        <button id="accept-cookies" class="kosmic-button small-button">Got it!</button>
+    </div>
+
+    <footer class="kosmic-footer">
+        <p>For entertainment purposes only • Entertainment for K-Pop fans worldwide 🌍</p>
+        <p class="footer-links">
+            <a href="index.html">Home</a> • 
+            <a href="kpop_tools_index.html">All Tools</a> • 
+            <a href="kpop_life_path.html">Life Path</a>
+        </p>
+    </footer>
+
+    <script>
+        // Numerology Functions
+        function letterToNumber(letter) {
+            const letters = 'abcdefghiklmnopqrstuvwxyz'.toUpperCase();
+            return letters.indexOf(letter.toUpperCase()) + 1;
+        }
+
+        function reduceToSingleDigit(num) {
+            while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
+                num = String(num).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+            }
+            return num;
+        }
+
+        function calculateNameNumber(name) {
+            let total = 0;
+            for (let letter of name.replace(/[^a-zA-Z]/g, '')) {
+                total += letterToNumber(letter);
+            }
+            return reduceToSingleDigit(total);
+        }
+
+        function calculateLifePath(birthDate) {
+            const [year, month, day] = birthDate.split('-').map(Number);
+            const total = reduceToSingleDigit(reduceToSingleDigit(year) + reduceToSingleDigit(month) + reduceToSingleDigit(day));
+            return total;
+        }
+
+        function calculatePersonalYear(birthDate, currentDate = new Date()) {
+            const birthMonth = parseInt(birthDate.split('-')[1]);
+            const birthDay = parseInt(birthDate.split('-')[2]);
+            const currentYear = currentDate.getFullYear();
+            const total = reduceToSingleDigit(birthMonth + birthDay + reduceToSingleDigit(currentYear));
+            return total;
+        }
+
+        // Archetype & Planet Mappings
+        const lifePathArchetypes = {
+            1: { archetype: "Golden Leader", planet: "Sun", emoji: "🌟", role: "Natural leader with vision and authority" },
+            2: { archetype: "Harmonious Diplomat", planet: "Moon", emoji: "🤝", role: "Peacemaker who balances emotions" },
+            3: { archetype: "Mood Maker", planet: "Jupiter", emoji: "😄", role: "Joy-bringer and creative spark" },
+            4: { archetype: "Reliable Backbone", planet: "Saturn", emoji: "💪", role: "Steady foundation and hard worker" },
+            5: { archetype: "All-Rounder Ace", planet: "Mercury", emoji: "🏆", role: "Versatile performer with many talents" },
+            6: { archetype: "Main Vocal Powerhouse", planet: "Venus", emoji: "🎤", role: "Emotional center and caregiver" },
+            7: { archetype: "Quiet Genius", planet: "Neptune", emoji: "🧠", role: "Deep thinker and innovator" },
+            8: { archetype: "Master Builder", planet: "Saturn + Pluto", emoji: "🏗️", role: "Visionary who builds success" },
+            9: { archetype: "Master Teacher", planet: "Mars + Neptune", emoji: "📚", role: "Wise guide who inspires others" },
+            11: { archetype: "Master Teacher (Enhanced)", planet: "Neptune + Uranus", emoji: "📚✨", role: "Intuitive visionary with higher purpose" },
+            22: { archetype: "Master Builder (Enhanced)", planet: "Saturn + Uranus", emoji: "🏗️✨", role: "Master manifestor of big visions" },
+            33: { archetype: "Master Teacher (Supreme)", planet: "All Planets", emoji: "📚🌟", role: "Selfless servant with kosmic purpose" }
+        };
+
+        const destinyArchetypes = {
+            1: "Lead position naturally", 2: "Support role suits you", 3: "Creative expression shines",
+            4: "Foundational member", 5: "Versatile performer", 6: "Heart of the group",
+            7: "Deep thinker role", 8: "Business-minded idol", 9: "Philanthropic entertainer",
+            11: "Spiritual guide", 22: "Visionary creator", 33: "Healing presence"
+        };
+
+        const conceptCompatibility = {
+            girlcrush: { compatible: [1, 5, 8, 22], description: "Bold concepts amplify your natural power" },
+            innocent: { compatible: [2, 3, 6, 11], description: "Fresh concepts resonate with your pure energy" },
+            sexy: { compatible: [5, 8, 11, 22], description: "Confident concepts highlight your allure" },
+            cute: { compatible: [3, 6, 11, 33], description: "Charming concepts match your sweetness" },
+            elegant: { compatible: [6, 8, 11, 22], description: "Sophisticated concepts elevate your grace" },
+            dark: { compatible: [7, 8, 11, 22], description: "Mysterious concepts amplify your depth" },
+            retro: { compatible: [3, 5, 11, 22], description: "Nostalgic concepts bring out your charm" },
+            hiphop: { compatible: [1, 5, 8, 22], description: "Authentic concepts highlight your realness" }
+        };
+
+        const trainingAdvice = {
+            vocal: { focus: "Vocal range, breath control, emotional delivery", bestTiming: "Personal year 3 or 6" },
+            dance: { focus: "Technique, expression, stamina", bestTiming: "Personal year 5 or 8" },
+            rap: { focus: "Flow, rhythm, lyrical skill", bestTiming: "Personal year 5 or 7" },
+            stage: { focus: "Charisma, connection, confidence", bestTiming: "Personal year 1 or 8" },
+            variety: { focus: "Quick wit, humor, relatability", bestTiming: "Personal year 3 or 5" },
+            acting: { focus: "Expression, emotion, versatility", bestTiming: "Personal year 3 or 6" },
+            songwriting: { focus: "Melody, lyrics, composition", bestTiming: "Personal year 7 or 11" },
+            languages: { focus: "Pronunciation, fluency, culture", bestTiming: "Personal year 5 or 7" },
+            all: { focus: "Balanced development across all areas", bestTiming: "Personal year 11 or 22" }
+        };
+
+        // Generate Idol Chart
+        function generateIdolChart(formData) {
+            const name = formData.preferredName;
+            const birthName = formData.birthName || name;
+            const birthDate = formData.birthDate;
+            const birthTime = formData.birthTime;
+            const birthPlace = formData.birthPlace;
+            const concept = formData.idealConcept;
+            const role = formData.desiredRole;
+            const trainingFocus = formData.trainingFocus;
+
+            // Calculate numerological values
+            const lifePathNumber = calculateLifePath(birthDate);
+            const destinyNumber = calculateNameNumber(birthName);
+            const personalityNumber = calculateNameNumber(name);
+            const currentPersonalYear = calculatePersonalYear(birthDate);
+
+            // Get archetype data
+            const lifePathData = lifePathArchetypes[lifePathNumber] || lifePathArchetypes[1];
+            const destinyReading = destinyArchetypes[destinyNumber] || "Versatile talent";
+            const conceptData = conceptCompatibility[concept] || { compatible: [], description: "Your energy adapts to any concept" };
+            const trainingData = trainingAdvice[trainingFocus] || trainingAdvice.all;
+
+            // Calculate concept compatibility score
+            const isCompatible = conceptData.compatible.includes(lifePathNumber) || 
+                                conceptData.compatible.includes(destinyNumber) ||
+                                conceptData.compatible.includes(currentPersonalYear);
+            
+            const compatibilityScore = isCompatible ? "Highly Compatible ⭐⭐⭐⭐⭐" : "Moderately Compatible ⭐⭐⭐";
+
+            // Generate overall reading
+            const overallReading = `
+                ${name}, your kosmic energy aligns strongly with the ${lifePathData.archetype} archetype, powered by ${lifePathData.planet} energy. 
+                This makes you naturally suited for the ${lifePathData.role} role. 
+                Your destiny number ${destinyNumber} indicates that you are destined to ${destinyReading.toLowerCase()}.
+                Currently in your personal year ${currentPersonalYear}, the universe is supporting your growth in ${trainingData.focus.toLowerCase()}.
+                ${isCompatible ? "Your chosen concept of ${concept} perfectly amplifies your natural energy!" : "While your concept may require extra effort, your versatility will make it shine."}
+            `;
+
+            return {
+                name,
+                lifePathNumber,
+                lifePathData,
+                destinyNumber,
+                destinyReading,
+                personalityNumber,
+                currentPersonalYear,
+                concept,
+                conceptData,
+                compatibilityScore,
+                role,
+                trainingFocus,
+                trainingData,
+                overallReading,
+                birthDetails: {
+                    date: birthDate,
+                    time: birthTime || "Not provided",
+                    place: birthPlace || "Not provided"
+                }
+            };
+        }
+
+        // Form Submission
+        document.getElementById('idol-chart-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                preferredName: document.getElementById('preferred-name').value,
+                birthName: document.getElementById('birth-name').value,
+                birthDate: document.getElementById('birth-date').value,
+                birthTime: document.getElementById('birth-time').value,
+                birthPlace: document.getElementById('birth-place').value,
+                idealConcept: document.getElementById('ideal-concept').value,
+                desiredRole: document.getElementById('desired-role').value,
+                trainingFocus: document.getElementById('training-focus').value
+            };
+            
+            // Show loading
+            showSection('loading-section');
+            
+            // Generate chart
+            setTimeout(() => {
+                const chart = generateIdolChart(formData);
+                displayResult(chart);
+            }, 2000);
+        });
+
+        // Display Result
+        function displayResult(chart) {
+            const container = document.getElementById('idol-chart-result');
+            
+            container.innerHTML = `
+                <div class="chart-header">
+                    <div class="sparkle-icon">✨</div>
+                    <h3>${chart.name}'s Complete Idol Chart</h3>
+                    <p class="chart-date">Generated: ${new Date().toLocaleDateString()}</p>
+                </div>
+
+                <div class="chart-section">
+                    <h4>🌟 Core Numbers</h4>
+                    <div class="numbers-grid">
+                        <div class="number-card">
+                            <h5>Life Path</h5>
+                            <div class="number-value">${chart.lifePathNumber}</div>
+                            <p>${chart.lifePathData.archetype}</p>
+                            <p class="number-planet">${chart.lifePathData.planet} Energy</p>
+                        </div>
+                        <div class="number-card">
+                            <h5>Destiny</h5>
+                            <div class="number-value">${chart.destinyNumber}</div>
+                            <p>${chart.destinyReading}</p>
+                        </div>
+                        <div class="number-card">
+                            <h5>Personality</h5>
+                            <div class="number-value">${chart.personalityNumber}</div>
+                            <p>How others see you</p>
+                        </div>
+                        <div class="number-card">
+                            <h5>Personal Year</h5>
+                            <div class="number-value">${chart.currentPersonalYear}</div>
+                            <p>Current energy cycle</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h4>🎭 Your Idol Role</h4>
+                    <div class="role-display">
+                        <div class="role-main">
+                            <h5>Archetype:</h5>
+                            <p>${chart.lifePathData.emoji} ${chart.lifePathData.archetype}</p>
+                            <p>${chart.lifePathData.role}</p>
+                        </div>
+                        <div class="role-desired">
+                            <h5>Desired Role:</h5>
+                            <p>${chart.role.replace(/-/g, ' ').toUpperCase()}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h4>💫 Concept Compatibility</h4>
+                    <div class="concept-display">
+                        <p><strong>Ideal Concept:</strong> ${chart.idealConcept.replace(/-/g, ' ').toUpperCase()}</p>
+                        <p><strong>Compatibility Score:</strong> ${chart.compatibilityScore}</p>
+                        <p class="concept-desc">${chart.conceptData.description}</p>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h4>💪 Training Focus</h4>
+                    <div class="training-display">
+                        <p><strong>Focus Area:</strong> ${chart.trainingFocus.replace(/-/g, ' ').toUpperCase()}</p>
+                        <p><strong>What to Develop:</strong> ${chart.trainingData.focus}</p>
+                        <p><strong>Best Timing:</strong> ${chart.trainingData.bestTiming}</p>
+                    </div>
+                </div>
+
+                <div class="chart-section kosmic-message">
+                    <h4>🌟 Overall Reading</h4>
+                    <p>${chart.overallReading}</p>
+                </div>
+
+                <div class="chart-section">
+                    <h4>📋 Birth Details</h4>
+                    <div class="birth-details">
+                        <p><strong>Date:</strong> ${chart.birthDetails.date}</p>
+                        <p><strong>Time:</strong> ${chart.birthDetails.time}</p>
+                        <p><strong>Place:</strong> ${chart.birthDetails.place}</p>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h4>✨ Growth Recommendations</h4>
+                    <ul>
+                        <li>Embrace your ${chart.lifePathData.archetype} archetype - it's your natural superpower</li>
+                        <li>Focus your training on ${chart.trainingData.focus.toLowerCase()}</li>
+                        <li>Use your personal year ${chart.currentPersonalYear} energy to accelerate growth</li>
+                        <li>Your ${chart.idealConcept.replace(/-/g, ' ')} concept ${chart.compatibilityScore.includes("Highly") ? "perfectly matches" : "will challenge and develop"} your energy</li>
+                        <li>Consider the ${chart.role.replace(/-/g, ' ')} role - it aligns with your kosmic blueprint</li>
+                    </ul>
+                </div>
+            `;
+            
+            showSection('result-section');
+            triggerConfetti();
+        }
+
+        // Show Section
+        function showSection(sectionId) {
+            document.querySelectorAll('.tool-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // Generate Another
+        document.getElementById('generate-another').addEventListener('click', () => {
+            document.getElementById('idol-chart-form').reset();
+            showSection('input-section');
+        });
+
+        // Share Result
+        document.getElementById('share-chart').addEventListener('click', () => {
+            const lifePathArchetype = document.querySelector('.number-card:first-child .number-value + p').textContent;
+            const shareText = `My idol archetype is ${lifePathArchetype}! 🌟 Get your complete idol chart at Kosmic K-Pop!`;
+            const shareUrl = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My K-Pop Idol Chart',
+                    text: shareText,
+                    url: shareUrl
+                });
+            } else {
+                navigator.clipboard.writeText(`${shareText} ${shareUrl}`);
+                alert('Idol chart copied to clipboard! 📊');
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hide loading overlay
+            setTimeout(() => {
+                document.getElementById('loading-overlay').style.display = 'none';
+            }, 1000);
+            
+            // Initialize effects
+            initStarField();
+            initCookieBanner();
+        });
+    </script>
+</body>
+</html>

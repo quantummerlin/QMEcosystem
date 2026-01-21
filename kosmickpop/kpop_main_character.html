@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Character Meter | Kosmic K-Pop</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="kosmic-background">
+        <div class="stars"></div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">🌟 Main Character Meter 🌟</h1>
+            <p class="subtitle">How much main character energy do you have today?</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="tool-content">
+            
+            <!-- Input Section -->
+            <div id="input-section" class="input-section">
+                <div class="tool-intro">
+                    <h3>✨ Measure Your Main Character Energy</h3>
+                    <p>Are you the protagonist of your life story, or supporting cast? Find out now!</p>
+                </div>
+                
+                <div class="energy-meters">
+                    <div class="meter-card">
+                        <h4>🎯 Attention Energy</h4>
+                        <p>How much do you naturally draw attention to yourself?</p>
+                        <div class="energy-slider-container">
+                            <input type="range" id="attention" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Blend In</span>
+                                <span id="attention-value">5</span>
+                                <span>Stand Out</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="meter-card">
+                        <h4>🧭 Self-Direction</h4>
+                        <p>How much do you follow your own path vs. others' expectations?</p>
+                        <div class="energy-slider-container">
+                            <input type="range" id="self-direction" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Follow Others</span>
+                                <span id="self-direction-value">5</span>
+                                <span>Forge Own Path</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="meter-card">
+                        <h4>💫 Presence Level</h4>
+                        <p>How present and aware are you in each moment?</p>
+                        <div class="energy-slider-container">
+                            <input type="range" id="presence" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Checked Out</span>
+                                <span id="presence-value">5</span>
+                                <span>Fully Present</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="meter-card">
+                        <h4>🎭 Dramatic Flair</h4>
+                        <p>How much dramatic, expressive energy do you have?</p>
+                        <div class="energy-slider-container">
+                            <input type="range" id="dramatic" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Understated</span>
+                                <span id="dramatic-value">5</span>
+                                <span>Extra Drama</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="meter-card">
+                        <h4>🔥 Confident Agency</h4>
+                        <p>How much control do you feel over your life story?</p>
+                        <div class="energy-slider-container">
+                            <input type="range" id="agency" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Passive</span>
+                                <span id="agency-value">5</span>
+                                <span>Active Control</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="optional-input">
+                    <h4>🎬 Optional: What's Your Current Scene?</h4>
+                    <textarea id="scene" class="scene-input" placeholder="Example: 'Walking into a party' or 'Starting a new job' or 'Having an important conversation'"></textarea>
+                </div>
+                
+                <button class="action-button kosmic-button" onclick="measureMainCharacter()">
+                    🌟 Measure My Main Character Energy 🌟
+                </button>
+            </div>
+            
+            <!-- Results Section -->
+            <div id="results-section" class="results-section" style="display: none;">
+                
+                <!-- Main Character Score -->
+                <div class="main-character-score">
+                    <div class="score-display">
+                        <div class="score-emoji" id="score-emoji">🌟</div>
+                        <div class="score-percentage" id="score-percentage">0%</div>
+                        <div class="score-label">MAIN CHARACTER ENERGY</div>
+                    </div>
+                    <div class="score-message" id="score-message"></div>
+                </div>
+                
+                <!-- Character Archetype -->
+                <div class="character-archetype">
+                    <h3>🎭 Your Character Archetype</h3>
+                    <div class="archetype-card" id="archetype-card">
+                        <div class="archetype-emoji" id="archetype-emoji">⭐</div>
+                        <div class="archetype-name" id="archetype-name"></div>
+                        <div class="archetype-description" id="archetype-description"></div>
+                    </div>
+                </div>
+                
+                <!-- Energy Breakdown -->
+                <div class="energy-breakdown">
+                    <h3>📊 Your Energy Breakdown</h3>
+                    <div class="breakdown-grid" id="breakdown-grid"></div>
+                </div>
+                
+                <!-- One Adjustment -->
+                <div class="one-adjustment">
+                    <h3>💡 One Thing to Adjust Today</h3>
+                    <div class="adjustment-card" id="adjustment-card">
+                        <div class="adjustment-icon">🎯</div>
+                        <div class="adjustment-text" id="adjustment-text"></div>
+                    </div>
+                </div>
+                
+                <!-- Main Character Traits -->
+                <div class="main-traits">
+                    <h3>✨ Your Main Character Traits</h3>
+                    <div class="traits-list" id="traits-list"></div>
+                </div>
+                
+                <!-- Scene-Specific Advice -->
+                <div class="scene-advice" id="scene-advice" style="display: none;">
+                    <h3>🎬 For Your Scene</h3>
+                    <div class="scene-tips" id="scene-tips"></div>
+                </div>
+                
+                <!-- Viral Features -->
+                <div id="viral-features"></div>
+                
+                <!-- Share Buttons -->
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareResult()">
+                        📱 Share My Main Character Energy!
+                    </button>
+                    <button class="share-btn" onclick="downloadCard()">
+                        📸 Download Character Card
+                    </button>
+                </div>
+                
+                <!-- Restart Button -->
+                <button class="restart-button" onclick="restartTool()">
+                    🌟 Re-measure Tomorrow
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="kpop_data.js"></script>
+    <script src="viral_components.js"></script>
+    <script>
+        // Character archetypes
+        const characterArchetypes = [
+            {
+                name: 'Protagonist',
+                emoji: '🌟',
+                description: 'You\'re the main character of your life story. You drive the plot, face challenges head-on, and grow through every experience.',
+                minScore: 80
+            },
+            {
+                name: 'Co-Lead',
+                emoji: '⭐',
+                description: 'You share the spotlight naturally. You\'re a key player in your story, balancing your journey with meaningful connections.',
+                minScore: 65
+            },
+            {
+                name: 'Rising Star',
+                emoji: '🌅',
+                description: 'You\'re building your main character energy. Your story is gaining momentum, and you\'re stepping into your power.',
+                minScore: 50
+            },
+            {
+                name: 'Ensemble Cast',
+                emoji: '👥',
+                description: 'You\'re comfortable in supporting roles but have main character moments. You value community and collective stories.',
+                minScore: 35
+            },
+            {
+                name: 'Background Character',
+                emoji: '🎭',
+                description: 'You prefer observing from the sidelines. You have wisdom from watching, and your main character moments are rare but powerful.',
+                minScore: 0
+            }
+        ];
+        
+        // Main character traits
+        const mainTraits = {
+            attention: {
+                high: ['Natural attention magnet', 'Comfortable being seen', 'Draws eyes effortlessly'],
+                medium: ['Balanced presence', 'Can shine when needed', 'Adaptable visibility'],
+                low: ['Prefers background', 'Observes before engaging', 'Subtle presence']
+            },
+            selfDirection: {
+                high: ['Follows own compass', 'Blazes own trails', 'Independent thinker'],
+                medium: ['Balances input and intuition', 'Collaborates but decides independently', 'Selective guidance'],
+                low: ['Values others\' paths', 'Learns from mentors', 'Follows proven routes']
+            },
+            presence: {
+                high: ['Fully in each moment', 'Deeply aware', 'Mindful presence'],
+                medium: ['Mostly present', 'Can focus when important', 'Growing awareness'],
+                low: ['Often in thoughts', 'Can be distracted', 'Practices presence']
+            },
+            dramatic: {
+                high: ['Expressive and bold', 'Natural storyteller', 'Captivating energy'],
+                medium: ['Thoughtful expression', 'Balanced drama', 'Appropriate intensity'],
+                low: ['Understated style', 'Subtle expression', 'Quiet impact']
+            },
+            agency: {
+                high: ['Active life creator', 'Takes charge', 'Owns choices'],
+                medium: ['Balanced control', 'Collaborative agency', 'Growing ownership'],
+                low: ['Receptive to flow', 'Adaptable to circumstances', 'Goes with the tide']
+            }
+        };
+        
+        // Adjustments
+        const adjustments = {
+            lowAttention: 'Make one bold choice today - wear something standout, speak up in a meeting, or take center stage in a conversation.',
+            highAttention: 'Practice active listening today. Let others shine while you observe and learn.',
+            lowDirection: 'Choose one decision today based purely on what YOU want, not what others expect.',
+            highDirection: 'Seek one piece of advice or collaboration today. Even main characters need allies.',
+            lowPresence: 'Put away distractions for one hour today. Be fully present in whatever you\'re doing.',
+            highPresence: 'Allow yourself to daydream or disconnect for 20 minutes. Even main characters need breaks.',
+            lowDramatic: 'Add one expressive element today - gesture more, use more descriptive words, or tell a story with flair.',
+            highDramatic: 'Practice being understated today. Sometimes the quietest moments are most powerful.',
+            lowAgency: 'Take one small, deliberate action toward a goal today. Every main character starts with a step.',
+            highAgency: 'Release control in one small situation today. Sometimes the story writes itself.'
+        };
+        
+        // Scene-specific advice
+        const sceneAdvice = {
+            party: [
+                '🎉 Enter like you own the space - head up, confident stride',
+                '💫 Choose one person to connect deeply with',
+                '🌟 Share one memorable story or opinion',
+                '✨ Leave while the energy is still high - main characters know when to exit'
+            ],
+            work: [
+                '💼 Speak up in one meeting with confidence',
+                '🎯 Take initiative on one project',
+                '💫 Make one meaningful connection with a colleague',
+                '✨ End your day with a clear win or accomplishment'
+            ],
+            date: [
+                '💖 Be authentically yourself from the start',
+                '🌟 Share one interesting story about yourself',
+                '💫 Ask engaging questions and listen actively',
+                '✨ Trust that you\'re enough as you are'
+            ],
+            performance: [
+                '🎤 Visualize your success before stepping on stage',
+                '💫 Channel nerves into powerful energy',
+                '🌟 Make eye contact and connect with your audience',
+                '✨ Own your performance, mistakes and all'
+            ]
+        };
+        
+        // Initialize sliders
+        document.querySelectorAll('.energy-slider').forEach(slider => {
+            slider.addEventListener('input', function() {
+                const valueSpan = document.getElementById(this.id + '-value');
+                if (valueSpan) {
+                    valueSpan.textContent = this.value;
+                }
+            });
+        });
+        
+        // Measure main character energy
+        function measureMainCharacter() {
+            const attention = parseInt(document.getElementById('attention').value);
+            const selfDirection = parseInt(document.getElementById('self-direction').value);
+            const presence = parseInt(document.getElementById('presence').value);
+            const dramatic = parseInt(document.getElementById('dramatic').value);
+            const agency = parseInt(document.getElementById('agency').value);
+            const scene = document.getElementById('scene').value.toLowerCase();
+            
+            // Calculate overall score
+            const overallScore = Math.round((attention + selfDirection + presence + dramatic + agency) / 5 * 10);
+            
+            // Determine archetype
+            const archetype = determineArchetype(overallScore);
+            
+            // Generate traits
+            const traits = generateTraits(attention, selfDirection, presence, dramatic, agency);
+            
+            // Generate adjustment
+            const adjustment = generateAdjustment(attention, selfDirection, presence, dramatic, agency);
+            
+            // Generate scene advice
+            const sceneTips = generateSceneAdvice(scene);
+            
+            // Display results
+            displayResults({
+                overallScore: overallScore,
+                archetype: archetype,
+                traits: traits,
+                adjustment: adjustment,
+                sceneTips: sceneTips,
+                breakdown: {
+                    attention: attention,
+                    selfDirection: selfDirection,
+                    presence: presence,
+                    dramatic: dramatic,
+                    agency: agency
+                }
+            });
+        }
+        
+        // Determine archetype
+        function determineArchetype(score) {
+            for (const archetype of characterArchetypes) {
+                if (score >= archetype.minScore) {
+                    return archetype;
+                }
+            }
+            return characterArchetypes[characterArchetypes.length - 1];
+        }
+        
+        // Generate traits
+        function generateTraits(attention, selfDirection, presence, dramatic, agency) {
+            const traits = [];
+            
+            // Attention traits
+            if (attention >= 8) {
+                traits.push(...mainTraits.attention.high);
+            } else if (attention >= 5) {
+                traits.push(...mainTraits.attention.medium);
+            } else {
+                traits.push(...mainTraits.attention.low);
+            }
+            
+            // Self-direction traits
+            if (selfDirection >= 8) {
+                traits.push(...mainTraits.selfDirection.high);
+            } else if (selfDirection >= 5) {
+                traits.push(...mainTraits.selfDirection.medium);
+            } else {
+                traits.push(...mainTraits.selfDirection.low);
+            }
+            
+            // Presence traits (only add high/medium to avoid too many traits)
+            if (presence >= 7) {
+                traits.push(mainTraits.presence.high[0]);
+            } else if (presence >= 4) {
+                traits.push(mainTraits.presence.medium[0]);
+            }
+            
+            // Dramatic traits
+            if (dramatic >= 8) {
+                traits.push(mainTraits.dramatic.high[0]);
+            } else if (dramatic >= 5) {
+                traits.push(mainTraits.dramatic.medium[0]);
+            } else {
+                traits.push(mainTraits.dramatic.low[0]);
+            }
+            
+            // Agency traits
+            if (agency >= 8) {
+                traits.push(mainTraits.agency.high[0]);
+            } else if (agency >= 5) {
+                traits.push(mainTraits.agency.medium[0]);
+            } else {
+                traits.push(mainTraits.agency.low[0]);
+            }
+            
+            return traits;
+        }
+        
+        // Generate adjustment
+        function generateAdjustment(attention, selfDirection, presence, dramatic, agency) {
+            const possibleAdjustments = [];
+            
+            if (attention <= 4) possibleAdjustments.push(adjustments.lowAttention);
+            else if (attention >= 8) possibleAdjustments.push(adjustments.highAttention);
+            
+            if (selfDirection <= 4) possibleAdjustments.push(adjustments.lowDirection);
+            else if (selfDirection >= 8) possibleAdjustments.push(adjustments.highDirection);
+            
+            if (presence <= 4) possibleAdjustments.push(adjustments.lowPresence);
+            else if (presence >= 8) possibleAdjustments.push(adjustments.highPresence);
+            
+            if (dramatic <= 4) possibleAdjustments.push(adjustments.lowDramatic);
+            else if (dramatic >= 8) possibleAdjustments.push(adjustments.highDramatic);
+            
+            if (agency <= 4) possibleAdjustments.push(adjustments.lowAgency);
+            else if (agency >= 8) possibleAdjustments.push(adjustments.highAgency);
+            
+            // Return random adjustment or default
+            if (possibleAdjustments.length > 0) {
+                return possibleAdjustments[Math.floor(Math.random() * possibleAdjustments.length)];
+            }
+            
+            return 'You have balanced main character energy today. Choose one area to lean into based on your scene or goals.';
+        }
+        
+        // Generate scene advice
+        function generateSceneAdvice(scene) {
+            if (!scene) return null;
+            
+            const sceneLower = scene.toLowerCase();
+            let sceneType = null;
+            
+            if (sceneLower.includes('party') || sceneLower.includes('gathering') || sceneLower.includes('event')) {
+                sceneType = 'party';
+            } else if (sceneLower.includes('work') || sceneLower.includes('job') || sceneLower.includes('meeting') || sceneLower.includes('office')) {
+                sceneType = 'work';
+            } else if (sceneLower.includes('date') || sceneLower.includes('romantic') || sceneLower.includes('relationship')) {
+                sceneType = 'date';
+            } else if (sceneLower.includes('performance') || sceneLower.includes('stage') || sceneLower.includes('present')) {
+                sceneType = 'performance';
+            }
+            
+            if (sceneType && sceneAdvice[sceneType]) {
+                return sceneAdvice[sceneType];
+            }
+            
+            return null;
+        }
+        
+        // Display results
+        function displayResults(results) {
+            // Animate score
+            animateScore(results.overallScore);
+            
+            // Update score message
+            const scoreMessages = {
+                veryHigh: 'MAXIMUM main character energy! You\'re living your best protagonist life! 🌟',
+                high: 'Strong main character energy! You\'re driving your story forward! ⭐',
+                medium: 'Solid main character energy building! Your story is gaining momentum! 🌅',
+                low: 'Growing main character energy! You have moments of brilliance! ✨',
+                veryLow: 'Quiet main character energy! Your moments matter deeply when they come! 🎭'
+            };
+            
+            let messageKey = 'medium';
+            if (results.overallScore >= 80) messageKey = 'veryHigh';
+            else if (results.overallScore >= 65) messageKey = 'high';
+            else if (results.overallScore >= 35) messageKey = 'low';
+            else messageKey = 'veryLow';
+            
+            document.getElementById('score-message').textContent = scoreMessages[messageKey];
+            
+            // Update score emoji
+            const scoreEmojis = {
+                veryHigh: '🌟🌟🌟',
+                high: '⭐⭐',
+                medium: '🌅',
+                low: '✨',
+                veryLow: '🎭'
+            };
+            document.getElementById('score-emoji').textContent = scoreEmojis[messageKey];
+            
+            // Update archetype
+            document.getElementById('archetype-emoji').textContent = results.archetype.emoji;
+            document.getElementById('archetype-name').textContent = results.archetype.name;
+            document.getElementById('archetype-description').textContent = results.archetype.description;
+            
+            // Update breakdown
+            document.getElementById('breakdown-grid').innerHTML = Object.entries(results.breakdown).map(([key, value]) => `
+                <div class="breakdown-item">
+                    <div class="breakdown-label">${formatLabel(key)}</div>
+                    <div class="breakdown-bar">
+                        <div class="breakdown-fill" style="width: ${value * 10}%"></div>
+                    </div>
+                    <div class="breakdown-value">${value}/10</div>
+                </div>
+            `).join('');
+            
+            // Update adjustment
+            document.getElementById('adjustment-text').textContent = results.adjustment;
+            
+            // Update traits
+            document.getElementById('traits-list').innerHTML = results.traits.map(trait => `
+                <div class="trait-item">${trait}</div>
+            `).join('');
+            
+            // Update scene advice
+            if (results.sceneTips) {
+                document.getElementById('scene-advice').style.display = 'block';
+                document.getElementById('scene-tips').innerHTML = results.sceneTips.map(tip => `
+                    <div class="scene-tip">${tip}</div>
+                `).join('');
+            } else {
+                document.getElementById('scene-advice').style.display = 'none';
+            }
+            
+            // Show results
+            document.getElementById('input-section').style.display = 'none';
+            document.getElementById('results-section').style.display = 'block';
+            
+            // Celebrate
+            celebrateMeasurement();
+        }
+        
+        // Format label
+        function formatLabel(key) {
+            const labels = {
+                attention: '🎯 Attention',
+                selfDirection: '🧭 Self-Direction',
+                presence: '💫 Presence',
+                dramatic: '🎭 Dramatic Flair',
+                agency: '🔥 Agency'
+            };
+            return labels[key] || key;
+        }
+        
+        // Animate score
+        function animateScore(finalScore) {
+            const scoreElement = document.getElementById('score-percentage');
+            let current = 0;
+            
+            const interval = setInterval(() => {
+                current += 1;
+                scoreElement.textContent = current + '%';
+                
+                if (current >= finalScore) {
+                    clearInterval(interval);
+                    
+                    // Add glow effect based on score
+                    if (finalScore >= 80) {
+                        scoreElement.style.color = '#FFD700';
+                    } else if (finalScore >= 50) {
+                        scoreElement.style.color = '#FF69B4';
+                    } else {
+                        scoreElement.style.color = '#9370DB';
+                    }
+                }
+            }, 30);
+        }
+        
+        // Celebrate measurement
+        function celebrateMeasurement() {
+            // Star sparkles
+            for (let i = 0; i < 40; i++) {
+                setTimeout(() => {
+                    createStarSparkle();
+                }, i * 60);
+            }
+        }
+        
+        function createStarSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.style.cssText = `
+                position: fixed;
+                top: ${Math.random() * 100}vh;
+                left: ${Math.random() * 100}vw;
+                width: 20px;
+                height: 20px;
+                background: ${['#FFD700', '#FF69B4', '#00FFFF', '#FFFFFF'][Math.floor(Math.random() * 4)]};
+                border-radius: 50%;
+                animation: starRise 2s ease-out forwards;
+                z-index: 1000;
+                opacity: 0;
+            `;
+            sparkle.textContent = '⭐';
+            sparkle.style.fontSize = '30px';
+            sparkle.style.background = 'transparent';
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 2000);
+        }
+        
+        // Share result
+        function shareResult() {
+            const score = document.getElementById('score-percentage').textContent;
+            const archetype = document.getElementById('archetype-name').textContent;
+            
+            const text = `I'm a ${archetype} with ${score} main character energy! 🌟\n\nFind YOUR main character energy: `;
+            const url = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My Main Character Energy',
+                    text: text,
+                    url: url
+                });
+            } else {
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+            }
+        }
+        
+        // Download card
+        function downloadCard() {
+            alert('📸 Character card generation coming soon! For now, take a screenshot to share! ✨');
+        }
+        
+        // Restart tool
+        function restartTool() {
+            document.getElementById('input-section').style.display = 'block';
+            document.getElementById('results-section').style.display = 'none';
+            
+            // Reset sliders
+            document.querySelectorAll('.energy-slider').forEach(slider => {
+                slider.value = 5;
+                const valueSpan = document.getElementById(slider.id + '-value');
+                if (valueSpan) {
+                    valueSpan.textContent = '5';
+                }
+            });
+            
+            // Reset inputs
+            document.getElementById('scene').value = '';
+        }
+    </script>
+    
+    <style>
+        .tool-intro {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .tool-intro h3 {
+            color: #FFD700;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .tool-intro p {
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .energy-meters {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .meter-card {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .meter-card h4 {
+            color: #FFD700;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .meter-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .optional-input {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .optional-input h4 {
+            color: #FFD700;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .scene-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        .main-character-score {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 105, 180, 0.2) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 3px solid #FFD700;
+            text-align: center;
+        }
+        
+        .score-display {
+            margin-bottom: 25px;
+        }
+        
+        .score-emoji {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .score-percentage {
+            font-size: 100px;
+            color: #FFD700;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+            margin-bottom: 15px;
+        }
+        
+        .score-label {
+            font-size: 24px;
+            color: white;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+        
+        .score-message {
+            font-size: 22px;
+            color: white;
+            font-style: italic;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .character-archetype {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+            text-align: center;
+        }
+        
+        .character-archetype h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        
+        .archetype-card {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+        }
+        
+        .archetype-emoji {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .archetype-name {
+            font-size: 36px;
+            color: #FFD700;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+        }
+        
+        .archetype-description {
+            font-size: 20px;
+            color: white;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .energy-breakdown {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .energy-breakdown h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .breakdown-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .breakdown-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .breakdown-label {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .breakdown-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 25px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+        }
+        
+        .breakdown-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF69B4, #FFD700);
+            border-radius: 8px;
+            transition: width 1s ease-out;
+            animation: fillBar 1s ease-out;
+        }
+        
+        .breakdown-value {
+            color: #FFD700;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .one-adjustment {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 105, 180, 0.2) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 3px solid #FFD700;
+        }
+        
+        .one-adjustment h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .adjustment-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+        }
+        
+        .adjustment-icon {
+            font-size: 50px;
+            animation: pulse 2s infinite;
+        }
+        
+        .adjustment-text {
+            color: white;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        
+        .main-traits {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .main-traits h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .traits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .trait-item {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            border-left: 4px solid #FF69B4;
+        }
+        
+        .scene-advice {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .scene-advice h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .scene-tips {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .scene-tip {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            border-left: 4px solid #FF69B4;
+        }
+        
+        @keyframes starRise {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px) scale(0);
+            }
+        }
+    </style>
+</body>
+</html>

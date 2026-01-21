@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Idol Energy | Kosmic K-Pop</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+    <link rel="stylesheet" href="viral_styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="kosmic-background">
+        <div class="stars"></div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">⚡ Compare Your Idol Energy ⚡</h1>
+            <p class="subtitle">See how your kosmic energy aligns with friends! ✨</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="tool-content">
+            
+            <!-- Input Section -->
+            <div id="input-section" class="input-section">
+                <div class="input-group">
+                    <h3>🌟 Your Information</h3>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>Your Name</label>
+                            <input type="text" id="name1" placeholder="Enter your name">
+                        </div>
+                        <div class="form-field">
+                            <label>Your Date of Birth</label>
+                            <input type="date" id="dob1">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>Your Archetype (Optional)</label>
+                            <select id="archetype1">
+                                <option value="">Take the quiz to find out!</option>
+                                <option value="golden_leader">Golden Leader 🌟</option>
+                                <option value="harmonious_diplomat">Harmonious Diplomat 🤝</option>
+                                <option value="mood_maker">Mood Maker 😄</option>
+                                <option value="reliable_backbone">Reliable Backbone 💪</option>
+                                <option value="main_dancer">Main Dancer Virtuoso 💃</option>
+                                <option value="visual_icon">Visual Icon ✨</option>
+                                <option value="quiet_genius">Quiet Genius 🧠</option>
+                                <option value="rapper_firecracker">Rapper Firecracker 🔥</option>
+                                <option value="main_vocal">Main Vocal Powerhouse 🎤</option>
+                                <option value="all_rounder">All-Rounder Ace 🏆</option>
+                                <option value="master_builder">Master Builder 🏗️</option>
+                                <option value="master_teacher">Master Teacher 📚</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vs-divider">
+                    <div class="vs-circle">VS</div>
+                </div>
+                
+                <div class="input-group">
+                    <h3>🌟 Friend's Information</h3>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>Friend's Name</label>
+                            <input type="text" id="name2" placeholder="Enter friend's name">
+                        </div>
+                        <div class="form-field">
+                            <label>Friend's Date of Birth</label>
+                            <input type="date" id="dob2">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>Friend's Archetype (Optional)</label>
+                            <select id="archetype2">
+                                <option value="">Take the quiz to find out!</option>
+                                <option value="golden_leader">Golden Leader 🌟</option>
+                                <option value="harmonious_diplomat">Harmonious Diplomat 🤝</option>
+                                <option value="mood_maker">Mood Maker 😄</option>
+                                <option value="reliable_backbone">Reliable Backbone 💪</option>
+                                <option value="main_dancer">Main Dancer Virtuoso 💃</option>
+                                <option value="visual_icon">Visual Icon ✨</option>
+                                <option value="quiet_genius">Quiet Genius 🧠</option>
+                                <option value="rapper_firecracker">Rapper Firecracker 🔥</option>
+                                <option value="main_vocal">Main Vocal Powerhouse 🎤</option>
+                                <option value="all_rounder">All-Rounder Ace 🏆</option>
+                                <option value="master_builder">Master Builder 🏗️</option>
+                                <option value="master_teacher">Master Teacher 📚</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="action-button kosmic-button" onclick="compareEnergy()">
+                    ⚡ Compare Energy ⚡
+                </button>
+            </div>
+            
+            <!-- Results Section -->
+            <div id="results-section" class="results-section" style="display: none;">
+                
+                <!-- Compatibility Score -->
+                <div class="compatibility-score">
+                    <div class="score-circle">
+                        <div class="score-number" id="compatibility-number">0</div>
+                        <div class="score-label">COMPATIBILITY</div>
+                    </div>
+                    <div class="score-stars" id="compatibility-stars"></div>
+                </div>
+                
+                <!-- Side-by-Side Comparison -->
+                <div class="comparison-grid">
+                    
+                    <!-- Person 1 -->
+                    <div class="person-card person1">
+                        <div class="person-header">
+                            <div class="person-emoji" id="emoji1">🌟</div>
+                            <div class="person-name" id="name-display1">You</div>
+                        </div>
+                        <div class="person-archetype" id="archetype-display1">Archetype</div>
+                        <div class="person-traits" id="traits1"></div>
+                        <div class="person-role" id="role1">Group Role</div>
+                    </div>
+                    
+                    <!-- VS Badge -->
+                    <div class="vs-badge">
+                        <div class="vs-text">VS</div>
+                    </div>
+                    
+                    <!-- Person 2 -->
+                    <div class="person-card person2">
+                        <div class="person-header">
+                            <div class="person-emoji" id="emoji2">✨</div>
+                            <div class="person-name" id="name-display2">Friend</div>
+                        </div>
+                        <div class="person-archetype" id="archetype-display2">Archetype</div>
+                        <div class="person-traits" id="traits2"></div>
+                        <div class="person-role" id="role2">Group Role</div>
+                    </div>
+                </div>
+                
+                <!-- Similarities -->
+                <div class="comparison-section">
+                    <h3>🎯 What You Both Share</h3>
+                    <div class="similarities-list" id="similarities"></div>
+                </div>
+                
+                <!-- Differences -->
+                <div class="comparison-section">
+                    <h3>🔄 What Makes You Different</h3>
+                    <div class="differences-list" id="differences"></div>
+                </div>
+                
+                <!-- Perfect Duo Analysis -->
+                <div class="perfect-duo">
+                    <h3>💫 Your Perfect Duo Potential</h3>
+                    <div class="duo-scenarios" id="duo-scenarios"></div>
+                </div>
+                
+                <!-- Viral Features -->
+                <div id="viral-features"></div>
+                
+                <!-- Share Buttons -->
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareResult()">
+                        📱 Share This Comparison!
+                    </button>
+                    <button class="share-btn" onclick="generateCard()">
+                        📸 Download Comparison Card
+                    </button>
+                </div>
+                
+                <!-- Restart Button -->
+                <button class="restart-button" onclick="restartTool()">
+                    🔄 Compare Another Pair
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="kpop_data.js"></script>
+    <script src="viral_components.js"></script>
+    <script>
+        // Archetype data (reference to kpop_data.js)
+        const archetypes = {
+            golden_leader: {
+                emoji: "🌟",
+                name: "Golden Leader",
+                traits: ["Natural authority", "Visionary thinking", "Charismatic presence"],
+                role: "Leader / Center"
+            },
+            harmonious_diplomat: {
+                emoji: "🤝",
+                name: "Harmonious Diplomat",
+                traits: ["Emotional intelligence", "Peacemaker", "Group harmony"],
+                role: "Sub-Vocal / Team Mediator"
+            },
+            mood_maker: {
+                emoji: "😄",
+                name: "Mood Maker",
+                traits: ["Joyful energy", "Entertainment skills", "Positive vibes"],
+                role: "Variety Star / Mood Maker"
+            },
+            reliable_backbone: {
+                emoji: "💪",
+                name: "Reliable Backbone",
+                traits: ["Stability", "Hard work", "Foundation building"],
+                role: "Main Dancer / Reliable Member"
+            },
+            main_dancer: {
+                emoji: "💃",
+                name: "Main Dancer Virtuoso",
+                traits: ["Movement mastery", "Performance intensity", "Stage presence"],
+                role: "Main Dancer / Center"
+            },
+            visual_icon: {
+                emoji: "✨",
+                name: "Visual Icon",
+                traits: ["Visual appeal", "Charm", "Camera presence"],
+                role: "Visual / Center"
+            },
+            quiet_genius: {
+                emoji: "🧠",
+                name: "Quiet Genius",
+                traits: ["Intellectual depth", "Innovation", "Strategic thinking"],
+                role: "Producer / Songwriter"
+            },
+            rapper_firecracker: {
+                emoji: "🔥",
+                name: "Rapper Firecracker",
+                traits: ["Intensity", "Word mastery", "Transformation"],
+                role: "Main Rapper"
+            },
+            main_vocal: {
+                emoji: "🎤",
+                name: "Main Vocal Powerhouse",
+                traits: ["Vocal power", "Emotional expression", "Range"],
+                role: "Main Vocalist"
+            },
+            all_rounder: {
+                emoji: "🏆",
+                name: "All-Rounder Ace",
+                traits: ["Complete mastery", "Versatility", "Excellence in all"],
+                role: "Ace / All-Rounder"
+            },
+            master_builder: {
+                emoji: "🏗️",
+                name: "Master Builder",
+                traits: ["Construction skills", "Success mindset", "Strategic planning"],
+                role: "Leader / Producer"
+            },
+            master_teacher: {
+                emoji: "📚",
+                name: "Master Teacher",
+                traits: ["Wisdom", "Inspiration", "Guidance"],
+                role: "Leader / Mentor"
+            }
+        };
+        
+        // Calculate life path from DOB
+        function calculateLifePath(dob) {
+            if (!dob) return null;
+            
+            const date = new Date(dob);
+            const day = date.getDate();
+            const month = date.getMonth() + 1;
+            const year = date.getFullYear();
+            
+            // Reduce to single digits
+            let sum = 0;
+            const digits = (day + month + year).toString().split('');
+            
+            while (digits.length > 1) {
+                sum = digits.reduce((a, b) => parseInt(a) + parseInt(b), 0);
+                const sumStr = sum.toString();
+                if (sumStr.length > 1) {
+                    digits.length = 0;
+                    digits.push(...sumStr.split(''));
+                } else {
+                    break;
+                }
+            }
+            
+            return sum;
+        }
+        
+        // Determine archetype from life path
+        function getArchetypeFromLifePath(lifePath) {
+            const archetypeKeys = Object.keys(archetypes);
+            const index = (lifePath - 1) % archetypeKeys.length;
+            return archetypeKeys[index];
+        }
+        
+        // Compare energies
+        function compareEnergy() {
+            const name1 = document.getElementById('name1').value || 'Person 1';
+            const dob1 = document.getElementById('dob1').value;
+            const archetype1 = document.getElementById('archetype1').value;
+            
+            const name2 = document.getElementById('name2').value || 'Person 2';
+            const dob2 = document.getElementById('dob2').value;
+            const archetype2 = document.getElementById('archetype2').value;
+            
+            // Calculate archetypes if not provided
+            const arch1 = archetype1 || getArchetypeFromLifePath(calculateLifePath(dob1));
+            const arch2 = archetype2 || getArchetypeFromLifePath(calculateLifePath(dob2));
+            
+            const person1 = archetypes[arch1];
+            const person2 = archetypes[arch2];
+            
+            // Update display
+            document.getElementById('name-display1').textContent = name1;
+            document.getElementById('name-display2').textContent = name2;
+            document.getElementById('emoji1').textContent = person1.emoji;
+            document.getElementById('emoji2').textContent = person2.emoji;
+            document.getElementById('archetype-display1').textContent = person1.name;
+            document.getElementById('archetype-display2').textContent = person2.name;
+            document.getElementById('role1').textContent = person1.role;
+            document.getElementById('role2').textContent = person2.role;
+            
+            // Update traits
+            document.getElementById('traits1').innerHTML = person1.traits.map(t => `<span class="trait">${t}</span>`).join('');
+            document.getElementById('traits2').innerHTML = person2.traits.map(t => `<span class="trait">${t}</span>`).join('');
+            
+            // Calculate compatibility
+            const compatibility = calculateCompatibility(arch1, arch2);
+            animateScore(compatibility);
+            
+            // Find similarities and differences
+            const similarities = findSimilarities(person1, person2);
+            const differences = findDifferences(person1, person2);
+            
+            document.getElementById('similarities').innerHTML = similarities.map(s => 
+                `<div class="similarity-item">${s}</div>`
+            ).join('');
+            
+            document.getElementById('differences').innerHTML = differences.map(d => 
+                `<div class="difference-item">${d}</div>`
+            ).join('');
+            
+            // Generate duo scenarios
+            const scenarios = generateDuoScenarios(person1, person2, compatibility);
+            document.getElementById('duo-scenarios').innerHTML = scenarios.map(s => 
+                `<div class="scenario-card">${s}</div>`
+            ).join('');
+            
+            // Show results
+            document.getElementById('input-section').style.display = 'none';
+            document.getElementById('results-section').style.display = 'block';
+            
+            // Add confetti
+            celebrateComparison();
+        }
+        
+        // Calculate compatibility score
+        function calculateCompatibility(arch1, arch2) {
+            if (arch1 === arch2) return 95; // Same archetype = high compatibility
+            
+            // Complementary pairs
+            const complementaryPairs = [
+                ['golden_leader', 'reliable_backbone'],
+                ['mood_maker', 'quiet_genius'],
+                ['main_dancer', 'rapper_firecracker'],
+                ['visual_icon', 'main_vocal'],
+                ['harmonious_diplomat', 'all_rounder']
+            ];
+            
+            for (const [a, b] of complementaryPairs) {
+                if ((arch1 === a && arch2 === b) || (arch1 === b && arch2 === a)) {
+                    return 90;
+                }
+            }
+            
+            // Random compatibility for others (70-85)
+            return Math.floor(Math.random() * 15) + 70;
+        }
+        
+        // Animate score
+        function animateScore(finalScore) {
+            const scoreElement = document.getElementById('compatibility-number');
+            const starsElement = document.getElementById('compatibility-stars');
+            let current = 0;
+            
+            const interval = setInterval(() => {
+                current += 1;
+                scoreElement.textContent = current + '%';
+                
+                if (current >= finalScore) {
+                    clearInterval(interval);
+                    
+                    // Generate stars
+                    const starCount = Math.floor(finalScore / 20);
+                    starsElement.innerHTML = '⭐'.repeat(starCount);
+                }
+            }, 30);
+        }
+        
+        // Find similarities
+        function findSimilarities(p1, p2) {
+            const similarities = [];
+            
+            if (p1.role.includes('Leader') && p2.role.includes('Leader')) {
+                similarities.push('Both have natural leadership energy');
+            }
+            
+            if (p1.traits.some(t => t.includes('stage')) && p2.traits.some(t => t.includes('stage'))) {
+                similarities.push('Both excel in stage presence');
+            }
+            
+            if (p1.traits.some(t => t.includes('visionary')) && p2.traits.some(t => t.includes('strategic'))) {
+                similarities.push('Both have strong future vision');
+            }
+            
+            if (similarities.length === 0) {
+                similarities.push('Both bring unique energy to any group');
+                similarities.push('Each complements the other perfectly');
+            }
+            
+            return similarities;
+        }
+        
+        // Find differences
+        function findDifferences(p1, p2) {
+            const differences = [];
+            
+            if (p1.role.includes('Vocal') && !p2.role.includes('Vocal')) {
+                differences.push(`${p1.name}: Leading the vocals`);
+                differences.push(`${p2.name}: ${p2.role}`);
+            } else if (p2.role.includes('Vocal') && !p1.role.includes('Vocal')) {
+                differences.push(`${p1.name}: ${p1.role}`);
+                differences.push(`${p2.name}: Leading the vocals`);
+            }
+            
+            if (p1.traits.some(t => t.includes('lead')) && !p2.traits.some(t => t.includes('lead'))) {
+                differences.push(`${p1.name}: Takes the lead`);
+                differences.push(`${p2.name}: Supports from the background`);
+            } else if (p2.traits.some(t => t.includes('lead')) && !p1.traits.some(t => t.includes('lead'))) {
+                differences.push(`${p1.name}: Supports from the background`);
+                differences.push(`${p2.name}: Takes the lead`);
+            }
+            
+            if (differences.length === 0) {
+                differences.push('Each brings unique perspectives');
+                differences.push('Different strengths create balance');
+            }
+            
+            return differences;
+        }
+        
+        // Generate duo scenarios
+        function generateDuoScenarios(p1, p2, compatibility) {
+            const scenarios = [];
+            
+            if (compatibility >= 90) {
+                scenarios.push(`🎤 Perfect for: Vocal duets and harmonies`);
+                scenarios.push(`📺 Perfect for: Variety show chemistry`);
+            }
+            
+            if (p1.traits.some(t => t.includes('dance')) || p2.traits.some(t => t.includes('dance'))) {
+                scenarios.push(`💃 Perfect for: Dance challenges`);
+            }
+            
+            if (p1.role.includes('Leader') || p2.role.includes('Leader')) {
+                scenarios.push(`👑 Perfect for: Co-leadership in sub-units`);
+            }
+            
+            if (p1.traits.some(t => t.includes('entertainment')) || p2.traits.some(t => t.includes('entertainment'))) {
+                scenarios.push(`😄 Perfect for: Fan meets and entertainment`);
+            }
+            
+            scenarios.push(`✨ Overall: ${compatibility >= 85 ? 'Perfect duo energy!' : 'Great complementary energy!'}`);
+            
+            return scenarios;
+        }
+        
+        // Celebrate with confetti
+        function celebrateComparison() {
+            // Simple confetti effect
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    createConfetti();
+                }, i * 50);
+            }
+        }
+        
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.style.cssText = `
+                position: fixed;
+                top: -10px;
+                left: ${Math.random() * 100}vw;
+                width: 10px;
+                height: 10px;
+                background: ${['#FF69B4', '#9400D3', '#FFD700', '#00FFFF'][Math.floor(Math.random() * 4)]};
+                border-radius: 50%;
+                animation: fall 3s linear forwards;
+                z-index: 1000;
+            `;
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => confetti.remove(), 3000);
+        }
+        
+        // Share result
+        function shareResult() {
+            const text = `I just compared my idol energy with a friend and we got ${document.getElementById('compatibility-number').textContent} compatibility! ⚡✨\n\nFind out YOUR compatibility: `;
+            const url = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Idol Energy Comparison',
+                    text: text,
+                    url: url
+                });
+            } else {
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+            }
+        }
+        
+        // Generate card
+        function generateCard() {
+            alert('📸 Comparison card generation coming soon! For now, take a screenshot to share! ✨');
+        }
+        
+        // Restart tool
+        function restartTool() {
+            document.getElementById('input-section').style.display = 'block';
+            document.getElementById('results-section').style.display = 'none';
+            document.getElementById('name1').value = '';
+            document.getElementById('name2').value = '';
+            document.getElementById('dob1').value = '';
+            document.getElementById('dob2').value = '';
+            document.getElementById('archetype1').value = '';
+            document.getElementById('archetype2').value = '';
+        }
+    </script>
+    
+    <style>
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</body>
+</html>

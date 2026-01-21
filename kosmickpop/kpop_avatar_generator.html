@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kosmic K-Pop Avatar Generator (11:11)</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+    <style>
+        .avatar-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .avatar-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #FF69B4, #9400D3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .avatar-subtitle {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        
+        .avatar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+        
+        .avatar-option {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.1), rgba(148, 0, 211, 0.1));
+            border: 2px solid rgba(255, 105, 180, 0.3);
+            border-radius: 20px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .avatar-option:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 105, 180, 0.6);
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+        }
+        
+        .avatar-option.selected {
+            border-color: #FFD700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        
+        .avatar-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #1A0A2E, #2A0A4E);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FF69B4;
+            font-size: 1.2rem;
+        }
+        
+        .avatar-label {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .avatar-style {
+            color: #E0E0E0;
+            font-size: 0.9rem;
+        }
+        
+        .cosmic-profile {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 105, 180, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+        
+        .cosmic-profile h3 {
+            color: #FF69B4;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .cosmic-profile .profile-item {
+            color: #E0E0E0;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .cosmic-profile .profile-item strong {
+            color: #FFD700;
+        }
+        
+        .generate-btn {
+            background: linear-gradient(90deg, #FF69B4, #9400D3);
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 20px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .generate-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
+        }
+        
+        .share-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 105, 180, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .share-btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .share-btn.twitter {
+            background: #1DA1F2;
+            color: #fff;
+        }
+        
+        .share-btn.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: #fff;
+        }
+        
+        .share-btn.facebook {
+            background: #1877F2;
+            color: #fff;
+        }
+        
+        .share-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .premium-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .premium-card {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.1), rgba(148, 0, 211, 0.1));
+            border: 2px solid rgba(255, 105, 180, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .premium-card:hover {
+            border-color: #FFD700;
+            transform: translateY(-5px);
+        }
+        
+        .premium-card h4 {
+            color: #FFD700;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .premium-card .price {
+            color: #FF69B4;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .premium-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        
+        .premium-card ul li {
+            color: #E0E0E0;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .premium-card .buy-btn {
+            background: linear-gradient(90deg, #FF69B4, #9400D3);
+            color: #fff;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .premium-card .buy-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .info-box {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        
+        .info-box h4 {
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .info-box p {
+            color: #E0E0E0;
+            line-height: 1.8;
+        }
+        
+        .loading-spinner {
+            border: 4px solid rgba(255, 105, 180, 0.3);
+            border-top: 4px solid #FF69B4;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="brand-logo">🌟 Kosmic K-Pop (11:11)</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="kpop_tools_index.html">All Tools</a>
+                <a href="kpop_archetype_quiz.html">Archetype Quiz</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="avatar-section">
+            <h1 class="avatar-title">✨ Your Kosmic K-Pop Avatar ✨</h1>
+            <p class="avatar-subtitle">K + K = 11:11 | Matched to Your Cosmic Energy</p>
+            
+            <!-- Coming Soon Banner -->
+            <div class="coming-soon-section" style="
+                background: linear-gradient(135deg, rgba(255, 105, 180, 0.2), rgba(148, 0, 211, 0.2));
+                border: 3px solid rgba(255, 215, 0, 0.5);
+                border-radius: 25px;
+                padding: 60px 40px;
+                max-width: 800px;
+                margin: 40px auto;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            ">
+                <div style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+                    animation: pulse 3s ease-in-out infinite;
+                "></div>
+                
+                <div style="position: relative; z-index: 1;">
+                    <div style="font-size: 5rem; margin-bottom: 20px;">🎨✨</div>
+                    <h2 style="
+                        font-size: 2.5rem;
+                        background: linear-gradient(90deg, #FFD700, #FFA500);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        margin-bottom: 20px;
+                        text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+                    ">Coming Soon!</h2>
+                    
+                    <p style="
+                        color: rgba(255, 255, 255, 0.9);
+                        font-size: 1.3rem;
+                        line-height: 1.8;
+                        max-width: 600px;
+                        margin: 0 auto 30px;
+                    ">
+                        We're crafting unique AI-generated avatars matched to your cosmic profile! 
+                        Each avatar will be designed based on your archetype, life path, and energy signature.
+                    </p>
+                    
+                    <div style="
+                        display: flex;
+                        justify-content: center;
+                        gap: 30px;
+                        flex-wrap: wrap;
+                        margin-bottom: 30px;
+                    ">
+                        <div style="
+                            background: rgba(255, 255, 255, 0.05);
+                            border: 1px solid rgba(255, 105, 180, 0.3);
+                            border-radius: 15px;
+                            padding: 20px 30px;
+                            text-align: center;
+                        ">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">🎭</div>
+                            <div style="color: #00FFFF; font-weight: bold;">12 Archetypes</div>
+                            <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Unique styles</div>
+                        </div>
+                        <div style="
+                            background: rgba(255, 255, 255, 0.05);
+                            border: 1px solid rgba(255, 105, 180, 0.3);
+                            border-radius: 15px;
+                            padding: 20px 30px;
+                            text-align: center;
+                        ">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">🎨</div>
+                            <div style="color: #00FFFF; font-weight: bold;">Multiple Concepts</div>
+                            <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Soft & Dark vibes</div>
+                        </div>
+                        <div style="
+                            background: rgba(255, 255, 255, 0.05);
+                            border: 1px solid rgba(255, 105, 180, 0.3);
+                            border-radius: 15px;
+                            padding: 20px 30px;
+                            text-align: center;
+                        ">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">✨</div>
+                            <div style="color: #00FFFF; font-weight: bold;">HD Downloads</div>
+                            <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Print-ready</div>
+                        </div>
+                    </div>
+                    
+                    <p style="
+                        color: #FFD700;
+                        font-size: 1.1rem;
+                        margin-bottom: 25px;
+                    ">
+                        🌟 While you wait, discover your idol archetype first! 🌟
+                    </p>
+                    
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <a href="kpop_archetype_quiz.html" style="
+                            display: inline-block;
+                            background: linear-gradient(90deg, #FF69B4, #9400D3);
+                            color: white;
+                            padding: 15px 35px;
+                            border-radius: 50px;
+                            text-decoration: none;
+                            font-weight: bold;
+                            font-size: 1.1rem;
+                            transition: all 0.3s ease;
+                        ">Take Archetype Quiz 🧩</a>
+                        
+                        <a href="kpop_life_path.html" style="
+                            display: inline-block;
+                            background: transparent;
+                            border: 2px solid #00FFFF;
+                            color: #00FFFF;
+                            padding: 15px 35px;
+                            border-radius: 50px;
+                            text-decoration: none;
+                            font-weight: bold;
+                            font-size: 1.1rem;
+                            transition: all 0.3s ease;
+                        ">Life Path Reading 🔮</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hidden sections for when avatars are ready -->
+            <div id="avatarGrid" class="avatar-grid hidden">
+                <!-- Avatar options will be inserted here -->
+            </div>
+            
+            <!-- Share Section (shown after selection) -->
+            <div id="shareSection" class="share-section hidden">
+                <h3 style="color: #FF69B4; margin-bottom: 20px;">🎉 Share Your Cosmic Avatar!</h3>
+                <p style="color: #E0E0E0; line-height: 1.8;">
+                    Your avatar has been matched to your cosmic energy! 
+                    K + K = 11:11 - the universe designed this for you.
+                </p>
+                
+                <div class="share-buttons">
+                    <button class="share-btn twitter" onclick="shareOnTwitter()">
+                        🐦 Twitter
+                    </button>
+                    <button class="share-btn instagram" onclick="shareOnInstagram()">
+                        📷 Instagram
+                    </button>
+                    <button class="share-btn facebook" onclick="shareOnFacebook()">
+                        📘 Facebook
+                    </button>
+                    <button class="share-btn" onclick="copyShareLink()">
+                        🔗 Copy Link
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Premium Options -->
+            <div class="premium-options">
+                <div class="premium-card">
+                    <h4>💎 HD Download</h4>
+                    <div class="price">$1.11</div>
+                    <ul>
+                        <li>High-resolution file</li>
+                        <li>Print-ready quality</li>
+                        <li>No watermark</li>
+                    </ul>
+                    <button class="buy-btn" onclick="buyPremium('hd')">Download HD</button>
+                </div>
+                
+                <div class="premium-card">
+                    <h4>📱 Phone Wallpaper</h4>
+                    <div class="price">$1.11</div>
+                    <ul>
+                        <li>Optimized for mobile</li>
+                        <li>Perfect resolution</li>
+                        <li>Background options</li>
+                    </ul>
+                    <button class="buy-btn" onclick="buyPremium('wallpaper')">Get Wallpaper</button>
+                </div>
+                
+                <div class="premium-card">
+                    <h4>🖼️ Print Package</h4>
+                    <div class="price">$4.44</div>
+                    <ul>
+                        <li>All formats included</li>
+                        <li>Print-ready files</li>
+                        <li>Commercial use license</li>
+                    </ul>
+                    <button class="buy-btn" onclick="buyPremium('print')">Get Package</button>
+                </div>
+            </div>
+            
+            <!-- Info Box -->
+            <div class="info-box">
+                <h4>🌟 How It Works</h4>
+                <p>
+                    Your Kosmic K-Pop avatar is matched to your cosmic profile using advanced 
+                    numerology and astrology calculations. Each avatar is uniquely designed 
+                    to reflect your archetype, life path, and energy signature. 
+                    K + K = 11:11 - the universe literally designed this for you!
+                </p>
+            </div>
+            
+            <!-- Regenerate Button -->
+            <button class="generate-btn" onclick="generateNewAvatars()">
+                ✨ Generate New Options
+            </button>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>🌟 Kosmic K-Pop (11:11) - Where the Universe Meets K-Pop 🌟</p>
+            <p>K + K = 11:11 | Divine Alignment | Cosmic Destiny</p>
+        </div>
+    </footer>
+    
+    <script src="kpop_data.js"></script>
+    <script src="avatar_matching_system.js"></script>
+    <script>
+        // User's cosmic profile
+        let userProfile = null;
+        let selectedAvatar = null;
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadUserProfile();
+        });
+        
+        // Load user's cosmic profile
+        function loadUserProfile() {
+            // Try to get from localStorage
+            const savedProfile = localStorage.getItem('kosmicProfile');
+            
+            if (savedProfile) {
+                userProfile = JSON.parse(savedProfile);
+            } else {
+                // Demo profile if none exists
+                userProfile = {
+                    archetype: "golden_leader",
+                    lifePath: 1,
+                    gender: "male",
+                    concept: "soft"
+                };
+            }
+            
+            updateProfileDisplay();
+            generateAvatars();
+        }
+        
+        // Update profile display
+        function updateProfileDisplay() {
+            const archetypeNames = {
+                "golden_leader": "Golden Leader 🌟",
+                "mood_maker": "Mood Maker 😄",
+                "main_dancer_virtuoso": "Main Dancer Virtuoso 💃",
+                "visual_icon": "Visual Icon ✨",
+                "harmonious_diplomat": "Harmonious Diplomat 🤝",
+                "reliable_backbone": "Reliable Backbone 💪",
+                "quiet_genius": "Quiet Genius 🧠",
+                "rapper_firecracker": "Rapper Firecracker 🔥",
+                "main_vocal_powerhouse": "Main Vocal Powerhouse 🎤",
+                "all_rounder_ace": "All-Rounder Ace 🏆",
+                "master_builder": "Master Builder 🏗️",
+                "master_teacher": "Master Teacher 📚"
+            };
+            
+            document.getElementById('profileArchetype').textContent = archetypeNames[userProfile.archetype] || userProfile.archetype;
+            document.getElementById('profileLifePath').textContent = userProfile.lifePath;
+            document.getElementById('profileGender').textContent = userProfile.gender.charAt(0).toUpperCase() + userProfile.gender.slice(1);
+            document.getElementById('profileConcept').textContent = userProfile.concept.charAt(0).toUpperCase() + userProfile.concept.slice(1);
+        }
+        
+        // Generate avatar options
+        function generateAvatars() {
+            document.getElementById('loadingState').classList.remove('hidden');
+            document.getElementById('avatarGrid').classList.add('hidden');
+            
+            // Simulate loading
+            setTimeout(() => {
+                displayAvatarOptions();
+                document.getElementById('loadingState').classList.add('hidden');
+                document.getElementById('avatarGrid').classList.remove('hidden');
+            }, 1500);
+        }
+        
+        // Display avatar options
+        function displayAvatarOptions() {
+            const grid = document.getElementById('avatarGrid');
+            grid.innerHTML = '';
+            
+            // Generate 6 avatar options (2 styles × 3 variations)
+            const options = generateMockAvatarOptions(6);
+            
+            options.forEach((option, index) => {
+                const card = document.createElement('div');
+                card.className = 'avatar-option';
+                card.onclick = () => selectAvatar(option, card);
+                
+                card.innerHTML = `
+                    <div class="avatar-image">
+                        ${option.style} Avatar<br>
+                        Variation ${option.variation}
+                    </div>
+                    <div class="avatar-label">${option.style} Style</div>
+                    <div class="avatar-style">Variation ${option.variation}</div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+        
+        // Generate mock avatar options (placeholder)
+        function generateMockAvatarOptions(count) {
+            const styles = ["Retro", "Futuristic"];
+            const options = [];
+            
+            for (let i = 0; i < count; i++) {
+                options.push({
+                    style: styles[i % 2],
+                    variation: Math.floor(i / 2) + 1,
+                    path: `/avatars/${userProfile.archetype}/lp${userProfile.lifePath}/${userProfile.gender}/${userProfile.concept}/`
+                });
+            }
+            
+            return options;
+        }
+        
+        // Select avatar
+        function selectAvatar(avatar, element) {
+            // Remove selected class from all
+            document.querySelectorAll('.avatar-option').forEach(el => {
+                el.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked
+            element.classList.add('selected');
+            
+            selectedAvatar = avatar;
+            
+            // Show share section
+            document.getElementById('shareSection').classList.remove('hidden');
+            
+            // Save to localStorage
+            localStorage.setItem('selectedAvatar', JSON.stringify(avatar));
+        }
+        
+        // Generate new avatar options
+        function generateNewAvatars() {
+            generateAvatars();
+            document.getElementById('shareSection').classList.add('hidden');
+        }
+        
+        // Share functions
+        function shareOnTwitter() {
+            const text = `I'm the ${userProfile.archetype} archetype! 🌟\\n\\nMy Kosmic K-Pop avatar matches my cosmic energy ✨\\n\\nK + K = 11:11\\n\\nGet yours at kosmickpop.com`;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank');
+        }
+        
+        function shareOnInstagram() {
+            alert('Save your avatar and share it on Instagram! Don\'t forget to tag @kosmickpop and use #KosmicKPop #1111');
+        }
+        
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+        
+        function copyShareLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('Link copied to clipboard!');
+            });
+        }
+        
+        // Premium purchase (placeholder)
+        function buyPremium(type) {
+            alert(`${type.charAt(0).toUpperCase() + type.slice(1)} purchase coming soon!\\n\\nPrice: ${type === 'hd' || type === 'wallpaper' ? '$1.11' : '$4.44'}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idol Energy Reset | Kosmic K-Pop</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="kosmic-background">
+        <div class="stars"></div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">🌟 Idol Energy Reset 🌟</h1>
+            <p class="subtitle">Clear comparison fatigue and re-anchor your self-worth</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="tool-content">
+            
+            <!-- Input Section -->
+            <div id="input-section" class="input-section">
+                <div class="tool-intro">
+                    <h3>✨ Reset Your Energy</h3>
+                    <p>K-Pop fandom is amazing, but constant comparison can drain you. Take 3 minutes to reset and reconnect with YOUR energy.</p>
+                </div>
+                
+                <div class="energy-check">
+                    <h4>💫 How Are You Feeling Right Now?</h4>
+                    <div class="feeling-options">
+                        <button class="feeling-btn" data-feeling="overwhelmed">
+                            😰 Overwhelmed by too much content
+                        </button>
+                        <button class="feeling-btn" data-feeling="comparing">
+                            😔 Comparing myself to idols
+                        </button>
+                        <button class="feeling-btn" data-feeling="inadequate">
+                            😞 Not good enough
+                        </button>
+                        <button class="feeling-btn" data-feeling="envious">
+                            😤 Envious of others' success
+                        </button>
+                        <button class="feeling-btn" data-feeling="drained">
+                            😴 Emotionally drained
+                        </button>
+                        <button class="feeling-btn" data-feeling="lost">
+                            🌀 Lost my own identity
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="intention-input">
+                    <h4>🎯 What Do You Want to Feel After This Reset?</h4>
+                    <textarea id="intention" class="intention-textarea" placeholder="Example: 'I want to feel confident in my own journey' or 'I want to enjoy K-Pop without comparison'"></textarea>
+                </div>
+                
+                <div class="breath-prompt">
+                    <h4>🌬️ Ready for Your Energy Reset?</h4>
+                    <p>Take 3 deep breaths before we begin. We'll wait...</p>
+                </div>
+                
+                <button class="action-button kosmic-button" onclick="startReset()">
+                    🌟 Begin My Energy Reset 🌟
+                </button>
+            </div>
+            
+            <!-- Reset Process -->
+            <div id="reset-process" class="reset-process" style="display: none;">
+                <div class="reset-step active" id="reset-step-1">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Clear Comparison Fatigue</div>
+                    <div class="step-content">
+                        <div class="step-instruction">
+                            Close your eyes. Take a deep breath in... and out.<br><br>
+                            Visualize all the images, videos, and content you've consumed today. 
+                            Imagine them as colorful bubbles floating around you.<br><br>
+                            Now, one by one, watch these bubbles float away. 
+                            They're not you. They're not your reality.<br><br>
+                            Let them go with each exhale.
+                        </div>
+                        <div class="step-timer">⏱️ 60 seconds</div>
+                        <button class="next-step-btn" onclick="nextStep(2)">
+                            ✅ Done - Next Step
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="reset-step" id="reset-step-2">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Re-Anchor Self-Worth</div>
+                    <div class="step-content">
+                        <div class="step-instruction">
+                            Place your hand on your heart. Feel your heartbeat.<br><br>
+                            This is your rhythm. Your energy. Your life.<br><br>
+                            Repeat silently or out loud:<br><br>
+                            <strong>"I am worthy, not because of what I achieve,<br>
+                            but because I exist."</strong><br><br>
+                            <strong>"My worth isn't measured by likes, views, or comparison."</strong><br><br>
+                            <strong>"I am enough, exactly as I am right now."</strong>
+                        </div>
+                        <div class="step-timer">⏱️ 60 seconds</div>
+                        <button class="next-step-btn" onclick="nextStep(3)">
+                            ✅ Done - Next Step
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="reset-step" id="reset-step-3">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Reframe Envy as Inspiration</div>
+                    <div class="step-content">
+                        <div class="step-instruction">
+                            Think of someone or something you've been comparing yourself to.<br><br>
+                            Instead of asking "Why am I not them?", ask:<br><br>
+                            <strong>"What do I love about them?"</strong><br><br>
+                            <strong>"What qualities do they have that I also admire in myself?"</strong><br><br>
+                            <strong>"How can this inspire my own journey?"</strong><br><br>
+                            Envy is just admiration waiting to be transformed into inspiration.
+                        </div>
+                        <div class="step-timer">⏱️ 60 seconds</div>
+                        <button class="next-step-btn" onclick="nextStep(4)">
+                            ✅ Done - Next Step
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Results Section -->
+            <div id="results-section" class="results-section" style="display: none;">
+                
+                <!-- Energy After -->
+                <div class="energy-after">
+                    <div class="after-icon">✨</div>
+                    <h2 class="after-title">Your Energy Has Been Reset</h2>
+                    <p class="after-subtitle">You're reconnected with your authentic self</p>
+                </div>
+                
+                <!-- Personal Affirmations -->
+                <div class="personal-affirmations">
+                    <h3>💖 Your Personal Affirmations</h3>
+                    <div class="affirmations-list" id="affirmations-list"></div>
+                </div>
+                
+                <!-- Actionable Steps -->
+                <div class="actionable-steps">
+                    <h3>🎯 Next Steps for Your Energy</h3>
+                    <div class="steps-list" id="steps-list"></div>
+                </div>
+                
+                <!-- Healthy Consumption -->
+                <div class="healthy-consumption">
+                    <h3>📱 Healthy K-Pop Consumption</h3>
+                    <div class="consumption-tips" id="consumption-tips"></div>
+                </div>
+                
+                <!-- Remember -->
+                <div class="remember-section">
+                    <h3>🌟 Remember</h3>
+                    <div class="remember-text" id="remember-text"></div>
+                </div>
+                
+                <!-- Viral Features -->
+                <div id="viral-features"></div>
+                
+                <!-- Share Buttons -->
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareResult()">
+                        📱 Share This Reset
+                    </button>
+                    <button class="share-btn" onclick="saveReset()">
+                        💾 Save for Later
+                    </button>
+                </div>
+                
+                <!-- Restart Button -->
+                <button class="restart-button" onclick="restartTool()">
+                    🌟 Reset Again Tomorrow
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="kpop_data.js"></script>
+    <script src="viral_components.js"></script>
+    <script>
+        let selectedFeeling = null;
+        
+        // Initialize feeling buttons
+        document.querySelectorAll('.feeling-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.feeling-btn').forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Store selected feeling
+                selectedFeeling = this.dataset.feeling;
+            });
+        });
+        
+        // Start reset
+        function startReset() {
+            if (!selectedFeeling) {
+                alert('Please select how you\'re feeling right now! 💫');
+                return;
+            }
+            
+            // Hide input, show reset process
+            document.getElementById('input-section').style.display = 'none';
+            document.getElementById('reset-process').style.display = 'block';
+            
+            // Start with step 1
+            showStep(1);
+        }
+        
+        // Show step
+        function showStep(stepNum) {
+            // Hide all steps
+            document.querySelectorAll('.reset-step').forEach(step => {
+                step.classList.remove('active');
+            });
+            
+            // Show current step
+            const currentStep = document.getElementById(`reset-step-${stepNum}`);
+            if (currentStep) {
+                currentStep.classList.add('active');
+            }
+        }
+        
+        // Next step
+        function nextStep(stepNum) {
+            if (stepNum > 3) {
+                // Show results
+                showResults();
+            } else {
+                showStep(stepNum);
+            }
+        }
+        
+        // Show results
+        function showResults() {
+            // Hide reset process
+            document.getElementById('reset-process').style.display = 'none';
+            
+            // Show results
+            document.getElementById('results-section').style.display = 'block';
+            
+            // Generate content based on feeling
+            const content = generateContent(selectedFeeling);
+            
+            // Update affirmations
+            document.getElementById('affirmations-list').innerHTML = content.affirmations.map(aff => `
+                <div class="affirmation-item">${aff}</div>
+            `).join('');
+            
+            // Update steps
+            document.getElementById('steps-list').innerHTML = content.steps.map(step => `
+                <div class="step-item">${step}</div>
+            `).join('');
+            
+            // Update consumption tips
+            document.getElementById('consumption-tips').innerHTML = content.consumption.map(tip => `
+                <div class="consumption-item">${tip}</div>
+            `).join('');
+            
+            // Update remember text
+            document.getElementById('remember-text').innerHTML = `
+                <p>${content.remember}</p>
+            `;
+            
+            // Celebrate
+            celebrateReset();
+        }
+        
+        // Generate content based on feeling
+        function generateContent(feeling) {
+            const content = {
+                overwhelmed: {
+                    affirmations: [
+                        '💫 I can take breaks from content without guilt',
+                        '✨ My worth isn\'t measured by how much I consume',
+                        '🌟 It\'s okay to step away and breathe',
+                        '💖 I am more than the content I engage with',
+                        '🎯 My attention is valuable - I choose where to focus'
+                    ],
+                    steps: [
+                        '📵 Set daily limits on social media and content consumption',
+                        '🧘 Schedule "content-free" time each day',
+                        '🌅 Start your morning with intention, not scrolling',
+                        '💫 Create a ritual for ending your day with gratitude',
+                        '🎯 Follow accounts that inspire, not drain you'
+                    ],
+                    consumption: [
+                        '⏰ Set specific times for K-Pop content (30 min max)',
+                        '📊 Track how content makes you feel - reduce what drains you',
+                        '🌟 Curate your feed - unfollow accounts that trigger comparison',
+                        '💫 Take regular digital detox breaks',
+                        '🎯 Remember: creators are showing highlights, not reality'
+                    ],
+                    remember: 'You are the protagonist of your own life. K-Pop is entertainment, not a measuring stick for your worth.'
+                },
+                comparing: {
+                    affirmations: [
+                        '💫 I run my own race at my own pace',
+                        '✨ My journey is unique and valuable',
+                        '🌟 Comparison steals joy - I choose my own happiness',
+                        '💖 I am exactly where I need to be right now',
+                        '🎯 Someone else\'s success doesn\'t diminish mine'
+                    ],
+                    steps: [
+                        '📝 List 5 things you love about yourself that have nothing to do with achievement',
+                        '🌟 Celebrate others\' success genuinely - it raises your energy',
+                        '💫 Focus on YOUR goals and growth, not others\' highlights',
+                        '🎯 Remember: everyone has struggles they don\'t show',
+                        '💖 Practice gratitude for your own journey daily'
+                    ],
+                    consumption: [
+                        '🎯 Follow diverse creators, not just "perfect" idols',
+                        '💫 Remember: behind every perfect image is a team of professionals',
+                        '🌟 Engage with content that inspires, not just impresses',
+                        '📵 Take breaks when you feel comparison creeping in',
+                        '✨ Remind yourself: social media is a curated highlight reel'
+                    ],
+                    remember: 'The only comparison that matters is who you were yesterday. You are growing, learning, and becoming - that\'s enough.'
+                },
+                inadequate: {
+                    affirmations: [
+                        '💫 I am worthy of love and belonging just as I am',
+                        '✨ My value isn\'t determined by external validation',
+                        '🌟 I am enough, exactly as I am right now',
+                        '💖 My journey has its own unique value',
+                        '🎯 I don\'t need to be perfect to be valuable'
+                    ],
+                    steps: [
+                        '📝 Write down 3 things you\'ve achieved that you\'re proud of',
+                        '💫 Practice self-compassion - talk to yourself like a friend',
+                        '🌟 Set goals based on YOUR values, not others\' expectations',
+                        '💖 Surround yourself with people who appreciate you for you',
+                        '🎯 Celebrate small wins - progress over perfection'
+                    ],
+                    consumption: [
+                        '🎯 Unfollow accounts that make you feel "not enough"',
+                        '💫 Remember: idols have entire teams supporting them',
+                        '🌟 Focus on enjoying content, not measuring yourself against it',
+                        '📵 Take social media breaks when feeling inadequate',
+                        '✨ Remind yourself: everyone starts somewhere'
+                    ],
+                    remember: 'You are a complete, valuable human being right now - not when you achieve more, look different, or become "better." You\'re enough.'
+                },
+                envious: {
+                    affirmations: [
+                        '💫 I transform envy into inspiration',
+                        '✨ Others\' success doesn\'t diminish my own',
+                        '🌟 There is enough success for everyone',
+                        '💖 I celebrate others\' joyfully',
+                        '🎯 My time will come - I trust my journey'
+                    ],
+                    steps: [
+                        '📝 Write what you admire about the person/situation you envy',
+                        '💫 Ask: "How can this inspire my own journey?"',
+                        '🌟 Celebrate others\' success genuinely - it raises your vibration',
+                        '💖 Practice gratitude for what you already have',
+                        '🎯 Trust that your path is unfolding perfectly'
+                    ],
+                    consumption: [
+                        '🎯 When you feel envy, take it as a sign of what you desire',
+                        '💫 Use that desire to fuel your own growth and goals',
+                        '🌟 Remember: you don\'t see the struggles behind the success',
+                        '📵 Step away from content that triggers intense envy',
+                        '✨ Practice celebrating others\' wins daily'
+                    ],
+                    remember: 'Envy is just admiration in disguise. Transform it into inspiration, use it to fuel your dreams, and trust your own timing.'
+                },
+                drained: {
+                    affirmations: [
+                        '💫 It\'s okay to rest and recharge',
+                        '✨ My energy is precious - I protect it',
+                        '🌟 Rest isn\'t laziness, it\'s restoration',
+                        '💖 I honor my need for quiet and renewal',
+                        '🎯 I can say no without guilt'
+                    ],
+                    steps: [
+                        '😴 Prioritize 7-8 hours of sleep',
+                        '🧘 Practice 5-10 minutes of meditation daily',
+                        '🌅 Start your day with a calming ritual, not scrolling',
+                        '💫 Set boundaries on your time and energy',
+                        '🎯 Schedule "me time" and protect it fiercely'
+                    ],
+                    consumption: [
+                        '⏰ Limit content consumption to times when you have energy',
+                        '📵 Take complete digital breaks on weekends',
+                        '💫 Engage with uplifting, not draining, content',
+                        '🌟 Balance K-Pop content with other interests',
+                        '🎯 Remember: it\'s okay to miss things - take care of yourself first'
+                    ],
+                    remember: 'You can\'t pour from an empty cup. Prioritize your energy and rest - everything else flows from that foundation.'
+                },
+                lost: {
+                    affirmations: [
+                        '💫 I am rediscovering who I am outside of fandom',
+                        '✨ My identity is multifaceted and valuable',
+                        '🌟 I can enjoy K-Pop while staying true to myself',
+                        '💖 My authentic self is worth expressing',
+                        '🎯 I integrate inspiration, I don\'t imitate'
+                    ],
+                    steps: [
+                        '📝 List 5 things you loved before K-Pop',
+                        '💫 Reconnect with hobbies and interests outside fandom',
+                        '🌟 Spend time with friends who know the real you',
+                        '💖 Practice expressing your authentic opinions and preferences',
+                        '🎯 Set intentions for how you want K-Pop to enrich your life'
+                    ],
+                    consumption: [
+                        '🎯 Ask: "Does this content align with who I want to be?"',
+                        '💫 Balance inspiration with self-expression',
+                        '🌟 Remember: idols are entertainers, not identity templates',
+                        '📵 Take breaks to reconnect with your authentic self',
+                        '✨ Use K-Pop as inspiration, not a blueprint for your life'
+                    ],
+                    remember: 'You are a unique individual with your own path, dreams, and value. K-Pop can be part of your life without becoming your whole life.'
+                }
+            };
+            
+            return content[feeling] || content.overwhelmed;
+        }
+        
+        // Celebrate reset
+        function celebrateReset() {
+            // Gentle healing sparkles
+            for (let i = 0; i < 25; i++) {
+                setTimeout(() => {
+                    createHealingSparkle();
+                }, i * 100);
+            }
+        }
+        
+        function createHealingSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.style.cssText = `
+                position: fixed;
+                top: ${Math.random() * 100}vh;
+                left: ${Math.random() * 100}vw;
+                font-size: 25px;
+                animation: healingFloat 2s ease-out forwards;
+                z-index: 1000;
+                opacity: 0;
+            `;
+            sparkle.textContent = ['✨', '💫', '🌟', '💖'][Math.floor(Math.random() * 4)];
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 2000);
+        }
+        
+        // Share result
+        function shareResult() {
+            const text = `I just reset my energy and reconnected with my authentic self! 🌟✨\n\nTaking care of my mental health is worth it.\n\nReset YOUR energy: `;
+            const url = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Idol Energy Reset',
+                    text: text,
+                    url: url
+                });
+            } else {
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+            }
+        }
+        
+        // Save reset
+        function saveReset() {
+            alert('✨ Your reset has been saved to your heart! Come back anytime you need to reconnect with your authentic self. 💖');
+        }
+        
+        // Restart tool
+        function restartTool() {
+            document.getElementById('input-section').style.display = 'block';
+            document.getElementById('reset-process').style.display = 'none';
+            document.getElementById('results-section').style.display = 'none';
+            
+            // Reset feeling selection
+            selectedFeeling = null;
+            document.querySelectorAll('.feeling-btn').forEach(b => b.classList.remove('active'));
+            
+            // Reset intention
+            document.getElementById('intention').value = '';
+            
+            // Reset steps
+            showStep(1);
+        }
+    </script>
+    
+    <style>
+        .tool-intro {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .tool-intro h3 {
+            color: #FFD700;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .tool-intro p {
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .energy-check {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .energy-check h4 {
+            color: #FFD700;
+            font-size: 22px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .feeling-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .feeling-btn {
+            padding: 20px;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+            border-radius: 15px;
+            background: rgba(255, 105, 180, 0.1);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+        
+        .feeling-btn:hover {
+            background: rgba(255, 105, 180, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .feeling-btn.active {
+            background: linear-gradient(135deg, #FF69B4 0%, #9400D3 100%);
+            border-color: #FFD700;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+        }
+        
+        .intention-input {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .intention-input h4 {
+            color: #FFD700;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .intention-textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 18px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .breath-prompt {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            text-align: center;
+        }
+        
+        .breath-prompt h4 {
+            color: #FFD700;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .breath-prompt p {
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .reset-process {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .reset-step {
+            display: none;
+            background: rgba(26, 10, 46, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            border: 3px solid rgba(255, 105, 180, 0.5);
+        }
+        
+        .reset-step.active {
+            display: block;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FF69B4 0%, #9400D3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+            margin: 0 auto 30px;
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.6);
+        }
+        
+        .step-title {
+            color: #FFD700;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        
+        .step-instruction {
+            color: white;
+            font-size: 20px;
+            line-height: 2;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .step-instruction strong {
+            color: #FF69B4;
+            font-size: 24px;
+        }
+        
+        .step-timer {
+            text-align: center;
+            color: #FFD700;
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        
+        .next-step-btn {
+            width: 100%;
+            padding: 20px 30px;
+            background: linear-gradient(135deg, #FF69B4 0%, #9400D3 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .next-step-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .energy-after {
+            text-align: center;
+            margin: 40px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 105, 180, 0.2) 100%);
+            border-radius: 20px;
+            border: 3px solid #FFD700;
+        }
+        
+        .after-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .after-title {
+            font-size: 40px;
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .after-subtitle {
+            font-size: 22px;
+            color: white;
+            font-style: italic;
+        }
+        
+        .personal-affirmations, .actionable-steps, .healthy-consumption {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .personal-affirmations h3, .actionable-steps h3, .healthy-consumption h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .affirmations-list, .steps-list, .consumption-tips {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .affirmation-item, .step-item, .consumption-item {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            border-left: 4px solid #FF69B4;
+            line-height: 1.6;
+        }
+        
+        .remember-section {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 105, 180, 0.2) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 3px solid #FFD700;
+        }
+        
+        .remember-section h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 28px;
+            text-align: center;
+        }
+        
+        .remember-text p {
+            color: white;
+            font-size: 22px;
+            line-height: 1.8;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        @keyframes healingFloat {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px) scale(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+</html>

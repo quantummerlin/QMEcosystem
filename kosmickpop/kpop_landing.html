@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Merlin: K-Pot Edition - Decode Your K-Pop Destiny</title>
+    <meta name="description" content="Discover your K-Pot idol archetype through kosmic numerology. Are you a Golden Leader, Main Dancer Virtuoso, or something else?">
+    <link rel="stylesheet" href="kpop_styles.css">
+    <style>
+        body {
+            background: linear-gradient(180deg, #1A0A2E 0%, #0D0D1A 100%);
+            min-height: 100vh;
+        }
+        .kpop-hero {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.3), rgba(148, 0, 211, 0.3));
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 3px solid rgba(255, 105, 180, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        .kpop-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 105, 180, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(0, 255, 255, 0.2) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        .kpop-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(255, 105, 180, 0.7);
+            position: relative;
+            z-index: 1;
+        }
+        .kpop-hero p {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .kpop-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        .kpop-stat {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 105, 180, 0.3);
+        }
+        .kpop-stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00FFFF;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+        .kpop-stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 5px;
+        }
+        .kpop-featured-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .kpop-featured-card {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.2), rgba(148, 0, 211, 0.2));
+            border: 2px solid rgba(255, 105, 180, 0.4);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .kpop-featured-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        .kpop-featured-card:hover::before {
+            left: 100%;
+        }
+        .kpop-featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
+            border-color: rgba(255, 105, 180, 0.8);
+        }
+        .kpop-featured-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .kpop-featured-title {
+            font-size: 1.5rem;
+            color: #00FFFF;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+        }
+        .kpop-featured-desc {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="kpop-hero">
+        <h1 class="kpop-title kpop-animate-pulse">🎤 Quantum Merlin: K-Pot Edition ✨</h1>
+        <p class="kpop-subtitle">Decode Your K-Pop Destiny Through kosmic Numerology & Planetary Energy</p>
+        
+        <div class="kpop-stats">
+            <div class="kpop-stat">
+                <div class="kpop-stat-number">12</div>
+                <div class="kpop-stat-label">Idol Archetypes</div>
+            </div>
+            <div class="kpop-stat">
+                <div class="kpop-stat-number">10</div>
+                <div class="kpop-stat-label">Planetary Powers</div>
+            </div>
+            <div class="kpop-stat">
+                <div class="kpop-stat-number">∞</div>
+                <div class="kpop-stat-label">kosmic Insights</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="kpop-container">
+        <!-- Introduction -->
+        <div class="kpop-section kpop-animate-slide">
+            <h2 class="kpop-heading">Your K-Pop kosmic Blueprint Awaits 🌟</h2>
+            <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.8; font-size: 1.1rem;">
+                The universe has aligned with K-Pop culture to reveal your idol destiny. 
+                Through ancient numerology and planetary energy, discover your unique archetype, 
+                strengths, and kosmic path to K-Pot stardom. Whether you're a Golden Leader, 
+                Main Dancer Virtuoso, or something entirely unique - the cosmos has your answer.
+            </p>
+        </div>
+
+        <!-- Featured Tools -->
+        <h2 class="kpop-heading kpop-text-center">✨ Discover Your Idol Archetype ✨</h2>
+        
+        <div class="kpop-featured-tools">
+            <a href="kpop_life_path.html" class="kpop-featured-card">
+                <div class="kpop-featured-icon">🎤</div>
+                <h3 class="kpop-featured-title">K-Pot Life Path</h3>
+                <p class="kpop-featured-desc">
+                    Discover your idol archetype. Are you a Golden Leader, Main Dancer Virtuoso, or something else?
+                </p>
+            </a>
+
+            <div class="kpop-featured-card">
+                <div class="kpop-featured-icon">🤝</div>
+                <h3 class="kpop-featured-title">Idol Synergy</h3>
+                <p class="kpop-featured-desc">
+                    Find your kosmic match among idol archetypes. Discover which idol types you're most compatible with.
+                </p>
+            </div>
+
+            <div class="kpop-featured-card">
+                <div class="kpop-featured-icon">🌙</div>
+                <h3 class="kpop-featured-title">Debut Timing</h3>
+                <p class="kpop-featured-desc">
+                    The universe reveals the best kosmic windows for your K-Pot debut through planetary alignments.
+                </p>
+            </div>
+
+            <div class="kpop-featured-card">
+                <div class="kpop-featured-icon">💃</div>
+                <h3 class="kpop-featured-title">Stage Position</h3>
+                <p class="kpop-featured-desc">
+                    Discover your natural position in a K-Pot group. Leader, main vocal, main dancer, or more?
+                </p>
+            </div>
+
+            <div class="kpop-featured-card">
+                <div class="kpop-featured-icon">🎭</div>
+                <h3 class="kpop-featured-title">Concept Match</h3>
+                <p class="kpop-featured-desc">
+                    Which K-Pop concept matches your energy? Girl crush, cute, hip-hop, or experimental?
+                </p>
+            </div>
+
+            <div class="kpop-featured-card">
+                <div class="kpop-featured-icon">✨</div>
+                <h3 class="kpop-featured-title">Visual Power</h3>
+                <p class="kpop-featured-desc">
+                    Your visual power level reveals your star quality, camera magnetism, and brand appeal.
+                </p>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="kpop-section kpop-animate-slide">
+            <h2 class="kpop-heading">How It Works 🔮</h2>
+            <div style="color: rgba(255, 255, 255, 0.8); line-height: 1.8;">
+                <p style="margin-bottom: 20px;">
+                    <span class="kpop-accent">🌟 kosmic Blueprint:</span> Your birth date reveals your Life Path number, 
+                    which corresponds to one of 12 idol archetypes with distinct kosmic energy.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    <span class="kpop-accent">🪐 Planetary Influence:</span> Each archetype is ruled by a specific planet 
+                    (Sun, Moon, Mars, Venus, etc.) that determines your strengths and K-Pot style.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    <span class="kpop-accent">🎤 Idol Destiny:</span> Get detailed insights into your group role, 
+                    performance style, fan connection, and path to K-Pot success.
+                </p>
+                <p>
+                    <span class="kpop-accent">✨ Share Your Result:</span> Share your idol archetype on social media 
+                    and see which friends match your kosmic energy! 
+                </p>
+            </div>
+        </div>
+
+        <!-- Archetype Preview -->
+        <div class="kpop-section kpop-animate-slide">
+            <h2 class="kpop-heading">Meet the 12 Idol Archetypes 🎤</h2>
+            <p style="color: archetype(255, 255, 255, 0.7); margin-bottom: 30px;">
+                Each archetype represents a unique kosmic energy for K-Pot success.
+            </p>
+
+            <div class="kpop-grid">
+                <div class="kpop-card kpop-animate-float">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🌟</div>
+                        <h3 class="kpop-card-title">Golden Leader</h3>
+                        <p class="kpop-card-text">Sun Energy | Leadership & Stage Presence</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card kpop-animate-float" style="animation-delay: 0.2s;">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🤝</div>
+                        <h3 class="kpop-card-title">Harmonious Diplomat</h3>
+                        <p class="kpop-card-text">Moon Energy | Emotional Balance</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card kpop-animate-float" style="animation-delay: 0.4s;">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">😄</div>
+                        <h3 class="kpop-card-title">Mood Maker</h3>
+                        <p class="kpop-card-text">Jupiter Energy | Joy & Expansion</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card kpop-animate-float" style="animation-delay: 0.6s;">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">💪</div>
+                        <h3 class="kpop-card-title">Reliable Backbone</h3>
+                        <p class="kpop-card-text">Saturn Energy | Stability & Foundation</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card kpop-animate-float" style="animation-delay: 0.8s;">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">💃</div>
+                        <h3 class="kpop-card-title">Main Dancer Virtuoso</h3>
+                        <p class="kpop-card-text">Mars Energy | Movement & Intensity</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card kpop-animate-float" style="animation-delay: 1s;">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">✨</div>
+                        <h3 class="kpop-card-title">Visual Icon</h3>
+                        <p class="kpop-card-text">Venus Energy | Beauty & Charm</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card kpop-animate-float" style="animation-delay: 1.2s;">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🧠</div>
+                        <h3 class="kpop-card-title">Quiet Genius</h3>
+                        <p class="kpop-card-text">Mercury Energy | Intellect & Innovation</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card kpop-animate-float" style="animation-delay: 1.4s;">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🔥</div>
+                        <h3 class="kpop-card-title">Rapper Firecracker</h3>
+                        <p class="kpop-card-text">Mars + Pluto | Intensity & Transformation</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card kpop-animate-float" style="animation-delay: 1.6s;">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🎤</div>
+                        <h3 class="kpop-card-title">Main Vocal Powerhouse</h3>
+                        <p class="kpop-card-text">Venus + Moon | Emotion & Expression</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card kpop-animate-float" style="animation-delay: 1.8s;">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🏆</div>
+                        <h3 class="kpop-card-title">All-Rounder Ace</h3>
+                        <p class="kpop-card-text">All Planets | Complete Mastery</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card kpop-animate-float" style="animation-delay: 2s;">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🏗️</div>
+                        <h3 class="kpop-card-title">Master Builder</h3>
+                        <p class="kpop-card-text">Saturn + Jupiter | Construction & Success</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card kpop-animate-float" style="animation-delay: 2.2s;">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">📚</div>
+                        <h3 class="kpop-card-title">Master Teacher</h3>
+                        <p class="kpop-card-text">All + Neptune | Wisdom & Inspiration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="kpop-section kpop-animate-slide" style="background: linear-gradient(135deg, rgba(255, 105, 180, 0.3), rgba(148, 0, 211, 0.3));">
+            <h2 class="kpop-heading kpop-text-center">Ready to Discover Your Idol Destiny? 🚀</h2>
+            <p class="kpop-text-center" style="color: rgba(255, 255, 255, 0.9); margin-bottom: 30px; font-size: 1.1rem;">
+                Enter your kosmic details and reveal your K-Pot archetype today!
+            </p>
+            <div class="kpop-flex-center">
+                <a href="kpop_life_path.html" class="kpop-btn kpop-btn-primary" style="text-decoration: none; display: inline-block;">
+                    Reveal My Idol Destiny 🌟
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="kpop-section kpop-text-center" style="border: none; background: transparent;">
+            <p style="color: rgba(255, 255, 255, 0.6);">
+                🎤 Quantum Merlin: K-Pot Edition | Decode Your K-Pop Destiny ✨
+            </p>
+            <p style="color: rgba(255, 255, 255, 0.4); font-size: 0.9rem; margin-top: 10px;">
+                Entertainment-based numerology and astrological interpretations for K-Pop culture enthusiasts.
+            </p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="kpop_data.js"></script>
+    <script src="kpop_branding.js"></script>
+    <script>
+        // Add sparkle effect on page load
+        window.addEventListener('load', () => {
+            const hero = document.querySelector('.kpop-hero');
+            
+            setInterval(() => {
+                const sparkle = document.createElement('span');
+                sparkle.innerHTML = '✨';
+                sparkle.style.cssText = `
+                    position: absolute;
+                    font-size: 20px;
+                    animation: sparkle 2s ease-in-out infinite;
+                    pointer-events: none;
+                    z-index: 1;
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                `;
+                hero.appendChild(sparkle);
+                
+                setTimeout(() => sparkle.remove(), 2000);
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

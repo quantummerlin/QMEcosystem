@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idol Group Generator | Kosmic K-Pop</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="kosmic-background">
+        <div class="stars"></div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">🌟 Create Your Dream K-Pop Group 🌟</h1>
+            <p class="subtitle">Generate your complete idol group with friends! ✨</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="tool-content">
+            
+            <!-- Input Section -->
+            <div id="input-section" class="input-section">
+                <div class="group-input-info">
+                    <h3>👥 Enter 3-7 Group Members</h3>
+                    <p>Add your friends and create your dream K-Pop group!</p>
+                </div>
+                
+                <div id="members-input" class="members-input">
+                    <div class="member-row">
+                        <input type="text" class="member-name" placeholder="Member 1 Name" data-index="1">
+                        <input type="date" class="member-dob" data-index="1">
+                    </div>
+                    <div class="member-row">
+                        <input type="text" class="member-name" placeholder="Member 2 Name" data-index="2">
+                        <input type="date" class="member-dob" data-index="2">
+                    </div>
+                    <div class="member-row">
+                        <input type="text" class="member-name" placeholder="Member 3 Name" data-index="3">
+                        <input type="date" class="member-dob" data-index="3">
+                    </div>
+                </div>
+                
+                <div class="group-controls">
+                    <button class="add-member-btn" onclick="addMember()">
+                        ➕ Add Another Member
+                    </button>
+                    <button class="remove-member-btn" onclick="removeMember()" id="remove-btn" style="display: none;">
+                        ➖ Remove Member
+                    </button>
+                </div>
+                
+                <div class="group-name-input">
+                    <label>Optional: Group Name</label>
+                    <input type="text" id="custom-group-name" placeholder="Leave blank for auto-generated name">
+                </div>
+                
+                <button class="action-button kosmic-button" onclick="generateGroup()">
+                    🌟 Generate Idol Group 🌟
+                </button>
+            </div>
+            
+            <!-- Results Section -->
+            <div id="results-section" class="results-section" style="display: none;">
+                
+                <!-- Group Header -->
+                <div class="group-header">
+                    <div class="group-emoji">🌟</div>
+                    <h2 class="group-title" id="group-title">YOUR K-POP GROUP</h2>
+                    <div class="group-subtitle" id="group-subtitle">kosmic STARS</div>
+                </div>
+                
+                <!-- Group Concept -->
+                <div class="group-concept">
+                    <h3>🎨 Group Concept</h3>
+                    <div class="concept-display" id="group-concept"></div>
+                </div>
+                
+                <!-- Group Members -->
+                <div class="group-members">
+                    <h3>👥 Group Members</h3>
+                    <div id="members-display" class="members-grid"></div>
+                </div>
+                
+                <!-- Group Stats -->
+                <div class="group-stats">
+                    <h3>📊 Group Strengths</h3>
+                    <div id="group-stats-display" class="stats-grid"></div>
+                </div>
+                
+                <!-- Debut Info -->
+                <div class="debut-info">
+                    <h3>🎤 Debut Information</h3>
+                    <div class="debut-details" id="debut-details"></div>
+                </div>
+                
+                <!-- Fandom Info -->
+                <div class="fandom-info">
+                    <h3>💖 Fandom Information</h3>
+                    <div class="fandom-details" id="fandom-details"></div>
+                </div>
+                
+                <!-- Group Compatibility -->
+                <div class="group-compatibility">
+                    <h3>💫 Group Chemistry</h3>
+                    <div class="compatibility-score">
+                        <div class="score-bar">
+                            <div class="score-fill" id="chemistry-score"></div>
+                        </div>
+                        <div class="score-label" id="chemistry-label"></div>
+                    </div>
+                </div>
+                
+                <!-- Viral Features -->
+                <div id="viral-features"></div>
+                
+                <!-- Share Buttons -->
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareGroup()">
+                        📱 Share This Group!
+                    </button>
+                    <button class="share-btn" onclick="downloadGroupCard()">
+                        📸 Download Group Card
+                    </button>
+                </div>
+                
+                <!-- Restart Button -->
+                <button class="restart-button" onclick="restartTool()">
+                    🔄 Create Another Group
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="kpop_data.js"></script>
+    <script src="viral_components.js"></script>
+    <script>
+        let memberCount = 3;
+        const maxMembers = 7;
+        const minMembers = 3;
+        
+        // Archetype data
+        const archetypes = [
+            { key: 'golden_leader', emoji: '🌟', name: 'Golden Leader', role: 'Leader' },
+            { key: 'harmonious_diplomat', emoji: '🤝', name: 'Harmonious Diplomat', role: 'Sub-Vocal' },
+            { key: 'mood_maker', emoji: '😄', name: 'Mood Maker', role: 'Variety Star' },
+            { key: 'reliable_backbone', emoji: '💪', name: 'Reliable Backbone', role: 'Main Dancer' },
+            { key: 'main_dancer', emoji: '💃', name: 'Main Dancer Virtuoso', role: 'Main Dancer' },
+            { key: 'visual_icon', emoji: '✨', name: 'Visual Icon', role: 'Visual' },
+            { key: 'quiet_genius', emoji: '🧠', name: 'Quiet Genius', role: 'Producer' },
+            { key: 'rapper_firecracker', emoji: '🔥', name: 'Rapper Firecracker', role: 'Main Rapper' },
+            { key: 'main_vocal', emoji: '🎤', name: 'Main Vocal Powerhouse', role: 'Main Vocalist' },
+            { key: 'all_rounder', emoji: '🏆', name: 'All-Rounder Ace', role: 'Ace' },
+            { key: 'master_builder', emoji: '🏗️', name: 'Master Builder', role: 'Leader' },
+            { key: 'master_teacher', emoji: '📚', name: 'Master Teacher', role: 'Mentor' }
+        ];
+        
+        // Group name parts
+        const groupPrefixes = ['kosmic', 'Stellar', 'Nova', 'Aurora', 'Galaxy', 'Lunar', 'Solar', 'Celestial', 'Ethereal', 'Radiant'];
+        const groupSuffixes = ['Stars', 'Dreams', 'Waves', 'Vibes', 'Glow', 'Spark', 'Nebula', 'Horizon', 'Pulse', 'Eclipse'];
+        
+        // Concept types
+        const concepts = [
+            { name: 'Girl Crush', vibe: 'Strong, confident, empowering', colors: ['#FF69B4', '#000000'] },
+            { name: 'Retro', vibe: 'Nostalgic, vintage, throwback', colors: ['#FFD700', '#8B4513'] },
+            { name: 'Fantasy', vibe: 'Magical, ethereal, dreamlike', colors: ['#9400D3', '#00FFFF'] },
+            { name: 'Dark & Mysterious', vibe: 'Edgy, intense, powerful', colors: ['#1A0A2E', '#8B0000'] },
+            { name: 'Fresh & Youthful', vibe: 'Bright, energetic, happy', colors: ['#00FF00', '#FF69B4'] },
+            { name: 'Elegant & Sophisticated', vibe: 'Classy, refined, mature', colors: ['#FFD700', '#FFFFFF'] },
+            { name: 'Cyberpunk', vibe: 'Futuristic, tech, neon', colors: ['#00FFFF', '#FF00FF'] },
+            { name: 'Tropical', vibe: 'Summer, beach, vibrant', colors: ['#00CED1', '#FFA500'] }
+        ];
+        
+        // Debut song templates
+        const debutSongs = [
+            'Neon Dreams', 'Stellar Night', 'Galaxy Hearts', 'kosmic Love', 'Aurora Lights',
+            'Star Power', 'Moonlit Dance', 'Solar Flare', 'Ethereal Kiss', 'Nova Blast'
+        ];
+        
+        // Fandom name templates
+        const fandomPrefixes = ['Star', 'Moon', 'Light', 'Dream', 'kosmic', 'Nova', 'Luna', 'Solar'];
+        const fandomSuffixes = ['lights', 'hearts', 'dreamers', 'stars', 'guardians', 'warriors', 'angels', 'voyagers'];
+        
+        // Add member
+        function addMember() {
+            if (memberCount < maxMembers) {
+                memberCount++;
+                const membersInput = document.getElementById('members-input');
+                const newRow = document.createElement('div');
+                newRow.className = 'member-row';
+                newRow.innerHTML = `
+                    <input type="text" class="member-name" placeholder="Member ${memberCount} Name" data-index="${memberCount}">
+                    <input type="date" class="member-dob" data-index="${memberCount}">
+                `;
+                membersInput.appendChild(newRow);
+                
+                // Update buttons
+                document.getElementById('remove-btn').style.display = 'inline-block';
+                
+                if (memberCount >= maxMembers) {
+                    document.querySelector('.add-member-btn').style.display = 'none';
+                }
+            }
+        }
+        
+        // Remove member
+        function removeMember() {
+            if (memberCount > minMembers) {
+                const membersInput = document.getElementById('members-input');
+                membersInput.removeChild(membersInput.lastElementChild);
+                memberCount--;
+                
+                // Update buttons
+                document.querySelector('.add-member-btn').style.display = 'inline-block';
+                
+                if (memberCount <= minMembers) {
+                    document.getElementById('remove-btn').style.display = 'none';
+                }
+            }
+        }
+        
+        // Calculate life path
+        function calculateLifePath(dob) {
+            if (!dob) return Math.floor(Math.random() * 9) + 1;
+            
+            const date = new Date(dob);
+            const day = date.getDate();
+            const month = date.getMonth() + 1;
+            const year = date.getFullYear();
+            
+            let sum = 0;
+            const digits = (day + month + year).toString().split('');
+            
+            while (digits.length > 1) {
+                sum = digits.reduce((a, b) => parseInt(a) + parseInt(b), 0);
+                const sumStr = sum.toString();
+                if (sumStr.length > 1) {
+                    digits.length = 0;
+                    digits.push(...sumStr.split(''));
+                } else {
+                    break;
+                }
+            }
+            
+            return sum;
+        }
+        
+        // Get archetype from life path
+        function getArchetypeFromLifePath(lifePath) {
+            const index = (lifePath - 1) % archetypes.length;
+            return archetypes[index];
+        }
+        
+        // Generate group
+        function generateGroup() {
+            const members = [];
+            const memberNames = document.querySelectorAll('.member-name');
+            const memberDobs = document.querySelectorAll('.member-dob');
+            
+            for (let i = 0; i < memberNames.length; i++) {
+                const name = memberNames[i].value || `Member ${i + 1}`;
+                const dob = memberDobs[i].value;
+                const lifePath = calculateLifePath(dob);
+                const archetype = getArchetypeFromLifePath(lifePath);
+                
+                members.push({
+                    name: name,
+                    archetype: archetype,
+                    lifePath: lifePath
+                });
+            }
+            
+            // Generate group name
+            const customName = document.getElementById('custom-group-name').value;
+            const groupName = customName || `${groupPrefixes[Math.floor(Math.random() * groupPrefixes.length)]} ${groupSuffixes[Math.floor(Math.random() * groupSuffixes.length)]}`;
+            
+            // Select concept
+            const concept = concepts[Math.floor(Math.random() * concepts.length)];
+            
+            // Generate debut song
+            const debutSong = debutSongs[Math.floor(Math.random() * debutSongs.length)];
+            
+            // Generate fandom name
+            const fandomName = `${fandomPrefixes[Math.floor(Math.random() * fandomPrefixes.length)]}${fandomSuffixes[Math.floor(Math.random() * fandomSuffixes.length)]}`;
+            
+            // Assign positions based on archetypes
+            const membersWithPositions = assignPositions(members);
+            
+            // Display results
+            displayResults({
+                groupName: groupName,
+                members: membersWithPositions,
+                concept: concept,
+                debutSong: debutSong,
+                fandomName: fandomName
+            });
+        }
+        
+        // Assign positions to members
+        function assignPositions(members) {
+            const roles = {};
+            
+            // Count archetype types
+            members.forEach(member => {
+                const role = member.archetype.role;
+                roles[role] = (roles[role] || 0) + 1;
+            });
+            
+            // Assign specific positions
+            return members.map((member, index) => {
+                let position = member.archetype.role;
+                
+                // If multiple members have same role, add variations
+                if (roles[position] > 1) {
+                    const suffixes = ['Lead', 'Sub', ''];
+                    position = `${suffixes[index % 3]} ${position}`.trim();
+                }
+                
+                // Assign leader to first member
+                if (index === 0) {
+                    position = `👑 Leader`;
+                }
+                
+                return {
+                    ...member,
+                    position: position
+                };
+            });
+        }
+        
+        // Display results
+        function displayResults(group) {
+            // Update group header
+            document.getElementById('group-title').textContent = group.groupName.toUpperCase();
+            document.getElementById('group-subtitle').textContent = group.fandomName.toUpperCase();
+            
+            // Update concept
+            document.getElementById('group-concept').innerHTML = `
+                <div class="concept-name">${group.concept.name}</div>
+                <div class="concept-vibe">${group.concept.vibe}</div>
+                <div class="concept-colors">
+                    ${group.concept.colors.map(color => 
+                        `<div class="color-swatch" style="background: ${color}"></div>`
+                    ).join('')}
+                </div>
+            `;
+            
+            // Update members
+            document.getElementById('members-display').innerHTML = group.members.map(member => `
+                <div class="member-card">
+                    <div class="member-emoji">${member.archetype.emoji}</div>
+                    <div class="member-name">${member.name}</div>
+                    <div class="member-position">${member.position}</div>
+                    <div class="member-archetype">${member.archetype.name}</div>
+                </div>
+            `).join('');
+            
+            // Update group stats
+            const stats = calculateGroupStats(group.members);
+            document.getElementById('group-stats-display').innerHTML = Object.entries(stats).map(([stat, value]) => `
+                <div class="stat-item">
+                    <div class="stat-name">${stat}</div>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: ${value}%"></div>
+                    </div>
+                    <div class="stat-value">${value}%</div>
+                </div>
+            `).join('');
+            
+            // Update debut info
+            document.getElementById('debut-details').innerHTML = `
+                <div class="debut-song">
+                    <strong>Debut Song:</strong> "${group.debutSong}"
+                </div>
+                <div class="debut-concept">
+                    <strong>Concept:</strong> ${group.concept.name} (${group.concept.vibe})
+                </div>
+                <div class="debut-style">
+                    <strong>Group Style:</strong> ${group.members.length}-member idol group
+                </div>
+            `;
+            
+            // Update fandom info
+            document.getElementById('fandom-details').innerHTML = `
+                <div class="fandom-name">
+                    <strong>Fandom Name:</strong> ${group.fandomName}
+                </div>
+                <div class="fandom-color">
+                    <strong>Fandom Color:</strong> ${group.concept.colors[0]}
+                </div>
+                <div class="fandom-slogan">
+                    <strong>Fandom Slogan:</strong> "${group.fandomName} forever with ${group.groupName}!"
+                </div>
+            `;
+            
+            // Update chemistry score
+            const chemistry = calculateChemistry(group.members);
+            document.getElementById('chemistry-score').style.width = chemistry + '%';
+            document.getElementById('chemistry-label').textContent = chemistry + '% Chemistry';
+            
+            // Show results
+            document.getElementById('input-section').style.display = 'none';
+            document.getElementById('results-section').style.display = 'block';
+            
+            // Celebrate
+            celebrateGroupCreation();
+        }
+        
+        // Calculate group stats
+        function calculateGroupStats(members) {
+            const stats = {
+                'Stage Presence': 70,
+                'Vocal Power': 65,
+                'Dance Skills': 75,
+                'Visual Appeal': 80,
+                'Variety Skills': 70,
+                'Leadership': 60
+            };
+            
+            // Add bonus for specific archetypes
+            members.forEach(member => {
+                if (member.archetype.key === 'main_vocal') stats['Vocal Power'] += 15;
+                if (member.archetype.key === 'main_dancer') stats['Dance Skills'] += 15;
+                if (member.archetype.key === 'visual_icon') stats['Visual Appeal'] += 15;
+                if (member.archetype.key === 'mood_maker') stats['Variety Skills'] += 15;
+                if (member.archetype.key === 'golden_leader') stats['Leadership'] += 20;
+                if (member.archetype.key === 'all_rounder') {
+                    Object.keys(stats).forEach(key => stats[key] += 5);
+                }
+            });
+            
+            // Cap at 100
+            Object.keys(stats).forEach(key => {
+                stats[key] = Math.min(100, stats[key]);
+            });
+            
+            return stats;
+        }
+        
+        // Calculate group chemistry
+        function calculateChemistry(members) {
+            // Base chemistry
+            let chemistry = 70;
+            
+            // Bonus for complementary archetypes
+            const archetypeKeys = members.map(m => m.archetype.key);
+            
+            // Check for leader + backbone combo
+            if (archetypeKeys.includes('golden_leader') && archetypeKeys.includes('reliable_backbone')) {
+                chemistry += 10;
+            }
+            
+            // Check for mood maker + quiet genius combo
+            if (archetypeKeys.includes('mood_maker') && archetypeKeys.includes('quiet_genius')) {
+                chemistry += 10;
+            }
+            
+            // Check for visual + vocal combo
+            if (archetypeKeys.includes('visual_icon') && archetypeKeys.includes('main_vocal')) {
+                chemistry += 10;
+            }
+            
+            // Bonus for balanced group (different archetypes)
+            const uniqueArchetypes = new Set(archetypeKeys);
+            if (uniqueArchetypes.size >= 4) {
+                chemistry += 5;
+            }
+            
+            // Cap at 100
+            return Math.min(100, chemistry);
+        }
+        
+        // Celebrate group creation
+        function celebrateGroupCreation() {
+            // Confetti explosion
+            for (let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    createConfetti();
+                }, i * 30);
+            }
+        }
+        
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.style.cssText = `
+                position: fixed;
+                top: -10px;
+                left: ${Math.random() * 100}vw;
+                width: 12px;
+                height: 12px;
+                background: ${['#FF69B4', '#9400D3', '#FFD700', '#00FFFF', '#FF0000'][Math.floor(Math.random() * 5)]};
+                border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
+                animation: fall 3s linear forwards;
+                z-index: 1000;
+            `;
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => confetti.remove(), 3000);
+        }
+        
+        // Share group
+        function shareGroup() {
+            const groupName = document.getElementById('group-title').textContent;
+            const fandomName = document.getElementById('group-subtitle').textContent;
+            const chemistry = document.getElementById('chemistry-label').textContent;
+            
+            const text = `I created a K-Pop group called "${groupName}" with friends! ${fandomName} forever! 💖\nGroup Chemistry: ${chemistry} ⚡\n\nCreate YOUR group: `;
+            const url = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My K-Pop Group',
+                    text: text,
+                    url: url
+                });
+            } else {
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+            }
+        }
+        
+        // Download group card
+        function downloadGroupCard() {
+            alert('📸 Group card generation coming soon! For now, take a screenshot to share! ✨');
+        }
+        
+        // Restart tool
+        function restartTool() {
+            document.getElementById('input-section').style.display = 'block';
+            document.getElementById('results-section').style.display = 'none';
+            document.querySelectorAll('.member-name').forEach(input => input.value = '');
+            document.querySelectorAll('.member-dob').forEach(input => input.value = '');
+            document.getElementById('custom-group-name').value = '';
+            
+            // Reset to 3 members
+            while (memberCount > 3) {
+                removeMember();
+            }
+        }
+    </script>
+    
+    <style>
+        .members-input {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .member-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .member-name, .member-dob {
+            flex: 1;
+            min-width: 200px;
+            padding: 12px 15px;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+            border-radius: 10px;
+            background: rgba(26, 10, 46, 0.8);
+            color: white;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        
+        .group-controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .add-member-btn, .remove-member-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .add-member-btn {
+            background: linear-gradient(135deg, #FF69B4 0%, #9400D3 100%);
+            color: white;
+        }
+        
+        .remove-member-btn {
+            background: linear-gradient(135deg, #FF6B6B 0%, #EE5A5A 100%);
+            color: white;
+        }
+        
+        .group-name-input {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .group-name-input label {
+            display: block;
+            color: #FFD700;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .group-name-input input {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 15px;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+            border-radius: 10px;
+            background: rgba(26, 10, 46, 0.8);
+            color: white;
+            font-size: 16px;
+            font-family: inherit;
+            text-align: center;
+        }
+        
+        .group-header {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .group-emoji {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .group-title {
+            font-size: 48px;
+            color: #FFD700;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+        }
+        
+        .group-subtitle {
+            font-size: 24px;
+            color: #FF69B4;
+            font-style: italic;
+        }
+        
+        .group-concept, .group-members, .group-stats, .debut-info, .fandom-info, .group-compatibility {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .group-concept h3, .group-members h3, .group-stats h3, .debut-info h3, .fandom-info h3, .group-compatibility h3 {
+            color: #FFD700;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .concept-name {
+            font-size: 32px;
+            color: #FF69B4;
+            margin-bottom: 10px;
+        }
+        
+        .concept-vibe {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .concept-colors {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .color-swatch {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            border: 3px solid white;
+        }
+        
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .member-card {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.2) 0%, rgba(148, 0, 211, 0.2) 100%);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        
+        .member-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .member-emoji {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+        
+        .member-name {
+            font-size: 24px;
+            color: #FFD700;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .member-position {
+            font-size: 18px;
+            color: #FF69B4;
+            margin-bottom: 10px;
+        }
+        
+        .member-archetype {
+            font-size: 16px;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .stat-item {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .stat-name {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .stat-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 20px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        
+        .stat-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF69B4, #9400D3);
+            border-radius: 8px;
+            transition: width 1s ease-out;
+        }
+        
+        .stat-value {
+            color: #FFD700;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .debut-details, .fandom-details {
+            color: white;
+            line-height: 2;
+            font-size: 18px;
+        }
+        
+        .debut-details strong, .fandom-details strong {
+            color: #FF69B4;
+        }
+        
+        .group-compatibility {
+            text-align: center;
+        }
+        
+        .compatibility-score {
+            margin-top: 20px;
+        }
+        
+        .score-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 30px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF69B4, #FFD700, #00FFFF);
+            border-radius: 8px;
+            transition: width 1.5s ease-out;
+        }
+        
+        .score-label {
+            font-size: 28px;
+            color: #FFD700;
+            font-weight: bold;
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</body>
+</html>

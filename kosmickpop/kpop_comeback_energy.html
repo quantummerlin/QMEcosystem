@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover your K-Pop comeback energy - what era would your next concept be?">
+    <title>Your K-Pop Comeback Energy | kosmic Reading</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+    <script src="kpop_data.js"></script>
+    <script src="kpop_branding.js"></script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="kpop-theme">
+    <!-- Navigation Header -->
+    <header style="
+        background: rgba(26, 10, 46, 0.95);
+        border-bottom: 2px solid rgba(255, 105, 180, 0.3);
+        padding: 15px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+    ">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <a href="index.html" style="color: #FFD700; text-decoration: none; font-size: 1.3rem; font-weight: bold;">🎤 Kosmic K-Pop</a>
+            <nav style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <a href="index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Home</a>
+                <a href="kpop_tools_index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">All Tools</a>
+                <a href="kpop_archetype_quiz.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Archetype Quiz</a>
+                <a href="kpop_life_path.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Life Path</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Star Field Background -->
+    <div id="star-field" class="star-field"></div>
+    
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="kosmic-loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Channeling Comeback Energy...</div>
+        </div>
+    </div>
+
+    <header class="kosmic-header">
+        <div class="header-content">
+            <h1 class="neon-title">Your K-Pop Comeback Energy 💫</h1>
+            <p class="header-subtitle">Discover the era of your next kosmic comeback</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Input Form -->
+        <div id="input-section" class="tool-section active">
+            <div class="input-container">
+                <div class="sparkle-icon">✨</div>
+                <h2>What Era Is Calling to You?</h2>
+                <p>Enter your details to discover the comeback concept that aligns with your current kosmic energy.</p>
+                
+                <form id="comeback-form" class="kosmic-form">
+                    <div class="form-group">
+                        <label for="preferred-name">
+                            Preferred Name ✨
+                            <span class="helper-text">What you resonate with most</span>
+                        </label>
+                        <input type="text" id="preferred-name" name="preferred-name" required placeholder="Enter your name" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-date">
+                            Date of Birth 🎂
+                            <span class="helper-text">For kosmic alignment</span>
+                        </label>
+                        <input type="date" id="birth-date" name="birth-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="current-mood">
+                            Current Mood/Vibe 🌊
+                            <span class="helper-text">How are you feeling right now?</span>
+                        </label>
+                        <select id="current-mood" name="current-mood" required>
+                            <option value="">Select your current energy...</option>
+                            <option value="energetic">💥 Energetic & Ready</option>
+                            <option value="emotional">💔 Emotional & Deep</option>
+                            <option value="playful">🎉 Playful & Fun</option>
+                            <option value="mysterious">🌙 Mysterious & Intense</option>
+                            <option value="romantic">💕 Romantic & Soft</option>
+                            <option value="bold">🔥 Bold & Confident</option>
+                            <option value="dreamy">☁️ Dreamy & Ethereal</option>
+                            <option value="rebellious">⚡ Rebellious & Free</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="desired-feeling">
+                            Desired Feeling for Comeback 🎯
+                            <span class="helper-text">What energy do you want to express?</span>
+                        </select>
+                        <select id="desired-feeling" name="desired-feeling" required>
+                            <option value="">Select desired energy...</option>
+                            <option value="powerful">💪 Powerful & Strong</option>
+                            <option value="emotional">💝 Emotional & Touching</option>
+                            <option value="refreshing">🌸 Refreshing & Bright</option>
+                            <option value="charismatic">✨ Charismatic & Cool</option>
+                            <option value="healing">🌿 Healing & Comforting</option>
+                            <option value="explosive">🎆 Explosive & Impactful</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="kosmic-button primary-button">Reveal My Comeback Era 🎤</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Loading Section -->
+        <div id="loading-section" class="tool-section">
+            <div class="kosmic-loader">
+                <div class="loader-ring"></div>
+                <div class="loader-text">Channeling Comeback Energy...</div>
+                <p class="loading-message">Aligning with kosmic forces...</p>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result-section" class="tool-section">
+            <div class="result-container">
+                <div class="sparkle-icon">✨</div>
+                <h2>Your Comeback Era Revealed!</h2>
+                
+                <div id="comeback-result" class="comeback-result">
+                    <!-- Result will be inserted here -->
+                </div>
+
+                <div class="result-actions">
+                    <button id="try-again" class="kosmic-button secondary-button">Try Different Energy</button>
+                    <button id="share-comeback" class="kosmic-button primary-button">Share My Era 🎤</button>
+                </div>
+
+                <div class="explore-more">
+                    <p>Want deeper insights? Try our <a href="kpop_life_path.html">Life Path Reading</a> or <a href="kpop_archetype_quiz.html">Archetype Quiz</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies to enhance your kosmic experience ✨</p>
+        <button id="accept-cookies" class="kosmic-button small-button">Got it!</button>
+    </div>
+
+    <footer class="kosmic-footer">
+        <p>For entertainment purposes only • Entertainment for K-Pop fans worldwide 🌍</p>
+        <p class="footer-links">
+            <a href="kpop_landing.html">Home</a> • 
+            <a href="kpop_tools_index.html">All Tools</a> • 
+            <a href="kpop_life_path.html">Life Path</a>
+        </p>
+    </footer>
+
+    <script>
+        // Comeback Concepts Data
+        const comebackConcepts = [
+            {
+                name: "Girl Crush Power",
+                emoji: "💥",
+                keywords: ["bold", "powerful", "energetic", "rebellious"],
+                colors: ["#FF0055", "#000000", "#FFFFFF"],
+                vibe: "Confident, strong, and unstoppable",
+                description: "You're radiating pure girl crush energy! Bold colors, powerful choreography, and a 'take no prisoners' attitude define this era. Think sharp edges, leather jackets, and fierce expressions.",
+                stageElements: ["Strong hip-hop beats", "Sharp knife-like choreography", "Bold makeup with dark liners", "Oversized streetwear"],
+                musicStyle: "EDM-trap fusion with heavy bass drops",
+                energyMessage: "This is your time to show strength and confidence. The universe is aligning to amplify your power!"
+            },
+            {
+                name: "Dreamy Fairy Tale",
+                emoji: "🧚",
+                keywords: ["dreamy", "romantic", "emotional", "refreshing"],
+                colors: ["#FFB6C1", "#E6E6FA", "#FFFFFF"],
+                vibe: "Ethereal, soft, and magical",
+                description: "A fairy tale comeback is calling! Soft pastels, flowing fabrics, and ethereal vibes create a dreamlike atmosphere. This era speaks to the romantic and gentle side of your soul.",
+                stageElements: ["Soft piano melodies", "Graceful flowing movements", "Floral accessories", "Light and airy makeup"],
+                musicStyle: "Ballad with orchestral elements and breathy vocals",
+                energyMessage: "Embrace your soft side and let your inner magic shine. The cosmos supports your gentle transformation."
+            },
+            {
+                name: "Cyberpunk Future",
+                emoji: "🤖",
+                keywords: ["bold", "energetic", "rebellious", "mysterious"],
+                colors: ["#00FFFF", "#FF00FF", "#000000"],
+                vibe: "Futuristic, edgy, and cutting-edge",
+                description: "The future is now! Cyberpunk aesthetics with neon lights, metallic textures, and high-tech vibes define this era. Perfect for those who want to push boundaries and explore the unknown.",
+                stageElements: ["Synth-heavy electronic beats", "Robotic dance moves", "LED-embedded costumes", "Holographic accessories"],
+                musicStyle: "Electronic-pop with glitch effects and auto-tune",
+                energyMessage: "You're ahead of your time! The cosmos is energizing your innovative spirit and futuristic vision."
+            },
+            {
+                name: "Retro 90s Nostalgia",
+                emoji: "💿",
+                keywords: ["playful", "energetic", "bold", "refreshing"],
+                colors: ["#FF6B6B", "#4ECDC4", "#FFE66D"],
+                vibe: "Nostalgic, fun, and infectious",
+                description: "90s vibes are calling! Bright colors, crop tops, high-waisted pants, and infectious energy take center stage. This era celebrates the golden age of pop with a modern twist.",
+                stageElements: ["Upbeat dance-pop beats", "Fun energetic choreography", "Retro accessories", "Bright bold makeup"],
+                musicStyle: "90s-inspired dance-pop with catchy hooks",
+                energyMessage: "The past is inspiring your future! Embrace the joy and energy of this nostalgic comeback."
+            },
+            {
+                name: "Dark Concept Mystique",
+                emoji: "🌑",
+                keywords: ["mysterious", "emotional", "bold", "rebellious"],
+                colors: ["#2C3E50", "#8B0000", "#1A1A1A"],
+                vibe: "Intense, dark, and captivating",
+                description: "Embrace the darkness! This concept explores deep emotions, mystery, and intensity. Gothic elements, dramatic makeup, and powerful storytelling create an unforgettable atmosphere.",
+                stageElements: ["Moody atmospheric beats", "Slow dramatic choreography", "Dark elegant costumes", "Smoky eye makeup"],
+                musicStyle: "Dark pop with orchestral undertones and haunting vocals",
+                energyMessage: "Your depth is your power. The cosmos honors your ability to explore and express intense emotions."
+            },
+            {
+                name: "Summer Tropical Breeze",
+                emoji: "🌴",
+                keywords: ["refreshing", "playful", "energetic", "romantic"],
+                colors: ["#00CED1", "#FF6347", "#FFD700"],
+                vibe: "Bright, fresh, and uplifting",
+                description: "Summer vibes all year round! Tropical colors, beach aesthetics, and infectious energy create a refreshing comeback. Perfect for bringing sunshine and joy to your audience.",
+                stageElements: ["Upbeat tropical house beats", "Bouncy energetic choreography", "Flower crowns and beach accessories", "Sun-kissed makeup"],
+                musicStyle: "Tropical-pop with steel drum elements and catchy choruses",
+                energyMessage: "You're a ray of sunshine! The cosmos is energizing your bright and uplifting spirit."
+            },
+            {
+                name: "Elegant Royal Ballad",
+                emoji: "👑",
+                keywords: ["romantic", "emotional", "powerful", "charismatic"],
+                colors: ["#D4AF37", "#800020", "#1A1A1A"],
+                vibe: "Regal, sophisticated, and emotional",
+                description: "Royalty vibes! Elegant gowns, sophisticated styling, and emotional depth define this majestic comeback. This era showcases your vocal prowess and artistic maturity.",
+                stageElements: ["Orchestral ballad arrangement", "Elegant graceful choreography", "Formal royal attire", "Polished refined makeup"],
+                musicStyle: "Emotional ballad with full orchestra and powerful vocals",
+                energyMessage: "You're royalty in your own right. The cosmos is honoring your elegance and emotional depth."
+            },
+            {
+                name: "Street Hip Hop Edge",
+                emoji: "🧢",
+                keywords: ["bold", "rebellious", "energetic", "charismatic"],
+                colors: ["#FF4500", "#1A1A1A", "#808080"],
+                vibe: "Cool, confident, and authentic",
+                description: "Street culture energy! Hoodies, caps, sneakers, and authentic hip-hop vibes create a raw and real comeback. This era celebrates street fashion and urban culture.",
+                stageElements: ["Hard-hitting hip-hop beats", "Sharp swagger-filled choreography", "Streetwear outfits", "Edgy urban makeup"],
+                musicStyle: "Hip-hop with trap influences and confident delivery",
+                energyMessage: "Keep it real! The cosmos supports your authentic expression and street-smart energy."
+            }
+        ];
+
+        // Form Submission
+        document.getElementById('comeback-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('preferred-name').value;
+            const birthDate = document.getElementById('birth-date').value;
+            const currentMood = document.getElementById('current-mood').value;
+            const desiredFeeling = document.getElementById('desired-feeling').value;
+            
+            // Show loading
+            showSection('loading-section');
+            
+            // Calculate comeback concept
+            setTimeout(() => {
+                const comeback = calculateComeback(name, birthDate, currentMood, desiredFeeling);
+                displayResult(name, comeback);
+            }, 1500);
+        });
+
+        // Calculate Comeback Concept
+        function calculateComeback(name, birthDate, currentMood, desiredFeeling) {
+            // Score each concept based on mood and feeling
+            const scores = comebackConcepts.map(concept => {
+                let score = 0;
+                
+                // Check keyword matches
+                if (concept.keywords.includes(currentMood)) score += 3;
+                if (concept.keywords.includes(desiredFeeling)) score += 3;
+                
+                // Add some randomness based on birth date
+                if (birthDate) {
+                    const dateNum = new Date(birthDate).getDate();
+                    score += (dateNum % 4);
+                }
+                
+                return { concept, score };
+            });
+            
+            // Sort by score and return highest
+            scores.sort((a, b) => b.score - a.score);
+            return scores[0].concept;
+        }
+
+        // Display Result
+        function displayResult(name, comeback) {
+            const container = document.getElementById('comeback-result');
+            
+            container.innerHTML = `
+                <div class="comeback-header">
+                    <div class="comeback-emoji">${comeback.emoji}</div>
+                    <h3 class="comeback-name">${name}'s Comeback Era:</h3>
+                    <h2 class="comeback-title">${comeback.name}</h2>
+                    <p class="comeback-vibe">${comeback.vibe}</p>
+                </div>
+                
+                <div class="comeback-colors">
+                    <h4>Color Palette:</h4>
+                    <div class="color-swatches">
+                        ${comeback.colors.map(color => `<div class="color-swatch" style="background-color: ${color}"></div>`).join('')}
+                    </div>
+                </div>
+                
+                <div class="comeback-description">
+                    <h4>About Your Era:</h4>
+                    <p>${comeback.description}</p>
+                </div>
+                
+                <div class="comeback-details">
+                    <div class="detail-section">
+                        <h4>🎵 Music Style:</h4>
+                        <p>${comeback.musicStyle}</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4>💃 Stage Elements:</h4>
+                        <ul>
+                            ${comeback.stageElements.map(element => `<li>${element}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section kosmic-message">
+                        <h4>✨ kosmic Energy Message:</h4>
+                        <p>${comeback.energyMessage}</p>
+                    </div>
+                </div>
+            `;
+            
+            showSection('result-section');
+            triggerConfetti();
+        }
+
+        // Show Section
+        function showSection(sectionId) {
+            document.querySelectorAll('.tool-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // Try Again
+        document.getElementById('try-again').addEventListener('click', () => {
+            document.getElementById('comeback-form').reset();
+            showSection('input-section');
+        });
+
+        // Share Result
+        document.getElementById('share-comeback').addEventListener('click', () => {
+            const comebackTitle = document.querySelector('.comeback-title').textContent;
+            const shareText = `My K-Pop comeback era is ${comebackTitle}! 💫 Find yours at Kosmic K-Pop!`;
+            const shareUrl = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My K-Pop Comeback Era',
+                    text: shareText,
+                    url: shareUrl
+                });
+            } else {
+                navigator.clipboard.writeText(`${shareText} ${shareUrl}`);
+                alert('Comeback era copied to clipboard! 🎤');
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hide loading overlay
+            setTimeout(() => {
+                document.getElementById('loading-overlay').style.display = 'none';
+            }, 1000);
+            
+            // Initialize effects
+            initStarField();
+            initCookieBanner();
+        });
+    </script>
+</body>
+</html>

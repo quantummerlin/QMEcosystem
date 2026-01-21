@@ -1,0 +1,713 @@
+/* ============================================
+   K-Pop Realm: Complete Design System
+   Copyright-Safe, Neon-Optimized, Mobile-Ready
+   ============================================ */
+
+/* CSS Variables - K-Pop Color Palette */
+:root {
+    /* Primary Colors */
+    --kpop-pink: #FF69B4;
+    --kpop-purple: #9400D3;
+    --kpop-cyan: #00FFFF;
+    --kpop-gold: #FFD700;
+    
+    /* Gradient Definitions */
+    --gradient-pink-purple: linear-gradient(135deg, #FF69B4, #9400D3);
+    --gradient-purple-cyan: linear-gradient(135deg, #9400D3, #00FFFF);
+    --gradient-pink-cyan: linear-gradient(135deg, #FF69B4, #00FFFF);
+    --gradient-gold: linear-gradient(135deg, #FFD700, #FFA500);
+    --gradient-dark: linear-gradient(180deg, #1A0A2E 0%, #0D0D1A 100%);
+    
+    /* Background Effects */
+    --holographic-bg: linear-gradient(45deg, 
+        rgba(255, 105, 180, 0.1), 
+        rgba(0, 255, 255, 0.1), 
+        rgba(148, 0, 211, 0.1),
+        rgba(255, 105, 180, 0.1));
+    
+    --stage-lights: radial-gradient(circle at 20% 50%, rgba(255, 105, 180, 0.3) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 50%, rgba(0, 255, 255, 0.3) 0%, transparent 50%),
+                    radial-gradient(circle at 50% 80%, rgba(148, 0, 211, 0.3) 0%, transparent 50%);
+    
+    /* Text Colors */
+    --text-primary: #FFFFFF;
+    --text-secondary: #E0E0E0;
+    --text-accent: #00FFFF;
+    --text-highlight: #FF69B4;
+    
+    /* Card Styling */
+    --card-bg: rgba(26, 10, 46, 0.85);
+    --card-border: 1px solid rgba(255, 105, 180, 0.3);
+    --card-shadow: 0 8px 32px rgba(255, 105, 180, 0.2);
+    --card-hover: 0 12px 40px rgba(255, 105, 180, 0.4);
+    
+    /* Button Styles */
+    --btn-primary: var(--gradient-pink-purple);
+    --btn-secondary: var(--gradient-purple-cyan);
+    --btn-accent: var(--gradient-gold);
+    
+    /* Effects */
+    --neon-pink: 0 0 10px rgba(255, 105, 180, 0.8), 0 0 20px rgba(255, 105, 180, 0.6);
+    --neon-purple: 0 0 10px rgba(148, 0, 211, 0.8), 0 0 20px rgba(148, 0, 211, 0.6);
+    --neon-cyan: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6);
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+}
+
+/* ============================================
+   Navigation Bar
+   ============================================ */
+
+.navbar {
+    background: rgba(26, 10, 46, 0.95);
+    border-bottom: 2px solid rgba(255, 105, 180, 0.3);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navbar .brand-logo {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #FF69B4;
+}
+
+/* ============================================
+   Global Reset & Base Styles
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--gradient-dark);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--stage-lights);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+.kpop-title {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: var(--gradient-pink-purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+.kpop-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-accent);
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.kpop-heading {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    text-transform: uppercase;
+    color: var(--text-highlight);
+    text-shadow: var(--neon-pink);
+    margin: var(--spacing-md) 0 var(--spacing-sm);
+}
+
+.kpop-accent {
+    color: var(--text-accent);
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+}
+
+.kpop-highlight {
+    color: var(--text-highlight);
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 105, 180, 0.8);
+}
+
+/* ============================================
+   Layout & Containers
+   ============================================ */
+
+.kpop-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+}
+
+.kpop-section {
+    background: var(--card-bg);
+    border: var(--card-border);
+    border-radius: 20px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.kpop-section:hover {
+    box-shadow: var(--card-hover);
+    transform: translateY(-5px);
+}
+
+.kpop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+}
+
+.kpop-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.kpop-flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============================================
+   Cards
+   ============================================ */
+
+.kpop-card {
+    background: var(--holographic-bg);
+    border: var(--card-border);
+    border-radius: 15px;
+    padding: var(--spacing-md);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.kpop-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--holographic-bg);
+    transition: left 0.5s ease;
+    z-index: 0;
+}
+
+.kpop-card:hover::before {
+    left: 0;
+}
+
+.kpop-card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.kpop-card-title {
+    font-size: 1.4rem;
+    color: var(--text-accent);
+    font-weight: bold;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: var(--neon-cyan);
+}
+
+.kpop-card-text {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* ============================================
+   Forms & Inputs
+   ============================================ */
+
+.kpop-form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.kpop-label {
+    display: block;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.9rem;
+}
+
+.kpop-input {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 105, 180, 0.5);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.kpop-input:focus {
+    outline: none;
+    border-color: var(--kpop-cyan);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.kpop-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.kpop-select {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 105, 180, 0.5);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.kpop-select option {
+    background: #1A0A2E;
+    color: var(--text-primary);
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+
+.kpop-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.kpop-btn-primary {
+    background: var(--btn-primary);
+    color: var(--text-primary);
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+}
+
+.kpop-btn-secondary {
+    background: var(--btn-secondary);
+    color: var(--text-primary);
+    box-shadow: 0 4px 15px rgba(148, 0, 211, 0.4);
+}
+
+.kpop-btn-accent {
+    background: var(--btn-accent);
+    color: #1A0A2E;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.kpop-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+}
+
+.kpop-btn:active {
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   Archetype Display
+   ============================================ */
+
+.kpop-archetype {
+    background: var(--gradient-pink-purple);
+    padding: var(--spacing-md);
+    border-radius: 20px;
+    text-align: center;
+    margin: var(--spacing-md) 0;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+}
+
+.kpop-archetype-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.kpop-archetype-name {
+    font-size: 2rem;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.kpop-archetype-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+}
+
+/* ============================================
+   Results Display
+   ============================================ */
+
+.kpop-result {
+    background: var(--card-bg);
+    border: 2px solid rgba(255, 105, 180, 0.5);
+    border-radius: 20px;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    position: relative;
+}
+
+.kpop-result::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient-pink-cyan);
+    border-radius: 20px 20px 0 0;
+}
+
+.kpop-result-section {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kpop-result-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.kpop-result-title {
+    color: var(--text-accent);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: var(--neon-cyan);
+}
+
+.kpop-result-text {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* ============================================
+   Planetary Icons
+   ============================================ */
+
+.kpop-planets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin: var(--spacing-sm) 0;
+}
+
+.kpop-planet {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: help;
+    transition: all 0.3s ease;
+}
+
+.kpop-planet:hover {
+    background: rgba(255, 105, 180, 0.3);
+    transform: scale(1.1);
+}
+
+.kpop-planet-sun:hover { box-shadow: var(--neon-pink); }
+.kpop-planet-moon:hover { box-shadow: 0 0 10px rgba(200, 200, 255, 0.8); }
+.kpop-planet-mercury:hover { box-shadow: var(--neon-cyan); }
+.kpop-planet-venus:hover { box-shadow: 0 0 10px rgba(255, 105, 180, 0.8); }
+.kpop-planet-mars:hover { box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); }
+.kpop-planet-jupiter:hover { box-shadow: 0 0 10px rgba(255, 215, 0, 0.8); }
+.kpop-planet-saturn:hover { box-shadow: 0 0 10px rgba(255, 200, 150, 0.8); }
+.kpop-planet-uranus:hover { box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); }
+.kpop-planet-neptune:hover { box-shadow: 0 0 10px rgba(100, 100, 255, 0.8); }
+.kpop-planet-pluto:hover { box-shadow: 0 0 10px rgba(150, 50, 150, 0.8); }
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes neonPulse {
+    0%, 100% { 
+        text-shadow: 0 0 10px rgba(255, 105, 180, 0.8), 
+                     0 0 20px rgba(255, 105, 180, 0.6);
+    }
+    50% { 
+        text-shadow: 0 0 20px rgba(255, 105, 180, 1), 
+                     0 0 30px rgba(255, 105, 180, 0.8);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.kpop-animate-pulse {
+    animation: neonPulse 2s ease-in-out infinite;
+}
+
+.kpop-animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.kpop-animate-sparkle {
+    animation: sparkle 1.5s ease-in-out infinite;
+}
+
+.kpop-animate-slide {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* ============================================
+   Loading Animation
+   ============================================ */
+
+.kpop-loading {
+    text-align: center;
+    padding: var(--spacing-xl);
+}
+
+.kpop-loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 105, 180, 0.3);
+    border-top: 4px solid var(--kpop-pink);
+    border-radius: 50%;
+    margin: 0 auto var(--spacing-md);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ============================================
+   Social Sharing Buttons
+   ============================================ */
+
+.kpop-share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin-top: var(--spacing-md);
+}
+
+.kpop-share-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.kpop-share-twitter {
+    background: #1DA1F2;
+    color: white;
+}
+
+.kpop-share-instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+}
+
+.kpop-share-tiktok {
+    background: #000000;
+    color: white;
+}
+
+.kpop-share-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   Mobile Responsive
+   ============================================ */
+
+@media (max-width: 768px) {
+    .kpop-title {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+    
+    .kpop-subtitle {
+        font-size: 1rem;
+    }
+    
+    .kpop-heading {
+        font-size: 1.4rem;
+    }
+    
+    .kpop-section {
+        padding: var(--spacing-sm);
+    }
+    
+    .kpop-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .kpop-btn {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .kpop-archetype-name {
+        font-size: 1.5rem;
+    }
+    
+    .kpop-share-buttons {
+        flex-direction: column;
+    }
+    
+    .kpop-share-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+.kpop-text-center { text-align: center; }
+.kpop-text-left { text-align: left; }
+.kpop-text-right { text-align: right; }
+.kpop-mb-sm { margin-bottom: var(--spacing-sm); }
+.kpop-mb-md { margin-bottom: var(--spacing-md); }
+.kpop-mb-lg { margin-bottom: var(--spacing-lg); }
+.kpop-mt-sm { margin-top: var(--spacing-sm); }
+.kpop-mt-md { margin-top: var(--spacing-md); }
+.kpop-mt-lg { margin-top: var(--spacing-lg); }
+.kpop-p-sm { padding: var(--spacing-sm); }
+.kpop-p-md { padding: var(--spacing-md); }
+.kpop-p-lg { padding: var(--spacing-lg); }
+
+/* ============================================
+   Print Styles (for sharing results)
+   ============================================ */
+
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .kpop-section {
+        border: 1px solid #ccc;
+        box-shadow: none;
+    }
+    
+    .kpop-btn, .kpop-share-buttons {
+        display: none;
+    }
+}

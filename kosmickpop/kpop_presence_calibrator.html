@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idol Presence Calibrator | Kosmic K-Pop</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="kosmic-background">
+        <div class="stars"></div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">🌟 Idol Presence Calibrator 🌟</h1>
+            <p class="subtitle">Check your current aura and charisma levels</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="tool-content">
+            
+            <!-- Daily Check Section -->
+            <div id="daily-check-section" class="input-section">
+                <div class="check-intro">
+                    <h3>✨ Daily Presence Check</h3>
+                    <p>Take a moment to check in with yourself. This is how idols calibrate their energy before every performance!</p>
+                </div>
+                
+                <div class="energy-questions">
+                    <div class="question-card">
+                        <h4>💫 Energy Level</h4>
+                        <div class="energy-slider-container">
+                            <input type="range" id="energy-level" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Low</span>
+                                <span id="energy-value">5</span>
+                                <span>High</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <h4>🎭 Confidence Level</h4>
+                        <div class="energy-slider-container">
+                            <input type="range" id="confidence-level" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Low</span>
+                                <span id="confidence-value">5</span>
+                                <span>High</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <h4>✨ Aura Strength</h4>
+                        <div class="energy-slider-container">
+                            <input type="range" id="aura-level" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Weak</span>
+                                <span id="aura-value">5</span>
+                                <span>Strong</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <h4>🎯 Focus Level</h4>
+                        <div class="energy-slider-container">
+                            <input type="range" id="focus-level" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Scattered</span>
+                                <span id="focus-value">5</span>
+                                <span>Laser</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <h4>💖 Self-Love Level</h4>
+                        <div class="energy-slider-container">
+                            <input type="range" id="selflove-level" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Low</span>
+                                <span id="selflove-value">5</span>
+                                <span>High</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="action-button kosmic-button" onclick="calibratePresence()">
+                    ⚡ Calibrate My Presence ⚡
+                </button>
+            </div>
+            
+            <!-- Results Section -->
+            <div id="results-section" class="results-section" style="display: none;">
+                
+                <!-- Overall Aura Score -->
+                <div class="aura-score-container">
+                    <div class="aura-score-circle">
+                        <div class="score-number" id="overall-score">0</div>
+                        <div class="score-label">AURA STRENGTH</div>
+                    </div>
+                    <div class="aura-message" id="aura-message"></div>
+                </div>
+                
+                <!-- Charisma Mode -->
+                <div class="charisma-mode-section">
+                    <h3>🎭 Your Current Charisma Mode</h3>
+                    <div class="charisma-mode-card" id="charisma-mode-card">
+                        <div class="mode-emoji" id="mode-emoji">✨</div>
+                        <div class="mode-name" id="mode-name"></div>
+                        <div class="mode-description" id="mode-description"></div>
+                    </div>
+                </div>
+                
+                <!-- Energy Breakdown -->
+                <div class="energy-breakdown">
+                    <h3>📊 Energy Breakdown</h3>
+                    <div class="breakdown-grid" id="breakdown-grid"></div>
+                </div>
+                
+                <!-- Today's Adjustment -->
+                <div class="today-adjustment">
+                    <h3>🎯 Today's One Adjustment</h3>
+                    <div class="adjustment-card" id="adjustment-card">
+                        <div class="adjustment-icon">💡</div>
+                        <div class="adjustment-text" id="adjustment-text"></div>
+                    </div>
+                </div>
+                
+                <!-- Presence Tips -->
+                <div class="presence-tips">
+                    <h3>✨ Presence Boost Tips</h3>
+                    <div class="tips-list" id="tips-list"></div>
+                </div>
+                
+                <!-- Viral Features -->
+                <div id="viral-features"></div>
+                
+                <!-- Share Buttons -->
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareResult()">
+                        📱 Share My Presence!
+                    </button>
+                    <button class="share-btn" onclick="downloadCard()">
+                        📸 Download Presence Card
+                    </button>
+                </div>
+                
+                <!-- Restart Button -->
+                <button class="restart-button" onclick="restartTool()">
+                    🔄 Recalibrate Tomorrow
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="kpop_data.js"></script>
+    <script src="viral_components.js"></script>
+    <script>
+        // Charisma modes
+        const charismaModes = [
+            {
+                name: 'Soft Mode',
+                emoji: '🌸',
+                description: 'Gentle, approachable, nurturing energy. Perfect for fan interactions, variety shows, and heartfelt moments.',
+                color: '#FFB6C1'
+            },
+            {
+                name: 'Lethal Mode',
+                emoji: '🔥',
+                description: 'Intense, powerful, commanding energy. Ideal for performances, dance breaks, and impactful moments.',
+                color: '#DC143C'
+            },
+            {
+                name: 'Untouchable Mode',
+                emoji: '💎',
+                description: 'Mysterious, elevated, exclusive energy. Great for high-fashion concepts, red carpets, and elite visuals.',
+                color: '#9370DB'
+            },
+            {
+                name: 'Leader Mode',
+                emoji: '👑',
+                description: 'Authoritative, visionary, guiding energy. Perfect for interviews, speeches, and taking charge.',
+                color: '#FFD700'
+            },
+            {
+                name: 'Ace Mode',
+                emoji: '🏆',
+                description: 'Complete, balanced, all-around energy. Ideal for situations requiring versatility and excellence.',
+                color: '#00CED1'
+            },
+            {
+                name: 'Mood Maker Mode',
+                emoji: '😄',
+                description: 'Joyful, entertaining, uplifting energy. Great for variety shows, fan meets, and bright concepts.',
+                color: '#FF69B4'
+            }
+        ];
+        
+        // Initialize sliders
+        document.querySelectorAll('.energy-slider').forEach(slider => {
+            slider.addEventListener('input', function() {
+                const valueSpan = document.getElementById(this.id + '-value');
+                if (valueSpan) {
+                    valueSpan.textContent = this.value;
+                }
+            });
+        });
+        
+        // Calibrate presence
+        function calibratePresence() {
+            const energy = parseInt(document.getElementById('energy-level').value);
+            const confidence = parseInt(document.getElementById('confidence-level').value);
+            const aura = parseInt(document.getElementById('aura-level').value);
+            const focus = parseInt(document.getElementById('focus-level').value);
+            const selfLove = parseInt(document.getElementById('selflove-level').value);
+            
+            // Calculate overall score
+            const overallScore = Math.round((energy + confidence + aura + focus + selfLove) / 5);
+            
+            // Determine charisma mode
+            const charismaMode = determineCharismaMode(energy, confidence, aura, focus, selfLove);
+            
+            // Generate adjustment
+            const adjustment = generateAdjustment(energy, confidence, aura, focus, selfLove);
+            
+            // Generate tips
+            const tips = generateTips(energy, confidence, aura, focus, selfLove);
+            
+            // Display results
+            displayResults({
+                overallScore: overallScore,
+                charismaMode: charismaMode,
+                adjustment: adjustment,
+                tips: tips,
+                breakdown: {
+                    energy: energy,
+                    confidence: confidence,
+                    aura: aura,
+                    focus: focus,
+                    selfLove: selfLove
+                }
+            });
+        }
+        
+        // Determine charisma mode
+        function determineCharismaMode(energy, confidence, aura, focus, selfLove) {
+            const avg = (energy + confidence + aura + focus + selfLove) / 5;
+            
+            if (avg >= 8 && confidence >= 7) {
+                return charismaModes[3]; // Leader Mode
+            } else if (avg >= 8 && energy >= 7) {
+                return charismaModes[1]; // Lethal Mode
+            } else if (avg >= 7 && aura >= 7) {
+                return charismaModes[2]; // Untouchable Mode
+            } else if (avg >= 7 && focus >= 7) {
+                return charismaModes[4]; // Ace Mode
+            } else if (energy >= 7 && confidence >= 7) {
+                return charismaModes[5]; // Mood Maker Mode
+            } else if (selfLove >= 7) {
+                return charismaModes[0]; // Soft Mode
+            } else {
+                // Return random mode for balanced results
+                return charismaModes[Math.floor(Math.random() * charismaModes.length)];
+            }
+        }
+        
+        // Generate adjustment
+        function generateAdjustment(energy, confidence, aura, focus, selfLove) {
+            const adjustments = [];
+            
+            if (energy <= 4) {
+                adjustments.push('Take 5 minutes to move your body - stretch, dance, or walk!');
+            }
+            
+            if (confidence <= 4) {
+                adjustments.push('Stand in front of a mirror and say 3 things you love about yourself!');
+            }
+            
+            if (aura <= 4) {
+                adjustments.push('Visualize a golden light surrounding you for 2 minutes!');
+            }
+            
+            if (focus <= 4) {
+                adjustments.push('Take 3 deep breaths and set one clear intention for today!');
+            }
+            
+            if (selfLove <= 4) {
+                adjustments.push('Write down 5 things that make you unique and valuable!');
+            }
+            
+            if (adjustments.length === 0) {
+                adjustments.push('You\'re radiating amazing energy! Share it with someone today!');
+            }
+            
+            return adjustments[0];
+        }
+        
+        // Generate tips
+        function generateTips(energy, confidence, aura, focus, selfLove) {
+            const allTips = [
+                '💫 Practice the "idol breathing" technique: 4 seconds in, hold 4, exhale 6',
+                '✨ Keep your posture open and shoulders back - it instantly boosts presence',
+                '🎯 Set one intention before any important interaction',
+                '💖 Remember: your worth isn\'t determined by others\' opinions',
+                '🔥 Channel your inner idol - how would they handle this situation?',
+                '🌟 Take 30 seconds to visualize your best self before any event',
+                '🎭 Your energy is contagious - be the energy you want to receive',
+                '💪 Presence isn\'t about being perfect, it\'s about being authentically you',
+                '✨ Small adjustments create big transformations',
+                '👑 You already have everything you need - trust yourself'
+            ];
+            
+            // Return random 4 tips
+            const shuffled = allTips.sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, 4);
+        }
+        
+        // Display results
+        function displayResults(results) {
+            // Animate overall score
+            animateScore(results.overallScore);
+            
+            // Display aura message
+            const auraMessages = {
+                low: 'Your aura is gentle today - perfect for introspection and quiet confidence',
+                medium: 'Your aura is balanced and steady - great for everyday interactions',
+                high: 'Your aura is radiating! You\'re magnetic and ready to shine!'
+            };
+            
+            let auraKey = 'medium';
+            if (results.overallScore >= 7) auraKey = 'high';
+            else if (results.overallScore <= 4) auraKey = 'low';
+            
+            document.getElementById('aura-message').textContent = auraMessages[auraKey];
+            
+            // Display charisma mode
+            const mode = results.charismaMode;
+            document.getElementById('mode-emoji').textContent = mode.emoji;
+            document.getElementById('mode-name').textContent = mode.name;
+            document.getElementById('mode-name').style.color = mode.color;
+            document.getElementById('mode-description').textContent = mode.description;
+            document.getElementById('charisma-mode-card').style.borderColor = mode.color;
+            
+            // Display energy breakdown
+            document.getElementById('breakdown-grid').innerHTML = Object.entries(results.breakdown).map(([key, value]) => `
+                <div class="breakdown-item">
+                    <div class="breakdown-label">${key.charAt(0).toUpperCase() + key.slice(1)}</div>
+                    <div class="breakdown-bar">
+                        <div class="breakdown-fill" style="width: ${value * 10}%"></div>
+                    </div>
+                    <div class="breakdown-value">${value}/10</div>
+                </div>
+            `).join('');
+            
+            // Display adjustment
+            document.getElementById('adjustment-text').textContent = results.adjustment;
+            
+            // Display tips
+            document.getElementById('tips-list').innerHTML = results.tips.map(tip => `
+                <div class="tip-item">${tip}</div>
+            `).join('');
+            
+            // Show results
+            document.getElementById('daily-check-section').style.display = 'none';
+            document.getElementById('results-section').style.display = 'block';
+            
+            // Celebrate
+            celebrateCalibration();
+        }
+        
+        // Animate score
+        function animateScore(finalScore) {
+            const scoreElement = document.getElementById('overall-score');
+            let current = 0;
+            
+            const interval = setInterval(() => {
+                current += 1;
+                scoreElement.textContent = current;
+                
+                if (current >= finalScore) {
+                    clearInterval(interval);
+                    
+                    // Add glow effect based on score
+                    if (finalScore >= 8) {
+                        scoreElement.style.color = '#FFD700';
+                    } else if (finalScore >= 5) {
+                        scoreElement.style.color = '#FF69B4';
+                    } else {
+                        scoreElement.style.color = '#9370DB';
+                    }
+                }
+            }, 50);
+        }
+        
+        // Celebrate calibration
+        function celebrateCalibration() {
+            // Gentle sparkles
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    createSparkle();
+                }, i * 100);
+            }
+        }
+        
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.style.cssText = `
+                position: fixed;
+                top: ${Math.random() * 100}vh;
+                left: ${Math.random() * 100}vw;
+                width: 20px;
+                height: 20px;
+                background: ${['#FF69B4', '#FFD700', '#00FFFF'][Math.floor(Math.random() * 3)]};
+                border-radius: 50%;
+                animation: sparkleFade 1s ease-out forwards;
+                z-index: 1000;
+                opacity: 0;
+            `;
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 1000);
+        }
+        
+        // Share result
+        function shareResult() {
+            const score = document.getElementById('overall-score').textContent;
+            const mode = document.getElementById('mode-name').textContent;
+            
+            const text = `I just calibrated my idol presence! 🌟\n\nAura Strength: ${score}/10\nCharisma Mode: ${mode}\n\nFind YOUR aura: `;
+            const url = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My Idol Presence',
+                    text: text,
+                    url: url
+                });
+            } else {
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+            }
+        }
+        
+        // Download card
+        function downloadCard() {
+            alert('📸 Presence card generation coming soon! For now, take a screenshot to share! ✨');
+        }
+        
+        // Restart tool
+        function restartTool() {
+            document.getElementById('daily-check-section').style.display = 'block';
+            document.getElementById('results-section').style.display = 'none';
+            
+            // Reset sliders
+            document.querySelectorAll('.energy-slider').forEach(slider => {
+                slider.value = 5;
+                const valueSpan = document.getElementById(slider.id + '-value');
+                if (valueSpan) {
+                    valueSpan.textContent = '5';
+                }
+            });
+        }
+    </script>
+    
+    <style>
+        .check-intro {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .check-intro h3 {
+            color: #FFD700;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .check-intro p {
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .energy-questions {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .question-card {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .question-card h4 {
+            color: #FFD700;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .energy-slider-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .energy-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #FF69B4, #FFD700);
+            outline: none;
+            cursor: pointer;
+        }
+        
+        .energy-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+        }
+        
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-size: 16px;
+        }
+        
+        .slider-labels span:nth-child(2) {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+        
+        .aura-score-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .aura-score-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FF69B4 0%, #9400D3 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.6);
+            animation: pulse 2s infinite;
+        }
+        
+        .score-number {
+            font-size: 80px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+        
+        .score-label {
+            font-size: 18px;
+            color: white;
+            letter-spacing: 2px;
+        }
+        
+        .aura-message {
+            font-size: 22px;
+            color: white;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .charisma-mode-section {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            text-align: center;
+        }
+        
+        .charisma-mode-section h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        
+        .charisma-mode-card {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            border: 3px solid;
+            border-color: #FF69B4;
+        }
+        
+        .mode-emoji {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .mode-name {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .mode-description {
+            font-size: 18px;
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .energy-breakdown {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .energy-breakdown h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .breakdown-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .breakdown-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .breakdown-label {
+            color: white;
+            font-size: 18px;
+        }
+        
+        .breakdown-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 25px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+        }
+        
+        .breakdown-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF69B4, #9400D3);
+            border-radius: 8px;
+            transition: width 1s ease-out;
+            animation: fillBar 1s ease-out;
+        }
+        
+        .breakdown-value {
+            color: #FFD700;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .today-adjustment {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 105, 180, 0.2) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 3px solid #FFD700;
+            text-align: center;
+        }
+        
+        .today-adjustment h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        
+        .adjustment-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+        }
+        
+        .adjustment-icon {
+            font-size: 50px;
+            animation: pulse 2s infinite;
+        }
+        
+        .adjustment-text {
+            color: white;
+            font-size: 22px;
+            line-height: 1.5;
+            text-align: left;
+            flex: 1;
+        }
+        
+        .presence-tips {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .presence-tips h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .tips-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .tip-item {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            line-height: 1.5;
+            border-left: 4px solid #FF69B4;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        @keyframes sparkleFade {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+    </style>
+</body>
+</html>

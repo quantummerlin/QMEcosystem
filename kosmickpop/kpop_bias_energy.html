@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover which K-Pop idol energy you're naturally drawn to - your bias energy revealed!">
+    <title>Your K-Pop Bias Energy | kosmic Reading</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+    <script src="kpop_data.js"></script>
+    <script src="kpop_branding.js"></script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="kpop-theme">
+    <!-- Star Field Background -->
+    <div id="star-field" class="star-field"></div>
+    
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="kosmic-loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Channeling Bias Energy...</div>
+        </div>
+    </div>
+
+    <header class="kosmic-header">
+        <div class="header-content">
+            <h1 class="neon-title">Your K-Pop Bias Energy 💖</h1>
+            <p class="header-subtitle">Discover which idol energy you're naturally drawn to</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Input Form -->
+        <div id="input-section" class="tool-section active">
+            <div class="input-container">
+                <div class="sparkle-icon">✨</div>
+                <h2>What Idol Energy Calls to You?</h2>
+                <p>We all have a bias - an idol we're naturally drawn to. Discover the kosmic reasons behind your bias energy and what it reveals about you!</p>
+                
+                <form id="bias-form" class="kosmic-form">
+                    <div class="form-group">
+                        <label for="preferred-name">
+                            Your Name ✨
+                            <span class="helper-text">For kosmic alignment</span>
+                        </label>
+                        <input type="text" id="preferred-name" name="preferred-name" required placeholder="Enter your name" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-date">
+                            Date of Birth 🎂
+                            <span class="helper-text">For numerological insight</span>
+                        </label>
+                        <input type="date" id="birth-date" name="birth-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bias-type">
+                            What Type of Idol Attracts You? 🌟
+                            <span class="helper-text">Be honest with yourself!</span>
+                        </label>
+                        <select id="bias-type" name="bias-type" required>
+                            <option value="">Select bias type...</option>
+                            <option value="leader">👑 Natural leaders who take charge</option>
+                            <option value="vocal">🎤 Powerful vocalists with emotion</option>
+                            <option value="dancer">💃 Amazing dancers with charisma</option>
+                            <option value="rapper">🔥 Charismatic rappers with flow</option>
+                            <option value="visual">✨ Stunning visuals and visuals</option>
+                            <option value="mood">😄 Mood makers who bring joy</option>
+                            <option value="quiet">🧠 Quiet geniuses with depth</option>
+                            <option value="reliable">💪 Reliable and steady members</option>
+                            <option value="all-rounder">🏆 Talented all-rounders</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attraction-reason">
+                            What Draws You Most? 💖
+                            <span class="helper-text">The main reason for your bias</span>
+                        </label>
+                        <select id="attraction-reason" name="attraction-reason" required>
+                            <option value="">Select main attraction...</option>
+                            <option value="personality">💝 Their personality and charm</option>
+                            <option value="talent">🎵 Their incredible talent</option>
+                            <option value="stage">💃 Their stage presence</option>
+                            <option value="vibes">✨ Their overall energy and vibes</option>
+                            <option value="story">📖 Their story and journey</option>
+                            <option value="appearance">👀 Their visual appeal</option>
+                            <option value="authenticity">🌟 Their authenticity and realness</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ideal-role">
+                            If You Were an Idol, What Role? 🎭
+                            <span class="helper-text">Your idol fantasy</span>
+                        </label>
+                        <select id="ideal-role" name="ideal-role" required>
+                            <option value="">Select your role...</option>
+                            <option value="leader">Leader - guiding the group</option>
+                            <option value="main-vocal">Main Vocal - carrying the melody</option>
+                            <option value="main-dancer">Main Dancer - owning the choreography</option>
+                            <option value="main-rapper">Main Rapper - spitting fire</option>
+                            <option value="visual">Visual - visual center</option>
+                            <option value="sub-vocal">Sub Vocal - harmonizing</option>
+                            <option value="center">Center - shining bright</option>
+                            <option value="mood-maker">Mood Maker - keeping energy up</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="kosmic-button primary-button">Reveal My Bias Energy 💖</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Loading Section -->
+        <div id="loading-section" class="tool-section">
+            <div class="kosmic-loader">
+                <div class="loader-ring"></div>
+                <div class="loader-text">Channeling Bias Energy...</div>
+                <p class="loading-message">Analyzing kosmic connections...</p>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result-section" class="tool-section">
+            <div class="result-container">
+                <div class="sparkle-icon">✨</div>
+                <h2>Your Bias Energy Revealed!</h2>
+                
+                <div id="bias-result" class="bias-result">
+                    <!-- Result will be inserted here -->
+                </div>
+
+                <div class="result-actions">
+                    <button id="try-again" class="kosmic-button secondary-button">Try Different Bias</button>
+                    <button id="share-bias" class="kosmic-button primary-button">Share My Bias Energy 💖</button>
+                </div>
+
+                <div class="explore-more">
+                    <p>Want deeper insights? Try our <a href="kpop_life_path.html">Life Path Reading</a>, <a href="kpop_archetype_quiz.html">Archetype Quiz</a>, or <a href="kpop_comeback_energy.html">Comeback Energy</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies to enhance your kosmic experience ✨</p>
+        <button id="accept-cookies" class="kosmic-button small-button">Got it!</button>
+    </div>
+
+    <footer class="kosmic-footer">
+        <p>For entertainment purposes only • Entertainment for K-Pop fans worldwide 🌍</p>
+        <p class="footer-links">
+            <a href="index.html">Home</a> • 
+            <a href="kpop_tools_index.html">All Tools</a> • 
+            <a href="kpop_life_path.html">Life Path</a>
+        </p>
+    </footer>
+
+    <script>
+        // Bias Energy Types
+        const biasEnergies = {
+            leader: {
+                archetype: "Golden Leader",
+                emoji: "👑",
+                planet: "Sun",
+                title: "Natural Authority Energy",
+                description: "You're drawn to leaders because you recognize and respect power, vision, and the ability to guide others. Your bias energy reveals your own potential for leadership and your admiration for those who can take charge and make decisions.",
+                traits: ["Visionary thinking", "Natural authority", "Decision-making ability", "Protective nature"],
+                cosmicConnection: "The Sun's energy radiates through your bias connection. You're attracted to confidence, clarity of purpose, and the ability to illuminate the path for others.",
+                growthArea: "Recognize your own leadership potential. You may be drawn to leaders because you're developing these qualities within yourself.",
+                fandomBehavior: "You're likely the organized stan who coordinates projects, leads fan initiatives, and keeps everyone informed.",
+                idolConnection: "Your bias connection is spiritual and inspiring. You see them as a role model and someone who embodies qualities you aspire to develop."
+            },
+            vocal: {
+                archetype: "Main Vocal Powerhouse",
+                emoji: "🎤",
+                planet: "Venus + Moon",
+                title: "Emotional Expression Energy",
+                description: "You're drawn to vocalists because you value emotional depth, authenticity, and the power of expression. Your bias energy reveals your appreciation for vulnerability and the courage to bare one's soul through music.",
+                traits: ["Emotional sensitivity", "Appreciation for art", "Deep feeling nature", "Authenticity seeking"],
+                cosmicConnection: "The combined energy of Venus (beauty/art) and Moon (emotions) flows through your bias connection. You're attracted to genuine emotion and artistic expression.",
+                growthArea: "Embrace your own emotional expression. Your connection to vocalists suggests you have untapped creative potential waiting to be expressed.",
+                fandomBehavior: "You're the emotional stan who feels every performance deeply, analyzes vocal technique, and appreciates the artistic journey.",
+                idolConnection: "Your bias connection is deeply emotional and empathetic. You feel their emotions as if they were your own and find healing through their voice."
+            },
+            dancer: {
+                archetype: "Main Dancer Virtuoso",
+                emoji: "💃",
+                planet: "Mars",
+                title: "Movement & Performance Energy",
+                description: "You're drawn to dancers because you appreciate dedication, discipline, and the art of physical expression. Your bias energy reveals your respect for hard work and the transformative power of movement.",
+                traits: ["Appreciation for discipline", "Love of performance", "Physical awareness", "Energy sensitivity"],
+                cosmicConnection: "Mars energy of action and intensity flows through your bias connection. You're attracted to power, precision, and the artistry of movement.",
+                growthArea: "Explore your own physical expression. Whether through dance, sports, or creative movement, there's untapped energy waiting to be expressed.",
+                fandomBehavior: "You're the performance stan who analyzes choreography, appreciates technique, and can re-watch fancams for hours.",
+                idolConnection: "Your bias connection is based on admiration for dedication and excellence. You respect the countless hours of practice behind every performance."
+            },
+            rapper: {
+                archetype: "Rapper Firecracker",
+                emoji: "🔥",
+                planet: "Mars + Pluto",
+                title: "Intensity & Transformation Energy",
+                description: "You're drawn to rappers because you value authenticity, raw expression, and the power of words to transform. Your bias energy reveals your appreciation for truth, even when it's uncomfortable.",
+                traits: ["Love of authenticity", "Appreciation for wordplay", "Intensity in feelings", "Desire for truth"],
+                cosmicConnection: "The intense energy of Mars and Pluto flows through your bias connection. You're attracted to transformation, intensity, and raw, unfiltered expression.",
+                growthArea: "Find your own voice. Your connection to rappers suggests you have something important to say and the courage to say it authentically.",
+                fandomBehavior: "You're the lyric stan who analyzes every word, appreciates flow and delivery, and connects with the message behind the music.",
+                idolConnection: "Your bias connection is based on respect for authenticity and artistic integrity. You value their willingness to speak their truth."
+            },
+            visual: {
+                archetype: "Visual Icon",
+                emoji: "✨",
+                planet: "Venus",
+                title: "Beauty & Charm Energy",
+                description: "You're drawn to visuals because you appreciate aesthetics, charisma, and the art of presence. Your bias energy reveals your own appreciation for beauty and the power of visual storytelling.",
+                traits: ["Aesthetic appreciation", "Eye for detail", "Love of beauty", "Charisma recognition"],
+                cosmicConnection: "Venus energy of beauty and attraction flows through your bias connection. You're naturally drawn to aesthetics, harmony, and visual appeal.",
+                growthArea: "Cultivate your own aesthetic. Your connection to visuals suggests you have an eye for beauty and the ability to create visually appealing experiences.",
+                fandomBehavior: "You're the visual stan who appreciates photoshoots, fashion, and the art of visual storytelling. You notice details others miss.",
+                idolConnection: "Your bias connection is based on admiration for beauty and the power of presence. You're inspired by their ability to captivate through visual appeal alone."
+            },
+            mood: {
+                archetype: "Mood Maker",
+                emoji: "😄",
+                planet: "Jupiter",
+                title: "Joy & Positivity Energy",
+                description: "You're drawn to mood makers because you value happiness, positivity, and the ability to lift others up. Your bias energy reveals your own desire to bring joy and your appreciation for those who do.",
+                traits: ["Optimistic outlook", "Love of happiness", "Desire to uplift others", "Appreciation for joy"],
+                cosmicConnection: "Jupiter's expansive and joyful energy flows through your bias connection. You're naturally attracted to optimism, expansion, and positive energy.",
+                growthArea: "Embrace your role as a joy-bringer. Your connection to mood makers suggests you have the power to lift others up and create positive environments.",
+                fandomBehavior: "You're the happy stan who spreads positivity, shares funny moments, and helps keep the fandom lighthearted and supportive.",
+                idolConnection: "Your bias connection is based on shared joy. You're drawn to their ability to make others happy and you find your own happiness amplified through them."
+            },
+            quiet: {
+                archetype: "Quiet Genius",
+                emoji: "🧠",
+                planet: "Mercury",
+                title: "Intellect & Innovation Energy",
+                description: "You're drawn to quiet geniuses because you value depth, intellect, and the power of thoughtful observation. Your bias energy reveals your own intellectual curiosity and appreciation for those who think deeply.",
+                traits: ["Intellectual curiosity", "Appreciation for depth", "Analytical thinking", "Love of learning"],
+                cosmicConnection: "Mercury's intellectual energy flows through your bias connection. You're naturally attracted to intelligence, innovation, and thoughtful communication.",
+                growthArea: "Honor your intellectual side. Your connection to quiet geniuses suggests you have deep wisdom and innovative ideas waiting to be shared.",
+                fandomBehavior: "You're the analytical stan who notices subtle details, appreciates nuanced performances, and values thoughtfulness over flashiness.",
+                idolConnection: "Your bias connection is based on intellectual respect. You admire their depth, their way of thinking, and their unique perspective."
+            },
+            reliable: {
+                archetype: "Reliable Backbone",
+                emoji: "💪",
+                planet: "Saturn",
+                title: "Stability & Support Energy",
+                description: "You're drawn to reliable members because you value consistency, loyalty, and the unsung heroes who hold everything together. Your bias energy reveals your own dependable nature and appreciation for stability.",
+                traits: ["Reliability", "Loyalty", "Appreciation for consistency", "Supportive nature"],
+                cosmicConnection: "Saturn's stabilizing energy flows through your bias connection. You're naturally attracted to dependability, structure, and those who provide foundation.",
+                growthArea: "Recognize your own strength in being reliable. Your connection to dependable members reflects your own capacity to be a rock for others.",
+                fandomBehavior: "You're the loyal stan who sticks around through everything, appreciates consistency, and values the hardworking members who may not get enough spotlight.",
+                idolConnection: "Your bias connection is based on respect for consistency and hard work. You see the value in their steady, reliable presence."
+            },
+            "all-rounder": {
+                archetype: "All-Rounder Ace",
+                emoji: "🏆",
+                planet: "All Planets",
+                title: "Versatility & Mastery Energy",
+                description: "You're drawn to all-rounders because you value versatility, excellence across multiple areas, and the ability to adapt and succeed anywhere. Your bias energy reveals your own multifaceted potential and desire for mastery.",
+                traits: ["Versatility", "Appreciation for excellence", "Adaptability", "Desire for mastery"],
+                cosmicConnection: "The combined energy of all planets flows through your bias connection. You're attracted to versatility, balance, and the ability to excel in multiple areas.",
+                growthArea: "Embrace your multifaceted nature. Your connection to all-rounders suggests you have diverse talents and the potential for mastery in multiple areas.",
+                fandomBehavior: "You're the appreciative stan who recognizes and celebrates all aspects of your bias, from performance to personality to visuals.",
+                idolConnection: "Your bias connection is based on admiration for versatility and excellence. You're inspired by their ability to shine in every aspect."
+            }
+        };
+
+        // Form Submission
+        document.getElementById('bias-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('preferred-name').value;
+            const birthDate = document.getElementById('birth-date').value;
+            const biasType = document.getElementById('bias-type').value;
+            const attractionReason = document.getElementById('attraction-reason').value;
+            const idealRole = document.getElementById('ideal-role').value;
+            
+            // Show loading
+            showSection('loading-section');
+            
+            // Calculate bias energy
+            setTimeout(() => {
+                const biasEnergy = calculateBiasEnergy(biasType, attractionReason, idealRole, birthDate);
+                displayResult(name, biasEnergy);
+            }, 1500);
+        });
+
+        // Calculate Bias Energy
+        function calculateBiasEnergy(biasType, attractionReason, idealRole, birthDate) {
+            // Get base energy from bias type
+            let baseEnergy = biasEnergies[biasType] || biasEnergies.allrounder;
+            
+            // Modify based on attraction reason
+            const energyModifiers = {
+                personality: { trait: "Deeply attuned to emotional connections", growth: "Your empathy is a superpower" },
+                talent: { trait: "Appreciates excellence and dedication", growth: "Your own talents deserve recognition" },
+                stage: { trait: "Thrives on performance energy", growth: "Your presence is more powerful than you know" },
+                vibes: { trait: "Sensitive to energy and atmosphere", growth: "Trust your intuition about people" },
+                story: { trait: "Values authenticity and growth", growth: "Your story is worth telling" },
+                appearance: { trait: "Has an eye for aesthetics", growth: "Create beauty in your own way" },
+                authenticity: { trait: "Values genuine connection", growth: "Your authenticity is your greatest strength" }
+            };
+            
+            const modifier = energyModifiers[attractionReason] || energyModifiers.personality;
+            
+            // Add modifier to energy
+            return {
+                ...baseEnergy,
+                additionalTrait: modifier.trait,
+                additionalGrowth: modifier.growth
+            };
+        }
+
+        // Display Result
+        function displayResult(name, biasEnergy) {
+            const container = document.getElementById('bias-result');
+            
+            container.innerHTML = `
+                <div class="bias-header">
+                    <div class="bias-emoji">${biasEnergy.emoji}</div>
+                    <h3>${name}'s Bias Energy:</h3>
+                    <h2 class="bias-title">${biasEnergy.title}</h2>
+                    <p class="bias-archetype">Archetype: ${biasEnergy.archetype} • ${biasEnergy.planet} Energy</p>
+                </div>
+                
+                <div class="bias-description">
+                    <h4>💖 What This Reveals About You:</h4>
+                    <p>${biasEnergy.description}</p>
+                </div>
+                
+                <div class="bias-traits">
+                    <h4>✨ Your Core Traits:</h4>
+                    <ul>
+                        ${biasEnergy.traits.map(trait => `<li>${trait}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="bias-kosmic">
+                    <h4>🌟 kosmic Connection:</h4>
+                    <p>${biasEnergy.cosmicConnection}</p>
+                </div>
+                
+                <div class="bias-fandom">
+                    <h4>💕 Your Fandom Behavior:</h4>
+                    <p>${biasEnergy.fandomBehavior}</p>
+                </div>
+                
+                <div class="bias-idol">
+                    <h4>🎤 Your Idol Connection:</h4>
+                    <p>${biasEnergy.idolConnection}</p>
+                </div>
+                
+                <div class="bias-growth kosmic-message">
+                    <h4>🌱 Growth Opportunity:</h4>
+                    <p>${biasEnergy.growthArea}</p>
+                    ${biasEnergy.additionalGrowth ? `<p class="additional-growth"><strong>Bonus insight:</strong> ${biasEnergy.additionalGrowth}</p>` : ''}
+                </div>
+            `;
+            
+            showSection('result-section');
+            triggerConfetti();
+        }
+
+        // Show Section
+        function showSection(sectionId) {
+            document.querySelectorAll('.tool-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // Try Again
+        document.getElementById('try-again').addEventListener('click', () => {
+            document.getElementById('bias-form').reset();
+            showSection('input-section');
+        });
+
+        // Share Result
+        document.getElementById('share-bias').addEventListener('click', () => {
+            const biasTitle = document.querySelector('.bias-title').textContent;
+            const shareText = `My K-Pop bias energy is ${biasTitle}! 💖 Find yours at Kosmic K-Pop!`;
+            const shareUrl = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My K-Pop Bias Energy',
+                    text: shareText,
+                    url: shareUrl
+                });
+            } else {
+                navigator.clipboard.writeText(`${shareText} ${shareUrl}`);
+                alert('Bias energy copied to clipboard! 💖');
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hide loading overlay
+            setTimeout(() => {
+                document.getElementById('loading-overlay').style.display = 'none';
+            }, 1000);
+            
+            // Initialize effects
+            initStarField();
+            initCookieBanner();
+        });
+    </script>
+</body>
+</html>

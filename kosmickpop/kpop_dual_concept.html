@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual-Concept Split Tool | Kosmic K-Pop</title>
+    <link rel="stylesheet" href="kpop_styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="kosmic-background">
+        <div class="stars"></div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">🌸⚡ Soft vs Dark Concept Split ⚡🌸</h1>
+            <p class="subtitle">Discover your unique K-Pop concept balance!</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="tool-content">
+            
+            <!-- Input Section -->
+            <div id="input-section" class="input-section">
+                <div class="concept-intro">
+                    <h3>✨ Your Concept Energy</h3>
+                    <p>K-Pop idols master both soft and dark concepts. Find your natural balance!</p>
+                </div>
+                
+                <div class="concept-questions">
+                    <div class="question-card">
+                        <h4>🌸 Soft Energy</h4>
+                        <div class="energy-slider-container">
+                            <input type="range" id="soft-energy" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Low</span>
+                                <span id="soft-value">5</span>
+                                <span>High</span>
+                            </div>
+                        </div>
+                        <p class="energy-description">Gentle, romantic, sweet, innocent vibes</p>
+                    </div>
+                    
+                    <div class="question-card">
+                        <h4>⚡ Dark Energy</h4>
+                        <div class="energy-slider-container">
+                            <input type="range" id="dark-energy" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Low</span>
+                                <span id="dark-value">5</span>
+                                <span>High</span>
+                            </div>
+                        </div>
+                        <p class="energy-description">Edgy, intense, powerful, mysterious vibes</p>
+                    </div>
+                    
+                    <div class="question-card">
+                        <h4>💫 Feminine Energy</h4>
+                        <div class="energy-slider-container">
+                            <input type="range" id="feminine-energy" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Low</span>
+                                <span id="feminine-value">5</span>
+                                <span>High</span>
+                            </div>
+                        </div>
+                        <p class="energy-description">Graceful, elegant, nurturing, emotional vibes</p>
+                    </div>
+                    
+                    <div class="question-card">
+                        <h4>🔥 Masculine Energy</h4>
+                        <div class="energy-slider-container">
+                            <input type="range" id="masculine-energy" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Low</span>
+                                <span id="masculine-value">5</span>
+                                <span>High</span>
+                            </div>
+                        </div>
+                        <p class="energy-description">Strong, direct, protective, assertive vibes</p>
+                    </div>
+                    
+                    <div class="question-card">
+                        <h4>🎭 Playful Energy</h4>
+                        <div class="energy-slider-container">
+                            <input type="range" id="playful-energy" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Low</span>
+                                <span id="playful-value">5</span>
+                                <span>High</span>
+                            </div>
+                        </div>
+                        <p class="energy-description">Fun, quirky, bright, energetic vibes</p>
+                    </div>
+                    
+                    <div class="question-card">
+                        <h4>💎 Serious Energy</h4>
+                        <div class="energy-slider-container">
+                            <input type="range" id="serious-energy" min="1" max="10" value="5" class="energy-slider">
+                            <div class="slider-labels">
+                                <span>Low</span>
+                                <span id="serious-value">5</span>
+                                <span>High</span>
+                            </div>
+                        </div>
+                        <p class="energy-description">Mature, intense, sophisticated, deep vibes</p>
+                    </div>
+                </div>
+                
+                <button class="action-button kosmic-button" onclick="analyzeConcept()">
+                    ⚡ Analyze My Concept ⚡
+                </button>
+            </div>
+            
+            <!-- Results Section -->
+            <div id="results-section" class="results-section" style="display: none;">
+                
+                <!-- Main Concept Split -->
+                <div class="concept-split-display">
+                    <div class="split-bar-container">
+                        <div class="soft-bar" id="soft-bar">
+                            <div class="bar-label">SOFT</div>
+                            <div class="bar-percentage" id="soft-percent">50%</div>
+                        </div>
+                        <div class="dark-bar" id="dark-bar">
+                            <div class="bar-label">DARK</div>
+                            <div class="bar-percentage" id="dark-percent">50%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-summary" id="concept-summary"></div>
+                </div>
+                
+                <!-- Secondary Split -->
+                <div class="secondary-split">
+                    <h3>💫 Secondary Energy Split</h3>
+                    <div class="secondary-bars">
+                        <div class="secondary-bar-group">
+                            <div class="secondary-label">Feminine</div>
+                            <div class="secondary-bar-container">
+                                <div class="secondary-bar feminine" id="feminine-bar"></div>
+                            </div>
+                            <div class="secondary-value" id="feminine-percent">50%</div>
+                        </div>
+                        
+                        <div class="secondary-bar-group">
+                            <div class="secondary-label">Masculine</div>
+                            <div class="secondary-bar-container">
+                                <div class="secondary-bar masculine" id="masculine-bar"></div>
+                            </div>
+                            <div class="secondary-value" id="masculine-percent">50%</div>
+                        </div>
+                        
+                        <div class="secondary-bar-group">
+                            <div class="secondary-label">Playful</div>
+                            <div class="secondary-bar-container">
+                                <div class="secondary-bar playful" id="playful-bar"></div>
+                            </div>
+                            <div class="secondary-value" id="playful-percent">50%</div>
+                        </div>
+                        
+                        <div class="secondary-bar-group">
+                            <div class="secondary-label">Serious</div>
+                            <div class="secondary-bar-container">
+                                <div class="secondary-bar serious" id="serious-bar"></div>
+                            </div>
+                            <div class="secondary-value" id="serious-percent">50%</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Your Ideal Concepts -->
+                <div class="ideal-concepts">
+                    <h3>🎨 Your Ideal Concepts</h3>
+                    <div class="concepts-grid" id="concepts-grid"></div>
+                </div>
+                
+                <!-- When to Activate -->
+                <div class="activation-guide">
+                    <h3>⚡ When to Activate Each Side</h3>
+                    <div class="activation-grid">
+                        <div class="activation-card soft-activation">
+                            <h4>🌸 Activate Soft Side When:</h4>
+                            <ul id="soft-triggers"></ul>
+                        </div>
+                        <div class="activation-card dark-activation">
+                            <h4>⚡ Activate Dark Side When:</h4>
+                            <ul id="dark-triggers"></ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Leaning Strategies -->
+                <div class="leaning-strategies">
+                    <h3>🎯 How to Lean Into Each Side</h3>
+                    <div class="strategies-grid">
+                        <div class="strategy-card soft-strategy">
+                            <h4>🌸 Lean Into Soft Energy</h4>
+                            <div class="strategy-tips" id="soft-tips"></div>
+                        </div>
+                        <div class="strategy-card dark-strategy">
+                            <h4>⚡ Lean Into Dark Energy</h4>
+                            <div class="strategy-tips" id="dark-tips"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Your Concept Identity -->
+                <div class="concept-identity">
+                    <h3>✨ Your Concept Identity</h3>
+                    <div class="identity-card" id="identity-card">
+                        <div class="identity-emoji">💫</div>
+                        <div class="identity-title" id="identity-title"></div>
+                        <div class="identity-description" id="identity-description"></div>
+                    </div>
+                </div>
+                
+                <!-- Viral Features -->
+                <div id="viral-features"></div>
+                
+                <!-- Share Buttons -->
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareResult()">
+                        📱 Share My Concept Split!
+                    </button>
+                    <button class="share-btn" onclick="downloadCard()">
+                        📸 Download Concept Card
+                    </button>
+                </div>
+                
+                <!-- Restart Button -->
+                <button class="restart-button" onclick="restartTool()">
+                    🔄 Reanalyze My Concept
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="kpop_data.js"></script>
+    <script src="viral_components.js"></script>
+    <script>
+        // Concept identities
+        const conceptIdentities = [
+            {
+                name: 'Sweet Angel',
+                emoji: '👼',
+                description: 'You naturally radiate pure soft energy. Your ideal concepts are romantic ballads and innocent vibes. Lean into your gentle nature!',
+                softPercent: 80,
+                darkPercent: 20
+            },
+            {
+                name: 'Dark Goddess',
+                emoji: '🖤',
+                description: 'You embody powerful dark energy. Your ideal concepts are intense, edgy, and mysterious. Own your fierce presence!',
+                softPercent: 20,
+                darkPercent: 80
+            },
+            {
+                name: 'Balanced Queen',
+                emoji: '👑',
+                description: 'You have perfect balance between soft and dark energy. You can pull off any concept! Your versatility is your superpower.',
+                softPercent: 50,
+                darkPercent: 50
+            },
+            {
+                name: 'Soft with Edge',
+                emoji: '🌸⚡',
+                description: 'You\'re mostly soft but have a dark side that surprises people. Perfect for concepts that start gentle and build to powerful climaxes.',
+                softPercent: 70,
+                darkPercent: 30
+            },
+            {
+                name: 'Dark with Softness',
+                emoji: '⚡🌸',
+                description: 'You\'re primarily dark but have hidden soft moments. Ideal for concepts that contrast intensity with vulnerable moments.',
+                softPercent: 30,
+                darkPercent: 70
+            }
+        ];
+        
+        // Ideal concepts based on energy
+        const idealConcepts = {
+            highSoft: [
+                'Romantic Ballad',
+                'Innocent School',
+                'Floral Fairy Tale',
+                'Sweet Summer',
+                'Dreamy Pastel',
+                'Gentle Whisper'
+            ],
+            highDark: [
+                'Girl Crush Power',
+                'Dark Fantasy',
+                'Cyberpunk Edge',
+                'Vampire Chic',
+                'Intense Bad Girl',
+                'Mysterious Night'
+            ],
+            balanced: [
+                'Dual Persona',
+                'Day & Night',
+                'Soft then Hard',
+                'Yin & Yang',
+                'Transformative',
+                'Versatile Mix'
+            ]
+        };
+        
+        // Activation triggers
+        const softTriggers = [
+            'Romantic situations or dates',
+            'When you want to appear approachable',
+            'For heartfelt, emotional performances',
+            'When connecting with gentle energy',
+            'During variety show moments'
+        ];
+        
+        const darkTriggers = [
+            'When you need to command attention',
+            'For powerful, intense performances',
+            'When you want to appear mysterious',
+            'During dance breaks and climaxes',
+            'When you need to stand out'
+        ];
+        
+        // Leaning strategies
+        const softTips = [
+            '💫 Focus on gentle movements and soft expressions',
+            '🌸 Use pastel colors and flowing fabrics',
+            '✨ Channel romantic, dreamy energy',
+            '💖 Smile more and use softer voice tone',
+            '🌟 Embrace vulnerability and emotion'
+        ];
+        
+        const darkTips = [
+            '⚡ Use sharp movements and intense expressions',
+            '🖤 Wear black, leather, or bold makeup',
+            '✨ Channel powerful, commanding energy',
+            '🔥 Focus on confidence and presence',
+            '🌟 Embrace intensity and mystery'
+        ];
+        
+        // Initialize sliders
+        document.querySelectorAll('.energy-slider').forEach(slider => {
+            slider.addEventListener('input', function() {
+                const valueSpan = document.getElementById(this.id.replace('-energy', '-value'));
+                if (valueSpan) {
+                    valueSpan.textContent = this.value;
+                }
+            });
+        });
+        
+        // Analyze concept
+        function analyzeConcept() {
+            const soft = parseInt(document.getElementById('soft-energy').value);
+            const dark = parseInt(document.getElementById('dark-energy').value);
+            const feminine = parseInt(document.getElementById('feminine-energy').value);
+            const masculine = parseInt(document.getElementById('masculine-energy').value);
+            const playful = parseInt(document.getElementById('playful-energy').value);
+            const serious = parseInt(document.getElementById('serious-energy').value);
+            
+            // Calculate main split
+            const totalSoftDark = soft + dark;
+            const softPercent = Math.round((soft / totalSoftDark) * 100);
+            const darkPercent = 100 - softPercent;
+            
+            // Calculate secondary splits
+            const femTotal = feminine + masculine;
+            const femPercent = Math.round((feminine / femTotal) * 100);
+            const mascPercent = 100 - femPercent;
+            
+            const playTotal = playful + serious;
+            const playPercent = Math.round((playful / playTotal) * 100);
+            const serPercent = 100 - playPercent;
+            
+            // Determine concept identity
+            const identity = determineIdentity(softPercent, darkPercent);
+            
+            // Select ideal concepts
+            const concepts = selectIdealConcepts(softPercent, darkPercent, playful, serious);
+            
+            // Display results
+            displayResults({
+                softPercent: softPercent,
+                darkPercent: darkPercent,
+                femPercent: femPercent,
+                mascPercent: mascPercent,
+                playPercent: playPercent,
+                serPercent: serPercent,
+                identity: identity,
+                concepts: concepts
+            });
+        }
+        
+        // Determine concept identity
+        function determineIdentity(soft, dark) {
+            const diff = Math.abs(soft - dark);
+            
+            if (diff <= 10) {
+                return conceptIdentities[2]; // Balanced
+            } else if (soft > 70) {
+                return conceptIdentities[0]; // Sweet Angel
+            } else if (dark > 70) {
+                return conceptIdentities[1]; // Dark Goddess
+            } else if (soft > 50) {
+                return conceptIdentities[3]; // Soft with Edge
+            } else {
+                return conceptIdentities[4]; // Dark with Softness
+            }
+        }
+        
+        // Select ideal concepts
+        function selectIdealConcepts(soft, dark, playful, serious) {
+            let concepts = [];
+            
+            if (soft > 60) {
+                concepts = [...concepts, ...idealConcepts.highSoft.slice(0, 3)];
+            }
+            
+            if (dark > 60) {
+                concepts = [...concepts, ...idealConcepts.highDark.slice(0, 3)];
+            }
+            
+            if (Math.abs(soft - dark) <= 20) {
+                concepts = [...concepts, ...idealConcepts.balanced.slice(0, 2)];
+            }
+            
+            if (playful > 7) {
+                concepts.push('Playful Variety');
+            }
+            
+            if (serious > 7) {
+                concepts.push('Mature Sophisticated');
+            }
+            
+            // Remove duplicates and limit
+            concepts = [...new Set(concepts)].slice(0, 6);
+            
+            return concepts.length > 0 ? concepts : ['Versatile Mix'];
+        }
+        
+        // Display results
+        function displayResults(results) {
+            // Update main split bar
+            document.getElementById('soft-bar').style.width = results.softPercent + '%';
+            document.getElementById('dark-bar').style.width = results.darkPercent + '%';
+            document.getElementById('soft-percent').textContent = results.softPercent + '%';
+            document.getElementById('dark-percent').textContent = results.darkPercent + '%';
+            
+            // Update concept summary
+            const summary = results.softPercent > 60 ? 
+                'You naturally lean toward soft, gentle energy!' :
+                results.darkPercent > 60 ?
+                'You naturally lean toward dark, intense energy!' :
+                'You have beautiful balance between both energies!';
+            document.getElementById('concept-summary').textContent = summary;
+            
+            // Update secondary bars
+            document.getElementById('feminine-bar').style.width = results.femPercent + '%';
+            document.getElementById('masculine-bar').style.width = results.mascPercent + '%';
+            document.getElementById('playful-bar').style.width = results.playPercent + '%';
+            document.getElementById('serious-bar').style.width = results.serPercent + '%';
+            
+            document.getElementById('feminine-percent').textContent = results.femPercent + '%';
+            document.getElementById('masculine-percent').textContent = results.mascPercent + '%';
+            document.getElementById('playful-percent').textContent = results.playPercent + '%';
+            document.getElementById('serious-percent').textContent = results.serPercent + '%';
+            
+            // Update ideal concepts
+            document.getElementById('concepts-grid').innerHTML = results.concepts.map(concept => `
+                <div class="concept-card">${concept}</div>
+            `).join('');
+            
+            // Update activation triggers
+            document.getElementById('soft-triggers').innerHTML = softTriggers.map(t => `<li>${t}</li>`).join('');
+            document.getElementById('dark-triggers').innerHTML = darkTriggers.map(t => `<li>${t}</li>`).join('');
+            
+            // Update leaning strategies
+            document.getElementById('soft-tips').innerHTML = softTips.map(t => `<div class="tip-item">${t}</div>`).join('');
+            document.getElementById('dark-tips').innerHTML = darkTips.map(t => `<div class="tip-item">${t}</div>`).join('');
+            
+            // Update identity
+            document.getElementById('identity-emoji').textContent = results.identity.emoji;
+            document.getElementById('identity-title').textContent = results.identity.name;
+            document.getElementById('identity-description').textContent = results.identity.description;
+            
+            // Show results
+            document.getElementById('input-section').style.display = 'none';
+            document.getElementById('results-section').style.display = 'block';
+            
+            // Celebrate
+            celebrateAnalysis();
+        }
+        
+        // Celebrate analysis
+        function celebrateAnalysis() {
+            // Alternating soft and dark sparkles
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const isSoft = i % 2 === 0;
+                    createConceptSparkle(isSoft ? '🌸' : '⚡', isSoft ? '#FFB6C1' : '#8B0000');
+                }, i * 80);
+            }
+        }
+        
+        function createConceptSparkle(emoji, color) {
+            const sparkle = document.createElement('div');
+            sparkle.style.cssText = `
+                position: fixed;
+                top: ${Math.random() * 100}vh;
+                left: ${Math.random() * 100}vw;
+                font-size: 30px;
+                animation: sparkleFloat 2s ease-out forwards;
+                z-index: 1000;
+                opacity: 0;
+            `;
+            sparkle.textContent = emoji;
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 2000);
+        }
+        
+        // Share result
+        function shareResult() {
+            const soft = document.getElementById('soft-percent').textContent;
+            const dark = document.getElementById('dark-percent').textContent;
+            const identity = document.getElementById('identity-title').textContent;
+            
+            const text = `I'm a ${identity}!\n\nSoft Energy: ${soft} | Dark Energy: ${dark}\n\nFind YOUR concept balance: `;
+            const url = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My K-Pop Concept Split',
+                    text: text,
+                    url: url
+                });
+            } else {
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+            }
+        }
+        
+        // Download card
+        function downloadCard() {
+            alert('📸 Concept card generation coming soon! For now, take a screenshot to share! ✨');
+        }
+        
+        // Restart tool
+        function restartTool() {
+            document.getElementById('input-section').style.display = 'block';
+            document.getElementById('results-section').style.display = 'none';
+            
+            // Reset sliders
+            document.querySelectorAll('.energy-slider').forEach(slider => {
+                slider.value = 5;
+                const valueSpan = document.getElementById(slider.id.replace('-energy', '-value'));
+                if (valueSpan) {
+                    valueSpan.textContent = '5';
+                }
+            });
+        }
+    </script>
+    
+    <style>
+        .concept-intro {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .concept-intro h3 {
+            color: #FFD700;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .concept-intro p {
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .concept-questions {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .question-card {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .question-card h4 {
+            color: #FFD700;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .energy-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        .concept-split-display {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .split-bar-container {
+            display: flex;
+            height: 80px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            border: 3px solid white;
+        }
+        
+        .soft-bar {
+            background: linear-gradient(135deg, #FFB6C1 0%, #FF69B4 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: width 1.5s ease-out;
+        }
+        
+        .dark-bar {
+            background: linear-gradient(135deg, #8B0000 0%, #1A0A2E 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: width 1.5s ease-out;
+        }
+        
+        .bar-label {
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .bar-percentage {
+            font-size: 28px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .concept-summary {
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            font-style: italic;
+            margin-top: 25px;
+        }
+        
+        .secondary-split {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .secondary-split h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .secondary-bars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+        
+        .secondary-bar-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .secondary-label {
+            color: white;
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        .secondary-bar-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 30px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+        }
+        
+        .secondary-bar {
+            height: 100%;
+            transition: width 1s ease-out;
+        }
+        
+        .secondary-bar.feminine {
+            background: linear-gradient(90deg, #FFB6C1, #FF69B4);
+        }
+        
+        .secondary-bar.masculine {
+            background: linear-gradient(90deg, #4169E1, #000080);
+        }
+        
+        .secondary-bar.playful {
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+        }
+        
+        .secondary-bar.serious {
+            background: linear-gradient(90deg, #696969, #2F4F4F);
+        }
+        
+        .secondary-value {
+            color: #FFD700;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .ideal-concepts {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+        }
+        
+        .ideal-concepts h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        
+        .concept-card {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.2) 0%, rgba(148, 0, 211, 0.2) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        
+        .concept-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        
+        .activation-guide {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .activation-guide h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .activation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .activation-card {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid;
+        }
+        
+        .activation-card.soft-activation {
+            border-color: #FFB6C1;
+        }
+        
+        .activation-card.dark-activation {
+            border-color: #8B0000;
+        }
+        
+        .activation-card h4 {
+            color: #FFD700;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .activation-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .activation-card li {
+            color: white;
+            font-size: 16px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .leaning-strategies {
+            background: rgba(26, 10, 46, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .leaning-strategies h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .strategy-card {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid;
+        }
+        
+        .strategy-card.soft-strategy {
+            border-color: #FFB6C1;
+        }
+        
+        .strategy-card.dark-strategy {
+            border-color: #8B0000;
+        }
+        
+        .strategy-card h4 {
+            color: #FFD700;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .strategy-tips {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .tip-item {
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+        }
+        
+        .concept-identity {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 105, 180, 0.2) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 3px solid #FFD700;
+            text-align: center;
+        }
+        
+        .concept-identity h3 {
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        
+        .identity-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .identity-emoji {
+            font-size: 80px;
+            animation: pulse 2s infinite;
+        }
+        
+        .identity-title {
+            font-size: 36px;
+            color: #FFD700;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+        }
+        
+        .identity-description {
+            font-size: 20px;
+            color: white;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+        
+        @keyframes sparkleFloat {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px) scale(0);
+            }
+        }
+    </style>
+</body>
+</html>

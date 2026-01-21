@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Pop Life Path: Your Idol Destiny | Quantum Merlin</title>
+    <meta name="description" content="Discover your K-Pot idol archetype through kosmic numerology. Are you a Golden Leader, Main Dancer Virtuoso, or something else?">
+    <link rel="stylesheet" href="kpop_styles.css">
+    <style>
+        body {
+            background: linear-gradient(180deg, #1A0A2E 0%, #0D0D1A 100%);
+            min-height: 100vh;
+        }
+        .kpop-hero {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.2), rgba(148, 0, 211, 0.2));
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        .kpop-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+        }
+        .kpop-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header style="
+        background: rgba(26, 10, 46, 0.95);
+        border-bottom: 2px solid rgba(255, 105, 180, 0.3);
+        padding: 15px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+    ">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <a href="index.html" style="color: #FFD700; text-decoration: none; font-size: 1.3rem; font-weight: bold;">🎤 Kosmic K-Pop</a>
+            <nav style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <a href="index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Home</a>
+                <a href="kpop_tools_index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">All Tools</a>
+                <a href="kpop_archetype_quiz.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Archetype Quiz</a>
+                <a href="kpop_avatar_generator.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Avatar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="kpop-hero">
+        <h1 class="kpop-title">🎤 Your K-Pot Life Path: Idol Destiny Revealed ✨</h1>
+        <p class="kpop-subtitle">Discover your kosmic blueprint for K-Pop stardom through numerology</p>
+    </div>
+
+    <div class="kpop-container">
+        <!-- Calculator Section -->
+        <div class="kpop-section">
+            <h2 class="kpop-heading">Enter Your kosmic Details</h2>
+            <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 30px;">
+                The universe will reveal your idol archetype based on your Life Path number. 
+                Each number corresponds to a unique K-Pot energy.
+            </p>
+
+            <form id="kpopLifePathForm" class="kpop-form-group">
+                <div class="kpop-form-group">
+                    <label class="kpop-label" for="kpopName">Your Name</label>
+                    <input type="text" id="kpopName" class="kpop-input" placeholder="Enter your stage name or preferred name" required>
+                </div>
+
+                <div class="kpop-form-group">
+                    <label class="kpop-label" for="kpopDOB">Date of Birth</label>
+                    <input type="date" id="kpopDOB" class="kpop-input" required>
+                </div>
+
+                <button type="submit" class="kpop-btn kpop-btn-primary" style="width: 100%;">
+                    Reveal My Idol Destiny 🌟
+                </button>
+            </form>
+        </div>
+
+        <!-- Result Section (Hidden Initially) -->
+        <div id="kpopResult" class="kpop-result" style="display: none;">
+            <!-- Results will be injected here -->
+        </div>
+
+        <!-- Archetype Preview -->
+        <div class="kpop-section">
+            <h2 class="kpop-heading">Meet the Idol Archetypes</h2>
+            <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 30px;">
+                Each Life Path number corresponds to a unique idol archetype with distinct kosmic energy.
+            </p>
+
+            <div class="kpop-grid">
+                <div class="kpop-card">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🌟</div>
+                        <h3 class="kpop-card-title">Golden Leader</h3>
+                        <p class="kpop-card-text">Life Path 1 | Sun Energy</p>
+                        <p class="kpop-card-text">Natural authority, charismatic, born to lead groups</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🤝</div>
+                        <h3 class="kpop-card-title">Harmonious Diplomat</h3>
+                        <p class="kpop-card-text">Life Path 2 | Moon Energy</p>
+                        <p class="kpop-card-text">Emotional balance, group harmony, fan connection</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">😄</div>
+                        <h3 class="kpop-card-title">Mood Maker</h3>
+                        <p class="kpop-card-text">Life Path 3 | Jupiter Energy</p>
+                        <p class="kpop-card-text">Joyful, entertaining, variety show star</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">💪</div>
+                        <h3 class="kpop-card-title">Reliable Backbone</h3>
+                        <p class="kpop-card-text">Life Path 4 | Saturn Energy</p>
+                        <p class="kpop-card-text">Hardworking, dependable, training foundation</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">💃</div>
+                        <h3 class="kpop-card-title">Main Dancer Virtuoso</h3>
+                        <p class="kpop-card-text">Life Path 5 | Mars Energy</p>
+                        <p class="kpop-card-text">Athletic, viral dance moments, stage domination</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">✨</div>
+                        <h3 class="kpop-card-title">Visual Icon</h3>
+                        <p class="kpop-card-text">Life Path 6 | Venus Energy</p>
+                        <p class="kpop-card-text">Striking appearance, brand appeal, camera magnet</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🧠</div>
+                        <h3 class="kpop-card-title">Quiet Genius</h3>
+                        <p class="kpop-card-text">Life Path 7 | Mercury Energy</p>
+                        <p class="kpop-card-text">Intellectual, innovative, hit song creator</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🔥</div>
+                        <h3 class="kpop-card-title">Rapper Firecracker</h3>
+                        <p class="kpop-card-text">Life Path 8 | Mars + Pluto Energy</p>
+                        <p class="kpop-card-text">Intense rap delivery, viral verses, stage charisma</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🎤</div>
+                        <h3 class="kpop-card-title">Main Vocal Powerhouse</h3>
+                        <p class="kpop-card-text">Life Path 9 | Venus + Moon Energy</p>
+                        <p class="kpop-card-text">Emotional vocal delivery, touching hearts, soulful</p>
+                    </div>
+                </div>
+
+                <div class="kpop-card">
+                    <div class="kpop-card-content">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🏆</div>
+                        <h3 class="kpop-card-title">All-Rounder Ace</h3>
+                        <p class="kpop-card-text">Life Path 11 | All Planets Strong</p>
+                        <p class="kpop-card-text">Exceptional at everything, solo potential, viral magnet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="kpop-section">
+            <h2 class="kpop-heading">How It Works</h2>
+            <div style="color: rgba(255, 255, 255, 0.8); line-height: 1.8;">
+                <p style="margin-bottom: 15px;">
+                    <span class="kpop-accent">1. Enter Your Details:</span> Provide your name and date of birth to unlock your kosmic blueprint.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    <span class="kpop-accent">2. Calculate Your Life Path:</span> We use numerology to calculate your Life Path number from your birth date.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    <span class="kpop-accent">3. Discover Your Archetype:</span> Your Life Path reveals your idol archetype and kosmic energy.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    <span class="kpop-accent">4. Get Your Reading:</span> Receive a detailed kosmic analysis of your K-Pot destiny.
+                </p>
+                <p>
+                    <span class="kpop-accent">5. Share Your Result:</span> Share your idol archetype with friends and on social media! 🎤✨
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="kpop_data.js"></script>
+    <script src="kpop_branding.js"></script>
+    <script>
+        // Form submission handler
+        document.getElementById('kpopLifePathForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('kpopName').value;
+            const dob = document.getElementById('kpopDOB').value;
+            
+            if (!name || !dob) {
+                alert('Please enter your name and date of birth! 🎤');
+                return;
+            }
+            
+            // Show loading
+            const loadingOverlay = showKPopLoading();
+            
+            // Calculate Life Path number
+            const lifePathNumber = calculateLifePathNumber(dob);
+            
+            // Calculate Zodiac sign
+            const zodiacSign = calculateZodiacSign(dob);
+            
+            // Generate reading
+            const resultHTML = generateKPopReading(name, lifePathNumber, zodiacSign);
+            
+            // Hide loading
+            setTimeout(() => {
+                hideKPopLoading(loadingOverlay);
+                
+                // Display result
+                const resultDiv = document.getElementById('kpopResult');
+                resultDiv.innerHTML = resultHTML + `
+                    <div class="kpop-share-buttons" style="margin-top: 30px;">
+                        <button class="kpop-share-btn kpop-share-twitter" onclick="shareResult('${name}', ${lifePathNumber})">
+                            🐦 Share on Twitter
+                        </button>
+                        <button class="kpop-share-btn kpop-share-instagram" onclick="shareOnInstagram()">
+                            📸 Share on Instagram
+                        </button>
+                        <button class="kpop-share-btn kpop-share-tiktok" onclick="shareOnTikTok()">
+                            🎬 Share on TikTok
+                        </button>
+                    </div>
+                `;
+                
+                resultDiv.style.display = 'block';
+                revealKPopResult(resultDiv);
+                
+                // Scroll to result
+                resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Play success sound
+                playKPopSound('success');
+                
+            }, 2000);
+        });
+        
+        // Calculate Life Path number
+        function calculateLifePathNumber(dob) {
+            const date = new Date(dob);
+            const day = date.getDate();
+            const month = date.getMonth() + 1;
+            const year = date.getFullYear();
+            
+            // Reduce to single digit (except 11, 22, 33)
+            function reduceNumber(num) {
+                while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
+                    num = num.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+                }
+                return num;
+            }
+            
+            const dayReduced = reduceNumber(day);
+            const monthReduced = reduceNumber(month);
+            const yearReduced = reduceNumber(year);
+            
+            const total = dayReduced + monthReduced + yearReduced;
+            const lifePath = reduceNumber(total);
+            
+            return lifePath;
+        }
+        
+        // Calculate Zodiac sign
+        function calculateZodiacSign(dob) {
+            const date = new Date(dob);
+            const day = date.getDate();
+            const month = date.getMonth() + 1;
+            
+            if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) return 'Aries';
+            if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) return 'Taurus';
+            if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) return 'Gemini';
+            if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) return 'Cancer';
+            if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) return 'Leo';
+            if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) return 'Virgo';
+            if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) return 'Libra';
+            if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) return 'Scorpio';
+            if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) return 'Sagittarius';
+            if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) return 'Capricorn';
+            if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) return 'Aquarius';
+            return 'Pisces';
+        }
+        
+        // Share result
+        function shareResult(name, lifePathNumber) {
+            const archetype = getArchetype(lifePathNumber);
+            const shareText = `🎤 My K-Pot Life Path is: ${archetype.name}! ${archetype.icon}
+
+The cosmos revealed my idol destiny through numerology!
+
+Find YOUR K-Pot archetype: ${window.location.href}
+
+#KPopNumerology #KosmicKPop #IdolDestiny 🌟✨`;
+            
+            const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
+            window.open(twitterUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
