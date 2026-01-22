@@ -193,6 +193,20 @@ const QMStorage = (function() {
      * Get reading data with maximum reliability
      */
     function getReading() {
+        // First, check URL for 'data' parameter (used when storage fails)
+        try {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlData = urlParams.get('data');
+            if (urlData) {
+                const decoded = decodeURIComponent(urlData);
+                // Validate it's valid JSON
+                JSON.parse(decoded);
+                return decoded;
+            }
+        } catch (e) {
+            console.warn('QMStorage: URL data parameter invalid', e);
+        }
+        
         // Try sessionStorage first (critical = true enables URL fallback)
         let data = getItem('quantumMerlinReading', 'session', true);
         
