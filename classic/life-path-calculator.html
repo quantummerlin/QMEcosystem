@@ -686,7 +686,35 @@
             
             const interpretation = interpretations[lifePathNumber];
             
+            // For master numbers, also include the reduced number meaning
+            let masterNumberNote = '';
+            let reducedNumberContent = '';
+            const masterToReduced = { 11: 2, 22: 4, 33: 6 };
+            const displayNumber = masterToReduced[lifePathNumber] 
+                ? `${lifePathNumber}/${masterToReduced[lifePathNumber]}` 
+                : lifePathNumber;
+            
+            if (masterToReduced[lifePathNumber]) {
+                const reducedNum = masterToReduced[lifePathNumber];
+                const reducedInterp = interpretations[reducedNum];
+                masterNumberNote = `
+                    <div class="master-number-note" style="background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(139, 92, 246, 0.15)); border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 12px; padding: 20px; margin: 20px 0;">
+                        <p style="color: #fbbf24; font-weight: 600; margin-bottom: 10px;">✨ Master Number ${lifePathNumber}/${reducedNum}</p>
+                        <p style="font-style: italic; color: #C4B998;">As a Master Number, you carry the intensified spiritual energy of ${lifePathNumber} while also having access to the grounded qualities of Life Path ${reducedNum}. In times of stress or when you need practical stability, you may naturally express more ${reducedNum} energy.</p>
+                    </div>
+                `;
+                reducedNumberContent = `
+                    <div class="reduced-number-section" style="margin-top: 30px; padding-top: 25px; border-top: 2px dashed rgba(6, 182, 212, 0.3);">
+                        <h3 style="color: #06b6d4; font-family: 'Cinzel', serif; margin-bottom: 15px;">🔮 Your ${reducedNum} Foundation: ${reducedInterp.title}</h3>
+                        <p style="margin-bottom: 15px;"><span class="highlight">Foundation Traits:</span> ${reducedInterp.traits}</p>
+                        <p style="margin-bottom: 15px;"><strong>The ${reducedNum} Within You:</strong> ${reducedInterp.core}</p>
+                        <p><strong>Grounding Guidance:</strong> When your ${lifePathNumber} energy feels overwhelming, lean into your ${reducedNum} nature: ${reducedInterp.advice}</p>
+                    </div>
+                `;
+            }
+            
             const resultContent = `
+                ${masterNumberNote}
                 <p><span class="highlight">Core Traits:</span> ${interpretation.traits}</p>
                 <p>${interpretation.description}</p>
                 <p><strong>Your Core Nature:</strong> ${interpretation.core}</p>
@@ -694,6 +722,7 @@
                 <p><strong>Your Relationship Path:</strong> ${interpretation.relationships}</p>
                 <p><strong>Your Life Purpose:</strong> ${interpretation.purpose}</p>
                 <p><strong>Guidance for Your Journey:</strong> ${interpretation.advice}</p>
+                ${reducedNumberContent}
             `;
             
             // Build reading data and redirect
@@ -701,8 +730,8 @@
                 toolType: 'life-path',
                 headerTitle: 'Your Life Path Reading',
                 headerSubtitle: 'Your soul journey has been illuminated',
-                number: lifePathNumber,
-                title: 'Life Path ' + lifePathNumber + ': ' + interpretation.title,
+                number: displayNumber,
+                title: 'Life Path ' + displayNumber + ': ' + interpretation.title,
                 subtitle: preferredName + ', here is your personalized reading',
                 content: resultContent,
                 sourceUrl: 'life-path-calculator.html'

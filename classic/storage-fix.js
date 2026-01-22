@@ -193,11 +193,12 @@ const QMStorage = (function() {
      * Get reading data with maximum reliability
      */
     function getReading() {
-        // First, check URL for 'data' parameter (used when storage fails)
-        try {
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlData = urlParams.get('data');
-            if (urlData) {
+        // First, check URL for 'data' parameter (ALWAYS takes priority)
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlData = urlParams.get('data');
+        
+        if (urlData) {
+            try {
                 let decoded = urlData;
                 // Handle double-encoding (sometimes happens with redirects)
                 try {
@@ -213,13 +214,16 @@ const QMStorage = (function() {
                 }
                 // Validate it's valid JSON
                 JSON.parse(decoded);
+                // URL data is valid - return it immediately, don't check localStorage
                 return decoded;
+            } catch (e) {
+                console.warn('QMStorage: URL data parameter invalid', e);
+                // URL data exists but is invalid - return null, don't use stale backup
+                return null;
             }
-        } catch (e) {
-            console.warn('QMStorage: URL data parameter invalid', e);
         }
         
-        // Try sessionStorage first (critical = true enables URL fallback)
+        // No URL data - try sessionStorage (critical = true enables URL fallback)
         let data = getItem('quantumMerlinReading', 'session', true);
         
         if (!data) {
