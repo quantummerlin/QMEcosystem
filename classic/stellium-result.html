@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        // Version: 20260123070550 - Auto-generated cache buster
+        // Version: 20260122170552 - Auto-generated cache buster
+        // Version: 20260122165534 - Auto-generated cache buster
+        // Version: 20260122150214 - Auto-generated cache buster
+        // Version: 20260122145556 - Auto-generated cache buster
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    <!-- End Google Analytics -->
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="version" content="20260123070550">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bf5af2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Quantum Merlin">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Quantum Merlin">
+    <meta name="msapplication-TileColor" content="#bf5af2">
+    <meta name="msapplication-navbutton-color" content="#bf5af2">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="RetroMerlin.jpg">
+    <link rel="manifest" href="manifest.json">
+    <title>Your Stellium Reading</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap&v=20260112083146&v=20260121162926&v=20260121163503&v=20260121164415&v=20260121170617&v=20260121175156&v=20260121180653&v=20260121182750&v=20260121203732&v=20260121204029&v=20260121204740&v=20260121211614&v=20260121223506&v=20260122073736&v=20260122145556&v=20260122150214&v=20260122165534&v=20260122170552&v=20260123070550" rel="stylesheet">
+    <link rel="stylesheet" href="quantum-merlin-styles.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0a0a0f;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #e0e0e0;
+        }
+        .container { max-width: 900px; width: 100%; margin: 0 auto; padding: 0 15px; }
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #fbbf24 0%, #06b6d4 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.2em;
+            color: #06b6d4;
+            font-style: italic;
+        }
+        .result-card {
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        .stellium-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(6, 182, 212, 0.2);
+        }
+        .stellium-sign {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2em;
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+        .stellium-planets {
+            font-size: 1.2em;
+            color: #06b6d4;
+            margin-bottom: 10px;
+        }
+        .stellium-count {
+            font-size: 1em;
+            color: #9ca3af;
+            font-style: italic;
+        }
+        .reading-content {
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+        .reading-content p {
+            margin-bottom: 20px;
+        }
+        .reading-content strong {
+            color: #fbbf24;
+            font-family: 'Cinzel', serif;
+        }
+        .no-stellium {
+            text-align: center;
+            padding: 40px;
+        }
+        .no-stellium h2 {
+            font-family: 'Cinzel', serif;
+            color: #fbbf24;
+            margin-bottom: 20px;
+        }
+        .planet-list {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(6, 182, 212, 0.05);
+            border-radius: 10px;
+        }
+        .planet-item {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(6, 182, 212, 0.1);
+        }
+        .planet-item:last-child {
+            border-bottom: none;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+        }
+        .highlight {
+            color: #06b6d4;
+            font-weight: 600;
+        }
+    </style>
+<!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/classic/stellium-result.html">
+    <meta property="og:title" content="Quantum Merlin | Ancient Patterns. Modern Interfaces.">
+    <meta property="og:description" content="Discover your cosmic destiny with numerology, astrology, and mystical calculators">
+    <meta property="og:image" content="https://quantummerlin.com/classic/RetroMerlin.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://quantummerlin.com/classic/stellium-result.html">
+    <meta name="twitter:title" content="Quantum Merlin | Ancient Patterns. Modern Interfaces.">
+    <meta name="twitter:description" content="Discover your cosmic destiny with numerology, astrology, and mystical calculators">
+    <meta name="twitter:image" content="https://quantummerlin.com/classic/RetroMerlin.jpg">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="headerTitle">Your Stellium Reading</h1>
+            <p id="headerSubtitle">The concentrated energy pattern of your soul</p>
+        </div>
+
+        <div id="resultContainer"></div>
+
+        <div style="text-align: center;">
+            <a href="tools_index.html" class="back-btn">Browse All Tools</a>
+        </div>
+    </div>
+
+    <script>
+        // Version: 20260122073736 - Auto-generated cache buster
+        // Version: 20260121223506 - Auto-generated cache buster
+        // Version: 20260121211614 - Auto-generated cache buster
+        // Version: 20260121204740 - Auto-generated cache buster
+        // Version: 20260121204029 - Auto-generated cache buster
+        // Version: 20260121203732 - Auto-generated cache buster
+        // Version: 20260121182750 - Auto-generated cache buster
+        // Version: 20260121180653 - Auto-generated cache buster
+        // Version: 20260121175156 - Auto-generated cache buster
+        // Version: 20260121170617 - Auto-generated cache buster
+        // Version: 20260121164415 - Auto-generated cache buster
+        // Version: 20260121163503 - Auto-generated cache buster
+        // Version: 20260121162926 - Auto-generated cache buster
+        // Version: 20260112083146 - Auto-generated cache buster
+        const STELLIUM_READINGS = {
+            'Aries': {
+                essence: "warrior's fire",
+                description: "With {count} planets concentrated in Aries, your chart blazes with the pure fire of initiation and courage. This is the energy of the pioneer, the warrior, the one who dares to begin. You came into this world with an extraordinary drive to assert yourself, to lead, and to blaze trails others fear to walk.",
+                core: "Your Aries stellium makes you a natural initiator and trailblazer. You feel most alive when starting new ventures, taking bold action, or standing up for what you believe in. This concentration of energy gives you remarkable courage, independence, and a competitive spirit that refuses to back down from challenges.",
+                strengths: "Your greatest gifts include fearless leadership, pioneering spirit, authentic self-expression, and the ability to inspire others through your courage. You have an almost supernatural ability to overcome obstacles through sheer will and determination. Your directness and honesty are refreshing in a world of hesitation.",
+                challenges: "The shadow side of this powerful stellium can manifest as impatience, impulsiveness, or difficulty considering others' perspectives. You may struggle with anger, rushing ahead without planning, or burning bridges in your haste to move forward. Learning to balance your warrior energy with strategic patience is your growth edge.",
+                purpose: "You are here to demonstrate what's possible when someone has the courage to act on their vision. Whether through entrepreneurship, activism, athletics, or leadership, you're meant to show others how to overcome fear and take bold action. Your legacy will be the doors you've kicked open for those who follow."
+            },
+            'Taurus': {
+                essence: "earth's abundance",
+                description: "With {count} planets anchored in Taurus, your soul resonates with the deep, steady rhythm of the Earth itself. This is the energy of the builder, the cultivator, the one who creates lasting beauty and security. You came into this world with an extraordinary capacity to manifest tangible results and create enduring value.",
+                core: "Your Taurus stellium gives you an almost supernatural ability to build, create, and accumulate. You feel most alive when working with your hands, creating beauty, or establishing security and stability. This concentration of energy provides you with remarkable patience, determination, and an appreciation for life's sensual pleasures.",
+                strengths: "Your greatest gifts include unwavering persistence, practical wisdom, the ability to create lasting value, and deep appreciation for beauty in all forms. You have a natural talent for turning resources into wealth, chaos into order, and visions into reality. Your presence is calming and your word is bond.",
+                challenges: "The shadow side of this earthy stellium can manifest as stubbornness, resistance to change, or excessive attachment to material security. You may struggle with possessiveness, fear of loss, or getting stuck in comfortable ruts. Learning when to hold on and when to release is your spiritual growth edge.",
+                purpose: "You are here to demonstrate the power of steady, patient effort and the creation of lasting beauty. Whether through business, art, farming, finance, or craftsmanship, you're meant to show humanity how to build foundations that endure. Your legacy will be the beautiful, stable structures you leave behind."
+            },
+            'Gemini': {
+                essence: "mind's versatility",
+                description: "With {count} planets dancing in Gemini, your consciousness operates like a cosmic switchboard, connecting ideas, people, and possibilities at lightning speed. This is the energy of the messenger, the teacher, the eternal student. You came into this world with an insatiable curiosity and a gift for communication that can bridge any divide.",
+                core: "Your Gemini stellium makes you a natural communicator and information gatherer. You feel most alive when learning something new, sharing ideas, or making connections between disparate concepts. This concentration of energy gives you remarkable mental agility, versatility, and the ability to see multiple perspectives simultaneously.",
+                strengths: "Your greatest gifts include brilliant communication skills, mental flexibility, the ability to learn and teach anything, and talent for bringing people and ideas together. You can explain complex concepts simply, see patterns others miss, and adapt to any social situation with ease. Your mind is your superpower.",
+                challenges: "The shadow side of this airy stellium can manifest as scattered energy, superficiality, or difficulty committing to one path. You may struggle with nervous anxiety, inconsistency, or saying what people want to hear rather than your truth. Learning to focus your vast mental energy and go deep rather than wide is your growth edge.",
+                purpose: "You are here to be a bridge-builder and information conduit. Whether through writing, teaching, media, networking, or technology, you're meant to connect people, ideas, and knowledge. Your legacy will be the understanding you've facilitated and the connections you've forged."
+            },
+            'Cancer': {
+                essence: "heart's sanctuary",
+                description: "With {count} planets nestled in Cancer, your soul carries the deep waters of emotion, memory, and nurturing care. This is the energy of the mother, the protector, the one who creates sanctuary. You came into this world with an extraordinary capacity to feel, to nurture, and to create emotional safety for yourself and others.",
+                core: "Your Cancer stellium gives you profound emotional intelligence and nurturing abilities. You feel most alive when caring for others, creating a beautiful home, or working with family and community. This concentration of energy provides you with remarkable intuition, empathy, and the ability to make anyone feel welcomed and protected.",
+                strengths: "Your greatest gifts include deep emotional wisdom, powerful intuition, the ability to nurture and heal, and talent for creating safe, beautiful spaces. You have an almost psychic ability to sense what others need emotionally. Your caring presence can heal wounds others don't even know they carry.",
+                challenges: "The shadow side of this watery stellium can manifest as moodiness, emotional overwhelm, or difficulty letting go of the past. You may struggle with taking things too personally, becoming overly protective, or using guilt to maintain connection. Learning to maintain boundaries while staying open-hearted is your growth edge.",
+                purpose: "You are here to demonstrate the healing power of unconditional love and emotional safety. Whether through parenting, counseling, hospitality, nursing, or creating community, you're meant to show humanity how to nurture and protect what is vulnerable. Your legacy will be the emotional safety you've created."
+            },
+            'Leo': {
+                essence: "sun's radiance",
+                description: "With {count} planets burning bright in Leo, your spirit radiates with the warmth and brilliance of the Sun itself. This is the energy of the performer, the creator, the one who dares to shine. You came into this world with an extraordinary capacity for creative self-expression and the courage to take center stage in your own life.",
+                core: "Your Leo stellium makes you a natural performer and creative powerhouse. You feel most alive when expressing yourself authentically, creating art, or inspiring others through your presence. This concentration of energy gives you remarkable confidence, generosity, and the ability to light up any room you enter.",
+                strengths: "Your greatest gifts include natural charisma, creative brilliance, the ability to inspire and uplift others, and talent for leadership through example. You have a generous heart and the courage to be fully yourself. Your authentic self-expression gives others permission to shine as well.",
+                challenges: "The shadow side of this fiery stellium can manifest as excessive pride, need for constant admiration, or drama when not receiving attention. You may struggle with taking criticism, sharing the spotlight, or recognizing when your ego is running the show. Learning that you can shine without diminishing others is your growth edge.",
+                purpose: "You are here to demonstrate the power of authentic self-expression and creative courage. Whether through art, entertainment, leadership, teaching, or entrepreneurship, you're meant to show people how to step into their power and shine. Your legacy will be the inspiration you've sparked in others."
+            },
+            'Virgo': {
+                essence: "nature's perfection",
+                description: "With {count} planets organized in Virgo, your consciousness operates like a divine craftsperson, refining and perfecting everything you touch. This is the energy of the healer, the analyst, the one who serves through excellence. You came into this world with an extraordinary eye for detail and a calling to make things better.",
+                core: "Your Virgo stellium makes you a natural healer and perfectionist. You feel most alive when improving systems, helping others, or bringing order to chaos. This concentration of energy gives you remarkable analytical abilities, attention to detail, and a deep desire to be of service.",
+                strengths: "Your greatest gifts include exceptional analytical skills, the ability to see what needs improvement, talent for healing and helping, and dedication to excellence in all you do. You can spot problems before they occur and create solutions that actually work. Your practical wisdom is invaluable.",
+                challenges: "The shadow side of this earthy stellium can manifest as excessive criticism, perfectionism, or anxiety about things not being 'right.' You may struggle with never feeling good enough, being overly critical of yourself and others, or getting lost in details. Learning that perfection is a direction, not a destination, is your growth edge.",
+                purpose: "You are here to demonstrate the power of dedicated service and continuous improvement. Whether through healthcare, analysis, craftsmanship, teaching, or any field requiring precision, you're meant to show humanity the value of excellence and attention to detail. Your legacy will be the improvements you've made."
+            },
+            'Libra': {
+                essence: "harmony's balance",
+                description: "With {count} planets poised in Libra, your soul seeks to create beauty, balance, and justice in all things. This is the energy of the diplomat, the artist, the one who brings opposing forces into harmony. You came into this world with an extraordinary sense of fairness and an eye for beauty that can transform any space.",
+                core: "Your Libra stellium makes you a natural peacemaker and aesthete. You feel most alive when creating beauty, facilitating harmony between people, or working toward justice and fairness. This concentration of energy gives you remarkable social grace, artistic sensibility, and the ability to see all sides of any situation.",
+                strengths: "Your greatest gifts include exceptional diplomacy, refined aesthetic taste, the ability to create harmony and beauty, and talent for seeing multiple perspectives. You can bring opposing parties to agreement and create environments that soothe the soul. Your sense of justice is profound.",
+                challenges: "The shadow side of this airy stellium can manifest as indecisiveness, people-pleasing, or avoiding conflict at all costs. You may struggle with losing yourself in relationships, difficulty making decisions, or saying what others want to hear. Learning to honor your own needs while maintaining harmony is your growth edge.",
+                purpose: "You are here to demonstrate the power of balance, beauty, and fair partnership. Whether through law, art, design, counseling, or diplomacy, you're meant to show humanity how to create harmony without sacrificing authenticity. Your legacy will be the beauty and justice you've brought into the world."
+            },
+            'Scorpio': {
+                essence: "soul's transformation",
+                description: "With {count} planets concentrated in Scorpio, your being pulses with the power of death and rebirth, secrets and revelation. This is the energy of the alchemist, the detective, the one who transforms darkness into light. You came into this world with an extraordinary capacity to see beneath surfaces and facilitate profound transformation.",
+                core: "Your Scorpio stellium makes you a natural transformer and depth psychologist. You feel most alive when exploring life's mysteries, facilitating deep change, or uncovering hidden truths. This concentration of energy gives you remarkable intensity, psychological insight, and the power to transform yourself and others.",
+                strengths: "Your greatest gifts include profound psychological insight, the ability to transform crisis into opportunity, talent for research and investigation, and courage to face what others avoid. You can see through pretense instantly and help others heal their deepest wounds. Your emotional intensity is your power.",
+                challenges: "The shadow side of this watery stellium can manifest as obsession, jealousy, or using power to control others. You may struggle with trust issues, holding grudges, or becoming consumed by intensity. Learning to transform without destroying, and to trust without losing power, is your growth edge.",
+                purpose: "You are here to demonstrate the power of transformation and emotional courage. Whether through psychology, healing, research, finance, or spiritual work, you're meant to show humanity how to face the shadow and emerge transformed. Your legacy will be the profound transformations you've facilitated."
+            },
+            'Sagittarius': {
+                essence: "truth's arrow",
+                description: "With {count} planets blazing in Sagittarius, your spirit soars with the quest for meaning, truth, and expansion. This is the energy of the philosopher, the adventurer, the one who must know WHY. You came into this world with an unquenchable thirst for wisdom and a need to explore both physical and philosophical horizons.",
+                core: "Your Sagittarius stellium makes you a natural philosopher and truth-seeker. You feel most alive when learning, traveling, teaching, or exploring life's bigger questions. This concentration of energy gives you remarkable optimism, philosophical depth, and the ability to inspire others with your vision of what's possible.",
+                strengths: "Your greatest gifts include profound wisdom, natural teaching ability, contagious enthusiasm, and the courage to explore unknown territories. You can see the big picture when others are lost in details and inspire people to reach for more. Your faith and optimism are infectious.",
+                challenges: "The shadow side of this fiery stellium can manifest as dogmatism, restlessness, or difficulty with commitment and details. You may struggle with being preachy, overextending yourself, or promising more than you can deliver. Learning to ground your vision in reality without losing your inspiration is your growth edge.",
+                purpose: "You are here to demonstrate the power of wisdom, faith, and expansion of consciousness. Whether through teaching, travel, publishing, spiritual work, or adventure, you're meant to show humanity that life is meant to be an adventure toward truth. Your legacy will be the wisdom you've shared and the horizons you've expanded."
+            },
+            'Capricorn': {
+                essence: "mountain's summit",
+                description: "With {count} planets ascending in Capricorn, your soul is built for the long climb to mastery and achievement. This is the energy of the elder, the executive, the one who builds legacies that outlast lifetimes. You came into this world with an extraordinary understanding of structure, responsibility, and the patient work required to reach the summit.",
+                core: "Your Capricorn stellium makes you a natural leader and master builder. You feel most alive when working toward ambitious goals, building something lasting, or taking on significant responsibility. This concentration of energy gives you remarkable discipline, strategic thinking, and the ability to achieve seemingly impossible things through patient, persistent effort.",
+                strengths: "Your greatest gifts include exceptional discipline, strategic brilliance, the ability to build enduring structures and systems, and natural authority that inspires respect. You can see the path to success where others see only obstacles. Your integrity and responsibility are unshakeable.",
+                challenges: "The shadow side of this earthy stellium can manifest as workaholism, emotional coldness, or excessive focus on status and achievement. You may struggle with difficulty relaxing, being overly serious, or sacrificing personal happiness for professional success. Learning that you are worthy beyond your achievements is your growth edge.",
+                purpose: "You are here to demonstrate the power of disciplined effort and ethical leadership. Whether through business, government, education, or any field requiring sustained excellence, you're meant to show humanity how to build things that matter and last. Your legacy will be the enduring institutions and standards you've established."
+            },
+            'Aquarius': {
+                essence: "future's vision",
+                description: "With {count} planets electrified in Aquarius, your consciousness operates on a frequency tuned to humanity's future. This is the energy of the revolutionary, the innovator, the one who sees beyond current limitations. You came into this world with an extraordinary capacity to envision what's possible and the courage to break free from outdated structures.",
+                core: "Your Aquarius stellium makes you a natural innovator and humanitarian. You feel most alive when working toward collective progress, connecting with diverse people, or developing revolutionary ideas. This concentration of energy gives you remarkable originality, intellectual brilliance, and the ability to see patterns and possibilities others miss.",
+                strengths: "Your greatest gifts include visionary thinking, commitment to humanitarian ideals, the ability to innovate and revolutionize, and talent for bringing diverse people together. You can see the future before it arrives and inspire others to create it. Your objectivity and fairness are remarkable.",
+                challenges: "The shadow side of this airy stellium can manifest as emotional detachment, rebelliousness for its own sake, or difficulty with intimacy and tradition. You may struggle with feeling alienated, being too rational about emotions, or rejecting anything 'conventional' even when it serves you. Learning to honor human connection while maintaining your independence is your growth edge.",
+                purpose: "You are here to demonstrate the power of innovation and collective consciousness. Whether through technology, activism, community organizing, science, or social reform, you're meant to show humanity how to evolve beyond current limitations. Your legacy will be the future you helped create."
+            },
+            'Pisces': {
+                essence: "ocean's oneness",
+                description: "With {count} planets dissolving in Pisces, your soul swims in the cosmic ocean where all separation is illusion. This is the energy of the mystic, the artist, the one who channels divine inspiration. You came into this world with an extraordinary capacity to transcend ego boundaries and access universal consciousness.",
+                core: "Your Pisces stellium makes you a natural mystic and channel. You feel most alive when creating art, helping others, or experiencing states of transcendence and unity. This concentration of energy gives you remarkable spiritual sensitivity, artistic gifts, and the ability to sense what others cannot perceive.",
+                strengths: "Your greatest gifts include profound spiritual insight, artistic and creative genius, unlimited compassion, and the ability to access higher consciousness. You can channel divine inspiration and create works of transcendent beauty. Your empathy and understanding know no bounds.",
+                challenges: "The shadow side of this watery stellium can manifest as escapism, boundary issues, or difficulty functioning in the material world. You may struggle with addiction, victim mentality, or absorbing others' emotions to your detriment. Learning to be in the world but not of it, and to maintain boundaries while staying open, is your growth edge.",
+                purpose: "You are here to demonstrate the reality of spiritual dimensions and the power of unconditional love. Whether through art, healing, spirituality, music, or service, you're meant to show humanity that we are all connected in the divine ocean of consciousness. Your legacy will be the spiritual awakening you've facilitated."
+            }
+        };
+
+        function generateStelliumReading(stellium, name) {
+            const reading = STELLIUM_READINGS[stellium.sign];
+            const planetList = stellium.planets.join(', ');
+            
+            return `
+                <div class="stellium-header">
+                    <div class="stellium-sign">${stellium.sign} Stellium</div>
+                    <div class="stellium-planets">Planets: ${planetList}</div>
+                    <div class="stellium-count">${stellium.count} planets concentrated in ${stellium.sign}</div>
+                </div>
+                <div class="reading-content">
+                    <p><strong>The Essence:</strong> ${reading.essence}</p>
+                    <p>${reading.description.replace('{count}', stellium.count)}</p>
+                    <p><strong>Your Core Nature:</strong> ${reading.core}</p>
+                    <p><strong>Your Superpowers:</strong> ${reading.strengths}</p>
+                    <p><strong>Your Growth Edge:</strong> ${reading.challenges}</p>
+                    <p><strong>Your Sacred Purpose:</strong> ${reading.purpose}</p>
+                    <p style="margin-top: 30px; padding: 20px; background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; border-radius: 8px;">
+                        <strong>${name}, this stellium is your soul's signature.</strong> These ${stellium.count} planets working together create a concentrated beam of cosmic energy that illuminates your path. This is not a scattered influence—this is your primary frequency, your deepest calling. Honor this concentrated power by fully embracing the qualities of ${stellium.sign} and using them in service of your highest purpose.
+                    </p>
+                </div>
+            `;
+        }
+
+        function generateNoStelliumReading(positions, name, degrees) {
+            let planetDisplay = '<div class="planet-list"><h3 style="color: #fbbf24; margin-bottom: 15px; font-family: Cinzel, serif;">Your Planetary Distribution:</h3>';
+            for (const [planet, sign] of Object.entries(positions)) {
+                const deg = degrees && degrees[planet] ? ` (${degrees[planet]}°)` : '';
+                planetDisplay += `<div class="planet-item"><span class="highlight">${planet}</span> in ${sign}${deg}</div>`;
+            }
+            planetDisplay += '</div>';
+            
+            return `
+                <div class="no-stellium">
+                    <h2>A Balanced Cosmic Blueprint</h2>
+                    <p style="color: #d1d5db; line-height: 1.8; margin: 20px 0;">
+                        ${name}, you don't have a traditional stellium (3+ planets in one sign), which means your cosmic energy is distributed across multiple signs rather than concentrated in one area. This is actually a powerful configuration!
+                    </p>
+                    <p style="color: #d1d5db; line-height: 1.8; margin: 20px 0;">
+                        <strong style="color: #fbbf24;">Your Gift:</strong> While stelliums create intense focus in one life area, your distributed chart gives you versatility, balance, and the ability to integrate multiple perspectives. You're not meant to be a specialist in one area—you're meant to be a renaissance soul who can draw from many wells of wisdom.
+                    </p>
+                    <p style="color: #d1d5db; line-height: 1.8; margin: 20px 0;">
+                        <strong style="color: #fbbf24;">Your Path:</strong> Your journey is about integration and synthesis. Each planetary placement gives you access to different energies and gifts. Study each planet's sign to understand the full spectrum of your cosmic inheritance.
+                    </p>
+                    ${planetDisplay}
+                    <p style="color: #06b6d4; margin-top: 30px; font-style: italic;">
+                        Explore each planetary reading on our site to understand how each energy operates uniquely in your chart. Your power lies in weaving these diverse threads into a cohesive whole.
+                    </p>
+                </div>
+            `;
+        }
+
+        // Multi-stellium element and modality mappings
+        const SIGN_ELEMENTS = {
+            'Aries': 'Fire', 'Leo': 'Fire', 'Sagittarius': 'Fire',
+            'Taurus': 'Earth', 'Virgo': 'Earth', 'Capricorn': 'Earth',
+            'Gemini': 'Air', 'Libra': 'Air', 'Aquarius': 'Air',
+            'Cancer': 'Water', 'Scorpio': 'Water', 'Pisces': 'Water'
+        };
+        
+        const SIGN_MODALITIES = {
+            'Aries': 'Cardinal', 'Cancer': 'Cardinal', 'Libra': 'Cardinal', 'Capricorn': 'Cardinal',
+            'Taurus': 'Fixed', 'Leo': 'Fixed', 'Scorpio': 'Fixed', 'Aquarius': 'Fixed',
+            'Gemini': 'Mutable', 'Virgo': 'Mutable', 'Sagittarius': 'Mutable', 'Pisces': 'Mutable'
+        };
+
+        // Generate bonus reading when user has multiple stelliums
+        function generateMultiStelliumBonus(stelliums, name) {
+            const signs = stelliums.map(s => s.sign);
+            const elements = signs.map(s => SIGN_ELEMENTS[s]);
+            const modalities = signs.map(s => SIGN_MODALITIES[s]);
+            const totalPlanets = stelliums.reduce((sum, s) => sum + s.count, 0);
+            
+            // Determine element harmony
+            const uniqueElements = [...new Set(elements)];
+            let elementHarmony = '';
+            let elementInsight = '';
+            
+            if (uniqueElements.length === 1) {
+                const elem = uniqueElements[0];
+                elementHarmony = `Pure ${elem} Dominance`;
+                const elementDescriptions = {
+                    'Fire': 'You are a blazing force of inspiration, creativity, and action. With both stelliums in Fire signs, you possess extraordinary drive, courage, and enthusiasm. Your life purpose is to ignite passion in yourself and others. The challenge is to avoid burnout—even the brightest flames need fuel.',
+                    'Earth': 'You are a master builder with both feet planted firmly on the ground. With both stelliums in Earth signs, you have extraordinary practical wisdom, patience, and ability to manifest in the physical world. Your purpose is to create lasting structures and tangible results. The challenge is to remain flexible and open to change.',
+                    'Air': 'You are a messenger of ideas and connection. With both stelliums in Air signs, you possess exceptional intellectual gifts, communication skills, and social intelligence. Your purpose is to spread knowledge, facilitate understanding, and connect people. The challenge is to ground your ideas into action.',
+                    'Water': 'You are a deep ocean of emotion and intuition. With both stelliums in Water signs, you possess profound emotional intelligence, psychic sensitivity, and healing abilities. Your purpose is to feel deeply, nurture others, and channel the invisible realms. The challenge is to maintain healthy emotional boundaries.'
+                };
+                elementInsight = elementDescriptions[elem];
+            } else {
+                const elemCombo = uniqueElements.sort().join(' + ');
+                const combos = {
+                    'Air + Fire': { name: 'Visionary Catalyst', insight: 'Fire provides passion and inspiration while Air provides ideas and communication. Together, you can both dream big AND spread your vision far and wide. You inspire through words and ignite movements.' },
+                    'Fire + Air': { name: 'Visionary Catalyst', insight: 'Fire provides passion and inspiration while Air provides ideas and communication. Together, you can both dream big AND spread your vision far and wide. You inspire through words and ignite movements.' },
+                    'Earth + Water': { name: 'Nurturing Creator', insight: 'Earth provides structure and manifestation while Water provides intuition and emotion. Together, you can both feel deeply AND build something lasting from those feelings. You create art, homes, and healing spaces.' },
+                    'Water + Earth': { name: 'Nurturing Creator', insight: 'Earth provides structure and manifestation while Water provides intuition and emotion. Together, you can both feel deeply AND build something lasting from those feelings. You create art, homes, and healing spaces.' },
+                    'Air + Earth': { name: 'Practical Thinker', insight: 'Air provides ideas and analysis while Earth provides practical application. Together, you can both conceive brilliant plans AND execute them effectively. You build systems that work.' },
+                    'Earth + Air': { name: 'Practical Thinker', insight: 'Air provides ideas and analysis while Earth provides practical application. Together, you can both conceive brilliant plans AND execute them effectively. You build systems that work.' },
+                    'Fire + Water': { name: 'Passionate Healer', insight: 'Fire provides action and courage while Water provides empathy and depth. Together, you can both feel the pain AND take bold action to heal it. You are a fierce protector and transformational force.' },
+                    'Water + Fire': { name: 'Passionate Healer', insight: 'Fire provides action and courage while Water provides empathy and depth. Together, you can both feel the pain AND take bold action to heal it. You are a fierce protector and transformational force.' },
+                    'Air + Water': { name: 'Intuitive Communicator', insight: 'Air provides articulation and logic while Water provides emotional depth and intuition. Together, you can both feel truths AND express them clearly. You are a poet, counselor, or artistic messenger.' },
+                    'Water + Air': { name: 'Intuitive Communicator', insight: 'Air provides articulation and logic while Water provides emotional depth and intuition. Together, you can both feel truths AND express them clearly. You are a poet, counselor, or artistic messenger.' },
+                    'Earth + Fire': { name: 'Ambitious Achiever', insight: 'Fire provides vision and drive while Earth provides discipline and endurance. Together, you can both dream big AND work tirelessly to achieve those dreams. You are destined for significant accomplishments.' },
+                    'Fire + Earth': { name: 'Ambitious Achiever', insight: 'Fire provides vision and drive while Earth provides discipline and endurance. Together, you can both dream big AND work tirelessly to achieve those dreams. You are destined for significant accomplishments.' }
+                };
+                const combo = combos[elemCombo] || { name: 'Elemental Bridge', insight: 'Your dual stelliums bridge different elements, giving you access to diverse energies that most people cannot integrate. This is a rare gift of versatility.' };
+                elementHarmony = combo.name;
+                elementInsight = combo.insight;
+            }
+            
+            // Determine modality pattern
+            const uniqueModalities = [...new Set(modalities)];
+            let modalityPattern = '';
+            let modalityInsight = '';
+            
+            if (uniqueModalities.length === 1) {
+                const mod = uniqueModalities[0];
+                modalityPattern = `Double ${mod} Power`;
+                const modalityDescriptions = {
+                    'Cardinal': 'Both stelliums are in initiating signs. You are a born leader and starter of new things. Your life is marked by constant new beginnings and pioneering ventures. You thrive when leading the charge.',
+                    'Fixed': 'Both stelliums are in sustaining signs. You are a force of determination and staying power. Once you commit to something, you see it through with unwavering persistence. Your word is your bond.',
+                    'Mutable': 'Both stelliums are in adapting signs. You are supremely flexible and versatile. You can shift shapes, reinvent yourself, and flow with any situation. Change is your natural state.'
+                };
+                modalityInsight = modalityDescriptions[mod];
+            } else {
+                modalityPattern = 'Dynamic Balance';
+                modalityInsight = 'Your stelliums operate in different modes—one may initiate or sustain while the other adapts. This gives you a complete cycle of action within yourself: you can start, persist, and evolve.';
+            }
+
+            return `
+                <div class="stellium-header" style="background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(139, 92, 246, 0.1)); padding: 30px; border-radius: 15px; margin-bottom: 20px;">
+                    <div style="font-size: 2em; margin-bottom: 10px;">⭐ BONUS: Multi-Stellium Reading ⭐</div>
+                    <div class="stellium-sign" style="font-size: 1.8em;">The ${signs.join(' + ')} Combination</div>
+                    <div class="stellium-count" style="color: #06b6d4;">${stelliums.length} Stelliums • ${totalPlanets} Planets Concentrated</div>
+                </div>
+                <div class="reading-content">
+                    <p style="font-size: 1.2em; color: #fbbf24; text-align: center; margin-bottom: 25px;">
+                        <strong>${name}, you are extraordinarily rare.</strong> Most people have zero or one stellium. You have ${stelliums.length}!
+                    </p>
+                    
+                    <p><strong>What This Means:</strong> Having multiple stelliums means your cosmic energy is not only concentrated—it's concentrated in MULTIPLE powerful nodes. Think of it like having two or more supercomputers instead of scattered circuits. Each stellium is a center of immense gravitational pull in your psyche and life path.</p>
+                    
+                    <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; padding: 20px; margin: 25px 0; border-radius: 8px;">
+                        <p style="margin: 0;"><strong style="color: #8b5cf6;">Elemental Signature: ${elementHarmony}</strong></p>
+                        <p style="margin-top: 10px; margin-bottom: 0;">${elementInsight}</p>
+                    </div>
+                    
+                    <div style="background: rgba(6, 182, 212, 0.1); border-left: 4px solid #06b6d4; padding: 20px; margin: 25px 0; border-radius: 8px;">
+                        <p style="margin: 0;"><strong style="color: #06b6d4;">Modality Pattern: ${modalityPattern}</strong></p>
+                        <p style="margin-top: 10px; margin-bottom: 0;">${modalityInsight}</p>
+                    </div>
+                    
+                    <p><strong>How They Work Together:</strong> Your ${signs[0]} stellium and ${signs[1]} stellium ${stelliums.length > 2 ? '(along with your other stelliums) ' : ''}don't operate in isolation. They constantly dialogue with each other. Sometimes they harmonize, creating moments of extraordinary flow and power. Sometimes they create tension, pulling you in different directions. This tension is not a flaw—it's the engine of your growth and creativity.</p>
+                    
+                    <p><strong>Your Unique Life Theme:</strong> While others may focus on mastering one area of life, you are here to be a Renaissance soul—achieving depth in MULTIPLE domains. Your ${signs.join(' and ')} energies weave together to create a life tapestry that is uniquely yours. No one else has this exact combination operating at this intensity.</p>
+                    
+                    <p><strong>Your Challenge:</strong> With so much concentrated energy in ${stelliums.length} different signs, you may sometimes feel pulled in multiple directions or struggle to prioritize. The key is not to choose between your stelliums—it's to find the synthesis, the higher purpose that honors ALL of your concentrated gifts.</p>
+                    
+                    <p style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(236, 72, 153, 0.15)); border-radius: 12px; text-align: center;">
+                        <strong style="font-size: 1.1em; color: #fbbf24;">${name}, embrace your multi-stellium nature.</strong><br><br>
+                        You are not meant to be one thing. You are a symphony of concentrated cosmic forces, each playing its powerful note in the grand composition of your life. Let them all sing.
+                    </p>
+                </div>
+            `;
+        }
+
+        // Get reading data from sessionStorage or URL params (for private browsing)
+        function getReadingData() {
+            return QMStorage.getReading();
+        }
+
+        // Load and display reading
+        window.addEventListener('DOMContentLoaded', function() {
+            const data = JSON.parse(getReadingData() || '{}');;
+            
+            if (!data.stelliums) {
+                window.location.href = 'stellium-reading.html';
+                return;
+            }
+
+            const container = document.getElementById('resultContainer');
+            
+            // Show birth info for debugging
+            if (data.birthInfo) {
+                const infoDiv = document.createElement('div');
+                infoDiv.style.cssText = 'background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3); padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center;';
+                const utcInfo = data.birthInfo.utcUsed ? `<br><small style="color: #9ca3af;">UTC used: ${data.birthInfo.utcUsed}</small>` : '';
+                infoDiv.innerHTML = `<p style="color: #fbbf24; margin: 0;">📅 Calculated for: <strong>${data.birthInfo.date}</strong> at <strong>${data.birthInfo.time}</strong> in ${data.birthInfo.place}${utcInfo}</p>`;
+                container.appendChild(infoDiv);
+            }
+            
+            if (data.stelliums.length > 0) {
+                // Display each stellium
+                data.stelliums.forEach(stellium => {
+                    const card = document.createElement('div');
+                    card.className = 'result-card';
+                    card.innerHTML = generateStelliumReading(stellium, data.name);
+                    container.appendChild(card);
+                });
+                
+                // Add bonus multi-stellium reading if user has 2+ stelliums
+                if (data.stelliums.length >= 2) {
+                    const bonusCard = document.createElement('div');
+                    bonusCard.className = 'result-card';
+                    bonusCard.style.cssText = 'border: 2px solid rgba(251, 191, 36, 0.5); box-shadow: 0 0 30px rgba(251, 191, 36, 0.2);';
+                    bonusCard.innerHTML = generateMultiStelliumBonus(data.stelliums, data.name);
+                    container.appendChild(bonusCard);
+                }
+            } else {
+                // No stellium found
+                const card = document.createElement('div');
+                card.className = 'result-card';
+                card.innerHTML = generateNoStelliumReading(data.allPositions, data.name, data.allDegrees);
+                container.appendChild(card);
+            }
+        });
+    </script>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="feedback-section">
+            <p class="feedback-text">🛠️ Found an issue or have a suggestion?</p>
+            <a href="mailto:fixit@quantummerlin.com?subject=Quantum%20Merlin%20Feedback" class="footer-feedback-btn">📧 fixit@quantummerlin.com</a>
+        </div>
+        <div class="legal-links">
+            <a href="terms.html">Terms of Service</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 Quantum Merlin. For entertainment purposes only.</p>
+        <div class="coffee-section">
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="coffee-btn" id="coffeeBtn">☕ Buy Us a Coffee</a>
+        </div>
+    </footer>
+    <style>
+        .legal-footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(191, 90, 242, 0.2);
+            background: rgba(10, 10, 15, 0.8);
+        }
+        .feedback-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(191, 90, 242, 0.15);
+        }
+        .feedback-text {
+            color: #9A8F7A;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .footer-feedback-btn {
+            display: inline-block;
+            color: #06b6d4;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            padding: 10px 20px;
+            border: 1px solid rgba(6, 182, 212, 0.4);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .footer-feedback-btn:hover {
+            background: rgba(6, 182, 212, 0.15);
+            border-color: #06b6d4;
+            transform: translateY(-2px);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .legal-links a {
+            color: #9A8F7A;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .legal-links a:hover {
+            color: #fbbf24;
+        }
+        .legal-links .separator {
+            color: rgba(191, 90, 242, 0.4);
+        }
+        .copyright {
+            color: #6B6B6B;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .coffee-section {
+            padding-top: 15px;
+            border-top: 1px solid rgba(191, 90, 242, 0.15);
+        }
+        .coffee-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #0a0a0f;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+        }
+        .coffee-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(251, 191, 36, 0.5);
+        }
+    </style>
+
+
+    <script src="storage-fix.js?v=20260123"></script></body>
+</html>
