@@ -198,7 +198,19 @@ const QMStorage = (function() {
             const urlParams = new URLSearchParams(window.location.search);
             const urlData = urlParams.get('data');
             if (urlData) {
-                const decoded = decodeURIComponent(urlData);
+                let decoded = urlData;
+                // Handle double-encoding (sometimes happens with redirects)
+                try {
+                    // First decode
+                    decoded = decodeURIComponent(decoded);
+                    // Check if it's still encoded (starts with %7B which is {)
+                    if (decoded.startsWith('%7B') || decoded.includes('%22')) {
+                        decoded = decodeURIComponent(decoded);
+                    }
+                } catch (e) {
+                    // If decode fails, try using as-is
+                    console.warn('QMStorage: Decode failed, using raw value');
+                }
                 // Validate it's valid JSON
                 JSON.parse(decoded);
                 return decoded;
