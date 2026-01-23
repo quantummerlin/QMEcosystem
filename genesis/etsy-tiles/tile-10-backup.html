@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis FG - Trust & Guarantee</title>
+    <!--
+    DEVELOPER NOTES - TILE 10: TRUST & GUARANTEE
+    Purpose: Build final confidence, overcome last objections
+    Key Elements: Support promise, privacy, guarantee, testimonials
+    Target: Final decision stage buyers needing reassurance
+    Conversion Goal: Close the sale, reduce refund requests
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 800px;
+            height: 1000px;
+            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 720px;
+            height: 920px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(251, 191, 36, 0.1));
+            border: 3px solid rgba(16, 185, 129, 0.3);
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .trust-elements {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            width: 100%;
+            margin: 40px 0;
+        }
+
+        .trust-card {
+            background: rgba(26, 0, 51, 0.9);
+            border-radius: 25px;
+            padding: 40px;
+            border: 2px solid rgba(16, 185, 129, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .trust-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(16, 185, 129, 0.5);
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.2);
+        }
+
+        .trust-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .trust-title {
+            font-size: 32px;
+            font-weight: 600;
+            color: #10b981;
+            margin-bottom: 15px;
+        }
+
+        .trust-description {
+            font-size: 24px;
+            color: white;
+            line-height: 1.4;
+        }
+
+        .guarantee-section {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(16, 185, 129, 0.2));
+            border-radius: 30px;
+            padding: 50px;
+            margin: 50px 0;
+            border: 3px solid rgba(251, 191, 36, 0.4);
+            width: 100%;
+        }
+
+        .guarantee-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #10b981;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-text {
+            font-size: 32px;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .testimonials-section {
+            background: rgba(26, 0, 51, 0.9);
+            border-radius: 25px;
+            padding: 40px;
+            margin-top: 40px;
+            border: 2px solid rgba(251, 191, 36, 0.2);
+            width: 100%;
+        }
+
+        .testimonial {
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .testimonial-text {
+            font-size: 24px;
+            color: white;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-author {
+            font-size: 20px;
+            color: #a78bfa;
+            font-weight: 600;
+        }
+
+        .testimonial-rating {
+            color: #fbbf24;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .shine-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(16, 185, 129, 0.1) 50%, transparent 70%);
+            animation: shine 4s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-element {
+            position: absolute;
+            font-size: 40px;
+            color: rgba(16, 185, 129, 0.3);
+            animation: float 6s infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 20%;
+            right: 15%;
+            animation-delay: 1s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 15%;
+            left: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(4) {
+            bottom: 20%;
+            right: 10%;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-10px) rotate(5deg); }
+            50% { transform: translateY(-20px) rotate(0deg); }
+            75% { transform: translateY(-10px) rotate(-5deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="shine-effect"></div>
+        <div class="floating-elements">
+            <div class="floating-element">🛡️</div>
+            <div class="floating-element">⭐</div>
+            <div class="floating-element">🔒</div>
+            <div class="floating-element">💬</div>
+        </div>
+
+        <div class="trust-elements">
+            <div class="trust-card">
+                <div class="trust-icon">💬</div>
+                <div class="trust-title">PRIORITY SUPPORT</div>
+                <div class="trust-description">Message us anytime - we respond within 24 hours (usually faster!)</div>
+            </div>
+
+            <div class="trust-card">
+                <div class="trust-icon">🔒</div>
+                <div class="trust-title">PRIVACY-FIRST</div>
+                <div class="trust-description">No tracking • No data collection<br>No ads • Complete privacy</div>
+            </div>
+        </div>
+
+        <div class="guarantee-section">
+            <div class="guarantee-title">✅ SATISFACTION GUARANTEED</div>
+            <div class="guarantee-text">
+                If it doesn't work, we'll help or refund - no questions asked
+            </div>
+        </div>
+
+        <div class="testimonials-section">
+            <div class="testimonial">
+                <div class="testimonial-text">"This app changed my meditation practice completely. The trinity frequencies are unlike anything I've experienced."</div>
+                <div class="testimonial-author">- Sarah M., Verified User</div>
+                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-text">"Finally, frequencies based on actual biblical numerology! The 37×73 layering is genius."</div>
+                <div class="testimonial-author">- Michael R., Frequency Enthusiast</div>
+                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-text">"Works perfectly offline, no subscription, and the sound quality is incredible. Best $4.99 I've spent!"</div>
+                <div class="testimonial-author">- Jennifer L., Long-time User</div>
+                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

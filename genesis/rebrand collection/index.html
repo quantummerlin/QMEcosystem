@@ -4,35 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VW4LGE7L1T');
-    </script>
-    
     <!-- SEO Meta Tags -->
     <title>Genesis Frequencies: Sacred 37Hz 73Hz Healing Tones from Biblical Gematria | Free Meditation App</title>
     <meta name="description" content="Transform your meditation with Genesis 1:1 sacred frequencies. Free online generator with 49 biblical healing tones (37Hz, 73Hz, 2701Hz) plus 432Hz, 528Hz Solfeggio frequencies. Unlock deep relaxation, spiritual awakening, and divine alignment. Try now - no download required.">
     <meta name="keywords" content="frequency generator, 432Hz, 432Hz frequency, 432Hz music, 528Hz, 528Hz frequency, 528Hz love frequency, 528Hz meditation, Solfeggio frequencies, 396Hz, 417Hz, 639Hz, 741Hz, 852Hz, 963Hz, binaural beats, binaural beats generator, Hz generator, tone generator, relaxation frequencies, sound therapy, meditation music, sleep frequencies, focus frequencies, meditation frequencies, relaxation sounds, chakra meditation, spiritual frequencies, 7.83Hz, Schumann resonance, genesis frequency, biblical frequencies, 37Hz, 73Hz, 2701Hz, sacred frequencies, Hebrew gematria, mindfulness sounds, calming frequencies, ambient tones">
     <meta name="author" content="Quantum Merlin">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://quantummerlin.com/genesis/">
-    <link rel="alternate" hreflang="en" href="https://quantummerlin.com/genesis/">
-    <link rel="alternate" hreflang="pt" href="https://quantummerlin.com/genesis/pt/">
-    <link rel="alternate" hreflang="x-default" href="https://quantummerlin.com/genesis/">
+    <link rel="canonical" href="https://genesis.quantummerlin.com/">
     <meta name="language" content="English">
     <meta name="geo.region" content="US">
     <meta name="geo.placename" content="United States">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://quantummerlin.com/genesis/">
+    <meta property="og:url" content="https://genesis.quantummerlin.com/">
     <meta property="og:title" content="Biblical Genesis Frequency Generator | Sacred Healing Frequencies">
     <meta property="og:description" content="🎵 Transform your meditation with biblical healing frequencies. 49 sacred tones including 37Hz, 73Hz, 528Hz Solfeggio. Free online generator based on Genesis 1:1 gematria. Deep relaxation, spiritual awakening & divine alignment. Try now!">
-    <meta property="og:image" content="https://quantummerlin.com/genesis/Genesis.png">
+    <meta property="og:image" content="https://genesis.quantummerlin.com/Genesis.png">
     <meta property="og:site_name" content="Genesis Frequencies by Quantum Merlin">
     <meta property="og:locale" content="en_US">
     <meta property="og:image:width" content="1200">
@@ -41,12 +29,12 @@
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://quantummerlin.com/genesis/">
+    <meta name="twitter:url" content="https://genesis.quantummerlin.com/">
     <meta name="twitter:title" content="Biblical Genesis Frequency Generator | Sacred Healing Frequencies">
     <meta name="twitter:description" content="🎵 Transform meditation with biblical healing frequencies. 49 sacred tones (37Hz, 73Hz, 528Hz). Free online generator from Genesis 1:1. Try now!">
     <meta name="twitter:creator" content="@QuantumMerlin">
     <meta name="twitter:site" content="@QuantumMerlin">
-    <meta name="twitter:image" content="https://quantummerlin.com/genesis/Genesis.png">
+    <meta name="twitter:image" content="https://genesis.quantummerlin.com/Genesis.png">
     
     <!-- Additional SEO -->
     <meta name="subject" content="Biblical Frequency Meditation and Spiritual Wellness">
@@ -62,7 +50,7 @@
         "name": "Genesis Frequencies - Biblical Healing Sound Generator",
         "alternateName": "Genesis Frequency Generator",
         "description": "Transform your meditation with 49 sacred healing frequencies derived from Genesis 1:1 biblical mathematics and Hebrew gematria. Features 37Hz, 73Hz, 2701Hz Trinity frequencies, 432Hz, 528Hz Solfeggio tones, angel numbers, and binaural beats for deep relaxation, spiritual awakening, and divine alignment.",
-        "url": "https://quantummerlin.com/genesis/",
+        "url": "https://genesis.quantummerlin.com",
         "applicationCategory": "LifestyleApplication",
         "operatingSystem": "Any (Web Browser)",
         "browserRequirements": "Requires JavaScript. Requires HTML5.",
@@ -100,8 +88,8 @@
             "Achievement & Progress Tracking",
             "Offline PWA Support"
         ],
-        "screenshot": "https://quantummerlin.com/genesis/Genesis.png",
-        "image": "https://quantummerlin.com/genesis/Genesis.png",
+        "screenshot": "https://genesis.quantummerlin.com/Genesis.png",
+        "image": "https://genesis.quantummerlin.com/Genesis.png",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
@@ -180,9 +168,6 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-
-    <!-- Preload critical image -->
-    <link rel="preload" as="image" href="/Genesis.png" fetchpriority="high">
 
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" type="image/png" sizes="192x192" href="/Genesis.png">
@@ -12383,15 +12368,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Register Service Worker for PWA functionality
-    if ('serviceWorker' in navigator && (location.protocol === 'http:' || location.protocol === 'https:')) {
-        navigator.serviceWorker.register('/genesis/sw.js', { scope: '/genesis/' })
-            .then(registration => {
-                console.log('Service Worker registered:', registration);
-            })
-            .catch(error => {
-                console.log('Service Worker registration failed:', error);
-            });
-    }
+    // if ('serviceWorker' in navigator && (location.protocol === 'http:' || location.protocol === 'https:')) {
+    //     navigator.serviceWorker.register('/sw.js', { scope: '/' })
+    //         .then(registration => {
+    //             console.log('Service Worker registered:', registration);
+    //         })
+    //         .catch(error => {
+    //             console.log('Service Worker registration failed:', error);
+    //         });
+    // }
 
     // Initialize homescreen and notification features
     initializePWAPrompt();

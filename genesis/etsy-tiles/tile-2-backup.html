@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis FG - Try Free First</title>
+    <!--
+    DEVELOPER NOTES - TILE 2: TRY FREE FIRST
+    Purpose: Remove buying hesitation by showing free trial option
+    Key Elements: QR code, free features list, clear upgrade path
+    Target: Skeptical buyers who want to test before committing
+    Conversion Goal: Drive traffic to free version, reduce bounce rate
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 800px;
+            height: 1000px;
+            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 720px;
+            height: 920px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(251, 191, 36, 0.1));
+            border: 3px solid rgba(251, 191, 36, 0.3);
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header {
+            font-size: 120px;
+            font-weight: 700;
+            color: #fbbf24;
+            margin-bottom: 40px;
+            text-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+        }
+
+        .subtitle {
+            font-size: 48px;
+            color: #a78bfa;
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+
+        .website {
+            font-size: 56px;
+            color: #fbbf24;
+            font-weight: 600;
+            margin-bottom: 60px;
+            text-decoration: underline;
+        }
+
+        .features {
+            background: rgba(26, 0, 51, 0.8);
+            border-radius: 30px;
+            padding: 60px;
+            margin: 40px 0;
+            border: 2px solid rgba(251, 191, 36, 0.2);
+        }
+
+        .features h3 {
+            font-size: 48px;
+            color: #fbbf24;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .feature-list {
+            list-style: none;
+            font-size: 36px;
+            line-height: 1.8;
+            color: white;
+        }
+
+        .feature-list li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: #10b981;
+            font-size: 48px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .upgrade-text {
+            font-size: 42px;
+            color: white;
+            margin: 40px 0;
+            line-height: 1.6;
+        }
+
+        .price {
+            font-size: 64px;
+            font-weight: 700;
+            color: #fbbf24;
+            margin: 30px 0;
+        }
+
+        .qr-placeholder {
+            width: 300px;
+            height: 300px;
+            background: white;
+            border-radius: 20px;
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #333;
+            border: 3px solid #fbbf24;
+        }
+
+        .footer {
+            font-size: 52px;
+            font-weight: 700;
+            color: #10b981;
+            margin-top: 40px;
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+        }
+
+        .shine-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(251, 191, 36, 0.1) 50%, transparent 70%);
+            animation: shine 3s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="shine-effect"></div>
+        <div class="header">🆓 TRY BEFORE YOU BUY</div>
+        <div class="subtitle">Remove buying hesitation - show they can test it</div>
+
+        <div class="website">genesis.quantummerlin.com</div>
+
+        <div class="features">
+            <h3>FREE VERSION INCLUDES:</h3>
+            <ul class="feature-list">
+                <li>1 full track unlimited</li>
+                <li>30-second previews of all 48</li>
+                <li>All app features & info</li>
+                <li>No credit card needed</li>
+            </ul>
+        </div>
+
+        <div class="upgrade-text">
+            Then unlock all 49 tracks<br>
+            for just
+        </div>
+
+        <div class="price">$4.99!</div>
+
+        <div class="qr-placeholder">[QR Code to website]</div>
+
+        <div class="footer">NO RISK • TEST IT FIRST</div>
+    </div>
+</body>
+</html>
