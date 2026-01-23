@@ -15,7 +15,7 @@
   "categories": ["lifestyle", "entertainment", "utilities"],
   "icons": [
     {
-      "src": "stranger.png",
+      "src": "stranger.jpg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
@@ -27,21 +27,21 @@
       "short_name": "Life Path",
       "description": "Discover your hidden path number",
       "url": "/stranger/life-path-calculator.html",
-      "icons": [{"src": "stranger.png", "sizes": "any"}]
+      "icons": [{"src": "stranger.jpg", "sizes": "any"}]
     },
     {
       "name": "Strange Fortune",
       "short_name": "Fortune",
       "description": "Get your daily strange guidance",
       "url": "/stranger/daily-fortune.html",
-      "icons": [{"src": "stranger.png", "sizes": "any"}]
+      "icons": [{"src": "stranger.jpg", "sizes": "any"}]
     },
     {
       "name": "Moon Phase",
       "short_name": "Moon",
       "description": "Check the celestial anomalies",
       "url": "/stranger/moon-phase-calculator.html",
-      "icons": [{"src": "stranger.png", "sizes": "any"}]
+      "icons": [{"src": "stranger.jpg", "sizes": "any"}]
     }
   ],
   "prefer_related_applications": false,
