@@ -1,5 +1,5 @@
 // Stranger Patterns Service Worker - Version Management
-const CACHE_VERSION = '20260123-stranger-v2';
+const CACHE_VERSION = '20260123-stranger-v3';
 const CACHE_NAME = `stranger-patterns-v${CACHE_VERSION}`;
 
 // Files to cache (update this as needed)

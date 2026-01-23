@@ -1283,15 +1283,15 @@ ${formData.message}
         // Welcome Modal for First-Time Visitors - with resilient storage check
         function showWelcomeModal() {
             // Check multiple storage methods to be resilient to PWA storage clearing
-            const welcomed = localStorage.getItem('quantumMerlinWelcomed') || 
-                           sessionStorage.getItem('quantumMerlinWelcomed');
+            const welcomed = localStorage.getItem('strangerPatternsWelcomed') || 
+                           sessionStorage.getItem('strangerPatternsWelcomed');
             if (welcomed) return;
             
             // Also don't show if user has profiles (they've used the app before)
-            const hasProfiles = localStorage.getItem('quantumMerlinProfiles');
+            const hasProfiles = localStorage.getItem('strangerPatternsProfiles');
             if (hasProfiles) {
                 // Re-set the welcomed flag since they're clearly a returning user
-                try { localStorage.setItem('quantumMerlinWelcomed', 'true'); } catch(e) {}
+                try { localStorage.setItem('strangerPatternsWelcomed', 'true'); } catch(e) {}
                 return;
             }
             
@@ -1301,8 +1301,8 @@ ${formData.message}
         function closeWelcomeModal() {
             document.getElementById('welcomeModal').classList.remove('show');
             // Save to both storage types for resilience
-            try { localStorage.setItem('quantumMerlinWelcomed', 'true'); } catch(e) {}
-            try { sessionStorage.setItem('quantumMerlinWelcomed', 'true'); } catch(e) {}
+            try { localStorage.setItem('strangerPatternsWelcomed', 'true'); } catch(e) {}
+            try { sessionStorage.setItem('strangerPatternsWelcomed', 'true'); } catch(e) {}
         }
         
         // Show welcome modal on page load for first-time visitors
@@ -1323,9 +1323,9 @@ ${formData.message}
     <div class="modal-overlay" id="welcomeModal">
         <div class="welcome-modal-content">
             <button class="modal-close" onclick="closeWelcomeModal()">&times;</button>
-            <div class="welcome-icon">✨🔮✨</div>
-            <h2 class="welcome-title">Welcome to Quantum Merlin</h2>
-            <p class="welcome-subtitle">Ancient Wisdom, Zero Barriers</p>
+            <div class="welcome-icon">🔥⚡🔥</div>
+            <h2 class="welcome-title">Welcome to the Upside Down</h2>
+            <p class="welcome-subtitle">Stranger Patterns Await</p>
             
             <div class="welcome-features">
                 <div class="welcome-feature">
@@ -1333,7 +1333,7 @@ ${formData.message}
                     <span class="feature-text"><strong>No Sign-Up</strong> – Just dive in</span>
                 </div>
                 <div class="welcome-feature">
-                    <span class="feature-icon">💫</span>
+                    <span class="feature-icon">🔥</span>
                     <span class="feature-text"><strong>100% Free</strong> – No subscriptions</span>
                 </div>
                 <div class="welcome-feature">
@@ -1350,20 +1350,20 @@ ${formData.message}
                 </div>
             </div>
             
-            <p class="welcome-tip">💡 <strong>Pro Tip:</strong> Add Quantum Merlin to your home screen for the best app-like experience. On iOS tap Share → Add to Home Screen. On Android tap Menu → Install App.</p>
+            <p class="welcome-tip">💡 <strong>Pro Tip:</strong> Add Stranger Patterns to your home screen for the best app-like experience. On iOS tap Share → Add to Home Screen. On Android tap Menu → Install App.</p>
             
-            <p class="welcome-message">As this is an ever-evolving collection of mystical tools, occasional issues may slip through. Found a bug or have a suggestion? We'd love to hear from you!</p>
+            <p class="welcome-message">As this is an ever-evolving portal to the upside down, occasional glitches may slip through. Found a strange anomaly or have a suggestion? We'd love to hear from you!</p>
             
-            <a href="mailto:fixit@quantummerlin.com?subject=Quantum%20Merlin%20Feedback" class="feedback-link" onclick="event.stopPropagation()">📧 fixit@quantummerlin.com</a>
+            <a href="mailto:fixit@quantummerlin.com?subject=Stranger%20Patterns%20Feedback" class="feedback-link" onclick="event.stopPropagation()">📧 fixit@quantummerlin.com</a>
             
-            <button class="welcome-btn" onclick="closeWelcomeModal()">Begin Your Journey ✨</button>
+            <button class="welcome-btn" onclick="closeWelcomeModal()">Enter the Upside Down ⚡</button>
         </div>
     </div>
     
     <style>
         .welcome-modal-content {
-            background: linear-gradient(180deg, #1a1025 0%, #0f0a15 100%);
-            border: 2px solid rgba(191, 90, 242, 0.5);
+            background: linear-gradient(180deg, #0a0508 0%, #1a0a0a 100%);
+            border: 2px solid rgba(255, 69, 0, 0.6);
             border-radius: 20px;
             padding: 25px 20px;
             max-width: 420px;
@@ -1373,8 +1373,8 @@ ${formData.message}
             text-align: center;
             position: relative;
             box-shadow: 
-                0 0 40px rgba(191, 90, 242, 0.3),
-                0 0 80px rgba(6, 182, 212, 0.2);
+                0 0 40px rgba(255, 69, 0, 0.4),
+                0 0 80px rgba(220, 38, 38, 0.3);
         }
         
         .welcome-icon {
@@ -1385,7 +1385,7 @@ ${formData.message}
         .welcome-title {
             font-family: 'Cinzel Decorative', serif;
             font-size: 1.5rem;
-            background: linear-gradient(135deg, #ff00ff 0%, #00ffff 50%, #fbbf24 100%);
+            background: linear-gradient(135deg, #FF4500 0%, #DC2626 50%, #FF6B35 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -1394,7 +1394,7 @@ ${formData.message}
         
         .welcome-subtitle {
             font-family: 'Cinzel', serif;
-            color: #06b6d4;
+            color: #FF6B35;
             font-size: 0.95rem;
             margin-bottom: 15px;
             letter-spacing: 2px;
@@ -1411,9 +1411,9 @@ ${formData.message}
             gap: 10px;
             padding: 8px 12px;
             margin-bottom: 6px;
-            background: rgba(139, 92, 246, 0.1);
+            background: rgba(255, 69, 0, 0.1);
             border-radius: 10px;
-            border-left: 3px solid #bf5af2;
+            border-left: 3px solid #FF4500;
         }
         
         .feature-icon {
@@ -1427,19 +1427,19 @@ ${formData.message}
         }
         
         .feature-text strong {
-            color: #fbbf24;
+            color: #FF6B35;
         }
         
         .welcome-message {
-            color: #9A8F7A;
+            color: #B8A090;
             font-size: 0.85rem;
             line-height: 1.5;
             margin: 12px 0;
         }
         
         .welcome-tip {
-            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(251, 191, 36, 0.05));
-            border: 1px solid rgba(251, 191, 36, 0.3);
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.15), rgba(220, 38, 38, 0.1));
+            border: 1px solid rgba(255, 69, 0, 0.4);
             border-radius: 10px;
             padding: 10px 12px;
             color: #E8E4D9;
@@ -1450,30 +1450,30 @@ ${formData.message}
         }
         
         .welcome-tip strong {
-            color: #fbbf24;
+            color: #FF6B35;
         }
         
         .feedback-link {
             display: inline-block;
-            color: #06b6d4;
+            color: #FF6B35;
             text-decoration: none;
             font-size: 0.9rem;
             padding: 8px 16px;
             margin-bottom: 15px;
-            border: 1px solid rgba(6, 182, 212, 0.4);
+            border: 1px solid rgba(255, 69, 0, 0.4);
             border-radius: 20px;
             transition: all 0.3s;
         }
         
         .feedback-link:hover {
-            background: rgba(6, 182, 212, 0.15);
-            border-color: #06b6d4;
+            background: rgba(255, 69, 0, 0.15);
+            border-color: #FF4500;
         }
         
         .welcome-btn {
             width: 100%;
             padding: 14px 25px;
-            background: linear-gradient(135deg, #bf5af2 0%, #06b6d4 100%);
+            background: linear-gradient(135deg, #FF4500 0%, #DC2626 100%);
             border: none;
             border-radius: 25px;
             color: white;
@@ -1482,12 +1482,12 @@ ${formData.message}
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 4px 20px rgba(191, 90, 242, 0.4);
+            box-shadow: 0 4px 20px rgba(255, 69, 0, 0.4);
         }
         
         .welcome-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(191, 90, 242, 0.6);
+            box-shadow: 0 8px 30px rgba(255, 69, 0, 0.6);
         }
         
         @media (max-width: 480px) {
