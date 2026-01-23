@@ -255,6 +255,8 @@
         const MODALITY_READINGS = {
             Cardinal: {
                 essence: "The Initiator",
+                hook: "Your cosmic blueprint is coded for beginnings. You are the spark that ignites new cycles, the force that makes things happen when everyone else is still deliberating.",
+                core_identity: "You ARE the starting point. While others discuss whether to begin, you've already begun. This isn't impatience — it's your cosmic assignment. You're here to show humanity what initiative looks like.",
                 description: "Cardinal energy is the spark that begins each season - the moment when potential becomes action. You are the cosmic starter, the one who sees the blank canvas and picks up the brush.",
                 strengths: [
                     "You excel at starting new projects and ventures",
@@ -270,10 +272,20 @@
                     "Delegation doesn't always come naturally",
                     "You might rush ahead before laying solid foundations"
                 ],
-                approach: "You move through life as a pioneer, always ready to break new ground. When change is needed, you don't wait - you create it. Your gift is seeing possibilities and having the courage to pursue them immediately."
+                approach: "You move through life as a pioneer, always ready to break new ground. When change is needed, you don't wait - you create it. Your gift is seeing possibilities and having the courage to pursue them immediately.",
+                shadow: "Starting without finishing. Treating initiation as destination rather than doorway. Forcing beginnings when what's needed is completion. Leadership that becomes imposition.",
+                integration: "The most powerful Cardinal energy knows when to initiate and when to let others carry forward. Your gift includes knowing when the beginning phase is complete.",
+                stress: "Under pressure, you may either force new starts on situations that need completion, or freeze — unable to begin because too much is at stake.",
+                relationships: "Partners may struggle with your constant drive for newness. The key is learning that some relationships need nurturing, not reinventing.",
+                growth: "Your evolution requires learning that completion is a form of beginning — ending well creates space for the next initiation.",
+                power: "You access your full power when your initiatives serve collective growth, not just personal action addiction.",
+                somatic: "Your body signals stagnation through restlessness, frustration, and physical need to move. These are signals, not symptoms.",
+                reflection: "Ask yourself: 'Am I initiating from vision, or running from the discomfort of sustained effort?'"
             },
             Fixed: {
                 essence: "The Sustainer",
+                hook: "Your cosmic blueprint is coded for endurance. You are the root that holds the tree, the commitment that makes promises real, the force that transforms beginnings into legacies.",
+                core_identity: "You ARE stability itself. While others abandon when things get difficult, you dig in deeper. This isn't stubbornness — it's your cosmic assignment. You're here to show humanity what commitment actually looks like.",
                 description: "Fixed energy is the deep root that holds steady through storms, the mountain that shapes the landscape. You are the cosmic preserver, the one who builds things meant to last.",
                 strengths: [
                     "Unshakeable determination powers your journey",
@@ -289,10 +301,20 @@
                     "Flexibility doesn't always come easily",
                     "You might resist necessary transformations"
                 ],
-                approach: "You move through life as a builder, creating structures of meaning and value. Where others see the need for constant change, you recognize the power of sustained effort. Your gift is persistence that transforms vision into reality."
+                approach: "You move through life as a builder, creating structures of meaning and value. Where others see the need for constant change, you recognize the power of sustained effort. Your gift is persistence that transforms vision into reality.",
+                shadow: "Holding on to what needs releasing. Confusing stubbornness with strength. Resisting change until crisis forces it. Building prisons while calling them foundations.",
+                integration: "The most powerful Fixed energy knows when to persist and when to release. Your gift includes recognizing when sustainability has become stagnation.",
+                stress: "Under pressure, you may either dig in more rigidly, or suddenly abandon everything in dramatic release. Neither extreme serves your sustaining gift.",
+                relationships: "Partners may struggle with your resistance to change. The key is learning that some relationships need evolution, not just endurance.",
+                growth: "Your evolution requires learning that letting go is a form of strength — releasing what's complete creates space for what's next.",
+                power: "You access your full power when your stability serves growth, not just preservation.",
+                somatic: "Your body signals needed change through physical tension, heaviness, and feeling 'stuck.' These are messages, not failures.",
+                reflection: "Ask yourself: 'Am I sustaining from commitment, or clinging from fear of the unknown?'"
             },
             Mutable: {
                 essence: "The Adapter",
+                hook: "Your cosmic blueprint is coded for transformation. You are the force that enables evolution, the bridge between what was and what will be, the translator between worlds.",
+                core_identity: "You ARE flexibility itself. While others cling to form, you understand that all forms are temporary. This isn't inconsistency — it's your cosmic assignment. You're here to show humanity what conscious adaptation looks like.",
                 description: "Mutable energy is the wind that carries seeds to new soil, the river that finds every path around obstacles. You are the cosmic translator, the one who bridges worlds and transforms perspectives.",
                 strengths: [
                     "Adaptability is your natural state of being",
@@ -308,7 +330,15 @@
                     "Decision-making can feel overwhelming",
                     "You might adapt so well you lose your center"
                 ],
-                approach: "You move through life as a shape-shifter, finding wisdom in flexibility. Where others struggle with uncertainty, you dance. Your gift is the ability to transform and help others transform, seeing possibilities in every transition."
+                approach: "You move through life as a shape-shifter, finding wisdom in flexibility. Where others struggle with uncertainty, you dance. Your gift is the ability to transform and help others transform, seeing possibilities in every transition.",
+                shadow: "Changing to avoid depth. Adapting so completely that you lose your center. Using flexibility to escape rather than transform. Becoming whoever others need you to be.",
+                integration: "The most powerful Mutable energy maintains a stable center while adapting outer form. Your gift includes knowing what to hold constant while everything else transforms.",
+                stress: "Under pressure, you may either scatter into reactive chaos, or suddenly rigidify in an attempt to create false stability. Neither extreme serves your adaptive gift.",
+                relationships: "Partners may struggle with your changeability. The key is learning that some relationships need constancy, not just responsiveness.",
+                growth: "Your evolution requires learning that choosing is a form of freedom — commitment creates depth that constant adaptation misses.",
+                power: "You access your full power when your adaptability serves transformation, not just survival.",
+                somatic: "Your body signals overextension through nervous system overwhelm, scattered energy, and difficulty focusing. These are boundaries, not limitations.",
+                reflection: "Ask yourself: 'Am I adapting from wisdom, or changing to avoid the discomfort of commitment?'"
             }
         };
 
@@ -357,10 +387,20 @@
                 const lowerDominant = data.dominant.toLowerCase();
                 
                 contentHTML += `
+                    <!-- Core Reading Section -->
+                    <div style="background: linear-gradient(135deg, rgba(139, 0, 0, 0.3), rgba(30, 30, 35, 0.9)); border: 2px solid #FF4500; border-radius: 15px; padding: 25px; margin-bottom: 25px;">
+                        <h3 style="color: #FF4500; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 15px; text-align: center;">🌀 ${reading.essence}: ${percentage}% Dominant</h3>
+                        <p style="color: #D4C5B0; font-size: 1.15rem; line-height: 1.8; font-style: italic; text-align: center;">${reading.hook}</p>
+                    </div>
+
+                    <div style="background: rgba(20, 20, 25, 0.8); border-left: 4px solid #FF6B35; padding: 20px; margin: 20px 0; border-radius: 0 10px 10px 0;">
+                        <h4 style="color: #FF6B35; font-family: 'Cinzel', serif; margin-bottom: 10px;">🌀 CORE FREQUENCY</h4>
+                        <p style="color: #D4C5B0; line-height: 1.7;">${reading.core_identity}</p>
+                    </div>
+
                     <div class="section ${lowerDominant}">
-                        <div class="section-title">${reading.essence}: Your Dominant Approach</div>
+                        <div class="section-title">Your Cosmic Approach</div>
                         <div class="section-content">
-                            <p>Dear ${data.name}, with <span class="highlight">${percentage}%</span> of your chart in ${data.dominant} signs, your cosmic blueprint is powerfully aligned with this energy.</p>
                             <p>${reading.description}</p>
                             <p>${reading.approach}</p>
                         </div>
@@ -377,6 +417,53 @@
                         <div class="section-title">Growth Opportunities</div>
                         <div class="section-content">
                             ${reading.challenges.map(c => `<p>• ${c}</p>`).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Premium Expansion Section -->
+                    <div style="background: linear-gradient(135deg, rgba(75, 0, 130, 0.2), rgba(30, 30, 35, 0.9)); border: 1px solid rgba(255, 107, 53, 0.4); border-radius: 15px; padding: 30px; margin: 30px 0;">
+                        <h3 style="color: #FF4500; font-family: 'Cinzel', serif; font-size: 1.4rem; text-align: center; margin-bottom: 25px; text-shadow: 0 0 20px rgba(255, 69, 0, 0.5);">🌀 MODALITY DEPTH ANALYSIS 🌀</h3>
+                        
+                        <div style="display: grid; gap: 20px;">
+                            <div style="background: rgba(15, 15, 20, 0.7); padding: 15px; border-radius: 10px; border-left: 3px solid #DC143C;">
+                                <h5 style="color: #DC143C; margin-bottom: 8px;">🌑 Shadow Territory</h5>
+                                <p style="color: #D4C5B0; line-height: 1.6; margin: 0;">${reading.shadow}</p>
+                            </div>
+
+                            <div style="background: rgba(15, 15, 20, 0.7); padding: 15px; border-radius: 10px; border-left: 3px solid #9370DB;">
+                                <h5 style="color: #9370DB; margin-bottom: 8px;">⚖️ Integration Key</h5>
+                                <p style="color: #D4C5B0; line-height: 1.6; margin: 0;">${reading.integration}</p>
+                            </div>
+
+                            <div style="background: rgba(15, 15, 20, 0.7); padding: 15px; border-radius: 10px; border-left: 3px solid #FF6347;">
+                                <h5 style="color: #FF6347; margin-bottom: 8px;">🔥 Under Stress</h5>
+                                <p style="color: #D4C5B0; line-height: 1.6; margin: 0;">${reading.stress}</p>
+                            </div>
+
+                            <div style="background: rgba(15, 15, 20, 0.7); padding: 15px; border-radius: 10px; border-left: 3px solid #FF69B4;">
+                                <h5 style="color: #FF69B4; margin-bottom: 8px;">💕 In Relationships</h5>
+                                <p style="color: #D4C5B0; line-height: 1.6; margin: 0;">${reading.relationships}</p>
+                            </div>
+
+                            <div style="background: rgba(15, 15, 20, 0.7); padding: 15px; border-radius: 10px; border-left: 3px solid #00CED1;">
+                                <h5 style="color: #00CED1; margin-bottom: 8px;">🌱 Growth Edge</h5>
+                                <p style="color: #D4C5B0; line-height: 1.6; margin: 0;">${reading.growth}</p>
+                            </div>
+
+                            <div style="background: rgba(15, 15, 20, 0.7); padding: 15px; border-radius: 10px; border-left: 3px solid #FF4500;">
+                                <h5 style="color: #FF4500; margin-bottom: 8px;">⚡ Power Access Point</h5>
+                                <p style="color: #D4C5B0; line-height: 1.6; margin: 0;">${reading.power}</p>
+                            </div>
+
+                            <div style="background: rgba(15, 15, 20, 0.7); padding: 15px; border-radius: 10px; border-left: 3px solid #20B2AA;">
+                                <h5 style="color: #20B2AA; margin-bottom: 8px;">🫀 Somatic Signal</h5>
+                                <p style="color: #D4C5B0; line-height: 1.6; margin: 0;">${reading.somatic}</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, rgba(255, 69, 0, 0.2), rgba(139, 0, 0, 0.3)); padding: 20px; border-radius: 10px; border: 1px solid rgba(255, 69, 0, 0.4); text-align: center;">
+                                <h5 style="color: #FF4500; margin-bottom: 10px;">🔮 Reflection Question</h5>
+                                <p style="color: #FFD700; font-style: italic; font-size: 1.1rem; line-height: 1.6; margin: 0;">${reading.reflection}</p>
+                            </div>
                         </div>
                     </div>
                 `;
