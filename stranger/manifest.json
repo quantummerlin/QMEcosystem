@@ -1,0 +1,55 @@
+{
+  "name": "Stranger Patterns - The Upside Down Oracle",
+  "short_name": "Stranger Patterns",
+  "description": "Reveal the strange forces hidden in your numbers, stars, and destiny. Numerology, astrology, and mystical insights from the upside down.",
+  "start_url": "/stranger/tools_index.html",
+  "scope": "/stranger/",
+  "id": "stranger-patterns-pwa",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#0a0508",
+  "theme_color": "#FF4500",
+  "orientation": "portrait-primary",
+  "dir": "ltr",
+  "lang": "en",
+  "categories": ["lifestyle", "entertainment", "utilities"],
+  "icons": [
+    {
+      "src": "stranger.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Life Path Calculator",
+      "short_name": "Life Path",
+      "description": "Discover your hidden path number",
+      "url": "/stranger/life-path-calculator.html",
+      "icons": [{"src": "favicon.svg", "sizes": "any"}]
+    },
+    {
+      "name": "Strange Fortune",
+      "short_name": "Fortune",
+      "description": "Get your daily strange guidance",
+      "url": "/stranger/daily-fortune.html",
+      "icons": [{"src": "favicon.svg", "sizes": "any"}]
+    },
+    {
+      "name": "Moon Phase",
+      "short_name": "Moon",
+      "description": "Check the celestial anomalies",
+      "url": "/stranger/moon-phase-calculator.html",
+      "icons": [{"src": "favicon.svg", "sizes": "any"}]
+    }
+  ],
+  "prefer_related_applications": false,
+  "handle_links": "preferred"
+}
