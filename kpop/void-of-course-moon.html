@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        // Version: 20260123070550 - Auto-generated cache buster
+        // Version: 20260122170552 - Auto-generated cache buster
+        // Version: 20260122165534 - Auto-generated cache buster
+        // Version: 20260122150214 - Auto-generated cache buster
+        // Version: 20260122145556 - Auto-generated cache buster
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    <!-- End Google Analytics -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="version" content="20260123070550">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bf5af2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Quantum Merlin">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Quantum Merlin">
+    <meta name="msapplication-TileColor" content="#bf5af2">
+    <meta name="msapplication-navbutton-color" content="#bf5af2">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="RetroMerlin.jpg">
+    <link rel="manifest" href="manifest.json">
+    <title>Void of Course Moon | Quantum Merlin</title>
+    <meta name="description" content="Check if the Moon is Void of Course - a time when the Moon makes no major aspects before changing signs.">
+<meta name="keywords" content="numerology, astrology, horoscope, zodiac, spiritual tools, cosmic insights, free calculator">
+        <link rel="canonical" href="https://quantummerlin.com/classic/void-of-course-moon.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="quantum-merlin-styles.css">
+    <script src="auto-fill.js"></script>
+    <script src="cosmic-loader.js"></script>
+    <script src="tool-tracker.js?v=20260123070550"></script>
+    <style>
+        .result-card { background: linear-gradient(135deg, rgba(147, 112, 219, 0.2), rgba(106, 90, 205, 0.2)); border-radius: 20px; padding: 2rem; margin: 1rem 0; border: 1px solid rgba(147, 112, 219, 0.4); }
+        .moon-symbol { font-size: 4rem; text-align: center; margin: 1rem 0; }
+        .void { color: #9775fa; }
+        .active { color: #51cf66; }
+    </style>
+<!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/classic/void-of-course-moon.html">
+    <meta property="og:title" content="Quantum Merlin | Ancient Patterns. Modern Interfaces.">
+    <meta property="og:description" content="Discover your cosmic destiny with numerology, astrology, and mystical calculators">
+    <meta property="og:image" content="https://quantummerlin.com/classic/RetroMerlin.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://quantummerlin.com/classic/void-of-course-moon.html">
+    <meta name="twitter:title" content="Quantum Merlin | Ancient Patterns. Modern Interfaces.">
+    <meta name="twitter:description" content="Discover your cosmic destiny with numerology, astrology, and mystical calculators">
+    <meta name="twitter:image" content="https://quantummerlin.com/classic/RetroMerlin.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Void of Course Moon",
+        "url": "https://quantummerlin.com/classic/void-of-course-moon.html",
+        "description": "Check if the Moon is Void of Course - a time when the Moon makes no major aspects before changing signs.",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "Quantum Merlin",
+            "url": "https://quantummerlin.com/classic"
+        }
+    }
+    </script>
+</head>
+<body>
+    <a href="tools_index.html" class="back-link">← Back to Tools</a>
+    
+    <div class="container">
+        <div class="tool-header">
+            <div class="tool-icon">🌙</div>
+            <h1>Void of Course Moon</h1>
+            <p class="tool-description">Check if the Moon is "void" - when important matters tend to go astray</p>
+        </div>
+
+        <form id="toolForm" class="tool-form" onsubmit="checkVOC(event)">
+            <div class="form-group">
+                <label for="checkDate">Date to Check (leave blank for today)</label>
+                <input type="date" id="checkDate">
+            </div>
+            <button type="submit" class="submit-btn">🌙 Check Moon</button>
+        </form>
+
+        <div id="result" class="result-section" style="display: none;"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/astronomy-engine@2.1.19/astronomy.browser.js"></script>
+    <script>
+        // Version: 20260122073736 - Auto-generated cache buster
+        // Version: 20260121223506 - Auto-generated cache buster
+        // Version: 20260121211614 - Auto-generated cache buster
+        // Version: 20260121204740 - Auto-generated cache buster
+        // Version: 20260121204029 - Auto-generated cache buster
+        // Version: 20260121203732 - Auto-generated cache buster
+        // Version: 20260121182750 - Auto-generated cache buster
+        // Version: 20260121180653 - Auto-generated cache buster
+        // Version: 20260121175156 - Auto-generated cache buster
+        // Version: 20260121170617 - Auto-generated cache buster
+        // Version: 20260121164415 - Auto-generated cache buster
+        // Version: 20260121163503 - Auto-generated cache buster
+        // Version: 20260121162926 - Auto-generated cache buster
+        const zodiacSigns = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
+        const zodiacSymbols = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];
+
+        function getMoonSign(date) {
+            const moonPos = Astronomy.EclipticGeoMoon(new Astronomy.AstroTime(date));
+            const eclipticLon = moonPos.lon;
+            const signIndex = Math.floor(eclipticLon / 30);
+            const degrees = eclipticLon % 30;
+            return { 
+                name: zodiacSigns[signIndex], 
+                symbol: zodiacSymbols[signIndex],
+                degrees: degrees.toFixed(1)
+            };
+        }
+
+        function getNextSignChange(date) {
+            const currentSign = getMoonSign(date);
+            // Moon moves ~13 degrees per day, ~0.5 degrees per hour
+            // Check ahead to find when sign changes
+            for (let hours = 1; hours <= 72; hours++) {
+                const futureDate = new Date(date.getTime() + hours * 60 * 60 * 1000);
+                const futureSign = getMoonSign(futureDate);
+                if (futureSign.name !== currentSign.name) {
+                    return futureDate;
+                }
+            }
+            return null;
+        }
+
+        function isVoidOfCourse(date) {
+            const currentSign = getMoonSign(date);
+            // Simplified VOC check: Moon is VOC when in late degrees (25+) of a sign
+            // In reality, VOC is determined by aspects, but this is a simplified approximation
+            const isLateSign = parseFloat(currentSign.degrees) >= 25;
+            
+            return {
+                isVoid: isLateSign,
+                currentSign: currentSign,
+                reason: isLateSign ? "Moon is in late degrees of sign (simplified VOC check)" : "Moon is active in sign"
+            };
+        }
+
+        function checkVOC(event) {
+            event.preventDefault();
+            
+            const dateInput = document.getElementById('checkDate').value;
+            const checkDate = dateInput ? new Date(dateInput) : new Date();
+            
+            const vocStatus = isVoidOfCourse(checkDate);
+            const nextChange = getNextSignChange(checkDate);
+            
+            showResult(checkDate, vocStatus, nextChange);
+        }
+
+        function formatDate(date) {
+            return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+        }
+
+        function formatDateTime(date) {
+            return date.toLocaleString('en-US', { 
+                month: 'long', day: 'numeric', year: 'numeric',
+                hour: 'numeric', minute: '2-digit', hour12: true
+            });
+        }
+
+        function showResult(date, vocStatus, nextChange) {
+            const dateStr = formatDate(date);
+            const status = vocStatus.isVoid ? 
+                `<span class="void">YES - Moon is Void of Course ☽</span>` :
+                `<span class="active">NO - Moon is Active 🌙</span>`;
+            
+            const nextSignIndex = (zodiacSigns.indexOf(vocStatus.currentSign.name) + 1) % 12;
+            const nextSign = zodiacSigns[nextSignIndex];
+            const nextSymbol = zodiacSymbols[nextSignIndex];
+            
+            const resultHTML = `
+                <div class="result-card">
+                    <div class="moon-symbol">${vocStatus.currentSign.symbol}</div>
+                    <h2 style="text-align: center;">${dateStr}</h2>
+                    <div style="font-size: 1.5rem; text-align: center; margin: 1rem 0;">
+                        ${status}
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                        <h3>Current Moon Position</h3>
+                        <p style="text-align: center; font-size: 1.2rem;">
+                            Moon in ${vocStatus.currentSign.name} ${vocStatus.currentSign.symbol} at ${vocStatus.currentSign.degrees}°
+                        </p>
+                        ${nextChange ? `
+                            <p style="text-align: center; margin-top: 1rem;">
+                                Next sign change: ${formatDateTime(nextChange)}<br>
+                                <span style="font-size: 1.5rem;">${nextSymbol} ${nextSign}</span>
+                            </p>
+                        ` : ''}
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                        <h3>What is Void of Course Moon?</h3>
+                        <p>The Moon is "Void of Course" (VOC) during the period between the Moon's last major aspect 
+                        in a sign and its entry into the next sign. During this time, the Moon is essentially "idle," 
+                        not forming meaningful connections.</p>
+                        <p style="margin-top: 0.5rem;">This period can last from a few minutes to over a day. 
+                        Traditionally, actions taken during VOC Moon tend to "come to nothing" or produce unexpected results.</p>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                        <h3>⚠️ What to Avoid During VOC Moon</h3>
+                        <ul>
+                            <li><strong>Starting new projects:</strong> They may not develop as planned</li>
+                            <li><strong>Making major purchases:</strong> Especially real estate or vehicles</li>
+                            <li><strong>Job interviews:</strong> May not lead to employment</li>
+                            <li><strong>First dates:</strong> Relationship may not progress</li>
+                            <li><strong>Signing contracts:</strong> Details may be overlooked</li>
+                            <li><strong>Launching businesses:</strong> May struggle to gain traction</li>
+                            <li><strong>Medical procedures:</strong> If elective and avoidable</li>
+                            <li><strong>Important meetings:</strong> Decisions may need revision</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                        <h3>✅ What to Do During VOC Moon</h3>
+                        <ul>
+                            <li><strong>Routine activities:</strong> Things you do regularly</li>
+                            <li><strong>Creative work:</strong> VOC can enhance creativity and flow</li>
+                            <li><strong>Meditation & spiritual practice:</strong> Excellent for going within</li>
+                            <li><strong>Relaxation & rest:</strong> The void is perfect for decompressing</li>
+                            <li><strong>Socializing:</strong> Casual, no-pressure interactions</li>
+                            <li><strong>Completing existing projects:</strong> Finishing what's already started</li>
+                            <li><strong>Research & study:</strong> Gathering information without decision-making</li>
+                            <li><strong>Cleaning & organizing:</strong> Routine maintenance tasks</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                        <h3>💫 The Hidden Gift</h3>
+                        <p>While VOC Moon is traditionally seen as unfavorable for initiating action, it's actually 
+                        a powerful time for:</p>
+                        <ul>
+                            <li>Going with the flow without forcing outcomes</li>
+                            <li>Creative activities that don't require specific results</li>
+                            <li>Spiritual connection and meditation</li>
+                            <li>Letting go and trusting the universe</li>
+                            <li>Processing emotions and integrating experiences</li>
+                        </ul>
+                        <p style="margin-top: 0.5rem;">Think of VOC Moon as a cosmic "pause button" - 
+                        a time to be rather than do.</p>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                        <h3>🌙 VOC in Different Signs</h3>
+                        <p><strong>Fire Signs (Aries, Leo, Sagittarius):</strong> Usually brief, energetic void</p>
+                        <p><strong>Earth Signs (Taurus, Virgo, Capricorn):</strong> Longer voids, good for rest</p>
+                        <p><strong>Air Signs (Gemini, Libra, Aquarius):</strong> Mental void, scattered thoughts</p>
+                        <p><strong>Water Signs (Cancer, Scorpio, Pisces):</strong> Emotional void, extra sensitive</p>
+                    </div>
+                    
+                    <p style="margin-top: 2rem; text-align: center; font-style: italic;">
+                        Note: This uses a simplified VOC calculation. For precise VOC times, consult an 
+                        ephemeris that shows exact aspects. Void periods can vary from minutes to over a day.
+                    </p>
+                </div>
+            `;
+            
+            document.getElementById('result').innerHTML = resultHTML;
+            CosmicLoader.showResult('result', 'toolForm');
+        }
+
+        // Auto-check on load
+        window.onload = () => {
+            const event = new Event('submit');
+            document.getElementById('toolForm').dispatchEvent(event);
+        };
+    </script>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="feedback-section">
+            <p class="feedback-text">🛠️ Found an issue or have a suggestion?</p>
+            <a href="mailto:fixit@quantummerlin.com?subject=Quantum%20Merlin%20Feedback" class="footer-feedback-btn">📧 fixit@quantummerlin.com</a>
+        </div>
+        <div class="legal-links">
+            <a href="terms.html">Terms of Service</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 Quantum Merlin. For entertainment purposes only.</p>
+        <div class="coffee-section">
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="coffee-btn" id="coffeeBtn">☕ Buy Us a Coffee</a>
+        </div>
+    </footer>
+    <style>
+        .legal-footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(191, 90, 242, 0.2);
+            background: rgba(10, 10, 15, 0.8);
+        }
+        .feedback-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(191, 90, 242, 0.15);
+        }
+        .feedback-text {
+            color: #9A8F7A;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .footer-feedback-btn {
+            display: inline-block;
+            color: #06b6d4;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            padding: 10px 20px;
+            border: 1px solid rgba(6, 182, 212, 0.4);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .footer-feedback-btn:hover {
+            background: rgba(6, 182, 212, 0.15);
+            border-color: #06b6d4;
+            transform: translateY(-2px);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .legal-links a {
+            color: #9A8F7A;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .legal-links a:hover {
+            color: #fbbf24;
+        }
+        .legal-links .separator {
+            color: rgba(191, 90, 242, 0.4);
+        }
+        .copyright {
+            color: #6B6B6B;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .coffee-section {
+            padding-top: 15px;
+            border-top: 1px solid rgba(191, 90, 242, 0.15);
+        }
+        .coffee-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #0a0a0f;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+        }
+        .coffee-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(251, 191, 36, 0.5);
+        }
+    </style>
+
+</body>
+</html>

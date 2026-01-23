@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        // Version: 20260123070550 - Auto-generated cache buster
+        // Version: 20260122170552 - Auto-generated cache buster
+        // Version: 20260122165534 - Auto-generated cache buster
+        // Version: 20260122150214 - Auto-generated cache buster
+        // Version: 20260122145556 - Auto-generated cache buster
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    <!-- End Google Analytics -->
+
+        <link rel="canonical" href="https://quantummerlin.com/classic/chinese-zodiac-calculator.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="version" content="20260123070550">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bf5af2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Quantum Merlin">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Quantum Merlin">
+    <meta name="msapplication-TileColor" content="#bf5af2">
+    <meta name="msapplication-navbutton-color" content="#bf5af2">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="RetroMerlin.jpg">
+    <link rel="manifest" href="manifest.json">
+    <title>Chinese Zodiac Calculator | Quantum Merlin</title>
+    <meta name="description" content="Reveal your Chinese zodiac animal sign and its archetypal patterns through ancient Eastern wisdom.">
+<meta name="keywords" content="chinese zodiac, chinese astrology, zodiac animal, lunar new year, chinese horoscope">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap&v=20260111121803&v=20260111121858&v=20260111132525&v=20260112083146&v=20260121162926&v=20260121163503&v=20260121164415&v=20260121170617&v=20260121175156&v=20260121180653&v=20260121182750&v=20260121203732&v=20260121204029&v=20260121204740&v=20260121211614&v=20260121223506&v=20260122073736&v=20260122145556&v=20260122150214&v=20260122165534&v=20260122170552&v=20260123070550" rel="stylesheet">
+    <link rel="stylesheet" href="quantum-merlin-styles.css">
+    <link rel="stylesheet" href="go-deeper.css">
+    <script src="tool-tracker.js?v=20260123070550"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0a0a0f;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; width: 100%; margin: 0 auto; padding: 0 15px; }
+        .header { 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+        .header h1 { 
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.5em; 
+            margin-bottom: 10px; 
+            background: linear-gradient(135deg, #fbbf24 0%, #06b6d4 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        .header p { 
+            font-size: 1.1em; 
+            opacity: 0.9; 
+            color: #e0e0e0;
+        }
+        .tool-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            margin-bottom: 30px;
+        }
+        .input-group { margin-bottom: 25px; }
+        label { 
+            display: block; 
+            font-family: 'Cinzel', serif;
+            font-weight: 600; 
+            margin-bottom: 8px; 
+            color: #fbbf24;
+        }
+        input[type="text"], input[type="number"], input[type="date"], select {
+            width: 100%;
+            padding: 15px;
+            background: rgba(17, 24, 39, 0.8);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: 'Cormorant Garamond', serif;
+            color: #e0e0e0;
+            transition: all 0.3s;
+        }
+        input:focus, select:focus { 
+            outline: none; 
+            border-color: #06b6d4; 
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+        }
+        button {
+            background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+        }
+        button:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(6, 182, 212, 0.4); }
+        .result {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+            border: 2px solid rgba(251, 191, 36, 0.4);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 25px;
+            display: none;
+        }
+        .result.show { display: block; animation: fadeIn 0.5s; }
+        .result h3 { font-size: 2em; margin-bottom: 15px; }
+        .result p { font-size: 1.1em; line-height: 1.6; }
+        .back-btn { 
+            background: rgba(6, 182, 212, 0.1); 
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            margin-top: 20px; 
+        }
+        .back-btn:hover { 
+            background: rgba(6, 182, 212, 0.2);
+            border-color: #06b6d4;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .share-buttons { display: flex; gap: 10px; margin-top: 20px; justify-content: center; }
+        .share-btn { background: #f0f0f0; color: #333; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.3s; }
+        .share-btn:hover { background: #e0e0e0; }
+    </style>
+    <script src="auto-fill.js"></script>
+<!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/classic/chinese-zodiac-calculator.html">
+    <meta property="og:title" content="Chinese Zodiac Calculator | Quantum Merlin">
+    <meta property="og:description" content="Find your Chinese zodiac animal sign based on your birth year.">
+    <meta property="og:image" content="https://quantummerlin.com/classic/RetroMerlin.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://quantummerlin.com/classic/chinese-zodiac-calculator.html">
+    <meta name="twitter:title" content="Chinese Zodiac Calculator | Quantum Merlin">
+    <meta name="twitter:description" content="Find your Chinese zodiac animal sign based on your birth year.">
+    <meta name="twitter:image" content="https://quantummerlin.com/classic/RetroMerlin.jpg">
+    <script src="share-utils.js?v=20260123070550"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Chinese Zodiac Calculator",
+        "url": "https://quantummerlin.com/classic/chinese-zodiac-calculator.html",
+        "description": "Find your Chinese zodiac animal sign. Discover your lunar year animal, personality traits, and compatibility.",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "Quantum Merlin",
+            "url": "https://quantummerlin.com/classic"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Chinese Zodiac Calculator</h1>
+            <p>Find your Chinese zodiac animal and its meaning.</p>
+        </div>
+        
+        <div class="tool-card">
+            <div style="text-align: right; margin-bottom: 15px;">
+                <button type="button" onclick="clearSavedData()" style="background: rgba(236, 72, 153, 0.1); border: 2px solid rgba(236, 72, 153, 0.3); color: #ec4899; padding: 8px 16px; font-size: 0.85em; border-radius: 8px; cursor: pointer; transition: all 0.3s; font-family: 'Cinzel', serif; font-weight: 600;">
+                    ??? Clear My Data
+                </button>
+            </div>
+            <div id="tool-content">
+            <div class="input-group">
+                <label for="birthYear">Enter Your Birth Year:</label>
+                <input type="number" id="birthYear" placeholder="1990" min="1900" max="2040" required>
+            </div>
+        </div>
+            <button id="calculate-btn">Find My Chinese Zodiac</button>
+            <div id="result" class="result">
+                <h3 id="result-title"></h3>
+                <p id="result-text"></p>
+                <div class="share-buttons">
+                <button class="share-btn" onclick="QMShare.twitter()" title="Share on X (Twitter)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
+                <button class="share-btn" onclick="QMShare.facebook()" title="Share on Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></button>
+                <button class="share-btn" onclick="QMShare.whatsapp()" title="Share on WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></button>
+                <button class="share-btn" onclick="QMShare.email()" title="Share via Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></button>
+                <button class="share-btn" onclick="QMShare.sms()" title="Share via SMS"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg></button>
+                <button class="share-btn" onclick="QMShare.copyLink()" title="Copy Link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+                </div>
+            </div>
+        </div>
+        
+        <button class="back-btn" onclick="goBack()">? Quantum Merlin Hub</button>
+    </div>
+    
+    <script>
+        // Version: 20260122073736 - Auto-generated cache buster
+        // Version: 20260121223506 - Auto-generated cache buster
+        // Version: 20260121211614 - Auto-generated cache buster
+        // Version: 20260121204740 - Auto-generated cache buster
+        // Version: 20260121204029 - Auto-generated cache buster
+        // Version: 20260121203732 - Auto-generated cache buster
+        // Version: 20260121182750 - Auto-generated cache buster
+        // Version: 20260121180653 - Auto-generated cache buster
+        // Version: 20260121175156 - Auto-generated cache buster
+        // Version: 20260121170617 - Auto-generated cache buster
+        // Version: 20260121164415 - Auto-generated cache buster
+        // Version: 20260121163503 - Auto-generated cache buster
+        // Version: 20260121162926 - Auto-generated cache buster
+        // Version: 20260112083146 - Auto-generated cache buster
+        // Version: 20260111132525 - Auto-generated cache buster
+        // Version: 20260111121858 - Auto-generated cache buster
+        // Version: 20260111121803 - Auto-generated cache buster
+        function goBack() { window.location.href = 'tools_index.html'; }
+        function shareOnTwitter() {
+            const text = encodeURIComponent("I just used Chinese Zodiac Calculator! Check it out: ");
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+        }
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Link copied to clipboard! ??');
+        }
+        
+            // Chinese New Year dates (varies between Jan 21 - Feb 20)
+            function getChineseNewYear(year) {
+                const cnyDates = {
+                    1900: [1, 31], 1901: [2, 19], 1902: [2, 8], 1903: [1, 29], 1904: [2, 16], 1905: [2, 4], 1906: [1, 25], 1907: [2, 13], 1908: [2, 2], 1909: [1, 22],
+                    1910: [2, 10], 1911: [1, 30], 1912: [2, 18], 1913: [2, 6], 1914: [1, 26], 1915: [2, 14], 1916: [2, 3], 1917: [1, 23], 1918: [2, 11], 1919: [2, 1],
+                    1920: [2, 20], 1921: [2, 8], 1922: [1, 28], 1923: [2, 16], 1924: [2, 5], 1925: [1, 24], 1926: [2, 13], 1927: [2, 2], 1928: [1, 23], 1929: [2, 10],
+                    1930: [1, 30], 1931: [2, 17], 1932: [2, 6], 1933: [1, 26], 1934: [2, 14], 1935: [2, 4], 1936: [1, 24], 1937: [2, 11], 1938: [1, 31], 1939: [2, 19],
+                    1940: [2, 8], 1941: [1, 27], 1942: [2, 15], 1943: [2, 5], 1944: [1, 25], 1945: [2, 13], 1946: [2, 2], 1947: [1, 22], 1948: [2, 10], 1949: [1, 29],
+                    1950: [2, 17], 1951: [2, 6], 1952: [1, 27], 1953: [2, 14], 1954: [2, 3], 1955: [1, 24], 1956: [2, 12], 1957: [1, 31], 1958: [2, 18], 1959: [2, 8],
+                    1960: [1, 28], 1961: [2, 15], 1962: [2, 5], 1963: [1, 25], 1964: [2, 13], 1965: [2, 2], 1966: [1, 21], 1967: [2, 9], 1968: [1, 30], 1969: [2, 17],
+                    1970: [2, 6], 1971: [1, 27], 1972: [2, 15], 1973: [2, 3], 1974: [1, 23], 1975: [2, 11], 1976: [1, 31], 1977: [2, 18], 1978: [2, 7], 1979: [1, 28],
+                    1980: [2, 16], 1981: [2, 5], 1982: [1, 25], 1983: [2, 13], 1984: [2, 2], 1985: [2, 20], 1986: [2, 9], 1987: [1, 29], 1988: [2, 17], 1989: [2, 6],
+                    1990: [1, 27], 1991: [2, 15], 1992: [2, 4], 1993: [1, 23], 1994: [2, 10], 1995: [1, 31], 1996: [2, 19], 1997: [2, 7], 1998: [1, 28], 1999: [2, 16],
+                    2000: [2, 5], 2001: [1, 24], 2002: [2, 12], 2003: [2, 1], 2004: [1, 22], 2005: [2, 9], 2006: [1, 29], 2007: [2, 18], 2008: [2, 7], 2009: [1, 26],
+                    2010: [2, 14], 2011: [2, 3], 2012: [1, 23], 2013: [2, 10], 2014: [1, 31], 2015: [2, 19], 2016: [2, 8], 2017: [1, 28], 2018: [2, 16], 2019: [2, 5],
+                    2020: [1, 25], 2021: [2, 12], 2022: [2, 1], 2023: [1, 22], 2024: [2, 10], 2025: [1, 29], 2026: [2, 17], 2027: [2, 6], 2028: [1, 26], 2029: [2, 13],
+                    2030: [2, 3], 2031: [1, 23], 2032: [2, 11], 2033: [1, 31], 2034: [2, 19], 2035: [2, 8], 2036: [1, 28], 2037: [2, 15], 2038: [2, 4], 2039: [1, 24], 2040: [2, 12]
+                };
+                const d = cnyDates[year];
+                return d ? new Date(year, d[0] - 1, d[1]) : new Date(year, 1, 1);
+            }
+            
+            document.getElementById('calculate-btn').addEventListener('click', function() {
+                const year = parseInt(document.getElementById('birthYear').value);
+                if (!year || year < 1900 || year > 2040) {
+                    alert('Please enter a valid birth year (1900-2040)');
+                    return;
+                }
+                
+                const zodiacAnimals = [
+                    { name: "Rat", emoji: "🐀", traits: "Intelligent, adaptable, charming", element: "Water" },
+                    { name: "Ox", emoji: "🐂", traits: "Diligent, reliable, strong", element: "Earth" },
+                    { name: "Tiger", emoji: "🐅", traits: "Brave, competitive, confident", element: "Wood" },
+                    { name: "Rabbit", emoji: "🐇", traits: "Quiet, elegant, kind", element: "Wood" },
+                    { name: "Dragon", emoji: "🐉", traits: "Confident, intelligent, enthusiastic", element: "Earth" },
+                    { name: "Snake", emoji: "🐍", traits: "Enigmatic, intelligent, wise", element: "Fire" },
+                    { name: "Horse", emoji: "🐎", traits: "Animated, active, energetic", element: "Fire" },
+                    { name: "Goat", emoji: "🐐", traits: "Calm, gentle, sympathetic", element: "Earth" },
+                    { name: "Monkey", emoji: "🐒", traits: "Sharp, smart, curiosity", element: "Metal" },
+                    { name: "Rooster", emoji: "🐓", traits: "Observant, hardworking, courageous", element: "Metal" },
+                    { name: "Dog", emoji: "🐕", traits: "Lovely, honest, prudent", element: "Earth" },
+                    { name: "Pig", emoji: "🐖", traits: "Compassionate, generous, diligent", element: "Water" }
+                ];
+                
+                // Note: This calculator only uses year - for January/February births,
+                // use the full Chinese Zodiac Reading tool which checks Chinese New Year dates
+                // Chinese zodiac starts with Rat in 1900
+                const zodiacIndex = (year - 1900) % 12;
+                const zodiac = zodiacAnimals[zodiacIndex];
+                
+                document.getElementById('result-title').textContent = `${zodiac.emoji} ${zodiac.name}`;
+                document.getElementById('result-text').textContent = `${zodiac.traits} | Element: ${zodiac.element}`;
+                document.getElementById('result').classList.add('show');
+            });
+        
+    
+        // Load saved data from localStorage
+        ;
+                
+                Object.keys(fieldMappings).forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    const dataKey = fieldMappings[fieldId];
+                    if (field && data[dataKey]) {
+                        field.value = data[dataKey];
+                    }
+                });
+            }
+        }
+        
+        // Save user data to localStorage
+        function saveUserData() {
+            const userData = {};
+            
+            // Try to find and save various field types
+            const fields = [
+                {ids: ['preferredName', 'name', 'yourName'], key: 'preferredName'},
+                {ids: ['birthName', 'fullName'], key: 'birthName'},
+                {ids: ['birthDate', 'date', 'dob', 'birthdate'], key: 'birthDate'},
+                {ids: ['birthTime', 'time'], key: 'birthTime'},
+                {ids: ['birthPlace', 'place', 'location'], key: 'birthPlace'}
+            ];
+            
+            fields.forEach(field => {
+                for (let id of field.ids) {
+                    const element = document.getElementById(id);
+                    if (element && element.value) {
+                        userData[field.key] = element.value;
+                        break;
+                    }
+                }
+            });
+            
+            if (Object.keys(userData).length > 0) {
+                localStorage.setItem('quantumMerlinUserData', JSON.stringify(userData));
+            }
+        }
+        
+        // Clear saved data
+        function clearSavedData() {
+            if (confirm('This will clear your saved personal information. Are you sure?')) {
+                localStorage.removeItem('quantumMerlinUserData');
+                location.reload();
+            }
+        }
+        
+        // Load saved data when page loads
+        window.addEventListener('DOMContentLoaded', function() {
+            loadSavedData();
+            
+            // Auto-save on form submission
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function() {
+                    saveUserData();
+                });
+            });
+            
+            // Auto-save on button clicks (for tools without forms)
+            const calcButtons = document.querySelectorAll('button[id*="calculate"], button[id*="btn"]');
+            calcButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    setTimeout(saveUserData, 100);
+                });
+            });
+        });
+
+        // Initialize Go Deeper section
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.ToolTracker && typeof ToolTracker.renderGoDeeper === 'function') {
+                ToolTracker.renderGoDeeper('goDeeper', 3);
+            }
+        });
+
+    </script>
+
+    <!-- Go Deeper Section -->
+    <div class="container">
+        <div class="go-deeper-section" id="goDeeper"></div>
+    </div>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="feedback-section">
+            <p class="feedback-text">??? Found an issue or have a suggestion?</p>
+            <a href="mailto:fixit@quantummerlin.com?subject=Quantum%20Merlin%20Feedback" class="footer-feedback-btn">?? fixit@quantummerlin.com</a>
+        </div>
+        <div class="legal-links">
+            <a href="terms.html">Terms of Service</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 Quantum Merlin. For entertainment purposes only.</p>
+        <div class="coffee-section">
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="coffee-btn" id="coffeeBtn">? Buy Us a Coffee</a>
+        </div>
+    </footer>
+    <style>
+        .legal-footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(191, 90, 242, 0.2);
+            background: rgba(10, 10, 15, 0.8);
+        }
+        .feedback-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(191, 90, 242, 0.15);
+        }
+        .feedback-text {
+            color: #9A8F7A;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .footer-feedback-btn {
+            display: inline-block;
+            color: #06b6d4;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            padding: 10px 20px;
+            border: 1px solid rgba(6, 182, 212, 0.4);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .footer-feedback-btn:hover {
+            background: rgba(6, 182, 212, 0.15);
+            border-color: #06b6d4;
+            transform: translateY(-2px);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .legal-links a {
+            color: #9A8F7A;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .legal-links a:hover {
+            color: #fbbf24;
+        }
+        .legal-links .separator {
+            color: rgba(191, 90, 242, 0.4);
+        }
+        .copyright {
+            color: #6B6B6B;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .coffee-section {
+            padding-top: 15px;
+            border-top: 1px solid rgba(191, 90, 242, 0.15);
+        }
+        .coffee-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #0a0a0f;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+        }
+        .coffee-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(251, 191, 36, 0.5);
+        }
+    </style>
+
+
+    <script src="storage-fix.js?v=20260123"></script></body>
+</html>
+
