@@ -3768,18 +3768,15 @@ function shareViaWhatsApp() {
             </div>
         </div>
 
-        <!-- Premium Upgrade CTA -->
-        <div id="premiumCtaTop" class="section premium-cta-section" style="text-align: center; margin: 30px 0; padding: 25px; background: linear-gradient(135deg, rgba(26,0,51,0.8), rgba(139,92,246,0.6)); border-radius: 15px; border: 2px solid rgba(251,191,36,0.3); position: relative; z-index: 1100;">
-            <h3 id="premiumCtaTopTitle" style="color: #fbbf24; font-size: 22px; font-weight: 700; margin-bottom: 15px;" data-translate="readyToUnlock">✨ Pronto para Desbloquear Recursos Premium?</h3>
-            <p style="color: #c4b5fd; font-size: 16px; margin-bottom: 20px; line-height: 1.5;" data-translate="premiumCtaDesc">
-                Obtenha acesso vitalício a controles de volume individuais, durações personalizadas, exportação WAV (reproduza no VLC Player gratuito!), sistema de conquistas, além de upgrade gratuito quando lançarmos na App Store!
+        <!-- Ad Placeholder / Espaço Publicitário -->
+        <div id="adPlaceholder" class="section" style="text-align: center; margin: 30px 0; padding: 25px; background: rgba(26,0,51,0.6); border: 1px dashed rgba(139,92,246,0.4); border-radius: 15px; position: relative; z-index: 1100;">
+            <h3 style="font-family: 'Cinzel', serif; color: #8b5cf6; font-size: 18px; font-weight: 600; margin-bottom: 10px;">📣 Espaço Publicitário Disponível</h3>
+            <p style="color: #9ca3af; font-size: 14px; margin-bottom: 15px; line-height: 1.5;">
+                Alcance nosso público engajado e espiritualmente conectado através do Frequências Gênesis
             </p>
-            <button onclick="showUpgradeModal()" style="background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #1a0033; border: none; border-radius: 25px; padding: 15px 30px; font-size: 18px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 15px rgba(251,191,36,0.3);" data-translate="upgradeToPremium">
-                Fazer Upgrade para Premium
-            </button>
-            <p style="margin-top: 15px; font-size: 14px; color: #9ca3af;" data-translate="oneTimePayment">
-                Pagamento único • Acesso vitalício • Sem assinaturas
-            </p>
+            <a href="/classic/advertise.html" style="display: inline-block; padding: 10px 25px; background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(6,182,212,0.3)); border: 1px solid rgba(139,92,246,0.5); border-radius: 20px; color: #e5e7eb; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
+                Envie seu Interesse →
+            </a>
         </div>
 
         <div class="trinity-base">
@@ -3832,10 +3829,17 @@ function shareViaWhatsApp() {
             </div>
         </div>
 
+        <!-- Ad Placeholder - Após Receitas -->
+        <div style="text-align: center; margin: 20px 0; padding: 20px; background: rgba(26,0,51,0.6); border: 1px dashed rgba(139,92,246,0.4); border-radius: 12px;">
+            <p style="color: #8b5cf6; font-size: 14px; margin-bottom: 8px;">📣 Espaço Publicitário Disponível</p>
+            <p style="color: #9ca3af; font-size: 12px; margin-bottom: 10px;">Alcance usuários explorando frequências de cura</p>
+            <a href="/classic/advertise.html" style="display: inline-block; padding: 6px 16px; background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(6,182,212,0.3)); border: 1px solid rgba(139,92,246,0.5); border-radius: 15px; color: #e5e7eb; text-decoration: none; font-size: 12px;">Saiba Mais →</a>
+        </div>
+
         <div class="section">
             <div class="section-title" data-translate="controlsTitle">Controles de Frequência</div>
             <div class="controls">
-                <div class="frequency-controls premium-lock" onclick="if(!hasPremiumAccess()) showUpgradeModal();" style="cursor: pointer;">
+                <div class="frequency-controls">
                     <div class="control-group">
                         <div>
                             <input type="number" id="freq1" min="0.1" max="100000" step="0.1" value="37">
@@ -3864,7 +3868,7 @@ function shareViaWhatsApp() {
                     </div>
                 </div>
                 
-                <div class="control-group duration-control premium-lock" onclick="if(!hasPremiumAccess()) showUpgradeModal();" style="cursor: pointer;">
+                <div class="control-group duration-control">
                     <label for="duration" data-translate="duration">⏱️ Duração</label>
                     <div class="duration-input-wrapper">
                         <div class="duration-input-container">
@@ -3882,7 +3886,6 @@ function shareViaWhatsApp() {
                 <div class="button-group">
                     <button class="button button-primary" id="playBtn" aria-label="Play frequency generator" data-translate="play">▶ PLAY</button>
                     <button class="button button-danger" id="stopBtn" aria-label="Stop frequency generator" data-translate="stop">⏹ STOP</button>
-                    <button class="button button-secondary premium-lock" id="exportBtn" onclick="showExportUpgradeModal()" aria-label="Export as WAV file - Premium feature" data-translate="export">💾 EXPORT</button>
                     <button class="button button-secondary" id="resetBtn" aria-label="Reset frequencies to default" data-translate="reset">🔄 RESET</button>
                 </div>
                 
@@ -3965,18 +3968,15 @@ function shareViaWhatsApp() {
             </div>
         </div>
 
-        <!-- Bottom Upgrade CTA - HIDDEN (Free version) -->
-        <div id="premiumCtaBottom" style="display: none; text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, rgba(26,0,51,0.8), rgba(139,92,246,0.6)); border-radius: 20px; border: 2px solid rgba(251,191,36,0.3); position: relative; z-index: 1100;">
-            <h3 id="premiumCtaBottomTitle" style="color: #fbbf24; font-size: 24px; margin-bottom: 15px;" data-translate="readyToUnlock">✨ Pronto para Desbloquear Recursos Premium?</h3>
-            <p style="color: #c4b5fd; font-size: 16px; margin-bottom: 20px; line-height: 1.6;" data-translate="premiumCtaDesc">
-                Obtenha acesso vitalício a controles de volume individuais, durações personalizadas, exportação WAV (toque no VLC Player gratuito!), sistema de conquistas, além de upgrade gratuito quando lançarmos na App Store!
+        <!-- Bottom Ad Placeholder -->
+        <div id="adPlaceholderBottom" style="text-align: center; margin: 40px 0; padding: 25px; background: rgba(26,0,51,0.6); border: 1px dashed rgba(139,92,246,0.4); border-radius: 15px; position: relative; z-index: 1100;">
+            <h3 style="font-family: 'Cinzel', serif; color: #8b5cf6; font-size: 16px; font-weight: 600; margin-bottom: 8px;">📣 Seu Anúncio Pode Estar Aqui</h3>
+            <p style="color: #9ca3af; font-size: 13px; margin-bottom: 12px; line-height: 1.4;">
+                Conecte-se com usuários que exploram frequências sagradas
             </p>
-            <button onclick="showUpgradeModal()" style="background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #1a0033; border: none; border-radius: 25px; padding: 15px 30px; font-size: 18px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 15px rgba(251,191,36,0.3);" data-translate="upgradeToPremium">
-                Faça Upgrade para Premium
-            </button>
-            <p style="margin-top: 15px; font-size: 14px; color: #9ca3af;" data-translate="oneTimePayment">
-                Pagamento único • Acesso vitalício • Sem assinaturas
-            </p>
+            <a href="/classic/advertise.html" style="display: inline-block; padding: 8px 20px; background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(6,182,212,0.3)); border: 1px solid rgba(139,92,246,0.5); border-radius: 20px; color: #e5e7eb; text-decoration: none; font-size: 13px; transition: all 0.3s ease;">
+                Envie seu Interesse →
+            </a>
         </div>
 
         <!-- Share & Earn Footer Section - HIDDEN -->
@@ -7360,14 +7360,14 @@ function shareViaWhatsApp() {
                 ">
                     <div style="font-size: 80px; margin-bottom: 20px;">🎉</div>
                     <h2 style="color: #fbbf24; font-size: 28px; margin-bottom: 15px;">
-                        Streak Broken
+                        Sequência Interrompida
                     </h2>
                     <p style="color: #fff; font-size: 18px; margin-bottom: 20px;">
-                        Your ${oldStreak}-day journey has paused
+                        Sua jornada de ${oldStreak} dias foi pausada
                     </p>
                     <p style="color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.6; margin-bottom: 30px;">
-                        Every master has stumbled. What matters is rising again.<br>
-                        Your longest streak (${userProgress.longestStreak} days) remains forever.
+                        Todo mestre já tropeçou. O que importa é se levantar novamente.<br>
+                        Sua maior sequência (${userProgress.longestStreak} dias) permanece para sempre.
                     </p>
                     <div style="
                         background: rgba(251,191,36,0.15);
@@ -7376,7 +7376,7 @@ function shareViaWhatsApp() {
                         margin-bottom: 25px;
                     ">
                         <p style="color: #fbbf24; font-weight: 600; margin-bottom: 10px;">
-                            🌟 Start Fresh
+                            🌟 Recomeçar
                         </p>
                         <p style="color: #fff; font-size: 14px;">
                             Comece uma nova sequência hoje. Cada dia é um novo começo.
@@ -7390,7 +7390,7 @@ function shareViaWhatsApp() {
                             margin-bottom: 25px;
                         ">
                             <p style="color: #c4b5fd; font-size: 13px;">
-                                💎 Premium users get a <b>Streak Freeze</b> to protect their progress
+                                💎 Usuários Premium têm <b>Congelamento de Sequência</b> para proteger seu progresso
                             </p>
                         </div>
                     ` : ''}
@@ -9513,6 +9513,13 @@ function shareViaWhatsApp() {
                     
                     ${dashboardContent}
                     
+                    <!-- Ad Placeholder in Achievements / Espaço Publicitário nas Conquistas -->
+                    <div style="text-align: center; margin: 25px auto; padding: 20px; max-width: 400px; background: rgba(26,0,51,0.6); border: 1px dashed rgba(139,92,246,0.4); border-radius: 12px;">
+                        <p style="color: #8b5cf6; font-size: 14px; margin-bottom: 8px;">📣 Espaço Publicitário Disponível</p>
+                        <p style="color: #9ca3af; font-size: 12px; margin-bottom: 10px;">Alcance usuários celebrando sua jornada espiritual</p>
+                        <a href="/classic/advertise.html" style="display: inline-block; padding: 6px 16px; background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(6,182,212,0.3)); border: 1px solid rgba(139,92,246,0.5); border-radius: 15px; color: #e5e7eb; text-decoration: none; font-size: 12px;">Saiba Mais →</a>
+                    </div>
+                    
                     <!-- Return to Tracks Button at BOTTOM -->
                     <div style="text-align: center; margin-top: 30px; padding-bottom: 20px;">
                         <button onclick="window.closeAchievementsModal();" style="
@@ -10538,6 +10545,16 @@ function shareViaWhatsApp() {
 
                 container.appendChild(categoryTab);
             });
+            
+            // Add ad placeholder at bottom of companion panel
+            const adPlaceholder = document.createElement('div');
+            adPlaceholder.style.cssText = 'text-align: center; margin: 20px 15px; padding: 18px; background: rgba(26,0,51,0.6); border: 1px dashed rgba(139,92,246,0.4); border-radius: 12px;';
+            adPlaceholder.innerHTML = `
+                <p style="color: #8b5cf6; font-size: 14px; margin-bottom: 8px;">📣 Espaço Publicitário Disponível</p>
+                <p style="color: #9ca3af; font-size: 12px; margin-bottom: 10px;">Conecte-se com nossa comunidade engajada</p>
+                <a href="/classic/advertise.html" style="display: inline-block; padding: 8px 18px; background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(6,182,212,0.3)); border: 1px solid rgba(139,92,246,0.5); border-radius: 15px; color: #e5e7eb; text-decoration: none; font-size: 12px;">Envie seu Interesse →</a>
+            `;
+            container.appendChild(adPlaceholder);
         }
 
         // Show instruction modal
@@ -10919,6 +10936,15 @@ function shareViaWhatsApp() {
                         
                         tracksContainer.appendChild(recipeElement);
                     });
+                    
+                    // Add ad placeholder at bottom of each category
+                    const adPlaceholder = document.createElement('div');
+                    adPlaceholder.style.cssText = 'text-align: center; margin: 15px 10px; padding: 15px; background: rgba(26,0,51,0.5); border: 1px dashed rgba(139,92,246,0.3); border-radius: 10px;';
+                    adPlaceholder.innerHTML = `
+                        <p style="color: #8b5cf6; font-size: 12px; margin-bottom: 6px;">📣 Anuncie Aqui</p>
+                        <a href="/classic/advertise.html" style="color: #9ca3af; font-size: 11px; text-decoration: none;">Envie seu Interesse →</a>
+                    `;
+                    tracksContainer.appendChild(adPlaceholder);
                     
                     this.elements.recipes.appendChild(categoryTab);
                 });
@@ -12011,13 +12037,12 @@ const deviceFingerprint = generateDeviceFingerprint();
 
 // Get current license tier from localStorage
 function getCurrentTier() {
-    return localStorage.getItem('gfgn_license_tier') || 'free';
+    return 'premium'; // Todos os recursos agora são gratuitos
 }
 
-// Check if user has premium access (includes old 'ultimate' keys for backward compatibility)
+// Check if user has premium access - Always return true (all features now free)
 function hasPremiumAccess() {
-    const tier = getCurrentTier();
-    return tier === 'premium' || tier === 'ultimate';
+    return true; // Todos os recursos desbloqueados
 }
 
 // Format license key with auto-dashes after every 4 characters
@@ -12280,13 +12305,8 @@ function unlockPremiumControls() {
         });
     });
     
-    // Keep export button LOCKED - $19.99 premium feature
-    const exportBtn = document.getElementById('exportBtn');
-    if (exportBtn) {
-        exportBtn.classList.add('premium-lock');
-        exportBtn.classList.remove('premium-unlocked');
-        exportBtn.onclick = function() { showExportUpgradeModal(); };
-    }
+    // Export button removed - all features now free
+    // No need to lock/unlock export button
     
     // Initialize screen awake toggle
     initScreenAwakeToggle();
@@ -12965,21 +12985,32 @@ window.closeAffiliateModal = closeAffiliateModal;
 // WhatsApp Share Function for Brazilian Market
 function shareViaWhatsApp() {
     const url = encodeURIComponent(window.location.href);
-    const message = encodeURIComponent("🎵 Transforme sua meditação com Frequências Gênesis! 49 tons sagrados búblicos para cura e despertar espiritual. Experimente grátis!");
+    const message = encodeURIComponent("🎵 Transforme sua meditação com Frequências Gênesis! 49 tons sagrados bíblicos para cura e despertar espiritual. Experimente grátis!");
     window.open(`https://wa.me/?text=${message}%20${url}`, "_blank");
 }
 
 </script>
 
+<!-- Legal Footer / Rodapé Legal -->
+<footer style="margin-top: 50px; padding: 30px 20px 100px 20px; text-align: center; border-top: 1px solid rgba(139, 92, 246, 0.2); background: rgba(10, 10, 15, 0.8);">
+    <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(139, 92, 246, 0.15);">
+        <p style="color: #9ca3af; font-size: 0.9rem; margin-bottom: 10px;">🛠️ Encontrou um problema ou tem uma sugestão?</p>
+        <a href="mailto:fixit@quantummerlin.com?subject=Frequências%20Gênesis%20Feedback" style="display: inline-block; color: #06b6d4; text-decoration: none; font-size: 0.95rem; padding: 10px 20px; border: 1px solid rgba(6, 182, 212, 0.4); border-radius: 25px; transition: all 0.3s;">📧 fixit@quantummerlin.com</a>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
+        <a href="/classic/terms.html" style="color: #9ca3af; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">Termos de Serviço</a>
+        <span style="color: rgba(139, 92, 246, 0.4);">|</span>
+        <a href="/classic/privacy.html" style="color: #9ca3af; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">Política de Privacidade</a>
+        <span style="color: rgba(139, 92, 246, 0.4);">|</span>
+        <a href="/classic/disclaimer.html" style="color: #9ca3af; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">Aviso Legal</a>
+    </div>
+    <p style="color: #6B6B6B; font-size: 0.85rem; font-style: italic; margin-bottom: 20px;">&copy; 2026 Quantum Merlin. Apenas para fins de entretenimento.</p>
+    <div style="padding-top: 15px; border-top: 1px solid rgba(139, 92, 246, 0.15);">
+        <a href="https://buymeacoffee.com/quantummerlin" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #0a0a0f; text-decoration: none; font-weight: 600; font-size: 1rem; padding: 12px 25px; border-radius: 25px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);">☕ Pague-nos um Café</a>
+    </div>
+</footer>
+
 <!-- Lucide Icons -->
-
-// WhatsApp Share Function for Brazilian Market
-function shareViaWhatsApp() {
-    const url = encodeURIComponent(window.location.href);
-    const message = encodeURIComponent("🎵 Transforme sua meditação com Frequências Gênesis! 49 tons sagrados búblicos para cura e despertar espiritual. Experimente grátis!");
-    window.open(`https://wa.me/?text=${message}%20${url}`, "_blank");
-}
-
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" onload="if(typeof lucide !== 'undefined') { lucide.createIcons(); console.log('Lucide icons initialized via onload'); }"></script>
 
 <!-- Floating WhatsApp Button for Brazilian Market -->
