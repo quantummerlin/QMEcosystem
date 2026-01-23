@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis Frequencies - Admin</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a0033 0%, #2d1b4e 50%, #1a0033 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { text-align: center; color: #fbbf24; margin-bottom: 30px; font-size: 28px; }
+        .card {
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        .card h2 { color: #e9d5ff; margin-bottom: 20px; font-size: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; color: #c4b5fd; margin-bottom: 6px; font-size: 14px; }
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(26, 0, 51, 0.6);
+            border: 2px solid rgba(139, 92, 246, 0.4);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 16px;
+        }
+        input:focus, select:focus { outline: none; border-color: #fbbf24; }
+        button {
+            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+            color: #1a0033;
+            border: none;
+            border-radius: 25px;
+            padding: 14px 30px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        button:hover { transform: scale(1.02); }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+        .result {
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid #10b981;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+        .result.error { background: rgba(239, 68, 68, 0.2); border-color: #ef4444; }
+        .key-display {
+            background: rgba(251, 191, 36, 0.2);
+            border: 2px solid #fbbf24;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #fbbf24;
+            margin: 15px 0;
+            cursor: pointer;
+        }
+        .key-display:hover { background: rgba(251, 191, 36, 0.3); }
+        .copy-hint { font-size: 12px; color: #a78bfa; text-align: center; }
+        .license-list { max-height: 400px; overflow-y: auto; }
+        .license-item {
+            background: rgba(26, 0, 51, 0.4);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .license-key { font-family: monospace; color: #fbbf24; font-weight: 600; }
+        .license-meta { font-size: 12px; color: #a78bfa; }
+        .badge {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .badge-premium { background: #8b5cf6; color: #fff; }
+        .badge-active { background: #10b981; color: #fff; }
+        .icon-btn {
+            padding: 6px 10px;
+            font-size: 14px;
+            border: 1px solid;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+        .icon-btn:hover { transform: scale(1.1); }
+        .admin-key-section {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .stats { display: flex; gap: 20px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
+        .stat {
+            background: rgba(139, 92, 246, 0.2);
+            padding: 15px 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .stat-value { font-size: 32px; font-weight: 700; color: #fbbf24; }
+        .stat-label { font-size: 12px; color: #c4b5fd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔑 Genesis Frequencies Admin</h1>
+        
+        <div class="admin-key-section">
+            <div class="form-group">
+                <label>Admin Key (required for all operations)</label>
+                <input type="password" id="adminKey" placeholder="Enter admin key" value="">
+            </div>
+        </div>
+
+        <div class="stats" id="stats" style="display: none;">
+            <div class="stat">
+                <div class="stat-value" id="totalLicenses">0</div>
+                <div class="stat-label">Total Licenses</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="activatedDevices">0</div>
+                <div class="stat-label">Activated Devices</div>
+            </div>
+        </div>
+
+        <!-- Generate Key -->
+        <div class="card">
+            <h2>⚡ Generate & Add License Key</h2>
+            <div class="form-group">
+                <label>Tier</label>
+                <select id="tier">
+                    <option value="premium">Premium ($9.99)</option>
+                    <option value="ultimate">Ultimate ($19.99)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Customer Email (optional)</label>
+                <input type="email" id="customerEmail" placeholder="customer@email.com">
+            </div>
+            <div class="form-group">
+                <label>Etsy Order ID (optional)</label>
+                <input type="text" id="etsyOrderId" placeholder="123456789">
+            </div>
+            <button onclick="generateAndAddKey()">🎫 Generate License Key</button>
+            
+            <div id="generateResult" class="result">
+                <div class="key-display" id="generatedKey" onclick="copyKey()"></div>
+                <p class="copy-hint">👆 Click to copy key</p>
+                
+                <!-- Quick Message Section -->
+                <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(139,92,246,0.3);">
+                    <p style="color: #e9d5ff; font-size: 14px; margin-bottom: 10px; font-weight: 600;">📨 Quick Message for Customer:</p>
+                    <textarea id="customerMessage" readonly style="width: 100%; height: 180px; padding: 12px; background: rgba(26,0,51,0.6); border: 1px solid rgba(139,92,246,0.4); border-radius: 10px; color: #fff; font-size: 13px; line-height: 1.5; resize: none;"></textarea>
+                    <button onclick="copyMessage()" style="margin-top: 10px; background: linear-gradient(90deg, #8b5cf6, #a78bfa);">📋 Copy Message</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- List Licenses -->
+        <div class="card">
+            <h2>📋 All Licenses</h2>
+            <button onclick="listLicenses()">🔄 Refresh List</button>
+            <div id="licenseList" class="license-list" style="margin-top: 20px;"></div>
+        </div>
+
+        <!-- Affiliate Interests -->
+        <div class="card">
+            <h2>🤝 Affiliate Interest Signups</h2>
+            <button onclick="listAffiliates()">🔄 Load Affiliates</button>
+            <div id="affiliateStats" style="margin-top: 15px; display: none;">
+                <span style="background: rgba(16,185,129,0.2); padding: 8px 15px; border-radius: 8px; color: #10b981; font-weight: 600;">
+                    <span id="affiliateCount">0</span> interested
+                </span>
+            </div>
+            <div id="affiliateList" style="margin-top: 15px; max-height: 300px; overflow-y: auto;"></div>
+            <button id="exportAffiliatesBtn" onclick="exportAffiliates()" style="display: none; margin-top: 15px; background: rgba(139,92,246,0.3); border: 1px solid #8b5cf6;">📧 Copy All Emails</button>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'https://api.quantummerlin.com';
+
+        function getAdminKey() {
+            return document.getElementById('adminKey').value.trim();
+        }
+
+        async function generateAndAddKey() {
+            const adminKey = getAdminKey();
+            if (!adminKey) {
+                alert('Please enter admin key');
+                return;
+            }
+
+            const tier = document.getElementById('tier').value;
+            const email = document.getElementById('customerEmail').value.trim();
+            const etsyOrderId = document.getElementById('etsyOrderId').value.trim();
+            const resultEl = document.getElementById('generateResult');
+            const keyEl = document.getElementById('generatedKey');
+
+            try {
+                // Generate key
+                const genResponse = await fetch(`${API_URL}/admin/generate-key`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ admin_key: adminKey, tier: tier })
+                });
+                const genData = await genResponse.json();
+                
+                if (genData.error) {
+                    resultEl.className = 'result error';
+                    resultEl.style.display = 'block';
+                    keyEl.textContent = genData.error;
+                    return;
+                }
+
+                const licenseKey = genData.license_key;
+
+                // Add to database
+                const addResponse = await fetch(`${API_URL}/admin/add-license`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        admin_key: adminKey,
+                        license_key: licenseKey,
+                        tier: tier,
+                        email: email,
+                        etsy_order_id: etsyOrderId
+                    })
+                });
+                const addData = await addResponse.json();
+
+                if (addData.success) {
+                    resultEl.className = 'result';
+                    resultEl.style.display = 'block';
+                    keyEl.textContent = licenseKey;
+                    
+                    // Generate customer message
+                    generateCustomerMessage(licenseKey, tier);
+                    
+                    // Clear form
+                    document.getElementById('customerEmail').value = '';
+                    document.getElementById('etsyOrderId').value = '';
+                    
+                    // Refresh list
+                    listLicenses();
+                } else {
+                    resultEl.className = 'result error';
+                    resultEl.style.display = 'block';
+                    keyEl.textContent = addData.error || 'Failed to add license';
+                }
+            } catch (err) {
+                resultEl.className = 'result error';
+                resultEl.style.display = 'block';
+                keyEl.textContent = 'Network error: ' + err.message;
+            }
+        }
+
+        function copyKey() {
+            const key = document.getElementById('generatedKey').textContent;
+            navigator.clipboard.writeText(key).then(() => {
+                alert('Copied: ' + key);
+            });
+        }
+
+        function generateCustomerMessage(licenseKey, tier) {
+            const tierName = tier === 'ultimate' ? 'Ultimate' : 'Premium';
+            const message = `Thank you for your purchase! 🌟
+
+Your Genesis Frequencies ${tierName} License Key:
+
+${licenseKey}
+
+To activate:
+1. Go to genesis.quantummerlin.com
+2. Tap "Upgrade to Premium" (the gold button)
+3. Tap "Enter License Key"
+4. Paste your key and tap Activate
+
+Works on up to 3 devices!
+
+Enjoy your frequency journey ✨
+- Quantum Merlin`;
+            
+            document.getElementById('customerMessage').value = message;
+        }
+
+        function copyMessage() {
+            const message = document.getElementById('customerMessage').value;
+            navigator.clipboard.writeText(message).then(() => {
+                alert('Message copied! Ready to paste in Etsy.');
+            });
+        }
+
+        async function listLicenses() {
+            const adminKey = getAdminKey();
+            if (!adminKey) {
+                alert('Please enter admin key');
+                return;
+            }
+
+            const listEl = document.getElementById('licenseList');
+            listEl.innerHTML = '<p style="color: #a78bfa;">Loading...</p>';
+
+            try {
+                const response = await fetch(`${API_URL}/admin/list-licenses`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ admin_key: adminKey })
+                });
+                const data = await response.json();
+
+                if (data.error) {
+                    listEl.innerHTML = `<p style="color: #ef4444;">${data.error}</p>`;
+                    return;
+                }
+
+                const licenses = data.licenses || [];
+                
+                // Update stats
+                document.getElementById('stats').style.display = 'flex';
+                document.getElementById('totalLicenses').textContent = licenses.length;
+                document.getElementById('activatedDevices').textContent = licenses.reduce((sum, l) => sum + (l.devices_used || 0), 0);
+
+                if (licenses.length === 0) {
+                    listEl.innerHTML = '<p style="color: #a78bfa;">No licenses yet</p>';
+                    return;
+                }
+
+                listEl.innerHTML = licenses.map(l => `
+                    <div class="license-item" id="license-${l.license_key.replace(/[^a-zA-Z0-9]/g, '')}">
+                        <div style="flex: 1; min-width: 200px;">
+                            <div class="license-key">${l.license_key}</div>
+                            <div class="license-meta">
+                                ${l.email || 'No email'} • ${l.devices_used}/${l.max_devices} devices
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <span class="badge badge-premium">${l.tier}</span>
+                            ${l.is_active ? '<span class="badge badge-active">✓</span>' : '<span class="badge" style="background:#ef4444;">✗</span>'}
+                            <button onclick="resetDevices('${l.license_key}')" class="icon-btn" title="Reset devices" style="background: rgba(139,92,246,0.3); border-color: #8b5cf6; color: #e9d5ff;">🔄</button>
+                            ${l.is_active ? 
+                                `<button onclick="toggleLicense('${l.license_key}', false)" class="icon-btn" title="Deactivate" style="background: rgba(251,191,36,0.2); border-color: #fbbf24; color: #fbbf24;">⏸</button>` :
+                                `<button onclick="toggleLicense('${l.license_key}', true)" class="icon-btn" title="Activate" style="background: rgba(16,185,129,0.2); border-color: #10b981; color: #10b981;">▶</button>`
+                            }
+                            <button onclick="deleteLicense('${l.license_key}')" class="icon-btn" title="Delete" style="background: rgba(239,68,68,0.2); border-color: #ef4444; color: #ef4444;">🗑</button>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (err) {
+                listEl.innerHTML = `<p style="color: #ef4444;">Error: ${err.message}</p>`;
+            }
+        }
+
+        async function resetDevices(licenseKey) {
+            if (!confirm(`Reset all device activations for ${licenseKey}?`)) return;
+            
+            const adminKey = getAdminKey();
+            try {
+                const response = await fetch(`${API_URL}/api/deactivate`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ admin_key: adminKey, license_key: licenseKey })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    alert('Devices reset successfully');
+                    listLicenses();
+                } else {
+                    alert('Error: ' + (data.error || 'Unknown error'));
+                }
+            } catch (err) {
+                alert('Error: ' + err.message);
+            }
+        }
+
+        async function toggleLicense(licenseKey, activate) {
+            const action = activate ? 'activate' : 'deactivate';
+            if (!confirm(`${activate ? 'Activate' : 'Deactivate'} license ${licenseKey}?`)) return;
+            
+            const adminKey = getAdminKey();
+            try {
+                const response = await fetch(`${API_URL}/admin/toggle-license`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ admin_key: adminKey, license_key: licenseKey, is_active: activate })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    alert(`License ${activate ? 'activated' : 'deactivated'} successfully`);
+                    listLicenses();
+                } else {
+                    alert('Error: ' + (data.error || 'Unknown error'));
+                }
+            } catch (err) {
+                alert('Error: ' + err.message);
+            }
+        }
+
+        async function deleteLicense(licenseKey) {
+            if (!confirm(`PERMANENTLY DELETE license ${licenseKey}? This cannot be undone!`)) return;
+            if (!confirm(`Are you SURE? Type the last 4 characters to confirm.`)) return;
+            
+            const adminKey = getAdminKey();
+            try {
+                const response = await fetch(`${API_URL}/admin/delete-license`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ admin_key: adminKey, license_key: licenseKey })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    alert('License deleted');
+                    listLicenses();
+                } else {
+                    alert('Error: ' + (data.error || 'Unknown error'));
+                }
+            } catch (err) {
+                alert('Error: ' + err.message);
+            }
+        }
+
+        let affiliateEmails = [];
+
+        async function listAffiliates() {
+            const adminKey = getAdminKey();
+            if (!adminKey) {
+                alert('Please enter admin key');
+                return;
+            }
+
+            const listEl = document.getElementById('affiliateList');
+            listEl.innerHTML = '<p style="color: #a78bfa;">Loading...</p>';
+
+            try {
+                const response = await fetch(`${API_URL}/admin/list-affiliates`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ admin_key: adminKey })
+                });
+                const data = await response.json();
+
+                if (data.error) {
+                    listEl.innerHTML = `<p style="color: #ef4444;">${data.error}</p>`;
+                    return;
+                }
+
+                const affiliates = data.affiliates || [];
+                affiliateEmails = affiliates.map(a => a.email);
+                
+                // Update stats
+                document.getElementById('affiliateStats').style.display = 'block';
+                document.getElementById('affiliateCount').textContent = affiliates.length;
+
+                if (affiliates.length === 0) {
+                    listEl.innerHTML = '<p style="color: #a78bfa;">No affiliate signups yet</p>';
+                    document.getElementById('exportAffiliatesBtn').style.display = 'none';
+                    return;
+                }
+
+                document.getElementById('exportAffiliatesBtn').style.display = 'block';
+
+                listEl.innerHTML = affiliates.map(a => `
+                    <div style="background: rgba(26,0,51,0.4); border-radius: 8px; padding: 10px 15px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #fbbf24; font-weight: 500;">${a.email}</span>
+                        <span style="color: #a78bfa; font-size: 11px;">${new Date(a.created_at).toLocaleDateString()}</span>
+                    </div>
+                `).join('');
+            } catch (err) {
+                listEl.innerHTML = `<p style="color: #ef4444;">Error: ${err.message}</p>`;
+            }
+        }
+
+        function exportAffiliates() {
+            if (affiliateEmails.length === 0) {
+                alert('No emails to export');
+                return;
+            }
+            const emailList = affiliateEmails.join(', ');
+            navigator.clipboard.writeText(emailList).then(() => {
+                alert(`Copied ${affiliateEmails.length} emails to clipboard!`);
+            });
+        }
+
+        // Auto-load licenses if admin key is saved
+        document.getElementById('adminKey').addEventListener('change', listLicenses);
+    </script>
+</body>
+</html>

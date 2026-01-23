@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis FG - 7 Frequency Categories</title>
+    <!--
+    DEVELOPER NOTES - TILE 6: 7 FREQUENCY CATEGORIES
+    Purpose: Demonstrate depth and variety of content
+    Key Elements: Category icons, descriptions, organized grid layout
+    Target: Buyers seeking comprehensive frequency library
+    Conversion Goal: Show breadth of content justifies the price
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 800px;
+            height: 1000px;
+            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 720px;
+            height: 920px;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(139, 92, 246, 0.1));
+            border: 3px solid rgba(251, 191, 36, 0.3);
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header {
+            font-size: 90px;
+            font-weight: 700;
+            color: #fbbf24;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+        }
+
+        .subheader {
+            font-size: 48px;
+            color: #a78bfa;
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            width: 100%;
+            margin: 40px 0;
+        }
+
+        .category-card {
+            background: rgba(26, 0, 51, 0.9);
+            border-radius: 25px;
+            padding: 40px;
+            border: 2px solid rgba(251, 191, 36, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent, rgba(251, 191, 36, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.2);
+            border-color: rgba(251, 191, 36, 0.5);
+        }
+
+        .category-card:hover::before {
+            opacity: 1;
+        }
+
+        .category-icon {
+            font-size: 72px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .category-name {
+            font-size: 36px;
+            font-weight: 700;
+            color: #fbbf24;
+            margin-bottom: 15px;
+        }
+
+        .category-desc {
+            font-size: 24px;
+            color: white;
+            line-height: 1.4;
+        }
+
+        .category-trinity .category-icon { color: #ef4444; }
+        .category-solfeggio .category-icon { color: #f59e0b; }
+        .category-chakra .category-icon { color: #10b981; }
+        .category-brainwave .category-icon { color: #3b82f6; }
+        .category-angel .category-icon { color: #8b5cf6; }
+        .category-planetary .category-icon { color: #ec4899; }
+        .category-biblical .category-icon { color: #6b7280; }
+
+        .shine-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(251, 191, 36, 0.1) 50%, transparent 70%);
+            animation: shine 5s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        @media (max-width: 1200px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="shine-effect"></div>
+        <div class="header">49 TRACKS ACROSS</div>
+        <div class="subheader">7 FREQUENCY CATEGORIES</div>
+
+        <div class="categories-grid">
+            <div class="category-card category-trinity">
+                <div class="category-icon">🌟</div>
+                <div class="category-name">TRINITY</div>
+                <div class="category-desc">Pure 37×73 Hz foundation</div>
+            </div>
+
+            <div class="category-card category-solfeggio">
+                <div class="category-icon">🎵</div>
+                <div class="category-name">SOLFEGGIO</div>
+                <div class="category-desc">396, 417, 528, 639, 741, 852, 963</div>
+            </div>
+
+            <div class="category-card category-chakra">
+                <div class="category-icon">💎</div>
+                <div class="category-name">CHAKRA</div>
+                <div class="category-desc">7 energy center activation</div>
+            </div>
+
+            <div class="category-card category-brainwave">
+                <div class="category-icon">🧠</div>
+                <div class="category-name">BRAINWAVE</div>
+                <div class="category-desc">Delta, Theta, Alpha, Beta, Gamma</div>
+            </div>
+
+            <div class="category-card category-angel">
+                <div class="category-icon">👼</div>
+                <div class="category-name">ANGEL NUMBERS</div>
+                <div class="category-desc">111, 222, 333, 444, 555, 777, 888</div>
+            </div>
+
+            <div class="category-card category-planetary">
+                <div class="category-icon">🌍</div>
+                <div class="category-name">PLANETARY</div>
+                <div class="category-desc">Sun, Moon, Earth, Mars, Venus...</div>
+            </div>
+
+            <div class="category-card category-biblical">
+                <div class="category-icon">📖</div>
+                <div class="category-name">BIBLICAL</div>
+                <div class="category-desc">Sacred numerology frequencies</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

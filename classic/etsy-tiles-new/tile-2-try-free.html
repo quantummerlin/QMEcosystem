@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Genesis Frequencies - Try Free First</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            width: 2000px;
+            height: 2000px;
+            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #16213e 100%);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.15) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+        .container {
+            width: 1800px;
+            height: 1800px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(251, 191, 36, 0.15));
+            border: 8px solid rgba(251, 191, 36, 0.4);
+            border-radius: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 150px;
+            text-align: center;
+            position: relative;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 30px 100px rgba(0, 0, 0, 0.5), inset 0 0 150px rgba(139, 92, 246, 0.1);
+        }
+        .header {
+            font-size: 180px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 60px;
+            letter-spacing: -3px;
+        }
+        .subtitle {
+            font-size: 90px;
+            color: #e0d4ff;
+            margin-bottom: 100px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        .website {
+            font-size: 100px;
+            color: #fbbf24;
+            font-weight: 700;
+            margin-bottom: 120px;
+            padding: 40px 80px;
+            background: rgba(251, 191, 36, 0.1);
+            border-radius: 40px;
+            border: 4px solid rgba(251, 191, 36, 0.3);
+        }
+        .features {
+            background: rgba(26, 0, 51, 0.9);
+            border-radius: 80px;
+            padding: 100px 120px;
+            margin: 60px 0;
+            border: 4px solid rgba(251, 191, 36, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        .features h3 {
+            font-size: 90px;
+            color: #fbbf24;
+            margin-bottom: 80px;
+            font-weight: 700;
+        }
+        .feature-list {
+            list-style: none;
+            font-size: 70px;
+            line-height: 2;
+            color: white;
+            text-align: left;
+        }
+        .feature-list li {
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            padding-left: 40px;
+        }
+        .feature-list li::before {
+            content: '✓';
+            color: #10b981;
+            font-size: 80px;
+            font-weight: 900;
+            margin-right: 40px;
+        }
+        .price {
+            font-size: 100px;
+            font-weight: 900;
+            color: #fbbf24;
+            margin-top: 80px;
+            text-shadow: 0 0 40px rgba(251, 191, 36, 0.8);
+        }
+        .footer {
+            position: absolute;
+            bottom: 80px;
+            font-size: 80px;
+            font-weight: 900;
+            color: #10b981;
+            text-shadow: 0 0 30px rgba(16, 185, 129, 0.6);
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">🆓 TRY BEFORE YOU BUY</div>
+        <div class="subtitle">Visit:</div>
+        <div class="website">genesis.quantummerlin.com</div>
+        <div class="features">
+            <h3>FREE VERSION INCLUDES:</h3>
+            <ul class="feature-list">
+                <li>1 full track unlimited</li>
+                <li>30-second previews of all 48</li>
+                <li>All app features & info</li>
+                <li>No credit card needed</li>
+            </ul>
+        </div>
+        <div class="price">Then unlock all 49 tracks<br>for just $4.99!</div>
+        <div class="footer">NO RISK • TEST IT FIRST</div>
+    </div>
+</body>
+</html>

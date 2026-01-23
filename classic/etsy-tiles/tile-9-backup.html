@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis FG - How It Works</title>
+    <!--
+    DEVELOPER NOTES - TILE 9: HOW IT WORKS
+    Purpose: Remove delivery confusion, explain simple process
+    Key Elements: Step-by-step flow, 2-minute setup emphasis, no app download
+    Target: Technically challenged buyers worried about complexity
+    Conversion Goal: Reduce support questions, increase completion rate
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 800px;
+            height: 1000px;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 720px;
+            height: 920px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(251, 191, 36, 0.1));
+            border: 3px solid rgba(59, 130, 246, 0.3);
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header {
+            font-size: 100px;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 60px;
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+        }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+            margin: 40px 0;
+        }
+
+        .step {
+            background: rgba(26, 0, 51, 0.9);
+            border-radius: 25px;
+            padding: 40px;
+            border: 2px solid rgba(59, 130, 246, 0.2);
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateX(10px);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: white;
+            margin-right: 30px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .step-content {
+            text-align: left;
+            flex: 1;
+        }
+
+        .step-title {
+            font-size: 32px;
+            font-weight: 600;
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            font-size: 24px;
+            color: white;
+            line-height: 1.4;
+        }
+
+        .step-icon {
+            font-size: 48px;
+            margin-left: 20px;
+        }
+
+        .bottom-section {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(139, 92, 246, 0.15));
+            border-radius: 30px;
+            padding: 50px;
+            margin-top: 60px;
+            border: 2px solid rgba(251, 191, 36, 0.3);
+            text-align: center;
+        }
+
+        .setup-time {
+            font-size: 52px;
+            font-weight: 700;
+            color: #fbbf24;
+            margin-bottom: 20px;
+        }
+
+        .no-download {
+            font-size: 36px;
+            color: white;
+            font-weight: 300;
+        }
+
+        .shine-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(59, 130, 246, 0.1) 50%, transparent 70%);
+            animation: shine 4s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .connecting-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .line {
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.3), transparent);
+            animation: flow 2s infinite;
+        }
+
+        .line:nth-child(1) {
+            left: 140px;
+            top: 200px;
+            height: 120px;
+        }
+
+        .line:nth-child(2) {
+            left: 140px;
+            top: 380px;
+            height: 120px;
+        }
+
+        .line:nth-child(3) {
+            left: 140px;
+            top: 560px;
+            height: 120px;
+        }
+
+        .line:nth-child(4) {
+            left: 140px;
+            top: 740px;
+            height: 120px;
+        }
+
+        @keyframes flow {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="shine-effect"></div>
+        <div class="connecting-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="header">HOW IT WORKS</div>
+
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1️⃣</div>
+                <div class="step-content">
+                    <div class="step-title">PURCHASE ON ETSY</div>
+                    <div class="step-description">Secure checkout - $4.99 one-time</div>
+                </div>
+                <div class="step-icon">🛒</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2️⃣</div>
+                <div class="step-content">
+                    <div class="step-title">RECEIVE LICENSE KEY</div>
+                    <div class="step-description">Sent via email within 24 hours (Usually much faster!)</div>
+                </div>
+                <div class="step-icon">📧</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3️⃣</div>
+                <div class="step-content">
+                    <div class="step-title">VISIT THE WEB APP</div>
+                    <div class="step-description">genesis.quantummerlin.com<br>Works on phone, tablet, computer</div>
+                </div>
+                <div class="step-icon">🌐</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4️⃣</div>
+                <div class="step-content">
+                    <div class="step-title">ENTER YOUR LICENSE KEY</div>
+                    <div class="step-description">Click "Activate License"<br>Enter your unique key</div>
+                </div>
+                <div class="step-icon">🔑</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5️⃣</div>
+                <div class="step-content">
+                    <div class="step-title">ENJOY ALL 49 TRACKS!</div>
+                    <div class="step-description">Instant access to everything<br>Lifetime access - no expiration</div>
+                </div>
+                <div class="step-icon">🎵</div>
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="setup-time">⏱️ SETUP TIME: 2 MINUTES</div>
+            <div class="no-download">📱 NO APP DOWNLOAD NEEDED</div>
+        </div>
+    </div>
+</body>
+</html>

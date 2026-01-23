@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis FG - Etsy Listing Tiles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 100%);
+            color: white;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(251, 191, 36, 0.1));
+            border-bottom: 2px solid rgba(251, 191, 36, 0.3);
+        }
+
+        .logo {
+            font-size: 48px;
+            color: #fbbf24;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 36px;
+            color: #a78bfa;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .tiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            padding: 60px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .tile-card {
+            background: rgba(26, 0, 51, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid rgba(251, 191, 36, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tile-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(251, 191, 36, 0.5);
+            box-shadow: 0 15px 35px rgba(251, 191, 36, 0.2);
+        }
+
+        .tile-preview {
+            height: 250px;
+            background: linear-gradient(135deg, #2d1b4e, #1a0a2e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #a78bfa;
+            border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+        }
+
+        .tile-info {
+            padding: 25px;
+        }
+
+        .tile-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+
+        .tile-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .tile-description {
+            font-size: 16px;
+            color: #a78bfa;
+            line-height: 1.5;
+        }
+
+        .view-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b5cf6, #fbbf24);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .view-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .instructions {
+            text-align: center;
+            padding: 40px;
+            background: rgba(26, 0, 51, 0.8);
+            margin: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(251, 191, 36, 0.2);
+        }
+
+        .instructions h3 {
+            color: #fbbf24;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .instructions p {
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .specs {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .specs h4 {
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+
+        .specs ul {
+            color: white;
+            padding-left: 20px;
+        }
+
+        .specs li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">🌟 GENESIS FG</div>
+        <h1 class="title">Etsy Listing Tiles</h1>
+        <p class="subtitle">Professional marketing tiles for your Etsy shop</p>
+    </div>
+
+    <div class="instructions">
+        <h3>🎨 How to Use These Tiles</h3>
+        <p>Each tile is designed as a 800x1000px HTML file that you can screenshot or save as image for your Etsy listings.</p>
+        <p>Open each HTML file in your browser, then take a screenshot or use browser dev tools to save as image.</p>
+        <p>These tiles follow your brand colors: Purple (#8b5cf6), Gold (#fbbf24), Green (#10b981), and your cosmic theme.</p>
+
+        <div class="specs">
+            <h4>📐 Technical Specifications:</h4>
+            <ul>
+                <li>Size: 800x1000px (4:5 aspect ratio)</li>
+                <li>Format: HTML (convert to JPG/PNG for Etsy)</li>
+                <li>Aspect Ratio: 4:5 (Instagram/Etsy standard)</li>
+                <li>Colors: Brand-consistent purple, gold, green</li>
+                <li>Fonts: Modern, readable sans-serif</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tiles-grid">
+        <div class="tile-card" onclick="window.open('tile-2-try-free.html', '_blank')">
+            <div class="tile-preview">🆓 TRY FREE FIRST</div>
+            <div class="tile-info">
+                <div class="tile-number">Tile 2</div>
+                <div class="tile-title">Try Free First</div>
+                <div class="tile-description">Remove buying hesitation - show they can test it. Features QR code, free version benefits, and clear upgrade path.</div>
+                <a href="tile-2-try-free.html" class="view-button" target="_blank">View Tile</a>
+            </div>
+        </div>
+
+        <div class="tile-card" onclick="window.open('tile-3-what-you-get.html', '_blank')">
+            <div class="tile-preview">🎁 WHAT YOU GET</div>
+            <div class="tile-info">
+                <div class="tile-number">Tile 3</div>
+                <div class="tile-title">What You Get</div>
+                <div class="tile-description">Complete value proposition with checklist format. Shows all 49 tracks, features, and emphasizes lifetime access.</div>
+                <a href="tile-3-what-you-get.html" class="view-button" target="_blank">View Tile</a>
+            </div>
+        </div>
+
+        <div class="tile-card" onclick="window.open('tile-4-app-screenshot.html', '_blank')">
+            <div class="tile-preview">📱 APP SCREENSHOT</div>
+            <div class="tile-info">
+                <div class="tile-number">Tile 4</div>
+                <div class="tile-title">App Screenshot</div>
+                <div class="tile-description">Mockup of your actual app interface. Shows track grid, beautiful UI, and key features with callout arrows.</div>
+                <a href="tile-4-app-screenshot.html" class="view-button" target="_blank">View Tile</a>
+            </div>
+        </div>
+
+        <div class="tile-card" onclick="window.open('tile-5-trinity-layering.html', '_blank')">
+            <div class="tile-preview">🔺 TRINITY LAYERING</div>
+            <div class="tile-info">
+                <div class="tile-number">Tile 5</div>
+                <div class="tile-title">Trinity Layering Technology</div>
+                <div class="tile-description">Explain your unique technology with visual diagram. Shows 37×73 layering, sacred math, and synergistic effects.</div>
+                <a href="tile-5-trinity-layering.html" class="view-button" target="_blank">View Tile</a>
+            </div>
+        </div>
+
+        <div class="tile-card" onclick="window.open('tile-6-categories.html', '_blank')">
+            <div class="tile-preview">📂 7 CATEGORIES</div>
+            <div class="tile-info">
+                <div class="tile-number">Tile 6</div>
+                <div class="tile-title">7 Frequency Categories</div>
+                <div class="tile-description">Show variety and depth with icons for each category: Trinity, Solfeggio, Chakra, Brainwave, Angel Numbers, Planetary, Biblical.</div>
+                <a href="tile-6-categories.html" class="view-button" target="_blank">View Tile</a>
+            </div>
+        </div>
+
+        <div class="tile-card" onclick="window.open('tile-7-beta-bonuses.html', '_blank')">
+            <div class="tile-preview">🚀 BETA BONUSES</div>
+            <div class="tile-info">
+                <div class="tile-number">Tile 7</div>
+                <div class="tile-title">Beta Launch Special</div>
+                <div class="tile-description">Create urgency with 50% off, lifetime price lock, free app store upgrades, and limited-time beta pricing.</div>
+                <a href="tile-7-beta-bonuses.html" class="view-button" target="_blank">View Tile</a>
+            </div>
+        </div>
+
+        <div class="tile-card" onclick="window.open('tile-8-vs-competitors.html', '_blank')">
+            <div class="tile-preview">⚖️ VS COMPETITORS</div>
+            <div class="tile-info">
+                <div class="tile-number">Tile 8</div>
+                <div class="tile-title">Why Genesis FG?</div>
+                <div class="tile-description">Comparison table showing massive savings vs subscription competitors. Emphasizes unique features and lifetime access.</div>
+                <a href="tile-8-vs-competitors.html" class="view-button" target="_blank">View Tile</a>
+            </div>
+        </div>
+
+        <div class="tile-card" onclick="window.open('tile-9-how-it-works.html', '_blank')">
+            <div class="tile-preview">📋 HOW IT WORKS</div>
+            <div class="tile-info">
+                <div class="tile-number">Tile 9</div>
+                <div class="tile-title">How It Works</div>
+                <div class="tile-description">Step-by-step delivery process. Removes confusion about web app access, license keys, and 2-minute setup time.</div>
+                <a href="tile-9-how-it-works.html" class="view-button" target="_blank">View Tile</a>
+            </div>
+        </div>
+
+        <div class="tile-card" onclick="window.open('tile-10-trust-guarantee.html', '_blank')">
+            <div class="tile-preview">🛡️ TRUST & GUARANTEE</div>
+            <div class="tile-info">
+                <div class="tile-number">Tile 10</div>
+                <div class="tile-title">Social Proof & Guarantee</div>
+                <div class="tile-description">Build trust with priority support, privacy commitment, satisfaction guarantee, and customer testimonials.</div>
+                <a href="tile-10-trust-guarantee.html" class="view-button" target="_blank">View Tile</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
