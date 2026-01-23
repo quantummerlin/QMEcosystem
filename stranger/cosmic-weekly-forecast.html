@@ -548,12 +548,14 @@
         }
         
         // ===== PLANETARY FUNCTIONS =====
+        // Mercury retrograde periods - using ISO date strings for clarity
         const retrogradePeriods = [
-            { start: new Date(2025, 2, 14), end: new Date(2025, 3, 7), sign: 'Aries' },
-            { start: new Date(2025, 6, 18), end: new Date(2025, 7, 11), sign: 'Leo' },
-            { start: new Date(2025, 10, 9), end: new Date(2025, 10, 29), sign: 'Sagittarius' },
-            { start: new Date(2026, 2, 2), end: new Date(2026, 2, 25), sign: 'Pisces' },
-            { start: new Date(2026, 6, 2), end: new Date(2026, 6, 26), sign: 'Cancer' }
+            { start: new Date('2025-03-15'), end: new Date('2025-04-07'), sign: 'Aries' },
+            { start: new Date('2025-07-18'), end: new Date('2025-08-11'), sign: 'Leo' },
+            { start: new Date('2025-11-09'), end: new Date('2025-11-29'), sign: 'Sagittarius' },
+            { start: new Date('2026-02-26'), end: new Date('2026-03-20'), sign: 'Pisces' },
+            { start: new Date('2026-06-29'), end: new Date('2026-07-23'), sign: 'Cancer' },
+            { start: new Date('2026-10-24'), end: new Date('2026-11-13'), sign: 'Scorpio' }
         ];
         
         function isMercuryRetrograde(date) {

@@ -189,6 +189,20 @@
         }
         .section-synthesis h2 { color: #8B0000; }
         
+        /* Chinese Zodiac Section */
+        .section-chinese { border-color: rgba(236, 72, 153, 0.4); }
+        .section-chinese h2 { color: #FF6B35; }
+        .chinese-zodiac-box {
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.15), rgba(220, 20, 60, 0.1));
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin: 15px 0;
+        }
+        .chinese-zodiac-box .animal { font-size: 3em; margin-bottom: 10px; }
+        .chinese-zodiac-box .name { font-family: 'Cinzel', serif; font-size: 1.4em; color: #FF6B35; }
+        .chinese-zodiac-box .element { color: #DC143C; margin-top: 5px; }
+        
         /* Guidance Lists */
         .guidance-list {
             list-style: none;
@@ -438,6 +452,68 @@
             { start: new Date('2026-10-24'), end: new Date('2026-11-13'), sign: 'Scorpio' }
         ];
         
+        // ===== CHINESE ZODIAC =====
+        const chineseZodiac = {
+            animals: [
+                { name: 'Rat', emoji: '🐀', element: 'Water', traits: 'Quick-witted, resourceful, adaptable' },
+                { name: 'Ox', emoji: '🐂', element: 'Earth', traits: 'Diligent, reliable, strong, determined' },
+                { name: 'Tiger', emoji: '🐅', element: 'Wood', traits: 'Brave, competitive, confident, unpredictable' },
+                { name: 'Rabbit', emoji: '🐇', element: 'Wood', traits: 'Quiet, elegant, kind, responsible' },
+                { name: 'Dragon', emoji: '🐉', element: 'Earth', traits: 'Confident, intelligent, enthusiastic, ambitious' },
+                { name: 'Snake', emoji: '🐍', element: 'Fire', traits: 'Enigmatic, intelligent, wise, intuitive' },
+                { name: 'Horse', emoji: '🐎', element: 'Fire', traits: 'Animated, active, energetic, free-spirited' },
+                { name: 'Goat', emoji: '🐐', element: 'Earth', traits: 'Calm, gentle, sympathetic, creative' },
+                { name: 'Monkey', emoji: '🐵', element: 'Metal', traits: 'Sharp, smart, curious, mischievous' },
+                { name: 'Rooster', emoji: '🐓', element: 'Metal', traits: 'Observant, hardworking, courageous, confident' },
+                { name: 'Dog', emoji: '🐕', element: 'Earth', traits: 'Loyal, honest, prudent, faithful' },
+                { name: 'Pig', emoji: '🐖', element: 'Water', traits: 'Compassionate, generous, diligent, trusting' }
+            ],
+            elements: ['Wood', 'Fire', 'Earth', 'Metal', 'Water'],
+            getAnimal: function(year) {
+                const index = (year - 1900) % 12;
+                return this.animals[index];
+            },
+            getElement: function(year) {
+                const index = Math.floor((year - 4) / 2) % 5;
+                return this.elements[index];
+            },
+            getCompatibility: function(animal1, animal2) {
+                const compatGroups = [
+                    ['Rat', 'Dragon', 'Monkey'],
+                    ['Ox', 'Snake', 'Rooster'],
+                    ['Tiger', 'Horse', 'Dog'],
+                    ['Rabbit', 'Goat', 'Pig']
+                ];
+                for (let group of compatGroups) {
+                    if (group.includes(animal1) && group.includes(animal2)) return 'excellent';
+                }
+                const clashes = [
+                    ['Rat', 'Horse'], ['Ox', 'Goat'], ['Tiger', 'Monkey'],
+                    ['Rabbit', 'Rooster'], ['Dragon', 'Dog'], ['Snake', 'Pig']
+                ];
+                for (let clash of clashes) {
+                    if (clash.includes(animal1) && clash.includes(animal2)) return 'challenging';
+                }
+                return 'neutral';
+            }
+        };
+        
+        // Daily Chinese Zodiac guidance
+        const chineseZodiacDaily = {
+            Rat: { advice: 'Your quick wit serves you well today. Trust your resourceful instincts.', lucky: ['Dragon', 'Monkey'] },
+            Ox: { advice: 'Steady effort wins today. Your reliability is your greatest asset.', lucky: ['Snake', 'Rooster'] },
+            Tiger: { advice: 'Channel your bold energy wisely. Calculated risks pay off.', lucky: ['Horse', 'Dog'] },
+            Rabbit: { advice: 'Your diplomatic nature smooths paths today. Be gentle but firm.', lucky: ['Goat', 'Pig'] },
+            Dragon: { advice: 'Let your natural charisma shine. Lead with vision and heart.', lucky: ['Rat', 'Monkey'] },
+            Snake: { advice: 'Trust your intuition deeply today. Your wisdom cuts through confusion.', lucky: ['Ox', 'Rooster'] },
+            Horse: { advice: 'Express your free spirit through action. Movement brings clarity.', lucky: ['Tiger', 'Dog'] },
+            Goat: { advice: 'Create beauty today. Your gentle creativity heals and inspires.', lucky: ['Rabbit', 'Pig'] },
+            Monkey: { advice: 'Your clever solutions shine today. Adapt and innovate freely.', lucky: ['Rat', 'Dragon'] },
+            Rooster: { advice: 'Your keen observation reveals opportunities others miss.', lucky: ['Ox', 'Snake'] },
+            Dog: { advice: 'Lead with your loyal heart. Your integrity guides wise choices.', lucky: ['Tiger', 'Horse'] },
+            Pig: { advice: 'Your generous spirit attracts abundance. Give and receive freely.', lucky: ['Rabbit', 'Goat'] }
+        };
+        
         // ===== NUMEROLOGY FUNCTIONS =====
         function reduceToSingle(num) {
             while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
@@ -583,18 +659,18 @@
         
         // ===== INTERPRETATIONS =====
         const numerologyInterpretations = {
-            1: { theme: "New Beginnings", energy: "Initiative, independence, leadership", focus: ["Start new projects", "Take bold action", "Assert yourself"], avoid: ["Waiting for others", "Self-doubt"] },
-            2: { theme: "Partnership", energy: "Cooperation, diplomacy, patience", focus: ["Collaborate with others", "Listen deeply", "Build bridges"], avoid: ["Being aggressive", "Making solo decisions"] },
-            3: { theme: "Expression", energy: "Creativity, communication, joy", focus: ["Express yourself", "Socialize", "Create something"], avoid: ["Self-criticism", "Isolation"] },
-            4: { theme: "Foundation", energy: "Organization, hard work, stability", focus: ["Build structure", "Handle practical matters", "Create order"], avoid: ["Shortcuts", "Rigidity"] },
-            5: { theme: "Change", energy: "Freedom, adventure, flexibility", focus: ["Embrace change", "Try new things", "Be adaptable"], avoid: ["Rigid routines", "Overindulgence"] },
-            6: { theme: "Harmony", energy: "Love, responsibility, nurturing", focus: ["Care for others", "Beautify your space", "Heal relationships"], avoid: ["Perfectionism", "Martyrdom"] },
-            7: { theme: "Reflection", energy: "Introspection, wisdom, spirituality", focus: ["Meditate", "Study", "Trust intuition"], avoid: ["Isolation", "Overthinking"] },
-            8: { theme: "Power", energy: "Achievement, authority, abundance", focus: ["Take charge", "Make business moves", "Manifest goals"], avoid: ["Greed", "Workaholism"] },
-            9: { theme: "Completion", energy: "Release, compassion, humanitarianism", focus: ["Let go", "Help others", "Complete projects"], avoid: ["Attachment", "Bitterness"] },
-            11: { theme: "Illumination", energy: "Inspiration, intuition, spiritual insight", focus: ["Trust visions", "Inspire others", "Channel creativity"], avoid: ["Anxiety", "Impracticality"] },
-            22: { theme: "Master Builder", energy: "Manifestation, large-scale vision", focus: ["Build something lasting", "Think big", "Lead projects"], avoid: ["Overwhelm", "Neglecting details"] },
-            33: { theme: "Master Teacher", energy: "Healing, uplifting humanity", focus: ["Teach and heal", "Serve with love", "Embody compassion"], avoid: ["Self-sacrifice", "Burnout"] }
+            1: { theme: "New Beginnings", energy: "Initiative, independence, leadership", focus: ["Start new projects", "Take bold action", "Assert yourself"], avoid: ["Waiting for others", "Self-doubt"], behave: "Be the initiator. Step up, speak first, and lead by example. Your courage opens doors." },
+            2: { theme: "Partnership", energy: "Cooperation, diplomacy, patience", focus: ["Collaborate with others", "Listen deeply", "Build bridges"], avoid: ["Being aggressive", "Making solo decisions"], behave: "Be the diplomat. Listen more than you speak. Seek harmony and find common ground." },
+            3: { theme: "Expression", energy: "Creativity, communication, joy", focus: ["Express yourself", "Socialize", "Create something"], avoid: ["Self-criticism", "Isolation"], behave: "Be expressive and joyful. Let your personality shine. Say yes to creative impulses." },
+            4: { theme: "Foundation", energy: "Organization, hard work, stability", focus: ["Build structure", "Handle practical matters", "Create order"], avoid: ["Shortcuts", "Rigidity"], behave: "Be methodical and patient. Show up consistently. Quality over speed today." },
+            5: { theme: "Change", energy: "Freedom, adventure, flexibility", focus: ["Embrace change", "Try new things", "Be adaptable"], avoid: ["Rigid routines", "Overindulgence"], behave: "Be adaptable and curious. Break your routine. Welcome the unexpected as opportunity." },
+            6: { theme: "Harmony", energy: "Love, responsibility, nurturing", focus: ["Care for others", "Beautify your space", "Heal relationships"], avoid: ["Perfectionism", "Martyrdom"], behave: "Be nurturing but balanced. Give generously, receive gracefully. Create beauty around you." },
+            7: { theme: "Reflection", energy: "Introspection, wisdom, spirituality", focus: ["Meditate", "Study", "Trust intuition"], avoid: ["Isolation", "Overthinking"], behave: "Be contemplative. Slow down and listen to inner wisdom. Seek depth over breadth." },
+            8: { theme: "Power", energy: "Achievement, authority, abundance", focus: ["Take charge", "Make business moves", "Manifest goals"], avoid: ["Greed", "Workaholism"], behave: "Be authoritative but fair. Make bold decisions. Own your power with integrity." },
+            9: { theme: "Completion", energy: "Release, compassion, humanitarianism", focus: ["Let go", "Help others", "Complete projects"], avoid: ["Attachment", "Bitterness"], behave: "Be generous and forgiving. Tie up loose ends. Create space for new blessings." },
+            11: { theme: "Illumination", energy: "Inspiration, intuition, spiritual insight", focus: ["Trust visions", "Inspire others", "Channel creativity"], avoid: ["Anxiety", "Impracticality"], behave: "Be open to divine guidance. Trust your visions. Let inspiration flow through you." },
+            22: { theme: "Master Builder", energy: "Manifestation, large-scale vision", focus: ["Build something lasting", "Think big", "Lead projects"], avoid: ["Overwhelm", "Neglecting details"], behave: "Be visionary AND practical. Take concrete steps toward your biggest dreams." },
+            33: { theme: "Master Teacher", energy: "Healing, uplifting humanity", focus: ["Teach and heal", "Serve with love", "Embody compassion"], avoid: ["Self-sacrifice", "Burnout"], behave: "Be the embodiment of compassion. Lead by example. Your being is your teaching." }
         };
         
         const moonPhaseGuidance = {
@@ -698,6 +774,16 @@
             const numInterp = numerologyInterpretations[personalDay] || numerologyInterpretations[1];
             const phaseGuide = moonPhaseGuidance[moonPhase.name] || moonPhaseGuidance['New Moon'];
             
+            // Chinese Zodiac calculations
+            const birthYear = new Date(profile.birthDate).getFullYear();
+            const userAnimal = chineseZodiac.getAnimal(birthYear);
+            const userElement = chineseZodiac.getElement(birthYear);
+            const yearAnimal = chineseZodiac.getAnimal(today.getFullYear());
+            const compatibility = chineseZodiac.getCompatibility(userAnimal.name, yearAnimal.name);
+            const zodiacAdvice = chineseZodiacDaily[userAnimal.name] || { advice: 'Trust your innate wisdom today.', lucky: [] };
+            const compatMessage = compatibility === 'excellent' ? '✨ Excellent year alignment!' : 
+                                  compatibility === 'challenging' ? '⚡ Growth through challenges' : '☯️ Balanced year energy';
+            
             // Build the cosmic overview grid
             let cosmicGrid = `
                 <div class="cosmic-grid">
@@ -725,6 +811,11 @@
                         <div class="icon">☿</div>
                         <div class="value">${mercury.retrograde ? 'Retrograde' : 'Direct'}</div>
                         <div class="label">Mercury</div>
+                    </div>
+                    <div class="cosmic-card chinese" style="border-color: rgba(255, 107, 53, 0.5);">
+                        <div class="icon">${userAnimal.emoji}</div>
+                        <div class="value">${userAnimal.name}</div>
+                        <div class="label">Your Animal</div>
                     </div>
                     ${vocMoon ? `
                     <div class="cosmic-card alert">
@@ -758,6 +849,9 @@
                             ${numInterp.avoid.map(a => `<li>${a}</li>`).join('')}
                         </ul>
                     </div>
+                    
+                    <h3>💫 How to BE Today</h3>
+                    <p><em>${numInterp.behave}</em></p>
                 </div>
             `;
             
@@ -810,6 +904,26 @@
                 </div>
             `;
             
+            // Chinese Zodiac Section
+            content += `
+                <div class="forecast-section section-chinese">
+                    <h2>🐲 Chinese Zodiac: ${userAnimal.name}</h2>
+                    <div class="chinese-zodiac-box">
+                        <div class="animal">${userAnimal.emoji}</div>
+                        <div class="name">${userElement} ${userAnimal.name}</div>
+                        <div class="element">${compatMessage}</div>
+                    </div>
+                    <p><strong>Today's Zodiac Wisdom:</strong> ${zodiacAdvice.advice}</p>
+                    <p>As a <strong>${userAnimal.name}</strong>, your natural traits of being <em>${userAnimal.traits.toLowerCase()}</em> blend uniquely with today's ${numInterp.theme.toLowerCase()} energy.</p>
+                    ${zodiacAdvice.lucky.length > 0 ? `
+                    <div class="focus-section">
+                        <h3>Lucky Connections Today</h3>
+                        <p>You have harmonious energy with: <strong>${zodiacAdvice.lucky.join(' & ')}</strong></p>
+                    </div>
+                    ` : ''}
+                </div>
+            `;
+            
             // Synthesis Section
             const synthesisAffirmations = {
                 1: "I am the pioneering force of my own destiny.",
@@ -834,6 +948,7 @@
                         <li><strong>Numerology:</strong> ${numInterp.energy}</li>
                         <li><strong>Lunar:</strong> ${moonSignEnergy[moonSign.name] || 'Mystical and intuitive energy'}</li>
                         <li><strong>Phase:</strong> ${phaseGuide.energy}</li>
+                        <li><strong>${userAnimal.name} Energy:</strong> ${userAnimal.traits}</li>
                         <li><strong>Mercury:</strong> ${mercury.retrograde ? 'Review and revision mode' : 'Clear forward movement'}</li>
                     </ul>
                     
