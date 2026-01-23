@@ -9499,6 +9499,13 @@
                     
                     ${dashboardContent}
                     
+                    <!-- Ad Placeholder in Achievements -->
+                    <div style="text-align: center; margin: 25px auto; padding: 20px; max-width: 400px; background: rgba(26,0,51,0.6); border: 1px dashed rgba(139,92,246,0.4); border-radius: 12px;">
+                        <p style="color: #8b5cf6; font-size: 14px; margin-bottom: 8px;">📣 Ad Space Available</p>
+                        <p style="color: #9ca3af; font-size: 12px; margin-bottom: 10px;">Reach users celebrating their spiritual journey</p>
+                        <a href="/classic/advertise.html" style="display: inline-block; padding: 6px 16px; background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(6,182,212,0.3)); border: 1px solid rgba(139,92,246,0.5); border-radius: 15px; color: #e5e7eb; text-decoration: none; font-size: 12px;">Learn More →</a>
+                    </div>
+                    
                     <!-- Return to Tracks Button at BOTTOM -->
                     <div style="text-align: center; margin-top: 30px; padding-bottom: 20px;">
                         <button onclick="window.closeAchievementsModal();" style="
@@ -10524,6 +10531,16 @@
 
                 container.appendChild(categoryTab);
             });
+            
+            // Add ad placeholder at bottom of companion panel
+            const adPlaceholder = document.createElement('div');
+            adPlaceholder.style.cssText = 'text-align: center; margin: 20px 15px; padding: 18px; background: rgba(26,0,51,0.6); border: 1px dashed rgba(139,92,246,0.4); border-radius: 12px;';
+            adPlaceholder.innerHTML = `
+                <p style="color: #8b5cf6; font-size: 14px; margin-bottom: 8px;">📣 Advertising Space Available</p>
+                <p style="color: #9ca3af; font-size: 12px; margin-bottom: 10px;">Connect with our engaged community</p>
+                <a href="/classic/advertise.html" style="display: inline-block; padding: 8px 18px; background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(6,182,212,0.3)); border: 1px solid rgba(139,92,246,0.5); border-radius: 15px; color: #e5e7eb; text-decoration: none; font-size: 12px;">Submit Your Interest →</a>
+            `;
+            container.appendChild(adPlaceholder);
         }
 
         // Show instruction modal
@@ -10905,6 +10922,15 @@
                         
                         tracksContainer.appendChild(recipeElement);
                     });
+                    
+                    // Add ad placeholder at bottom of each category
+                    const adPlaceholder = document.createElement('div');
+                    adPlaceholder.style.cssText = 'text-align: center; margin: 15px 10px; padding: 15px; background: rgba(26,0,51,0.5); border: 1px dashed rgba(139,92,246,0.3); border-radius: 10px;';
+                    adPlaceholder.innerHTML = `
+                        <p style="color: #8b5cf6; font-size: 12px; margin-bottom: 6px;">📣 Advertise Here</p>
+                        <a href="/classic/advertise.html" style="color: #9ca3af; font-size: 11px; text-decoration: none;">Submit Interest →</a>
+                    `;
+                    tracksContainer.appendChild(adPlaceholder);
                     
                     this.elements.recipes.appendChild(categoryTab);
                 });
