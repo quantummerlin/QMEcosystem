@@ -250,6 +250,41 @@
             box-shadow: 0 0 15px rgba(255, 107, 157, 0.15);
         }
         
+        /* Featured Category - Band Builder */
+        .category-section.featured-category {
+            border: 3px solid #FF6B9D;
+            box-shadow: 0 0 30px rgba(255, 107, 157, 0.4), 0 0 60px rgba(168, 85, 247, 0.2);
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(168, 85, 247, 0.1));
+            animation: featuredPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes featuredPulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(255, 107, 157, 0.4), 0 0 60px rgba(168, 85, 247, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(255, 107, 157, 0.6), 0 0 80px rgba(168, 85, 247, 0.4); }
+        }
+        
+        .category-section.featured-category .category-header {
+            background: linear-gradient(90deg, rgba(255, 107, 157, 0.3), rgba(168, 85, 247, 0.3));
+        }
+        
+        .new-badge {
+            background: linear-gradient(135deg, #FF6B9D 0%, #A855F7 100%);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: 8px;
+            animation: badgePop 2s ease-in-out infinite;
+        }
+        
+        @keyframes badgePop {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
         /* Journey Progress */
         .journey-progress {
             background: linear-gradient(135deg, rgba(25, 10, 35, 0.9), rgba(18, 5, 28, 0.9));
@@ -1143,8 +1178,26 @@
             <div class="tools-grid" id="favorites-grid"></div>
         </div>
         
-        <!-- Categories (collapsible) - Order: Astrology, Numerology, Purpose, Compatibility, Forecasts, Life Cycles -->
+        <!-- Categories (collapsible) - Order: Band Builder, Astrology, Numerology, Purpose, Compatibility, Forecasts, Life Cycles -->
         <div class="categories-container" id="categoriesContainer">
+            <!-- 🎤 K-Pop Band Builder Section - FEATURED -->
+            <div class="category-section featured-category">
+                <div class="category-header" onclick="toggleCategory('bandbuilder')">
+                    <h2>🎤 K-Pop Band Builder <span class="count">(4 tools)</span> <span class="new-badge">NEW!</span></h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-content" id="bandbuilder-content">
+                    <div class="tools-grid" id="bandbuilder-grid"></div>
+                </div>
+            </div>
+            
+            <!-- Ad Space after Band Builder -->
+            <div class="ad-space" onclick="openAdInquiry('bandbuilder', 'After K-Pop Band Builder Section')">
+                <div class="ad-space-title">📢 Advertise Here</div>
+                <div class="ad-space-text">Reach K-Pop stans building their dream groups 🎤</div>
+                <span class="ad-space-cta">Inquire About This Space →</span>
+            </div>
+            
             <!-- Idol Star Signs Section -->
             <div class="category-section">
                 <div class="category-header" onclick="toggleCategory('astrology')">
@@ -1195,7 +1248,7 @@
             <!-- Squad Chemistry Section -->
             <div class="category-section">
                 <div class="category-header" onclick="toggleCategory('compatibility')">
-                    <h2>💕 Squad Chemistry <span class="count">(8 tools)</span></h2>
+                    <h2>💕 Squad Chemistry <span class="count">(7 tools)</span></h2>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="category-content" id="compatibility-content">
@@ -1335,8 +1388,7 @@
             { title: "Trainee Debt Reading", description: "Analyze and transform your karmic trainee debt (13, 14, 16, 19) 💪", category: "numerology", file: "karmic-debt-reading.html" },
             { title: "Master Number Slay", description: "Master your 11, 22, or 33 — you've got that enhanced idol potential! ✨", category: "numerology", file: "master-number-reading.html" },
             
-            // Compatibility Tools (8) - Squad Chemistry
-            { title: "🎤 K-Pop Band Builder", description: "Build your dream K-pop group! Add 2-12 members, see group synergy, get role assignments, and generate the perfect group name! No cap this one ATE 🔥✨", category: "compatibility", file: "band-builder.html", isNew: true },
+            // Compatibility Tools (7) - Squad Chemistry
             { title: "Squad Vibe Check", description: "Check if you and your pookie are serving bestie energy or nah! It's giving main duo vibes fr fr 💕", category: "compatibility", file: "squad-chemistry-reading.html" },
             { title: "Energy Match Test", description: "Are you soft or baddie? Check your friendship energy combo! No cap this one ate 🔥", category: "compatibility", file: "venus-mars-compatibility.html" },
             { title: "Day One or Fake Friend?", description: "Determine if they're your real one or just a casual mutual 💜", category: "compatibility", file: "soul-mate-analysis.html" },
@@ -1344,6 +1396,12 @@
             { title: "Cosmic Connection Chart", description: "Map the planetary aspects linking you and your bestie! It's giving soulmate friendship ✨", category: "compatibility", file: "synastry-reading.html" },
             { title: "Squad Fusion Reading", description: "Discover the energy created when you and your main link up — ultimate squad goals! 👯", category: "compatibility", file: "composite-chart-reading.html" },
             { title: "Past Life Bestie Bond", description: "Have you been besties before? Detect past life and karmic squad connections!", category: "compatibility", file: "relationship-karma-reading.html" },
+            
+            // Band Builder Tools (4) - K-Pop Band Builder
+            { title: "🎤 Dream Group Builder", description: "Build your ultimate K-pop group with 2-12 members! See group synergy, role assignments, and generate the perfect name! This one ATE no cap 🔥✨", category: "bandbuilder", file: "band-builder.html", isNew: true },
+            { title: "🌟 Debut Date Analyzer", description: "Pick the perfect debut date for your group! See how the stars and numbers guide your squad to greatness! 📅✨", category: "bandbuilder", file: "band-builder-debut.html", isNew: true },
+            { title: "👑 Role Assignment", description: "Discover who's the leader, main vocalist, rapper, dancer, visual, and more! Based on cosmic charts fr fr 🎵", category: "bandbuilder", file: "band-builder-roles.html", isNew: true },
+            { title: "✨ Group Name Generator", description: "Generate the perfect K-pop group name! Get 5 unique options based on your squad's cosmic energy! No cap these names slay 🎤", category: "bandbuilder", file: "band-builder-names.html", isNew: true },
             
             // Life Purpose Tools (6) - Stan Purpose
             { title: "North Star Destiny", description: "Locate your soul's direction — where the universe wants you to stan! 🌟", category: "purpose", file: "north-node-reading.html" },
@@ -1581,12 +1639,20 @@ ${formData.message}
             if (e.target === this) closeAdModal();
         });
         
-        // Initialize all category grids (order: astrology, numerology, purpose, compatibility, forecasts, life)
+        // Initialize all category grids (order: bandbuilder, astrology, numerology, purpose, compatibility, forecasts, life)
         function initializeGrids() {
-            ['astrology', 'numerology', 'purpose', 'compatibility', 'forecasts', 'life'].forEach(cat => {
+            ['bandbuilder', 'astrology', 'numerology', 'purpose', 'compatibility', 'forecasts', 'life'].forEach(cat => {
                 renderCategoryTools(cat);
             });
             renderFavorites();
+            
+            // Auto-expand Band Builder category on first load
+            const bandBuilderContent = document.getElementById('bandbuilder-content');
+            const bandBuilderHeader = bandBuilderContent?.previousElementSibling;
+            if (bandBuilderContent && !bandBuilderContent.classList.contains('show')) {
+                bandBuilderContent.classList.add('show');
+                bandBuilderHeader?.classList.add('active');
+            }
         }
         initializeGrids();
         
