@@ -287,7 +287,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <body>
     <div class="container">
         <div class="header">
-            <h1>ðŸŒ™ Rising Sign Calculator</h1>
+            <h1>🌙 Rising Sign Calculator</h1>
             <p>Calculate and interpret your outer personality</p>
         </div>
 
@@ -337,7 +337,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <div id="result" class="result">
                 <h2 id="result-title"></h2>
                 <div id="result-content" class="result-content"></div>
-                <button type="button" class="back-button" onclick="window.location.href='tools_index.html'">â† Back to Quantum Merlin Hub</button>
+                <button type="button" class="back-button" onclick="window.location.href='tools_index.html'">← Back to Quantum Merlin Hub</button>
             </div>
         </div>
     </div>
@@ -599,12 +599,12 @@ with open('rising-sign-reading-new.html', 'w', encoding='utf-8') as f:
     f.write(final_html)
 
 print("âœ… Generated: rising-sign-reading-new.html")
-print("ðŸ“‹ Features:")
-print("   â€¢ Astronomical calculations using astronomy-engine library")
-print("   â€¢ Automatic geocoding of birth location")
-print("   â€¢ Calculates Moon's ecliptic longitude")
-print("   â€¢ Determines zodiac sign from position")
-print("   â€¢ Full interpretations from original file")
-print("   â€¢ Profile management system")
-print("   â€¢ No external links or promotions")
+print("📋 Features:")
+print("   • Astronomical calculations using astronomy-engine library")
+print("   • Automatic geocoding of birth location")
+print("   • Calculates Moon's ecliptic longitude")
+print("   • Determines zodiac sign from position")
+print("   • Full interpretations from original file")
+print("   • Profile management system")
+print("   • No external links or promotions")
 

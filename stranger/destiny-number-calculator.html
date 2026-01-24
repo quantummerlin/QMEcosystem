@@ -513,7 +513,9 @@
             e.preventDefault();
             
             const preferredName = document.getElementById('preferredName').value;
-            const birthName = preferredName;
+            // Use birthName field if provided, otherwise fall back to preferredName
+            const birthNameField = document.getElementById('birthName');
+            const birthName = (birthNameField && birthNameField.value.trim()) ? birthNameField.value.trim() : preferredName;
             
             const destinyNumber = calculateNameNumber(birthName);
             

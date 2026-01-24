@@ -45,7 +45,7 @@
         .pwa-loader-text{color:#FF6B9D;font-size:1rem;margin-top:20px;font-family:system-ui,sans-serif;letter-spacing:2px}
         @keyframes pulse{0%,100%{transform:scale(1);opacity:0.8}50%{transform:scale(1.2);opacity:1}}
     </style>
-    <meta name="description" content="K-Pop Cosmos reveals the what makes you the ultimate stan 💜. Numerology, astrology, and magical insights from the K-Pop universe.">
+    <meta name="description" content="K-Pop Cosmos reveals the what makes you the ultimate stan 💜. Numerology, astrology, and magical insights from the K-Pop cosmos.">
 <meta name="keywords" content="numerology tools, astrology calculator, free horoscope, debut idol destiny number, zodiac sign, cosmic forecast, spiritual tools">
     
     <!-- Open Graph / Social Media -->
@@ -77,7 +77,7 @@
             font-family: 'Poppins', sans-serif;
             background: #0D0015;
             background-image: 
-                /* K-Pop universe grid at bottom */
+                /* K-Pop cosmos grid at bottom */
                 linear-gradient(transparent 60%, rgba(168, 85, 247, 0.04) 60%),
                 repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 107, 157, 0.04) 50px, rgba(255, 107, 157, 0.04) 51px),
                 repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(168, 85, 247, 0.04) 50px, rgba(168, 85, 247, 0.04) 51px),
@@ -1017,7 +1017,7 @@
         "@type": "WebApplication",
         "name": "K-Pop Cosmos",
         "url": "https://quantummerlin.com/kpop/tools_index.html",
-        "description": "Explore 60+ free numerology and astrology tools. Life path calculator, zodiac readings, cosmic forecasts, and personalized insights from the K-Pop universe - no signup required.",
+        "description": "Explore 60+ free numerology and astrology tools. Life path calculator, zodiac readings, cosmic forecasts, and personalized insights from the K-Pop cosmos - no signup required.",
         "applicationCategory": "LifestyleApplication",
         "operatingSystem": "Web Browser",
         "offers": {
@@ -1067,19 +1067,19 @@
         <div class="header">
             <img src="kpop.jpg?v=20260124" alt="K-Pop Cosmos" class="wizard-logo">
             <h1 class="rainbow-shimmer">K-Pop Cosmos</h1>
-            <p class="tagline">✨ Your Ultimate Bias Reading 💜</p>
-            <p class="subtitle">Discover your idol destiny, stan compatibility, and K-Pop journey through the stars! 🌟</p>
+            <p class="tagline">✨ Slay Your Destiny Bestie 💜</p>
+            <p class="subtitle">Discover your main character energy, stan compatibility, and K-Pop era through the stars! 🌟</p>
         </div>
         
         <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="🔍 Search for your destiny bestie...">
+            <input type="text" id="searchInput" placeholder="🔍 Search for your reading bestie... 💫">
         </div>
         
         <!-- Journey Progress -->
         <div class="journey-progress" id="journeyProgress">
             <div class="journey-header">
-                <span class="journey-icon">🌟</span>
-                <span class="journey-text">Your Journey: <strong id="journeyCount">0</strong> of <strong id="journeyTotal">0</strong> tools explored</span>
+                <span class="journey-icon">💫</span>
+                <span class="journey-text">Stan Progress: <strong id="journeyCount">0</strong> of <strong id="journeyTotal">0</strong> readings slayed</span>
             </div>
             <div class="journey-bar-container">
                 <div class="journey-bar" id="journeyBar"></div>
@@ -1095,8 +1095,8 @@
         <!-- Favorites Section (shown when user has favorites) -->
         <div class="favorites-section" id="favoritesSection">
             <div class="favorites-header">
-                <h3>⭐ Your Favorites</h3>
-                <span class="favorites-hint">Click ⭐ on any tool to add/remove</span>
+                <h3>💜 Your Bias List</h3>
+                <span class="favorites-hint">Click ⭐ on any reading to add your faves</span>
             </div>
             <div class="tools-grid" id="favorites-grid"></div>
         </div>
@@ -1185,8 +1185,8 @@
         </div>
         
         <div class="footer">
-            <p>© 2026 K-Pop Cosmos 💜 Made with love for stans everywhere ✨</p>
-            <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 8px;">Your idol destiny awaits! 🌟</p>
+            <p>© 2026 K-Pop Cosmos 💜 Made with slay energy for stans everywhere ✨</p>
+            <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 8px;">Your bias destiny awaits, bestie! Fighting! 🌟</p>
         </div>
     </div>
     
@@ -1273,86 +1273,86 @@
     </div>
     
     <script>
-        // Version: 20260123 - Stranger Things inspired tool names
+        // Version: 20260127 - K-Pop Cosmos themed tool names
         const tools = [
-            // Numerology Tools (16) - Strange Number Frequencies
-            { title: "Your Idol Frequency", description: "Decode the strange pattern that defines your path through dimensions.", category: "numerology", file: "life-path-calculator.html" },
-            { title: "Fate Code Decoder", description: "Uncover the hidden code that controls your debut destiny.", category: "numerology", file: "debut destiny-number-calculator.html" },
-            { title: "Inner Void Signal", description: "Reveal the frequency calling from deep within your soul.", category: "numerology", file: "soul-urge-calculator.html" },
-            { title: "Surface Pattern Scan", description: "Detect the pattern others perceive when they encounter you.", category: "numerology", file: "personality-number-calculator.html" },
-            { title: "Name Frequency Decoder", description: "Analyze the strange vibrations encoded in your name.", category: "numerology", file: "name-number-calculator.html" },
-            { title: "Expression Pattern Analysis", description: "Map your natural abilities and the talents hidden in your signal.", category: "numerology", file: "expression-number-reading.html" },
-            { title: "Birth Portal Reading", description: "Discover the gifts that emerged when you crossed into this dimension.", category: "numerology", file: "birthday-number-reading.html" },
-            { title: "Annual Frequency Shift", description: "Track the strange energy pattern defining your current year.", category: "numerology", file: "personal-year-reading.html" },
-            { title: "Monthly Signal Report", description: "Decode this month's idol interference patterns.", category: "numerology", file: "personal-month-reading.html" },
-            { title: "Today's Frequency Scan", description: "Detect today's strange energy fluctuations for you.", category: "numerology", file: "personal-day-number.html" },
-            { title: "Pinnacle Phase Mapping", description: "Chart the four major idol shifts in your timeline.", category: "numerology", file: "pinnacle-numbers-reading.html" },
-            { title: "Challenge Pattern Analysis", description: "Identify the obstacles from the K-Pop universe you must overcome.", category: "numerology", file: "challenge-numbers-reading.html" },
-            { title: "Hidden Talent Detector", description: "Reveal the secret power frequency hidden in your name.", category: "numerology", file: "hidden-passion-number.html" },
-            { title: "Maturity Signal Emergence", description: "Detect the wisdom frequency that emerges in your later years.", category: "numerology", file: "maturity-number-reading.html" },
-            { title: "Karmic Debt Scanner", description: "Analyze and transform your strange karmic interference (13, 14, 16, 19).", category: "numerology", file: "karmic-debt-reading.html" },
-            { title: "Master Frequency Reading", description: "Master your 11, 22, or 33 enhanced idol potential.", category: "numerology", file: "master-number-reading.html" },
+            // Numerology Tools (16) - Your Debut Numbers
+            { title: "Main Character Energy", description: "Discover the life path number that makes you the star of your own K-Pop story 💫", category: "numerology", file: "life-path-calculator.html" },
+            { title: "Debut Destiny Decoder", description: "Uncover the hidden code that controls when you'll have your ultimate glow-up!", category: "numerology", file: "destiny-number-calculator.html" },
+            { title: "Inner Stan Anthem", description: "Reveal the soul urge that makes your heart skip like a perfect comeback beat 💜", category: "numerology", file: "soul-urge-calculator.html" },
+            { title: "Your Visual Aura", description: "Discover the personality number that defines your iconic first impression era.", category: "numerology", file: "personality-number-calculator.html" },
+            { title: "Stage Name Energy", description: "Analyze the slay vibrations encoded in your name — birth name vs stage name!", category: "numerology", file: "name-number-calculator.html" },
+            { title: "Trainee Talent Profile", description: "Map your natural abilities — are you main vocal, lead dancer, or ace material?", category: "numerology", file: "expression-number-reading.html" },
+            { title: "Pre-Debut Gift Reading", description: "Discover the talents you were born with — your pre-debut era blessings ✨", category: "numerology", file: "birthday-number-reading.html" },
+            { title: "Your Year's Era Theme", description: "What era are you in this year? Dark concept? Cute concept? Find out!", category: "numerology", file: "personal-year-reading.html" },
+            { title: "Monthly Comeback Vibes", description: "Decode this month's energy — is it promotion season or rest time? 🌙", category: "numerology", file: "personal-month-reading.html" },
+            { title: "Today's Stan Forecast", description: "Slay or lay low? Get your daily K-Pop cosmic guidance here!", category: "numerology", file: "personal-day-number.html" },
+            { title: "Career Era Roadmap", description: "Chart the four major eras in your life — debut, rise, peak, and legend! 🌟", category: "numerology", file: "pinnacle-numbers-reading.html" },
+            { title: "Bias Wrecker Challenges", description: "Identify the challenges life throws at you (and how to slay them anyway).", category: "numerology", file: "challenge-numbers-reading.html" },
+            { title: "Hidden Ace Talent", description: "Reveal your secret bias-wrecker energy — the talent no one sees coming! 💎", category: "numerology", file: "hidden-passion-number.html" },
+            { title: "Senior Idol Wisdom", description: "Discover the sunbae energy that emerges as you level up in life.", category: "numerology", file: "maturity-number-reading.html" },
+            { title: "Trainee Debt Reading", description: "Analyze and transform your karmic trainee debt (13, 14, 16, 19) 💪", category: "numerology", file: "karmic-debt-reading.html" },
+            { title: "Master Number Slay", description: "Master your 11, 22, or 33 — you've got that enhanced idol potential! ✨", category: "numerology", file: "master-number-reading.html" },
             
-            // Compatibility Tools (7) - Connection Frequencies
-            { title: "Love Connection Frequency", description: "Scan the strange attraction patterns between two souls.", category: "compatibility", file: "love-compatibility-reading.html" },
-            { title: "Venus-Mars Chemistry Scan", description: "Detect your romantic and primal energy connection.", category: "compatibility", file: "venus-mars-compatibility.html" },
-            { title: "Soul Bond Detection", description: "Determine if you've found your true interidol connection.", category: "compatibility", file: "soul-mate-analysis.html" },
-            { title: "Path Intersection Analysis", description: "How your idol frequencies interact in love.", category: "compatibility", file: "relationship-life-path.html" },
-            { title: "Synastry Field Reading", description: "Map the planetary aspects linking you and your partner.", category: "compatibility", file: "synastry-reading.html" },
-            { title: "Composite Entity Reading", description: "Discover the strange new entity created when two souls merge.", category: "compatibility", file: "composite-chart-reading.html" },
-            { title: "Karmic Bond Reading", description: "Detect past dimension connections and karmic entanglements.", category: "compatibility", file: "relationship-karma-reading.html" },
+            // Compatibility Tools (7) - Bias Compatibility
+            { title: "Ship Chemistry Check", description: "Scan the romantic attraction between you and your bias (or bestie!) 💕", category: "compatibility", file: "love-compatibility-reading.html" },
+            { title: "Venus-Mars Flirt Factor", description: "Are you soft or savage? Check your romantic and spicy energy combo! 🔥", category: "compatibility", file: "venus-mars-compatibility.html" },
+            { title: "Soulmate or Just Bias?", description: "Determine if they're your forever or just your bias of the moment 💜", category: "compatibility", file: "soul-mate-analysis.html" },
+            { title: "OTP Path Reading", description: "How your life paths interact — are you an iconic duo or nah?", category: "compatibility", file: "relationship-life-path.html" },
+            { title: "Stan Synastry Chart", description: "Map the planetary aspects linking you and your bias/bestie! ✨", category: "compatibility", file: "synastry-reading.html" },
+            { title: "Ship Entity Reading", description: "Discover the new entity created when your souls merge — your ship name energy! 🚢", category: "compatibility", file: "composite-chart-reading.html" },
+            { title: "Past Life Connection", description: "Have you stanned each other before? Detect past life and karmic bonds!", category: "compatibility", file: "relationship-karma-reading.html" },
             
-            // Life Purpose Tools (6) - Mission Decoders
-            { title: "North Node Beacon", description: "Locate your soul's evolutionary direction through the void.", category: "purpose", file: "north-node-reading.html" },
-            { title: "South Node Memory", description: "Access your past dimension gifts and karmic patterns.", category: "purpose", file: "south-node-reading.html" },
-            { title: "Life Mission Decoder", description: "Your complete mission briefing through strange frequencies.", category: "purpose", file: "life-mission-reading.html" },
-            { title: "Dharma Signal Reading", description: "Detect your spiritual purpose and idol calling.", category: "purpose", file: "dharma-number-reading.html" },
-            { title: "Vocation Frequency", description: "Locate your true career calling from across dimensions.", category: "purpose", file: "vocation-reading.html" },
-            { title: "Soul Contract Reveal", description: "Access the strange agreements and lessons you chose before arriving.", category: "purpose", file: "soul-contract-reading.html" },
+            // Life Purpose Tools (6) - Stan Purpose
+            { title: "North Star Destiny", description: "Locate your soul's direction — where the universe wants you to stan! 🌟", category: "purpose", file: "north-node-reading.html" },
+            { title: "Past Era Gifts", description: "Access your past life talents — trainee skills from another timeline! 💫", category: "purpose", file: "south-node-reading.html" },
+            { title: "Ultimate Bias Purpose", description: "Your complete life mission briefing — main character script revealed!", category: "purpose", file: "life-mission-reading.html" },
+            { title: "Dharma Stan Calling", description: "Detect your spiritual purpose — which fandom are you destined to lead? 💜", category: "purpose", file: "dharma-number-reading.html" },
+            { title: "Idol Career Path", description: "Locate your true career calling — CEO, creative, or performer vibes?", category: "purpose", file: "vocation-reading.html" },
+            { title: "Pre-Debut Contract", description: "Access the soul agreements you signed before debuting in this life! ✨", category: "purpose", file: "soul-contract-reading.html" },
             
-            // Astrology Tools (21) - Planetary Anomalies
+            // Astrology Tools (21) - Idol Star Signs
             // The Angles & Luminaries
-            { title: "Rising Mask Reading", description: "Reveal the outer pattern you project to the world.", category: "astrology", file: "rising-sign-reading.html" },
-            { title: "Your Hidden Frequency", description: "Access your emotional depths and inner idol self.", category: "astrology", file: "moon-sign-reading.html" },
+            { title: "Rising Sign Slay", description: "Reveal the iconic first impression you serve to the world! 👑", category: "astrology", file: "rising-sign-reading.html" },
+            { title: "Moon Sign Feels", description: "Access your emotional core — the soft hours and crying in the club energy 🌙", category: "astrology", file: "moon-sign-reading.html" },
             // Personal Planets (Mercury through Mars)
-            { title: "The Communication Glitch", description: "Understand how you transmit and receive signals.", category: "astrology", file: "mercury-sign-reading.html" },
-            { title: "Venus Attraction Field", description: "Detect how you love, attract, and express beauty.", category: "astrology", file: "venus-sign-reading.html" },
-            { title: "Mars Drive Signal", description: "Reveal your primal drive and pursuit patterns.", category: "astrology", file: "mars-sign-reading.html" },
+            { title: "Mercury Speak Mode", description: "Understand how you communicate — are you lyricist or rapper energy?", category: "astrology", file: "mercury-sign-reading.html" },
+            { title: "Venus Love Language", description: "Discover how you love, attract, and serve visuals! 💕", category: "astrology", file: "venus-sign-reading.html" },
+            { title: "Mars Fire Energy", description: "Reveal your drive, ambition, and go-getter trainee hustle! 🔥", category: "astrology", file: "mars-sign-reading.html" },
             // Social Planets
-            { title: "Jupiter Expansion Wave", description: "Detect how you attract luck and abundance from the void.", category: "astrology", file: "jupiter-sign-reading.html" },
-            { title: "Saturn Lesson Protocol", description: "Access your karmic lessons and path to mastery.", category: "astrology", file: "saturn-sign-reading.html" },
+            { title: "Jupiter Lucky Star", description: "How you attract luck, success, and daebak moments from the universe! 🌟", category: "astrology", file: "jupiter-sign-reading.html" },
+            { title: "Saturn Sunbae Lessons", description: "Access your karmic lessons — what you must master to level up!", category: "astrology", file: "saturn-sign-reading.html" },
             // Outer/Transpersonal Planets
-            { title: "Uranus Awakening Frequency", description: "Reveal how you innovate and awaken to strange freedom.", category: "astrology", file: "uranus-sign-reading.html" },
-            { title: "Neptune Dream Signal", description: "Access your dreams and interidol gifts.", category: "astrology", file: "neptune-sign-reading.html" },
-            { title: "Pluto Transformation Code", description: "Reveal your path to power and complete rebirth.", category: "astrology", file: "pluto-sign-reading.html" },
+            { title: "Uranus It-Factor", description: "Reveal how you innovate, rebel, and serve unexpected slay! ⚡", category: "astrology", file: "uranus-sign-reading.html" },
+            { title: "Neptune Dream Concept", description: "Access your dreams, creativity, and ethereal concept energy 🌊", category: "astrology", file: "neptune-sign-reading.html" },
+            { title: "Pluto Glow-Up Power", description: "Reveal your path to transformation and ultimate rebirth era! 🦋", category: "astrology", file: "pluto-sign-reading.html" },
             // Sensitive Points
-            { title: "Chiron Wound Reading", description: "Locate your deepest wound and greatest healing frequency.", category: "astrology", file: "chiron-reading.html" },
-            { title: "Your Shadow Self", description: "Explore your dark side and primal K-Pop universe power.", category: "astrology", file: "lilith-reading.html" },
-            { title: "Midheaven Legacy Signal", description: "Detect your life purpose, career path, and lasting impact.", category: "astrology", file: "midheaven-reading.html" },
-            { title: "Descendant Mirror", description: "What you seek in others and how they perceive you.", category: "astrology", file: "descendant-reading.html" },
-            { title: "Fortune Point Locator", description: "Find your joy, luck, and natural prosperity frequency.", category: "astrology", file: "part-of-fortune-reading.html" },
+            { title: "Chiron Healing Arc", description: "Locate your deepest wound and greatest healing journey — debut trauma glow-up!", category: "astrology", file: "chiron-reading.html" },
+            { title: "Lilith Dark Concept", description: "Explore your shadow side — fierce, mysterious, and unapologetic! 🖤", category: "astrology", file: "lilith-reading.html" },
+            { title: "Midheaven Career Star", description: "Detect your life purpose, career path, and lasting legacy! 👑", category: "astrology", file: "midheaven-reading.html" },
+            { title: "Descendant Mirror", description: "What you seek in others — your ideal bias and bestie energy!", category: "astrology", file: "descendant-reading.html" },
+            { title: "Fortune Lightstick", description: "Find your joy, luck, and natural prosperity — where to wave your lightstick! 💫", category: "astrology", file: "part-of-fortune-reading.html" },
             // Chart Patterns
-            { title: "Stellium Power Cluster", description: "Detect concentrated strange energy patterns in your chart.", category: "astrology", file: "stellium-reading.html" },
-            { title: "Modality Balance Scan", description: "Analyze how you initiate, sustain, and adapt to anomalies.", category: "astrology", file: "modality-reading.html" },
+            { title: "Stellium Power Group", description: "Detect concentrated star energy — like a supergroup in your chart! 🌟", category: "astrology", file: "stellium-reading.html" },
+            { title: "Modality Balance Check", description: "Analyze how you lead, persist, and adapt — main, lead, or sub position?", category: "astrology", file: "modality-reading.html" },
             // Lunar Tools
-            { title: "Moon Phase Decoder", description: "Identify what lunar phase you emerged under.", category: "astrology", file: "moon-phase-calculator.html" },
-            { title: "Void Moon Warning", description: "Check if the Moon is void — when strange things go astray.", category: "astrology", file: "void-of-course-moon.html" },
+            { title: "Birth Moon Phase", description: "Identify what lunar phase you debuted under — full moon slay or new moon energy? 🌙", category: "astrology", file: "moon-phase-calculator.html" },
+            { title: "Void Moon Alert", description: "Check if the Moon is void — when plans go sideways and things flop! ⚠️", category: "astrology", file: "void-of-course-moon.html" },
             // Mercury Retrograde
-            { title: "Mercury Retrograde Alert", description: "Check for the communication glitch and what to expect.", category: "astrology", file: "mercury-retrograde-checker.html" },
+            { title: "Mercury Retrograde SOS", description: "Check for the communication chaos era — what to expect and how to survive! 📡", category: "astrology", file: "mercury-retrograde-checker.html" },
             // Other Systems & Fun
-            { title: "Chinese Animal Spirit", description: "Discover your animal spirit, element, and ancient patterns.", category: "astrology", file: "chinese-zodiac-reading.html" },
+            { title: "Chinese Zodiac Bias", description: "Discover your animal spirit, element, and ancient fan archetype! 🐉", category: "astrology", file: "chinese-zodiac-reading.html" },
             
-            // Forecast Tools (5) - Anomaly Reports
-            { title: "Today's Anomaly Report", description: "Daily strange forecast: frequencies + moon + planets + zodiac.", category: "forecasts", file: "cosmic-daily-forecast.html", isNew: true },
-            { title: "Weekly Anomaly Forecast", description: "Full week: strange frequencies + lunar shifts + planetary movements.", category: "forecasts", file: "cosmic-weekly-forecast.html", isNew: true },
-            { title: "Monthly Pattern Forecast", description: "Lunar calendar + Chinese zodiac + full month anomaly guide.", category: "forecasts", file: "cosmic-monthly-forecast.html", isNew: true },
-            { title: "Yearly Idol Forecast", description: "Chinese zodiac year + all retrogrades + month-by-month anomalies.", category: "forecasts", file: "cosmic-yearly-forecast.html", isNew: true },
-            { title: "Decade Cycle Mapping", description: "Long-term idol cycles, pinnacles, and decade patterns.", category: "forecasts", file: "decade-forecast.html" },
+            // Forecast Tools (5) - Comeback Forecasts
+            { title: "Today's Slay Report", description: "Daily forecast: your energy + moon vibes + planet tea + zodiac moment! ☀️", category: "forecasts", file: "cosmic-daily-forecast.html", isNew: true },
+            { title: "Weekly Comeback Forecast", description: "Full week ahead: energy shifts + lunar phases + planetary movements! 📅", category: "forecasts", file: "cosmic-weekly-forecast.html", isNew: true },
+            { title: "Monthly Era Guide", description: "Lunar calendar + Chinese zodiac + full month slay guide! 🗓️", category: "forecasts", file: "cosmic-monthly-forecast.html", isNew: true },
+            { title: "Yearly Album Forecast", description: "Your year's concept: Chinese zodiac + all retrogrades + month-by-month predictions! 🎤", category: "forecasts", file: "cosmic-yearly-forecast.html", isNew: true },
+            { title: "Decade Discography Map", description: "Long-term career cycles, peak eras, and decade-defining moments! 📀", category: "forecasts", file: "decade-forecast.html" },
             
-            // Life Cycles Tools (3) - Timeline Trackers
-            { title: "Idol Age Scanner", description: "Calculate your exact strange age and position in life's grand cycles.", category: "life", file: "age-calculator.html" },
-            { title: "Solar Return Countdown", description: "Track time until your solar return — when idol energies reset.", category: "life", file: "birthday-countdown.html" },
-            { title: "Life Timeline Visualization", description: "Map your complete journey across dimensions with frequency phases.", category: "life", file: "life-progress.html" }
+            // Life Cycles Tools (3) - Your Era Timeline
+            { title: "Idol Age Calculator", description: "Calculate your exact age and where you are in your iconic life eras! 🎂", category: "life", file: "age-calculator.html" },
+            { title: "Birthday Comeback Timer", description: "Track time until your solar return — when your idol energies reset! 🎁", category: "life", file: "birthday-countdown.html" },
+            { title: "Life Era Visualization", description: "Map your complete journey with all your debut, peak, and legacy eras! ✨", category: "life", file: "life-progress.html" }
         ];
         
         // ===== FAVORITES SYSTEM =====
