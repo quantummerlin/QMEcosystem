@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        // Version: 20260123070550 - Auto-generated cache buster
+        // Version: 20260122170552 - Auto-generated cache buster
+        // Version: 20260122165534 - Auto-generated cache buster
+        // Version: 20260122150214 - Auto-generated cache buster
+        // Version: 20260122145556 - Auto-generated cache buster
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    <!-- End Google Analytics -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="version" content="20260123070550">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF6B9D">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="K-Pop Cosmos">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="K-Pop Cosmos">
+    <meta name="msapplication-TileColor" content="#FF6B9D">
+    <meta name="msapplication-navbutton-color" content="#FF6B9D">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="kpop.jpg">
+    <link rel="manifest" href="manifest.json">
+    <title>Pinnacle Numbers Reading | K-Pop Cosmos</title>
+    <meta name="description" content="Discover your four life pinnacles - the major themes and opportunities in each phase of your life.">
+<meta name="keywords" content="numerology, astrology, horoscope, zodiac, spiritual tools, cosmic insights, free calculator">
+        <link rel="canonical" href="https://quantummerlin.com/kpop/pinnacle-numbers-reading.html">
+<link rel="icon" type="image/svg+xml" href="kpop.jpg">
+    <link rel="stylesheet" href="quantum-merlin-styles.css">
+    <script src="auto-fill.js"></script>
+    <script src="cosmic-loader.js"></script>
+    <script src="storage-fix.js?v=20260123"></script>
+    <script src="tool-tracker.js?v=20260123070550"></script>
+    <style>
+        .result-card { background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(255, 215, 0, 0.2)); border-radius: 20px; padding: 2rem; margin: 1rem 0; border: 1px solid rgba(138, 43, 226, 0.4); }
+        .pinnacle-symbol { font-size: 4rem; text-align: center; margin: 1rem 0; }
+        .pinnacle { background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid var(--accent-color); }
+        .current-pinnacle { border-left-color: gold; background: rgba(255,215,0,0.1); }
+        .timeline { display: flex; justify-content: space-between; margin: 2rem 0; flex-wrap: wrap; }
+        .timeline-item { text-align: center; padding: 1rem; flex: 1; min-width: 120px; }
+    </style>
+<!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/kpop/pinnacle-numbers-reading.html">
+    <meta property="og:title" content="K-Pop Cosmos | Your Ultimate Bias Reading ✨">
+    <meta property="og:description" content="Discover your strange debut destiny with numerology, astrology, and magical calculators">
+    <meta property="og:image" content="https://quantummerlin.com/kpop/kpop.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://quantummerlin.com/kpop/pinnacle-numbers-reading.html">
+    <meta name="twitter:title" content="K-Pop Cosmos | Your Ultimate Bias Reading ✨">
+    <meta name="twitter:description" content="Discover your strange debut destiny with numerology, astrology, and magical calculators">
+    <meta name="twitter:image" content="https://quantummerlin.com/kpop/kpop.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Pinnacle Numbers Reading",
+        "url": "https://quantummerlin.com/kpop/pinnacle-numbers-reading.html",
+        "description": "Discover your four life pinnacles - the major themes and opportunities in each phase of your life.",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "K-Pop Cosmos",
+            "url": "https://quantummerlin.com/classic"
+        }
+    }
+    </script>
+</head>
+<body>
+    <a href="tools_index.html" class="back-link">← Back to Tools</a>
+    
+    <div class="container">
+        <div class="tool-header">
+            <div class="tool-icon">🏔️</div>
+            <h1>Pinnacle Numbers Reading</h1>
+            <p class="tool-description">Discover the four major phases of your life and the opportunities each brings</p>
+        </div>
+
+        <form id="toolForm" class="tool-form" onsubmit="calculatePinnacles(event)">
+            <div class="form-group">
+                <label for="preferredName">Your Name 💜 (optional)</label>
+                <input type="text" id="preferredName" placeholder="How should we address you?">
+            </div>
+            <div class="form-group">
+                <label for="birthDate">Your Birthday 🎂</label>
+                <input type="date" id="birthDate" required>
+            </div>
+            <button type="submit" class="submit-btn">🏔️ Calculate Pinnacles</button>
+        </form>
+
+        <div id="result" class="result-section" style="display: none;"></div>
+    </div>
+
+    <script>
+        // Version: 20260122073736 - Auto-generated cache buster
+        // Version: 20260121223506 - Auto-generated cache buster
+        // Version: 20260121211614 - Auto-generated cache buster
+        // Version: 20260121204740 - Auto-generated cache buster
+        // Version: 20260121204029 - Auto-generated cache buster
+        // Version: 20260121203732 - Auto-generated cache buster
+        // Version: 20260121182750 - Auto-generated cache buster
+        // Version: 20260121180653 - Auto-generated cache buster
+        // Version: 20260121175156 - Auto-generated cache buster
+        // Version: 20260121170617 - Auto-generated cache buster
+        // Version: 20260121164415 - Auto-generated cache buster
+        // Version: 20260121163503 - Auto-generated cache buster
+        // Version: 20260121162926 - Auto-generated cache buster
+        const pinnacleMeanings = {
+            1: {
+                theme: "Independence & Leadership",
+                hook: "This pinnacle calls you into the fire of self-reliance — a idol cycle where you must learn to lead yourself before leading others.",
+                description: "The 1 Pinnacle is a powerful phase of individuation and assertion. You're being asked to develop courage, self-trust, and the ability to start things without waiting for permission or validation.",
+                focus: "Develop courage, initiative, and self-reliance",
+                opportunities: "New beginnings, pioneering ventures, leadership roles, and chances to forge your own path regardless of what others expect.",
+                challenges: "Learning to stand alone without becoming isolated, to lead without dominating, to be independent without being unable to collaborate.",
+                strength: "When aligned, this pinnacle forges genuine self-confidence — not ego, but true trust in your own guidance and capability.",
+                shadow: "The glitch: aggression as substitute for assertion, loneliness disguised as independence, fear of relying on anyone.",
+                integration: "This pinnacle works best when you see independence and connection as compatible. You can stand alone AND stand with others.",
+                somatic: "You may feel this pinnacle in your spine and solar plexus — a call to stand taller, move forward, initiate.",
+                reflection: "Ask yourself: 'Where am I being called to lead that I've been avoiding?'"
+            },
+            2: {
+                theme: "Partnership & Cooperation",
+                hook: "This pinnacle calls you into the art of attunement — a idol cycle where you learn that true power includes sensitivity.",
+                description: "The 2 Pinnacle is a phase of developing emotional intelligence, patience, and the ability to work within relationships. You're being asked to learn diplomacy, partnership, and the power of receptivity.",
+                focus: "Develop patience, cooperation, and emotional intelligence",
+                opportunities: "Deep partnerships, collaborative ventures, behind-the-scenes influence, and roles that require mediation or support.",
+                challenges: "Learning to cooperate without disappearing, to be patient without being passive, to be sensitive without being overwhelmed.",
+                strength: "When aligned, this pinnacle develops profound emotional wisdom — the ability to read people and situations with uncanny accuracy.",
+                shadow: "The glitch: codependency, losing yourself in others' needs, avoiding conflict at the cost of authenticity.",
+                integration: "This pinnacle works best when you learn that setting boundaries IS partnership — healthy relationship requires two whole selves.",
+                somatic: "You may feel this pinnacle in your heart and nervous system — a heightened awareness of relational dynamics.",
+                reflection: "Ask yourself: 'Where am I losing myself in partnership instead of becoming more fully myself?'"
+            },
+            3: {
+                theme: "Expression & Creativity",
+                hook: "This pinnacle calls you into the joy of creation — a idol cycle where what you express matters more than what you produce.",
+                description: "The 3 Pinnacle is a phase of developing creative expression, communication, and the ability to bring joy and inspiration to others. You're being asked to find and use your voice.",
+                focus: "Develop creativity, joy, and self-expression",
+                opportunities: "Creative projects, social connections, artistic pursuits, speaking, writing, and any work that involves communication and inspiration.",
+                challenges: "Learning to express without scattering, to be joyful without being superficial, to create with discipline as well as freedom.",
+                strength: "When aligned, this pinnacle develops powerful creative and communicative abilities — you can touch hearts and shift perspectives.",
+                shadow: "The glitch: scattered energy, performing instead of expressing, using brightness to avoid depth.",
+                integration: "This pinnacle works best when you see discipline as amplifying expression, not limiting it. Focus is your creative friend.",
+                somatic: "You may feel this pinnacle in your throat, hands, and face — an urge to speak, create, gesture, express.",
+                reflection: "Ask yourself: 'What am I truly meant to express that I've been holding back?'"
+            },
+            4: {
+                theme: "Foundation & Hard Work",
+                hook: "This pinnacle calls you into the craft of building — a idol cycle where what you construct matters more than how fast you move.",
+                description: "The 4 Pinnacle is a phase of developing discipline, practical skills, and the ability to create lasting structures. You're being asked to build foundations that will support future growth.",
+                focus: "Develop discipline, organization, and persistence",
+                opportunities: "Building projects, organizational roles, practical work, craftsmanship, and anything requiring sustained, patient effort.",
+                challenges: "Learning to be disciplined without becoming rigid, to work hard without becoming a workaholic, to build without becoming trapped in your own structures.",
+                strength: "When aligned, this pinnacle develops masterful building abilities — you can turn ideas into solid reality through patient, persistent effort.",
+                shadow: "The glitch: rigidity, workaholism, building cages instead of foundations.",
+                integration: "This pinnacle works best when you build flexibility into your structures. Strong foundations include doorways, not just walls.",
+                somatic: "You may feel this pinnacle in your body's groundedness — hands that want to build, feet firmly planted, back straight with purpose.",
+                reflection: "Ask yourself: 'What lasting thing am I being called to build during this phase?'"
+            },
+            5: {
+                theme: "Freedom & Change",
+                hook: "This pinnacle calls you into the dance of adaptability — a idol cycle where change is not disruption but curriculum.",
+                description: "The 5 Pinnacle is a phase of developing flexibility, embracing change, and learning to thrive in dynamic circumstances. You're being asked to expand your experience and adaptability.",
+                focus: "Develop flexibility, courage to change, and resourcefulness",
+                opportunities: "Travel, new experiences, variety in work, communications, sales, and anything requiring adaptability and quick thinking.",
+                challenges: "Learning to embrace freedom without becoming scattered, to welcome change without losing your center, to be adaptable without being unreliable.",
+                strength: "When aligned, this pinnacle develops remarkable adaptability — you can thrive in circumstances that would overwhelm others.",
+                shadow: "The glitch: restlessness without direction, running from commitment, confusing stimulation with fulfillment.",
+                integration: "This pinnacle works best when your freedom has purpose. Adventure can include depth, not just novelty.",
+                somatic: "You may feel this pinnacle in your restless energy — a constant readiness for motion, change, new experience.",
+                reflection: "Ask yourself: 'Is my quest for freedom taking me somewhere meaningful?'"
+            },
+            6: {
+                theme: "Responsibility & Service",
+                hook: "This pinnacle calls you into the art of nurturing — a idol cycle where service becomes iconic practice.",
+                description: "The 6 Pinnacle is a phase of developing your capacity to nurture, take responsibility, and create harmony. You're being asked to serve in ways that genuinely benefit others and yourself.",
+                focus: "Develop compassion, responsibility, and ability to nurture",
+                opportunities: "Family responsibilities, community service, healing roles, teaching, counseling, and creating beauty or harmony in environments.",
+                challenges: "Learning to serve without martyrdom, to nurture without controlling, to take responsibility without taking too much.",
+                strength: "When aligned, this pinnacle develops wise caregiving — you know when to help and when to let go, giving from fullness rather than depletion.",
+                shadow: "The glitch: martyrdom, perfectionism, enabling others' dysfunction through excessive helping.",
+                integration: "This pinnacle works best when you include yourself in your circle of care. Sustainable service requires self-nurturing.",
+                somatic: "You may feel this pinnacle in your heart and hands — a constant awareness of who needs care, what needs beautifying.",
+                reflection: "Ask yourself: 'Am I serving from fullness or depleting myself?'"
+            },
+            7: {
+                theme: "Wisdom & Spiritual Growth",
+                hook: "This pinnacle calls you into the depths of understanding — a idol cycle where inner work becomes your outer work.",
+                description: "The 7 Pinnacle is a phase of developing wisdom, intuition, and spiritual understanding. You're being asked to go within, seek truth, and develop genuine insight.",
+                focus: "Develop intuition, wisdom, and spiritual understanding",
+                opportunities: "Study, research, contemplation, spiritual practices, specialized knowledge, and roles requiring depth of understanding.",
+                challenges: "Learning to seek without becoming isolated, to analyze without losing the ability to trust, to be in solitude without being lonely.",
+                strength: "When aligned, this pinnacle develops profound wisdom — you can perceive what others miss and share insights that genuinely illuminate.",
+                shadow: "The glitch: isolation, overthinking, using analysis to avoid living or connecting.",
+                integration: "This pinnacle works best when you balance seeking with being, when you live what you understand rather than just understanding it.",
+                somatic: "You may feel this pinnacle in your mind and third eye — a constant processing, questioning, seeking pattern.",
+                reflection: "Ask yourself: 'What truth am I being called to embody, not just understand?'"
+            },
+            8: {
+                theme: "Power & Achievement",
+                hook: "This pinnacle calls you into the fire of manifestation — a idol cycle where material mastery becomes spiritual practice.",
+                description: "The 8 Pinnacle is a phase of developing your ability to handle power, achieve success, and manifest at scale. You're being asked to master the material world with integrity.",
+                focus: "Develop ambition, business skills, and ability to manifest",
+                opportunities: "Business ventures, financial growth, leadership positions, and any work requiring organization and achievement at scale.",
+                challenges: "Learning to achieve without losing your soul, to handle power without corruption, to succeed while maintaining integrity.",
+                strength: "When aligned, this pinnacle develops ethical power — you can manifest significant success while serving something larger than yourself.",
+                shadow: "The glitch: ruthlessness, workaholism, sacrificing relationships and values for achievement.",
+                integration: "This pinnacle works best when power serves purpose beyond personal gain. Achievement that only benefits you eventually feels empty.",
+                somatic: "You may feel this pinnacle in your commanding presence — a natural authority, an awareness of resources and leverage.",
+                reflection: "Ask yourself: 'Is my achievement serving my soul's purpose or undermining it?'"
+            },
+            9: {
+                theme: "Completion & Humanitarian Service",
+                hook: "This pinnacle calls you into the expansiveness of universal love — a idol cycle where your circle of concern widens to include all.",
+                description: "The 9 Pinnacle is a phase of developing compassion, releasing what's complete, and serving at broader scales. You're being asked to give, release, and serve the collective evolution.",
+                focus: "Develop compassion, wisdom, and ability to serve",
+                opportunities: "Humanitarian work, teaching, healing, artistic expression, and any work serving causes larger than personal interest.",
+                challenges: "Learning to serve without martyrdom, to release without grief, to love universally while still loving particularly.",
+                strength: "When aligned, this pinnacle develops profound humanitarian capacity — you can catalyze transformation at collective levels.",
+                shadow: "The glitch: trying to save everyone, scattered across too many causes, depletion from over-giving.",
+                integration: "This pinnacle works best when you serve from fullness and know that you can't save the world by exhausting yourself.",
+                somatic: "You may feel this pinnacle in your heart's expansiveness — a constant attunement to collective need, a pull toward giving.",
+                reflection: "Ask yourself: 'Am I serving the whole while also honoring my own wholeness?'"
+            },
+            11: {
+                theme: "Illumination & Inspiration",
+                hook: "This master pinnacle calls you into the fire of spiritual transmission — a idol cycle where you become a channel for higher frequencies.",
+                description: "The Master 11 Pinnacle is an intensified phase of spiritual development and inspiration. You're being asked to receive and transmit insights that can shift consciousness.",
+                focus: "Develop spiritual gifts, intuition, and ability to inspire",
+                opportunities: "Spiritual teaching, creative inspiration, counseling, healing, and any work channeling higher wisdom into practical form.",
+                challenges: "Learning to ground your illumination in practical reality, to handle intensity without anxiety, to inspire without burning out.",
+                strength: "When aligned, this pinnacle develops powerful transmission abilities — your insights can catalyze awakening in others.",
+                shadow: "The glitch: nervous instability, impracticality, feeling too different to connect with ordinary life.",
+                integration: "This pinnacle works best when you ground your spiritual gifts in embodied, practical living. Heaven needs an earth to land on.",
+                somatic: "You may feel this pinnacle in your nervous system's sensitivity — a constant receiving of frequencies others don't perceive.",
+                reflection: "Ask yourself: 'How can I ground my illumination in ways that actually serve?'"
+            },
+            22: {
+                theme: "Master Builder",
+                hook: "This master pinnacle calls you into the highest manifestation frequency — a idol cycle where you're asked to build at world-changing scale.",
+                description: "The Master 22 Pinnacle is the most powerful manifesting cycle possible. You're being asked to turn grand visions into world-scale reality — to build structures that serve humanity.",
+                focus: "Develop practical idealism and ability to build lasting structures",
+                opportunities: "Large-scale projects, institution building, movements, and any work manifesting spiritual visions into material form at massive scale.",
+                challenges: "Learning to hold massive vision without being crushed by it, to build at scale without becoming tyrannical, to manifest the impossible step by step.",
+                strength: "When aligned, this pinnacle develops master building abilities — you can actually create what others only dream about.",
+                shadow: "The glitch: being overwhelmed by your own potential, dictatorial behavior, collapsing when visions don't manifest immediately.",
+                integration: "This pinnacle works best when you balance vision with patience and include others in your massive creations. No one builds an empire alone.",
+                somatic: "You may feel this pinnacle in your whole being's orientation toward massive creation — a constant drive to build at scale.",
+                reflection: "Ask yourself: 'What world-serving structure am I being called to build, and what support do I need?'"
+            }
+        };
+
+        function reduceToSingle(num) {
+            while (num > 9 && num !== 11 && num !== 22) {
+                num = String(num).split('').reduce((a, b) => a + parseInt(b), 0);
+            }
+            return num;
+        }
+
+        function calculatePinnacles(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('preferredName').value || 'Seeker';
+            const birthDate = document.getElementById('birthDate').value;
+            const [year, month, day] = birthDate.split('-').map(Number);
+            
+            const currentYear = new Date().getFullYear();
+            const currentAge = currentYear - year;
+            
+            // Calculate Life Path for transition ages
+            let lpSum = 0;
+            String(day).split('').forEach(d => lpSum += parseInt(d));
+            String(month).split('').forEach(d => lpSum += parseInt(d));
+            String(year).split('').forEach(d => lpSum += parseInt(d));
+            const lifePath = reduceToSingle(lpSum);
+            
+            // Calculate transition ages
+            const firstTransition = 36 - lifePath;
+            const secondTransition = firstTransition + 9;
+            const thirdTransition = secondTransition + 9;
+            
+            // Calculate pinnacle numbers
+            const monthReduced = reduceToSingle(month);
+            const dayReduced = reduceToSingle(day);
+            const yearReduced = reduceToSingle(year);
+            
+            const pinnacle1 = reduceToSingle(monthReduced + dayReduced);
+            const pinnacle2 = reduceToSingle(dayReduced + yearReduced);
+            const pinnacle3 = reduceToSingle(pinnacle1 + pinnacle2);
+            const pinnacle4 = reduceToSingle(monthReduced + yearReduced);
+            
+            const pinnacles = [
+                { number: pinnacle1, startAge: 0, endAge: firstTransition, label: "First Pinnacle" },
+                { number: pinnacle2, startAge: firstTransition, endAge: secondTransition, label: "Second Pinnacle" },
+                { number: pinnacle3, startAge: secondTransition, endAge: thirdTransition, label: "Third Pinnacle" },
+                { number: pinnacle4, startAge: thirdTransition, endAge: 120, label: "Fourth Pinnacle" }
+            ];
+            
+            showResult(name, pinnacles, currentAge);
+        }
+
+        function showResult(name, pinnacles, currentAge) {
+            const timeline = pinnacles.map(p => `
+                <div class="timeline-item">
+                    <div style="font-size: 2rem; color: ${currentAge >= p.startAge && currentAge < p.endAge ? 'gold' : '#FF6B9D'};">
+                        ${p.number}
+                    </div>
+                    <div style="font-size: 0.9rem; margin-top: 0.5rem;">
+                        Ages ${p.startAge}-${p.endAge === 120 ? '+' : p.endAge}
+                    </div>
+                    <div style="font-size: 0.8rem; opacity: 0.7;">
+                        ${p.label}
+                    </div>
+                </div>
+            `).join('');
+            
+            const pinnacleCards = pinnacles.map(p => {
+                const data = pinnacleMeanings[p.number];
+                const isCurrent = currentAge >= p.startAge && currentAge < p.endAge;
+                
+                return `
+                    <div class="pinnacle ${isCurrent ? 'current-pinnacle' : ''}">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <h3>${p.label}: ${p.number}</h3>
+                            <span style="font-size: 0.9rem; opacity: 0.8;">
+                                Ages ${p.startAge}-${p.endAge === 120 ? 'end of life' : p.endAge}
+                                ${isCurrent ? '✨ CURRENT' : ''}
+                            </span>
+                        </div>
+                        <h4 style="color: ${isCurrent ? 'gold' : '#FF6B9D'};">${data.theme}</h4>
+                        
+                        <!-- HOOK -->
+                        <div style="font-size: 1.1em; color: #22D3EE; margin: 15px 0; font-style: italic;">
+                            ${data.hook}
+                        </div>
+                        
+                        <div style="margin-top: 1rem;">
+                            <p><strong style="color: #22D3EE;">📡 This Cycle:</strong> ${data.description}</p>
+                        </div>
+                        
+                        <div style="margin-top: 1rem;">
+                            <p><strong style="color: #22D3EE;">🎯 Focus:</strong> ${data.focus}</p>
+                        </div>
+                        
+                        <div style="margin-top: 1rem;">
+                            <p><strong style="color: #22D3EE;">⭐ Opportunities:</strong> ${data.opportunities}</p>
+                        </div>
+                        
+                        <div style="margin-top: 1rem;">
+                            <p><strong style="color: #22D3EE;">⚔️ Challenges:</strong> ${data.challenges}</p>
+                        </div>
+                        
+                        <div style="margin-top: 1rem;">
+                            <p><strong style="color: #22D3EE;">💎 Strength Developed:</strong> ${data.strength}</p>
+                        </div>
+                        
+                        <div style="margin-top: 1rem;">
+                            <p><strong style="color: #22D3EE;">🌑 The Glitch:</strong> ${data.shadow}</p>
+                        </div>
+                        
+                        <div style="margin-top: 1rem;">
+                            <p><strong style="color: #22D3EE;">🔑 Integration:</strong> ${data.integration}</p>
+                        </div>
+                        
+                        <div style="margin-top: 1rem;">
+                            <p><strong style="color: #22D3EE;">🫀 Felt Sense:</strong> ${data.somatic}</p>
+                        </div>
+                        
+                        <div style="margin-top: 1rem; background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(168, 85, 247, 0.1)); padding: 15px; border-radius: 10px; border-left: 3px solid #FF6B9D;">
+                            <p style="font-style: italic;"><strong style="color: #22D3EE;">🪞 Reflection:</strong> ${data.reflection}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            const resultHTML = `
+                <div class="result-card">
+                    <div class="pinnacle-symbol">🏔️</div>
+                    <h2>Your Idol Pinnacle Cycles</h2>
+                    <p style="text-align: center; margin-bottom: 2rem; font-style: italic; color: #22D3EE;">Four major phases, each bringing unique opportunities and idol lessons</p>
+                    
+                    <div class="timeline">
+                        ${timeline}
+                    </div>
+                    
+                    ${pinnacleCards}
+                    
+                    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem;">
+                        <h3 style="color: #FF6B9D;">Understanding Your Idol Pinnacles</h3>
+                        <p>Pinnacle Numbers represent the four major idol cycles of your life, each bringing specific 
+                        opportunities and lessons. Think of them as frequency phases — each peak transmits different energy 
+                        and teaches different skills.</p>
+                        
+                        <p style="margin-top: 1rem;"><strong style="color: #22D3EE;">First Pinnacle (Spring):</strong> Foundation years — 
+                        learning and growth. This sets the frequency tone for your early life.</p>
+                        
+                        <p style="margin-top: 0.5rem;"><strong style="color: #22D3EE;">Second Pinnacle (Summer):</strong> Productive years — 
+                        building and achieving. Often your most challenging but productive idol phase.</p>
+                        
+                        <p style="margin-top: 0.5rem;"><strong style="color: #22D3EE;">Third Pinnacle (Autumn):</strong> Harvest years — 
+                        reaping what you've sown. The synthesis of your first two pinnacles.</p>
+                        
+                        <p style="margin-top: 0.5rem;"><strong style="color: #22D3EE;">Fourth Pinnacle (Winter):</strong> Wisdom years — 
+                        teaching and legacy. This frequency stays with you for the rest of your life.</p>
+                    </div>
+                    
+                    <div class="next-suggestion" style="margin-top: 25px; padding: 20px; background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(0, 0, 0, 0.3)); border-radius: 12px; border: 1px solid rgba(255, 107, 157, 0.3);">
+                        <p style="color: #C4B998; font-size: 0.95em;">
+                            <span style="color: #22D3EE;">📡 Signal Enhancement:</span> These pinnacle cycles gain depth when viewed alongside your Challenge Numbers — what you're learning to master during each phase.
+                        </p>
+                    </div>
+                    
+                    <p style="margin-top: 2rem; text-align: center; font-style: italic;">
+                        ${name}, you are currently ${currentAge} years old, experiencing your 
+                        ${pinnacles.find(p => currentAge >= p.startAge && currentAge < p.endAge).label}.
+                        Each pinnacle builds on the last — trust the idol journey.
+                    </p>
+                </div>
+            `;
+            
+            // Store reading for the multi-page results flow
+            const readingData = {
+                toolType: 'pinnacle',
+                headerTitle: 'Pinnacle Numbers Reading',
+                headerSubtitle: 'The four phases of your life journey',
+                content: resultHTML,
+                sourceUrl: 'pinnacle-numbers-reading.html'
+            };
+            // Try sessionStorage first, fallback to URL params for private browsing
+            QMStorage.navigateWithReading(readingData, 'reading-loading.html');
+        }
+    </script>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="feedback-section">
+            <p class="feedback-text">🛠️ Found an issue or have a suggestion?</p>
+            <a href="mailto:fixit@quantummerlin.com?subject=Quantum%20Merlin%20Feedback" class="footer-feedback-btn">📧 fixit@quantummerlin.com</a>
+        </div>
+        <div class="legal-links">
+            <a href="terms.html">Terms of Service</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 K-Pop Cosmos. Made with 💜 for stans everywhere ✨.</p>
+        <div class="coffee-section">
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="coffee-btn" id="coffeeBtn">☕ Buy Us a Coffee</a>
+        </div>
+    </footer>
+    <style>
+        .legal-footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+            background: rgba(20, 10, 30, 0.8);
+        }
+        .feedback-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+        }
+        .feedback-text {
+            color: #9A8F7A;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .footer-feedback-btn {
+            display: inline-block;
+            color: #FF6B9D;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 107, 157, 0.4);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .footer-feedback-btn:hover {
+            background: rgba(255, 107, 157, 0.15);
+            border-color: #FF6B9D;
+            transform: translateY(-2px);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .legal-links a {
+            color: #9A8F7A;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .legal-links a:hover {
+            color: #22D3EE;
+        }
+        .legal-links .separator {
+            color: rgba(168, 85, 247, 0.4);
+        }
+        .copyright {
+            color: #A78BFA;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .coffee-section {
+            padding-top: 15px;
+            border-top: 1px solid rgba(168, 85, 247, 0.15);
+        }
+        .coffee-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #22D3EE 0%, #f59e0b 100%);
+            color: #0a0a0f;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+        }
+        .coffee-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(251, 191, 36, 0.5);
+        }
+    </style>
+
+</body>
+</html>

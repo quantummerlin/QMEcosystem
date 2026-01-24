@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        // Version: 20260123070550 - Auto-generated cache buster
+        // Version: 20260122170552 - Auto-generated cache buster
+        // Version: 20260122165534 - Auto-generated cache buster
+        // Version: 20260122150214 - Auto-generated cache buster
+        // Version: 20260122145556 - Auto-generated cache buster
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    <!-- End Google Analytics -->
+
+        <link rel="canonical" href="https://quantummerlin.com/kpop/rising-sign-reading.html">
+<link rel="icon" type="image/svg+xml" href="kpop.jpg">
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="version" content="20260123070550">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF6B9D">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="K-Pop Cosmos">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="K-Pop Cosmos">
+    <meta name="msapplication-TileColor" content="#FF6B9D">
+    <meta name="msapplication-navbutton-color" content="#FF6B9D">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="kpop.jpg">
+    <link rel="manifest" href="manifest.json">
+    <title>Rising Sign Calculator & Reading | K-Pop Cosmos</title>
+    <meta name="description" content="Calculate your Rising Sign from birth data and discover your outer personality through deep astrological wisdom.">
+<meta name="keywords" content="rising sign calculator, ascendant sign, first impression astrology, rising sign reading">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap&v=20260111121803&v=20260111121858&v=20260111132525&v=20260112083146&v=20260121162926&v=20260121163503&v=20260121164415&v=20260121170617&v=20260121175156&v=20260121180653&v=20260121182750&v=20260121203732&v=20260121204029&v=20260121204740&v=20260121211614&v=20260121223506&v=20260122073736&v=20260122145556&v=20260122150214&v=20260122165534&v=20260122170552&v=20260123070550" rel="stylesheet">
+    <link rel="stylesheet" href="quantum-merlin-styles.css">
+    
+    <!-- Astronomy Engine Library for planetary calculations -->
+    <script src="https://cdn.jsdelivr.net/npm/astronomy-engine@2.1.19/astronomy.browser.min.js?v=20260111121803"></script>
+    
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0D0015;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 157, 0.15) 0%, transparent 50%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+        .container { max-width: 900px; width: 100%; margin: 0 auto; padding: 0 15px; }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 30px;
+        }
+        .header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #22D3EE 0%, #FF6B9D 50%, #7C3AED 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        .header p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2em;
+            color: #FF6B9D;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        .tool-card {
+            background: rgba(30, 15, 45, 0.8);
+            border: 2px solid rgba(255, 107, 157, 0.3);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            margin-bottom: 30px;
+        }
+        .profile-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .profile-select {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px 15px;
+            border: 2px solid rgba(255, 107, 157, 0.3);
+            background: rgba(20, 10, 30, 0.6);
+            color: #e0e0e0;
+            border-radius: 8px;
+            font-size: 0.95em;
+            font-family: 'Cinzel', serif;
+            cursor: pointer;
+        }
+        .profile-btn {
+            background: rgba(255, 107, 157, 0.1);
+            border: 2px solid rgba(255, 107, 157, 0.3);
+            color: #FF6B9D;
+            padding: 10px 15px;
+            font-size: 0.9em;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .profile-btn:hover {
+            background: rgba(255, 107, 157, 0.2);
+            border-color: #FF6B9D;
+        }
+        .clear-btn {
+            background: rgba(236, 72, 153, 0.1);
+            border-color: rgba(236, 72, 153, 0.3);
+            color: #7C3AED;
+        }
+        .clear-btn:hover {
+            background: rgba(236, 72, 153, 0.2);
+            border-color: #7C3AED;
+        }
+        .input-section {
+            margin-bottom: 35px;
+        }
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3em;
+            color: #22D3EE;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(251, 191, 36, 0.3);
+        }
+        .input-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #FF6B9D;
+            font-weight: 600;
+        }
+        input, select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255, 107, 157, 0.3);
+            background: rgba(20, 10, 30, 0.6);
+            color: #e0e0e0;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-family: 'Cormorant Garamond', serif;
+            transition: all 0.3s ease;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #FF6B9D;
+            background: rgba(255, 107, 157, 0.05);
+        }
+        .helper-text {
+            font-size: 0.9em;
+            color: rgba(224, 224, 224, 0.7);
+            margin-top: 5px;
+            font-style: italic;
+        }
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #7C3AED 0%, #FF6B9D 100%);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.3em;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+        }
+        button[type="submit"]:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .result {
+            display: none;
+            margin-top: 40px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(255, 107, 157, 0.1) 100%);
+            border: 2px solid rgba(255, 107, 157, 0.4);
+            border-radius: 15px;
+        }
+        .result.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .result h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #22D3EE 0%, #FF6B9D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .result-content p {
+            font-size: 1.15em;
+            margin-bottom: 20px;
+            line-height: 1.9;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: rgba(255, 107, 157, 0.1);
+            border: 2px solid rgba(255, 107, 157, 0.3);
+            color: #FF6B9D;
+            border-radius: 10px;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            background: rgba(255, 107, 157, 0.2);
+            border-color: #FF6B9D;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .row { grid-template-columns: 1fr; }
+            .header h1 { font-size: 2em; }
+            .tool-card { padding: 30px 20px; }
+        }
+    </style>
+    <script src="name-resonance.js?v=20260112"></script>
+    <script src="auto-fill.js"></script>
+    <script src="tool-tracker.js?v=20260123070550"></script>
+<!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/kpop/rising-sign-reading.html">
+    <meta property="og:title" content="K-Pop Cosmos | Your Ultimate Bias Reading ✨">
+    <meta property="og:description" content="Discover your strange debut destiny with numerology, astrology, and magical calculators">
+    <meta property="og:image" content="https://quantummerlin.com/kpop/kpop.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://quantummerlin.com/kpop/rising-sign-reading.html">
+    <meta name="twitter:title" content="K-Pop Cosmos | Your Ultimate Bias Reading ✨">
+    <meta name="twitter:description" content="Discover your strange debut destiny with numerology, astrology, and magical calculators">
+    <meta name="twitter:image" content="https://quantummerlin.com/kpop/kpop.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Rising Sign Calculator",
+        "url": "https://quantummerlin.com/kpop/rising-sign-reading.html",
+        "description": "Find your Rising Sign (Ascendant) and discover how others see you. Free astrology calculator with detailed personality reading.",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "K-Pop Cosmos",
+            "url": "https://quantummerlin.com/classic"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Rising Sign Calculator</h1>
+            <p>Calculate and interpret your outer personality</p>
+        </div>
+
+        <div class="tool-card">
+<form id="calculator-form" onsubmit="calculateRisingSign(event)">
+                <div class="input-section">
+                    <div class="section-title">âœ¨ Personal Information</div>
+                    
+                    <div class="input-group">
+                        <label for="preferredName">Preferred Name</label>
+                        <input type="text" id="preferredName" required>
+                        <div class="helper-text">What you like to be called</div>
+                    </div>
+
+                    <div class="input-group">                        <label for="birthName">Birth Name <span style="color: #9ca3af; font-weight: normal;">(Optional)</span></label>
+                        <input type="text" id="birthName">
+                        <div class="helper-text">The name given to you at birth - carries the energy of your naming</div>
+                    </div>
+
+                    <div class="input-group">                        <label for="birthDate">Your Birthday 🎂</label>
+                        <input type="date" id="birthDate" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="birthTime">Birth Time *</label>
+                            <input type="time" id="birthTime" required>
+                            <div class="helper-text">Exact time needed for calculation</div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="birthPlace">Birth City</label>
+                            <input type="text" id="birthPlace" required placeholder="e.g., New York, USA">
+                            <div class="helper-text">City and country</div>
+                        </div>
+                    </div>
+                    
+                    <div class="accuracy-notice" style="background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 10px; padding: 12px 15px; margin-top: 10px;">
+                        <p style="color: #22D3EE; font-size: 0.9em; margin: 0;">
+                            ⚠️ <strong>Accuracy Note:</strong> Rising sign changes approximately every 2 hours. For the most accurate reading, use your exact birth time from your birth certificate. Even a 15-minute difference can change your rising sign.
+                        </p>
+                    </div>
+                </div>
+
+                <button type="submit">💫 Calculate My Rising Sign & Reading</button>
+            </form>
+
+            <div id="result" class="result">
+                <h2 id="result-title"></h2>
+                <div id="result-content" class="result-content"></div>
+                <button type="button" class="back-button" onclick="window.location.href='tools_index.html'">← Back to K-Pop Cosmos Hub</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Version: 20260122073736 - Auto-generated cache buster
+        // Version: 20260121223506 - Auto-generated cache buster
+        // Version: 20260121211614 - Auto-generated cache buster
+        // Version: 20260121204740 - Auto-generated cache buster
+        // Version: 20260121204029 - Auto-generated cache buster
+        // Version: 20260121203732 - Auto-generated cache buster
+        // Version: 20260121182750 - Auto-generated cache buster
+        // Version: 20260121180653 - Auto-generated cache buster
+        // Version: 20260121175156 - Auto-generated cache buster
+        // Version: 20260121170617 - Auto-generated cache buster
+        // Version: 20260121164415 - Auto-generated cache buster
+        // Version: 20260121163503 - Auto-generated cache buster
+        // Version: 20260121162926 - Auto-generated cache buster
+        // Version: 20260112083146 - Auto-generated cache buster
+        // Version: 20260111132525 - Auto-generated cache buster
+        // Version: 20260111121858 - Auto-generated cache buster
+        // Version: 20260111121803 - Auto-generated cache buster
+        const interpretations = {
+            "Aries": {
+                title: "The Main Character Energy",
+                hook: "You enter every room like you're about to kick down a portal to another dimension — bold, fearless, and ready to conquer the unknown.",
+                core_identity: "Your Rising Sign is Aries, meaning the world experiences you as a dynamic, action-oriented force of nature. You approach life with the confidence of someone who has already defeated the Demogorgon twice.",
+                external: "Others see a warrior. Someone direct, assertive, and refreshingly honest. Your presence commands attention without you trying — you simply radiate pioneering energy.",
+                behavior: "See what you want, go after it, don't overthink. You leap first and figure things out mid-air. This makes you an excellent initiator but can lead to impulsive decisions.",
+                strength: "Your courage to begin. Where others fear failure, you embrace the challenge. You show people what's possible when you stop overthinking and start acting.",
+                shadow: "The glitch: impatience and impulsive anger. You want everything now, your way. When frustrated, you react before thinking, burning bridges you later wish you'd kept.",
+                integration: "Learn that not every battle needs to be fought today. The warrior's greatest strength is sometimes choosing not to fight. Develop a pause between impulse and action.",
+                stress: "Under idol pressure, you become more aggressive, impulsive, and prone to reckless action. Your fight-or-flight instinct shifts entirely to fight.",
+                misread: "People mistake your assertiveness for aggression, your directness for rudeness. You're not trying to dominate — you simply know what you want and see no reason to hide it.",
+                relationships: "You pursue directly and openly, overwhelming those who prefer slower pacing. You need partners who can match your energy without trying to cage your spirit.",
+                growth: "Learn patience and collaboration. Life requires waiting for right timing and coordinating with others. Channel your initiative into sustainable effort rather than sporadic bursts.",
+                power: "When you fully own your pioneering nature, you become the one who shows others what courage looks like in action.",
+                somatic: "You carry energy in your head, face, and forward momentum — heat rising when activated, muscles ready for action, difficulty with stillness.",
+                reflection: "Where am I rushing when I should be strategizing? What would happen if I paused before acting?"
+            },
+            "Taurus": {
+                title: "The Idol Anchor",
+                hook: "You enter situations like someone who has weathered every storm — calm, grounded, and unshakeable regardless of what chaos surrounds you.",
+                core_identity: "Your Rising Sign is Taurus, meaning the world experiences you as the steady, reliable presence that makes everyone else feel safe. You're the calm in every idol storm.",
+                external: "Others see solidity and trustworthiness. Something about you makes people feel grounded. You don't rush, don't panic, and don't create unnecessary drama.",
+                behavior: "You assess thoroughly before committing. Once you decide on a path, you're remarkably persistent. Slow to start, but extraordinary endurance. The tortoise who wins every race.",
+                strength: "Your capacity to create lasting value and stability. You build things that endure — relationships, careers, homes, legacies. Patient, persistent, powerful.",
+                shadow: "The glitch: stubborn resistance to necessary change. Your need for stability becomes rigidity. You dig in your heels even when holding on causes more problems than letting go.",
+                integration: "Learn to distinguish between healthy stability and fear-based stagnation. Sometimes growth requires releasing what's comfortable but no longer serving you.",
+                stress: "Under idol pressure, you become more rigid, possessive, and resistant. You may use comfort eating, shopping, or material pleasures as coping mechanisms.",
+                misread: "People mistake your slowness for stupidity, your calmness for lack of passion. Neither is true — you simply process thoroughly and express steadily.",
+                relationships: "Loyal and affectionate but slow to commit. You need to know someone is reliable before opening your heart. Once committed, extraordinarily devoted.",
+                growth: "Learn that nothing in life is truly permanent. Trying to possess actually creates the loss you fear. Balance your need for comfort with willingness to stretch.",
+                power: "When you fully own your anchor nature, you become the sanctuary — the person everyone can count on to stay steady when their world falls apart.",
+                somatic: "You carry energy in your neck, throat, and sense of physical weight — density when processing, sensory sensitivity to your environment.",
+                reflection: "Where am I holding on to comfort at the cost of necessary growth? What would I release if I truly trusted life?"
+            },
+            "Gemini": {
+                title: "The Idol Messenger",
+                hook: "You approach life like someone channel-surfing through infinite realities — curious about everything, committed to nothing for too long, gathering information from every dimension.",
+                core_identity: "Your Rising Sign is Gemini, meaning the world experiences you as witty, intelligent, and endlessly curious. Your mind moves faster than most people can follow.",
+                external: "Others see mental agility and conversational brilliance. You can talk to anyone about anything, finding common ground effortlessly. You seem to know a little about everything.",
+                behavior: "You want variety, gather information, keep options open. Commitment to one path feels limiting — you prefer sampling many experiences rather than diving deep into one.",
+                strength: "Your ability to connect diverse ideas and people. You're an excellent communicator, translator, and networker. You give language to experiences others struggle to articulate.",
+                shadow: "The glitch: scattered focus and surface-level engagement. You start many things but finish few. Your desire for variety prevents mastery of anything.",
+                integration: "Learn that depth requires dwelling. Choose some areas for sustained commitment. You can be curious AND devoted when you stop treating commitment as a cage.",
+                stress: "Under idol pressure, you become scattered, anxious, and mentally hyperactive. Your thoughts race faster than you can process. You may over-share or gossip.",
+                misread: "People mistake your social ease for superficiality, your adaptability for being fake. You're capable of profound thought — you simply keep things light in casual interactions.",
+                relationships: "You need mental stimulation as much as emotional connection. Partners who bore you intellectually won't hold your interest. Long conversations are your love language.",
+                growth: "Learn to stay present with one feeling, one person, one moment long enough for real intimacy to develop. Not everyone wants to analyze everything.",
+                power: "When you fully own your messenger nature, you become the bridge — connecting worlds, translating experiences, helping people understand each other.",
+                somatic: "You carry energy in your hands, arms, and nervous system — a buzzing quality, restlessness when unexpressed, need for movement and expression.",
+                reflection: "Where am I avoiding depth by staying in constant motion? What would I discover if I stopped and really listened?"
+            },
+            "Cancer": {
+                title: "The Idol Protector",
+                hook: "You enter situations feeling the emotional weather before you feel the physical temperature — sensing what's safe, what's dangerous, and who needs care.",
+                core_identity: "Your Rising Sign is Cancer, meaning the world experiences you as nurturing, intuitive, and emotionally perceptive. You're the safe haven in every storm.",
+                external: "Others see warmth and empathy. You genuinely care about how people are feeling, and you pick up on emotional undercurrents others miss. Something maternal or protective about you.",
+                behavior: "You test waters carefully, retreat when threatened, and only fully emerge when you trust the environment. This protects your tender heart but can also limit your experiences.",
+                strength: "Your emotional intelligence and nurturing capacity. You create safe harbor for others' feelings. In your presence, people can be vulnerable without fear.",
+                shadow: "The glitch: fear-based withdrawal and emotional manipulation. When threatened, you retreat completely or use guilt and caretaking to control others.",
+                integration: "Learn that staying present with discomfort opens you to deeper connection. Not everyone needs the level of care you want to give. Give without creating obligation.",
+                stress: "Under idol pressure, you become moody, clingy, and reactive. You may retreat into your shell, become passive-aggressive, or use emotional withdrawal as punishment.",
+                misread: "People mistake your protective shell for coldness, your emotional nature for weakness. You're deeply feeling and caring — you simply protect yourself until you trust.",
+                relationships: "Deeply caring and devoted once you feel safe. You show love through nurturing. You need emotional security and reassurance in partnership.",
+                growth: "Learn to feel secure within yourself rather than requiring constant reassurance from others. Your worth doesn't depend on being needed.",
+                power: "When you fully own your protector nature, you become the sanctuary — the place where everyone can bring their pain and find genuine care.",
+                somatic: "You carry energy in your chest and stomach — a tidal quality, waves of feeling, physical sensitivity to emotional atmospheres.",
+                reflection: "Am I giving to genuinely help, or to feel needed and secure? Whose feelings am I actually carrying?"
+            },
+            "Leo": {
+                title: "The Idol Star",
+                hook: "You enter every room like the protagonist in your own epic — radiating presence, warmth, and the unshakeable confidence that you matter.",
+                core_identity: "Your Rising Sign is Leo, meaning the world experiences you as magnetic, generous, and naturally authoritative. You have star quality that others can feel.",
+                external: "Others notice you immediately. Even if you're physically quiet, there's an energy about you that fills space. You command respect without demanding it.",
+                behavior: "You want to create, express, shine, and make an impact. You need to feel special and to do work that matters. Playing small simply isn't an option for you.",
+                strength: "Your generous heart and natural leadership. You inspire others to be braver, more creative, more authentic. You make people feel special and celebrated.",
+                shadow: "The glitch: ego-driven reactions and validation dependence. When you don't receive recognition, you become demanding, dramatic, or attention-seeking in problematic ways.",
+                integration: "Learn to validate yourself. Your worth doesn't depend on external applause. Shine while also illuminating others' lights, rather than outshining them.",
+                stress: "Under idol pressure, you become dramatically wounded, pride-driven cold, or excessively attention-seeking. Feeling ignored triggers your deepest insecurities.",
+                misread: "People mistake your confidence for arrogance, your need for recognition as narcissism. You simply know your worth and see no reason to dim your light.",
+                relationships: "Passionate and loyal. You love big and express affection dramatically. You need admiration and celebration in partnership — not from vanity but because that's how you feel secure.",
+                growth: "Learn to hear criticism without ego-wound. True strength includes acknowledging weaknesses and asking for help when needed. Generosity without strings attached.",
+                power: "When you fully own your star nature, you become the sun that others orbit — warming, illuminating, and inspiring everyone in your presence.",
+                somatic: "You carry energy in your heart and back — an expansive quality, warmth radiating outward, physical need to express and be witnessed.",
+                reflection: "Am I seeking validation for what I should be giving myself? Can I shine without an audience?"
+            },
+            "Virgo": {
+                title: "The Idol Analyst",
+                hook: "You enter situations already noticing what could be improved — scanning for inefficiencies, offering solutions, and quietly making everything work better.",
+                core_identity: "Your Rising Sign is Virgo, meaning the world experiences you as intelligent, helpful, and impressively competent. You earn respect through demonstrated skill.",
+                external: "Others see precision and thoughtfulness. You choose words carefully, present yourself with understated competence. There's a quiet intelligence about you that people find reassuring.",
+                behavior: "You analyze situations, identify problems, and develop practical solutions. You need to feel useful and competent. You measure your worth by how effectively you serve.",
+                strength: "Your ability to see how things can be better and actually make them so. You're genuinely helpful, competently skilled, and reliably excellent.",
+                shadow: "The glitch: perfectionism and harsh self-criticism. You notice every flaw — in yourself, others, and situations. Your critical eye can become destructive.",
+                integration: "Learn that needing emotional support isn't failure. Some things don't need to be fixed — they just need to be felt. Empathy before analysis.",
+                stress: "Under idol pressure, you become hyper-critical, anxious about details, and martyr-like in your service. You may do everything yourself while silently resenting others.",
+                misread: "People mistake your analytical nature for coldness, your modesty for lack of confidence. You feel deeply and you're quite capable — you simply don't advertise.",
+                relationships: "You show love through service and practical support. You need partners who appreciate your practical care and don't mistake your reserve for lack of feeling.",
+                growth: "Learn to accept 'good enough.' Learning to act despite imperfection serves you better than waiting for certainty that never comes.",
+                power: "When you fully own your analyst nature, you become invaluably helpful — the one who actually shows up with what's needed.",
+                somatic: "You carry energy in your gut and nervous system — tension, digestive sensitivity, a constant low-level hum of assessment and evaluation.",
+                reflection: "Where am I trying to fix what just needs to be felt? Can I be useful without being perfect?"
+            },
+            "Libra": {
+                title: "The Group Harmony Leader",
+                hook: "You enter situations seeking balance and harmony — naturally smoothing rough edges, finding common ground, and making everything more beautiful.",
+                core_identity: "Your Rising Sign is Libra, meaning the world experiences you as charming, fair-minded, and socially graceful. You create harmony without trying.",
+                external: "Others see elegance and social skill. You know how to make people comfortable and smooth social situations. There's something classically beautiful about your presence.",
+                behavior: "You prefer collaboration over solo ventures, harmonious environments over chaotic ones, and fair solutions over one-sided victories. Ugliness and discord drain you.",
+                strength: "Your ability to bring people together and find fair solutions. You create beauty, foster connection, and demonstrate that grace and diplomacy are forms of power.",
+                shadow: "The glitch: people-pleasing and loss of self. To maintain peace, you suppress your true feelings, avoid necessary confrontations, and agree when you actually disagree.",
+                integration: "Learn that healthy conflict can deepen relationships rather than destroy them. Develop a strong sense of self independent of partnership.",
+                stress: "Under idol pressure, you become indecisive, conflict-avoidant, and dependent on others for emotional direction. You may not know what you feel until someone else defines it.",
+                misread: "People mistake your diplomatic nature for lack of conviction, your conflict avoidance for weakness. You have strong values — you simply prefer persuasion over force.",
+                relationships: "You thrive in partnership but can lose yourself in it. You're romantic and skilled at compromise, but may change your desires to match your partner's.",
+                growth: "Learn who you are when you're alone. What do you want independent of what maintains harmony? These questions are crucial for your evolution.",
+                power: "When you fully own your diplomat nature, you become the bridge — bringing people together and creating genuine harmony without losing yourself.",
+                somatic: "You carry energy in your sense of balance — a literal feeling of equilibrium or disturbance, sensitivity to discord in your environment, lower back tension.",
+                reflection: "Where am I keeping the peace at the cost of my truth? What do I actually want?"
+            },
+            "Scorpio": {
+                title: "The Idol Investigator",
+                hook: "You enter situations reading the hidden frequencies — sensing secrets, unspoken power dynamics, and the shadow truths that everyone else pretends don't exist.",
+                core_identity: "Your Rising Sign is Scorpio, meaning the world experiences you as mysteriously powerful and intensely perceptive. Your presence demands notice through intensity, not volume.",
+                external: "Others sense your power immediately. Your eyes seem to see through facades into souls. You don't do small talk — you prefer real conversation or comfortable silence.",
+                behavior: "You don't do anything halfway. When you commit, you dive to the depths. You want to understand the hidden machinery, the psychological undercurrents, the shadow side.",
+                strength: "Your ability to see truth others avoid and to transform through facing darkness. You help people confront their shadows and emerge stronger.",
+                shadow: "The glitch: control, manipulation, and destructive intensity. When hurt, you may use your intimate knowledge of people's vulnerabilities against them.",
+                integration: "Learn to trust without controlling, to be vulnerable without guarantee of safety. True power lies in transformation and release, not maintaining resentment.",
+                stress: "Under idol pressure, you become controlling, jealous, or emotionally manipulative. You may test people's loyalty through creating drama.",
+                misread: "People fear your intensity or misinterpret your privacy as having something to hide. You simply don't share your depths casually.",
+                relationships: "Intensely loyal and passionate. You want soul-level intimacy — complete honesty, total trust, merged vulnerability. Once you trust, you're fiercely devoted.",
+                growth: "Learn to release resentment before it poisons you. Not everyone who hurts you intended to betray you. Transformation, not revenge.",
+                power: "When you fully own your investigator nature, you become the transformer — helping others face and transmute their deepest wounds.",
+                somatic: "You carry energy in your lower belly and reproductive organs — a churning intensity, power rising from deep within, sensitivity to hidden undercurrents.",
+                reflection: "Am I holding onto resentment that's poisoning me? Where can I transform instead of destroy?"
+            },
+            "Sagittarius": {
+                title: "The Idol Explorer",
+                hook: "You enter situations like an adventurer arriving from a distant land — curious, optimistic, and ready to discover what truths lie beyond the horizon.",
+                core_identity: "Your Rising Sign is Sagittarius, meaning the world experiences you as enthusiastic, honest, and freedom-loving. You radiate possibility.",
+                external: "Others see friendly, expansive energy. You smile easily, laugh readily, and seem genuinely interested in learning. There's something larger-than-life about you.",
+                behavior: "You want to understand the bigger picture, discover truth, and expand your horizons. You're not interested in details or limitations — you focus on possibilities.",
+                strength: "Your ability to see possibilities and inspire hope. You help people expand their perspectives and believe in better futures.",
+                shadow: "The glitch: avoiding depth through constant movement. When feelings get uncomfortable, you change the subject, make a joke, or leave.",
+                integration: "Learn that some feelings don't need meaning — they just need to be felt. Sit with discomfort sometimes instead of immediately reframing or escaping.",
+                stress: "Under idol pressure, you become scattered, preachy, or commitment-phobic. You may sabotage relationships when they start feeling too serious.",
+                misread: "People mistake your need for freedom as inability to commit, your optimism as naivety. You can commit when it doesn't feel like imprisonment.",
+                relationships: "You need freedom and intellectual connection. Emotional clinginess makes you want to run. You're honest to a fault, sometimes painfully so.",
+                growth: "Learn that true freedom exists within commitment. Depth doesn't require abandoning exploration. Stay present with current blessings.",
+                power: "When you fully own your explorer nature, you become the guide — helping others find meaning, hope, and perspective in their darkest moments.",
+                somatic: "You carry energy in your hips, thighs, and sense of movement — restlessness when stuck, expansion when processing, physical need for freedom.",
+                reflection: "Am I seeking meaning to avoid feeling? What would happen if I stayed with this experience without explaining it?"
+            },
+            "Capricorn": {
+                title: "The Choreography Master",
+                hook: "You enter situations like someone building an empire — assessing structures, evaluating resources, and planning how to create something that will last.",
+                core_identity: "Your Rising Sign is Capricorn, meaning the world experiences you as mature, responsible, and impressively capable. You command respect through demonstrated competence.",
+                external: "Others see professionalism and composure. You present yourself with dignity, even as a young person. There's something adult about you — as if you were born 40 years old.",
+                behavior: "You have plans, ambitions, and the discipline to execute them. You're willing to delay gratification and work harder than others. Success isn't optional — it's necessary.",
+                strength: "Your ability to build lasting achievement through disciplined effort. You create structures that endure — careers, institutions, legacies.",
+                shadow: "The glitch: emotional coldness and workaholism. You may build walls so high no one can reach you, judging yourself harshly for having any needs at all.",
+                integration: "Learn that vulnerability is strength, not weakness. Needing others is human, not failure. Rest and pleasure are necessary, not indulgent.",
+                stress: "Under idol pressure, you become more controlling, workaholic, and emotionally unavailable. You bury feelings in achievement until they erupt.",
+                misread: "People mistake your reserve for coldness, your ambition for heartlessness. You actually feel deeply — you simply show it through actions rather than words.",
+                relationships: "Loyal and committed but emotionally reserved. You show love through providing, protecting, and helping partners achieve their goals.",
+                growth: "Learn that receiving help isn't weakness. Permission to be vulnerable is permission to be human. Not everything needs to be earned.",
+                power: "When you fully own your architect nature, you become the pillar — someone others can depend on while also allowing yourself to be supported.",
+                somatic: "You carry energy in your bones, joints, and knees — heaviness, responsibility, physical manifestation of the weight you carry.",
+                reflection: "Where am I substituting achievement for connection? What would I feel if I stopped working long enough to notice?"
+            },
+            "Aquarius": {
+                title: "The Idol Revolutionary",
+                hook: "You enter situations as if you're visiting from the future — seeing patterns others miss, questioning what everyone else accepts, and envisioning better possibilities.",
+                core_identity: "Your Rising Sign is Aquarius, meaning the world experiences you as unique, intellectual, and refreshingly unconventional. You don't try to fit in — you simply are yourself.",
+                external: "Others notice you're different. Something distinctive about you sets you apart. You seem comfortable being yourself, which is both refreshing and sometimes perplexing.",
+                behavior: "You're interested in innovation, social change, and ideas that improve collective existence. Individual emotional drama bores you — you care about humanity as a whole.",
+                strength: "Your authentic individuality and visionary thinking. You help humanity evolve by refusing to accept limiting norms. You show that being different is necessary for progress.",
+                shadow: "The glitch: emotional unavailability and reactive rebellion. You use intellectualization to avoid genuine vulnerability, rejecting things simply because they're mainstream.",
+                integration: "Learn that intimacy doesn't mean losing yourself. Some traditional emotional expressions aren't conformity — they're genuine connection.",
+                stress: "Under idol pressure, you become detached, contrarian, or emotionally absent. You may retreat into abstract ideas while avoiding the human in front of you.",
+                misread: "People mistake your detachment for lack of caring, your unconventionality for attention-seeking. You care deeply about humanity — you're simply wired to see the bigger picture.",
+                relationships: "You need friendship and intellectual connection as much as romance. You're attracted to unique, independent people who respect your freedom.",
+                growth: "Learn that you can be free within connection. Some traditional expressions of care aren't conformity but genuine love. Let someone fully in.",
+                power: "When you fully own your revolutionary nature, you become the liberator — freeing others from conventions that limit authentic expression.",
+                somatic: "You carry energy in your nervous system and ankles — a buzzing, electrical quality, sudden insights, connection to collective frequencies.",
+                reflection: "Am I staying detached to stay safe? What would happen if I let someone fully in?"
+            },
+            "Pisces": {
+                title: "The Idol Mystic",
+                hook: "You enter situations feeling the emotional weather before you see the physical room — absorbing energies, sensing unspoken truths, navigating life more through intuition than logic.",
+                core_identity: "Your Rising Sign is Pisces, meaning the world experiences you as gentle, compassionate, and spiritually attuned. There's something otherworldly about your presence.",
+                external: "Others see softness and empathy. You seem to genuinely care about their wellbeing, picking up on emotional nuances they barely notice themselves.",
+                behavior: "You trust feelings over logic, respond to subtle energies, and navigate life through sensing rather than thinking. Harsh reality often feels too much.",
+                strength: "Your boundless compassion and spiritual depth. You help others access their own souls and feel legendary love. Your gentleness is courage, not weakness.",
+                shadow: "The glitch: victim consciousness, escapism, and boundary-lessness. You absorb everyone's emotions, give endlessly without protection, and escape when reality hurts.",
+                integration: "Learn that you can be compassionate with boundaries. Saving yourself from drowning in others' pain allows you to actually help. Discernment protects your gift.",
+                stress: "Under idol pressure, you become escapist — disappearing into fantasy, substances, sleep, or spiritual bypassing. Reality feels too harsh to bear.",
+                misread: "People take advantage of your giving nature or mistake your gentleness for weakness. You're stronger than you appear — spiritual strength is often invisible.",
+                relationships: "Romantic, compassionate, and self-sacrificing. You want fairy-tale love and soul-mate connection. You may be attracted to people who need saving.",
+                growth: "Learn that receiving is as spiritual as giving. Recognizing your own agency and responsibility empowers you. Not all suffering is loving.",
+                power: "When you fully own your mystic nature, you become the healer — accessing depths of compassion and spiritual insight that genuinely transform others.",
+                somatic: "You carry energy as boundaryless flow — dissolution of where you end and others begin, sensitivity to unseen energies, physical porousness, feet sensitivity.",
+                reflection: "Whose pain am I carrying that isn't mine? Where do I need boundaries to protect my gift?"
+            }
+        };
+
+        async function calculateRisingSign(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('preferredName').value;
+            const birthName = document.getElementById('birthName') ? document.getElementById('birthName').value : '';
+            const birthDate = document.getElementById('birthDate').value;
+            const birthTime = document.getElementById('birthTime').value;
+            const birthPlace = document.getElementById('birthPlace').value;
+
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Looking up location...';
+            submitBtn.disabled = true;
+
+            let coords;
+            try {
+                coords = await geocodeLocation(birthPlace);
+            } catch (error) {
+                console.error('Geocoding error:', error);
+                alert('Could not find location: "' + birthPlace + '"\n\nPlease enter a valid city and country (e.g., "Melbourne, Australia" or "New York, USA").');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                return;
+            }
+
+            try {
+                submitBtn.textContent = 'Calculating rising sign...';
+                
+                // Calculate Rising Sign position
+                const risingSign = calculateRisingPosition(birthDate, birthTime, coords);
+                
+                // Show result
+                showResult(name, risingSign, birthName);
+                
+            } catch (error) {
+                console.error('Rising sign calculation error:', error);
+                alert('Error calculating rising sign: ' + error.message);
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        }
+
+        async function geocodeLocation(location) {
+            const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(location)}&format=json&limit=1`;
+            
+            const response = await fetch(url, {
+                headers: { 'User-Agent': 'QuantumMerlinTools/1.0' }
+            });
+            
+            if (!response.ok) throw new Error('Failed to look up location');
+            
+            const data = await response.json();
+            if (data.length === 0) throw new Error('Location not found');
+            
+            return {
+                lat: parseFloat(data[0].lat),
+                lon: parseFloat(data[0].lon),
+                name: data[0].display_name
+            };
+        }
+
+        function calculateRisingPosition(dateStr, timeStr, coords) {
+            try {
+                // Parse date and time components
+                const [year, month, day] = dateStr.split('-').map(Number);
+                const [hours, minutes] = timeStr.split(':').map(Number);
+                
+                // Better timezone estimation using known timezone data for major regions
+                // This is an approximation - real timezone handling would require a full tz database
+                let tzOffsetHours = Math.round(coords.lon / 15);
+                
+                // Known timezone corrections for regions where simple longitude doesn't work
+                // UAE/Gulf is UTC+4, not UTC+3.6 from longitude
+                if (coords.lon >= 51 && coords.lon <= 60 && coords.lat >= 22 && coords.lat <= 27) {
+                    tzOffsetHours = 4; // UAE, Oman, parts of Gulf
+                }
+                // India is UTC+5.5
+                if (coords.lon >= 68 && coords.lon <= 97 && coords.lat >= 8 && coords.lat <= 37) {
+                    tzOffsetHours = 5.5;
+                }
+                // China uses UTC+8 throughout
+                if (coords.lon >= 73 && coords.lon <= 135 && coords.lat >= 18 && coords.lat <= 54) {
+                    if (coords.name && coords.name.toLowerCase().includes('china')) {
+                        tzOffsetHours = 8;
+                    }
+                }
+                // Australia
+                if (coords.lon >= 113 && coords.lon <= 129 && coords.lat >= -45 && coords.lat <= -10) tzOffsetHours = 8; // WA
+                if (coords.lon >= 129 && coords.lon <= 141 && coords.lat >= -45 && coords.lat <= -10) tzOffsetHours = 9.5; // Central
+                if (coords.lon >= 141 && coords.lon <= 154 && coords.lat >= -45 && coords.lat <= -10) tzOffsetHours = 10; // Eastern
+                
+                // Convert local time to UTC
+                const totalLocalMinutes = hours * 60 + minutes;
+                const tzOffsetMinutes = tzOffsetHours * 60;
+                let totalUtcMinutes = totalLocalMinutes - tzOffsetMinutes;
+                
+                // Handle day rollover
+                let adjustedDay = day;
+                let adjustedMonth = month;
+                let adjustedYear = year;
+                
+                if (totalUtcMinutes < 0) {
+                    totalUtcMinutes += 1440; // Add 24 hours in minutes
+                    adjustedDay -= 1;
+                    if (adjustedDay < 1) {
+                        adjustedMonth -= 1;
+                        if (adjustedMonth < 1) {
+                            adjustedMonth = 12;
+                            adjustedYear -= 1;
+                        }
+                        // Get days in previous month
+                        const daysInMonth = new Date(adjustedYear, adjustedMonth, 0).getDate();
+                        adjustedDay = daysInMonth;
+                    }
+                } else if (totalUtcMinutes >= 1440) {
+                    totalUtcMinutes -= 1440;
+                    adjustedDay += 1;
+                    const daysInMonth = new Date(adjustedYear, adjustedMonth, 0).getDate();
+                    if (adjustedDay > daysInMonth) {
+                        adjustedDay = 1;
+                        adjustedMonth += 1;
+                        if (adjustedMonth > 12) {
+                            adjustedMonth = 1;
+                            adjustedYear += 1;
+                        }
+                    }
+                }
+                
+                const utcHours = Math.floor(totalUtcMinutes / 60);
+                const utcMins = totalUtcMinutes % 60;
+                
+                // Create Date in UTC
+                const datetime = new Date(Date.UTC(adjustedYear, adjustedMonth - 1, adjustedDay, utcHours, utcMins, 0));
+                
+                // Calculate Julian Date
+                const jd = 2440587.5 + (datetime.getTime() / 86400000);
+                
+                // Calculate centuries from J2000.0 (January 1, 2000 at 12:00 TT)
+                const T = (jd - 2451545.0) / 36525.0;
+                
+                // Calculate Greenwich Mean Sidereal Time (GMST) using IAU formula
+                // Result in degrees
+                let gmst = 280.46061837 + 
+                           360.98564736629 * (jd - 2451545.0) +
+                           0.000387933 * T * T -
+                           T * T * T / 38710000.0;
+                
+                // Normalize to 0-360
+                gmst = ((gmst % 360) + 360) % 360;
+                
+                // Calculate Local Sidereal Time (LST) in degrees
+                let lst = gmst + coords.lon;
+                lst = ((lst % 360) + 360) % 360;
+                
+                // Get obliquity of the ecliptic (more precise formula)
+                const obliquity = 23.439291 - 0.0130042 * T;
+                
+                // Calculate Ascendant using the corrected formula
+                // The ascendant is the point where the ecliptic crosses the eastern horizon
+                const lstRad = lst * Math.PI / 180;
+                const latRad = coords.lat * Math.PI / 180;
+                const oblRad = obliquity * Math.PI / 180;
+                
+                // Avoid issues near polar latitudes
+                if (Math.abs(coords.lat) > 66) {
+                    throw new Error('Rising sign calculations are unreliable near polar regions');
+                }
+                
+                // Correct ascendant formula:
+                // tan(ASC) = cos(LST) / (-sin(LST) * cos(ε) - tan(φ) * sin(ε))
+                // Using atan2 for proper quadrant handling:
+                const sinLst = Math.sin(lstRad);
+                const cosLst = Math.cos(lstRad);
+                const sinObl = Math.sin(oblRad);
+                const cosObl = Math.cos(oblRad);
+                const tanLat = Math.tan(latRad);
+                
+                const y = cosLst;
+                const x = -(sinLst * cosObl + tanLat * sinObl);
+                
+                let ascDegrees = Math.atan2(y, x) * 180 / Math.PI;
+                
+                // Normalize to 0-360
+                ascDegrees = ((ascDegrees % 360) + 360) % 360;
+                
+                // Determine zodiac sign from ascendant degree
+                const signIndex = Math.floor(ascDegrees / 30);
+                
+                const signs = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 
+                              'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
+                
+                console.log(`Birth: ${dateStr} ${timeStr} at ${coords.name}`);
+                console.log(`Coordinates: ${coords.lat.toFixed(4)}, ${coords.lon.toFixed(4)}`);
+                console.log(`Estimated TZ offset: UTC+${tzOffsetHours}`);
+                console.log(`UTC time: ${datetime.toISOString()}`);
+                console.log(`Julian Date: ${jd.toFixed(6)}`);
+                console.log(`GMST: ${gmst.toFixed(4)}°`);
+                console.log(`LST: ${lst.toFixed(4)}°`);
+                console.log(`Obliquity: ${obliquity.toFixed(4)}°`);
+                console.log(`Ascendant degree: ${ascDegrees.toFixed(2)}°`);
+                console.log(`Rising sign: ${signs[signIndex]}`);
+                
+                return signs[signIndex];
+            } catch (error) {
+                console.error('Rising position calculation error:', error);
+                throw new Error('Failed to calculate Rising Sign: ' + error.message);
+            }
+        }
+
+        function showResult(name, risingSign, birthName) {
+            const data = interpretations[risingSign];
+            
+            const resultHTML = `
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <span style="font-size: 2.5em; display: block; margin-bottom: 10px;">⬆️</span>
+                    <h3 style="color: #FF6B9D; font-size: 1.5em; margin-bottom: 10px;">${data.title}</h3>
+                    <p style="font-size: 1.2em; color: #22D3EE;">Rising Sign: ${risingSign}</p>
+                </div>
+                
+                <!-- HOOK -->
+                <div style="font-size: 1.15em; color: #22D3EE; margin-bottom: 25px; font-style: italic; text-align: center; line-height: 1.6;">
+                    ${data.hook}
+                </div>
+                
+                <!-- CORE READING -->
+                <div style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(0, 0, 0, 0.3)); padding: 25px; border-radius: 15px; margin-bottom: 20px; border: 1px solid rgba(255, 107, 157, 0.3);">
+                    <h4 style="color: #FF6B9D; font-size: 1.2em; margin-bottom: 15px;">⬆️ Your Outer Dimension Signal</h4>
+                    <p style="line-height: 1.8;">${data.core_identity.replace(/{preferredName}/g, name)}</p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <p><strong style="color: #22D3EE;">👁️ How Others See You:</strong> ${data.external}</p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <p><strong style="color: #22D3EE;">⭐ Your Default Approach:</strong> ${data.behavior}</p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <p><strong style="color: #22D3EE;">💎 Your Ascendant Strength:</strong> ${data.strength}</p>
+                </div>
+                
+                <!-- PREMIUM EXPANSION -->
+                <div style="background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(124, 58, 237, 0.15)); padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(255, 107, 157, 0.2);">
+                    <h4 style="color: #FF6B9D; font-size: 1.1em; margin-bottom: 20px;">💫 Premium Ascendant Analysis</h4>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #22D3EE;">🌑 The Shadow Glitch:</strong> ${data.shadow}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #22D3EE;">🔑 Integration Key:</strong> ${data.integration}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #22D3EE;">⚠️ Under Idol Pressure:</strong> ${data.stress}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #22D3EE;">🎭 How You're Misread:</strong> ${data.misread}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #22D3EE;">💕 Relationship Expression:</strong> ${data.relationships}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #22D3EE;">🌱 Growth Edge:</strong> ${data.growth}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #22D3EE;">⭐ Full Power Activation:</strong> ${data.power}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 0;">
+                        <p><strong style="color: #22D3EE;">🫀 Somatic Signature:</strong> ${data.somatic}</p>
+                    </div>
+                </div>
+                
+                <!-- REFLECTION -->
+                <div style="background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(168, 85, 247, 0.1)); padding: 20px; border-radius: 12px; border-left: 4px solid #FF6B9D; margin-top: 25px;">
+                    <p style="font-style: italic; color: #22D3EE; font-size: 1.1em;"><strong>🪞 Idol Reflection:</strong> ${data.reflection}</p>
+                </div>
+                
+                <!-- NEXT SUGGESTION -->
+                <div style="margin-top: 25px; padding: 20px; background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(0, 0, 0, 0.3)); border-radius: 12px; border: 1px solid rgba(255, 107, 157, 0.3);">
+                    <p style="color: #C4B998; font-size: 0.95em;">
+                        <span style="color: #22D3EE;">📡 Signal Enhancement:</span> Your Rising Sign is your outer mask, but it gains depth when viewed alongside your Sun Sign (core identity) and Moon Sign (emotional nature).
+                    </p>
+                </div>
+            `;
+
+            // Store reading for the multi-page results flow
+            const readingData = {
+                toolType: 'rising',
+                headerTitle: 'Your Rising Sign Reading',
+                headerSubtitle: 'Your outer personality revealed',
+                number: risingSign,
+                title: `Rising Sign: ${risingSign}`,
+                subtitle: `${name}, this is how the world sees you`,
+                content: resultHTML,
+                sourceUrl: 'rising-sign-reading.html'
+            };
+            // Try sessionStorage first, fallback to URL params for private browsing
+            QMStorage.navigateWithReading(readingData, 'reading-loading.html');
+        }
+
+        </script>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="feedback-section">
+            <p class="feedback-text">🛠️ Found an issue or have a suggestion?</p>
+            <a href="mailto:fixit@quantummerlin.com?subject=Quantum%20Merlin%20Feedback" class="footer-feedback-btn">📧 fixit@quantummerlin.com</a>
+        </div>
+        <div class="legal-links">
+            <a href="terms.html">Terms of Service</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 K-Pop Cosmos. Made with 💜 for stans everywhere ✨.</p>
+        <div class="coffee-section">
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="coffee-btn" id="coffeeBtn">☕ Buy Us a Coffee</a>
+        </div>
+    </footer>
+    <style>
+        .legal-footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+            background: rgba(20, 10, 30, 0.8);
+        }
+        .feedback-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+        }
+        .feedback-text {
+            color: #9A8F7A;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .footer-feedback-btn {
+            display: inline-block;
+            color: #FF6B9D;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 107, 157, 0.4);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .footer-feedback-btn:hover {
+            background: rgba(255, 107, 157, 0.15);
+            border-color: #FF6B9D;
+            transform: translateY(-2px);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .legal-links a {
+            color: #9A8F7A;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .legal-links a:hover {
+            color: #22D3EE;
+        }
+        .legal-links .separator {
+            color: rgba(168, 85, 247, 0.4);
+        }
+        .copyright {
+            color: #A78BFA;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .coffee-section {
+            padding-top: 15px;
+            border-top: 1px solid rgba(168, 85, 247, 0.15);
+        }
+        .coffee-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #22D3EE 0%, #f59e0b 100%);
+            color: #0a0a0f;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+        }
+        .coffee-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(251, 191, 36, 0.5);
+        }
+    </style>
+
+
+    <script src="storage-fix.js?v=20260123"></script></body>
+</html>

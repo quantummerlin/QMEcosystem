@@ -1,0 +1,49 @@
+{
+  "name": "K-Pop Cosmos ✨ Your Ultimate Bias Reading",
+  "short_name": "K-Pop Cosmos",
+  "description": "Discover your idol destiny! ✨ K-Pop themed numerology & astrology readings for stans 💜 Find your stan purpose and K-Pop journey!",
+  "start_url": "/kpop/tools_index.html",
+  "scope": "/kpop/",
+  "id": "kpop-cosmos-pwa",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#0D0015",
+  "theme_color": "#FF6B9D",
+  "orientation": "portrait-primary",
+  "dir": "ltr",
+  "lang": "en",
+  "categories": ["lifestyle", "entertainment", "utilities"],
+  "icons": [
+    {
+      "src": "kpop.jpg",
+      "sizes": "any",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Life Path Calculator",
+      "short_name": "Life Path",
+      "description": "Discover your K-Pop destiny number ✨",
+      "url": "/kpop/life-path-calculator.html",
+      "icons": [{"src": "kpop.jpg", "sizes": "any"}]
+    },
+    {
+      "name": "Daily Fortune",
+      "short_name": "Fortune",
+      "description": "Get your daily stan guidance 💜",
+      "url": "/kpop/daily-fortune.html",
+      "icons": [{"src": "kpop.jpg", "sizes": "any"}]
+    },
+    {
+      "name": "Love Compatibility",
+      "short_name": "Love",
+      "description": "Check your bias compatibility 💕",
+      "url": "/kpop/love-compatibility-reading.html",
+      "icons": [{"src": "kpop.jpg", "sizes": "any"}]
+    }
+  ],
+  "prefer_related_applications": false,
+  "handle_links": "preferred"
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        // Version: 20260123070550 - Auto-generated cache buster
+        // Version: 20260122170552 - Auto-generated cache buster
+        // Version: 20260122165534 - Auto-generated cache buster
+        // Version: 20260122150214 - Auto-generated cache buster
+        // Version: 20260122145556 - Auto-generated cache buster
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    <!-- End Google Analytics -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF6B9D">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="K-Pop Cosmos">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="K-Pop Cosmos">
+    <meta name="msapplication-TileColor" content="#FF6B9D">
+    <meta name="msapplication-navbutton-color" content="#FF6B9D">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="kpop.jpg">
+    <link rel="manifest" href="manifest.json">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Debug Life Path</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #1a0a0f; color: #fff; }
+        .debug { background: #333; padding: 15px; margin: 10px 0; border-radius: 8px; word-wrap: break-word; }
+        .error { background: #660000; }
+        .success { background: #006600; }
+        input, button { padding: 15px; margin: 10px 0; width: 100%; box-sizing: border-box; font-size: 16px; }
+        button { background: #6366f1; color: white; border: none; border-radius: 8px; cursor: pointer; }
+        h2 { color: #a5b4fc; }
+    </style>
+<!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/kpop/debug-life-path.html">
+    <meta property="og:title" content="K-Pop Cosmos | Your Ultimate Bias Reading ✨">
+    <meta property="og:description" content="Discover your strange debut destiny with numerology, astrology, and magical calculators">
+    <meta property="og:image" content="https://quantummerlin.com/kpop/kpop.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://quantummerlin.com/kpop/debug-life-path.html">
+    <meta name="twitter:title" content="K-Pop Cosmos | Your Ultimate Bias Reading ✨">
+    <meta name="twitter:description" content="Discover your strange debut destiny with numerology, astrology, and magical calculators">
+    <meta name="twitter:image" content="https://quantummerlin.com/kpop/kpop.jpg">
+</head>
+<body>
+    <h1>Debug Life Path Calculator</h1>
+    
+    <div id="debugLog"></div>
+    
+    <h2>Test Form</h2>
+    <form id="testForm">
+        <input type="text" id="preferredName" placeholder="Your Name 💜" value="Test User">
+        <input type="date" id="birthDate" value="1990-05-15">
+        <button type="submit">Test Submit</button>
+    </form>
+    
+    <h2>Manual Tests</h2>
+    <button onclick="testSessionStorage()">Test SessionStorage</button>
+    <button onclick="testLocalStorage()">Test LocalStorage</button>
+    <button onclick="testRedirect()">Test Redirect</button>
+    
+    <script>
+        // Version: 20260122073736 - Auto-generated cache buster
+        // Version: 20260121223506 - Auto-generated cache buster
+        // Version: 20260121211614 - Auto-generated cache buster
+        // Version: 20260121204740 - Auto-generated cache buster
+        // Version: 20260121204029 - Auto-generated cache buster
+        // Version: 20260121203732 - Auto-generated cache buster
+        // Version: 20260121182750 - Auto-generated cache buster
+        // Version: 20260121180653 - Auto-generated cache buster
+        // Version: 20260121175156 - Auto-generated cache buster
+        // Version: 20260121170617 - Auto-generated cache buster
+        // Version: 20260121164415 - Auto-generated cache buster
+        // Version: 20260121163503 - Auto-generated cache buster
+        // Version: 20260121162926 - Auto-generated cache buster
+        function log(msg, type = '') {
+            const div = document.createElement('div');
+            div.className = 'debug ' + type;
+            div.textContent = new Date().toLocaleTimeString() + ': ' + msg;
+            document.getElementById('debugLog').prepend(div);
+        }
+        
+        // Catch all errors
+        window.onerror = function(msg, url, line, col, error) {
+            log('ERROR: ' + msg + ' at line ' + line, 'error');
+            return false;
+        };
+        
+        log('Page loaded');
+        log('User Agent: ' + navigator.userAgent);
+        
+        // Test sessionStorage
+        function testSessionStorage() {
+            try {
+                sessionStorage.setItem('test', 'works');
+                const val = sessionStorage.getItem('test');
+                sessionStorage.removeItem('test');
+                log('SessionStorage: ' + (val === 'works' ? 'WORKS' : 'FAILED'), val === 'works' ? 'success' : 'error');
+            } catch (e) {
+                log('SessionStorage BLOCKED: ' + e.message, 'error');
+            }
+        }
+        
+        // Test localStorage
+        function testLocalStorage() {
+            try {
+                localStorage.setItem('test', 'works');
+                const val = localStorage.getItem('test');
+                localStorage.removeItem('test');
+                log('LocalStorage: ' + (val === 'works' ? 'WORKS' : 'FAILED'), val === 'works' ? 'success' : 'error');
+            } catch (e) {
+                log('LocalStorage BLOCKED: ' + e.message, 'error');
+            }
+        }
+        
+        // Test redirect
+        function testRedirect() {
+            log('Redirecting in 2 seconds...');
+            setTimeout(() => {
+                window.location.href = 'debug-life-path.html?redirected=yes';
+            }, 2000);
+        }
+        
+        // Check if redirected
+        if (window.location.search.includes('redirected=yes')) {
+            log('Redirect successful!', 'success');
+        }
+        
+        // Form submission
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            log('Form submitted!', 'success');
+            
+            const name = document.getElementById('preferredName').value;
+            const date = document.getElementById('birthDate').value;
+            log('Name: ' + name + ', Date: ' + date);
+            
+            // Calculate life path
+            try {
+                const [year, month, day] = date.split('-').map(Number);
+                log('Parsed: Year=' + year + ', Month=' + month + ', Day=' + day);
+                
+                function reduceToSingle(num) {
+                    while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
+                        num = num.toString().split('').reduce((a, b) => a + parseInt(b), 0);
+                    }
+                    return num;
+                }
+                
+                const lifePathNumber = reduceToSingle(
+                    reduceToSingle(day) + reduceToSingle(month) + reduceToSingle(year)
+                );
+                log('Debut Idol Destiny Number: ' + lifePathNumber, 'success');
+                
+                // Try to store and redirect
+                const readingData = {
+                    toolType: 'life-path',
+                    headerTitle: 'Your Debut Destiny Reading',
+                    number: lifePathNumber,
+                    title: 'Life Path ' + lifePathNumber,
+                    subtitle: name + ', here is your reading',
+                    content: '<p>Your debut idol destiny number is ' + lifePathNumber + '</p>',
+                    sourceUrl: 'life-path-calculator.html'
+                };
+                
+                try {
+                    sessionStorage.setItem('quantumMerlinReading', JSON.stringify(readingData));
+                    log('Data saved to sessionStorage', 'success');
+                    log('Redirecting to reading-loading.html in 2 seconds...');
+                    setTimeout(() => {
+                        window.location.href = 'reading-loading.html';
+                    }, 2000);
+                } catch (e) {
+                    log('SessionStorage failed, using URL params', 'error');
+                    const encodedData = encodeURIComponent(JSON.stringify(readingData));
+                    log('Data length: ' + encodedData.length + ' chars');
+                    setTimeout(() => {
+                        window.location.href = 'reading-loading.html?data=' + encodedData;
+                    }, 2000);
+                }
+                
+            } catch (e) {
+                log('Calculation error: ' + e.message, 'error');
+            }
+        });
+        
+        // Auto-run tests
+        testSessionStorage();
+        testLocalStorage();
+    </script>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="feedback-section">
+            <p class="feedback-text">🛠️ Found an issue or have a suggestion?</p>
+            <a href="mailto:fixit@quantummerlin.com?subject=Quantum%20Merlin%20Feedback" class="footer-feedback-btn">📧 fixit@quantummerlin.com</a>
+        </div>
+        <div class="legal-links">
+            <a href="terms.html">Terms of Service</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 K-Pop Cosmos. Made with 💜 for stans everywhere ✨.</p>
+        <div class="coffee-section">
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="coffee-btn" id="coffeeBtn">☕ Buy Us a Coffee</a>
+        </div>
+    </footer>
+    <style>
+        .legal-footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+            background: rgba(20, 10, 30, 0.8);
+        }
+        .feedback-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+        }
+        .feedback-text {
+            color: #9A8F7A;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .footer-feedback-btn {
+            display: inline-block;
+            color: #FF6B9D;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 107, 157, 0.4);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .footer-feedback-btn:hover {
+            background: rgba(255, 107, 157, 0.15);
+            border-color: #FF6B9D;
+            transform: translateY(-2px);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .legal-links a {
+            color: #9A8F7A;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .legal-links a:hover {
+            color: #22D3EE;
+        }
+        .legal-links .separator {
+            color: rgba(168, 85, 247, 0.4);
+        }
+        .copyright {
+            color: #A78BFA;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .coffee-section {
+            padding-top: 15px;
+            border-top: 1px solid rgba(168, 85, 247, 0.15);
+        }
+        .coffee-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #22D3EE 0%, #f59e0b 100%);
+            color: #0a0a0f;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+        }
+        .coffee-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(251, 191, 36, 0.5);
+        }
+    </style>
+
+</body>
+</html>
