@@ -1,5 +1,5 @@
 // Service Worker for 40Hz Gamma Wave Generator
-const CACHE_NAME = '40hz-gamma-v1.0.1';
+const CACHE_NAME = '40hz-gamma-v1.0.2';
 const urlsToCache = [
   '/40hz/',
   '/40hz/index.html',
