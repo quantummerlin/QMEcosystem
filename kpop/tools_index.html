@@ -718,6 +718,295 @@
         .categories-container.hidden {
             display: none;
         }
+        
+        /* ===== ✨ SLAY VISUAL EFFECTS ✨ ===== */
+        
+        /* Sparkle Cursor Trail */
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 99999;
+            animation: sparkle-fade 0.8s ease-out forwards;
+            font-size: 1rem;
+        }
+        
+        @keyframes sparkle-fade {
+            0% { opacity: 1; transform: scale(1) translateY(0); }
+            100% { opacity: 0; transform: scale(0.3) translateY(-30px); }
+        }
+        
+        /* Floating Particles Background */
+        .particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            animation: float-up 8s ease-in-out infinite;
+            opacity: 0.6;
+            font-size: 1.2rem;
+        }
+        
+        @keyframes float-up {
+            0%, 100% { 
+                transform: translateY(100vh) rotate(0deg); 
+                opacity: 0;
+            }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { 
+                transform: translateY(-20vh) rotate(360deg); 
+                opacity: 0;
+            }
+        }
+        
+        /* Holographic Shimmer Effect on Cards */
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 107, 157, 0.1),
+                rgba(168, 85, 247, 0.15),
+                rgba(34, 211, 238, 0.1),
+                transparent
+            );
+            transition: left 0.6s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .tool-card:hover::before {
+            left: 100%;
+        }
+        
+        /* Rainbow Shimmer Text */
+        .rainbow-shimmer {
+            background: linear-gradient(
+                90deg,
+                #FF6B9D 0%,
+                #A855F7 20%,
+                #22D3EE 40%,
+                #FF6B9D 60%,
+                #A855F7 80%,
+                #22D3EE 100%
+            );
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow-flow 3s linear infinite;
+        }
+        
+        @keyframes rainbow-flow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+        
+        /* Pulsing Heart Buttons */
+        .heart-pulse {
+            animation: heart-beat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heart-beat {
+            0%, 100% { transform: scale(1); }
+            15% { transform: scale(1.1); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.08); }
+        }
+        
+        /* Glow Border Animation */
+        .glow-border {
+            position: relative;
+        }
+        
+        .glow-border::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #FF6B9D, #A855F7, #22D3EE, #FF6B9D);
+            background-size: 400% 400%;
+            border-radius: inherit;
+            z-index: -1;
+            animation: glow-rotate 3s linear infinite;
+            filter: blur(8px);
+            opacity: 0.6;
+        }
+        
+        @keyframes glow-rotate {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Confetti Celebration */
+        .confetti {
+            position: fixed;
+            pointer-events: none;
+            z-index: 99998;
+            animation: confetti-fall 3s ease-out forwards;
+        }
+        
+        @keyframes confetti-fall {
+            0% { 
+                opacity: 1; 
+                transform: translateY(-20px) rotate(0deg); 
+            }
+            100% { 
+                opacity: 0; 
+                transform: translateY(100vh) rotate(720deg); 
+            }
+        }
+        
+        /* Enhanced Header with Sparkle */
+        .header h1 {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .header h1::before,
+        .header h1::after {
+            content: '✨';
+            position: absolute;
+            animation: sparkle-float 2s ease-in-out infinite;
+        }
+        
+        .header h1::before {
+            left: -35px;
+            top: 0;
+        }
+        
+        .header h1::after {
+            right: -35px;
+            top: 0;
+            animation-delay: 0.5s;
+        }
+        
+        @keyframes sparkle-float {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+            50% { transform: translateY(-8px) scale(1.2); opacity: 0.8; }
+        }
+        
+        /* Tagline Glow */
+        .header .tagline {
+            text-shadow: 0 0 20px rgba(255, 107, 157, 0.5),
+                         0 0 40px rgba(168, 85, 247, 0.3);
+        }
+        
+        /* Logo Sparkle Ring */
+        .wizard-logo {
+            position: relative;
+        }
+        
+        @keyframes logo-sparkle-ring {
+            0%, 100% { 
+                box-shadow: 
+                    0 0 20px rgba(255, 107, 157, 0.7),
+                    0 0 40px rgba(168, 85, 247, 0.5),
+                    0 0 60px rgba(34, 211, 238, 0.3);
+            }
+            33% { 
+                box-shadow: 
+                    0 0 25px rgba(168, 85, 247, 0.7),
+                    0 0 50px rgba(34, 211, 238, 0.5),
+                    0 0 70px rgba(255, 107, 157, 0.3);
+            }
+            66% { 
+                box-shadow: 
+                    0 0 20px rgba(34, 211, 238, 0.7),
+                    0 0 40px rgba(255, 107, 157, 0.5),
+                    0 0 60px rgba(168, 85, 247, 0.3);
+            }
+        }
+        
+        /* Search Bar Glow Focus */
+        .search-bar:focus-within {
+            box-shadow: 
+                0 0 20px rgba(255, 107, 157, 0.5),
+                0 0 40px rgba(168, 85, 247, 0.3),
+                inset 0 0 15px rgba(255, 107, 157, 0.1);
+            border-color: #FF6B9D;
+        }
+        
+        /* Category Header Hover Hearts */
+        .category-header:hover h2::after {
+            content: ' 💜';
+            animation: pop-in 0.3s ease-out;
+        }
+        
+        @keyframes pop-in {
+            0% { opacity: 0; transform: scale(0); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        /* Tool Card Hover Lift */
+        .tool-card {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+        
+        /* Tool Icon Bounce on Hover */
+        .tool-card:hover .tool-icon {
+            animation: icon-bounce 0.5s ease;
+        }
+        
+        @keyframes icon-bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3) rotate(10deg); }
+        }
+        
+        /* Journey Bar Shimmer */
+        .journey-bar {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .journey-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer-bar 2s infinite;
+        }
+        
+        @keyframes shimmer-bar {
+            0% { left: -100%; }
+            100% { left: 200%; }
+        }
+        
+        /* Cute Loading Dots */
+        .loading-dots::after {
+            content: '';
+            animation: dots 1.5s infinite;
+        }
+        
+        @keyframes dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
+        }
     </style>
 <script src="tool-tracker.js?v=20260123070550"></script>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
@@ -777,7 +1066,7 @@
     <div class="container">
         <div class="header">
             <img src="kpop.jpg?v=20260124" alt="K-Pop Cosmos" class="wizard-logo">
-            <h1>K-Pop Cosmos</h1>
+            <h1 class="rainbow-shimmer">K-Pop Cosmos</h1>
             <p class="tagline">✨ Your Ultimate Bias Reading 💜</p>
             <p class="subtitle">Discover your idol destiny, stan compatibility, and K-Pop journey through the stars! 🌟</p>
         </div>
@@ -1325,48 +1614,48 @@ ${formData.message}
     <div class="modal-overlay" id="welcomeModal">
         <div class="welcome-modal-content">
             <button class="modal-close" onclick="closeWelcomeModal()">&times;</button>
-            <div class="welcome-icon">🔥⭐🔥</div>
-            <h2 class="welcome-title">Welcome to the K-Pop universe</h2>
-            <p class="welcome-subtitle">K-Pop Cosmos Await</p>
+            <div class="welcome-icon">�✨💜</div>
+            <h2 class="welcome-title">OMG Hiii Bestie! 👋</h2>
+            <p class="welcome-subtitle">Welcome to K-Pop Cosmos ✨</p>
             
             <div class="welcome-features">
                 <div class="welcome-feature">
-                    <span class="feature-icon">🚫</span>
-                    <span class="feature-text"><strong>No Sign-Up</strong> – Just dive in</span>
+                    <span class="feature-icon">🙅‍♀️</span>
+                    <span class="feature-text"><strong>No Sign-Up</strong> – Just vibe</span>
                 </div>
                 <div class="welcome-feature">
-                    <span class="feature-icon">🔥</span>
-                    <span class="feature-text"><strong>100% Free</strong> – No subscriptions</span>
+                    <span class="feature-icon">🆓</span>
+                    <span class="feature-text"><strong>100% Free</strong> – For real, no cap</span>
                 </div>
                 <div class="welcome-feature">
                     <span class="feature-icon">🔒</span>
-                    <span class="feature-text"><strong>No Data Collection</strong> – Stays on your device</span>
+                    <span class="feature-text"><strong>Private</strong> – Your data stays on YOUR device</span>
                 </div>
                 <div class="welcome-feature">
-                    <span class="feature-icon">⭐</span>
-                    <span class="feature-text"><strong>Enter Once, Explore All</strong> – Details auto-fill</span>
+                    <span class="feature-icon">💅</span>
+                    <span class="feature-text"><strong>Enter Once</strong> – Details auto-fill everywhere</span>
                 </div>
                 <div class="welcome-feature">
                     <span class="feature-icon">📱</span>
-                    <span class="feature-text"><strong>Save to Home Screen</strong> – Best experience!</span>
+                    <span class="feature-text"><strong>Add to Home</strong> – It's giving app!</span>
                 </div>
             </div>
             
-            <p class="welcome-tip">💡 <strong>Pro Tip:</strong> Add K-Pop Cosmos to your home screen for the best app-like experience. On iOS tap Share → Add to Home Screen. On Android tap Menu → Install App.</p>
+            <p class="welcome-tip">💡 <strong>Pro Tip:</strong> Add to your home screen for the best experience! iOS: Share → Add to Home. Android: Menu → Install</p>
             
-            <p class="welcome-message">As this is an ever-evolving portal to the K-Pop universe, occasional glitches may slip through. Found a strange anomaly or have a suggestion? We'd love to hear from you!</p>
+            <p class="welcome-message">Found a glitch or have suggestions? We'd love to hear from you bestie!</p>
             
-            <a href="mailto:fixit@quantummerlin.com?subject=Stranger%20Patterns%20Feedback" class="feedback-link" onclick="event.stopPropagation()">📧 fixit@quantummerlin.com</a>
+            <a href="mailto:fixit@quantummerlin.com?subject=K-Pop%20Cosmos%20Feedback" class="feedback-link" onclick="event.stopPropagation()">📧 fixit@quantummerlin.com</a>
             
-            <button class="welcome-btn" onclick="closeWelcomeModal()">Enter the K-Pop universe ⭐</button>
+            <button class="welcome-btn heart-pulse" onclick="closeWelcomeModal()">Let's Go! 💜✨</button>
         </div>
     </div>
     
     <style>
         .welcome-modal-content {
-            background: linear-gradient(180deg, #0D0015 0%, #1a0a0a 100%);
+            background: linear-gradient(180deg, #0D0015 0%, #1a0a20 100%);
             border: 2px solid rgba(255, 107, 157, 0.6);
-            border-radius: 20px;
+            border-radius: 25px;
             padding: 25px 20px;
             max-width: 420px;
             width: calc(100% - 30px);
@@ -1376,18 +1665,20 @@ ${formData.message}
             position: relative;
             box-shadow: 
                 0 0 40px rgba(255, 107, 157, 0.4),
-                0 0 80px rgba(220, 38, 38, 0.3);
+                0 0 80px rgba(168, 85, 247, 0.3);
         }
         
         .welcome-icon {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
+            animation: heart-beat 1.5s ease-in-out infinite;
         }
         
         .welcome-title {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 1.5rem;
-            background: linear-gradient(135deg, #FF6B9D 0%, #DC2626 50%, #22D3EE 100%);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FF6B9D 0%, #A855F7 50%, #22D3EE 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -1395,11 +1686,11 @@ ${formData.message}
         }
         
         .welcome-subtitle {
-            font-family: 'Cinzel', serif;
+            font-family: 'Poppins', sans-serif;
             color: #22D3EE;
             font-size: 0.95rem;
             margin-bottom: 15px;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
         
         .welcome-features {
@@ -1611,6 +1902,114 @@ ${formData.message}
             box-shadow: 0 6px 25px rgba(251, 191, 36, 0.5);
         }
     </style>
+
+    <!-- ✨ SLAY VISUAL EFFECTS SCRIPTS ✨ -->
+    
+    <!-- Floating Particles Container -->
+    <div class="particles-container" id="particlesContainer"></div>
+    
+    <script>
+        // ===== SPARKLE CURSOR TRAIL ✨ =====
+        const sparkleEmojis = ['✨', '💜', '⭐', '💖', '🌟', '💫', '✦', '♡'];
+        let lastSparkleTime = 0;
+        const sparkleDelay = 50; // milliseconds between sparkles
+        
+        document.addEventListener('mousemove', function(e) {
+            const now = Date.now();
+            if (now - lastSparkleTime < sparkleDelay) return;
+            lastSparkleTime = now;
+            
+            createSparkle(e.clientX, e.clientY);
+        });
+        
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.textContent = sparkleEmojis[Math.floor(Math.random() * sparkleEmojis.length)];
+            sparkle.style.left = (x + (Math.random() - 0.5) * 20) + 'px';
+            sparkle.style.top = (y + (Math.random() - 0.5) * 20) + 'px';
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 800);
+        }
+        
+        // ===== FLOATING PARTICLES BACKGROUND 💜 =====
+        const particleEmojis = ['💜', '⭐', '✨', '💖', '🌟', '💫', '♡', '✦'];
+        const particlesContainer = document.getElementById('particlesContainer');
+        
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.textContent = particleEmojis[Math.floor(Math.random() * particleEmojis.length)];
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = (6 + Math.random() * 6) + 's';
+            particle.style.animationDelay = Math.random() * 4 + 's';
+            particle.style.fontSize = (0.8 + Math.random() * 0.8) + 'rem';
+            particlesContainer.appendChild(particle);
+            
+            // Remove after animation completes
+            setTimeout(() => particle.remove(), 14000);
+        }
+        
+        // Create initial particles
+        for (let i = 0; i < 15; i++) {
+            setTimeout(createParticle, i * 300);
+        }
+        
+        // Keep creating particles
+        setInterval(createParticle, 800);
+        
+        // ===== CONFETTI CELEBRATION 🎉 =====
+        function triggerConfetti() {
+            const confettiEmojis = ['💜', '⭐', '✨', '💖', '🌟', '💫', '🎀', '💝'];
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.textContent = confettiEmojis[Math.floor(Math.random() * confettiEmojis.length)];
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.top = '-20px';
+                    confetti.style.fontSize = (1 + Math.random() * 1) + 'rem';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 3000);
+                }, i * 50);
+            }
+        }
+        
+        // Trigger confetti on first visit
+        if (!localStorage.getItem('kpopCosmosConfettiShown')) {
+            setTimeout(() => {
+                triggerConfetti();
+                localStorage.setItem('kpopCosmosConfettiShown', 'true');
+            }, 1500);
+        }
+        
+        // ===== TOUCH SPARKLE FOR MOBILE 📱 =====
+        document.addEventListener('touchstart', function(e) {
+            const touch = e.touches[0];
+            for (let i = 0; i < 3; i++) {
+                setTimeout(() => createSparkle(touch.clientX, touch.clientY), i * 50);
+            }
+        });
+        
+        // ===== TOOL CARD CLICK SPARKLE BURST 💫 =====
+        document.querySelectorAll('.tool-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                for (let i = 0; i < 8; i++) {
+                    setTimeout(() => {
+                        const rect = this.getBoundingClientRect();
+                        createSparkle(
+                            rect.left + rect.width / 2 + (Math.random() - 0.5) * 80,
+                            rect.top + rect.height / 2 + (Math.random() - 0.5) * 40
+                        );
+                    }, i * 30);
+                }
+            });
+        });
+        
+        console.log('✨ K-Pop Cosmos is serving SLAY vibes! 💜');
+    </script>
 
 </body>
 </html>
