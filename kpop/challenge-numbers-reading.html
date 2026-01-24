@@ -288,6 +288,14 @@
             }
             return num;
         }
+        
+        // Preserves master numbers 11, 22, 33 for Life Path calculation
+        function reduceToSinglePreserveMaster(num) {
+            while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
+                num = String(num).split('').reduce((a, b) => a + parseInt(b), 0);
+            }
+            return num;
+        }
 
         function calculateChallenges(event) {
             event.preventDefault();
@@ -299,12 +307,12 @@
             const currentYear = new Date().getFullYear();
             const currentAge = currentYear - year;
             
-            // Calculate Life Path for transition ages
+            // Calculate Life Path for transition ages (preserve master numbers for accurate timing)
             let lpSum = 0;
             String(day).split('').forEach(d => lpSum += parseInt(d));
             String(month).split('').forEach(d => lpSum += parseInt(d));
             String(year).split('').forEach(d => lpSum += parseInt(d));
-            const lifePath = reduceToSingle(lpSum);
+            const lifePath = reduceToSinglePreserveMaster(lpSum);
             
             // Calculate transition ages (same as Pinnacles)
             const firstTransition = 36 - lifePath;
