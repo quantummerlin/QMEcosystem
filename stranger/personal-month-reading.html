@@ -417,6 +417,14 @@
             return num;
         }
 
+        // Reduce to single digit (1-9), no master numbers for personal month
+        function reduceToSingleDigit(num) {
+            while (num > 9) {
+                num = num.toString().split('').reduce((a, b) => a + parseInt(b), 0);
+            }
+            return num;
+        }
+
         function letterToNumber(letter) {
             const values = {
                 'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8, 'I': 9,
@@ -473,9 +481,9 @@
             const today = new Date();
             const personalYear = calculatePersonalYear(dateStr);
             const currentMonth = today.getMonth() + 1;
-            const monthReduced = reduceToSingle(currentMonth);
+            const monthReduced = reduceToSingleDigit(currentMonth);
             
-            return reduceToSingle(personalYear + monthReduced);
+            return reduceToSingleDigit(personalYear + monthReduced);
         }
         
         function getMonthName(monthNum) {

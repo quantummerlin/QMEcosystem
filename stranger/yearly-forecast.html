@@ -334,20 +334,37 @@
         // Version: 20260121164415 - Auto-generated cache buster
         // Version: 20260121163503 - Auto-generated cache buster
         // Version: 20260121162926 - Auto-generated cache buster
-        function reduceToSingle(num) {
-            while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
+        // Reduce to single digit (1-9), no master numbers for personal day/week/month/year
+        function reduceToSingleDigit(num) {
+            while (num > 9) {
                 num = num.toString().split('').reduce((a, b) => a + parseInt(b), 0);
             }
             return num;
         }
         
-        function calculatePersonalYear(birthDate, targetYear) {
-            const date = new Date(birthDate);
-            return reduceToSingle(reduceToSingle(date.getDate()) + reduceToSingle(date.getMonth() + 1) + reduceToSingle(targetYear));
+        // Personal Year starts on birthday, not January 1st
+        function calculatePersonalYear(birthDate, targetDate) {
+            const birth = new Date(birthDate);
+            const target = new Date(targetDate);
+            const birthMonth = birth.getMonth();
+            const birthDay = birth.getDate();
+            const targetYear = target.getFullYear();
+            const targetMonth = target.getMonth();
+            const targetDay = target.getDate();
+            
+            // Check if we've passed the birthday this year
+            const hadBirthdayThisYear = (targetMonth > birthMonth) || 
+                                        (targetMonth === birthMonth && targetDay >= birthDay);
+            
+            // Use current year if past birthday, otherwise use previous year
+            const cycleYear = hadBirthdayThisYear ? targetYear : targetYear - 1;
+            
+            return reduceToSingleDigit(reduceToSingleDigit(birthDay) + reduceToSingleDigit(birthMonth + 1) + reduceToSingleDigit(cycleYear));
         }
         
-        function calculatePersonalMonth(birthDate, targetYear, targetMonth) {
-            return reduceToSingle(calculatePersonalYear(birthDate, targetYear) + targetMonth);
+        function calculatePersonalMonth(birthDate, targetDate) {
+            const target = new Date(targetDate);
+            return reduceToSingleDigit(calculatePersonalYear(birthDate, targetDate) + (target.getMonth() + 1));
         }
         
         const themes = {
@@ -542,15 +559,17 @@
             document.getElementById('greeting').textContent = `${name}'s Personal Year`;
             
             const currentYear = today.getFullYear();
-            const personalYear = calculatePersonalYear(profile.birthDate, currentYear);
+            // Use the user's birth date and today to calculate personal year based on birthday cycle
+            const personalYear = calculatePersonalYear(profile.birthDate, today);
             const interp = yearlyInterpretations[personalYear];
             
-            // Calculate monthly energies
+            // Calculate monthly energies - use the first day of each month
             const months = [];
             for (let m = 1; m <= 12; m++) {
+                const monthDate = new Date(currentYear, m - 1, 15); // mid-month as target
                 months.push({
                     name: monthNames[m - 1],
-                    energy: calculatePersonalMonth(profile.birthDate, currentYear, m)
+                    energy: calculatePersonalMonth(profile.birthDate, monthDate)
                 });
             }
             

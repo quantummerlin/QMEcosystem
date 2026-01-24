@@ -223,6 +223,22 @@
             return num;
         }
 
+        // Personal Year starts on birthday, not January 1st
+        function getPersonalYearForDate(birthMonth, birthDay, targetDate) {
+            const targetYear = targetDate.getFullYear();
+            const targetMonth = targetDate.getMonth() + 1;
+            const targetDay = targetDate.getDate();
+            
+            // Check if we've passed the birthday this year
+            const hadBirthdayThisYear = (targetMonth > birthMonth) || 
+                                        (targetMonth === birthMonth && targetDay >= birthDay);
+            
+            // Use current year if past birthday, otherwise use previous year
+            const cycleYear = hadBirthdayThisYear ? targetYear : targetYear - 1;
+            
+            return reduceToSingle(reduceToSingle(birthDay) + reduceToSingle(birthMonth) + reduceToSingle(cycleYear));
+        }
+
         function calculatePersonalDay(event) {
             event.preventDefault();
             
@@ -240,11 +256,9 @@
             
             const month = targetDate.getMonth() + 1;
             const day = targetDate.getDate();
-            const year = targetDate.getFullYear();
             
-            // Calculate Personal Year
-            const personalYearSum = reduceToSingle(birthMonth) + reduceToSingle(birthDay) + reduceToSingle(year);
-            const personalYear = reduceToSingle(personalYearSum);
+            // Calculate Personal Year using birthday-based cycle
+            const personalYear = getPersonalYearForDate(birthMonth, birthDay, targetDate);
             
             // Calculate Personal Month
             const personalMonthSum = personalYear + reduceToSingle(month);
