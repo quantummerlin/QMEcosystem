@@ -155,6 +155,38 @@
             to { opacity: 1; }
         }
 
+        /* Enhanced Animations */
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(6, 182, 212, 0.3); }
+            50% { box-shadow: 0 0 35px rgba(6, 182, 212, 0.6); }
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.02); opacity: 0.9; }
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         .welcome-logo {
             font-size: 3em;
             margin-bottom: 20px;
@@ -226,26 +258,15 @@
         }
 
         .welcome-progress {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 30px;
+            display: none; /* Removed for cleaner look */
         }
 
         .progress-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(6, 182, 212, 0.2);
-            border: 2px solid rgba(6, 182, 212, 0.4);
-            transition: all 0.3s ease;
+            display: none;
         }
 
         .progress-dot.active {
-            background: #06b6d4;
-            border-color: #06b6d4;
-            box-shadow: 0 0 12px rgba(6, 182, 212, 0.8);
-            transform: scale(1.1);
+            display: none;
         }
 
         .welcome-buttons {
@@ -297,6 +318,7 @@
             border-bottom: 2px solid rgba(6, 182, 212, 0.3);
             position: relative;
             overflow: hidden;
+            animation: slideInUp 0.6s ease-out;
         }
 
         header::before {
@@ -306,7 +328,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at center, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle at center, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+            animation: breathe 4s ease-in-out infinite;
+        }
             pointer-events: none;
         }
 
@@ -335,17 +359,22 @@
         }
 
         .brain-image {
-            max-width: 300px;
+            max-width: 280px;
             width: 100%;
             border-radius: 15px;
             box-shadow: 0 0 30px rgba(6, 182, 212, 0.3), 0 0 60px rgba(139, 92, 246, 0.2);
             border: 2px solid rgba(6, 182, 212, 0.4);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .brain-image:nth-child(2) {
+            animation-delay: -3s;
         }
 
         .brain-image:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(6, 182, 212, 0.5), 0 0 80px rgba(139, 92, 246, 0.3);
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 0 45px rgba(6, 182, 212, 0.5), 0 0 80px rgba(139, 92, 246, 0.35);
         }
 
         /* Description */
@@ -583,6 +612,7 @@
             margin-bottom: 20px;
             font-size: 1.5em;
             text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+            animation: pulseGlow 3s ease-in-out infinite;
         }
 
         .now-playing-content {
@@ -593,24 +623,103 @@
 
         .now-playing-info {
             text-align: center;
+            animation: slideInUp 0.4s ease-out;
         }
 
         .now-playing-title {
             font-size: 1.3em;
             color: #e0e7ff;
             margin-bottom: 10px;
+            font-weight: 600;
         }
 
         .now-playing-frequencies {
-            font-family: 'Courier New', monospace;
+            font-family: 'Segoe UI', monospace;
             color: #06b6d4;
-            font-size: 1.2em;
+            font-size: 1.1em;
             margin-bottom: 10px;
+            background: linear-gradient(90deg, #06b6d4, #8b5cf6, #06b6d4);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s linear infinite;
         }
 
         .now-playing-description {
             color: #94a3b8;
             font-size: 0.95em;
+        }
+
+        /* Volume and Frequency Controls */
+        .player-controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .slider-control {
+            background: rgba(6, 182, 212, 0.08);
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .slider-control:hover {
+            border-color: rgba(6, 182, 212, 0.5);
+            background: rgba(6, 182, 212, 0.12);
+        }
+
+        .slider-label {
+            color: #a78bfa;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .slider-value {
+            color: #06b6d4;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, rgba(6, 182, 212, 0.3), rgba(139, 92, 246, 0.3));
+            outline: none;
+            cursor: pointer;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+            transition: all 0.2s ease;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.8);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
         }
 
         .controls {
@@ -630,18 +739,19 @@
 
         .control-label {
             color: #a78bfa;
-            font-size: 0.9em;
+            font-size: 0.85em;
         }
 
         .control-value {
-            background: rgba(6, 182, 212, 0.1);
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.08));
             border: 1px solid rgba(6, 182, 212, 0.3);
             color: #06b6d4;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 1.1em;
-            min-width: 80px;
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-size: 1.05em;
+            min-width: 75px;
             text-align: center;
+            font-weight: 600;
         }
 
         .main-controls {
@@ -1419,6 +1529,30 @@
                     <div class="now-playing-description" id="np-description">Track description here</div>
                 </div>
                 
+                <!-- Volume & Frequency Controls -->
+                <div class="player-controls-grid">
+                    <div class="slider-control">
+                        <span class="slider-label">🔊 Master Volume</span>
+                        <div class="slider-value" id="volume-value">75%</div>
+                        <input type="range" id="volume-slider" min="0" max="100" value="75" oninput="updateVolume(this.value)">
+                    </div>
+                    <div class="slider-control">
+                        <span class="slider-label">🧠 Base Frequency</span>
+                        <div class="slider-value" id="base-freq-value">40 Hz</div>
+                        <input type="range" id="base-freq-slider" min="35" max="45" value="40" step="0.5" oninput="updateBaseFrequency(this.value)">
+                    </div>
+                    <div class="slider-control">
+                        <span class="slider-label">🎵 Carrier Tone</span>
+                        <div class="slider-value" id="carrier-value">200 Hz</div>
+                        <input type="range" id="carrier-slider" min="100" max="400" value="200" step="10" oninput="updateCarrier(this.value)">
+                    </div>
+                    <div class="slider-control">
+                        <span class="slider-label">🌊 Binaural Depth</span>
+                        <div class="slider-value" id="binaural-value">50%</div>
+                        <input type="range" id="binaural-slider" min="0" max="100" value="50" oninput="updateBinauralDepth(this.value)">
+                    </div>
+                </div>
+                
                 <div class="controls">
                     <div class="control-group">
                         <label class="control-label">Duration</label>
@@ -1426,7 +1560,7 @@
                     </div>
                     
                     <div class="control-group">
-                        <label class="control-label">Time Remaining</label>
+                        <label class="control-label">Time Left</label>
                         <div class="control-value" id="time-remaining">10:00</div>
                     </div>
                     
@@ -1487,9 +1621,34 @@
         </div>
 
         <footer>
-            <p>© 2024 40Hz Quantum Merlin. All rights reserved.</p>
-            <p>Advanced Gamma Wave Research Platform</p>
-            <p>For advertising inquiries, contact us at <a href="mailto:advertise@40hz.quantummerlin.com">advertise@40hz.quantummerlin.com</a></p>
+            <!-- Feedback Section -->
+            <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid rgba(6, 182, 212, 0.15);">
+                <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 10px;">🛠️ Found an issue or have a suggestion?</p>
+                <a href="mailto:fixit@quantummerlin.com?subject=40Hz%20Quantum%20Merlin%20Feedback" style="display: inline-block; color: #06b6d4; text-decoration: none; font-size: 0.95rem; padding: 10px 20px; border: 1px solid rgba(6, 182, 212, 0.4); border-radius: 25px; transition: all 0.3s;">📧 fixit@quantummerlin.com</a>
+            </div>
+            
+            <!-- Legal Links -->
+            <div style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
+                <a href="/classic/terms.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">Terms of Service</a>
+                <span style="color: rgba(6, 182, 212, 0.4);">|</span>
+                <a href="/classic/privacy.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">Privacy Policy</a>
+                <span style="color: rgba(6, 182, 212, 0.4);">|</span>
+                <a href="/classic/disclaimer.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">Disclaimer</a>
+            </div>
+            
+            <!-- Copyright -->
+            <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 8px;">© 2026 40Hz Quantum Merlin. All rights reserved.</p>
+            <p style="color: #64748b; font-size: 0.8rem; font-style: italic; margin-bottom: 20px;">Advanced Gamma Wave Research Platform • For wellness purposes only</p>
+            
+            <!-- Buy Me A Coffee -->
+            <div style="padding-top: 20px; border-top: 1px solid rgba(6, 182, 212, 0.15);">
+                <a href="https://buymeacoffee.com/quantummerlin" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #0a0a0f; text-decoration: none; font-weight: 600; font-size: 1rem; padding: 12px 28px; border-radius: 25px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3); animation: float 4s ease-in-out infinite;">☕ Buy Us a Coffee</a>
+            </div>
+            
+            <!-- Quantum Merlin Link -->
+            <div style="margin-top: 20px;">
+                <a href="https://quantummerlin.com" style="color: #06b6d4; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">✨ Explore more at QuantumMerlin.com</a>
+            </div>
         </footer>
     </div>
 
@@ -2667,6 +2826,109 @@
             if (event.target === modal) {
                 closeModal();
             }
+        }
+
+        // ====== PLAYER CONTROL FUNCTIONS ======
+        
+        // Master volume control (0-100)
+        let masterVolume = 0.75;
+        let baseFrequency = 40;
+        let carrierTone = 200;
+        let binauralDepth = 50;
+
+        function updateVolume(value) {
+            masterVolume = value / 100;
+            document.getElementById('volume-value').textContent = value + '%';
+            
+            // Update all oscillator volumes
+            if (oscillators.length > 0 && isPlaying) {
+                const volumePerOsc = masterVolume / oscillators.length;
+                oscillators.forEach(({ gain }) => {
+                    gain.gain.linearRampToValueAtTime(volumePerOsc, audioContext.currentTime + 0.05);
+                });
+            }
+        }
+
+        function updateBaseFrequency(value) {
+            baseFrequency = parseFloat(value);
+            document.getElementById('base-freq-value').textContent = value + ' Hz';
+            
+            // If playing, recreate oscillators with new frequency
+            if (isPlaying && currentTrack) {
+                regenerateOscillators();
+            }
+        }
+
+        function updateCarrier(value) {
+            carrierTone = parseFloat(value);
+            document.getElementById('carrier-value').textContent = value + ' Hz';
+            
+            // If playing, regenerate with new carrier
+            if (isPlaying && currentTrack) {
+                regenerateOscillators();
+            }
+        }
+
+        function updateBinauralDepth(value) {
+            binauralDepth = parseFloat(value);
+            document.getElementById('binaural-value').textContent = value + '%';
+            
+            // Binaural depth affects the stereo spread
+            if (isPlaying && currentTrack) {
+                regenerateOscillators();
+            }
+        }
+
+        function regenerateOscillators() {
+            if (!audioContext || !currentTrack) return;
+            
+            // Fade out current oscillators
+            oscillators.forEach(({ oscillator, gain }) => {
+                gain.gain.linearRampToValueAtTime(0, audioContext.currentTime + 0.05);
+                setTimeout(() => oscillator.stop(), 60);
+            });
+            
+            // Create new oscillators with updated frequencies
+            setTimeout(() => {
+                oscillators = [];
+                const volumePerOsc = masterVolume / 2; // For binaural, we use 2 oscillators
+                
+                // Left channel (carrier - binaural/2)
+                const leftFreq = carrierTone - (baseFrequency * binauralDepth / 200);
+                const rightFreq = carrierTone + (baseFrequency * binauralDepth / 200);
+                
+                // Create left oscillator
+                const leftOsc = audioContext.createOscillator();
+                const leftGain = audioContext.createGain();
+                const leftPanner = audioContext.createStereoPanner();
+                leftOsc.type = 'sine';
+                leftOsc.frequency.value = leftFreq;
+                leftGain.gain.setValueAtTime(0, audioContext.currentTime);
+                leftGain.gain.linearRampToValueAtTime(volumePerOsc, audioContext.currentTime + 0.1);
+                leftPanner.pan.value = -0.8;
+                leftOsc.connect(leftGain);
+                leftGain.connect(leftPanner);
+                leftPanner.connect(audioContext.destination);
+                oscillators.push({ oscillator: leftOsc, gain: leftGain });
+                
+                // Create right oscillator
+                const rightOsc = audioContext.createOscillator();
+                const rightGain = audioContext.createGain();
+                const rightPanner = audioContext.createStereoPanner();
+                rightOsc.type = 'sine';
+                rightOsc.frequency.value = rightFreq;
+                rightGain.gain.setValueAtTime(0, audioContext.currentTime);
+                rightGain.gain.linearRampToValueAtTime(volumePerOsc, audioContext.currentTime + 0.1);
+                rightPanner.pan.value = 0.8;
+                rightOsc.connect(rightGain);
+                rightGain.connect(rightPanner);
+                rightPanner.connect(audioContext.destination);
+                oscillators.push({ oscillator: rightOsc, gain: rightGain });
+                
+                // Start both
+                leftOsc.start();
+                rightOsc.start();
+            }, 70);
         }
 
         // Initialize on page load
