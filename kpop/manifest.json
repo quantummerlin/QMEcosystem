@@ -1,7 +1,7 @@
 {
-  "name": "K-Pop Cosmos ✨ Your Ultimate Bias Reading",
+  "name": "K-Pop Cosmos ✨ Your Main Character Reading",
   "short_name": "K-Pop Cosmos",
-  "description": "Discover your idol destiny! ✨ K-Pop themed numerology & astrology readings for stans 💜 Find your stan purpose and K-Pop journey!",
+  "description": "Discover your idol destiny! ✨ K-Pop themed numerology & astrology readings for stans 💜 Find your stan purpose and cosmic besties! No cap this app ate fr fr",
   "start_url": "/kpop/tools_index.html",
   "scope": "/kpop/",
   "id": "kpop-cosmos-pwa",
@@ -37,10 +37,10 @@
       "icons": [{"src": "kpop.jpg", "sizes": "any"}]
     },
     {
-      "name": "Love Compatibility",
-      "short_name": "Love",
-      "description": "Check your bias compatibility 💕",
-      "url": "/kpop/love-compatibility-reading.html",
+      "name": "Squad Chemistry",
+      "short_name": "Squad Vibe",
+      "description": "Check your bestie compatibility 💕",
+      "url": "/kpop/squad-chemistry-reading.html",
       "icons": [{"src": "kpop.jpg", "sizes": "any"}]
     }
   ],

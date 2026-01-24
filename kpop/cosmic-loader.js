@@ -370,9 +370,16 @@ const CosmicLoader = {
                 formElement.style.display = 'none';
             }
             
-            // Scroll to result
+            // Scroll to result with timeout to prevent stuck animations
             if (resultElement) {
-                resultElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                setTimeout(() => {
+                    try {
+                        resultElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } catch(e) {
+                        // Fallback to instant scroll if smooth fails
+                        resultElement.scrollIntoView(false);
+                    }
+                }, 100);
             }
         });
     }
