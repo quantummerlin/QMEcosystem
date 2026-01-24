@@ -23,11 +23,11 @@ window.QMShare = {
         'aura': (color, name) => `✨ My aura is ${color}! What color is YOUR idol energy?`,
         'age': (days, name) => `🎂 I'm ${days.toLocaleString()} days old! How many days have YOU lived?`,
         'personal-year': (num, name) => `📅 My Year Era Theme is ${num}! What's your era bringing? 🌟`,
-        'fortune': (fortune) => `🔮 My cosmic fortune: "${fortune.substring(0, 80)}..." Get yours →`,
-        'lucky-numbers': (nums) => `🍀 My lucky numbers: ${nums}! Find your cosmic numbers →`,
+        'fortune': (fortune) => `🔮 My K-osmic fortune: "${fortune.substring(0, 80)}..." Get yours →`,
+        'lucky-numbers': (nums) => `🍀 My lucky numbers: ${nums}! Find your K-osmic numbers →`,
         'compatibility': (score) => `💕 Our Ship Chemistry: ${score}%! Check YOUR bias match 💜`,
         'forecast': (type) => `🌟 Just read my ${type} Comeback Forecast! See what the stars say for YOU →`,
-        'default': () => `✨ Just discovered my K-Pop cosmic destiny! Fighting! 💜`
+        'default': () => `✨ Just discovered my K-Pop K-osmic destiny! Fighting! 💜`
     },
     
     /**
@@ -640,7 +640,7 @@ QMShare.injectViralCard = function(options = {}) {
     <div class="viral-share-card">
         <div class="viral-share-header">
             <span class="viral-emoji">�</span>
-            <span class="viral-title">Share Your Cosmic Destiny!</span>
+            <span class="viral-title">Share Your K-osmic Destiny!</span>
         </div>
         <div class="viral-preview">
             <div class="viral-quote">"${viralText}"</div>
