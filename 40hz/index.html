@@ -113,6 +113,9 @@
             justify-content: center;
             align-items: center;
             backdrop-filter: blur(10px);
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .welcome-overlay.hidden {
@@ -121,9 +124,10 @@
 
         .welcome-container {
             max-width: 700px;
-            width: 90%;
+            width: 100%;
             text-align: center;
             animation: fadeInUp 0.8s ease;
+            margin: auto;
         }
 
         @keyframes fadeInUp {
@@ -914,8 +918,72 @@
                 padding: 15px;
             }
 
+            /* Welcome Flow Mobile */
+            .welcome-overlay {
+                padding: 15px;
+                align-items: flex-start;
+            }
+
+            .welcome-container {
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .welcome-logo {
+                font-size: 2.5em;
+                margin-bottom: 15px;
+            }
+
             .welcome-title {
-                font-size: 2em;
+                font-size: 1.8em;
+                margin-bottom: 10px;
+            }
+
+            .welcome-subtitle {
+                font-size: 1.1em;
+                margin-bottom: 20px;
+            }
+
+            .welcome-content {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+                border-radius: 15px;
+            }
+
+            .welcome-text {
+                font-size: 1em;
+                line-height: 1.6;
+                margin-bottom: 15px;
+            }
+
+            .welcome-benefits {
+                gap: 10px;
+            }
+
+            .benefit-item {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+
+            .welcome-progress {
+                margin-bottom: 20px;
+            }
+
+            .progress-dot {
+                width: 10px;
+                height: 10px;
+            }
+
+            .welcome-buttons {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+            }
+
+            .welcome-btn {
+                width: 100%;
+                padding: 14px 30px;
+                font-size: 1em;
             }
 
             .track-header {
@@ -963,36 +1031,75 @@
         /* Extra Small Devices (phones, 480px and down) */
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.6em;
+                font-size: 1.5em;
             }
 
             h2 {
-                font-size: 1em;
+                font-size: 0.95em;
             }
 
             .container {
                 padding: 10px;
             }
 
+            /* Welcome Flow Extra Small */
+            .welcome-overlay {
+                padding: 10px;
+            }
+
+            .welcome-container {
+                padding: 5px 0;
+            }
+
+            .welcome-logo {
+                font-size: 2em;
+                margin-bottom: 10px;
+            }
+
             .welcome-title {
-                font-size: 1.6em;
+                font-size: 1.4em;
+                margin-bottom: 8px;
             }
 
             .welcome-subtitle {
-                font-size: 1.1em;
+                font-size: 0.95em;
+                margin-bottom: 15px;
             }
 
             .welcome-content {
-                padding: 20px 15px;
+                padding: 15px 12px;
+                margin-bottom: 15px;
+                border-radius: 12px;
             }
 
             .welcome-text {
-                font-size: 1em;
+                font-size: 0.9em;
+                line-height: 1.5;
+            }
+
+            .welcome-benefits {
+                gap: 8px;
             }
 
             .benefit-item {
-                padding: 10px 15px;
-                font-size: 0.85em;
+                padding: 8px 12px;
+                font-size: 0.8em;
+                border-radius: 20px;
+            }
+
+            .welcome-progress {
+                margin-bottom: 15px;
+                gap: 8px;
+            }
+
+            .progress-dot {
+                width: 8px;
+                height: 8px;
+            }
+
+            .welcome-btn {
+                padding: 12px 25px;
+                font-size: 0.95em;
             }
 
             .track-card {
@@ -1005,15 +1112,19 @@
             }
 
             .brain-image {
-                max-width: 200px;
+                max-width: 180px;
             }
 
             .category-title {
-                font-size: 1em;
+                font-size: 0.95em;
+            }
+
+            .category-icon {
+                font-size: 1.2em;
             }
 
             .description {
-                font-size: 1em;
+                font-size: 0.95em;
                 padding: 15px;
             }
 
