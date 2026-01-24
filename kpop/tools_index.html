@@ -102,6 +102,9 @@
             margin-bottom: 30px;
             padding: 25px 15px;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .wizard-logo {
@@ -117,6 +120,8 @@
                 inset 0 0 20px rgba(255, 255, 255, 0.1);
             margin-bottom: 20px;
             animation: wizardGlow 3s ease-in-out infinite;
+            display: block;
+            flex-shrink: 0;
         }
         
         @keyframes wizardGlow {
@@ -147,6 +152,8 @@
             letter-spacing: clamp(2px, 1vw, 6px);
             animation: neonGlow 3s ease-in-out infinite;
             text-transform: uppercase;
+            width: 100%;
+            display: block;
         }
         
         @keyframes neonGlow {
@@ -238,6 +245,92 @@
         
         .search-bar input::placeholder {
             color: #6b7280;
+        }
+        
+        /* Featured Banner - Band Builder CTA */
+        .featured-banner {
+            display: block;
+            margin: 20px 15px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+            border: 3px solid #FF6B9D;
+            border-radius: 20px;
+            text-decoration: none;
+            box-shadow: 0 0 30px rgba(255, 107, 157, 0.4), 0 0 60px rgba(168, 85, 247, 0.2);
+            animation: featuredBannerPulse 2s ease-in-out infinite;
+            transition: all 0.3s;
+        }
+        
+        .featured-banner:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 40px rgba(255, 107, 157, 0.6), 0 0 80px rgba(168, 85, 247, 0.4);
+        }
+        
+        @keyframes featuredBannerPulse {
+            0%, 100% { border-color: #FF6B9D; }
+            50% { border-color: #A855F7; }
+        }
+        
+        .featured-banner-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .featured-banner-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        
+        .featured-banner-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .featured-banner-title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.3rem;
+            color: #FF6B9D;
+            font-weight: 700;
+        }
+        
+        .featured-banner-desc {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            color: #e0e0e0;
+        }
+        
+        .featured-banner-badge {
+            background: linear-gradient(135deg, #FF6B9D 0%, #A855F7 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: badgePop 2s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+        
+        @media (max-width: 500px) {
+            .featured-banner-content {
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .featured-banner-text {
+                width: 100%;
+                align-items: center;
+            }
+            
+            .featured-banner-badge {
+                margin-top: 10px;
+            }
         }
         
         /* Collapsible Categories - Strange Style */
@@ -1151,6 +1244,18 @@
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="🔍 Search for your reading... 💫">
         </div>
+        
+        <!-- Band Builder Featured Banner -->
+        <a href="band-builder.html" class="featured-banner" id="bandBuilderBanner">
+            <div class="featured-banner-content">
+                <span class="featured-banner-icon">🎤</span>
+                <div class="featured-banner-text">
+                    <span class="featured-banner-title">K-Pop Band Builder</span>
+                    <span class="featured-banner-desc">Build your dream group! Get synergy scores, roles & group names ✨</span>
+                </div>
+                <span class="featured-banner-badge">NEW!</span>
+            </div>
+        </a>
         
         <!-- Journey Progress -->
         <div class="journey-progress" id="journeyProgress">

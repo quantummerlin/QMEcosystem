@@ -1,9 +1,10 @@
 // Service Worker for Gravity Pause PWA
 const CACHE_NAME = 'gravity-pause-v1';
 const urlsToCache = [
-  '/gravity7/',
-  '/gravity7/index.html',
-  '/gravity7/manifest.json'
+  '/',
+  '/index.html',
+  '/reading.html',
+  '/manifest.json'
 ];
 
 // Install event - cache resources
@@ -66,7 +67,7 @@ self.addEventListener('fetch', (event) => {
       })
       .catch(() => {
         // Offline fallback
-        return caches.match('/gravity7/');
+        return caches.match('/');
       })
   );
 });

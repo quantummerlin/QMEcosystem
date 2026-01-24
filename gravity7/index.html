@@ -13,13 +13,13 @@
   <meta property="og:title" content="Global Gravity Pause – August 12, 2026" />
   <meta property="og:description" content="A symbolic cosmic moment observed across calendars. Countdown to 14:33 UTC." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://quantummerlin.com/gravity7" />
+  <meta property="og:url" content="https://gravity7.quantummerlin.com" />
   
   <!-- PWA -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#0a0a0f">
-  <link rel="manifest" href="/gravity7/manifest.json">
-  <link rel="icon" type="image/png" href="/gravity7/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" href="/favicon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -66,6 +66,7 @@
       max-width: 640px;
       margin: 0 auto;
       padding: 80px 24px 120px;
+      text-align: center;
     }
 
     /* Header */
@@ -190,6 +191,7 @@
       border-radius: 12px;
       padding: 28px;
       margin-bottom: 20px;
+      text-align: left;
     }
 
     /* Calendar list */
@@ -536,7 +538,7 @@
     <!-- CTA -->
     <section class="cta-section">
       <p class="cta-text">Explore the astrology of this moment</p>
-      <a href="/gravity7/reading.html" class="cta-button">
+      <a href="/reading.html" class="cta-button">
         <span>Solar Eclipse Reading</span>
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -631,7 +633,7 @@
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/gravity7/sw.js').catch(() => {});
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
       });
     }
   </script>
