@@ -1,0 +1,28 @@
+{
+  "name": "Global Gravity Pause – August 12, 2026",
+  "short_name": "Gravity Pause",
+  "description": "Countdown to the symbolic 7-second global gravity pause. Observed across calendars, astrology, and cosmic timing.",
+  "start_url": "/gravity7/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#0b0b1a",
+  "orientation": "portrait",
+  "scope": "/gravity7/",
+  "icons": [
+    {
+      "src": "/gravity7/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/gravity7/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "education", "entertainment"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

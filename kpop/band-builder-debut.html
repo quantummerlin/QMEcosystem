@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF6B9D">
+    <title>Choose Debut Date | K-Pop K-osmos Band Builder</title>
+    <meta name="description" content="Pick the perfect debut date for your K-pop group! Our K-osmic calculator finds the most auspicious day for your squad's debut era. ✨">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="kpop.jpg">
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0D0015;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 50%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #FF6B9D 0%, #A855F7 50%, #22D3EE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #A855F7;
+            font-style: italic;
+        }
+        
+        .progress-bar {
+            background: rgba(168, 85, 247, 0.2);
+            border-radius: 10px;
+            height: 8px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF6B9D, #A855F7, #22D3EE);
+            border-radius: 10px;
+            width: 50%;
+        }
+        
+        .progress-text {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .date-section {
+            background: rgba(30, 15, 45, 0.8);
+            border: 2px solid rgba(168, 85, 247, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .date-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: #FF6B9D;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .date-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .date-option {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            background: rgba(10, 10, 20, 0.6);
+            border: 2px solid rgba(168, 85, 247, 0.2);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .date-option:hover {
+            border-color: #A855F7;
+        }
+        
+        .date-option.selected {
+            border-color: #FF6B9D;
+            background: rgba(255, 107, 157, 0.1);
+        }
+        
+        .date-option input[type="radio"] {
+            display: none;
+        }
+        
+        .date-option .radio-circle {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #A855F7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .date-option.selected .radio-circle {
+            border-color: #FF6B9D;
+        }
+        
+        .date-option.selected .radio-circle::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(135deg, #FF6B9D, #A855F7);
+            border-radius: 50%;
+        }
+        
+        .date-option-content {
+            flex: 1;
+        }
+        
+        .date-option-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-bottom: 5px;
+        }
+        
+        .date-option-desc {
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+        
+        .custom-date-input {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(10, 10, 20, 0.8);
+            border-radius: 12px;
+        }
+        
+        .custom-date-input.show {
+            display: block;
+        }
+        
+        .custom-date-input label {
+            display: block;
+            font-family: 'Cinzel', serif;
+            color: #A855F7;
+            margin-bottom: 10px;
+        }
+        
+        .custom-date-input input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid rgba(168, 85, 247, 0.3);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: rgba(10, 10, 20, 0.8);
+            color: #e0e0e0;
+        }
+        
+        .custom-date-input input:focus {
+            outline: none;
+            border-color: #FF6B9D;
+        }
+        
+        /* Auspicious dates suggestions */
+        .auspicious-section {
+            background: rgba(34, 211, 238, 0.05);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .auspicious-section h3 {
+            font-family: 'Cinzel', serif;
+            color: #22D3EE;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        .auspicious-dates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+        }
+        
+        .auspicious-date {
+            padding: 12px 15px;
+            background: rgba(34, 211, 238, 0.1);
+            border: 1px solid rgba(34, 211, 238, 0.3);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .auspicious-date:hover {
+            background: rgba(34, 211, 238, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .auspicious-date .date {
+            font-family: 'Cinzel', serif;
+            color: #22D3EE;
+            font-size: 1rem;
+        }
+        
+        .auspicious-date .reason {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            margin-top: 4px;
+        }
+        
+        /* Group Name Preview */
+        .group-preview {
+            background: rgba(255, 107, 157, 0.05);
+            border: 1px solid rgba(255, 107, 157, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .group-preview h3 {
+            font-family: 'Cinzel', serif;
+            color: #FF6B9D;
+            margin-bottom: 15px;
+        }
+        
+        .member-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .member-tag {
+            padding: 8px 15px;
+            background: rgba(168, 85, 247, 0.2);
+            border-radius: 20px;
+            color: #A855F7;
+            font-size: 0.9rem;
+        }
+        
+        /* Ad Space */
+        .ad-space {
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px dashed rgba(168, 85, 247, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 25px 0;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .back-btn {
+            padding: 12px 25px;
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 10px;
+            color: #A855F7;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .back-btn:hover {
+            background: rgba(168, 85, 247, 0.25);
+        }
+        
+        .next-btn {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #FF6B9D 0%, #A855F7 100%);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .next-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📅 Choose Debut Date</h1>
+            <p class="subtitle">When will your squad make their K-osmic entrance? ✨</p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 50%"></div>
+        </div>
+        <p class="progress-text">Step 2 of 4: Select Debut Date</p>
+        
+        <!-- Group Preview -->
+        <div class="group-preview">
+            <h3>✨ Your Squad</h3>
+            <div class="member-list" id="memberList">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+        
+        <div class="date-section">
+            <h2>🗓️ Pick Your Debut Era</h2>
+            
+            <div class="date-options">
+                <label class="date-option selected" onclick="selectOption('calculate')">
+                    <input type="radio" name="dateOption" value="calculate" checked>
+                    <div class="radio-circle"></div>
+                    <div class="date-option-content">
+                        <div class="date-option-title">✨ Calculate Best Debut Date</div>
+                        <div class="date-option-desc">Let the K-osmos find the most auspicious date based on your squad's numerology!</div>
+                    </div>
+                </label>
+                
+                <label class="date-option" onclick="selectOption('custom')">
+                    <input type="radio" name="dateOption" value="custom">
+                    <div class="radio-circle"></div>
+                    <div class="date-option-content">
+                        <div class="date-option-title">📅 Choose Custom Date</div>
+                        <div class="date-option-desc">Have a specific date in mind? Pick your own debut day!</div>
+                    </div>
+                </label>
+                
+                <label class="date-option" onclick="selectOption('today')">
+                    <input type="radio" name="dateOption" value="today">
+                    <div class="radio-circle"></div>
+                    <div class="date-option-content">
+                        <div class="date-option-title">⚡ Debut Today!</div>
+                        <div class="date-option-desc">No waiting - your main character era starts RIGHT NOW!</div>
+                    </div>
+                </label>
+            </div>
+            
+            <div class="custom-date-input" id="customDateInput">
+                <label for="debutDate">Select your debut date:</label>
+                <input type="date" id="debutDate" onchange="updateCustomDate()">
+            </div>
+            
+            <!-- Auspicious Dates -->
+            <div class="auspicious-section" id="auspiciousSection">
+                <h3>🌟 K-osmically Blessed Dates</h3>
+                <div class="auspicious-dates" id="auspiciousDates">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ad Space -->
+        <div class="ad-space">
+            📢 Advertisement Space - K-Pop Albums & Lightsticks
+        </div>
+        
+        <div class="actions">
+            <a href="band-builder-members.html" class="back-btn">← Back</a>
+            <button class="next-btn" onclick="calculateSynergy()">
+                Calculate Synergy →
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        // Get members from session storage
+        const members = JSON.parse(sessionStorage.getItem('bandBuilderMembers') || '[]');
+        
+        let selectedOption = 'calculate';
+        let customDate = null;
+        
+        // Redirect if no members
+        if (members.length === 0) {
+            window.location.href = 'band-builder.html';
+        }
+        
+        // Display member list
+        function displayMembers() {
+            const list = document.getElementById('memberList');
+            list.innerHTML = members.map(m => `<span class="member-tag">${m.name}</span>`).join('');
+        }
+        
+        // Calculate auspicious dates based on group numerology
+        function calculateAuspiciousDates() {
+            const container = document.getElementById('auspiciousDates');
+            const today = new Date();
+            const dates = [];
+            
+            // Get group life path sum
+            let groupSum = 0;
+            members.forEach(m => {
+                const dobDigits = m.dob.replace(/-/g, '').split('').map(Number);
+                groupSum += dobDigits.reduce((a, b) => a + b, 0);
+            });
+            const groupNumber = reduceToSingle(groupSum);
+            
+            // Find dates where day numerology matches or harmonizes
+            for (let i = 1; i <= 90; i++) {
+                const date = new Date(today);
+                date.setDate(date.getDate() + i);
+                
+                const daySum = date.getDate() + (date.getMonth() + 1) + date.getFullYear();
+                const dayNumber = reduceToSingle(daySum);
+                
+                // Check for harmonious numbers
+                if (dayNumber === groupNumber || isHarmonious(dayNumber, groupNumber)) {
+                    const reason = getHarmonyReason(dayNumber, groupNumber);
+                    dates.push({
+                        date: date,
+                        formatted: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+                        reason: reason
+                    });
+                    
+                    if (dates.length >= 4) break;
+                }
+            }
+            
+            container.innerHTML = dates.map(d => `
+                <div class="auspicious-date" onclick="selectAuspiciousDate('${d.date.toISOString().split('T')[0]}')">
+                    <div class="date">${d.formatted}</div>
+                    <div class="reason">${d.reason}</div>
+                </div>
+            `).join('');
+        }
+        
+        function reduceToSingle(num) {
+            while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
+                num = String(num).split('').reduce((a, b) => a + parseInt(b), 0);
+            }
+            return num;
+        }
+        
+        function isHarmonious(a, b) {
+            // Harmonious number pairs in numerology
+            const pairs = [
+                [1, 5], [1, 7], [2, 4], [2, 8], [3, 6], [3, 9],
+                [4, 8], [5, 7], [6, 9], [1, 9], [3, 5]
+            ];
+            return pairs.some(p => (p[0] === a && p[1] === b) || (p[0] === b && p[1] === a));
+        }
+        
+        function getHarmonyReason(dayNum, groupNum) {
+            if (dayNum === groupNum) return `Perfect ${dayNum} alignment!`;
+            if (dayNum === 11 || dayNum === 22) return `Master Number ${dayNum}!`;
+            
+            const reasons = {
+                1: "Leadership day",
+                2: "Partnership day",
+                3: "Creative day",
+                4: "Foundation day",
+                5: "Change day",
+                6: "Harmony day",
+                7: "Spiritual day",
+                8: "Abundance day",
+                9: "Completion day"
+            };
+            return reasons[dayNum] || "Auspicious";
+        }
+        
+        // Select date option
+        function selectOption(option) {
+            selectedOption = option;
+            
+            document.querySelectorAll('.date-option').forEach(el => el.classList.remove('selected'));
+            document.querySelector(`input[value="${option}"]`).closest('.date-option').classList.add('selected');
+            
+            // Show/hide custom date input
+            document.getElementById('customDateInput').classList.toggle('show', option === 'custom');
+            
+            // Show/hide auspicious section
+            document.getElementById('auspiciousSection').style.display = option === 'calculate' ? 'block' : 'none';
+        }
+        
+        function updateCustomDate() {
+            customDate = document.getElementById('debutDate').value;
+        }
+        
+        function selectAuspiciousDate(dateStr) {
+            document.getElementById('debutDate').value = dateStr;
+            customDate = dateStr;
+            selectOption('custom');
+        }
+        
+        // Calculate synergy and go to results
+        function calculateSynergy() {
+            let debutDate;
+            
+            if (selectedOption === 'today') {
+                debutDate = new Date().toISOString().split('T')[0];
+            } else if (selectedOption === 'custom' && customDate) {
+                debutDate = customDate;
+            } else {
+                // Auto-calculate best date (first auspicious date)
+                const today = new Date();
+                today.setDate(today.getDate() + 7); // Default to 1 week from now
+                debutDate = today.toISOString().split('T')[0];
+            }
+            
+            // Save to session storage
+            sessionStorage.setItem('bandBuilderDebutDate', debutDate);
+            
+            // Navigate to results
+            window.location.href = 'band-builder-results.html';
+        }
+        
+        // Initialize
+        displayMembers();
+        calculateAuspiciousDates();
+    </script>
+    
+    <script src="slay-effects.js"></script>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF6B9D">
+    <title>Add Your Squad | K-Pop K-osmos Band Builder</title>
+    <meta name="description" content="Add members to your dream K-pop group! Enter names and birthdays to calculate your squad's K-osmic synergy. No cap this tool ate fr fr 🎤✨">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="kpop.jpg">
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0D0015;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 50%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #FF6B9D 0%, #A855F7 50%, #22D3EE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #A855F7;
+            font-style: italic;
+        }
+        
+        .progress-bar {
+            background: rgba(168, 85, 247, 0.2);
+            border-radius: 10px;
+            height: 8px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF6B9D, #A855F7, #22D3EE);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+        
+        .progress-text {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .members-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .member-card {
+            background: rgba(30, 15, 45, 0.8);
+            border: 2px solid rgba(168, 85, 247, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+        
+        .member-card:hover {
+            border-color: #FF6B9D;
+            box-shadow: 0 5px 25px rgba(255, 107, 157, 0.2);
+        }
+        
+        .member-card.completed {
+            border-color: #22D3EE;
+            background: rgba(34, 211, 238, 0.05);
+        }
+        
+        .member-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .member-number {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.3rem;
+            color: #FF6B9D;
+        }
+        
+        .member-status {
+            font-size: 0.85rem;
+            padding: 5px 12px;
+            border-radius: 15px;
+            background: rgba(168, 85, 247, 0.2);
+            color: #A855F7;
+        }
+        
+        .member-status.done {
+            background: rgba(34, 211, 238, 0.2);
+            color: #22D3EE;
+        }
+        
+        .input-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 600px) {
+            .input-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        
+        .input-group label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            color: #A855F7;
+            font-weight: 600;
+        }
+        
+        .input-group input {
+            padding: 12px 15px;
+            border: 2px solid rgba(168, 85, 247, 0.3);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: rgba(10, 10, 20, 0.8);
+            color: #e0e0e0;
+            transition: all 0.3s;
+        }
+        
+        .input-group input:focus {
+            outline: none;
+            border-color: #FF6B9D;
+            box-shadow: 0 0 15px rgba(255, 107, 157, 0.2);
+        }
+        
+        .input-group input::placeholder {
+            color: #6b7280;
+        }
+        
+        .optional-tag {
+            font-size: 0.75rem;
+            color: #6b7280;
+            font-weight: normal;
+        }
+        
+        .quick-add {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+        }
+        
+        .quick-add-title {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            margin-bottom: 10px;
+        }
+        
+        .quick-add-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .quick-add-btn {
+            padding: 6px 12px;
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 20px;
+            color: #A855F7;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+        
+        .quick-add-btn:hover {
+            background: rgba(168, 85, 247, 0.3);
+            border-color: #A855F7;
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .back-btn {
+            padding: 12px 25px;
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 10px;
+            color: #A855F7;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .back-btn:hover {
+            background: rgba(168, 85, 247, 0.25);
+        }
+        
+        .next-btn {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #FF6B9D 0%, #A855F7 100%);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .next-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
+        }
+        
+        .next-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .validation-msg {
+            color: #FF6B9D;
+            font-size: 0.85rem;
+            text-align: center;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .validation-msg.show {
+            display: block;
+        }
+        
+        /* Ad Space */
+        .ad-space {
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px dashed rgba(168, 85, 247, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 30px 0;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎤 Add Your Squad</h1>
+            <p class="subtitle">Enter your members' info to unlock K-osmic synergy! ✨</p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width: 25%"></div>
+        </div>
+        <p class="progress-text" id="progressText">Step 1 of 4: Add Members</p>
+        
+        <div class="members-container" id="membersContainer">
+            <!-- Member cards will be generated here -->
+        </div>
+        
+        <p class="validation-msg" id="validationMsg">Please fill in all required fields (name and birthday) for each member!</p>
+        
+        <!-- Ad Space -->
+        <div class="ad-space">
+            📢 Advertisement Space - K-Pop Merch & Albums
+        </div>
+        
+        <div class="actions">
+            <a href="band-builder.html" class="back-btn">← Back</a>
+            <button class="next-btn" id="nextBtn" onclick="goToDebutDate()">
+                Choose Debut Date →
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        // Famous K-pop idol birthdays database
+        const famousIdols = [
+            { name: "Jungkook (BTS)", dob: "1997-09-01" },
+            { name: "Lisa (BLACKPINK)", dob: "1997-03-27" },
+            { name: "Jennie (BLACKPINK)", dob: "1996-01-16" },
+            { name: "V (BTS)", dob: "1995-12-30" },
+            { name: "Jimin (BTS)", dob: "1995-10-13" },
+            { name: "Rosé (BLACKPINK)", dob: "1997-02-11" },
+            { name: "Jisoo (BLACKPINK)", dob: "1995-01-03" },
+            { name: "RM (BTS)", dob: "1994-09-12" },
+            { name: "Suga (BTS)", dob: "1993-03-09" },
+            { name: "Jin (BTS)", dob: "1992-12-04" },
+            { name: "J-Hope (BTS)", dob: "1994-02-18" },
+            { name: "Nayeon (TWICE)", dob: "1995-09-22" },
+            { name: "Momo (TWICE)", dob: "1996-11-09" },
+            { name: "Sana (TWICE)", dob: "1996-12-29" },
+            { name: "Tzuyu (TWICE)", dob: "1999-06-14" },
+            { name: "IU", dob: "1993-05-16" },
+            { name: "Karina (aespa)", dob: "2000-04-11" },
+            { name: "Winter (aespa)", dob: "2001-01-01" },
+            { name: "Felix (Stray Kids)", dob: "2000-09-15" },
+            { name: "Hyunjin (Stray Kids)", dob: "2000-03-20" }
+        ];
+        
+        // Get member count from session storage
+        const memberCount = parseInt(sessionStorage.getItem('bandBuilderMemberCount')) || 4;
+        let members = [];
+        
+        // Initialize members array
+        for (let i = 0; i < memberCount; i++) {
+            members.push({ name: '', dob: '', birthTime: '' });
+        }
+        
+        // Render member cards
+        function renderMemberCards() {
+            const container = document.getElementById('membersContainer');
+            container.innerHTML = '';
+            
+            for (let i = 0; i < memberCount; i++) {
+                const member = members[i];
+                const isComplete = member.name && member.dob;
+                
+                // Get random idols for quick add (3 different ones per card)
+                const shuffled = [...famousIdols].sort(() => 0.5 - Math.random());
+                const quickAddIdols = shuffled.slice(0, 3);
+                
+                container.innerHTML += `
+                    <div class="member-card ${isComplete ? 'completed' : ''}" id="member-${i}">
+                        <div class="member-header">
+                            <span class="member-number">✨ Member ${i + 1}</span>
+                            <span class="member-status ${isComplete ? 'done' : ''}">${isComplete ? '✓ Ready!' : 'Waiting...'}</span>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="name-${i}">Name / Stage Name</label>
+                                <input type="text" id="name-${i}" placeholder="e.g., Jisoo, Your Name" 
+                                    value="${member.name}" onchange="updateMember(${i}, 'name', this.value)">
+                            </div>
+                            <div class="input-group">
+                                <label for="dob-${i}">Date of Birth</label>
+                                <input type="date" id="dob-${i}" value="${member.dob}" 
+                                    onchange="updateMember(${i}, 'dob', this.value)">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="time-${i}">Birth Time <span class="optional-tag">(optional - boosts accuracy!)</span></label>
+                            <input type="time" id="time-${i}" value="${member.birthTime}" 
+                                onchange="updateMember(${i}, 'birthTime', this.value)">
+                        </div>
+                        <div class="quick-add">
+                            <p class="quick-add-title">⚡ Quick Add Famous Idol:</p>
+                            <div class="quick-add-btns">
+                                ${quickAddIdols.map(idol => `
+                                    <button class="quick-add-btn" onclick="quickAddIdol(${i}, '${idol.name}', '${idol.dob}')">
+                                        ${idol.name.split(' ')[0]}
+                                    </button>
+                                `).join('')}
+                                <button class="quick-add-btn" onclick="showAllIdols(${i})">More...</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            updateProgress();
+        }
+        
+        // Update member data
+        function updateMember(index, field, value) {
+            members[index][field] = value;
+            
+            // Update card status
+            const card = document.getElementById(`member-${index}`);
+            const status = card.querySelector('.member-status');
+            const isComplete = members[index].name && members[index].dob;
+            
+            if (isComplete) {
+                card.classList.add('completed');
+                status.textContent = '✓ Ready!';
+                status.classList.add('done');
+            } else {
+                card.classList.remove('completed');
+                status.textContent = 'Waiting...';
+                status.classList.remove('done');
+            }
+            
+            updateProgress();
+        }
+        
+        // Quick add idol
+        function quickAddIdol(index, name, dob) {
+            members[index].name = name;
+            members[index].dob = dob;
+            
+            document.getElementById(`name-${index}`).value = name;
+            document.getElementById(`dob-${index}`).value = dob;
+            
+            updateMember(index, 'name', name);
+        }
+        
+        // Show all idols modal
+        function showAllIdols(index) {
+            const idolList = famousIdols.map(idol => `${idol.name}`).join('\n');
+            const choice = prompt(`Choose an idol to add:\n\n${idolList}\n\nType the name exactly:`);
+            
+            if (choice) {
+                const idol = famousIdols.find(i => i.name.toLowerCase().includes(choice.toLowerCase()));
+                if (idol) {
+                    quickAddIdol(index, idol.name, idol.dob);
+                } else {
+                    alert("Idol not found! Try typing the name exactly as shown.");
+                }
+            }
+        }
+        
+        // Update progress bar
+        function updateProgress() {
+            const completed = members.filter(m => m.name && m.dob).length;
+            const percent = Math.round((completed / memberCount) * 25) + 25; // Step 1 = 25-50%
+            
+            document.getElementById('progressFill').style.width = `${percent}%`;
+            document.getElementById('progressText').textContent = `Step 1 of 4: ${completed}/${memberCount} members added`;
+            
+            // Enable/disable next button
+            document.getElementById('nextBtn').disabled = completed < memberCount;
+        }
+        
+        // Go to debut date page
+        function goToDebutDate() {
+            const allComplete = members.every(m => m.name && m.dob);
+            
+            if (!allComplete) {
+                document.getElementById('validationMsg').classList.add('show');
+                return;
+            }
+            
+            // Save members to session storage
+            sessionStorage.setItem('bandBuilderMembers', JSON.stringify(members));
+            
+            // Navigate to debut date page
+            window.location.href = 'band-builder-debut.html';
+        }
+        
+        // Initialize
+        renderMemberCards();
+    </script>
+    
+    <script src="slay-effects.js"></script>
+</body>
+</html>
