@@ -41,7 +41,7 @@
     <meta name="twitter:image" content="https://quantummerlin.com/40hz/Genesis.png">
     
     <!-- PWA -->
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json?v=1.0.1">
     <meta name="theme-color" content="#06b6d4">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -97,6 +97,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            text-align: center;
         }
 
         /* Welcome Flow Overlay */
@@ -956,6 +957,77 @@
 
             .welcome-btn {
                 width: 100%;
+            }
+        }
+
+        /* Extra Small Devices (phones, 480px and down) */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            h2 {
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .welcome-title {
+                font-size: 1.6em;
+            }
+
+            .welcome-subtitle {
+                font-size: 1.1em;
+            }
+
+            .welcome-content {
+                padding: 20px 15px;
+            }
+
+            .welcome-text {
+                font-size: 1em;
+            }
+
+            .benefit-item {
+                padding: 10px 15px;
+                font-size: 0.85em;
+            }
+
+            .track-card {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .track-title {
+                font-size: 1em;
+            }
+
+            .brain-image {
+                max-width: 200px;
+            }
+
+            .category-title {
+                font-size: 1em;
+            }
+
+            .description {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            .now-playing-bar {
+                padding: 15px;
+            }
+
+            .now-playing h3 {
+                font-size: 1em;
+            }
+
+            footer {
+                padding: 20px 15px;
+                font-size: 0.85em;
             }
         }
 

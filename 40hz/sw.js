@@ -1,12 +1,10 @@
 // Service Worker for 40Hz Gamma Wave Generator
-const CACHE_NAME = '40hz-gamma-v1.0.0';
+const CACHE_NAME = '40hz-gamma-v1.0.1';
 const urlsToCache = [
   '/40hz/',
   '/40hz/index.html',
   '/40hz/Genesis.png',
-  '/40hz/manifest.json',
-  '/40hz/styles.css',
-  '/40hz/app.js'
+  '/40hz/manifest.json'
 ];
 
 // Install event - cache resources
