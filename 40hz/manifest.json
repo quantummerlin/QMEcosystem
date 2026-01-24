@@ -1,0 +1,42 @@
+{
+  "name": "40Hz Gamma Wave Generator",
+  "short_name": "40Hz Gamma",
+  "start_url": "/40hz/index.html",
+  "display": "standalone",
+  "background_color": "#0a0f1e",
+  "theme_color": "#06b6d4",
+  "description": "Experience 40Hz gamma waves for cognitive enhancement, memory support, and mental clarity. Research-based frequency combinations backed by neuroscience.",
+  "orientation": "portrait-primary",
+  "categories": ["health", "lifestyle", "productivity", "medical"],
+  "lang": "en",
+  "scope": "/40hz/",
+  "id": "/40hz/",
+  "icons": [
+    {
+      "src": "Genesis.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "Genesis.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "Genesis.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "Genesis.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    
+    <!-- SEO Meta Tags -->
+    <title>Genesis Frequencies: Sacred 37Hz 73Hz Healing Tones from Biblical Gematria | Free Meditation App</title>
+    <meta name="description" content="Transform your meditation with Genesis 1:1 sacred frequencies. Free online generator with 49 biblical healing tones (37Hz, 73Hz, 2701Hz) plus 432Hz, 528Hz Solfeggio frequencies. Unlock deep relaxation, spiritual awakening, and divine alignment. Try now - no download required.">
+    <meta name="keywords" content="frequency generator, 432Hz, 432Hz frequency, 432Hz music, 528Hz, 528Hz frequency, 528Hz love frequency, 528Hz meditation, Solfeggio frequencies, 396Hz, 417Hz, 639Hz, 741Hz, 852Hz, 963Hz, binaural beats, binaural beats generator, Hz generator, tone generator, relaxation frequencies, sound therapy, meditation music, sleep frequencies, focus frequencies, meditation frequencies, relaxation sounds, chakra meditation, spiritual frequencies, 7.83Hz, Schumann resonance, genesis frequency, biblical frequencies, 37Hz, 73Hz, 2701Hz, sacred frequencies, Hebrew gematria, mindfulness sounds, calming frequencies, ambient tones">
+    <meta name="author" content="Quantum Merlin">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://genesis.quantummerlin.com/">
+    <link rel="alternate" hreflang="en" href="https://genesis.quantummerlin.com/">
+    <link rel="alternate" hreflang="pt" href="https://genesis.quantummerlin.com/pt/">
+    <link rel="alternate" hreflang="x-default" href="https://genesis.quantummerlin.com/">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="US">
+    <meta name="geo.placename" content="United States">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://genesis.quantummerlin.com/">
+    <meta property="og:title" content="Biblical Genesis Frequency Generator | Sacred Healing Frequencies">
+    <meta property="og:description" content="🎵 Transform your meditation with biblical healing frequencies. 49 sacred tones including 37Hz, 73Hz, 528Hz Solfeggio. Free online generator based on Genesis 1:1 gematria. Deep relaxation, spiritual awakening & divine alignment. Try now!">
+    <meta property="og:image" content="https://genesis.quantummerlin.com/Genesis.png">
+    <meta property="og:site_name" content="Genesis Frequencies by Quantum Merlin">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Genesis Frequencies - Sacred Healing Sound Generator">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://genesis.quantummerlin.com/">
+    <meta name="twitter:title" content="Biblical Genesis Frequency Generator | Sacred Healing Frequencies">
+    <meta name="twitter:description" content="🎵 Transform meditation with biblical healing frequencies. 49 sacred tones (37Hz, 73Hz, 528Hz). Free online generator from Genesis 1:1. Try now!">
+    <meta name="twitter:creator" content="@QuantumMerlin">
+    <meta name="twitter:site" content="@QuantumMerlin">
+    <meta name="twitter:image" content="https://genesis.quantummerlin.com/Genesis.png">
+    
+    <!-- Additional SEO -->
+    <meta name="subject" content="Biblical Frequency Meditation and Spiritual Wellness">
+    <meta name="classification" content="Wellness, Spirituality, Meditation, Relaxation">
+    <meta name="rating" content="General">
+    <meta name="referrer" content="origin-when-cross-origin">
+    
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Genesis Frequencies - Biblical Healing Sound Generator",
+        "alternateName": "Genesis Frequency Generator",
+        "description": "Transform your meditation with 49 sacred healing frequencies derived from Genesis 1:1 biblical mathematics and Hebrew gematria. Features 37Hz, 73Hz, 2701Hz Trinity frequencies, 432Hz, 528Hz Solfeggio tones, angel numbers, and binaural beats for deep relaxation, spiritual awakening, and divine alignment.",
+        "url": "https://genesis.quantummerlin.com",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Any (Web Browser)",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "softwareVersion": "1.0",
+        "datePublished": "2025-01-01",
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true,
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2030-12-31"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Quantum Merlin",
+            "url": "https://quantummerlin.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Quantum Merlin",
+            "url": "https://quantummerlin.com"
+        },
+        "keywords": "genesis frequencies, biblical frequencies, 37Hz, 73Hz, 2701Hz, frequency generator, 432Hz music, 528Hz love frequency, Solfeggio frequencies, healing tones, meditation music, binaural beats, sound therapy, spiritual awakening, chakra healing, Hebrew gematria, sacred geometry, angel numbers, sleep sounds, relaxation music, divine alignment",
+        "featureList": [
+            "49 Sacred Frequency Tracks",
+            "Genesis 1:1 Biblical Frequencies (37Hz, 73Hz, 2701Hz)",
+            "Full Solfeggio Scale (396Hz-963Hz)",
+            "432Hz Healing Music",
+            "Angel Number Frequencies (111-999)",
+            "Individual Volume Controls (Premium)",
+            "Custom Session Durations (Premium)",
+            "WAV Export for Offline Use (Premium)",
+            "Achievement & Progress Tracking",
+            "Offline PWA Support"
+        ],
+        "screenshot": "https://genesis.quantummerlin.com/Genesis.png",
+        "image": "https://genesis.quantummerlin.com/Genesis.png",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "847",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What are Genesis Frequencies?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Genesis Frequencies are sacred healing tones derived from the mathematical structure of Genesis 1:1 in Hebrew. The primary frequencies are 37Hz, 73Hz, and 2701Hz, which represent the gematria (numerical value) of the first verse of the Bible. These frequencies are believed to carry the vibrational blueprint of creation itself."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I use the Genesis Frequency Generator?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Simply select a frequency track from the 49 available options, set your desired duration (5-10 minutes recommended for beginners), put on headphones for best results, press PLAY, and focus on your intention. The frequencies work best during meditation, prayer, or relaxation practices."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the 528Hz love frequency?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "528Hz is one of the Solfeggio frequencies known as the 'love frequency' or 'miracle tone.' It's associated with DNA repair, transformation, and miracles. Combined with the Genesis Trinity frequencies (37Hz + 73Hz), it creates a powerful healing resonance for the heart chakra and emotional balance."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the Genesis Frequency Generator free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! The Genesis Frequency Generator is completely free to use with access to all 49 frequency tracks. Premium features like individual volume controls, custom durations, and WAV export are available for a one-time payment of $9.99 with lifetime access."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the benefits of 432Hz music?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "432Hz is known as the natural tuning frequency that resonates with the universe. Benefits include deep relaxation, reduced anxiety, improved sleep quality, enhanced meditation states, and alignment with natural rhythms. It's mathematically consistent with patterns found in nature, sacred geometry, and the cosmos."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use Genesis Frequencies for sleep?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! Many tracks are specifically designed for deep relaxation and sleep, including Earth Resonance (7.83Hz Schumann resonance), Delta Wave frequencies, and specific Solfeggio combinations. Set a duration of 30-60 minutes and let the frequencies guide you into restful sleep."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Genesis Frequencies">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#6B46C1">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Preload critical image -->
+    <link rel="preload" as="image" href="/Genesis.png" fetchpriority="high">
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="/Genesis.png">
+    <link rel="apple-touch-icon" href="/Genesis.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Hide scrollbars but keep scroll functionality */
+        * {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+        }
+        *::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: url('/Genesis.png') center center/cover fixed;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            padding: 8px;
+            padding-top: max(20px, env(safe-area-inset-top));
+            padding-bottom: max(8px, env(safe-area-inset-bottom));
+            padding-left: max(8px, env(safe-area-inset-left));
+            padding-right: max(8px, env(safe-area-inset-right));
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Extra padding for PWA standalone mode */
+        @media all and (display-mode: standalone) {
+            body {
+                padding-top: max(30px, calc(env(safe-area-inset-top) + 15px));
+            }
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(26, 0, 51, 0.6) 0%, rgba(26, 0, 51, 0.9) 100%);
+            pointer-events: none;
+            z-index: 1;
+            animation: backgroundShift 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% {
+                background-position: 0% 0%;
+            }
+            25% {
+                background-position: 100% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            75% {
+                background-position: 0% 100%;
+            }
+        }
+
+        /* Respect user's motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                margin: 0 auto;
+                border-radius: 28px;
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding: 4px;
+                background-attachment: scroll;
+            }
+
+            .container {
+                margin: 0;
+                border-radius: 16px;
+                padding: 8px;
+                max-width: none;
+                width: calc(100vw - 8px);
+                box-sizing: border-box;
+            }
+
+            .header {
+                padding: 8px 0 16px 0;
+            }
+
+            .header h1 {
+                font-size: 22px;
+                line-height: 1.2;
+            }
+
+            .header p {
+                font-size: 14px;
+                line-height: 1.4;
+            }
+
+            .section {
+                margin-bottom: 20px;
+            }
+
+            .section-title {
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+
+            .welcome-content {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            .welcome-content h3 {
+                font-size: 16px;
+            }
+
+            .welcome-content ul, .welcome-content ol {
+                padding-left: 16px;
+            }
+
+            .welcome-content li {
+                margin-bottom: 6px;
+            }
+
+            .trinity-base {
+                padding: 16px;
+                margin: 16px 0;
+            }
+
+            .trinity-title {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+
+            .trinity-frequencies {
+                gap: 12px;
+            }
+
+            .trinity-freq {
+                padding: 8px 12px;
+            }
+
+            .trinity-freq .hz {
+                font-size: 18px;
+            }
+
+            .trinity-freq .label {
+                font-size: 12px;
+            }
+
+            .visualizer {
+                height: 120px;
+                margin: 16px 0;
+            }
+
+            .frequency-vibration {
+                height: 80px;
+            }
+
+            .recipes {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .recipe-card {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .recipe-header {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .recipe-freqs {
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+
+            .recipe-description {
+                font-size: 13px;
+                line-height: 1.4;
+            }
+
+            .controls {
+                padding: 16px;
+            }
+
+            .frequency-controls {
+                gap: 12px;
+            }
+
+            .control-group {
+                padding: 12px;
+                border-radius: 8px;
+            }
+
+            .control-group input[type="number"] {
+                font-size: 16px;
+                padding: 8px;
+            }
+
+            .control-group input[type="range"] {
+                height: 6px;
+            }
+
+            .range-value {
+                font-size: 12px;
+            }
+
+            .duration-input-container input {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .duration-buttons {
+                gap: 6px;
+                flex-wrap: wrap;
+            }
+
+            .duration-btn {
+                font-size: 14px;
+                padding: 8px 12px;
+                min-width: 44px;
+            }
+
+            .button-group {
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+
+            .button {
+                font-size: 16px;
+                padding: 12px 20px;
+                min-height: 48px;
+                min-width: 120px;
+            }
+
+            .status {
+                font-size: 14px;
+                padding: 12px;
+                margin: 12px 0;
+            }
+
+            .instructions-panel {
+                padding: 16px !important;
+                margin: 0 8px 16px 8px !important;
+                border-radius: 12px !important;
+            }
+
+            .instructions-header h2 {
+                font-size: 20px !important;
+            }
+
+            .accordion-content {
+                padding: 12px 4px 0 4px !important;
+                font-size: 14px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 4px;
+                overflow-x: hidden;
+            }
+
+            .container {
+                padding: 8px;
+                border-radius: 12px;
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            .section {
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                padding: 4px;
+                margin-bottom: 12px;
+                overflow-x: hidden;
+            }
+
+            .frequency-controls {
+                gap: 0px;

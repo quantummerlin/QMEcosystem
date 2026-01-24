@@ -1,0 +1,857 @@
+{
+  "version": "1.0",
+  "brand": "40Hz Quantum Merlin",
+  "lastUpdated": "2025-01-09",
+  "categories": [
+    {
+      "id": "cognitive",
+      "name": "Cognitive Performance",
+      "description": "Enhance focus, concentration, and mental clarity",
+      "icon": "🧠",
+      "color": "#8b5cf6",
+      "tracks": [
+        {
+          "id": "cog_001",
+          "name": "Gamma Focus Study",
+          "frequencies": [40, 10.5, 128],
+          "layers": ["Gamma Base", "Alpha Focus", "Heart Resonance"],
+          "description": "Enhanced focus and concentration with heart coherence",
+          "duration": { "min": 5, "max": 60, "default": 15 },
+          "bestFor": ["Deep Work", "Study", "Programming"],
+          "featured": true,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "cog_002",
+          "name": "Focus Calm Center",
+          "frequencies": [40, 10, 136.1],
+          "layers": ["Gamma Base", "Alpha Calm", "OM Foundation"],
+          "description": "Balanced focus with centered awareness",
+          "duration": { "min": 5, "max": 60, "default": 15 },
+          "bestFor": ["Meditation", "Reading", "Planning"],
+          "featured": false,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "cog_003",
+          "name": "Steady State Relief",
+          "frequencies": [40, 12, 174],
+          "layers": ["Gamma Base", "SMR Stability", "Solfeggio Relief"],
+          "description": "Stable focus with stress reduction",
+          "duration": { "min": 5, "max": 60, "default": 20 },
+          "bestFor": ["Stressful Work", "Deadlines", "Meetings"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "cog_004",
+          "name": "Alert Clarity Light",
+          "frequencies": [40, 16, 144],
+          "layers": ["Gamma Base", "Beta Alert", "Light Clarity"],
+          "description": "High alertness with mental clarity",
+          "duration": { "min": 5, "max": 45, "default": 15 },
+          "bestFor": ["Problem Solving", "Analysis", "Strategic Thinking"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "cog_005",
+          "name": "Vigilant Stability Base",
+          "frequencies": [40, 18, 100],
+          "layers": ["Gamma Base", "High Beta", "Stability Tone"],
+          "description": "Sustained vigilance with grounding",
+          "duration": { "min": 5, "max": 60, "default": 20 },
+          "bestFor": ["Long Sessions", "Monitoring", "Security Work"],
+          "featured": false,
+          "difficulty": "advanced"
+        },
+        {
+          "id": "cog_006",
+          "name": "Theta Calm Layer",
+          "frequencies": [40, 5, 174],
+          "layers": ["Gamma Base", "Theta Calm", "Relief Tone"],
+          "description": "Deep calm with gamma awareness",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Stress Relief", "Anxiety Management", "Deep Work"],
+          "featured": true,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "cog_007",
+          "name": "Beta Vigil Core",
+          "frequencies": [40, 18, 100],
+          "layers": ["Gamma Base", "Beta Vigilance", "Core Stability"],
+          "description": "High energy sustained focus",
+          "duration": { "min": 5, "max": 45, "default": 15 },
+          "bestFor": ["Energy Work", "Active Tasks", "Physical Activity"],
+          "featured": true,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "cog_008",
+          "name": "Earth Pulse Sync",
+          "frequencies": [40, 7.83, 128],
+          "layers": ["Gamma Base", "Schumann Resonance", "Heart Tone"],
+          "description": "Grounded focus with earth connection",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Outdoor Work", "Nature Connection", "Grounding"],
+          "featured": false,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "cog_009",
+          "name": "Phi Rhythm Frame",
+          "frequencies": [40, 1.618, 136.1],
+          "layers": ["Gamma Base", "Golden Ratio", "OM Foundation"],
+          "description": "Natural harmony focus with mathematical precision",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Creative Work", "Design", "Pattern Recognition"],
+          "featured": false,
+          "difficulty": "advanced"
+        },
+        {
+          "id": "cog_010",
+          "name": "SMR Stability Duo",
+          "frequencies": [40, 13, 111],
+          "layers": ["Gamma Base", "SMR Rhythm", "Sacred Triple"],
+          "description": "Stable sensorimotor rhythm focus",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Sports Training", "Motor Skills", "Coordination"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "cog_011",
+          "name": "High Beta Charge",
+          "frequencies": [40, 30, 100],
+          "layers": ["Gamma Base", "High Beta Energy", "Stability Base"],
+          "description": "Maximum energy and alertness",
+          "duration": { "min": 5, "max": 30, "default": 10 },
+          "bestFor": ["Urgent Tasks", "Quick Decisions", "Emergency Focus"],
+          "featured": false,
+          "difficulty": "advanced"
+        },
+        {
+          "id": "cog_012",
+          "name": "Delta Deep Anchor",
+          "frequencies": [40, 2, 128],
+          "layers": ["Gamma Base", "Delta Deep", "Heart Anchor"],
+          "description": "Deep rest with gamma awareness",
+          "duration": { "min": 20, "max": 120, "default": 45 },
+          "bestFor": ["Deep Rest", "Recovery", "Sleep Support"],
+          "featured": false,
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "neural",
+      "name": "Neural Harmony",
+      "description": "Balance and synchronize brain wave activity",
+      "icon": "⚡",
+      "color": "#3b82f6",
+      "tracks": [
+        {
+          "id": "neu_001",
+          "name": "Gamma Earth Heart",
+          "frequencies": [40, 7.83, 128],
+          "layers": ["Gamma Base", "Earth Resonance", "Heart Frequency"],
+          "description": "Complete neural harmony with earth and heart connection",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Balance", "Harmony", "Integration"],
+          "featured": true,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "neu_002",
+          "name": "Memory Unblock Flow",
+          "frequencies": [40, 5.5, 96],
+          "layers": ["Gamma Base", "Theta Flow", "Throat Resonance"],
+          "description": "Enhanced memory flow and communication",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Learning", "Memory Work", "Communication"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "neu_003",
+          "name": "Theta Harmony Alignment",
+          "frequencies": [40, 8, 172.06],
+          "layers": ["Gamma Base", "Theta Harmony", "Pythagorean Tune"],
+          "description": "Deep theta alignment with gamma awareness",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Deep Meditation", "Insight", "Intuition"],
+          "featured": false,
+          "difficulty": "advanced"
+        },
+        {
+          "id": "neu_004",
+          "name": "Pure Intention Stream",
+          "frequencies": [40, 12, 111],
+          "layers": ["Gamma Base", "Alpha Intention", "Sacred Triple"],
+          "description": "Focused intention with clarity",
+          "duration": { "min": 5, "max": 45, "default": 15 },
+          "bestFor": ["Goal Setting", "Visualization", "Manifestation"],
+          "featured": false,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "neu_005",
+          "name": "Memory Lane Carrier",
+          "frequencies": [40, 6, 128],
+          "layers": ["Gamma Base", "Theta Memory", "Heart Carrier"],
+          "description": "Memory access and processing support",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Recall", "Memory Work", "Reflection"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "neu_006",
+          "name": "Vitality Pulse Wave",
+          "frequencies": [40, 15, 174],
+          "layers": ["Gamma Base", "Beta Vitality", "Relief Tone"],
+          "description": "Energizing neural vitality",
+          "duration": { "min": 5, "max": 45, "default": 15 },
+          "bestFor": ["Energy", "Motivation", "Activity"],
+          "featured": false,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "neu_007",
+          "name": "Celestial Clock Sync",
+          "frequencies": [40, 33.33, 136.1],
+          "layers": ["Gamma Base", "High Beta Sync", "OM Foundation"],
+          "description": "Celestial timing and synchronization",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Timing", "Rhythm", "Coordination"],
+          "featured": false,
+          "difficulty": "advanced"
+        },
+        {
+          "id": "neu_008",
+          "name": "Grounding Rod Tone",
+          "frequencies": [40, 9, 128],
+          "layers": ["Gamma Base", "Alpha Grounding", "Heart Tone"],
+          "description": "Strong grounding with mental clarity",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Stability", "Grounding", "Focus"],
+          "featured": false,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "neu_009",
+          "name": "Neural Highway Clear",
+          "frequencies": [40, 16, 174],
+          "layers": ["Gamma Base", "Beta Highway", "Relief Clear"],
+          "description": "Clear neural pathways for thinking",
+          "duration": { "min": 5, "max": 45, "default": 15 },
+          "bestFor": ["Clear Thinking", "Problem Solving", "Analysis"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "neu_010",
+          "name": "Harmonic Heart Key",
+          "frequencies": [40, 128],
+          "layers": ["Gamma Base", "Heart Resonance"],
+          "description": "Simple gamma-heart harmony",
+          "duration": { "min": 5, "max": 60, "default": 15 },
+          "bestFor": ["Heart Focus", "Emotional Balance", "Compassion"],
+          "featured": false,
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "name": "Research Exploration",
+      "description": "Experimental and theoretical frequency combinations",
+      "icon": "🔬",
+      "color": "#06b6d4",
+      "tracks": [
+        {
+          "id": "res_001",
+          "name": "Void Resonance Bridge",
+          "frequencies": [40, 0.1, 183.58],
+          "layers": ["Gamma Base", "Ultra-Low Delta", "High Frequency"],
+          "description": "Experimental bridge between consciousness states",
+          "duration": { "min": 20, "max": 90, "default": 30 },
+          "bestFor": ["Deep Exploration", "Consciousness Research", "Advanced Practice"],
+          "featured": true,
+          "difficulty": "expert"
+        },
+        {
+          "id": "res_002",
+          "name": "Plasma Consciousness Key",
+          "frequencies": [40, 34, 72, 114, 186],
+          "layers": ["Gamma Base", "Beta Plasma", "Alpha Bridge", "Theta Key", "Delta Foundation"],
+          "description": "Multi-layer consciousness exploration",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Consciousness Exploration", "Deep States", "Advanced Research"],
+          "featured": false,
+          "difficulty": "expert"
+        },
+        {
+          "id": "res_003",
+          "name": "Chronos Synch Field",
+          "frequencies": [40, 1, 33, 432],
+          "layers": ["Gamma Base", "Delta Time", "Beta Sync", "Universal Frequency"],
+          "description": "Time perception and synchronization",
+          "duration": { "min": 20, "max": 90, "default": 30 },
+          "bestFor": ["Time Perception", "Flow States", "Synchronization"],
+          "featured": false,
+          "difficulty": "expert"
+        },
+        {
+          "id": "res_004",
+          "name": "Morphic Dream Beacon",
+          "frequencies": [40, 3.14, 88, 198],
+          "layers": ["Gamma Base", "Pi Delta", "Alpha Dream", "High Beta Beacon"],
+          "description": "Dream state exploration with mathematical precision",
+          "duration": { "min": 20, "max": 90, "default": 30 },
+          "bestFor": ["Dream Work", "Creativity", "Subconscious Access"],
+          "featured": false,
+          "difficulty": "expert"
+        },
+        {
+          "id": "res_005",
+          "name": "Aetheric Weave Anchor",
+          "frequencies": [40, 6.66, 108, 216],
+          "layers": ["Gamma Base", "Theta Aether", "Alpha Weave", "Beta Anchor"],
+          "description": "Ethereal connection with grounding",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Spiritual Exploration", "Higher Consciousness", "Grounded Insight"],
+          "featured": false,
+          "difficulty": "expert"
+        },
+        {
+          "id": "res_006",
+          "name": "Lattice Light Grid",
+          "frequencies": [40, 11, 22, 44, 88],
+          "layers": ["Gamma Base", "Alpha Grid", "Beta Lattice", "Gamma Double", "High Gamma"],
+          "description": "Geometric frequency lattice for structured thinking",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Structured Thinking", "Pattern Recognition", "Geometric Insight"],
+          "featured": false,
+          "difficulty": "expert"
+        },
+        {
+          "id": "res_007",
+          "name": "Crystalline Memory Matrix",
+          "frequencies": [40, 9, 99, 153, 369],
+          "layers": ["Gamma Base", "Alpha Crystal", "Beta Matrix", "Theta Memory", "High Frequency"],
+          "description": "Crystal-structured memory enhancement",
+          "duration": { "min": 20, "max": 90, "default": 30 },
+          "bestFor": ["Memory Enhancement", "Crystal Work", "Structured Recall"],
+          "featured": false,
+          "difficulty": "expert"
+        },
+        {
+          "id": "res_008",
+          "name": "Hyperbolic Intuition Wave",
+          "frequencies": [40, 2.718, 54, 174.6],
+          "layers": ["Gamma Base", "Euler's Delta", "Alpha Intuition", "Solfeggio Wave"],
+          "description": "Mathematical intuition enhancement",
+          "duration": { "min": 20, "max": 90, "default": 30 },
+          "bestFor": ["Mathematical Thinking", "Intuition", "Problem Solving"],
+          "featured": false,
+          "difficulty": "expert"
+        },
+        {
+          "id": "res_009",
+          "name": "Solar Plexus Nova",
+          "frequencies": [40, 15.6, 126, 210],
+          "layers": ["Gamma Base", "Beta Nova", "Alpha Solar", "High Beta Energy"],
+          "description": "Solar energy center activation",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Personal Power", "Energy Work", "Confidence"],
+          "featured": false,
+          "difficulty": "advanced"
+        },
+        {
+          "id": "res_010",
+          "name": "Bio-Cosmic Trigger",
+          "frequencies": [40, 0.618, 64, 256],
+          "layers": ["Gamma Base", "Phi Delta", "Low Beta Bio", "High Beta Cosmic"],
+          "description": "Biological-cosmic connection trigger",
+          "duration": { "min": 20, "max": 90, "default": 30 },
+          "bestFor": ["Cosmic Connection", "Biological Harmony", "Universal Insight"],
+          "featured": false,
+          "difficulty": "expert"
+        }
+      ]
+    },
+    {
+      "id": "relaxation",
+      "name": "Deep Relaxation",
+      "description": "Stress reduction and calm focus states",
+      "icon": "🌊",
+      "color": "#10b981",
+      "tracks": [
+        {
+          "id": "rel_001",
+          "name": "Stillness Engine",
+          "frequencies": [40, 0.5],
+          "layers": ["Gamma Base", "Deep Delta"],
+          "description": "Profound stillness with gamma awareness",
+          "duration": { "min": 20, "max": 120, "default": 45 },
+          "bestFor": ["Deep Meditation", "Stillness Practice", "Profound Rest"],
+          "featured": true,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "rel_002",
+          "name": "Deep Healing Resonance",
+          "frequencies": [40, 2.5, 285],
+          "layers": ["Gamma Base", "Delta Healing", "Solfeggio Repair"],
+          "description": "Deep relaxation with healing frequencies",
+          "duration": { "min": 20, "max": 90, "default": 30 },
+          "bestFor": ["Healing", "Recovery", "Deep Rest"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "rel_003",
+          "name": "Calm Focus Field",
+          "frequencies": [40, 10, 174],
+          "layers": ["Gamma Base", "Alpha Calm", "Relief Tone"],
+          "description": "Balanced calm with focused awareness",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Calm Work", "Stress Relief", "Balanced Focus"],
+          "featured": false,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "rel_004",
+          "name": "Neural Soothing Sync",
+          "frequencies": [40, 12, 174],
+          "layers": ["Gamma Base", "SMR Soothing", "Relief Tone"],
+          "description": "Neural system soothing and relaxation",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Nervous System Care", "Stress Relief", "Relaxation"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "rel_005",
+          "name": "Grounded Awareness",
+          "frequencies": [40, 8, 128],
+          "layers": ["Gamma Base", "Theta Ground", "Heart Awareness"],
+          "description": "Grounded presence with awareness",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Grounding", "Presence", "Mindfulness"],
+          "featured": false,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "rel_006",
+          "name": "Restorative States",
+          "frequencies": [40, 4, 136.1],
+          "layers": ["Gamma Base", "Theta Restore", "OM Foundation"],
+          "description": "Deep restorative state induction",
+          "duration": { "min": 20, "max": 90, "default": 30 },
+          "bestFor": ["Restoration", "Recovery", "Deep Rest"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "rel_007",
+          "name": "Connection Harmony",
+          "frequencies": [40, 8, 741],
+          "layers": ["Gamma Base", "Theta Connection", "Solfeggio Harmony"],
+          "description": "Harmonious connection and unity",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Connection", "Unity", "Harmony"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "rel_008",
+          "name": "Emotional Balance Bridge",
+          "frequencies": [40, 4, 963],
+          "layers": ["Gamma Base", "Theta Balance", "Solfeggio Awakening"],
+          "description": "Emotional equilibrium and balance",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Emotional Balance", "Equilibrium", "Inner Peace"],
+          "featured": false,
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "energy",
+      "name": "Energy & Vitality",
+      "description": "Mental energy, alertness, and sustained focus",
+      "icon": "⚡",
+      "color": "#f59e0b",
+      "tracks": [
+        {
+          "id": "ene_001",
+          "name": "Creative Spark Dial",
+          "frequencies": [40, 8.88, 111],
+          "layers": ["Gamma Base", "Alpha Creative", "Sacred Spark"],
+          "description": "Creative energy and inspiration",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Creativity", "Inspiration", "Artistic Work"],
+          "featured": true,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "ene_002",
+          "name": "Vitality Resonance",
+          "frequencies": [40, 9, 852],
+          "layers": ["Gamma Base", "Alpha Vitality", "Solfeggio Awakening"],
+          "description": "Vital energy and life force resonance",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Vitality", "Life Force", "Energy"],
+          "featured": false,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "ene_003",
+          "name": "Alert Clarity Aid",
+          "frequencies": [40, 16, 639],
+          "layers": ["Gamma Base", "Beta Alert", "Solfeggio Connection"],
+          "description": "Sharp alertness with mental clarity",
+          "duration": { "min": 5, "max": 45, "default": 15 },
+          "bestFor": ["Alertness", "Clarity", "Quick Thinking"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "ene_004",
+          "name": "Restoration Wave",
+          "frequencies": [40, 2, 285],
+          "layers": ["Gamma Base", "Delta Restore", "Solfeggio Healing"],
+          "description": "Restorative energy wave",
+          "duration": { "min": 20, "max": 90, "default": 30 },
+          "bestFor": ["Energy Restoration", "Recovery", "Renewal"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "ene_005",
+          "name": "Energetic Synchronization",
+          "frequencies": [40, 20, 639],
+          "layers": ["Gamma Base", "Beta Energy", "Solfeggio Sync"],
+          "description": "Synchronized energy flow",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Energy Flow", "Synchronization", "Coordination"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "ene_006",
+          "name": "Phi Rhythm Release",
+          "frequencies": [40, 1.618, 194.18],
+          "layers": ["Gamma Base", "Golden Phi", "Liberation Tone"],
+          "description": "Natural rhythm energy release",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Natural Energy", "Flow", "Release"],
+          "featured": false,
+          "difficulty": "advanced"
+        },
+        {
+          "id": "ene_007",
+          "name": "Unified Field Primer",
+          "frequencies": [40, 1.618, 963],
+          "layers": ["Gamma Base", "Phi Primer", "Solfeggio Awakening"],
+          "description": "Unified field energy preparation",
+          "duration": { "min": 20, "max": 90, "default": 30 },
+          "bestFor": ["Unified Field", "Peak States", "Integration"],
+          "featured": false,
+          "difficulty": "expert"
+        },
+        {
+          "id": "ene_008",
+          "name": "Beta-Gamma Vigilance",
+          "frequencies": [40, 17, 396],
+          "layers": ["Gamma Base", "Beta Vigilance", "Solfeggio Liberation"],
+          "description": "High vigilance with liberation",
+          "duration": { "min": 5, "max": 45, "default": 15 },
+          "bestFor": ["Vigilance", "High Focus", "Liberation"],
+          "featured": false,
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "memory",
+      "name": "Memory & Learning",
+      "description": "Memory encoding, recall, and cognitive processing",
+      "icon": "📚",
+      "color": "#ec4899",
+      "tracks": [
+        {
+          "id": "mem_001",
+          "name": "Gamma-Theta Recall",
+          "frequencies": [40, 5, 528],
+          "layers": ["Gamma Base", "Theta Memory", "Solfeggio Miracle"],
+          "description": "Enhanced memory recall and access",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Memory Recall", "Learning", "Study"],
+          "featured": true,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "mem_002",
+          "name": "Pathway Clearance Tone",
+          "frequencies": [40, 6, 417],
+          "layers": ["Gamma Base", "Theta Pathway", "Solfeggio Change"],
+          "description": "Clear neural pathways for learning",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Learning", "Pathway Clearing", "New Skills"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "mem_003",
+          "name": "Synaptic Light Stream",
+          "frequencies": [40, 11, 639],
+          "layers": ["Gamma Base", "Alpha Synaptic", "Solfeggio Connection"],
+          "description": "Synaptic enhancement and neural flow",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Synaptic Health", "Neural Flow", "Learning"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "mem_004",
+          "name": "Gentle Vigilance Field",
+          "frequencies": [40, 14, 396],
+          "layers": ["Gamma Base", "Beta Gentle", "Solfeggio Liberation"],
+          "description": "Gentle memory vigilance",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Memory Work", "Gentle Focus", "Learning"],
+          "featured": false,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "mem_005",
+          "name": "Deep Calm Anchor",
+          "frequencies": [40, 3, 528],
+          "layers": ["Gamma Base", "Delta Calm", "Solfeggio Miracle"],
+          "description": "Calm anchor for memory work",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Calm Learning", "Memory Work", "Study"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "mem_006",
+          "name": "Coherence Builder",
+          "frequencies": [40, 10.5, 174],
+          "layers": ["Gamma Base", "Alpha Coherence", "Relief Tone"],
+          "description": "Neural coherence for learning",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Coherence", "Learning", "Integration"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "mem_007",
+          "name": "Focus Sustain Matrix",
+          "frequencies": [40, 15, 741],
+          "layers": ["Gamma Base", "Beta Sustain", "Solfeggio Expression"],
+          "description": "Sustained focus for learning",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Sustained Focus", "Long Study", "Deep Learning"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "mem_008",
+          "name": "Neural Wash Harmonic",
+          "frequencies": [40, 4.5, 285],
+          "layers": ["Gamma Base", "Theta Wash", "Solfeggio Healing"],
+          "description": "Neural cleansing for clarity",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Neural Cleansing", "Clarity", "Fresh Start"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "mem_009",
+          "name": "Stable Rhythm Foundation",
+          "frequencies": [40, 8.3, 128],
+          "layers": ["Gamma Base", "Theta Stable", "Heart Foundation"],
+          "description": "Stable rhythm for memory work",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Stable Learning", "Rhythm", "Memory Work"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "mem_010",
+          "name": "Energetic Alignment Tone",
+          "frequencies": [40, 7.2, 852],
+          "layers": ["Gamma Base", "Theta Alignment", "Solfeggio Awakening"],
+          "description": "Energetic alignment for learning",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Alignment", "Learning", "Energy Work"],
+          "featured": false,
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "specialized",
+      "name": "Specialized Applications",
+      "description": "Study, creativity, analytical thinking, and meditation",
+      "icon": "🎯",
+      "color": "#8b5cf6",
+      "tracks": [
+        {
+          "id": "spe_001",
+          "name": "Study Aid Focus",
+          "frequencies": [40, 16, 100],
+          "layers": ["Gamma Base", "Beta Study", "Stability Tone"],
+          "description": "Optimized for studying and learning",
+          "duration": { "min": 15, "max": 90, "default": 30 },
+          "bestFor": ["Studying", "Learning", "Academic Work"],
+          "featured": true,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "spe_002",
+          "name": "Creative Flow Catalyst",
+          "frequencies": [40, 10.2, 741],
+          "layers": ["Gamma Base", "Alpha Flow", "Solfeggio Expression"],
+          "description": "Catalyst for creative flow states",
+          "duration": { "min": 15, "max": 90, "default": 30 },
+          "bestFor": ["Creativity", "Flow States", "Artistic Work"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "spe_003",
+          "name": "Analytical Thinking",
+          "frequencies": [40, 18, 174],
+          "layers": ["Gamma Base", "High Beta Analytical", "Relief Tone"],
+          "description": "Enhanced analytical and logical thinking",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Analysis", "Logic", "Problem Solving"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "spe_004",
+          "name": "Meditative Focus",
+          "frequencies": [40, 6, 136.1],
+          "layers": ["Gamma Base", "Theta Meditation", "OM Foundation"],
+          "description": "Focused meditation with gamma awareness",
+          "duration": { "min": 20, "max": 90, "default": 30 },
+          "bestFor": ["Meditation", "Mindfulness", "Inner Focus"],
+          "featured": false,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "spe_005",
+          "name": "Default Mode Soothe",
+          "frequencies": [40, 1, 128],
+          "layers": ["Gamma Base", "Delta Default", "Heart Soothe"],
+          "description": "Soothing default mode network",
+          "duration": { "min": 20, "max": 90, "default": 30 },
+          "bestFor": ["Mental Quieting", "Default Mode", "Rest"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "spe_006",
+          "name": "Heart-Brain Coherence",
+          "frequencies": [40, 8, 128],
+          "layers": ["Gamma Base", "Theta Coherence", "Heart Resonance"],
+          "description": "Heart and brain coherence",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Coherence", "Heart-Brain", "Integration"],
+          "featured": false,
+          "difficulty": "beginner"
+        },
+        {
+          "id": "spe_007",
+          "name": "Temporal Lobe Focus",
+          "frequencies": [40, 6, 285],
+          "layers": ["Gamma Base", "Theta Temporal", "Solfeggio Healing"],
+          "description": "Temporal lobe activation focus",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Memory", "Temporal Focus", "Learning"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "spe_008",
+          "name": "Metabolic Clarity Aid",
+          "frequencies": [40, 11.5, 963],
+          "layers": ["Gamma Base", "Alpha Metabolic", "Solfeggio Awakening"],
+          "description": "Clarity with metabolic support",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Metabolic Support", "Clarity", "Energy"],
+          "featured": false,
+          "difficulty": "advanced"
+        },
+        {
+          "id": "spe_009",
+          "name": "Neural Dust Settle",
+          "frequencies": [40, 3.5, 174],
+          "layers": ["Gamma Base", "Delta Settle", "Relief Tone"],
+          "description": "Settle neural activity for clarity",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Neural Settling", "Clarity", "Quiet Mind"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "spe_010",
+          "name": "Cognitive Spark Sync",
+          "frequencies": [40, 15.5, 639],
+          "layers": ["Gamma Base", "Beta Spark", "Solfeggio Connection"],
+          "description": "Cognitive spark and synchronization",
+          "duration": { "min": 10, "max": 60, "default": 20 },
+          "bestFor": ["Cognitive Spark", "Quick Thinking", "Ideas"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "spe_011",
+          "name": "Flow State Catalyst",
+          "frequencies": [40, 10.2, 741],
+          "layers": ["Gamma Base", "Alpha Flow", "Solfeggio Expression"],
+          "description": "Enter and maintain flow states",
+          "duration": { "min": 15, "max": 90, "default": 30 },
+          "bestFor": ["Flow States", "Peak Performance", "Deep Work"],
+          "featured": false,
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "spe_012",
+          "name": "Vessel Clearance Tone",
+          "frequencies": [40, 8.8, 852],
+          "layers": ["Gamma Base", "Theta Vessel", "Solfeggio Awakening"],
+          "description": "Clear mental vessel for new insights",
+          "duration": { "min": 15, "max": 60, "default": 25 },
+          "bestFor": ["Mental Clearance", "New Insights", "Fresh Perspective"],
+          "featured": false,
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "featuredTracks": [
+    "cog_001",
+    "cog_006",
+    "cog_007",
+    "neu_001",
+    "rel_001",
+    "ene_001",
+    "mem_001",
+    "spe_001",
+    "res_001"
+  ],
+  "difficultyLevels": {
+    "beginner": "Suitable for all users, gentle and effective",
+    "intermediate": "Some experience recommended, moderate effects",
+    "advanced": "Experienced users, stronger effects",
+    "expert": "Advanced practitioners, experimental combinations"
+  }
+}
