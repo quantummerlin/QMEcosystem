@@ -448,6 +448,14 @@
             return num;
         }
         
+        // For personal day/month/year - always reduce to 1-9 (no master numbers)
+        function reduceToSingleDigit(num) {
+            while (num > 9) {
+                num = num.toString().split('').reduce((a, b) => a + parseInt(b), 0);
+            }
+            return num;
+        }
+        
         // Personal Year starts on birthday, not January 1st
         function getPersonalYearForDate(birthDate, targetDate) {
             const birth = new Date(birthDate);
@@ -465,25 +473,25 @@
             // Use current year if past birthday, otherwise use previous year
             const cycleYear = hadBirthdayThisYear ? targetYear : targetYear - 1;
             
-            return reduceToSingle(reduceToSingle(birthDay) + reduceToSingle(birthMonth + 1) + reduceToSingle(cycleYear));
+            return reduceToSingleDigit(reduceToSingleDigit(birthDay) + reduceToSingleDigit(birthMonth + 1) + reduceToSingleDigit(cycleYear));
         }
         
         function calculatePersonalYear(birthDate, targetYear) {
             // Legacy function - uses calendar year (for backward compatibility)
             const date = new Date(birthDate);
-            return reduceToSingle(reduceToSingle(date.getDate()) + reduceToSingle(date.getMonth() + 1) + reduceToSingle(targetYear));
+            return reduceToSingleDigit(reduceToSingleDigit(date.getDate()) + reduceToSingleDigit(date.getMonth() + 1) + reduceToSingleDigit(targetYear));
         }
         
         function calculatePersonalMonth(birthDate, targetDate) {
             const target = new Date(targetDate);
             const personalYear = getPersonalYearForDate(birthDate, target);
-            return reduceToSingle(personalYear + (target.getMonth() + 1));
+            return reduceToSingleDigit(personalYear + (target.getMonth() + 1));
         }
         
         function calculatePersonalDay(birthDate, targetDate) {
             const target = new Date(targetDate);
             const personalMonth = calculatePersonalMonth(birthDate, target);
-            return reduceToSingle(personalMonth + target.getDate());
+            return reduceToSingleDigit(personalMonth + target.getDate());
         }
         
         function getWeekNumber(date) {
@@ -496,7 +504,7 @@
         function calculatePersonalWeek(birthDate, targetDate) {
             const target = new Date(targetDate);
             const personalYear = getPersonalYearForDate(birthDate, target);
-            return reduceToSingle(personalYear + getWeekNumber(target));
+            return reduceToSingleDigit(personalYear + getWeekNumber(target));
         }
         
         function getWeekDates(date) {
