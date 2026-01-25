@@ -30,7 +30,7 @@
   <meta name="theme-color" content="#0a0a0f">
   <link rel="manifest" href="/manifest.json">
   <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,6 +46,9 @@
     gtag('config', 'G-VW4LGE7L1T');
   </script>
 
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -53,15 +56,8 @@
     "@type": "Article",
     "headline": "The Numerology of 224 – August 12, 2026",
     "description": "Deep dive into the numerological significance of Day 224 and the gravity pause phenomenon.",
-    "author": {
-      "@type": "Organization",
-      "name": "Quantum Merlin"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Quantum Merlin",
-      "url": "https://quantummerlin.com"
-    },
+    "author": { "@type": "Organization", "name": "Quantum Merlin" },
+    "publisher": { "@type": "Organization", "name": "Quantum Merlin", "url": "https://quantummerlin.com" },
     "datePublished": "2026-01-25",
     "mainEntityOfPage": "https://gravity7.quantummerlin.com/numerology.html"
   }
@@ -76,6 +72,7 @@
       --text-secondary: rgba(255, 255, 255, 0.6);
       --text-tertiary: rgba(255, 255, 255, 0.4);
       --accent: #8b7cf7;
+      --accent-glow: rgba(139, 124, 247, 0.4);
       --accent-dim: rgba(139, 124, 247, 0.12);
       --border: rgba(255, 255, 255, 0.06);
     }
@@ -85,6 +82,7 @@
     html {
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -93,9 +91,41 @@
       color: var(--text-primary);
       min-height: 100vh;
       line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Ambient background */
+    .ambient {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .ambient::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 30% 20%, rgba(139, 124, 247, 0.08) 0%, transparent 50%),
+                  radial-gradient(ellipse at 70% 80%, rgba(139, 124, 247, 0.05) 0%, transparent 40%);
+      animation: ambientDrift 20s ease-in-out infinite;
+    }
+
+    @keyframes ambientDrift {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(-5%, 5%) rotate(3deg); }
     }
 
     .page {
+      position: relative;
+      z-index: 1;
       max-width: 640px;
       margin: 0 auto;
       padding: 60px 24px 100px;
@@ -104,6 +134,8 @@
     /* Navigation */
     .nav {
       margin-bottom: 48px;
+      opacity: 0;
+      animation: fadeIn 0.6s ease 0.2s forwards;
     }
 
     .back-link {
@@ -116,14 +148,8 @@
       transition: color 0.2s;
     }
 
-    .back-link:hover {
-      color: var(--accent);
-    }
-
-    .back-link svg {
-      width: 16px;
-      height: 16px;
-    }
+    .back-link:hover { color: var(--accent); }
+    .back-link svg { width: 16px; height: 16px; }
 
     /* Header */
     .header {
@@ -138,6 +164,8 @@
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 16px;
+      opacity: 0;
+      animation: fadeIn 0.6s ease 0.3s forwards;
     }
 
     .title {
@@ -145,6 +173,8 @@
       font-weight: 300;
       letter-spacing: -0.02em;
       margin-bottom: 16px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.4s forwards;
     }
 
     .subtitle {
@@ -152,34 +182,81 @@
       color: var(--text-secondary);
       max-width: 400px;
       margin: 0 auto;
+      opacity: 0;
+      animation: fadeIn 0.6s ease 0.6s forwards;
     }
 
-    /* Big Number Feature */
-    .feature-number {
+    /* Hero Number */
+    .hero-number {
       text-align: center;
-      padding: 48px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 48px;
+      padding: 80px 0;
+      position: relative;
     }
 
     .big-number {
-      font-size: clamp(72px, 20vw, 120px);
+      font-size: clamp(100px, 28vw, 180px);
       font-weight: 200;
       color: var(--accent);
       letter-spacing: -0.03em;
       line-height: 1;
-      margin-bottom: 12px;
+      position: relative;
+      display: inline-block;
+      opacity: 0;
+      animation: numberReveal 1.2s ease 0.8s forwards;
     }
 
-    .number-meaning {
+    .big-number::after {
+      content: '';
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      filter: blur(40px);
+      opacity: 0;
+      animation: glowPulse 3s ease-in-out 1.5s infinite;
+      z-index: -1;
+    }
+
+    .number-reveal-text {
       font-size: 14px;
-      color: var(--text-secondary);
+      color: var(--text-tertiary);
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeIn 0.6s ease 1.8s forwards;
+    }
+
+    /* Scroll prompt */
+    .scroll-prompt {
+      margin-top: 48px;
+      opacity: 0;
+      animation: fadeIn 0.6s ease 2.2s forwards, bounce 2s ease-in-out 3s infinite;
+    }
+
+    .scroll-prompt svg {
+      width: 24px;
+      height: 24px;
+      color: var(--text-tertiary);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* Reveal sections */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* Section */
     .section {
-      margin-bottom: 40px;
+      margin-bottom: 80px;
     }
 
     .section-title {
@@ -201,20 +278,119 @@
       margin-bottom: 16px;
     }
 
-    .section-content p:last-child {
-      margin-bottom: 0;
+    .section-content p:last-child { margin-bottom: 0; }
+
+    /* Dramatic divider */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 60px 0;
     }
 
-    /* Card */
+    /* Interactive Calculation */
+    .calculation-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .calculation-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(139, 124, 247, 0.05), transparent);
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .calc-numbers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .calc-digit {
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--text-primary);
+      opacity: 0;
+      transform: scale(0.5);
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .calc-digit.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .calc-digit.accent { color: var(--accent); }
+
+    .calc-operator {
+      font-size: 32px;
+      font-weight: 300;
+      color: var(--text-tertiary);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .calc-operator.visible { opacity: 1; }
+
+    .calc-result {
+      font-size: 64px;
+      font-weight: 200;
+      color: var(--accent);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+      text-shadow: 0 0 40px var(--accent-glow);
+    }
+
+    .calc-result.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .calc-meaning {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: 16px;
+      opacity: 0;
+      transition: opacity 0.4s ease 0.3s;
+    }
+
+    .calc-meaning.visible { opacity: 1; }
+
+    /* Cards */
     .card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 28px;
       margin-bottom: 20px;
+      position: relative;
+      transition: border-color 0.3s, transform 0.3s;
     }
 
-    /* Breakdown */
+    .card:hover {
+      border-color: rgba(139, 124, 247, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* Number breakdown - animated */
     .breakdown {
       margin-top: 24px;
     }
@@ -222,9 +398,17 @@
     .breakdown-item {
       display: flex;
       align-items: flex-start;
-      gap: 16px;
-      padding: 20px 0;
+      gap: 20px;
+      padding: 24px 0;
       border-bottom: 1px solid var(--border);
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: all 0.5s ease;
+    }
+
+    .breakdown-item.visible {
+      opacity: 1;
+      transform: translateX(0);
     }
 
     .breakdown-item:last-child {
@@ -233,58 +417,183 @@
     }
 
     .breakdown-number {
-      font-size: 32px;
-      font-weight: 300;
+      font-size: 42px;
+      font-weight: 200;
       color: var(--accent);
-      min-width: 60px;
+      min-width: 70px;
+      position: relative;
     }
 
+    .breakdown-number::after {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      background: radial-gradient(circle, var(--accent-dim) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .breakdown-item:hover .breakdown-number::after { opacity: 1; }
+
     .breakdown-text h3 {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 500;
       color: var(--text-primary);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .breakdown-text p {
       font-size: 14px;
       color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    /* Calculation */
-    .calculation {
-      background: var(--accent-dim);
-      border-radius: 8px;
-      padding: 24px;
-      text-align: center;
-      margin: 24px 0;
-    }
-
-    .calc-formula {
-      font-size: 20px;
-      font-weight: 300;
-      color: var(--text-primary);
-      font-family: monospace;
-      letter-spacing: 0.05em;
-    }
-
-    .calc-result {
-      font-size: 13px;
-      color: var(--text-tertiary);
-      margin-top: 12px;
+      line-height: 1.7;
     }
 
     /* Quote */
     .quote {
       border-left: 2px solid var(--accent);
-      padding-left: 20px;
-      margin: 28px 0;
+      padding: 24px 0 24px 24px;
+      margin: 32px 0;
+      font-size: 17px;
       font-style: italic;
       color: var(--text-secondary);
+      line-height: 1.7;
+      position: relative;
     }
 
-    /* Navigation Links */
+    .quote::before {
+      content: '"';
+      position: absolute;
+      left: 24px;
+      top: 0;
+      font-size: 60px;
+      color: var(--accent-dim);
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+
+    /* The reveal moment */
+    .pattern-reveal {
+      text-align: center;
+      padding: 60px 0;
+      position: relative;
+    }
+
+    .pattern-title {
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 32px;
+    }
+
+    .pattern-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .pattern-item {
+      background: var(--accent-dim);
+      border-radius: 12px;
+      padding: 24px 16px;
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .pattern-item.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .pattern-item:nth-child(1) { transition-delay: 0.1s; }
+    .pattern-item:nth-child(2) { transition-delay: 0.2s; }
+    .pattern-item:nth-child(3) { transition-delay: 0.3s; }
+    .pattern-item:nth-child(4) { transition-delay: 0.4s; }
+    .pattern-item:nth-child(5) { transition-delay: 0.5s; }
+
+    .pattern-value {
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .pattern-label {
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      color: var(--text-tertiary);
+    }
+
+    /* Master 11 special reveal */
+    .master-reveal {
+      text-align: center;
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .master-number {
+      font-size: clamp(80px, 20vw, 140px);
+      font-weight: 200;
+      color: var(--accent);
+      position: relative;
+      display: inline-block;
+    }
+
+    .master-number .one {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .master-number .one:nth-child(1) { transition-delay: 0.2s; }
+    .master-number .one:nth-child(2) { transition-delay: 0.4s; }
+
+    .master-number.visible .one {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .master-label {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity 0.5s ease 0.6s;
+    }
+
+    .master-number.visible + .master-label { opacity: 1; }
+
+    /* Final insight */
+    .final-insight {
+      background: linear-gradient(135deg, var(--accent-dim) 0%, rgba(139, 124, 247, 0.05) 100%);
+      border: 1px solid rgba(139, 124, 247, 0.2);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    .final-insight p {
+      font-size: 17px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .final-insight strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Page navigation */
     .page-nav {
       display: flex;
       justify-content: space-between;
@@ -300,13 +609,8 @@
       transition: color 0.2s;
     }
 
-    .nav-link:hover {
-      color: var(--accent);
-    }
-
-    .nav-link.next {
-      margin-left: auto;
-    }
+    .nav-link:hover { color: var(--accent); }
+    .nav-link.next { margin-left: auto; }
 
     /* Footer */
     .footer {
@@ -325,15 +629,41 @@
       opacity: 0.5;
     }
 
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes numberReveal {
+      0% { opacity: 0; transform: scale(0.8); filter: blur(10px); }
+      100% { opacity: 1; transform: scale(1); filter: blur(0); }
+    }
+
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.1); }
+    }
+
     @media (max-width: 480px) {
       .page { padding: 40px 20px 80px; }
-      .breakdown-item { flex-direction: column; gap: 8px; }
-      .breakdown-number { min-width: unset; }
+      .breakdown-item { flex-direction: column; gap: 12px; }
+      .breakdown-number { min-width: unset; font-size: 36px; }
+      .pattern-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .calc-numbers { gap: 8px; }
+      .calc-digit { font-size: 36px; }
     }
   </style>
 </head>
 
 <body>
+  <div class="ambient"></div>
+  
   <div class="page">
     <!-- Navigation -->
     <nav class="nav">
@@ -349,82 +679,149 @@
     <header class="header">
       <div class="page-label">Numerology</div>
       <h1 class="title">The Numbers Behind the Pause</h1>
-      <p class="subtitle">Why August 12, 2026 carries profound numerical significance</p>
+      <p class="subtitle">Some patterns only reveal themselves to those who look</p>
     </header>
 
-    <!-- Featured Number -->
-    <section class="feature-number">
-      <div class="big-number">224</div>
-      <div class="number-meaning">The 224th day of 2026</div>
-    </section>
-
-    <!-- Primary Reduction -->
-    <section class="section">
-      <h2 class="section-title">The Primary Reduction</h2>
-      <div class="section-content">
-        <p>In numerology, we reduce compound numbers to their single-digit essence through addition. Day 224 carries a unique signature:</p>
-      </div>
-      
-      <div class="calculation">
-        <div class="calc-formula">2 + 2 + 4 = 8</div>
-        <div class="calc-result">The number of infinity, power, and karmic balance</div>
-      </div>
-      
-      <div class="section-content">
-        <p>Eight is the number of manifestation — the bridge between the spiritual and material worlds. It represents cycles, cause and effect, and the flow of cosmic energy.</p>
+    <!-- Hero Number -->
+    <section class="hero-number">
+      <div class="big-number" id="heroNumber">224</div>
+      <p class="number-reveal-text">The 224th day of 2026</p>
+      <div class="scroll-prompt">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
       </div>
     </section>
 
-    <!-- Full Date -->
-    <section class="section">
-      <div class="card">
-        <h2 class="section-title">The Full Date Signature</h2>
-        <div class="section-content">
-          <p>When we calculate the complete numerological signature of August 12, 2026:</p>
+    <div class="divider"></div>
+
+    <!-- First calculation -->
+    <section class="section reveal">
+      <h2 class="section-title">The First Pattern</h2>
+      <div class="section-content">
+        <p>Numerology reveals meaning through reduction. We add digits together until a single essence remains.</p>
+        <p>Watch:</p>
+      </div>
+      
+      <div class="calculation-box" id="calc1">
+        <div class="calc-numbers">
+          <span class="calc-digit" data-delay="0">2</span>
+          <span class="calc-operator" data-delay="200">+</span>
+          <span class="calc-digit" data-delay="400">2</span>
+          <span class="calc-operator" data-delay="600">+</span>
+          <span class="calc-digit" data-delay="800">4</span>
+          <span class="calc-operator" data-delay="1000">=</span>
         </div>
-        
-        <div class="calculation">
-          <div class="calc-formula">8 + 1 + 2 + 2 + 0 + 2 + 6 = 21 → 2 + 1 = 3</div>
-          <div class="calc-result">Month (8) + Day (12) + Year (2026)</div>
-        </div>
-        
-        <div class="section-content">
-          <p>Three is the number of creation, expression, and the trinity. It appears in sacred geometry, religious traditions, and the fundamental structure of reality: past, present, future.</p>
-        </div>
+        <div class="calc-result" data-delay="1400">8</div>
+        <p class="calc-meaning" data-delay="1800">The number of infinity, power, and karmic balance</p>
       </div>
     </section>
 
-    <!-- Master Number -->
-    <section class="section">
-      <h2 class="section-title">The Hidden Master Number</h2>
+    <!-- Meaning of 8 -->
+    <section class="section reveal">
       <div class="section-content">
-        <p>Before the final reduction, notice the intermediate step:</p>
+        <p>Eight is the number of <strong style="color: var(--accent)">manifestation</strong> — the bridge between the spiritual and material worlds.</p>
+        <p>Turn it on its side. You get ∞. Infinity. Endless cycles and eternal return.</p>
+        <p>This is not coincidence. August is the 8th month.</p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Full date calculation -->
+    <section class="section reveal">
+      <h2 class="section-title">Go Deeper</h2>
+      <div class="section-content">
+        <p>Now calculate the complete date. Month + Day + Year:</p>
       </div>
       
-      <div class="calculation">
-        <div class="calc-formula">8 + 12 + 2026 → 2 + 0 + 4 + 6 = 12 → 1 + 1 = 2 → 11</div>
-        <div class="calc-result">Master Number 11 emerges through the date components</div>
+      <div class="calculation-box" id="calc2">
+        <div class="calc-numbers">
+          <span class="calc-digit" data-delay="0">8</span>
+          <span class="calc-operator" data-delay="150">+</span>
+          <span class="calc-digit" data-delay="300">1</span>
+          <span class="calc-operator" data-delay="450">+</span>
+          <span class="calc-digit" data-delay="600">2</span>
+          <span class="calc-operator" data-delay="750">+</span>
+          <span class="calc-digit" data-delay="900">2</span>
+          <span class="calc-operator" data-delay="1050">+</span>
+          <span class="calc-digit" data-delay="1200">0</span>
+          <span class="calc-operator" data-delay="1350">+</span>
+          <span class="calc-digit" data-delay="1500">2</span>
+          <span class="calc-operator" data-delay="1650">+</span>
+          <span class="calc-digit" data-delay="1800">6</span>
+          <span class="calc-operator" data-delay="1950">=</span>
+        </div>
+        <div class="calc-result" data-delay="2400">21 → 3</div>
+        <p class="calc-meaning" data-delay="2800">The number of creation, expression, and the trinity</p>
+      </div>
+    </section>
+
+    <!-- Meaning of 3 -->
+    <section class="section reveal">
+      <div class="section-content">
+        <p>Three appears everywhere in sacred geometry. The triangle. The trinity. Past, present, future.</p>
+        <p>It is the number of <strong style="color: var(--accent)">creation itself</strong>.</p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- The hidden pattern -->
+    <section class="section reveal">
+      <h2 class="section-title">But Wait</h2>
+      <div class="section-content">
+        <p>Before the final reduction, something appears. Something that doesn't reduce.</p>
+        <p>Look at the timestamp: <strong style="color: var(--accent)">14:33 UTC</strong></p>
       </div>
       
+      <div class="calculation-box" id="calc3">
+        <div class="calc-numbers">
+          <span class="calc-digit" data-delay="0">1</span>
+          <span class="calc-operator" data-delay="150">+</span>
+          <span class="calc-digit" data-delay="300">4</span>
+          <span class="calc-operator" data-delay="450">+</span>
+          <span class="calc-digit" data-delay="600">3</span>
+          <span class="calc-operator" data-delay="750">+</span>
+          <span class="calc-digit" data-delay="900">3</span>
+          <span class="calc-operator" data-delay="1050">=</span>
+        </div>
+        <div class="calc-result accent" data-delay="1500">11</div>
+        <p class="calc-meaning" data-delay="1900">Master Number</p>
+      </div>
+    </section>
+
+    <!-- Master 11 reveal -->
+    <section class="master-reveal reveal">
+      <div class="master-number" id="masterNumber">
+        <span class="one">1</span><span class="one">1</span>
+      </div>
+      <p class="master-label">The Gateway</p>
+    </section>
+
+    <section class="section reveal">
       <div class="quote">
-        "Eleven is the gateway — it doesn't reduce, it amplifies. It is intuition meeting reality, the bridge between dimensions."
+        Eleven is the gateway — it doesn't reduce, it amplifies. It is intuition meeting reality, the bridge between dimensions.
       </div>
-      
       <div class="section-content">
-        <p>Master Number 11 represents spiritual awakening, heightened intuition, and the connection between the seen and unseen. It is considered the most intuitive of all numbers.</p>
+        <p>Master Number 11 represents spiritual awakening, heightened intuition, and the connection between the seen and unseen.</p>
+        <p>It appears <em>twice</em> in this date. In the timestamp. And hidden within the date itself.</p>
+        <p>This was not chosen arbitrarily.</p>
       </div>
     </section>
 
-    <!-- The Breakdown -->
-    <section class="section">
-      <h2 class="section-title">The Component Numbers</h2>
+    <div class="divider"></div>
+
+    <!-- The component numbers -->
+    <section class="section reveal">
+      <h2 class="section-title">The Building Blocks</h2>
       
-      <div class="breakdown">
+      <div class="breakdown" id="breakdown">
         <div class="breakdown-item">
           <div class="breakdown-number">2</div>
           <div class="breakdown-text">
             <h3>Duality & Balance</h3>
-            <p>Partnership, polarity, the dance between opposing forces. Two appears twice in 224, doubling its influence.</p>
+            <p>Partnership, polarity, the dance between opposing forces. Appears twice in 224, doubling its influence.</p>
           </div>
         </div>
         
@@ -432,7 +829,7 @@
           <div class="breakdown-number">4</div>
           <div class="breakdown-text">
             <h3>Foundation & Structure</h3>
-            <p>The four elements, four directions, stability and order. Interestingly, it's what gives gravity its grounding nature.</p>
+            <p>The four elements, four directions, stability and order. What gives gravity its grounding nature.</p>
           </div>
         </div>
         
@@ -440,7 +837,7 @@
           <div class="breakdown-number">8</div>
           <div class="breakdown-text">
             <h3>Infinity & Power</h3>
-            <p>August is the 8th month. When 8 lies on its side, it becomes the infinity symbol — endless cycles and eternal return.</p>
+            <p>August is the 8th month. Turned sideways, it becomes ∞ — endless cycles and eternal return.</p>
           </div>
         </div>
         
@@ -448,59 +845,182 @@
           <div class="breakdown-number">7</div>
           <div class="breakdown-text">
             <h3>The Sacred Seven</h3>
-            <p>The pause lasts 7 seconds. Seven is mysticism, inner wisdom, and the number of completion in countless traditions.</p>
+            <p>The pause lasts exactly 7 seconds. Seven is mysticism, inner wisdom, completion.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Time -->
-    <section class="section">
-      <div class="card">
-        <h2 class="section-title">The Timestamp: 14:33 UTC</h2>
-        <div class="section-content">
-          <p>Even the chosen time carries meaning:</p>
+    <div class="divider"></div>
+
+    <!-- Pattern convergence -->
+    <section class="pattern-reveal reveal">
+      <div class="pattern-title">The Convergence</div>
+      <div class="pattern-grid" id="patternGrid">
+        <div class="pattern-item">
+          <div class="pattern-value">224</div>
+          <div class="pattern-label">Day of Year</div>
         </div>
-        
-        <div class="calculation">
-          <div class="calc-formula">1 + 4 + 3 + 3 = 11</div>
-          <div class="calc-result">Master Number 11 appears again</div>
+        <div class="pattern-item">
+          <div class="pattern-value">8</div>
+          <div class="pattern-label">Manifestation</div>
         </div>
-        
-        <div class="section-content">
-          <p>The repetition of Master Number 11 in both the date calculation and the timestamp suggests this moment was not chosen arbitrarily. The numbers align with uncanny precision.</p>
+        <div class="pattern-item">
+          <div class="pattern-value">3</div>
+          <div class="pattern-label">Creation</div>
+        </div>
+        <div class="pattern-item">
+          <div class="pattern-value">11</div>
+          <div class="pattern-label">Master Gateway</div>
+        </div>
+        <div class="pattern-item" style="grid-column: span 2;">
+          <div class="pattern-value">7</div>
+          <div class="pattern-label">Seconds of Pause</div>
         </div>
       </div>
     </section>
 
-    <!-- Synchronicity -->
-    <section class="section">
-      <h2 class="section-title">Pattern Recognition</h2>
-      <div class="section-content">
-        <p>Whether one believes in numerology as divination or simply appreciates pattern recognition, the numerical convergence of this date is remarkable:</p>
-        <p>• Day 224 reduces to 8 (manifestation)<br>
-           • Full date reduces to 3 (creation)<br>
-           • Master Number 11 appears twice (awakening)<br>
-           • Duration of 7 seconds (completion)<br>
-           • Eclipse occurs in Leo (the 5th sign)</p>
-        <p>These are not random — they form a coherent symbolic language that has fascinated humans across cultures for millennia.</p>
+    <!-- Final insight -->
+    <section class="reveal">
+      <div class="final-insight">
+        <p><strong>So what does this mean for you?</strong></p>
+        <p style="margin-top: 16px;">The numbers point to a day of <strong>transition and manifestation</strong>. The infinite cycles (8), the spiritual gateway (11), the divine pattern (3) — they all converge here.</p>
+        <p style="margin-top: 16px;">This isn't about believing in numerology. It's about recognizing that <strong>this moment is marked</strong> — across systems, across traditions, across time.</p>
+        <p style="margin-top: 16px;">If you've been waiting for a sign to start something new, to release something old, or to simply pause and listen: <strong>this is that moment</strong>.</p>
       </div>
     </section>
 
     <!-- Navigation -->
-    <nav class="page-nav">
+    <nav class="page-nav reveal">
       <a href="/" class="nav-link">← Countdown</a>
-      <a href="/reading.html" class="nav-link next">Eclipse Reading →</a>
+      <a href="/prophecy.html" class="nav-link next">Gematria & Prophecy →</a>
     </nav>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-brand">Quantum Merlin</div>
+    <footer class="footer reveal">
+      <div style="display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap;">
+        <a href="/about.html" style="font-size: 12px; color: var(--text-tertiary); text-decoration: none;">About</a>
+        <a href="/privacy.html" style="font-size: 12px; color: var(--text-tertiary); text-decoration: none;">Privacy Policy</a>
+        <a href="mailto:hello@quantummerlin.com" style="font-size: 12px; color: var(--text-tertiary); text-decoration: none;">Contact</a>
+      </div>
+      <div class="footer-brand">© 2026 Quantum Merlin</div>
     </footer>
   </div>
 
-  <!-- Service Worker -->
   <script>
+    // Intersection Observer for reveal animations
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          
+          // Trigger calculation animations
+          if (entry.target.querySelector('.calculation-box')) {
+            animateCalculation(entry.target.querySelector('.calculation-box'));
+          }
+          
+          // Trigger breakdown animations
+          if (entry.target.querySelector('.breakdown')) {
+            animateBreakdown(entry.target.querySelector('.breakdown'));
+          }
+          
+          // Trigger master number animation
+          if (entry.target.querySelector('.master-number')) {
+            entry.target.querySelector('.master-number').classList.add('visible');
+          }
+          
+          // Trigger pattern grid animation
+          if (entry.target.querySelector('.pattern-grid')) {
+            animatePatternGrid(entry.target.querySelector('.pattern-grid'));
+          }
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // Animate calculation boxes
+    function animateCalculation(box) {
+      const digits = box.querySelectorAll('.calc-digit');
+      const operators = box.querySelectorAll('.calc-operator');
+      const result = box.querySelector('.calc-result');
+      const meaning = box.querySelector('.calc-meaning');
+
+      digits.forEach(digit => {
+        const delay = parseInt(digit.dataset.delay) || 0;
+        setTimeout(() => digit.classList.add('visible'), delay);
+      });
+
+      operators.forEach(op => {
+        const delay = parseInt(op.dataset.delay) || 0;
+        setTimeout(() => op.classList.add('visible'), delay);
+      });
+
+      if (result) {
+        const delay = parseInt(result.dataset.delay) || 1400;
+        setTimeout(() => result.classList.add('visible'), delay);
+      }
+
+      if (meaning) {
+        const delay = parseInt(meaning.dataset.delay) || 1800;
+        setTimeout(() => meaning.classList.add('visible'), delay);
+      }
+    }
+
+    // Animate breakdown items
+    function animateBreakdown(breakdown) {
+      const items = breakdown.querySelectorAll('.breakdown-item');
+      items.forEach((item, index) => {
+        setTimeout(() => item.classList.add('visible'), index * 200);
+      });
+    }
+
+    // Animate pattern grid
+    function animatePatternGrid(grid) {
+      const items = grid.querySelectorAll('.pattern-item');
+      items.forEach((item, index) => {
+        setTimeout(() => item.classList.add('visible'), index * 150);
+      });
+    }
+
+    // Animate hero number on load - counting up effect
+    const heroNumber = document.getElementById('heroNumber');
+    let currentNumber = 0;
+    const targetNumber = 224;
+    const duration = 1500;
+    let startTime = null;
+
+    function animateHeroNumber(currentTime) {
+      if (!startTime) startTime = currentTime;
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function (ease-out cubic)
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      currentNumber = Math.floor(easeOut * targetNumber);
+      
+      heroNumber.textContent = currentNumber;
+      
+      if (progress < 1) {
+        requestAnimationFrame(animateHeroNumber);
+      } else {
+        heroNumber.textContent = targetNumber;
+      }
+    }
+
+    // Start hero animation after page load
+    setTimeout(() => {
+      requestAnimationFrame(animateHeroNumber);
+    }, 1000);
+
+    // Service Worker
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js');
     }

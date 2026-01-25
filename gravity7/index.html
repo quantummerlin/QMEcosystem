@@ -36,8 +36,8 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="/icon-512.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Gravity Pause">
@@ -63,6 +63,9 @@
     gtag('js', new Date());
     gtag('config', 'G-VW4LGE7L1T');
   </script>
+
+  <!-- Google AdSense - Replace with your Publisher ID -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -110,6 +113,7 @@
       --text-secondary: rgba(255, 255, 255, 0.6);
       --text-tertiary: rgba(255, 255, 255, 0.4);
       --accent: #8b7cf7;
+      --accent-glow: rgba(139, 124, 247, 0.4);
       --accent-dim: rgba(139, 124, 247, 0.12);
       --border: rgba(255, 255, 255, 0.06);
     }
@@ -124,6 +128,7 @@
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -132,10 +137,74 @@
       color: var(--text-primary);
       min-height: 100vh;
       line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Ambient background */
+    .ambient {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .ambient::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(ellipse at 50% 0%, rgba(139, 124, 247, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(139, 124, 247, 0.08) 0%, transparent 40%),
+        radial-gradient(ellipse at 20% 80%, rgba(139, 124, 247, 0.05) 0%, transparent 40%);
+      animation: ambientDrift 25s ease-in-out infinite;
+    }
+
+    @keyframes ambientDrift {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      33% { transform: translate(-3%, 3%) rotate(1deg); }
+      66% { transform: translate(3%, -2%) rotate(-1deg); }
+    }
+
+    /* Floating particles */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 50%;
+      opacity: 0;
+      animation: float 15s infinite;
+    }
+
+    @keyframes float {
+      0% { opacity: 0; transform: translateY(100vh) scale(0); }
+      10% { opacity: 0.6; }
+      90% { opacity: 0.6; }
+      100% { opacity: 0; transform: translateY(-100vh) scale(1); }
     }
 
     /* Layout */
     .page {
+      position: relative;
+      z-index: 1;
       max-width: 640px;
       margin: 0 auto;
       padding: 80px 24px 120px;
@@ -145,7 +214,7 @@
     /* Header */
     .header {
       text-align: center;
-      margin-bottom: 64px;
+      margin-bottom: 48px;
     }
 
     .brand {
@@ -154,51 +223,207 @@
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--text-tertiary);
+      margin-bottom: 32px;
+      opacity: 0;
+      animation: fadeIn 0.8s ease 0.2s forwards;
+    }
+
+    /* Mystery intro */
+    .mystery-intro {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 0;
+      transition: all 0.5s ease;
+    }
+
+    /* Returning visitor - skip intro, countdown is hero */
+    .skip-intro .mystery-intro {
+      display: none;
+    }
+
+    .skip-intro .section.reveal:first-of-type,
+    .skip-intro .divider:first-of-type,
+    .skip-intro .header.reveal {
+      display: none;
+    }
+
+    .skip-intro .countdown-hero {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 0;
+    }
+
+    .skip-intro .scroll-indicator {
+      display: none;
+    }
+
+    .skip-intro .reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    .skip-intro .divider {
+      opacity: 1;
+      animation: none;
+    }
+
+    .skip-intro .countdown-value,
+    .skip-intro .countdown-separator,
+    .skip-intro .event-datetime,
+    .skip-intro .event-datetime-link,
+    .skip-intro .tagline,
+    .skip-intro .title,
+    .skip-intro .seven-badge {
+      opacity: 1;
+      animation: none;
+    }
+
+    /* Returning visitor brand */
+    .returning-brand {
+      display: none;
+    }
+
+    .skip-intro .returning-brand {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 32px;
+    }
+
+    .mystery-line {
+      font-size: 15px;
+      color: var(--text-tertiary);
+      font-weight: 400;
       margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease 0.5s forwards;
+    }
+
+    .mystery-question {
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 200;
+      color: var(--text-secondary);
+      margin-bottom: 60px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease 1.5s forwards;
+    }
+
+    .mystery-answer {
+      font-size: clamp(36px, 8vw, 56px);
+      font-weight: 200;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      opacity: 0;
+      animation: fadeUp 1s ease 3s forwards;
+    }
+
+    .mystery-answer .accent {
+      color: var(--accent);
+    }
+
+    .mystery-date {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      opacity: 0;
+      animation: fadeIn 0.8s ease 3.5s forwards;
     }
 
     .title {
-      font-size: clamp(28px, 6vw, 42px);
+      font-size: clamp(32px, 8vw, 48px);
       font-weight: 300;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
       color: var(--text-primary);
+      opacity: 0;
+      animation: fadeUp 1s ease 0.4s forwards;
     }
 
     .tagline {
       font-size: 15px;
       color: var(--text-secondary);
       font-weight: 400;
+      opacity: 0;
+      animation: fadeIn 0.8s ease 0.7s forwards;
     }
 
-    /* Countdown */
-    .countdown-section {
-      text-align: center;
-      padding: 56px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 56px;
+    /* Countdown Hero */
+    .countdown-hero {
+      padding: 60px 0 80px;
+      position: relative;
+    }
+
+    .countdown-hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      filter: blur(60px);
+      opacity: 0;
+      animation: glowPulse 4s ease-in-out 1.5s infinite;
+      z-index: -1;
+    }
+
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.2; transform: translate(-50%, -50%) scale(1); }
+      50% { opacity: 0.4; transform: translate(-50%, -50%) scale(1.1); }
     }
 
     .countdown {
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      gap: 6px;
-      margin-bottom: 28px;
+      gap: 8px;
+      margin-bottom: 32px;
     }
 
     .countdown-unit {
-      min-width: 64px;
+      min-width: 72px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: countdownReveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .countdown-unit:nth-child(1) { animation-delay: 0.8s; }
+    .countdown-unit:nth-child(3) { animation-delay: 0.9s; }
+    .countdown-unit:nth-child(5) { animation-delay: 1.0s; }
+    .countdown-unit:nth-child(7) { animation-delay: 1.1s; }
+
+    @keyframes countdownReveal {
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .countdown-value {
-      font-size: clamp(32px, 8vw, 52px);
-      font-weight: 300;
+      font-size: clamp(42px, 10vw, 64px);
+      font-weight: 200;
       letter-spacing: -0.02em;
       font-variant-numeric: tabular-nums;
       color: var(--text-primary);
-      transition: opacity 0.15s ease;
+      line-height: 1;
+      position: relative;
+    }
+
+    .countdown-value.tick {
+      animation: tick 0.3s ease;
+    }
+
+    @keyframes tick {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); color: var(--accent); }
+      100% { transform: scale(1); }
     }
 
     .countdown-label {
@@ -207,21 +432,24 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--text-tertiary);
-      margin-top: 8px;
+      margin-top: 12px;
     }
 
     .countdown-separator {
-      font-size: clamp(28px, 6vw, 44px);
+      font-size: clamp(32px, 8vw, 52px);
       font-weight: 200;
       color: rgba(255, 255, 255, 0.15);
       line-height: 1;
-      padding-top: 4px;
+      opacity: 0;
+      animation: fadeIn 0.5s ease 1.2s forwards;
     }
 
     .event-datetime {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--text-secondary);
       font-weight: 400;
+      opacity: 0;
+      animation: fadeIn 0.6s ease 1.4s forwards;
     }
 
     .event-datetime strong {
@@ -229,56 +457,285 @@
       font-weight: 500;
     }
 
+    .event-datetime-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      font-size: 15px;
+      color: var(--text-secondary);
+      font-weight: 400;
+      opacity: 0;
+      animation: fadeIn 0.6s ease 1.4s forwards;
+      transition: all 0.2s ease;
+    }
+
+    .event-datetime-link strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .event-datetime-link .check-local {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      transition: color 0.2s ease;
+    }
+
+    .event-datetime-link:hover .check-local {
+      color: var(--accent);
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      margin-top: 48px;
+      opacity: 0;
+      animation: fadeIn 0.6s ease 2s forwards, bounce 2s ease-in-out 3s infinite;
+      cursor: pointer;
+      padding: 16px;
+      margin: 40px -16px 0;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      background: none;
+      border: none;
+      outline: none;
+    }
+
+    .scroll-indicator:hover {
+      background: rgba(139, 124, 247, 0.1);
+    }
+
+    .scroll-indicator:hover svg {
+      color: var(--accent);
+      transform: translateY(4px);
+    }
+
+    .scroll-indicator svg {
+      width: 24px;
+      height: 24px;
+      color: var(--text-tertiary);
+      transition: all 0.3s ease;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 60px 0;
+      opacity: 0;
+      animation: fadeIn 0.6s ease 1.6s forwards;
+    }
+
+    /* Reveal sections */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     /* Sections */
     .section {
-      margin-bottom: 40px;
+      margin-bottom: 56px;
     }
 
     .section-title {
       font-size: 11px;
       font-weight: 500;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--text-tertiary);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .section-content {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--text-secondary);
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     .section-content p {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .section-content p:last-child {
       margin-bottom: 0;
     }
 
+    .section-content strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
     /* Card */
     .card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 28px;
-      margin-bottom: 20px;
+      border-radius: 16px;
+      padding: 32px;
       text-align: left;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .card:hover {
+      border-color: rgba(139, 124, 247, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(139, 124, 247, 0.03), transparent);
+      animation: shimmer 4s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    /* Eclipse visual */
+    .eclipse-visual {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      position: relative;
+    }
+
+    .eclipse-sun {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #ffd93d, #ff9500);
+      position: absolute;
+      box-shadow: 0 0 40px rgba(255, 200, 0, 0.4);
+    }
+
+    .eclipse-moon {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      transform: translateX(-30px);
+      animation: eclipseMove 8s ease-in-out infinite;
+    }
+
+    @keyframes eclipseMove {
+      0%, 100% { transform: translateX(-30px); }
+      50% { transform: translateX(0px); }
+    }
+
+    /* Numbers */
+    .number-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .number-item {
+      text-align: center;
+      padding: 24px 16px;
+      background: var(--accent-dim);
+      border-radius: 12px;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s, transform 0.3s;
+    }
+
+    .number-item.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .number-item:nth-child(1) { transition-delay: 0.1s; }
+    .number-item:nth-child(2) { transition-delay: 0.2s; }
+    .number-item:nth-child(3) { transition-delay: 0.3s; }
+
+    .number-item:hover {
+      background: rgba(139, 124, 247, 0.2);
+      transform: scale(1.02);
+    }
+
+    .number-value {
+      font-size: 32px;
+      font-weight: 200;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .number-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+    }
+
+    /* Read More Link */
+    .read-more-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .read-more-link:hover {
+      gap: 12px;
+    }
+
+    .read-more-link svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.2s;
+    }
+
+    .read-more-link:hover svg {
+      transform: translateX(4px);
     }
 
     /* Calendar list */
     .calendar-list {
-      margin-top: 16px;
+      margin-top: 20px;
     }
 
     .calendar-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0;
+      padding: 14px 0;
       border-bottom: 1px solid var(--border);
       font-size: 14px;
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: all 0.4s ease;
+    }
+
+    .calendar-item.visible {
+      opacity: 1;
+      transform: translateX(0);
     }
 
     .calendar-item:last-child {
@@ -295,92 +752,89 @@
       font-weight: 400;
     }
 
-    /* Numbers */
-    .number-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 16px;
-    }
-
-    .number-item {
-      text-align: center;
-      padding: 20px 12px;
-      background: var(--accent-dim);
-      border-radius: 8px;
-    }
-
-    .number-value {
-      font-size: 26px;
-      font-weight: 300;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
-
-    .number-label {
-      font-size: 9px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-tertiary);
-    }
-
-    /* Read More Link */
-    .read-more-link {
-      display: inline-block;
-      margin-top: 20px;
-      font-size: 13px;
-      color: var(--accent);
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-
-    .read-more-link:hover {
-      opacity: 0.8;
-    }
-
     /* CTA */
     .cta-section {
       text-align: center;
-      padding: 40px 0;
+      padding: 48px 0;
       margin-top: 40px;
-      border-top: 1px solid var(--border);
     }
 
     .cta-text {
       font-size: 14px;
       color: var(--text-tertiary);
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .cta-button {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
+      gap: 10px;
+      padding: 14px 28px;
       background: var(--accent);
       color: #fff;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 500;
       text-decoration: none;
-      border-radius: 8px;
-      transition: all 0.2s ease;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
     }
 
     .cta-button:hover {
       background: #9d8ff8;
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(139, 124, 247, 0.3);
     }
 
     .cta-button svg {
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s;
+    }
+
+    .cta-button:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* Seven seconds */
+    .seven-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: var(--accent-dim);
+      border-radius: 100px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .seven-badge strong {
+      color: var(--accent);
+      font-size: 18px;
+      font-weight: 400;
     }
 
     /* Footer */
     .footer {
-      margin-top: 64px;
-      padding-top: 28px;
+      margin-top: 80px;
+      padding-top: 32px;
       border-top: 1px solid var(--border);
       text-align: center;
     }
@@ -388,8 +842,27 @@
     .disclaimer {
       font-size: 12px;
       color: var(--text-tertiary);
-      line-height: 1.7;
+      line-height: 1.8;
       margin-bottom: 24px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-secondary);
     }
 
     .footer-brand {
@@ -401,6 +874,82 @@
       opacity: 0.5;
     }
 
+    /* Ad containers */
+    .ad-container {
+      margin: 40px 0;
+      text-align: center;
+      min-height: 100px;
+    }
+
+    .ad-container.in-content {
+      margin: 32px -12px;
+      padding: 16px 0;
+      background: rgba(255, 255, 255, 0.01);
+      border-radius: 8px;
+    }
+
+    .ad-label {
+      font-size: 9px;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+      opacity: 0.5;
+    }
+
+    /* Explore section */
+    .explore-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .explore-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 16px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .explore-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .explore-card:hover {
+      border-color: rgba(139, 124, 247, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .explore-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .explore-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .explore-desc {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 480px) {
+      .explore-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* Install prompt */
     .install-prompt {
       position: fixed;
@@ -410,13 +959,14 @@
       background: var(--bg-secondary);
       border: 1px solid var(--border);
       padding: 18px 24px;
-      border-radius: 12px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       gap: 18px;
-      transition: bottom 0.4s ease;
+      transition: bottom 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
       z-index: 1000;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
     }
 
     .install-prompt.show {
@@ -435,9 +985,9 @@
     }
 
     .install-btn {
-      padding: 10px 16px;
+      padding: 10px 18px;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       font-size: 13px;
       font-weight: 500;
       cursor: pointer;
@@ -452,6 +1002,7 @@
 
     .install-btn.primary:hover {
       background: #9d8ff8;
+      transform: translateY(-1px);
     }
 
     .install-btn.secondary {
@@ -464,6 +1015,17 @@
       border-color: var(--text-tertiary);
     }
 
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     /* Responsive */
     @media (max-width: 480px) {
       .page {
@@ -471,29 +1033,28 @@
       }
 
       .header {
-        margin-bottom: 48px;
+        margin-bottom: 32px;
       }
 
-      .countdown-section {
-        padding: 40px 0;
-        margin-bottom: 40px;
+      .countdown-hero {
+        padding: 40px 0 60px;
       }
 
       .countdown {
-        gap: 2px;
+        gap: 4px;
       }
 
       .countdown-unit {
-        min-width: 52px;
+        min-width: 56px;
       }
 
       .number-grid {
         grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 12px;
       }
 
       .number-item {
-        padding: 16px;
+        padding: 20px;
       }
 
       .install-prompt {
@@ -508,21 +1069,68 @@
       .install-prompt p {
         white-space: normal;
       }
+
+      .eclipse-visual {
+        width: 60px;
+        height: 60px;
+      }
+
+      .eclipse-sun {
+        width: 60px;
+        height: 60px;
+      }
+
+      .eclipse-moon {
+        width: 56px;
+        height: 56px;
+      }
     }
   </style>
 </head>
 
 <body>
+  <!-- Ambient background -->
+  <div class="ambient"></div>
+  
+  <!-- Floating particles -->
+  <div class="particles" id="particles"></div>
+
   <div class="page">
-    <!-- Header -->
-    <header class="header">
+    <!-- Mystery Intro -->
+    <section class="mystery-intro">
       <div class="brand">Quantum Merlin</div>
-      <h1 class="title">The Gravity Pause</h1>
-      <p class="tagline">A symbolic moment observed across time</p>
+      <p class="mystery-line">Something happens on this day.</p>
+      <p class="mystery-question">Have you heard about the pause?</p>
+      <h1 class="mystery-answer"><span class="accent">7</span> seconds.</h1>
+      <p class="mystery-date">12 August 2026 · 14:33 UTC</p>
+      
+      <button class="scroll-indicator" id="scrollDown" style="margin-top: 60px; opacity: 0; animation: fadeIn 1s ease 4s forwards;" aria-label="Scroll to countdown">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </button>
+    </section>
+
+    <!-- The Reveal -->
+    <section class="section reveal">
+      <div class="section-content" style="text-align: center;">
+        <p style="font-size: 18px; color: var(--text-secondary); margin-bottom: 24px;">They say gravity will pause for 7 seconds.</p>
+        <p style="font-size: 15px; color: var(--text-tertiary);">It won't. Not literally.</p>
+        <p style="font-size: 17px; color: var(--text-primary); margin-top: 24px;"><strong>But something is happening that day.</strong></p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Header -->
+    <header class="header reveal">
+      <h1 class="title" style="opacity: 1; animation: none;">The Gravity Pause</h1>
+      <p class="tagline" style="opacity: 1; animation: none;">A total solar eclipse. A Leo stellium. A threshold in time.</p>
     </header>
 
-    <!-- Countdown -->
-    <section class="countdown-section">
+    <!-- Countdown Hero -->
+    <section class="countdown-hero">
+      <div class="returning-brand">The Gravity Pause</div>
       <div class="countdown" id="countdown">
         <div class="countdown-unit">
           <div class="countdown-value" id="days">000</div>
@@ -544,35 +1152,76 @@
           <div class="countdown-label">Sec</div>
         </div>
       </div>
-      <div class="event-datetime">
-        <strong>12 August 2026</strong> · <strong>14:33 UTC</strong>
+      <a href="/local-time.html" class="event-datetime-link">
+        <strong>12 August 2026</strong>
+        <span class="check-local">Check your local time →</span>
+      </a>
+      
+      <div class="seven-badge">
+        <strong>7</strong> seconds of pause
       </div>
     </section>
 
+    <div class="divider"></div>
+
     <!-- About -->
-    <section class="section">
-      <h2 class="section-title">The Phenomenon</h2>
+    <section class="section reveal">
+      <h2 class="section-title">What's Actually Happening</h2>
       <div class="section-content">
-        <p>At this precise moment, an internet phenomenon predicts a symbolic 7-second suspension of gravity — not physical, but metaphorical.</p>
-        <p>A pause between structure and possibility. A breath in the fabric of time.</p>
+        <p>Forget the meme. Here's the real event:</p>
+        <p style="margin-top: 16px;">• A <strong>total solar eclipse</strong> crosses the Arctic, Greenland, Iceland, and Spain<br>
+        • <strong>Four planets cluster in Leo</strong> — Sun, Moon, Mercury, Jupiter<br>
+        • It's the <strong>224th day</strong> of the year — a number with ancient significance<br>
+        • Hebrew calendar: the <strong>last day before Elul</strong>, the month of return</p>
+        <p style="margin-top: 16px;">The "gravity pause" started as internet folklore. But the day itself? <strong>It's marked.</strong></p>
       </div>
     </section>
 
     <!-- Eclipse -->
-    <section class="section">
+    <section class="section reveal">
       <div class="card">
+        <div class="eclipse-visual">
+          <div class="eclipse-sun"></div>
+          <div class="eclipse-moon"></div>
+        </div>
         <h2 class="section-title">Total Solar Eclipse</h2>
         <div class="section-content">
-          <p>This timestamp falls on the same day as a total solar eclipse — a rare moment when the Moon passes between Earth and Sun.</p>
-          <p>Historically, eclipses mark transitions, not endings.</p>
+          <p>This timestamp falls on the same day as a <strong>total solar eclipse</strong> — a rare moment when the Moon passes between Earth and Sun.</p>
+          <p>The path of totality crosses the Arctic, Greenland, Iceland, and Spain. Historically, eclipses mark transitions, not endings.</p>
         </div>
       </div>
     </section>
 
+    <!-- What You'll Feel -->
+    <section class="section reveal">
+      <h2 class="section-title">What You Might Feel</h2>
+      <div class="section-content">
+        <p><strong>Even if nothing physically pauses</strong>, this cosmic alignment creates real energy:</p>
+        <p>• A pull toward <strong>bold self-expression</strong> — Leo demands you be seen<br>
+        • Heightened <strong>intuition and creativity</strong> — ideas want to become real<br>
+        • A sense of <strong>transition</strong> — something ending, something beginning<br>
+        • <strong>Restlessness</strong> followed by unusual clarity</p>
+        <p>Many cultures treat eclipses as times to <strong>pause, reflect, and reset</strong>. The 7 seconds is symbolic — but the invitation is real.</p>
+      </div>
+    </section>
+
+    <!-- Ad Container -->
+    <div class="ad-container in-content">
+      <div class="ad-label">Advertisement</div>
+      <!-- Ad unit will be inserted here -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
     <!-- Numbers -->
-    <section class="section">
+    <section class="section reveal" id="numbersSection">
       <h2 class="section-title">The Numbers</h2>
-      <div class="number-grid">
+      <div class="number-grid" id="numberGrid">
         <div class="number-item">
           <div class="number-value">224</div>
           <div class="number-label">Day of Year</div>
@@ -587,17 +1236,20 @@
         </div>
       </div>
       <a href="/numerology.html" class="read-more-link">
-        <span class="read-more-text">Explore the numerology of Day 224 →</span>
+        Explore the numerology of Day 224
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
       </a>
     </section>
 
     <!-- Calendars -->
-    <section class="section">
+    <section class="section reveal" id="calendarsSection">
       <h2 class="section-title">Across Calendars</h2>
       <div class="section-content">
         <p>This moment exists simultaneously across timekeeping systems.</p>
       </div>
-      <div class="calendar-list">
+      <div class="calendar-list" id="calendarList">
         <div class="calendar-item">
           <span class="calendar-name">Gregorian</span>
           <span class="calendar-date">12 August 2026</span>
@@ -623,26 +1275,48 @@
           <span class="calendar-date">6 Nehasie 2018</span>
         </div>
       </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section">
-      <p class="cta-text">Explore the astrology of this moment</p>
-      <a href="/reading.html" class="cta-button">
-        <span>Solar Eclipse Reading</span>
+      <a href="/prophecy.html" class="read-more-link">
+        Explore gematria & prophetic connections
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
         </svg>
       </a>
     </section>
 
+    <!-- Explore Pages -->
+    <section class="section reveal" id="exploreSection">
+      <h2 class="section-title">Go Deeper</h2>
+      <div class="explore-grid" id="exploreGrid">
+        <a href="/numerology.html" class="explore-card">
+          <div class="explore-icon">𝟛</div>
+          <div class="explore-title">Numerology</div>
+          <div class="explore-desc">The hidden meaning of Day 224</div>
+        </a>
+        <a href="/prophecy.html" class="explore-card">
+          <div class="explore-icon">✡</div>
+          <div class="explore-title">Gematria</div>
+          <div class="explore-desc">Hebrew letters & prophecy</div>
+        </a>
+        <a href="/reading.html" class="explore-card">
+          <div class="explore-icon">☉</div>
+          <div class="explore-title">Eclipse</div>
+          <div class="explore-desc">Full astrological reading</div>
+        </a>
+      </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer reveal">
       <p class="disclaimer">
         Symbolic and for entertainment purposes only.<br>
         Gravity is not expected to turn off.
       </p>
-      <div class="footer-brand">Quantum Merlin</div>
+      <div class="footer-links">
+        <a href="/about.html">About</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="mailto:hello@quantummerlin.com">Contact</a>
+      </div>
+      <div class="footer-brand">© 2026 Quantum Merlin</div>
     </footer>
   </div>
 
@@ -656,6 +1330,51 @@
   </div>
 
   <script>
+    // Check if returning visitor
+    const hasVisited = localStorage.getItem('gravity7_visited');
+    if (hasVisited) {
+      document.body.classList.add('skip-intro');
+    }
+
+    // Mark as visited once they scroll or click
+    function markVisited() {
+      localStorage.setItem('gravity7_visited', 'true');
+    }
+
+    // Scroll button functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const scrollBtn = document.getElementById('scrollDown');
+      const countdownHero = document.querySelector('.countdown-hero');
+      
+      if (scrollBtn && countdownHero) {
+        scrollBtn.addEventListener('click', function() {
+          markVisited();
+          countdownHero.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+
+      // Also mark visited on any scroll past intro
+      let scrollMarked = false;
+      window.addEventListener('scroll', function() {
+        if (!scrollMarked && window.scrollY > 200) {
+          markVisited();
+          scrollMarked = true;
+        }
+      }, { passive: true });
+    });
+
+    // Create floating particles
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 20; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 15 + 's';
+      particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+      particlesContainer.appendChild(particle);
+    }
+
+    // Countdown
     const targetDate = new Date("2026-08-12T14:33:00Z");
 
     function updateCountdown() {
@@ -663,10 +1382,10 @@
       const diff = targetDate - now;
 
       if (diff <= 0) {
-        document.querySelector('.countdown-section').innerHTML = `
-          <div style="padding: 20px 0;">
-            <div style="font-size: 24px; font-weight: 300; margin-bottom: 12px;">The Pause</div>
-            <div style="font-size: 14px; color: var(--text-secondary);">This moment has arrived</div>
+        document.querySelector('.countdown-hero').innerHTML = `
+          <div style="padding: 40px 0;">
+            <div style="font-size: 48px; font-weight: 200; margin-bottom: 16px; color: var(--accent);">The Pause</div>
+            <div style="font-size: 16px; color: var(--text-secondary);">This moment has arrived</div>
           </div>
         `;
         return;
@@ -686,16 +1405,58 @@
     function updateUnit(id, value) {
       const el = document.getElementById(id);
       if (el && el.textContent !== value) {
-        el.style.opacity = '0.4';
+        el.classList.add('tick');
         setTimeout(() => {
           el.textContent = value;
-          el.style.opacity = '1';
-        }, 100);
+          el.classList.remove('tick');
+        }, 150);
       }
     }
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
+
+    // Intersection Observer for reveal animations
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          
+          // Animate number grid items
+          if (entry.target.id === 'numbersSection') {
+            const items = entry.target.querySelectorAll('.number-item');
+            items.forEach((item, index) => {
+              setTimeout(() => item.classList.add('visible'), index * 150);
+            });
+          }
+          
+          // Animate calendar items
+          if (entry.target.id === 'calendarsSection') {
+            const items = entry.target.querySelectorAll('.calendar-item');
+            items.forEach((item, index) => {
+              setTimeout(() => item.classList.add('visible'), index * 100);
+            });
+          }
+          
+          // Animate explore cards
+          if (entry.target.id === 'exploreSection') {
+            const cards = entry.target.querySelectorAll('.explore-card');
+            cards.forEach((card, index) => {
+              setTimeout(() => card.classList.add('visible'), index * 150);
+            });
+          }
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      revealObserver.observe(el);
+    });
 
     // PWA
     let deferredPrompt;
@@ -705,7 +1466,7 @@
       deferredPrompt = e;
       setTimeout(() => {
         document.getElementById('installPrompt').classList.add('show');
-      }, 15000);
+      }, 20000);
     });
 
     document.getElementById('installBtn').addEventListener('click', async () => {

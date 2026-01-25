@@ -30,13 +30,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
@@ -46,6 +46,9 @@
     gtag('js', new Date());
     gtag('config', 'G-VW4LGE7L1T');
   </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -81,7 +84,9 @@
       --text-tertiary: rgba(255, 255, 255, 0.4);
       --accent: #8b7cf7;
       --accent-secondary: #f7a87c;
+      --accent-leo: #ff9f43;
       --accent-dim: rgba(139, 124, 247, 0.12);
+      --leo-dim: rgba(255, 159, 67, 0.12);
       --border: rgba(255, 255, 255, 0.06);
     }
 
@@ -103,294 +108,682 @@
       color: var(--text-primary);
       min-height: 100vh;
       line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Background */
+    .ambient {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .ambient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      animation: ambientDrift 25s ease-in-out infinite;
+    }
+
+    .ambient-orb.orb-1 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, var(--accent-leo) 0%, transparent 70%);
+      top: -100px;
+      right: -100px;
+      animation-delay: 0s;
+    }
+
+    .ambient-orb.orb-2 {
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+      bottom: 20%;
+      left: -100px;
+      animation-delay: -8s;
+    }
+
+    .ambient-orb.orb-3 {
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, var(--accent-secondary) 0%, transparent 70%);
+      top: 50%;
+      right: -50px;
+      animation-delay: -15s;
+    }
+
+    @keyframes ambientDrift {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(30px, -20px) scale(1.05); }
+      50% { transform: translate(-20px, 30px) scale(0.95); }
+      75% { transform: translate(-30px, -30px) scale(1.02); }
+    }
+
+    /* Star particles */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0;
+      animation: starTwinkle 4s ease-in-out infinite;
+    }
+
+    @keyframes starTwinkle {
+      0%, 100% { opacity: 0.1; }
+      50% { opacity: 0.6; }
     }
 
     /* Layout */
     .page {
-      max-width: 680px;
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
       margin: 0 auto;
       padding: 60px 24px 120px;
+    }
+
+    /* Hero Section */
+    .hero {
       text-align: center;
+      padding: 60px 0 80px;
+      position: relative;
     }
 
-    /* Back link */
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      color: var(--text-tertiary);
-      text-decoration: none;
-      margin-bottom: 40px;
-      transition: color 0.2s ease;
-    }
-
-    .back-link:hover {
-      color: var(--text-secondary);
-    }
-
-    .back-link svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    /* Header */
-    .header {
-      margin-bottom: 48px;
-    }
-
-    .badge {
+    .hero-badge {
       display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-leo);
+      background: var(--leo-dim);
+      padding: 8px 16px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .hero-title {
+      font-size: clamp(36px, 8vw, 56px);
+      font-weight: 200;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+      line-height: 1.1;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease 0.15s forwards;
+    }
+
+    .hero-title .accent {
+      color: var(--accent-leo);
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease 0.3s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Eclipse Visual */
+    .eclipse-visual {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      margin: 50px auto 0;
+      opacity: 0;
+      animation: fadeInUp 1s ease 0.5s forwards;
+    }
+
+    .eclipse-corona {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, transparent 30%, var(--accent-leo) 50%, transparent 70%);
+      opacity: 0.5;
+      animation: coronaPulse 4s ease-in-out infinite;
+    }
+
+    .eclipse-sun {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent-leo) 0%, #ff6b35 100%);
+      box-shadow: 0 0 60px rgba(255, 159, 67, 0.5);
+    }
+
+    .eclipse-moon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      transform: translate(-50%, -50%);
+      animation: moonCross 20s ease-in-out infinite;
+    }
+
+    @keyframes coronaPulse {
+      0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+      50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.1); }
+    }
+
+    @keyframes moonCross {
+      0% { transform: translate(-150%, -50%); }
+      30%, 70% { transform: translate(-50%, -50%); }
+      100% { transform: translate(50%, -50%); }
+    }
+
+    /* Event Stats Bar */
+    .event-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 60px;
+    }
+
+    .stat-item {
+      background: var(--bg-secondary);
+      padding: 24px 16px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .stat-item.visible {
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .stat-label {
       font-size: 10px;
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--accent);
-      background: var(--accent-dim);
-      padding: 6px 12px;
-      border-radius: 4px;
-      margin-bottom: 20px;
-    }
-
-    .title {
-      font-size: clamp(28px, 5vw, 38px);
-      font-weight: 300;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-      color: var(--text-primary);
-      line-height: 1.2;
-    }
-
-    .subtitle {
-      font-size: 15px;
-      color: var(--text-secondary);
-      font-weight: 400;
-    }
-
-    /* Event details bar */
-    .event-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      padding: 20px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 48px;
-    }
-
-    .event-item {
-      font-size: 13px;
-    }
-
-    .event-label {
       color: var(--text-tertiary);
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
 
-    .event-value {
+    .stat-value {
+      font-size: 16px;
+      font-weight: 400;
       color: var(--text-primary);
-      font-weight: 500;
+    }
+
+    .stat-value.accent {
+      color: var(--accent-leo);
     }
 
     /* Sections */
     .section {
-      margin-bottom: 48px;
+      margin-bottom: 60px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
     }
 
     .section-title {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-tertiary);
-      margin-bottom: 16px;
+      font-size: clamp(24px, 5vw, 32px);
+      font-weight: 300;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
     }
 
-    .section-content {
-      font-size: 15px;
+    .section-intro {
+      text-align: center;
+      font-size: 16px;
       color: var(--text-secondary);
       line-height: 1.8;
+      max-width: 560px;
+      margin: 0 auto 32px;
     }
 
-    .section-content p {
-      margin-bottom: 16px;
+    /* Planet Cards */
+    .planet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
     }
 
-    .section-content p:last-child {
-      margin-bottom: 0;
-    }
-
-    .section-content strong {
-      color: var(--text-primary);
-      font-weight: 500;
-    }
-
-    .section-content em {
-      color: var(--accent);
-      font-style: normal;
-    }
-
-    /* Card */
-    .card {
+    .planet-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 28px;
-      margin-bottom: 20px;
-      text-align: left;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+      transition: all 0.4s ease;
     }
 
-    .card-title {
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--text-primary);
-      margin-bottom: 16px;
+    .planet-card.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
     }
 
-    /* Planet table */
-    .planet-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 16px;
-    }
-
-    .planet-table th,
-    .planet-table td {
-      text-align: left;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 14px;
-    }
-
-    .planet-table th {
-      color: var(--text-tertiary);
-      font-weight: 500;
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .planet-table td {
-      color: var(--text-secondary);
-    }
-
-    .planet-table td:first-child {
-      color: var(--text-primary);
-      font-weight: 400;
-    }
-
-    .planet-table tr:last-child td {
-      border-bottom: none;
+    .planet-card:hover {
+      border-color: rgba(255, 159, 67, 0.3);
+      background: rgba(255, 159, 67, 0.03);
     }
 
     .planet-symbol {
-      display: inline-block;
-      width: 24px;
-      font-size: 16px;
+      font-size: 28px;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--leo-dim);
+      border-radius: 12px;
     }
 
-    /* Aspect list */
+    .planet-info {
+      flex: 1;
+    }
+
+    .planet-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .planet-position {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .planet-position .sign {
+      color: var(--accent-leo);
+    }
+
+    /* Leo Stellium Visual */
+    .stellium-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, var(--leo-dim) 0%, transparent 100%);
+      border-radius: 16px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .stellium-planet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    .stellium-planet.visible {
+      animation: stelliumReveal 0.6s ease forwards;
+    }
+
+    @keyframes stelliumReveal {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .stellium-icon {
+      font-size: 36px;
+      width: 72px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-secondary);
+      border: 2px solid var(--accent-leo);
+      border-radius: 50%;
+      box-shadow: 0 0 30px rgba(255, 159, 67, 0.3);
+    }
+
+    .stellium-name {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .stellium-connector {
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-leo), transparent);
+      opacity: 0;
+    }
+
+    .stellium-connector.visible {
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 0.5; }
+    }
+
+    /* Theme Cards */
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .theme-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: left;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+    }
+
+    .theme-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .theme-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .theme-icon {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .theme-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--accent-leo);
+      margin-bottom: 8px;
+    }
+
+    .theme-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Aspect Cards */
     .aspect-list {
-      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    .aspect-item {
+    .aspect-card {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: all 0.4s ease;
     }
 
-    .aspect-item:last-child {
-      border-bottom: none;
+    .aspect-card.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .aspect-card:hover {
+      border-color: var(--accent);
     }
 
     .aspect-planets {
+      font-size: 15px;
+      font-weight: 400;
       color: var(--text-primary);
     }
 
     .aspect-type {
-      color: var(--accent);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 500;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-    }
-
-    /* Interpretation blocks */
-    .interp-block {
-      background: var(--accent-dim);
-      border-radius: 8px;
-      padding: 24px;
-      margin: 24px 0;
-      text-align: left;
-    }
-
-    .interp-block p {
-      margin: 0;
-      font-size: 15px;
-      line-height: 1.8;
-      color: var(--text-secondary);
-    }
-
-    .interp-block p em {
       color: var(--accent);
+      background: var(--accent-dim);
+      padding: 6px 12px;
+      border-radius: 20px;
     }
 
-    /* Quote */
-    .quote {
-      border-left: 2px solid var(--accent);
-      padding-left: 20px;
-      margin: 24px 0;
-      font-style: italic;
+    /* Interpretation */
+    .interp-content {
+      font-size: 16px;
       color: var(--text-secondary);
+      line-height: 1.9;
+      text-align: center;
+    }
+
+    .interp-content p {
+      margin-bottom: 20px;
+    }
+
+    .interp-content strong {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .interp-content em {
+      color: var(--accent-leo);
+      font-style: normal;
+    }
+
+    /* Quote Block */
+    .quote-block {
+      position: relative;
+      padding: 40px;
+      background: linear-gradient(135deg, var(--accent-dim) 0%, transparent 100%);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 16px 16px 0;
+      margin: 40px 0;
       text-align: left;
     }
 
-    /* CTA */
-    .cta-section {
-      text-align: center;
-      padding: 48px 0;
-      margin-top: 48px;
-      border-top: 1px solid var(--border);
+    .quote-text {
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--text-primary);
+      line-height: 1.6;
+      font-style: italic;
     }
 
-    .cta-text {
+    .quote-mark {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 48px;
+      color: var(--accent);
+      opacity: 0.3;
+      font-family: Georgia, serif;
+    }
+
+    /* Seven Seconds */
+    .seven-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 32px;
+    }
+
+    .seven-number {
+      font-size: 120px;
+      font-weight: 200;
+      color: var(--accent);
+      line-height: 1;
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    .seven-number.visible {
+      animation: sevenReveal 1s ease forwards;
+    }
+
+    @keyframes sevenReveal {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .seven-label {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-top: 8px;
+    }
+
+    /* Working Energy Cards */
+    .energy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .energy-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: left;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+    }
+
+    .energy-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .energy-card:hover {
+      border-color: var(--accent);
+    }
+
+    .energy-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .energy-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Page Navigation */
+    .page-nav {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      margin-top: 60px;
+    }
+
+    .nav-link {
       font-size: 14px;
       color: var(--text-tertiary);
-      margin-bottom: 18px;
-    }
-
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      background: var(--accent);
-      color: #fff;
-      font-size: 14px;
-      font-weight: 500;
       text-decoration: none;
-      border-radius: 8px;
-      transition: all 0.2s ease;
+      padding: 12px 0;
+      transition: color 0.3s;
     }
 
-    .cta-button:hover {
-      background: #9d8ff8;
-      transform: translateY(-1px);
+    .nav-link:hover {
+      color: var(--accent);
     }
 
-    .cta-button svg {
-      width: 16px;
-      height: 16px;
+    .nav-link.next {
+      margin-left: auto;
     }
 
     /* Footer */
     .footer {
-      margin-top: 64px;
-      padding-top: 28px;
+      margin-top: 60px;
+      padding-top: 32px;
       border-top: 1px solid var(--border);
       text-align: center;
     }
@@ -412,251 +805,453 @@
     }
 
     /* Responsive */
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
       .page {
         padding: 40px 20px 80px;
       }
 
-      .event-bar {
-        gap: 16px;
+      .hero {
+        padding: 40px 0 60px;
       }
 
-      .planet-table th,
-      .planet-table td {
-        padding: 10px 0;
-        font-size: 13px;
+      .event-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .theme-grid,
+      .energy-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stellium-visual {
+        flex-direction: column;
+      }
+
+      .stellium-connector {
+        display: none;
+      }
+
+      .quote-block {
+        padding: 28px;
+      }
+
+      .quote-text {
+        font-size: 18px;
       }
     }
   </style>
 </head>
 
 <body>
+  <!-- Ambient Background -->
+  <div class="ambient">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <!-- Star particles -->
+  <div class="stars" id="stars"></div>
+
   <div class="page">
-    <!-- Back -->
-    <a href="/" class="back-link">
-      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-      </svg>
-      Back to countdown
-    </a>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-badge">Astrological Reading</div>
+      <h1 class="hero-title">Total Solar Eclipse<br>in <span class="accent">Leo</span></h1>
+      <p class="hero-subtitle">August 12, 2026 at 14:33 UTC</p>
+      
+      <div class="eclipse-visual">
+        <div class="eclipse-corona"></div>
+        <div class="eclipse-sun"></div>
+        <div class="eclipse-moon"></div>
+      </div>
+    </section>
 
-    <!-- Header -->
-    <header class="header">
-      <div class="badge">Astrological Reading</div>
-      <h1 class="title">Total Solar Eclipse in Leo</h1>
-      <p class="subtitle">August 12, 2026 at 14:33 UTC</p>
-    </header>
-
-    <!-- Event bar -->
-    <div class="event-bar">
-      <div class="event-item">
-        <div class="event-label">Eclipse Type</div>
-        <div class="event-value">Total Solar</div>
+    <!-- Event Stats -->
+    <section class="section reveal" id="statsSection">
+      <div class="event-stats">
+        <div class="stat-item">
+          <div class="stat-label">Eclipse Type</div>
+          <div class="stat-value">Total Solar</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Sun Position</div>
+          <div class="stat-value accent">19° Leo</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Moon Position</div>
+          <div class="stat-value accent">19° Leo</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Saros Cycle</div>
+          <div class="stat-value">126</div>
+        </div>
       </div>
-      <div class="event-item">
-        <div class="event-label">Sun Position</div>
-        <div class="event-value">19° Leo</div>
-      </div>
-      <div class="event-item">
-        <div class="event-label">Moon Position</div>
-        <div class="event-value">19° Leo</div>
-      </div>
-      <div class="event-item">
-        <div class="event-label">Saros Cycle</div>
-        <div class="event-value">126</div>
-      </div>
-    </div>
+    </section>
 
     <!-- Overview -->
-    <section class="section">
-      <h2 class="section-title">Overview</h2>
-      <div class="section-content">
-        <p>The Total Solar Eclipse on <strong>August 12, 2026</strong> occurs at <em>19° Leo</em>, with the Sun and Moon in exact conjunction. This is a powerful moment of reset — a cosmic "new moon" amplified by the complete obscuring of the Sun.</p>
-        <p>Leo eclipses speak to themes of <strong>identity, creativity, self-expression, and leadership</strong>. This is not about endings; it's about what emerges from the shadow.</p>
+    <section class="section reveal">
+      <div class="section-header">
+        <div class="section-label">Overview</div>
+        <h2 class="section-title">A Cosmic Reset</h2>
+      </div>
+      <div class="interp-content">
+        <p>On <strong>August 12, 2026</strong>, the Sun and Moon align perfectly at <em>19° Leo</em>. The Moon blocks the Sun completely. Day becomes night. Then light returns.</p>
+        <p>This is one of nature's most powerful resets. Eclipses don't predict — they <strong>amplify</strong>. Whatever you're feeling, expect it louder.</p>
+        <p>Leo rules <strong>identity, creativity, and courage</strong>. The question this eclipse asks:<br><em>Who are you becoming?</em></p>
       </div>
     </section>
 
     <!-- Planetary Positions -->
-    <section class="section">
-      <h2 class="section-title">Planetary Positions</h2>
-      <div class="section-content">
-        <p>At 14:33 UTC, the planets occupy the following positions:</p>
+    <section class="section reveal" id="planetsSection">
+      <div class="section-header">
+        <div class="section-label">Celestial Map</div>
+        <h2 class="section-title">Planetary Positions</h2>
       </div>
-      <div class="card">
-        <table class="planet-table">
-          <thead>
-            <tr>
-              <th>Planet</th>
-              <th>Sign</th>
-              <th>Degree</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><span class="planet-symbol">☉</span> Sun</td>
-              <td>Leo</td>
-              <td>19°23'</td>
-            </tr>
-            <tr>
-              <td><span class="planet-symbol">☽</span> Moon</td>
-              <td>Leo</td>
-              <td>19°23'</td>
-            </tr>
-            <tr>
-              <td><span class="planet-symbol">☿</span> Mercury</td>
-              <td>Leo</td>
-              <td>27°14'</td>
-            </tr>
-            <tr>
-              <td><span class="planet-symbol">♀</span> Venus</td>
-              <td>Libra</td>
-              <td>8°42'</td>
-            </tr>
-            <tr>
-              <td><span class="planet-symbol">♂</span> Mars</td>
-              <td>Cancer</td>
-              <td>22°05'</td>
-            </tr>
-            <tr>
-              <td><span class="planet-symbol">♃</span> Jupiter</td>
-              <td>Leo</td>
-              <td>3°18'</td>
-            </tr>
-            <tr>
-              <td><span class="planet-symbol">♄</span> Saturn</td>
-              <td>Aries</td>
-              <td>15°22' ℞</td>
-            </tr>
-            <tr>
-              <td><span class="planet-symbol">♅</span> Uranus</td>
-              <td>Gemini</td>
-              <td>4°56'</td>
-            </tr>
-            <tr>
-              <td><span class="planet-symbol">♆</span> Neptune</td>
-              <td>Aries</td>
-              <td>3°41' ℞</td>
-            </tr>
-            <tr>
-              <td><span class="planet-symbol">♇</span> Pluto</td>
-              <td>Aquarius</td>
-              <td>3°28' ℞</td>
-            </tr>
-          </tbody>
-        </table>
+      <p class="section-intro">At 14:33 UTC, the planets occupy the following positions:</p>
+      
+      <div class="planet-grid" id="planetGrid">
+        <div class="planet-card">
+          <div class="planet-symbol">☉</div>
+          <div class="planet-info">
+            <div class="planet-name">Sun</div>
+            <div class="planet-position"><span class="sign">Leo</span> 19°23'</div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-symbol">☽</div>
+          <div class="planet-info">
+            <div class="planet-name">Moon</div>
+            <div class="planet-position"><span class="sign">Leo</span> 19°23'</div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-symbol">☿</div>
+          <div class="planet-info">
+            <div class="planet-name">Mercury</div>
+            <div class="planet-position"><span class="sign">Leo</span> 27°14'</div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-symbol">♀</div>
+          <div class="planet-info">
+            <div class="planet-name">Venus</div>
+            <div class="planet-position"><span class="sign">Libra</span> 8°42'</div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-symbol">♂</div>
+          <div class="planet-info">
+            <div class="planet-name">Mars</div>
+            <div class="planet-position"><span class="sign">Cancer</span> 22°05'</div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-symbol">♃</div>
+          <div class="planet-info">
+            <div class="planet-name">Jupiter</div>
+            <div class="planet-position"><span class="sign">Leo</span> 3°18'</div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-symbol">♄</div>
+          <div class="planet-info">
+            <div class="planet-name">Saturn</div>
+            <div class="planet-position"><span class="sign">Aries</span> 15°22' ℞</div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-symbol">♅</div>
+          <div class="planet-info">
+            <div class="planet-name">Uranus</div>
+            <div class="planet-position"><span class="sign">Gemini</span> 4°56'</div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-symbol">♆</div>
+          <div class="planet-info">
+            <div class="planet-name">Neptune</div>
+            <div class="planet-position"><span class="sign">Aries</span> 3°41' ℞</div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-symbol">♇</div>
+          <div class="planet-info">
+            <div class="planet-name">Pluto</div>
+            <div class="planet-position"><span class="sign">Aquarius</span> 3°28' ℞</div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Leo Stellium -->
-    <section class="section">
-      <h2 class="section-title">The Leo Stellium</h2>
-      <div class="section-content">
-        <p>Four celestial bodies cluster in Leo: <strong>Sun, Moon, Mercury, and Jupiter</strong>. This concentrated fire energy amplifies themes of:</p>
+    <section class="section reveal" id="stelliumSection">
+      <div class="section-header">
+        <div class="section-label">Concentration of Fire</div>
+        <h2 class="section-title">The Leo Stellium</h2>
       </div>
-      <div class="interp-block">
-        <p><em>Self-expression</em> — A powerful urge to be seen and heard authentically.<br><br>
-        <em>Creative power</em> — Ideas want to become real. Projects want to launch.<br><br>
-        <em>Leadership</em> — Stepping into roles that require visibility and courage.<br><br>
-        <em>Joy and play</em> — Leo reminds us that life includes pleasure, not just purpose.</p>
+      <p class="section-intro">Four celestial bodies cluster in Leo, amplifying the fire energy of this eclipse:</p>
+      
+      <div class="stellium-visual" id="stelliumVisual">
+        <div class="stellium-planet">
+          <div class="stellium-icon">☉</div>
+          <div class="stellium-name">Sun</div>
+        </div>
+        <div class="stellium-connector"></div>
+        <div class="stellium-planet">
+          <div class="stellium-icon">☽</div>
+          <div class="stellium-name">Moon</div>
+        </div>
+        <div class="stellium-connector"></div>
+        <div class="stellium-planet">
+          <div class="stellium-icon">☿</div>
+          <div class="stellium-name">Mercury</div>
+        </div>
+        <div class="stellium-connector"></div>
+        <div class="stellium-planet">
+          <div class="stellium-icon">♃</div>
+          <div class="stellium-name">Jupiter</div>
+        </div>
+      </div>
+
+      <div class="theme-grid" id="themeGrid">
+        <div class="theme-card">
+          <div class="theme-icon">✦</div>
+          <div class="theme-title">Self-Expression</div>
+          <div class="theme-desc">You'll feel pulled to speak up. Say the thing you've been holding back.</div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">◈</div>
+          <div class="theme-title">Creative Power</div>
+          <div class="theme-desc">Ideas will demand to become real. Start that project. Make that thing.</div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">◇</div>
+          <div class="theme-title">Leadership</div>
+          <div class="theme-desc">Time to step into roles you've avoided. Visibility won't feel optional.</div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">☼</div>
+          <div class="theme-title">Joy & Play</div>
+          <div class="theme-desc">Leo says: life is also fun. Seriousness alone won't carry you through.</div>
+        </div>
       </div>
     </section>
 
     <!-- Key Aspects -->
-    <section class="section">
-      <h2 class="section-title">Key Aspects</h2>
-      <div class="section-content">
-        <p>The major planetary conversations at this moment:</p>
+    <section class="section reveal" id="aspectsSection">
+      <div class="section-header">
+        <div class="section-label">Cosmic Conversations</div>
+        <h2 class="section-title">Key Aspects</h2>
       </div>
-      <div class="card">
-        <div class="aspect-list">
-          <div class="aspect-item">
-            <span class="aspect-planets">Sun-Moon Conjunction</span>
-            <span class="aspect-type">New Moon / Eclipse</span>
-          </div>
-          <div class="aspect-item">
-            <span class="aspect-planets">Jupiter in Leo</span>
-            <span class="aspect-type">Expansion of Identity</span>
-          </div>
-          <div class="aspect-item">
-            <span class="aspect-planets">Saturn Retrograde in Aries</span>
-            <span class="aspect-type">Inner Discipline Review</span>
-          </div>
-          <div class="aspect-item">
-            <span class="aspect-planets">Pluto in Aquarius</span>
-            <span class="aspect-type">Collective Transformation</span>
-          </div>
-          <div class="aspect-item">
-            <span class="aspect-planets">Venus in Libra</span>
-            <span class="aspect-type">Relational Harmony</span>
-          </div>
+      <p class="section-intro">The major planetary conversations at this moment:</p>
+      
+      <div class="aspect-list" id="aspectList">
+        <div class="aspect-card">
+          <span class="aspect-planets">Sun-Moon Conjunction</span>
+          <span class="aspect-type">New Moon / Eclipse</span>
+        </div>
+        <div class="aspect-card">
+          <span class="aspect-planets">Jupiter in Leo</span>
+          <span class="aspect-type">Expansion of Identity</span>
+        </div>
+        <div class="aspect-card">
+          <span class="aspect-planets">Saturn Retrograde in Aries</span>
+          <span class="aspect-type">Inner Discipline Review</span>
+        </div>
+        <div class="aspect-card">
+          <span class="aspect-planets">Pluto in Aquarius</span>
+          <span class="aspect-type">Collective Transformation</span>
+        </div>
+        <div class="aspect-card">
+          <span class="aspect-planets">Venus in Libra</span>
+          <span class="aspect-type">Relational Harmony</span>
         </div>
       </div>
     </section>
 
-    <!-- Interpretation -->
-    <section class="section">
-      <h2 class="section-title">The Meaning</h2>
-      <div class="section-content">
-        <p>Solar eclipses are <strong>portals, not predictions</strong>. They mark the beginning of cycles that unfold over months or years. The August 2026 eclipse in Leo asks:</p>
+    <!-- The Meaning -->
+    <section class="section reveal">
+      <div class="section-header">
+        <div class="section-label">Interpretation</div>
+        <h2 class="section-title">What This Means For You</h2>
+      </div>
+      <div class="interp-content">
+        <p>Forget predictions. Eclipses are <strong>invitations</strong>. This one asks you to step into the light — even when it feels dark.</p>
         
-        <div class="quote">
-          What version of yourself is ready to emerge?<br>
-          What have you been hiding that wants light?
+        <div class="quote-block">
+          <span class="quote-mark">"</span>
+          <p class="quote-text">What version of yourself is ready to emerge?<br>What have you been hiding that wants light?</p>
         </div>
-
-        <p>With <strong>Jupiter expanding Leo's fire</strong> and <strong>Saturn retrograde in Aries</strong> turning discipline inward, this is a moment of bold but thoughtful action. Not reckless — but not timid either.</p>
         
-        <p>The eclipse path crosses <strong>Iceland, Greenland, and Spain</strong>, casting literal shadow across the North Atlantic. Symbolically, it touches themes of exploration, identity, and what happens when the light temporarily goes dark.</p>
+        <p><strong>Jupiter in Leo</strong> says: go big. <strong>Saturn retrograde</strong> says: but be smart about it. This isn't reckless action. It's <em>bold</em> action.</p>
         
-        <p><strong>Pluto in Aquarius</strong> (opposing the Leo cluster) suggests that personal transformation serves collective evolution. Your growth matters beyond yourself.</p>
+        <p>The eclipse passes over <em>Iceland, Greenland, and Spain</em>. Darkness travels thousands of miles, then passes. Whatever shadow you're under — it will also pass.</p>
+        
+        <p><strong>The personal and collective connect here.</strong> Your transformation matters beyond yourself. Growth is not selfish — it's necessary.</p>
       </div>
     </section>
 
     <!-- The 7 Seconds -->
-    <section class="section">
-      <h2 class="section-title">Why "7 Seconds"?</h2>
-      <div class="section-content">
-        <p>The "gravity pause" myth plays with a real phenomenon: <strong>totality</strong>. During a total solar eclipse, there's a brief window — often around 2-4 minutes — where the Sun is completely hidden.</p>
+    <section class="section reveal" id="sevenSection">
+      <div class="section-header">
+        <div class="section-label">Symbolism</div>
+        <h2 class="section-title">Why "7 Seconds"?</h2>
+      </div>
+      
+      <div class="seven-visual">
+        <div class="seven-number" id="sevenNumber">7</div>
+        <div class="seven-label">Seconds of Stillness</div>
+      </div>
+
+      <div class="interp-content">
+        <p>The "gravity pause" myth plays with a real phenomenon: <em>totality</em>. During a total solar eclipse, there's a brief window — often around 2-4 minutes — where the Sun is completely hidden.</p>
         
         <p>The <strong>7 seconds</strong> represents the symbolic heart of that moment: the instant of maximum darkness before light returns. Not an ending. A held breath.</p>
         
-        <p>In numerology, <strong>7</strong> is associated with spiritual seeking, introspection, and hidden knowledge. It asks you to pause, not act.</p>
+        <p>In numerology, <em>7</em> is associated with spiritual seeking, introspection, and hidden knowledge. It asks you to pause, not act.</p>
       </div>
     </section>
 
-    <!-- Practical -->
-    <section class="section">
-      <h2 class="section-title">Working With This Energy</h2>
-      <div class="section-content">
-        <p>Eclipse energy is potent but not for forcing outcomes. Consider:</p>
+    <!-- Working With This Energy -->
+    <section class="section reveal" id="energySection">
+      <div class="section-header">
+        <div class="section-label">Practical Guidance</div>
+        <h2 class="section-title">What To Do That Day</h2>
       </div>
-      <div class="interp-block">
-        <p><em>Set intentions, not demands</em> — Plant seeds. Don't demand harvests.<br><br>
-        <em>Release what's blocking your light</em> — What identity are you clinging to that no longer fits?<br><br>
-        <em>Create something</em> — Write, draw, build. Leo wants expression.<br><br>
-        <em>Rest during totality</em> — Ancient traditions recommend stillness during eclipses. Honor the pause.</p>
+      <p class="section-intro">Eclipse energy is intense but workable. Here's how to use it:</p>
+      
+      <div class="energy-grid" id="energyGrid">
+        <div class="energy-card">
+          <div class="energy-title">1. Set One Intention</div>
+          <div class="energy-desc">Not a list. One clear thing you want to become or release. Write it down.</div>
+        </div>
+        <div class="energy-card">
+          <div class="energy-title">2. Don't Force Outcomes</div>
+          <div class="energy-desc">Plant seeds, don't demand harvests. Eclipses start cycles that unfold over months.</div>
+        </div>
+        <div class="energy-card">
+          <div class="energy-title">3. Create Something</div>
+          <div class="energy-desc">Write, draw, build, compose. Leo wants expression. Give it an outlet.</div>
+        </div>
+        <div class="energy-card">
+          <div class="energy-title">4. Rest During Totality</div>
+          <div class="energy-desc">If you're in the eclipse path, pause. Ancient traditions recommend stillness.</div>
+        </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-      <p class="cta-text">Explore more cosmic tools</p>
-      <a href="https://quantummerlin.com" class="cta-button" target="_blank">
-        <span>Visit Quantum Merlin</span>
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-        </svg>
-      </a>
-    </section>
+    <!-- Page Navigation -->
+    <nav class="page-nav reveal">
+      <a href="/prophecy.html" class="nav-link">← Gematria & Prophecy</a>
+      <a href="/" class="nav-link next">Countdown →</a>
+    </nav>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer reveal">
       <p class="disclaimer">
         Astrological interpretation for symbolic exploration.<br>
         This is not a prediction of physical events.
       </p>
-      <div class="footer-brand">Quantum Merlin</div>
+      <div style="display: flex; justify-content: center; gap: 24px; margin-bottom: 24px; flex-wrap: wrap;">
+        <a href="/about.html" style="font-size: 12px; color: var(--text-tertiary); text-decoration: none;">About</a>
+        <a href="/privacy.html" style="font-size: 12px; color: var(--text-tertiary); text-decoration: none;">Privacy Policy</a>
+        <a href="mailto:hello@quantummerlin.com" style="font-size: 12px; color: var(--text-tertiary); text-decoration: none;">Contact</a>
+      </div>
+      <div class="footer-brand">© 2026 Quantum Merlin</div>
     </footer>
   </div>
+
+  <script>
+    // Create star particles
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 50; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.animationDelay = Math.random() * 4 + 's';
+      star.style.animationDuration = (3 + Math.random() * 3) + 's';
+      starsContainer.appendChild(star);
+    }
+
+    // Intersection Observer for reveal animations
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          
+          // Animate stat items
+          if (entry.target.id === 'statsSection') {
+            const items = entry.target.querySelectorAll('.stat-item');
+            items.forEach((item, index) => {
+              setTimeout(() => item.classList.add('visible'), index * 100);
+            });
+          }
+          
+          // Animate planet cards
+          if (entry.target.id === 'planetsSection') {
+            const cards = entry.target.querySelectorAll('.planet-card');
+            cards.forEach((card, index) => {
+              setTimeout(() => card.classList.add('visible'), index * 80);
+            });
+          }
+          
+          // Animate stellium
+          if (entry.target.id === 'stelliumSection') {
+            const planets = entry.target.querySelectorAll('.stellium-planet');
+            const connectors = entry.target.querySelectorAll('.stellium-connector');
+            planets.forEach((planet, index) => {
+              setTimeout(() => planet.classList.add('visible'), index * 200);
+            });
+            connectors.forEach((conn, index) => {
+              setTimeout(() => conn.classList.add('visible'), 100 + index * 200);
+            });
+            
+            const themes = entry.target.querySelectorAll('.theme-card');
+            themes.forEach((theme, index) => {
+              setTimeout(() => theme.classList.add('visible'), 800 + index * 150);
+            });
+          }
+          
+          // Animate aspects
+          if (entry.target.id === 'aspectsSection') {
+            const aspects = entry.target.querySelectorAll('.aspect-card');
+            aspects.forEach((aspect, index) => {
+              setTimeout(() => aspect.classList.add('visible'), index * 120);
+            });
+          }
+          
+          // Animate seven number
+          if (entry.target.id === 'sevenSection') {
+            const num = document.getElementById('sevenNumber');
+            setTimeout(() => num.classList.add('visible'), 200);
+          }
+          
+          // Animate energy cards
+          if (entry.target.id === 'energySection') {
+            const cards = entry.target.querySelectorAll('.energy-card');
+            cards.forEach((card, index) => {
+              setTimeout(() => card.classList.add('visible'), index * 150);
+            });
+          }
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // Service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    }
+  </script>
 </body>
 </html>
