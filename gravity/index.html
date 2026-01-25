@@ -53,7 +53,7 @@
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
@@ -145,47 +145,74 @@
     }
 
     body {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      background: var(--bg-primary);
+      font-family: 'Rajdhani', 'Cormorant Garamond', Georgia, sans-serif;
+      background: #000812;
       background-image: 
-        linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px),
-        radial-gradient(ellipse at 50% 0%, rgba(107, 70, 193, 0.15) 0%, transparent 60%),
-        radial-gradient(ellipse at 100% 100%, rgba(0, 245, 255, 0.08) 0%, transparent 50%);
-      background-size: 50px 50px, 50px 50px, 100% 100%, 100% 100%;
-      background-position: 0 0, 0 0, 0 0, 0 0;
-      color: var(--text-primary);
+        linear-gradient(rgba(0, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.04) 1px, transparent 1px),
+        radial-gradient(ellipse at 50% 0%, rgba(255, 0, 255, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 100% 100%, rgba(0, 255, 255, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 0% 50%, rgba(178, 75, 243, 0.08) 0%, transparent 40%);
+      background-size: 50px 50px, 50px 50px, 100% 100%, 100% 100%, 100% 100%;
+      background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
+      color: #f0f8ff;
       min-height: 100vh;
       line-height: 1.9;
       overflow-x: hidden;
-      font-size: 19px;
-      font-weight: 400;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    /* Scanline overlay for 80's CRT effect */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.03) 0px,
+        rgba(0, 0, 0, 0.03) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+      pointer-events: none;
+      z-index: 9999;
     }
 
     h1, h2, h3 {
-      font-family: 'Cinzel Decorative', 'Cinzel', serif;
+      font-family: 'Orbitron', sans-serif;
     }
 
     h1 {
-      font-size: clamp(2rem, 6vw, 3.5rem);
-      font-weight: 700;
-      background: linear-gradient(135deg, #00f5ff 0%, #0af 25%, #b24bf3 60%, #8b5cf6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: 4px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 900;
+      color: #00ffff;
+      letter-spacing: 6px;
       text-transform: uppercase;
-      filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.5));
+      text-shadow: 
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00f5ff,
+        0 0 60px #0af,
+        0 0 80px #b24bf3;
     }
 
     h2 {
-      font-family: 'Cinzel', serif;
-      color: var(--neon-cyan);
-      font-weight: 600;
-      letter-spacing: 3px;
+      font-family: 'Orbitron', sans-serif;
+      color: #ff00ff;
+      font-weight: 700;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      font-size: 0.85rem;
-      text-shadow: 0 0 20px rgba(0, 245, 255, 0.6);
+      font-size: 0.9rem;
+      text-shadow: 
+        0 0 5px #ff00ff,
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff,
+        0 0 40px #b24bf3;
     }
 
     .ornament {
@@ -489,37 +516,54 @@
     }
 
     .countdown-value {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(5.5rem, 15vw, 11rem);
-      font-weight: 700;
-      letter-spacing: 0.05em;
+      font-family: 'Orbitron', 'Rajdhani', sans-serif;
+      font-size: clamp(4rem, 18vw, 9rem);
+      font-weight: 900;
+      letter-spacing: 0.08em;
       font-variant-numeric: tabular-nums;
-      background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--electric-blue) 35%, var(--electric-purple) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 0.85;
+      color: #00ffff;
+      text-shadow: 
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00f5ff,
+        0 0 60px #0af,
+        0 0 80px #b24bf3,
+        0 0 100px #b24bf3;
+      line-height: 1;
       position: relative;
-      filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.7)) 
-              drop-shadow(0 0 40px rgba(178, 75, 243, 0.5))
-              drop-shadow(0 0 60px rgba(96, 165, 250, 0.3));
-      animation: neonPulse 3s ease-in-out infinite;
+      animation: neonFlicker 3s ease-in-out infinite;
     }
 
     .countdown-value.tick {
       animation: tick 0.4s ease;
     }
 
-    @keyframes neonPulse {
+    @keyframes neonFlicker {
       0%, 100% { 
-        filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.7)) 
-                drop-shadow(0 0 40px rgba(178, 75, 243, 0.5))
-                drop-shadow(0 0 60px rgba(96, 165, 250, 0.3));
+        text-shadow: 
+          0 0 10px #00ffff,
+          0 0 20px #00ffff,
+          0 0 40px #00f5ff,
+          0 0 60px #0af,
+          0 0 80px #b24bf3,
+          0 0 100px #b24bf3;
+        opacity: 1;
       }
       50% { 
-        filter: drop-shadow(0 0 30px rgba(0, 245, 255, 1)) 
-                drop-shadow(0 0 60px rgba(178, 75, 243, 0.8))
-                drop-shadow(0 0 90px rgba(96, 165, 250, 0.5));
+        text-shadow: 
+          0 0 15px #00ffff,
+          0 0 30px #00ffff,
+          0 0 60px #00f5ff,
+          0 0 90px #0af,
+          0 0 120px #b24bf3,
+          0 0 150px #b24bf3;
+        opacity: 1;
+      }
+      92% {
+        opacity: 0.95;
+      }
+      94% {
+        opacity: 1;
       }
     }
 
@@ -534,23 +578,27 @@
     }
 
     .countdown-label {
-      font-family: 'Cinzel', serif;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.3em;
+      font-family: 'Orbitron', 'Rajdhani', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.4em;
       text-transform: uppercase;
-      color: var(--neon-cyan);
-      margin-top: 16px;
-      text-shadow: 0 0 10px rgba(0, 245, 255, 0.6);
+      color: #00ffff;
+      margin-top: 20px;
+      text-shadow: 
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #0af;
     }
 
     .countdown-separator {
-      font-size: clamp(28px, 7vw, 48px);
-      font-weight: 300;
-      color: var(--ancient-gold);
-      opacity: 0.4;
+      font-size: clamp(32px, 8vw, 56px);
+      font-weight: 700;
+      color: #ff00ff;
+      opacity: 1;
       line-height: 1;
       animation: fadeIn 0.5s ease 1.2s forwards;
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #b24bf3;
     }
 
     .event-datetime {
@@ -637,12 +685,15 @@
 
     /* Divider */
     .divider {
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--neon-cyan), var(--electric-blue), var(--electric-purple), var(--royal-purple), transparent);
-      margin: 70px 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #00ffff, #ff00ff, #00ffff, transparent);
+      margin: 80px 0;
       opacity: 0;
       animation: fadeIn 0.6s ease 1.6s forwards;
-      box-shadow: 0 0 10px rgba(0, 245, 255, 0.4);
+      box-shadow: 
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #ff00ff;
     }
 
     /* Reveal sections */
@@ -663,15 +714,19 @@
     }
 
     .section-title {
-      font-family: 'Cinzel', serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.3em;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.4em;
       text-transform: uppercase;
-      color: var(--neon-cyan);
-      margin-bottom: 22px;
+      color: #ff00ff;
+      margin-bottom: 28px;
       text-align: center;
-      text-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
+      text-shadow: 
+        0 0 5px #ff00ff,
+        0 0 10px #ff00ff,
+        0 0 25px #ff00ff,
+        0 0 40px #b24bf3;
     }
 
     .section-content {
@@ -818,33 +873,36 @@
     .number-item:nth-child(3) { transition-delay: 0.3s; }
 
     .number-item:hover {
-      background: linear-gradient(145deg, rgba(0, 245, 255, 0.15), rgba(178, 75, 243, 0.12));
-      transform: scale(1.05);
-      border-color: var(--neon-cyan);
-      box-shadow: 0 0 25px rgba(0, 245, 255, 0.3),
-                  inset 0 0 20px rgba(0, 245, 255, 0.08);
+      background: linear-gradient(145deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.15));
+      transform: scale(1.08);
+      border-color: #00ffff;
+      box-shadow: 
+        0 0 20px #00ffff,
+        0 0 40px rgba(0, 255, 255, 0.4),
+        inset 0 0 25px rgba(0, 255, 255, 0.15);
     }
 
     .number-value {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 42px;
-      font-weight: 700;
-      background: linear-gradient(135deg, var(--neon-cyan), var(--electric-blue), var(--electric-purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 12px;
-      filter: drop-shadow(0 0 8px rgba(0, 245, 255, 0.4));
+      font-family: 'Orbitron', sans-serif;
+      font-size: 48px;
+      font-weight: 900;
+      color: #00ffff;
+      margin-bottom: 14px;
+      text-shadow: 
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #0af;
     }
 
     .number-label {
-      font-family: 'Cinzel', serif;
+      font-family: 'Orbitron', sans-serif;
       font-size: 10px;
       font-weight: 600;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--neon-cyan);
-      opacity: 0.7;
+      color: #ff00ff;
+      text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
     }
 
     /* Read More Link */
@@ -994,30 +1052,33 @@
     .seven-badge {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      margin-top: 28px;
-      padding: 16px 32px;
-      background: linear-gradient(145deg, rgba(0, 245, 255, 0.1), rgba(178, 75, 243, 0.08));
-      border: 1px solid rgba(0, 245, 255, 0.3);
+      gap: 14px;
+      margin-top: 32px;
+      padding: 18px 36px;
+      background: linear-gradient(145deg, rgba(0, 255, 255, 0.15), rgba(255, 0, 255, 0.1));
+      border: 2px solid #00ffff;
       border-radius: 100px;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 15px;
-      font-style: italic;
-      color: var(--text-secondary);
-      box-shadow: 0 0 20px rgba(0, 245, 255, 0.15),
-                  inset 0 0 15px rgba(0, 245, 255, 0.05);
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      box-shadow: 
+        0 0 15px #00ffff,
+        0 0 30px rgba(0, 255, 255, 0.3),
+        inset 0 0 20px rgba(0, 255, 255, 0.1);
     }
 
     .seven-badge strong {
-      font-family: 'Cinzel Decorative', serif;
+      font-family: 'Orbitron', sans-serif;
       font-style: normal;
-      background: linear-gradient(135deg, var(--neon-cyan), var(--electric-blue), var(--electric-purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      font-size: 24px;
-      font-weight: 700;
-      filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.5));
+      color: #00ffff;
+      font-size: 32px;
+      font-weight: 900;
+      text-shadow: 
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #0af;
     }
 
     /* Footer */
@@ -1312,7 +1373,7 @@
       <div class="brand">✧ Quantum Merlin ✧</div>
       <p class="mystery-line">The cosmos whispers of a moment foretold...</p>
       <p class="mystery-question">When the heavens hold their breath, will you be ready?</p>
-      <h1 class="mystery-answer"><span class="accent">VII</span> Sacred Seconds</h1>
+      <h1 class="mystery-answer"><span class="accent">7</span> Sacred Seconds</h1>
       <p class="mystery-date">✦ The Twelfth Day of August, 2026 ✦<br><em style="font-size: 0.85em; opacity: 0.7;">At the Hour of 14:33 Universal Time</em></p>
       
       <button class="scroll-indicator" id="scrollDown" style="margin-top: 60px; opacity: 0; animation: fadeIn 1s ease 4s forwards;" aria-label="Scroll to countdown">
@@ -1369,7 +1430,7 @@
       </a>
       
       <div class="seven-badge">
-        <strong>VII</strong> seconds of celestial stillness
+        <strong>7</strong> seconds of celestial stillness
       </div>
     </section>
 
