@@ -822,13 +822,13 @@
                 <strong id="groupsBuiltCount">47,832</strong> groups have been built • Only <strong id="topPercentage">12%</strong> score this high!
             </div>
 
-            <!-- Famous Group Comparison - Identity Association -->
+            <!-- Legendary Archetype Comparison - Identity Association -->
             <div class="famous-comparison" id="famousComparison">
-                <h3>🌟 Your Energy Matches...</h3>
+                <h3>🌟 Your Legendary Archetype</h3>
                 <div class="famous-group-match">
                     <div class="your-group" id="yourGroupName">YOUR GROUP</div>
                     <div class="match-equals">≈</div>
-                    <div class="famous-group" id="famousGroupName">BTS</div>
+                    <div class="famous-group" id="famousGroupName">The Global Icons</div>
                 </div>
                 <p class="match-percent"><span id="matchPercent">89</span>% energy similarity!</p>
                 <p id="matchReason" style="color: #9ca3af; font-size: 0.9rem; margin-top: 10px;"></p>
@@ -1382,7 +1382,7 @@
                     </div>
                     <div class="career-phase">
                         <div class="phase-title">✨ Legacy Era (7+ Years)</div>
-                        <div class="phase-desc">${members.length >= 5 ? 'Subunit and solo era! Individual members branch out while group comebacks become legendary events. Your discography is studied in K-pop history classes fr fr.' : 'Tight-knit group stays together! Expect longevity like SHINee or MAMAMOO. Contract renewals are a given.'}</div>
+                        <div class="phase-desc">${members.length >= 5 ? 'Subunit and solo era! Individual members branch out while group comebacks become legendary events. Your discography is studied in K-pop history classes fr fr.' : 'Tight-knit group stays together! Expect longevity like classic legendary groups. Contract renewals are a given.'}</div>
                     </div>
                 </div>
             `;
@@ -1460,18 +1460,18 @@ Build your K-pop group at: quantummerlin.com/kpop/band-builder.html
         // CHASE HUGHES-STYLE PSYCHOLOGICAL ENGAGEMENT
         // ============================================
 
-        // Famous groups database for identity association
-        const famousGroups = [
-            { name: 'BTS', traits: [1, 8, 9], size: 7, vibe: 'global domination', reason: 'Your leadership energy and global soul match their worldwide impact' },
-            { name: 'BLACKPINK', traits: [1, 5, 6], size: 4, vibe: 'fierce visual power', reason: 'Your dynamic energy and visual impact mirror their iconic presence' },
-            { name: 'TWICE', traits: [2, 3, 6], size: 9, vibe: 'harmonious joy', reason: 'Your group radiates the same positive, infectious energy' },
-            { name: 'Stray Kids', traits: [1, 4, 5], size: 8, vibe: 'self-producing power', reason: 'Your creative independence matches their producer energy' },
-            { name: 'SEVENTEEN', traits: [3, 6, 9], size: 13, vibe: 'synchronized perfection', reason: 'Your coordination and harmony echo their legendary teamwork' },
-            { name: 'NewJeans', traits: [3, 5, 7], size: 5, vibe: 'fresh authenticity', reason: 'Your unique concept energy matches their groundbreaking approach' },
-            { name: 'aespa', traits: [7, 11, 22], size: 4, vibe: 'futuristic concepts', reason: 'Your mystical numbers align with their innovative worldbuilding' },
-            { name: 'ITZY', traits: [1, 5, 8], size: 5, vibe: 'confident individuality', reason: 'Your self-assured energy matches their bold message' },
-            { name: 'TXT', traits: [2, 3, 7], size: 5, vibe: 'artistic storytelling', reason: 'Your creative depth mirrors their conceptual artistry' },
-            { name: 'LE SSERAFIM', traits: [1, 8, 9], size: 5, vibe: 'fearless ambition', reason: 'Your power numbers match their unstoppable momentum' }
+        // Legendary archetype database for identity association (fictional to avoid copyright)
+        const legendaryArchetypes = [
+            { name: 'The Global Icons', traits: [1, 8, 9], size: 7, vibe: 'global domination', reason: 'Your leadership energy and global soul match the legendary 7-member dynasty archetype' },
+            { name: 'The Fierce Four', traits: [1, 5, 6], size: 4, vibe: 'fierce visual power', reason: 'Your dynamic energy mirrors the iconic power-quartet archetype' },
+            { name: 'The Harmony Nine', traits: [2, 3, 6], size: 9, vibe: 'harmonious joy', reason: 'Your group radiates the same positive, infectious energy as the classic large-group archetype' },
+            { name: 'The Self-Made Kings', traits: [1, 4, 5], size: 8, vibe: 'self-producing power', reason: 'Your creative independence matches the producer-idol archetype' },
+            { name: 'The Synchronized Legends', traits: [3, 6, 9], size: 13, vibe: 'synchronized perfection', reason: 'Your coordination echoes the legendary mega-group archetype' },
+            { name: 'The Fresh Wave', traits: [3, 5, 7], size: 5, vibe: 'fresh authenticity', reason: 'Your unique concept energy matches the groundbreaking newcomer archetype' },
+            { name: 'The Future Concept', traits: [7, 11, 22], size: 4, vibe: 'futuristic concepts', reason: 'Your mystical numbers align with the innovative worldbuilder archetype' },
+            { name: 'The Confident Queens', traits: [1, 5, 8], size: 5, vibe: 'confident individuality', reason: 'Your self-assured energy matches the bold empowerment archetype' },
+            { name: 'The Artistic Dreamers', traits: [2, 3, 7], size: 5, vibe: 'artistic storytelling', reason: 'Your creative depth mirrors the conceptual artist archetype' },
+            { name: 'The Fearless Rising', traits: [1, 8, 9], size: 5, vibe: 'fearless ambition', reason: 'Your power numbers match the unstoppable momentum archetype' }
         ];
 
         // Progressive loading messages - builds anticipation with open loops
@@ -1486,28 +1486,28 @@ Build your K-pop group at: quantummerlin.com/kpop/band-builder.html
         ];
 
         function findFamousMatch(synergy) {
-            // Find best match based on life paths and group size
+            // Find best archetype match based on life paths and group size
             const memberLifePaths = members.map(m => m.lifePath);
             const memberCount = members.length;
             
-            let bestMatch = famousGroups[0];
+            let bestMatch = legendaryArchetypes[0];
             let bestScore = 0;
             
-            famousGroups.forEach(group => {
+            legendaryArchetypes.forEach(archetype => {
                 let score = 0;
                 // Match on life path traits
-                group.traits.forEach(trait => {
+                archetype.traits.forEach(trait => {
                     if (memberLifePaths.includes(trait)) score += 20;
                 });
                 // Match on group size
-                const sizeDiff = Math.abs(group.size - memberCount);
+                const sizeDiff = Math.abs(archetype.size - memberCount);
                 score += Math.max(0, 30 - sizeDiff * 5);
                 // Synergy bonus
                 score += synergy * 0.3;
                 
                 if (score > bestScore) {
                     bestScore = score;
-                    bestMatch = group;
+                    bestMatch = archetype;
                 }
             });
             

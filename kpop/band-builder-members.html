@@ -322,28 +322,29 @@
     </div>
     
     <script>
-        // Famous K-pop idol birthdays database
-        const famousIdols = [
-            { name: "Jungkook (BTS)", dob: "1997-09-01" },
-            { name: "Lisa (BLACKPINK)", dob: "1997-03-27" },
-            { name: "Jennie (BLACKPINK)", dob: "1996-01-16" },
-            { name: "V (BTS)", dob: "1995-12-30" },
-            { name: "Jimin (BTS)", dob: "1995-10-13" },
-            { name: "Rosé (BLACKPINK)", dob: "1997-02-11" },
-            { name: "Jisoo (BLACKPINK)", dob: "1995-01-03" },
-            { name: "RM (BTS)", dob: "1994-09-12" },
-            { name: "Suga (BTS)", dob: "1993-03-09" },
-            { name: "Jin (BTS)", dob: "1992-12-04" },
-            { name: "J-Hope (BTS)", dob: "1994-02-18" },
-            { name: "Nayeon (TWICE)", dob: "1995-09-22" },
-            { name: "Momo (TWICE)", dob: "1996-11-09" },
-            { name: "Sana (TWICE)", dob: "1996-12-29" },
-            { name: "Tzuyu (TWICE)", dob: "1999-06-14" },
-            { name: "IU", dob: "1993-05-16" },
-            { name: "Karina (aespa)", dob: "2000-04-11" },
-            { name: "Winter (aespa)", dob: "2001-01-01" },
-            { name: "Felix (Stray Kids)", dob: "2000-09-15" },
-            { name: "Hyunjin (Stray Kids)", dob: "2000-03-20" }
+        // Example names database (fictional - for demonstration)
+        // Users can enter any names they want - these are just fun examples!
+        const exampleIdols = [
+            { name: "Luna (Main Vocal)", dob: "1997-09-01" },
+            { name: "Kai (Lead Dancer)", dob: "1997-03-27" },
+            { name: "Mira (Visual)", dob: "1996-01-16" },
+            { name: "Juno (Rapper)", dob: "1995-12-30" },
+            { name: "Sora (All-Rounder)", dob: "1995-10-13" },
+            { name: "Hana (Maknae)", dob: "1999-02-11" },
+            { name: "Yuki (Center)", dob: "1995-01-03" },
+            { name: "Nova (Leader)", dob: "1994-09-12" },
+            { name: "Ren (Producer)", dob: "1993-03-09" },
+            { name: "Sage (Vocalist)", dob: "1992-12-04" },
+            { name: "Zion (Dancer)", dob: "1994-02-18" },
+            { name: "Aria (Sub-Vocal)", dob: "1995-09-22" },
+            { name: "Jin (Performer)", dob: "1996-11-09" },
+            { name: "Rio (Visual)", dob: "1996-12-29" },
+            { name: "Yuna (Maknae)", dob: "1999-06-14" },
+            { name: "Sol (Solo Artist)", dob: "1993-05-16" },
+            { name: "Eden (Concept)", dob: "2000-04-11" },
+            { name: "Frost (Dancer)", dob: "2001-01-01" },
+            { name: "Phoenix (Rapper)", dob: "2000-09-15" },
+            { name: "Storm (All-Rounder)", dob: "2000-03-20" }
         ];
         
         // Get member count from session storage
@@ -364,8 +365,8 @@
                 const member = members[i];
                 const isComplete = member.name && member.dob;
                 
-                // Get random idols for quick add (3 different ones per card)
-                const shuffled = [...famousIdols].sort(() => 0.5 - Math.random());
+                // Get random example names for quick add (3 different ones per card)
+                const shuffled = [...exampleIdols].sort(() => 0.5 - Math.random());
                 const quickAddIdols = shuffled.slice(0, 3);
                 
                 container.innerHTML += `
@@ -442,17 +443,20 @@
             updateMember(index, 'name', name);
         }
         
-        // Show all idols modal
+        // Show example names modal
         function showAllIdols(index) {
-            const idolList = famousIdols.map(idol => `${idol.name}`).join('\n');
-            const choice = prompt(`Choose an idol to add:\n\n${idolList}\n\nType the name exactly:`);
+            const idolList = exampleIdols.map(idol => `${idol.name}`).join('\n');
+            const choice = prompt(`Choose an example name to add (or just type your own!):\n\n${idolList}\n\nType a name:`);
             
             if (choice) {
-                const idol = famousIdols.find(i => i.name.toLowerCase().includes(choice.toLowerCase()));
+                const idol = exampleIdols.find(i => i.name.toLowerCase().includes(choice.toLowerCase()));
                 if (idol) {
                     quickAddIdol(index, idol.name, idol.dob);
                 } else {
-                    alert("Idol not found! Try typing the name exactly as shown.");
+                    // If not in list, just use their custom name with today's date as placeholder
+                    const today = new Date().toISOString().split('T')[0];
+                    quickAddIdol(index, choice, today);
+                    alert("Custom name added! Don't forget to update the birthday! 🎂");
                 }
             }
         }
