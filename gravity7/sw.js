@@ -1,73 +1,123 @@
 // Service Worker for Gravity Pause PWA
-const CACHE_NAME = 'gravity-pause-v1';
-const urlsToCache = [
+// Version 2 - Enhanced caching and offline support
+
+const CACHE_NAME = 'gravity-pause-v2';
+const STATIC_CACHE = 'gravity-static-v2';
+const DYNAMIC_CACHE = 'gravity-dynamic-v2';
+
+// Core assets to cache immediately
+const STATIC_ASSETS = [
   '/',
   '/index.html',
   '/reading.html',
-  '/manifest.json'
+  '/manifest.json',
+  '/icon-192.png',
+  '/icon-512.png',
+  '/favicon.png',
+  '/favicon.ico'
 ];
 
-// Install event - cache resources
+// Install - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+        console.log('[SW] Caching static assets');
+        return cache.addAll(STATIC_ASSETS);
       })
       .then(() => self.skipWaiting())
   );
 });
 
-// Activate event - clean up old caches
+// Activate - clean old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
+        cacheNames
+          .filter((name) => name !== STATIC_CACHE && name !== DYNAMIC_CACHE)
+          .map((name) => {
+            console.log('[SW] Deleting old cache:', name);
+            return caches.delete(name);
+          })
       );
     }).then(() => self.clients.claim())
   );
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch - stale-while-revalidate strategy
 self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  // Skip non-GET requests
+  if (request.method !== 'GET') return;
+
+  // Skip external requests (except fonts)
+  if (url.origin !== location.origin && !url.hostname.includes('fonts')) {
+    return;
+  }
+
+  // For HTML - network first, fallback to cache
+  if (request.headers.get('accept')?.includes('text/html')) {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          const clone = response.clone();
+          caches.open(DYNAMIC_CACHE).then((cache) => cache.put(request, clone));
+          return response;
+        })
+        .catch(() => caches.match(request).then((cached) => cached || caches.match('/')))
+    );
+    return;
+  }
+
+  // For static assets - cache first, then network
   event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Cache hit - return response
-        if (response) {
-          return response;
+    caches.match(request).then((cached) => {
+      const fetchPromise = fetch(request).then((response) => {
+        if (response && response.status === 200) {
+          const clone = response.clone();
+          caches.open(STATIC_CACHE).then((cache) => cache.put(request, clone));
         }
+        return response;
+      }).catch(() => cached);
 
-        // Clone the request
-        const fetchRequest = event.request.clone();
+      return cached || fetchPromise;
+    })
+  );
+});
 
-        return fetch(fetchRequest).then((response) => {
-          // Check if valid response
-          if (!response || response.status !== 200 || response.type !== 'basic') {
-            return response;
-          }
+// Background sync for analytics (when back online)
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'analytics-sync') {
+    console.log('[SW] Syncing analytics');
+  }
+});
 
-          // Clone the response
-          const responseToCache = response.clone();
+// Push notifications (for future use)
+self.addEventListener('push', (event) => {
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body || 'The moment approaches',
+      icon: '/icon-192.png',
+      badge: '/icon-192.png',
+      vibrate: [100, 50, 100],
+      data: {
+        url: data.url || '/'
+      }
+    };
+    event.waitUntil(
+      self.registration.showNotification(data.title || 'Gravity Pause', options)
+    );
+  }
+});
 
-          caches.open(CACHE_NAME)
-            .then((cache) => {
-              cache.put(event.request, responseToCache);
-            });
-
-          return response;
-        });
-      })
-      .catch(() => {
-        // Offline fallback
-        return caches.match('/');
-      })
+// Handle notification click
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  event.waitUntil(
+    clients.openWindow(event.notification.data.url || '/')
   );
 });
