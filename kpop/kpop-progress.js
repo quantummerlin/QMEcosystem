@@ -25,56 +25,101 @@ const KPopProgress = {
     },
     
     // Tool tier assignments (which level unlocks each tool)
+    // Uses filename without .html extension as the key
     TOOL_TIERS: {
-        // Level 1 - TRAINEE (Always available)
-        'birth-sigil': 1,
-        'quantum-forecast': 1,
-        'soul-card-calculator': 1,
-        'angel-number-calculator': 1,
+        // Level 1 - TRAINEE (Always available - 4 core tools)
+        'life-path-calculator': 1,       // Debut Idol Destiny Number
+        'life-path-simple': 1,           // Quick Life Path
+        'zodiac-calculator': 1,          // Sun Sign Calculator
+        'soul-urge-calculator': 1,       // Soul Urge Number
         
-        // Level 2 - DEBUT
-        'life-strategy-calendar': 2,
-        'numerology-reading': 2,
-        'chinese-zodiac': 2,
-        'moon-phase-calculator': 2,
-        'planetary-hours': 2,
-        'reality-codes': 2,
-        'zodiac-calculator': 2,
-        'sun-sign-reading': 2,
+        // Level 2 - DEBUT (6 tools - Building your profile)
+        'destiny-number-calculator': 2,
+        'personality-number-calculator': 2,
+        'expression-number-reading': 2,
         'moon-sign-reading': 2,
         'rising-sign-reading': 2,
+        'chinese-zodiac-calculator': 2,
+        'chinese-zodiac-reading': 2,
+        'birthday-number-reading': 2,
+        'name-number-calculator': 2,
+        'lucky-numbers': 2,
         
-        // Level 3 - COMEBACK (Shadow Work)
-        'identity-split-detector': 3,
-        'power-avoidance-pattern': 3,
-        'energy-leak-detector': 3,
-        'trust-radar': 3,
-        'hidden-strengths-revealer': 3,
-        'saturn-return': 3,
+        // Level 3 - COMEBACK (5+ shadow work tools)
         'chiron-reading': 3,
+        'saturn-sign-reading': 3,
+        'karmic-debt-reading': 3,
+        'challenge-numbers-reading': 3,
+        'hidden-passion-number': 3,
+        'south-node-reading': 3,
+        'pluto-sign-reading': 3,
+        'neptune-sign-reading': 3,
+        'lilith-reading': 3,
+        'relationship-karma-reading': 3,
         
-        // Level 4 - WORLD TOUR
-        'compatibility-calculator': 4,
-        'crystal-reading': 4,
-        'genesis-frequencies': 4,
-        'astro-forecast': 4,
-        'tarot-reading': 4,
-        'gematria-calculator': 4,
-        'synastry-reading': 4,
+        // Level 4 - WORLD TOUR (8+ alignment tools)
+        'love-compatibility-reading': 4,
         'venus-sign-reading': 4,
         'mars-sign-reading': 4,
         'mercury-sign-reading': 4,
         'jupiter-sign-reading': 4,
+        'synastry-reading': 4,
+        'composite-chart-reading': 4,
+        'venus-mars-compatibility': 4,
+        'soul-mate-analysis': 4,
+        'squad-chemistry-reading': 4,
+        'relationship-life-path': 4,
         
-        // Level 5 - LEGEND
-        'quantum-rose': 5,
+        // Level 5 - LEGEND (Advanced mastery)
         'band-builder': 5,
-        'yearly-forecast': 5,
+        'band-builder-debut': 5,
+        'band-builder-members': 5,
+        'band-builder-results': 5,
         'vocation-reading': 5,
-        'karmic-debt': 5,
-        'pinnacle-numbers': 5,
+        'life-mission-reading': 5,
         'north-node-reading': 5,
-        'lilith-reading': 5
+        'midheaven-reading': 5,
+        'pinnacle-numbers-reading': 5,
+        'maturity-number-reading': 5,
+        'master-number-reading': 5,
+        'dharma-number-reading': 5,
+        'soul-contract-reading': 5,
+        'part-of-fortune-reading': 5,
+        'descendant-reading': 5,
+        'stellium-reading': 5,
+        'modality-reading': 5,
+        'uranus-sign-reading': 5,
+        
+        // Forecasts - Progressive unlock based on timeframe
+        'daily-forecast': 1,
+        'daily-fortune': 1,
+        'cosmic-daily-forecast': 2,
+        'personal-day-number': 2,
+        'weekly-forecast': 3,
+        'cosmic-weekly-forecast': 3,
+        'monthly-forecast': 4,
+        'cosmic-monthly-forecast': 4,
+        'personal-month-reading': 4,
+        'yearly-forecast': 5,
+        'cosmic-yearly-forecast': 5,
+        'personal-year-reading': 5,
+        'decade-forecast': 5,
+        
+        // Fun tools - scattered across levels
+        'fortune-cookie': 1,
+        'yes-no-oracle': 1,
+        'crystal-ball': 2,
+        'moon-phase-calculator': 2,
+        'mercury-retrograde-checker': 3,
+        'void-of-course-moon': 4,
+        'birthday-countdown': 1,
+        'age-calculator': 1,
+        'life-progress': 2,
+        
+        // Personality tests
+        'aura-color-test': 2,
+        'brain-type-test': 3,
+        'color-personality-test': 2
     },
     
     // Achievement definitions
