@@ -287,7 +287,7 @@
         }
         
         .submit-btn:hover {
-            transform: translateY(-3px);
+            transform ✨: translateY(-3px);
             box-shadow: 0 15px 40px rgba(255, 107, 157, 0.4);
         }
         
@@ -485,8 +485,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="timeline">Preferred Start</label>
-                        <select id="timeline" name="timeline">
+                        <label for="era">Preferred Start</label>
+                        <select id="era" name="era">
                             <option value="">When to start...</option>
                             <option value="asap">As soon as possible</option>
                             <option value="1month">Within 1 month</option>
@@ -531,7 +531,7 @@
                 website: document.getElementById('website').value,
                 slots: Array.from(document.querySelectorAll('input[name="slots"]:checked')).map(cb => cb.value),
                 budget: document.getElementById('budget').value,
-                timeline: document.getElementById('timeline').value,
+                era: document.getElementById('era').value,
                 message: document.getElementById('message').value,
                 submittedAt: new Date().toISOString()
             };
@@ -604,7 +604,7 @@
         .footer-feedback-btn:hover {
             background: rgba(255, 107, 157, 0.15);
             border-color: #FF6B9D;
-            transform: translateY(-2px);
+            transform ✨: translateY(-2px);
         }
         .legal-links {
             display: flex;

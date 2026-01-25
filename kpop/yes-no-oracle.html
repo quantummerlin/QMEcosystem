@@ -123,7 +123,7 @@
             width: 100%;
         }
         button:hover { 
-            transform: translateY(-2px); 
+            transform ✨: translateY(-2px); 
             box-shadow: 0 10px 30px rgba(255, 107, 157, 0.5);
         }
         .result {
@@ -147,7 +147,7 @@
             background: rgba(255, 107, 157, 0.2);
             border-color: #FF6B9D;
         }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; transform ✨: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .share-buttons { display: flex; gap: 10px; margin-top: 20px; justify-content: center; }
         .share-btn { background: #f0f0f0; color: #333; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.3s; }
         .share-btn:hover { background: #e0e0e0; }
@@ -271,10 +271,10 @@
                 const preferredName = document.getElementById('preferredName')?.value || 'friend';
             
             const interpretations = {
-                'Yes': `The Reading speaks: YES, ${preferredName}! The cosmic energies are aligning in your favor regarding this question. This affirmative answer suggests that proceeding with your plans, trusting your instincts, or taking that leap will serve your highest good. the K-Pop K-osmos is giving you a green light—move forward with confidence and optimism. Sometimes we need external confirmation for what we already know deep down. This is that confirmation. Trust yourself and take action.`,
-                'No': `The Reading speaks: NO, ${preferredName}. This answer is actually protecting you from a path that wouldn't serve your highest good right now. A 'no' from the K-Pop K-osmos isn't rejection—it's redirection toward something better. Perhaps the timing isn't right, or there's information you don't yet have, or a better option is waiting to reveal itself. Trust this guidance and either wait for clearer signs or consider alternative approaches. Sometimes what we think we want isn't what we truly need.`,
+                'Yes': `The Reading speaks: YES, ${preferredName}! The cosmic energies are aligning in your favor regarding this question. This affirmative answer suggests that proceeding with your plans, trusting your instincts, or taking that leap will serve your highest good. the K-Pop K-osmos is giving you a green light—move forward with confidence 💪 and optimism. Sometimes we need external confirmation for what we already know deep down. This is that confirmation. Trust yourself and take action.`,
+                'No': `The Reading speaks: NO, ${preferredName}. This answer is actually protecting you from a path that wouldn't serve your highest good right now. A 'no' from the K-Pop K-osmos isn't rejection—it's redirection toward something better. Maybe the timing isn't right, or there's information you don't yet have, or a better option is waiting to reveal itself. Trust this guidance and either wait for clearer signs or consider alternative approaches. Sometimes what we think we want isn't what we truly need.`,
                 'Maybe': `The Reading speaks: MAYBE, ${preferredName}. This uncertain answer reflects that the situation is still in flux—energies haven't fully formed yet, or your own clarity about what you truly want needs development. The outcome depends on choices you have yet to make or information that hasn't been revealed. Rather than frustration, view this as an invitation to gather more information, reflect on what you really want, and trust that clarity will come when the time is right. the K-Pop K-osmos is asking you to wait just a bit longer before deciding.`,
-                'Ask Again Later': `The Reading cannot see clearly at this moment, ${preferredName}. The energies surrounding your question are too turbulent or unfixed for a definitive answer. This isn't a denial—it's wisdom. Wait until you feel more centered about this question, or until circumstances shift. When the time is right, ask again and you'll receive clear guidance. Sometimes 'not now' is the wisest answer of all.`
+                'Ask Again Later': `The Reading cannot see clearly at this moment, ${preferredName}. The energies surrounding your question are too turbulent or unfixed for a definitive answer. This isn't a denial—it's wisdom 🧠. Wait until you feel more centered about this question, or until circumstances shift. When the time is right, ask again and you'll receive clear guidance. Sometimes 'not now' is the wisest answer of all.`
             };
             
             const answers = ['Yes', 'No', 'Maybe', 'Ask Again Later'];
@@ -282,7 +282,7 @@
                 const answer = answers[Math.floor(Math.random() * answers.length)];
                 
                 document.getElementById('result-title').textContent = `${answer.emoji} ${answer.text}`;
-                document.getElementById('result-text').textContent = "The reading has spoken. Trust your intuition!";
+                document.getElementById('result-text').textContent = "The reading has spoken. Trust your intuition ✨!";
                 CosmicLoader.show(() => {
                     document.getElementById('result').classList.add('show');
                 });
