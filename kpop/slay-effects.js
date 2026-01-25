@@ -13,10 +13,19 @@
         sparkleDelay: 50,
         particleInterval: 800,
         particleCount: 12,
-        confettiCount: 30
+        confettiCount: 30,
+        // Pages with complex forms - disable floating particles for better UX
+        interactivePages: ['band-builder', 'welcome-flow', 'crystal-ball']
     };
     
     let lastSparkleTime = 0;
+    let isInteractivePage = false;
+    
+    // ===== CHECK IF INTERACTIVE PAGE =====
+    function checkInteractivePage() {
+        const path = window.location.pathname.toLowerCase();
+        return CONFIG.interactivePages.some(page => path.includes(page));
+    }
     
     // ===== CREATE PARTICLES CONTAINER =====
     function createParticlesContainer() {
@@ -124,16 +133,26 @@
             return;
         }
         
-        // Mouse sparkle trail
+        // Check if this is an interactive page (forms, inputs, etc.)
+        isInteractivePage = checkInteractivePage();
+        
+        if (isInteractivePage) {
+            // On interactive pages: NO floating particles, NO sparkle trails
+            // Just keep confetti available for celebrations
+            console.log('✨ K-Pop Cosmos: Interactive page mode - minimal effects 💜');
+            return;
+        }
+        
+        // Mouse sparkle trail (only on non-interactive pages)
         document.addEventListener('mousemove', handleMouseMove);
         
-        // Touch sparkle for mobile
+        // Touch sparkle for mobile (only on non-interactive pages)
         document.addEventListener('touchstart', handleTouchStart);
         
-        // Click sparkle burst
+        // Click sparkle burst (only on non-interactive pages)
         document.addEventListener('click', handleClick);
         
-        // Initialize floating particles
+        // Initialize floating particles (only on non-interactive pages)
         initParticles();
         
         console.log('✨ K-Pop Cosmos Slay Effects loaded! 💜');

@@ -294,6 +294,25 @@ input:focus, select:focus, textarea:focus {
     }
 }
 
+/* ===== FORM ELEMENTS ALWAYS ON TOP ===== */
+/* Ensures form elements are never blocked by animations */
+input, 
+select, 
+textarea, 
+button, 
+.btn,
+[type="text"],
+[type="date"],
+[type="number"],
+[type="email"],
+.input-group,
+.member-card,
+.card,
+form {
+    position: relative;
+    z-index: 10;
+}
+
 /* ===== REDUCED MOTION SUPPORT ===== */
 @media (prefers-reduced-motion: reduce) {
     .sparkle,
