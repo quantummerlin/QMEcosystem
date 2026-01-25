@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#FF6B9D">
-    <title>Squad Synergy Results | K-Pop K-osmos Band Builder</title>
-    <meta name="description" content="Discover your K-pop group's K-osmic synergy score, role assignments, and perfect group name! No cap this reading ate fr fr 🎤✨">
+    <title>Squad Synergy Results | K-Pop Band Builder ✨</title>
+    <meta name="description" content="Discover your K-pop group's cosmic synergy score, role assignments, and perfect group name! No cap this reading ate fr fr 🎤✨">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -416,6 +416,129 @@
             margin: 0 auto;
             line-height: 1.6;
         }
+
+        /* Group Dynamics Section */
+        .dynamics-section {
+            background: rgba(30, 15, 45, 0.7);
+            border: 2px solid rgba(255, 107, 157, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        .dynamics-section h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.5rem;
+            color: #FF6B9D;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .dynamics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .dynamics-card {
+            background: rgba(168, 85, 247, 0.1);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .dynamics-card h4 {
+            color: #22D3EE;
+            font-family: 'Cinzel', serif;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .dynamics-card p {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Career Section */
+        .career-section {
+            background: rgba(30, 15, 45, 0.7);
+            border: 2px solid rgba(34, 211, 238, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        .career-section h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.5rem;
+            color: #22D3EE;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .career-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .career-phase {
+            background: rgba(168, 85, 247, 0.1);
+            border-left: 4px solid #A855F7;
+            padding: 15px 20px;
+            border-radius: 0 10px 10px 0;
+        }
+        .career-phase.highlight {
+            border-left-color: #FF6B9D;
+            background: rgba(255, 107, 157, 0.1);
+        }
+        .phase-title {
+            color: #FF6B9D;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .phase-desc {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Fan Strategy Section */
+        .fan-section {
+            background: rgba(30, 15, 45, 0.7);
+            border: 2px solid rgba(168, 85, 247, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        .fan-section h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.5rem;
+            color: #A855F7;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .fan-tips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .fan-tip {
+            background: rgba(168, 85, 247, 0.1);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+        }
+        .fan-tip-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .fan-tip-title {
+            color: #22D3EE;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        .fan-tip-desc {
+            color: #9ca3af;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
         
         /* Ad Space */
         .ad-space {
@@ -538,7 +661,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎤 Your Squad's K-osmic Reading</h1>
+            <h1>🎤 Your Squad's Ultimate Reading</h1>
             <p class="subtitle">The universe has aligned your group's destiny! ✨</p>
         </div>
         
@@ -549,7 +672,7 @@
         
         <!-- Loading -->
         <div class="loading" id="loading">
-            <h2>✨ Calculating K-osmic Synergy...</h2>
+            <h2>✨ Calculating Squad Synergy...</h2>
             <div class="loading-bar">
                 <div class="loading-bar-fill"></div>
             </div>
@@ -570,12 +693,12 @@
             
             <!-- Group Name -->
             <div class="group-name-section">
-                <div class="group-name-label">Your K-osmically Destined Group Name</div>
+                <div class="group-name-label">Your Destined Group Name ✨</div>
                 <div class="group-name" id="groupName">STELLAR7</div>
                 <p class="group-meaning" id="groupMeaning">Meaning: Seven stars aligned in perfect harmony</p>
                 
                 <div class="alt-names">
-                    <p class="alt-names-label">Other K-osmic name options:</p>
+                    <p class="alt-names-label">Other iconic name options:</p>
                     <div class="alt-names-list" id="altNames">
                         <!-- Filled by JS -->
                     </div>
@@ -597,6 +720,30 @@
                     <!-- Filled by JS -->
                 </div>
             </div>
+
+            <!-- Group Dynamics Analysis -->
+            <div class="dynamics-section">
+                <h2>🔥 Group Dynamics Analysis</h2>
+                <div class="dynamics-content" id="dynamicsContent">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+
+            <!-- Career Forecast -->
+            <div class="career-section">
+                <h2>📈 Career Forecast</h2>
+                <div class="career-content" id="careerContent">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+
+            <!-- Fan Strategy -->
+            <div class="fan-section">
+                <h2>👑 Stan Attraction Strategy</h2>
+                <div class="fan-content" id="fanContent">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
             
             <!-- Debut Forecast -->
             <div class="debut-section">
@@ -612,7 +759,7 @@
             
             <!-- Share Section -->
             <div class="share-section">
-                <h2>Share Your K-osmic Reading!</h2>
+                <h2>Share Your Reading! 💜</h2>
                 <div class="share-buttons">
                     <button class="share-btn tiktok" onclick="shareToTikTok()">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg>
@@ -636,6 +783,44 @@
             <div class="actions">
                 <a href="band-builder.html" class="action-btn secondary">Build New Group</a>
                 <a href="tools_index.html" class="action-btn primary">Explore More Tools ✨</a>
+            </div>
+
+            <!-- Explore More Tools Section -->
+            <div class="explore-more-section">
+                <h2>✨ Keep Your Main Character Era Going!</h2>
+                <p class="explore-subtitle">Bestie, your squad reading is just the beginning fr fr 💜</p>
+                <div class="tools-grid">
+                    <a href="compatibility-calculator.html" class="tool-card-mini">
+                        <span class="tool-icon">💜</span>
+                        <span class="tool-name">Squad Compatibility</span>
+                        <span class="tool-desc">Deep dive into any two members' chemistry!</span>
+                    </a>
+                    <a href="life-path-calculator.html" class="tool-card-mini">
+                        <span class="tool-icon">✨</span>
+                        <span class="tool-name">Life Path Reading</span>
+                        <span class="tool-desc">Get your full idol destiny reading!</span>
+                    </a>
+                    <a href="zodiac-calculator.html" class="tool-card-mini">
+                        <span class="tool-icon">⭐</span>
+                        <span class="tool-name">Zodiac Reading</span>
+                        <span class="tool-desc">What's your stan personality?</span>
+                    </a>
+                    <a href="moon-sign-reading.html" class="tool-card-mini">
+                        <span class="tool-icon">🌙</span>
+                        <span class="tool-name">Moon Sign Reading</span>
+                        <span class="tool-desc">Your emotional stan side revealed!</span>
+                    </a>
+                    <a href="kpop-name-generator.html" class="tool-card-mini">
+                        <span class="tool-icon">🎤</span>
+                        <span class="tool-name">Stage Name Generator</span>
+                        <span class="tool-desc">Get your perfect idol name!</span>
+                    </a>
+                    <a href="yes-no-oracle.html" class="tool-card-mini">
+                        <span class="tool-icon">🔮</span>
+                        <span class="tool-name">Yes/No Oracle</span>
+                        <span class="tool-desc">Ask the universe anything!</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -860,7 +1045,7 @@
             const names = [
                 {
                     name: `${groupNumber === 11 || groupNumber === 22 ? 'DESTINY' : 'STELLAR'}${memberCount}`,
-                    meaning: `${memberCount} stars united under ${groupNumber} energy - a K-osmically blessed combination`
+                    meaning: `${memberCount} stars united under ${groupNumber} energy - destined for greatness fr fr`
                 },
                 {
                     name: `${initials.slice(0, Math.min(4, initials.length))}ERA`,
@@ -875,8 +1060,8 @@
                     meaning: `${memberCount} members shining together`
                 },
                 {
-                    name: 'KOSMIC',
-                    meaning: 'Destined by the K-osmos itself'
+                    name: 'STARLIT',
+                    meaning: 'Destined by the stars themselves'
                 }
             ];
             
@@ -944,7 +1129,7 @@
             
             const ratings = [
                 [90, '🔥 LEGENDARY CHEMISTRY', 'No cap, this group was literally written in the stars! Your energy is unmatched fr fr.'],
-                [80, '✨ SLAY-LEVEL SYNERGY', 'Your squad literally ate! The K-osmos blessed this combination.'],
+                [80, '✨ SLAY-LEVEL SYNERGY', 'Your squad literally ate! The universe blessed this combination bestie.'],
                 [70, '💜 SOLID SQUAD VIBES', 'Great chemistry with room to grow even stronger together!'],
                 [60, '🌟 PROMISING POTENTIAL', 'Your unique differences create interesting dynamics!'],
                 [0, '💫 BUILDING CHEMISTRY', 'Every legendary group started somewhere. Your era is coming!']
@@ -990,10 +1175,103 @@
                     <div class="chem-percent">${c.percent}%</div>
                 </div>
             `).join('');
+
+            // Group Dynamics
+            renderDynamics(data);
+            
+            // Career Forecast
+            renderCareerForecast(data);
+            
+            // Fan Strategy
+            renderFanStrategy(data);
             
             // Debut
             document.getElementById('debutDate').textContent = data.debutAnalysis.formatted;
             document.getElementById('debutAnalysis').textContent = data.debutAnalysis.analysis;
+        }
+
+        function renderDynamics(data) {
+            const memberCount = members.length;
+            const avgLifePath = Math.round(members.reduce((sum, m) => sum + m.lifePath, 0) / memberCount);
+            const hasLeader = data.roles.some(r => r.role === 'Leader');
+            const hasVisual = data.roles.some(r => r.role === 'Visual');
+            
+            const dynamicsHTML = `
+                <div class="dynamics-grid">
+                    <div class="dynamics-card">
+                        <h4>⚡ Group Energy Type</h4>
+                        <p>${avgLifePath <= 4 ? 'Your squad has STABLE, grounded energy. You\'ll be known for consistency and reliable comebacks. Fans can always count on you!' : avgLifePath <= 7 ? 'Your squad radiates DYNAMIC energy! Expect creative concepts and constantly evolving sound. No two eras will be the same!' : 'POWERHOUSE energy detected! Your group aims high and achieves higher. Industry leaders are shaking rn fr fr.'}</p>
+                    </div>
+                    <div class="dynamics-card">
+                        <h4>🎭 Concept Alignment</h4>
+                        <p>${data.synergy >= 85 ? 'Your numerology screams DARK CONCEPT potential! Think mysterious lore, cryptic MVs, and deep symbolism that fans will analyze for years.' : data.synergy >= 70 ? 'FRESH CONCEPT energy! Your group would slay bright, energetic concepts with catchy hooks and viral choreography.' : 'VERSATILE concept energy! You could successfully pull off any concept from cute to girl crush to experimental.'}</p>
+                    </div>
+                    <div class="dynamics-card">
+                        <h4>💪 Strength Balance</h4>
+                        <p>${hasLeader && hasVisual ? 'BALANCED squad! You\'ve got strong leadership AND visual impact. This is the formula for longevity in the industry.' : hasLeader ? 'LEADER-DRIVEN group! Your decision-making will be clear and unified. Great for navigating industry challenges!' : 'DEMOCRATIC energy! No single leader means everyone\'s voice matters. Perfect for creative collaboration!'}</p>
+                    </div>
+                    <div class="dynamics-card">
+                        <h4>🌍 Global Appeal</h4>
+                        <p>${members.some(m => m.lifePath === 9) ? 'You have a GLOBAL SOUL in your lineup! Life Path 9 energy means worldwide recognition is in your destiny. International fans incoming!' : memberCount >= 7 ? 'Large groups attract DIVERSE fanbases! Your lineup ensures there\'s someone for every stan to bias.' : 'Tight-knit energy means INTENSE fan connections! Expect a smaller but fiercely loyal fanbase.'}</p>
+                    </div>
+                </div>
+            `;
+            document.getElementById('dynamicsContent').innerHTML = dynamicsHTML;
+        }
+
+        function renderCareerForecast(data) {
+            const masterNumbers = members.filter(m => [11, 22, 33].includes(m.lifePath)).length;
+            const highEnergy = members.filter(m => m.lifePath >= 7).length;
+            
+            const careerHTML = `
+                <div class="career-timeline">
+                    <div class="career-phase highlight">
+                        <div class="phase-title">🚀 Debut Era (Year 1)</div>
+                        <div class="phase-desc">${data.synergy >= 80 ? 'EXPLOSIVE debut incoming! Your chemistry will catch attention immediately. Expect rookie awards and rapid fandom growth. Music show wins are literally in the stars!' : 'Solid foundation building! Focus on perfecting your signature sound. Stans will appreciate your growth arc.'}</div>
+                    </div>
+                    <div class="career-phase">
+                        <div class="phase-title">📈 Growth Era (Years 2-3)</div>
+                        <div class="phase-desc">${masterNumbers > 0 ? 'Master number energy means ACCELERATED growth! Expect breakthrough moments, viral fancams, and chart-topping comebacks ahead of schedule.' : 'Steady climb! Each comeback builds on the last. Focus on developing your unique sound and fan service game.'}</div>
+                    </div>
+                    <div class="career-phase">
+                        <div class="phase-title">👑 Peak Era (Years 4-6)</div>
+                        <div class="phase-desc">${highEnergy >= 2 ? 'WORLD TOUR era activated! Stadium concerts, brand ambassadorships, and industry influence await. Your group becomes a reference point for future generations.' : 'Arena tours and daesang nominations! Your dedicated fanbase ensures sold-out shows and emotional concert moments.'}</div>
+                    </div>
+                    <div class="career-phase">
+                        <div class="phase-title">✨ Legacy Era (7+ Years)</div>
+                        <div class="phase-desc">${members.length >= 5 ? 'Subunit and solo era! Individual members branch out while group comebacks become legendary events. Your discography is studied in K-pop history classes fr fr.' : 'Tight-knit group stays together! Expect longevity like SHINee or MAMAMOO. Contract renewals are a given.'}</div>
+                    </div>
+                </div>
+            `;
+            document.getElementById('careerContent').innerHTML = careerHTML;
+        }
+
+        function renderFanStrategy(data) {
+            const fanHTML = `
+                <div class="fan-tips">
+                    <div class="fan-tip">
+                        <div class="fan-tip-icon">📱</div>
+                        <div class="fan-tip-title">Social Strategy</div>
+                        <div class="fan-tip-desc">${data.synergy >= 80 ? 'Behind-the-scenes chaos will go viral! Show your real dynamics on VLive and TikTok.' : 'Curated aesthetics work! Focus on beautiful feed and consistent branding.'}</div>
+                    </div>
+                    <div class="fan-tip">
+                        <div class="fan-tip-icon">🎤</div>
+                        <div class="fan-tip-title">Content Focus</div>
+                        <div class="fan-tip-desc">${members.some(m => m.lifePath === 3) ? 'Variety show appearances will showcase your natural humor! Fans love a funny group.' : 'Focus on performance content! Dance practices and live vocals show your skills.'}</div>
+                    </div>
+                    <div class="fan-tip">
+                        <div class="fan-tip-icon">💜</div>
+                        <div class="fan-tip-title">Fan Service Style</div>
+                        <div class="fan-tip-desc">${members.some(m => m.lifePath === 6) ? 'Heartfelt fan letters and emotional moments will create deep parasocial bonds!' : 'Playful interactions and inside jokes create a fun fandom culture!'}</div>
+                    </div>
+                    <div class="fan-tip">
+                        <div class="fan-tip-icon">🌟</div>
+                        <div class="fan-tip-title">Fandom Name Vibe</div>
+                        <div class="fan-tip-desc">${data.synergy >= 85 ? 'Celestial/cosmic themed fandom name! Something ethereal that matches your legendary energy.' : 'Color or light themed! Something bright and uplifting that represents your fans\' devotion.'}</div>
+                    </div>
+                </div>
+            `;
+            document.getElementById('fanContent').innerHTML = fanHTML;
         }
         
         function selectName(name, meaning) {
@@ -1015,7 +1293,7 @@
         }
         
         function shareToTwitter() {
-            const text = `Just built my dream K-pop group "${document.getElementById('groupName').textContent}" with ${document.getElementById('synergyValue').textContent}% K-osmic synergy! 🎤✨\n\nBuild yours: quantummerlin.com/kpop/band-builder.html`;
+            const text = `Just built my dream K-pop group "${document.getElementById('groupName').textContent}" with ${document.getElementById('synergyValue').textContent}% synergy! 🎤✨\n\nBuild yours: quantummerlin.com/kpop/band-builder.html`;
             window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank');
         }
         
@@ -1045,6 +1323,166 @@ Build your K-pop group at: quantummerlin.com/kpop/band-builder.html
             document.getElementById('results').classList.add('show');
         }, 3500);
     </script>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="feedback-section">
+            <p class="feedback-text">🛠️ Found an issue or have a suggestion?</p>
+            <a href="mailto:fixit@quantummerlin.com?subject=K-Pop%20Band%20Builder%20Feedback" class="footer-feedback-btn">📧 fixit@quantummerlin.com</a>
+        </div>
+        <div class="legal-links">
+            <a href="terms.html">Terms of Service</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 K-Pop Tools. Made with 💜 for stans everywhere ✨</p>
+        <div class="coffee-section">
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="coffee-btn">☕ Buy Us a Coffee</a>
+        </div>
+    </footer>
+    <style>
+        /* Explore More Tools Section */
+        .explore-more-section {
+            background: rgba(30, 15, 45, 0.9);
+            border: 2px solid rgba(168, 85, 247, 0.3);
+            border-radius: 20px;
+            padding: 35px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .explore-more-section h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.6rem;
+            color: #FF6B9D;
+            margin-bottom: 10px;
+        }
+        .explore-subtitle {
+            color: #A855F7;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+        }
+        .tool-card-mini {
+            background: rgba(168, 85, 247, 0.1);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 15px;
+            padding: 20px 15px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .tool-card-mini:hover {
+            background: rgba(255, 107, 157, 0.15);
+            border-color: #FF6B9D;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(255, 107, 157, 0.3);
+        }
+        .tool-icon {
+            font-size: 2rem;
+        }
+        .tool-name {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            color: #22D3EE;
+            font-weight: 600;
+        }
+        .tool-desc {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            text-align: center;
+        }
+        
+        /* Legal Footer */
+        .legal-footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+            background: rgba(20, 10, 30, 0.8);
+        }
+        .feedback-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+        }
+        .feedback-text {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .footer-feedback-btn {
+            display: inline-block;
+            color: #FF6B9D;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 107, 157, 0.4);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .footer-feedback-btn:hover {
+            background: rgba(255, 107, 157, 0.15);
+            border-color: #FF6B9D;
+            transform: translateY(-2px);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .legal-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .legal-links a:hover {
+            color: #22D3EE;
+        }
+        .legal-links .separator {
+            color: rgba(168, 85, 247, 0.4);
+        }
+        .copyright {
+            color: #A78BFA;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .coffee-section {
+            padding-top: 15px;
+            border-top: 1px solid rgba(168, 85, 247, 0.15);
+        }
+        .coffee-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #22D3EE 0%, #f59e0b 100%);
+            color: #0a0a0f;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .coffee-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(34, 211, 238, 0.4);
+        }
+    </style>
     
     <script src="slay-effects.js"></script>
 </body>
