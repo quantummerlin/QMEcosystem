@@ -113,6 +113,123 @@
         .loading-text {
             color: #9ca3af;
             font-style: italic;
+            transition: all 0.3s ease;
+        }
+
+        /* Teaser Reveal - Open Loop Psychology */
+        .teaser-reveal {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 107, 157, 0.1);
+            border: 1px solid rgba(255, 107, 157, 0.3);
+            border-radius: 15px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.5s ease;
+        }
+        .teaser-reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .teaser-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .teaser-text {
+            color: #FF6B9D;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+        }
+
+        /* Rarity Badge - Scarcity Psychology */
+        .rarity-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 15px;
+            animation: rarityPulse 2s ease-in-out infinite;
+        }
+        .rarity-badge.legendary {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .rarity-badge.epic {
+            background: linear-gradient(135deg, #A855F7 0%, #7C3AED 100%);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+        }
+        .rarity-badge.rare {
+            background: linear-gradient(135deg, #22D3EE 0%, #0891B2 100%);
+            color: #fff;
+        }
+        @keyframes rarityPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Social Proof Counter */
+        .social-proof {
+            text-align: center;
+            padding: 15px;
+            background: rgba(168, 85, 247, 0.1);
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+        .social-proof strong {
+            color: #22D3EE;
+        }
+
+        /* Comparison to Famous Groups */
+        .famous-comparison {
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+            border: 2px solid rgba(255, 107, 157, 0.4);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .famous-comparison h3 {
+            font-family: 'Cinzel Decorative', serif;
+            color: #FF6B9D;
+            margin-bottom: 15px;
+        }
+        .famous-group-match {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .your-group, .famous-group {
+            padding: 15px 25px;
+            border-radius: 15px;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+        }
+        .your-group {
+            background: rgba(255, 107, 157, 0.2);
+            border: 1px solid #FF6B9D;
+            color: #FF6B9D;
+        }
+        .famous-group {
+            background: rgba(168, 85, 247, 0.2);
+            border: 1px solid #A855F7;
+            color: #A855F7;
+        }
+        .match-equals {
+            font-size: 1.5rem;
+            color: #22D3EE;
+        }
+        .match-percent {
+            color: #22D3EE;
+            font-size: 1.2rem;
+            margin-top: 15px;
         }
         
         /* Results Section */
@@ -670,13 +787,19 @@
         </div>
         <p class="progress-text">Complete! Your K-Pop group reading is ready ✨</p>
         
-        <!-- Loading -->
+        <!-- Loading - Progressive reveal builds anticipation -->
         <div class="loading" id="loading">
-            <h2>✨ Calculating Squad Synergy...</h2>
+            <h2 id="loadingTitle">✨ Analyzing Your Squad...</h2>
             <div class="loading-bar">
-                <div class="loading-bar-fill"></div>
+                <div class="loading-bar-fill" id="loadingBarFill"></div>
             </div>
-            <p class="loading-text">Aligning the stars for your squad...</p>
+            <p class="loading-text" id="loadingText">Reading birth dates...</p>
+            
+            <!-- Open Loop Teaser - creates curiosity gap -->
+            <div class="teaser-reveal" id="teaserReveal">
+                <div class="teaser-icon">👀</div>
+                <p class="teaser-text" id="teaserText"></p>
+            </div>
         </div>
         
         <!-- Results -->
@@ -689,6 +812,26 @@
                 </div>
                 <div class="synergy-rating" id="synergyRating">🔥 LEGENDARY CHEMISTRY</div>
                 <p class="synergy-desc" id="synergyDesc">Your squad's energy is literally unmatched. No cap, this group was written in the stars!</p>
+                
+                <!-- Rarity Badge - Scarcity Psychology -->
+                <div class="rarity-badge legendary" id="rarityBadge">⭐ TOP 3% OF ALL GROUPS BUILT</div>
+            </div>
+
+            <!-- Social Proof -->
+            <div class="social-proof" id="socialProof">
+                <strong id="groupsBuiltCount">47,832</strong> groups have been built • Only <strong id="topPercentage">12%</strong> score this high!
+            </div>
+
+            <!-- Famous Group Comparison - Identity Association -->
+            <div class="famous-comparison" id="famousComparison">
+                <h3>🌟 Your Energy Matches...</h3>
+                <div class="famous-group-match">
+                    <div class="your-group" id="yourGroupName">YOUR GROUP</div>
+                    <div class="match-equals">≈</div>
+                    <div class="famous-group" id="famousGroupName">BTS</div>
+                </div>
+                <p class="match-percent"><span id="matchPercent">89</span>% energy similarity!</p>
+                <p id="matchReason" style="color: #9ca3af; font-size: 0.9rem; margin-top: 10px;"></p>
             </div>
             
             <!-- Group Name -->
@@ -1312,16 +1455,144 @@ Build your K-pop group at: quantummerlin.com/kpop/band-builder.html
             navigator.clipboard.writeText(text);
             alert('Results copied! Share with your squad! 💜');
         }
-        
-        // Initialize
-        setTimeout(() => {
-            const data = calculateResults();
-            renderResults(data);
+
+        // ============================================
+        // CHASE HUGHES-STYLE PSYCHOLOGICAL ENGAGEMENT
+        // ============================================
+
+        // Famous groups database for identity association
+        const famousGroups = [
+            { name: 'BTS', traits: [1, 8, 9], size: 7, vibe: 'global domination', reason: 'Your leadership energy and global soul match their worldwide impact' },
+            { name: 'BLACKPINK', traits: [1, 5, 6], size: 4, vibe: 'fierce visual power', reason: 'Your dynamic energy and visual impact mirror their iconic presence' },
+            { name: 'TWICE', traits: [2, 3, 6], size: 9, vibe: 'harmonious joy', reason: 'Your group radiates the same positive, infectious energy' },
+            { name: 'Stray Kids', traits: [1, 4, 5], size: 8, vibe: 'self-producing power', reason: 'Your creative independence matches their producer energy' },
+            { name: 'SEVENTEEN', traits: [3, 6, 9], size: 13, vibe: 'synchronized perfection', reason: 'Your coordination and harmony echo their legendary teamwork' },
+            { name: 'NewJeans', traits: [3, 5, 7], size: 5, vibe: 'fresh authenticity', reason: 'Your unique concept energy matches their groundbreaking approach' },
+            { name: 'aespa', traits: [7, 11, 22], size: 4, vibe: 'futuristic concepts', reason: 'Your mystical numbers align with their innovative worldbuilding' },
+            { name: 'ITZY', traits: [1, 5, 8], size: 5, vibe: 'confident individuality', reason: 'Your self-assured energy matches their bold message' },
+            { name: 'TXT', traits: [2, 3, 7], size: 5, vibe: 'artistic storytelling', reason: 'Your creative depth mirrors their conceptual artistry' },
+            { name: 'LE SSERAFIM', traits: [1, 8, 9], size: 5, vibe: 'fearless ambition', reason: 'Your power numbers match their unstoppable momentum' }
+        ];
+
+        // Progressive loading messages - builds anticipation with open loops
+        const loadingStages = [
+            { text: 'Reading birth dates...', percent: 15, delay: 0 },
+            { text: 'Calculating life path numbers...', percent: 30, delay: 800 },
+            { text: 'Analyzing compatibility matrices...', percent: 45, delay: 1600 },
+            { text: 'Something interesting is emerging... 👀', percent: 55, delay: 2400, isTeaser: true },
+            { text: 'Comparing to legendary groups...', percent: 70, delay: 3200 },
+            { text: 'Your results are RARE... calculating exactly how rare...', percent: 85, delay: 4000, isTeaser: true },
+            { text: 'Finalizing your reading ✨', percent: 100, delay: 4800 }
+        ];
+
+        function findFamousMatch(synergy) {
+            // Find best match based on life paths and group size
+            const memberLifePaths = members.map(m => m.lifePath);
+            const memberCount = members.length;
             
-            // Hide loading, show results
+            let bestMatch = famousGroups[0];
+            let bestScore = 0;
+            
+            famousGroups.forEach(group => {
+                let score = 0;
+                // Match on life path traits
+                group.traits.forEach(trait => {
+                    if (memberLifePaths.includes(trait)) score += 20;
+                });
+                // Match on group size
+                const sizeDiff = Math.abs(group.size - memberCount);
+                score += Math.max(0, 30 - sizeDiff * 5);
+                // Synergy bonus
+                score += synergy * 0.3;
+                
+                if (score > bestScore) {
+                    bestScore = score;
+                    bestMatch = group;
+                }
+            });
+            
+            const matchPercent = Math.min(97, Math.max(75, Math.round(bestScore * 0.8)));
+            return { group: bestMatch, percent: matchPercent };
+        }
+
+        function calculateRarity(synergy) {
+            // Creates exclusivity/scarcity
+            if (synergy >= 90) return { badge: 'legendary', text: '⭐ TOP 3% OF ALL GROUPS', percent: 3 };
+            if (synergy >= 85) return { badge: 'legendary', text: '🌟 TOP 7% OF ALL GROUPS', percent: 7 };
+            if (synergy >= 80) return { badge: 'epic', text: '💜 TOP 12% OF ALL GROUPS', percent: 12 };
+            if (synergy >= 75) return { badge: 'epic', text: '✨ TOP 18% OF ALL GROUPS', percent: 18 };
+            if (synergy >= 70) return { badge: 'rare', text: '🎤 TOP 25% OF ALL GROUPS', percent: 25 };
+            return { badge: 'rare', text: '💫 UNIQUE ENERGY DETECTED', percent: 35 };
+        }
+
+        function generateSocialProof() {
+            // Realistic-feeling social proof numbers
+            const baseCount = 47000 + Math.floor(Math.random() * 5000);
+            const todayCount = 120 + Math.floor(Math.random() * 80);
+            return { total: baseCount.toLocaleString(), today: todayCount };
+        }
+
+        function runProgressiveLoading(data) {
+            const titleEl = document.getElementById('loadingTitle');
+            const textEl = document.getElementById('loadingText');
+            const barEl = document.getElementById('loadingBarFill');
+            const teaserEl = document.getElementById('teaserReveal');
+            const teaserTextEl = document.getElementById('teaserText');
+
+            // Generate teaser text based on actual data
+            const teasers = [
+                `Wait... your squad has ${members.filter(m => [11,22,33].includes(m.lifePath)).length > 0 ? 'MASTER NUMBER energy' : 'unique synergy patterns'}! 🔥`,
+                `Only ${calculateRarity(data.synergy).percent}% of groups score this combination...`
+            ];
+
+            let teaserIndex = 0;
+            loadingStages.forEach((stage, index) => {
+                setTimeout(() => {
+                    textEl.textContent = stage.text;
+                    barEl.style.width = stage.percent + '%';
+                    barEl.style.transition = 'width 0.5s ease-out';
+                    
+                    if (stage.isTeaser && teaserIndex < teasers.length) {
+                        teaserTextEl.textContent = teasers[teaserIndex];
+                        teaserEl.classList.add('show');
+                        teaserIndex++;
+                    }
+                }, stage.delay);
+            });
+        }
+
+        function renderPsychologicalElements(data) {
+            // Rarity Badge
+            const rarity = calculateRarity(data.synergy);
+            const rarityEl = document.getElementById('rarityBadge');
+            rarityEl.textContent = rarity.text;
+            rarityEl.className = 'rarity-badge ' + rarity.badge;
+
+            // Social Proof
+            const social = generateSocialProof();
+            document.getElementById('groupsBuiltCount').textContent = social.total;
+            document.getElementById('topPercentage').textContent = rarity.percent + '%';
+
+            // Famous Group Comparison
+            const match = findFamousMatch(data.synergy);
+            document.getElementById('yourGroupName').textContent = data.names[0].name;
+            document.getElementById('famousGroupName').textContent = match.group.name;
+            document.getElementById('matchPercent').textContent = match.percent;
+            document.getElementById('matchReason').textContent = match.group.reason;
+        }
+        
+        // Initialize with progressive loading
+        const data = calculateResults();
+        runProgressiveLoading(data);
+        
+        setTimeout(() => {
+            renderResults(data);
+            renderPsychologicalElements(data);
+            
+            // Hide loading, show results with slight delay for drama
             document.getElementById('loading').style.display = 'none';
             document.getElementById('results').classList.add('show');
-        }, 3500);
+        }, 5500);
     </script>
 
     <!-- Legal Footer -->
