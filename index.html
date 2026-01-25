@@ -67,8 +67,156 @@
     <!-- Quantum Intro Animation -->
     <link rel="stylesheet" href="./shared/css/quantum-intro.css">
     
-    <!-- *** VERSION 2.1.1 - DEPLOYED 2025-12-30 08:50 UTC - FORCE REBUILD *** -->
+    <!-- *** VERSION 2.2.0 - DEPLOYED 2026-01-26 - Chase Hughes Psychological Animation Update *** -->
     <style>
+        /* ===== CHASE HUGHES PSYCHOLOGICAL ANIMATION SYSTEM ===== */
+        /* Principle: Subtle, intentional, creates unconscious trust */
+        
+        /* Scroll-Reveal Animations - Appear as user engages */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Staggered entrance for grids - creates visual rhythm */
+        .reveal-stagger {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .reveal-stagger.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Subtle fade-in from left/right - guides eye movement */
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Scale entrance - draws attention to key elements */
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .reveal-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* Soft breathing glow - creates presence without distraction */
+        @keyframes subtleBreath {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(0, 245, 255, 0.15);
+            }
+            50% { 
+                box-shadow: 0 0 35px rgba(0, 245, 255, 0.25);
+            }
+        }
+        
+        .breathing-glow {
+            animation: subtleBreath 4s ease-in-out infinite;
+        }
+        
+        /* Focus pulse - for CTAs, subtle but noticeable */
+        @keyframes focusPulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 8px 30px rgba(0, 245, 255, 0.3);
+            }
+            50% { 
+                transform: scale(1.02);
+                box-shadow: 0 12px 40px rgba(0, 245, 255, 0.4);
+            }
+        }
+        
+        .cta-button {
+            animation: focusPulse 3s ease-in-out infinite;
+        }
+        
+        .cta-button:hover {
+            animation: none;
+            transform: scale(1.05);
+        }
+        
+        /* Magnetic hover - elements slightly gravitate toward cursor */
+        .magnetic {
+            transition: transform 0.3s ease;
+        }
+        
+        /* Text emphasis animation - subtle highlight sweep */
+        @keyframes textHighlight {
+            0% { background-position: -100% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        .highlight-sweep {
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(0, 245, 255, 0.1) 45%, 
+                rgba(0, 245, 255, 0.2) 50%, 
+                rgba(0, 245, 255, 0.1) 55%, 
+                transparent 100%
+            );
+            background-size: 200% 100%;
+            animation: textHighlight 4s ease-in-out infinite;
+        }
+        
+        /* Typewriter reveal for key statements */
+        .typewriter {
+            overflow: hidden;
+            border-right: 2px solid #00f5ff;
+            white-space: nowrap;
+            animation: typewriter 3s steps(40) forwards, blink 0.8s step-end infinite;
+            max-width: 0;
+        }
+        
+        .typewriter.visible {
+            max-width: 100%;
+        }
+        
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        
+        /* Confidence indicator - subtle upward motion suggests growth */
+        @keyframes confidenceRise {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+        
+        .confidence-element {
+            animation: confidenceRise 5s ease-in-out infinite;
+        }
+        
         *, *::before, *::after {
             box-sizing: border-box;
         }
@@ -1959,7 +2107,7 @@
             </div>
 
             <div style="margin-bottom: 40px;">
-                <h3 style="color: #00f5ff; font-size: 1.5rem; margin-bottom: 15px;">4?? Explore Additional Tools (Coming Soon)</h3>
+                <h3 style="color: #00f5ff; font-size: 1.5rem; margin-bottom: 15px;">4. Explore Additional Tools (Coming Soon)</h3>
                 <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">
                     As we launch Genesis Frequencies, Tarot Readings, Crystal Guides, and more—you'll be able to integrate them seamlessly into your spiritual practice. Each tool works independently or as part of your complete mystical toolkit.
                 </p>
@@ -1967,7 +2115,7 @@
 
             <div style="background: rgba(0, 245, 255, 0.1); border-left: 4px solid #ffd700; padding: 25px; border-radius: 10px; margin-top: 50px;">
                 <p style="font-size: 1.15rem; line-height: 1.8; margin: 0;">
-                    <strong style="color: #ffd700;">?? Pro Tip:</strong> Your data never leaves your device. Everything is stored in your browser's local storage�completely private, no servers, no tracking. Clear your browser data and it's gone. Export/backup features coming soon!
+                    <strong style="color: #ffd700;">Pro Tip:</strong> Your data never leaves your device. Everything is stored in your browser's local storage—completely private, no servers, no tracking. Clear your browser data and it's gone. Export/backup features coming soon!
                 </p>
             </div>
         </div>
@@ -1976,7 +2124,7 @@
     <!-- Support Card -->
     <section style="padding: 60px 20px; max-width: 800px; margin: 0 auto;">
         <div style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 245, 255, 0.1)); border: 2px solid rgba(255, 215, 0, 0.4); border-radius: 25px; padding: 40px; text-align: center;">
-            <h2 style="font-family: 'Orbitron', monospace; font-size: 2rem; color: #ffd700; margin-bottom: 20px;">?? Keep Quantum Merlin Free</h2>
+            <h2 style="font-family: 'Orbitron', monospace; font-size: 2rem; color: #ffd700; margin-bottom: 20px;">Keep Quantum Merlin Free</h2>
             <p style="font-size: 1.1rem; line-height: 1.8; color: rgba(255, 255, 255, 0.9); margin-bottom: 25px;">
                 We're committed to keeping all our tools <strong style="color: #00f5ff;">100% free forever</strong>. While ads will eventually be added to sustain the platform, your support through donations and premium readings can help us stay ad-free and continue expanding our mystical toolkit.
             </p>
@@ -2078,47 +2226,47 @@
         // Mystical Systems Modal
         const systemsData = {
             numerology: {
-                icon: '??',
+                icon: '🔢',
                 name: 'Numerology',
                 why: 'Numbers carry vibrational frequencies that reveal your life path, personality, and destiny. Your birth date encodes your soul\'s purpose.',
-                how: 'We calculate your Life Path, Expression, Soul Urge, and Personal Year numbers�then cross-reference them with astrology and other systems for precision insight.',
+                how: 'We calculate your Life Path, Expression, Soul Urge, and Personal Year numbers—then cross-reference them with astrology and other systems for precision insight.',
                 benefits: ['Discover your core life purpose', 'Understand your natural talents', 'Identify optimal timing for decisions', 'Reveal hidden personality traits'],
                 tool: '/forecasts'
             },
             astrology: {
-                icon: '?',
+                icon: '✦',
                 name: 'Astrology',
-                why: 'The positions of celestial bodies at your birth create a unique cosmic blueprint�your tendencies, timing, and internal cycles.',
+                why: 'The positions of celestial bodies at your birth create a unique cosmic blueprint—your tendencies, timing, and internal cycles.',
                 how: 'We don\'t do generic horoscopes. We cross-reference your Sun, Moon, and Rising signs with numerology, lunar cycles, and reality codes for precision insight.',
                 benefits: ['Better timing for major decisions', 'Awareness of repeating patterns', 'Alignment with natural strengths', 'Understanding relationship dynamics'],
                 tool: '/forecasts'
             },
             chinese: {
-                icon: '??',
+                icon: '🐉',
                 name: 'Chinese Zodiac',
-                why: 'The 12-year animal cycle combined with the 5 elements creates 60 unique personality types�revealing your hidden nature and compatibility.',
+                why: 'The 12-year animal cycle combined with the 5 elements creates 60 unique personality types—revealing your hidden nature and compatibility.',
                 how: 'We integrate your Chinese animal sign and element with Western astrology to create a complete East-West cosmic profile.',
                 benefits: ['Understand your core nature', 'Reveal compatibility with others', 'Discover your element\'s influence', 'Unlock Eastern wisdom traditions'],
                 tool: '/forecasts'
             },
             gematria: {
-                icon: '??',
+                icon: '🔮',
                 name: 'Gematria',
-                why: 'Ancient number-letter correspondences reveal hidden meanings in your name�codes that influence your identity and destiny.',
+                why: 'Ancient number-letter correspondences reveal hidden meanings in your name—codes that influence your identity and destiny.',
                 how: 'We calculate Hebrew, Greek, and Pythagorean values of your name to uncover hidden patterns and connections to sacred texts.',
                 benefits: ['Decode your name\'s hidden power', 'Find connections to sacred texts', 'Reveal karmic patterns', 'Understand name vibrations'],
                 tool: '/forecasts'
             },
             tarot: {
-                icon: '??',
+                icon: '🃏',
                 name: 'Tarot',
-                why: 'The 78 archetypes of Tarot map to universal human experiences�offering guidance from the collective unconscious.',
+                why: 'The 78 archetypes of Tarot map to universal human experiences—offering guidance from the collective unconscious.',
                 how: 'Your birth cards and daily draws are integrated with your numerology and astrology for personalized archetypal guidance.',
                 benefits: ['Access archetypal wisdom', 'Gain clarity on decisions', 'Understand life transitions', 'Connect to intuitive guidance'],
                 tool: '/forecasts'
             },
             lunar: {
-                icon: '??',
+                icon: '🌙',
                 name: 'Lunar Positioning',
                 why: 'The Moon\'s 28-day cycle affects emotions, energy, and manifestation power. Aligning with lunar phases amplifies your intentions.',
                 how: 'We track the Moon\'s phase, sign, and aspects to provide timing guidance for manifestation, release, and action.',
@@ -2126,7 +2274,7 @@
                 tool: '/forecasts'
             },
             frequencies: {
-                icon: '??',
+                icon: '🎵',
                 name: 'Frequencies',
                 why: 'Sound frequencies (Solfeggio, Hz tones) can shift your brainwaves, heal emotional wounds, and attune you to higher states.',
                 how: 'We calculate your personal frequencies based on your birth data and provide audio tools for healing and transformation.',
@@ -2134,17 +2282,17 @@
                 tool: '/genesis/index.html'
             },
             planetary: {
-                icon: '??',
+                icon: '🪐',
                 name: 'Planetary Alignments',
-                why: 'Each hour of the day is ruled by a different planet�knowing this helps you align activities with cosmic support.',
+                why: 'Each hour of the day is ruled by a different planet—knowing this helps you align activities with cosmic support.',
                 how: 'We calculate planetary hours and transits specific to your location and birth chart for precision timing guidance.',
                 benefits: ['Master divine timing', 'Optimize activities by planet', 'Avoid challenging transits', 'Harness beneficial alignments'],
                 tool: '/forecasts'
             },
             realitycodes: {
-                icon: '?',
+                icon: '⚡',
                 name: 'Reality Codes',
-                why: 'Quantum affirmations encoded with your personal frequencies can reprogram reality�amplified exponentially by community support.',
+                why: 'Quantum affirmations encoded with your personal frequencies can reprogram reality—amplified exponentially by community support.',
                 how: 'We generate personalized quantum codes from your birth data, then amplify them through our community manifestation network.',
                 benefits: ['Create exponential manifestation', 'Join community amplification', 'Transform intentions to reality', 'Access quantum field power'],
                 tool: '/qrcodes.html'
@@ -2163,20 +2311,20 @@
                 modal.innerHTML = `
                     <div class="system-modal-overlay" onclick="closeSystemModal()"></div>
                     <div class="system-modal-content">
-                        <button class="system-modal-close" onclick="closeSystemModal()">�</button>
+                        <button class="system-modal-close" onclick="closeSystemModal()">×</button>
                         <div class="system-modal-icon"></div>
                         <h2 class="system-modal-title"></h2>
                         <div class="system-modal-body">
                             <div class="system-section">
-                                <h4>?? Why It Matters</h4>
+                                <h4>Why It Matters</h4>
                                 <p class="system-why"></p>
                             </div>
                             <div class="system-section">
-                                <h4>?? How Quantum Merlin Uses It</h4>
+                                <h4>How Quantum Merlin Uses It</h4>
                                 <p class="system-how"></p>
                             </div>
                             <div class="system-section">
-                                <h4>? What You Get</h4>
+                                <h4>What You Get</h4>
                                 <ul class="system-benefits"></ul>
                             </div>
                         </div>
@@ -2204,7 +2352,7 @@
                     .system-section p { color: rgba(255,255,255,0.9); line-height: 1.7; font-size: 1rem; }
                     .system-benefits { list-style: none; padding: 0; margin: 0; }
                     .system-benefits li { padding: 8px 0; padding-left: 25px; position: relative; color: rgba(255,255,255,0.85); }
-                    .system-benefits li:before { content: "?"; position: absolute; left: 0; color: #00f5ff; font-weight: bold; }
+                    .system-benefits li:before { content: "→"; position: absolute; left: 0; color: #00f5ff; font-weight: bold; }
                     .system-modal-actions { display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap; }
                     .system-btn-primary { flex: 1; padding: 15px 25px; background: linear-gradient(135deg, #00f5ff, #9d00ff); color: #fff; text-decoration: none; border-radius: 25px; text-align: center; font-weight: 600; transition: all 0.3s; min-width: 150px; }
                     .system-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,245,255,0.4); }
@@ -2234,10 +2382,103 @@
                 document.body.style.overflow = '';
             }
         }
+        
+        // ===== CHASE HUGHES SCROLL REVEAL SYSTEM =====
+        // Psychological principle: Progressive disclosure builds engagement
+        
+        function initScrollReveal() {
+            const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+            const staggerElements = document.querySelectorAll('.reveal-stagger');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -80px 0px', // Trigger slightly before entering viewport
+                threshold: 0.15
+            };
+            
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+            
+            revealElements.forEach(el => revealObserver.observe(el));
+            
+            // Staggered reveals for grids
+            const staggerObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const parent = entry.target.closest('.tool-grid, .featured-grid, .stats-grid, .realm-grid');
+                        if (parent) {
+                            const siblings = parent.querySelectorAll('.reveal-stagger');
+                            siblings.forEach((sibling, index) => {
+                                setTimeout(() => {
+                                    sibling.classList.add('visible');
+                                }, index * 100); // 100ms stagger between each
+                            });
+                        } else {
+                            entry.target.classList.add('visible');
+                        }
+                        staggerObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            staggerElements.forEach(el => staggerObserver.observe(el));
+        }
+        
+        // Magnetic hover effect - subtle movement toward cursor
+        function initMagneticElements() {
+            const magneticEls = document.querySelectorAll('.magnetic, .cta-button, .featured-card, .tool-card');
+            
+            magneticEls.forEach(el => {
+                el.addEventListener('mousemove', (e) => {
+                    const rect = el.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    
+                    // Subtle magnetic pull - max 5px movement
+                    const moveX = x * 0.03;
+                    const moveY = y * 0.03;
+                    
+                    el.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                });
+                
+                el.addEventListener('mouseleave', () => {
+                    el.style.transform = '';
+                });
+            });
+        }
+        
+        // Add reveal classes to existing elements
+        function tagElementsForReveal() {
+            // Section headers
+            document.querySelectorAll('section h2').forEach(el => {
+                if (!el.classList.contains('reveal')) el.classList.add('reveal');
+            });
+            
+            // Cards in grids
+            document.querySelectorAll('.tool-card, .featured-card, .stat-item').forEach(el => {
+                if (!el.classList.contains('reveal-stagger')) el.classList.add('reveal-stagger');
+            });
+            
+            // Paragraphs in sections
+            document.querySelectorAll('.hero .subtitle, .hero .tagline').forEach(el => {
+                if (!el.classList.contains('reveal')) el.classList.add('reveal');
+            });
+        }
+        
+        // Initialize all psychological animations
+        document.addEventListener('DOMContentLoaded', () => {
+            tagElementsForReveal();
+            initScrollReveal();
+            initMagneticElements();
+        });
     </script>
 </body>
 </html>
-<!-- Build trigger: 2025-12-30-075748 -->
-
-<!-- Force deploy: 2025-12-30-163402 -->
+<!-- Build trigger: 2026-01-26 - Chase Hughes Animation Update -->
 
