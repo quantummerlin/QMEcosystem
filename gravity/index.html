@@ -498,14 +498,18 @@
 
     .countdown {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: flex-start;
-      gap: 8px;
+      gap: 12px 20px;
       margin-bottom: 32px;
+      max-width: 100%;
+      padding: 0 10px;
     }
 
     .countdown-unit {
-      min-width: 72px;
+      min-width: 60px;
+      flex: 0 1 auto;
       opacity: 0;
       transform: translateY(20px);
       animation: countdownReveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
@@ -522,19 +526,17 @@
 
     .countdown-value {
       font-family: 'Orbitron', 'Rajdhani', sans-serif;
-      font-size: clamp(4rem, 18vw, 9rem);
+      font-size: clamp(2.5rem, 10vw, 5rem);
       font-weight: 900;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.05em;
       font-variant-numeric: tabular-nums;
       color: #00ffff;
       text-shadow: 
         0 0 10px #00ffff,
         0 0 20px #00ffff,
         0 0 40px #00f5ff,
-        0 0 60px #0af,
-        0 0 80px #b24bf3,
-        0 0 100px #b24bf3;
-      line-height: 1;
+        0 0 60px #0af;
+      line-height: 1.1;
       position: relative;
       animation: neonFlicker 3s ease-in-out infinite;
     }
@@ -1304,9 +1306,28 @@
     }
 
     /* Responsive */
+    @media (max-width: 768px) {
+      .countdown-value {
+        font-size: clamp(2rem, 12vw, 4rem);
+      }
+      
+      .countdown-separator {
+        display: none;
+      }
+      
+      .countdown {
+        gap: 8px 16px;
+      }
+      
+      .countdown-label {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+      }
+    }
+    
     @media (max-width: 480px) {
       .page {
-        padding: 48px 20px 80px;
+        padding: 48px 16px 80px;
       }
 
       .header {
@@ -1318,11 +1339,21 @@
       }
 
       .countdown {
-        gap: 4px;
+        gap: 6px 12px;
       }
 
       .countdown-unit {
-        min-width: 56px;
+        min-width: 50px;
+      }
+      
+      .countdown-value {
+        font-size: clamp(1.8rem, 15vw, 3rem);
+      }
+      
+      .countdown-label {
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        margin-top: 10px;
       }
 
       .number-grid {
@@ -1375,11 +1406,11 @@
   <div class="page">
     <!-- Mystery Intro -->
     <section class="mystery-intro">
-      <div class="brand">✧ Quantum Merlin ✧</div>
+      <div class="brand">Quantum Merlin</div>
       <p class="mystery-line">The cosmos whispers of a moment foretold...</p>
       <p class="mystery-question">When the heavens hold their breath, will you be ready?</p>
       <h1 class="mystery-answer"><span class="accent">7</span> Sacred Seconds</h1>
-      <p class="mystery-date">✦ The Twelfth Day of August, 2026 ✦<br><em style="font-size: 0.85em; opacity: 0.7;">At the Hour of 14:33 Universal Time</em></p>
+      <p class="mystery-date">The Twelfth Day of August, 2026<br><em style="font-size: 0.85em; opacity: 0.7;">At the Hour of 14:33 Universal Time</em></p>
       
       <button class="scroll-indicator" id="scrollDown" style="margin-top: 60px; opacity: 0; animation: fadeIn 1s ease 4s forwards;" aria-label="Scroll to countdown">
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1407,7 +1438,7 @@
 
     <!-- Countdown Hero -->
     <section class="countdown-hero">
-      <div class="returning-brand">✦ The Sacred Pause ✦</div>
+      <div class="returning-brand">The Sacred Pause</div>
       <div class="countdown" id="countdown">
         <div class="countdown-unit">
           <div class="countdown-value" id="days">000</div>
@@ -1430,8 +1461,8 @@
         </div>
       </div>
       <a href="/local-time.html" class="event-datetime-link">
-        <strong>✩ 12th August 2026 ✩</strong>
-        <span class="check-local">Discover your local moment of alignment →</span>
+        <strong>12th August 2026</strong>
+        <span class="check-local">Discover your local moment of alignment</span>
       </a>
       
       <div class="seven-badge">
@@ -1443,7 +1474,7 @@
 
     <!-- About -->
     <section class="section reveal">
-      <h2 class="section-title">✦ The Celestial Convergence ✦</h2>
+      <h2 class="section-title">The Celestial Convergence</h2>
       <div class="section-content">
         <p style="font-style: italic; margin-bottom: 20px;">Beyond the whispered legends lies a truth more magnificent than any myth...</p>
         <p style="margin-top: 16px;">
@@ -1462,7 +1493,7 @@
           <div class="eclipse-sun"></div>
           <div class="eclipse-moon"></div>
         </div>
-        <h2 class="section-title">☀ The Great Eclipse ☽</h2>
+        <h2 class="section-title">The Great Eclipse</h2>
         <div class="section-content">
           <p>Behold the <strong>Total Solar Eclipse</strong> — that rare and sacred moment when Luna steps before Sol, and day becomes as night. The ancients trembled; the wise prepared.</p>
           <p style="margin-top: 16px;">The path of totality shall sweep across Arctic realms, the frozen grandeur of Greenland, mystical Iceland, and the sun-kissed shores of Spain. <em>Throughout history, eclipses have marked the death of kings, the birth of prophets, and the turning of great wheels of fate.</em></p>
@@ -1472,7 +1503,7 @@
 
     <!-- What You'll Feel -->
     <section class="section reveal">
-      <h2 class="section-title">✨ What Your Soul May Experience ✨</h2>
+      <h2 class="section-title">What Your Soul May Experience</h2>
       <div class="section-content">
         <p style="font-style: italic; margin-bottom: 20px;">As the celestial dance unfolds, sensitive souls shall feel the stirring of ancient energies...</p>
         <p>
@@ -1499,7 +1530,7 @@
 
     <!-- Numbers -->
     <section class="section reveal" id="numbersSection">
-      <h2 class="section-title">✡ The Sacred Numerology ✡</h2>
+      <h2 class="section-title">The Sacred Numerology</h2>
       <div class="number-grid" id="numberGrid">
         <div class="number-item">
           <div class="number-value">224</div>
@@ -1524,7 +1555,7 @@
 
     <!-- Calendars -->
     <section class="section reveal" id="calendarsSection">
-      <h2 class="section-title">❂ Across the Timekeeping Traditions ❂</h2>
+      <h2 class="section-title">Across the Timekeeping Traditions</h2>
       <div class="section-content">
         <p style="font-style: italic;">This celestial moment reverberates through every sacred calendar devised by humankind...</p>
       </div>
