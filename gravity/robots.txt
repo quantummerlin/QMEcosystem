@@ -1,0 +1,9 @@
+# Robots.txt for gravity7.quantummerlin.com
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://gravity7.quantummerlin.com/sitemap.xml
+
+# Crawl-delay (be nice to servers)
+Crawl-delay: 1

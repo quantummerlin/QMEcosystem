@@ -1,0 +1,66 @@
+{
+  "name": "Global Gravity Pause Countdown",
+  "short_name": "Gravity7",
+  "description": "Live countdown to the symbolic 7-second gravity pause on August 12, 2026 at 14:33 UTC. Total Solar Eclipse in Leo.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#0a0015",
+  "theme_color": "#0a0015",
+  "orientation": "portrait-primary",
+  "lang": "en-US",
+  "dir": "ltr",
+  "id": "/",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Global Gravity Pause Countdown"
+    }
+  ],
+  "categories": ["lifestyle", "education", "entertainment"],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Solar Eclipse Reading",
+      "short_name": "Reading",
+      "description": "Astrological interpretation of the August 2026 eclipse",
+      "url": "/reading.html?source=pwa",
+      "icons": [{"src": "/icon-192.png", "sizes": "192x192"}]
+    }
+  ],
+  "related_applications": [],
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
+}
