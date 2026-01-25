@@ -1174,6 +1174,11 @@
     </style>
 <script src="tool-tracker.js?v=20260123070550"></script>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+    
+    <!-- Progressive Journey System -->
+    <link rel="stylesheet" href="kpop-progress.css?v=20260126">
+    <script src="kpop-progress.js?v=20260126"></script>
+    <script src="kpop-progress-ui.js?v=20260126" defer></script>
 
     <script type="application/ld+json">
     {
@@ -1245,6 +1250,29 @@
         
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="🔍 Search for your reading... 💫">
+        </div>
+        
+        <!-- Trainee to Superstar Progress Bar -->
+        <div class="kpop-progress-bar" id="kpopProgressBar">
+            <div class="progress-header">
+                <div class="progress-level">
+                    <span class="level-emoji" id="levelEmoji">🎤</span>
+                    <span class="level-name" id="levelName">TRAINEE ERA</span>
+                </div>
+                <div class="progress-stats">
+                    <span id="completedCount">0</span> / <span id="nextLevelReq">2</span> tools
+                </div>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+            </div>
+            <div class="progress-levels">
+                <span class="progress-level-marker active" data-level="1">🎤 Trainee</span>
+                <span class="progress-level-marker" data-level="2">🌟 Debut</span>
+                <span class="progress-level-marker" data-level="3">💫 Comeback</span>
+                <span class="progress-level-marker" data-level="4">🌍 World Tour</span>
+                <span class="progress-level-marker" data-level="5">👑 Legend</span>
+            </div>
         </div>
         
         <!-- Band Builder Featured Banner -->
@@ -2251,6 +2279,48 @@ ${formData.message}
         
         // Run counter animation on page load
         window.addEventListener('load', animateCounter);
+        
+        // ===== PROGRESSIVE JOURNEY INTEGRATION 🌟 =====
+        function updateProgressBar() {
+            if (typeof KPopProgress === 'undefined') return;
+            
+            const progress = KPopProgress.getProgress();
+            if (!progress) return;
+            
+            const level = progress.level;
+            const levelInfo = KPopProgress.LEVELS[level];
+            const completedCount = progress.completedTools.length;
+            
+            // Update level display
+            document.getElementById('levelEmoji').textContent = levelInfo.emoji;
+            document.getElementById('levelName').textContent = levelInfo.title.toUpperCase();
+            document.getElementById('completedCount').textContent = completedCount;
+            
+            // Calculate next level requirement
+            const nextLevel = Math.min(level + 1, 5);
+            const nextReq = KPopProgress.LEVELS[nextLevel].requiredTools;
+            document.getElementById('nextLevelReq').textContent = nextReq;
+            
+            // Update progress bar fill
+            const progressPercent = KPopProgress.getProgressToNextLevel();
+            document.getElementById('progressFill').style.width = progressPercent + '%';
+            
+            // Update level markers
+            document.querySelectorAll('.progress-level-marker').forEach(marker => {
+                const markerLevel = parseInt(marker.dataset.level);
+                marker.classList.remove('active', 'completed');
+                if (markerLevel === level) {
+                    marker.classList.add('active');
+                } else if (markerLevel < level) {
+                    marker.classList.add('completed');
+                }
+            });
+        }
+        
+        // Update progress bar on load
+        window.addEventListener('load', function() {
+            setTimeout(updateProgressBar, 500);
+        });
         
         console.log('✨ K-Pop K-osmos is serving! No cap this app ate fr fr 💜');
     </script>

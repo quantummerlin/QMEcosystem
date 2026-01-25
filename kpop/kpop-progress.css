@@ -1,0 +1,490 @@
+/**
+ * K-Pop K-osmos Progressive Journey Styles
+ * Trainee to Superstar Visual System
+ */
+
+/* ===== Level Progress Bar ===== */
+.kpop-progress-bar {
+    background: linear-gradient(135deg, #1a0a1a 0%, #2d1f3d 100%);
+    border: 2px solid #ff6b9d;
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    box-shadow: 
+        0 0 20px rgba(255, 107, 157, 0.3),
+        inset 0 0 30px rgba(139, 69, 255, 0.1);
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.progress-level {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.level-emoji {
+    font-size: 1.8rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.level-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #ff6b9d, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.progress-stats {
+    font-size: 0.85rem;
+    color: #b8a8c8;
+}
+
+.progress-track {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    height: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b9d, #c084fc, #60a5fa);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+.progress-levels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.75rem;
+}
+
+.progress-level-marker {
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.progress-level-marker.active {
+    opacity: 1;
+    color: #ff6b9d;
+}
+
+.progress-level-marker.completed {
+    opacity: 1;
+    color: #4ade80;
+}
+
+/* ===== Tool Cards - Lock States ===== */
+.tool-card {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tool-card.locked {
+    opacity: 0.6;
+    filter: grayscale(50%);
+}
+
+.tool-card.locked:hover {
+    opacity: 0.8;
+}
+
+.tool-card.locked::before {
+    content: '🔒';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    z-index: 10;
+    animation: pulse 2s infinite;
+}
+
+.tool-card.completed::after {
+    content: '⭐';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    z-index: 10;
+    animation: sparkle 1.5s infinite;
+}
+
+.lock-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 5;
+}
+
+.tool-card.locked:hover .lock-overlay {
+    opacity: 1;
+}
+
+.lock-message {
+    color: #ff6b9d;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.lock-level {
+    color: #c084fc;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+/* ===== Tier Badges ===== */
+.tier-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tier-badge.tier-1 {
+    background: linear-gradient(135deg, #4ade80, #22c55e);
+    color: #000;
+}
+
+.tier-badge.tier-2 {
+    background: linear-gradient(135deg, #60a5fa, #3b82f6);
+    color: #000;
+}
+
+.tier-badge.tier-3 {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    color: #fff;
+}
+
+.tier-badge.tier-4 {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #000;
+}
+
+.tier-badge.tier-5 {
+    background: linear-gradient(135deg, #ff6b9d, #ec4899);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 107, 157, 0.5);
+}
+
+/* ===== Celebration Modal ===== */
+.kpop-celebration-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease;
+}
+
+.celebration-content {
+    background: linear-gradient(135deg, #1a0a1a 0%, #2d1f3d 50%, #1a0a1a 100%);
+    border: 3px solid transparent;
+    border-image: linear-gradient(45deg, #ff6b9d, #c084fc, #60a5fa) 1;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    max-width: 450px;
+    overflow: hidden;
+    animation: scaleIn 0.4s ease;
+}
+
+.celebration-confetti {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: 
+        radial-gradient(circle, #ff6b9d 2px, transparent 2px),
+        radial-gradient(circle, #c084fc 2px, transparent 2px),
+        radial-gradient(circle, #60a5fa 2px, transparent 2px),
+        radial-gradient(circle, #4ade80 2px, transparent 2px);
+    background-size: 50px 50px, 40px 40px, 60px 60px, 45px 45px;
+    background-position: 0 0, 25px 25px, 10px 35px, 40px 10px;
+    animation: confetti 3s linear infinite;
+    opacity: 0.5;
+}
+
+.celebration-emoji {
+    font-size: 5rem;
+    animation: bounce 0.6s ease infinite alternate;
+    filter: drop-shadow(0 0 20px rgba(255, 107, 157, 0.8));
+}
+
+.celebration-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, #ff6b9d, #c084fc, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 20px 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.celebration-level {
+    font-size: 1.5rem;
+    color: #c084fc;
+    margin-bottom: 20px;
+}
+
+.celebration-message {
+    color: #e8d8f8;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.celebration-btn {
+    background: linear-gradient(135deg, #ff6b9d, #c084fc);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.celebration-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 107, 157, 0.6);
+}
+
+/* ===== Achievement Popup ===== */
+.kpop-achievement-popup {
+    position: fixed;
+    top: 20px;
+    right: -400px;
+    width: 350px;
+    background: linear-gradient(135deg, #1a0a1a 0%, #2d1f3d 100%);
+    border: 2px solid #c084fc;
+    border-radius: 15px;
+    padding: 20px;
+    z-index: 9999;
+    transition: right 0.5s ease;
+    box-shadow: 0 0 30px rgba(192, 132, 252, 0.5);
+}
+
+.kpop-achievement-popup.show {
+    right: 20px;
+}
+
+.achievement-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.achievement-emoji {
+    font-size: 2.5rem;
+    animation: sparkle 1s infinite;
+}
+
+.achievement-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.achievement-label {
+    font-size: 0.75rem;
+    color: #ff6b9d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.achievement-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.achievement-message {
+    color: #c8b8d8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-top: 1px solid rgba(192, 132, 252, 0.3);
+    padding-top: 10px;
+    margin: 0;
+}
+
+/* ===== Achievement Gallery ===== */
+.achievement-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.achievement-badge {
+    background: linear-gradient(135deg, rgba(26, 10, 26, 0.9), rgba(45, 31, 61, 0.9));
+    border: 2px solid #4a3a5a;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s;
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+.achievement-badge.unlocked {
+    opacity: 1;
+    filter: none;
+    border-color: #c084fc;
+    box-shadow: 0 0 15px rgba(192, 132, 252, 0.3);
+}
+
+.achievement-badge-emoji {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.achievement-badge-name {
+    font-size: 0.75rem;
+    color: #b8a8c8;
+    font-weight: 600;
+}
+
+.achievement-badge.unlocked .achievement-badge-name {
+    color: #fff;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { 
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to { 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes sparkle {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    25% { transform: scale(1.1) rotate(5deg); }
+    50% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 0.8;
+    }
+    75% { transform: scale(1.1) rotate(-5deg); }
+}
+
+@keyframes shimmer {
+    to { left: 100%; }
+}
+
+@keyframes confetti {
+    0% { background-position: 0 0, 25px 25px, 10px 35px, 40px 10px; }
+    100% { background-position: 0 100px, 25px 125px, 10px 135px, 40px 110px; }
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+    .kpop-progress-bar {
+        padding: 12px 15px;
+    }
+    
+    .level-name {
+        font-size: 1rem;
+    }
+    
+    .celebration-content {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+    
+    .celebration-emoji {
+        font-size: 4rem;
+    }
+    
+    .celebration-title {
+        font-size: 1.8rem;
+    }
+    
+    .kpop-achievement-popup {
+        width: calc(100% - 40px);
+        left: 20px;
+        right: 20px !important;
+        top: auto;
+        bottom: -200px;
+        transition: bottom 0.5s ease;
+    }
+    
+    .kpop-achievement-popup.show {
+        bottom: 20px;
+    }
+}
