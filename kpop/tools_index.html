@@ -190,40 +190,6 @@
             color: #22D3EE;
         }
         
-        /* K-osmic Stats Counter */
-        .K-osmic-stats {
-            margin-top: 20px;
-            padding: 15px 25px;
-            background: linear-gradient(135deg, rgba(255, 107, 157, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
-            border: 1px solid rgba(255, 107, 157, 0.3);
-            border-radius: 15px;
-            display: inline-block;
-        }
-        
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .stat-number {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            font-weight: 700;
-            background: linear-gradient(135deg, #FF6B9D 0%, #A855F7 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .stat-label {
-            font-size: 0.85rem;
-            color: #9ca3af;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
         /* Search Bar - Strange Style */
         .search-bar {
             background: rgba(18, 5, 28, 0.95);
@@ -1239,14 +1205,6 @@
             <h1 class="rainbow-shimmer">K-Pop K-osmos</h1>
             <p class="tagline">✨ Slay Your K-osmic destiny 💜</p>
             <p class="subtitle">Discover your main character energy, stan compatibility, and K-Pop era through the stars! 🌟</p>
-            
-            <!-- Visitor Counter -->
-            <div class="K-osmic-stats" id="K-osmicStats">
-                <div class="stat-item">
-                    <span class="stat-number" id="visitorCount">Loading...</span>
-                    <span class="stat-label">Stans Discovered Their Destiny</span>
-                </div>
-            </div>
         </div>
         
         <div class="search-bar">
@@ -2252,34 +2210,6 @@ ${formData.message}
                 }
             });
         });
-        
-        // ===== K-osmic STATS COUNTER ANIMATION 💫 =====
-        function animateCounter() {
-            const counter = document.getElementById('visitorCount');
-            if (!counter) return;
-            
-            // Base number + random daily increment
-            const baseVisitors = 127439;
-            const dailyIncrement = Math.floor(Math.random() * 1000);
-            const target = baseVisitors + dailyIncrement;
-            
-            let current = 0;
-            const duration = 2000; // 2 seconds
-            const increment = target / (duration / 16); // 60fps
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    counter.textContent = target.toLocaleString();
-                    clearInterval(timer);
-                } else {
-                    counter.textContent = Math.floor(current).toLocaleString();
-                }
-            }, 16);
-        }
-        
-        // Run counter animation on page load
-        window.addEventListener('load', animateCounter);
         
         // ===== PROGRESSIVE JOURNEY INTEGRATION 🌟 =====
         function updateProgressBar() {
