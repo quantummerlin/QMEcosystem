@@ -349,7 +349,23 @@
         }
 
         function generateReading() {
-            const data = JSON.parse(getReadingData());
+            const rawData = getReadingData();
+            
+            if (!rawData) {
+                console.error('QM: No modality reading data found');
+                console.log('QM Diagnostics:', QMStorage.getDiagnostics());
+                window.location.href = 'modality-reading.html';
+                return;
+            }
+            
+            let data;
+            try {
+                data = JSON.parse(rawData);
+            } catch (e) {
+                console.error('QM: Failed to parse modality data:', e);
+                window.location.href = 'modality-reading.html';
+                return;
+            }
             
             if (!data || data.toolType !== 'modality') {
                 window.location.href = 'modality-reading.html';

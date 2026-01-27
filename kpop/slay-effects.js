@@ -23,6 +23,14 @@
     
     // ===== CHECK IF INTERACTIVE PAGE =====
     function checkInteractivePage() {
+        // Check if page has forms with inputs (calculators, readings)
+        const forms = document.querySelectorAll('form');
+        const hasInputForms = Array.from(forms).some(form => 
+            form.querySelectorAll('input[type="text"], input[type="date"], input[type="time"], input[type="number"]').length > 0
+        );
+        if (hasInputForms) return true;
+        
+        // Also check explicit list
         const path = window.location.pathname.toLowerCase();
         return CONFIG.interactivePages.some(page => path.includes(page));
     }

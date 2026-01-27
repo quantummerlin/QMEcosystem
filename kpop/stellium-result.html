@@ -630,7 +630,23 @@
 
         // Load and display reading
         window.addEventListener('DOMContentLoaded', function() {
-            const data = JSON.parse(getReadingData() || '{}');;
+            const rawData = getReadingData();
+            
+            if (!rawData) {
+                console.error('QM: No stellium reading data found');
+                console.log('QM Diagnostics:', QMStorage.getDiagnostics());
+                window.location.href = 'stellium-reading.html';
+                return;
+            }
+            
+            let data;
+            try {
+                data = JSON.parse(rawData);
+            } catch (e) {
+                console.error('QM: Failed to parse stellium data:', e);
+                window.location.href = 'stellium-reading.html';
+                return;
+            }
             
             if (!data.stelliums) {
                 window.location.href = 'stellium-reading.html';
