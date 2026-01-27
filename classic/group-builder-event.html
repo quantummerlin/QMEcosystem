@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bf5af2">
+    <title>Choose Gathering Date | Circle Builder ✨</title>
+    <meta name="description" content="Pick the perfect date for your gathering! Our cosmic calculator finds auspicious days for your circle's reunion. ✨">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="RetroMerlin.jpg">
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0a0a0f;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fbbf24 0%, #06b6d4 50%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #06b6d4;
+            font-style: italic;
+        }
+        
+        .progress-bar {
+            background: rgba(6, 182, 212, 0.2);
+            border-radius: 10px;
+            height: 8px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #fbbf24, #06b6d4, #a78bfa);
+            border-radius: 10px;
+            width: 50%;
+        }
+        
+        .progress-text {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .date-section {
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .date-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: #fbbf24;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .date-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .date-option {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            background: rgba(10, 10, 20, 0.6);
+            border: 2px solid rgba(6, 182, 212, 0.2);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .date-option:hover {
+            border-color: #06b6d4;
+        }
+        
+        .date-option.selected {
+            border-color: #fbbf24;
+            background: rgba(251, 191, 36, 0.1);
+        }
+        
+        .date-option input[type="radio"] {
+            display: none;
+        }
+        
+        .date-option .radio-circle {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #06b6d4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .date-option.selected .radio-circle {
+            border-color: #fbbf24;
+        }
+        
+        .date-option.selected .radio-circle::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(135deg, #fbbf24, #06b6d4);
+            border-radius: 50%;
+        }
+        
+        .date-option-content {
+            flex: 1;
+        }
+        
+        .date-option-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-bottom: 5px;
+        }
+        
+        .date-option-desc {
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+        
+        .custom-date-input {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(10, 10, 20, 0.8);
+            border-radius: 12px;
+        }
+        
+        .custom-date-input.show {
+            display: block;
+        }
+        
+        .custom-date-input label {
+            display: block;
+            font-family: 'Cinzel', serif;
+            color: #06b6d4;
+            margin-bottom: 10px;
+        }
+        
+        .custom-date-input input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: rgba(10, 10, 20, 0.8);
+            color: #e0e0e0;
+        }
+        
+        .custom-date-input input:focus {
+            outline: none;
+            border-color: #fbbf24;
+        }
+        
+        .suggested-dates {
+            background: rgba(6, 182, 212, 0.05);
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .suggested-dates h3 {
+            font-family: 'Cinzel', serif;
+            color: #a78bfa;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        .suggested-date-grid {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .suggested-date-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 8px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+        
+        .suggested-date-btn:hover {
+            background: rgba(6, 182, 212, 0.2);
+            border-color: #06b6d4;
+        }
+        
+        .suggested-date-btn .date {
+            color: #fbbf24;
+            font-weight: 600;
+        }
+        
+        .suggested-date-btn .reason {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .back-btn {
+            padding: 12px 25px;
+            background: rgba(6, 182, 212, 0.15);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 10px;
+            color: #06b6d4;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .back-btn:hover {
+            background: rgba(6, 182, 212, 0.25);
+        }
+        
+        .next-btn {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #fbbf24 0%, #06b6d4 100%);
+            border: none;
+            border-radius: 10px;
+            color: #0a0a0f;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .next-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📅 Choose Gathering Date</h1>
+            <p class="subtitle">When should your circle unite? ✨</p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 50%"></div>
+        </div>
+        <p class="progress-text">Step 2 of 4: Choose a Meaningful Date</p>
+        
+        <div class="date-section">
+            <h2>Select a Date Type</h2>
+            <div class="date-options">
+                <label class="date-option selected" onclick="selectOption('next-gathering')">
+                    <input type="radio" name="dateType" value="next-gathering" checked>
+                    <span class="radio-circle"></span>
+                    <div class="date-option-content">
+                        <div class="date-option-title">🌙 Cosmic Recommendation</div>
+                        <div class="date-option-desc">Let us find the most auspicious upcoming date based on your circle's energies</div>
+                    </div>
+                </label>
+                
+                <label class="date-option" onclick="selectOption('upcoming-event')">
+                    <input type="radio" name="dateType" value="upcoming-event">
+                    <span class="radio-circle"></span>
+                    <div class="date-option-content">
+                        <div class="date-option-title">🎉 Upcoming Special Date</div>
+                        <div class="date-option-desc">See cosmic alignments for birthdays, anniversaries, or holidays coming up</div>
+                    </div>
+                </label>
+                
+                <label class="date-option" onclick="selectOption('custom')">
+                    <input type="radio" name="dateType" value="custom">
+                    <span class="radio-circle"></span>
+                    <div class="date-option-content">
+                        <div class="date-option-title">📆 Choose Your Own Date</div>
+                        <div class="date-option-desc">Pick any date and we'll reveal its cosmic significance for your circle</div>
+                    </div>
+                </label>
+                
+                <label class="date-option" onclick="selectOption('skip')">
+                    <input type="radio" name="dateType" value="skip">
+                    <span class="radio-circle"></span>
+                    <div class="date-option-content">
+                        <div class="date-option-title">⏭️ Skip Date Selection</div>
+                        <div class="date-option-desc">Just show me the circle's chemistry and dynamics!</div>
+                    </div>
+                </label>
+            </div>
+            
+            <div class="custom-date-input" id="customDateInput">
+                <label for="customDate">Select Your Date:</label>
+                <input type="date" id="customDate">
+            </div>
+            
+            <div class="suggested-dates" id="suggestedDates">
+                <h3>✨ Cosmically Auspicious Dates:</h3>
+                <div class="suggested-date-grid" id="suggestedDateGrid">
+                    <!-- Generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <a href="group-builder-members.html" class="back-btn">← Back</a>
+            <button class="next-btn" onclick="goToResults()">
+                Reveal Circle Chemistry →
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        let selectedOption = 'next-gathering';
+        let selectedDate = null;
+        
+        // Check for session data
+        if (!sessionStorage.getItem('circleBuilderMembers')) {
+            window.location.href = 'group-builder.html';
+        }
+        
+        function selectOption(option) {
+            selectedOption = option;
+            
+            // Update UI
+            document.querySelectorAll('.date-option').forEach(opt => {
+                opt.classList.remove('selected');
+                if (opt.querySelector(`input[value="${option}"]`)) {
+                    opt.classList.add('selected');
+                }
+            });
+            
+            // Show/hide custom input
+            document.getElementById('customDateInput').classList.toggle('show', option === 'custom');
+            
+            // Show/hide suggested dates
+            document.getElementById('suggestedDates').style.display = 
+                (option === 'next-gathering' || option === 'upcoming-event') ? 'block' : 'none';
+            
+            // Generate suggested dates
+            if (option === 'next-gathering') {
+                generateCosmicDates();
+            } else if (option === 'upcoming-event') {
+                generateUpcomingEvents();
+            }
+        }
+        
+        function generateCosmicDates() {
+            const grid = document.getElementById('suggestedDateGrid');
+            const today = new Date();
+            
+            // Generate 4 auspicious dates in the next 30 days
+            const dates = [];
+            for (let i = 0; i < 4; i++) {
+                const daysAhead = 7 + Math.floor(Math.random() * 21);
+                const date = new Date(today);
+                date.setDate(date.getDate() + daysAhead);
+                
+                const reasons = [
+                    '🌕 Full Moon energy',
+                    '🌙 New Moon fresh start',
+                    '💫 Venus harmony day',
+                    '✨ Jupiter luck boost',
+                    '🔮 Mercury clarity',
+                    '💕 Love energy peak'
+                ];
+                
+                dates.push({
+                    date: date,
+                    reason: reasons[Math.floor(Math.random() * reasons.length)]
+                });
+            }
+            
+            dates.sort((a, b) => a.date - b.date);
+            
+            grid.innerHTML = dates.map(d => `
+                <button class="suggested-date-btn" onclick="pickSuggestedDate('${d.date.toISOString().split('T')[0]}')">
+                    <span class="date">${d.date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}</span>
+                    <span class="reason">${d.reason}</span>
+                </button>
+            `).join('');
+        }
+        
+        function generateUpcomingEvents() {
+            const grid = document.getElementById('suggestedDateGrid');
+            const members = JSON.parse(sessionStorage.getItem('circleBuilderMembers') || '[]');
+            const today = new Date();
+            const events = [];
+            
+            // Check for upcoming birthdays
+            members.forEach(member => {
+                if (member.dob) {
+                    const bday = new Date(member.dob);
+                    const thisYearBday = new Date(today.getFullYear(), bday.getMonth(), bday.getDate());
+                    
+                    if (thisYearBday < today) {
+                        thisYearBday.setFullYear(today.getFullYear() + 1);
+                    }
+                    
+                    const daysUntil = Math.floor((thisYearBday - today) / (1000 * 60 * 60 * 24));
+                    if (daysUntil <= 90) {
+                        events.push({
+                            date: thisYearBday,
+                            reason: `🎂 ${member.name}'s birthday`
+                        });
+                    }
+                }
+            });
+            
+            // Sort by date
+            events.sort((a, b) => a.date - b.date);
+            
+            if (events.length === 0) {
+                grid.innerHTML = '<p style="color: #9ca3af; text-align: center;">No upcoming birthdays in the next 90 days. Try cosmic recommendation!</p>';
+            } else {
+                grid.innerHTML = events.slice(0, 4).map(e => `
+                    <button class="suggested-date-btn" onclick="pickSuggestedDate('${e.date.toISOString().split('T')[0]}')">
+                        <span class="date">${e.date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}</span>
+                        <span class="reason">${e.reason}</span>
+                    </button>
+                `).join('');
+            }
+        }
+        
+        function pickSuggestedDate(dateStr) {
+            selectedDate = dateStr;
+            document.querySelectorAll('.suggested-date-btn').forEach(btn => {
+                btn.style.background = 'rgba(6, 182, 212, 0.1)';
+                btn.style.borderColor = 'rgba(6, 182, 212, 0.3)';
+            });
+            event.target.closest('.suggested-date-btn').style.background = 'rgba(251, 191, 36, 0.2)';
+            event.target.closest('.suggested-date-btn').style.borderColor = '#fbbf24';
+        }
+        
+        function goToResults() {
+            // Determine final date
+            let gatheringDate = null;
+            
+            if (selectedOption === 'custom') {
+                gatheringDate = document.getElementById('customDate').value || null;
+            } else if (selectedOption !== 'skip' && selectedDate) {
+                gatheringDate = selectedDate;
+            } else if (selectedOption === 'next-gathering' && !selectedDate) {
+                // Default to first suggested date
+                const today = new Date();
+                today.setDate(today.getDate() + 14);
+                gatheringDate = today.toISOString().split('T')[0];
+            }
+            
+            // Save to session
+            sessionStorage.setItem('circleBuilderDate', gatheringDate || '');
+            sessionStorage.setItem('circleBuilderDateType', selectedOption);
+            
+            // Navigate to results
+            window.location.href = 'group-builder-results.html';
+        }
+        
+        // Initialize
+        generateCosmicDates();
+    </script>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="legal-links">
+            <a href="terms.html">Terms</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 Quantum Merlin ✨</p>
+    </footer>
+    <style>
+        .legal-footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid rgba(6, 182, 212, 0.2);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .legal-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .legal-links a:hover { color: #06b6d4; }
+        .legal-links .separator { color: rgba(6, 182, 212, 0.4); }
+        .copyright { color: #6b7280; font-size: 0.8rem; }
+    </style>
+</body>
+</html>

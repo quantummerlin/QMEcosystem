@@ -332,28 +332,42 @@
                         <input type="date" id="birthDate" required>
                     </div>
 
-                    <div class="row">
+                    <div class="input-group" style="margin-bottom: 15px;">
+                        <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; color: #06b6d4;">
+                            <input type="checkbox" id="unknownTime" onchange="toggleTimeFields()" style="width: 18px; height: 18px; accent-color: #06b6d4;">
+                            <span>I don't know my birth time</span>
+                        </label>
+                        <div class="helper-text" style="margin-top: 5px;">No worries! We'll give you a Sun Sign reading instead</div>
+                    </div>
+
+                    <div id="timeFields" class="row">
                         <div class="input-group">
-                            <label for="birthTime">Birth Time *</label>
-                            <input type="time" id="birthTime" required>
-                            <div class="helper-text">Exact time needed for calculation</div>
+                            <label for="birthTime">Birth Time</label>
+                            <input type="time" id="birthTime">
+                            <div class="helper-text">For Rising Sign calculation</div>
                         </div>
 
                         <div class="input-group">
                             <label for="birthPlace">Birth City</label>
-                            <input type="text" id="birthPlace" required placeholder="e.g., New York, USA">
+                            <input type="text" id="birthPlace" placeholder="e.g., New York, USA">
                             <div class="helper-text">City and country</div>
                         </div>
                     </div>
                     
-                    <div class="accuracy-notice" style="background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 10px; padding: 12px 15px; margin-top: 10px;">
+                    <div id="accuracyNotice" class="accuracy-notice" style="background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 10px; padding: 12px 15px; margin-top: 10px;">
                         <p style="color: #fbbf24; font-size: 0.9em; margin: 0;">
                             ⚠️ <strong>Accuracy Note:</strong> Rising sign changes approximately every 2 hours. For the most accurate reading, use your exact birth time from your birth certificate. Even a 15-minute difference can change your rising sign.
                         </p>
                     </div>
+                    
+                    <div id="sunSignNotice" style="display: none; background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3); border-radius: 10px; padding: 12px 15px; margin-top: 10px;">
+                        <p style="color: #06b6d4; font-size: 0.9em; margin: 0;">
+                            ☀️ <strong>Sun Sign Mode:</strong> Without birth time, we'll calculate your Sun Sign — your core identity and inner essence! Rising Sign requires exact birth time because it changes every 2 hours.
+                        </p>
+                    </div>
                 </div>
 
-                <button type="submit">🔮 Calculate My Rising Sign & Reading</button>
+                <button type="submit" id="submitBtn">🔮 Calculate My Rising Sign & Reading</button>
             </form>
 
             <div id="result" class="result">
@@ -382,7 +396,344 @@
         // Version: 20260111132525 - Auto-generated cache buster
         // Version: 20260111121858 - Auto-generated cache buster
         // Version: 20260111121803 - Auto-generated cache buster
-        const interpretations = {"Aries": "Your Rising Sign is Aries, {preferredName}, meaning you enter every room, situation, and new experience with boldness, confidence, and pioneering energy. Your first instinct in life is to take action, lead the charge, and meet challenges head-on. People perceive you as dynamic, courageous, and somewhat impatient.\n\nWhen others first meet you, they notice your energy immediately. You have a direct, assertive presence that commands attention without trying. You don't fade into the background\u2014you announce yourself simply by existing. This isn't arrogance; it's the natural expression of your Aries Ascendant's warrior spirit.\n\nYour approach to life is straightforward: see what you want, go after it, don't overthink. Where others deliberate and plan, you prefer to leap and figure things out mid-air. This makes you an excellent initiator and pioneer but can also lead to impulsive decisions you later regret.\n\nPhysically, Aries Rising often manifests as athletic build, strong features, a prominent forehead or distinctive eyebrows, and energetic movement. You walk fast, talk fast, and generally operate at a quicker pace than those around you. Stillness feels foreign to your body.\n\nYour ruling planet is Mars, giving you competitive drive and warrior energy. You're drawn to challenges, competitions, and situations that test your courage. Boredom is your enemy\u2014you need constant stimulation, new frontiers to conquer, and obstacles to overcome.\n\nIn relationships, you come on strong. When you're interested in someone, you pursue directly and openly. Subtlety isn't your style\u2014you'd rather risk rejection through bold approach than miss opportunity through hesitation. This refreshing honesty attracts people but can also overwhelm those who prefer slower pacing.\n\nYour challenge with Aries Rising is learning patience and collaboration. Your instinct is to do everything yourself, right now, your way. But life often requires waiting for right timing, coordinating with others, and allowing processes to unfold naturally. Learning to channel your initiative into sustainable effort rather than sporadic bursts serves you well.\n\nYou may also struggle with anger and impulsive reactions. When frustrated, you want to fight or flee immediately. Developing a pause between impulse and action prevents you from burning bridges or creating unnecessary conflicts. Your directness is a gift, but it requires wisdom about when to use it.\n\nPeople often misunderstand your assertiveness as aggression. You're not trying to dominate\u2014you simply know what you want and see no reason to pretend otherwise. Learning to soften your approach when necessary while maintaining your authentic directness is an ongoing balancing act.\n\nYour greatest strength is your courage to begin. Where others fear failure, you embrace the challenge. You show people what's possible when you stop overthinking and start acting. This pioneering spirit is your gift to the world, {preferredName}.", "Taurus": "Your Rising Sign is Taurus, {preferredName}, meaning you approach life with steady, grounded, and sensual energy. You enter situations calmly, assess them thoroughly, and move forward only when you feel secure. People perceive you as reliable, patient, and unshakeable.\n\nWhen others first meet you, they notice your calming presence. There's something solid and trustworthy about you that makes people feel safe. You don't rush, you don't panic, and you don't create unnecessary drama. This grounded quality draws others to you, especially those seeking stability in chaotic times.\n\nYour approach to life is methodical and practical. You need to understand what you're getting into before committing. Once you decide on a path, however, you're remarkably persistent. You may be slow to start, but you have extraordinary endurance. You're the tortoise who wins the race through consistent effort.\n\nPhysically, Taurus Rising often manifests as strong, sturdy build, attractive features (Venus-ruled), a thick neck or shoulders, and graceful, deliberate movement. You may have a love for good food that shows in your body. There's often a natural beauty or pleasant appearance that draws positive attention.\n\nYour ruling planet is Venus, giving you appreciation for beauty, comfort, and sensory pleasure. You're drawn to quality over quantity\u2014fine food, beautiful environments, comfortable fabrics, pleasant scents. You build your life around tangible pleasures and material security.\n\nIn relationships, you're loyal and affectionate but slow to commit. You need to know someone is reliable before opening your heart. Once you do commit, however, you're extraordinarily devoted. You show love through providing comfort, physical affection, and creating beautiful shared experiences.\n\nYour challenge with Taurus Rising is overcoming resistance to change. Your need for stability can become stubborn rigidity. When circumstances require adaptation, you may dig in your heels and refuse to budge, even when holding on causes more problems than letting go would.\n\nYou may also struggle with possessiveness\u2014of people, things, and situations. Because you value security so highly, you try to control and maintain what you have. Learning that nothing in life is truly permanent, and that trying to possess actually creates the loss you fear, is crucial wisdom.\n\nLaziness or excessive indulgence can also be issues. Your love of comfort can become excuse for avoiding necessary effort. You may choose ease over growth, staying in situations that feel good but don't serve your evolution. Balancing your need for comfort with willingness to stretch yourself is important.\n\nPeople sometimes misinterpret your slowness as stupidity or your calmness as lack of passion. Neither is true\u2014you simply process thoroughly and express steadily. You're deeply feeling and intelligent; you just don't perform these qualities for others' entertainment.\n\nYour greatest strength is your ability to create lasting value and stability. You build things that endure\u2014relationships, careers, homes, and legacies. You show others what's possible through patient, persistent effort, {preferredName}.", "Gemini": "Your Rising Sign is Gemini, {preferredName}, meaning you approach life with curiosity, versatility, and communication focus. You enter situations eager to learn, quick to adapt, and ready to engage in conversation. People perceive you as witty, intelligent, and socially graceful.\n\nWhen others first meet you, they notice your mental agility and conversational skill. You can talk to anyone about anything, finding common ground effortlessly. Your quick wit and interesting observations make you entertaining company. You seem to know a little about everything, making you fascinating to be around.\n\nYour approach to life is exploratory and flexible. You want to experience variety, gather information, and keep options open. Commitment to one path feels limiting\u2014you prefer to sample many experiences rather than diving deep into one. This makes you adaptable and well-rounded but can also lead to scattered focus.\n\nPhysically, Gemini Rising often manifests as youthful appearance regardless of age, expressive hands, animated facial expressions, and quick, nervous energy. You may gesture a lot when speaking. There's often something playful or mischievous in your expression.\n\nYour ruling planet is Mercury, giving you sharp intellect and communication gifts. You're drawn to learning, teaching, writing, speaking, and any activity that engages your mind. You process life through language and logic, needing to articulate experiences to fully understand them.\n\nIn relationships, you need mental stimulation as much as emotional connection. You're attracted to intelligent, articulate people who can keep up with your quick mind. Conversations are how you bond\u2014long talks are more intimate to you than silent togetherness. Partners who bore you intellectually won't hold your interest.\n\nYour challenge with Gemini Rising is developing depth and follow-through. Your desire for variety can prevent you from staying with anything long enough to master it. You start many projects but finish few, learn broad basics but rarely expert-level depth. Choosing some areas for deep commitment serves you well.\n\nYou may also struggle with nervous energy and mental overload. Your mind processes constantly, analyzing everything, considering multiple perspectives simultaneously. This can create anxiety, restlessness, and difficulty being present. Learning to quiet your mind through meditation or physical activity is essential.\n\nInconsistency can also be an issue. You may say one thing today and something different tomorrow, not from dishonesty but because you've genuinely changed your mind. People may perceive you as unreliable or two-faced when really you're just adapting to new information.\n\nPeople sometimes mistake your social ease for superficiality. Because you can talk to anyone about anything, they assume you don't go deep. But you're capable of profound thought\u2014you simply prefer to keep things light in casual interactions. Your depth reveals itself to those who truly know you.\n\nYour greatest strength is your ability to connect diverse ideas and people. You're an excellent communicator, translator, and networker. You show others that intelligence includes flexibility, that staying curious keeps you young, {preferredName}.", "Cancer": "Your Rising Sign is Cancer, {preferredName}, meaning you approach life with sensitivity, protectiveness, and emotional awareness. You enter situations cautiously, feeling out the emotional atmosphere before fully engaging. People perceive you as nurturing, intuitive, and sometimes shy or reserved.\n\nWhen others first meet you, they notice your warmth and empathy. You seem to genuinely care about how they're feeling, and you pick up on emotional undercurrents others miss. There's something maternal or protective about you, regardless of your gender\u2014people instinctively feel you'll take care of them.\n\nYour approach to life is emotionally-led and security-focused. You need to feel safe before you open up or take risks. You test waters carefully, retreat when threatened, and only fully emerge when you trust the environment. This protects your tender heart but can also limit your experiences.\n\nPhysically, Cancer Rising often manifests as round or soft features, expressive eyes that reveal emotion, a full chest or torso, and nurturing energy in your presence. You may have a baby face or youthful quality. Your body language is often protective\u2014crossed arms, hunched shoulders\u2014when feeling vulnerable.\n\nYour ruling planet is the Moon, making you highly changeable and emotionally responsive to your environment. Your mood shifts with lunar cycles, and you're extremely sensitive to others' emotional states. You absorb feelings from your surroundings like a psychic sponge.\n\nIn relationships, you're deeply caring and devoted once you feel safe. You show love through nurturing\u2014cooking, caring for, creating home together. You need emotional security and reassurance in partnership. Without it, you retreat into your shell and shut down. Partners who can hold space for your sensitivity without trying to toughen you up are ideal.\n\nYour challenge with Cancer Rising is overcoming fear-based withdrawal. When you feel threatened emotionally, you retreat completely\u2014ending relationships, avoiding situations, building walls. Learning to stay present with discomfort rather than automatically protecting yourself opens you to deeper connection and growth.\n\nYou may also struggle with taking things too personally. You interpret everything through an emotional lens, finding personal meaning in situations that aren't about you. Someone's bad mood becomes evidence they don't like you. Developing objectivity about others' behavior protects your emotional wellbeing.\n\nClingy or manipulative behavior can emerge when you're insecure. You may use guilt, emotional outbursts, or excessive caretaking to keep people close. Learning to feel secure within yourself rather than requiring constant reassurance from others is crucial maturity.\n\nPeople sometimes mistake your protective shell for coldness or your emotional nature for weakness. Neither is accurate\u2014you're deeply feeling and caring, you simply protect yourself until you trust. Once you open up, people discover your vast emotional depth and loyalty.\n\nYour greatest strength is your emotional intelligence and nurturing capacity. You create safe harbor for others' feelings. You show people what unconditional care looks like, teaching that vulnerability and sensitivity are strengths, not weaknesses, {preferredName}.", "Leo": "Your Rising Sign is Leo, {preferredName}, meaning you approach life with confidence, warmth, and creative flair. You enter every situation as if you own the place, radiating presence and charisma. People perceive you as magnetic, generous, and naturally authoritative.\n\nWhen others first meet you, they notice you. You have star quality\u2014something distinctive and memorable that draws attention. Even if you're physically quiet, there's an energy about you that fills space. You command respect without demanding it, and people naturally look to you for leadership.\n\nYour approach to life is bold and heart-centered. You want to create, express, shine, and make an impact. You need to feel special and to do work that matters. You're not interested in blending in or playing small\u2014you came here to leave a mark, and your rising sign ensures you do.\n\nPhysically, Leo Rising often manifests as thick, distinctive hair (your mane), proud posture, warm smile, and regal bearing. You may have broad shoulders or a strong back. There's often something cat-like in your movement\u2014graceful yet powerful. You dress to be noticed, favoring bold colors or statement pieces.\n\nYour ruling planet is the Sun, making you naturally central in any group. Just as planets orbit the Sun, people tend to orbit around you. You're generous and warm-hearted, sharing your light freely. But you also expect appreciation and acknowledgment for what you give.\n\nIn relationships, you're passionate and loyal. You love big and express affection dramatically. You want to be proud of your partner and have them be proud of you. You need admiration and celebration in partnership\u2014not from vanity but because feeling special to someone you love is how you feel secure.\n\nYour challenge with Leo Rising is managing ego and need for validation. When you don't receive the recognition you crave, you may become demanding, dramatic, or attention-seeking in problematic ways. Learning to validate yourself rather than requiring constant external applause is essential growth.\n\nYou may also struggle with taking criticism. Because you identify strongly with your creations and expressions, feedback can feel like personal attack. You may become defensive or dismiss valid input. Developing the ability to hear critique without ego-wound serves you well.\n\nPride can prevent you from admitting mistakes or showing vulnerability. You want to maintain your regal image, which can isolate you. Learning that true strength includes acknowledging weaknesses and asking for help when needed deepens your leadership.\n\nPeople sometimes mistake your confidence for arrogance or your need for recognition as narcissism. You're not trying to dominate\u2014you simply know your worth and see no reason to dim your light. Learning to shine while also illuminating others' lights, rather than outshining them, is your evolution.\n\nYour greatest strength is your generous heart and natural leadership. You inspire others to be braver, more creative, more authentic. You show people what's possible when you refuse to play small and fully embrace your magnificence, {preferredName}.", "Virgo": "Your Rising Sign is Virgo, {preferredName}, meaning you approach life with discernment, practicality, and attention to detail. You enter situations analytically, immediately noticing what could be improved. People perceive you as intelligent, helpful, and somewhat reserved or modest.\n\nWhen others first meet you, they notice your precision and thoughtfulness. You choose words carefully, dress neatly, and present yourself with understated competence. You don't demand attention\u2014you earn respect through demonstrated skill and genuine helpfulness. There's a quiet intelligence about you that people find reassuring.\n\nYour approach to life is methodical and improvement-focused. You analyze situations, identify problems, and develop practical solutions. You're not a dreamer\u2014you're a doer who makes things work better. You need to feel useful and competent, and you measure your worth by how effectively you serve.\n\nPhysically, Virgo Rising often manifests as clean, precise features, youthful appearance, slender or wiry build, and meticulous personal grooming. You pay attention to details others overlook\u2014a wrinkle in your clothes, a hair out of place. There's often nervous energy in your body, manifesting as fidgeting or restlessness.\n\nYour ruling planet is Mercury, giving you sharp analytical mind and communication skill focused on practical utility. You're drawn to systems, processes, and techniques that improve efficiency. You process life through categorizing, organizing, and perfecting.\n\nIn relationships, you show love through service and practical support. You may not be overly romantic or emotionally demonstrative, but you'll help fix problems, organize chaos, and support your partner's health and growth. You need partners who appreciate your practical care and don't mistake your reserve for lack of feeling.\n\nYour challenge with Virgo Rising is overcoming perfectionism and self-criticism. You notice every flaw\u2014in yourself, others, and situations. This critical eye is valuable for improvement but becomes destructive when it prevents you from appreciating what's already good. Learning to accept \"good enough\" is difficult but necessary.\n\nYou may also struggle with excessive worry and analysis paralysis. You can see every potential problem, which prevents action. You analyze situations to death, seeking the perfect approach, but never finding it. Learning to act despite imperfection serves you better than waiting for certainty that never comes.\n\nBeing overly critical of others can damage relationships. Your helpful suggestions feel like harsh judgment to sensitive people. Learning to appreciate what people do right before pointing out what could improve creates better reception for your valuable insights.\n\nPeople sometimes mistake your analytical nature for coldness or your modesty for lack of confidence. Neither is accurate\u2014you feel deeply and you're quite capable. You simply don't advertise your emotions or abilities. You prefer to demonstrate worth through action rather than declaration.\n\nYour greatest strength is your ability to see how things can be better and actually make them so. You're genuinely helpful, competently skilled, and reliably excellent. You show others that mastery comes through attention to detail and continuous improvement, {preferredName}.", "Libra": "Your Rising Sign is Libra, {preferredName}, meaning you approach life with grace, diplomacy, and relationship focus. You enter situations seeking balance, harmony, and connection. People perceive you as charming, fair-minded, and socially skilled.\n\nWhen others first meet you, they notice your pleasant demeanor and social grace. You know how to make people comfortable, find common ground, and smooth social situations. There's an elegance about you\u2014in how you speak, move, and interact\u2014that draws people in. You seem approachable and genuinely interested in others.\n\nYour approach to life is partnership-oriented and balance-seeking. You prefer collaboration over solo ventures, harmonious environments over chaotic ones, and fair solutions over one-sided victories. You need beauty, balance, and connection to feel truly alive. Ugliness and discord drain you.\n\nPhysically, Libra Rising often manifests as symmetrical, attractive features, graceful movement, pleasant voice, and refined aesthetic sense. Venus-ruled, you're naturally drawn to beauty and typically look put-together. There's often something classically beautiful about your appearance.\n\nYour ruling planet is Venus, giving you natural charm and aesthetic sensibility. You're drawn to art, beauty, relationships, and creating harmony. You see life through the lens of balance and fairness, constantly seeking equilibrium in all situations.\n\nIn relationships, you thrive and suffer equally. You need partnership but can lose yourself in it. You're romantic, considerate, and skilled at compromise, making you an excellent partner. However, you may struggle to know what you want independently of others, changing your desires to match your partner's.\n\nYour challenge with Libra Rising is developing independent identity and decision-making. You define yourself through relationships and see yourself in others' mirrors. Who are you when you're alone? What do you want independent of what maintains harmony? These questions are crucial for your growth.\n\nYou may also struggle with conflict avoidance and people-pleasing. To maintain peace, you suppress your true feelings, avoid necessary confrontations, and agree when you actually disagree. This creates resentment and prevents authentic intimacy. Learning that healthy conflict can deepen relationships rather than destroy them is essential.\n\nIndecisiveness can paralyze you. You see all perspectives so clearly that choosing one feels like betraying the others. You may wait for others to decide, afraid of making the wrong choice. Developing trust in your own judgment, even knowing it might be imperfect, is important growth.\n\nPeople sometimes mistake your diplomatic nature for lack of conviction or your conflict avoidance for weakness. You actually have strong values and considerable strength\u2014you simply prefer persuasion over force and harmony over discord. Learning when to fight is as important as knowing how to make peace.\n\nYour greatest strength is your ability to bring people together and find fair solutions. You create beauty, foster connection, and show others how cooperation produces better results than competition. You demonstrate that grace and diplomacy are forms of power, {preferredName}.", "Scorpio": "Your Rising Sign is Scorpio, {preferredName}, meaning you approach life with intensity, depth, and penetrating perception. You enter situations reading hidden dynamics and unspoken truths. People perceive you as mysterious, powerful, and somewhat intimidating.\n\nWhen others first meet you, they sense your power immediately. You have a presence that demands notice\u2014not through volume but through intensity. Your eyes seem to see through facades into souls. You don't engage in small talk comfortably; you prefer real conversation or comfortable silence. There's something enigmatic about you that draws curiosity.\n\nYour approach to life is all-or-nothing and transformation-focused. You don't do anything halfway. When you commit, you dive to the depths. You're not interested in surface experiences\u2014you want to understand the hidden machinery, the psychological undercurrents, the shadow side that others fear to explore.\n\nPhysically, Scorpio Rising often manifests as intense, penetrating eyes (your most distinctive feature), strong or angular features, magnetic presence, and controlled movement. You may have prominent brows or bone structure. There's often something about your appearance that's both attractive and slightly dangerous.\n\nYour ruling planet is Pluto (and traditionally Mars), giving you transformative power and warrior courage. You're drawn to depth psychology, occult knowledge, power dynamics, and situations that require facing what others avoid. You process life through experiencing its extremes.\n\nIn relationships, you're intensely loyal and passionate. You want soul-level intimacy\u2014complete honesty, total trust, merged vulnerability. Superficial partnership doesn't interest you. You test people's loyalty, sometimes unconsciously creating situations that reveal their true character. Once you trust, you're fiercely devoted.\n\nYour challenge with Scorpio Rising is managing control and power dynamics. You fear vulnerability and betrayal, so you try to control situations and people. You may manipulate, test, or use intimate knowledge as power. Learning to trust without controlling, to be vulnerable without guarantee of safety, is difficult but necessary growth.\n\nYou may also struggle with jealousy and possessiveness. Your intensity extends to ownership\u2014you want complete claim on those you love. You may perceive threats where none exist, driven by fear of loss or betrayal. Developing security within yourself rather than requiring it from others is crucial.\n\nHolding grudges and seeking revenge can poison you more than those you resent. When hurt, you never forget, and you may wait years for opportunity to settle scores. Learning that true power lies in transformation and release, not in maintaining resentment, liberates you.\n\nPeople sometimes fear your intensity or misinterpret your privacy as having something to hide. You're not deliberately mysterious\u2014you simply don't share your depths casually. You reveal yourself slowly, testing trustworthiness. Once you open up, people discover your profound capacity for loyalty and transformation.\n\nYour greatest strength is your ability to see truth others avoid and to transform through facing darkness. You help people confront their shadows and emerge stronger. You show that real power comes from complete honesty and willingness to die and be reborn, {preferredName}.", "Sagittarius": "Your Rising Sign is Sagittarius, {preferredName}, meaning you approach life with optimism, enthusiasm, and philosophical perspective. You enter situations with curiosity and openness, ready for adventure and growth. People perceive you as upbeat, honest, and freedom-loving.\n\nWhen others first meet you, they notice your friendly, enthusiastic energy. You smile easily, laugh readily, and seem genuinely interested in learning about people and ideas. You have an openness that puts others at ease\u2014you don't judge; you explore. There's something larger-than-life about you, even if you're physically small.\n\nYour approach to life is exploratory and meaning-seeking. You want to understand the bigger picture, discover truth, and expand your horizons\u2014physically, mentally, and spiritually. You're not interested in details or limitations; you focus on possibilities and principles. You need freedom to roam, whether geographically or intellectually.\n\nPhysically, Sagittarius Rising often manifests as athletic or lanky build, long limbs, friendly face, and energetic movement. You may be tall or give the impression of height. There's often something youthful and adventurous in your appearance, regardless of age. You dress for comfort and mobility rather than fashion.\n\nYour ruling planet is Jupiter, giving you optimistic outlook and expansive nature. You're drawn to travel, higher learning, philosophy, and experiences that broaden perspective. You process life by finding the lesson, the silver lining, the bigger meaning in every situation.\n\nIn relationships, you need freedom and intellectual connection. You're attracted to adventurous, growth-oriented people who want to explore life with you rather than settle into routine. You're honest to a fault, sometimes painfully so. You'd rather risk hurting someone with truth than comfort them with lies.\n\nYour challenge with Sagittarius Rising is learning depth and commitment. Your desire for freedom and new experiences can prevent you from staying anywhere long enough to go deep. You may abandon relationships, jobs, or interests when they start feeling limiting, missing the depth that develops through sustained commitment.\n\nYou may also struggle with tactlessness and over-promising. Your honesty is admirable but can be hurtful when delivered without consideration. You blurt truths that would be better softened or left unsaid. Learning that not every truth needs speaking, and kind delivery doesn't diminish honesty, serves you well.\n\nRestlessness can prevent presence. You're always looking ahead to the next adventure, the next insight, the next experience. This constant forward motion means you rarely enjoy where you are. Learning to be present with current blessings rather than constantly seeking new ones deepens your happiness.\n\nPeople sometimes mistake your need for freedom as inability to commit or your optimism as naivety. Neither is true\u2014you can commit when it doesn't feel like imprisonment, and your optimism comes from faith in life's benevolence, not ignorance of its difficulties.\n\nYour greatest strength is your ability to see possibilities and inspire hope. You help people expand their perspectives and believe in better futures. You show that life is meant to be an adventure of continuous growth and discovery, {preferredName}.", "Capricorn": "Your Rising Sign is Capricorn, {preferredName}, meaning you approach life with seriousness, ambition, and self-discipline. You enter situations assessing how to achieve goals and establish yourself as competent. People perceive you as mature, responsible, and somewhat reserved.\n\nWhen others first meet you, they notice your professionalism and composure. You present yourself with dignity and competence, even as a young person. There's something adult about you, as if you were born 40 years old. You command respect through demonstrated capability rather than demanding it through force.\n\nYour approach to life is goal-oriented and achievement-focused. You have plans, ambitions, and the discipline to execute them. You're willing to delay gratification, work harder than others, and climb mountains one methodical step at a time. Success isn't optional for you\u2014it's necessary for self-respect.\n\nPhysically, Capricorn Rising often manifests as lean or angular features, strong bone structure, reserved demeanor, and controlled movement. You may have prominent cheekbones or jaw. There's often a serious expression, though you have a wonderful dry wit when comfortable. You may age in reverse\u2014looking old when young, youthful when older.\n\nYour ruling planet is Saturn, giving you discipline, responsibility, and respect for structure and authority. You're drawn to tradition, hierarchy, and proven methods. You process life through achievement, building lasting structures and legacies.\n\nIn relationships, you're loyal and committed but emotionally reserved. You show love through providing, protecting, and helping partners achieve their goals. You need respect and shared ambition in partnership. Frivolous people drain you\u2014you want serious partners who have their lives together.\n\nYour challenge with Capricorn Rising is learning emotional expression and playfulness. You're so focused on achievement and responsibility that you forget to simply enjoy life. You may judge yourself harshly for having fun when you could be productive. Learning that rest and pleasure are necessary, not indulgent, is important growth.\n\nYou may also struggle with workaholism and excessive seriousness. You take everything\u2014including yourself\u2014very seriously. You have difficulty relaxing or being silly. Your standards are impossibly high, creating constant stress. Learning to lighten up and accept imperfection without feeling like you've failed is crucial.\n\nFear of failure or judgment can paralyze you. You won't try unless you're certain of success, missing opportunities that require risk. You care deeply about others' opinions, especially authority figures. Developing internal validation rather than constantly seeking external approval liberates you.\n\nPeople sometimes mistake your reserve for coldness or your ambition for heartlessness. You actually feel deeply\u2014you simply don't display emotions publicly. You care tremendously about people you love; you simply show it through actions rather than words.\n\nYour greatest strength is your ability to build lasting achievement through disciplined effort. You create structures that endure\u2014careers, institutions, legacies. You show others that meaningful success comes through consistent hard work and unwavering commitment, {preferredName}.", "Aquarius": "Your Rising Sign is Aquarius, {preferredName}, meaning you approach life with independence, originality, and humanitarian focus. You enter situations as your authentic self, unconcerned with conforming to others' expectations. People perceive you as unique, intellectual, and slightly detached.\n\nWhen others first meet you, they notice you're different. There's something distinctive about you\u2014your appearance, ideas, or energy\u2014that sets you apart. You don't try to fit in, and you don't apologize for your unconventionality. You seem comfortable being yourself, which is both refreshing and sometimes perplexing to others.\n\nYour approach to life is intellectual and progressive. You're interested in innovation, social change, and ideas that improve collective existence. You think in terms of systems, patterns, and future possibilities. Individual emotional drama bores you\u2014you care about humanity as a whole more than individual personalities.\n\nPhysically, Aquarius Rising often manifests as distinctive or unconventional appearance, angular features, tall or lanky build, and unique personal style. You may have something unusual about your look\u2014unusual hair, striking eyes, eccentric fashion. You dress to express individuality rather than to attract or fit in.\n\nYour ruling planet is Uranus (and traditionally Saturn), giving you revolutionary energy and intellectual brilliance. You're drawn to technology, astrology, social activism, and anything progressive or unconventional. You process life through understanding patterns and envisioning better futures.\n\nIn relationships, you need friendship and intellectual connection as much as romance. You're attracted to unique, independent people who respect your freedom. You're loyal in your own way but resist traditional relationship structures. You may prefer open relationships, unconventional arrangements, or significant personal space within partnership.\n\nYour challenge with Aquarius Rising is developing emotional intimacy and personal connection. Your intellectual approach to life can disconnect you from feelings\u2014yours and others'. You may analyze emotions rather than feeling them, creating distance in relationships. Learning to be emotionally present and vulnerable is difficult but deepens your connections.\n\nYou may also struggle with being contrary simply for the sake of being different. You automatically resist anything mainstream or traditional, even when it has value. You may reject good advice simply because it's conventional. Discerning between authentic individuality and reactive rebellion serves you well.\n\nDetachment can isolate you. You maintain emotional distance, observing life rather than fully participating. You may intellectualize pain rather than processing it emotionally. This protects you from hurt but also prevents genuine intimacy. Learning to engage emotionally as well as intellectually enriches your experience.\n\nPeople sometimes mistake your detachment for lack of caring or your unconventionality for attention-seeking. Neither is accurate\u2014you care deeply about humanity and progressive causes. You're simply wired to see the bigger picture rather than get lost in personal dramas.\n\nYour greatest strength is your authentic individuality and visionary thinking. You help humanity evolve by refusing to accept limiting norms. You show people that being different isn't just acceptable\u2014it's necessary for progress, {preferredName}.", "Pisces": "Your Rising Sign is Pisces, {preferredName}, meaning you approach life with sensitivity, imagination, and spiritual openness. You enter situations feeling the emotional atmosphere and absorbing unspoken energies. People perceive you as gentle, compassionate, and somewhat otherworldly.\n\nWhen others first meet you, they notice your softness and empathy. You seem to genuinely care about their wellbeing, and you pick up on emotional nuances others miss. There's something dreamy or ethereal about you, as if you're not quite fully present in mundane reality. People often feel they can open up to you easily.\n\nYour approach to life is intuitive and boundary-less. You trust feelings over logic, respond to subtle energies, and navigate life more through sensing than thinking. You experience life as fluid and interconnected rather than solid and separate. Harsh reality often feels too much, so you naturally seek gentler realms\u2014through art, spirituality, or imagination.\n\nPhysically, Pisces Rising often manifests as soft features, dreamy or sleepy eyes, fluid movement, and gentle presence. You may have a youthful, angelic quality. Your body language is often open and unguarded, lacking the defensive postures others adopt. You may seem to float rather than walk.\n\nYour ruling planet is Neptune (and traditionally Jupiter), giving you spiritual sensitivity and creative imagination. You're drawn to art, music, mysticism, and helping professions. You process life through feeling, imagining, and seeking transcendent meaning beyond material reality.\n\nIn relationships, you're romantic, compassionate, and self-sacrificing. You want fairy-tale love, soul-mate connection, and complete emotional merging. You give everything to partners, sometimes losing yourself entirely. You're attracted to people who need saving, which creates complicated dynamics where you're more rescuer than equal partner.\n\nYour challenge with Pisces Rising is developing boundaries and discernment. You absorb everyone's emotions, making it hard to know what's yours versus what you picked up from others. You give endlessly without protecting your own energy, leading to depletion. Learning to distinguish between compassion and martyrdom is crucial.\n\nYou may also struggle with escapism and avoiding reality. When life gets hard, you disappear\u2014into fantasy, substances, sleep, or spiritual bypassing. You may choose delusional comfort over painful truth. Developing the courage to face reality directly, even when it hurts, strengthens you.\n\nVictimhood and helplessness can become patterns. You may unconsciously choose situations where you suffer, confusing suffering with loving. You may believe you're powerless when you're actually choosing powerlessness. Recognizing your own agency and responsibility empowers you.\n\nPeople sometimes take advantage of your giving nature or mistake your gentleness for weakness. You're stronger than you appear\u2014spiritual strength is often invisible. You endure tremendous emotional weight that would crush harder-seeming people. Your gentleness is courage, not cowardice.\n\nYour greatest strength is your boundless compassion and spiritual depth. You help others access their own souls and feel divine love. You show that true strength includes vulnerability, that the highest power is unconditional love, {preferredName}."};
+        // Version: 20260127 - Upgraded to 14-field structured interpretations
+        const interpretations = {
+            "Aries": {
+                title: "The Cosmic Pioneer",
+                hook: "You enter every room like you're about to lead a charge into uncharted territory — bold, fearless, and ready to conquer whatever lies ahead.",
+                core_identity: "Your Rising Sign is Aries, meaning the world experiences you as a dynamic, action-oriented force of nature. You approach life with the confidence of a warrior who has already won countless battles.",
+                external: "Others see a warrior. Someone direct, assertive, and refreshingly honest. Your presence commands attention without you trying — you simply radiate pioneering energy.",
+                behavior: "See what you want, go after it, don't overthink. You leap first and figure things out mid-air. This makes you an excellent initiator but can lead to impulsive decisions.",
+                strength: "Your courage to begin. Where others fear failure, you embrace the challenge. You show people what's possible when you stop overthinking and start acting.",
+                shadow: "The shadow pattern: impatience and impulsive anger. You want everything now, your way. When frustrated, you react before thinking, burning bridges you later wish you'd kept.",
+                integration: "Learn that not every battle needs to be fought today. The warrior's greatest strength is sometimes choosing not to fight. Develop a pause between impulse and action.",
+                stress: "Under cosmic pressure, you become more aggressive, impulsive, and prone to reckless action. Your fight-or-flight instinct shifts entirely to fight.",
+                misread: "People mistake your assertiveness for aggression, your directness for rudeness. You're not trying to dominate — you simply know what you want and see no reason to hide it.",
+                relationships: "You pursue directly and openly, overwhelming those who prefer slower pacing. You need partners who can match your energy without trying to cage your spirit.",
+                growth: "Learn patience and collaboration. Life requires waiting for right timing and coordinating with others. Channel your initiative into sustainable effort rather than sporadic bursts.",
+                power: "When you fully own your pioneering nature, you become the one who shows others what courage looks like in action.",
+                somatic: "You carry energy in your head, face, and forward momentum — heat rising when activated, muscles ready for action, difficulty with stillness.",
+                reflection: "Where am I rushing when I should be strategizing? What would happen if I paused before acting?"
+            },
+            "Taurus": {
+                title: "The Cosmic Anchor",
+                hook: "You enter situations like someone who has weathered every storm — calm, grounded, and unshakeable regardless of what chaos surrounds you.",
+                core_identity: "Your Rising Sign is Taurus, meaning the world experiences you as the steady, reliable presence that makes everyone else feel safe. You're the calm in every cosmic storm.",
+                external: "Others see solidity and trustworthiness. Something about you makes people feel grounded. You don't rush, don't panic, and don't create unnecessary drama.",
+                behavior: "You assess thoroughly before committing. Once you decide on a path, you're remarkably persistent. Slow to start, but extraordinary endurance. The tortoise who wins every race.",
+                strength: "Your capacity to create lasting value and stability. You build things that endure — relationships, careers, homes, legacies. Patient, persistent, powerful.",
+                shadow: "The shadow pattern: stubborn resistance to necessary change. Your need for stability becomes rigidity. You dig in your heels even when holding on causes more problems than letting go.",
+                integration: "Learn to distinguish between healthy stability and fear-based stagnation. Sometimes growth requires releasing what's comfortable but no longer serving you.",
+                stress: "Under cosmic pressure, you become more rigid, possessive, and resistant. You may use comfort eating, shopping, or material pleasures as coping mechanisms.",
+                misread: "People mistake your slowness for stupidity, your calmness for lack of passion. Neither is true — you simply process thoroughly and express steadily.",
+                relationships: "Loyal and affectionate but slow to commit. You need to know someone is reliable before opening your heart. Once committed, extraordinarily devoted.",
+                growth: "Learn that nothing in life is truly permanent. Trying to possess actually creates the loss you fear. Balance your need for comfort with willingness to stretch.",
+                power: "When you fully own your anchor nature, you become the sanctuary — the person everyone can count on to stay steady when their world falls apart.",
+                somatic: "You carry energy in your neck, throat, and sense of physical weight — density when processing, sensory sensitivity to your environment.",
+                reflection: "Where am I holding on to comfort at the cost of necessary growth? What would I release if I truly trusted life?"
+            },
+            "Gemini": {
+                title: "The Cosmic Messenger",
+                hook: "You approach life like someone surfing through infinite information streams — curious about everything, committed to nothing for too long, gathering wisdom from every realm.",
+                core_identity: "Your Rising Sign is Gemini, meaning the world experiences you as witty, intelligent, and endlessly curious. Your mind moves faster than most people can follow.",
+                external: "Others see mental agility and conversational brilliance. You can talk to anyone about anything, finding common ground effortlessly. You seem to know a little about everything.",
+                behavior: "You want variety, gather information, keep options open. Commitment to one path feels limiting — you prefer sampling many experiences rather than diving deep into one.",
+                strength: "Your ability to connect diverse ideas and people. You're an excellent communicator, translator, and networker. You give language to experiences others struggle to articulate.",
+                shadow: "The shadow pattern: scattered focus and surface-level engagement. You start many things but finish few. Your desire for variety prevents mastery of anything.",
+                integration: "Learn that depth requires dwelling. Choose some areas for sustained commitment. You can be curious AND devoted when you stop treating commitment as a cage.",
+                stress: "Under cosmic pressure, you become scattered, anxious, and mentally hyperactive. Your thoughts race faster than you can process. You may over-share or gossip.",
+                misread: "People mistake your social ease for superficiality, your adaptability for being fake. You're capable of profound thought — you simply keep things light in casual interactions.",
+                relationships: "You need mental stimulation as much as emotional connection. Partners who bore you intellectually won't hold your interest. Long conversations are your love language.",
+                growth: "Learn to stay present with one feeling, one person, one moment long enough for real intimacy to develop. Not everyone wants to analyze everything.",
+                power: "When you fully own your messenger nature, you become the bridge — connecting worlds, translating experiences, helping people understand each other.",
+                somatic: "You carry energy in your hands, arms, and nervous system — a buzzing quality, restlessness when unexpressed, need for movement and expression.",
+                reflection: "Where am I avoiding depth by staying in constant motion? What would I discover if I stopped and really listened?"
+            },
+            "Cancer": {
+                title: "The Cosmic Protector",
+                hook: "You enter situations feeling the emotional weather before you feel the physical temperature — sensing what's safe, what's dangerous, and who needs care.",
+                core_identity: "Your Rising Sign is Cancer, meaning the world experiences you as nurturing, intuitive, and emotionally perceptive. You're the safe haven in every storm.",
+                external: "Others see warmth and empathy. You genuinely care about how people are feeling, and you pick up on emotional undercurrents others miss. Something maternal or protective about you.",
+                behavior: "You test waters carefully, retreat when threatened, and only fully emerge when you trust the environment. This protects your tender heart but can also limit your experiences.",
+                strength: "Your emotional intelligence and nurturing capacity. You create safe harbor for others' feelings. In your presence, people can be vulnerable without fear.",
+                shadow: "The shadow pattern: fear-based withdrawal and emotional manipulation. When threatened, you retreat completely or use guilt and caretaking to control others.",
+                integration: "Learn that staying present with discomfort opens you to deeper connection. Not everyone needs the level of care you want to give. Give without creating obligation.",
+                stress: "Under cosmic pressure, you become moody, clingy, and reactive. You may retreat into your shell, become passive-aggressive, or use emotional withdrawal as punishment.",
+                misread: "People mistake your protective shell for coldness, your emotional nature for weakness. You're deeply feeling and caring — you simply protect yourself until you trust.",
+                relationships: "Deeply caring and devoted once you feel safe. You show love through nurturing. You need emotional security and reassurance in partnership.",
+                growth: "Learn to feel secure within yourself rather than requiring constant reassurance from others. Your worth doesn't depend on being needed.",
+                power: "When you fully own your protector nature, you become the sanctuary — the place where everyone can bring their pain and find genuine care.",
+                somatic: "You carry energy in your chest and stomach — a tidal quality, waves of feeling, physical sensitivity to emotional atmospheres.",
+                reflection: "Am I giving to genuinely help, or to feel needed and secure? Whose feelings am I actually carrying?"
+            },
+            "Leo": {
+                title: "The Cosmic Star",
+                hook: "You enter every room like the protagonist in your own epic — radiating presence, warmth, and the unshakeable confidence that you matter.",
+                core_identity: "Your Rising Sign is Leo, meaning the world experiences you as magnetic, generous, and naturally authoritative. You have star quality that others can feel.",
+                external: "Others notice you immediately. Even if you're physically quiet, there's an energy about you that fills space. You command respect without demanding it.",
+                behavior: "You want to create, express, shine, and make an impact. You need to feel special and to do work that matters. Playing small simply isn't an option for you.",
+                strength: "Your generous heart and natural leadership. You inspire others to be braver, more creative, more authentic. You make people feel special and celebrated.",
+                shadow: "The shadow pattern: ego-driven reactions and validation dependence. When you don't receive recognition, you become demanding, dramatic, or attention-seeking in problematic ways.",
+                integration: "Learn to validate yourself. Your worth doesn't depend on external applause. Shine while also illuminating others' lights, rather than outshining them.",
+                stress: "Under cosmic pressure, you become dramatically wounded, pride-driven cold, or excessively attention-seeking. Feeling ignored triggers your deepest insecurities.",
+                misread: "People mistake your confidence for arrogance, your need for recognition as narcissism. You simply know your worth and see no reason to dim your light.",
+                relationships: "Passionate and loyal. You love big and express affection dramatically. You need admiration and celebration in partnership — not from vanity but because that's how you feel secure.",
+                growth: "Learn to hear criticism without ego-wound. True strength includes acknowledging weaknesses and asking for help when needed. Generosity without strings attached.",
+                power: "When you fully own your star nature, you become the sun that others orbit — warming, illuminating, and inspiring everyone in your presence.",
+                somatic: "You carry energy in your heart and back — an expansive quality, warmth radiating outward, physical need to express and be witnessed.",
+                reflection: "Am I seeking validation for what I should be giving myself? Can I shine without an audience?"
+            },
+            "Virgo": {
+                title: "The Cosmic Analyst",
+                hook: "You enter situations already noticing what could be improved — scanning for inefficiencies, offering solutions, and quietly making everything work better.",
+                core_identity: "Your Rising Sign is Virgo, meaning the world experiences you as intelligent, helpful, and impressively competent. You earn respect through demonstrated skill.",
+                external: "Others see precision and thoughtfulness. You choose words carefully, present yourself with understated competence. There's a quiet intelligence about you that people find reassuring.",
+                behavior: "You analyze situations, identify problems, and develop practical solutions. You need to feel useful and competent. You measure your worth by how effectively you serve.",
+                strength: "Your ability to see how things can be better and actually make them so. You're genuinely helpful, competently skilled, and reliably excellent.",
+                shadow: "The shadow pattern: perfectionism and harsh self-criticism. You notice every flaw — in yourself, others, and situations. Your critical eye can become destructive.",
+                integration: "Learn that needing emotional support isn't failure. Some things don't need to be fixed — they just need to be felt. Empathy before analysis.",
+                stress: "Under cosmic pressure, you become hyper-critical, anxious about details, and martyr-like in your service. You may do everything yourself while silently resenting others.",
+                misread: "People mistake your analytical nature for coldness, your modesty for lack of confidence. You feel deeply and you're quite capable — you simply don't advertise.",
+                relationships: "You show love through service and practical support. You need partners who appreciate your practical care and don't mistake your reserve for lack of feeling.",
+                growth: "Learn to accept 'good enough.' Learning to act despite imperfection serves you better than waiting for certainty that never comes.",
+                power: "When you fully own your analyst nature, you become invaluably helpful — the one who actually shows up with what's needed.",
+                somatic: "You carry energy in your gut and nervous system — tension, digestive sensitivity, a constant low-level hum of assessment and evaluation.",
+                reflection: "Where am I trying to fix what just needs to be felt? Can I be useful without being perfect?"
+            },
+            "Libra": {
+                title: "The Cosmic Diplomat",
+                hook: "You enter situations seeking balance and harmony — naturally smoothing rough edges, finding common ground, and making everything more beautiful.",
+                core_identity: "Your Rising Sign is Libra, meaning the world experiences you as charming, fair-minded, and socially graceful. You create harmony without trying.",
+                external: "Others see elegance and social skill. You know how to make people comfortable and smooth social situations. There's something classically beautiful about your presence.",
+                behavior: "You prefer collaboration over solo ventures, harmonious environments over chaotic ones, and fair solutions over one-sided victories. Ugliness and discord drain you.",
+                strength: "Your ability to bring people together and find fair solutions. You create beauty, foster connection, and demonstrate that grace and diplomacy are forms of power.",
+                shadow: "The shadow pattern: people-pleasing and loss of self. To maintain peace, you suppress your true feelings, avoid necessary confrontations, and agree when you actually disagree.",
+                integration: "Learn that healthy conflict can deepen relationships rather than destroy them. Develop a strong sense of self independent of partnership.",
+                stress: "Under cosmic pressure, you become indecisive, conflict-avoidant, and dependent on others for emotional direction. You may not know what you feel until someone else defines it.",
+                misread: "People mistake your diplomatic nature for lack of conviction, your conflict avoidance for weakness. You have strong values — you simply prefer persuasion over force.",
+                relationships: "You thrive in partnership but can lose yourself in it. You're romantic and skilled at compromise, but may change your desires to match your partner's.",
+                growth: "Learn who you are when you're alone. What do you want independent of what maintains harmony? These questions are crucial for your evolution.",
+                power: "When you fully own your diplomat nature, you become the bridge — bringing people together and creating genuine harmony without losing yourself.",
+                somatic: "You carry energy in your sense of balance — a literal feeling of equilibrium or disturbance, sensitivity to discord in your environment, lower back tension.",
+                reflection: "Where am I keeping the peace at the cost of my truth? What do I actually want?"
+            },
+            "Scorpio": {
+                title: "The Cosmic Investigator",
+                hook: "You enter situations reading the hidden frequencies — sensing secrets, unspoken power dynamics, and the shadow truths that everyone else pretends don't exist.",
+                core_identity: "Your Rising Sign is Scorpio, meaning the world experiences you as mysteriously powerful and intensely perceptive. Your presence demands notice through intensity, not volume.",
+                external: "Others sense your power immediately. Your eyes seem to see through facades into souls. You don't do small talk — you prefer real conversation or comfortable silence.",
+                behavior: "You don't do anything halfway. When you commit, you dive to the depths. You want to understand the hidden machinery, the psychological undercurrents, the shadow side.",
+                strength: "Your ability to see truth others avoid and to transform through facing darkness. You help people confront their shadows and emerge stronger.",
+                shadow: "The shadow pattern: control, manipulation, and destructive intensity. When hurt, you may use your intimate knowledge of people's vulnerabilities against them.",
+                integration: "Learn to trust without controlling, to be vulnerable without guarantee of safety. True power lies in transformation and release, not maintaining resentment.",
+                stress: "Under cosmic pressure, you become controlling, jealous, or emotionally manipulative. You may test people's loyalty through creating drama.",
+                misread: "People fear your intensity or misinterpret your privacy as having something to hide. You simply don't share your depths casually.",
+                relationships: "Intensely loyal and passionate. You want soul-level intimacy — complete honesty, total trust, merged vulnerability. Once you trust, you're fiercely devoted.",
+                growth: "Learn to release resentment before it poisons you. Not everyone who hurts you intended to betray you. Transformation, not revenge.",
+                power: "When you fully own your investigator nature, you become the transformer — helping others face and transmute their deepest wounds.",
+                somatic: "You carry energy in your lower belly and reproductive organs — a churning intensity, power rising from deep within, sensitivity to hidden undercurrents.",
+                reflection: "Am I holding onto resentment that's poisoning me? Where can I transform instead of destroy?"
+            },
+            "Sagittarius": {
+                title: "The Cosmic Explorer",
+                hook: "You enter situations like an adventurer arriving from a distant land — curious, optimistic, and ready to discover what truths lie beyond the horizon.",
+                core_identity: "Your Rising Sign is Sagittarius, meaning the world experiences you as enthusiastic, honest, and freedom-loving. You radiate possibility.",
+                external: "Others see friendly, expansive energy. You smile easily, laugh readily, and seem genuinely interested in learning. There's something larger-than-life about you.",
+                behavior: "You want to understand the bigger picture, discover truth, and expand your horizons. You're not interested in details or limitations — you focus on possibilities.",
+                strength: "Your ability to see possibilities and inspire hope. You help people expand their perspectives and believe in better futures.",
+                shadow: "The shadow pattern: avoiding depth through constant movement. When feelings get uncomfortable, you change the subject, make a joke, or leave.",
+                integration: "Learn that some feelings don't need meaning — they just need to be felt. Sit with discomfort sometimes instead of immediately reframing or escaping.",
+                stress: "Under cosmic pressure, you become scattered, preachy, or commitment-phobic. You may sabotage relationships when they start feeling too serious.",
+                misread: "People mistake your need for freedom as inability to commit, your optimism as naivety. You can commit when it doesn't feel like imprisonment.",
+                relationships: "You need freedom and intellectual connection. Emotional clinginess makes you want to run. You're honest to a fault, sometimes painfully so.",
+                growth: "Learn that true freedom exists within commitment. Depth doesn't require abandoning exploration. Stay present with current blessings.",
+                power: "When you fully own your explorer nature, you become the guide — helping others find meaning, hope, and perspective in their darkest moments.",
+                somatic: "You carry energy in your hips, thighs, and sense of movement — restlessness when stuck, expansion when processing, physical need for freedom.",
+                reflection: "Am I seeking meaning to avoid feeling? What would happen if I stayed with this experience without explaining it?"
+            },
+            "Capricorn": {
+                title: "The Cosmic Architect",
+                hook: "You enter situations like someone building an empire — assessing structures, evaluating resources, and planning how to create something that will last.",
+                core_identity: "Your Rising Sign is Capricorn, meaning the world experiences you as mature, responsible, and impressively capable. You command respect through demonstrated competence.",
+                external: "Others see professionalism and composure. You present yourself with dignity, even as a young person. There's something adult about you — as if you were born 40 years old.",
+                behavior: "You have plans, ambitions, and the discipline to execute them. You're willing to delay gratification and work harder than others. Success isn't optional — it's necessary.",
+                strength: "Your ability to build lasting achievement through disciplined effort. You create structures that endure — careers, institutions, legacies.",
+                shadow: "The shadow pattern: emotional coldness and workaholism. You may build walls so high no one can reach you, judging yourself harshly for having any needs at all.",
+                integration: "Learn that vulnerability is strength, not weakness. Needing others is human, not failure. Rest and pleasure are necessary, not indulgent.",
+                stress: "Under cosmic pressure, you become more controlling, workaholic, and emotionally unavailable. You bury feelings in achievement until they erupt.",
+                misread: "People mistake your reserve for coldness, your ambition for heartlessness. You actually feel deeply — you simply show it through actions rather than words.",
+                relationships: "Loyal and committed but emotionally reserved. You show love through providing, protecting, and helping partners achieve their goals.",
+                growth: "Learn that receiving help isn't weakness. Permission to be vulnerable is permission to be human. Not everything needs to be earned.",
+                power: "When you fully own your architect nature, you become the pillar — someone others can depend on while also allowing yourself to be supported.",
+                somatic: "You carry energy in your bones, joints, and knees — heaviness, responsibility, physical manifestation of the weight you carry.",
+                reflection: "Where am I substituting achievement for connection? What would I feel if I stopped working long enough to notice?"
+            },
+            "Aquarius": {
+                title: "The Cosmic Revolutionary",
+                hook: "You enter situations as if you're visiting from the future — seeing patterns others miss, questioning what everyone else accepts, and envisioning better possibilities.",
+                core_identity: "Your Rising Sign is Aquarius, meaning the world experiences you as unique, intellectual, and refreshingly unconventional. You don't try to fit in — you simply are yourself.",
+                external: "Others notice you're different. Something distinctive about you sets you apart. You seem comfortable being yourself, which is both refreshing and sometimes perplexing.",
+                behavior: "You're interested in innovation, social change, and ideas that improve collective existence. Individual emotional drama bores you — you care about humanity as a whole.",
+                strength: "Your authentic individuality and visionary thinking. You help humanity evolve by refusing to accept limiting norms. You show that being different is necessary for progress.",
+                shadow: "The shadow pattern: emotional unavailability and reactive rebellion. You use intellectualization to avoid genuine vulnerability, rejecting things simply because they're mainstream.",
+                integration: "Learn that intimacy doesn't mean losing yourself. Some traditional emotional expressions aren't conformity — they're genuine connection.",
+                stress: "Under cosmic pressure, you become detached, contrarian, or emotionally absent. You may retreat into abstract ideas while avoiding the human in front of you.",
+                misread: "People mistake your detachment for lack of caring, your unconventionality for attention-seeking. You care deeply about humanity — you're simply wired to see the bigger picture.",
+                relationships: "You need friendship and intellectual connection as much as romance. You're attracted to unique, independent people who respect your freedom.",
+                growth: "Learn that you can be free within connection. Some traditional expressions of care aren't conformity but genuine love. Let someone fully in.",
+                power: "When you fully own your revolutionary nature, you become the liberator — freeing others from conventions that limit authentic expression.",
+                somatic: "You carry energy in your nervous system and ankles — a buzzing, electrical quality, sudden insights, connection to collective frequencies.",
+                reflection: "Am I staying detached to stay safe? What would happen if I let someone fully in?"
+            },
+            "Pisces": {
+                title: "The Cosmic Mystic",
+                hook: "You enter situations feeling the emotional weather before you see the physical room — absorbing energies, sensing unspoken truths, navigating life more through intuition than logic.",
+                core_identity: "Your Rising Sign is Pisces, meaning the world experiences you as gentle, compassionate, and spiritually attuned. There's something otherworldly about your presence.",
+                external: "Others see softness and empathy. You seem to genuinely care about their wellbeing, picking up on emotional nuances they barely notice themselves.",
+                behavior: "You trust feelings over logic, respond to subtle energies, and navigate life through sensing rather than thinking. Harsh reality often feels too much.",
+                strength: "Your boundless compassion and spiritual depth. You help others access their own souls and feel divine love. Your gentleness is courage, not weakness.",
+                shadow: "The shadow pattern: victim consciousness, escapism, and boundary-lessness. You absorb everyone's emotions, give endlessly without protection, and escape when reality hurts.",
+                integration: "Learn that you can be compassionate with boundaries. Saving yourself from drowning in others' pain allows you to actually help. Discernment protects your gift.",
+                stress: "Under cosmic pressure, you become escapist — disappearing into fantasy, substances, sleep, or spiritual bypassing. Reality feels too harsh to bear.",
+                misread: "People take advantage of your giving nature or mistake your gentleness for weakness. You're stronger than you appear — spiritual strength is often invisible.",
+                relationships: "Romantic, compassionate, and self-sacrificing. You want fairy-tale love and soul-mate connection. You may be attracted to people who need saving.",
+                growth: "Learn that receiving is as spiritual as giving. Recognizing your own agency and responsibility empowers you. Not all suffering is loving.",
+                power: "When you fully own your mystic nature, you become the healer — accessing depths of compassion and spiritual insight that genuinely transform others.",
+                somatic: "You carry energy as boundaryless flow — dissolution of where you end and others begin, sensitivity to unseen energies, physical porousness, feet sensitivity.",
+                reflection: "Whose pain am I carrying that isn't mine? Where do I need boundaries to protect my gift?"
+            }
+        };
+
+        // Toggle time/place fields visibility based on checkbox
+        function toggleTimeFields() {
+            const unknownTime = document.getElementById('unknownTime').checked;
+            const timeFields = document.getElementById('timeFields');
+            const accuracyNotice = document.getElementById('accuracyNotice');
+            const sunSignNotice = document.getElementById('sunSignNotice');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            if (unknownTime) {
+                timeFields.style.display = 'none';
+                accuracyNotice.style.display = 'none';
+                sunSignNotice.style.display = 'block';
+                submitBtn.textContent = '☀️ Calculate My Sun Sign Reading';
+            } else {
+                timeFields.style.display = 'grid';
+                accuracyNotice.style.display = 'block';
+                sunSignNotice.style.display = 'none';
+                submitBtn.textContent = '🔮 Calculate My Rising Sign & Reading';
+            }
+        }
+        
+        // Calculate Sun Sign from birthdate (no time needed)
+        function calculateSunSign(birthDate) {
+            const [year, month, day] = birthDate.split('-').map(Number);
+            
+            const signs = [
+                { sign: 'Capricorn', start: [1, 1], end: [1, 19] },
+                { sign: 'Aquarius', start: [1, 20], end: [2, 18] },
+                { sign: 'Pisces', start: [2, 19], end: [3, 20] },
+                { sign: 'Aries', start: [3, 21], end: [4, 19] },
+                { sign: 'Taurus', start: [4, 20], end: [5, 20] },
+                { sign: 'Gemini', start: [5, 21], end: [6, 20] },
+                { sign: 'Cancer', start: [6, 21], end: [7, 22] },
+                { sign: 'Leo', start: [7, 23], end: [8, 22] },
+                { sign: 'Virgo', start: [8, 23], end: [9, 22] },
+                { sign: 'Libra', start: [9, 23], end: [10, 22] },
+                { sign: 'Scorpio', start: [10, 23], end: [11, 21] },
+                { sign: 'Sagittarius', start: [11, 22], end: [12, 21] },
+                { sign: 'Capricorn', start: [12, 22], end: [12, 31] }
+            ];
+            
+            for (const range of signs) {
+                const [startMonth, startDay] = range.start;
+                const [endMonth, endDay] = range.end;
+                
+                if (month === startMonth && day >= startDay) return range.sign;
+                if (month === endMonth && day <= endDay) return range.sign;
+                if (month > startMonth && month < endMonth) return range.sign;
+            }
+            
+            return 'Unknown';
+        }
+        
+        // Show Sun Sign fallback reading
+        function showSunSignResult(name, sunSign, birthName) {
+            const data = interpretations[sunSign];
+            if (!data) {
+                alert('Could not determine Sun Sign. Please check your birth date.');
+                return;
+            }
+            
+            const resultHTML = `
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <span style="font-size: 2.5em; display: block; margin-bottom: 10px;">☀️</span>
+                    <h3 style="color: #fbbf24; font-size: 1.5em; margin-bottom: 10px;">${data.title}</h3>
+                    <p style="font-size: 1.2em; color: #06b6d4;">Sun Sign: ${sunSign}</p>
+                </div>
+                
+                <div style="background: rgba(255, 193, 7, 0.1); border: 1px solid rgba(255, 193, 7, 0.3); border-radius: 12px; padding: 15px; margin-bottom: 25px;">
+                    <p style="color: #fbbf24; font-size: 0.95em; margin: 0;">
+                        <strong>☀️ Sun Sign Reading:</strong> Without your birth time, we can't calculate your Rising Sign (which changes every 2 hours). But your Sun Sign reveals your core identity and inner essence!
+                    </p>
+                </div>
+                
+                <div style="font-size: 1.15em; color: #06b6d4; margin-bottom: 25px; font-style: italic; text-align: center; line-height: 1.6;">
+                    ${data.hook}
+                </div>
+                
+                <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(0, 0, 0, 0.3)); padding: 25px; border-radius: 15px; margin-bottom: 20px; border: 1px solid rgba(6, 182, 212, 0.3);">
+                    <h4 style="color: #fbbf24; font-size: 1.2em; margin-bottom: 15px;">☀️ Your Core Sun Energy</h4>
+                    <p style="line-height: 1.8;">${data.core_identity.replace('Rising Sign', 'Sun Sign').replace('world experiences you', 'inner self is').replace(/{preferredName}/g, name)}</p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <p><strong style="color: #06b6d4;">⭐ Your Natural Approach:</strong> ${data.behavior}</p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <p><strong style="color: #06b6d4;">💎 Your Core Strength:</strong> ${data.strength}</p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.15)); padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(6, 182, 212, 0.2);">
+                    <h4 style="color: #fbbf24; font-size: 1.1em; margin-bottom: 20px;">💫 Deeper Patterns</h4>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #06b6d4;">🌑 Shadow Side:</strong> ${data.shadow}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #06b6d4;">🌱 Growth Edge:</strong> ${data.growth}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 0;">
+                        <p><strong style="color: #06b6d4;">💕 Relationship Style:</strong> ${data.relationships}</p>
+                    </div>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(139, 92, 246, 0.1)); padding: 20px; border-radius: 12px; border-left: 4px solid #fbbf24; margin-top: 25px;">
+                    <p style="font-style: italic; color: #06b6d4; font-size: 1.1em;"><strong>🪞 Reflection:</strong> ${data.reflection}</p>
+                </div>
+                
+                <div style="margin-top: 25px; padding: 20px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(0, 0, 0, 0.3)); border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.3);">
+                    <p style="color: #C4B998; font-size: 0.95em;">
+                        <span style="color: #06b6d4;">🔮 Want Your Rising Sign?</span> If you find your birth certificate with your exact birth time, come back and we'll reveal how the world sees you! Your Rising Sign is your outer mask — the energy you project to strangers.
+                    </p>
+                </div>
+            `;
+
+            const readingData = {
+                toolType: 'sun-sign',
+                headerTitle: '☀️ Your Sun Sign Reading',
+                headerSubtitle: 'Your core identity revealed',
+                number: sunSign,
+                title: `Sun Sign: ${sunSign}`,
+                subtitle: `${name}, this is your inner essence`,
+                content: resultHTML,
+                sourceUrl: 'rising-sign-reading.html'
+            };
+            QMStorage.navigateWithReading(readingData, 'reading-loading.html');
+        }
 
         async function calculateRisingSign(event) {
             event.preventDefault();
@@ -392,9 +743,35 @@
             const birthDate = document.getElementById('birthDate').value;
             const birthTime = document.getElementById('birthTime').value;
             const birthPlace = document.getElementById('birthPlace').value;
-
+            const unknownTime = document.getElementById('unknownTime').checked;
+            
             const submitBtn = event.target.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
+            
+            // If user doesn't know birth time, calculate Sun Sign instead
+            if (unknownTime || !birthTime) {
+                submitBtn.textContent = '☀️ Calculating Sun Sign...';
+                submitBtn.disabled = true;
+                
+                try {
+                    const sunSign = calculateSunSign(birthDate);
+                    showSunSignResult(name, sunSign, birthName);
+                } catch (error) {
+                    console.error('Sun sign calculation error:', error);
+                    alert('Error calculating Sun Sign: ' + error.message);
+                } finally {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }
+                return;
+            }
+            
+            // Need birth place for Rising Sign calculation
+            if (!birthPlace) {
+                alert('Birth city is required for Rising Sign calculation. If you don\'t know your birth time, check the "I don\'t know my birth time" option above for a Sun Sign reading instead!');
+                return;
+            }
+            
             submitBtn.textContent = 'Looking up location...';
             submitBtn.disabled = true;
 
@@ -595,19 +972,92 @@
         }
 
         function showResult(name, risingSign, birthName) {
-            const interpretation = interpretations[risingSign];
-            const personalizedReading = interpretation.replace(/{preferredName}/g, name);
-            const paragraphs = personalizedReading.split('\n\n').map(p => `<p>${p}</p>`).join('');
+            const data = interpretations[risingSign];
+            if (!data) {
+                alert('Could not find interpretation for Rising Sign: ' + risingSign);
+                return;
+            }
+            
+            const resultHTML = `
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <span style="font-size: 2.5em; display: block; margin-bottom: 10px;">🌅</span>
+                    <h3 style="color: #fbbf24; font-size: 1.5em; margin-bottom: 10px;">${data.title}</h3>
+                    <p style="font-size: 1.2em; color: #06b6d4;">Rising Sign: ${risingSign}</p>
+                </div>
+                
+                <div style="font-size: 1.15em; color: #06b6d4; margin-bottom: 25px; font-style: italic; text-align: center; line-height: 1.6;">
+                    ${data.hook}
+                </div>
+                
+                <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(0, 0, 0, 0.3)); padding: 25px; border-radius: 15px; margin-bottom: 20px; border: 1px solid rgba(6, 182, 212, 0.3);">
+                    <h4 style="color: #fbbf24; font-size: 1.2em; margin-bottom: 15px;">🌅 Your Rising Sign Core Identity</h4>
+                    <p style="line-height: 1.8;">${data.core_identity.replace(/{preferredName}/g, name)}</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                    <div style="background: rgba(6, 182, 212, 0.1); padding: 18px; border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.2);">
+                        <p><strong style="color: #fbbf24;">🎭 External Presence:</strong><br>${data.external}</p>
+                    </div>
+                    <div style="background: rgba(139, 92, 246, 0.1); padding: 18px; border-radius: 12px; border: 1px solid rgba(139, 92, 246, 0.2);">
+                        <p><strong style="color: #fbbf24;">✨ Natural Behavior:</strong><br>${data.behavior}</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <p><strong style="color: #06b6d4;">💎 Your Core Strength:</strong> ${data.strength}</p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.15)); padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(6, 182, 212, 0.2);">
+                    <h4 style="color: #fbbf24; font-size: 1.1em; margin-bottom: 20px;">🔮 Cosmic Patterns</h4>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #06b6d4;">🌑 Shadow Side:</strong> ${data.shadow}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #06b6d4;">⚡ Integration Path:</strong> ${data.integration}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #06b6d4;">😰 Under Stress:</strong> ${data.stress}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 0;">
+                        <p><strong style="color: #06b6d4;">❓ Often Misread As:</strong> ${data.misread}</p>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                    <div style="background: rgba(251, 191, 36, 0.1); padding: 18px; border-radius: 12px; border: 1px solid rgba(251, 191, 36, 0.2);">
+                        <p><strong style="color: #fbbf24;">💕 Relationships:</strong><br>${data.relationships}</p>
+                    </div>
+                    <div style="background: rgba(6, 182, 212, 0.1); padding: 18px; border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.2);">
+                        <p><strong style="color: #fbbf24;">🌱 Growth Edge:</strong><br>${data.growth}</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <p><strong style="color: #06b6d4;">⚡ Your Power Move:</strong> ${data.power}</p>
+                </div>
+                
+                <div style="background: rgba(139, 92, 246, 0.15); padding: 20px; border-radius: 12px; margin-bottom: 20px; border: 1px solid rgba(139, 92, 246, 0.3);">
+                    <p><strong style="color: #fbbf24;">🧘 Somatic Signature:</strong> ${data.somatic}</p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(139, 92, 246, 0.1)); padding: 20px; border-radius: 12px; border-left: 4px solid #fbbf24; margin-top: 25px;">
+                    <p style="font-style: italic; color: #06b6d4; font-size: 1.1em;"><strong>🪞 Reflection:</strong> ${data.reflection}</p>
+                </div>
+            `;
 
             // Store reading for the multi-page results flow
             const readingData = {
                 toolType: 'rising',
-                headerTitle: 'Your Rising Sign Reading',
+                headerTitle: '🌅 Your Rising Sign Reading',
                 headerSubtitle: 'Your outer personality revealed',
                 number: risingSign,
-                title: `Rising Sign: ${risingSign}`,
+                title: `${data.title}`,
                 subtitle: `${name}, this is how the world sees you`,
-                content: paragraphs,
+                content: resultHTML,
                 sourceUrl: 'rising-sign-reading.html'
             };
             // Try sessionStorage first, fallback to URL params for private browsing

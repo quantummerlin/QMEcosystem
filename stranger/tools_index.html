@@ -872,6 +872,17 @@
                 </div>
             </div>
             
+            <!-- Party Builder Section -->
+            <div class="category-section">
+                <div class="category-header" onclick="toggleCategory('partybuilder')">
+                    <h2>🔦 Party Builder <span class="count">(4 tools)</span></h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-content" id="partybuilder-content">
+                    <div class="tools-grid" id="partybuilder-grid"></div>
+                </div>
+            </div>
+            
             <!-- Dimensional Portals Section -->
             <div class="category-section">
                 <div class="category-header" onclick="toggleCategory('forecasts')">
@@ -1011,6 +1022,12 @@
             { title: "Synastry Field Reading", description: "Map the planetary aspects linking you and your partner.", category: "compatibility", file: "synastry-reading.html" },
             { title: "Composite Entity Reading", description: "Discover the strange new entity created when two souls merge.", category: "compatibility", file: "composite-chart-reading.html" },
             { title: "Karmic Bond Reading", description: "Detect past dimension connections and karmic entanglements.", category: "compatibility", file: "relationship-karma-reading.html" },
+            
+            // Party Builder Tools (4) - Adventuring Party Chemistry
+            { title: "Party Builder", description: "Assemble your adventuring party and analyze group synergy.", category: "partybuilder", file: "party-builder.html", isNew: true },
+            { title: "Add Party Members", description: "Enter adventurer names, birthdays, and party roles.", category: "partybuilder", file: "party-builder-members.html", isNew: true },
+            { title: "Choose Mission Date", description: "Select the optimal date for your party's adventure.", category: "partybuilder", file: "party-builder-mission.html", isNew: true },
+            { title: "Party Power Results", description: "Your complete party synergy, roles, and survival forecast.", category: "partybuilder", file: "party-builder-results.html", isNew: true },
             
             // Life Purpose Tools (6) - Mission Decoders
             { title: "North Node Beacon", description: "Locate your soul's evolutionary direction through the void.", category: "purpose", file: "north-node-reading.html" },
@@ -1248,9 +1265,9 @@ ${formData.message}
             if (e.target === this) closeAdModal();
         });
         
-        // Initialize all category grids (order: astrology, numerology, purpose, compatibility, forecasts, life)
+        // Initialize all category grids (order: astrology, numerology, purpose, compatibility, partybuilder, forecasts, life)
         function initializeGrids() {
-            ['astrology', 'numerology', 'purpose', 'compatibility', 'forecasts', 'life'].forEach(cat => {
+            ['astrology', 'numerology', 'purpose', 'compatibility', 'partybuilder', 'forecasts', 'life'].forEach(cat => {
                 renderCategoryTools(cat);
             });
             renderFavorites();

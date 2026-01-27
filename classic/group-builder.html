@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bf5af2">
+    <title>Circle Builder ✨ | Discover Your Group's Chemistry</title>
+    <meta name="description" content="Discover your group's cosmic chemistry! Create your friend group, family circle, or team and reveal your collective dynamics, roles, and hidden connections. 🔮✨">
+    <meta name="keywords" content="group compatibility, friendship chemistry, family dynamics, team synergy calculator, relationship numerology, group astrology">
+    
+    <link rel="icon" type="image/jpeg" href="RetroMerlin.jpg">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0a0a0f;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fbbf24 0%, #06b6d4 50%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+        
+        .header .subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: #06b6d4;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .header .description {
+            font-size: 1rem;
+            color: #9ca3af;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+        
+        .feature-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        
+        .badge {
+            background: rgba(6, 182, 212, 0.15);
+            border: 1px solid rgba(6, 182, 212, 0.4);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #06b6d4;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .card {
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            margin-bottom: 30px;
+        }
+        
+        .card h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: #fbbf24;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .member-count-selector {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .member-count-label {
+            font-size: 1.2rem;
+            color: #06b6d4;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .member-count-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+        
+        .member-count-btn {
+            padding: 20px 10px;
+            background: rgba(6, 182, 212, 0.1);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 12px;
+            color: #06b6d4;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .member-count-btn:hover {
+            background: rgba(6, 182, 212, 0.2);
+            border-color: #06b6d4;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(6, 182, 212, 0.3);
+        }
+        
+        .member-count-btn.selected {
+            background: linear-gradient(135deg, #fbbf24 0%, #06b6d4 100%);
+            border-color: #fbbf24;
+            color: #0a0a0f;
+        }
+        
+        .member-count-btn .number {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .member-count-btn .label {
+            font-size: 0.75rem;
+            opacity: 0.9;
+        }
+        
+        .start-btn {
+            display: inline-block;
+            padding: 18px 50px;
+            background: linear-gradient(135deg, #fbbf24 0%, #06b6d4 100%);
+            color: #0a0a0f;
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+        }
+        
+        .start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(251, 191, 36, 0.6);
+        }
+        
+        .start-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .examples {
+            background: rgba(6, 182, 212, 0.05);
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 40px;
+        }
+        
+        .examples h3 {
+            font-family: 'Cinzel', serif;
+            color: #a78bfa;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .examples ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .examples li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(6, 182, 212, 0.1);
+            font-size: 1rem;
+            color: #9ca3af;
+        }
+        
+        .examples li:last-child {
+            border-bottom: none;
+        }
+        
+        .examples li::before {
+            content: '✨ ';
+            color: #fbbf24;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #06b6d4;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        
+        .back-link:hover {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔮 Circle Builder</h1>
+            <p class="subtitle">Discover Your Group's Cosmic Chemistry ✨</p>
+            <p class="description">
+                Map your inner circle! Add friends, family members, or teammates to reveal your collective dynamics, natural roles, and hidden connections.
+            </p>
+            <div class="feature-badges">
+                <span class="badge">✨ Group Synergy Score</span>
+                <span class="badge">👑 Natural Role Assignments</span>
+                <span class="badge">🔮 Circle Name Generator</span>
+                <span class="badge">💫 Gathering Date Analysis</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Choose Your Circle Size</h2>
+            <div class="member-count-selector">
+                <p class="member-count-label">How many people in your circle?</p>
+                <div class="member-count-grid" id="memberCountGrid">
+                    <!-- Buttons generated by JavaScript -->
+                </div>
+                <button class="start-btn" id="startBtn" disabled onclick="startBuilding()">
+                    Begin Circle Mapping 🔮
+                </button>
+            </div>
+        </div>
+        
+        <div class="examples">
+            <h3>💡 What You Can Discover:</h3>
+            <ul>
+                <li>Map your friend group and reveal the natural dynamics between you all</li>
+                <li>Add family members to understand generational patterns and connections</li>
+                <li>Build your team and discover everyone's natural role and strengths</li>
+                <li>Choose a special date to see how the cosmos align for gatherings</li>
+                <li>Generate a meaningful circle name that captures your collective energy</li>
+                <li>Understand who naturally leads, who nurtures, who creates harmony</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="tools_index.html" class="back-link">← Back to Quantum Merlin Tools</a>
+        </div>
+    </div>
+    
+    <script>
+        // Generate member count buttons (2-12 members)
+        const grid = document.getElementById('memberCountGrid');
+        let selectedCount = null;
+        
+        for (let i = 2; i <= 12; i++) {
+            const btn = document.createElement('button');
+            btn.className = 'member-count-btn';
+            btn.innerHTML = `
+                <span class="number">${i}</span>
+                <span class="label">people</span>
+            `;
+            btn.onclick = () => selectMemberCount(i);
+            grid.appendChild(btn);
+        }
+        
+        function selectMemberCount(count) {
+            selectedCount = count;
+            
+            // Update button states
+            document.querySelectorAll('.member-count-btn').forEach((btn, index) => {
+                if (index + 2 === count) {
+                    btn.classList.add('selected');
+                } else {
+                    btn.classList.remove('selected');
+                }
+            });
+            
+            // Enable start button
+            document.getElementById('startBtn').disabled = false;
+        }
+        
+        function startBuilding() {
+            if (selectedCount) {
+                // Save to session storage
+                sessionStorage.setItem('circleBuilderMemberCount', selectedCount);
+                // Navigate to member input page
+                window.location.href = 'group-builder-members.html';
+            }
+        }
+    </script>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="feedback-section">
+            <p class="feedback-text">✨ Found an issue or have a suggestion?</p>
+            <a href="mailto:fixit@quantummerlin.com?subject=Circle%20Builder%20Feedback" class="footer-feedback-btn">📧 fixit@quantummerlin.com</a>
+        </div>
+        <div class="legal-links">
+            <a href="terms.html">Terms of Service</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 Quantum Merlin. Made with 💜 for seekers everywhere ✨</p>
+        <div class="coffee-section">
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="coffee-btn">☕ Buy Us a Coffee</a>
+        </div>
+    </footer>
+    <style>
+        .legal-footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(6, 182, 212, 0.2);
+            background: rgba(10, 10, 20, 0.8);
+        }
+        .feedback-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(6, 182, 212, 0.15);
+        }
+        .feedback-text {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .footer-feedback-btn {
+            display: inline-block;
+            color: #fbbf24;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            padding: 10px 20px;
+            border: 1px solid rgba(251, 191, 36, 0.4);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .footer-feedback-btn:hover {
+            background: rgba(251, 191, 36, 0.15);
+            border-color: #fbbf24;
+            transform: translateY(-2px);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .legal-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .legal-links a:hover {
+            color: #06b6d4;
+        }
+        .legal-links .separator {
+            color: rgba(6, 182, 212, 0.4);
+        }
+        .copyright {
+            color: #a78bfa;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .coffee-section {
+            padding-top: 15px;
+            border-top: 1px solid rgba(6, 182, 212, 0.15);
+        }
+        .coffee-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #0a0a0f;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .coffee-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(251, 191, 36, 0.4);
+        }
+    </style>
+</body>
+</html>

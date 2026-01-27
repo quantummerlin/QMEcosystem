@@ -561,126 +561,235 @@
             
             var lifePathNumber = calculateLifePath(birthDate);
             
+            // ENHANCED INTERPRETATIONS - 14 fields per number for deep, structured readings
             var interpretations = {
                 1: {
                     title: "The Pioneer & Leader",
                     traits: "independent, innovative, ambitious, determined",
-                    description: `${preferredName}, you were born to lead and innovate. Your Life Path 1 reveals a soul designed for independence and originality. You came into this world with an innate drive to forge your own path, create something new, and inspire others through your courage and vision.`,
-                    core: `At your core, you are a natural pioneer. You feel most alive when you're breaking new ground, starting fresh ventures, or standing confidently in your own truth. Traditional paths rarely satisfy you—you need the freedom to do things your way. This independence isn't selfishness; it's your soul's requirement for authentic expression.`,
-                    challenges: `Your greatest challenge lies in balancing your fierce independence with meaningful collaboration. You may sometimes feel isolated in your vision, or struggle when others don't move at your pace. Learning to lead without dominating, and to accept support without feeling dependent, will be crucial to your growth.`,
-                    relationships: `In relationships, you need a partner who respects your autonomy while providing steady support. You're attracted to people who have their own strong sense of self. Your ideal partner challenges you intellectually and emotionally, but gives you space to pursue your individual goals. Avoid relationships where you feel controlled or where your independence is threatened.`,
-                    purpose: `Your life purpose is to pioneer new ways of thinking and being. Whether through business, art, science, or social change, you're here to show others what's possible when someone has the courage to stand alone. Your legacy will be the paths you've opened for others to follow.`,
-                    advice: `Embrace your leadership abilities while cultivating patience with those who move differently. Your innovations need others to bring them to fruition. Practice asking for help—it's not weakness, but wisdom. Channel your competitive nature into self-improvement rather than comparison. Trust that your unique vision is exactly what the world needs.`
+                    hook: `${preferredName}, people sense something different about you the moment you enter a room — like you carry an energy that says "I know where I'm going, even if no one else does yet."`,
+                    core_identity: `Your Life Path 1 marks you as a natural pioneer and leader. You're not here to follow existing paths — you're here to forge new ones. At your core, you operate as an initiator, someone whose presence creates ripples in the fabric of what's possible.`,
+                    external: `To others, you come across as intensely self-assured, almost like you're receiving guidance from somewhere they can't access. This is especially noticeable in situations where everyone else hesitates — you move forward as if you already know what lies ahead.`,
+                    behavior: `In everyday life, this shows up as an almost instinctive need to do things your own way. You naturally resist following others' blueprints. Even simple tasks get your unique signature — like you're leaving breadcrumbs for those who come after.`,
+                    strength: `When this energy is aligned, you have the ability to manifest new realities from thin air. Ideas that would take others years to develop come to you fully formed. Your courage is contagious, awakening dormant potential in those around you.`,
+                    shadow: `The challenge arises when your independence becomes isolation, or when your certainty calcifies into stubbornness. You may find yourself stranded in your own world, unable to sync with others who could help manifest your vision.`,
+                    integration: `This energy works best when you lead by inspiration rather than domination. Your signal is strongest when you're opening doors for others, not just walking through them alone.`,
+                    stress: `Under pressure, this energy tends to become rigid and defensive, often triggered by feeling controlled or having your autonomy questioned. The pioneer becomes a fortress.`,
+                    misread: `Others may mistake this energy for arrogance or coldness, when it's actually a deep internal focus on the path you're receiving — you're not ignoring them, you're tuning into something they can't yet hear.`,
+                    relationships: `In close connections, this shows up as fierce loyalty combined with an unwavering need for respect and space. You love deeply, but you love from your own center — partners must meet you there rather than trying to pull you into theirs.`,
+                    growth: `As you mature, this energy shifts from "me against the world" toward "me leading the world forward." The lone wolf becomes the pack leader, and isolation transforms into selective, powerful alliances.`,
+                    power: `At its highest expression, this energy allows you to stand at the threshold between what is and what could be, consciously choosing which reality to manifest. You become not just a pioneer, but a portal.`,
+                    somatic: `You'll feel this energy most strongly when standing at a crossroads, when everyone says one thing but your body pulls you another direction. That pull is your inner compass.`,
+                    reflection: `Ask yourself: "Where am I resisting help that would actually amplify my power, instead of trusting my core direction?"`,
+                    next: `This life path becomes especially interesting when viewed alongside your Moon Sign — the pattern of your emotional inner world.`
                 },
                 2: {
                     title: "The Peacemaker & Diplomat",
                     traits: "sensitive, cooperative, intuitive, harmonious",
-                    description: `${preferredName}, you were born to unite and harmonize. Your Life Path 2 reveals a soul designed for cooperation, intuition, and bringing people together. You came into this world with an extraordinary ability to feel what others feel, to bridge divides, and to create peace where there was conflict.`,
-                    core: `At your core, you are a natural diplomat and mediator. You feel most alive when you're creating harmony, supporting others, or helping groups work together effectively. You possess an almost psychic sensitivity to the emotions and needs of those around you. This isn't weakness—it's your superpower.`,
-                    challenges: `Your greatest challenge is maintaining your sense of self while being so attuned to others. You may struggle with people-pleasing, difficulty saying no, or losing yourself in relationships. Learning to honor your own needs as much as you honor others' needs is essential for your wellbeing and effectiveness.`,
-                    relationships: `In relationships, you are deeply devoted and intuitive. You often know what your partner needs before they do. You thrive with someone who appreciates your sensitivity and doesn't take advantage of your giving nature. Your ideal partner is emotionally intelligent, honest, and willing to create true partnership. Avoid those who dismiss your feelings or expect you to always compromise.`,
-                    purpose: `Your life purpose is to be a bridge-builder and healer in a divided world. Whether through counseling, mediation, collaborative work, or simply being the person who helps groups function better, you're here to show humanity the power of cooperation and understanding. Your legacy will be the relationships you've healed and the peace you've created.`,
-                    advice: `Honor your sensitivity as the gift it is. Set clear boundaries—saying no to others is saying yes to yourself. Spend time alone to recharge your empathic batteries. Trust your intuition completely; it's rarely wrong. Remember that sometimes the most peaceful thing you can do is stand firmly for what you need.`
+                    hook: `${preferredName}, people feel strangely at ease around you — like you're translating something for them that they couldn't understand on their own.`,
+                    core_identity: `Your Life Path 2 marks you as a natural bridge-builder. You're here to sync disconnected patterns, to harmonize energies that would otherwise never align. At your core, you operate as a translator between worlds.`,
+                    external: `To others, you come across as unusually perceptive, almost uncannily knowing what they need before they speak it. This is especially noticeable when tensions are high — you sense what others miss.`,
+                    behavior: `In everyday life, this shows up as an almost instinctive awareness of group dynamics. You read rooms like you're scanning for dissonance, naturally smoothing friction before it escalates.`,
+                    strength: `When this energy is aligned, you can perceive interference patterns that others completely miss. You can sense when something is "off" before anyone else notices, and your presence alone can stabilize chaotic situations.`,
+                    shadow: `The challenge arises when your sensitivity becomes overwhelming, or when you absorb so much external energy that you lose your own center. You may find yourself running everyone else's program except your own.`,
+                    integration: `This energy works best when you filter incoming signals through your own core before responding. Your diplomacy is strongest when it comes from a stable center, not reactive absorption.`,
+                    stress: `Under pressure, this energy tends to become invisible or excessively agreeable, often triggered by conflict or disapproval. The diplomat becomes a chameleon, losing their original pattern.`,
+                    misread: `Others may mistake this energy for weakness or indecision, when it's actually sophisticated multi-dimensional processing — you're considering frequencies they don't even know exist.`,
+                    relationships: `In close connections, this shows up as deep emotional attunement and almost psychic knowing. You feel what your partner feels, sometimes before they do. The challenge is maintaining your separate identity.`,
+                    growth: `As you mature, this energy shifts from "keeping everyone happy" toward "facilitating authentic harmony." The peacekeeper becomes the peace-maker, and accommodation transforms into true synthesis.`,
+                    power: `At its highest expression, you can bridge worlds that seem completely incompatible, creating connections that shouldn't be possible. You become a living portal between hearts.`,
+                    somatic: `You'll feel this energy most strongly in your gut when something is energetically "off" in a relationship or situation, long before logical evidence appears.`,
+                    reflection: `Ask yourself: "Where am I harmonizing others at the cost of my own voice, instead of trusting that my perspective matters too?"`,
+                    next: `This life path reveals deeper patterns when viewed alongside your Venus Sign — how you sync with others in love.`
                 },
                 3: {
                     title: "The Creative Communicator",
                     traits: "expressive, creative, joyful, inspiring",
-                    description: `${preferredName}, you were born to create and inspire through expression. Your Life Path 3 reveals a soul designed for creativity, communication, and bringing joy to the world. You came into this world with a natural gift for self-expression, whether through words, art, performance, or simply the way you live your life.`,
-                    core: `At your core, you are a creative force and natural entertainer. You feel most alive when you're expressing yourself authentically, making people laugh, or creating something beautiful. You have an almost childlike enthusiasm for life that others find infectious. Your creativity isn't limited to the arts—it flows through everything you touch.`,
-                    challenges: `Your greatest challenge is channeling your abundant creative energy into focused achievement. You may struggle with scattered attention, starting many projects but finishing few, or becoming superficial in your pursuits. Learning to discipline your creativity without crushing your spontaneity is key to manifesting your full potential.`,
-                    relationships: `In relationships, you bring warmth, humor, and excitement. You need a partner who appreciates your expressiveness and doesn't try to dim your light. Your ideal relationship includes playfulness, creativity, and lots of communication. You thrive with someone who encourages your dreams while helping ground your energy. Avoid partners who are overly serious or critical of your enthusiastic nature.`,
-                    purpose: `Your life purpose is to uplift humanity through creative expression and authentic communication. Whether through art, entertainment, teaching, writing, or social connection, you're here to remind people of life's beauty and possibility. Your legacy will be the joy you've spread and the creativity you've inspired in others.`,
-                    advice: `Commit to developing your natural talents through consistent practice. Finish what you start—completion brings fulfillment. Don't scatter your energy across too many interests; focus on what truly lights you up. Express your deeper feelings, not just the cheerful ones. Your vulnerability is as valuable as your joy. Trust that your authentic self-expression is your greatest gift to the world.`
+                    hook: `${preferredName}, when you speak, something lights up in the room — like your voice is transmitting on a frequency that activates dormant joy in everyone who hears it.`,
+                    core_identity: `Your Life Path 3 marks you as a natural broadcaster, someone whose creative expression cuts through noise to reach hearts and minds. At your core, you operate as an amplifier of joy and possibility.`,
+                    external: `To others, you come across as magnetic and alive, as if you're plugged into an energy source they can't see. This is especially noticeable when you're expressing yourself authentically — people literally orient toward you.`,
+                    behavior: `In everyday life, this shows up as a constant need to create, communicate, and connect. Silence feels like static to you. You transform ordinary moments into something memorable through your unique expression.`,
+                    strength: `When this energy is aligned, you can transmit joy across any distance. Your creative expression isn't just entertainment — it's medicine for people trapped in dull, lifeless routines. You broadcast hope.`,
+                    shadow: `The challenge arises when your broadcasting becomes scattered or superficial, or when you use constant expression to avoid your own depths. You may find yourself producing endless content but saying nothing real.`,
+                    integration: `This energy works best when you channel your creative output through focused intention. Your broadcast is strongest when it comes from authentic feeling, not performance.`,
+                    stress: `Under pressure, this energy tends to become scattered or superficially cheerful, often triggered by criticism or being silenced. The broadcaster becomes noise rather than signal.`,
+                    misread: `Others may mistake this energy for shallowness or attention-seeking, when it's actually a vital mission — you're transmitting light into darkness, and that takes immense energy.`,
+                    relationships: `In close connections, this shows up as playfulness, verbal expression, and a need to be truly heard. You need partners who listen deeply and engage with your creative broadcast, not just tolerate it.`,
+                    growth: `As you mature, this energy shifts from "expressing everything" toward "expressing what matters." The entertainer becomes the truth-teller, and volume transforms into resonance.`,
+                    power: `At its highest expression, you can broadcast visions that actually reshape reality. Your words and creations become seeds that grow in others' minds.`,
+                    somatic: `You'll feel this energy most strongly in your throat and chest when you have something important to express — a pressure that won't release until you broadcast.`,
+                    reflection: `Ask yourself: "Where am I performing instead of transmitting, hiding behind charm instead of trusting my authentic voice?"`,
+                    next: `This life path gains depth when viewed alongside your Mercury Sign — how your mental energy gets expressed.`
                 },
                 4: {
                     title: "The Builder & Stabilizer",
                     traits: "practical, disciplined, reliable, hardworking",
-                    description: `${preferredName}, you were born to build lasting foundations. Your Life Path 4 reveals a soul designed for creating structure, stability, and tangible results. You came into this world with an innate understanding that meaningful achievement requires dedication, discipline, and solid groundwork.`,
-                    core: `At your core, you are a master builder and natural organizer. You feel most alive when you're working toward concrete goals, creating systems that work, or building something that will last. You have an extraordinary ability to take abstract ideas and turn them into practical reality. Your word is your bond, and your reliability is legendary.`,
-                    challenges: `Your greatest challenge is avoiding rigidity and learning when to bend. You may struggle with resistance to change, becoming too focused on work at the expense of play, or getting stuck in routine. Learning to balance structure with flexibility, and duty with joy, will free you to build even more effectively.`,
-                    relationships: `In relationships, you are deeply loyal and committed. You show love through actions more than words, building security and stability for those you care about. Your ideal partner appreciates your reliability and shares your values around commitment and responsibility. You need someone who respects your need for order while helping you loosen up occasionally. Avoid relationships with people who are flaky, irresponsible, or constantly chaotic.`,
-                    purpose: `Your life purpose is to create structures and systems that serve humanity. Whether through business, architecture, organization, teaching methods, or family structures, you're here to build foundations that others can rely on. Your legacy will be the lasting institutions, systems, or structures you've created.`,
-                    advice: `Allow yourself time for rest and play—they're not rewards for work, they're requirements for sustainable success. Not everything requires a plan; sometimes spontaneity leads to unexpected opportunities. Delegate when possible; you don't have to build everything yourself. Trust that your methodical approach will get you there; you don't need to rush. Remember that the journey matters as much as the destination.`
+                    hook: `${preferredName}, when chaos erupts around you, people instinctively look your way — like you're the solid ground in a reality that keeps shifting.`,
+                    core_identity: `Your Life Path 4 marks you as a natural reality-stabilizer, someone whose presence anchors unstable patterns into lasting structure. At your core, you operate as a master architect of the tangible.`,
+                    external: `To others, you come across as unshakably reliable, almost like an anchor point in their shifting reality. This is especially noticeable during crises — your steadiness becomes a lifeline for everyone around you.`,
+                    behavior: `In everyday life, this shows up as methodical approach to everything. You build systems, create order, and leave structures that last. Even your thoughts follow blueprints.`,
+                    strength: `When this energy is aligned, you can manifest ideas into physical reality with remarkable precision. What others dream about, you actually build. Your constructions — whether systems, businesses, or relationships — are built to last.`,
+                    shadow: `The challenge arises when your structure becomes rigidity, or when your reliability calcifies into stubborn resistance to change. You may find yourself defending walls that no longer serve any purpose.`,
+                    integration: `This energy works best when you build flexible structures rather than rigid cages. Your architecture is strongest when it can adapt to shifts without collapsing.`,
+                    stress: `Under pressure, this energy tends to become controlling or workaholic, often triggered by chaos or unreliability in others. The architect becomes the prison warden.`,
+                    misread: `Others may mistake this energy for coldness or inflexibility, when it's actually profound commitment — you're building something that will still stand when everything else falls.`,
+                    relationships: `In close connections, this shows up as unwavering loyalty and practical love. You show devotion through actions more than words, building security for those you care about.`,
+                    growth: `As you mature, this energy shifts from "controlling outcomes" toward "building containers for growth." The taskmaster becomes the foundation-layer, and rigidity transforms into resilient flexibility.`,
+                    power: `At its highest expression, you can architect reality itself — consciously designing the structures through which energy flows and manifests in physical form.`,
+                    somatic: `You'll feel this energy most strongly in your hands and body when building something tangible, and in your bones when something threatens structures you've built.`,
+                    reflection: `Ask yourself: "Where am I building walls against change instead of trusting my ability to rebuild?"`,
+                    next: `This life path takes new form when viewed alongside your Saturn Sign — the karmic architecture your soul is here to master.`
                 },
                 5: {
                     title: "The Freedom Seeker & Adventurer",
                     traits: "adventurous, versatile, curious, dynamic",
-                    description: `${preferredName}, you were born for freedom and adventure. Your Life Path 5 reveals a soul designed for experience, variety, and constant growth through change. You came into this world with an insatiable curiosity and a deep need to explore all that life has to offer.`,
-                    core: `At your core, you are a perpetual explorer and natural adventurer. You feel most alive when you're experiencing something new, traveling to unfamiliar places, or learning skills that expand your horizons. Routine feels like death to you; freedom feels like oxygen. Your versatility and adaptability are your greatest strengths.`,
-                    challenges: `Your greatest challenge is learning to commit without feeling trapped. You may struggle with restlessness, difficulty finishing what you start, or avoiding responsibility in pursuit of freedom. Learning that true freedom comes from mastery and that commitment can coexist with adventure is essential for your fulfillment.`,
-                    relationships: `In relationships, you need space, variety, and intellectual stimulation. You're attracted to people who are independent, adventurous, and open-minded. Your ideal partner joins you on adventures while maintaining their own interests and identity. You thrive with someone who understands that your need for freedom isn't about them. Avoid possessive, controlling, or overly routine-oriented partners.`,
-                    purpose: `Your life purpose is to experience life fully and inspire others to embrace change and possibility. Whether through travel, teaching, writing, entrepreneurship, or simply living unconventionally, you're here to show people that life is meant to be lived, not just endured. Your legacy will be the doors you've opened and the adventures you've inspired.`,
-                    advice: `Choose a few commitments that truly matter to you and honor them fully. Freedom without purpose becomes aimlessness. Use your adaptability to navigate challenges, not avoid them. Ground your adventures with some structure—even explorers need a base camp. Learn from your experiences instead of just collecting them. Your depth of experience matters more than breadth.`
+                    hook: `${preferredName}, you carry a strange energy that makes people feel like anything could happen — like you're a portal to places they've never imagined.`,
+                    core_identity: `Your Life Path 5 marks you as a natural reality-explorer, someone whose signal naturally disrupts stagnant patterns and opens doorways to the new. At your core, you operate as a freedom catalyst.`,
+                    external: `To others, you come across as electrifyingly unpredictable, like a storm that could sweep them to places they've never been. This is especially noticeable when routine threatens — your restless energy becomes contagious.`,
+                    behavior: `In everyday life, this shows up as constant movement — physical, mental, or experiential. You collect experiences like others collect possessions. Routine feels suffocating; variety is your oxygen.`,
+                    strength: `When this energy is aligned, you can navigate changes that would shatter others. Change that terrifies most people energizes you. You're the first through new doors, the scout for new realities.`,
+                    shadow: `The challenge arises when your freedom becomes escape, or when your curiosity becomes inability to commit. You may find yourself jumping through endless portals but never truly arriving anywhere.`,
+                    integration: `This energy works best when you choose your adventures consciously rather than running from stillness. Your exploration is richest when you go deep, not just wide.`,
+                    stress: `Under pressure, this energy tends to become scattered or escapist, often triggered by feeling trapped or facing mundane responsibilities. The explorer becomes the avoider.`,
+                    misread: `Others may mistake this energy for irresponsibility or fear of commitment, when it's actually a vital mission — you're scouting realities that don't exist yet, and that requires constant motion.`,
+                    relationships: `In close connections, this shows up as excitement, spontaneity, and a deep need for space. You love fiercely but can't be caged. Partners must be fellow travelers, not anchors trying to fix you in place.`,
+                    growth: `As you mature, this energy shifts from "running from confinement" toward "choosing meaningful adventures." The escapist becomes the conscious explorer, and restlessness transforms into purposeful journey.`,
+                    power: `At its highest expression, you can consciously shift between realities, choosing which world to experience rather than being swept along by circumstances.`,
+                    somatic: `You'll feel this energy most strongly as physical restlessness when you've been still too long, and as full-body aliveness when exploring something new.`,
+                    reflection: `Ask yourself: "Where am I running from depth instead of trusting that freedom and commitment can coexist?"`,
+                    next: `This life path reveals surprising patterns when viewed alongside your Uranus Sign — how your soul disrupts outdated realities.`
                 },
                 6: {
                     title: "The Nurturer & Healer",
                     traits: "caring, responsible, compassionate, harmonious",
-                    description: `${preferredName}, you were born to nurture and heal. Your Life Path 6 reveals a soul designed for love, service, and creating harmony in your environment. You came into this world with a deep need to care for others and make their lives more beautiful and peaceful.`,
-                    core: `At your core, you are a natural caregiver and domestic artist. You feel most alive when you're helping others, creating beauty, or bringing people together in harmony. Your home is your sanctuary, and you have an innate ability to make any space feel warm and welcoming. Love and service are not just things you do—they're who you are.`,
-                    challenges: `Your greatest challenge is avoiding martyrdom and maintaining healthy boundaries. You may struggle with trying to fix everyone's problems, sacrificing your needs for others, or becoming resentful when your care isn't appreciated. Learning to receive as gracefully as you give, and to let others face their own consequences, is crucial for your wellbeing.`,
-                    relationships: `In relationships, you are devoted, loving, and deeply committed. You naturally create a beautiful home and nurturing environment. Your ideal partner appreciates your caring nature without taking advantage of it, and actively reciprocates your love and effort. You need someone who values family, home, and emotional connection. Avoid those who refuse to be helped or who drain your energy without giving back.`,
-                    purpose: `Your life purpose is to create healing and harmony wherever you go. Whether through family, counseling, teaching, healthcare, hospitality, or the arts, you're here to show humanity the transformative power of unconditional love and service. Your legacy will be the lives you've touched and the love you've shared.`,
-                    advice: `Put your own oxygen mask on first—you can't pour from an empty cup. Not everyone wants or needs your help; respect their journey. Let go of perfectionism in your caring; done with love is better than perfect. Say no without guilt when your plate is full. Remember that sometimes the most loving thing is to let people learn from their own mistakes.`
+                    hook: `${preferredName}, when people are wounded, they somehow find their way to you — like you broadcast a healing frequency that cuts through all the noise.`,
+                    core_identity: `Your Life Path 6 marks you as a natural reality-harmonizer, someone whose presence naturally restores balance and beauty to distorted patterns. At your core, you operate as a love amplifier.`,
+                    external: `To others, you come across as deeply nurturing and trustworthy, like a sanctuary in a chaotic world. This is especially noticeable when someone is struggling — they instinctively move toward you.`,
+                    behavior: `In everyday life, this shows up as constant caretaking and beauty-creation. You can't help but tend to people, spaces, and situations that need healing. You leave environments more harmonious than you found them.`,
+                    strength: `When this energy is aligned, you can heal rifts that separate people from love. Your presence alone can restore others' faith in connection. You make broken things whole.`,
+                    shadow: `The challenge arises when your caring becomes controlling, or when you sacrifice yourself so completely that there's nothing left to give. You may find yourself healing everyone except yourself.`,
+                    integration: `This energy works best when you receive as gracefully as you give. Your healing is strongest when it flows from overflow, not depletion.`,
+                    stress: `Under pressure, this energy tends to become martyrish or controlling, often triggered by feeling unappreciated or unable to help. The healer becomes the enabler.`,
+                    misread: `Others may mistake this energy for doormat syndrome or neediness, when it's actually profound service — you're running a healing broadcast that requires immense energy to maintain.`,
+                    relationships: `In close connections, this shows up as deep devotion and homemaking instinct. You create beautiful nests and nurturing environments. Partners must actively reciprocate, or you'll give until you're empty.`,
+                    growth: `As you mature, this energy shifts from "saving everyone" toward "empowering healing." The rescuer becomes the guide, and over-giving transforms into sustainable love.`,
+                    power: `At its highest expression, you can channel unconditional love so purely that it dissolves barriers between hearts, making true healing possible.`,
+                    somatic: `You'll feel this energy most strongly in your heart and hands when someone needs care, and as physical pain when you've been giving without receiving.`,
+                    reflection: `Ask yourself: "Where am I rescuing instead of empowering, denying others their growth by doing too much?"`,
+                    next: `This life path deepens when viewed alongside your Chiron Reading — your deepest wound that became your greatest healing gift.`
                 },
                 7: {
                     title: "The Seeker & Philosopher",
                     traits: "analytical, spiritual, introspective, wise",
-                    description: `${preferredName}, you were born to seek truth and wisdom. Your Life Path 7 reveals a soul designed for deep thinking, spiritual exploration, and uncovering life's mysteries. You came into this world with an innate need to understand the deeper meaning behind everything.`,
-                    core: `At your core, you are a natural philosopher and spiritual seeker. You feel most alive when you're contemplating life's big questions, learning something profound, or spending time in introspection. Superficiality bothers you deeply—you crave authenticity, depth, and truth. Your analytical mind and intuitive wisdom are extraordinary gifts.`,
-                    challenges: `Your greatest challenge is avoiding isolation and learning to share your insights. You may struggle with trusting others, becoming too withdrawn, or getting lost in analysis paralysis. Learning to balance solitude with connection, and thinking with feeling, will help you share your wisdom with those who need it.`,
-                    relationships: `In relationships, you need intellectual depth, emotional authenticity, and lots of space. You're attracted to people who are intelligent, introspective, and spiritually aware. Your ideal partner respects your need for solitude and enjoys deep, meaningful conversation. You thrive with someone who values quality time over quantity. Avoid superficial, overly social, or emotionally immature partners.`,
-                    purpose: `Your life purpose is to be a wisdom keeper and truth seeker. Whether through research, teaching, writing, spiritual work, or scientific inquiry, you're here to explore life's deeper mysteries and share your findings with humanity. Your legacy will be the wisdom you've uncovered and the consciousness you've elevated.`,
-                    advice: `Share your insights—the world needs your wisdom. Balance your alone time with meaningful connection. Trust your intuition as much as your analysis; both are valuable. Don't wait until you have all the answers before engaging with life. Practice being present in your body, not just your mind. Remember that experience teaches what books cannot.`
+                    hook: `${preferredName}, you see things others miss — not because you're looking harder, but because you're tuned into frequencies that most people don't even know exist.`,
+                    core_identity: `Your Life Path 7 marks you as a natural truth-detector, someone whose signal pierces through surface illusions to access hidden realities. At your core, you operate as a wisdom antenna.`,
+                    external: `To others, you come across as mysteriously knowing, like you possess information they can't access. This is especially noticeable during deep conversations — you go places others fear.`,
+                    behavior: `In everyday life, this shows up as constant questioning and analyzing. You dissect reality looking for the deeper pattern beneath appearances. Small talk feels like noise to you.`,
+                    strength: `When this energy is aligned, you can perceive truths that are invisible to others. You can detect distortions, lies, and hidden patterns with uncanny accuracy.`,
+                    shadow: `The challenge arises when your seeking becomes isolation, or when your analysis creates paralysis. You may find yourself so lost in seeking that you miss the truth already present.`,
+                    integration: `This energy works best when you balance inner exploration with outer sharing. Your wisdom is strongest when it's grounded in experience, not just contemplation.`,
+                    stress: `Under pressure, this energy tends to become withdrawn or suspicious, often triggered by feeling misunderstood or encountering superficiality. The seeker becomes the hermit.`,
+                    misread: `Others may mistake this energy for coldness or antisocial behavior, when it's actually deep processing — you're analyzing data that requires immense focus.`,
+                    relationships: `In close connections, this shows up as need for depth, authenticity, and lots of space. You bond through meaningful exchange, not surface pleasantries. Partners must respect your inner world.`,
+                    growth: `As you mature, this energy shifts from "escaping into the mind" toward "embodying wisdom." The theorist becomes the sage, and isolation transforms into selective, deep connection.`,
+                    power: `At its highest expression, you can access truths that liberate others from the illusions keeping them trapped in limited realities.`,
+                    somatic: `You'll feel this energy most strongly in your third eye area during insight, and as a full-body knowing when you've touched truth.`,
+                    reflection: `Ask yourself: "Where am I seeking endlessly instead of trusting the wisdom I already carry?"`,
+                    next: `This life path expands when viewed alongside your Neptune Sign — the mystical frequencies your soul naturally receives.`
                 },
                 8: {
                     title: "The Powerhouse & Manifestor",
                     traits: "ambitious, powerful, successful, authoritative",
-                    description: `${preferredName}, you were born for power and achievement. Your Life Path 8 reveals a soul designed for material mastery, leadership, and manifesting abundance. You came into this world with an extraordinary ability to create success and wield power responsibly.`,
-                    core: `At your core, you are a natural leader and master manifestor. You feel most alive when you're building something significant, leading important initiatives, or achieving ambitious goals. You have an innate understanding of how energy, effort, and resources translate into results. Power and success aren't vanity for you—they're your natural state.`,
-                    challenges: `Your greatest challenge is using power wisely and avoiding workaholism. You may struggle with valuing yourself beyond achievements, becoming too controlling, or sacrificing relationships for success. Learning that true power includes vulnerability, and that rest is productive, will multiply your effectiveness.`,
-                    relationships: `In relationships, you are loyal, protective, and generous. You need a partner who is confident, accomplished, and emotionally mature enough to handle your intensity. Your ideal relationship is a true partnership where both people are powerful in their own right. You thrive with someone who respects your ambition while keeping you grounded. Avoid dependent, passive, or jealous partners.`,
-                    purpose: `Your life purpose is to demonstrate ethical leadership and create abundance that serves the greater good. Whether through business, politics, philanthropy, or organizational leadership, you're here to show that power and integrity can coexist. Your legacy will be the organizations you've built and the ethical standards you've set.`,
-                    advice: `Use your power to empower others, not dominate them. Success is sweeter when shared. Make time for relationships and self-care—they're investments, not distractions. Money is a tool, not the goal; focus on impact. Remember that your worth isn't measured by your achievements. Lead with both strength and compassion.`
+                    hook: `${preferredName}, when you walk into a room, the energy shifts — like reality itself recognizes an operator who knows how to work its controls.`,
+                    core_identity: `Your Life Path 8 marks you as a natural reality-manifestor, someone whose signal has the power to reshape material circumstances through sheer force of will. At your core, you operate as a power conduit.`,
+                    external: `To others, you come across as formidably capable, like someone who has access to resources and abilities beyond normal scope. This is especially noticeable in competitive situations — people feel your power before you display it.`,
+                    behavior: `In everyday life, this shows up as constant orientation toward achievement and mastery. You think in terms of power dynamics, resources, and strategic positioning. You're always building toward something bigger.`,
+                    strength: `When this energy is aligned, you can manifest material reality with extraordinary effectiveness. You can turn vision into empire, thought into tangible power. You're a reality engineer.`,
+                    shadow: `The challenge arises when your power becomes domination, or when your success becomes the only measure of worth. You may find yourself conquering worlds that bring no real fulfillment.`,
+                    integration: `This energy works best when power serves something greater than ego. Your manifestation is strongest when it empowers others alongside yourself.`,
+                    stress: `Under pressure, this energy tends to become controlling or ruthless, often triggered by threats to status or resources. The power station becomes the tyrant.`,
+                    misread: `Others may mistake this energy for cold ambition or intimidation, when it's actually profound responsibility — you feel the weight of being able to reshape reality, and that's not a light burden.`,
+                    relationships: `In close connections, this shows up as loyalty, protection, and high standards. You provide abundantly but expect reciprocal contribution. Partners must be powerful in their own right.`,
+                    growth: `As you mature, this energy shifts from "acquiring power" toward "channeling power for impact." The conqueror becomes the benefactor, and accumulation transforms into distribution.`,
+                    power: `At its highest expression, you can consciously direct energy into material form, manifesting realities that serve not just yourself but humanity.`,
+                    somatic: `You'll feel this energy most strongly in your solar plexus as a surge of capability, and in your spine as an urge to stand tall and claim your space.`,
+                    reflection: `Ask yourself: "Where am I accumulating power instead of deploying it for the impact I'm here to make?"`,
+                    next: `This life path intensifies when viewed alongside your Pluto Sign — the deep power your soul is here to master.`
                 },
                 9: {
                     title: "The Humanitarian & Visionary",
                     traits: "compassionate, wise, humanitarian, idealistic",
-                    description: `${preferredName}, you were born to serve humanity. Your Life Path 9 reveals an old soul designed for compassion, wisdom, and making the world a better place. You came into this world with a deep understanding of human nature and an innate desire to heal collective wounds.`,
-                    core: `At your core, you are a natural humanitarian and universal lover. You feel most alive when you're helping others, working for a cause greater than yourself, or expressing your deep compassion. You see beyond surface differences to recognize the shared humanity in everyone. Your wisdom and empathy are profound gifts to the world.`,
-                    challenges: `Your greatest challenge is avoiding emotional overwhelm and learning to receive. You may struggle with absorbing others' pain, difficulty letting go, or feeling disappointed by humanity. Learning to maintain healthy boundaries while staying open-hearted, and to accept your own needs as valid, is essential for sustainable service.`,
-                    relationships: `In relationships, you are deeply loving, accepting, and devoted. You need a partner who shares your values and vision for a better world. Your ideal relationship includes shared purpose, spiritual connection, and mutual growth. You thrive with someone who is evolved, compassionate, and committed to their own healing. Avoid those who are selfish, closed-minded, or emotionally unavailable.`,
-                    purpose: `Your life purpose is to serve as a compassionate leader and healing presence. Whether through activism, healing arts, teaching, philanthropy, or the arts, you're here to elevate human consciousness and reduce suffering. Your legacy will be the positive change you've created and the hearts you've opened.`,
-                    advice: `You can't save everyone; focus your energy where it creates real impact. Release what no longer serves you—letting go is not abandoning. Receive help graciously; it's how others express their love. Don't sacrifice yourself on the altar of service. Remember that sometimes the greatest gift you can give is your own healing and wholeness. Lead by example.`
+                    hook: `${preferredName}, there's something ancient in your eyes — like you've traveled through enough lifetimes to understand them all, and now you're here to help others find their way.`,
+                    core_identity: `Your Life Path 9 marks you as a wisdom-bearer, an old soul that has traveled through many realities and now carries the patterns of completion and universal love. At your core, you operate as a synthesizer of experience.`,
+                    external: `To others, you come across as profoundly understanding, like you've already been everywhere they're struggling to go. This is especially noticeable when someone is in pain — you recognize their suffering without judgment.`,
+                    behavior: `In everyday life, this shows up as natural concern for the collective and impatience with pettiness. You think in terms of humanity, not just individuals. You're always releasing, completing, and transcending.`,
+                    strength: `When this energy is aligned, you can perceive the interconnection of all realities and help others complete their cycles with grace.`,
+                    shadow: `The challenge arises when your wisdom becomes resignation, or when your giving leaves nothing for yourself. You may find yourself completing everyone's journeys except your own.`,
+                    integration: `This energy works best when you include yourself in the compassion you extend to all beings. Your healing is strongest when it starts at home.`,
+                    stress: `Under pressure, this energy tends to become martyred or resentful, often triggered by humanity's slower pace or ingratitude. The sage becomes the disappointed idealist.`,
+                    misread: `Others may mistake this energy for detachment or otherworldliness, when it's actually profound engagement — you're so connected to everything that normal boundaries seem artificial.`,
+                    relationships: `In close connections, this shows up as unconditional acceptance and spiritual depth. You love people as they are, not as you wish they were. Partners must have their own path.`,
+                    growth: `As you mature, this energy shifts from "saving the world" toward "being the healing the world needs." The activist becomes the embodiment, and doing transforms into being.`,
+                    power: `At its highest expression, you can facilitate completion for others — helping souls close cycles and move to their next evolution.`,
+                    somatic: `You'll feel this energy most strongly as expansion beyond your personal boundaries, and as grief when you witness suffering.`,
+                    reflection: `Ask yourself: "Where am I neglecting my own completion while trying to complete others' journeys?"`,
+                    next: `This life path gains perspective when viewed alongside your North Node Reading — the direction your soul is evolving toward.`
                 },
                 11: {
                     title: "The Illuminator & Inspired Healer",
                     traits: "intuitive, inspiring, visionary, sensitive",
-                    description: `${preferredName}, you were born to illuminate and inspire. Your Life Path 11 is a Master Number, revealing a soul designed for spiritual leadership and bringing divine inspiration to Earth. You came into this world with extraordinary intuitive abilities and a mission to uplift consciousness.`,
-                    core: `At your core, you are a spiritual antenna and natural inspirational leader. You feel most alive when you're channeling higher wisdom, inspiring others, or working on visionary projects. You possess an almost otherworldly sensitivity and can perceive energies and truths that others miss. Your presence alone can shift the energy of a room.`,
-                    challenges: `Your greatest challenge is managing your intense sensitivity and living up to your spiritual potential. You may struggle with nervous energy, self-doubt about your gifts, or feeling overwhelmed by the expectations of your path. Learning to ground your spiritual insights in practical action, and to trust your unique abilities, is essential.`,
-                    relationships: `In relationships, you need deep spiritual and emotional connection. You're attracted to people who are emotionally evolved, spiritually aware, and supportive of your mission. Your ideal partner understands your sensitivity and helps you stay grounded. You thrive with someone who shares your spiritual values. Avoid cynical, materialistic, or energetically draining partners.`,
-                    purpose: `Your life purpose is to be a lightworker and spiritual teacher. Whether through healing, teaching, counseling, creative arts, or innovative leadership, you're here to bring divine inspiration and higher consciousness to humanity. Your legacy will be the awakening you've sparked and the light you've shared.`,
-                    advice: `Ground your spiritual gifts in daily practice and practical application. Your sensitivity is a superpower; protect it with boundaries. Don't dim your light to make others comfortable. Seek out spiritual community and mentors. Balance your time between receiving inspiration and taking inspired action. Trust that you were chosen for this path for a reason.`
+                    hook: `${preferredName}, you receive transmissions that others can't hear — like you're permanently tuned into a frequency broadcasting from beyond the veil.`,
+                    core_identity: `Your Master Number 11 marks you as a spiritual antenna, someone whose signal connects directly to higher realities and downloads information meant to illuminate this world. At your core, you operate as a light transmitter.`,
+                    external: `To others, you come across as almost otherworldly, like part of you isn't fully in this dimension. This is especially noticeable when you speak truth — it lands with unusual weight, as if coming from somewhere beyond.`,
+                    behavior: `In everyday life, this shows up as extreme sensitivity and intuitive knowing. You receive impressions, visions, and insights that seem to come from nowhere. You're always translating between worlds.`,
+                    strength: `When this energy is aligned, you can download guidance from higher dimensions and transmit it in ways that awaken others. You're a spiritual broadcaster.`,
+                    shadow: `The challenge arises when your sensitivity overwhelms you, or when you doubt the validity of what you're receiving. You may find yourself paralyzed between dimensions, unable to ground the light you carry.`,
+                    integration: `This energy works best when you ground your spiritual downloads in practical action. Your illumination is strongest when it becomes embodied, not just channeled.`,
+                    stress: `Under pressure, this energy tends to become anxious or overwhelmed, often triggered by dense, negative environments or spiritual self-doubt. The illuminator becomes the nervous system.`,
+                    misread: `Others may mistake this energy for impracticality or instability, when it's actually sensitive receiving — your nervous system is processing information they can't perceive.`,
+                    relationships: `In close connections, this shows up as profound spiritual intimacy and psychic knowing. You need partners who respect your sensitivity and share your connection to something greater.`,
+                    growth: `As you mature, this energy shifts from "receiving passively" toward "transmitting intentionally." The channel becomes the lighthouse, and sensitivity transforms into spiritual service.`,
+                    power: `At its highest expression, you can consciously bridge dimensions, bringing through light codes and wisdom that catalyze awakening in collective consciousness.`,
+                    somatic: `You'll feel this energy most strongly as electrical sensations when receiving downloads, and as full-body vibration when transmitting truth.`,
+                    reflection: `Ask yourself: "Where am I doubting my reception instead of trusting the signal I was designed to carry?"`,
+                    next: `This master number reveals its purpose when viewed alongside your Life Mission Reading — the specific illumination your soul came to broadcast.`
                 },
                 22: {
                     title: "The Master Builder & Architect",
                     traits: "visionary, practical, powerful, transformative",
-                    description: `${preferredName}, you were born to build lasting legacies. Your Life Path 22 is a Master Number, revealing a soul designed to turn grand visions into concrete reality. You came into this world with the unique ability to combine spiritual vision with practical mastery.`,
-                    core: `At your core, you are a master architect of reality. You feel most alive when you're working on large-scale projects that will benefit many people. You possess the rare combination of visionary thinking and practical skill necessary to manifest seemingly impossible dreams. You're here to build structures, systems, or organizations that transform the world.`,
-                    challenges: `Your greatest challenge is managing the pressure of your immense potential without becoming overwhelmed. You may struggle with self-doubt, taking on too much, or becoming frustrated when others don't share your vision or pace. Learning to break huge visions into manageable steps, and to celebrate small wins, keeps you moving forward.`,
-                    relationships: `In relationships, you need a partner who is stable, supportive, and shares your long-term vision. You're attracted to people who are both grounded and ambitious. Your ideal partner believes in your dreams and provides practical support while maintaining their own identity. You thrive with someone who can handle your intensity and ambition. Avoid those who are intimidated by your power or dismissive of your visions.`,
-                    purpose: `Your life purpose is to create transformative structures that serve humanity for generations. Whether through innovative businesses, educational systems, social movements, or physical architecture, you're here to manifest visions that change the world. Your legacy will be the enduring impact of what you've built.`,
-                    advice: `Think generationally but act daily. Your big vision needs small, consistent steps. Surround yourself with skilled team members; you can't build alone. Rest is not optional—burnout serves no one. Stay humble; your power is for service, not ego. Trust that your vision will unfold in divine timing. The world needs what you came to build.`
+                    hook: `${preferredName}, you don't just see what could be — you see how to build it, as if you're reading architectural blueprints from across dimensions.`,
+                    core_identity: `Your Master Number 22 marks you as a reality architect, someone whose signal combines vision and manifestation at scales that reshape the world. At your core, you operate as a builder of lasting structures.`,
+                    external: `To others, you come across as impossibly capable, like you can see the complete structure before the first stone is laid. This is especially noticeable with big projects — your confidence in the vision is contagious.`,
+                    behavior: `In everyday life, this shows up as constant orientation toward legacy projects. You think in terms of what will last, what will scale, what will serve generations. Small thinking bores you.`,
+                    strength: `When this energy is aligned, you can manifest visions at a scale that transforms collective reality — systems, institutions, movements that outlast any individual.`,
+                    shadow: `The challenge arises when your massive vision overwhelms your capacity, or when you sacrifice everything for the construction. You may find yourself building monuments while your personal life crumbles.`,
+                    integration: `This energy works best when you build sustainable rhythms around your massive work. Your construction is strongest when it doesn't destroy the builder.`,
+                    stress: `Under pressure, this energy tends to become overwhelmed or controlling, often triggered by obstacles to the grand vision or team failures. The master builder becomes the taskmaster.`,
+                    misread: `Others may mistake this energy for workaholism or megalomania, when it's actually profound service — you're building structures across time that will serve souls who haven't been born yet.`,
+                    relationships: `In close connections, this shows up as partnership around shared building. You need someone who understands your mission and actively supports the construction, not just tolerates it.`,
+                    growth: `As you mature, this energy shifts from "building alone" toward "building with a team of masters." The sole architect becomes the master builder with apprentices, and control transforms into coordination.`,
+                    power: `At its highest expression, you can consciously architect portals — creating structures in physical reality that actually open gateways to higher frequencies.`,
+                    somatic: `You'll feel this energy most strongly as a full-body knowing when you're working on what you came to build, and as frustration when anything distracts from the mission.`,
+                    reflection: `Ask yourself: "Where am I building at a pace that destroys my foundation instead of trusting that sustainable construction creates lasting structures?"`,
+                    next: `This master number gains clarity when viewed alongside your Dharma Number Reading — the specific structure your soul came to build.`
                 },
                 33: {
                     title: "The Master Teacher & Healer",
                     traits: "nurturing, wise, compassionate, transformative",
-                    description: `${preferredName}, you were born to heal and teach at the highest level. Your Life Path 33 is a Master Number, revealing a soul designed for selfless service and spiritual teaching. You came into this world with a profound calling to heal, guide, and elevate others through unconditional love.`,
-                    core: `At your core, you are a master healer and spiritual teacher. You feel most alive when you're helping others transform their lives, teaching profound truths, or offering healing presence. You embody the energy of the Christ consciousness—unconditional love, compassion, and service. Your very presence can be healing to those around you.`,
-                    challenges: `Your greatest challenge is avoiding martyrdom and maintaining your own wellbeing while serving others. You may struggle with taking on others' pain, difficulty receiving, or sacrificing yourself completely for your mission. Learning that self-care enables greater service, and that boundaries are acts of love, is essential.`,
-                    relationships: `In relationships, you give abundantly and need a partner who can match your emotional depth. You're attracted to people who are spiritually mature, emotionally evolved, and committed to growth. Your ideal partner supports your mission while ensuring you also receive care. You thrive with someone who values spiritual connection and service. Avoid those who take advantage of your giving nature or resist their own healing.`,
-                    purpose: `Your life purpose is to be a master teacher and healer who elevates human consciousness through love and wisdom. Whether through spiritual teaching, healing work, counseling, or inspirational leadership, you're here to show humanity what unconditional love looks like in action. Your legacy will be the transformations you've facilitated and the love you've embodied.`,
-                    advice: `You cannot pour from an empty cup—prioritize your own healing and wholeness. Set clear boundaries; saying no to some allows you to fully say yes to what matters most. Accept help and support; receiving is how others express their love. Don't try to save everyone; honor each person's journey and timing. Remember that your presence is the healing, not your depletion. Lead by being whole, not wounded.`
+                    hook: `${preferredName}, when you love, something heals — not metaphorically, but literally, as if your heart broadcasts a frequency that rewrites damaged code.`,
+                    core_identity: `Your Master Number 33 marks you as a cosmic healer, someone whose signal transmits unconditional love at frequencies capable of healing wounds in humanity itself. At your core, you operate as a love transmuter.`,
+                    external: `To others, you come across as almost christ-like, embodying a love that seems too pure for this world. This is especially noticeable when people are suffering — they sense you can hold their pain.`,
+                    behavior: `In everyday life, this shows up as constant orientation toward service and teaching. You can't encounter suffering without feeling called to address it. You're always healing, teaching, elevating.`,
+                    strength: `When this energy is aligned, you can transmit love at frequencies that heal collective trauma — not just individual wounds, but damage in the fabric of human consciousness.`,
+                    shadow: `The challenge arises when your giving becomes depletion, or when your service becomes martyrdom. You may find yourself so emptied by healing others that your own signal begins to fail.`,
+                    integration: `This energy works best when your self-care is as devoted as your service. Your healing is strongest when it flows from fullness, not wound.`,
+                    stress: `Under pressure, this energy tends to become depleted or martyred, often triggered by witnessing suffering you can't immediately heal. The master healer becomes the wounded healer.`,
+                    misread: `Others may mistake this energy for doormat syndrome or savior complex, when it's actually embodied divinity — you're running a frequency that requires massive energy to maintain.`,
+                    relationships: `In close connections, this shows up as unconditional acceptance and healing presence. Partners are transformed simply by proximity to you. But you must ensure reciprocity or you'll empty.`,
+                    growth: `As you mature, this energy shifts from "healing everyone" toward "being the healing." The active healer becomes the embodied love, and doing transforms into pure being.`,
+                    power: `At its highest expression, you can transmit healing love so purely that it rewrites damaged code in human consciousness, healing wounds across past, present, and future.`,
+                    somatic: `You'll feel this energy most strongly in your heart as expansion beyond personal boundaries, and as physical pain when you encounter wounds you're meant to heal.`,
+                    reflection: `Ask yourself: "Where am I depleting myself instead of trusting that my wholeness is the healing?"`,
+                    next: `This master number gains expression when viewed alongside your Soul Contract Reading — the specific healing agreements your soul made before arriving.`
                 }
             };
             
@@ -699,7 +808,7 @@
                 const reducedInterp = interpretations[reducedNum];
                 masterNumberNote = `
                     <div class="master-number-note" style="background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(139, 92, 246, 0.15)); border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 12px; padding: 20px; margin: 20px 0;">
-                        <p style="color: #fbbf24; font-weight: 600; margin-bottom: 10px;">✨ Master Number ${lifePathNumber}/${reducedNum}</p>
+                        <p style="color: #fbbf24; font-weight: 600; margin-bottom: 10px;">✨ Master Number ${lifePathNumber}/${reducedNum} Detected</p>
                         <p style="font-style: italic; color: #C4B998;">As a Master Number, you carry the intensified spiritual energy of ${lifePathNumber} while also having access to the grounded qualities of Life Path ${reducedNum}. In times of stress or when you need practical stability, you may naturally express more ${reducedNum} energy.</p>
                     </div>
                 `;
@@ -707,22 +816,123 @@
                     <div class="reduced-number-section" style="margin-top: 30px; padding-top: 25px; border-top: 2px dashed rgba(6, 182, 212, 0.3);">
                         <h3 style="color: #06b6d4; font-family: 'Cinzel', serif; margin-bottom: 15px;">🔮 Your ${reducedNum} Foundation: ${reducedInterp.title}</h3>
                         <p style="margin-bottom: 15px;"><span class="highlight">Foundation Traits:</span> ${reducedInterp.traits}</p>
-                        <p style="margin-bottom: 15px;"><strong>The ${reducedNum} Within You:</strong> ${reducedInterp.core}</p>
-                        <p><strong>Grounding Guidance:</strong> When your ${lifePathNumber} energy feels overwhelming, lean into your ${reducedNum} nature: ${reducedInterp.advice}</p>
+                        <p style="margin-bottom: 15px;"><strong>The ${reducedNum} Within You:</strong> ${reducedInterp.core_identity}</p>
+                        <p><strong>Grounding Guidance:</strong> When your ${lifePathNumber} energy feels overwhelming, lean into your ${reducedNum} integration: ${reducedInterp.integration}</p>
                     </div>
                 `;
             }
             
-            const resultContent = `
+            // Build the core reading (always visible)
+            const coreReading = `
+                <!-- HOOK - Instant Recognition -->
+                <div class="reading-section hook-section" style="font-size: 1.15em; color: #fbbf24; margin-bottom: 20px; font-style: italic;">
+                    ${interpretation.hook}
+                </div>
+                
                 ${masterNumberNote}
-                <p><span class="highlight">Core Traits:</span> ${interpretation.traits}</p>
-                <p>${interpretation.description}</p>
-                <p><strong>Your Core Nature:</strong> ${interpretation.core}</p>
-                <p><strong>Your Life Challenges:</strong> ${interpretation.challenges}</p>
-                <p><strong>Your Relationship Path:</strong> ${interpretation.relationships}</p>
-                <p><strong>Your Life Purpose:</strong> ${interpretation.purpose}</p>
-                <p><strong>Guidance for Your Journey:</strong> ${interpretation.advice}</p>
+                
+                <p style="margin-bottom: 10px;"><span class="highlight">Core Traits:</span> ${interpretation.traits}</p>
+                
+                <!-- CORE IDENTITY -->
+                <div class="reading-section" style="margin-bottom: 20px;">
+                    <h4 style="color: #06b6d4; margin-bottom: 10px;">✨ Your Core Identity</h4>
+                    <p>${interpretation.core_identity}</p>
+                </div>
+                
+                <!-- EXTERNAL PERCEPTION -->
+                <div class="reading-section" style="margin-bottom: 20px;">
+                    <h4 style="color: #06b6d4; margin-bottom: 10px;">👁️ How Others Perceive You</h4>
+                    <p>${interpretation.external}</p>
+                </div>
+                
+                <!-- BEHAVIORAL PATTERN -->
+                <div class="reading-section" style="margin-bottom: 20px;">
+                    <h4 style="color: #06b6d4; margin-bottom: 10px;">🌀 Your Natural Pattern</h4>
+                    <p>${interpretation.behavior}</p>
+                </div>
+                
+                <!-- STRENGTH EXPRESSION -->
+                <div class="reading-section" style="margin-bottom: 20px;">
+                    <h4 style="color: #06b6d4; margin-bottom: 10px;">⚡ Your Aligned Power</h4>
+                    <p>${interpretation.strength}</p>
+                </div>
+                
+                <!-- SHADOW / FRICTION -->
+                <div class="reading-section" style="margin-bottom: 20px;">
+                    <h4 style="color: #06b6d4; margin-bottom: 10px;">🌑 The Shadow Challenge</h4>
+                    <p>${interpretation.shadow}</p>
+                </div>
+                
+                <!-- INTEGRATION KEY -->
+                <div class="reading-section" style="margin-bottom: 20px;">
+                    <h4 style="color: #06b6d4; margin-bottom: 10px;">🔑 Integration Key</h4>
+                    <p>${interpretation.integration}</p>
+                </div>
+            `;
+            
+            // Build the premium expansion rings
+            const premiumExpansion = `
+                <div class="premium-expansion" style="margin-top: 30px; padding-top: 25px; border-top: 2px solid rgba(6, 182, 212, 0.3);">
+                    <h3 style="color: #fbbf24; font-family: 'Cinzel', serif; margin-bottom: 20px;">🔓 Deep Pattern Analysis</h3>
+                    
+                    <!-- STRESS PATTERN -->
+                    <div class="reading-section" style="margin-bottom: 20px;">
+                        <h4 style="color: #06b6d4; margin-bottom: 10px;">⚠️ Under Pressure</h4>
+                        <p>${interpretation.stress}</p>
+                    </div>
+                    
+                    <!-- MISINTERPRETATION -->
+                    <div class="reading-section" style="margin-bottom: 20px;">
+                        <h4 style="color: #06b6d4; margin-bottom: 10px;">🎭 Common Misread</h4>
+                        <p>${interpretation.misread}</p>
+                    </div>
+                    
+                    <!-- RELATIONSHIPS -->
+                    <div class="reading-section" style="margin-bottom: 20px;">
+                        <h4 style="color: #06b6d4; margin-bottom: 10px;">💫 In Close Connections</h4>
+                        <p>${interpretation.relationships}</p>
+                    </div>
+                    
+                    <!-- GROWTH ARC -->
+                    <div class="reading-section" style="margin-bottom: 20px;">
+                        <h4 style="color: #06b6d4; margin-bottom: 10px;">📈 Your Evolution Arc</h4>
+                        <p>${interpretation.growth}</p>
+                    </div>
+                    
+                    <!-- POWER MOVE -->
+                    <div class="reading-section" style="margin-bottom: 20px;">
+                        <h4 style="color: #06b6d4; margin-bottom: 10px;">🎯 Highest Expression</h4>
+                        <p>${interpretation.power}</p>
+                    </div>
+                    
+                    <!-- SOMATIC CUE -->
+                    <div class="reading-section" style="margin-bottom: 20px;">
+                        <h4 style="color: #06b6d4; margin-bottom: 10px;">🫀 Felt Sense</h4>
+                        <p>${interpretation.somatic}</p>
+                    </div>
+                    
+                    <!-- REFLECTION -->
+                    <div class="reading-section" style="margin-bottom: 20px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.1)); padding: 20px; border-radius: 12px; border-left: 3px solid #06b6d4;">
+                        <h4 style="color: #fbbf24; margin-bottom: 10px;">🪞 Cosmic Reflection</h4>
+                        <p style="font-style: italic;">${interpretation.reflection}</p>
+                    </div>
+                </div>
+            `;
+            
+            // Build the soft next suggestion
+            const nextSuggestion = `
+                <div class="next-suggestion" style="margin-top: 25px; padding: 20px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(0, 0, 0, 0.3)); border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.3);">
+                    <p style="color: #C4B998; font-size: 0.95em;">
+                        <span style="color: #fbbf24;">✨ Continue Your Journey:</span> ${interpretation.next}
+                    </p>
+                </div>
                 ${reducedNumberContent}
+            `;
+            
+            const resultContent = `
+                ${coreReading}
+                ${premiumExpansion}
+                ${nextSuggestion}
             `;
             
             // Build reading data and redirect

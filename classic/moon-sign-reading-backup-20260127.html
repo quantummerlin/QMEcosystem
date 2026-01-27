@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        // Version: 20260123070550 - Auto-generated cache buster
+        // Version: 20260122170552 - Auto-generated cache buster
+        // Version: 20260122165534 - Auto-generated cache buster
+        // Version: 20260122150214 - Auto-generated cache buster
+        // Version: 20260122145556 - Auto-generated cache buster
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+    <!-- End Google Analytics -->
+
+        <link rel="canonical" href="https://quantummerlin.com/classic/moon-sign-reading.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="version" content="20260123070550">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bf5af2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Quantum Merlin">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Quantum Merlin">
+    <meta name="msapplication-TileColor" content="#bf5af2">
+    <meta name="msapplication-navbutton-color" content="#bf5af2">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="RetroMerlin.jpg">
+    <link rel="manifest" href="manifest.json">
+    <title>Moon Sign Calculator & Reading | Quantum Merlin</title>
+    <meta name="description" content="Calculate your Moon Sign from birth data and discover your emotional nature through deep astrological wisdom.">
+<meta name="keywords" content="moon sign calculator, lunar sign, emotional astrology, moon reading, astrology calculator">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap&v=20260111121803&v=20260111121858&v=20260111132525&v=20260112083146&v=20260121162926&v=20260121163503&v=20260121164415&v=20260121170617&v=20260121175156&v=20260121180653&v=20260121182750&v=20260121203732&v=20260121204029&v=20260121204740&v=20260121211614&v=20260121223506&v=20260122073736&v=20260122145556&v=20260122150214&v=20260122165534&v=20260122170552&v=20260123070550" rel="stylesheet">
+    <link rel="stylesheet" href="quantum-merlin-styles.css">
+    
+    <!-- Astronomy Engine Library for planetary calculations -->
+    <script src="https://cdn.jsdelivr.net/npm/astronomy-engine@2.1.19/astronomy.browser.min.js?v=20260111121803"></script>
+    
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0a0a0f;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+        .container { max-width: 900px; width: 100%; margin: 0 auto; padding: 0 15px; }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 30px;
+        }
+        .header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fbbf24 0%, #06b6d4 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        .header p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2em;
+            color: #06b6d4;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        .tool-card {
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            margin-bottom: 30px;
+        }
+        .clear-btn {
+            background: rgba(236, 72, 153, 0.1);
+            border-color: rgba(236, 72, 153, 0.3);
+            color: #ec4899;
+        }
+        .clear-btn:hover {
+            background: rgba(236, 72, 153, 0.2);
+            border-color: #ec4899;
+        }
+        .input-section {
+            margin-bottom: 35px;
+        }
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3em;
+            color: #fbbf24;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(251, 191, 36, 0.3);
+        }
+        .input-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #06b6d4;
+            font-weight: 600;
+        }
+        input, select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            background: rgba(10, 10, 15, 0.6);
+            color: #e0e0e0;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-family: 'Cormorant Garamond', serif;
+            transition: all 0.3s ease;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #06b6d4;
+            background: rgba(6, 182, 212, 0.05);
+        }
+        .helper-text {
+            font-size: 0.9em;
+            color: rgba(224, 224, 224, 0.7);
+            margin-top: 5px;
+            font-style: italic;
+        }
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.3em;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+        }
+        button[type="submit"]:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .result {
+            display: none;
+            margin-top: 40px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+            border: 2px solid rgba(6, 182, 212, 0.4);
+            border-radius: 15px;
+        }
+        .result.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .result h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #fbbf24 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .result-content p {
+            font-size: 1.15em;
+            margin-bottom: 20px;
+            line-height: 1.9;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: rgba(6, 182, 212, 0.1);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            color: #06b6d4;
+            border-radius: 10px;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            background: rgba(6, 182, 212, 0.2);
+            border-color: #06b6d4;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .row { grid-template-columns: 1fr; }
+            .header h1 { font-size: 2em; }
+            .tool-card { padding: 30px 20px; }
+        }
+    </style>
+    <script src="name-resonance.js?v=20260112"></script>
+    <script src="auto-fill.js"></script>
+    <script src="tool-tracker.js?v=20260123070550"></script>
+<!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/classic/moon-sign-reading.html">
+    <meta property="og:title" content="Quantum Merlin | Ancient Patterns. Modern Interfaces.">
+    <meta property="og:description" content="Discover your cosmic destiny with numerology, astrology, and mystical calculators">
+    <meta property="og:image" content="https://quantummerlin.com/classic/RetroMerlin.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://quantummerlin.com/classic/moon-sign-reading.html">
+    <meta name="twitter:title" content="Quantum Merlin | Ancient Patterns. Modern Interfaces.">
+    <meta name="twitter:description" content="Discover your cosmic destiny with numerology, astrology, and mystical calculators">
+    <meta name="twitter:image" content="https://quantummerlin.com/classic/RetroMerlin.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Moon Sign Calculator & Reading",
+        "url": "https://quantummerlin.com/classic/moon-sign-reading.html",
+        "description": "Calculate your Moon sign and get a detailed reading. Discover your emotional nature, instincts, and inner self with our free astrology tool.",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "Quantum Merlin",
+            "url": "https://quantummerlin.com/classic"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Moon Sign Calculator</h1>
+            <p>Calculate and interpret your emotional nature</p>
+        </div>
+
+        <div class="tool-card">
+<form id="calculator-form" onsubmit="calculateMoonSign(event)">
+                <div class="input-section">
+                    <div class="section-title">✨ Personal Information</div>
+                    
+                    <div class="input-group">
+                        <label for="preferredName">Preferred Name</label>
+                        <input type="text" id="preferredName" required>
+                        <div class="helper-text">What you like to be called</div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="birthName">Birth Name <span style="color: #9ca3af; font-weight: normal;">(Optional)</span></label>
+                        <input type="text" id="birthName">
+                        <div class="helper-text">The name given to you at birth - carries the energy of your naming</div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="birthDate">Birth Date</label>
+                        <input type="date" id="birthDate" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="birthTime">Birth Time *</label>
+                            <input type="time" id="birthTime" required>
+                            <div class="helper-text">Exact time needed for calculation</div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="birthPlace">Birth City</label>
+                            <input type="text" id="birthPlace" required placeholder="e.g., New York, USA">
+                            <div class="helper-text">City and country</div>
+                        </div>
+                    </div>
+                    
+                    <div class="accuracy-notice" style="background: rgba(147, 112, 219, 0.1); border: 1px solid rgba(147, 112, 219, 0.3); border-radius: 10px; padding: 12px 15px; margin-top: 10px;">
+                        <p style="color: #9775fa; font-size: 0.9em; margin: 0;">
+                            🌙 <strong>Accuracy Note:</strong> The Moon changes signs approximately every 2.5 days. If you were born on a day when the Moon changed signs, your exact birth time is crucial for accuracy.
+                        </p>
+                    </div>
+                </div>
+
+                <button type="submit">🔮 Calculate My Moon Sign & Reading</button>
+            </form>
+
+            <div id="result" class="result">
+                <h2 id="result-title"></h2>
+                <div id="result-content" class="result-content"></div>
+                <button type="button" class="back-button" onclick="window.location.href='tools_index.html'">← Back to Quantum Merlin Hub</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Version: 20260122073736 - Auto-generated cache buster
+        // Version: 20260121223506 - Auto-generated cache buster
+        // Version: 20260121211614 - Auto-generated cache buster
+        // Version: 20260121204740 - Auto-generated cache buster
+        // Version: 20260121204029 - Auto-generated cache buster
+        // Version: 20260121203732 - Auto-generated cache buster
+        // Version: 20260121182750 - Auto-generated cache buster
+        // Version: 20260121180653 - Auto-generated cache buster
+        // Version: 20260121175156 - Auto-generated cache buster
+        // Version: 20260121170617 - Auto-generated cache buster
+        // Version: 20260121164415 - Auto-generated cache buster
+        // Version: 20260121163503 - Auto-generated cache buster
+        // Version: 20260121162926 - Auto-generated cache buster
+        // Version: 20260112083146 - Auto-generated cache buster
+        // Version: 20260111132525 - Auto-generated cache buster
+        // Version: 20260111121858 - Auto-generated cache buster
+        // Version: 20260111121803 - Auto-generated cache buster
+        // BACKUP COPY - Created 2026-01-27 before upgrade to 14-field structured interpretations
+        const interpretations = {"Aries": "Your Moon is in Aries, {preferredName}, revealing a fiery, passionate emotional nature that craves independence and excitement. Your inner world operates at high speed—you feel things intensely and immediately, and you need to express emotions as they arise rather than holding them in.\n\nEmotionally, you're a warrior. When feelings surface, your first instinct is action. You don't sit with sadness—you do something about it. You don't ponder anger—you express it. This directness can be refreshing in a world where many people suppress their true feelings, but it can also lead to impulsive emotional reactions you later regret.\n\nYou need emotional freedom above all else. Relationships or situations that feel controlling or restrictive trigger intense discomfort. You require partners and friends who respect your independence and don't try to cage your spirited nature. Clinginess or emotional manipulation repels you instantly.\n\nYour emotional comfort comes through physical activity and new experiences. When you're upset, you need to move—run, work out, or tackle a challenging project. Sitting still with difficult feelings feels unbearable. You process emotions through action, not introspection.\n\nIn childhood, you likely needed more freedom than you were given. You may have felt restrained by family expectations or rules that didn't account for your pioneering spirit. Your relationship with your mother or primary caregiver may have been complicated by your need for independence versus their desire to protect or guide you.\n\nYour emotional needs are simple but non-negotiable: excitement, autonomy, and the freedom to be spontaneous. Routine and predictability drain your spirit. You need variety, challenge, and the ability to pursue whatever captures your interest in the moment.\n\nHowever, the shadow side of Aries Moon is impatience with others' emotional processes. You want to fix things immediately, but not everyone processes feelings at your speed. Learning to give others space to feel without rushing them toward resolution is part of your growth.\n\nYou're also learning that not every emotional trigger requires immediate action. Sometimes the warrior's greatest strength is choosing not to fight. Developing a pause between feeling and reacting serves you well.\n\nYour greatest emotional gift is your courage. You're willing to feel intensely and express authentically. You don't hide from difficult emotions—you meet them head-on. This bravery inspires others to be more honest about their own feelings.", "Taurus": "OLD_BACKUP_CONTENT", "Gemini": "OLD_BACKUP_CONTENT", "Cancer": "OLD_BACKUP_CONTENT", "Leo": "OLD_BACKUP_CONTENT", "Virgo": "OLD_BACKUP_CONTENT", "Libra": "OLD_BACKUP_CONTENT", "Scorpio": "OLD_BACKUP_CONTENT", "Sagittarius": "OLD_BACKUP_CONTENT", "Capricorn": "OLD_BACKUP_CONTENT", "Aquarius": "OLD_BACKUP_CONTENT", "Pisces": "OLD_BACKUP_CONTENT"};
+        // End backup marker
+    </script>
+</body>
+</html>

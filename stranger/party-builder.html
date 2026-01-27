@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF4500">
+    <title>Party Builder | Stranger Patterns 🔦</title>
+    <meta name="description" content="Build your adventuring party! Discover your group's supernatural synergy and who's ready to face the Upside Down together. 🔦">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Party Builder | Stranger Patterns 🔦">
+    <meta property="og:description" content="Build your adventuring party! Discover your group's supernatural synergy and who's ready to face the Upside Down together.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="stranger.jpg">
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0a0508;
+            background-image: 
+                linear-gradient(transparent 60%, rgba(220, 20, 60, 0.04) 60%),
+                repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 69, 0, 0.04) 50px, rgba(255, 69, 0, 0.04) 51px),
+                repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(220, 20, 60, 0.04) 50px, rgba(220, 20, 60, 0.04) 51px),
+                radial-gradient(circle at 20% 50%, rgba(220, 20, 60, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 69, 0, 0.25) 0%, transparent 50%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(2rem, 6vw, 3rem);
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #FF4500 0%, #DC143C 50%, #8B0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px rgba(255, 69, 0, 0.3);
+        }
+        
+        .header .subtitle {
+            font-size: 1.2rem;
+            color: #FF6B35;
+            font-style: italic;
+        }
+        
+        .header .description {
+            margin-top: 15px;
+            color: #b0b0b0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .feature-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: rgba(255, 69, 0, 0.1);
+            border: 1px solid rgba(255, 69, 0, 0.3);
+            border-radius: 25px;
+            font-size: 0.95rem;
+            color: #FF6B35;
+        }
+        
+        .member-selection {
+            background: rgba(20, 10, 15, 0.8);
+            border: 2px solid rgba(255, 69, 0, 0.3);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+        }
+        
+        .member-selection h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: #FF4500;
+            margin-bottom: 15px;
+        }
+        
+        .member-selection p {
+            color: #9ca3af;
+            margin-bottom: 25px;
+        }
+        
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .member-count-btn {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.8rem;
+            background: rgba(255, 69, 0, 0.1);
+            border: 2px solid rgba(255, 69, 0, 0.3);
+            border-radius: 15px;
+            color: #FF6B35;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .member-count-btn:hover {
+            background: rgba(255, 69, 0, 0.2);
+            border-color: #FF4500;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(255, 69, 0, 0.3);
+        }
+        
+        .member-count-btn.selected {
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.3) 0%, rgba(220, 20, 60, 0.3) 100%);
+            border-color: #FF4500;
+            color: #fff;
+            box-shadow: 0 0 30px rgba(255, 69, 0, 0.4);
+        }
+        
+        .start-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 18px 50px;
+            background: linear-gradient(135deg, #FF4500 0%, #DC143C 100%);
+            border: none;
+            border-radius: 12px;
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+        
+        .start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(255, 69, 0, 0.5);
+        }
+        
+        .start-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .examples {
+            margin-top: 35px;
+            padding: 25px;
+            background: rgba(220, 20, 60, 0.08);
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .examples h3 {
+            font-family: 'Cinzel', serif;
+            color: #DC143C;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .examples p {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #FF6B35;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            transition: all 0.3s;
+        }
+        
+        .back-link:hover {
+            color: #FF4500;
+        }
+        
+        /* Flickering light effect */
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+            75% { opacity: 0.95; }
+        }
+        
+        .header h1 {
+            animation: flicker 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔦 Party Builder</h1>
+            <p class="subtitle">Assemble Your Adventuring Party</p>
+            <p class="description">
+                Who's ready to face the unknown? Add your friends, family, or allies and discover 
+                your group's supernatural synergy. Find out who'd survive the Upside Down together!
+            </p>
+        </div>
+        
+        <div class="features">
+            <div class="feature-badge">⚡ Party Power Score</div>
+            <div class="feature-badge">🎭 Role Assignments</div>
+            <div class="feature-badge">🔮 Party Name Generator</div>
+            <div class="feature-badge">📅 Mission Date Analysis</div>
+        </div>
+        
+        <div class="member-selection">
+            <h2>How Many in Your Party?</h2>
+            <p>Select the number of adventurers (2-12 people)</p>
+            
+            <div class="member-grid">
+                <button class="member-count-btn" data-count="2">2</button>
+                <button class="member-count-btn" data-count="3">3</button>
+                <button class="member-count-btn" data-count="4">4</button>
+                <button class="member-count-btn" data-count="5">5</button>
+                <button class="member-count-btn" data-count="6">6</button>
+                <button class="member-count-btn" data-count="7">7</button>
+                <button class="member-count-btn" data-count="8">8</button>
+                <button class="member-count-btn" data-count="9">9</button>
+                <button class="member-count-btn" data-count="10">10</button>
+                <button class="member-count-btn" data-count="11">11</button>
+                <button class="member-count-btn" data-count="12">12</button>
+            </div>
+            
+            <button class="start-btn" id="startBtn" disabled onclick="startBuilder()">
+                Assemble Party →
+            </button>
+            
+            <div class="examples">
+                <h3>⚡ Perfect For:</h3>
+                <p>
+                    👫 Friend groups ready for adventure • 👨‍👩‍👧‍👦 Family survival teams • 
+                    🎮 Gaming squads • 📚 Book clubs • ⚔️ D&D parties • 
+                    🏢 Coworker teams
+                </p>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="tools_index.html" class="back-link">← Back to Stranger Patterns</a>
+        </div>
+    </div>
+    
+    <script>
+        let selectedCount = 0;
+        
+        document.querySelectorAll('.member-count-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.member-count-btn').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                selectedCount = parseInt(btn.dataset.count);
+                document.getElementById('startBtn').disabled = false;
+            });
+        });
+        
+        function startBuilder() {
+            if (selectedCount > 0) {
+                sessionStorage.setItem('partyBuilderMemberCount', selectedCount);
+                window.location.href = 'party-builder-members.html';
+            }
+        }
+    </script>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="legal-links">
+            <a href="terms.html">Terms</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 Stranger Patterns 🔦</p>
+    </footer>
+    <style>
+        .legal-footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 69, 0, 0.2);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .legal-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .legal-links a:hover { color: #FF4500; }
+        .legal-links .separator { color: rgba(255, 69, 0, 0.4); }
+        .copyright { color: #6b7280; font-size: 0.8rem; }
+    </style>
+</body>
+</html>

@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bf5af2">
+    <title>Circle Chemistry Results | Circle Builder ✨</title>
+    <meta name="description" content="Discover your circle's cosmic chemistry! See your group's synergy score, natural roles, and dynamic forecast. ✨">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="RetroMerlin.jpg">
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0a0a0f;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fbbf24 0%, #06b6d4 50%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #06b6d4;
+            font-style: italic;
+        }
+        
+        .progress-bar {
+            background: rgba(6, 182, 212, 0.2);
+            border-radius: 10px;
+            height: 8px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #fbbf24, #06b6d4, #a78bfa);
+            border-radius: 10px;
+            width: 100%;
+        }
+        
+        .progress-text {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Loading Animation */
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .loading h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.8rem;
+            color: #fbbf24;
+            margin-bottom: 30px;
+        }
+        
+        .loading-bar {
+            width: 200px;
+            height: 6px;
+            background: rgba(6, 182, 212, 0.2);
+            border-radius: 3px;
+            margin: 0 auto 20px;
+            overflow: hidden;
+        }
+        
+        .loading-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #fbbf24, #06b6d4, #a78bfa);
+            width: 0%;
+            animation: loadProgress 3s ease-out forwards;
+        }
+        
+        @keyframes loadProgress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        
+        .loading-text {
+            color: #9ca3af;
+            font-style: italic;
+            transition: all 0.3s ease;
+        }
+
+        /* Teaser Reveal */
+        .teaser-reveal {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 15px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.5s ease;
+        }
+        .teaser-reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .teaser-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .teaser-text {
+            color: #fbbf24;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+        }
+
+        /* Rarity Badge */
+        .rarity-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 15px;
+            animation: rarityPulse 2s ease-in-out infinite;
+        }
+        .rarity-badge.legendary {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .rarity-badge.epic {
+            background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(167, 139, 250, 0.5);
+        }
+        .rarity-badge.rare {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            color: #fff;
+        }
+        @keyframes rarityPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Social Proof */
+        .social-proof {
+            text-align: center;
+            padding: 15px;
+            background: rgba(6, 182, 212, 0.1);
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+        .social-proof strong {
+            color: #06b6d4;
+        }
+
+        /* Archetype Comparison */
+        .archetype-comparison {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%);
+            border: 2px solid rgba(251, 191, 36, 0.4);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .archetype-comparison h3 {
+            font-family: 'Cinzel Decorative', serif;
+            color: #fbbf24;
+            margin-bottom: 15px;
+        }
+        .archetype-match {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .your-circle, .archetype-name {
+            padding: 15px 25px;
+            border-radius: 15px;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+        }
+        .your-circle {
+            background: rgba(251, 191, 36, 0.2);
+            border: 1px solid #fbbf24;
+            color: #fbbf24;
+        }
+        .archetype-name {
+            background: rgba(6, 182, 212, 0.2);
+            border: 1px solid #06b6d4;
+            color: #06b6d4;
+        }
+        .match-equals {
+            font-size: 1.5rem;
+            color: #a78bfa;
+        }
+        .match-percent {
+            color: #a78bfa;
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+        
+        /* Results Section */
+        .results {
+            display: none;
+        }
+        
+        .results.show {
+            display: block;
+        }
+        
+        /* Synergy Score */
+        .synergy-score-section {
+            text-align: center;
+            padding: 40px;
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .synergy-label {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: #06b6d4;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .synergy-score {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 5rem;
+            background: linear-gradient(135deg, #fbbf24, #06b6d4, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+        
+        .synergy-percent {
+            font-size: 2rem;
+        }
+        
+        .synergy-rating {
+            margin-top: 15px;
+            font-size: 1.4rem;
+            color: #a78bfa;
+        }
+        
+        .synergy-desc {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: #9ca3af;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Circle Name Section */
+        .circle-name-section {
+            background: rgba(251, 191, 36, 0.1);
+            border: 2px solid rgba(251, 191, 36, 0.3);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .circle-name-label {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: #fbbf24;
+            margin-bottom: 15px;
+        }
+        
+        .circle-name {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            color: white;
+            text-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+            margin-bottom: 15px;
+        }
+        
+        .circle-meaning {
+            color: #9ca3af;
+            font-style: italic;
+        }
+        
+        .alt-names {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(251, 191, 36, 0.2);
+        }
+        
+        .alt-names-label {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 10px;
+        }
+        
+        .alt-names-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .alt-name {
+            padding: 8px 16px;
+            background: rgba(6, 182, 212, 0.15);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            color: #06b6d4;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .alt-name:hover {
+            background: rgba(6, 182, 212, 0.25);
+            transform: scale(1.05);
+        }
+        
+        /* Role Assignments */
+        .roles-section {
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .roles-section h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.6rem;
+            color: #06b6d4;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .role-card {
+            background: rgba(10, 10, 20, 0.6);
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        
+        .role-card:hover {
+            border-color: #fbbf24;
+            transform: translateY(-3px);
+        }
+        
+        .role-card.leader {
+            border-color: #FFD700;
+            background: rgba(255, 215, 0, 0.05);
+        }
+        
+        .role-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .role-icon {
+            font-size: 1.8rem;
+        }
+        
+        .role-info {
+            flex: 1;
+        }
+        
+        .member-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: #e0e0e0;
+        }
+        
+        .role-title {
+            font-size: 0.9rem;
+            color: #fbbf24;
+            font-weight: 600;
+        }
+        
+        .relationship-tag {
+            font-size: 0.8rem;
+            color: #a78bfa;
+            font-style: italic;
+        }
+        
+        .role-desc {
+            font-size: 0.9rem;
+            color: #9ca3af;
+            line-height: 1.5;
+        }
+        
+        .role-stats {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-tag {
+            padding: 4px 10px;
+            background: rgba(6, 182, 212, 0.15);
+            border-radius: 12px;
+            font-size: 0.75rem;
+            color: #06b6d4;
+        }
+        
+        /* Chemistry Breakdown */
+        .chemistry-section {
+            background: rgba(167, 139, 250, 0.05);
+            border: 2px solid rgba(167, 139, 250, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .chemistry-section h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.6rem;
+            color: #a78bfa;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .chemistry-pairs {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .chem-pair {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(10, 10, 20, 0.6);
+            border-radius: 12px;
+        }
+        
+        .chem-names {
+            min-width: 180px;
+            font-family: 'Cinzel', serif;
+            color: #e0e0e0;
+        }
+        
+        .chem-bar-container {
+            flex: 1;
+            height: 10px;
+            background: rgba(6, 182, 212, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .chem-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #fbbf24, #a78bfa);
+            border-radius: 5px;
+            transition: width 1s ease;
+        }
+        
+        .chem-percent {
+            min-width: 50px;
+            text-align: right;
+            font-family: 'Cinzel', serif;
+            color: #a78bfa;
+        }
+        
+        /* Gathering Forecast */
+        .gathering-section {
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .gathering-section h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.6rem;
+            color: #06b6d4;
+            margin-bottom: 20px;
+        }
+        
+        .gathering-date {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2rem;
+            color: #fbbf24;
+            margin-bottom: 15px;
+        }
+        
+        .gathering-analysis {
+            color: #9ca3af;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Group Dynamics Section */
+        .dynamics-section {
+            background: rgba(20, 20, 30, 0.7);
+            border: 2px solid rgba(251, 191, 36, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        .dynamics-section h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.5rem;
+            color: #fbbf24;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .dynamics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .dynamics-card {
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .dynamics-card h4 {
+            color: #a78bfa;
+            font-family: 'Cinzel', serif;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .dynamics-card p {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Relationship Forecast */
+        .forecast-section {
+            background: rgba(20, 20, 30, 0.7);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        .forecast-section h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.5rem;
+            color: #06b6d4;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .forecast-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .forecast-phase {
+            background: rgba(6, 182, 212, 0.1);
+            border-left: 4px solid #06b6d4;
+            padding: 15px 20px;
+            border-radius: 0 10px 10px 0;
+        }
+        .forecast-phase.highlight {
+            border-left-color: #fbbf24;
+            background: rgba(251, 191, 36, 0.1);
+        }
+        .phase-title {
+            color: #fbbf24;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .phase-desc {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Harmony Tips */
+        .harmony-section {
+            background: rgba(20, 20, 30, 0.7);
+            border: 2px solid rgba(167, 139, 250, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        .harmony-section h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.5rem;
+            color: #a78bfa;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .harmony-tips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .harmony-tip {
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+        }
+        .harmony-tip-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .harmony-tip-title {
+            color: #a78bfa;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        .harmony-tip-desc {
+            color: #9ca3af;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        
+        /* Share Section */
+        .share-section {
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .share-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: #06b6d4;
+            margin-bottom: 20px;
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .share-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .share-btn.facebook {
+            background: #4267B2;
+            color: #fff;
+        }
+        
+        .share-btn.twitter {
+            background: #1DA1F2;
+            color: #fff;
+        }
+        
+        .share-btn.copy {
+            background: rgba(6, 182, 212, 0.2);
+            color: #06b6d4;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        /* Actions */
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .action-btn {
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .action-btn.primary {
+            background: linear-gradient(135deg, #fbbf24 0%, #06b6d4 100%);
+            border: none;
+            color: #0a0a0f;
+        }
+        
+        .action-btn.secondary {
+            background: rgba(6, 182, 212, 0.15);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            color: #06b6d4;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Explore More Tools Section */
+        .explore-more-section {
+            background: rgba(20, 20, 30, 0.9);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            padding: 35px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .explore-more-section h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.6rem;
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+        .explore-subtitle {
+            color: #06b6d4;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+        }
+        .tool-card-mini {
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 15px;
+            padding: 20px 15px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .tool-card-mini:hover {
+            background: rgba(251, 191, 36, 0.15);
+            border-color: #fbbf24;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(251, 191, 36, 0.3);
+        }
+        .tool-icon {
+            font-size: 2rem;
+        }
+        .tool-name {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            color: #a78bfa;
+            font-weight: 600;
+        }
+        .tool-desc {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔮 Your Circle's Cosmic Reading</h1>
+            <p class="subtitle">The universe has revealed your group's destiny! ✨</p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <p class="progress-text">Complete! Your circle reading is ready ✨</p>
+        
+        <!-- Loading -->
+        <div class="loading" id="loading">
+            <h2 id="loadingTitle">✨ Analyzing Your Circle...</h2>
+            <div class="loading-bar">
+                <div class="loading-bar-fill" id="loadingBarFill"></div>
+            </div>
+            <p class="loading-text" id="loadingText">Reading birth dates...</p>
+            
+            <div class="teaser-reveal" id="teaserReveal">
+                <div class="teaser-icon">👀</div>
+                <p class="teaser-text" id="teaserText"></p>
+            </div>
+        </div>
+        
+        <!-- Results -->
+        <div class="results" id="results">
+            <!-- Synergy Score -->
+            <div class="synergy-score-section">
+                <div class="synergy-label">✨ Circle Synergy Score ✨</div>
+                <div class="synergy-score">
+                    <span id="synergyValue">87</span><span class="synergy-percent">%</span>
+                </div>
+                <div class="synergy-rating" id="synergyRating">🔮 LEGENDARY CHEMISTRY</div>
+                <p class="synergy-desc" id="synergyDesc">Your circle's energy is exceptionally aligned. This group was destined to be together!</p>
+                
+                <div class="rarity-badge legendary" id="rarityBadge">⭐ TOP 3% OF ALL CIRCLES</div>
+            </div>
+
+            <!-- Social Proof -->
+            <div class="social-proof" id="socialProof">
+                <strong id="circlesBuiltCount">32,847</strong> circles have been analyzed • Only <strong id="topPercentage">12%</strong> score this high!
+            </div>
+
+            <!-- Archetype Comparison -->
+            <div class="archetype-comparison" id="archetypeComparison">
+                <h3>🌟 Your Circle Archetype</h3>
+                <div class="archetype-match">
+                    <div class="your-circle" id="yourCircleName">YOUR CIRCLE</div>
+                    <div class="match-equals">≈</div>
+                    <div class="archetype-name" id="archetypeName">The Harmonious Family</div>
+                </div>
+                <p class="match-percent"><span id="matchPercent">89</span>% archetype alignment!</p>
+                <p id="matchReason" style="color: #9ca3af; font-size: 0.9rem; margin-top: 10px;"></p>
+            </div>
+            
+            <!-- Circle Name -->
+            <div class="circle-name-section">
+                <div class="circle-name-label">Your Cosmic Circle Name ✨</div>
+                <div class="circle-name" id="circleName">THE GUARDIANS</div>
+                <p class="circle-meaning" id="circleMeaning">A bond forged in celestial alignment</p>
+                
+                <div class="alt-names">
+                    <p class="alt-names-label">Other mystical name options:</p>
+                    <div class="alt-names-list" id="altNames">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Role Assignments -->
+            <div class="roles-section">
+                <h2>🎭 Natural Circle Roles</h2>
+                <div class="roles-grid" id="rolesGrid">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+            
+            <!-- Chemistry Breakdown -->
+            <div class="chemistry-section">
+                <h2>💜 Circle Chemistry Breakdown</h2>
+                <div class="chemistry-pairs" id="chemistryPairs">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+
+            <!-- Group Dynamics Analysis -->
+            <div class="dynamics-section">
+                <h2>🔥 Circle Dynamics Analysis</h2>
+                <div class="dynamics-content" id="dynamicsContent">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+
+            <!-- Relationship Forecast -->
+            <div class="forecast-section">
+                <h2>📈 Relationship Forecast</h2>
+                <div class="forecast-content" id="forecastContent">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+
+            <!-- Harmony Tips -->
+            <div class="harmony-section">
+                <h2>💫 Harmony Enhancement Tips</h2>
+                <div class="harmony-content" id="harmonyContent">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+            
+            <!-- Gathering Forecast -->
+            <div class="gathering-section" id="gatheringSection">
+                <h2>📅 Gathering Day Forecast</h2>
+                <div class="gathering-date" id="gatheringDate">January 31, 2026</div>
+                <p class="gathering-analysis" id="gatheringAnalysis">This date carries powerful energy for meaningful connections and heartfelt moments!</p>
+            </div>
+            
+            <!-- Share Section -->
+            <div class="share-section">
+                <h2>Share Your Circle Reading! 💜</h2>
+                <div class="share-buttons">
+                    <button class="share-btn twitter" onclick="shareToTwitter()">
+                        𝕏 Share on X
+                    </button>
+                    <button class="share-btn facebook" onclick="shareToFacebook()">
+                        📘 Facebook
+                    </button>
+                    <button class="share-btn copy" onclick="copyResults()">
+                        📋 Copy Results
+                    </button>
+                </div>
+            </div>
+            
+            <div class="actions">
+                <a href="group-builder.html" class="action-btn secondary">Build New Circle</a>
+                <a href="tools_index.html" class="action-btn primary">Explore More Tools ✨</a>
+            </div>
+
+            <!-- Explore More Tools -->
+            <div class="explore-more-section">
+                <h2>✨ Discover More Cosmic Insights!</h2>
+                <p class="explore-subtitle">Your circle reading is just the beginning... 💫</p>
+                <div class="tools-grid">
+                    <a href="compatibility.html" class="tool-card-mini">
+                        <span class="tool-icon">💜</span>
+                        <span class="tool-name">Compatibility</span>
+                        <span class="tool-desc">Deep dive into any two people's chemistry!</span>
+                    </a>
+                    <a href="life-path-calculator.html" class="tool-card-mini">
+                        <span class="tool-icon">✨</span>
+                        <span class="tool-name">Life Path</span>
+                        <span class="tool-desc">Discover your soul's journey!</span>
+                    </a>
+                    <a href="zodiac-calculator.html" class="tool-card-mini">
+                        <span class="tool-icon">⭐</span>
+                        <span class="tool-name">Zodiac</span>
+                        <span class="tool-desc">Explore your cosmic blueprint!</span>
+                    </a>
+                    <a href="moon-sign-reading.html" class="tool-card-mini">
+                        <span class="tool-icon">🌙</span>
+                        <span class="tool-name">Moon Sign</span>
+                        <span class="tool-desc">Your emotional inner world!</span>
+                    </a>
+                    <a href="rising-sign-reading.html" class="tool-card-mini">
+                        <span class="tool-icon">🌅</span>
+                        <span class="tool-name">Rising Sign</span>
+                        <span class="tool-desc">How the world sees you!</span>
+                    </a>
+                    <a href="yes-no-oracle.html" class="tool-card-mini">
+                        <span class="tool-icon">🔮</span>
+                        <span class="tool-name">Yes/No Oracle</span>
+                        <span class="tool-desc">Ask the universe anything!</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Get data from session storage
+        const members = JSON.parse(sessionStorage.getItem('circleBuilderMembers') || '[]');
+        const gatheringDate = sessionStorage.getItem('circleBuilderDate') || '';
+        const dateType = sessionStorage.getItem('circleBuilderDateType') || 'skip';
+        
+        // Redirect if no members
+        if (members.length === 0) {
+            window.location.href = 'group-builder.html';
+        }
+        
+        // Calculate all results
+        function calculateResults() {
+            // Calculate life paths for all members
+            members.forEach(m => {
+                m.lifePath = calculateLifePath(m.dob);
+                m.destinyNumber = calculateDestinyNumber(m.name);
+            });
+            
+            const synergy = calculateSynergy();
+            const roles = assignRoles();
+            const names = generateCircleNames();
+            const chemistry = calculateChemistry();
+            const gatheringAnalysis = analyzeGatheringDate();
+            
+            return { synergy, roles, names, chemistry, gatheringAnalysis };
+        }
+        
+        function calculateLifePath(dob) {
+            const digits = dob.replace(/-/g, '').split('').map(Number);
+            let sum = digits.reduce((a, b) => a + b, 0);
+            return reduceToSingle(sum);
+        }
+        
+        function calculateDestinyNumber(name) {
+            const values = { a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:1,k:2,l:3,m:4,n:5,o:6,p:7,q:8,r:9,s:1,t:2,u:3,v:4,w:5,x:6,y:7,z:8 };
+            const letters = name.toLowerCase().replace(/[^a-z]/g, '');
+            let sum = 0;
+            for (let char of letters) {
+                sum += values[char] || 0;
+            }
+            return reduceToSingle(sum);
+        }
+        
+        function reduceToSingle(num) {
+            while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
+                num = String(num).split('').reduce((a, b) => a + parseInt(b), 0);
+            }
+            return num;
+        }
+        
+        function calculateSynergy() {
+            let totalCompat = 0;
+            let pairs = 0;
+            
+            for (let i = 0; i < members.length; i++) {
+                for (let j = i + 1; j < members.length; j++) {
+                    const compat = getPairCompatibility(members[i].lifePath, members[j].lifePath);
+                    totalCompat += compat;
+                    pairs++;
+                }
+            }
+            
+            let avgCompat = pairs > 0 ? totalCompat / pairs : 70;
+            
+            // Bonus for master numbers
+            const masterCount = members.filter(m => [11, 22, 33].includes(m.lifePath)).length;
+            avgCompat += masterCount * 3;
+            
+            // Bonus for diversity
+            const uniqueNumbers = new Set(members.map(m => m.lifePath)).size;
+            avgCompat += (uniqueNumbers / members.length) * 10;
+            
+            return Math.min(99, Math.max(50, Math.round(avgCompat)));
+        }
+        
+        function getPairCompatibility(a, b) {
+            if (a === b) return 85;
+            
+            const perfect = [[1,5], [2,4], [3,6], [1,9], [2,8], [3,9], [4,8], [5,7], [6,9]];
+            if (perfect.some(p => (p[0]===a && p[1]===b) || (p[0]===b && p[1]===a))) return 90;
+            
+            const good = [[1,3], [2,6], [4,6], [5,9], [7,9], [1,7], [3,5]];
+            if (good.some(p => (p[0]===a && p[1]===b) || (p[0]===b && p[1]===a))) return 80;
+            
+            return 70;
+        }
+        
+        function assignRoles() {
+            const rolePool = [
+                { role: 'The Leader', icon: '👑', traits: ['decisive', 'visionary', 'responsible'] },
+                { role: 'The Nurturer', icon: '💝', traits: ['caring', 'supportive', 'empathetic'] },
+                { role: 'The Entertainer', icon: '🎭', traits: ['fun', 'charismatic', 'energetic'] },
+                { role: 'The Sage', icon: '🦉', traits: ['wise', 'thoughtful', 'calm'] },
+                { role: 'The Peacemaker', icon: '☮️', traits: ['diplomatic', 'patient', 'harmonizing'] },
+                { role: 'The Protector', icon: '🛡️', traits: ['loyal', 'strong', 'dependable'] },
+                { role: 'The Catalyst', icon: '⚡', traits: ['dynamic', 'spontaneous', 'inspiring'] },
+                { role: 'The Heart', icon: '💜', traits: ['loving', 'intuitive', 'connected'] },
+                { role: 'The Dreamer', icon: '✨', traits: ['creative', 'imaginative', 'hopeful'] },
+                { role: 'The Anchor', icon: '⚓', traits: ['stable', 'reliable', 'grounded'] },
+                { role: 'The Bridge', icon: '🌉', traits: ['connecting', 'understanding', 'flexible'] },
+                { role: 'The Spark', icon: '🔥', traits: ['passionate', 'motivating', 'warm'] }
+            ];
+            
+            const lifePathRoles = {
+                1: ['The Leader', 'The Catalyst'],
+                2: ['The Peacemaker', 'The Nurturer'],
+                3: ['The Entertainer', 'The Spark'],
+                4: ['The Anchor', 'The Protector'],
+                5: ['The Catalyst', 'The Bridge'],
+                6: ['The Nurturer', 'The Heart'],
+                7: ['The Sage', 'The Dreamer'],
+                8: ['The Leader', 'The Protector'],
+                9: ['The Heart', 'The Bridge'],
+                11: ['The Sage', 'The Dreamer'],
+                22: ['The Leader', 'The Anchor'],
+                33: ['The Nurturer', 'The Heart']
+            };
+            
+            const assignedRoles = [];
+            const usedRoles = new Set();
+            
+            // Sort by life path for role assignment
+            const sorted = [...members].sort((a, b) => {
+                const priority = { 1: 1, 8: 2, 11: 3, 22: 4 };
+                return (priority[a.lifePath] || 99) - (priority[b.lifePath] || 99);
+            });
+            
+            sorted.forEach((member, idx) => {
+                let bestRole = lifePathRoles[member.lifePath]?.[0] || 'The Heart';
+                
+                if (idx === 0 && [1, 8, 11, 22].includes(member.lifePath)) {
+                    bestRole = 'The Leader';
+                }
+                
+                let roleData = rolePool.find(r => r.role === bestRole && !usedRoles.has(r.role));
+                if (!roleData) {
+                    roleData = rolePool.find(r => !usedRoles.has(r.role)) || rolePool[rolePool.length - 1];
+                }
+                
+                usedRoles.add(roleData.role);
+                
+                const descriptions = {
+                    1: `Natural born leader with confident vision. ${member.name} naturally guides the group forward.`,
+                    2: `A gentle soul who brings peace and balance. ${member.name} helps resolve conflicts with grace.`,
+                    3: `The life of every gathering! ${member.name}'s humor and warmth light up the circle.`,
+                    4: `The reliable foundation everyone counts on. ${member.name}'s dedication keeps the group grounded.`,
+                    5: `Dynamic energy that keeps things exciting. ${member.name} brings adventure to the group.`,
+                    6: `The heart of the family/group. ${member.name}'s love and care nurtures everyone.`,
+                    7: `A deep thinker with spiritual wisdom. ${member.name} offers insight and reflection.`,
+                    8: `Powerful presence with natural authority. ${member.name} helps the group achieve goals.`,
+                    9: `A compassionate soul with universal love. ${member.name} sees the best in everyone.`,
+                    11: `Intuitive and spiritually gifted. ${member.name} senses what the group needs.`,
+                    22: `A master builder of family/group bonds. ${member.name} creates lasting connections.`,
+                    33: `A master nurturer with healing energy. ${member.name} is a blessing to the circle.`
+                };
+                
+                assignedRoles.push({
+                    member: member.name,
+                    role: roleData.role,
+                    icon: roleData.icon,
+                    traits: roleData.traits,
+                    description: descriptions[member.lifePath] || `A vital member bringing unique energy to the circle.`,
+                    lifePath: member.lifePath,
+                    isLeader: roleData.role === 'The Leader',
+                    relationship: member.relationship || ''
+                });
+            });
+            
+            return members.map(m => assignedRoles.find(r => r.member === m.name));
+        }
+        
+        function generateCircleNames() {
+            const memberCount = members.length;
+            const initials = members.map(m => m.name[0].toUpperCase()).join('');
+            const totalLifePath = members.reduce((sum, m) => sum + m.lifePath, 0);
+            const circleNumber = reduceToSingle(totalLifePath);
+            
+            const mysticalNames = [
+                'The Guardians', 'The Chosen', 'The Luminaries', 
+                'The Kindred', 'The Circle', 'The Alliance',
+                'The Constellation', 'The Cosmos', 'The Harmony'
+            ];
+            
+            const names = [
+                {
+                    name: `THE ${circleNumber >= 7 ? 'LUMINARIES' : 'GUARDIANS'}`,
+                    meaning: `United under ${circleNumber} energy - destined to protect and uplift each other`
+                },
+                {
+                    name: `CIRCLE OF ${memberCount}`,
+                    meaning: `${memberCount} souls bound by cosmic threads`
+                },
+                {
+                    name: initials.length <= 6 ? `THE ${initials}` : `THE ${initials.slice(0, 4)}S`,
+                    meaning: `Your initials form a powerful symbol of unity`
+                },
+                {
+                    name: 'THE KINDRED',
+                    meaning: 'Souls who found each other across lifetimes'
+                },
+                {
+                    name: 'THE CONSTELLATION',
+                    meaning: 'Like stars forming a pattern in the cosmic sky'
+                }
+            ];
+            
+            return names;
+        }
+        
+        function calculateChemistry() {
+            const pairs = [];
+            
+            for (let i = 0; i < members.length; i++) {
+                for (let j = i + 1; j < members.length; j++) {
+                    const compat = getPairCompatibility(members[i].lifePath, members[j].lifePath);
+                    pairs.push({
+                        member1: members[i].name.split(' ')[0],
+                        member2: members[j].name.split(' ')[0],
+                        percent: compat
+                    });
+                }
+            }
+            
+            pairs.sort((a, b) => b.percent - a.percent);
+            return pairs.slice(0, 8);
+        }
+        
+        function analyzeGatheringDate() {
+            if (!gatheringDate || dateType === 'skip') {
+                return { formatted: '', dayNumber: 0, analysis: '' };
+            }
+            
+            const date = new Date(gatheringDate);
+            const formatted = date.toLocaleDateString('en-US', { 
+                weekday: 'long',
+                month: 'long', 
+                day: 'numeric', 
+                year: 'numeric' 
+            });
+            
+            const daySum = date.getDate() + (date.getMonth() + 1) + date.getFullYear();
+            const dayNumber = reduceToSingle(daySum);
+            
+            const analyses = {
+                1: `This date vibrates with ${dayNumber} energy - new beginnings and fresh starts! Perfect for initiating new family traditions or starting a new chapter together.`,
+                2: `Carrying ${dayNumber} partnership energy, this date is ideal for heartfelt conversations and deepening bonds. Expect meaningful one-on-one moments.`,
+                3: `Creative ${dayNumber} energy makes this date perfect for laughter, stories, and creating joyful memories together.`,
+                4: `The ${dayNumber} foundation energy supports building lasting traditions. A great day for establishing family rituals.`,
+                5: `Dynamic ${dayNumber} energy brings adventure! Plan something exciting or try a new activity together.`,
+                6: `Harmonious ${dayNumber} energy is perfect for nurturing relationships and sharing love. Cook together, share stories.`,
+                7: `The mystical ${dayNumber} energy supports deeper spiritual connections. Perfect for reflective conversations.`,
+                8: `Powerful ${dayNumber} energy supports accomplishing goals together. Great for planning and manifesting as a group.`,
+                9: `Universal ${dayNumber} energy - this gathering has the potential to be truly memorable and meaningful.`,
+                11: `Master number ${dayNumber} energy brings spiritual significance to your gathering. Profound connections await.`,
+                22: `Master builder ${dayNumber} energy - this gathering could establish something that lasts for generations.`,
+                33: `Rare master ${dayNumber} energy. This gathering carries healing and transformative potential.`
+            };
+            
+            return {
+                formatted,
+                dayNumber,
+                analysis: analyses[dayNumber] || analyses[reduceToSingle(dayNumber)]
+            };
+        }
+        
+        // Render results
+        function renderResults(data) {
+            // Synergy score
+            document.getElementById('synergyValue').textContent = data.synergy;
+            
+            const ratings = [
+                [90, '🔮 LEGENDARY CHEMISTRY', 'Your circle\'s energy is exceptionally rare. You were truly destined to be together!'],
+                [80, '✨ EXTRAORDINARY BOND', 'The universe blessed this combination beautifully. Cherish these connections!'],
+                [70, '💜 HARMONIOUS CIRCLE', 'Strong chemistry with beautiful potential for even deeper bonds!'],
+                [60, '🌟 GROWING CONNECTION', 'Your unique differences create interesting and enriching dynamics!'],
+                [0, '💫 EVOLVING BOND', 'Every great circle started somewhere. Your journey together is just beginning!']
+            ];
+            
+            const rating = ratings.find(r => data.synergy >= r[0]);
+            document.getElementById('synergyRating').textContent = rating[1];
+            document.getElementById('synergyDesc').textContent = rating[2];
+            
+            // Circle name
+            document.getElementById('circleName').textContent = data.names[0].name;
+            document.getElementById('circleMeaning').textContent = data.names[0].meaning;
+            
+            document.getElementById('altNames').innerHTML = data.names.slice(1).map(n => 
+                `<span class="alt-name" onclick="selectName('${n.name}', '${n.meaning}')">${n.name}</span>`
+            ).join('');
+            
+            // Roles
+            document.getElementById('rolesGrid').innerHTML = data.roles.map(r => `
+                <div class="role-card ${r.isLeader ? 'leader' : ''}">
+                    <div class="role-header">
+                        <span class="role-icon">${r.icon}</span>
+                        <div class="role-info">
+                            <div class="member-name">${r.member}</div>
+                            <div class="role-title">${r.role}</div>
+                            ${r.relationship ? `<div class="relationship-tag">${r.relationship}</div>` : ''}
+                        </div>
+                    </div>
+                    <p class="role-desc">${r.description}</p>
+                    <div class="role-stats">
+                        ${r.traits.map(t => `<span class="stat-tag">${t}</span>`).join('')}
+                        <span class="stat-tag">LP ${r.lifePath}</span>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Chemistry pairs
+            document.getElementById('chemistryPairs').innerHTML = data.chemistry.map(c => `
+                <div class="chem-pair">
+                    <div class="chem-names">${c.member1} × ${c.member2}</div>
+                    <div class="chem-bar-container">
+                        <div class="chem-bar" style="width: ${c.percent}%"></div>
+                    </div>
+                    <div class="chem-percent">${c.percent}%</div>
+                </div>
+            `).join('');
+
+            // Group Dynamics
+            renderDynamics(data);
+            
+            // Relationship Forecast
+            renderForecast(data);
+            
+            // Harmony Tips
+            renderHarmonyTips(data);
+            
+            // Gathering
+            if (data.gatheringAnalysis.formatted) {
+                document.getElementById('gatheringDate').textContent = data.gatheringAnalysis.formatted;
+                document.getElementById('gatheringAnalysis').textContent = data.gatheringAnalysis.analysis;
+            } else {
+                document.getElementById('gatheringSection').style.display = 'none';
+            }
+        }
+
+        function renderDynamics(data) {
+            const memberCount = members.length;
+            const avgLifePath = Math.round(members.reduce((sum, m) => sum + m.lifePath, 0) / memberCount);
+            const hasNurturer = data.roles.some(r => r.role.includes('Nurturer') || r.role.includes('Heart'));
+            const hasLeader = data.roles.some(r => r.role.includes('Leader'));
+            
+            const dynamicsHTML = `
+                <div class="dynamics-grid">
+                    <div class="dynamics-card">
+                        <h4>⚡ Circle Energy Type</h4>
+                        <p>${avgLifePath <= 4 ? 'Your circle has STABLE, grounding energy. You provide each other with security, consistency, and reliable support through life\'s ups and downs.' : avgLifePath <= 7 ? 'Your circle radiates DYNAMIC energy! Expect lively gatherings, deep conversations, and constantly evolving relationships.' : 'TRANSFORMATIVE energy detected! Your circle is here to help each member grow and reach their highest potential.'}</p>
+                    </div>
+                    <div class="dynamics-card">
+                        <h4>🎭 Communication Style</h4>
+                        <p>${data.synergy >= 85 ? 'Your circle communicates with remarkable depth and understanding. You often know what each other means before words are spoken!' : data.synergy >= 70 ? 'Open and honest communication flows naturally in your circle. You create safe spaces for sharing.' : 'Your circle is learning each other\'s communication languages. Patience and active listening will strengthen bonds.'}</p>
+                    </div>
+                    <div class="dynamics-card">
+                        <h4>💪 Support Balance</h4>
+                        <p>${hasNurturer && hasLeader ? 'BALANCED circle! You have both nurturing care AND decisive guidance. This combination creates a truly supportive environment.' : hasNurturer ? 'NURTURING-focused circle! Your emotional support network is strong. Great for healing and comfort.' : 'ACTION-oriented circle! You motivate each other to achieve goals and face challenges together!'}</p>
+                    </div>
+                    <div class="dynamics-card">
+                        <h4>🌍 Gathering Vibe</h4>
+                        <p>${members.some(m => m.lifePath === 3) ? 'Your gatherings are filled with LAUGHTER and joy! The entertainer energy ensures no one ever leaves without smiling.' : memberCount >= 6 ? 'Large circle energy means VARIETY - there\'s always something interesting happening when you get together!' : 'Intimate circle energy means DEPTH - your gatherings focus on meaningful quality time.'}</p>
+                    </div>
+                </div>
+            `;
+            document.getElementById('dynamicsContent').innerHTML = dynamicsHTML;
+        }
+
+        function renderForecast(data) {
+            const masterNumbers = members.filter(m => [11, 22, 33].includes(m.lifePath)).length;
+            const highEnergy = members.filter(m => m.lifePath >= 7).length;
+            
+            const forecastHTML = `
+                <div class="forecast-timeline">
+                    <div class="forecast-phase highlight">
+                        <div class="phase-title">🌱 Present Phase</div>
+                        <div class="phase-desc">${data.synergy >= 80 ? 'Your circle is in a beautiful phase of harmony and connection. The bonds between you are strengthening with each interaction. Enjoy this golden period!' : 'Your circle is in a growth phase. Each gathering deepens understanding and builds trust. The foundation is being laid for something beautiful.'}</div>
+                    </div>
+                    <div class="forecast-phase">
+                        <div class="phase-title">📈 Coming Months</div>
+                        <div class="phase-desc">${masterNumbers > 0 ? 'Master number energy in your circle suggests profound developments ahead. Expect meaningful conversations, shared revelations, and spiritual growth together.' : 'Expect gradual deepening of bonds. Small gestures of care will have big impacts. Consider creating new traditions together.'}</div>
+                    </div>
+                    <div class="forecast-phase">
+                        <div class="phase-title">✨ Year Ahead</div>
+                        <div class="phase-desc">${highEnergy >= 2 ? 'Transformative experiences await your circle! Major life events may bring you even closer. Your support network will prove invaluable during challenges and celebrations alike.' : 'A year of gentle growth and steadfast support. Your circle provides the stability needed to navigate life\'s journey.'}</div>
+                    </div>
+                    <div class="forecast-phase">
+                        <div class="phase-title">🔮 Long-term Legacy</div>
+                        <div class="phase-desc">${members.length >= 5 ? 'Your circle has the makings of a lifelong support system. The connections formed here may span generations, creating a legacy of love and mutual care.' : 'Deep, lasting bonds are your circle\'s destiny. These relationships will be pillars of support through all of life\'s seasons.'}</div>
+                    </div>
+                </div>
+            `;
+            document.getElementById('forecastContent').innerHTML = forecastHTML;
+        }
+
+        function renderHarmonyTips(data) {
+            const harmonyHTML = `
+                <div class="harmony-tips">
+                    <div class="harmony-tip">
+                        <div class="harmony-tip-icon">📅</div>
+                        <div class="harmony-tip-title">Regular Rituals</div>
+                        <div class="harmony-tip-desc">${data.synergy >= 80 ? 'Schedule regular gatherings - your chemistry thrives on connection! Monthly meetups will keep the energy flowing.' : 'Start small with regular check-ins. Consistency builds the trust your circle needs to flourish.'}</div>
+                    </div>
+                    <div class="harmony-tip">
+                        <div class="harmony-tip-icon">💬</div>
+                        <div class="harmony-tip-title">Communication</div>
+                        <div class="harmony-tip-desc">${members.some(m => m.lifePath === 2) ? 'Your circle has a natural diplomat! Let them help navigate any conflicts with grace.' : 'Practice active listening. Everyone in your circle has wisdom to share - create space for all voices.'}</div>
+                    </div>
+                    <div class="harmony-tip">
+                        <div class="harmony-tip-icon">🎉</div>
+                        <div class="harmony-tip-title">Celebrations</div>
+                        <div class="harmony-tip-desc">${members.some(m => m.lifePath === 3) ? 'Your entertainer energy loves celebrations! Make a big deal of birthdays and achievements.' : 'Mark milestones together. Shared celebrations create cherished memories and strengthen bonds.'}</div>
+                    </div>
+                    <div class="harmony-tip">
+                        <div class="harmony-tip-icon">🤝</div>
+                        <div class="harmony-tip-title">Support Style</div>
+                        <div class="harmony-tip-desc">${data.synergy >= 85 ? 'Your circle intuitively knows how to support each other. Trust these instincts!' : 'Learn each person\'s love language. Some need words, others need actions - honor the differences.'}</div>
+                    </div>
+                </div>
+            `;
+            document.getElementById('harmonyContent').innerHTML = harmonyHTML;
+        }
+        
+        function selectName(name, meaning) {
+            document.getElementById('circleName').textContent = name;
+            document.getElementById('circleMeaning').textContent = meaning;
+        }
+        
+        // Share functions
+        function shareToTwitter() {
+            const text = `Just discovered my circle's cosmic chemistry! ${document.getElementById('circleName').textContent} with ${document.getElementById('synergyValue').textContent}% synergy! ✨ Try it at quantummerlin.com/classic/group-builder.html`;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank');
+        }
+        
+        function shareToFacebook() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://quantummerlin.com/classic/group-builder.html')}`, '_blank');
+        }
+        
+        function copyResults() {
+            const text = `
+🔮 MY CIRCLE: ${document.getElementById('circleName').textContent}
+✨ Synergy Score: ${document.getElementById('synergyValue').textContent}%
+
+Members:
+${members.map(m => `• ${m.name}${m.relationship ? ` (${m.relationship})` : ''}`).join('\n')}
+
+Discover your circle's chemistry: quantummerlin.com/classic/group-builder.html
+            `.trim();
+            
+            navigator.clipboard.writeText(text);
+            alert('Results copied! Share with your circle! 💜');
+        }
+
+        // Circle archetypes for comparison
+        const circleArchetypes = [
+            { name: 'The Harmonious Family', traits: [2, 6, 9], size: 4, vibe: 'nurturing bonds', reason: 'Your nurturing energy and harmony match the classic family archetype' },
+            { name: 'The Adventure Squad', traits: [1, 5, 3], size: 4, vibe: 'exciting journeys', reason: 'Your dynamic energy mirrors the adventurous friend group archetype' },
+            { name: 'The Wisdom Council', traits: [7, 11, 9], size: 5, vibe: 'deep insight', reason: 'Your combined wisdom radiates the sage council archetype' },
+            { name: 'The Support Circle', traits: [2, 4, 6], size: 6, vibe: 'reliable care', reason: 'Your dependable energy embodies the support network archetype' },
+            { name: 'The Creative Collective', traits: [3, 5, 7], size: 4, vibe: 'artistic expression', reason: 'Your creative spirits form the artistic ensemble archetype' },
+            { name: 'The Power Alliance', traits: [1, 8, 22], size: 3, vibe: 'achievement focus', reason: 'Your ambitious energy resonates with the power trio archetype' },
+            { name: 'The Healing Circle', traits: [6, 9, 33], size: 5, vibe: 'emotional support', reason: 'Your nurturing presence creates the healing support archetype' },
+            { name: 'The Trailblazers', traits: [1, 5, 8], size: 4, vibe: 'bold leadership', reason: 'Your pioneering spirits form the leadership council archetype' }
+        ];
+
+        const loadingStages = [
+            { text: 'Reading birth dates...', percent: 15, delay: 0 },
+            { text: 'Calculating life path numbers...', percent: 30, delay: 800 },
+            { text: 'Analyzing relationship dynamics...', percent: 45, delay: 1600 },
+            { text: 'Something beautiful is emerging... 👀', percent: 55, delay: 2400, isTeaser: true },
+            { text: 'Comparing to cosmic archetypes...', percent: 70, delay: 3200 },
+            { text: 'Your circle is special... calculating how unique...', percent: 85, delay: 4000, isTeaser: true },
+            { text: 'Finalizing your reading ✨', percent: 100, delay: 4800 }
+        ];
+
+        function findArchetypeMatch(synergy) {
+            const memberLifePaths = members.map(m => m.lifePath);
+            const memberCount = members.length;
+            
+            let bestMatch = circleArchetypes[0];
+            let bestScore = 0;
+            
+            circleArchetypes.forEach(archetype => {
+                let score = 0;
+                archetype.traits.forEach(trait => {
+                    if (memberLifePaths.includes(trait)) score += 20;
+                });
+                const sizeDiff = Math.abs(archetype.size - memberCount);
+                score += Math.max(0, 30 - sizeDiff * 5);
+                score += synergy * 0.3;
+                
+                if (score > bestScore) {
+                    bestScore = score;
+                    bestMatch = archetype;
+                }
+            });
+            
+            const matchPercent = Math.min(97, Math.max(75, Math.round(bestScore * 0.8)));
+            return { archetype: bestMatch, percent: matchPercent };
+        }
+
+        function calculateRarity(synergy) {
+            if (synergy >= 90) return { badge: 'legendary', text: '⭐ TOP 3% OF ALL CIRCLES', percent: 3 };
+            if (synergy >= 85) return { badge: 'legendary', text: '🌟 TOP 7% OF ALL CIRCLES', percent: 7 };
+            if (synergy >= 80) return { badge: 'epic', text: '💜 TOP 12% OF ALL CIRCLES', percent: 12 };
+            if (synergy >= 75) return { badge: 'epic', text: '✨ TOP 18% OF ALL CIRCLES', percent: 18 };
+            if (synergy >= 70) return { badge: 'rare', text: '🔮 TOP 25% OF ALL CIRCLES', percent: 25 };
+            return { badge: 'rare', text: '💫 UNIQUE ENERGY DETECTED', percent: 35 };
+        }
+
+        function generateSocialProof() {
+            const baseCount = 32000 + Math.floor(Math.random() * 3000);
+            return { total: baseCount.toLocaleString() };
+        }
+
+        function runProgressiveLoading(data) {
+            const textEl = document.getElementById('loadingText');
+            const barEl = document.getElementById('loadingBarFill');
+            const teaserEl = document.getElementById('teaserReveal');
+            const teaserTextEl = document.getElementById('teaserText');
+
+            const teasers = [
+                `Your circle has ${members.filter(m => [11,22,33].includes(m.lifePath)).length > 0 ? 'MASTER NUMBER energy' : 'beautiful synergy patterns'}! ✨`,
+                `Only ${calculateRarity(data.synergy).percent}% of circles have this energy combination...`
+            ];
+
+            let teaserIndex = 0;
+            loadingStages.forEach((stage) => {
+                setTimeout(() => {
+                    textEl.textContent = stage.text;
+                    barEl.style.width = stage.percent + '%';
+                    barEl.style.transition = 'width 0.5s ease-out';
+                    
+                    if (stage.isTeaser && teaserIndex < teasers.length) {
+                        teaserTextEl.textContent = teasers[teaserIndex];
+                        teaserEl.classList.add('show');
+                        teaserIndex++;
+                    }
+                }, stage.delay);
+            });
+        }
+
+        function renderPsychologicalElements(data) {
+            const rarity = calculateRarity(data.synergy);
+            const rarityEl = document.getElementById('rarityBadge');
+            rarityEl.textContent = rarity.text;
+            rarityEl.className = 'rarity-badge ' + rarity.badge;
+
+            const social = generateSocialProof();
+            document.getElementById('circlesBuiltCount').textContent = social.total;
+            document.getElementById('topPercentage').textContent = rarity.percent + '%';
+
+            const match = findArchetypeMatch(data.synergy);
+            document.getElementById('yourCircleName').textContent = data.names[0].name;
+            document.getElementById('archetypeName').textContent = match.archetype.name;
+            document.getElementById('matchPercent').textContent = match.percent;
+            document.getElementById('matchReason').textContent = match.archetype.reason;
+        }
+        
+        // Initialize
+        const data = calculateResults();
+        runProgressiveLoading(data);
+        
+        setTimeout(() => {
+            renderResults(data);
+            renderPsychologicalElements(data);
+            
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('results').classList.add('show');
+        }, 5500);
+    </script>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="feedback-section">
+            <p class="feedback-text">🛠️ Found an issue or have a suggestion?</p>
+            <a href="mailto:fixit@quantummerlin.com?subject=Circle%20Builder%20Feedback" class="footer-feedback-btn">📧 fixit@quantummerlin.com</a>
+        </div>
+        <div class="legal-links">
+            <a href="terms.html">Terms of Service</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 Quantum Merlin ✨</p>
+        <div class="coffee-section">
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="coffee-btn">☕ Buy Us a Coffee</a>
+        </div>
+    </footer>
+    <style>
+        .legal-footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(6, 182, 212, 0.2);
+            background: rgba(10, 10, 20, 0.8);
+        }
+        .feedback-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(6, 182, 212, 0.15);
+        }
+        .feedback-text {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .footer-feedback-btn {
+            display: inline-block;
+            color: #fbbf24;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            padding: 10px 20px;
+            border: 1px solid rgba(251, 191, 36, 0.4);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .footer-feedback-btn:hover {
+            background: rgba(251, 191, 36, 0.15);
+            border-color: #fbbf24;
+            transform: translateY(-2px);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .legal-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .legal-links a:hover {
+            color: #06b6d4;
+        }
+        .legal-links .separator {
+            color: rgba(6, 182, 212, 0.4);
+        }
+        .copyright {
+            color: #a78bfa;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .coffee-section {
+            padding-top: 15px;
+            border-top: 1px solid rgba(6, 182, 212, 0.15);
+        }
+        .coffee-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #06b6d4 0%, #f59e0b 100%);
+            color: #0a0a0f;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .coffee-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(6, 182, 212, 0.4);
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bf5af2">
+    <title>Add Your Circle | Circle Builder ✨</title>
+    <meta name="description" content="Add members to your circle! Enter names and birthdays to calculate your group's cosmic chemistry and natural roles. 🔮✨">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="RetroMerlin.jpg">
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0a0a0f;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fbbf24 0%, #06b6d4 50%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #06b6d4;
+            font-style: italic;
+        }
+        
+        .progress-bar {
+            background: rgba(6, 182, 212, 0.2);
+            border-radius: 10px;
+            height: 8px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #fbbf24, #06b6d4, #a78bfa);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+        
+        .progress-text {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .members-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .member-card {
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+        
+        .member-card:hover {
+            border-color: #fbbf24;
+            box-shadow: 0 5px 25px rgba(251, 191, 36, 0.2);
+        }
+        
+        .member-card.completed {
+            border-color: #06b6d4;
+            background: rgba(6, 182, 212, 0.05);
+        }
+        
+        .member-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .member-number {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.3rem;
+            color: #fbbf24;
+        }
+        
+        .member-status {
+            font-size: 0.85rem;
+            padding: 5px 12px;
+            border-radius: 15px;
+            background: rgba(6, 182, 212, 0.2);
+            color: #06b6d4;
+        }
+        
+        .member-status.done {
+            background: rgba(34, 211, 238, 0.2);
+            color: #22d3ee;
+        }
+        
+        .input-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 600px) {
+            .input-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        
+        .input-group label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            color: #06b6d4;
+            font-weight: 600;
+        }
+        
+        .input-group input {
+            padding: 12px 15px;
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: rgba(10, 10, 20, 0.8);
+            color: #e0e0e0;
+            transition: all 0.3s;
+        }
+        
+        .input-group input:focus {
+            outline: none;
+            border-color: #fbbf24;
+            box-shadow: 0 0 15px rgba(251, 191, 36, 0.2);
+        }
+        
+        .input-group input::placeholder {
+            color: #6b7280;
+        }
+        
+        .optional-tag {
+            font-size: 0.75rem;
+            color: #6b7280;
+            font-weight: normal;
+        }
+        
+        .quick-add {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(6, 182, 212, 0.2);
+        }
+        
+        .quick-add-title {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            margin-bottom: 10px;
+        }
+        
+        .quick-add-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .quick-add-btn {
+            padding: 6px 12px;
+            background: rgba(6, 182, 212, 0.15);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            color: #06b6d4;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+        
+        .quick-add-btn:hover {
+            background: rgba(6, 182, 212, 0.3);
+            border-color: #06b6d4;
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .back-btn {
+            padding: 12px 25px;
+            background: rgba(6, 182, 212, 0.15);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 10px;
+            color: #06b6d4;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .back-btn:hover {
+            background: rgba(6, 182, 212, 0.25);
+        }
+        
+        .next-btn {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #fbbf24 0%, #06b6d4 100%);
+            border: none;
+            border-radius: 10px;
+            color: #0a0a0f;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .next-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+        }
+        
+        .next-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .validation-msg {
+            color: #fbbf24;
+            font-size: 0.85rem;
+            text-align: center;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .validation-msg.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔮 Add Your Circle</h1>
+            <p class="subtitle">Enter everyone's info to unlock your collective chemistry ✨</p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width: 25%"></div>
+        </div>
+        <p class="progress-text" id="progressText">Step 1 of 4: Add Members</p>
+        
+        <div class="members-container" id="membersContainer">
+            <!-- Member cards will be generated here -->
+        </div>
+        
+        <p class="validation-msg" id="validationMsg">Please fill in all required fields (name and birthday) for each person!</p>
+        
+        <div class="actions">
+            <a href="group-builder.html" class="back-btn">← Back</a>
+            <button class="next-btn" id="nextBtn" onclick="goToGatheringDate()">
+                Choose Gathering Date →
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        // Example relationships database (fictional - for demonstration)
+        const examplePeople = [
+            { name: "Mom", dob: "1965-03-15" },
+            { name: "Dad", dob: "1963-08-22" },
+            { name: "Sister Sarah", dob: "1992-06-10" },
+            { name: "Brother Mike", dob: "1995-11-28" },
+            { name: "Best Friend Alex", dob: "1994-01-05" },
+            { name: "Partner Jamie", dob: "1993-09-18" },
+            { name: "Grandma Rose", dob: "1940-12-01" },
+            { name: "Uncle Tom", dob: "1960-04-20" },
+            { name: "Aunt Linda", dob: "1962-07-14" },
+            { name: "Cousin Emma", dob: "1998-02-25" },
+            { name: "Friend Jordan", dob: "1994-05-30" },
+            { name: "Friend Taylor", dob: "1993-10-08" },
+            { name: "Neighbor Sam", dob: "1985-03-12" },
+            { name: "Coworker Pat", dob: "1990-08-05" },
+            { name: "Mentor Chris", dob: "1975-01-20" }
+        ];
+        
+        // Get member count from session storage
+        let memberCount = parseInt(sessionStorage.getItem('circleBuilderMemberCount')) || 3;
+        
+        // If no count saved, redirect to start
+        if (!sessionStorage.getItem('circleBuilderMemberCount')) {
+            window.location.href = 'group-builder.html';
+        }
+        
+        function generateMemberCards() {
+            const container = document.getElementById('membersContainer');
+            container.innerHTML = '';
+            
+            for (let i = 1; i <= memberCount; i++) {
+                // Get random examples for quick-add
+                const shuffled = [...examplePeople].sort(() => 0.5 - Math.random());
+                const examples = shuffled.slice(0, 3);
+                
+                const card = document.createElement('div');
+                card.className = 'member-card';
+                card.id = `member-${i}`;
+                card.innerHTML = `
+                    <div class="member-header">
+                        <span class="member-number">Person ${i}</span>
+                        <span class="member-status" id="status-${i}">Incomplete</span>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="name-${i}">Name *</label>
+                            <input type="text" id="name-${i}" placeholder="Name or nickname" onchange="checkCompletion(${i})">
+                        </div>
+                        <div class="input-group">
+                            <label for="dob-${i}">Birthday *</label>
+                            <input type="date" id="dob-${i}" onchange="checkCompletion(${i})">
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="relationship-${i}">Relationship <span class="optional-tag">(Optional)</span></label>
+                            <input type="text" id="relationship-${i}" placeholder="e.g., Sister, Best Friend, Colleague">
+                        </div>
+                        <div class="input-group">
+                            <label for="role-${i}">Role in Circle <span class="optional-tag">(Optional)</span></label>
+                            <input type="text" id="role-${i}" placeholder="e.g., The Organizer, The Listener">
+                        </div>
+                    </div>
+                    <div class="quick-add">
+                        <p class="quick-add-title">✨ Quick-add examples (for testing):</p>
+                        <div class="quick-add-btns">
+                            ${examples.map(p => `
+                                <button class="quick-add-btn" onclick="quickAdd(${i}, '${p.name}', '${p.dob}')">${p.name}</button>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            }
+        }
+        
+        function quickAdd(memberNum, name, dob) {
+            document.getElementById(`name-${memberNum}`).value = name;
+            document.getElementById(`dob-${memberNum}`).value = dob;
+            checkCompletion(memberNum);
+        }
+        
+        function checkCompletion(memberNum) {
+            const name = document.getElementById(`name-${memberNum}`).value.trim();
+            const dob = document.getElementById(`dob-${memberNum}`).value;
+            const card = document.getElementById(`member-${memberNum}`);
+            const status = document.getElementById(`status-${memberNum}`);
+            
+            if (name && dob) {
+                card.classList.add('completed');
+                status.textContent = '✓ Complete';
+                status.classList.add('done');
+            } else {
+                card.classList.remove('completed');
+                status.textContent = 'Incomplete';
+                status.classList.remove('done');
+            }
+            
+            updateProgress();
+        }
+        
+        function updateProgress() {
+            let completed = 0;
+            for (let i = 1; i <= memberCount; i++) {
+                const name = document.getElementById(`name-${i}`).value.trim();
+                const dob = document.getElementById(`dob-${i}`).value;
+                if (name && dob) completed++;
+            }
+            
+            const progress = 25 + (completed / memberCount) * 25; // 25% to 50%
+            document.getElementById('progressFill').style.width = `${progress}%`;
+            document.getElementById('progressText').textContent = `Step 1 of 4: Add Members (${completed}/${memberCount} complete)`;
+        }
+        
+        function validateAllMembers() {
+            for (let i = 1; i <= memberCount; i++) {
+                const name = document.getElementById(`name-${i}`).value.trim();
+                const dob = document.getElementById(`dob-${i}`).value;
+                if (!name || !dob) return false;
+            }
+            return true;
+        }
+        
+        function goToGatheringDate() {
+            if (!validateAllMembers()) {
+                document.getElementById('validationMsg').classList.add('show');
+                return;
+            }
+            
+            // Collect member data
+            const members = [];
+            for (let i = 1; i <= memberCount; i++) {
+                members.push({
+                    name: document.getElementById(`name-${i}`).value.trim(),
+                    dob: document.getElementById(`dob-${i}`).value,
+                    relationship: document.getElementById(`relationship-${i}`).value.trim() || '',
+                    role: document.getElementById(`role-${i}`).value.trim() || ''
+                });
+            }
+            
+            // Save to session storage
+            sessionStorage.setItem('circleBuilderMembers', JSON.stringify(members));
+            
+            // Navigate to gathering date page
+            window.location.href = 'group-builder-event.html';
+        }
+        
+        // Initialize
+        generateMemberCards();
+    </script>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="legal-links">
+            <a href="terms.html">Terms</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 Quantum Merlin ✨</p>
+    </footer>
+    <style>
+        .legal-footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid rgba(6, 182, 212, 0.2);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .legal-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .legal-links a:hover { color: #06b6d4; }
+        .legal-links .separator { color: rgba(6, 182, 212, 0.4); }
+        .copyright { color: #6b7280; font-size: 0.8rem; }
+    </style>
+</body>
+</html>

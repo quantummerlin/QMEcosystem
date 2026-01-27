@@ -274,14 +274,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://quantummerlin.com/kpop/rising-sign-reading.html">
     <meta property="og:title" content="K-Pop K-osmos | Your Main Character Reading ✨">
-    <meta property="og:description" content="Discover your iconic K-Pop destiny ?? with numerology, astrology, and magical calculators">
+    <meta property="og:description" content="Discover your iconic K-Pop destiny ✨ with numerology, astrology, and magical calculators">
     <meta property="og:image" content="https://quantummerlin.com/kpop/kpop.jpg">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://quantummerlin.com/kpop/rising-sign-reading.html">
     <meta name="twitter:title" content="K-Pop K-osmos | Your Main Character Reading ✨">
-    <meta name="twitter:description" content="Discover your iconic K-Pop destiny ?? with numerology, astrology, and magical calculators">
+    <meta name="twitter:description" content="Discover your iconic K-Pop destiny ✨ with numerology, astrology, and magical calculators">
     <meta name="twitter:image" content="https://quantummerlin.com/kpop/kpop.jpg">
 
     <script type="application/ld+json">
@@ -333,28 +333,42 @@
                         <input type="date" id="birthDate" required>
                     </div>
 
-                    <div class="row">
+                    <div class="input-group" style="margin-bottom: 15px;">
+                        <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; color: #FF6B9D;">
+                            <input type="checkbox" id="unknownTime" onchange="toggleTimeFields()" style="width: 18px; height: 18px; accent-color: #FF6B9D;">
+                            <span>I don't know my birth time 🤷</span>
+                        </label>
+                        <div class="helper-text" style="margin-top: 5px;">No worries! We'll give you a Sun Sign reading instead</div>
+                    </div>
+
+                    <div id="timeFields" class="row">
                         <div class="input-group">
-                            <label for="birthTime">Birth Time *</label>
-                            <input type="time" id="birthTime" required>
-                            <div class="helper-text">Exact time needed for calculation</div>
+                            <label for="birthTime">Birth Time</label>
+                            <input type="time" id="birthTime">
+                            <div class="helper-text">For Rising Sign calculation</div>
                         </div>
 
                         <div class="input-group">
                             <label for="birthPlace">Birth City</label>
-                            <input type="text" id="birthPlace" required placeholder="e.g., New York, USA">
+                            <input type="text" id="birthPlace" placeholder="e.g., New York, USA">
                             <div class="helper-text">City and country</div>
                         </div>
                     </div>
                     
-                    <div class="accuracy-notice" style="background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 10px; padding: 12px 15px; margin-top: 10px;">
+                    <div id="accuracyNotice" class="accuracy-notice" style="background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 10px; padding: 12px 15px; margin-top: 10px;">
                         <p style="color: #22D3EE; font-size: 0.9em; margin: 0;">
                             ⚠️ <strong>Accuracy Note:</strong> Rising sign changes approximately every 2 hours. For the most accurate reading, use your exact birth time from your birth certificate. Even a 15-minute difference can change your rising sign.
                         </p>
                     </div>
+                    
+                    <div id="sunSignNotice" style="display: none; background: rgba(255, 107, 157, 0.1); border: 1px solid rgba(255, 107, 157, 0.3); border-radius: 10px; padding: 12px 15px; margin-top: 10px;">
+                        <p style="color: #FF6B9D; font-size: 0.9em; margin: 0;">
+                            ☀️ <strong>Sun Sign Mode:</strong> Without birth time, we'll calculate your Sun Sign — your core identity and inner essence! Rising Sign requires exact birth time because it changes every 2 hours.
+                        </p>
+                    </div>
                 </div>
 
-                <button type="submit">💫 Calculate My Rising Sign & Reading</button>
+                <button type="submit" id="submitBtn">💫 Calculate My Rising Sign & Reading</button>
             </form>
 
             <div id="result" class="result">
@@ -590,6 +604,143 @@
             }
         };
 
+        // Toggle time/place fields visibility based on checkbox
+        function toggleTimeFields() {
+            const unknownTime = document.getElementById('unknownTime').checked;
+            const timeFields = document.getElementById('timeFields');
+            const accuracyNotice = document.getElementById('accuracyNotice');
+            const sunSignNotice = document.getElementById('sunSignNotice');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            if (unknownTime) {
+                timeFields.style.display = 'none';
+                accuracyNotice.style.display = 'none';
+                sunSignNotice.style.display = 'block';
+                submitBtn.textContent = '☀️ Calculate My Sun Sign Reading';
+            } else {
+                timeFields.style.display = 'grid';
+                accuracyNotice.style.display = 'block';
+                sunSignNotice.style.display = 'none';
+                submitBtn.textContent = '💫 Calculate My Rising Sign & Reading';
+            }
+        }
+        
+        // Calculate Sun Sign from birthdate (no time needed)
+        function calculateSunSign(birthDate) {
+            const [year, month, day] = birthDate.split('-').map(Number);
+            
+            // Sun sign date ranges (approximate - accounts for cusp dates)
+            const signs = [
+                { sign: 'Capricorn', start: [1, 1], end: [1, 19] },
+                { sign: 'Aquarius', start: [1, 20], end: [2, 18] },
+                { sign: 'Pisces', start: [2, 19], end: [3, 20] },
+                { sign: 'Aries', start: [3, 21], end: [4, 19] },
+                { sign: 'Taurus', start: [4, 20], end: [5, 20] },
+                { sign: 'Gemini', start: [5, 21], end: [6, 20] },
+                { sign: 'Cancer', start: [6, 21], end: [7, 22] },
+                { sign: 'Leo', start: [7, 23], end: [8, 22] },
+                { sign: 'Virgo', start: [8, 23], end: [9, 22] },
+                { sign: 'Libra', start: [9, 23], end: [10, 22] },
+                { sign: 'Scorpio', start: [10, 23], end: [11, 21] },
+                { sign: 'Sagittarius', start: [11, 22], end: [12, 21] },
+                { sign: 'Capricorn', start: [12, 22], end: [12, 31] }
+            ];
+            
+            for (const range of signs) {
+                const [startMonth, startDay] = range.start;
+                const [endMonth, endDay] = range.end;
+                
+                if (month === startMonth && day >= startDay) return range.sign;
+                if (month === endMonth && day <= endDay) return range.sign;
+                if (month > startMonth && month < endMonth) return range.sign;
+            }
+            
+            return 'Unknown';
+        }
+        
+        // Show Sun Sign fallback reading
+        function showSunSignResult(name, sunSign, birthName) {
+            const data = interpretations[sunSign];
+            if (!data) {
+                alert('Could not determine Sun Sign. Please check your birth date.');
+                return;
+            }
+            
+            const resultHTML = `
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <span style="font-size: 2.5em; display: block; margin-bottom: 10px;">☀️</span>
+                    <h3 style="color: #FF6B9D; font-size: 1.5em; margin-bottom: 10px;">${data.title}</h3>
+                    <p style="font-size: 1.2em; color: #22D3EE;">Sun Sign: ${sunSign}</p>
+                </div>
+                
+                <div style="background: rgba(255, 193, 7, 0.1); border: 1px solid rgba(255, 193, 7, 0.3); border-radius: 12px; padding: 15px; margin-bottom: 25px;">
+                    <p style="color: #fbbf24; font-size: 0.95em; margin: 0;">
+                        <strong>☀️ Sun Sign Reading:</strong> Without your birth time, we can't calculate your Rising Sign (which changes every 2 hours). But your Sun Sign reveals your core identity and inner essence!
+                    </p>
+                </div>
+                
+                <!-- HOOK -->
+                <div style="font-size: 1.15em; color: #22D3EE; margin-bottom: 25px; font-style: italic; text-align: center; line-height: 1.6;">
+                    ${data.hook}
+                </div>
+                
+                <!-- CORE READING -->
+                <div style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(0, 0, 0, 0.3)); padding: 25px; border-radius: 15px; margin-bottom: 20px; border: 1px solid rgba(255, 107, 157, 0.3);">
+                    <h4 style="color: #FF6B9D; font-size: 1.2em; margin-bottom: 15px;">☀️ Your Core Sun Energy</h4>
+                    <p style="line-height: 1.8;">${data.core_identity.replace('Rising Sign', 'Sun Sign').replace('world experiences you', 'inner self is').replace(/{preferredName}/g, name)}</p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <p><strong style="color: #22D3EE;">⭐ Your Natural Approach:</strong> ${data.behavior}</p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <p><strong style="color: #22D3EE;">💎 Your Core Strength:</strong> ${data.strength}</p>
+                </div>
+                
+                <!-- GROWTH -->
+                <div style="background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(124, 58, 237, 0.15)); padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(255, 107, 157, 0.2);">
+                    <h4 style="color: #FF6B9D; font-size: 1.1em; margin-bottom: 20px;">💫 Deeper Insights</h4>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #22D3EE;">🌑 Shadow Side:</strong> ${data.shadow}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <p><strong style="color: #22D3EE;">🌱 Growth Edge:</strong> ${data.growth}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 0;">
+                        <p><strong style="color: #22D3EE;">💕 Relationship Style:</strong> ${data.relationships}</p>
+                    </div>
+                </div>
+                
+                <!-- REFLECTION -->
+                <div style="background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(168, 85, 247, 0.1)); padding: 20px; border-radius: 12px; border-left: 4px solid #FF6B9D; margin-top: 25px;">
+                    <p style="font-style: italic; color: #22D3EE; font-size: 1.1em;"><strong>🪞 Real Talk Moment:</strong> ${data.reflection}</p>
+                </div>
+                
+                <!-- RISING SIGN UPSELL -->
+                <div style="margin-top: 25px; padding: 20px; background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(0, 0, 0, 0.3)); border-radius: 12px; border: 1px solid rgba(255, 107, 157, 0.3);">
+                    <p style="color: #C4B998; font-size: 0.95em;">
+                        <span style="color: #22D3EE;">🔮 Want Your Rising Sign?</span> If you find your birth certificate with your exact birth time, come back and we'll reveal how the world sees you! Your Rising Sign is your outer mask — the energy you project to strangers.
+                    </p>
+                </div>
+            `;
+
+            const readingData = {
+                toolType: 'sun-sign',
+                headerTitle: '☀️ Your Sun Sign Reading',
+                headerSubtitle: 'Your core identity revealed',
+                number: sunSign,
+                title: `Sun Sign: ${sunSign}`,
+                subtitle: `${name}, this is your inner essence`,
+                content: resultHTML,
+                sourceUrl: 'rising-sign-reading.html'
+            };
+            QMStorage.navigateWithReading(readingData, 'reading-loading.html');
+        }
+
         async function calculateRisingSign(event) {
             event.preventDefault();
             
@@ -598,9 +749,35 @@
             const birthDate = document.getElementById('birthDate').value;
             const birthTime = document.getElementById('birthTime').value;
             const birthPlace = document.getElementById('birthPlace').value;
-
+            const unknownTime = document.getElementById('unknownTime').checked;
+            
             const submitBtn = event.target.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
+            
+            // If user doesn't know birth time, calculate Sun Sign instead
+            if (unknownTime || !birthTime) {
+                submitBtn.textContent = '☀️ Calculating Sun Sign...';
+                submitBtn.disabled = true;
+                
+                try {
+                    const sunSign = calculateSunSign(birthDate);
+                    showSunSignResult(name, sunSign, birthName);
+                } catch (error) {
+                    console.error('Sun sign calculation error:', error);
+                    alert('Error calculating Sun Sign: ' + error.message);
+                } finally {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }
+                return;
+            }
+            
+            // Need birth place for Rising Sign calculation
+            if (!birthPlace) {
+                alert('Birth city is required for Rising Sign calculation. If you don\\'t know your birth time, check the "I don\\'t know my birth time" option above for a Sun Sign reading instead!');
+                return;
+            }
+            
             submitBtn.textContent = 'Looking up location...';
             submitBtn.disabled = true;
 

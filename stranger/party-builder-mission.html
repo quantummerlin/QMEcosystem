@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF4500">
+    <title>Choose Mission Date | Party Builder 🔦</title>
+    <meta name="description" content="Choose when your party faces the unknown! Find the most powerful dates for your adventure. 🔦">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="stranger.jpg">
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0a0508;
+            background-image: 
+                linear-gradient(transparent 60%, rgba(220, 20, 60, 0.04) 60%),
+                repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 69, 0, 0.04) 50px, rgba(255, 69, 0, 0.04) 51px),
+                repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(220, 20, 60, 0.04) 50px, rgba(220, 20, 60, 0.04) 51px),
+                radial-gradient(circle at 20% 50%, rgba(220, 20, 60, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 69, 0, 0.25) 0%, transparent 50%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #FF4500 0%, #DC143C 50%, #8B0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #FF6B35;
+            font-style: italic;
+        }
+        
+        .progress-bar {
+            background: rgba(255, 69, 0, 0.2);
+            border-radius: 10px;
+            height: 8px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF4500, #DC143C, #8B0000);
+            border-radius: 10px;
+            width: 50%;
+        }
+        
+        .progress-text {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .date-section {
+            background: rgba(20, 10, 15, 0.8);
+            border: 2px solid rgba(255, 69, 0, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .date-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: #FF4500;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .date-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .date-option {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            background: rgba(10, 5, 10, 0.6);
+            border: 2px solid rgba(255, 69, 0, 0.2);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .date-option:hover {
+            border-color: #FF4500;
+        }
+        
+        .date-option.selected {
+            border-color: #FF4500;
+            background: rgba(255, 69, 0, 0.1);
+        }
+        
+        .date-option input[type="radio"] {
+            display: none;
+        }
+        
+        .date-option .radio-circle {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #FF6B35;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .date-option.selected .radio-circle {
+            border-color: #FF4500;
+        }
+        
+        .date-option.selected .radio-circle::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(135deg, #FF4500, #DC143C);
+            border-radius: 50%;
+        }
+        
+        .date-option-content {
+            flex: 1;
+        }
+        
+        .date-option-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-bottom: 5px;
+        }
+        
+        .date-option-desc {
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+        
+        .custom-date-input {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(10, 5, 10, 0.8);
+            border-radius: 12px;
+        }
+        
+        .custom-date-input.show {
+            display: block;
+        }
+        
+        .custom-date-input label {
+            display: block;
+            font-family: 'Cinzel', serif;
+            color: #FF6B35;
+            margin-bottom: 10px;
+        }
+        
+        .custom-date-input input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid rgba(255, 69, 0, 0.3);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: rgba(10, 5, 10, 0.8);
+            color: #e0e0e0;
+        }
+        
+        .custom-date-input input:focus {
+            outline: none;
+            border-color: #FF4500;
+        }
+        
+        .suggested-dates {
+            background: rgba(220, 20, 60, 0.05);
+            border: 1px solid rgba(220, 20, 60, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .suggested-dates h3 {
+            font-family: 'Cinzel', serif;
+            color: #DC143C;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        .suggested-date-grid {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .suggested-date-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: rgba(255, 69, 0, 0.1);
+            border: 1px solid rgba(255, 69, 0, 0.3);
+            border-radius: 8px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+        
+        .suggested-date-btn:hover {
+            background: rgba(255, 69, 0, 0.2);
+            border-color: #FF4500;
+        }
+        
+        .suggested-date-btn .date {
+            color: #FF4500;
+            font-weight: 600;
+        }
+        
+        .suggested-date-btn .reason {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .back-btn {
+            padding: 12px 25px;
+            background: rgba(255, 69, 0, 0.15);
+            border: 1px solid rgba(255, 69, 0, 0.3);
+            border-radius: 10px;
+            color: #FF6B35;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255, 69, 0, 0.25);
+        }
+        
+        .next-btn {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #FF4500 0%, #DC143C 100%);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .next-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📅 Choose Mission Date</h1>
+            <p class="subtitle">When does your party face the unknown? ⚡</p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 50%"></div>
+        </div>
+        <p class="progress-text">Step 2 of 4: Select Your Mission Date</p>
+        
+        <div class="date-section">
+            <h2>Select a Date Type</h2>
+            <div class="date-options">
+                <label class="date-option selected" onclick="selectOption('power-date')">
+                    <input type="radio" name="dateType" value="power-date" checked>
+                    <span class="radio-circle"></span>
+                    <div class="date-option-content">
+                        <div class="date-option-title">⚡ Power Date Recommendation</div>
+                        <div class="date-option-desc">Find the most powerful upcoming date for your party's energy</div>
+                    </div>
+                </label>
+                
+                <label class="date-option" onclick="selectOption('strange-event')">
+                    <input type="radio" name="dateType" value="strange-event">
+                    <span class="radio-circle"></span>
+                    <div class="date-option-content">
+                        <div class="date-option-title">🌙 Strange Phenomena Dates</div>
+                        <div class="date-option-desc">Full moons, eclipses, and other supernatural power days</div>
+                    </div>
+                </label>
+                
+                <label class="date-option" onclick="selectOption('custom')">
+                    <input type="radio" name="dateType" value="custom">
+                    <span class="radio-circle"></span>
+                    <div class="date-option-content">
+                        <div class="date-option-title">📆 Choose Your Own Date</div>
+                        <div class="date-option-desc">Pick any date and we'll reveal its supernatural significance</div>
+                    </div>
+                </label>
+                
+                <label class="date-option" onclick="selectOption('skip')">
+                    <input type="radio" name="dateType" value="skip">
+                    <span class="radio-circle"></span>
+                    <div class="date-option-content">
+                        <div class="date-option-title">⏭️ Skip Date Selection</div>
+                        <div class="date-option-desc">Just show me my party's power analysis!</div>
+                    </div>
+                </label>
+            </div>
+            
+            <div class="custom-date-input" id="customDateInput">
+                <label for="customDate">Select Your Mission Date:</label>
+                <input type="date" id="customDate">
+            </div>
+            
+            <div class="suggested-dates" id="suggestedDates">
+                <h3>⚡ High Power Dates:</h3>
+                <div class="suggested-date-grid" id="suggestedDateGrid">
+                    <!-- Generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <a href="party-builder-members.html" class="back-btn">← Back</a>
+            <button class="next-btn" onclick="goToResults()">
+                Reveal Party Power →
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        let selectedOption = 'power-date';
+        let selectedDate = null;
+        
+        // Check for session data
+        if (!sessionStorage.getItem('partyBuilderMembers')) {
+            window.location.href = 'party-builder.html';
+        }
+        
+        function selectOption(option) {
+            selectedOption = option;
+            
+            // Update UI
+            document.querySelectorAll('.date-option').forEach(opt => {
+                opt.classList.remove('selected');
+                if (opt.querySelector(`input[value="${option}"]`)) {
+                    opt.classList.add('selected');
+                }
+            });
+            
+            // Show/hide custom input
+            document.getElementById('customDateInput').classList.toggle('show', option === 'custom');
+            
+            // Show/hide suggested dates
+            document.getElementById('suggestedDates').style.display = 
+                (option === 'power-date' || option === 'strange-event') ? 'block' : 'none';
+            
+            // Generate suggested dates
+            if (option === 'power-date') {
+                generatePowerDates();
+            } else if (option === 'strange-event') {
+                generateStrangeDates();
+            }
+        }
+        
+        function generatePowerDates() {
+            const grid = document.getElementById('suggestedDateGrid');
+            const today = new Date();
+            
+            const dates = [];
+            for (let i = 0; i < 4; i++) {
+                const daysAhead = 7 + Math.floor(Math.random() * 21);
+                const date = new Date(today);
+                date.setDate(date.getDate() + daysAhead);
+                
+                const reasons = [
+                    '⚡ High supernatural activity',
+                    '🔥 Power surge detected',
+                    '🌙 Veil is thin',
+                    '✨ Cosmic alignment',
+                    '🔮 Portal energy peak',
+                    '⭐ Stars favor the brave'
+                ];
+                
+                dates.push({
+                    date: date,
+                    reason: reasons[Math.floor(Math.random() * reasons.length)]
+                });
+            }
+            
+            dates.sort((a, b) => a.date - b.date);
+            
+            grid.innerHTML = dates.map(d => `
+                <button class="suggested-date-btn" onclick="pickSuggestedDate('${d.date.toISOString().split('T')[0]}')">
+                    <span class="date">${d.date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}</span>
+                    <span class="reason">${d.reason}</span>
+                </button>
+            `).join('');
+        }
+        
+        function generateStrangeDates() {
+            const grid = document.getElementById('suggestedDateGrid');
+            const today = new Date();
+            
+            // Find upcoming "strange" dates (simulated full moons, 11th of month, etc.)
+            const strangeDates = [];
+            
+            // Next 11th of month
+            let next11 = new Date(today.getFullYear(), today.getMonth(), 11);
+            if (next11 <= today) next11.setMonth(next11.getMonth() + 1);
+            strangeDates.push({ date: next11, reason: '🔮 11th - Portal day' });
+            
+            // Next 22nd of month
+            let next22 = new Date(today.getFullYear(), today.getMonth(), 22);
+            if (next22 <= today) next22.setMonth(next22.getMonth() + 1);
+            strangeDates.push({ date: next22, reason: '⚡ 22nd - Master number energy' });
+            
+            // Friday the 13th check
+            for (let m = today.getMonth(); m < today.getMonth() + 6; m++) {
+                const fri13 = new Date(today.getFullYear(), m, 13);
+                if (fri13 > today && fri13.getDay() === 5) {
+                    strangeDates.push({ date: fri13, reason: '🌙 Friday 13th - Maximum strangeness' });
+                    break;
+                }
+            }
+            
+            // Halloween if upcoming
+            const halloween = new Date(today.getFullYear(), 9, 31);
+            if (halloween > today && halloween < new Date(today.getTime() + 90 * 24 * 60 * 60 * 1000)) {
+                strangeDates.push({ date: halloween, reason: '👻 Halloween - Veil thinnest' });
+            }
+            
+            strangeDates.sort((a, b) => a.date - b.date);
+            
+            grid.innerHTML = strangeDates.slice(0, 4).map(d => `
+                <button class="suggested-date-btn" onclick="pickSuggestedDate('${d.date.toISOString().split('T')[0]}')">
+                    <span class="date">${d.date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}</span>
+                    <span class="reason">${d.reason}</span>
+                </button>
+            `).join('');
+        }
+        
+        function pickSuggestedDate(dateStr) {
+            selectedDate = dateStr;
+            document.querySelectorAll('.suggested-date-btn').forEach(btn => {
+                btn.style.background = 'rgba(255, 69, 0, 0.1)';
+                btn.style.borderColor = 'rgba(255, 69, 0, 0.3)';
+            });
+            event.target.closest('.suggested-date-btn').style.background = 'rgba(255, 69, 0, 0.2)';
+            event.target.closest('.suggested-date-btn').style.borderColor = '#FF4500';
+        }
+        
+        function goToResults() {
+            let missionDate = null;
+            
+            if (selectedOption === 'custom') {
+                missionDate = document.getElementById('customDate').value || null;
+            } else if (selectedOption !== 'skip' && selectedDate) {
+                missionDate = selectedDate;
+            } else if (selectedOption === 'power-date' && !selectedDate) {
+                const today = new Date();
+                today.setDate(today.getDate() + 14);
+                missionDate = today.toISOString().split('T')[0];
+            }
+            
+            sessionStorage.setItem('partyBuilderDate', missionDate || '');
+            sessionStorage.setItem('partyBuilderDateType', selectedOption);
+            
+            window.location.href = 'party-builder-results.html';
+        }
+        
+        // Initialize
+        generatePowerDates();
+    </script>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="legal-links">
+            <a href="terms.html">Terms</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 Stranger Patterns 🔦</p>
+    </footer>
+    <style>
+        .legal-footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 69, 0, 0.2);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .legal-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .legal-links a:hover { color: #FF4500; }
+        .legal-links .separator { color: rgba(255, 69, 0, 0.4); }
+        .copyright { color: #6b7280; font-size: 0.8rem; }
+    </style>
+</body>
+</html>

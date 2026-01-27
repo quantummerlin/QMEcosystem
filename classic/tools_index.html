@@ -871,6 +871,17 @@
                 </div>
             </div>
             
+            <!-- Circle Builder Section -->
+            <div class="category-section">
+                <div class="category-header" onclick="toggleCategory('circlebuilder')">
+                    <h2>🔮 Circle Builder <span class="count">(4 tools)</span></h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-content" id="circlebuilder-content">
+                    <div class="tools-grid" id="circlebuilder-grid"></div>
+                </div>
+            </div>
+            
             <!-- Forecasts Section -->
             <div class="category-section">
                 <div class="category-header" onclick="toggleCategory('forecasts')">
@@ -1010,6 +1021,12 @@
             { title: "Synastry Reading", description: "Explore the planetary aspects between you and your partner.", category: "compatibility", file: "synastry-reading.html" },
             { title: "Composite Chart Reading", description: "Discover the unique entity created when two souls merge.", category: "compatibility", file: "composite-chart-reading.html" },
             { title: "Relationship Karma Reading", description: "Discover past life bonds and karmic connections.", category: "compatibility", file: "relationship-karma-reading.html" },
+            
+            // Circle Builder Tools (4) - Group chemistry and dynamics
+            { title: "Circle Builder", description: "Analyze group chemistry for family, friends, or teams.", category: "circlebuilder", file: "group-builder.html", isNew: true },
+            { title: "Add Circle Members", description: "Enter member names, birthdays, and relationships.", category: "circlebuilder", file: "group-builder-members.html", isNew: true },
+            { title: "Choose Gathering Date", description: "Select the perfect date for your circle's event.", category: "circlebuilder", file: "group-builder-event.html", isNew: true },
+            { title: "Circle Results", description: "Your complete group synergy, roles, and harmony tips.", category: "circlebuilder", file: "group-builder-results.html", isNew: true },
             
             // Life Purpose Tools (6)
             { title: "North Node Reading", description: "Discover your soul's evolutionary direction and life purpose.", category: "purpose", file: "north-node-reading.html" },
@@ -1247,9 +1264,9 @@ ${formData.message}
             if (e.target === this) closeAdModal();
         });
         
-        // Initialize all category grids (order: astrology, numerology, purpose, compatibility, forecasts, life)
+        // Initialize all category grids (order: astrology, numerology, purpose, compatibility, circlebuilder, forecasts, life)
         function initializeGrids() {
-            ['astrology', 'numerology', 'purpose', 'compatibility', 'forecasts', 'life'].forEach(cat => {
+            ['astrology', 'numerology', 'purpose', 'compatibility', 'circlebuilder', 'forecasts', 'life'].forEach(cat => {
                 renderCategoryTools(cat);
             });
             renderFavorites();

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF4500">
+    <title>Add Party Members | Stranger Patterns 🔦</title>
+    <meta name="description" content="Add your adventuring party members! Enter names and birthdays to discover everyone's supernatural abilities. 🔦">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="stranger.jpg">
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0a0508;
+            background-image: 
+                linear-gradient(transparent 60%, rgba(220, 20, 60, 0.04) 60%),
+                repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 69, 0, 0.04) 50px, rgba(255, 69, 0, 0.04) 51px),
+                repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(220, 20, 60, 0.04) 50px, rgba(220, 20, 60, 0.04) 51px),
+                radial-gradient(circle at 20% 50%, rgba(220, 20, 60, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 69, 0, 0.25) 0%, transparent 50%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #FF4500 0%, #DC143C 50%, #8B0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #FF6B35;
+            font-style: italic;
+        }
+        
+        .progress-bar {
+            background: rgba(255, 69, 0, 0.2);
+            border-radius: 10px;
+            height: 8px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF4500, #DC143C, #8B0000);
+            border-radius: 10px;
+            width: 25%;
+        }
+        
+        .progress-text {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .members-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .member-card {
+            background: rgba(20, 10, 15, 0.8);
+            border: 2px solid rgba(255, 69, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+        
+        .member-card.completed {
+            border-color: #28a745;
+        }
+        
+        .member-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .member-number {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.3rem;
+            color: #FF4500;
+        }
+        
+        .completion-badge {
+            padding: 5px 12px;
+            background: rgba(40, 167, 69, 0.2);
+            border: 1px solid #28a745;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #28a745;
+            display: none;
+        }
+        
+        .member-card.completed .completion-badge {
+            display: block;
+        }
+        
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        
+        .input-group label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            color: #FF6B35;
+        }
+        
+        .input-group input, .input-group select {
+            padding: 12px 15px;
+            border: 2px solid rgba(255, 69, 0, 0.3);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: rgba(10, 5, 10, 0.8);
+            color: #e0e0e0;
+            transition: all 0.3s;
+        }
+        
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: #FF4500;
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.2);
+        }
+        
+        .input-group select {
+            cursor: pointer;
+        }
+        
+        .input-group select option {
+            background: #0a0508;
+            color: #e0e0e0;
+        }
+        
+        .quick-add-section {
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(220, 20, 60, 0.08);
+            border-radius: 12px;
+        }
+        
+        .quick-add-section h3 {
+            font-family: 'Cinzel', serif;
+            color: #DC143C;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .quick-add-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .quick-add-btn {
+            padding: 8px 16px;
+            background: rgba(255, 69, 0, 0.15);
+            border: 1px solid rgba(255, 69, 0, 0.3);
+            border-radius: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            color: #FF6B35;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .quick-add-btn:hover {
+            background: rgba(255, 69, 0, 0.25);
+            border-color: #FF4500;
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .back-btn {
+            padding: 12px 25px;
+            background: rgba(255, 69, 0, 0.15);
+            border: 1px solid rgba(255, 69, 0, 0.3);
+            border-radius: 10px;
+            color: #FF6B35;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255, 69, 0, 0.25);
+        }
+        
+        .next-btn {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #FF4500 0%, #DC143C 100%);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .next-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.4);
+        }
+        
+        .next-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .status-bar {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 69, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .status-bar span {
+            font-family: 'Cinzel', serif;
+            color: #FF6B35;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔦 Assemble Your Party</h1>
+            <p class="subtitle">Enter each adventurer's info ⚡</p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 25%"></div>
+        </div>
+        <p class="progress-text">Step 1 of 4: Add Party Members</p>
+        
+        <div class="members-container" id="membersContainer">
+            <!-- Generated by JavaScript -->
+        </div>
+        
+        <div class="quick-add-section">
+            <h3>⚡ Quick Examples (Click to add)</h3>
+            <div class="quick-add-grid">
+                <button class="quick-add-btn" onclick="quickAdd('Mike', '2008-04-15', 'Friend', 'The Strategist')">🎲 Mike</button>
+                <button class="quick-add-btn" onclick="quickAdd('Eleven', '2008-11-11', 'Friend', 'The Power')">⚡ Eleven</button>
+                <button class="quick-add-btn" onclick="quickAdd('Dustin', '2008-09-22', 'Friend', 'The Brain')">🧠 Dustin</button>
+                <button class="quick-add-btn" onclick="quickAdd('Lucas', '2008-06-18', 'Friend', 'The Warrior')">🏹 Lucas</button>
+                <button class="quick-add-btn" onclick="quickAdd('Max', '2008-07-04', 'Friend', 'The Wildcard')">🛹 Max</button>
+                <button class="quick-add-btn" onclick="quickAdd('Will', '2008-03-22', 'Friend', 'The Survivor')">🔮 Will</button>
+                <button class="quick-add-btn" onclick="quickAdd('Nancy', '2004-08-12', 'Sibling', 'The Investigator')">📰 Nancy</button>
+                <button class="quick-add-btn" onclick="quickAdd('Steve', '2003-05-28', 'Friend', 'The Protector')">⚾ Steve</button>
+            </div>
+        </div>
+        
+        <div class="status-bar" id="statusBar">
+            <span id="completedCount">0</span> of <span id="totalCount">0</span> adventurers added
+        </div>
+        
+        <div class="actions">
+            <a href="party-builder.html" class="back-btn">← Back</a>
+            <button class="next-btn" id="nextBtn" disabled onclick="goToMission()">
+                Choose Mission Date →
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        const memberCount = parseInt(sessionStorage.getItem('partyBuilderMemberCount')) || 4;
+        const container = document.getElementById('membersContainer');
+        
+        // Redirect if no count set
+        if (!sessionStorage.getItem('partyBuilderMemberCount')) {
+            window.location.href = 'party-builder.html';
+        }
+        
+        // Generate member cards
+        function generateMemberCards() {
+            container.innerHTML = '';
+            document.getElementById('totalCount').textContent = memberCount;
+            
+            for (let i = 1; i <= memberCount; i++) {
+                const card = document.createElement('div');
+                card.className = 'member-card';
+                card.id = `member-${i}`;
+                card.innerHTML = `
+                    <div class="member-header">
+                        <span class="member-number">⚡ Adventurer ${i}</span>
+                        <span class="completion-badge">✓ Ready</span>
+                    </div>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="name-${i}">Name *</label>
+                            <input type="text" id="name-${i}" placeholder="Enter name" onchange="checkCompletion()">
+                        </div>
+                        <div class="input-group">
+                            <label for="dob-${i}">Birthday *</label>
+                            <input type="date" id="dob-${i}" onchange="checkCompletion()">
+                        </div>
+                        <div class="input-group">
+                            <label for="role-${i}">Relationship</label>
+                            <select id="role-${i}">
+                                <option value="">Select...</option>
+                                <option value="Friend">Friend</option>
+                                <option value="Best Friend">Best Friend</option>
+                                <option value="Sibling">Sibling</option>
+                                <option value="Partner">Partner</option>
+                                <option value="Parent">Parent</option>
+                                <option value="Coworker">Coworker</option>
+                                <option value="Gaming Buddy">Gaming Buddy</option>
+                                <option value="Neighbor">Neighbor</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="class-${i}">Party Role</label>
+                            <select id="class-${i}">
+                                <option value="">Auto-assign...</option>
+                                <option value="The Leader">The Leader</option>
+                                <option value="The Brain">The Brain</option>
+                                <option value="The Power">The Power</option>
+                                <option value="The Heart">The Heart</option>
+                                <option value="The Wildcard">The Wildcard</option>
+                                <option value="The Protector">The Protector</option>
+                                <option value="The Investigator">The Investigator</option>
+                                <option value="The Survivor">The Survivor</option>
+                            </select>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            }
+        }
+        
+        let currentFillIndex = 1;
+        
+        function quickAdd(name, dob, relationship, role) {
+            if (currentFillIndex > memberCount) {
+                currentFillIndex = 1;
+            }
+            
+            // Find next empty slot
+            for (let i = currentFillIndex; i <= memberCount; i++) {
+                const nameInput = document.getElementById(`name-${i}`);
+                if (!nameInput.value) {
+                    nameInput.value = name;
+                    document.getElementById(`dob-${i}`).value = dob;
+                    document.getElementById(`role-${i}`).value = relationship;
+                    document.getElementById(`class-${i}`).value = role;
+                    currentFillIndex = i + 1;
+                    checkCompletion();
+                    return;
+                }
+            }
+            
+            // If all filled, wrap around
+            for (let i = 1; i < currentFillIndex; i++) {
+                const nameInput = document.getElementById(`name-${i}`);
+                if (!nameInput.value) {
+                    nameInput.value = name;
+                    document.getElementById(`dob-${i}`).value = dob;
+                    document.getElementById(`role-${i}`).value = relationship;
+                    document.getElementById(`class-${i}`).value = role;
+                    currentFillIndex = i + 1;
+                    checkCompletion();
+                    return;
+                }
+            }
+        }
+        
+        function checkCompletion() {
+            let completed = 0;
+            
+            for (let i = 1; i <= memberCount; i++) {
+                const name = document.getElementById(`name-${i}`).value.trim();
+                const dob = document.getElementById(`dob-${i}`).value;
+                const card = document.getElementById(`member-${i}`);
+                
+                if (name && dob) {
+                    card.classList.add('completed');
+                    completed++;
+                } else {
+                    card.classList.remove('completed');
+                }
+            }
+            
+            document.getElementById('completedCount').textContent = completed;
+            document.getElementById('nextBtn').disabled = completed < memberCount;
+        }
+        
+        function goToMission() {
+            const members = [];
+            
+            for (let i = 1; i <= memberCount; i++) {
+                const name = document.getElementById(`name-${i}`).value.trim();
+                const dob = document.getElementById(`dob-${i}`).value;
+                const relationship = document.getElementById(`role-${i}`).value;
+                const partyRole = document.getElementById(`class-${i}`).value;
+                
+                if (name && dob) {
+                    members.push({ name, dob, relationship, partyRole });
+                }
+            }
+            
+            if (members.length === memberCount) {
+                sessionStorage.setItem('partyBuilderMembers', JSON.stringify(members));
+                window.location.href = 'party-builder-mission.html';
+            }
+        }
+        
+        generateMemberCards();
+    </script>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <div class="legal-links">
+            <a href="terms.html">Terms</a>
+            <span class="separator">|</span>
+            <a href="privacy.html">Privacy</a>
+            <span class="separator">|</span>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2026 Stranger Patterns 🔦</p>
+    </footer>
+    <style>
+        .legal-footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 69, 0, 0.2);
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .legal-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .legal-links a:hover { color: #FF4500; }
+        .legal-links .separator { color: rgba(255, 69, 0, 0.4); }
+        .copyright { color: #6b7280; font-size: 0.8rem; }
+    </style>
+</body>
+</html>
