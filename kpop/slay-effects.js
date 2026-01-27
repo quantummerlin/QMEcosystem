@@ -15,7 +15,7 @@
         particleCount: 12,
         confettiCount: 30,
         // Pages with complex forms - disable floating particles for better UX
-        interactivePages: ['band-builder', 'welcome-flow', 'crystal-ball']
+        interactivePages: ['band-builder', 'welcome-flow', 'crystal-ball', 'stellium-reading', 'rising-sign-reading', 'birth-chart', 'numerology']
     };
     
     let lastSparkleTime = 0;

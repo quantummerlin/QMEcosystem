@@ -759,13 +759,24 @@
             const readingData = getReadingData();
             
             if (!readingData) {
-                // No reading found
+                // No reading found - log diagnostics
+                console.error('QM: No reading data found');
+                console.log('QM Diagnostics:', QMStorage.getDiagnostics());
                 document.querySelector('.container').style.display = 'none';
                 document.getElementById('noResultSection').style.display = 'block';
                 return;
             }
             
-            const reading = JSON.parse(readingData);
+            let reading;
+            try {
+                reading = JSON.parse(readingData);
+            } catch (e) {
+                console.error('QM: Failed to parse reading data:', e);
+                console.log('QM: Raw data:', readingData);
+                document.querySelector('.container').style.display = 'none';
+                document.getElementById('noResultSection').style.display = 'block';
+                return;
+            }
             
             // Track this tool as used
             if (reading.sourceUrl && window.ToolTracker) {
