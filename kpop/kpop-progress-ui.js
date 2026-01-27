@@ -1,5 +1,5 @@
 /**
- * K-Pop K-osmos Progressive Journey UI Integration
+ * K-Pop Kosmic Progressive Journey UI Integration
  * Handles lock states, tier badges, and tool completion
  */
 

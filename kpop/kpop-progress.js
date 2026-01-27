@@ -1,5 +1,5 @@
 /**
- * K-Pop K-osmos Progressive Journey System
+ * K-Pop Kosmic Progressive Journey System
  * "From Trainee to Superstar" 🌟
  * 
  * Tracks user progress through the 5-level K-Pop journey:

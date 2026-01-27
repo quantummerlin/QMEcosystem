@@ -1,5 +1,5 @@
 /**
- * K-Pop K-osmos Tool Completion Tracker
+ * K-Pop Kosmic Tool Completion Tracker
  * Include this on individual tool pages to track completion
  * 
  * Usage: Add to tool pages after kpop-progress.js
