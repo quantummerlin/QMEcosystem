@@ -359,13 +359,15 @@
 
     /* Mystery intro */
     .mystery-intro {
-      min-height: 70vh;
+      min-height: 100vh;
+      min-height: 100dvh; /* Dynamic viewport height for mobile */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 40px 0;
+      padding: 40px 0 120px; /* Extra bottom padding for mobile browser bar */
+      padding-bottom: calc(120px + env(safe-area-inset-bottom));
       transition: all 0.5s ease;
     }
 
@@ -1766,8 +1768,8 @@
       if (scrollBtn && aboutSection) {
         scrollBtn.addEventListener('click', function() {
           markVisited();
-          // Get the section position and add a small offset for padding
-          const sectionTop = aboutSection.getBoundingClientRect().top + window.scrollY - 20;
+          // Get the section position and add offset for mobile browser bars
+          const sectionTop = aboutSection.getBoundingClientRect().top + window.scrollY - 60;
           window.scrollTo({ top: sectionTop, behavior: 'smooth' });
         });
       }
