@@ -36,11 +36,16 @@
     }
 
     const storageAvailable = isStorageAvailable();
-    if (!storageAvailable) return;
+    console.log('🔧 Auto-fill: Storage available:', storageAvailable);
+    if (!storageAvailable) {
+        console.warn('🔧 Auto-fill: Storage NOT available - profiles will not persist');
+        return;
+    }
 
     function getProfiles() {
         try {
             const data = localStorage.getItem(PROFILES_KEY);
+            console.log('🔧 Auto-fill: Raw profiles data:', data ? `${data.substring(0, 100)}...` : 'null');
             if (!data) return {};
             const profiles = JSON.parse(data);
             // Validate structure to prevent corrupted data
@@ -48,6 +53,7 @@
                 console.warn('Auto-fill: Corrupted profiles data, resetting');
                 return {};
             }
+            console.log('🔧 Auto-fill: Loaded', Object.keys(profiles).length, 'profiles:', Object.keys(profiles));
             return profiles;
         } catch (e) { 
             console.warn('Auto-fill: Failed to load profiles', e);
@@ -331,10 +337,13 @@
     }
 
     function init() {
+        console.log('🔧 Auto-fill: Initializing...');
         createProfileSelector();
         const active = getActiveProfile();
+        console.log('🔧 Auto-fill: Active profile:', active || '(none)');
         if (active) loadData(active);
         setupAutoSave();
+        console.log('🔧 Auto-fill: Init complete');
     }
 
     if (document.readyState === 'loading') {
