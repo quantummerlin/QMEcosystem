@@ -456,6 +456,71 @@ function calculateModality(birthDate) {
 }
 
 // ============================================
+// ADVANCED ASTROLOGICAL POINTS
+// ============================================
+
+function calculatePartOfFortune(sunSign, moonSign, risingSign) {
+    // Part of Fortune formula: Ascendant + Moon - Sun
+    // This is the Arabic Part showing where joy and success flow naturally
+    if (!risingSign || !risingSign.name || risingSign.name === 'Unknown') {
+        return null;
+    }
+    
+    const ascIndex = ZODIAC_SIGNS.findIndex(s => s.name === risingSign.name);
+    const moonIndex = ZODIAC_SIGNS.findIndex(s => s.name === moonSign.name);
+    const sunIndex = ZODIAC_SIGNS.findIndex(s => s.name === sunSign.name);
+    
+    // Calculate Part of Fortune position
+    const fortuneIndex = ((ascIndex + moonIndex - sunIndex) + 12) % 12;
+    
+    return ZODIAC_SIGNS[fortuneIndex];
+}
+
+// ============================================
+// CURRENT TRANSITS (as of 2026)
+// ============================================
+
+function calculateCurrentTransits(birthDate) {
+    const currentDate = new Date();
+    const age = calculateAge(birthDate);
+    
+    // Current outer planet positions (approximate for 2026)
+    const transits = {
+        saturn: {
+            sign: ZODIAC_SIGNS[11], // Pisces (2023-2026)
+            meaning: 'structure and boundaries in spiritual/emotional realms',
+            startYear: 2023,
+            endYear: 2026
+        },
+        pluto: {
+            sign: ZODIAC_SIGNS[10], // Aquarius (2024-2044)
+            meaning: 'transformation of community and innovation',
+            startYear: 2024,
+            endYear: 2044
+        },
+        jupiter: {
+            sign: ZODIAC_SIGNS[6], // Libra (approximate for 2026)
+            meaning: 'growth in relationships and balance',
+            year: 2026
+        },
+        uranus: {
+            sign: ZODIAC_SIGNS[1], // Taurus (2018-2026)
+            meaning: 'revolution in values and security',
+            startYear: 2018,
+            endYear: 2026
+        },
+        neptune: {
+            sign: ZODIAC_SIGNS[11], // Pisces (2011-2026)
+            meaning: 'spiritual awakening and dissolution of boundaries',
+            startYear: 2011,
+            endYear: 2026
+        }
+    };
+    
+    return transits;
+}
+
+// ============================================
 // LIFE CYCLE CALCULATIONS
 // ============================================
 
@@ -687,6 +752,10 @@ function calculateAllReadings(userData) {
         saturn: getPlanetHouse(saturnSign, houses)
     } : null;
     
+    // Advanced points
+    const partOfFortune = calculatePartOfFortune(sunSign, moonSign, risingSign);
+    const currentTransits = calculateCurrentTransits(birthDate);
+    
     // Life cycles
     const age = calculateAge(birthDate);
     const nextBirthday = calculateNextBirthday(birthDate);
@@ -740,7 +809,9 @@ function calculateAllReadings(userData) {
             modality,
             houses,
             planetHouses,
-            aspects
+            aspects,
+            partOfFortune,
+            currentTransits
         },
         
         // Life cycles
