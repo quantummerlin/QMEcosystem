@@ -737,10 +737,113 @@
             box-shadow: 0 10px 30px rgba(255,105,180,0.4);
         }
         
+        /* Action Buttons */
+        #action-buttons {
+            display: none;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .action-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .action-btn.secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        /* Pagination */
+        .reading-section {
+            display: none;
+        }
+
+        .reading-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .pagination-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+        }
+
+        .pagination-controls button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .pagination-controls button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .pagination-controls button:not(:disabled):hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .page-indicator {
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* AdSense Placeholder */
+        .ad-container {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            text-align: center;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        .ad-placeholder {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+        }
+        
         /* Print Styles */
         @media print {
-            .header, .action-buttons, .new-reading-btn, .toc {
+            .header, .action-buttons, .new-reading-btn, .toc, .pagination-controls, .ad-container, #action-buttons, #theme-bar {
                 display: none !important;
+            }
+            
+            .reading-section {
+                display: block !important;
+                page-break-after: always;
             }
             
             .results-section {
@@ -756,6 +859,12 @@
             body {
                 background: white;
                 color: black;
+            }
+            
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
             }
         }
         
@@ -967,6 +1076,14 @@
             <h1 id="brandName">Complete Cosmic Blueprint</h1>
             <p class="tagline" id="tagline">Your Complete Cosmic Profile</p>
             <p class="sub-tagline" id="subTagline">58 Readings • One Beautiful Report • Lifetime Guidance</p>
+            
+            <!-- Action Buttons (hidden until reading generated) -->
+            <div id="action-buttons" style="display: none; margin-top: 20px; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                <button type="button" onclick="printReading()" class="action-btn" title="Print or Save as PDF">🖨️ Print/PDF</button>
+                <button type="button" onclick="downloadReading()" class="action-btn" title="Download as HTML file">💾 Download</button>
+                <button type="button" onclick="shareReading()" class="action-btn" title="Share this reading">📤 Share</button>
+                <button type="button" onclick="clearReading()" class="action-btn secondary" title="Start a new reading">🔄 New Reading</button>
+            </div>
         </header>
         
         <div class="container">
@@ -1046,6 +1163,8 @@
     <script src="house-readings.js"></script>
     <script src="aspect-readings.js"></script>
     <script src="advanced-readings.js"></script>
+    <script src="love-blueprint.js"></script>
+    <script src="save-share.js"></script>
     <script>
         // ============================================
         // GENDER THEME SWITCH
@@ -1297,6 +1416,8 @@
             // ============================================
             // SECTION 1: CELESTIAL / ASTROLOGY
             // ============================================
+            const celestialSectionWrapper = document.createElement('div');
+            celestialSectionWrapper.className = 'reading-section active';
             const celestialSection = createSection('celestial', config.sections.celestial);
             
             // Sun Sign
@@ -1617,11 +1738,22 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 ));
             }
             
-            container.appendChild(celestialSection);
+            celestialSectionWrapper.appendChild(celestialSection);
+            container.appendChild(celestialSectionWrapper);
+            
+            // Add pagination control after celestial section
+            const celestialPagination = createPaginationControl();
+            container.appendChild(celestialPagination);
+            
+            // Add AdSense slot
+            const ad1 = createAdSlot();
+            container.appendChild(ad1);
             
             // ============================================
             // SECTION 2: NUMEROLOGY
             // ============================================
+            const numbersSectionWrapper = document.createElement('div');
+            numbersSectionWrapper.className = 'reading-section';
             const numbersSection = createSection('numbers', config.sections.numbers);
             
             // Life Path
@@ -1753,11 +1885,25 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 ));
             }
             
-            container.appendChild(numbersSection);
+            numbersSectionWrapper.appendChild(numbersSection);
+            container.appendChild(numbersSectionWrapper);
             
-            // ============================================
-            // SECTION 3: SOUL MISSION
-            // ============================================
+            // Add pagination control after numerology section
+            const numbersPagination = createPaginationControl();
+            container.appendChild(numbersPagination);
+            
+            // Add AdSense slot
+            const ad2 = createAdSlot();
+            container.appendChild(ad2);
+            
+            // Store readings globally for save functionality
+            window.lastGeneratedReadings = readings;
+            
+            // Initialize pagination
+            setTimeout(() => {
+                initializePagination();
+            }, 100);
+        }
             const soulSection = createSection('soul', config.sections.soul);
             
             // North Node with detailed reading
@@ -1883,6 +2029,33 @@ This isn't a flaw - it's their power source. The tension between these two drive
             `;
             
             return section;
+        }
+        
+        function createPaginationControl() {
+            const pagination = document.createElement('div');
+            pagination.className = 'pagination-controls';
+            pagination.innerHTML = `
+                <button type="button" id="prev-page" onclick="prevPage()">← Previous</button>
+                <span class="page-indicator" id="page-indicator">Section 1 of 2</span>
+                <button type="button" id="next-page" onclick="nextPage()">Next →</button>
+            `;
+            return pagination;
+        }
+        
+        function createAdSlot() {
+            const ad = document.createElement('div');
+            ad.className = 'ad-container';
+            ad.innerHTML = `
+                <div class="ad-placeholder">
+                    <p style="color: rgba(255,255,255,0.3); margin: 0;">Advertisement</p>
+                    <!-- Replace with your AdSense code -->
+                    <ins class="adsbygoogle"
+                         style="display:block; margin-top: 20px;"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                </div>
+            `;
+            return ad;
         }
         
         function createReadingCard(title, value, keywords, content, strengths, challenges) {
