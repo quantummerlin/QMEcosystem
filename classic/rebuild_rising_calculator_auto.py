@@ -8,13 +8,13 @@ import json
 
 # Rising Sign interpretations from the current file
 MOON_SIGN_INTERPRETATIONS = {
-    "Aries": """Your Moon is in Aries, {preferredName}, revealing a fiery, passionate outer personality that craves independence and excitement. Your inner world operates at high speedâ€”you feel things intensely and immediately, and you need to express emotions as they arise rather than holding them in.
+    "Aries": """Your Moon is in Aries, {preferredName}, revealing a fiery, passionate outer personality that craves independence and excitement. Your inner world operates at high speed"”you feel things intensely and immediately, and you need to express emotions as they arise rather than holding them in.
 
-Emotionally, you're a warrior. When feelings surface, your first instinct is action. You don't sit with sadnessâ€”you do something about it. You don't ponder angerâ€”you express it. This directness can be refreshing in a world where many people suppress their true feelings, but it can also lead to impulsive emotional reactions you later regret.
+Emotionally, you're a warrior. When feelings surface, your first instinct is action. You don't sit with sadness"”you do something about it. You don't ponder anger"”you express it. This directness can be refreshing in a world where many people suppress their true feelings, but it can also lead to impulsive emotional reactions you later regret.
 
 You need emotional freedom above all else. Relationships or situations that feel controlling or restrictive trigger intense discomfort. You require partners and friends who respect your independence and don't try to cage your spirited nature. Clinginess or emotional manipulation repels you instantly.
 
-Your emotional comfort comes through physical activity and new experiences. When you're upset, you need to moveâ€”run, work out, or tackle a challenging project. Sitting still with difficult feelings feels unbearable. You process emotions through action, not introspection.
+Your emotional comfort comes through physical activity and new experiences. When you're upset, you need to move"”run, work out, or tackle a challenging project. Sitting still with difficult feelings feels unbearable. You process emotions through action, not introspection.
 
 In childhood, you likely needed more freedom than you were given. You may have felt restrained by family expectations or rules that didn't account for your pioneering spirit. Your relationship with your mother or primary caregiver may have been complicated by your need for independence versus their desire to protect or guide you.
 
@@ -24,15 +24,15 @@ However, the shadow side of Aries Moon is impatience with others' emotional proc
 
 You're also learning that not every emotional trigger requires immediate action. Sometimes the warrior's greatest strength is choosing not to fight. Developing a pause between feeling and reacting serves you well.
 
-Your greatest emotional gift is your courage. You're willing to feel intensely and express authentically. You don't hide from difficult emotionsâ€”you meet them head-on. This bravery inspires others to be more honest about their own feelings.""",
+Your greatest emotional gift is your courage. You're willing to feel intensely and express authentically. You don't hide from difficult emotions"”you meet them head-on. This bravery inspires others to be more honest about their own feelings.""",
 
-    "Taurus": """Your Moon is in Taurus, {preferredName}, giving you an outer personality that craves stability, comfort, and sensory pleasure. Your inner world operates at a steady, deliberate paceâ€”you need time to process feelings fully before moving forward, and you value emotional security above almost everything else.
+    "Taurus": """Your Moon is in Taurus, {preferredName}, giving you an outer personality that craves stability, comfort, and sensory pleasure. Your inner world operates at a steady, deliberate pace"”you need time to process feelings fully before moving forward, and you value emotional security above almost everything else.
 
 Emotionally, you're grounded and practical. When feelings arise, you don't rush to express them. Instead, you sit with them, feel them in your body, and only share when you've fully understood what you're experiencing. This can make you seem emotionally reserved, but really you're just thorough.
 
 You need consistency and reliability in relationships. Sudden changes, unpredictability, or emotional chaos disturb you deeply. You want to know where you stand with people, and you offer the same dependability you seek. Once you commit emotionally, you're remarkably loyal and steadfast.
 
-Your emotional comfort comes through physical world pleasuresâ€”good food, beautiful environments, comfortable clothes, pleasant scents, soothing music. When you're upset, you seek sensory comfort. A delicious meal, a soft blanket, time in natureâ€”these aren't superficial Band-aids but genuine emotional medicine for you.
+Your emotional comfort comes through physical world pleasures"”good food, beautiful environments, comfortable clothes, pleasant scents, soothing music. When you're upset, you seek sensory comfort. A delicious meal, a soft blanket, time in nature"”these aren't superficial Band-aids but genuine emotional medicine for you.
 
 In childhood, you needed material and emotional security. Disruptions to home stability may have affected you more deeply than your caregivers realized. Your relationship with your mother or primary caregiver likely centered on themes of safety, provision, and physical comfort.
 
@@ -298,12 +298,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 </select>
                 <button type="button" class="profile-btn" onclick="showSaveProfileDialog()">ðŸ’¾ Save Profile</button>
                 <button type="button" class="profile-btn" onclick="showDeleteProfileDialog()">ðŸ—‘ï¸ Delete Profile</button>
-                <button type="button" class="profile-btn clear-btn" onclick="clearSavedData()">âœ¨ Clear Form</button>
+                <button type="button" class="profile-btn clear-btn" onclick="clearSavedData()">✨ Clear Form</button>
             </div>
 
             <form id="calculator-form" onsubmit="calculateRisingSign(event)">
                 <div class="input-section">
-                    <div class="section-title">âœ¨ Personal Information</div>
+                    <div class="section-title">✨ Personal Information</div>
                     
                     <div class="input-group">
                         <label for="preferredName">Preferred Name</label>
@@ -456,7 +456,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             localStorage.setItem('quantumMerlinActiveProfile', profileName);
             
             updateProfileDropdown();
-            alert(`Profile "${profileName}" saved! âœ¨`);
+            alert(`Profile "${profileName}" saved! ✨`);
         }
 
         function loadProfile(profileName) {

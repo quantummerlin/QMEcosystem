@@ -1045,6 +1045,7 @@
     <script src="readings.js"></script>
     <script src="house-readings.js"></script>
     <script src="aspect-readings.js"></script>
+    <script src="advanced-readings.js"></script>
     <script>
         // ============================================
         // GENDER THEME SWITCH
@@ -1529,6 +1530,90 @@ This isn't a flaw - it's their power source. The tension between these two drive
                     paradoxReading,
                     ['Deep self-awareness', 'Understanding complexity'],
                     sunMoonAspect.nature === 'challenging' ? ['Internal tension requires conscious integration'] : []
+                ));
+            }
+            
+            // ============================================
+            // LOVE BLUEPRINT SYNTHESIS
+            // ============================================
+            if (readings.astrology.loveBlueprint && typeof generateLoveBlueprint === 'function') {
+                const lb = readings.astrology.loveBlueprint;
+                const blueprint = generateLoveBlueprint(lb.venus, lb.mars, lb.house7);
+                
+                const blueprintHeader = document.createElement('div');
+                blueprintHeader.className = 'section-divider';
+                blueprintHeader.innerHTML = '<h3>💕 Love Blueprint</h3><p>How they\'ll love, desire, and attract throughout life</p>';
+                celestialSection.appendChild(blueprintHeader);
+                
+                celestialSection.appendChild(createReadingCard(
+                    blueprint.title,
+                    blueprint.subtitle,
+                    blueprint.keywords,
+                    blueprint.synthesis.replace(/this little one/gi, userData.name).replace(/they/gi, 'they').replace(/their/gi, 'their'),
+                    [`Their heart speaks: ${blueprint.essence}`, `They naturally attract: ${blueprint.attracted}`],
+                    []
+                ));
+            }
+            
+            // ============================================
+            // PART OF FORTUNE
+            // ============================================
+            if (readings.astrology.partOfFortune && PART_OF_FORTUNE_READINGS) {
+                const fortuneSign = readings.astrology.partOfFortune;
+                const fortuneReading = PART_OF_FORTUNE_READINGS[fortuneSign.name];
+                
+                if (fortuneReading) {
+                    celestialSection.appendChild(createReadingCard(
+                        fortuneReading.title,
+                        `🍀 ${fortuneSign.name}`,
+                        fortuneReading.keywords,
+                        fortuneReading.reading.replace(/this child/gi, userData.name).replace(/they/gi, 'they').replace(/them/gi, 'them').replace(/their/gi, 'their'),
+                        [fortuneReading.guidance],
+                        []
+                    ));
+                }
+            }
+            
+            // ============================================
+            // CURRENT TRANSITS
+            // ============================================
+            if (readings.astrology.currentTransits && TRANSIT_READINGS) {
+                const transitsHeader = document.createElement('div');
+                transitsHeader.className = 'section-divider';
+                transitsHeader.innerHTML = '<h3>🌊 Current Cosmic Weather (2026)</h3><p>What the universe is teaching this generation right now</p>';
+                celestialSection.appendChild(transitsHeader);
+                
+                // Saturn transit
+                const saturnTransit = TRANSIT_READINGS.saturn;
+                celestialSection.appendChild(createReadingCard(
+                    saturnTransit.title,
+                    `♄ Saturn in ${saturnTransit.currentSign}`,
+                    saturnTransit.keywords,
+                    saturnTransit.reading.replace(/this little one/gi, userData.name).replace(/they/gi, 'they'),
+                    [saturnTransit.guidance],
+                    []
+                ));
+                
+                // Pluto transit
+                const plutoTransit = TRANSIT_READINGS.pluto;
+                celestialSection.appendChild(createReadingCard(
+                    plutoTransit.title,
+                    `♇ Pluto in ${plutoTransit.currentSign}`,
+                    plutoTransit.keywords,
+                    plutoTransit.reading.replace(/this child/gi, userData.name).replace(/they/gi, 'they'),
+                    [plutoTransit.guidance],
+                    []
+                ));
+                
+                // Jupiter transit
+                const jupiterTransit = TRANSIT_READINGS.jupiter;
+                celestialSection.appendChild(createReadingCard(
+                    jupiterTransit.title,
+                    `♃ Jupiter in ${jupiterTransit.currentSign}`,
+                    jupiterTransit.keywords,
+                    jupiterTransit.reading.replace(/they/gi, 'they'),
+                    [jupiterTransit.guidance],
+                    []
                 ));
             }
             

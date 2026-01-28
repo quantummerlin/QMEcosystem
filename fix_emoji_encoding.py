@@ -5,11 +5,11 @@ import glob
 
 # Map of mojibake to proper UTF-8 emoji
 REPLACEMENTS = {
-    'âœ¨': '✨',  # sparkle emoji
-    'â€"': '—',   # em dash
-    'â€™': "'",   # right single quote
-    'â€œ': '"',   # left double quote
-    'â€': '"',    # right double quote (partial)
+    '✨': '✨',  # sparkle emoji
+    '—': '—',   # em dash
+    ''': "'",   # right single quote
+    '"': '"',   # left double quote
+    '"': '"',    # right double quote (partial)
 }
 
 def fix_file(filepath):
@@ -35,19 +35,20 @@ def main():
     """Fix all HTML files in the workspace"""
     root = r'C:\Users\WIPED\QMEcosystem'
     
-    # Find all HTML files
-    patterns = [
-        os.path.join(root, '**', '*.html'),
-    ]
-    
     fixed_count = 0
-    for pattern in patterns:
-        for filepath in glob.glob(pattern, recursive=True):
-            if fix_file(filepath):
-                print(f"Fixed: {filepath}")
-                fixed_count += 1
+    # Walk through directories
+    for dirpath, dirnames, filenames in os.walk(root):
+        # Skip git and node_modules
+        dirnames[:] = [d for d in dirnames if d not in ['.git', 'node_modules', 'Expand']]
+        
+        for filename in filenames:
+            if filename.endswith('.html') or filename.endswith('.py'):
+                filepath = os.path.join(dirpath, filename)
+                if fix_file(filepath):
+                    print(f"Fixed: {filepath}")
+                    fixed_count += 1
     
-    print(f"\n✨ Fixed {fixed_count} files")
+    print(f"\nFixed {fixed_count} files")
 
 if __name__ == '__main__':
     main()

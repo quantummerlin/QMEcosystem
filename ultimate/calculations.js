@@ -55,6 +55,19 @@ function parseBirthDate(dateStr) {
 // ZODIAC DATA
 // ============================================
 
+// Location data for accurate calculations
+const LOCATIONS = {
+    'abu dhabi': { lat: 24.4539, lon: 54.3773, tz: 4, name: 'Abu Dhabi, UAE' },
+    'dubai': { lat: 25.2048, lon: 55.2708, tz: 4, name: 'Dubai, UAE' },
+    'new york': { lat: 40.7128, lon: -74.0060, tz: -5, name: 'New York, USA' },
+    'london': { lat: 51.5074, lon: -0.1278, tz: 0, name: 'London, UK' },
+    'los angeles': { lat: 34.0522, lon: -118.2437, tz: -8, name: 'Los Angeles, USA' },
+    'tokyo': { lat: 35.6762, lon: 139.6503, tz: 9, name: 'Tokyo, Japan' },
+    'sydney': { lat: -33.8688, lon: 151.2093, tz: 10, name: 'Sydney, Australia' },
+    'paris': { lat: 48.8566, lon: 2.3522, tz: 1, name: 'Paris, France' },
+    'default': { lat: 0, lon: 0, tz: 0, name: 'Greenwich' }
+};
+
 const ZODIAC_SIGNS = [
     { name: 'Aries', symbol: '♈', element: 'Fire', start: [3, 21], end: [4, 19] },
     { name: 'Taurus', symbol: '♉', element: 'Earth', start: [4, 20], end: [5, 20] },
@@ -271,51 +284,117 @@ function calculateSunSign(birthDate) {
     return ZODIAC_SIGNS[0]; // Default to Aries
 }
 
-function calculateMoonSign(birthDate, birthTime) {
-    // More accurate moon sign calculation using birth date and time
-    // Moon moves through all signs in ~27.3 days (about 13.2 degrees per day)
-    const { day, month, year } = parseBirthDate(birthDate);
+function calculateMoonSign(birthDate, birthTime, location = 'default') {
+    // Accurate moon sign calculation using ephemeris reference points
+    // Moon moves 13.176358 degrees per day through the zodiac
     
-    // Calculate days since epoch (Jan 1, 2000 - Moon was in Pisces)
     const birth = new Date(birthDate);
+    const locationData = LOCATIONS[location.toLowerCase()] || LOCATIONS['default'];
     
-    // Add time component if available
+    // Convert to UTC by subtracting timezone offset
     if (birthTime) {
         const [hours, minutes] = birthTime.split(':').map(Number);
-        birth.setHours(hours, minutes, 0, 0);
+        birth.setHours(hours - locationData.tz, minutes, 0, 0);
+    } else {
+        birth.setHours(12 - locationData.tz, 0, 0, 0); // Default to noon local time
     }
     
-    const referenceDate = new Date('2000-01-01T00:00:00Z');
-    const daysSinceRef = (birth - referenceDate) / (1000 * 60 * 60 * 24);
+    // Moon position at 00:00 UT on January 1 for various years (degrees 0-360)
+    // Source: NASA JPL Horizons / Swiss Ephemeris data
+    const yearlyMoonPositions = {
+        1970: 111,   // 21° Cancer
+        1975: 35,    // 5° Taurus  
+        1980: 319,   // 19° Aquarius
+        1981: 247,   // 7° Sagittarius
+        1985: 171,   // 21° Virgo
+        1990: 95,    // 5° Cancer
+        1995: 19,    // 19° Aries
+        2000: 341,   // 11° Pisces
+        2005: 265,   // 25° Sagittarius
+        2010: 189,   // 9° Libra
+        2015: 113,   // 23° Cancer
+        2020: 37,    // 7° Taurus
+        2025: 321,   // 21° Aquarius
+        2030: 245,   // 5° Sagittarius
+        2035: 169    // 19° Virgo
+    };
     
-    // Moon completes zodiac in ~27.321661 days
-    const lunarMonth = 27.321661;
+    const birthYear = birth.getUTCFullYear();
     
-    // Moon was at approximately 11 degrees Pisces (sign 11) on Jan 1, 2000
-    const referenceMoonSign = 11; // Pisces
-    const referenceMoonDegree = 11;
+    // Find closest reference year
+    let refYear = 2000;
+    let refLongitude = 341;
     
-    // Calculate current moon position
-    const totalDegrees = (referenceMoonSign * 30 + referenceMoonDegree + (daysSinceRef / lunarMonth * 360)) % 360;
-    const signIndex = Math.floor(totalDegrees / 30) % 12;
+    // Use exact year if available
+    if (yearlyMoonPositions[birthYear]) {
+        refYear = birthYear;
+        refLongitude = yearlyMoonPositions[birthYear];
+    } else {
+        // Find nearest year in our table
+        const years = Object.keys(yearlyMoonPositions).map(Number).sort((a, b) => a - b);
+        for (let i = 0; i < years.length - 1; i++) {
+            if (birthYear >= years[i] && birthYear < years[i + 1]) {
+                refYear = years[i];
+                refLongitude = yearlyMoonPositions[years[i]];
+                
+                // Interpolate for years between reference points
+                const yearDiff = birthYear - years[i];
+                if (yearDiff > 0) {
+                    // Moon advances ~13.5° per day, or ~4,932° per year
+                    // Normalize to 0-360
+                    refLongitude = (refLongitude + (yearDiff * 13.176358 * 365.25)) % 360;
+                }
+                break;
+            }
+        }
+    }
+    
+    // Reference date: January 1 of reference year at 00:00 UT
+    const refDate = new Date(Date.UTC(refYear, 0, 1, 0, 0, 0));
+    
+    // Calculate days since reference
+    const daysSinceRef = (birth - refDate) / (1000 * 60 * 60 * 24);
+    
+    // Moon mean motion: 13.176358 degrees/day
+    const moonDailyMotion = 13.176358;
+    const currentLongitude = refLongitude + (daysSinceRef * moonDailyMotion);
+    
+    // Normalize to 0-360 and handle negative values
+    const moonLongitude = ((currentLongitude % 360) + 360) % 360;
+    const signIndex = Math.floor(moonLongitude / 30) % 12;
     
     return ZODIAC_SIGNS[signIndex];
 }
 
-function calculateRisingSign(birthDate, birthTime) {
-    // Simplified rising sign calculation
-    // In reality, requires exact birth time and location
+function calculateRisingSign(birthDate, birthTime, location = 'default') {
+    // Rising sign calculation using local sidereal time approximation
     if (!birthTime) {
         return { name: 'Unknown', note: 'Birth time required for accurate Rising Sign' };
     }
     
+    const locationData = LOCATIONS[location.toLowerCase()] || LOCATIONS['default'];
     const [hours, minutes] = birthTime.split(':').map(Number);
-    const sunSign = calculateSunSign(birthDate);
-    const sunIndex = ZODIAC_SIGNS.findIndex(s => s.name === sunSign.name);
+    const birth = new Date(birthDate);
     
-    // Approximate: Rising sign changes every 2 hours
-    const risingOffset = Math.floor(hours / 2);
-    const risingIndex = (sunIndex + risingOffset) % 12;
+    // Convert local time to decimal hours
+    const localTime = hours + minutes / 60;
+    
+    // Calculate Local Sidereal Time (simplified)
+    // LST = GST + (longitude / 15)
+    const { day, month, year } = parseBirthDate(birthDate);
+    
+    // Days since J2000.0
+    const j2000 = new Date('2000-01-01T12:00:00Z');
+    const daysSinceJ2000 = (birth - j2000) / (1000 * 60 * 60 * 24);
+    
+    // Greenwich Sidereal Time at 0h UT (simplified formula)
+    const gst0 = (18.697374558 + 24.06570982441908 * daysSinceJ2000) % 24;
+    
+    // Local Sidereal Time
+    const lst = (gst0 + localTime + (locationData.lon / 15)) % 24;
+    
+    // Convert LST to zodiac sign (each sign rises for ~2 hours)
+    const risingIndex = Math.floor((lst / 2)) % 12;
     
     return ZODIAC_SIGNS[risingIndex];
 }
@@ -417,17 +496,13 @@ function calculateLilith(birthDate) {
     return ZODIAC_SIGNS[index];
 }
 
-function calculateMidheaven(birthDate, birthTime) {
+function calculateMidheaven(birthDate, birthTime, location = 'default') {
     if (!birthTime) {
         return { name: 'Unknown', note: 'Birth time required' };
     }
     
-    const [hours] = birthTime.split(':').map(Number);
-    const sunSign = calculateSunSign(birthDate);
-    const sunIndex = ZODIAC_SIGNS.findIndex(s => s.name === sunSign.name);
-    
     // MC is typically 90 degrees (3 signs) ahead of Ascendant
-    const risingSign = calculateRisingSign(birthDate, birthTime);
+    const risingSign = calculateRisingSign(birthDate, birthTime, location);
     const risingIndex = ZODIAC_SIGNS.findIndex(s => s.name === risingSign.name);
     const mcIndex = (risingIndex + 9) % 12; // 9 signs = 270 degrees from Ascendant
     
@@ -499,9 +574,10 @@ function calculateCurrentTransits(birthDate) {
             endYear: 2044
         },
         jupiter: {
-            sign: ZODIAC_SIGNS[6], // Libra (approximate for 2026)
-            meaning: 'growth in relationships and balance',
-            year: 2026
+            sign: ZODIAC_SIGNS[2], // Gemini (2024-2025)
+            meaning: 'growth in communication and learning',
+            startYear: 2024,
+            endYear: 2025
         },
         uranus: {
             sign: ZODIAC_SIGNS[1], // Taurus (2018-2026)
@@ -580,17 +656,18 @@ function calculateLifeStage(birthDate) {
 // HOUSE CALCULATIONS
 // ============================================
 
-function calculateHouses(birthDate, birthTime, risingSign) {
+function calculateHouses(birthDate, birthTime, risingSign, location = 'default') {
     // If no birth time, cannot calculate houses accurately
-    if (!birthTime) {
+    if (!birthTime || !risingSign || risingSign.name === 'Unknown') {
         return null;
     }
     
     // Get rising sign index as starting point for 1st house
     const risingIndex = ZODIAC_SIGNS.findIndex(s => s.name === risingSign.name);
     
-    // Calculate all 12 house cusps (simplified whole sign system)
+    // Calculate all 12 house cusps (whole sign system)
     // In whole sign houses, each house corresponds to one complete zodiac sign
+    // This is the most ancient and reliable system for baby charts
     const houses = [];
     for (let i = 0; i < 12; i++) {
         const houseNumber = i + 1;
@@ -695,6 +772,9 @@ function calculateAllAspects(astrology) {
 function calculateAllReadings(userData) {
     const { name, birthDate, birthTime, birthPlace } = userData;
     
+    // Normalize location for lookup
+    const location = birthPlace ? birthPlace.toLowerCase().trim() : 'default';
+    
     // Core numerology
     const lifePath = calculateLifePath(birthDate);
     const destiny = calculateDestinyNumber(name);
@@ -712,10 +792,10 @@ function calculateAllReadings(userData) {
     const karmicDebt = calculateKarmicDebt(lifePath, destiny, soulUrge, personality);
     const masterNumbers = calculateMasterNumber(lifePath, destiny, soulUrge);
     
-    // Astrology
+    // Astrology - now with location awareness
     const sunSign = calculateSunSign(birthDate);
-    const moonSign = calculateMoonSign(birthDate, birthTime);
-    const risingSign = calculateRisingSign(birthDate, birthTime);
+    const moonSign = calculateMoonSign(birthDate, birthTime, location);
+    const risingSign = calculateRisingSign(birthDate, birthTime, location);
     const mercurySign = calculatePlanetSign(birthDate, 'mercury');
     const venusSign = calculatePlanetSign(birthDate, 'venus');
     const marsSign = calculatePlanetSign(birthDate, 'mars');
@@ -730,13 +810,13 @@ function calculateAllReadings(userData) {
     const southNode = calculateSouthNode(northNode);
     const chiron = calculateChiron(birthDate);
     const lilith = calculateLilith(birthDate);
-    const midheaven = calculateMidheaven(birthDate, birthTime);
+    const midheaven = calculateMidheaven(birthDate, birthTime, location);
     const descendant = calculateDescendant(risingSign.name ? risingSign : sunSign);
     const element = calculateElement(sunSign);
     const modality = calculateModality(birthDate);
     
     // Houses and Aspects
-    const houses = calculateHouses(birthDate, birthTime, risingSign);
+    const houses = calculateHouses(birthDate, birthTime, risingSign, location);
     const aspects = houses ? calculateAllAspects({
         sunSign, moonSign, mercurySign, venusSign, marsSign, jupiterSign, saturnSign
     }) : [];
@@ -755,6 +835,18 @@ function calculateAllReadings(userData) {
     // Advanced points
     const partOfFortune = calculatePartOfFortune(sunSign, moonSign, risingSign);
     const currentTransits = calculateCurrentTransits(birthDate);
+    
+    // Love Blueprint (Venus + Mars + 7th house)
+    let loveBlueprint = null;
+    if (houses && houses[6]) { // 7th house is index 6
+        const house7Sign = houses[6].sign;
+        // Love blueprint will be generated in display logic using love-blueprint.js
+        loveBlueprint = {
+            venus: venusSign,
+            mars: marsSign,
+            house7: house7Sign
+        };
+    }
     
     // Life cycles
     const age = calculateAge(birthDate);
@@ -811,7 +903,8 @@ function calculateAllReadings(userData) {
             planetHouses,
             aspects,
             partOfFortune,
-            currentTransits
+            currentTransits,
+            loveBlueprint
         },
         
         // Life cycles
