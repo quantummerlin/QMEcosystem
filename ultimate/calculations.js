@@ -489,6 +489,118 @@ function calculateLifeStage(birthDate) {
 }
 
 // ============================================
+// HOUSE CALCULATIONS
+// ============================================
+
+function calculateHouses(birthDate, birthTime, risingSign) {
+    // If no birth time, cannot calculate houses accurately
+    if (!birthTime) {
+        return null;
+    }
+    
+    // Get rising sign index as starting point for 1st house
+    const risingIndex = ZODIAC_SIGNS.findIndex(s => s.name === risingSign.name);
+    
+    // Calculate all 12 house cusps (simplified whole sign system)
+    // In whole sign houses, each house corresponds to one complete zodiac sign
+    const houses = [];
+    for (let i = 0; i < 12; i++) {
+        const houseNumber = i + 1;
+        const signIndex = (risingIndex + i) % 12;
+        houses.push({
+            house: houseNumber,
+            sign: ZODIAC_SIGNS[signIndex],
+            cusp: ZODIAC_SIGNS[signIndex].name
+        });
+    }
+    
+    return houses;
+}
+
+function getPlanetHouse(planetSign, houses) {
+    if (!houses) return null;
+    
+    const house = houses.find(h => h.sign.name === planetSign.name);
+    return house ? house.house : null;
+}
+
+// ============================================
+// ASPECT CALCULATIONS
+// ============================================
+
+function calculateAspectAngle(sign1Index, sign2Index) {
+    // Calculate the shortest angle between two signs (0-180 degrees)
+    const diff = Math.abs(sign1Index - sign2Index);
+    const angle = diff * 30; // Each sign is 30 degrees
+    return angle > 180 ? 360 - angle : angle;
+}
+
+function calculateAspect(planet1Sign, planet2Sign, planet1Name, planet2Name) {
+    const sign1Index = ZODIAC_SIGNS.findIndex(s => s.name === planet1Sign.name);
+    const sign2Index = ZODIAC_SIGNS.findIndex(s => s.name === planet2Sign.name);
+    
+    const angle = calculateAspectAngle(sign1Index, sign2Index);
+    const orb = 8; // degrees of allowed orb
+    
+    // Major aspects
+    const aspects = [
+        { name: 'Conjunction', angle: 0, symbol: '☌', type: 'major', nature: 'neutral' },
+        { name: 'Sextile', angle: 60, symbol: '⚹', type: 'major', nature: 'harmonious' },
+        { name: 'Square', angle: 90, symbol: '□', type: 'major', nature: 'challenging' },
+        { name: 'Trine', angle: 120, symbol: '△', type: 'major', nature: 'harmonious' },
+        { name: 'Opposition', angle: 180, symbol: '☍', type: 'major', nature: 'challenging' }
+    ];
+    
+    for (const aspect of aspects) {
+        if (Math.abs(angle - aspect.angle) <= orb) {
+            return {
+                aspect: aspect.name,
+                symbol: aspect.symbol,
+                type: aspect.type,
+                nature: aspect.nature,
+                planet1: planet1Name,
+                planet2: planet2Name,
+                angle: angle,
+                orb: Math.abs(angle - aspect.angle)
+            };
+        }
+    }
+    
+    return null;
+}
+
+function calculateAllAspects(astrology) {
+    const planets = [
+        { name: 'Sun', sign: astrology.sunSign },
+        { name: 'Moon', sign: astrology.moonSign },
+        { name: 'Mercury', sign: astrology.mercurySign },
+        { name: 'Venus', sign: astrology.venusSign },
+        { name: 'Mars', sign: astrology.marsSign },
+        { name: 'Jupiter', sign: astrology.jupiterSign },
+        { name: 'Saturn', sign: astrology.saturnSign }
+    ];
+    
+    const aspects = [];
+    
+    // Calculate aspects between all planet pairs
+    for (let i = 0; i < planets.length; i++) {
+        for (let j = i + 1; j < planets.length; j++) {
+            const aspect = calculateAspect(
+                planets[i].sign, 
+                planets[j].sign,
+                planets[i].name,
+                planets[j].name
+            );
+            if (aspect) {
+                aspects.push(aspect);
+            }
+        }
+    }
+    
+    return aspects;
+}
+
+// ============================================
 // MASTER CALCULATION FUNCTION
 // ============================================
 
@@ -534,6 +646,23 @@ function calculateAllReadings(userData) {
     const descendant = calculateDescendant(risingSign.name ? risingSign : sunSign);
     const element = calculateElement(sunSign);
     const modality = calculateModality(birthDate);
+    
+    // Houses and Aspects
+    const houses = calculateHouses(birthDate, birthTime, risingSign);
+    const aspects = houses ? calculateAllAspects({
+        sunSign, moonSign, mercurySign, venusSign, marsSign, jupiterSign, saturnSign
+    }) : [];
+    
+    // Planet house placements
+    const planetHouses = houses ? {
+        sun: getPlanetHouse(sunSign, houses),
+        moon: getPlanetHouse(moonSign, houses),
+        mercury: getPlanetHouse(mercurySign, houses),
+        venus: getPlanetHouse(venusSign, houses),
+        mars: getPlanetHouse(marsSign, houses),
+        jupiter: getPlanetHouse(jupiterSign, houses),
+        saturn: getPlanetHouse(saturnSign, houses)
+    } : null;
     
     // Life cycles
     const age = calculateAge(birthDate);
@@ -585,7 +714,10 @@ function calculateAllReadings(userData) {
             midheaven,
             descendant,
             element,
-            modality
+            modality,
+            houses,
+            planetHouses,
+            aspects
         },
         
         // Life cycles
