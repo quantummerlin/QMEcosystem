@@ -1754,7 +1754,9 @@
       if (scrollBtn && aboutSection) {
         scrollBtn.addEventListener('click', function() {
           markVisited();
-          aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Get the section position and add a small offset for padding
+          const sectionTop = aboutSection.getBoundingClientRect().top + window.scrollY - 20;
+          window.scrollTo({ top: sectionTop, behavior: 'smooth' });
         });
       }
 
