@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title id="page-title">Complete Cosmic Blueprint</title>
     <meta name="description" id="meta-description" content="Get your complete cosmic profile with 58 personalized readings.">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#FF69B4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Baby Blueprint">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Baby Cosmic Blueprint">
+    <meta name="msapplication-TileColor" content="#FF69B4">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- PWA Manifest & Icons -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon-192.png">
     
     <!-- Open Graph -->
     <meta property="og:title" id="og-title" content="Complete Cosmic Blueprint">
@@ -661,7 +676,7 @@
             }
         }
         
-        /* Responsive */
+        /* Responsive - Tablet */
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
@@ -677,6 +692,167 @@
             
             .reading-card {
                 padding: 20px;
+            }
+            
+            .gender-switch {
+                flex-direction: row;
+            }
+            
+            .gender-btn {
+                padding: 12px 15px;
+            }
+        }
+        
+        /* Responsive - Mobile */
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 30px 10px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header .tagline {
+                font-size: 1rem;
+            }
+            
+            .input-form {
+                padding: 20px 15px;
+                border-radius: 15px;
+            }
+            
+            .form-group label {
+                font-size: 1rem;
+            }
+            
+            .form-group input {
+                padding: 12px 15px;
+                font-size: 16px; /* Prevents iOS zoom on focus */
+            }
+            
+            .gender-switch {
+                gap: 10px;
+            }
+            
+            .gender-btn {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+            }
+            
+            .gender-btn .gender-icon {
+                font-size: 1.5rem;
+            }
+            
+            .submit-btn {
+                padding: 15px 20px;
+                font-size: 1.1rem;
+            }
+            
+            .results-header {
+                padding: 30px 15px;
+                border-radius: 15px;
+            }
+            
+            .results-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .action-buttons {
+                gap: 10px;
+            }
+            
+            .action-btn {
+                padding: 10px 15px;
+                font-size: 0.85rem;
+            }
+            
+            .toc {
+                padding: 20px 15px;
+            }
+            
+            .toc-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .section-header .icon {
+                font-size: 2.5rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.4rem;
+            }
+            
+            .reading-card {
+                padding: 15px;
+                border-radius: 12px;
+                margin-bottom: 15px;
+            }
+            
+            .reading-card .card-icon {
+                font-size: 2rem;
+            }
+            
+            .reading-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .reading-card .result-value {
+                font-size: 1rem;
+                padding: 6px 12px;
+            }
+            
+            .reading-card .keywords {
+                gap: 6px;
+            }
+            
+            .reading-card .keyword {
+                padding: 4px 10px;
+                font-size: 0.8rem;
+            }
+            
+            .reading-card .reading-content {
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+            
+            .reading-card .strengths-challenges {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .new-reading-btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+        }
+        
+        /* Touch-friendly enhancements */
+        @media (hover: none) and (pointer: coarse) {
+            .submit-btn,
+            .action-btn,
+            .gender-btn,
+            .toc-item,
+            .new-reading-btn {
+                min-height: 44px; /* Apple's recommended touch target */
+            }
+            
+            .form-group input {
+                min-height: 48px;
+            }
+        }
+        
+        /* Safe area insets for notched devices */
+        @supports (padding: max(0px)) {
+            body {
+                padding-left: max(10px, env(safe-area-inset-left));
+                padding-right: max(10px, env(safe-area-inset-right));
+                padding-bottom: max(10px, env(safe-area-inset-bottom));
             }
         }
     </style>
@@ -823,6 +999,12 @@
                 root.style.setProperty('--accent', '#FF1493');
                 root.style.setProperty('--background', '#FFF0F5');
                 root.style.setProperty('--card-border', '#FFE4EC');
+            }
+            
+            // Update PWA theme-color meta tag
+            const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+            if (themeColorMeta) {
+                themeColorMeta.content = gender === 'boy' ? '#6BA3D6' : '#FF69B4';
             }
         }
         
@@ -1530,6 +1712,22 @@
         }
         
         // ============================================
+        // SERVICE WORKER REGISTRATION
+        // ============================================
+        
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then((registration) => {
+                        console.log('✨ Service Worker registered:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+        
+        // ============================================
         // INITIALIZE
         // ============================================
         
@@ -1537,6 +1735,13 @@
             applyBrandConfig();
             // Set default gender theme (baby pink)
             setGender('girl');
+            
+            // Update theme-color meta tag when gender changes
+            const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+            if (themeColorMeta) {
+                const gender = document.getElementById('genderInput').value;
+                themeColorMeta.content = gender === 'boy' ? '#6BA3D6' : '#FF69B4';
+            }
         });
     </script>
 </body>
