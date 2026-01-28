@@ -1,9 +1,9 @@
 // Service Worker for Gravity Pause PWA
-// Version 2 - Enhanced caching and offline support
+// Version 3 - Cache bust 2026-01-28
 
-const CACHE_NAME = 'gravity-pause-v2';
-const STATIC_CACHE = 'gravity-static-v2';
-const DYNAMIC_CACHE = 'gravity-dynamic-v2';
+const CACHE_NAME = 'gravity-pause-v3';
+const STATIC_CACHE = 'gravity-static-v3';
+const DYNAMIC_CACHE = 'gravity-dynamic-v3';
 
 // Core assets to cache immediately
 const STATIC_ASSETS = [
