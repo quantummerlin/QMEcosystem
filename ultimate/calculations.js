@@ -271,12 +271,35 @@ function calculateSunSign(birthDate) {
     return ZODIAC_SIGNS[0]; // Default to Aries
 }
 
-function calculateMoonSign(birthDate) {
-    // Simplified moon sign calculation based on birth date
-    // In reality, this requires exact birth time and ephemeris data
+function calculateMoonSign(birthDate, birthTime) {
+    // More accurate moon sign calculation using birth date and time
+    // Moon moves through all signs in ~27.3 days (about 13.2 degrees per day)
     const { day, month, year } = parseBirthDate(birthDate);
-    const seed = (day + month * 30 + year) % 12;
-    return ZODIAC_SIGNS[seed];
+    
+    // Calculate days since epoch (Jan 1, 2000 - Moon was in Pisces)
+    const birth = new Date(birthDate);
+    
+    // Add time component if available
+    if (birthTime) {
+        const [hours, minutes] = birthTime.split(':').map(Number);
+        birth.setHours(hours, minutes, 0, 0);
+    }
+    
+    const referenceDate = new Date('2000-01-01T00:00:00Z');
+    const daysSinceRef = (birth - referenceDate) / (1000 * 60 * 60 * 24);
+    
+    // Moon completes zodiac in ~27.321661 days
+    const lunarMonth = 27.321661;
+    
+    // Moon was at approximately 11 degrees Pisces (sign 11) on Jan 1, 2000
+    const referenceMoonSign = 11; // Pisces
+    const referenceMoonDegree = 11;
+    
+    // Calculate current moon position
+    const totalDegrees = (referenceMoonSign * 30 + referenceMoonDegree + (daysSinceRef / lunarMonth * 360)) % 360;
+    const signIndex = Math.floor(totalDegrees / 30) % 12;
+    
+    return ZODIAC_SIGNS[signIndex];
 }
 
 function calculateRisingSign(birthDate, birthTime) {
@@ -626,7 +649,7 @@ function calculateAllReadings(userData) {
     
     // Astrology
     const sunSign = calculateSunSign(birthDate);
-    const moonSign = calculateMoonSign(birthDate);
+    const moonSign = calculateMoonSign(birthDate, birthTime);
     const risingSign = calculateRisingSign(birthDate, birthTime);
     const mercurySign = calculatePlanetSign(birthDate, 'mercury');
     const venusSign = calculatePlanetSign(birthDate, 'venus');
