@@ -382,7 +382,7 @@ function calculateChiron(birthDate) {
     // Chiron has ~50 year orbit
     const daysSinceEpoch = Math.floor((new Date(birthDate) - new Date('2000-01-01')) / (1000 * 60 * 60 * 24));
     const chironCycle = 18262; // ~50 years in days
-    const index = Math.floor((daysSinceEpoch / chironCycle) * 12) % 12;
+    const index = ((Math.floor((daysSinceEpoch / chironCycle) * 12) % 12) + 12) % 12;
     return ZODIAC_SIGNS[index];
 }
 
@@ -390,7 +390,7 @@ function calculateLilith(birthDate) {
     // Black Moon Lilith has ~9 year cycle
     const daysSinceEpoch = Math.floor((new Date(birthDate) - new Date('2000-01-01')) / (1000 * 60 * 60 * 24));
     const lilithCycle = 3232; // ~8.85 years in days
-    const index = Math.floor((daysSinceEpoch / lilithCycle) * 12) % 12;
+    const index = ((Math.floor((daysSinceEpoch / lilithCycle) * 12) % 12) + 12) % 12;
     return ZODIAC_SIGNS[index];
 }
 

@@ -16,10 +16,10 @@
     <meta name="msapplication-TileColor" content="#FF69B4">
     <meta name="format-detection" content="telephone=no">
     
-    <!-- PWA Manifest & Icons -->
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icon-192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icon-192.png">
+    <!-- PWA Manifest & Icons (cache bust) -->
+    <link rel="manifest" href="manifest.json?v=3">
+    <link rel="apple-touch-icon" href="icon.svg?v=3">
+    <link rel="icon" type="image/svg+xml" href="icon.svg?v=3">
     
     <!-- Open Graph -->
     <meta property="og:title" id="og-title" content="Complete Cosmic Blueprint">
@@ -77,6 +77,62 @@
             color: var(--text);
             line-height: 1.6;
             min-height: 100vh;
+            padding-top: 50px;
+        }
+        
+        /* Fixed Theme Bar at Top */
+        .theme-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(90deg, #FF69B4 0%, #FFB6C1 25%, #E6E6FA 50%, #87CEEB 75%, #6BA3D6 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            transition: background 0.5s ease;
+        }
+        
+        .theme-bar.theme-selected-girl {
+            background: linear-gradient(135deg, #FF69B4 0%, #FFB6C1 100%);
+        }
+        
+        .theme-bar.theme-selected-boy {
+            background: linear-gradient(135deg, #6BA3D6 0%, #87CEEB 100%);
+        }
+        
+        .theme-bar-btn {
+            padding: 8px 20px;
+            border: 2px solid white;
+            border-radius: 20px;
+            background: transparent;
+            color: white;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .theme-bar-btn:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+        }
+        
+        .theme-bar-btn.active {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .theme-bar-btn[data-theme="boy"].active {
+            color: #6BA3D6;
         }
         
         body.dark-theme {
@@ -859,6 +915,16 @@
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
+    <!-- Theme Bar -->
+    <div class="theme-bar" id="themeBar">
+        <button class="theme-bar-btn" data-theme="girl" onclick="setGender('girl')">
+            👧 Baby Pink
+        </button>
+        <button class="theme-bar-btn" data-theme="boy" onclick="setGender('boy')">
+            👦 Baby Blue
+        </button>
+    </div>
+    
     <!-- Loading Overlay -->
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-spinner"></div>
@@ -975,11 +1041,24 @@
             selectedGender = gender;
             document.getElementById('genderInput').value = gender;
             
-            // Update button states
+            // Update form button states
             document.querySelectorAll('.gender-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            document.querySelector(`.gender-btn[data-gender="${gender}"]`).classList.add('active');
+            const formBtn = document.querySelector(`.gender-btn[data-gender="${gender}"]`);
+            if (formBtn) formBtn.classList.add('active');
+            
+            // Update theme bar button states
+            document.querySelectorAll('.theme-bar-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const barBtn = document.querySelector(`.theme-bar-btn[data-theme="${gender}"]`);
+            if (barBtn) barBtn.classList.add('active');
+            
+            // Update theme bar background
+            const themeBar = document.getElementById('themeBar');
+            themeBar.classList.remove('theme-selected-girl', 'theme-selected-boy');
+            themeBar.classList.add(`theme-selected-${gender}`);
             
             // Apply theme colors
             document.body.classList.remove('theme-girl', 'theme-boy');

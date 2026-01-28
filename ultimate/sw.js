@@ -1,12 +1,13 @@
 // Baby Cosmic Blueprint - Service Worker
-const CACHE_NAME = 'baby-blueprint-v1';
+const CACHE_NAME = 'baby-blueprint-v3';
 const ASSETS_TO_CACHE = [
     '/ultimate/',
     '/ultimate/index.html',
     '/ultimate/config.js',
     '/ultimate/calculations.js',
     '/ultimate/readings.js',
-    '/ultimate/manifest.json'
+    '/ultimate/manifest.json',
+    '/ultimate/icon.svg'
 ];
 
 // Install event - cache assets
@@ -14,23 +15,29 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then((cache) => {
-                console.log('📦 Caching app assets');
+                console.log('📦 Caching app assets v3');
                 return cache.addAll(ASSETS_TO_CACHE);
             })
             .then(() => self.skipWaiting())
     );
 });
 
-// Activate event - clean old caches
+// Activate event - clean ALL old caches aggressively
 self.addEventListener('activate', (event) => {
     event.waitUntil(
         caches.keys().then((cacheNames) => {
             return Promise.all(
                 cacheNames
                     .filter((name) => name !== CACHE_NAME)
-                    .map((name) => caches.delete(name))
+                    .map((name) => {
+                        console.log('🗑️ Deleting old cache:', name);
+                        return caches.delete(name);
+                    })
             );
-        }).then(() => self.clients.claim())
+        }).then(() => {
+            console.log('✅ Service worker activated, claiming clients');
+            return self.clients.claim();
+        })
     );
 });
 
