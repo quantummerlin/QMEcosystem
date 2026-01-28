@@ -651,6 +651,33 @@
             color: var(--primary);
         }
         
+        /* Section Divider */
+        .section-divider {
+            text-align: center;
+            margin: 40px 0 30px;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, rgba(255,105,180,0.1) 0%, rgba(135,206,235,0.1) 100%);
+            border-radius: 15px;
+            border: 2px dashed var(--primary);
+        }
+        
+        .section-divider h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+        }
+        
+        .section-divider p {
+            color: var(--text);
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+        
+        .dark-theme .section-divider {
+            background: linear-gradient(135deg, rgba(255,105,180,0.2) 0%, rgba(135,206,235,0.2) 100%);
+        }
+        
         @media (max-width: 600px) {
             .strengths-challenges {
                 grid-template-columns: 1fr;
@@ -1415,6 +1442,95 @@
                 [],
                 []
             ));
+            
+            // ============================================
+            // HOUSE PLACEMENTS (if birth time available)
+            // ============================================
+            if (readings.astrology.planetHouses && readings.astrology.houses) {
+                const planetHouses = readings.astrology.planetHouses;
+                
+                // Sun in House
+                if (planetHouses.sun && HOUSE_READINGS.Sun && HOUSE_READINGS.Sun[planetHouses.sun]) {
+                    const houseReading = HOUSE_READINGS.Sun[planetHouses.sun];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `☉ in House ${planetHouses.sun}`,
+                        houseReading.keywords,
+                        houseReading.reading.replace(/this child/gi, userData.name).replace(/they/gi, 'they'),
+                        houseReading.strengths,
+                        houseReading.challenges
+                    ));
+                }
+                
+                // Add more house placements for Moon, Mercury, Venus, Mars, Jupiter, Saturn
+                // (For now showing pattern - can expand with more planets)
+            }
+            
+            // ============================================
+            // PLANETARY ASPECTS
+            // ============================================
+            if (readings.astrology.aspects && readings.astrology.aspects.length > 0) {
+                const aspectsHeader = document.createElement('div');
+                aspectsHeader.className = 'section-divider';
+                aspectsHeader.innerHTML = '<h3>⚡ Planetary Relationships</h3><p>How your planets interact and create your unique cosmic pattern</p>';
+                celestialSection.appendChild(aspectsHeader);
+                
+                // Display major aspects
+                readings.astrology.aspects.forEach(aspect => {
+                    const aspectReading = getAspectReading(aspect.planet1, aspect.planet2, aspect.aspect);
+                    
+                    if (aspectReading) {
+                        celestialSection.appendChild(createReadingCard(
+                            aspectReading.title,
+                            `${aspect.symbol} ${aspect.planet1}-${aspect.planet2} ${aspect.aspect}`,
+                            aspectReading.keywords,
+                            aspectReading.reading.replace(/this child/gi, userData.name).replace(/they/gi, 'they'),
+                            aspectReading.strength ? [aspectReading.strength] : [],
+                            aspectReading.challenge ? [aspectReading.challenge] : []
+                        ));
+                    }
+                });
+            }
+            
+            // ============================================
+            // CORE PARADOX SYNTHESIS
+            // ============================================
+            const sunMoonAspect = readings.astrology.aspects ? 
+                readings.astrology.aspects.find(a => 
+                    (a.planet1 === 'Sun' && a.planet2 === 'Moon') || 
+                    (a.planet1 === 'Moon' && a.planet2 === 'Sun')
+                ) : null;
+            
+            if (sunMoonAspect) {
+                const sunSign = readings.astrology.sunSign;
+                const moonSign = readings.astrology.moonSign;
+                
+                const paradoxTitle = "🌟 Core Integration - Sun & Moon";
+                let paradoxReading = '';
+                
+                if (sunMoonAspect.nature === 'harmonious') {
+                    paradoxReading = `${userData.name} has a harmonious ${sunMoonAspect.aspect} between their ${sunSign.name} Sun (core identity) and ${moonSign.name} Moon (emotional nature). This creates beautiful alignment between what they want and what they need emotionally.
+
+Their conscious will and subconscious feelings work together naturally. What brings them joy (Sun) also satisfies their emotional needs (Moon). This internal harmony creates a sense of wholeness and self-understanding that is truly a gift.
+
+Support this natural integration by honoring both their ${sunSign.element} Sun's need for ${sunSign.element === 'Fire' ? 'action and recognition' : sunSign.element === 'Earth' ? 'stability and tangible results' : sunSign.element === 'Air' ? 'mental stimulation and communication' : 'emotional depth and intuitive connection'} and their ${moonSign.element} Moon's need for ${moonSign.element === 'Fire' ? 'emotional expression and excitement' : moonSign.element === 'Earth' ? 'security and routine' : moonSign.element === 'Air' ? 'intellectual processing of feelings' : 'emotional safety and nurturing'}.`;
+                } else {
+                    paradoxReading = `${userData.name} has a ${sunMoonAspect.aspect} between their ${sunSign.name} Sun (conscious identity) and ${moonSign.name} Moon (emotional needs). This creates dynamic tension between what they want and what they need emotionally - a creative friction that shapes their growth.
+
+Their ${sunSign.element} Sun wants ${sunSign.element === 'Fire' ? 'bold action and recognition' : sunSign.element === 'Earth' ? 'stability and material security' : sunSign.element === 'Air' ? 'intellectual freedom and variety' : 'emotional depth and merging'}, while their ${moonSign.element} Moon needs ${moonSign.element === 'Fire' ? 'passionate emotional expression' : moonSign.element === 'Earth' ? 'predictable emotional security' : moonSign.element === 'Air' ? 'mental understanding of feelings' : 'deep emotional bonding'}.
+
+This isn't a flaw - it's their power source. The tension between these two drives creates motivation, self-awareness, and the ability to understand others who also contain contradictions. Help them honor both parts of themselves without forcing them to choose one over the other.`;
+                }
+                
+                celestialSection.appendChild(createReadingCard(
+                    paradoxTitle,
+                    `${sunSign.symbol} ${sunSign.name} ${sunMoonAspect.symbol} ${moonSign.symbol} ${moonSign.name}`,
+                    ['Integration', 'Inner Balance', 'Self-Understanding'],
+                    paradoxReading,
+                    ['Deep self-awareness', 'Understanding complexity'],
+                    sunMoonAspect.nature === 'challenging' ? ['Internal tension requires conscious integration'] : []
+                ));
+            }
             
             container.appendChild(celestialSection);
             
