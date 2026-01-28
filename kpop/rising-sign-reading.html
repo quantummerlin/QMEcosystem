@@ -187,7 +187,7 @@
         }
         .row {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
         button[type="submit"] {
@@ -317,7 +317,7 @@
         <div class="tool-card">
 <form id="calculator-form" onsubmit="calculateRisingSign(event)">
                 <div class="input-section">
-                    <div class="section-title">âœ¨ Personal Information</div>
+                    <div class="section-title">✨ Personal Information</div>
                     
                     <div class="input-group">
                         <label for="preferredName">Preferred Name</label>

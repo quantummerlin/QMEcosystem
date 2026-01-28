@@ -186,7 +186,7 @@
         }
         .row {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
         button[type="submit"] {
@@ -316,7 +316,7 @@
         <div class="tool-card">
 <form id="calculator-form" onsubmit="calculateRisingSign(event)">
                 <div class="input-section">
-                    <div class="section-title">âœ¨ Personal Information</div>
+                    <div class="section-title">✨ Personal Information</div>
                     
                     <div class="input-group">
                         <label for="preferredName">Preferred Name</label>
@@ -995,7 +995,7 @@
                     <p style="line-height: 1.8;">${data.core_identity.replace(/{preferredName}/g, name)}</p>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 20px;">
                     <div style="background: rgba(6, 182, 212, 0.1); padding: 18px; border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.2);">
                         <p><strong style="color: #fbbf24;">🎭 External Presence:</strong><br>${data.external}</p>
                     </div>
@@ -1028,7 +1028,7 @@
                     </div>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 20px;">
                     <div style="background: rgba(251, 191, 36, 0.1); padding: 18px; border-radius: 12px; border: 1px solid rgba(251, 191, 36, 0.2);">
                         <p><strong style="color: #fbbf24;">💕 Relationships:</strong><br>${data.relationships}</p>
                     </div>
