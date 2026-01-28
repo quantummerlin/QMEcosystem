@@ -1,7 +1,7 @@
 {
-  "name": "The Sacred Pause - Triple Convergence",
-  "short_name": "Sacred Pause",
-  "description": "August 12, 2026: New Moon + Total Solar Eclipse + Sacred Pause. The Triple Convergence countdown.",
+  "name": "The Gravity Pause - August 12, 2026",
+  "short_name": "Gravity Pause",
+  "description": "August 12, 2026: New Moon + Total Solar Eclipse + Leo Stellium. The countdown to a remarkable celestial alignment.",
   "start_url": "./?source=pwa",
   "scope": "./",
   "display": "standalone",
@@ -44,7 +44,7 @@
       "sizes": "1200x630",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "The Sacred Pause - Triple Convergence Countdown"
+      "label": "The Gravity Pause - August 12, 2026 Countdown"
     }
   ],
   "categories": ["lifestyle", "education", "entertainment"],
