@@ -1,5 +1,5 @@
 // Baby Cosmic Blueprint - Service Worker
-const CACHE_NAME = 'baby-blueprint-v3';
+const CACHE_NAME = 'baby-blueprint-v4';
 const ASSETS_TO_CACHE = [
     '/ultimate/',
     '/ultimate/index.html',

@@ -956,21 +956,7 @@
                     <p class="helper-text" id="birthDateHelper">Birth date for calculations</p>
                 </div>
                 
-                <!-- Gender Switch for Theme Colors -->
-                <div class="form-group">
-                    <label>Theme Color</label>
-                    <div class="gender-switch">
-                        <button type="button" class="gender-btn active" data-gender="girl" onclick="setGender('girl')">
-                            <span class="gender-icon">👧</span>
-                            <span>Baby Pink</span>
-                        </button>
-                        <button type="button" class="gender-btn" data-gender="boy" onclick="setGender('boy')">
-                            <span class="gender-icon">👦</span>
-                            <span>Baby Blue</span>
-                        </button>
-                    </div>
-                    <input type="hidden" id="genderInput" value="girl">
-                </div>
+                <input type="hidden" id="genderInput" value="girl">
                 
                 <div class="form-group" id="birthTimeGroup">
                     <label id="birthTimeLabel">Time of Birth <span class="optional-badge">Optional</span></label>
@@ -1405,25 +1391,25 @@
             ));
             
             // Chiron (The Wounded Healer)
-            const chiron = readings.astrology.chiron;
+            const chiron = readings.astrology.chiron || { name: 'Aries' };
             const chironReading = CHIRON_SIGN_READINGS ? CHIRON_SIGN_READINGS[chiron.name] : null;
             celestialSection.appendChild(createReadingCard(
-                'Chiron - The Wounded Healer',
+                'Chiron - The Healer Within',
                 `⚷ ${chiron.name}`,
-                chironReading ? chironReading.keywords : ['Wound', 'Healing', 'Gift'],
-                chironReading ? chironReading.reading : `Chiron in ${chiron.name} reveals the core wound and healing gift.`,
+                chironReading ? chironReading.keywords : ['Healing', 'Growth', 'Gift'],
+                chironReading ? chironReading.reading : `Chiron in ${chiron.name} reveals a beautiful capacity for healing and helping others.`,
                 [],
                 []
             ));
             
             // Black Moon Lilith
-            const lilith = readings.astrology.lilith;
+            const lilith = readings.astrology.lilith || { name: 'Aries' };
             const lilithReading = LILITH_SIGN_READINGS ? LILITH_SIGN_READINGS[lilith.name] : null;
             celestialSection.appendChild(createReadingCard(
-                'Black Moon Lilith - Shadow Self',
+                'Lilith - Hidden Strength',
                 `⚸ ${lilith.name}`,
-                lilithReading ? lilithReading.keywords : ['Shadow', 'Power', 'Reclamation'],
-                lilithReading ? lilithReading.reading : `Lilith in ${lilith.name} reveals suppressed power awaiting integration.`,
+                lilithReading ? lilithReading.keywords : ['Strength', 'Independence', 'Authenticity'],
+                lilithReading ? lilithReading.reading : `Lilith in ${lilith.name} reveals inner strength waiting to blossom.`,
                 [],
                 []
             ));
