@@ -32,6 +32,24 @@
             --font-body: 'Inter', 'Segoe UI', sans-serif;
         }
         
+        /* Baby Pink Theme (default for girl) */
+        body.theme-girl {
+            --primary: #FF69B4;
+            --secondary: #FFB6C1;
+            --accent: #FF1493;
+            --background: #FFF0F5;
+            --card-border: #FFE4EC;
+        }
+        
+        /* Baby Blue Theme (for boy) */
+        body.theme-boy {
+            --primary: #6BA3D6;
+            --secondary: #87CEEB;
+            --accent: #4169E1;
+            --background: #F0F8FF;
+            --card-border: #B0E0E6;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -144,6 +162,53 @@
         
         .form-group input::placeholder {
             color: #999;
+        }
+        
+        /* Gender Switch Buttons */
+        .gender-switch {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .gender-btn {
+            flex: 1;
+            max-width: 200px;
+            padding: 15px 25px;
+            border: 3px solid var(--card-border);
+            border-radius: 15px;
+            background: var(--card-bg);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        .gender-btn .gender-icon {
+            font-size: 2rem;
+        }
+        
+        .gender-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .gender-btn.active {
+            border-color: var(--primary);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            box-shadow: 0 5px 20px rgba(255,105,180,0.3);
+        }
+        
+        .gender-btn[data-gender="boy"].active {
+            background: linear-gradient(135deg, #6BA3D6 0%, #87CEEB 100%);
+            box-shadow: 0 5px 20px rgba(107,163,214,0.3);
         }
         
         .optional-badge {
@@ -365,19 +430,24 @@
         /* Reading Sections */
         .reading-section {
             margin-bottom: 50px;
+            text-align: center;
         }
         
         .section-header {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
             margin-bottom: 25px;
             padding-bottom: 15px;
             border-bottom: 3px solid var(--primary);
+            text-align: center;
         }
         
         .section-header .icon {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 5px;
         }
         
         .section-header h2 {
@@ -399,13 +469,21 @@
             padding: 30px;
             margin-bottom: 25px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            border-left: 5px solid var(--primary);
+            border-left: none;
+            border-top: 5px solid var(--primary);
+            text-align: center;
         }
         
         .dark-theme .reading-card {
             background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.1);
-            border-left: 5px solid var(--primary);
+            border-top: 5px solid var(--primary);
+        }
+        
+        .reading-card .card-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 10px;
         }
         
         .reading-card h3 {
@@ -413,9 +491,8 @@
             font-size: 1.4rem;
             color: var(--primary);
             margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            display: block;
+            text-align: center;
         }
         
         .reading-card .result-value {
@@ -438,6 +515,7 @@
             flex-wrap: wrap;
             gap: 8px;
             margin-bottom: 15px;
+            justify-content: center;
         }
         
         .reading-card .keyword {
@@ -452,6 +530,7 @@
             font-size: 1.05rem;
             line-height: 1.8;
             color: var(--text);
+            text-align: center;
         }
         
         .dark-theme .reading-card .reading-content {
@@ -469,6 +548,7 @@
             margin-top: 20px;
             padding-top: 20px;
             border-top: 1px solid var(--card-border);
+            text-align: left;
         }
         
         .dark-theme .reading-card .strengths-challenges {
@@ -634,6 +714,22 @@
                     <p class="helper-text" id="birthDateHelper">Birth date for calculations</p>
                 </div>
                 
+                <!-- Gender Switch for Theme Colors -->
+                <div class="form-group">
+                    <label>Theme Color</label>
+                    <div class="gender-switch">
+                        <button type="button" class="gender-btn active" data-gender="girl" onclick="setGender('girl')">
+                            <span class="gender-icon">👧</span>
+                            <span>Baby Pink</span>
+                        </button>
+                        <button type="button" class="gender-btn" data-gender="boy" onclick="setGender('boy')">
+                            <span class="gender-icon">👦</span>
+                            <span>Baby Blue</span>
+                        </button>
+                    </div>
+                    <input type="hidden" id="genderInput" value="girl">
+                </div>
+                
                 <div class="form-group" id="birthTimeGroup">
                     <label id="birthTimeLabel">Time of Birth <span class="optional-badge">Optional</span></label>
                     <input type="time" id="birthTimeInput">
@@ -694,6 +790,43 @@
     <script src="readings.js"></script>
     <script>
         // ============================================
+        // GENDER THEME SWITCH
+        // ============================================
+        
+        let selectedGender = 'girl';
+        
+        function setGender(gender) {
+            selectedGender = gender;
+            document.getElementById('genderInput').value = gender;
+            
+            // Update button states
+            document.querySelectorAll('.gender-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`.gender-btn[data-gender="${gender}"]`).classList.add('active');
+            
+            // Apply theme colors
+            document.body.classList.remove('theme-girl', 'theme-boy');
+            document.body.classList.add(`theme-${gender}`);
+            
+            // Update CSS variables for dynamic theming
+            const root = document.documentElement;
+            if (gender === 'boy') {
+                root.style.setProperty('--primary', '#6BA3D6');
+                root.style.setProperty('--secondary', '#87CEEB');
+                root.style.setProperty('--accent', '#4169E1');
+                root.style.setProperty('--background', '#F0F8FF');
+                root.style.setProperty('--card-border', '#B0E0E6');
+            } else {
+                root.style.setProperty('--primary', '#FF69B4');
+                root.style.setProperty('--secondary', '#FFB6C1');
+                root.style.setProperty('--accent', '#FF1493');
+                root.style.setProperty('--background', '#FFF0F5');
+                root.style.setProperty('--card-border', '#FFE4EC');
+            }
+        }
+        
+        // ============================================
         // APPLY BRAND CONFIGURATION
         // ============================================
         
@@ -705,7 +838,7 @@
                 document.body.classList.add('dark-theme');
             }
             
-            // Apply colors
+            // Apply colors (will be overridden by gender selection)
             const root = document.documentElement;
             root.style.setProperty('--primary', config.colors.primary);
             root.style.setProperty('--secondary', config.colors.secondary);
@@ -1342,8 +1475,20 @@
             // Convert newlines to paragraphs
             const contentParagraphs = content.split('\n\n').map(p => `<p>${p}</p>`).join('');
             
+            // Extract emoji from title and put on its own line
+            const emojiRegex = /^([\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F000}-\u{1F02F}\u{1F0A0}-\u{1F0FF}♈♉♊♋♌♍♎♏♐♑♒♓]+)\s*/u;
+            const emojiMatch = title.match(emojiRegex);
+            let iconHtml = '';
+            let cleanTitle = title;
+            
+            if (emojiMatch) {
+                iconHtml = `<span class="card-icon">${emojiMatch[1]}</span>`;
+                cleanTitle = title.replace(emojiRegex, '');
+            }
+            
             card.innerHTML = `
-                <h3>${title}</h3>
+                ${iconHtml}
+                <h3>${cleanTitle}</h3>
                 <div class="result-value">${value}</div>
                 ${keywordsHtml}
                 <div class="reading-content">
@@ -1390,6 +1535,8 @@
         
         document.addEventListener('DOMContentLoaded', function() {
             applyBrandConfig();
+            // Set default gender theme (baby pink)
+            setGender('girl');
         });
     </script>
 </body>
