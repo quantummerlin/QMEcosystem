@@ -23,16 +23,16 @@
     
     // ===== CHECK IF INTERACTIVE PAGE =====
     function checkInteractivePage() {
-        // Check if page has forms with inputs (calculators, readings)
-        const forms = document.querySelectorAll('form');
-        const hasInputForms = Array.from(forms).some(form => 
-            form.querySelectorAll('input[type="text"], input[type="date"], input[type="time"], input[type="number"]').length > 0
-        );
-        if (hasInputForms) return true;
-        
-        // Also check explicit list
         const path = window.location.pathname.toLowerCase();
-        return CONFIG.interactivePages.some(page => path.includes(page));
+        
+        // ONLY enable full effects on index/hub pages
+        const hubPages = ['index.html', 'tools_index.html', 'hub', '/kpop/', '/kpop'];
+        const isHubPage = hubPages.some(hub => path.endsWith(hub) || path === hub);
+        
+        // If it's NOT a hub page, treat it as interactive (no effects)
+        if (!isHubPage) return true;
+        
+        return false;
     }
     
     // ===== CREATE PARTICLES CONTAINER =====
