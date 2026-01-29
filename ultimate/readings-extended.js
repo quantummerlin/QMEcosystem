@@ -2399,6 +2399,24 @@ function getLifePathGift(number) {
     return gifts[number] || "A unique gift waiting to be discovered";
 }
 
+function getLifePathPurpose(number) {
+    const purposes = {
+        1: "This soul is here to pioneer new paths and demonstrate the power of individuality",
+        2: "This soul is here to create harmony and show that true strength lies in connection",
+        3: "This soul is here to spread joy and demonstrate that creativity is essential to life",
+        4: "This soul is here to build lasting foundations and show the value of dedicated work",
+        5: "This soul is here to embrace change and demonstrate that freedom expands consciousness",
+        6: "This soul is here to nurture and beautify, showing that love creates healing",
+        7: "This soul is here to seek truth and demonstrate that wisdom comes from within",
+        8: "This soul is here to master abundance and show that material success can serve spirit",
+        9: "This soul is here to serve humanity and demonstrate universal compassion",
+        11: "This soul is here to illuminate and inspire, channeling higher wisdom to uplift others",
+        22: "This soul is here to manifest dreams into reality on a scale that benefits many",
+        33: "This soul is here to heal through unconditional love and teach by divine example"
+    };
+    return purposes[number] || "This soul is here to discover and fulfill a unique purpose";
+}
+
 function getLifePathNeed(number) {
     const needs = {
         1: "lead and make independent decisions",
