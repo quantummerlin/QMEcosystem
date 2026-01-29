@@ -2562,6 +2562,78 @@ function getMarsSummary(sign) {
     return summaries[sign] || "Unique expression of will and energy";
 }
 
+function getNorthNodePurpose(sign) {
+    const purposes = {
+        Aries: "developing independence, courage, and self-assertion",
+        Taurus: "cultivating stability, self-worth, and material mastery",
+        Gemini: "embracing curiosity, communication, and versatility",
+        Cancer: "nurturing emotional intelligence and creating home",
+        Leo: "expressing creativity, courage, and heart-centered leadership",
+        Virgo: "developing service, discernment, and practical skills",
+        Libra: "learning partnership, balance, and diplomatic grace",
+        Scorpio: "embracing depth, transformation, and emotional power",
+        Sagittarius: "seeking truth, adventure, and expanded horizons",
+        Capricorn: "building legacy, mastery, and responsible authority",
+        Aquarius: "serving community, innovation, and collective progress",
+        Pisces: "developing compassion, spirituality, and transcendence"
+    };
+    return purposes[sign] || "discovering their unique soul purpose";
+}
+
+function getMoonSummary(sign) {
+    const summaries = {
+        Aries: "This soul feels emotions quickly and intensely, needing action to process feelings. Comfort comes through independence and movement.",
+        Taurus: "This soul processes emotions slowly but deeply, needing stability and sensory comfort. Security comes through consistency and touch.",
+        Gemini: "This soul processes emotions through talking and thinking, needing mental stimulation. Comfort comes through communication and variety.",
+        Cancer: "This soul feels everything deeply and remembers every emotional nuance. Comfort comes through nurturing, home, and family connection.",
+        Leo: "This soul needs to feel special and appreciated, expressing emotions dramatically. Comfort comes through attention and creative expression.",
+        Virgo: "This soul processes emotions analytically, sometimes worrying too much. Comfort comes through helping others and useful activity.",
+        Libra: "This soul needs harmony and balance to feel secure, avoiding conflict. Comfort comes through beauty, partnership, and fairness.",
+        Scorpio: "This soul feels emotions with tremendous intensity and depth. Comfort comes through trust, privacy, and emotional truth.",
+        Sagittarius: "This soul processes emotions through optimism and adventure. Comfort comes through freedom, learning, and exploration.",
+        Capricorn: "This soul processes emotions privately, sometimes appearing reserved. Comfort comes through achievement and being taken seriously.",
+        Aquarius: "This soul needs space and intellectual understanding of emotions. Comfort comes through independence and being accepted for uniqueness.",
+        Pisces: "This soul absorbs emotions from everyone around them like a sponge. Comfort comes through imagination, spirituality, and creative escape."
+    };
+    return summaries[sign] || "This soul has a unique way of processing and expressing emotions.";
+}
+
+function getRisingSummary(sign) {
+    const summaries = {
+        Aries: "The world sees a bold, energetic, and pioneering spirit. First impressions are of courage and directness.",
+        Taurus: "The world sees a calm, grounded, and dependable presence. First impressions are of stability and sensuality.",
+        Gemini: "The world sees a curious, articulate, and versatile spirit. First impressions are of intelligence and wit.",
+        Cancer: "The world sees a nurturing, sensitive, and protective nature. First impressions are of warmth and care.",
+        Leo: "The world sees a confident, warm, and charismatic presence. First impressions are of royalty and radiance.",
+        Virgo: "The world sees a helpful, modest, and intelligent nature. First impressions are of competence and thoughtfulness.",
+        Libra: "The world sees a graceful, charming, and balanced presence. First impressions are of beauty and diplomacy.",
+        Scorpio: "The world sees an intense, mysterious, and powerful presence. First impressions are of depth and magnetism.",
+        Sagittarius: "The world sees an optimistic, adventurous, and philosophical spirit. First impressions are of enthusiasm and wisdom.",
+        Capricorn: "The world sees a serious, capable, and ambitious presence. First impressions are of authority and reliability.",
+        Aquarius: "The world sees a unique, progressive, and friendly nature. First impressions are of originality and humanity.",
+        Pisces: "The world sees a dreamy, compassionate, and artistic presence. First impressions are of sensitivity and imagination."
+    };
+    return summaries[sign] || "The world sees a unique and special soul.";
+}
+
+function getChineseSummary(animal) {
+    const summaries = {
+        Rat: "Clever, resourceful, and quick-thinking. The Rat brings intelligence, charm, and adaptability",
+        Ox: "Patient, dependable, and strong. The Ox brings determination, reliability, and quiet power",
+        Tiger: "Brave, confident, and unpredictable. The Tiger brings courage, passion, and magnetic presence",
+        Rabbit: "Gentle, elegant, and alert. The Rabbit brings diplomacy, artistic sense, and good fortune",
+        Dragon: "Powerful, lucky, and ambitious. The Dragon brings charisma, success, and natural authority",
+        Snake: "Wise, intuitive, and sophisticated. The Snake brings wisdom, grace, and mysterious depth",
+        Horse: "Active, energetic, and free-spirited. The Horse brings enthusiasm, independence, and warmth",
+        Goat: "Creative, gentle, and artistic. The Goat brings creativity, kindness, and artistic beauty",
+        Monkey: "Clever, curious, and playful. The Monkey brings wit, intelligence, and inventive spirit",
+        Rooster: "Observant, hardworking, and confident. The Rooster brings precision, loyalty, and honesty",
+        Dog: "Loyal, honest, and protective. The Dog brings faithfulness, justice, and true friendship",
+        Pig: "Generous, compassionate, and sincere. The Pig brings abundance, generosity, and good nature"
+    };
+    return summaries[animal] || "This Chinese zodiac sign brings unique gifts and characteristics";
+}
+
 // Export for use in other files
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
