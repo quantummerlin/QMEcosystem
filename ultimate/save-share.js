@@ -22,11 +22,14 @@ function showPage(pageIndex) {
     const sections = document.querySelectorAll('.reading-section');
     currentPage = Math.max(0, Math.min(pageIndex, totalPages - 1));
     
-    // Hide all sections
+    // Hide all sections except current
     sections.forEach((section, index) => {
-        section.classList.remove('active');
         if (index === currentPage) {
+            section.classList.remove('hidden');
             section.classList.add('active');
+        } else {
+            section.classList.add('hidden');
+            section.classList.remove('active');
         }
     });
     
