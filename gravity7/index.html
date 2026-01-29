@@ -253,11 +253,14 @@
     }
 
     .skip-intro .countdown-hero {
-      min-height: 70vh;
+      min-height: 100vh;
+      min-height: 100dvh;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       padding-top: 0;
+      padding-bottom: calc(60px + env(safe-area-inset-bottom));
     }
 
     .skip-intro .scroll-indicator {
@@ -292,12 +295,50 @@
 
     .skip-intro .returning-brand {
       display: block;
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 700;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
+      background: linear-gradient(135deg, #ffd700, #e879a9, #9b59b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 40px;
+      text-shadow: 0 0 60px rgba(255, 215, 0, 0.3);
+    }
+
+    /* Returning visitor scroll hint */
+    .returning-scroll-hint {
+      display: none;
+    }
+
+    .skip-intro .returning-scroll-hint {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: 40px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-style: italic;
       color: var(--text-tertiary);
-      margin-bottom: 32px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .skip-intro .returning-scroll-hint:hover {
+      color: var(--celestial-rose);
+    }
+
+    .skip-intro .returning-scroll-hint .scroll-arrow {
+      font-size: 20px;
+      animation: bounceDown 2s ease-in-out infinite;
+    }
+
+    @keyframes bounceDown {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
     }
 
     .mystery-line {
@@ -1161,6 +1202,12 @@
       <div class="seven-badge">
         <strong>7</strong> seconds of pause
       </div>
+      
+      <!-- Scroll hint for returning visitors -->
+      <div class="returning-scroll-hint">
+        <span>Explore</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
     </section>
 
     <div class="divider"></div>
@@ -1346,11 +1393,23 @@
     document.addEventListener('DOMContentLoaded', function() {
       const scrollBtn = document.getElementById('scrollDown');
       const countdownHero = document.querySelector('.countdown-hero');
+      const returningScrollHint = document.querySelector('.returning-scroll-hint');
       
       if (scrollBtn && countdownHero) {
         scrollBtn.addEventListener('click', function() {
           markVisited();
           countdownHero.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+
+      // Returning visitor scroll hint - scroll to first content section
+      if (returningScrollHint) {
+        returningScrollHint.addEventListener('click', function() {
+          const firstSection = document.querySelector('.section.reveal');
+          if (firstSection) {
+            const sectionTop = firstSection.getBoundingClientRect().top + window.scrollY - 60;
+            window.scrollTo({ top: sectionTop, behavior: 'smooth' });
+          }
         });
       }
 

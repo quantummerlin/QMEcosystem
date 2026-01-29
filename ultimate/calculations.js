@@ -367,7 +367,7 @@ function calculateMoonSign(birthDate, birthTime, location = 'default') {
 }
 
 function calculateRisingSign(birthDate, birthTime, location = 'default') {
-    // Rising sign calculation using local sidereal time approximation
+    // Rising sign (Ascendant) calculation using proper astronomical formula
     if (!birthTime) {
         return { name: 'Unknown', note: 'Birth time required for accurate Rising Sign' };
     }
@@ -375,28 +375,54 @@ function calculateRisingSign(birthDate, birthTime, location = 'default') {
     const locationData = LOCATIONS[location.toLowerCase()] || LOCATIONS['default'];
     const [hours, minutes] = birthTime.split(':').map(Number);
     const birth = new Date(birthDate);
-    
-    // Convert local time to decimal hours
-    const localTime = hours + minutes / 60;
-    
-    // Calculate Local Sidereal Time (simplified)
-    // LST = GST + (longitude / 15)
     const { day, month, year } = parseBirthDate(birthDate);
     
-    // Days since J2000.0
-    const j2000 = new Date('2000-01-01T12:00:00Z');
-    const daysSinceJ2000 = (birth - j2000) / (1000 * 60 * 60 * 24);
+    // Convert local time to UT (Universal Time)
+    const localTimeDecimal = hours + minutes / 60;
+    const utTime = localTimeDecimal - locationData.tz;
     
-    // Greenwich Sidereal Time at 0h UT (simplified formula)
-    const gst0 = (18.697374558 + 24.06570982441908 * daysSinceJ2000) % 24;
+    // Calculate Julian Day Number
+    let y = year;
+    let m = month;
+    if (m <= 2) {
+        y -= 1;
+        m += 12;
+    }
+    const A = Math.floor(y / 100);
+    const B = 2 - A + Math.floor(A / 4);
+    const JD = Math.floor(365.25 * (y + 4716)) + Math.floor(30.6001 * (m + 1)) + day + utTime / 24 + B - 1524.5;
     
-    // Local Sidereal Time
-    const lst = (gst0 + localTime + (locationData.lon / 15)) % 24;
+    // Calculate Local Sidereal Time
+    const T = (JD - 2451545.0) / 36525; // Julian centuries from J2000.0
     
-    // Convert LST to zodiac sign (each sign rises for ~2 hours)
-    const risingIndex = Math.floor((lst / 2)) % 12;
+    // Greenwich Mean Sidereal Time at 0h UT (in degrees)
+    let GMST0 = 280.46061837 + 360.98564736629 * (JD - 2451545.0) + 0.000387933 * T * T - T * T * T / 38710000;
+    GMST0 = GMST0 % 360;
+    if (GMST0 < 0) GMST0 += 360;
     
-    return ZODIAC_SIGNS[risingIndex];
+    // Local Sidereal Time (in degrees)
+    let LST = GMST0 + locationData.lon;
+    LST = LST % 360;
+    if (LST < 0) LST += 360;
+    
+    // Calculate the Ascendant using the proper formula
+    // ASC = atan2(-cos(LST), sin(LST) * cos(obliquity) + tan(lat) * sin(obliquity))
+    const obliquity = 23.4393 * Math.PI / 180; // Earth's axial tilt in radians
+    const latRad = locationData.lat * Math.PI / 180;
+    const lstRad = LST * Math.PI / 180;
+    
+    // Calculate Ascendant in radians
+    const y1 = -Math.cos(lstRad);
+    const x1 = Math.sin(lstRad) * Math.cos(obliquity) + Math.tan(latRad) * Math.sin(obliquity);
+    let ascendant = Math.atan2(y1, x1) * 180 / Math.PI;
+    
+    // Convert to 0-360 range
+    ascendant = (ascendant + 360) % 360;
+    
+    // Convert degrees to zodiac sign (each sign = 30 degrees)
+    const signIndex = Math.floor(ascendant / 30);
+    
+    return ZODIAC_SIGNS[signIndex];
 }
 
 function calculatePlanetSign(birthDate, planet) {
