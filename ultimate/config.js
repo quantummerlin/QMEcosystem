@@ -194,7 +194,7 @@ const BRAND_CONFIG = {
     // ============================================
     seo: {
         title: "Cosmic Baby Blueprint - Complete Newborn Astrology & Numerology Reading",
-        description: "Discover your baby's complete cosmic profile with 58 personalized readings including astrology, numerology, and life path analysis. Free comprehensive birth chart for newborns.",
+        description: "Discover your baby's complete cosmic blueprint with 65+ personalized readings covering astrology, numerology, and soul insights. Free and unlimited access.",
         keywords: "baby astrology, newborn numerology, baby birth chart, baby horoscope, newborn reading, baby life path, cosmic baby, baby zodiac, newborn personality"
     }
 };
