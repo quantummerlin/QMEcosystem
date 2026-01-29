@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title id="page-title">Complete Cosmic Blueprint</title>
-    <meta name="description" id="meta-description" content="Discover your baby's complete cosmic blueprint with 65+ personalized readings covering astrology, numerology, and soul insights. Free and unlimited.">
+    <meta name="description" id="meta-description" content="Discover a complete cosmic blueprint with 65+ personalized readings covering astrology, numerology, and soul insights. Perfect for any age - gift it to new parents, create one for yourself, or explore your child's cosmic profile. Free and unlimited.">
     
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#FF69B4">
@@ -26,7 +26,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" id="og-title" content="Complete Cosmic Blueprint - 65+ Personalized Readings">
-    <meta property="og:description" id="og-description" content="Discover your baby's complete cosmic blueprint with 65+ personalized readings. Astrology, numerology, and soul insights. Free and unlimited.">
+    <meta property="og:description" id="og-description" content="Discover a complete cosmic blueprint with 65+ personalized readings. Astrology, numerology, and soul insights for any age. Free and unlimited.">
     <meta property="og:type" content="website">
     
     <!-- Fonts -->
@@ -50,7 +50,7 @@
             --font-body: 'Inter', 'Segoe UI', sans-serif;
         }
         
-        /* Baby Pink Theme (default for girl) */
+        /* Pink Theme (default for girl) */
         body.theme-girl {
             --primary: #FF69B4;
             --secondary: #FFB6C1;
@@ -59,7 +59,7 @@
             --card-border: #FFE4EC;
         }
         
-        /* Baby Blue Theme (for boy) */
+        /* Blue Theme (for boy) */
         body.theme-boy {
             --primary: #6BA3D6;
             --secondary: #87CEEB;
@@ -1382,10 +1382,10 @@
     <!-- Theme Bar -->
     <div class="theme-bar" id="themeBar">
         <button class="theme-bar-btn" data-theme="girl" onclick="setGender('girl')">
-            👧 Baby Pink
+            👧 Pink Theme
         </button>
         <button class="theme-bar-btn" data-theme="boy" onclick="setGender('boy')">
-            👦 Baby Blue
+            👦 Blue Theme
         </button>
     </div>
     
@@ -1475,7 +1475,7 @@
             <div class="gift-support-section">
                 <div class="gift-box">
                     <h3>🎁 Gift This Reading</h3>
-                    <p>Create a beautiful, ad-free keepsake of this reading to share with family and loved ones.</p>
+                    <p>Create a beautiful, ad-free version to share with loved ones or print as a keepsake.</p>
                     <button class="gift-btn" onclick="giftReading()">✨ Create Gift Version</button>
                 </div>
                 
@@ -3654,7 +3654,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             URL.revokeObjectURL(url);
             
             // Show success message
-            alert('🎁 Gift version created! The ad-free reading has been downloaded. You can email it or print it for the parents!');
+            alert('🎁 Gift version created! The ad-free reading has been downloaded. You can email it or print it as a keepsake!');
         }
         
         // ============================================
@@ -3679,7 +3679,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
         
         document.addEventListener('DOMContentLoaded', function() {
             applyBrandConfig();
-            // Set default gender theme (baby pink)
+            // Set default gender theme (pink)
             setGender('girl');
             
             // Update theme-color meta tag when gender changes

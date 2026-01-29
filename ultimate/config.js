@@ -1,7 +1,7 @@
 // ============================================
-// COSMIC BABY BLUEPRINT - BRAND CONFIGURATION
+// COSMIC BLUEPRINT - BRAND CONFIGURATION
 // ============================================
-// Baby/Newborn specific branding
+// Universal branding for all ages
 // Copy this file to config.js to activate
 // ============================================
 
@@ -9,25 +9,25 @@ const BRAND_CONFIG = {
     // ============================================
     // BRAND IDENTITY
     // ============================================
-    brandName: "Cosmic Baby Blueprint",
-    tagline: "Your Child's Complete Cosmic Profile",
-    subTagline: "58 Readings • One Beautiful Report • Lifetime Guidance",
+    brandName: "Cosmic Blueprint",
+    tagline: "A Complete Cosmic Profile",
+    subTagline: "65+ Readings • One Beautiful Report • Lifetime Guidance",
     
     // Who is this reading for?
-    subjectType: "baby",
-    subjectLabel: "Baby",
-    subjectLabelPlural: "Babies",
+    subjectType: "person",
+    subjectLabel: "Person",
+    subjectLabelPlural: "People",
     
     // ============================================
     // COPY & LANGUAGE
     // ============================================
     inputLabels: {
-        name: "Baby's Name",
-        namePlaceholder: "Enter your baby's name",
-        nameHelper: "The name your child will be called (or birth name)",
+        name: "Name",
+        namePlaceholder: "Enter name",
+        nameHelper: "First name or nickname",
         
         birthDate: "Date of Birth",
-        birthDateHelper: "Your baby's birthday",
+        birthDateHelper: "Birthday",
         
         birthTime: "Time of Birth",
         birthTimeHelper: "For accurate Rising Sign (check birth certificate)",
@@ -37,13 +37,13 @@ const BRAND_CONFIG = {
         birthPlaceHelper: "Hospital location or city of birth"
     },
     
-    ctaButton: "✨ Generate My Baby's Cosmic Blueprint",
-    loadingMessage: "Calculating your baby's cosmic blueprint...",
+    ctaButton: "✨ Generate Cosmic Blueprint",
+    loadingMessage: "Calculating cosmic blueprint...",
     
     // Result page copy
     resultTitle: "Complete Cosmic Blueprint",
     resultSubtitle: "A Lifetime Guide for",
-    generatedBy: "Generated with love by Cosmic Baby Blueprint",
+    generatedBy: "Generated with love by Cosmic Blueprint",
     
     // ============================================
     // SECTION NAMES
@@ -52,22 +52,22 @@ const BRAND_CONFIG = {
         celestial: {
             name: "Celestial Gifts",
             icon: "🌟",
-            description: "Your baby's planetary influences and cosmic personality"
+            description: "Planetary influences and cosmic personality"
         },
         numbers: {
             name: "Sacred Numbers",
             icon: "🔢",
-            description: "The numerological blueprint of your child's life path"
+            description: "The numerological blueprint of the life path"
         },
         soul: {
             name: "Soul Mission",
             icon: "✨",
-            description: "Your baby's deeper purpose and spiritual gifts"
+            description: "Deeper purpose and spiritual gifts"
         },
         forecasts: {
             name: "Life Seasons",
             icon: "🌈",
-            description: "What the cosmos has in store for your little one"
+            description: "What the cosmos has in store"
         },
         cycles: {
             name: "Growth Cycles",
@@ -157,9 +157,9 @@ const BRAND_CONFIG = {
     // SOCIAL SHARING
     // ============================================
     sharing: {
-        hashtags: ["CosmicBaby", "BabyReading", "NewbornAstrology", "BabyNumerology"],
-        defaultMessage: "I just discovered my baby's complete cosmic blueprint! 🌟👶",
-        twitterHandle: "@cosmicbaby"
+        hashtags: ["CosmicBlueprint", "Astrology", "Numerology", "SoulReading"],
+        defaultMessage: "I just discovered this complete cosmic blueprint! 🌟✨",
+        twitterHandle: "@quantummerlin"
     },
     
     // ============================================

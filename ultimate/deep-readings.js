@@ -12,7 +12,7 @@
 const DEEP_MOON_READINGS = {
     "Aries": {
         title: "The Emotional Warrior",
-        hook: "This little one feels everything with urgency and fire — emotions hit fast, burn bright, and move through quickly. Their inner world is a battlefield of passionate feelings demanding immediate expression.",
+        hook: "This soul feels everything with urgency and fire — emotions hit fast, burn bright, and move through quickly. Their inner world is a battlefield of passionate feelings demanding immediate expression.",
         coreIdentity: "The Moon in Aries gives this child an emotional nature that's direct, courageous, and action-oriented. They don't hide how they feel — they show it instantly. When happy, they're exuberant. When upset, everyone knows immediately. This isn't drama; it's authentic, unfiltered emotional expression.",
         external: "Others will experience this child as emotionally honest and refreshingly direct. There's no guessing game with their feelings. They inspire others with their bravery in expressing what most people hide. Their emotional courage is contagious.",
         behavior: "When emotions arise, this child needs to move — running, jumping, doing something physical. They process feelings through action, not contemplation. Sitting still with big feelings is almost impossible and shouldn't be forced.",
@@ -31,7 +31,7 @@ const DEEP_MOON_READINGS = {
     
     "Taurus": {
         title: "The Emotional Sanctuary",
-        hook: "This little one needs the world to feel safe, predictable, and comfortable before they can truly relax. Their inner world is a garden — needing consistent care, time, and patience to bloom.",
+        hook: "This soul needs the world to feel safe, predictable, and comfortable before they can truly relax. Their inner world is a garden — needing consistent care, time, and patience to bloom.",
         coreIdentity: "The Moon in Taurus gives this child an emotional nature that's stable, sensory, and security-focused. They feel through their body — comfort, touch, taste, and physical safety are how they understand love. Change feels threatening to their nervous system.",
         external: "Others experience this child as calming and grounding. Their steady emotional presence makes people feel safe. There's a peaceful quality about them that others find reassuring.",
         behavior: "When upset, they seek physical comfort — soft blankets, favorite foods, being held. They need time to process feelings; pushing them to 'get over it' backfires. Once upset, returning to baseline takes longer than other children.",
@@ -50,7 +50,7 @@ const DEEP_MOON_READINGS = {
     
     "Gemini": {
         title: "The Emotional Translator",
-        hook: "This little one processes feelings by talking, thinking, and making sense of them intellectually. Their inner world is a busy library — cataloging, cross-referencing, and understanding emotions through words and ideas.",
+        hook: "This soul processes feelings by talking, thinking, and making sense of them intellectually. Their inner world is a busy library — cataloging, cross-referencing, and understanding emotions through words and ideas.",
         coreIdentity: "The Moon in Gemini gives this child an emotional nature that's curious, communicative, and mentally active. They understand their feelings by thinking about them and talking them through. Naming an emotion helps them process it.",
         external: "Others experience this child as interesting and easy to talk to about feelings. They can articulate emotional experiences in ways that help others understand their own feelings too. Their words bring clarity.",
         behavior: "When upset, they need to talk about it — sometimes to multiple people, sometimes for a long time. They may ask questions about their feelings: 'Why do I feel this way?' Processing happens through dialogue and analysis.",
@@ -69,7 +69,7 @@ const DEEP_MOON_READINGS = {
     
     "Cancer": {
         title: "The Emotional Sanctuary",
-        hook: "This little one's inner world is vast as the ocean — they feel everything deeply, absorb emotions from their environment, and need absolute safety to let down their protective shell.",
+        hook: "This soul's inner world is vast as the ocean — they feel everything deeply, absorb emotions from their environment, and need absolute safety to let down their protective shell.",
         coreIdentity: "The Moon in Cancer is in its home sign, amplifying emotional sensitivity, intuition, and nurturing instincts to their maximum. This child feels EVERYTHING — their own emotions and everyone else's. They're a psychic sponge who absorbs the emotional atmosphere.",
         external: "Others experience this child as deeply caring and emotionally intuitive. People sense they can be vulnerable with them. Even as a baby, there's a nurturing quality — wanting to care for others' feelings.",
         behavior: "When upset, they retreat into their shell. They need to be held and feel absolutely safe before opening up. They may deny their feelings to protect others' feelings. They sense what parents need and may try to provide it.",
@@ -88,7 +88,7 @@ const DEEP_MOON_READINGS = {
     
     "Leo": {
         title: "The Emotional Performer",
-        hook: "This little one's heart is designed for the spotlight — they feel with dramatic intensity and need their emotions witnessed, celebrated, and validated. Their inner world is a stage where every feeling is a performance.",
+        hook: "This soul's heart is designed for the spotlight — they feel with dramatic intensity and need their emotions witnessed, celebrated, and validated. Their inner world is a stage where every feeling is a performance.",
         coreIdentity: "The Moon in Leo gives this child an emotional nature that's warm, generous, and expressive. Nothing is felt small — everything is significant and meaningful. They experience life as an epic story with themselves as the protagonist.",
         external: "Others experience this child's warmth and enthusiasm as genuinely uplifting. They make people feel special and celebrated. Their emotional presence is magnetic and generous — they light up rooms.",
         behavior: "When upset, they need to express it dramatically AND have someone witness it. Ignoring their emotional display makes everything worse. They need acknowledgment that what they feel matters. Praise and recognition are essential.",
@@ -107,7 +107,7 @@ const DEEP_MOON_READINGS = {
     
     "Virgo": {
         title: "The Emotional Analyst",
-        hook: "This little one processes feelings through a lens of analysis and improvement — they instinctively examine emotions, looking for what's wrong and what could be better. Their inner world is a laboratory for understanding.",
+        hook: "This soul processes feelings through a lens of analysis and improvement — they instinctively examine emotions, looking for what's wrong and what could be better. Their inner world is a laboratory for understanding.",
         coreIdentity: "The Moon in Virgo gives this child an emotional nature that's analytical, helpful, and detail-oriented. They process feelings intellectually: Why am I feeling this? What's causing it? How can I make it better? This is how they find safety.",
         external: "Others experience this child as practically caring and competently helpful. They don't just offer sympathy — they show up with solutions. Their help is concrete, useful, and reliably available.",
         behavior: "When upset, they may try to fix the situation rather than feel the feeling. They may get busy, organize something, or focus on details. Asking 'how can I help?' is their emotional response to others' distress.",
@@ -126,7 +126,7 @@ const DEEP_MOON_READINGS = {
     
     "Libra": {
         title: "The Emotional Diplomat",
-        hook: "This little one's inner world operates through relationships — they understand themselves through connection with others and need harmony and balance to feel emotionally complete.",
+        hook: "This soul's inner world operates through relationships — they understand themselves through connection with others and need harmony and balance to feel emotionally complete.",
         coreIdentity: "The Moon in Libra gives this child an emotional nature that craves harmony, beauty, and partnership. Conflict disturbs them deeply. They'll go to great lengths to maintain peace, sometimes at cost to their own needs.",
         external: "Others experience this child as emotionally graceful and socially attuned. They create harmony naturally. People relax in their presence because they make everything feel more pleasant and balanced.",
         behavior: "When conflicts arise, they instinctively seek middle ground. They can see all perspectives, which makes them excellent mediators but can leave them confused about their own feelings. They may ask 'what do YOU want?' before knowing what they want.",
@@ -145,7 +145,7 @@ const DEEP_MOON_READINGS = {
     
     "Scorpio": {
         title: "The Emotional Alchemist",
-        hook: "This little one feels everything at maximum intensity — their inner world is a place of profound depth, powerful feelings, and transformative emotional experiences that most people never access.",
+        hook: "This soul feels everything at maximum intensity — their inner world is a place of profound depth, powerful feelings, and transformative emotional experiences that most people never access.",
         coreIdentity: "The Moon in Scorpio gives this child one of the most intense, powerful emotional natures. Superficial feelings don't exist for them — it's passion, obsession, soul-deep connection, or nothing at all. They feel everything at extremes.",
         external: "Others experience this child as emotionally intense and magnetically powerful. People sense their depth and may be drawn to or intimidated by their penetrating presence. They seem to see through pretense.",
         behavior: "When upset, they may go silent, withdraw completely, or express with volcanic intensity. They need to process deeply before speaking. They test people's loyalty without realizing it. They never forget how someone made them feel.",
@@ -164,7 +164,7 @@ const DEEP_MOON_READINGS = {
     
     "Sagittarius": {
         title: "The Emotional Explorer",
-        hook: "This little one's inner world craves expansion, meaning, and adventure — they need emotional breathing room and philosophical perspective to feel truly alive.",
+        hook: "This soul's inner world craves expansion, meaning, and adventure — they need emotional breathing room and philosophical perspective to feel truly alive.",
         coreIdentity: "The Moon in Sagittarius gives this child an emotional nature that's optimistic, adventurous, and freedom-loving. They instinctively look for the lesson, the silver lining, the bigger picture. Their spirit is wild and free.",
         external: "Others experience this child as emotionally uplifting and inspiring. Their optimism is contagious. They help people see possibilities and find meaning in difficult experiences. Their enthusiasm lights the way.",
         behavior: "When difficult feelings arise, they seek expansion — want to go somewhere, do something, learn something new. They process emotions by gaining altitude and perspective. Sitting with difficult feelings feels suffocating.",
@@ -183,7 +183,7 @@ const DEEP_MOON_READINGS = {
     
     "Capricorn": {
         title: "The Emotional Executive",
-        hook: "This little one's inner world operates through achievement and self-control — they feel safest when they're accomplishing something and believe emotional discipline is a sign of maturity.",
+        hook: "This soul's inner world operates through achievement and self-control — they feel safest when they're accomplishing something and believe emotional discipline is a sign of maturity.",
         coreIdentity: "The Moon in Capricorn gives this child an emotional nature that's disciplined, responsible, and self-contained. From an early age, they may seem older than their years. Feelings that don't serve a purpose feel like weakness.",
         external: "Others experience this child as emotionally steady and reliable. They're the one people count on in crisis. Their capacity to stay functional under pressure is remarkable. Mature beyond their years.",
         behavior: "When upset, they may suppress feelings and focus on tasks. They may refuse comfort, preferring to 'handle it themselves.' They feel safest when they've accomplished something. Achievement soothes anxiety.",
@@ -202,7 +202,7 @@ const DEEP_MOON_READINGS = {
     
     "Aquarius": {
         title: "The Emotional Innovator",
-        hook: "This little one's inner world values freedom, individuality, and progressive thinking — they need space to be authentically themselves without conforming to others' emotional expectations.",
+        hook: "This soul's inner world values freedom, individuality, and progressive thinking — they need space to be authentically themselves without conforming to others' emotional expectations.",
         coreIdentity: "The Moon in Aquarius gives this child an emotional nature that's independent, unconventional, and intellectually-focused. They observe feelings with curiosity rather than getting lost in them. Their emotional expression is unique.",
         external: "Others experience this child as emotionally unique and refreshingly authentic. They don't follow expected emotional scripts. Their originality is liberating for those who value truth over convention.",
         behavior: "When feelings arise, they observe them analytically, almost from a distance. They process emotions by understanding them conceptually. They may seem detached when they're actually processing in their unique way.",
@@ -221,7 +221,7 @@ const DEEP_MOON_READINGS = {
     
     "Pisces": {
         title: "The Emotional Mystic",
-        hook: "This little one's inner world has no clear boundaries — they absorb emotions from everyone around them, sense unspoken feelings, and often can't distinguish between their emotions and others'.",
+        hook: "This soul's inner world has no clear boundaries — they absorb emotions from everyone around them, sense unspoken feelings, and often can't distinguish between their emotions and others'.",
         coreIdentity: "The Moon in Pisces gives this child one of the most sensitive, intuitive, and compassionate emotional natures. They're a psychic sponge, absorbing the emotional atmosphere wherever they go. They feel EVERYTHING.",
         external: "Others experience this child as deeply empathetic and spiritually attuned. People feel understood at levels they can't explain. Their compassion is boundless. There's something otherworldly about their presence.",
         behavior: "When overwhelmed, they may retreat into fantasy, sleep, or imagination. They escape harsh reality through creativity. They need alone time to discharge others' emotions they've absorbed. They may lose themselves in helping others.",
