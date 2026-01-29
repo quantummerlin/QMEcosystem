@@ -401,20 +401,20 @@
             font-family: var(--font-heading);
             font-size: clamp(1.8rem, 4vw, 2.5rem);
             margin-bottom: 10px;
-            color: #1a0a2e;
+            color: #1a0a2e !important;
         }
         
         .results-header .subject-name {
             font-size: clamp(1.5rem, 3vw, 2rem);
             font-family: var(--font-heading);
             margin-bottom: 15px;
-            color: #2d1b4e;
+            color: #2d1b4e !important;
         }
         
         .results-header .birth-info {
             opacity: 1;
             font-size: 1rem;
-            color: #3d2b5e;
+            color: #3d2b5e !important;
         }
         
         .action-buttons {
@@ -1504,16 +1504,18 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=24"></script>
-    <script src="calculations.js?v=24"></script>
-    <script src="readings.js?v=24"></script>
-    <script src="house-readings.js?v=24"></script>
-    <script src="aspect-readings.js?v=24"></script>
-    <script src="advanced-readings.js?v=24"></script>
-    <script src="deep-readings.js?v=24"></script>
-    <script src="readings-extended.js?v=24"></script>
-    <script src="love-blueprint.js?v=24"></script>
-    <script src="save-share.js?v=24"></script>
+    <script src="config.js?v=25"></script>
+    <script src="calculations.js?v=25"></script>
+    <script src="readings.js?v=25"></script>
+    <script src="house-readings.js?v=25"></script>
+    <script src="aspect-readings.js?v=25"></script>
+    <script src="advanced-readings.js?v=25"></script>
+    <script src="deep-readings.js?v=25"></script>
+    <script src="deep-planet-readings.js?v=25"></script>
+    <script src="deep-planet-readings-outer.js?v=25"></script>
+    <script src="readings-extended.js?v=25"></script>
+    <script src="love-blueprint.js?v=25"></script>
+    <script src="save-share.js?v=25"></script>
     <script>
         // ============================================
         // GENDER THEME SWITCH
@@ -2029,55 +2031,154 @@
             
             // Mercury Sign (mercurySign already declared in blueprint section)
             const mercuryReading = MERCURY_SIGN_READINGS ? MERCURY_SIGN_READINGS[mercurySign.name] : null;
+            const deepMercury = (typeof DEEP_MERCURY_READINGS !== 'undefined') ? DEEP_MERCURY_READINGS[mercurySign.name] : null;
+            
+            let mercuryContent = '';
+            if (deepMercury) {
+                mercuryContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepMercury.hook}</p>`;
+                mercuryContent += `<div style="white-space: pre-line;">${deepMercury.coreNature}</div>`;
+                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">💬 Communication Style</h4>`;
+                mercuryContent += `<div style="white-space: pre-line;">${deepMercury.communication}</div>`;
+                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">📚 Learning Style</h4>`;
+                mercuryContent += `<div style="white-space: pre-line;">${deepMercury.learning}</div>`;
+                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🌙 Shadows & Challenges</h4>`;
+                mercuryContent += `<div style="white-space: pre-line;">${deepMercury.challenges}</div>`;
+                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">👨‍👩‍👧 For Parents</h4>`;
+                mercuryContent += `<div style="white-space: pre-line;">${deepMercury.parentGuidance}</div>`;
+                mercuryContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>✨ Affirmation:</strong> "${deepMercury.affirmation}"</p>`;
+            } else {
+                mercuryContent = mercuryReading ? mercuryReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Mercury in ${mercurySign.name} influences communication and thinking style.`;
+            }
+            
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.mercurySign,
-                `☿️ ${mercurySign.name}`,
+                `☿️ ${mercurySign.name}${deepMercury ? ` - ${deepMercury.title}` : ''}`,
                 mercuryReading ? mercuryReading.keywords : ['Communication', 'Thinking', 'Learning'],
-                mercuryReading ? mercuryReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Mercury in ${mercurySign.name} influences communication and thinking style.`,
+                mercuryContent,
                 mercuryReading ? mercuryReading.strengths : [],
                 mercuryReading ? mercuryReading.challenges : []
             ));
             
             // Venus Sign (venusSign already declared in blueprint section)
             const venusReading = VENUS_SIGN_READINGS ? VENUS_SIGN_READINGS[venusSign.name] : null;
+            const deepVenus = (typeof DEEP_VENUS_READINGS !== 'undefined') ? DEEP_VENUS_READINGS[venusSign.name] : null;
+            
+            let venusContent = '';
+            if (deepVenus) {
+                venusContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepVenus.hook}</p>`;
+                venusContent += `<div style="white-space: pre-line;">${deepVenus.coreNature}</div>`;
+                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">💕 Love Style</h4>`;
+                venusContent += `<div style="white-space: pre-line;">${deepVenus.loveStyle}</div>`;
+                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">💝 What They Need in Love</h4>`;
+                venusContent += `<div style="white-space: pre-line;">${deepVenus.needs}</div>`;
+                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🌙 Shadows & Challenges</h4>`;
+                venusContent += `<div style="white-space: pre-line;">${deepVenus.challenges}</div>`;
+                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">👨‍👩‍👧 For Parents</h4>`;
+                venusContent += `<div style="white-space: pre-line;">${deepVenus.parentGuidance}</div>`;
+                venusContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>✨ Affirmation:</strong> "${deepVenus.affirmation}"</p>`;
+            } else {
+                venusContent = venusReading ? venusReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Venus in ${venusSign.name} influences love and relationships.`;
+            }
+            
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.venusSign,
-                `♀️ ${venusSign.name}`,
+                `♀️ ${venusSign.name}${deepVenus ? ` - ${deepVenus.title}` : ''}`,
                 venusReading ? venusReading.keywords : ['Love', 'Beauty', 'Values'],
-                venusReading ? venusReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Venus in ${venusSign.name} influences love and relationships.`,
+                venusContent,
                 venusReading ? venusReading.strengths : [],
                 venusReading ? venusReading.challenges : []
             ));
             
             // Mars Sign (marsSign already declared in blueprint section)
             const marsReading = MARS_SIGN_READINGS ? MARS_SIGN_READINGS[marsSign.name] : null;
+            const deepMars = (typeof DEEP_MARS_READINGS !== 'undefined') ? DEEP_MARS_READINGS[marsSign.name] : null;
+            
+            let marsContent = '';
+            if (deepMars) {
+                marsContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepMars.hook}</p>`;
+                marsContent += `<div style="white-space: pre-line;">${deepMars.coreNature}</div>`;
+                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">⚡ Energy Expression</h4>`;
+                marsContent += `<div style="white-space: pre-line;">${deepMars.energy}</div>`;
+                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🎯 Drive & Motivation</h4>`;
+                marsContent += `<div style="white-space: pre-line;">${deepMars.willAndDrive}</div>`;
+                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🌙 Shadows & Challenges</h4>`;
+                marsContent += `<div style="white-space: pre-line;">${deepMars.challenges}</div>`;
+                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">👨‍👩‍👧 For Parents</h4>`;
+                marsContent += `<div style="white-space: pre-line;">${deepMars.parentGuidance}</div>`;
+                marsContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>✨ Affirmation:</strong> "${deepMars.affirmation}"</p>`;
+            } else {
+                marsContent = marsReading ? marsReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Mars in ${marsSign.name} influences energy and drive.`;
+            }
+            
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.marsSign,
-                `♂️ ${marsSign.name}`,
+                `♂️ ${marsSign.name}${deepMars ? ` - ${deepMars.title}` : ''}`,
                 marsReading ? marsReading.keywords : ['Energy', 'Drive', 'Action'],
-                marsReading ? marsReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Mars in ${marsSign.name} influences energy and drive.`,
+                marsContent,
                 marsReading ? marsReading.strengths : [],
                 marsReading ? marsReading.challenges : []
             ));
             
             // Jupiter Sign (jupiterSign already declared in blueprint section)
             const jupiterReading = JUPITER_SIGN_READINGS ? JUPITER_SIGN_READINGS[jupiterSign.name] : null;
+            const deepJupiter = (typeof DEEP_JUPITER_READINGS !== 'undefined') ? DEEP_JUPITER_READINGS[jupiterSign.name] : null;
+            
+            let jupiterContent = '';
+            if (deepJupiter) {
+                jupiterContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepJupiter.hook}</p>`;
+                jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.coreNature}</div>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🌱 Path of Expansion</h4>`;
+                jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.expansion}</div>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">📜 Wisdom & Teaching</h4>`;
+                jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.wisdom}</div>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🍀 How Luck Finds Them</h4>`;
+                jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.luck}</div>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🌙 Shadows & Challenges</h4>`;
+                jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.challenges}</div>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">👨‍👩‍👧 For Parents</h4>`;
+                jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.parentGuidance}</div>`;
+                jupiterContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>✨ Affirmation:</strong> "${deepJupiter.affirmation}"</p>`;
+            } else {
+                jupiterContent = jupiterReading ? jupiterReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Jupiter in ${jupiterSign.name} influences luck and expansion.`;
+            }
+            
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.jupiterSign,
-                `♃ ${jupiterSign.name}`,
+                `♃ ${jupiterSign.name}${deepJupiter ? ` - ${deepJupiter.title}` : ''}`,
                 jupiterReading ? jupiterReading.keywords : ['Luck', 'Growth', 'Expansion'],
-                jupiterReading ? jupiterReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Jupiter in ${jupiterSign.name} influences luck and expansion.`,
+                jupiterContent,
                 jupiterReading ? jupiterReading.strengths : [],
                 jupiterReading ? jupiterReading.challenges : []
             ));
             
             // Saturn Sign (saturnSign already declared in blueprint section)
             const saturnReading = SATURN_SIGN_READINGS ? SATURN_SIGN_READINGS[saturnSign.name] : null;
+            const deepSaturn = (typeof DEEP_SATURN_READINGS !== 'undefined') ? DEEP_SATURN_READINGS[saturnSign.name] : null;
+            
+            let saturnContent = '';
+            if (deepSaturn) {
+                saturnContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepSaturn.hook}</p>`;
+                saturnContent += `<div style="white-space: pre-line;">${deepSaturn.coreNature}</div>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">📚 Life Lessons</h4>`;
+                saturnContent += `<div style="white-space: pre-line;">${deepSaturn.lessons}</div>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🌙 Challenges & Shadow Work</h4>`;
+                saturnContent += `<div style="white-space: pre-line;">${deepSaturn.challenges}</div>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🏆 Path to Mastery</h4>`;
+                saturnContent += `<div style="white-space: pre-line;">${deepSaturn.mastery}</div>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">✨ Gifts When Integrated</h4>`;
+                saturnContent += `<div style="white-space: pre-line;">${deepSaturn.gifts}</div>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">👨‍👩‍👧 For Parents</h4>`;
+                saturnContent += `<div style="white-space: pre-line;">${deepSaturn.parentGuidance}</div>`;
+                saturnContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>✨ Affirmation:</strong> "${deepSaturn.affirmation}"</p>`;
+            } else {
+                saturnContent = saturnReading ? saturnReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Saturn in ${saturnSign.name} indicates life lessons and areas of mastery.`;
+            }
+            
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.saturnSign,
-                `♄ ${saturnSign.name}`,
+                `♄ ${saturnSign.name}${deepSaturn ? ` - ${deepSaturn.title}` : ''}`,
                 saturnReading ? saturnReading.keywords : ['Lessons', 'Discipline', 'Mastery'],
-                saturnReading ? saturnReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Saturn in ${saturnSign.name} indicates life lessons and areas of mastery.`,
+                saturnContent,
                 saturnReading ? saturnReading.strengths : [],
                 saturnReading ? saturnReading.challenges : []
             ));
