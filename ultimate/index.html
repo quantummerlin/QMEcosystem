@@ -2240,63 +2240,63 @@ This isn't a flaw - it's their power source. The tension between these two drive
             // Letter to number mapping
             const letterChart = 'A=1, B=2, C=3, D=4, E=5, F=6, G=7, H=8, I=9, J=1, K=2, L=3, M=4, N=5, O=6, P=7, Q=8, R=9, S=1, T=2, U=3, V=4, W=5, X=6, Y=7, Z=8';
             
-            numExplainer.innerHTML = \`
+            numExplainer.innerHTML = `
                 <span class="card-icon">🔢</span>
                 <h3>How Your Numbers Are Calculated</h3>
                 <p class="blueprint-intro">Numerology uses ancient mathematical principles to reveal the energetic blueprint encoded in your birth date and name. Here's exactly how ${userData.name}'s core numbers are calculated:</p>
                 
                 <div class="num-calc-section">
-                    <h4>📊 Life Path Number: \${readings.numerology.lifePath}</h4>
+                    <h4>📊 Life Path Number: ${readings.numerology.lifePath}</h4>
                     <p>Your Life Path is the most important number — it reveals your life's purpose and the journey you're meant to walk.</p>
                     <div class="calc-steps">
                         <div class="calc-step">
                             <span class="calc-label">Birth Date:</span>
-                            <span class="calc-value">\${birthMonth}/\${birthDay}/\${birthYear}</span>
+                            <span class="calc-value">${birthMonth}/${birthDay}/${birthYear}</span>
                         </div>
                         <div class="calc-step">
-                            <span class="calc-label">Reduce Month (\${birthMonth}):</span>
-                            <span class="calc-value">\${birthMonth} → \${monthReduced}</span>
+                            <span class="calc-label">Reduce Month (${birthMonth}):</span>
+                            <span class="calc-value">${birthMonth} → ${monthReduced}</span>
                         </div>
                         <div class="calc-step">
-                            <span class="calc-label">Reduce Day (\${birthDay}):</span>
-                            <span class="calc-value">\${birthDay} → \${dayReduced}</span>
+                            <span class="calc-label">Reduce Day (${birthDay}):</span>
+                            <span class="calc-value">${birthDay} → ${dayReduced}</span>
                         </div>
                         <div class="calc-step">
-                            <span class="calc-label">Reduce Year (\${birthYear}):</span>
-                            <span class="calc-value">\${String(birthYear).split('').join(' + ')} = \${String(birthYear).split('').reduce((a,b) => +a + +b)} → \${yearReduced}</span>
+                            <span class="calc-label">Reduce Year (${birthYear}):</span>
+                            <span class="calc-value">${String(birthYear).split('').join(' + ')} = ${String(birthYear).split('').reduce((a,b) => +a + +b)} → ${yearReduced}</span>
                         </div>
                         <div class="calc-step final">
                             <span class="calc-label">Add Together:</span>
-                            <span class="calc-value">\${monthReduced} + \${dayReduced} + \${yearReduced} = \${lifePathSum} → <strong>\${readings.numerology.lifePath}</strong></span>
+                            <span class="calc-value">${monthReduced} + ${dayReduced} + ${yearReduced} = ${lifePathSum} → <strong>${readings.numerology.lifePath}</strong></span>
                         </div>
                     </div>
                     <p class="calc-note">*Master Numbers (11, 22, 33) are not reduced, as they carry special significance.</p>
                 </div>
                 
                 <div class="num-calc-section">
-                    <h4>💫 Destiny Number: \${readings.numerology.destiny}</h4>
+                    <h4>💫 Destiny Number: ${readings.numerology.destiny}</h4>
                     <p>Calculated from your full birth name — each letter has a numeric value. All letters are added and reduced.</p>
-                    <div class="letter-chart">\${letterChart}</div>
-                    <p>Add all letter values in "<strong>\${userData.fullName}</strong>" and reduce to a single digit (or Master Number).</p>
+                    <div class="letter-chart">${letterChart}</div>
+                    <p>Add all letter values in "<strong>${userData.fullName}</strong>" and reduce to a single digit (or Master Number).</p>
                 </div>
                 
                 <div class="num-calc-section">
-                    <h4>💖 Soul Urge Number: \${readings.numerology.soulUrge}</h4>
+                    <h4>💖 Soul Urge Number: ${readings.numerology.soulUrge}</h4>
                     <p>Calculated from only the <strong>vowels</strong> in your full name (A, E, I, O, U). This reveals your heart's deepest desires.</p>
                 </div>
                 
                 <div class="num-calc-section">
-                    <h4>🎭 Personality Number: \${readings.numerology.personality}</h4>
+                    <h4>🎭 Personality Number: ${readings.numerology.personality}</h4>
                     <p>Calculated from only the <strong>consonants</strong> in your full name. This reveals how others perceive you.</p>
                 </div>
                 
                 <div class="num-calc-section">
-                    <h4>🎂 Birthday Number: \${readings.numerology.birthday}</h4>
-                    <p>Simply the day of the month you were born (\${birthDay}), reduced if needed. This reveals natural talents and special gifts.</p>
+                    <h4>🎂 Birthday Number: ${readings.numerology.birthday}</h4>
+                    <p>Simply the day of the month you were born (${birthDay}), reduced if needed. This reveals natural talents and special gifts.</p>
                 </div>
                 
                 <p class="blueprint-footer">Each number carries unique vibrational energy that influences different aspects of your life. Scroll down to discover what each of ${userData.name}'s numbers reveals.</p>
-            \`;
+            `;
             numbersSection.appendChild(numExplainer);
             
             // Life Path
