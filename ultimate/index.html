@@ -1690,6 +1690,10 @@
             // Hide loading
             overlay.classList.remove('active');
             
+            // Store userData for gift functionality
+            window.lastUserData = userData;
+            localStorage.setItem('lastReading', JSON.stringify(userData));
+            
             // Display results
             displayResults(userData, readings);
         }
@@ -3476,16 +3480,26 @@ This isn't a flaw - it's their power source. The tension between these two drive
         // ============================================
         
         function giftReading() {
-            const userData = JSON.parse(localStorage.getItem('lastReading') || '{}');
+            // Try multiple sources for userData
+            const userData = window.lastUserData || JSON.parse(localStorage.getItem('lastReading') || '{}');
             const readings = window.lastGeneratedReadings;
             
-            if (!userData.name || !readings) {
+            // Check if we have the readings container with content as fallback
+            const readingsContainer = document.getElementById('readingsContainer');
+            const hasContent = readingsContainer && readingsContainer.children.length > 0;
+            
+            if (!userData.name && !hasContent) {
                 alert('Please generate a reading first before creating a gift version.');
                 return;
             }
             
-            // Clone the current reading content
-            const readingsContainer = document.getElementById('readingsContainer');
+            // If we have content but no userData, get name from the displayed results
+            if (!userData.name && hasContent) {
+                const subjectName = document.getElementById('subjectName');
+                userData.name = subjectName ? subjectName.textContent : 'Unknown';
+            }
+            
+            // Get reading content for the gift version
             const closingContainer = document.getElementById('readingClosing');
             
             // Create a clean, ad-free HTML document
