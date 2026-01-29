@@ -9,9 +9,9 @@ const BRAND_CONFIG = {
     // ============================================
     // BRAND IDENTITY
     // ============================================
-    brandName: "Cosmic Blueprint",
-    tagline: "A Complete Cosmic Profile",
-    subTagline: "65+ Readings • One Beautiful Report • Lifetime Guidance",
+    brandName: "Soul Blueprint",
+    tagline: "A Portrait of the Soul",
+    subTagline: "65+ Personalized Readings • A Keepsake for Life",
     
     // Who is this reading for?
     subjectType: "person",
@@ -37,13 +37,13 @@ const BRAND_CONFIG = {
         birthPlaceHelper: "Hospital location or city of birth"
     },
     
-    ctaButton: "✨ Generate Cosmic Blueprint",
-    loadingMessage: "Calculating cosmic blueprint...",
+    ctaButton: "✨ Create Soul Blueprint",
+    loadingMessage: "Discovering the soul's story...",
     
     // Result page copy
-    resultTitle: "Complete Cosmic Blueprint",
-    resultSubtitle: "A Lifetime Guide for",
-    generatedBy: "Generated with love by Cosmic Blueprint",
+    resultTitle: "Soul Blueprint",
+    resultSubtitle: "A Portrait of",
+    generatedBy: "Created with love by Soul Blueprint",
     
     // ============================================
     // SECTION NAMES
@@ -157,8 +157,8 @@ const BRAND_CONFIG = {
     // SOCIAL SHARING
     // ============================================
     sharing: {
-        hashtags: ["CosmicBlueprint", "Astrology", "Numerology", "SoulReading"],
-        defaultMessage: "I just discovered this complete cosmic blueprint! 🌟✨",
+        hashtags: ["SoulBlueprint", "BirthChart", "SoulReading", "GiftFromTheStars"],
+        defaultMessage: "I just discovered this beautiful soul blueprint! 🌟✨",
         twitterHandle: "@quantummerlin"
     },
     
