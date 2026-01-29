@@ -1165,16 +1165,16 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=18"></script>
-    <script src="calculations.js?v=18"></script>
-    <script src="readings.js?v=18"></script>
-    <script src="house-readings.js?v=18"></script>
-    <script src="aspect-readings.js?v=18"></script>
-    <script src="advanced-readings.js?v=18"></script>
-    <script src="deep-readings.js?v=18"></script>
-    <script src="readings-extended.js?v=18"></script>
-    <script src="love-blueprint.js?v=18"></script>
-    <script src="save-share.js?v=18"></script>
+    <script src="config.js?v=19"></script>
+    <script src="calculations.js?v=19"></script>
+    <script src="readings.js?v=19"></script>
+    <script src="house-readings.js?v=19"></script>
+    <script src="aspect-readings.js?v=19"></script>
+    <script src="advanced-readings.js?v=19"></script>
+    <script src="deep-readings.js?v=19"></script>
+    <script src="readings-extended.js?v=19"></script>
+    <script src="love-blueprint.js?v=19"></script>
+    <script src="save-share.js?v=19"></script>
     <script>
         // ============================================
         // GENDER THEME SWITCH
@@ -1540,15 +1540,19 @@
 
 <em>Approach to Life:</em> ${deepRising.lifeApproach}
 
-<em>How Others Perceive Them:</em> ${deepRising.howOthersSee}
+<em>How Others Perceive This Child:</em> ${deepRising.howOthersSee}
 
 <em>Physical Expression:</em> ${deepRising.physicalExpression}
 
 <em>Life Path Theme:</em> ${deepRising.lifePath}
 
-<em>The Gift They Bring:</em> ${deepRising.gift}
+<em>The Gift This Child Brings:</em> ${deepRising.gift}
 
-<em>Growth Challenge:</em> ${deepRising.challenge}`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+<em>Growth Challenge:</em> ${deepRising.challenge}
+
+<em>💫 Parenting Guidance:</em> ${deepRising.parentGuidance}
+
+<em>🔮 Synthesis:</em> ${deepRising.synthesis}`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
                     
                     celestialSection.appendChild(createReadingCard(
                         deepRising.title,
@@ -2476,6 +2480,32 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         moneyBlueprint.reading,
                         moneyBlueprint.strengths || [],
                         moneyBlueprint.growth || []
+                    ));
+                }
+                
+                // Health & Wellness Blueprint
+                if (SYNTHESIS_READINGS.health && typeof SYNTHESIS_READINGS.health.generate === 'function') {
+                    const healthBlueprint = SYNTHESIS_READINGS.health.generate(chartData);
+                    synthesisSection.appendChild(createReadingCard(
+                        healthBlueprint.title,
+                        `💚 Wellness & Vitality`,
+                        healthBlueprint.keywords,
+                        healthBlueprint.reading,
+                        healthBlueprint.strengths || [],
+                        healthBlueprint.watchFor || []
+                    ));
+                }
+                
+                // Communication & Learning Blueprint
+                if (SYNTHESIS_READINGS.communication && typeof SYNTHESIS_READINGS.communication.generate === 'function') {
+                    const commBlueprint = SYNTHESIS_READINGS.communication.generate(chartData);
+                    synthesisSection.appendChild(createReadingCard(
+                        commBlueprint.title,
+                        `💬 Communication & Learning`,
+                        commBlueprint.keywords,
+                        commBlueprint.reading,
+                        commBlueprint.strengths || [],
+                        commBlueprint.tips || []
                     ));
                 }
                 

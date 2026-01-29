@@ -1263,6 +1263,71 @@ Path to Prosperity: Financial success flows when they ${getMoneySuccess(jupiter,
                 growth: [`Master ${saturn} money lessons`]
             };
         }
+    },
+    
+    health: {
+        title: "Wellness & Vitality Synthesis",
+        icon: "💚",
+        description: "The body-mind connection and path to optimal wellbeing",
+        generate: function(chartData) {
+            const sunSign = chartData.sunSign;
+            const moonSign = chartData.moonSign;
+            const marsSign = chartData.marsSign;
+            const risingSign = chartData.risingSign || chartData.sunSign;
+            const name = chartData.name;
+            
+            return {
+                title: "Wellness & Vitality Blueprint",
+                keywords: ['Health', 'Vitality', 'Body-Mind', 'Self-Care'],
+                reading: `Vitality Source (Sun in ${sunSign}): The Sun represents core vitality. ${sunSign} Sun regenerates through ${getSunVitality(sunSign)}. When energy is low, returning to these activities restores life force.
+
+Emotional Wellness (Moon in ${moonSign}): The Moon governs emotional health and physical responses to stress. ${moonSign} Moon needs ${getMoonWellness(moonSign)} for emotional equilibrium. Ignoring these needs depletes both emotional and physical resources.
+
+Physical Body (${risingSign} Rising): The Rising Sign influences physical constitution and appearance. ${risingSign} Rising often has ${getRisingBody(risingSign)}. Physical activities that suit this constitution include ${getRisingExercise(risingSign)}.
+
+Energy Expression (Mars in ${marsSign}): Mars rules physical energy and how it's best expressed. ${marsSign} Mars thrives with ${getMarsExercise(marsSign)}. This is how ${name} naturally wants to move and exert energy.
+
+Wellness Integration: Optimal health comes from honoring ${sunSign} Sun's vitality needs, ${moonSign} Moon's emotional requirements, and ${marsSign} Mars's movement style. When these align, energy flows freely.
+
+Self-Care Priorities: The most essential self-care practices for this chart include ${getHealthPriorities(sunSign, moonSign, risingSign)}.`,
+                strengths: [`${sunSign} vitality`, `${marsSign} energy expression`],
+                watchFor: [`${moonSign} emotional needs affecting physical health`]
+            };
+        }
+    },
+    
+    communication: {
+        title: "Communication Style Synthesis",
+        icon: "💬",
+        description: "How this soul expresses, learns, and connects through language",
+        generate: function(chartData) {
+            const mercury = chartData.mercurySign;
+            const sunSign = chartData.sunSign;
+            const moonSign = chartData.moonSign;
+            const risingSign = chartData.risingSign || chartData.sunSign;
+            const lifePath = chartData.lifePath;
+            const name = chartData.name;
+            
+            return {
+                title: "Communication & Learning Blueprint",
+                keywords: ['Communication', 'Learning Style', 'Expression', 'Mental Gifts'],
+                reading: `The Mind (Mercury in ${mercury}): Mercury governs thinking and communication. ${mercury} Mercury has ${getMercuryMindStyle(mercury)}. This child learns best through ${getMercuryLearning(mercury)} and communicates with ${getMercuryCommStyle(mercury)}.
+
+Core Expression (Sun in ${sunSign}): The Sun influences what they want to communicate about. ${sunSign} Sun naturally talks about ${getSunTopics(sunSign)} and expresses ideas with ${getSunCommStyle(sunSign)}.
+
+Emotional Communication (Moon in ${moonSign}): The Moon reveals how feelings are expressed. ${moonSign} Moon ${getMoonCommStyle(moonSign)}. Understanding this helps decode what they really mean versus what they say.
+
+First Impressions (${risingSign} Rising): The Rising Sign colors initial communication. ${risingSign} Rising initially comes across as ${getRisingCommStyle(risingSign)}.
+
+Learning Environment: This child thrives in learning environments that offer ${getLearningEnvironment(mercury, moonSign, lifePath)}. Traditional schooling may need to be supplemented with approaches that honor their unique mental wiring.
+
+Communication Gifts: Natural talents include ${getCommGifts(mercury, sunSign, moonSign)}. These gifts can be developed into genuine strengths.
+
+Parent Guidance: When communicating with ${name}, remember they process information ${getMercuryProcessing(mercury)}. Adjust your communication style to ${getParentCommTip(mercury, moonSign)}.`,
+                strengths: [`${mercury} mental gifts`, `${sunSign} expression style`],
+                tips: [`Honor ${moonSign} emotional communication needs`]
+            };
+        }
     }
 };
 
@@ -1666,6 +1731,264 @@ function getSaturnPattern(sign) {
         Pisces: "boundary dissolution"
     };
     return patterns[sign] || "habitual limitation patterns";
+}
+
+// ============================================
+// HELPER FUNCTIONS FOR HEALTH SYNTHESIS
+// ============================================
+
+function getSunVitality(sign) {
+    const vitality = {
+        Aries: "physical challenges, competition, new adventures, and being first at something",
+        Taurus: "nature, good food, comfortable spaces, and sensory pleasures",
+        Gemini: "mental stimulation, conversation, variety, and learning new things",
+        Cancer: "home, family connection, water, and nurturing activities",
+        Leo: "creative expression, play, appreciation, and joyful celebration",
+        Virgo: "purposeful work, healthy routines, organization, and being of service",
+        Libra: "beauty, harmony, partnership, and aesthetic experiences",
+        Scorpio: "intensity, deep experiences, transformation, and emotional truth",
+        Sagittarius: "adventure, freedom, travel, learning, and philosophical exploration",
+        Capricorn: "achievement, goal completion, respect, and building something lasting",
+        Aquarius: "intellectual stimulation, freedom, innovation, and being authentically unique",
+        Pisces: "creativity, spiritual connection, imagination, and compassionate service"
+    };
+    return vitality[sign] || "authentic self-expression";
+}
+
+function getMoonWellness(sign) {
+    const wellness = {
+        Aries: "physical outlets for emotional energy and quick resolution of upsets",
+        Taurus: "consistent routines, comfort objects, and sensory soothing",
+        Gemini: "talking through feelings, mental stimulation, and social connection",
+        Cancer: "family closeness, nurturing, and feeling emotionally held",
+        Leo: "appreciation, creative play, and feeling special and seen",
+        Virgo: "order, helpful activities, and practical expressions of care",
+        Libra: "harmony in environment, beauty, and peaceful relationships",
+        Scorpio: "emotional depth, privacy, and feelings being honored as valid",
+        Sagittarius: "freedom, optimism, adventure, and meaning",
+        Capricorn: "respect, achievement, and practical problem-solving for feelings",
+        Aquarius: "acceptance of uniqueness, space, and intellectual engagement",
+        Pisces: "imagination, gentleness, spiritual connection, and creative expression"
+    };
+    return wellness[sign] || "emotional attunement and care";
+}
+
+function getRisingBody(sign) {
+    const bodies = {
+        Aries: "athletic build, strong constitution, tendency toward heat, and high energy reserves",
+        Taurus: "sturdy constitution, pleasant features, potential weight sensitivity, and strong endurance",
+        Gemini: "youthful appearance, nervous system sensitivity, and need for variety in movement",
+        Cancer: "round features, digestive sensitivity, and strong response to emotional-physical connection",
+        Leo: "proud bearing, strong heart and spine, and vital constitution that responds to joy",
+        Virgo: "refined features, digestive sensitivity, and body that responds to routine and purity",
+        Libra: "symmetrical features, kidney and skin sensitivity, and need for balance in all things",
+        Scorpio: "penetrating eyes, reproductive and elimination system focus, and intense energy reserves",
+        Sagittarius: "athletic build, liver and thigh sensitivity, and body that needs movement and freedom",
+        Capricorn: "strong bone structure, knees and joints sensitivity, and constitution that improves with age",
+        Aquarius: "unusual features, circulatory and nervous sensitivity, and electric energy quality",
+        Pisces: "soft features, feet and lymphatic sensitivity, and highly permeable energy field"
+    };
+    return bodies[sign] || "unique physical expression";
+}
+
+function getRisingExercise(sign) {
+    const exercises = {
+        Aries: "competitive sports, high-intensity intervals, martial arts, and challenging physical goals",
+        Taurus: "walking in nature, yoga, swimming, and steady rhythmic activities",
+        Gemini: "dance, activities with variety, sports that involve hand-eye coordination, and movement with mental engagement",
+        Cancer: "swimming, water activities, yoga, and movement that feels emotionally safe",
+        Leo: "dance, performance, team sports where they can shine, and joyful movement",
+        Virgo: "precise activities like pilates, hiking, detailed sports, and movement with clear purpose",
+        Libra: "dance, partner activities, beautiful exercise environments, and graceful movement",
+        Scorpio: "intense workouts, martial arts, swimming, and transformative physical practices",
+        Sagittarius: "outdoor adventures, hiking, horseback riding, team sports, and movement that feels like freedom",
+        Capricorn: "climbing, structured routines, goal-oriented fitness, and activities that build strength over time",
+        Aquarius: "unusual or innovative exercise, group fitness, and movement that feels uniquely their own",
+        Pisces: "swimming, dance, yoga, tai chi, and fluid movement practices"
+    };
+    return exercises[sign] || "movement that honors their unique nature";
+}
+
+function getMarsExercise(sign) {
+    const exercises = {
+        Aries: "high-intensity, competitive, and challenging activities that let them push their edge",
+        Taurus: "steady, sensory, and strength-building activities they can do at their own pace",
+        Gemini: "varied activities that engage the mind alongside the body, changing things up often",
+        Cancer: "activities that feel emotionally safe and connected, often home-based or with family",
+        Leo: "activities where they can express themselves and receive appreciation, often creative or performance-based",
+        Virgo: "precise, purposeful activities with clear technique to master and visible improvement",
+        Libra: "partner activities, beautiful movement, and exercise that feels graceful rather than aggressive",
+        Scorpio: "intense, transformative practices that let them push through limits and access power",
+        Sagittarius: "adventurous, expansive activities with freedom and fun as primary features",
+        Capricorn: "disciplined, goal-oriented training with clear progress markers and earned achievement",
+        Aquarius: "unconventional, innovative activities that let them do things their own unique way",
+        Pisces: "fluid, intuitive movement that feels more like art or meditation than exercise"
+    };
+    return exercises[sign] || "authentic physical expression";
+}
+
+function getHealthPriorities(sun, moon, rising) {
+    return `honoring ${sun} Sun's energy needs, meeting ${moon} Moon's emotional requirements for physical balance, and respecting ${rising} Rising's physical constitution and exercise preferences`;
+}
+
+// ============================================
+// HELPER FUNCTIONS FOR COMMUNICATION SYNTHESIS
+// ============================================
+
+function getMercuryMindStyle(sign) {
+    const styles = {
+        Aries: "quick, direct, and competitive mental energy — ideas come fast and are expressed immediately",
+        Taurus: "methodical, practical, and sensory-based mental processing — ideas develop slowly but solidly",
+        Gemini: "curious, versatile, and quick-witted mental agility — ideas multiply and connect rapidly",
+        Cancer: "intuitive, memory-based, and emotionally-colored thinking — ideas are felt as much as thought",
+        Leo: "creative, confident, and dramatic mental expression — ideas tend toward the grand and expressive",
+        Virgo: "analytical, precise, and detail-oriented thinking — ideas are carefully examined and refined",
+        Libra: "balanced, diplomatic, and relationship-aware thinking — ideas consider all perspectives",
+        Scorpio: "deep, investigative, and penetrating thinking — ideas probe beneath surfaces",
+        Sagittarius: "expansive, philosophical, and big-picture thinking — ideas reach toward meaning",
+        Capricorn: "structured, strategic, and goal-oriented thinking — ideas serve practical purposes",
+        Aquarius: "original, innovative, and unconventional thinking — ideas break from tradition",
+        Pisces: "imaginative, intuitive, and poetic thinking — ideas blur boundaries between logic and intuition"
+    };
+    return styles[sign] || "unique mental expression";
+}
+
+function getMercuryLearning(sign) {
+    const learning = {
+        Aries: "hands-on experience, competition, and challenges that motivate quick mastery",
+        Taurus: "repetition, sensory engagement, and slow steady progression at their own pace",
+        Gemini: "variety, conversation, reading, and making connections between different subjects",
+        Cancer: "emotional safety, personal connection to material, and learning through relationship",
+        Leo: "creative engagement, drama, presentation, and learning through expression",
+        Virgo: "systematic approach, detailed instruction, and practical application of knowledge",
+        Libra: "discussion, debate, partnership learning, and beautiful learning environments",
+        Scorpio: "deep investigation, discovering hidden knowledge, and learning through intensity",
+        Sagittarius: "big-picture understanding first, freedom to explore, and learning through adventure",
+        Capricorn: "structured curriculum, clear goals, and learning that leads to mastery",
+        Aquarius: "unconventional methods, technology, group learning, and questioning established ideas",
+        Pisces: "imagination, art, music, and learning through feeling and intuition"
+    };
+    return learning[sign] || "approaches that honor their unique mind";
+}
+
+function getMercuryCommStyle(sign) {
+    const comm = {
+        Aries: "directness, speed, and competitive edge — they say what they mean quickly",
+        Taurus: "calm, measured, deliberate speech — they think before speaking and mean what they say",
+        Gemini: "quick, varied, versatile communication — they talk about many things and adapt to their audience",
+        Cancer: "emotionally attuned, nurturing communication — they communicate care and pick up on feelings",
+        Leo: "warm, expressive, dramatic communication — they speak from the heart with natural performance",
+        Virgo: "precise, helpful, detailed communication — they notice and articulate specifics",
+        Libra: "diplomatic, pleasant, balanced communication — they consider others and seek harmony",
+        Scorpio: "intense, probing, meaningful communication — they go deep or stay silent",
+        Sagittarius: "enthusiastic, honest, expansive communication — they speak truth and inspire",
+        Capricorn: "reserved, purposeful, authoritative communication — they speak when they have something worth saying",
+        Aquarius: "unique, innovative, intellectual communication — they share unconventional perspectives",
+        Pisces: "gentle, intuitive, imaginative communication — they communicate through feeling and imagery"
+    };
+    return comm[sign] || "authentic verbal expression";
+}
+
+function getSunTopics(sign) {
+    const topics = {
+        Aries: "achievements, adventures, competitions, and being first or best",
+        Taurus: "beautiful things, comfort, nature, food, and what they're building",
+        Gemini: "everything — ideas, information, gossip, questions, and interesting connections",
+        Cancer: "family, feelings, home, memories, and people they care about",
+        Leo: "creative projects, adventures, romance, and things they're proud of",
+        Virgo: "improvements, health, work, details others missed, and helpful information",
+        Libra: "relationships, fairness, beauty, and ideas from multiple perspectives",
+        Scorpio: "depth, truth, mysteries, transformation, and what's really going on beneath surfaces",
+        Sagittarius: "adventures, meaning, philosophy, truth, and what they're excited about",
+        Capricorn: "goals, achievements, responsibilities, and things of substance",
+        Aquarius: "ideas, innovations, social causes, and unique perspectives",
+        Pisces: "dreams, feelings, art, spirituality, and imaginative possibilities"
+    };
+    return topics[sign] || "what matters to their authentic self";
+}
+
+function getSunCommStyle(sign) {
+    const styles = {
+        Aries: "confident, direct, enthusiastic energy",
+        Taurus: "calm, grounded, sensible energy",
+        Gemini: "curious, quick, adaptable energy",
+        Cancer: "caring, protective, emotional energy",
+        Leo: "warm, dramatic, generous energy",
+        Virgo: "precise, helpful, thoughtful energy",
+        Libra: "charming, balanced, diplomatic energy",
+        Scorpio: "intense, penetrating, powerful energy",
+        Sagittarius: "optimistic, honest, enthusiastic energy",
+        Capricorn: "authoritative, practical, measured energy",
+        Aquarius: "unique, innovative, intellectual energy",
+        Pisces: "gentle, imaginative, compassionate energy"
+    };
+    return styles[sign] || "authentic expressive energy";
+}
+
+function getMoonCommStyle(sign) {
+    const styles = {
+        Aries: "expresses emotions quickly and directly, may seem aggressive when just being honest about feelings",
+        Taurus: "expresses emotions slowly and steadily, may not talk about feelings readily but shows them through actions",
+        Gemini: "talks about emotions readily, processes feelings by discussing them, may seem to change emotional positions",
+        Cancer: "deeply emotional communication, may communicate indirectly through nurturing, very sensitive to tone",
+        Leo: "expresses emotions dramatically and openly, needs emotional expression to be witnessed and valued",
+        Virgo: "analyzes emotions before expressing, may help rather than emote, can be self-critical about feelings",
+        Libra: "expresses emotions diplomatically, may suppress own feelings for harmony, sensitive to relationship dynamics",
+        Scorpio: "guards emotions intensely, when they share feelings it's significant, very private about inner world",
+        Sagittarius: "expresses emotions optimistically, may avoid heavy emotional processing, needs freedom in emotional expression",
+        Capricorn: "reserved with emotions, may struggle to express vulnerability, more comfortable with respect than sentiment",
+        Aquarius: "intellectual about emotions, may seem detached when processing feelings, needs freedom in emotional expression",
+        Pisces: "deeply sensitive communication, may absorb others' emotions, expresses through art and imagination"
+    };
+    return styles[sign] || "unique emotional communication style";
+}
+
+function getRisingCommStyle(sign) {
+    const styles = {
+        Aries: "direct, confident, and energetic — people know immediately where they stand",
+        Taurus: "calm, pleasant, and grounded — people feel settled in their presence",
+        Gemini: "curious, engaging, and quick — people find them easy to talk to",
+        Cancer: "warm, caring, and emotionally attuned — people feel nurtured by them",
+        Leo: "confident, warm, and engaging — people notice and are drawn to them",
+        Virgo: "helpful, thoughtful, and precise — people find them competent and caring",
+        Libra: "charming, gracious, and balanced — people feel comfortable and appreciated",
+        Scorpio: "intense, perceptive, and powerful — people sense depth and respect their presence",
+        Sagittarius: "optimistic, open, and enthusiastic — people feel inspired and cheered",
+        Capricorn: "capable, mature, and authoritative — people trust their competence",
+        Aquarius: "unique, friendly, and intellectual — people find them interesting and refreshing",
+        Pisces: "gentle, intuitive, and dreamy — people feel understood and accepted"
+    };
+    return styles[sign] || "unique first impression style";
+}
+
+function getLearningEnvironment(mercury, moon, lifePath) {
+    return `${mercury} Mercury's mental needs (variety, structure, depth, etc.), ${moon} Moon's emotional safety requirements, and Life Path ${lifePath}'s learning purpose`;
+}
+
+function getCommGifts(mercury, sun, moon) {
+    return `${mercury} Mercury's mental abilities combined with ${sun} Sun's expressive confidence and ${moon} Moon's emotional intelligence`;
+}
+
+function getMercuryProcessing(sign) {
+    const processing = {
+        Aries: "quickly and directly — give information in brief, action-oriented chunks",
+        Taurus: "slowly and thoroughly — give time to process and repeat important information",
+        Gemini: "rapidly and variably — engage multiple senses and approaches",
+        Cancer: "emotionally — connect information to feelings and relationships",
+        Leo: "dramatically — make learning fun, creative, and personally meaningful",
+        Virgo: "analytically — provide details, systems, and practical applications",
+        Libra: "relationally — discuss, debate, and consider multiple perspectives",
+        Scorpio: "deeply — allow investigation and honor their need to understand fully",
+        Sagittarius: "expansively — provide big picture first, then details",
+        Capricorn: "practically — connect learning to goals and real-world application",
+        Aquarius: "unconventionally — allow unique approaches and intellectual exploration",
+        Pisces: "intuitively — use imagination, story, and feeling alongside logic"
+    };
+    return processing[sign] || "in their unique way";
+}
+
+function getParentCommTip(mercury, moon) {
+    return `honor ${mercury} Mercury's thinking style and ${moon} Moon's emotional needs — both shape how communication lands`;
 }
 
 // ============================================
