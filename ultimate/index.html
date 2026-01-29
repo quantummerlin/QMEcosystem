@@ -1827,8 +1827,7 @@
                 }
             }
             
-            // Chinese Zodiac
-            const chineseZodiac = readings.astrology.chineseZodiac;
+            // Chinese Zodiac (chineseZodiac already declared in blueprint section)
             const chineseReading = CHINESE_ZODIAC_READINGS[chineseZodiac.name];
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.chineseZodiac,
@@ -2443,8 +2442,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             soulSectionWrapper.className = 'reading-section';
             const soulSection = createSection('soul', config.sections.soul);
             
-            // North Node with detailed reading
-            const northNode = readings.astrology.northNode;
+            // North Node with detailed reading (northNode already declared in blueprint section)
             const northNodeReading = NORTH_NODE_READINGS ? NORTH_NODE_READINGS[northNode.name] : null;
             soulSection.appendChild(createReadingCard(
                 config.readingTitles.northNode,
