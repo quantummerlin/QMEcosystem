@@ -2051,7 +2051,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
         
         function createSection(id, sectionConfig) {
             const section = document.createElement('div');
-            section.className = 'reading-section';
+            section.className = 'section-content';
             section.id = `section-${id}`;
             
             section.innerHTML = `
@@ -2137,7 +2137,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                             <div>
                                 <h4>🌱 Growth Areas</h4>
                                 <ul>
-                                    ${challengesArray.map(c => `<li>${c}</li>`).join('')}}
+                                    ${challengesArray.map(c => `<li>${c}</li>`).join('')}
                                 </ul>
                             </div>
                         ` : ''}
