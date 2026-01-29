@@ -1154,27 +1154,29 @@ const SYNTHESIS_READINGS = {
         title: "Career Path Synthesis",
         icon: "💼",
         description: "Your complete career blueprint based on your cosmic profile",
-        generate: function(readings) {
-            const mc = readings.astrology.midheaven || readings.astrology.sunSign;
-            const saturn = readings.astrology.saturnSign;
-            const mars = readings.astrology.marsSign;
-            const destiny = readings.numerology.destiny;
+        generate: function(chartData) {
+            // chartData has flat properties: sunSign, moonSign, marsSign, saturnSign, midheaven, destiny, name, etc.
+            const mc = chartData.midheaven || chartData.sunSign;
+            const saturn = chartData.saturnSign;
+            const mars = chartData.marsSign;
+            const destiny = chartData.destiny;
+            const name = chartData.name;
             
-            return `Career Blueprint for ${readings.input.name}
+            return {
+                title: "Career & Purpose Blueprint",
+                keywords: ['Career Path', 'Public Role', 'Life Work', 'Mastery'],
+                reading: `The Midheaven in ${mc} reveals the ultimate career direction: ${getCareerPath(mc)}. This is the mountain ${name} is destined to climb, the public role they're here to fulfill.
 
-The Midheaven in ${mc.name || mc} reveals the ultimate career direction: ${getCareerPath(mc.name || mc)}. This is the mountain they're destined to climb, the public role they're here to fulfill.
+Saturn in ${saturn} shows where discipline and mastery must be developed: ${getSaturnCareerLesson(saturn)}. This indicates the challenges that will become greatest strengths through dedicated effort.
 
-Saturn in ${saturn.name} shows where discipline and mastery must be developed: ${getSaturnCareerLesson(saturn.name)}. This indicates the challenges that will become greatest strengths through dedicated effort.
-
-Mars in ${mars.name} reveals their work style and drive: ${getMarsWorkStyle(mars.name)}. This shows how they'll pursue goals and overcome obstacles in their professional life.
+Mars in ${mars} reveals their work style and drive: ${getMarsWorkStyle(mars)}. This shows how they'll pursue goals and overcome obstacles in their professional life.
 
 Their Destiny Number ${destiny} adds numerological purpose: this soul is here to express the energy of ${destiny}, which in career terms means ${getDestinyCareer(destiny)}.
 
-Career Synthesis: Combining these influences, the ideal career path involves ${synthesizeCareerPath(mc.name || mc, saturn.name, mars.name, destiny)}. They'll find greatest success when their work allows them to ${getCareerSuccess(mc.name || mc)}.
-
-Early Career: During childhood and adolescence, encourage interests that align with these natural talents. Watch for early signs of ${getEarlyCareerSigns(mc.name || mc, mars.name)}.
-
-Life Purpose Through Work: Their ultimate contribution to the world through their career will be ${getCareerPurpose(mc.name || mc, saturn.name)}.`;
+Career Synthesis: Combining these influences, the ideal career path involves ${synthesizeCareerPath(mc, saturn, mars, destiny)}. They'll find greatest success when their work allows them to ${getCareerSuccess(mc)}.`,
+                strengths: [`Natural talent for ${getCareerPath(mc)}`, `${mars} drive style`, `Destiny ${destiny} purpose`],
+                watchFor: [`Saturn lessons in ${saturn}`]
+            };
         }
     },
     
@@ -1182,28 +1184,27 @@ Life Purpose Through Work: Their ultimate contribution to the world through thei
         title: "Spiritual Path Synthesis",
         icon: "🔮",
         description: "Your soul's spiritual journey and growth path",
-        generate: function(readings) {
-            const northNode = readings.astrology.northNode;
-            const chiron = readings.astrology.chiron || { name: 'Aries' };
-            const moonPhase = readings.astrology.moonPhase;
-            const lifePath = readings.numerology.lifePath;
-            const neptune = readings.astrology.neptuneSign || { name: 'Unknown' };
+        generate: function(chartData) {
+            const northNode = chartData.northNode || 'Aries';
+            const lifePath = chartData.lifePath;
+            const moonSign = chartData.moonSign;
+            const name = chartData.name;
             
-            return `Spiritual Path for ${readings.input.name}
+            return {
+                title: "Spiritual Path Blueprint",
+                keywords: ['Soul Growth', 'Spiritual Gifts', 'Higher Purpose', 'Awakening'],
+                reading: `Soul Direction (North Node in ${northNode}): ${name}'s soul is growing toward ${northNode} qualities - ${getNorthNodeSpiritual(northNode)}. The spiritual curriculum of this lifetime involves developing these qualities through experience.
 
-Soul Direction (North Node in ${northNode.name}): This soul is growing toward ${northNode.name} qualities - ${getNorthNodeSpiritual(northNode.name)}. The spiritual curriculum of this lifetime involves developing these qualities through experience.
+The Emotional Path (Moon in ${moonSign}): The Moon reveals emotional and intuitive gifts - ${getMoonSpiritual(moonSign)}. This is how ${name} connects with the divine through feeling.
 
-The Healing Journey (Chiron in ${chiron.name}): Core spiritual wound and gift involve ${chiron.name} themes - ${getChironSpiritual(chiron.name)}. Healing this wound becomes their ability to heal others similarly.
+Life Path ${lifePath} adds: This vibration means the spiritual journey involves ${getLifePathSpiritual(lifePath)}. The soul is learning and teaching these lessons throughout life.
 
-Birth Moon Phase (${moonPhase.name}): Arriving during the ${moonPhase.name} imbues the soul with ${getMoonPhaseSpiritual(moonPhase.name)}. This is the spiritual "season" they carry within.
+Spiritual Practices: Natural spiritual practices that support this soul include ${getSpiritualPractices(northNode, moonSign, lifePath)}.
 
-Life Path ${lifePath} adds: This master number or vibration means the spiritual journey involves ${getLifePathSpiritual(lifePath)}. The soul is learning and teaching these lessons throughout life.
-
-Spiritual Practices: Natural spiritual practices that support this soul include ${getSpiritualPractices(northNode.name, moonPhase.name, lifePath)}.
-
-Soul Gifts to Develop: The unique spiritual gifts waiting to unfold include ${getSoulGifts(northNode.name, chiron.name, lifePath)}.
-
-The Awakening Path: Spiritual awakening for this soul will likely involve ${getAwakeningPath(northNode.name, chiron.name, moonPhase.name)}. Trust the timing of their unique unfolding.`;
+Soul Gifts to Develop: The unique spiritual gifts waiting to unfold include ${getSoulGifts(northNode, moonSign, lifePath)}.`,
+                gifts: [`${northNode} soul direction`, `${moonSign} intuitive style`, `Life Path ${lifePath} wisdom`],
+                practices: [`${getSpiritualPracticeShort(northNode)}`]
+            };
         }
     },
     
@@ -1211,27 +1212,27 @@ The Awakening Path: Spiritual awakening for this soul will likely involve ${getA
         title: "Shadow Work Synthesis",
         icon: "🌑",
         description: "Understanding and integrating the hidden self",
-        generate: function(readings) {
-            const lilith = readings.astrology.lilith || { name: 'Aries' };
-            const southNode = readings.astrology.southNode;
-            const challenges = readings.numerology.challenges;
-            const chiron = readings.astrology.chiron || { name: 'Aries' };
+        generate: function(chartData) {
+            const saturnSign = chartData.saturnSign;
+            const sunSign = chartData.sunSign;
+            const moonSign = chartData.moonSign;
+            const name = chartData.name;
             
-            return `Shadow Work Profile for ${readings.input.name}
+            return {
+                title: "Shadow Work Blueprint",
+                keywords: ['Hidden Self', 'Growth Edges', 'Integration', 'Wholeness'],
+                reading: `Primary Shadow (Saturn in ${saturnSign}): The growth edge that requires attention involves ${saturnSign} energy - ${getSaturnShadow(saturnSign)}. This represents areas where mastery must be developed through conscious effort.
 
-Primary Shadow (Lilith in ${lilith.name}): The rejected or suppressed aspects of self relate to ${lilith.name} energy - ${getLilithShadow(lilith.name)}. This represents power that was hidden, shamed, or forbidden and must be reclaimed for wholeness.
+Sun-Moon Dynamic: With Sun in ${sunSign} and Moon in ${moonSign}, there may be tension between outer identity and inner needs - ${getSunMoonShadow(sunSign, moonSign)}. Integration creates wholeness.
 
-Past Life Patterns (South Node in ${southNode.name}): Comfort zones that can become limitations involve ${southNode.name} behaviors - ${getSouthNodeShadow(southNode.name)}. Over-reliance on these past gifts prevents evolution.
+Shadow Integration Path: To integrate these shadow elements, ${name} needs ${getShadowIntegrationSimple(saturnSign, sunSign, moonSign)}.
 
-Core Challenge (Challenge Number ${challenges.third}): The central shadow lesson involves ${challenges.third} energy - ${getChallengesShadow(challenges.third)}. This recurring theme appears until the lesson is learned.
+Reclaimed Power: When shadow work is done, this soul accesses authentic ${saturnSign} mastery and the full power of their ${sunSign}/${moonSign} combination.
 
-The Wounded Healer (Chiron in ${chiron.name}): The deepest wound that becomes greatest gift involves ${chiron.name} - ${getChironShadow(chiron.name)}. Facing this wound transforms it into healing power.
-
-Shadow Integration Path: To integrate these shadow elements, the soul needs ${getShadowIntegration(lilith.name, southNode.name, challenges.third)}.
-
-Reclaimed Power: When shadow work is done, this soul accesses ${getReclaimedPower(lilith.name, chiron.name)}. The very things that were hidden become sources of authentic strength.
-
-Support for Integration: Parents and caregivers can support shadow integration by ${getShadowSupport(lilith.name, challenges.third)}. Creating space for all parts of self prevents shadow accumulation.`;
+Support for Integration: Parents and caregivers can support shadow integration by honoring both ${name}'s ${sunSign} need for expression and ${moonSign} emotional needs without judgment.`,
+                integration: [`${saturnSign} mastery`, `${sunSign}/${moonSign} balance`],
+                patterns: [`Watch for ${getSaturnPattern(saturnSign)}`]
+            };
         }
     },
     
@@ -1239,30 +1240,28 @@ Support for Integration: Parents and caregivers can support shadow integration b
         title: "Money Blueprint Synthesis",
         icon: "💰",
         description: "Your relationship with abundance and resources",
-        generate: function(readings) {
-            const venus = readings.astrology.venusSign;
-            const jupiter = readings.astrology.jupiterSign;
-            const saturn = readings.astrology.saturnSign;
-            const lifePath = readings.numerology.lifePath;
-            const house2Sign = readings.astrology.houses ? readings.astrology.houses[1] : null;
+        generate: function(chartData) {
+            const venus = chartData.venusSign;
+            const jupiter = chartData.jupiterSign;
+            const saturn = chartData.saturnSign;
+            const lifePath = chartData.lifePath;
+            const name = chartData.name;
             
-            return `Money Blueprint for ${readings.input.name}
+            return {
+                title: "Abundance Blueprint",
+                keywords: ['Prosperity', 'Values', 'Resources', 'Financial Flow'],
+                reading: `Values & Attraction (Venus in ${venus}): Venus shows what ${name} values and how they attract resources - ${venus} Venus values ${getVenusValue(venus)} and attracts through ${getVenusAttraction(venus)}.
 
-Values & Attraction (Venus in ${venus.name}): Venus shows what they value and how they attract resources - ${venus.name} Venus values ${getVenusValue(venus.name)} and attracts through ${getVenusAttraction(venus.name)}.
+Expansion & Luck (Jupiter in ${jupiter}): Jupiter shows where luck and expansion occur - ${jupiter} Jupiter expands through ${getJupiterExpansion(jupiter)}. This is where "lucky breaks" tend to happen.
 
-Expansion & Luck (Jupiter in ${jupiter.name}): Jupiter shows where luck and expansion occur - ${jupiter.name} Jupiter expands through ${getJupiterExpansion(jupiter.name)}. This is where "lucky breaks" tend to happen.
-
-Lessons & Mastery (Saturn in ${saturn.name}): Saturn shows money lessons to master - ${saturn.name} Saturn teaches ${getSaturnMoneyLesson(saturn.name)}. Early challenges become later mastery.
+Lessons & Mastery (Saturn in ${saturn}): Saturn shows money lessons to master - ${saturn} Saturn teaches ${getSaturnMoneyLesson(saturn)}. Early challenges become later mastery.
 
 Life Path ${lifePath} Money Style: This vibration approaches money with ${getLifePathMoney(lifePath)}. Understanding this helps align with natural abundance flow.
 
-Money Mindset at Birth: This soul arrives with tendencies toward ${getMoneyMindset(venus.name, saturn.name)}. Early experiences will either reinforce or help heal these patterns.
-
-Path to Prosperity: Financial success flows when they ${getMoneySuccess(jupiter.name, venus.name, lifePath)}. Alignment with these energies opens abundance channels.
-
-Generosity Pattern: This soul gives and receives through ${getGenerosityPattern(venus.name, jupiter.name)}. Understanding their unique generosity style prevents money guilt.
-
-Financial Wisdom to Develop: Key money wisdom for this soul includes ${getFinancialWisdom(saturn.name, lifePath)}. These lessons, once learned, create lasting security.`;
+Path to Prosperity: Financial success flows when they ${getMoneySuccess(jupiter, venus, lifePath)}. Alignment with these energies opens abundance channels.`,
+                strengths: [`${jupiter} expansion luck`, `${venus} attraction power`],
+                growth: [`Master ${saturn} money lessons`]
+            };
         }
     }
 };
@@ -1567,52 +1566,262 @@ function getFinancialWisdom(saturn, lifePath) {
     return `mastering ${saturn} Saturn lessons while following Life Path ${lifePath} guidance toward true prosperity`;
 }
 
+// Additional helper functions for simplified synthesis
+function getMoonSpiritual(sign) {
+    const spiritual = {
+        Aries: "bold emotional expression and intuitive action",
+        Taurus: "grounded emotional wisdom and sensory intuition",
+        Gemini: "curious emotional exploration and intellectual intuition",
+        Cancer: "deep emotional sensitivity and psychic attunement",
+        Leo: "heart-centered intuition and creative emotional expression",
+        Virgo: "discerning emotional wisdom and service-oriented intuition",
+        Libra: "balanced emotional perception and harmonious intuition",
+        Scorpio: "profound emotional depth and transformative intuition",
+        Sagittarius: "expansive emotional faith and philosophical intuition",
+        Capricorn: "mature emotional wisdom and practical intuition",
+        Aquarius: "unique emotional perspective and progressive intuition",
+        Pisces: "boundless emotional compassion and mystical intuition"
+    };
+    return spiritual[sign] || "unique emotional-intuitive gifts";
+}
+
+function getSpiritualPracticeShort(northNode) {
+    const practices = {
+        Aries: "active meditation, movement practices",
+        Taurus: "grounding, nature connection",
+        Gemini: "journaling, learning, breath work",
+        Cancer: "emotional processing, moon rituals",
+        Leo: "creative expression, heart-opening",
+        Virgo: "service meditation, health practices",
+        Libra: "partner practices, beauty appreciation",
+        Scorpio: "shadow work, transformation rituals",
+        Sagittarius: "vision quests, philosophical study",
+        Capricorn: "disciplined practice, goal-setting rituals",
+        Aquarius: "group meditation, humanitarian focus",
+        Pisces: "surrender practices, water rituals"
+    };
+    return practices[northNode] || "contemplative practices";
+}
+
+function getSaturnShadow(sign) {
+    const shadows = {
+        Aries: "fear of asserting self, hidden anger about not leading",
+        Taurus: "scarcity fears, hidden material attachments",
+        Gemini: "fear of being misunderstood, communication anxiety",
+        Cancer: "emotional armor, hidden sensitivity",
+        Leo: "hidden need for recognition, fear of shining",
+        Virgo: "perfectionism paralysis, critical inner voice",
+        Libra: "fear of rejection, hidden need for approval",
+        Scorpio: "control issues, hidden power struggles",
+        Sagittarius: "fear of limitation, hidden dogmatism",
+        Capricorn: "workaholism, fear of failure",
+        Aquarius: "detachment as defense, fear of intimacy",
+        Pisces: "escapism, boundary confusion"
+    };
+    return shadows[sign] || "growth edge requiring conscious attention";
+}
+
+function getSunMoonShadow(sun, moon) {
+    const sunElement = getElement(sun);
+    const moonElement = getElement(moon);
+    
+    if (sunElement === moonElement) {
+        return "natural internal harmony, though may need to develop complementary elements";
+    } else if ((sunElement === 'Fire' && moonElement === 'Water') || (sunElement === 'Water' && moonElement === 'Fire')) {
+        return "creative tension between action and emotion - learning to honor both";
+    } else if ((sunElement === 'Earth' && moonElement === 'Air') || (sunElement === 'Air' && moonElement === 'Earth')) {
+        return "balancing practical needs with intellectual desires";
+    } else {
+        return "complementary energies that create wholeness when integrated";
+    }
+}
+
+function getElement(sign) {
+    const elements = {
+        Aries: 'Fire', Leo: 'Fire', Sagittarius: 'Fire',
+        Taurus: 'Earth', Virgo: 'Earth', Capricorn: 'Earth',
+        Gemini: 'Air', Libra: 'Air', Aquarius: 'Air',
+        Cancer: 'Water', Scorpio: 'Water', Pisces: 'Water'
+    };
+    return elements[sign] || 'Fire';
+}
+
+function getShadowIntegrationSimple(saturn, sun, moon) {
+    return `conscious work on ${saturn} lessons while honoring both ${sun} identity needs and ${moon} emotional needs`;
+}
+
+function getSaturnPattern(sign) {
+    const patterns = {
+        Aries: "avoiding initiative due to fear of failure",
+        Taurus: "holding on too tightly to security",
+        Gemini: "scattered energy avoiding depth",
+        Cancer: "over-protecting or under-nurturing",
+        Leo: "hiding light to avoid criticism",
+        Virgo: "paralysis from perfectionism",
+        Libra: "losing self in others' expectations",
+        Scorpio: "power struggles masking vulnerability",
+        Sagittarius: "over-promising, under-delivering",
+        Capricorn: "achievement addiction",
+        Aquarius: "emotional detachment as defense",
+        Pisces: "boundary dissolution"
+    };
+    return patterns[sign] || "habitual limitation patterns";
+}
+
 // ============================================
 // PROGRESSIONS - Current Life Phase
 // ============================================
 
 const PROGRESSION_READINGS = {
-    description: "Progressions show how the birth chart evolves over time - where the soul is NOW in their journey",
+    description: "Progressions show how the birth chart evolves over time",
     
-    progressedSun: {
-        title: "Progressed Sun",
-        icon: "☉",
-        description: "The current evolution of core identity (advances ~1 degree per year)",
-        generate: function(birthDate, currentAge) {
-            // Progressed Sun moves about 1 degree per year
-            // For a newborn, it's still in birth sign for first ~30 years
-            const yearsFromBirth = currentAge || 0;
-            
-            if (yearsFromBirth < 1) {
-                return `The Progressed Sun remains in the birth sign, fully expressing the natal Sun qualities. This is the foundation phase - the core identity is establishing itself in its purest form. All solar themes from the birth chart are at full strength.`;
-            } else if (yearsFromBirth < 30) {
-                return `The Progressed Sun has advanced approximately ${yearsFromBirth} degrees from birth position. It likely remains in the birth sign, but is developing new dimensions of that sign's expression. Watch for subtle shifts in identity expression as the Sun progresses through different degrees.`;
-            } else {
-                return `The Progressed Sun may have moved into the next sign, adding new dimensions to identity expression. The original birth Sun remains foundational, but new qualities are emerging.`;
-            }
+    sun: {
+        Aries: {
+            title: "Progressed Sun in Aries",
+            keywords: ['Initiative', 'New Beginnings', 'Courage', 'Identity'],
+            reading: "The Progressed Sun in Aries marks a period of new beginnings and self-discovery. This soul is in an initiating phase, learning to assert their identity and take bold action. Independence and courage are being developed now.",
+            evolution: ['Developing leadership', 'Learning self-assertion', 'Building confidence']
+        },
+        Taurus: {
+            title: "Progressed Sun in Taurus",
+            keywords: ['Stability', 'Building', 'Values', 'Patience'],
+            reading: "The Progressed Sun in Taurus brings focus to security, values, and steady building. This is a consolidating phase where foundations are being laid. Patience and persistence are key themes being developed.",
+            evolution: ['Developing patience', 'Building security', 'Clarifying values']
+        },
+        Gemini: {
+            title: "Progressed Sun in Gemini",
+            keywords: ['Learning', 'Communication', 'Curiosity', 'Connections'],
+            reading: "The Progressed Sun in Gemini activates mental development and communication skills. This is a learning phase where curiosity drives growth. Multiple interests and versatility are being developed.",
+            evolution: ['Developing communication', 'Expanding knowledge', 'Building connections']
+        },
+        Cancer: {
+            title: "Progressed Sun in Cancer",
+            keywords: ['Nurturing', 'Emotions', 'Home', 'Security'],
+            reading: "The Progressed Sun in Cancer deepens emotional awareness and family connections. This is a nurturing phase focused on belonging and emotional security. Sensitivity and care for others is being developed.",
+            evolution: ['Deepening emotions', 'Creating home', 'Developing nurturing']
+        },
+        Leo: {
+            title: "Progressed Sun in Leo",
+            keywords: ['Creativity', 'Self-Expression', 'Heart', 'Joy'],
+            reading: "The Progressed Sun in Leo activates creative self-expression and heart-centered living. This is a phase of shining, playing, and developing authentic confidence. Joy and creative expression are key themes.",
+            evolution: ['Expressing creativity', 'Building confidence', 'Following heart']
+        },
+        Virgo: {
+            title: "Progressed Sun in Virgo",
+            keywords: ['Service', 'Skills', 'Health', 'Improvement'],
+            reading: "The Progressed Sun in Virgo focuses on skill development and service. This is a phase of refinement, where attention to detail and health become important. Practical improvement is the theme.",
+            evolution: ['Developing skills', 'Improving health', 'Learning service']
+        },
+        Libra: {
+            title: "Progressed Sun in Libra",
+            keywords: ['Partnership', 'Balance', 'Harmony', 'Relationships'],
+            reading: "The Progressed Sun in Libra emphasizes relationships and finding balance. This is a phase of learning through partnership and developing social awareness. Harmony and fairness are key themes.",
+            evolution: ['Learning partnership', 'Developing diplomacy', 'Finding balance']
+        },
+        Scorpio: {
+            title: "Progressed Sun in Scorpio",
+            keywords: ['Transformation', 'Depth', 'Intensity', 'Power'],
+            reading: "The Progressed Sun in Scorpio brings deep transformation and intensity. This is a phase of facing shadows, developing power, and learning emotional depth. Regeneration through crisis is possible.",
+            evolution: ['Developing depth', 'Transforming patterns', 'Building inner power']
+        },
+        Sagittarius: {
+            title: "Progressed Sun in Sagittarius",
+            keywords: ['Expansion', 'Faith', 'Adventure', 'Meaning'],
+            reading: "The Progressed Sun in Sagittarius expands horizons and develops faith. This is an adventurous phase focused on meaning, learning, and optimism. Philosophy and big-picture thinking are developing.",
+            evolution: ['Expanding vision', 'Developing faith', 'Seeking meaning']
+        },
+        Capricorn: {
+            title: "Progressed Sun in Capricorn",
+            keywords: ['Achievement', 'Discipline', 'Responsibility', 'Mastery'],
+            reading: "The Progressed Sun in Capricorn focuses on achievement and responsibility. This is a phase of building toward goals, developing discipline, and earning authority. Long-term success is being built.",
+            evolution: ['Building achievement', 'Developing discipline', 'Earning respect']
+        },
+        Aquarius: {
+            title: "Progressed Sun in Aquarius",
+            keywords: ['Innovation', 'Freedom', 'Community', 'Uniqueness'],
+            reading: "The Progressed Sun in Aquarius activates uniqueness and humanitarian focus. This is a phase of innovation, breaking free from limitations, and serving the collective. Independence and originality are key.",
+            evolution: ['Embracing uniqueness', 'Serving community', 'Innovating']
+        },
+        Pisces: {
+            title: "Progressed Sun in Pisces",
+            keywords: ['Spirituality', 'Compassion', 'Intuition', 'Surrender'],
+            reading: "The Progressed Sun in Pisces deepens spirituality and compassion. This is a phase of surrender, intuitive development, and connection to the transcendent. Empathy and imagination flourish.",
+            evolution: ['Developing intuition', 'Deepening compassion', 'Spiritual growth']
         }
     },
     
-    progressedMoon: {
-        title: "Progressed Moon",
-        icon: "☽",
-        description: "Current emotional phase and inner development (cycles through all signs every ~28 years)",
-        generate: function(birthDate, currentAge) {
-            // Progressed Moon moves about 1 degree per month (~12 degrees per year)
-            // Completes zodiac in about 27-28 years
-            const yearsFromBirth = currentAge || 0;
-            const monthsFromBirth = yearsFromBirth * 12;
-            const degreesProgressed = monthsFromBirth; // ~1 degree per month
-            const signsPassed = Math.floor(degreesProgressed / 30);
-            
-            if (yearsFromBirth < 1) {
-                return `The Progressed Moon remains in or near the birth Moon sign, establishing the foundational emotional patterns. The first year of life sees the Moon progressing through approximately 12-13 degrees, beginning the emotional journey of development.`;
-            } else if (yearsFromBirth < 3) {
-                return `The Progressed Moon has likely moved into the sign following the birth Moon, introducing new emotional themes. These early years see rapid emotional evolution as the progressed Moon moves through new territory.`;
-            } else {
-                const currentPhase = signsPassed % 12;
-                return `The Progressed Moon has completed approximately ${signsPassed} sign changes, and is now in an evolved emotional phase. Each ~2.5 years brings a new emotional chapter as the Moon progresses through different signs.`;
-            }
+    moon: {
+        Aries: {
+            title: "Progressed Moon in Aries",
+            keywords: ['Emotional Independence', 'New Feelings', 'Courage'],
+            reading: "The Progressed Moon in Aries brings emotional new beginnings. Feelings are direct and action-oriented. There's a need for emotional independence and courage in expressing feelings.",
+            currentNeeds: ['Emotional freedom', 'New experiences', 'Direct expression']
+        },
+        Taurus: {
+            title: "Progressed Moon in Taurus",
+            keywords: ['Emotional Security', 'Comfort', 'Stability'],
+            reading: "The Progressed Moon in Taurus stabilizes emotions and seeks comfort. This phase brings need for emotional security, routine, and sensory satisfaction. Patience with feelings develops.",
+            currentNeeds: ['Comfort', 'Security', 'Slow processing']
+        },
+        Gemini: {
+            title: "Progressed Moon in Gemini",
+            keywords: ['Emotional Curiosity', 'Communication', 'Variety'],
+            reading: "The Progressed Moon in Gemini stimulates emotional curiosity and need for communication. Feelings are processed through talking and thinking. Variety in emotional experiences is sought.",
+            currentNeeds: ['Communication', 'Mental stimulation', 'Variety']
+        },
+        Cancer: {
+            title: "Progressed Moon in Cancer",
+            keywords: ['Deep Emotions', 'Nurturing', 'Home'],
+            reading: "The Progressed Moon in Cancer deepens emotional sensitivity and need for nurturing. This phase emphasizes home, family, and emotional security. Feelings are intense and protective.",
+            currentNeeds: ['Emotional closeness', 'Family connection', 'Security']
+        },
+        Leo: {
+            title: "Progressed Moon in Leo",
+            keywords: ['Emotional Expression', 'Joy', 'Recognition'],
+            reading: "The Progressed Moon in Leo brightens emotional expression and need for recognition. Feelings are warm, dramatic, and heart-centered. There's need for appreciation and creative emotional outlets.",
+            currentNeeds: ['Recognition', 'Creative expression', 'Warmth']
+        },
+        Virgo: {
+            title: "Progressed Moon in Virgo",
+            keywords: ['Emotional Service', 'Analysis', 'Improvement'],
+            reading: "The Progressed Moon in Virgo brings emotional focus on service and improvement. Feelings are processed analytically. There's need for usefulness and helping others.",
+            currentNeeds: ['Being helpful', 'Order', 'Practical care']
+        },
+        Libra: {
+            title: "Progressed Moon in Libra",
+            keywords: ['Emotional Balance', 'Partnership', 'Harmony'],
+            reading: "The Progressed Moon in Libra seeks emotional balance and partnership. Feelings are processed through relationships. There's strong need for harmony and fair treatment.",
+            currentNeeds: ['Partnership', 'Harmony', 'Beauty']
+        },
+        Scorpio: {
+            title: "Progressed Moon in Scorpio",
+            keywords: ['Emotional Intensity', 'Depth', 'Transformation'],
+            reading: "The Progressed Moon in Scorpio intensifies emotional experience. Feelings run deep and transformative. There's need for emotional truth and processing of powerful feelings.",
+            currentNeeds: ['Emotional depth', 'Truth', 'Transformation']
+        },
+        Sagittarius: {
+            title: "Progressed Moon in Sagittarius",
+            keywords: ['Emotional Freedom', 'Adventure', 'Faith'],
+            reading: "The Progressed Moon in Sagittarius lightens emotions and seeks adventure. Feelings are optimistic and freedom-loving. There's need for meaning and emotional expansion.",
+            currentNeeds: ['Freedom', 'Adventure', 'Optimism']
+        },
+        Capricorn: {
+            title: "Progressed Moon in Capricorn",
+            keywords: ['Emotional Maturity', 'Responsibility', 'Achievement'],
+            reading: "The Progressed Moon in Capricorn brings emotional maturity and self-reliance. Feelings are contained and goal-oriented. There's need for emotional achievement and respect.",
+            currentNeeds: ['Achievement', 'Structure', 'Respect']
+        },
+        Aquarius: {
+            title: "Progressed Moon in Aquarius",
+            keywords: ['Emotional Independence', 'Uniqueness', 'Community'],
+            reading: "The Progressed Moon in Aquarius detaches and objectifies emotions. Feelings need intellectual processing. There's need for emotional freedom and community connection.",
+            currentNeeds: ['Space', 'Uniqueness', 'Friendship']
+        },
+        Pisces: {
+            title: "Progressed Moon in Pisces",
+            keywords: ['Emotional Sensitivity', 'Intuition', 'Compassion'],
+            reading: "The Progressed Moon in Pisces heightens emotional sensitivity and intuition. Feelings are boundless and compassionate. There's need for spiritual connection and emotional transcendence.",
+            currentNeeds: ['Spiritual connection', 'Compassion', 'Dream time']
         }
     }
 };
@@ -1625,56 +1834,109 @@ const COSMIC_WRAPUP = {
     title: "The Complete Cosmic Blueprint",
     icon: "✨",
     
-    generate: function(readings) {
-        const name = readings.input.name;
-        const sunSign = readings.astrology.sunSign;
-        const moonSign = readings.astrology.moonSign;
-        const risingSign = readings.astrology.risingSign;
-        const lifePath = readings.numerology.lifePath;
-        const northNode = readings.astrology.northNode;
-        const chineseZodiac = readings.astrology.chineseZodiac;
+    generate: function(data) {
+        // data is a flat object with: name, sunSign, moonSign, risingSign, lifePath, northNode, chineseZodiac, etc.
+        const name = data.name;
+        const sunSign = data.sunSign;
+        const moonSign = data.moonSign;
+        const risingSign = data.risingSign || 'Unknown';
+        const lifePath = data.lifePath;
+        const northNode = data.northNode;
+        const chineseZodiac = data.chineseZodiac;
+        const sunElement = data.sunElement || getElement(sunSign);
+        const moonElement = data.moonElement || getElement(moonSign);
         
-        return `✨ THE COMPLETE COSMIC BLUEPRINT FOR ${name.toUpperCase()} ✨
+        const opening = `From the very moment of first breath, ${name} arrived carrying a unique cosmic signature - a blueprint written in the stars that no one else has ever carried or ever will carry again.`;
+        
+        const coreEssence = `🌟 THE SOUL ESSENCE
 
-From the very moment of first breath, ${name} arrived carrying a unique cosmic signature - a blueprint written in the stars that no one else has ever carried or ever will carry again.
+At the core, ${name} is a ${sunSign} Sun - ${getSunSummary(sunSign)}. This is the light they carry within, the fundamental life force that animates their being. Everything they do throughout life will be colored by this solar essence.
 
-🌟 THE SOUL ESSENCE
-At the core, ${name} is a ${sunSign.name || sunSign} Sun - ${getSunSummary(sunSign.name || sunSign)}. This is the light they carry within, the fundamental life force that animates their being. Everything they do throughout life will be colored by this solar essence.
+Their Moon in ${moonSign} reveals the inner emotional landscape - ${getMoonSummary(moonSign)}. This is how they feel, what they need for emotional security, and how they'll nurture and be nurtured throughout life.
 
-Their Moon in ${moonSign.name || moonSign} reveals the inner emotional landscape - ${getMoonSummary(moonSign.name || moonSign)}. This is how they feel, what they need for emotional security, and how they'll nurture and be nurtured throughout life.
+${risingSign && risingSign !== 'Unknown' ? `With ${risingSign} Rising, they enter every room with ${getRisingSummary(risingSign)}. This is the mask they wear, the first impression they make, and the filter through which they experience life's beginnings.` : 'The Rising Sign adds the outer layer of how they present to the world.'}`;
+        
+        const soulPath = `🔮 THE SOUL PURPOSE
 
-${risingSign.name && risingSign.name !== 'Unknown' ? `With ${risingSign.name} Rising, they enter every room with ${getRisingSummary(risingSign.name || risingSign)}. This is the mask they wear, the first impression they make, and the filter through which they experience life's beginnings.` : ''}
-
-🔮 THE SOUL PURPOSE
 Life Path ${lifePath} reveals their numerological destiny: ${getLifePathPurpose(lifePath)}. This number will echo through every major life event, guiding them toward their highest expression.
 
-The North Node in ${northNode.name} points to their soul's growth direction: ${getNorthNodePurpose(northNode.name)}. This is the edge of evolution, where comfort zones end and real growth begins.
+The North Node in ${northNode} points to their soul's growth direction: ${getNorthNodePurpose(northNode)}. This is the edge of evolution, where comfort zones end and real growth begins.
 
-Born in the Year of the ${chineseZodiac.name}, they carry the ancient wisdom of ${getChineseSummary(chineseZodiac.name)}. This Eastern influence adds another layer to their complex cosmic makeup.
+Born in the Year of the ${chineseZodiac}, they carry the ancient wisdom of ${getChineseSummary(chineseZodiac)}. This Eastern influence adds another layer to their complex cosmic makeup.`;
+        
+        const gifts = `💫 THE GIFT THEY BRING
 
-💫 THE GIFT THEY BRING
-${name} arrives at this precise moment in history carrying exactly what the world needs. Their unique combination of energies - ${sunSign.name || sunSign} determination, ${moonSign.name || moonSign} emotional wisdom, and Life Path ${lifePath} purpose - creates a soul unlike any other.
+${name} arrives at this precise moment in history carrying exactly what the world needs. Their unique combination of ${sunElement} Sun, ${moonElement} Moon, and Life Path ${lifePath} purpose creates a soul unlike any other.
 
-They are not here by accident. The exact moment of birth, the precise alignment of celestial bodies, the specific numerical vibrations of their name and birthdate - all conspired to create this unrepeatable cosmic event.
+They are not here by accident. The exact moment of birth, the precise alignment of celestial bodies, the specific numerical vibrations of their name and birthdate - all conspired to create this unrepeatable cosmic event.`;
+        
+        const closing = `🙏 THE BLESSING
 
-🌈 THE JOURNEY AHEAD
-The path will unfold uniquely for ${name}. There will be moments when the ${sunSign.name || sunSign} Sun blazes with confidence, and moments when it seeks rest. The ${moonSign.name || moonSign} Moon will cycle through emotional seasons. The Life Path ${lifePath} lessons will present themselves again and again until mastered.
-
-Every challenge written in this chart is also an opportunity. Every tension is potential energy waiting to be transformed. Every seeming limitation is actually a focusing force, concentrating power into specific channels.
-
-🙏 THE BLESSING
 May ${name} grow into the fullness of this cosmic blueprint. May they learn to work WITH their energies rather than against them. May they discover that the stars don't bind them - they illuminate the path.
 
-This reading captures a single moment in time - the moment of ${name}'s first breath. But the soul is vast, mysterious, and ultimately free. The stars incline; they do not compel. ${name} is the author of their own story, and these cosmic patterns are simply the ink with which they write.
+The stars incline; they do not compel. ${name} is the author of their own story, and these cosmic patterns are simply the ink with which they write.
 
-Welcome to the world, precious ${name}. The universe has been waiting for you.
+Welcome to the world, precious ${name}. The universe has been waiting for you. ✨`;
+        
+        const parentGuidance = `Understanding ${name}'s cosmic blueprint helps you support their natural gifts while gently guiding them through challenges. Their ${sunSign} Sun needs ${getSunNeed(sunSign)}. Their ${moonSign} Moon needs ${getMoonNeed(moonSign)}. Honor both, and watch them flourish.
 
-With love and stardust,
-Your Complete Cosmic Blueprint 💫`;
+Remember: this reading is a map, not a cage. ${name} has free will and an infinite soul. Use these insights as guidance, but always trust what you observe directly in your unique child.`;
+        
+        return {
+            title: `The Complete Cosmic Blueprint for ${name}`,
+            keywords: ['Soul Essence', 'Life Purpose', 'Cosmic Gifts', 'Divine Timing'],
+            opening: opening,
+            coreEssence: coreEssence,
+            soulPath: soulPath,
+            gifts: gifts,
+            closing: closing,
+            parentGuidance: parentGuidance,
+            affirmations: [
+                `${name} is exactly who they're meant to be`,
+                `The universe designed ${name} perfectly`,
+                `${name}'s challenges are their superpowers in disguise`
+            ]
+        };
     }
 };
 
 // Helper functions for wrap-up
+function getSunNeed(sign) {
+    const needs = {
+        Aries: "independence and opportunities to lead",
+        Taurus: "stability and time to build at their own pace",
+        Gemini: "mental stimulation and varied experiences",
+        Cancer: "emotional safety and family closeness",
+        Leo: "recognition and creative outlets",
+        Virgo: "order and ways to be helpful",
+        Libra: "harmony and partnership",
+        Scorpio: "emotional depth and trust",
+        Sagittarius: "freedom and adventure",
+        Capricorn: "goals and earned achievement",
+        Aquarius: "independence and room to be unique",
+        Pisces: "imagination and spiritual connection"
+    };
+    return needs[sign] || "love and understanding";
+}
+
+function getMoonNeed(sign) {
+    const needs = {
+        Aries: "action and physical comfort when upset",
+        Taurus: "routine and sensory soothing",
+        Gemini: "communication and mental engagement",
+        Cancer: "closeness and emotional attunement",
+        Leo: "warmth and special attention",
+        Virgo: "order and practical care",
+        Libra: "peace and beautiful surroundings",
+        Scorpio: "depth and emotional honesty",
+        Sagittarius: "optimism and space to explore",
+        Capricorn: "structure and respect",
+        Aquarius: "acceptance of their uniqueness",
+        Pisces: "gentleness and imaginative play"
+    };
+    return needs[sign] || "emotional attunement";
+}
+
 function getSunSummary(sign) {
     const summaries = {
         Aries: "a bold pioneer who leads with courage and action",
