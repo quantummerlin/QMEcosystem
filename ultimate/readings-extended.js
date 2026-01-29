@@ -1843,48 +1843,131 @@ const COSMIC_WRAPUP = {
         const lifePath = data.lifePath;
         const northNode = data.northNode;
         const chineseZodiac = data.chineseZodiac;
+        const moonPhase = data.moonPhase || 'Unknown';
         const sunElement = data.sunElement || getElement(sunSign);
         const moonElement = data.moonElement || getElement(moonSign);
+        const mercurySign = data.mercurySign;
+        const venusSign = data.venusSign;
+        const marsSign = data.marsSign;
         
-        const opening = `From the very moment of first breath, ${name} arrived carrying a unique cosmic signature - a blueprint written in the stars that no one else has ever carried or ever will carry again.`;
+        // Get deep reading data if available
+        const deepSun = (typeof DEEP_SUN_READINGS !== 'undefined') ? DEEP_SUN_READINGS[sunSign] : null;
+        const deepMoon = (typeof DEEP_MOON_READINGS !== 'undefined') ? DEEP_MOON_READINGS[moonSign] : null;
+        const deepRising = (typeof DEEP_RISING_READINGS !== 'undefined') ? DEEP_RISING_READINGS[risingSign] : null;
         
-        const coreEssence = `🌟 THE SOUL ESSENCE
+        const opening = `✨ FROM THE STARS TO YOUR ARMS ✨
 
-At the core, ${name} is a ${sunSign} Sun - ${getSunSummary(sunSign)}. This is the light they carry within, the fundamental life force that animates their being. Everything they do throughout life will be colored by this solar essence.
+On the day ${name} took their first breath, the cosmos aligned in a pattern that has never existed before and will never exist again. This isn't metaphor—it's mathematical precision. The exact positions of Sun, Moon, planets, and stars at that moment created a celestial fingerprint as unique as the lines on ${name}'s tiny hands.
 
-Their Moon in ${moonSign} reveals the inner emotional landscape - ${getMoonSummary(moonSign)}. This is how they feel, what they need for emotional security, and how they'll nurture and be nurtured throughout life.
-
-${risingSign && risingSign !== 'Unknown' ? `With ${risingSign} Rising, they enter every room with ${getRisingSummary(risingSign)}. This is the mask they wear, the first impression they make, and the filter through which they experience life's beginnings.` : 'The Rising Sign adds the outer layer of how they present to the world.'}`;
+What follows is ${name}'s energetic birth certificate—the cosmic blueprint that describes not who they must become, but who they already ARE at their deepest level. These patterns don't limit; they illuminate. They don't predict; they empower.`;
         
-        const soulPath = `🔮 THE SOUL PURPOSE
+        const coreEssence = `🌟 THE THREE PILLARS OF SELF
 
-Life Path ${lifePath} reveals their numerological destiny: ${getLifePathPurpose(lifePath)}. This number will echo through every major life event, guiding them toward their highest expression.
+Every human operates from three interconnected energy centers. In ${name}, these are:
 
-The North Node in ${northNode} points to their soul's growth direction: ${getNorthNodePurpose(northNode)}. This is the edge of evolution, where comfort zones end and real growth begins.
+💛 THE SUN IN ${sunSign.toUpperCase()}: The Core Light
+${deepSun ? deepSun.hook : getSunSummary(sunSign)}
+This is ${name}'s life force—the energy they're here to radiate into the world. Every ${sunSign} Sun is born with a mission: ${deepSun ? deepSun.lifeLesson : 'to shine their unique light'}. Their greatest power lies in ${deepSun ? deepSun.creativeExpression : 'expressing their authentic self'}.
 
-Born in the Year of the ${chineseZodiac}, they carry the ancient wisdom of ${getChineseSummary(chineseZodiac)}. This Eastern influence adds another layer to their complex cosmic makeup.`;
+${deepSun ? `The ${sunSign} Sun needs: ` + deepSun.parentGuidance : ''}
+
+🌙 THE MOON IN ${moonSign.toUpperCase()}: The Inner Sanctuary  
+${deepMoon ? deepMoon.hook : getMoonSummary(moonSign)}
+This is ${name}'s emotional operating system—how they process feelings, what makes them feel safe, and how they'll need to be comforted. When ${name} cries, they're speaking in ${moonSign} Moon language. ${deepMoon ? deepMoon.parentGuidance : ''}
+
+⬆️ ${risingSign !== 'Unknown' ? `${risingSign.toUpperCase()} RISING: The Outer Expression` : 'THE ASCENDANT'}
+${risingSign !== 'Unknown' ? (deepRising ? deepRising.firstImpression : getRisingSummary(risingSign)) : 'Unknown at birth—requires birth time.'}
+${risingSign !== 'Unknown' ? `This is how the world will first perceive ${name}. As they grow, they'll develop this persona as their interface with the world. ${deepRising ? deepRising.lifeApproach : ''}` : 'The Rising Sign reveals how others first perceive this soul.'}`;
         
-        const gifts = `💫 THE GIFT THEY BRING
+        const soulPath = `🔮 THE SOUL'S JOURNEY
 
-${name} arrives at this precise moment in history carrying exactly what the world needs. Their unique combination of ${sunElement} Sun, ${moonElement} Moon, and Life Path ${lifePath} purpose creates a soul unlike any other.
+LIFE PATH ${lifePath}: ${getLifePathTitle(lifePath)}
+${name}'s entire life will be shaped by the lessons and gifts of the number ${lifePath}. This isn't random—it's calculated from the precise mathematics of their birthdate. ${getLifePathPurpose(lifePath)}.
 
-They are not here by accident. The exact moment of birth, the precise alignment of celestial bodies, the specific numerical vibrations of their name and birthdate - all conspired to create this unrepeatable cosmic event.`;
+This means ${name} is here to:
+• ${getLifePathLesson1(lifePath)}
+• ${getLifePathLesson2(lifePath)}  
+• ${getLifePathLesson3(lifePath)}
+
+THE NORTH NODE IN ${northNode.toUpperCase()}: The Soul's Growth Edge
+While the Life Path shows the journey, the North Node reveals WHERE that journey leads. ${name}'s soul is evolving toward ${getNorthNodePurpose(northNode)}. This is uncomfortable territory—it's the edge of growth. The opposite sign represents familiar patterns they're learning to balance.
+
+THE YEAR OF THE ${chineseZodiac.toUpperCase()}: Eastern Wisdom
+${name} carries the ancient energy of the ${chineseZodiac}. ${getChineseSummary(chineseZodiac)}. In Chinese astrology, this influences personality, compatibility, and fortune throughout life.
+
+${moonPhase !== 'Unknown' ? `BORN UNDER THE ${moonPhase.toUpperCase()} MOON
+The lunar phase at birth carries significance: ${getMoonPhaseMeaning(moonPhase)}.` : ''}`;
         
-        const closing = `🙏 THE BLESSING
+        const gifts = `💎 THE GIFTS ${name.toUpperCase()} BRINGS
 
-May ${name} grow into the fullness of this cosmic blueprint. May they learn to work WITH their energies rather than against them. May they discover that the stars don't bind them - they illuminate the path.
+${name} didn't arrive empty-handed. The cosmic blueprint reveals specific gifts:
 
-The stars incline; they do not compel. ${name} is the author of their own story, and these cosmic patterns are simply the ink with which they write.
+From their ${sunSign} Sun: ${deepSun ? deepSun.affirmation : 'The gift of authentic self-expression'}
 
-Welcome to the world, precious ${name}. The universe has been waiting for you. ✨`;
+From their ${moonSign} Moon: ${deepMoon ? 'The power of ' + deepMoon.power : 'Deep emotional wisdom'}
+
+From their ${risingSign !== 'Unknown' ? risingSign : 'Rising'} Ascendant: ${deepRising ? 'The gift of ' + deepRising.gift : 'Unique presence in the world'}
+
+From Life Path ${lifePath}: ${getLifePathGift(lifePath)}
+
+THE ELEMENTAL BALANCE
+${name} carries ${sunElement} at their core (Sun) and ${moonElement} in their emotional nature (Moon). ${getElementCombination(sunElement, moonElement)}
+
+INNER PLANET SIGNATURES
+• Mercury in ${mercurySign}: ${getMercurySummary(mercurySign)} (how they think and communicate)
+• Venus in ${venusSign}: ${getVenusSummary(venusSign)} (how they love and create beauty)
+• Mars in ${marsSign}: ${getMarsSummary(marsSign)} (how they act and assert themselves)`;
         
-        const parentGuidance = `Understanding ${name}'s cosmic blueprint helps you support their natural gifts while gently guiding them through challenges. Their ${sunSign} Sun needs ${getSunNeed(sunSign)}. Their ${moonSign} Moon needs ${getMoonNeed(moonSign)}. Honor both, and watch them flourish.
+        const closing = `🌟 THE SACRED BLESSING
 
-Remember: this reading is a map, not a cage. ${name} has free will and an infinite soul. Use these insights as guidance, but always trust what you observe directly in your unique child.`;
+Dear ${name},
+
+Before you could speak, before you could walk, before you knew your own name, you were already complete. The stars arranged themselves to witness your arrival. The planets moved to their positions to greet you. The numbers aligned to create your unique frequency.
+
+You are not an accident. You are not random. You are a precise event in the cosmic story—a note in the universal symphony that only you can play.
+
+Your ${sunSign} Sun will illuminate the world. Your ${moonSign} Moon will guide you home to yourself. Your Life Path ${lifePath} will reveal your purpose. And all of it together—the aspects, the houses, the numbers, the elements—creates a being who has never existed before and will never exist again.
+
+The challenges in your chart aren't punishments; they're invitations to grow. The squares and oppositions are diamonds in the rough. The difficult placements are strengths disguised, waiting for you to discover them.
+
+You chose this time.
+You chose these parents.
+You chose this blueprint.
+
+And now the adventure begins.
+
+✨ Welcome to Earth, beloved ${name}. The universe has been waiting for you. ✨`;
+        
+        const parentGuidance = `💝 FOR ${name.toUpperCase()}'S PARENTS & GUARDIANS
+
+Understanding this cosmic blueprint is a gift—not a cage. Here's how to use it:
+
+THE ${sunSign} SUN NEEDS:
+${getSunNeed(sunSign)}. Honor their core nature by providing ${getSunNeedSpecific(sunSign)}.
+
+THE ${moonSign} MOON NEEDS:
+${getMoonNeed(moonSign)}. When they're upset, they'll respond best to ${getMoonComfortSpecific(moonSign)}.
+
+${risingSign !== 'Unknown' ? `THE ${risingSign} RISING NEEDS:
+Understanding that the way they present may differ from their inner nature. Their ${risingSign} outer expression is how they learn to navigate the world.` : ''}
+
+LIFE PATH ${lifePath} NEEDS:
+Opportunities to ${getLifePathNeed(lifePath)}. Their soul is oriented toward ${getLifePathPurpose(lifePath)}.
+
+REMEMBER:
+• This reading illuminates—it doesn't determine
+• Free will always supersedes cosmic patterns  
+• ${name} is more than any chart can capture
+• Trust what you observe directly in your unique child
+• The stars incline; they do not compel
+
+Your job isn't to change who ${name} is. It's to create the conditions where who they already are can flourish.
+
+You were chosen for this sacred role. Trust yourself. Trust ${name}. Trust the cosmos that brought you together. 💫`;
         
         return {
             title: `The Complete Cosmic Blueprint for ${name}`,
-            keywords: ['Soul Essence', 'Life Purpose', 'Cosmic Gifts', 'Divine Timing'],
+            keywords: ['Soul Essence', 'Life Purpose', 'Cosmic Gifts', 'Divine Blueprint'],
             opening: opening,
             coreEssence: coreEssence,
             soulPath: soulPath,
@@ -1892,157 +1975,250 @@ Remember: this reading is a map, not a cage. ${name} has free will and an infini
             closing: closing,
             parentGuidance: parentGuidance,
             affirmations: [
-                `${name} is exactly who they're meant to be`,
-                `The universe designed ${name} perfectly`,
-                `${name}'s challenges are their superpowers in disguise`
+                `${name} is exactly who they were meant to be`,
+                `Every aspect of ${name}'s chart is a gift`,
+                `The universe designed ${name} with perfect intention`,
+                `${name}'s challenges are superpowers in disguise`,
+                `${name} chose this time, these people, this life`
             ]
         };
     }
 };
 
-// Helper functions for wrap-up
-function getSunNeed(sign) {
+// Helper functions for enhanced wrap-up
+function getLifePathTitle(number) {
+    const titles = {
+        1: "The Pioneer",
+        2: "The Peacemaker", 
+        3: "The Creative",
+        4: "The Builder",
+        5: "The Freedom Seeker",
+        6: "The Nurturer",
+        7: "The Seeker",
+        8: "The Achiever",
+        9: "The Humanitarian",
+        11: "The Intuitive",
+        22: "The Master Builder",
+        33: "The Master Teacher"
+    };
+    return titles[number] || "The Unique Soul";
+}
+
+function getLifePathLesson1(number) {
+    const lessons = {
+        1: "Develop independence and self-trust",
+        2: "Master cooperation and sensitivity",
+        3: "Express creativity and communicate joy",
+        4: "Build lasting foundations with patience",
+        5: "Embrace change and honor freedom",
+        6: "Nurture others while caring for self",
+        7: "Seek wisdom and trust intuition",
+        8: "Master abundance and use power wisely",
+        9: "Serve humanity with compassion",
+        11: "Channel intuitive wisdom to inspire",
+        22: "Manifest visions into lasting reality",
+        33: "Heal through unconditional love"
+    };
+    return lessons[number] || "Discover unique purpose";
+}
+
+function getLifePathLesson2(number) {
+    const lessons = {
+        1: "Lead by example, not force",
+        2: "Find strength in collaboration",
+        3: "Complete creative projects fully",
+        4: "Stay flexible within structure",
+        5: "Find freedom within commitment",
+        6: "Set healthy boundaries",
+        7: "Balance solitude with connection",
+        8: "Give back as much as gained",
+        9: "Release and allow endings",
+        11: "Stay grounded while channeling",
+        22: "Build for others, not just self",
+        33: "Practice receiving as well as giving"
+    };
+    return lessons[number] || "Balance opposites";
+}
+
+function getLifePathLesson3(number) {
+    const lessons = {
+        1: "Include others in the journey",
+        2: "Value own needs equally",
+        3: "Move through creative blocks with persistence",
+        4: "Allow spontaneity and joy",
+        5: "Cultivate depth alongside variety",
+        6: "Love without losing self",
+        7: "Share wisdom with the world",
+        8: "Lead with integrity",
+        9: "Embrace the cycle of completion",
+        11: "Trust visions even when others doubt",
+        22: "Balance practical with visionary",
+        33: "Accept imperfection in self and others"
+    };
+    return lessons[number] || "Embrace full potential";
+}
+
+function getLifePathGift(number) {
+    const gifts = {
+        1: "The gift of pioneering—showing others what's possible",
+        2: "The gift of peace—creating harmony wherever they go",
+        3: "The gift of joy—uplifting others through creative expression",
+        4: "The gift of stability—building things that last",
+        5: "The gift of liberation—inspiring freedom in others",
+        6: "The gift of love—creating home and healing wherever they are",
+        7: "The gift of wisdom—seeing what others miss",
+        8: "The gift of manifestation—turning vision into reality",
+        9: "The gift of completion—bringing things to their highest form",
+        11: "The gift of inspiration—channeling higher wisdom to others",
+        22: "The gift of legacy—building dreams that outlive them",
+        33: "The gift of healing—transforming through pure love"
+    };
+    return gifts[number] || "A unique gift waiting to be discovered";
+}
+
+function getLifePathNeed(number) {
     const needs = {
-        Aries: "independence and opportunities to lead",
-        Taurus: "stability and time to build at their own pace",
-        Gemini: "mental stimulation and varied experiences",
-        Cancer: "emotional safety and family closeness",
-        Leo: "recognition and creative outlets",
-        Virgo: "order and ways to be helpful",
-        Libra: "harmony and partnership",
-        Scorpio: "emotional depth and trust",
-        Sagittarius: "freedom and adventure",
-        Capricorn: "goals and earned achievement",
-        Aquarius: "independence and room to be unique",
-        Pisces: "imagination and spiritual connection"
+        1: "lead and make independent decisions",
+        2: "cooperate and feel emotionally safe",
+        3: "create and express themselves freely",
+        4: "build structure and work toward goals",
+        5: "explore and experience variety",
+        6: "care for others and create beauty",
+        7: "question and seek deeper meaning",
+        8: "achieve and be recognized for efforts",
+        9: "contribute to something larger than self",
+        11: "trust intuition and inspire others",
+        22: "create something of lasting significance",
+        33: "heal and teach through loving presence"
     };
-    return needs[sign] || "love and understanding";
+    return needs[number] || "discover their unique path";
 }
 
-function getMoonNeed(sign) {
-    const needs = {
-        Aries: "action and physical comfort when upset",
-        Taurus: "routine and sensory soothing",
-        Gemini: "communication and mental engagement",
-        Cancer: "closeness and emotional attunement",
-        Leo: "warmth and special attention",
-        Virgo: "order and practical care",
-        Libra: "peace and beautiful surroundings",
-        Scorpio: "depth and emotional honesty",
-        Sagittarius: "optimism and space to explore",
-        Capricorn: "structure and respect",
-        Aquarius: "acceptance of their uniqueness",
-        Pisces: "gentleness and imaginative play"
+function getElementCombination(sunElement, moonElement) {
+    if (sunElement === moonElement) {
+        return `With both Sun and Moon in ${sunElement}, ${sunElement.toLowerCase()} energy is strongly emphasized. This creates focus but may need balance from other elements.`;
+    }
+    
+    const combos = {
+        'Fire-Earth': 'Fire inspiration meets Earth practicality—visionary ideas grounded in reality.',
+        'Fire-Air': 'Fire passion meets Air intellect—enthusiastic communication and quick thinking.',
+        'Fire-Water': 'Fire action meets Water intuition—passionate feelings and creative energy.',
+        'Earth-Fire': 'Earth stability meets Fire inspiration—grounded ambition.',
+        'Earth-Air': 'Earth practicality meets Air ideas—thoughtful implementation.',
+        'Earth-Water': 'Earth grounding meets Water sensitivity—nurturing stability.',
+        'Air-Fire': 'Air ideas meet Fire enthusiasm—inspired communication.',
+        'Air-Earth': 'Air thinking meets Earth grounding—practical wisdom.',
+        'Air-Water': 'Air intellect meets Water intuition—emotional intelligence.',
+        'Water-Fire': 'Water feeling meets Fire action—emotionally motivated movement.',
+        'Water-Earth': 'Water intuition meets Earth stability—sensitive practicality.',
+        'Water-Air': 'Water depth meets Air clarity—feelings understood through thought.'
     };
-    return needs[sign] || "emotional attunement";
+    
+    return combos[`${sunElement}-${moonElement}`] || `${sunElement} and ${moonElement} energies combine uniquely.`;
 }
 
-function getSunSummary(sign) {
+function getMoonPhaseMeaning(phase) {
+    const meanings = {
+        'New Moon': 'Born for new beginnings. This soul arrives with fresh slate energy—pioneering, initiating, and comfortable with uncertainty.',
+        'Waxing Crescent': 'Born to build. This soul has natural momentum—growing, developing, and moving toward manifestation.',
+        'First Quarter': 'Born for action. This soul has crisis-management skills—decisive, courageous, and able to turn challenges into opportunities.',
+        'Waxing Gibbous': 'Born to refine. This soul has editing energy—improving, perfecting, and bringing things to higher expression.',
+        'Full Moon': 'Born for completion and illumination. This soul has powerful projection—visible, expressive, and meant to be seen.',
+        'Waning Gibbous': 'Born to share. This soul has teaching energy—distributing wisdom and helping others grow.',
+        'Last Quarter': 'Born for release. This soul understands endings—letting go, completing, and clearing the way.',
+        'Waning Crescent': 'Born for transition. This soul has ancient wisdom—contemplative, intuitive, and connected to the beyond.'
+    };
+    return meanings[phase] || 'A unique lunar influence awaits discovery.';
+}
+
+function getSunNeedSpecific(sign) {
+    const specifics = {
+        Aries: "challenges, competition, and room to be first",
+        Taurus: "consistency, comfort, and time to move at their own pace",
+        Gemini: "books, conversations, and constant new input",
+        Cancer: "closeness, traditions, and emotional acknowledgment",
+        Leo: "audiences, applause, and creative supplies",
+        Virgo: "order, useful tasks, and appreciation for helpfulness",
+        Libra: "beauty, fairness, and harmonious surroundings",
+        Scorpio: "privacy, depth, and emotional honesty",
+        Sagittarius: "adventure, learning, and philosophical discussion",
+        Capricorn: "goals, achievements, and earned respect",
+        Aquarius: "uniqueness, freedom, and intellectual stimulation",
+        Pisces: "imagination, spiritual nourishment, and creative outlets"
+    };
+    return specifics[sign] || "love and understanding";
+}
+
+function getMoonComfortSpecific(sign) {
+    const comforts = {
+        Aries: "physical movement and action—let them punch pillows or run it out",
+        Taurus: "soft textures, favorite foods, and patient presence",
+        Gemini: "talking it through repeatedly and naming what they feel",
+        Cancer: "holding, rocking, and complete emotional presence",
+        Leo: "dramatic acknowledgment and making them feel special",
+        Virgo: "fixing something practical and restoring order",
+        Libra: "beautiful music, aesthetic environment, and gentle fairness",
+        Scorpio: "honoring the depth of their feeling without trying to fix it",
+        Sagittarius: "distraction, humor, and perspective on the bigger picture",
+        Capricorn: "respect, practical solutions, and quiet competence",
+        Aquarius: "space, unconditional acceptance, and logical discussion",
+        Pisces: "imagination, music, and gentle transcendence of the problem"
+    };
+    return comforts[sign] || "loving presence and patience";
+}
+
+function getMercurySummary(sign) {
     const summaries = {
-        Aries: "a bold pioneer who leads with courage and action",
-        Taurus: "a steady builder who creates beauty and lasting value",
-        Gemini: "a curious communicator who connects ideas and people",
-        Cancer: "a nurturing soul who creates belonging and emotional safety",
-        Leo: "a radiant heart who shines through creative self-expression",
-        Virgo: "a sacred servant who heals through attention and service",
-        Libra: "a graceful harmonizer who creates balance and beauty",
-        Scorpio: "a powerful transformer who finds gold in the shadows",
-        Sagittarius: "a joyful seeker who expands horizons and inspires faith",
-        Capricorn: "a wise master who builds mountains through patient effort",
-        Aquarius: "a visionary revolutionary who serves the future",
-        Pisces: "a compassionate mystic who bridges the visible and invisible worlds"
+        Aries: "Quick, direct, competitive thinking",
+        Taurus: "Methodical, practical, sensory-based thinking",
+        Gemini: "Curious, versatile, quick-witted thinking",
+        Cancer: "Intuitive, memory-focused, emotional thinking",
+        Leo: "Creative, confident, dramatic thinking",
+        Virgo: "Analytical, precise, detail-oriented thinking",
+        Libra: "Balanced, diplomatic, relationship-focused thinking",
+        Scorpio: "Deep, investigative, penetrating thinking",
+        Sagittarius: "Expansive, philosophical, big-picture thinking",
+        Capricorn: "Structured, strategic, goal-oriented thinking",
+        Aquarius: "Original, innovative, unconventional thinking",
+        Pisces: "Imaginative, intuitive, poetic thinking"
     };
-    return summaries[sign] || "a unique soul with special gifts";
+    return summaries[sign] || "Unique mental expression";
 }
 
-function getMoonSummary(sign) {
+function getVenusSummary(sign) {
     const summaries = {
-        Aries: "quick-feeling and courageous, needing action to process emotions",
-        Taurus: "steady and security-oriented, needing comfort and consistency",
-        Gemini: "quick-minded emotionally, processing feelings through talking and thinking",
-        Cancer: "deeply sensitive and nurturing, needing emotional closeness",
-        Leo: "warm-hearted and expressive, needing to be seen and appreciated",
-        Virgo: "careful and service-oriented, processing emotions through helping",
-        Libra: "harmony-seeking, needing beauty and balanced relationships",
-        Scorpio: "intensely feeling, needing depth and emotional truth",
-        Sagittarius: "freedom-loving emotionally, needing space and adventure",
-        Capricorn: "responsible with feelings, needing emotional self-reliance",
-        Aquarius: "unique in emotional expression, needing space for individuality",
-        Pisces: "boundlessly compassionate, needing spiritual connection"
+        Aries: "Passionate, direct, adventurous love style",
+        Taurus: "Sensual, devoted, comfort-seeking love style",
+        Gemini: "Curious, communicative, playful love style",
+        Cancer: "Nurturing, protective, devoted love style",
+        Leo: "Generous, dramatic, adoring love style",
+        Virgo: "Helpful, attentive, service-oriented love style",
+        Libra: "Harmonious, romantic, partnership-focused love style",
+        Scorpio: "Intense, transformative, all-or-nothing love style",
+        Sagittarius: "Free-spirited, adventurous, honest love style",
+        Capricorn: "Committed, traditional, loyal love style",
+        Aquarius: "Independent, unique, friendship-based love style",
+        Pisces: "Compassionate, romantic, boundless love style"
     };
-    return summaries[sign] || "unique emotional needs and gifts";
+    return summaries[sign] || "Unique expression of love and beauty";
 }
 
-function getRisingSummary(sign) {
+function getMarsSummary(sign) {
     const summaries = {
-        Aries: "directness and courage, ready to take initiative",
-        Taurus: "groundedness and grace, a calming presence",
-        Gemini: "curiosity and adaptability, ready to connect",
-        Cancer: "sensitivity and warmth, a nurturing presence",
-        Leo: "confidence and radiance, commanding attention",
-        Virgo: "thoughtfulness and helpfulness, ready to serve",
-        Libra: "charm and grace, creating harmony",
-        Scorpio: "intensity and perception, seeing beneath surfaces",
-        Sagittarius: "enthusiasm and openness, ready for adventure",
-        Capricorn: "maturity and capability, quietly commanding respect",
-        Aquarius: "uniqueness and independence, refreshingly different",
-        Pisces: "sensitivity and imagination, an otherworldly quality"
+        Aries: "Direct, competitive, fearless action style",
+        Taurus: "Steady, persistent, unstoppable action style",
+        Gemini: "Versatile, quick, multi-directional action style",
+        Cancer: "Protective, emotionally-driven action style",
+        Leo: "Confident, dramatic, heart-driven action style",
+        Virgo: "Precise, efficient, improvement-focused action style",
+        Libra: "Strategic, diplomatic, partnership-oriented action style",
+        Scorpio: "Intense, strategic, transformative action style",
+        Sagittarius: "Bold, optimistic, adventure-seeking action style",
+        Capricorn: "Disciplined, ambitious, goal-directed action style",
+        Aquarius: "Unconventional, collective, revolutionary action style",
+        Pisces: "Intuitive, compassionate, flowing action style"
     };
-    return summaries[sign] || "unique presentation to the world";
-}
-
-function getLifePathPurpose(number) {
-    const purposes = {
-        1: "learning independence, developing leadership, pioneering new paths",
-        2: "mastering cooperation, developing sensitivity, creating partnership",
-        3: "expressing creativity, spreading joy, communicating truth",
-        4: "building foundations, creating systems, developing discipline",
-        5: "embracing change, honoring freedom, experiencing life fully",
-        6: "nurturing others, creating beauty, serving family and community",
-        7: "seeking wisdom, developing intuition, understanding mysteries",
-        8: "mastering abundance, developing authority, using power wisely",
-        9: "serving humanity, completing cycles, expressing universal love",
-        11: "inspiring others, developing intuition, channeling higher wisdom",
-        22: "building dreams, manifesting visions, creating lasting legacy",
-        33: "healing through love, teaching through example, embodying compassion"
-    };
-    return purposes[number] || "discovering unique purpose through experience";
-}
-
-function getNorthNodePurpose(sign) {
-    const purposes = {
-        Aries: "developing courage, self-assertion, and independent action",
-        Taurus: "building self-worth, creating stability, enjoying simple pleasures",
-        Gemini: "staying curious, communicating, learning from everyone",
-        Cancer: "developing emotional intelligence, nurturing, creating home",
-        Leo: "expressing creatively, following the heart, learning to shine",
-        Virgo: "serving practically, developing skills, attending to details",
-        Libra: "partnering, cooperating, learning balance and harmony",
-        Scorpio: "embracing transformation, developing intimacy, facing shadow",
-        Sagittarius: "seeking truth, adventuring, developing faith and meaning",
-        Capricorn: "building achievement, accepting responsibility, developing authority",
-        Aquarius: "serving humanity, honoring uniqueness, building community",
-        Pisces: "developing spirituality, practicing compassion, surrendering to flow"
-    };
-    return purposes[sign] || "unique soul evolution path";
-}
-
-function getChineseSummary(animal) {
-    const summaries = {
-        Rat: "clever adaptability and resourceful problem-solving",
-        Ox: "steady determination and reliable strength",
-        Tiger: "bold courage and magnetic leadership",
-        Rabbit: "gentle diplomacy and refined sensitivity",
-        Dragon: "powerful fortune and natural magnetism",
-        Snake: "wise intuition and elegant mystery",
-        Horse: "energetic freedom and warm enthusiasm",
-        Goat: "creative gentleness and peaceful artistry",
-        Monkey: "clever playfulness and quick intelligence",
-        Rooster: "confident precision and observant honesty",
-        Dog: "loyal protection and faithful friendship",
-        Pig: "generous warmth and sincere kindness"
-    };
-    return summaries[animal] || "unique Eastern wisdom";
+    return summaries[sign] || "Unique expression of will and energy";
 }
 
 // Export for use in other files

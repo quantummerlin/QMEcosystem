@@ -1165,15 +1165,16 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=16"></script>
-    <script src="calculations.js?v=16"></script>
-    <script src="readings.js?v=16"></script>
-    <script src="house-readings.js?v=16"></script>
-    <script src="aspect-readings.js?v=16"></script>
-    <script src="advanced-readings.js?v=16"></script>
-    <script src="readings-extended.js?v=16"></script>
-    <script src="love-blueprint.js?v=16"></script>
-    <script src="save-share.js?v=16"></script>
+    <script src="config.js?v=18"></script>
+    <script src="calculations.js?v=18"></script>
+    <script src="readings.js?v=18"></script>
+    <script src="house-readings.js?v=18"></script>
+    <script src="aspect-readings.js?v=18"></script>
+    <script src="advanced-readings.js?v=18"></script>
+    <script src="deep-readings.js?v=18"></script>
+    <script src="readings-extended.js?v=18"></script>
+    <script src="love-blueprint.js?v=18"></script>
+    <script src="save-share.js?v=18"></script>
     <script>
         // ============================================
         // GENDER THEME SWITCH
@@ -1429,41 +1430,144 @@
             celestialSectionWrapper.className = 'reading-section active';
             const celestialSection = createSection('celestial', config.sections.celestial);
             
-            // Sun Sign
+            // Sun Sign - DEEP READING
             const sunSign = readings.astrology.sunSign;
-            const sunReading = SUN_SIGN_READINGS[sunSign.name];
-            celestialSection.appendChild(createReadingCard(
-                config.readingTitles.sunSign,
-                `${sunSign.symbol} ${sunSign.name}`,
-                sunReading ? sunReading.keywords : [],
-                sunReading ? sunReading.reading : `Born under the sign of ${sunSign.name}, a ${sunSign.element} sign.`,
-                sunReading ? sunReading.strengths : [],
-                sunReading ? sunReading.challenges : []
-            ));
+            const deepSun = (typeof DEEP_SUN_READINGS !== 'undefined') ? DEEP_SUN_READINGS[sunSign.name] : null;
             
-            // Moon Sign
-            const moonSign = readings.astrology.moonSign;
-            const moonReading = SUN_SIGN_READINGS[moonSign.name];
-            celestialSection.appendChild(createReadingCard(
-                config.readingTitles.moonSign,
-                `${moonSign.symbol} ${moonSign.name}`,
-                ['Emotions', 'Inner Self', 'Instincts', 'Comfort'],
-                `The Moon in ${moonSign.name} reveals the emotional nature and inner world. This placement suggests ${userData.name}'s emotional responses are colored by ${moonSign.element} energy - ${moonSign.element === 'Fire' ? 'passionate and expressive' : moonSign.element === 'Earth' ? 'stable and grounded' : moonSign.element === 'Air' ? 'intellectual and communicative' : 'deep and intuitive'}.`,
-                moonReading ? moonReading.strengths : [],
-                moonReading ? moonReading.challenges : []
-            ));
-            
-            // Rising Sign
-            const risingSign = readings.astrology.risingSign;
-            if (risingSign.name && risingSign.name !== 'Unknown') {
+            if (deepSun) {
+                const sunContent = `<strong>${deepSun.hook}</strong>
+
+<em>Core Identity:</em> ${deepSun.coreIdentity}
+
+<em>Life Force:</em> ${deepSun.lifeForce}
+
+<em>Creative Expression:</em> ${deepSun.creativeExpression}
+
+<em>Ego Pattern:</em> ${deepSun.egoPattern}
+
+<em>Leadership Style:</em> ${deepSun.leadership}
+
+<em>Life Lesson:</em> ${deepSun.lifeLesson}
+
+<em>Shadow to Watch:</em> ${deepSun.shadow}
+
+<em>Integration Path:</em> ${deepSun.integration}
+
+<em>💫 Parenting Guidance:</em> ${deepSun.parentGuidance}
+
+<em>🌟 Affirmation:</em> "${deepSun.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+                
                 celestialSection.appendChild(createReadingCard(
-                    config.readingTitles.risingSign,
-                    `${risingSign.symbol || '⬆️'} ${risingSign.name}`,
-                    ['First Impressions', 'Appearance', 'Approach to Life'],
-                    `With ${risingSign.name} Rising, ${userData.name} presents to the world with ${risingSign.element} energy. This is the mask worn in new situations and the first impression made on others.`,
+                    deepSun.title,
+                    `☉ Sun in ${sunSign.name}`,
+                    ['Core Identity', 'Life Purpose', 'Ego Expression', 'Vitality'],
+                    sunContent,
                     [],
                     []
                 ));
+            } else {
+                const sunReading = SUN_SIGN_READINGS[sunSign.name];
+                celestialSection.appendChild(createReadingCard(
+                    config.readingTitles.sunSign,
+                    `${sunSign.symbol} ${sunSign.name}`,
+                    sunReading ? sunReading.keywords : [],
+                    sunReading ? sunReading.reading : `Born under the sign of ${sunSign.name}, a ${sunSign.element} sign.`,
+                    sunReading ? sunReading.strengths : [],
+                    sunReading ? sunReading.challenges : []
+                ));
+            }
+            
+            // Moon Sign - DEEP READING
+            const moonSign = readings.astrology.moonSign;
+            const deepMoon = (typeof DEEP_MOON_READINGS !== 'undefined') ? DEEP_MOON_READINGS[moonSign.name] : null;
+            
+            if (deepMoon) {
+                // Create comprehensive Moon reading from deep content
+                const moonContent = `<strong>${deepMoon.hook}</strong>
+
+<em>Core Emotional Identity:</em> ${deepMoon.coreIdentity}
+
+<em>How Others Experience Them:</em> ${deepMoon.external}
+
+<em>Emotional Behavior Patterns:</em> ${deepMoon.behavior}
+
+<em>Greatest Emotional Strength:</em> ${deepMoon.strength}
+
+<em>Shadow Pattern to Watch:</em> ${deepMoon.shadow}
+
+<em>Path to Integration:</em> ${deepMoon.integration}
+
+<em>Under Stress:</em> ${deepMoon.stress}
+
+<em>In Relationships:</em> ${deepMoon.relationships}
+
+<em>Emotional Growth Edge:</em> ${deepMoon.growth}
+
+<em>Physical Expression:</em> ${deepMoon.somatic}
+
+<em>💫 Parenting Guidance:</em> ${deepMoon.parentGuidance}
+
+<em>🌟 Affirmation:</em> "${deepMoon.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+                
+                celestialSection.appendChild(createReadingCard(
+                    deepMoon.title,
+                    `☽ Moon in ${moonSign.name}`,
+                    ['Emotional Nature', 'Inner Needs', 'Comfort Style', 'Instinctual Response'],
+                    moonContent,
+                    [`${deepMoon.power}`],
+                    []
+                ));
+            } else {
+                // Fallback to basic reading
+                const moonReading = SUN_SIGN_READINGS[moonSign.name];
+                celestialSection.appendChild(createReadingCard(
+                    config.readingTitles.moonSign,
+                    `${moonSign.symbol} ${moonSign.name}`,
+                    ['Emotions', 'Inner Self', 'Instincts', 'Comfort'],
+                    `The Moon in ${moonSign.name} reveals the emotional nature and inner world. This placement suggests ${userData.name}'s emotional responses are colored by ${moonSign.element} energy - ${moonSign.element === 'Fire' ? 'passionate and expressive' : moonSign.element === 'Earth' ? 'stable and grounded' : moonSign.element === 'Air' ? 'intellectual and communicative' : 'deep and intuitive'}.`,
+                    moonReading ? moonReading.strengths : [],
+                    moonReading ? moonReading.challenges : []
+                ));
+            }
+            
+            // Rising Sign - DEEP READING
+            const risingSign = readings.astrology.risingSign;
+            if (risingSign.name && risingSign.name !== 'Unknown') {
+                const deepRising = (typeof DEEP_RISING_READINGS !== 'undefined') ? DEEP_RISING_READINGS[risingSign.name] : null;
+                
+                if (deepRising) {
+                    const risingContent = `<strong>${deepRising.firstImpression}</strong>
+
+<em>Approach to Life:</em> ${deepRising.lifeApproach}
+
+<em>How Others Perceive Them:</em> ${deepRising.howOthersSee}
+
+<em>Physical Expression:</em> ${deepRising.physicalExpression}
+
+<em>Life Path Theme:</em> ${deepRising.lifePath}
+
+<em>The Gift They Bring:</em> ${deepRising.gift}
+
+<em>Growth Challenge:</em> ${deepRising.challenge}`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+                    
+                    celestialSection.appendChild(createReadingCard(
+                        deepRising.title,
+                        `⬆️ ${risingSign.name} Rising`,
+                        ['First Impressions', 'Life Approach', 'Outer Expression', 'Physical Presence'],
+                        risingContent,
+                        [],
+                        []
+                    ));
+                } else {
+                    celestialSection.appendChild(createReadingCard(
+                        config.readingTitles.risingSign,
+                        `${risingSign.symbol || '⬆️'} ${risingSign.name}`,
+                        ['First Impressions', 'Appearance', 'Approach to Life'],
+                        `With ${risingSign.name} Rising, ${userData.name} presents to the world with ${risingSign.element} energy. This is the mask worn in new situations and the first impression made on others.`,
+                        [],
+                        []
+                    ));
+                }
             }
             
             // Chinese Zodiac
