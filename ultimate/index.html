@@ -1784,8 +1784,7 @@
                 ));
             }
             
-            // Rising Sign - DEEP READING
-            const risingSign = readings.astrology.risingSign;
+            // Rising Sign - DEEP READING (risingSign already declared in blueprint section)
             if (risingSign.name && risingSign.name !== 'Unknown') {
                 const deepRising = (typeof DEEP_RISING_READINGS !== 'undefined') ? DEEP_RISING_READINGS[risingSign.name] : null;
                 
@@ -1840,8 +1839,7 @@
                 chineseReading ? chineseReading.challenges : []
             ));
             
-            // Moon Phase - Enhanced with deep readings
-            const moonPhase = readings.astrology.moonPhase;
+            // Moon Phase - Enhanced with deep readings (moonPhase already declared in blueprint section)
             const moonPhaseReading = MOON_PHASE_READINGS[moonPhase.name];
             const deepMoonPhase = typeof DEEP_MOON_PHASE_READINGS !== 'undefined' ? DEEP_MOON_PHASE_READINGS[moonPhase.name] : null;
             
@@ -1871,8 +1869,7 @@
                 deepMoonPhase ? deepMoonPhase.shadows : (moonPhaseReading ? moonPhaseReading.challenges : [])
             ));
             
-            // Mercury Sign
-            const mercurySign = readings.astrology.mercurySign;
+            // Mercury Sign (mercurySign already declared in blueprint section)
             const mercuryReading = MERCURY_SIGN_READINGS ? MERCURY_SIGN_READINGS[mercurySign.name] : null;
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.mercurySign,
@@ -1883,8 +1880,7 @@
                 mercuryReading ? mercuryReading.challenges : []
             ));
             
-            // Venus Sign
-            const venusSign = readings.astrology.venusSign;
+            // Venus Sign (venusSign already declared in blueprint section)
             const venusReading = VENUS_SIGN_READINGS ? VENUS_SIGN_READINGS[venusSign.name] : null;
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.venusSign,
@@ -1895,8 +1891,7 @@
                 venusReading ? venusReading.challenges : []
             ));
             
-            // Mars Sign
-            const marsSign = readings.astrology.marsSign;
+            // Mars Sign (marsSign already declared in blueprint section)
             const marsReading = MARS_SIGN_READINGS ? MARS_SIGN_READINGS[marsSign.name] : null;
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.marsSign,
@@ -1907,8 +1902,7 @@
                 marsReading ? marsReading.challenges : []
             ));
             
-            // Jupiter Sign
-            const jupiterSign = readings.astrology.jupiterSign;
+            // Jupiter Sign (jupiterSign already declared in blueprint section)
             const jupiterReading = JUPITER_SIGN_READINGS ? JUPITER_SIGN_READINGS[jupiterSign.name] : null;
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.jupiterSign,
@@ -1919,8 +1913,7 @@
                 jupiterReading ? jupiterReading.challenges : []
             ));
             
-            // Saturn Sign
-            const saturnSign = readings.astrology.saturnSign;
+            // Saturn Sign (saturnSign already declared in blueprint section)
             const saturnReading = SATURN_SIGN_READINGS ? SATURN_SIGN_READINGS[saturnSign.name] : null;
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.saturnSign,
