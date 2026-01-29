@@ -1165,14 +1165,15 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=15"></script>
-    <script src="calculations.js?v=15"></script>
-    <script src="readings.js?v=15"></script>
-    <script src="house-readings.js?v=15"></script>
-    <script src="aspect-readings.js?v=15"></script>
-    <script src="advanced-readings.js?v=15"></script>
-    <script src="love-blueprint.js?v=15"></script>
-    <script src="save-share.js?v=15"></script>
+    <script src="config.js?v=16"></script>
+    <script src="calculations.js?v=16"></script>
+    <script src="readings.js?v=16"></script>
+    <script src="house-readings.js?v=16"></script>
+    <script src="aspect-readings.js?v=16"></script>
+    <script src="advanced-readings.js?v=16"></script>
+    <script src="readings-extended.js?v=16"></script>
+    <script src="love-blueprint.js?v=16"></script>
+    <script src="save-share.js?v=16"></script>
     <script>
         // ============================================
         // GENDER THEME SWITCH
@@ -1687,7 +1688,17 @@
                 
                 // Display major aspects
                 readings.astrology.aspects.forEach(aspect => {
-                    const aspectReading = getAspectReading(aspect.planet1, aspect.planet2, aspect.aspect);
+                    let aspectReading = getAspectReading(aspect.planet1, aspect.planet2, aspect.aspect);
+                    
+                    // Check for additional aspects in readings-extended.js
+                    if (!aspectReading && typeof ADDITIONAL_ASPECT_READINGS !== 'undefined') {
+                        const key = `${aspect.planet1}-${aspect.planet2}`;
+                        const altKey = `${aspect.planet2}-${aspect.planet1}`;
+                        const aspectData = ADDITIONAL_ASPECT_READINGS[key] || ADDITIONAL_ASPECT_READINGS[altKey];
+                        if (aspectData && aspectData[aspect.aspect]) {
+                            aspectReading = aspectData[aspect.aspect];
+                        }
+                    }
                     
                     if (aspectReading) {
                         celestialSection.appendChild(createReadingCard(
@@ -2103,6 +2114,406 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             cyclesSectionWrapper.appendChild(cyclesSection);
             container.appendChild(cyclesSectionWrapper);
+            
+            // ============================================
+            // SECTION 6: ANGULAR HOUSES - Life Pillars
+            // ============================================
+            if (readings.astrology.angularHouses && typeof ANGULAR_HOUSE_READINGS !== 'undefined') {
+                const angularSectionWrapper = document.createElement('div');
+                angularSectionWrapper.className = 'reading-section';
+                const angularSection = document.createElement('div');
+                angularSection.className = 'section-content';
+                angularSection.id = 'section-angular';
+                
+                angularSection.innerHTML = `
+                    <div class="section-header">
+                        <span class="icon">🏛️</span>
+                        <div>
+                            <h2>The Four Pillars</h2>
+                            <p class="description">The angular houses form the foundation of ${userData.name}'s life chart</p>
+                        </div>
+                    </div>
+                `;
+                
+                const angular = readings.astrology.angularHouses;
+                
+                // 1st House - Ascendant/Self
+                if (angular.first && ANGULAR_HOUSE_READINGS.first && ANGULAR_HOUSE_READINGS.first[angular.first]) {
+                    const houseData = ANGULAR_HOUSE_READINGS.first[angular.first];
+                    angularSection.appendChild(createReadingCard(
+                        houseData.title,
+                        `⬆️ ${angular.first} Rising - The Self`,
+                        houseData.keywords,
+                        houseData.reading.replace(/this child/gi, userData.name),
+                        houseData.strengths || [],
+                        houseData.challenges || []
+                    ));
+                }
+                
+                // 4th House - IC/Roots
+                if (angular.fourth && ANGULAR_HOUSE_READINGS.fourth && ANGULAR_HOUSE_READINGS.fourth[angular.fourth]) {
+                    const houseData = ANGULAR_HOUSE_READINGS.fourth[angular.fourth];
+                    angularSection.appendChild(createReadingCard(
+                        houseData.title,
+                        `🏠 ${angular.fourth} IC - The Roots`,
+                        houseData.keywords,
+                        houseData.reading.replace(/this child/gi, userData.name),
+                        houseData.strengths || [],
+                        houseData.challenges || []
+                    ));
+                }
+                
+                // 7th House - Descendant/Partnerships
+                if (angular.seventh && ANGULAR_HOUSE_READINGS.seventh && ANGULAR_HOUSE_READINGS.seventh[angular.seventh]) {
+                    const houseData = ANGULAR_HOUSE_READINGS.seventh[angular.seventh];
+                    angularSection.appendChild(createReadingCard(
+                        houseData.title,
+                        `🤝 ${angular.seventh} Descendant - The Partners`,
+                        houseData.keywords,
+                        houseData.reading.replace(/this child/gi, userData.name),
+                        houseData.strengths || [],
+                        houseData.challenges || []
+                    ));
+                }
+                
+                // 10th House - MC/Career
+                if (angular.tenth && ANGULAR_HOUSE_READINGS.tenth && ANGULAR_HOUSE_READINGS.tenth[angular.tenth]) {
+                    const houseData = ANGULAR_HOUSE_READINGS.tenth[angular.tenth];
+                    angularSection.appendChild(createReadingCard(
+                        houseData.title,
+                        `👑 ${angular.tenth} Midheaven - The Legacy`,
+                        houseData.keywords,
+                        houseData.reading.replace(/this child/gi, userData.name),
+                        houseData.strengths || [],
+                        houseData.challenges || []
+                    ));
+                }
+                
+                angularSectionWrapper.appendChild(angularSection);
+                container.appendChild(angularSectionWrapper);
+            }
+            
+            // ============================================
+            // SECTION 7: VERTEX - Fated Encounters
+            // ============================================
+            if (readings.astrology.vertex && typeof VERTEX_READINGS !== 'undefined') {
+                const vertex = readings.astrology.vertex;
+                const vertexReading = VERTEX_READINGS[vertex.name || vertex];
+                
+                if (vertexReading) {
+                    const vertexSectionWrapper = document.createElement('div');
+                    vertexSectionWrapper.className = 'reading-section';
+                    const vertexSection = document.createElement('div');
+                    vertexSection.className = 'section-content';
+                    vertexSection.id = 'section-vertex';
+                    
+                    vertexSection.innerHTML = `
+                        <div class="section-header">
+                            <span class="icon">✨</span>
+                            <div>
+                                <h2>Fated Encounters</h2>
+                                <p class="description">The Vertex reveals destined meetings and pivotal life moments</p>
+                            </div>
+                        </div>
+                    `;
+                    
+                    vertexSection.appendChild(createReadingCard(
+                        vertexReading.title,
+                        `⚝ Vertex in ${vertex.name || vertex}`,
+                        vertexReading.keywords,
+                        vertexReading.reading.replace(/this child/gi, userData.name),
+                        vertexReading.fatedThemes || [],
+                        []
+                    ));
+                    
+                    vertexSectionWrapper.appendChild(vertexSection);
+                    container.appendChild(vertexSectionWrapper);
+                }
+            }
+            
+            // ============================================
+            // SECTION 8: NODES IN HOUSES - Soul Path Details
+            // ============================================
+            if ((readings.astrology.northNodeHouse || readings.astrology.southNodeHouse) && typeof NODES_IN_HOUSES !== 'undefined') {
+                const nodesSectionWrapper = document.createElement('div');
+                nodesSectionWrapper.className = 'reading-section';
+                const nodesSection = document.createElement('div');
+                nodesSection.className = 'section-content';
+                nodesSection.id = 'section-nodes-houses';
+                
+                nodesSection.innerHTML = `
+                    <div class="section-header">
+                        <span class="icon">☊</span>
+                        <div>
+                            <h2>Karmic Life Areas</h2>
+                            <p class="description">Where soul evolution unfolds in ${userData.name}'s life</p>
+                        </div>
+                    </div>
+                `;
+                
+                // North Node in House
+                const nnHouse = readings.astrology.northNodeHouse;
+                if (nnHouse && NODES_IN_HOUSES.north && NODES_IN_HOUSES.north[nnHouse]) {
+                    const nnReading = NODES_IN_HOUSES.north[nnHouse];
+                    nodesSection.appendChild(createReadingCard(
+                        nnReading.title,
+                        `☊ North Node in House ${nnHouse}`,
+                        nnReading.keywords,
+                        nnReading.reading.replace(/this child/gi, userData.name),
+                        nnReading.growth || [],
+                        nnReading.resistance || []
+                    ));
+                }
+                
+                // South Node in House
+                const snHouse = readings.astrology.southNodeHouse;
+                if (snHouse && NODES_IN_HOUSES.south && NODES_IN_HOUSES.south[snHouse]) {
+                    const snReading = NODES_IN_HOUSES.south[snHouse];
+                    nodesSection.appendChild(createReadingCard(
+                        snReading.title,
+                        `☋ South Node in House ${snHouse}`,
+                        snReading.keywords,
+                        snReading.reading.replace(/this child/gi, userData.name),
+                        snReading.gifts || [],
+                        snReading.release || []
+                    ));
+                }
+                
+                nodesSectionWrapper.appendChild(nodesSection);
+                container.appendChild(nodesSectionWrapper);
+            }
+            
+            // Add AdSense slot
+            const ad5 = createAdSlot();
+            container.appendChild(ad5);
+            
+            // ============================================
+            // SECTION 9: LIFE SYNTHESIS - Major Life Blueprints
+            // ============================================
+            if (typeof SYNTHESIS_READINGS !== 'undefined') {
+                const synthesisSectionWrapper = document.createElement('div');
+                synthesisSectionWrapper.className = 'reading-section';
+                const synthesisSection = document.createElement('div');
+                synthesisSection.className = 'section-content';
+                synthesisSection.id = 'section-synthesis';
+                
+                synthesisSection.innerHTML = `
+                    <div class="section-header">
+                        <span class="icon">🔮</span>
+                        <div>
+                            <h2>Life Blueprints</h2>
+                            <p class="description">Deep synthesis of ${userData.name}'s cosmic design across key life areas</p>
+                        </div>
+                    </div>
+                `;
+                
+                const chartData = {
+                    sunSign: readings.astrology.sunSign.name,
+                    moonSign: readings.astrology.moonSign.name,
+                    risingSign: readings.astrology.risingSign.name || 'Unknown',
+                    mercurySign: readings.astrology.mercurySign.name,
+                    venusSign: readings.astrology.venusSign.name,
+                    marsSign: readings.astrology.marsSign.name,
+                    jupiterSign: readings.astrology.jupiterSign.name,
+                    saturnSign: readings.astrology.saturnSign.name,
+                    northNode: readings.astrology.northNode.name,
+                    midheaven: readings.astrology.angularHouses ? readings.astrology.angularHouses.tenth : readings.astrology.midheaven?.name,
+                    lifePath: readings.numerology.lifePath,
+                    destiny: readings.numerology.destiny,
+                    name: userData.name
+                };
+                
+                // Career Blueprint
+                if (SYNTHESIS_READINGS.career && typeof SYNTHESIS_READINGS.career.generate === 'function') {
+                    const careerBlueprint = SYNTHESIS_READINGS.career.generate(chartData);
+                    synthesisSection.appendChild(createReadingCard(
+                        careerBlueprint.title,
+                        `💼 Career & Purpose Blueprint`,
+                        careerBlueprint.keywords,
+                        careerBlueprint.reading,
+                        careerBlueprint.strengths || [],
+                        careerBlueprint.watchFor || []
+                    ));
+                }
+                
+                // Spiritual Blueprint
+                if (SYNTHESIS_READINGS.spiritual && typeof SYNTHESIS_READINGS.spiritual.generate === 'function') {
+                    const spiritualBlueprint = SYNTHESIS_READINGS.spiritual.generate(chartData);
+                    synthesisSection.appendChild(createReadingCard(
+                        spiritualBlueprint.title,
+                        `🙏 Spiritual Path Blueprint`,
+                        spiritualBlueprint.keywords,
+                        spiritualBlueprint.reading,
+                        spiritualBlueprint.gifts || [],
+                        spiritualBlueprint.practices || []
+                    ));
+                }
+                
+                // Shadow Blueprint
+                if (SYNTHESIS_READINGS.shadow && typeof SYNTHESIS_READINGS.shadow.generate === 'function') {
+                    const shadowBlueprint = SYNTHESIS_READINGS.shadow.generate(chartData);
+                    synthesisSection.appendChild(createReadingCard(
+                        shadowBlueprint.title,
+                        `🌑 Shadow Work Blueprint`,
+                        shadowBlueprint.keywords,
+                        shadowBlueprint.reading,
+                        shadowBlueprint.integration || [],
+                        shadowBlueprint.patterns || []
+                    ));
+                }
+                
+                // Money Blueprint
+                if (SYNTHESIS_READINGS.money && typeof SYNTHESIS_READINGS.money.generate === 'function') {
+                    const moneyBlueprint = SYNTHESIS_READINGS.money.generate(chartData);
+                    synthesisSection.appendChild(createReadingCard(
+                        moneyBlueprint.title,
+                        `💰 Abundance Blueprint`,
+                        moneyBlueprint.keywords,
+                        moneyBlueprint.reading,
+                        moneyBlueprint.strengths || [],
+                        moneyBlueprint.growth || []
+                    ));
+                }
+                
+                synthesisSectionWrapper.appendChild(synthesisSection);
+                container.appendChild(synthesisSectionWrapper);
+            }
+            
+            // ============================================
+            // SECTION 10: PROGRESSIONS - Soul Evolution
+            // ============================================
+            if (typeof PROGRESSION_READINGS !== 'undefined') {
+                const progressionsSectionWrapper = document.createElement('div');
+                progressionsSectionWrapper.className = 'reading-section';
+                const progressionsSection = document.createElement('div');
+                progressionsSection.className = 'section-content';
+                progressionsSection.id = 'section-progressions';
+                
+                progressionsSection.innerHTML = `
+                    <div class="section-header">
+                        <span class="icon">🌀</span>
+                        <div>
+                            <h2>Soul Evolution</h2>
+                            <p class="description">How ${userData.name}'s inner self is evolving over time</p>
+                        </div>
+                    </div>
+                `;
+                
+                // Calculate progressed signs based on age
+                const birthDate = new Date(userData.date);
+                const now = new Date();
+                const ageYears = Math.floor((now - birthDate) / (365.25 * 24 * 60 * 60 * 1000));
+                
+                // For babies/children, progressed Sun is still natal Sun or maybe next sign
+                const signs = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
+                const natalSunIndex = signs.indexOf(readings.astrology.sunSign.name);
+                const progressedSunIndex = (natalSunIndex + Math.floor(ageYears / 30)) % 12;
+                const progressedSun = signs[progressedSunIndex];
+                
+                const natalMoonIndex = signs.indexOf(readings.astrology.moonSign.name);
+                const progressedMoonIndex = (natalMoonIndex + Math.floor(ageYears / 2.5)) % 12;
+                const progressedMoon = signs[progressedMoonIndex];
+                
+                // Progressed Sun
+                if (PROGRESSION_READINGS.sun && PROGRESSION_READINGS.sun[progressedSun]) {
+                    const sunProg = PROGRESSION_READINGS.sun[progressedSun];
+                    progressionsSection.appendChild(createReadingCard(
+                        sunProg.title,
+                        `☉ Progressed Sun in ${progressedSun}`,
+                        sunProg.keywords,
+                        sunProg.reading.replace(/this soul/gi, userData.name),
+                        sunProg.evolution || [],
+                        []
+                    ));
+                }
+                
+                // Progressed Moon
+                if (PROGRESSION_READINGS.moon && PROGRESSION_READINGS.moon[progressedMoon]) {
+                    const moonProg = PROGRESSION_READINGS.moon[progressedMoon];
+                    progressionsSection.appendChild(createReadingCard(
+                        moonProg.title,
+                        `☽ Progressed Moon in ${progressedMoon}`,
+                        moonProg.keywords,
+                        moonProg.reading.replace(/this soul/gi, userData.name),
+                        moonProg.currentNeeds || [],
+                        []
+                    ));
+                }
+                
+                progressionsSectionWrapper.appendChild(progressionsSection);
+                container.appendChild(progressionsSectionWrapper);
+            }
+            
+            // Add AdSense slot
+            const ad6 = createAdSlot();
+            container.appendChild(ad6);
+            
+            // ============================================
+            // SECTION 11: COSMIC WRAP-UP - The Complete Picture
+            // ============================================
+            if (typeof COSMIC_WRAPUP !== 'undefined' && typeof COSMIC_WRAPUP.generate === 'function') {
+                const wrapupSectionWrapper = document.createElement('div');
+                wrapupSectionWrapper.className = 'reading-section';
+                const wrapupSection = document.createElement('div');
+                wrapupSection.className = 'section-content';
+                wrapupSection.id = 'section-wrapup';
+                
+                wrapupSection.innerHTML = `
+                    <div class="section-header">
+                        <span class="icon">🌟</span>
+                        <div>
+                            <h2>The Complete Cosmic Blueprint</h2>
+                            <p class="description">A sacred synthesis of ${userData.name}'s energetic signature at birth</p>
+                        </div>
+                    </div>
+                `;
+                
+                const wrapupData = {
+                    name: userData.name,
+                    sunSign: readings.astrology.sunSign.name,
+                    moonSign: readings.astrology.moonSign.name,
+                    risingSign: readings.astrology.risingSign.name || 'Unknown',
+                    sunElement: readings.astrology.sunSign.element,
+                    moonElement: readings.astrology.moonSign.element,
+                    mercurySign: readings.astrology.mercurySign.name,
+                    venusSign: readings.astrology.venusSign.name,
+                    marsSign: readings.astrology.marsSign.name,
+                    jupiterSign: readings.astrology.jupiterSign.name,
+                    saturnSign: readings.astrology.saturnSign.name,
+                    northNode: readings.astrology.northNode.name,
+                    lifePath: readings.numerology.lifePath,
+                    destiny: readings.numerology.destiny,
+                    soulUrge: readings.numerology.soulUrge,
+                    chineseZodiac: readings.astrology.chineseZodiac.name,
+                    moonPhase: readings.astrology.moonPhase.name
+                };
+                
+                const wrapup = COSMIC_WRAPUP.generate(wrapupData);
+                
+                wrapupSection.appendChild(createReadingCard(
+                    wrapup.title,
+                    `✨ ${userData.name}'s Energetic Blueprint`,
+                    wrapup.keywords,
+                    wrapup.opening + '\n\n' + wrapup.coreEssence + '\n\n' + wrapup.soulPath + '\n\n' + wrapup.gifts + '\n\n' + wrapup.closing,
+                    wrapup.affirmations || [],
+                    []
+                ));
+                
+                // Parent guidance card
+                if (wrapup.parentGuidance) {
+                    wrapupSection.appendChild(createReadingCard(
+                        'Guidance for Parents & Caregivers',
+                        `💝 Nurturing ${userData.name}'s Potential`,
+                        ['Parenting', 'Support', 'Understanding'],
+                        wrapup.parentGuidance,
+                        [],
+                        []
+                    ));
+                }
+                
+                wrapupSectionWrapper.appendChild(wrapupSection);
+                container.appendChild(wrapupSectionWrapper);
+            }
             
             // Store readings globally for save functionality
             window.lastGeneratedReadings = readings;

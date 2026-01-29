@@ -826,6 +826,99 @@ function calculatePartOfFortune(sunSign, moonSign, risingSign) {
     return ZODIAC_SIGNS[fortuneIndex];
 }
 
+function calculateVertex(birthDate, birthTime, location = 'default') {
+    // The Vertex is the intersection of the prime vertical and ecliptic in the western hemisphere
+    // It's always in the western half of the chart (houses 5-8), and is associated with fated encounters
+    // The Vertex is roughly opposite to the Ascendant + 6 houses, adjusted by co-latitude
+    
+    if (!birthTime) {
+        return { name: 'Unknown', note: 'Birth time required' };
+    }
+    
+    // Get the Ascendant first
+    const risingSign = calculateRisingSign(birthDate, birthTime, location);
+    if (!risingSign || risingSign.name === 'Unknown') {
+        return { name: 'Unknown', note: 'Unable to calculate' };
+    }
+    
+    // The Vertex is typically in the 5th, 6th, 7th, or 8th house
+    // Simplified calculation: Descendant + 2-3 signs (varies by latitude)
+    const risingIndex = ZODIAC_SIGNS.findIndex(s => s.name === risingSign.name);
+    
+    // Get latitude for adjustment
+    const coords = LOCATION_COORDS[location.toLowerCase()] || LOCATION_COORDS['default'];
+    const latitudeAdjust = Math.round(coords.lat / 15); // Adjust based on latitude
+    
+    // Vertex formula: approximately Descendant + latitude adjustment
+    // Typically ends up in 5th-8th house western hemisphere
+    const vertexIndex = (risingIndex + 6 + 2 + latitudeAdjust) % 12;
+    
+    return ZODIAC_SIGNS[vertexIndex];
+}
+
+function calculateNodeHouse(nodeSign, houses) {
+    // Determine which house the North/South Node falls in
+    if (!houses || !nodeSign || !nodeSign.name) {
+        return null;
+    }
+    
+    const nodeIndex = ZODIAC_SIGNS.findIndex(s => s.name === nodeSign.name);
+    
+    // In whole sign houses, each sign is a house starting from the Ascendant
+    for (let i = 0; i < houses.length; i++) {
+        const houseSign = houses[i].sign;
+        const houseIndex = ZODIAC_SIGNS.findIndex(s => s.name === houseSign);
+        if (houseIndex === nodeIndex) {
+            return i + 1; // Houses are 1-indexed
+        }
+    }
+    
+    // Fallback: calculate based on sign position relative to first house
+    const firstHouseIndex = ZODIAC_SIGNS.findIndex(s => s.name === houses[0].sign);
+    const houseNum = ((nodeIndex - firstHouseIndex + 12) % 12) + 1;
+    return houseNum;
+}
+
+function calculateAngularHouses(houses, risingSign, midheaven) {
+    // Returns the Angular Houses with their signs:
+    // 1st (Ascendant/Self), 4th (IC/Home), 7th (Descendant/Others), 10th (MC/Career)
+    
+    if (!houses || houses.length < 10) {
+        return null;
+    }
+    
+    return {
+        first: {
+            house: 1,
+            sign: houses[0].sign,
+            name: 'Ascendant',
+            theme: 'Self & Identity',
+            symbol: '⬆️'
+        },
+        fourth: {
+            house: 4,
+            sign: houses[3].sign,
+            name: 'Imum Coeli (IC)',
+            theme: 'Home & Roots',
+            symbol: '🏠'
+        },
+        seventh: {
+            house: 7,
+            sign: houses[6].sign,
+            name: 'Descendant',
+            theme: 'Partnerships & Others',
+            symbol: '💑'
+        },
+        tenth: {
+            house: 10,
+            sign: houses[9].sign,
+            name: 'Midheaven (MC)',
+            theme: 'Career & Public Life',
+            symbol: '⭐'
+        }
+    };
+}
+
 // ============================================
 // CURRENT TRANSITS (as of 2026)
 // ============================================
@@ -1109,7 +1202,15 @@ function calculateAllReadings(userData) {
     
     // Advanced points
     const partOfFortune = calculatePartOfFortune(sunSign, moonSign, risingSign);
+    const vertex = calculateVertex(birthDate, birthTime, location);
     const currentTransits = calculateCurrentTransits(birthDate);
+    
+    // Angular Houses (1st, 4th, 7th, 10th)
+    const angularHouses = houses ? calculateAngularHouses(houses, risingSign, midheaven) : null;
+    
+    // Nodes in Houses
+    const northNodeHouse = houses ? calculateNodeHouse(northNode, houses) : null;
+    const southNodeHouse = northNodeHouse ? ((northNodeHouse + 5) % 12) + 1 : null;
     
     // Love Blueprint (Venus + Mars + 7th house)
     let loveBlueprint = null;
@@ -1168,10 +1269,14 @@ function calculateAllReadings(userData) {
             moonPhase,
             northNode,
             southNode,
+            northNodeHouse,
+            southNodeHouse,
             chiron,
             lilith,
             midheaven,
             descendant,
+            vertex,
+            angularHouses,
             element,
             modality,
             houses,
