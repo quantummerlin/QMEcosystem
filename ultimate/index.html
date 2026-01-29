@@ -655,6 +655,186 @@
             color: var(--primary);
         }
         
+        /* Cosmic Blueprint Summary */
+        .cosmic-blueprint-summary {
+            background: linear-gradient(135deg, rgba(103,58,183,0.08) 0%, rgba(255,105,180,0.08) 100%);
+            border-top: 5px solid linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        
+        .dark-theme .cosmic-blueprint-summary {
+            background: linear-gradient(135deg, rgba(103,58,183,0.15) 0%, rgba(255,105,180,0.15) 100%);
+        }
+        
+        .blueprint-intro {
+            font-size: 1.1rem;
+            margin-bottom: 25px !important;
+            color: var(--text);
+        }
+        
+        .blueprint-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            text-align: left;
+            margin: 25px 0;
+        }
+        
+        .blueprint-category {
+            background: rgba(255,255,255,0.5);
+            border-radius: 12px;
+            padding: 15px 20px;
+            border: 1px solid rgba(103,58,183,0.15);
+        }
+        
+        .dark-theme .blueprint-category {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.1);
+        }
+        
+        .blueprint-category h4 {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(103,58,183,0.2);
+        }
+        
+        .blueprint-items {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .blueprint-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            padding: 5px 0;
+        }
+        
+        .blueprint-item .planet-symbol {
+            font-size: 1.1rem;
+            width: 24px;
+            text-align: center;
+        }
+        
+        .blueprint-item .meaning {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        .dark-theme .blueprint-item .meaning {
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .blueprint-footer {
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-top: 20px !important;
+            margin-bottom: 0 !important;
+        }
+        
+        /* Numerology Explainer */
+        .numerology-explainer {
+            background: linear-gradient(135deg, rgba(255,215,0,0.08) 0%, rgba(255,105,180,0.08) 100%);
+        }
+        
+        .dark-theme .numerology-explainer {
+            background: linear-gradient(135deg, rgba(255,215,0,0.12) 0%, rgba(255,105,180,0.12) 100%);
+        }
+        
+        .num-calc-section {
+            background: rgba(255,255,255,0.5);
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin: 15px 0;
+            text-align: left;
+            border: 1px solid rgba(103,58,183,0.15);
+        }
+        
+        .dark-theme .num-calc-section {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.1);
+        }
+        
+        .num-calc-section h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+        
+        .num-calc-section p {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+        
+        .calc-steps {
+            background: rgba(103,58,183,0.08);
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin: 10px 0;
+        }
+        
+        .dark-theme .calc-steps {
+            background: rgba(103,58,183,0.2);
+        }
+        
+        .calc-step {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            font-size: 0.9rem;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+        }
+        
+        .dark-theme .calc-step {
+            border-bottom-color: rgba(255,255,255,0.1);
+        }
+        
+        .calc-step:last-child {
+            border-bottom: none;
+        }
+        
+        .calc-step.final {
+            background: rgba(255,215,0,0.2);
+            margin: 8px -10px -6px;
+            padding: 10px;
+            border-radius: 0 0 6px 6px;
+            font-weight: 600;
+        }
+        
+        .calc-label {
+            color: var(--text-muted);
+        }
+        
+        .calc-value {
+            font-family: 'Courier New', monospace;
+            color: var(--primary);
+        }
+        
+        .calc-note {
+            font-size: 0.85rem !important;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+        
+        .letter-chart {
+            background: rgba(255,255,255,0.6);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            margin: 10px 0;
+            word-break: break-all;
+        }
+        
+        .dark-theme .letter-chart {
+            background: rgba(0,0,0,0.3);
+        }
+        
         /* Section Divider */
         .section-divider {
             text-align: center;
@@ -1165,16 +1345,16 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=19"></script>
-    <script src="calculations.js?v=19"></script>
-    <script src="readings.js?v=19"></script>
-    <script src="house-readings.js?v=19"></script>
-    <script src="aspect-readings.js?v=19"></script>
-    <script src="advanced-readings.js?v=19"></script>
-    <script src="deep-readings.js?v=19"></script>
-    <script src="readings-extended.js?v=19"></script>
-    <script src="love-blueprint.js?v=19"></script>
-    <script src="save-share.js?v=19"></script>
+    <script src="config.js?v=20"></script>
+    <script src="calculations.js?v=20"></script>
+    <script src="readings.js?v=20"></script>
+    <script src="house-readings.js?v=20"></script>
+    <script src="aspect-readings.js?v=20"></script>
+    <script src="advanced-readings.js?v=20"></script>
+    <script src="deep-readings.js?v=20"></script>
+    <script src="readings-extended.js?v=20"></script>
+    <script src="love-blueprint.js?v=20"></script>
+    <script src="save-share.js?v=20"></script>
     <script>
         // ============================================
         // GENDER THEME SWITCH
@@ -1430,8 +1610,83 @@
             celestialSectionWrapper.className = 'reading-section active';
             const celestialSection = createSection('celestial', config.sections.celestial);
             
-            // Sun Sign - DEEP READING
+            // ============================================
+            // COSMIC BLUEPRINT SUMMARY - Planetary Overview
+            // ============================================
             const sunSign = readings.astrology.sunSign;
+            const moonSign = readings.astrology.moonSign;
+            const risingSign = readings.astrology.risingSign;
+            const moonPhase = readings.astrology.moonPhase;
+            const mercurySign = readings.astrology.mercurySign;
+            const venusSign = readings.astrology.venusSign;
+            const marsSign = readings.astrology.marsSign;
+            const jupiterSign = readings.astrology.jupiterSign;
+            const saturnSign = readings.astrology.saturnSign;
+            const uranusSign = readings.astrology.uranusSign;
+            const neptuneSign = readings.astrology.neptuneSign;
+            const plutoSign = readings.astrology.plutoSign;
+            const northNode = readings.astrology.northNode;
+            const chineseZodiac = readings.astrology.chineseZodiac;
+            
+            // Build the summary card
+            const blueprintSummary = document.createElement('div');
+            blueprintSummary.className = 'reading-card cosmic-blueprint-summary';
+            blueprintSummary.innerHTML = `
+                <span class="card-icon">🌌</span>
+                <h3>Your Cosmic Blueprint at a Glance</h3>
+                <p class="blueprint-intro">Before we dive deep into each placement, here's a complete overview of ${userData.name}'s celestial coordinates — the positions of all major celestial bodies at the moment of birth.</p>
+                
+                <div class="blueprint-grid">
+                    <div class="blueprint-category">
+                        <h4>🌟 The Big Three</h4>
+                        <div class="blueprint-items">
+                            <div class="blueprint-item"><span class="planet-symbol">☉</span> <strong>Sun:</strong> ${sunSign.name} <span class="meaning">(Core Identity)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">☽</span> <strong>Moon:</strong> ${moonSign.name} <span class="meaning">(Emotional Nature)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">↑</span> <strong>Rising:</strong> ${risingSign ? risingSign.name : 'Unknown'} <span class="meaning">(First Impression)</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="blueprint-category">
+                        <h4>🪐 Personal Planets</h4>
+                        <div class="blueprint-items">
+                            <div class="blueprint-item"><span class="planet-symbol">☿</span> <strong>Mercury:</strong> ${mercurySign.name} <span class="meaning">(Mind & Communication)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">♀</span> <strong>Venus:</strong> ${venusSign.name} <span class="meaning">(Love & Beauty)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">♂</span> <strong>Mars:</strong> ${marsSign.name} <span class="meaning">(Drive & Action)</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="blueprint-category">
+                        <h4>🌙 Social Planets</h4>
+                        <div class="blueprint-items">
+                            <div class="blueprint-item"><span class="planet-symbol">♃</span> <strong>Jupiter:</strong> ${jupiterSign.name} <span class="meaning">(Luck & Expansion)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">♄</span> <strong>Saturn:</strong> ${saturnSign.name} <span class="meaning">(Discipline & Lessons)</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="blueprint-category">
+                        <h4>🌀 Outer Planets (Generational)</h4>
+                        <div class="blueprint-items">
+                            <div class="blueprint-item"><span class="planet-symbol">⛢</span> <strong>Uranus:</strong> ${uranusSign.name} <span class="meaning">(Innovation & Change)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">♆</span> <strong>Neptune:</strong> ${neptuneSign.name} <span class="meaning">(Dreams & Spirituality)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">♇</span> <strong>Pluto:</strong> ${plutoSign.name} <span class="meaning">(Transformation)</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="blueprint-category">
+                        <h4>🌓 Other Key Points</h4>
+                        <div class="blueprint-items">
+                            <div class="blueprint-item"><span class="planet-symbol">☊</span> <strong>North Node:</strong> ${northNode.name} <span class="meaning">(Life Purpose)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">${moonPhase.icon}</span> <strong>Moon Phase:</strong> ${moonPhase.name} <span class="meaning">(Soul Character)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">${chineseZodiac.emoji}</span> <strong>Chinese:</strong> ${chineseZodiac.name} <span class="meaning">(Earth Element)</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="blueprint-footer">Each placement tells a different part of ${userData.name}'s story. Scroll down for detailed interpretations of each celestial influence.</p>
+            `;
+            celestialSection.appendChild(blueprintSummary);
+            
+            // Sun Sign - DEEP READING
             const deepSun = (typeof DEEP_SUN_READINGS !== 'undefined') ? DEEP_SUN_READINGS[sunSign.name] : null;
             
             if (deepSun) {
@@ -1586,16 +1841,35 @@
                 chineseReading ? chineseReading.challenges : []
             ));
             
-            // Moon Phase
+            // Moon Phase - Enhanced with deep readings
             const moonPhase = readings.astrology.moonPhase;
             const moonPhaseReading = MOON_PHASE_READINGS[moonPhase.name];
+            const deepMoonPhase = typeof DEEP_MOON_PHASE_READINGS !== 'undefined' ? DEEP_MOON_PHASE_READINGS[moonPhase.name] : null;
+            
+            // Build comprehensive moon phase content
+            let moonPhaseContent = '';
+            if (deepMoonPhase) {
+                moonPhaseContent = `<p><em>${deepMoonPhase.hook.replace(/this soul/gi, userData.name)}</em></p>\n\n`;
+                moonPhaseContent += deepMoonPhase.coreNature.replace(/this soul|this child/gi, userData.name) + '\n\n';
+                moonPhaseContent += `<h4>🛤️ Life Path Theme</h4>\n${deepMoonPhase.lifePath.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<h4>🔮 Inner World</h4>\n${deepMoonPhase.innerWorld.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<h4>💕 Relationships</h4>\n${deepMoonPhase.relationships.replace(/this soul|these souls/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<h4>✨ Spiritual Path</h4>\n${deepMoonPhase.spiritualPath.replace(/this soul|these souls/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<h4>👨‍👩‍👧 Parent Guidance</h4>\n${deepMoonPhase.parentGuidance.replace(/this child/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<p><strong>Affirmation:</strong> <em>"${deepMoonPhase.affirmation}"</em></p>`;
+            } else if (moonPhaseReading) {
+                moonPhaseContent = moonPhaseReading.reading.replace(/this soul/gi, userData.name);
+            } else {
+                moonPhaseContent = `Born under the ${moonPhase.name}.`;
+            }
+            
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.moonPhase,
-                `${moonPhase.icon} ${moonPhase.name}`,
-                moonPhaseReading ? moonPhaseReading.keywords : [],
-                moonPhaseReading ? moonPhaseReading.reading.replace(/this soul/gi, userData.name) : `Born under the ${moonPhase.name}.`,
-                moonPhaseReading ? moonPhaseReading.strengths : [],
-                moonPhaseReading ? moonPhaseReading.challenges : []
+                `${moonPhase.icon} ${moonPhase.name} ${deepMoonPhase ? `- ${deepMoonPhase.title}` : ''}`,
+                deepMoonPhase ? deepMoonPhase.gifts.slice(0, 4) : (moonPhaseReading ? moonPhaseReading.keywords : []),
+                moonPhaseContent,
+                deepMoonPhase ? deepMoonPhase.gifts : (moonPhaseReading ? moonPhaseReading.strengths : []),
+                deepMoonPhase ? deepMoonPhase.shadows : (moonPhaseReading ? moonPhaseReading.challenges : [])
             ));
             
             // Mercury Sign
@@ -1958,6 +2232,81 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const numbersSectionWrapper = document.createElement('div');
             numbersSectionWrapper.className = 'reading-section';
             const numbersSection = createSection('numbers', config.sections.numbers);
+            
+            // ============================================
+            // NUMEROLOGY CALCULATION EXPLAINER
+            // ============================================
+            const { day: birthDay, month: birthMonth, year: birthYear } = parseBirthDate(userData.birthDate);
+            const numExplainer = document.createElement('div');
+            numExplainer.className = 'reading-card numerology-explainer';
+            
+            // Calculate step-by-step for Life Path
+            const dayReduced = reduceToSingleDigit(birthDay);
+            const monthReduced = reduceToSingleDigit(birthMonth);
+            const yearReduced = reduceToSingleDigit(birthYear);
+            const lifePathSum = dayReduced + monthReduced + yearReduced;
+            
+            // Letter to number mapping
+            const letterChart = 'A=1, B=2, C=3, D=4, E=5, F=6, G=7, H=8, I=9, J=1, K=2, L=3, M=4, N=5, O=6, P=7, Q=8, R=9, S=1, T=2, U=3, V=4, W=5, X=6, Y=7, Z=8';
+            
+            numExplainer.innerHTML = \`
+                <span class="card-icon">🔢</span>
+                <h3>How Your Numbers Are Calculated</h3>
+                <p class="blueprint-intro">Numerology uses ancient mathematical principles to reveal the energetic blueprint encoded in your birth date and name. Here's exactly how ${userData.name}'s core numbers are calculated:</p>
+                
+                <div class="num-calc-section">
+                    <h4>📊 Life Path Number: \${readings.numerology.lifePath}</h4>
+                    <p>Your Life Path is the most important number — it reveals your life's purpose and the journey you're meant to walk.</p>
+                    <div class="calc-steps">
+                        <div class="calc-step">
+                            <span class="calc-label">Birth Date:</span>
+                            <span class="calc-value">\${birthMonth}/\${birthDay}/\${birthYear}</span>
+                        </div>
+                        <div class="calc-step">
+                            <span class="calc-label">Reduce Month (\${birthMonth}):</span>
+                            <span class="calc-value">\${birthMonth} → \${monthReduced}</span>
+                        </div>
+                        <div class="calc-step">
+                            <span class="calc-label">Reduce Day (\${birthDay}):</span>
+                            <span class="calc-value">\${birthDay} → \${dayReduced}</span>
+                        </div>
+                        <div class="calc-step">
+                            <span class="calc-label">Reduce Year (\${birthYear}):</span>
+                            <span class="calc-value">\${String(birthYear).split('').join(' + ')} = \${String(birthYear).split('').reduce((a,b) => +a + +b)} → \${yearReduced}</span>
+                        </div>
+                        <div class="calc-step final">
+                            <span class="calc-label">Add Together:</span>
+                            <span class="calc-value">\${monthReduced} + \${dayReduced} + \${yearReduced} = \${lifePathSum} → <strong>\${readings.numerology.lifePath}</strong></span>
+                        </div>
+                    </div>
+                    <p class="calc-note">*Master Numbers (11, 22, 33) are not reduced, as they carry special significance.</p>
+                </div>
+                
+                <div class="num-calc-section">
+                    <h4>💫 Destiny Number: \${readings.numerology.destiny}</h4>
+                    <p>Calculated from your full birth name — each letter has a numeric value. All letters are added and reduced.</p>
+                    <div class="letter-chart">\${letterChart}</div>
+                    <p>Add all letter values in "<strong>\${userData.fullName}</strong>" and reduce to a single digit (or Master Number).</p>
+                </div>
+                
+                <div class="num-calc-section">
+                    <h4>💖 Soul Urge Number: \${readings.numerology.soulUrge}</h4>
+                    <p>Calculated from only the <strong>vowels</strong> in your full name (A, E, I, O, U). This reveals your heart's deepest desires.</p>
+                </div>
+                
+                <div class="num-calc-section">
+                    <h4>🎭 Personality Number: \${readings.numerology.personality}</h4>
+                    <p>Calculated from only the <strong>consonants</strong> in your full name. This reveals how others perceive you.</p>
+                </div>
+                
+                <div class="num-calc-section">
+                    <h4>🎂 Birthday Number: \${readings.numerology.birthday}</h4>
+                    <p>Simply the day of the month you were born (\${birthDay}), reduced if needed. This reveals natural talents and special gifts.</p>
+                </div>
+                
+                <p class="blueprint-footer">Each number carries unique vibrational energy that influences different aspects of your life. Scroll down to discover what each of ${userData.name}'s numbers reveals.</p>
+            \`;
+            numbersSection.appendChild(numExplainer);
             
             // Life Path
             const lifePath = readings.numerology.lifePath;

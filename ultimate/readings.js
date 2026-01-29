@@ -1444,37 +1444,316 @@ const NORTH_NODE_READINGS = {
 // ============================================
 
 const BIRTHDAY_NUMBER_READINGS = {
-    1: { title: "The Leader", reading: "Birthday 1 brings leadership, originality, and pioneering spirit. Natural ability to initiate and inspire." },
-    2: { title: "The Diplomat", reading: "Birthday 2 brings sensitivity, cooperation, and diplomatic skills. Natural ability to mediate and support." },
-    3: { title: "The Entertainer", reading: "Birthday 3 brings creativity, expression, and joy. Natural ability to inspire and uplift through communication." },
-    4: { title: "The Builder", reading: "Birthday 4 brings stability, practicality, and strong work ethic. Natural ability to create lasting structures." },
-    5: { title: "The Freedom Lover", reading: "Birthday 5 brings versatility, adventure, and love of freedom. Natural ability to adapt and inspire change." },
-    6: { title: "The Nurturer", reading: "Birthday 6 brings responsibility, love, and domestic harmony. Natural ability to care for and beautify." },
-    7: { title: "The Seeker", reading: "Birthday 7 brings wisdom, analysis, and spiritual depth. Natural ability to investigate and understand." },
-    8: { title: "The Achiever", reading: "Birthday 8 brings ambition, authority, and material mastery. Natural ability to organize and succeed." },
-    9: { title: "The Humanitarian", reading: "Birthday 9 brings compassion, wisdom, and universal love. Natural ability to inspire and heal." },
-    10: { title: "The Pioneer", reading: "Birthday 10 (1+0=1) combines leadership with adaptability. Natural ability to lead in new directions." },
-    11: { title: "The Illuminator", reading: "Birthday 11 is a Master Number bringing intuition, inspiration, and spiritual insight. Natural channel for higher wisdom." },
-    12: { title: "The Creative Communicator", reading: "Birthday 12 (1+2=3) brings dynamic creativity and social gifts. Natural performer and inspirer." },
-    13: { title: "The Builder of Foundations", reading: "Birthday 13 (1+3=4) brings determination and ability to transform challenges. Natural ability to create from difficulty." },
-    14: { title: "The Versatile Communicator", reading: "Birthday 14 (1+4=5) brings adaptability and communication skills. Natural ability to connect diverse ideas." },
-    15: { title: "The Magnetic Healer", reading: "Birthday 15 (1+5=6) brings personal magnetism and healing ability. Natural ability to nurture and attract." },
-    16: { title: "The Introspective Analyst", reading: "Birthday 16 (1+6=7) brings deep introspection and spiritual seeking. Natural ability to find hidden truths." },
-    17: { title: "The Spiritual Achiever", reading: "Birthday 17 (1+7=8) brings business acumen with spiritual depth. Natural ability to succeed meaningfully." },
-    18: { title: "The Humanitarian Leader", reading: "Birthday 18 (1+8=9) brings leadership in service of humanity. Natural ability to inspire global change." },
-    19: { title: "The Independent Humanitarian", reading: "Birthday 19 (1+9=10=1) brings independence with universal consciousness. Natural ability to pioneer for all." },
-    20: { title: "The Sensitive Diplomat", reading: "Birthday 20 (2+0=2) brings heightened sensitivity and intuition. Natural peacemaker and supporter." },
-    21: { title: "The Social Butterfly", reading: "Birthday 21 (2+1=3) brings exceptional social gifts and creativity. Natural ability to network and express." },
-    22: { title: "The Master Builder", reading: "Birthday 22 is a Master Number bringing exceptional ability to manifest large visions. Natural architect of dreams." },
-    23: { title: "The Versatile Communicator", reading: "Birthday 23 (2+3=5) brings communication gifts and adaptability. Natural ability to influence through words." },
-    24: { title: "The Devoted Counselor", reading: "Birthday 24 (2+4=6) brings nurturing instincts and counseling ability. Natural ability to harmonize and heal." },
-    25: { title: "The Wise Intuitive", reading: "Birthday 25 (2+5=7) brings analytical mind with intuitive gifts. Natural ability to perceive hidden truths." },
-    26: { title: "The Practical Visionary", reading: "Birthday 26 (2+6=8) brings business skills with partnership focus. Natural ability to succeed collaboratively." },
-    27: { title: "The Compassionate Leader", reading: "Birthday 27 (2+7=9) brings leadership in humanitarian causes. Natural ability to inspire through wisdom." },
-    28: { title: "The Independent Diplomat", reading: "Birthday 28 (2+8=10=1) brings leadership with sensitivity. Natural ability to lead while cooperating." },
-    29: { title: "The Visionary Peacemaker", reading: "Birthday 29 (2+9=11) brings master number sensitivity and vision. Natural bridge between worlds." },
-    30: { title: "The Creative Visionary", reading: "Birthday 30 (3+0=3) brings amplified creativity and expression. Natural ability to create and inspire joy." },
-    31: { title: "The Disciplined Creator", reading: "Birthday 31 (3+1=4) brings creativity with practical discipline. Natural ability to build artistic visions." }
+    1: { 
+        title: "The Leader", 
+        reading: `Birthday 1 brings natural leadership, originality, and pioneering spirit into this life. This soul came in knowing how to initiate, to be first, to forge new paths.
+
+The day of birth imparts a special gift for independence and self-starting. Even in childhood, there's a desire to do things their own way, to lead rather than follow, to be original rather than imitative.
+
+This is someone who inspires others by example, who can take charge when needed, and who thrives when given autonomy. Their special talent is the courage to begin what others only dream about.
+
+For children with Birthday 1: Give them leadership opportunities early. Let them make decisions and experience consequences. Their independence is a gift — nurture it.`
+    },
+    2: { 
+        title: "The Diplomat", 
+        reading: `Birthday 2 brings natural sensitivity, cooperation, and diplomatic gifts into this life. This soul came in attuned to others' feelings and skilled at creating harmony.
+
+The day of birth imparts a special gift for partnership and support. Even in childhood, there's awareness of others' emotions and a desire to help, to mediate, to bring people together.
+
+This is someone who excels in partnerships, who can sense what others need before they ask, and who creates peace wherever they go. Their special talent is the ability to truly listen and understand.
+
+For children with Birthday 2: Honor their sensitivity — it's their superpower. Create harmonious environments. Let them support others but ensure they also receive support.`
+    },
+    3: { 
+        title: "The Entertainer", 
+        reading: `Birthday 3 brings natural creativity, self-expression, and joy into this life. This soul came in ready to create, to communicate, and to uplift through their presence.
+
+The day of birth imparts a special gift for inspiring and entertaining others. Even in childhood, there's a creative spark, a way with words, and an ability to bring smiles to faces.
+
+This is someone who lights up rooms, who can express what others struggle to articulate, and who makes life more beautiful through their creativity. Their special talent is spreading joy.
+
+For children with Birthday 3: Provide creative outlets abundantly. Celebrate their self-expression. Their joy is meant to be shared — don't dim their light.`
+    },
+    4: { 
+        title: "The Builder", 
+        reading: `Birthday 4 brings natural stability, practicality, and strong work ethic into this life. This soul came in knowing how to build, to organize, and to create lasting structures.
+
+The day of birth imparts a special gift for practical accomplishment. Even in childhood, there's a love of order, a patience for detailed work, and satisfaction in tangible results.
+
+This is someone who can be relied upon absolutely, who builds things to last, and who finds satisfaction in hard work done well. Their special talent is turning dreams into solid reality.
+
+For children with Birthday 4: Give them projects with visible results. Honor their need for routine and order. Their reliability is a rare gift — don't mistake it for rigidity.`
+    },
+    5: { 
+        title: "The Freedom Lover", 
+        reading: `Birthday 5 brings natural versatility, love of freedom, and adaptability into this life. This soul came in ready to experience everything, to change and grow, to live fully.
+
+The day of birth imparts a special gift for adaptation and change. Even in childhood, there's restlessness, curiosity about everything, and a need for variety and adventure.
+
+This is someone who thrives on new experiences, who can adjust to any situation, and who inspires others to embrace change. Their special talent is making life an adventure.
+
+For children with Birthday 5: Provide variety and new experiences. Don't over-restrict — they need room to explore. Channel their restlessness into positive adventures.`
+    },
+    6: { 
+        title: "The Nurturer", 
+        reading: `Birthday 6 brings natural responsibility, love, and domestic harmony into this life. This soul came in knowing how to care, to nurture, and to create beautiful spaces.
+
+The day of birth imparts a special gift for caretaking and beautifying. Even in childhood, there's concern for family, attention to aesthetics, and a desire to help those in need.
+
+This is someone who creates harmony wherever they go, who takes responsibility seriously, and who makes others feel cared for. Their special talent is nurturing love into everything.
+
+For children with Birthday 6: Let them help with caring tasks. Create beautiful environments. They absorb family dynamics — ensure they experience love and harmony.`
+    },
+    7: { 
+        title: "The Seeker", 
+        reading: `Birthday 7 brings natural wisdom, analytical ability, and spiritual depth into this life. This soul came in as a seeker, a questioner, a finder of hidden truths.
+
+The day of birth imparts a special gift for investigation and understanding. Even in childhood, there's deep thinking, questioning, and a preference for quality over quantity in relationships.
+
+This is someone who sees beneath surfaces, who understands what others miss, and who connects with deeper meaning in life. Their special talent is finding truth.
+
+For children with Birthday 7: Answer their questions thoughtfully — they sense when you're giving surface answers. Provide solitude and deep learning opportunities. Their wisdom is real.`
+    },
+    8: { 
+        title: "The Achiever", 
+        reading: `Birthday 8 brings natural ambition, authority, and material mastery into this life. This soul came in with capability for significant achievement and success.
+
+The day of birth imparts a special gift for organization and accomplishment. Even in childhood, there's ambition, understanding of power dynamics, and drive to succeed.
+
+This is someone who can achieve significant goals, who understands money and power, and who inspires others through their accomplishments. Their special talent is manifesting success.
+
+For children with Birthday 8: Let them experience achievement through goals and rewards. Teach healthy relationship with money and power. Their ambition is meant to accomplish great things.`
+    },
+    9: { 
+        title: "The Humanitarian", 
+        reading: `Birthday 9 brings natural compassion, wisdom, and universal love into this life. This soul came in caring about the world and wanting to contribute to the greater good.
+
+The day of birth imparts a special gift for inspiring and healing others. Even in childhood, there's awareness of suffering, desire to help, and an old-soul quality.
+
+This is someone who sees the big picture, who cares deeply about humanity, and who inspires others to be better. Their special talent is healing through presence.
+
+For children with Birthday 9: Involve them in charitable activities. Their empathy is vast — teach them it's a gift while also teaching self-care. They're here to serve humanity.`
+    },
+    10: { 
+        title: "The Pioneer", 
+        reading: `Birthday 10 (1+0=1) combines leadership with wholeness and adaptability. This soul came in with pioneering energy and the ability to reinvent themselves.
+
+The day of birth imparts special gifts for initiating in multiple directions. The presence of zero amplifies and purifies the leadership energy, adding flexibility to originality.
+
+This is someone who can lead in new directions repeatedly, who reinvents without losing core self, and who pioneers change with wisdom. Their special talent is fresh beginnings.
+
+For children with Birthday 10: They combine independence with adaptability. Let them try many things. Their identity develops through exploration and leadership.`
+    },
+    11: { 
+        title: "The Illuminator", 
+        reading: `Birthday 11 is a Master Number bringing heightened intuition, inspiration, and spiritual insight into this life. This soul came in as a channel for higher wisdom.
+
+The day of birth imparts extraordinary gifts for perception beyond the ordinary. Even in childhood, there's unusual sensitivity, possible psychic awareness, and an illuminated quality.
+
+This is someone who inspires through presence, who receives insights that benefit others, and who bridges the spiritual and physical. Their special talent is illuminating truth.
+
+For children with Birthday 11: They are highly sensitive and spiritually attuned. Protect their nervous system while nurturing their gifts. Their intuitions are real — validate them.`
+    },
+    12: { 
+        title: "The Creative Communicator", 
+        reading: `Birthday 12 (1+2=3) brings dynamic creativity, social gifts, and expressive ability into this life. This soul came in ready to create, connect, and communicate.
+
+The day of birth imparts special gifts for combining initiative (1) with sensitivity (2) into creative expression (3). There's natural charm and ability to inspire through communication.
+
+This is someone who can express ideas in ways that reach people, who creates with both independence and awareness of audience, and who uplifts through artistry. Their special talent is inspiring communication.
+
+For children with Birthday 12: They have both leadership and sensitivity. Provide creative outlets and social opportunities. Their expression is meant to reach and inspire others.`
+    },
+    13: { 
+        title: "The Builder of Foundations", 
+        reading: `Birthday 13 (1+3=4) brings determination and ability to transform challenges into solid foundations. This soul came in knowing that strength comes through struggle.
+
+The day of birth imparts special gifts for building through transformation. There's resilience, practical creativity, and the ability to create structure from chaos.
+
+This is someone who gets stronger through challenges, who builds things that last precisely because they've worked so hard, and who transforms difficulty into foundation. Their special talent is turning trials into triumphs.
+
+For children with Birthday 13: Don't shield them from all challenges — they grow through overcoming. Help them see difficulties as building materials. Their resilience is remarkable.`
+    },
+    14: { 
+        title: "The Versatile Communicator", 
+        reading: `Birthday 14 (1+4=5) brings adaptability, communication skills, and love of variety into this life. This soul came in ready to experience and share many things.
+
+The day of birth imparts special gifts for connecting diverse ideas and people. There's initiative combined with discipline, expressed through versatility and communication.
+
+This is someone who can adapt their message to any audience, who thrives on variety while maintaining core identity, and who teaches through experience. Their special talent is versatile wisdom.
+
+For children with Birthday 14: Provide variety within structure. They need both freedom and foundation. Their communication skills develop through diverse experiences.`
+    },
+    15: { 
+        title: "The Magnetic Healer", 
+        reading: `Birthday 15 (1+5=6) brings personal magnetism, healing ability, and nurturing power into this life. This soul came in with attractive force and caring heart.
+
+The day of birth imparts special gifts for drawing others in and healing them. There's leadership and freedom expressed through love and responsibility.
+
+This is someone whose presence heals, who attracts people and opportunities, and who leads through nurturing. Their special talent is magnetic love.
+
+For children with Birthday 15: They attract others easily — teach them discernment. Their nurturing nature is powerful. Help them maintain boundaries while sharing their healing presence.`
+    },
+    16: { 
+        title: "The Introspective Analyst", 
+        reading: `Birthday 16 (1+6=7) brings deep introspection, spiritual seeking, and analytical ability into this life. This soul came in questioning deeply and seeking truth.
+
+The day of birth imparts special gifts for uncovering hidden patterns and spiritual truths. There's leadership and responsibility expressed through investigation and wisdom.
+
+This is someone who thinks deeply, who finds truth others miss, and who develops wisdom through solitude and study. Their special talent is penetrating insight.
+
+For children with Birthday 16: They need solitude to process their deep thoughts. Don't dismiss their introspection as withdrawal. Their analytical spiritual gifts need quiet development.`
+    },
+    17: { 
+        title: "The Spiritual Achiever", 
+        reading: `Birthday 17 (1+7=8) brings business acumen combined with spiritual depth into this life. This soul came in able to achieve in the material world while maintaining spiritual awareness.
+
+The day of birth imparts special gifts for meaningful success. There's leadership and wisdom expressed through achievement and authority.
+
+This is someone who succeeds in ways that matter, who builds wealth and power for purposes beyond ego, and who leads with spiritual foundation. Their special talent is purposeful achievement.
+
+For children with Birthday 17: Help them understand that material success can serve spiritual purposes. Their drive to achieve is meant to be meaningful. Guide their power toward good.`
+    },
+    18: { 
+        title: "The Humanitarian Leader", 
+        reading: `Birthday 18 (1+8=9) brings leadership in service of humanity into this life. This soul came in to lead for the greater good, to achieve for the benefit of all.
+
+The day of birth imparts special gifts for inspiring global change. There's pioneering initiative and material mastery expressed through humanitarian vision.
+
+This is someone who leads movements, who achieves for more than personal gain, and who inspires others to care about the world. Their special talent is leading for humanity.
+
+For children with Birthday 18: Their concern for the world is real and powerful. Help them channel it constructively. They're here to lead humanitarian efforts — nurture this purpose.`
+    },
+    19: { 
+        title: "The Independent Humanitarian", 
+        reading: `Birthday 19 (1+9=10=1) brings independence combined with universal consciousness into this life. This soul came in as a pioneer who serves humanity through their own path.
+
+The day of birth imparts special gifts for independent service. There's double leadership energy (1 appearing twice) with humanitarian completion (9).
+
+This is someone who helps the world in their own unique way, who leads independently while serving the whole, and who pioneers for all. Their special talent is individual contribution to the universal.
+
+For children with Birthday 19: They march to their own drum but care about everyone. Let them find their unique way to serve. Their independence has humanitarian purpose.`
+    },
+    20: { 
+        title: "The Sensitive Diplomat", 
+        reading: `Birthday 20 (2+0=2) brings heightened sensitivity, intuition, and diplomatic gifts into this life. This soul came in as an amplified peacemaker and supporter.
+
+The day of birth imparts special gifts for perceiving and harmonizing. The zero amplifies and purifies the sensitive, cooperative energy, adding spiritual dimension to partnership gifts.
+
+This is someone whose sensitivity is almost psychic, who creates harmony instinctively, and who supports others with unusual perception. Their special talent is sensitive diplomacy.
+
+For children with Birthday 20: They may be extremely sensitive — create peaceful environments. Their intuition is heightened. Help them develop confidence alongside their natural supporting nature.`
+    },
+    21: { 
+        title: "The Social Butterfly", 
+        reading: `Birthday 21 (2+1=3) brings exceptional social gifts, charm, and creative expression into this life. This soul came in knowing how to connect, create, and inspire joy.
+
+The day of birth imparts special gifts for social creativity. Partnership and leadership combine into expressive, connecting energy that draws people together.
+
+This is someone who networks naturally, who creates in ways that bring people together, and who inspires through their social artistry. Their special talent is creative connection.
+
+For children with Birthday 21: They thrive in social settings. Provide opportunities for creative collaboration. Their charm is genuine — help them use it for good.`
+    },
+    22: { 
+        title: "The Master Builder", 
+        reading: `Birthday 22 is a Master Number bringing exceptional ability to manifest large visions into reality. This soul came in as an architect of dreams with practical mastery.
+
+The day of birth imparts extraordinary gifts for building on a grand scale. Double partnership energy creates master builder capacity — able to manifest visions that serve many.
+
+This is someone who sees huge possibilities and has the practical skills to make them real, who builds lasting structures that benefit humanity. Their special talent is manifesting the impossible.
+
+For children with Birthday 22: They may seem impossibly ambitious — don't dismiss their dreams. They need practical skills to manifest visions. They are Master Builders with extraordinary potential.`
+    },
+    23: { 
+        title: "The Versatile Communicator", 
+        reading: `Birthday 23 (2+3=5) brings communication gifts, adaptability, and influential expression into this life. This soul came in able to reach people through versatile communication.
+
+The day of birth imparts special gifts for connecting through words. Partnership and creativity combine into freedom and variety, expressed through communication that adapts to any audience.
+
+This is someone who can influence through words, who adapts their message without losing truth, and who teaches through experience and expression. Their special talent is influential communication.
+
+For children with Birthday 23: They learn through variety and communicate naturally. Provide diverse experiences and expressive outlets. Their words carry power — help them use it wisely.`
+    },
+    24: { 
+        title: "The Devoted Counselor", 
+        reading: `Birthday 24 (2+4=6) brings nurturing instincts, counseling ability, and devoted care into this life. This soul came in knowing how to support, advise, and heal through love.
+
+The day of birth imparts special gifts for harmonizing and guiding. Partnership and stability combine into responsibility and love that serves others deeply.
+
+This is someone who naturally counsels others, who creates harmony through devoted attention, and who heals through consistent, loving presence. Their special talent is devoted counseling.
+
+For children with Birthday 24: They naturally take care of others — make sure they're also cared for. Their counseling gifts emerge early. Create balanced giving and receiving.`
+    },
+    25: { 
+        title: "The Wise Intuitive", 
+        reading: `Birthday 25 (2+5=7) brings analytical mind combined with intuitive gifts into this life. This soul came in able to perceive hidden truths through both logic and intuition.
+
+The day of birth imparts special gifts for wise perception. Partnership and freedom combine into introspection that uses both head and heart to find truth.
+
+This is someone who analyzes and intuits simultaneously, who finds truths others miss through dual perception, and who develops wisdom through experience and reflection. Their special talent is integrated knowing.
+
+For children with Birthday 25: They process both intellectually and intuitively. Honor both ways of knowing. Their insights come through multiple channels — trust their perceptions.`
+    },
+    26: { 
+        title: "The Practical Visionary", 
+        reading: `Birthday 26 (2+6=8) brings business skills combined with partnership focus into this life. This soul came in able to achieve material success through collaboration.
+
+The day of birth imparts special gifts for building wealth and power with and for others. Partnership and responsibility combine into achievement that serves relationships.
+
+This is someone who succeeds in partnership, who builds wealth through cooperation, and who uses power to benefit those they care about. Their special talent is collaborative achievement.
+
+For children with Birthday 26: Help them understand partnership in achievement. Their success is meant to be shared. Guide their growing power toward benefiting others.`
+    },
+    27: { 
+        title: "The Compassionate Leader", 
+        reading: `Birthday 27 (2+7=9) brings leadership in humanitarian causes combined with spiritual wisdom into this life. This soul came in to inspire through compassion and understanding.
+
+The day of birth imparts special gifts for wise, compassionate influence. Partnership and introspection combine into humanitarian completion that serves through deep wisdom.
+
+This is someone who leads gently but powerfully, who inspires through compassion rather than force, and who serves humanity through spiritual understanding. Their special talent is wise compassion.
+
+For children with Birthday 27: Their empathy is deep and their wisdom real. Help them lead without depleting themselves. They serve humanity through understanding — nurture both gifts.`
+    },
+    28: { 
+        title: "The Independent Diplomat", 
+        reading: `Birthday 28 (2+8=10=1) brings leadership ability combined with partnership sensitivity into this life. This soul came in able to lead while remaining aware of others' needs.
+
+The day of birth imparts special gifts for balanced leadership. Partnership and power combine into independent initiative that stays connected to others.
+
+This is someone who leads with sensitivity, who achieves while maintaining relationships, and who pioneers without losing collaborative awareness. Their special talent is connected leadership.
+
+For children with Birthday 28: They can lead and cooperate — help them balance both. Their independence includes others. Guide their growing authority to remain relationship-aware.`
+    },
+    29: { 
+        title: "The Visionary Peacemaker", 
+        reading: `Birthday 29 (2+9=11) brings Master Number sensitivity combined with humanitarian vision into this life. This soul came in as a bridge between worlds, a visionary diplomat.
+
+The day of birth imparts exceptional gifts for inspired peacemaking. Partnership and completion combine into master illumination that serves through vision and sensitivity.
+
+This is someone whose intuition spans worlds, who creates peace through spiritual vision, and who bridges the earthly and divine. Their special talent is illuminated peacemaking.
+
+For children with Birthday 29: They are unusually sensitive and visionary. Create environments that support their sensitivity. Their peacemaking comes from spiritual perception — honor it.`
+    },
+    30: { 
+        title: "The Creative Visionary", 
+        reading: `Birthday 30 (3+0=3) brings amplified creativity, expression, and joy into this life. This soul came in as a powerful creator and communicator.
+
+The day of birth imparts special gifts for inspired creation. Creativity is amplified and purified by zero, adding spiritual dimension to self-expression and joy.
+
+This is someone whose creativity channels something beyond personal, who expresses in ways that inspire and uplift, and who creates beauty that touches souls. Their special talent is inspired creation.
+
+For children with Birthday 30: Their creativity has unusual depth. Provide abundant creative outlets. Their expression carries something special — help it develop without pressure.`
+    },
+    31: { 
+        title: "The Disciplined Creator", 
+        reading: `Birthday 31 (3+1=4) brings creativity combined with practical discipline into this life. This soul came in able to manifest artistic visions into solid reality.
+
+The day of birth imparts special gifts for building creative visions. Creativity and leadership combine into stability that produces lasting artistic works.
+
+This is someone who creates with discipline, who builds artistic visions into tangible form, and who combines inspiration with perspiration. Their special talent is manifested creativity.
+
+For children with Birthday 31: They create with unusual follow-through. Support both their creativity and their discipline. Their art has practical foundation — help them develop both aspects.`
+    }
 };
 
 const PERSONAL_YEAR_READINGS = {
@@ -1571,32 +1850,239 @@ const KARMIC_DEBT_READINGS = {
 };
 
 const SOUL_URGE_READINGS = {
-    1: { title: "Desire for Independence", reading: "Soul Urge 1 craves independence, leadership, and being first. Deepest fulfillment comes from pioneering, leading, and expressing individuality. The soul wants to stand out and make an original contribution." },
-    2: { title: "Desire for Harmony", reading: "Soul Urge 2 craves peace, partnership, and emotional connection. Deepest fulfillment comes from harmonious relationships and supporting others. The soul wants to love and be loved in true partnership." },
-    3: { title: "Desire for Expression", reading: "Soul Urge 3 craves creative self-expression and joy. Deepest fulfillment comes from artistic creation, communication, and inspiring others. The soul wants to create beauty and spread happiness." },
-    4: { title: "Desire for Security", reading: "Soul Urge 4 craves stability, order, and tangible accomplishment. Deepest fulfillment comes from building something lasting and reliable. The soul wants to create security and leave a solid legacy." },
-    5: { title: "Desire for Freedom", reading: "Soul Urge 5 craves adventure, variety, and personal freedom. Deepest fulfillment comes from new experiences and freedom from restriction. The soul wants to explore life fully without limitation." },
-    6: { title: "Desire for Love", reading: "Soul Urge 6 craves love, family, and nurturing relationships. Deepest fulfillment comes from caring for loved ones and creating harmony. The soul wants to give and receive love in a beautiful home." },
-    7: { title: "Desire for Understanding", reading: "Soul Urge 7 craves knowledge, wisdom, and spiritual truth. Deepest fulfillment comes from understanding life's mysteries. The soul wants to comprehend the deeper meaning of existence." },
-    8: { title: "Desire for Achievement", reading: "Soul Urge 8 craves success, recognition, and material mastery. Deepest fulfillment comes from achievement and respected authority. The soul wants to accomplish something significant and be recognized for it." },
-    9: { title: "Desire to Serve", reading: "Soul Urge 9 craves to give back, heal, and serve humanity. Deepest fulfillment comes from making the world better. The soul wants to contribute something meaningful to the greater good." },
-    11: { title: "Desire to Inspire", reading: "Soul Urge 11 craves to inspire, illuminate, and channel higher wisdom. Deepest fulfillment comes from spiritual connection and inspiring others. The soul wants to be a vessel for light and truth." },
-    22: { title: "Desire to Build Dreams", reading: "Soul Urge 22 craves to manifest grand visions into reality. Deepest fulfillment comes from building something that serves humanity on a large scale. The soul wants to leave a lasting legacy that benefits many." },
-    33: { title: "Desire to Heal", reading: "Soul Urge 33 craves to heal through unconditional love. Deepest fulfillment comes from selfless service and teaching through example. The soul wants to embody and radiate pure love." }
+    1: { 
+        title: "Desire for Independence", 
+        reading: `Soul Urge 1 craves independence, leadership, and being first. At the deepest level, this soul needs to feel original, pioneering, and self-reliant.
+
+This inner drive often creates someone who must do things their own way, even when there's an easier path. Being told what to do feels like soul-level discomfort. Leadership isn't just a preference — it's a need.
+
+Deepest fulfillment comes from pioneering new territory, starting something original, and expressing unique individuality. This soul feels most alive when standing at the front, when charting their own course, when being recognized for original contribution.
+
+For children with this Soul Urge: Let them lead in safe contexts. Don't do everything for them — they need to prove their capability to themselves. Honor their need to be first and to figure things out independently.`
+    },
+    2: { 
+        title: "Desire for Harmony", 
+        reading: `Soul Urge 2 craves peace, partnership, and deep emotional connection. At the deepest level, this soul needs to feel loved, included, and part of meaningful relationships.
+
+This inner drive creates someone who is exquisitely sensitive to others' emotions and needs. Conflict feels physically uncomfortable. Harmony isn't a preference — it's essential to wellbeing.
+
+Deepest fulfillment comes from true partnership, from being the support behind success, from creating peace and beauty in relationships. This soul feels most alive when deeply connected, when someone truly sees them, when harmony flows.
+
+For children with this Soul Urge: Create peaceful home environments. Validate their emotional sensitivity. Never dismiss their need for connection as "clingy" — it's their soul speaking.`
+    },
+    3: { 
+        title: "Desire for Expression", 
+        reading: `Soul Urge 3 craves creative self-expression and joy. At the deepest level, this soul needs to communicate, create, and bring beauty into the world.
+
+This inner drive creates someone who must express themselves — through art, words, music, or personality. Suppressed creativity feels like spiritual suffocation. Self-expression isn't optional — it's survival.
+
+Deepest fulfillment comes from artistic creation, inspiring others, and spreading joy. This soul feels most alive when creating, when making others laugh, when their unique voice is heard and celebrated.
+
+For children with this Soul Urge: Provide creative outlets — art supplies, instruments, journals, stages. Celebrate their self-expression without criticism. Their joy is meant to be shared with the world.`
+    },
+    4: { 
+        title: "Desire for Security", 
+        reading: `Soul Urge 4 craves stability, order, and tangible accomplishment. At the deepest level, this soul needs to build something lasting and create security that endures.
+
+This inner drive creates someone who values hard work, reliability, and concrete results. Chaos and instability feel threatening. Structure isn't rigidity — it's sacred foundation.
+
+Deepest fulfillment comes from building something solid, from being utterly reliable, from creating order out of chaos. This soul feels most alive when their work produces tangible results, when they can see the foundation they've built.
+
+For children with this Soul Urge: Create consistent routines and follow through on promises. Let them complete projects to see tangible results. Validate their need for stability — it's wisdom, not fear.`
+    },
+    5: { 
+        title: "Desire for Freedom", 
+        reading: `Soul Urge 5 craves adventure, variety, and personal freedom. At the deepest level, this soul needs to experience life fully without restriction or limitation.
+
+This inner drive creates someone who feels confined by routine and restriction. Sameness feels like slow death. Freedom isn't rebellion — it's oxygen.
+
+Deepest fulfillment comes from new experiences, from variety and change, from the thrill of the unexpected. This soul feels most alive when exploring, when the next adventure beckons, when life feels expansive and limitless.
+
+For children with this Soul Urge: Provide variety and new experiences. Don't over-restrict — they need room to explore. Channel their need for freedom into positive adventures rather than risky rebellion.`
+    },
+    6: { 
+        title: "Desire for Love", 
+        reading: `Soul Urge 6 craves love, family, and nurturing relationships. At the deepest level, this soul needs to care for others and create a beautiful, harmonious home.
+
+This inner drive creates someone who puts family and loved ones first. An unharmonious home feels like personal failure. Nurturing isn't a role — it's a calling.
+
+Deepest fulfillment comes from caring for loved ones, from creating beauty and harmony, from being needed and valued by family. This soul feels most alive when their home is peaceful, when everyone feels cared for, when love flows freely.
+
+For children with this Soul Urge: Let them help with nurturing tasks (caring for plants, pets, younger siblings). Create a beautiful, harmonious home environment. They take on others' emotions — teach them healthy boundaries.`
+    },
+    7: { 
+        title: "Desire for Understanding", 
+        reading: `Soul Urge 7 craves knowledge, wisdom, and spiritual truth. At the deepest level, this soul needs to understand the deeper meaning behind everything.
+
+This inner drive creates someone who questions, analyzes, and seeks truth relentlessly. Surface-level explanations feel unsatisfying. Understanding isn't curiosity — it's purpose.
+
+Deepest fulfillment comes from uncovering mysteries, from moments of genuine insight, from connecting with spiritual truth. This soul feels most alive when studying deeply, when alone with thoughts, when touching the transcendent.
+
+For children with this Soul Urge: Provide space for solitude and deep thinking. Answer their questions thoughtfully — they sense when you're giving surface answers. Honor their spiritual nature from a young age.`
+    },
+    8: { 
+        title: "Desire for Achievement", 
+        reading: `Soul Urge 8 craves success, recognition, and material mastery. At the deepest level, this soul needs to achieve something significant and be recognized for it.
+
+This inner drive creates someone who is drawn to power, success, and material abundance. Feeling powerless is soul-crushing. Achievement isn't ego — it's purpose fulfillment.
+
+Deepest fulfillment comes from reaching goals, from building wealth and authority, from being respected and recognized for accomplishment. This soul feels most alive when winning, when building something impressive, when their power is acknowledged.
+
+For children with this Soul Urge: Let them experience achievement through goals and rewards. Teach healthy relationship with money and power. Validate their ambition — it's meant to accomplish great things.`
+    },
+    9: { 
+        title: "Desire to Serve", 
+        reading: `Soul Urge 9 craves to give back, heal, and serve humanity. At the deepest level, this soul needs to contribute something meaningful to the greater good.
+
+This inner drive creates someone who cares deeply about the world and feels called to make it better. Selfish living feels empty. Service isn't sacrifice — it's fulfillment.
+
+Deepest fulfillment comes from helping others, from contributing to causes larger than self, from leaving the world better than found. This soul feels most alive when serving, when they see their impact on others' lives, when connected to humanity.
+
+For children with this Soul Urge: Involve them in charitable activities. Help them understand their place in the larger human family. Their empathy is vast — teach them it's a gift while also teaching self-care.`
+    },
+    11: { 
+        title: "Desire to Inspire", 
+        reading: `Soul Urge 11 craves to inspire, illuminate, and channel higher wisdom. At the deepest level, this soul needs to be a vessel for spiritual light and inspiration.
+
+This inner drive creates someone who is highly intuitive, often receiving insights that seem to come from beyond. Ordinary life feels insufficient. Inspiration isn't ambition — it's calling.
+
+Deepest fulfillment comes from illuminating truth for others, from channeling inspiration, from living as a bridge between worlds. This soul feels most alive when deeply connected to the spiritual, when inspiring others, when truth flows through them.
+
+For children with this Soul Urge: They are highly sensitive and spiritually attuned. Protect their nervous system while nurturing their gifts. Validate their intuitions — they are receiving real information.`
+    },
+    22: { 
+        title: "Desire to Build Dreams", 
+        reading: `Soul Urge 22 craves to manifest grand visions into reality. At the deepest level, this soul needs to build something that serves humanity on a large scale.
+
+This inner drive creates someone who sees huge possibilities and feels compelled to make them real. Small projects feel like wasted potential. Building isn't ambition — it's sacred purpose.
+
+Deepest fulfillment comes from seeing visions become reality, from building lasting structures that benefit many, from leaving a legacy that endures. This soul feels most alive when working on something grand, when the pieces come together, when their building changes the world.
+
+For children with this Soul Urge: They may seem impossibly ambitious — don't dismiss their dreams. Help them learn practical skills to manifest visions. They are Master Builders and need support for their huge potential.`
+    },
+    33: { 
+        title: "Desire to Heal", 
+        reading: `Soul Urge 33 craves to heal through unconditional love. At the deepest level, this soul needs to embody and radiate pure, healing love into the world.
+
+This inner drive creates someone who feels others' pain deeply and wants to heal it. Anything less than unconditional love feels like failure. Healing isn't a career — it's identity.
+
+Deepest fulfillment comes from selfless service, from teaching through example, from being love in action. This soul feels most alive when helping others heal, when love flows without condition, when their presence brings peace.
+
+For children with this Soul Urge: They carry enormous spiritual responsibility — don't burden them further. Let them be children first. Their healing gifts will emerge naturally. Protect them from absorbing too much of others' pain.`
+    }
 };
 
 const PERSONALITY_NUMBER_READINGS = {
-    1: { title: "Projects Leadership", reading: "Personality Number 1 projects confidence, independence, and leadership. Others see someone capable and self-assured who can take charge. The outer self appears pioneering and assertive." },
-    2: { title: "Projects Gentleness", reading: "Personality Number 2 projects gentleness, cooperation, and sensitivity. Others see someone diplomatic and supportive who works well with others. The outer self appears kind and receptive." },
-    3: { title: "Projects Creativity", reading: "Personality Number 3 projects creativity, charm, and optimism. Others see someone expressive and entertaining who brings joy. The outer self appears artistic and sociable." },
-    4: { title: "Projects Reliability", reading: "Personality Number 4 projects reliability, practicality, and discipline. Others see someone dependable and hardworking who gets things done. The outer self appears stable and organized." },
-    5: { title: "Projects Versatility", reading: "Personality Number 5 projects versatility, energy, and attractiveness. Others see someone adventurous and dynamic who brings excitement. The outer self appears magnetic and changeable." },
-    6: { title: "Projects Warmth", reading: "Personality Number 6 projects warmth, responsibility, and nurturing. Others see someone caring and dependable who creates harmony. The outer self appears loving and domestic." },
-    7: { title: "Projects Mystery", reading: "Personality Number 7 projects mystery, intelligence, and depth. Others see someone thoughtful and reserved who has inner wisdom. The outer self appears analytical and spiritual." },
-    8: { title: "Projects Power", reading: "Personality Number 8 projects power, success, and authority. Others see someone accomplished and confident who can achieve. The outer self appears professional and commanding." },
-    9: { title: "Projects Wisdom", reading: "Personality Number 9 projects wisdom, compassion, and sophistication. Others see someone cultured and humanitarian who cares about the world. The outer self appears wise and charitable." },
-    11: { title: "Projects Inspiration", reading: "Personality Number 11 projects inspiration, intuition, and spiritual awareness. Others see someone insightful and visionary who senses deeply. The outer self appears illuminated and sensitive." },
-    22: { title: "Projects Vision", reading: "Personality Number 22 projects vision, capability, and mastery. Others see someone who can accomplish great things and build lasting structures. The outer self appears powerful and visionary." }
+    1: { 
+        title: "Projects Leadership", 
+        reading: `Personality Number 1 projects confidence, independence, and leadership. Others see someone capable and self-assured who can take charge and lead the way.
+
+The outer self appears pioneering, original, and assertive. First impressions involve strength, independence, and capability. Even before speaking, this energy commands attention and respect.
+
+This projection attracts opportunities for leadership and situations requiring initiative. People instinctively look to this person to take charge or start something new.
+
+However, this projection may intimidate some people or make them seem unapproachable. Learning to soften when appropriate helps balance the natural leadership aura.`
+    },
+    2: { 
+        title: "Projects Gentleness", 
+        reading: `Personality Number 2 projects gentleness, cooperation, and sensitivity. Others see someone diplomatic and supportive who works beautifully with others.
+
+The outer self appears kind, receptive, and harmonious. First impressions involve warmth, listening, and genuine interest in others. This energy draws people in and makes them feel comfortable.
+
+This projection attracts partnerships, supportive roles, and situations requiring diplomacy. People instinctively share their feelings with this person and seek their counsel.
+
+However, this projection may sometimes be underestimated or overlooked. Learning to assert when necessary helps balance the natural supportive aura.`
+    },
+    3: { 
+        title: "Projects Creativity", 
+        reading: `Personality Number 3 projects creativity, charm, and optimism. Others see someone expressive and entertaining who brings joy wherever they go.
+
+The outer self appears artistic, sociable, and uplifting. First impressions involve sparkle, warmth, and creative energy. This energy lights up rooms and lifts moods.
+
+This projection attracts creative opportunities, social invitations, and situations requiring communication. People instinctively want to be around this person and share in their positive energy.
+
+However, this projection may sometimes seem too light or not serious enough. Learning to show depth when appropriate helps balance the natural joyful aura.`
+    },
+    4: { 
+        title: "Projects Reliability", 
+        reading: `Personality Number 4 projects reliability, practicality, and discipline. Others see someone dependable and hardworking who can be counted on to get things done.
+
+The outer self appears stable, organized, and competent. First impressions involve trustworthiness, capability, and solid grounding. This energy inspires confidence and trust.
+
+This projection attracts responsibility, trust, and situations requiring practical solutions. People instinctively give this person important tasks and rely on their follow-through.
+
+However, this projection may sometimes seem rigid or boring. Learning to show spontaneity when appropriate helps balance the natural reliable aura.`
+    },
+    5: { 
+        title: "Projects Versatility", 
+        reading: `Personality Number 5 projects versatility, energy, and attractiveness. Others see someone adventurous and dynamic who brings excitement to any situation.
+
+The outer self appears magnetic, changeable, and full of life. First impressions involve energy, charm, and a hint of unpredictability. This energy draws people in and creates excitement.
+
+This projection attracts adventure, variety, and situations requiring adaptability. People instinctively want to go along on this person's adventures and experience their energy.
+
+However, this projection may sometimes seem unreliable or scattered. Learning to show consistency when appropriate helps balance the natural dynamic aura.`
+    },
+    6: { 
+        title: "Projects Warmth", 
+        reading: `Personality Number 6 projects warmth, responsibility, and nurturing care. Others see someone caring and dependable who creates harmony and makes people feel at home.
+
+The outer self appears loving, domestic, and responsible. First impressions involve comfort, care, and natural warmth. This energy makes people feel cared for and welcome.
+
+This projection attracts family roles, caregiving responsibilities, and situations requiring harmony. People instinctively bring their problems to this person and seek their nurturing presence.
+
+However, this projection may sometimes seem too focused on others or mothering. Learning to maintain boundaries helps balance the natural nurturing aura.`
+    },
+    7: { 
+        title: "Projects Mystery", 
+        reading: `Personality Number 7 projects mystery, intelligence, and depth. Others see someone thoughtful and reserved who has profound inner wisdom.
+
+The outer self appears analytical, spiritual, and somewhat enigmatic. First impressions involve intelligence, depth, and an air of mystery. This energy intrigues and draws curious minds.
+
+This projection attracts research opportunities, spiritual seekers, and situations requiring deep analysis. People instinctively respect this person's knowledge and seek their wisdom.
+
+However, this projection may sometimes seem aloof or unapproachable. Learning to show warmth when appropriate helps balance the natural mysterious aura.`
+    },
+    8: { 
+        title: "Projects Power", 
+        reading: `Personality Number 8 projects power, success, and authority. Others see someone accomplished and confident who can achieve significant results.
+
+The outer self appears professional, commanding, and capable of great success. First impressions involve competence, authority, and material mastery. This energy commands respect and opens doors.
+
+This projection attracts business opportunities, leadership roles, and situations requiring power and decisiveness. People instinctively see this person as capable of handling big responsibilities.
+
+However, this projection may sometimes seem intimidating or materialistic. Learning to show humility when appropriate helps balance the natural powerful aura.`
+    },
+    9: { 
+        title: "Projects Wisdom", 
+        reading: `Personality Number 9 projects wisdom, compassion, and sophistication. Others see someone cultured and humanitarian who genuinely cares about the world.
+
+The outer self appears wise, charitable, and worldly. First impressions involve depth, compassion, and evolved perspective. This energy inspires and uplifts.
+
+This projection attracts humanitarian opportunities, teaching roles, and situations requiring wisdom and broad perspective. People instinctively trust this person's counsel on important matters.
+
+However, this projection may sometimes seem too detached or above it all. Learning to stay grounded when appropriate helps balance the natural wise aura.`
+    },
+    11: { 
+        title: "Projects Inspiration", 
+        reading: `Personality Number 11 projects inspiration, intuition, and spiritual awareness. Others see someone insightful and visionary who senses things beyond the surface.
+
+The outer self appears illuminated, sensitive, and spiritually attuned. First impressions involve depth, intuition, and unusual perception. This energy inspires and sometimes awes.
+
+This projection attracts spiritual seekers, creative opportunities, and situations requiring vision and inspiration. People instinctively sense that this person has access to something beyond ordinary.
+
+However, this projection may sometimes seem too sensitive or impractical. Learning to show groundedness when appropriate helps balance the natural inspirational aura.`
+    },
+    22: { 
+        title: "Projects Vision", 
+        reading: `Personality Number 22 projects vision, capability, and mastery. Others see someone who can accomplish great things and build structures that last.
+
+The outer self appears powerful, visionary, and capable of manifesting large-scale dreams. First impressions involve impressive capability and grand potential. This energy commands respect and inspires ambition.
+
+This projection attracts major opportunities, building projects, and situations requiring vision combined with practical mastery. People instinctively see this person as capable of achieving the exceptional.
+
+However, this projection may sometimes seem overwhelming or intimidating. Learning to be approachable helps balance the natural master builder aura.`
+    }
 };
 
 // Export for use in other files

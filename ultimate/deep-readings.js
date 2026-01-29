@@ -656,6 +656,316 @@ Welcome to Earth, little star. We've been waiting for you.
 };
 
 // ============================================
+// DEEP MOON PHASE READINGS
+// ============================================
+
+const DEEP_MOON_PHASE_READINGS = {
+    "New Moon": {
+        title: "The Seed Carrier",
+        icon: "🌑",
+        hook: "Born in darkness, carrying the light of what's to come — this soul arrived at the most potent moment of potential, when everything is possible because nothing has yet begun.",
+        
+        coreNature: `The New Moon phase represents the moment just before dawn — the darkest point that precedes new light. A child born during this phase carries the energy of pure potential. They are beginners, initiators, and seed-planters by nature.
+        
+This is the soul who came to start things. Not necessarily to finish them — that's a different gift — but to perceive what wants to be born and give it the first spark of life. They may not know where something is going, but they feel when it's time for something new.`,
+        
+        lifePath: `This soul often experiences life as a series of fresh starts. They may change direction more than others, not from indecision but from their natural attunement to cycles of renewal. When something completes (or stagnates), they feel the pull toward the next beginning.
+
+Throughout their life, they'll be the one who senses when the old way has run its course, when it's time to plant new seeds, when a situation needs fresh energy. Others may not understand why they're always starting over — but they're following their lunar programming.`,
+        
+        innerWorld: `Internally, New Moon souls have a rich, hidden life that others rarely see. Like the dark moon itself, their light isn't visible from the outside. They process deeply in the darkness before bringing anything into form.
+
+They may seem mysterious or private, even to themselves. Their ideas and feelings often need to incubate before they can be expressed. Forcing premature expression feels violating — they need to trust their own timing.`,
+        
+        gifts: ["Perceiving new possibilities before others", "Initiating projects and movements", "Comfort with uncertainty and the unknown", "Natural attunement to timing and cycles", "Ability to start fresh without baggage", "Pioneering spirit and original vision"],
+        
+        shadows: ["Difficulty with follow-through and completion", "Feeling perpetually at the starting line", "Self-doubt about unrealized potential", "Frustration when others can't see their vision", "Starting too many things at once", "Fear of being 'seen' before ready"],
+        
+        relationships: `In relationships, New Moon souls bring freshness and possibility. They help others see new directions and untapped potential. However, they may struggle with the 'maintenance' phase of relationships — they're energized by new beginnings but can feel stuck in established patterns.
+
+They need partners who appreciate their need for renewal and don't interpret their desire for freshness as dissatisfaction. They're not trying to escape; they're trying to bring new life into what exists.`,
+        
+        spiritualPath: `Spiritually, these souls understand that creation happens in the void. They're comfortable with mystery and the unknown in ways others find unsettling. They may be drawn to practices involving intention-setting, manifestation, or working with potential rather than form.
+
+Their spiritual gift is the ability to access what doesn't exist yet — to sense what's trying to be born. They're natural manifesters, not because they control reality, but because they're aligned with creation's earliest impulses.`,
+        
+        parentGuidance: `This child may take longer to 'show' themselves than others — and that's okay. Their light is developing in the dark, like a seed underground. Don't rush them to produce visible results.
+
+Support their many beginnings without demanding completion on everything. Some seeds they plant will grow; others are practice. Help them learn the difference without shaming their exploratory nature.
+
+They may seem uncertain or unclear about who they are — this is part of their nature, not a problem to fix. Their identity crystallizes through trying things, not through planning.`,
+        
+        affirmation: "Your potential is not a failure — it's a gift. What you sense wanting to be born is real. You are allowed to begin again, and again, and again."
+    },
+    
+    "Waxing Crescent": {
+        title: "The Brave Seedling",
+        icon: "🌒",
+        hook: "Born with the first sliver of light breaking through darkness — this soul arrived knowing that faith and forward movement matter more than certainty.",
+        
+        coreNature: `The Waxing Crescent represents the moment a seed breaks through soil into light — that first brave push against resistance. A child born during this phase carries the energy of determined emergence. They are faith-walkers, pushing forward despite uncertainty.
+
+This is the soul who knows that action creates clarity. They don't wait until they're sure; they move forward and figure it out along the way. Their courage isn't the absence of fear — it's the decision to act anyway.`,
+        
+        lifePath: `This soul often experiences life as an ongoing journey into the unknown, supported by faith rather than evidence. They're the ones who take the first step when no path is visible, who say yes before they know how.
+
+Throughout life, they'll encounter situations requiring them to move forward without guarantees. What others see as reckless, they experience as necessary — they know that waiting for certainty means waiting forever.`,
+        
+        innerWorld: `Internally, Waxing Crescent souls have a quiet fire of determination burning beneath the surface. They experience both the pull of momentum and the weight of self-doubt. The key to their nature is learning that doubt doesn't have to stop movement.
+
+They often wrestle with faith — in themselves, in life, in their path. This wrestling is their work. They're here to prove (to themselves most of all) that moving forward matters even when you're not sure.`,
+        
+        gifts: ["Courage to act without certainty", "Faith in forward momentum", "Persistence through early difficulties", "Ability to inspire others to begin", "Natural entrepreneurial spirit", "Comfort with incremental progress"],
+        
+        shadows: ["Impatience with slow growth", "Frustration when effort doesn't show results yet", "Comparing their beginning to others' middles", "Wavering faith when things get hard", "Difficulty tolerating the vulnerability of early stages"],
+        
+        relationships: `In relationships, Waxing Crescent souls bring enthusiasm and forward energy. They help others get started and push through initial resistance. They're natural encouragers who believe in people's potential.
+
+However, they may grow impatient when relationships hit predictable rough patches. They need to learn that relationship growth, like all growth, includes plateaus and hard seasons.`,
+        
+        spiritualPath: `Spiritually, these souls understand faith as a verb rather than a noun. They know that belief is demonstrated through action, not just affirmed through words. They may be drawn to practices that combine intention with movement — walking meditation, active prayer, embodied spirituality.
+
+Their spiritual gift is the courage to act on spiritual guidance before it fully makes sense. They trust the divine through forward movement.`,
+        
+        parentGuidance: `This child needs their efforts celebrated before results appear. The bravery is in the beginning, not the completion. Help them see that starting is its own achievement.
+
+Don't compare their progress to others who are further along in their journeys. Celebrate their increments. When they get frustrated with slow growth, remind them that seeds don't become trees overnight.
+
+Support their determination while teaching healthy patience. They're learning that faith isn't just believing good things will happen — it's continuing to act while waiting.`,
+        
+        affirmation: "Your movement matters even before you see results. Faith is the courage to keep going. Every step forward is a victory."
+    },
+    
+    "First Quarter": {
+        title: "The Crisis Navigator",
+        icon: "🌓",
+        hook: "Born at the critical turning point — this soul arrived knowing that growth requires friction, that decisions must be made, and that sometimes you have to break through to break free.",
+        
+        coreNature: `The First Quarter Moon represents a crisis point — when the growing moon reaches exactly half-illumination and must push through resistance to continue growing. A child born during this phase carries the energy of decisive action. They are breakthrough artists, crisis navigators, and change-makers.
+
+This is the soul who thrives when things get challenging. They're not thrown by obstacles — they're energized by them. When others see problems, they see puzzles to solve.`,
+        
+        lifePath: `This soul often experiences life as a series of challenges requiring action. They seem to attract situations demanding decisions, confrontations, and breakthroughs. This isn't bad luck — it's their purpose activating.
+
+Throughout life, they'll be the one who takes action when everyone else is frozen. They're built for crisis, not because they create drama, but because they can navigate it when it arrives.`,
+        
+        innerWorld: `Internally, First Quarter souls have an urgent sense that something needs to happen. They may feel restless in situations of prolonged stability. They're not comfortable with complacency — something in them pushes toward action and resolution.
+
+They often experience inner tension between different parts of themselves or competing desires. This tension is their fuel — it creates the pressure that produces diamonds.`,
+        
+        gifts: ["Decisiveness under pressure", "Ability to take necessary action", "Natural crisis management", "Courage to confront issues head-on", "Skill at breaking through obstacles", "Energized by challenges that drain others"],
+        
+        shadows: ["Creating conflict when bored", "Difficulty with peace and stability", "Impulsive decisions that could have waited", "Confrontational approach when gentleness would work", "Viewing everything as a battle to win", "Exhausting themselves and others with intensity"],
+        
+        relationships: `In relationships, First Quarter souls bring decisiveness and the courage to address issues directly. They don't let things fester — they'd rather have an uncomfortable conversation now than let resentment build.
+
+However, they may struggle with the peaceful phases of relationships, unconsciously creating conflict to feel engaged. They need to learn that growth doesn't always require crisis.`,
+        
+        spiritualPath: `Spiritually, these souls understand that transformation requires tension. They know that real change involves breaking through, not sliding smoothly. They may be drawn to challenging spiritual practices — fasting, intense meditation, transformative experiences.
+
+Their spiritual gift is the courage to face their shadows directly. While others avoid inner darkness, they're willing to confront it.`,
+        
+        parentGuidance: `This child needs appropriate challenges — without them, they'll create their own, and those may be less constructive. Channel their need for action into sports, competitions, problem-solving, or projects with clear obstacles.
+
+Don't smooth their path completely. They grow through friction. When they're facing challenges, resist the urge to rescue them immediately. Let them experience the victory of breakthrough.
+
+Help them learn that not everything is a battle. Sometimes the brave choice is to rest, to wait, to let things unfold without forcing.`,
+        
+        affirmation: "Your courage transforms obstacles into opportunities. Your willingness to act when others freeze is a gift. You are built for breakthrough."
+    },
+    
+    "Waxing Gibbous": {
+        title: "The Refiner",
+        icon: "🌔",
+        hook: "Born in the final push before fullness — this soul arrived knowing that details matter, that excellence requires adjustment, and that almost-there is its own beautiful state.",
+        
+        coreNature: `The Waxing Gibbous Moon represents the phase of refinement — when the moon is nearly full and final adjustments are being made. A child born during this phase carries the energy of perfection and preparation. They are refiners, analysts, and devotees of excellence.
+
+This is the soul who notices what others miss. They see the gap between good and great, between almost and done. Their eye for improvement isn't criticism — it's devotion to potential fully realized.`,
+        
+        lifePath: `This soul often experiences life as a process of continuous improvement. They're naturally drawn to refining, analyzing, and perfecting. Whatever they touch, they want to make better.
+
+Throughout life, they'll be the one who takes things from 90% to 100%, who polishes what others leave rough, who asks "how can this be better?" Their work often involves improving existing systems rather than creating from scratch.`,
+        
+        innerWorld: `Internally, Waxing Gibbous souls experience a constant sense of almost. There's always something more to adjust, to improve, to refine. This can create anxiety when they can't accept good enough, or it can fuel genuine excellence.
+
+They may struggle with the feeling that nothing is ever quite ready — including themselves. Learning to balance improvement with acceptance is their core work.`,
+        
+        gifts: ["Eye for detail and improvement", "Analytical and critical thinking", "Dedication to excellence", "Patience with refinement processes", "Ability to prepare for important moments", "Natural quality control"],
+        
+        shadows: ["Perfectionism that prevents completion", "Analysis paralysis", "Never feeling ready or good enough", "Criticism of self and others", "Inability to enjoy imperfect present", "Anxiety about details others don't notice"],
+        
+        relationships: `In relationships, Waxing Gibbous souls bring attention and care. They notice the details of what others need. They remember preferences, they prepare thoughtfully, they show love through attention.
+
+However, they may struggle with accepting imperfect partners and imperfect love. They need to learn that love isn't about perfection — it's about presence with what is.`,
+        
+        spiritualPath: `Spiritually, these souls understand that the path of mastery requires endless refinement. They're drawn to practices with clear measures of progress — structured meditation paths, detailed spiritual practices, systems with levels of advancement.
+
+Their spiritual gift is the patience to work on themselves continuously without needing dramatic breakthroughs. They trust gradual improvement.`,
+        
+        parentGuidance: `This child needs their efforts acknowledged, not just their results. The refinement process is their gift — help them value it even when perfection isn't achieved.
+
+Watch for perfectionism becoming paralysis. Sometimes they need permission to release something that's good enough, even if it isn't perfect. Help them distinguish between details that matter and details that are just anxiety.
+
+Don't dismiss their high standards as unnecessary. Their attention to quality is real and valuable. But do help them find peace with imperfection when appropriate.`,
+        
+        affirmation: "Your attention to detail is a gift, not a burden. Excellence is worth pursuing. AND you are already enough, exactly as you are."
+    },
+    
+    "Full Moon": {
+        title: "The Illuminated One",
+        icon: "🌕",
+        hook: "Born at the peak of lunar light — this soul arrived to be seen, to feel fully, and to experience life at maximum intensity.",
+        
+        coreNature: `The Full Moon represents the moment of complete illumination — when the moon receives and reflects maximum light. A child born during this phase carries the energy of fullness, intensity, and visibility. They are meant to be seen, to shine, and to experience life without holding back.
+
+This is the soul who lives at full volume. Their emotions are big, their presence is noticeable, their life tends toward significant moments. They weren't built for quiet corners — they were built to reflect light.`,
+        
+        lifePath: `This soul often experiences life as a series of culminations and revelations. They seem to be present for significant moments — climaxes, completions, revelations. Things that were building come to fruition around them.
+
+Throughout life, they'll experience heightened emotions and significant events. What others experience as normal life, they experience at higher intensity. This isn't drama — it's their lunar frequency.`,
+        
+        innerWorld: `Internally, Full Moon souls experience emotions at full blast. They don't have the filter that dampens feeling for others. Everything registers deeply, intensely, completely.
+
+This can be overwhelming — they may need to learn to dim their internal volume to function. But their emotional depth is also their greatest gift. They feel what others only glimpse.`,
+        
+        gifts: ["Emotional depth and authenticity", "Natural presence and magnetism", "Ability to complete and fulfill", "Capacity for peak experiences", "Power to illuminate situations", "Gift of being fully present"],
+        
+        shadows: ["Emotional overwhelm", "Need for external validation", "Difficulty with subtlety", "All-or-nothing patterns", "Drama when life feels too quiet", "Exhaustion from intensity"],
+        
+        relationships: `In relationships, Full Moon souls bring intensity, presence, and deep feeling. They love fully, not cautiously. Their partners experience being truly seen and fully loved.
+
+However, they may struggle with the mundane phases of relationships. They need to learn that love isn't always at fever pitch — sometimes it's quiet companionship.`,
+        
+        spiritualPath: `Spiritually, these souls understand that illumination means nothing stays hidden. They're drawn to practices that reveal truth — shadow work, therapy, confession, radical honesty.
+
+Their spiritual gift is the courage to be fully seen. While others hide parts of themselves, Full Moon souls are here to demonstrate that wholeness includes the parts we usually shadow.`,
+        
+        parentGuidance: `This child needs plenty of outlets for their intensity. They'll feel everything bigger than other kids — don't tell them they're "too much." They're exactly the right amount for their lunar phase.
+
+Help them develop emotional regulation tools because they need them more than most. But don't try to dim their light — help them learn to work with it.
+
+They need to be seen and acknowledged more than other children might. This isn't ego — it's their nature. Visibility is part of how they process their identity.`,
+        
+        affirmation: "Your intensity is not too much — it's exactly right. You are allowed to shine at full power. Your feelings are meant to be felt fully."
+    },
+    
+    "Waning Gibbous": {
+        title: "The Wisdom Sharer",
+        icon: "🌖",
+        hook: "Born as the light begins to soften — this soul arrived knowing that wisdom is meant to be shared, that gratitude completes experience, and that the real gift is in the giving.",
+        
+        coreNature: `The Waning Gibbous Moon represents the phase of sharing and gratitude — when the full moon begins to decrease and its light is distributed. A child born during this phase carries the energy of teaching and generosity. They are wisdom-sharers, mentors, and gratitude practitioners.
+
+This is the soul who processes their experiences by sharing them. They learn something, then immediately want to pass it on. Their understanding completes itself in the giving.`,
+        
+        lifePath: `This soul often experiences life as an ongoing education meant to be shared. Every experience becomes a lesson, every lesson becomes a gift for others. They're natural teachers in whatever form that takes.
+
+Throughout life, they'll find themselves in positions of sharing knowledge — formally or informally. They may mentor, teach, write, or simply be the friend everyone comes to for wisdom.`,
+        
+        innerWorld: `Internally, Waning Gibbous souls process experiences by making meaning of them. They're constantly asking "what did I learn from this? What can I share from this?" Nothing is wasted — everything becomes curriculum.
+
+They may struggle with experiences that don't yield obvious lessons. Learning to simply be with experience, without extracting meaning for others, is part of their growth.`,
+        
+        gifts: ["Natural teaching ability", "Gift for sharing wisdom", "Capacity for gratitude", "Generosity of spirit", "Ability to make meaning", "Skill at distilling experience into lessons"],
+        
+        shadows: ["Over-giving and depletion", "Difficulty receiving from others", "Turning everything into a lesson (even when not wanted)", "Preachy or know-it-all tendencies", "Using teaching to avoid feeling", "Not enough silence to simply be"],
+        
+        relationships: `In relationships, Waning Gibbous souls bring wisdom, generosity, and support. They help their partners grow and learn. They're patient teachers who celebrate others' development.
+
+However, they may struggle with equal partnerships — always being the one with answers can create imbalance. They need to learn to receive as much as they give.`,
+        
+        spiritualPath: `Spiritually, these souls understand that wisdom completes itself in sharing. They're drawn to spiritual paths that involve teaching, service, or transmission — lineages where knowledge is passed down.
+
+Their spiritual gift is the ability to receive something and pass it on without distortion. They're natural vessels for wisdom transmission.`,
+        
+        parentGuidance: `This child will want to share what they learn almost immediately — let them teach you, teach siblings, teach anyone who'll listen. Their processing is in the sharing.
+
+Help them develop boundaries around giving. Not everyone wants their lessons, and they need to learn to offer wisdom rather than impose it.
+
+Make sure they're receiving as much as giving. They may deplete themselves in generosity. Model receiving for them so they learn that's part of the cycle too.`,
+        
+        affirmation: "Your wisdom is meant to be shared. Your generosity is a gift. AND you are allowed to receive as much as you give."
+    },
+    
+    "Last Quarter": {
+        title: "The Sacred Releaser",
+        icon: "🌗",
+        hook: "Born at the second crisis point — this soul arrived knowing that letting go takes as much courage as holding on, and that some endings are actually liberations.",
+        
+        coreNature: `The Last Quarter Moon represents the moment of release crisis — when the waning moon reaches exactly half-illumination and must surrender to continue its cycle. A child born during this phase carries the energy of conscious release. They are transition guides, ending-honorers, and liberation artists.
+
+This is the soul who knows how to let go. When others cling, they release. When others fight endings, they midwife them. Their courage is in the surrender.`,
+        
+        lifePath: `This soul often experiences life as a series of necessary endings and releases. They may seem to outgrow things faster than others — relationships, phases, identities. This isn't fickleness; it's their nature activating.
+
+Throughout life, they'll be the one who can let go when others can't. They may help others through transitions, goodbyes, and endings. Their presence makes release bearable.`,
+        
+        innerWorld: `Internally, Last Quarter souls experience a pull toward simplification. They feel what needs to go, what's weighing them down, what's complete even if not finished. This can feel like constant loss, or it can feel like liberation.
+
+They may struggle with attachment, not because they don't love but because they feel endings more acutely. Learning to hold things loosely while still loving deeply is their work.`,
+        
+        gifts: ["Courage to let go", "Skill with transitions and endings", "Wisdom about what truly matters", "Ability to release gracefully", "Natural grief processing", "Gift of making space for new"],
+        
+        shadows: ["Letting go of things too quickly", "Difficulty with attachment and commitment", "Crisis orientation like First Quarter", "Depression around endings", "Feeling like everything is always ending", "Fear of starting because ending is inevitable"],
+        
+        relationships: `In relationships, Last Quarter souls bring wisdom about impermanence and the courage to address what's not working. They won't hold on to dead relationships out of fear.
+
+However, they may let go too easily, or their awareness of impermanence may prevent them from fully committing. They need to learn that knowing something will end doesn't mean they can't invest fully.`,
+        
+        spiritualPath: `Spiritually, these souls understand non-attachment as a practice rather than a philosophy. They're drawn to teachings about impermanence, letting go, death and rebirth.
+
+Their spiritual gift is the ability to release what others cling to desperately. They can model healthy endings and conscious transition.`,
+        
+        parentGuidance: `This child will experience endings more intensely and may need help grieving transitions that others barely notice. What seems small might feel significant to them.
+
+Don't push them to 'get over' endings quickly — they process endings deeply, and that's okay. But do help them not become identified with loss.
+
+Help them see that their ability to let go is a gift, not a curse. Many people suffer because they can't release. This child has the courage to.`,
+        
+        affirmation: "Your courage to let go is rare and precious. Endings are not failures — they are completions. You make space for new life by releasing the old."
+    },
+    
+    "Waning Crescent": {
+        title: "The Sacred Stillness",
+        icon: "🌘",
+        hook: "Born in the quiet before renewal — this soul arrived knowing that rest is not laziness, that endings prepare beginnings, and that some of the most important work happens in stillness.",
+        
+        coreNature: `The Waning Crescent Moon represents the phase of surrender and spiritual preparation — when the moon is barely visible and returning to darkness for renewal. A child born during this phase carries the energy of sacred completion. They are rest practitioners, cycle-enders, and preparation specialists.
+
+This is the soul who understands the value of pause. They know that creation follows rest, that death precedes rebirth, that the void is not empty but full of potential.`,
+        
+        lifePath: `This soul often experiences life as a series of completions and preparations. They're naturally drawn to endings, closures, and the quiet work that happens before new things begin.
+
+Throughout life, they'll be the one who knows when it's time to rest rather than push. They may resist a culture that values constant productivity — and they're right to. Someone has to model healthy pause.`,
+        
+        innerWorld: `Internally, Waning Crescent souls experience a pull toward silence, rest, and inner work. Their energy is naturally lower than action-oriented phases, which can feel like a problem in a world that values doing.
+
+They may struggle with feeling 'lazy' or 'unproductive' when they're actually completing necessary spiritual work. Learning to trust their need for stillness is essential.`,
+        
+        gifts: ["Deep intuition and inner knowing", "Spiritual sensitivity", "Ability to complete cycles gracefully", "Natural capacity for rest and renewal", "Wisdom about the importance of pause", "Connection to the liminal and mysterious"],
+        
+        shadows: ["Low energy and withdrawal", "Difficulty initiating new things", "Escapism and avoidance", "Depression or melancholy", "Feeling 'done' before their time", "Isolation disguised as introspection"],
+        
+        relationships: `In relationships, Waning Crescent souls bring depth, intuition, and spiritual sensitivity. They sense things about their partners that aren't spoken. They provide a calm presence that soothes agitation.
+
+However, they may withdraw when they need energy they don't have. They need partners who understand their need for solitude and don't interpret it as rejection.`,
+        
+        spiritualPath: `Spiritually, these souls have a natural advantage — they're already oriented toward inner experience. They're drawn to contemplative practices, mysticism, and paths that value being over doing.
+
+Their spiritual gift is access to the liminal — the space between worlds, between phases, between identities. They can navigate the void that terrifies others.`,
+        
+        parentGuidance: `This child genuinely needs more rest and quiet time than others. This is not laziness — it's their nature. Protect their need for solitude without making them feel weird for needing it.
+
+Help them find ways to engage with the world that don't require constant high energy. They may thrive in supportive roles, behind-the-scenes work, or fields that value depth over speed.
+
+Watch for withdrawal becoming isolation, or rest becoming avoidance. There's a line between healthy pause and unhealthy hiding — help them find it.`,
+        
+        affirmation: "Your stillness is not laziness — it's wisdom. Rest is sacred work. You are preparing for something new, even when you can't see it yet."
+    }
+};
+
+// ============================================
 // Export for use
 // ============================================
 if (typeof module !== 'undefined' && module.exports) {
@@ -663,6 +973,7 @@ if (typeof module !== 'undefined' && module.exports) {
         DEEP_MOON_READINGS,
         DEEP_RISING_READINGS,
         DEEP_SUN_READINGS,
+        DEEP_MOON_PHASE_READINGS,
         COSMIC_WRAPUP_TEMPLATES
     };
 }

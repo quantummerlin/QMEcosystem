@@ -99,14 +99,14 @@ const CHINESE_ZODIAC = [
 ];
 
 const MOON_PHASES = [
-    { name: 'New Moon', icon: '🌑', range: [0, 1.85] },
-    { name: 'Waxing Crescent', icon: '🌒', range: [1.85, 7.38] },
-    { name: 'First Quarter', icon: '🌓', range: [7.38, 11.07] },
-    { name: 'Waxing Gibbous', icon: '🌔', range: [11.07, 14.77] },
-    { name: 'Full Moon', icon: '🌕', range: [14.77, 18.46] },
-    { name: 'Waning Gibbous', icon: '🌖', range: [18.46, 22.15] },
-    { name: 'Last Quarter', icon: '🌗', range: [22.15, 25.84] },
-    { name: 'Waning Crescent', icon: '🌘', range: [25.84, 29.53] }
+    { name: 'New Moon', icon: '🌑', range: [0, 1.85], illumination: '0-2%' },
+    { name: 'Waxing Crescent', icon: '🌒', range: [1.85, 7.38], illumination: '2-49%' },
+    { name: 'First Quarter', icon: '🌓', range: [7.38, 11.07], illumination: '50%' },
+    { name: 'Waxing Gibbous', icon: '🌔', range: [11.07, 14.77], illumination: '51-99%' },
+    { name: 'Full Moon', icon: '🌕', range: [14.77, 18.46], illumination: '100%' },
+    { name: 'Waning Gibbous', icon: '🌖', range: [18.46, 22.15], illumination: '99-51%' },
+    { name: 'Last Quarter', icon: '🌗', range: [22.15, 25.84], illumination: '50%' },
+    { name: 'Waning Crescent', icon: '🌘', range: [25.84, 30], illumination: '49-2%' }
 ];
 
 // ============================================
@@ -605,31 +605,35 @@ function calculateChineseZodiac(birthDate) {
 }
 
 function calculateMoonPhase(birthDate) {
-    const date = new Date(birthDate);
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
+    // More accurate moon phase calculation using synodic month
+    // Reference: Known New Moon on January 6, 2000 at 18:14 UTC
+    const knownNewMoon = new Date(Date.UTC(2000, 0, 6, 18, 14, 0));
+    const synodicMonth = 29.53058867; // Average length of synodic month in days
     
-    // Simplified moon phase calculation
-    const c = Math.floor(year / 100);
-    const n = year - 19 * Math.floor(year / 19);
-    const k = Math.floor((c - 17) / 25);
-    let i = c - Math.floor(c / 4) - Math.floor((c - k) / 3) + 19 * n + 15;
-    i = i - 30 * Math.floor(i / 30);
-    i = i - Math.floor(i / 28) * (1 - Math.floor(i / 28) * Math.floor(29 / (i + 1)) * Math.floor((21 - n) / 11));
-    let j = year + Math.floor(year / 4) + i + 2 - c + Math.floor(c / 4);
-    j = j - 7 * Math.floor(j / 7);
-    const l = i - j;
-    const moonDay = day + l;
-    const phase = ((moonDay % 30) + 30) % 30;
+    const date = new Date(birthDate);
+    // Convert to UTC noon for consistency
+    const targetDate = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), 12, 0, 0));
+    
+    // Calculate days since known new moon
+    const daysSinceNewMoon = (targetDate - knownNewMoon) / (1000 * 60 * 60 * 24);
+    
+    // Get position within current lunar cycle (0-29.53)
+    let phase = daysSinceNewMoon % synodicMonth;
+    if (phase < 0) phase += synodicMonth; // Handle dates before reference
+    
+    // Define phase ranges based on synodic month (29.53 days / 8 phases ≈ 3.69 days each)
+    // New Moon: 0-1.85, Waxing Crescent: 1.85-7.38, First Quarter: 7.38-11.07
+    // Waxing Gibbous: 11.07-14.77, Full Moon: 14.77-18.46
+    // Waning Gibbous: 18.46-22.15, Last Quarter: 22.15-25.84, Waning Crescent: 25.84-29.53
     
     for (const moonPhase of MOON_PHASES) {
         if (phase >= moonPhase.range[0] && phase < moonPhase.range[1]) {
-            return moonPhase;
+            return { ...moonPhase, dayInCycle: phase.toFixed(1) };
         }
     }
     
-    return MOON_PHASES[0];
+    // If phase is very close to 29.53, return New Moon
+    return { ...MOON_PHASES[0], dayInCycle: phase.toFixed(1) };
 }
 
 function calculateNorthNode(birthDate) {
