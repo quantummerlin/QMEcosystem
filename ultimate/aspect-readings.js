@@ -172,6 +172,107 @@ The gift is learning perfect timing. Eventually, they develop an instinct for wh
     
     // Additional aspects for other planet pairs would follow...
     // Mercury-Neptune, Jupiter-Saturn, etc.
+    
+    "Sun-Jupiter": {
+        Conjunction: {
+            title: "Sun-Jupiter Conjunction - Boundless Spirit",
+            keywords: ["Optimism", "Expansion", "Luck", "Confidence"],
+            reading: `The Sun conjunct Jupiter blesses this child with natural optimism, confidence, and good fortune. Their identity is tied to expansion, growth, and seeing the bright side of life. They radiate warmth and generosity that attracts opportunities.
+
+This is one of the luckiest aspects in astrology. They seem to be in the right place at the right time, meeting the right people. Their positive outlook creates a self-fulfilling prophecy - expecting good things, they often receive them.
+
+The challenge is excess. They may overestimate their abilities, promise more than they can deliver, or expect success without effort. Their confidence, while magnetic, can tip into arrogance or overindulgence.
+
+Guide their expansive spirit with gentle reality checks while never dampening their beautiful optimism. They're meant to inspire others and live large - just with appropriate boundaries.`,
+            nature: "harmonious",
+            strength: "Natural luck, optimism, and ability to attract opportunities",
+            challenge: "Overconfidence, excess, expecting rewards without effort"
+        },
+        Trine: {
+            title: "Sun-Jupiter Trine - Lucky Star",
+            keywords: ["Fortune", "Ease", "Growth", "Wisdom"],
+            reading: `Sun trine Jupiter bestows natural good fortune and an easy path to growth and wisdom. This child has guardian-angel energy - things tend to work out for them, and they develop a deep trust in life's benevolence.
+
+Their generous spirit attracts generosity in return. They share naturally and receive abundantly. Educational and travel opportunities flow to them. They may show early wisdom beyond their years.
+
+The ease of this aspect means they may not develop resilience through struggle. When rare difficulties arise, they may be unprepared. Help them appreciate that their good fortune is a gift to be used wisely, not taken for granted.`,
+            nature: "harmonious",
+            strength: "Natural good fortune, wisdom, and generous spirit",
+            challenge: "May lack resilience when facing rare difficulties"
+        },
+        Square: {
+            title: "Sun-Jupiter Square - Restless Growth",
+            keywords: ["Excess", "Ambition", "Friction", "Overreach"],
+            reading: `Sun square Jupiter creates friction between identity and expansion. This child wants MORE - more experience, more recognition, more of everything. This restless drive for growth can achieve great things but also lead to overextension.
+
+They may promise more than they can deliver, take on too much, or expect recognition before it's earned. Their ambition exceeds their patience. Yet this very friction drives them to accomplish more than those who are content.
+
+The challenge is learning appropriate limits without losing their magnificent ambition. They need gentle boundaries while being encouraged to dream big. Balance their expansive nature with practical steps toward their grand visions.`,
+            nature: "challenging",
+            strength: "Tremendous ambition and drive for growth",
+            challenge: "Overextension, restlessness, impatience for recognition"
+        }
+    },
+    
+    "Mercury-Neptune": {
+        Conjunction: {
+            title: "Mercury-Neptune Conjunction - Dreaming Mind",
+            keywords: ["Imagination", "Intuition", "Creativity", "Inspiration"],
+            reading: `Mercury conjunct Neptune gives this child a mind that operates on both logical and mystical wavelengths. Their thinking is infused with imagination, intuition, and creative inspiration. They may show artistic or psychic talents early.
+
+Learning happens differently for them - through images, feelings, and inspiration rather than pure logic. They absorb information from their environment almost psychically. Music, art, and fantasy deeply engage their mind.
+
+The challenge is distinguishing reality from imagination. They may believe things that aren't true, have difficulty with precise facts, or struggle with deception (giving or receiving). Clear boundaries between real and imagined are essential.
+
+Nurture their magical thinking while grounding them in practical reality. They have gifts for creative and intuitive fields - just ensure they also develop discernment and healthy skepticism.`,
+            nature: "neutral",
+            strength: "Brilliant creative imagination and intuitive intelligence",
+            challenge: "Confusion between fact and fantasy, difficulty with precision"
+        },
+        Square: {
+            title: "Mercury-Neptune Square - Foggy Insights",
+            keywords: ["Confusion", "Creativity", "Deception", "Imagination"],
+            reading: `Mercury square Neptune creates friction between logical thinking and intuitive knowing. This child's mind may feel foggy or confused at times, struggling to grasp concrete details while perceiving subtle, intangible truths.
+
+They may have learning differences - not because they're less intelligent, but because their mind works differently. Abstract and creative thinking comes naturally; rote memorization and precise facts are challenging.
+
+The gift is accessing realms of imagination and intuition that logical minds miss. They think in poetry, metaphor, and vision. Creative, spiritual, and artistic pursuits suit their non-linear intelligence.
+
+Patience with their different learning style is essential. Avoid labeling their foggy moments as flaws - instead, help them translate their intuitive insights into practical expression.`,
+            nature: "challenging",
+            strength: "Access to intuitive and creative intelligence beyond logic",
+            challenge: "Mental confusion, difficulty with facts and precision"
+        }
+    },
+    
+    "Jupiter-Saturn": {
+        Conjunction: {
+            title: "Jupiter-Saturn Conjunction - Grounded Expansion",
+            keywords: ["Balance", "Achievement", "Wisdom", "Timing"],
+            reading: `Jupiter conjunct Saturn is a rare and powerful aspect that balances expansion with limitation, optimism with realism. This child understands instinctively that big dreams require practical steps, and that patience enhances rather than limits growth.
+
+They take calculated risks rather than blind leaps. Their ambitions are realistic, their plans practical. They inspire others with vision while also being able to execute. This combination creates natural leaders and successful achievers.
+
+The internal balance may sometimes feel like internal conflict - the part that wants MORE battling the part that says WAIT. This tension, once integrated, becomes their greatest strength.
+
+This aspect occurs only every 20 years, marking generational themes. Support their natural ability to dream big while building carefully. They're learning to balance faith and fear, expansion and contraction.`,
+            nature: "neutral",
+            strength: "Perfect balance of vision and practical execution",
+            challenge: "Internal tension between expansion and limitation"
+        },
+        Opposition: {
+            title: "Jupiter-Saturn Opposition - Expansion vs. Limitation",
+            keywords: ["Tension", "Balance", "Growth", "Restriction"],
+            reading: `Jupiter opposite Saturn creates a tug-of-war between wanting more and needing less, between faith and fear, between expansion and contraction. This child will experience periods of growth alternating with periods of restriction.
+
+They may swing between excessive optimism and excessive caution, between taking on too much and holding back too long. Finding the middle ground between these extremes becomes a central life lesson.
+
+The gift is eventual mastery of timing. They learn when to expand and when to consolidate, when to leap and when to wait. This wisdom, hard-earned through experience, makes them excellent advisors.`,
+            nature: "challenging",
+            strength: "Develops excellent timing and balanced judgment",
+            challenge: "Swings between excess and restriction until balance is found"
+        }
+    }
 };
 
 // Helper function to get aspect reading

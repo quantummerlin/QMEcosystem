@@ -1579,21 +1579,101 @@
             if (readings.astrology.planetHouses && readings.astrology.houses) {
                 const planetHouses = readings.astrology.planetHouses;
                 
+                const housesHeader = document.createElement('div');
+                housesHeader.className = 'section-divider';
+                housesHeader.innerHTML = '<h3>🏠 House Placements</h3><p>Where each planet expresses its energy in your life</p>';
+                celestialSection.appendChild(housesHeader);
+                
                 // Sun in House
                 if (planetHouses.sun && HOUSE_READINGS.Sun && HOUSE_READINGS.Sun[planetHouses.sun]) {
                     const houseReading = HOUSE_READINGS.Sun[planetHouses.sun];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
-                        `☉ in House ${planetHouses.sun}`,
+                        `☉ Sun in House ${planetHouses.sun}`,
                         houseReading.keywords,
                         houseReading.reading.replace(/this child/gi, userData.name).replace(/they/gi, 'they'),
-                        houseReading.strengths,
-                        houseReading.challenges
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
                     ));
                 }
                 
-                // Add more house placements for Moon, Mercury, Venus, Mars, Jupiter, Saturn
-                // (For now showing pattern - can expand with more planets)
+                // Moon in House
+                if (planetHouses.moon && HOUSE_READINGS.Moon && HOUSE_READINGS.Moon[planetHouses.moon]) {
+                    const houseReading = HOUSE_READINGS.Moon[planetHouses.moon];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `☽ Moon in House ${planetHouses.moon}`,
+                        houseReading.keywords,
+                        houseReading.reading.replace(/this child/gi, userData.name),
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
+                    ));
+                }
+                
+                // Mercury in House
+                if (planetHouses.mercury && HOUSE_READINGS.Mercury && HOUSE_READINGS.Mercury[planetHouses.mercury]) {
+                    const houseReading = HOUSE_READINGS.Mercury[planetHouses.mercury];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `☿ Mercury in House ${planetHouses.mercury}`,
+                        houseReading.keywords,
+                        houseReading.reading,
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
+                    ));
+                }
+                
+                // Venus in House
+                if (planetHouses.venus && HOUSE_READINGS.Venus && HOUSE_READINGS.Venus[planetHouses.venus]) {
+                    const houseReading = HOUSE_READINGS.Venus[planetHouses.venus];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `♀ Venus in House ${planetHouses.venus}`,
+                        houseReading.keywords,
+                        houseReading.reading,
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
+                    ));
+                }
+                
+                // Mars in House
+                if (planetHouses.mars && HOUSE_READINGS.Mars && HOUSE_READINGS.Mars[planetHouses.mars]) {
+                    const houseReading = HOUSE_READINGS.Mars[planetHouses.mars];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `♂ Mars in House ${planetHouses.mars}`,
+                        houseReading.keywords,
+                        houseReading.reading,
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
+                    ));
+                }
+                
+                // Jupiter in House
+                if (planetHouses.jupiter && HOUSE_READINGS.Jupiter && HOUSE_READINGS.Jupiter[planetHouses.jupiter]) {
+                    const houseReading = HOUSE_READINGS.Jupiter[planetHouses.jupiter];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `♃ Jupiter in House ${planetHouses.jupiter}`,
+                        houseReading.keywords,
+                        houseReading.reading,
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
+                    ));
+                }
+                
+                // Saturn in House
+                if (planetHouses.saturn && HOUSE_READINGS.Saturn && HOUSE_READINGS.Saturn[planetHouses.saturn]) {
+                    const houseReading = HOUSE_READINGS.Saturn[planetHouses.saturn];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `♄ Saturn in House ${planetHouses.saturn}`,
+                        houseReading.keywords,
+                        houseReading.reading,
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
+                    ));
+                }
             }
             
             // ============================================

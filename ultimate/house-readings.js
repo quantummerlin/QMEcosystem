@@ -174,11 +174,169 @@ Respect their need for alone time and quiet. Their sensitivity is real - protect
             challenges: ["Boundaries", "Escapism", "Victimization", "Shyness"],
             guidance: "Honor their spiritual sensitivity while helping them stay grounded in the physical world."
         }
-    }
-    // Moon, Mercury, Venus, Mars, Jupiter, Saturn readings would follow similar structure
-    // This is just the Sun placements - we need all planets in all houses
-    // For brevity in this initial implementation, I'm showing the pattern
-};
+    },
+    
+    Moon: {
+        1: {
+            title: "Moon in 1st House - Emotional Heart on Sleeve",
+            keywords: ["Sensitivity", "Emotions", "Nurturing", "Receptivity"],
+            reading: `With the Moon in their 1st House, this child wears their heart on their sleeve. Their emotions are visible and immediately expressed through their appearance and demeanor. They're emotionally transparent and deeply sensitive to their environment.`,
+            strengths: ["Emotional authenticity", "Nurturing presence", "Intuitive"],
+            challenges: ["Moodiness", "Over-sensitivity", "Emotional reactivity"]
+        },
+        2: {
+            title: "Moon in 2nd House - Emotional Security Through Stability",
+            keywords: ["Security", "Comfort", "Values", "Possessions"],
+            reading: `The Moon in the 2nd House connects emotional well-being to security and material comfort. This child feels safe when surrounded by familiar things and stable routines. Changes to their environment or possessions can trigger emotional responses.`,
+            strengths: ["Good financial instincts", "Value stability", "Loyal"],
+            challenges: ["Attachment to possessions", "Fear of change", "Comfort eating"]
+        },
+        3: {
+            title: "Moon in 3rd House - Emotional Intelligence",
+            keywords: ["Communication", "Learning", "Siblings", "Curiosity"],
+            reading: `With the Moon in the 3rd House, emotions and thinking are intertwined. This child processes feelings through words and conversation. They may be an emotional storyteller, needing to talk through their feelings to understand them.`,
+            strengths: ["Emotional intelligence", "Good with siblings", "Intuitive learning"],
+            challenges: ["Nervous anxiety", "Overthinking feelings", "Mental restlessness"]
+        },
+        4: {
+            title: "Moon in 4th House - Deep Roots",
+            keywords: ["Home", "Family", "Belonging", "Roots"],
+            reading: `The Moon is at home in the 4th House, making family and home life central to emotional well-being. This child needs a stable, nurturing home environment more than most. They have deep connections to family traditions and ancestry.`,
+            strengths: ["Strong family bonds", "Natural nurturer", "Emotional depth"],
+            challenges: ["Difficulty leaving home", "Clingy", "Past-focused"]
+        },
+        5: {
+            title: "Moon in 5th House - Creative Heart",
+            keywords: ["Creativity", "Play", "Romance", "Joy"],
+            reading: `With the Moon in the 5th House, emotions express through creativity, play, and self-expression. This child needs creative outlets for their feelings - art, music, drama, or play. Their emotional life is colorful and dramatic.`,
+            strengths: ["Creative expression", "Playful spirit", "Romantic heart"],
+            challenges: ["Drama queen tendencies", "Need for attention", "Emotional risk-taking"]
+        },
+        6: {
+            title: "Moon in 6th House - Nurturing Through Service",
+            keywords: ["Health", "Service", "Routine", "Work"],
+            reading: `The Moon in the 6th House connects emotional well-being to daily routines and service to others. This child feels best when helping and when life is orderly. Physical health may be affected by emotional states.`,
+            strengths: ["Helpful nature", "Loves routine", "Health conscious"],
+            challenges: ["Anxiety about health", "Worry", "Perfectionism about daily life"]
+        },
+        7: {
+            title: "Moon in 7th House - Relationship Oriented",
+            keywords: ["Partnerships", "Balance", "Others", "Harmony"],
+            reading: `With the Moon in the 7th House, emotional fulfillment comes through relationships. This child needs partnership and may dislike being alone. They're naturally diplomatic and attuned to others' emotional needs.`,
+            strengths: ["Relationship skills", "Diplomatic", "Partner-focused"],
+            challenges: ["Dependent on others", "People-pleasing", "Fear of being alone"]
+        },
+        8: {
+            title: "Moon in 8th House - Deep Emotional Waters",
+            keywords: ["Intensity", "Transformation", "Secrets", "Power"],
+            reading: `The Moon in the 8th House gives extraordinary emotional depth and intensity. This child feels everything deeply and may be drawn to life's mysteries. They have powerful emotional experiences and strong intuition.`,
+            strengths: ["Emotional depth", "Transformative ability", "Psychic sensitivity"],
+            challenges: ["Emotional intensity", "Secrecy", "Possessiveness"]
+        },
+        9: {
+            title: "Moon in 9th House - Wandering Heart",
+            keywords: ["Adventure", "Philosophy", "Travel", "Wisdom"],
+            reading: `With the Moon in the 9th House, emotional fulfillment comes through exploration, learning, and adventure. This child needs variety and may feel restricted by routine. Foreign cultures and big ideas feed their soul.`,
+            strengths: ["Adventurous spirit", "Philosophical nature", "Open-minded"],
+            challenges: ["Restlessness", "Commitment issues", "Preachy tendencies"]
+        },
+        10: {
+            title: "Moon in 10th House - Public Emotional Life",
+            keywords: ["Career", "Reputation", "Achievement", "Public"],
+            reading: `The Moon in the 10th House connects emotional needs to career and public recognition. This child's feelings may be on public display, and they may seek emotional fulfillment through achievement and status.`,
+            strengths: ["Career ambition", "Public presence", "Leadership"],
+            challenges: ["Work-life imbalance", "Need for approval", "Emotional exposure"]
+        },
+        11: {
+            title: "Moon in 11th House - Friend of the World",
+            keywords: ["Friends", "Groups", "Ideals", "Community"],
+            reading: `With the Moon in the 11th House, emotional fulfillment comes through friendships and community involvement. This child needs to belong to groups and causes larger than themselves. They nurture through humanitarian ideals.`,
+            strengths: ["Great friend", "Community minded", "Idealistic"],
+            challenges: ["Emotional detachment", "Impersonal relationships", "Idealism over intimacy"]
+        },
+        12: {
+            title: "Moon in 12th House - Hidden Depths",
+            keywords: ["Spirituality", "Solitude", "Dreams", "Subconscious"],
+            reading: `The Moon in the 12th House indicates a rich inner emotional life that may not be visible to others. This child needs solitude to process feelings and may have vivid dreams and strong intuition. Their sensitivity is both their challenge and gift.`,
+            strengths: ["Spiritual depth", "Compassion", "Intuitive gifts"],
+            challenges: ["Hidden emotions", "Loneliness", "Escapism"]
+        }
+    },
+    
+    Mercury: {
+        1: { title: "Mercury in 1st House - Quick Mind", keywords: ["Communication", "Wit", "Curiosity"], reading: `Mercury in the 1st House gives a quick, curious mind that's always active. This child communicates easily and thinks fast on their feet.`, strengths: ["Quick wit", "Articulate"], challenges: ["Nervousness", "Scattered energy"] },
+        2: { title: "Mercury in 2nd House - Practical Thinker", keywords: ["Values", "Money", "Resources"], reading: `Mercury here gives practical intelligence focused on values and resources. May have talent for business.`, strengths: ["Financial mind", "Practical"], challenges: ["Materialistic thinking"] },
+        3: { title: "Mercury in 3rd House - Natural Communicator", keywords: ["Learning", "Writing", "Speaking"], reading: `Mercury is at home in the 3rd House, creating a natural communicator, writer, or teacher.`, strengths: ["Communication", "Learning"], challenges: ["Mental restlessness"] },
+        4: { title: "Mercury in 4th House - Family Storyteller", keywords: ["Home", "Memory", "Heritage"], reading: `Mercury here gives interest in family history and home-based learning. May be the family historian.`, strengths: ["Memory", "Home-based work"], challenges: ["Stuck in past thinking"] },
+        5: { title: "Mercury in 5th House - Creative Mind", keywords: ["Creativity", "Play", "Expression"], reading: `Mercury in the 5th House brings creative intelligence and playful communication style.`, strengths: ["Creative thinking", "Fun communication"], challenges: ["Drama", "Showing off"] },
+        6: { title: "Mercury in 6th House - Analytical Mind", keywords: ["Analysis", "Health", "Service"], reading: `Mercury here gives analytical abilities and interest in health and daily efficiency.`, strengths: ["Analysis", "Problem-solving"], challenges: ["Worry", "Over-analysis"] },
+        7: { title: "Mercury in 7th House - Partnership Mind", keywords: ["Relationships", "Negotiation", "Diplomacy"], reading: `Mercury in the 7th House gives skill in negotiation and communication within relationships.`, strengths: ["Diplomacy", "Fair-minded"], challenges: ["Indecision", "Debate"] },
+        8: { title: "Mercury in 8th House - Deep Investigator", keywords: ["Research", "Psychology", "Mystery"], reading: `Mercury here gives a penetrating mind drawn to mysteries, psychology, and hidden truths.`, strengths: ["Research", "Psychology"], challenges: ["Obsessive thinking", "Secrets"] },
+        9: { title: "Mercury in 9th House - Philosophical Mind", keywords: ["Philosophy", "Travel", "Teaching"], reading: `Mercury in the 9th House creates a philosophical thinker interested in big ideas and foreign cultures.`, strengths: ["Big-picture thinking", "Teaching"], challenges: ["Preachy", "Theoretical only"] },
+        10: { title: "Mercury in 10th House - Career Communicator", keywords: ["Career", "Public Speaking", "Authority"], reading: `Mercury here gives communication abilities useful in career and public life.`, strengths: ["Public speaking", "Career communication"], challenges: ["Image-focused", "Calculating"] },
+        11: { title: "Mercury in 11th House - Group Thinker", keywords: ["Groups", "Technology", "Innovation"], reading: `Mercury in the 11th House gives talent for group communication and innovative thinking.`, strengths: ["Innovation", "Network building"], challenges: ["Detached", "Eccentric ideas"] },
+        12: { title: "Mercury in 12th House - Intuitive Mind", keywords: ["Intuition", "Spirituality", "Subconscious"], reading: `Mercury here gives intuitive, imaginative thinking that accesses the subconscious.`, strengths: ["Intuition", "Creativity"], challenges: ["Confusion", "Hidden thoughts"] }
+    },
+    
+    Venus: {
+        1: { title: "Venus in 1st House - Natural Charm", keywords: ["Beauty", "Charm", "Grace"], reading: `Venus in the 1st House bestows natural charm, beauty, and grace. This child attracts positive attention effortlessly.`, strengths: ["Charm", "Beauty", "Likability"], challenges: ["Vanity", "Superficiality"] },
+        2: { title: "Venus in 2nd House - Love of Beauty", keywords: ["Values", "Possessions", "Luxury"], reading: `Venus here gives love of beautiful things and talent for attracting resources.`, strengths: ["Financial luck", "Aesthetic sense"], challenges: ["Materialism", "Indulgence"] },
+        3: { title: "Venus in 3rd House - Sweet Communication", keywords: ["Harmony", "Siblings", "Words"], reading: `Venus in the 3rd House gives a pleasant communication style and harmonious relationships with siblings.`, strengths: ["Pleasant speech", "Diplomatic"], challenges: ["Avoid confrontation", "Superficial"] },
+        4: { title: "Venus in 4th House - Home Lover", keywords: ["Home", "Family", "Comfort"], reading: `Venus here creates love of home and family, wanting a beautiful, harmonious domestic life.`, strengths: ["Home beautification", "Family harmony"], challenges: ["Over-attached to home"] },
+        5: { title: "Venus in 5th House - Creative Romance", keywords: ["Romance", "Creativity", "Pleasure"], reading: `Venus is joyful in the 5th House, bringing romance, creativity, and love of pleasure.`, strengths: ["Creativity", "Romance", "Joy"], challenges: ["Pleasure-seeking", "Drama"] },
+        6: { title: "Venus in 6th House - Service with Grace", keywords: ["Service", "Health", "Beauty"], reading: `Venus in the 6th House brings grace to daily work and interest in health/beauty routines.`, strengths: ["Graceful service", "Health consciousness"], challenges: ["Criticism avoidance"] },
+        7: { title: "Venus in 7th House - Partnership Oriented", keywords: ["Marriage", "Partnership", "Harmony"], reading: `Venus is at home in the 7th House, promising harmonious relationships and partnership luck.`, strengths: ["Relationship luck", "Diplomatic"], challenges: ["Dependency", "Peace at any price"] },
+        8: { title: "Venus in 8th House - Passionate Heart", keywords: ["Intensity", "Passion", "Transformation"], reading: `Venus here gives intense emotional attachments and magnetic attraction.`, strengths: ["Passionate love", "Magnetic"], challenges: ["Jealousy", "Possessiveness"] },
+        9: { title: "Venus in 9th House - Love of Adventure", keywords: ["Travel", "Philosophy", "Freedom"], reading: `Venus in the 9th House loves adventure, travel, and philosophical exploration.`, strengths: ["Adventure", "Open-minded love"], challenges: ["Restless heart", "Commitment issues"] },
+        10: { title: "Venus in 10th House - Charming Career", keywords: ["Career", "Reputation", "Beauty"], reading: `Venus here brings charm to career pursuits and public life.`, strengths: ["Career charm", "Public appeal"], challenges: ["Image-focused", "Using charm for gain"] },
+        11: { title: "Venus in 11th House - Friend to All", keywords: ["Friends", "Groups", "Ideals"], reading: `Venus in the 11th House creates love of friendships and group activities.`, strengths: ["Friendship luck", "Group harmony"], challenges: ["Superficial friendships", "Detached love"] },
+        12: { title: "Venus in 12th House - Hidden Love", keywords: ["Spirituality", "Compassion", "Secret"], reading: `Venus in the 12th House indicates hidden love nature and spiritual/compassionate heart.`, strengths: ["Spiritual love", "Compassion"], challenges: ["Secret affairs", "Unrequited love"] }
+    },
+    
+    Mars: {
+        1: { title: "Mars in 1st House - Warrior Spirit", keywords: ["Energy", "Action", "Courage"], reading: `Mars in the 1st House gives dynamic energy, courage, and a pioneering spirit. This child takes action naturally.`, strengths: ["Courage", "Initiative", "Energy"], challenges: ["Aggression", "Impatience"] },
+        2: { title: "Mars in 2nd House - Resource Builder", keywords: ["Money", "Drive", "Values"], reading: `Mars here gives drive to earn money and build resources through personal effort.`, strengths: ["Financial drive", "Self-reliance"], challenges: ["Impulsive spending", "Possessive"] },
+        3: { title: "Mars in 3rd House - Sharp Mind", keywords: ["Communication", "Debate", "Wit"], reading: `Mars in the 3rd House gives a sharp, competitive mind that enjoys debate.`, strengths: ["Quick mind", "Persuasive"], challenges: ["Argumentative", "Harsh words"] },
+        4: { title: "Mars in 4th House - Home Warrior", keywords: ["Home", "Family", "Protection"], reading: `Mars here creates strong protective instincts toward home and family.`, strengths: ["Protective", "Home improvement"], challenges: ["Family conflicts", "Anger at home"] },
+        5: { title: "Mars in 5th House - Creative Fire", keywords: ["Creativity", "Sports", "Romance"], reading: `Mars in the 5th House gives passionate creativity, competitive sports ability, and romantic pursuit.`, strengths: ["Athletic", "Creative passion"], challenges: ["Competitive love", "Drama"] },
+        6: { title: "Mars in 6th House - Productive Worker", keywords: ["Work", "Health", "Service"], reading: `Mars here gives productive work energy and active approach to health.`, strengths: ["Productive", "Active health"], challenges: ["Work stress", "Accidents"] },
+        7: { title: "Mars in 7th House - Passionate Partnerships", keywords: ["Relationships", "Competition", "Attraction"], reading: `Mars in the 7th House attracts dynamic, passionate relationships.`, strengths: ["Passionate partnerships", "Magnetic"], challenges: ["Conflict in relationships", "Combative"] },
+        8: { title: "Mars in 8th House - Intense Drive", keywords: ["Power", "Transformation", "Intensity"], reading: `Mars here gives intense willpower and ability to transform through crisis.`, strengths: ["Willpower", "Resilience"], challenges: ["Power struggles", "Control issues"] },
+        9: { title: "Mars in 9th House - Adventurous Spirit", keywords: ["Travel", "Philosophy", "Crusade"], reading: `Mars in the 9th House creates a crusader spirit driven by beliefs and adventure.`, strengths: ["Adventure", "Conviction"], challenges: ["Righteous anger", "Fanaticism"] },
+        10: { title: "Mars in 10th House - Career Ambition", keywords: ["Career", "Ambition", "Achievement"], reading: `Mars here drives powerful career ambition and competitive achievement.`, strengths: ["Career success", "Leadership"], challenges: ["Ruthless ambition", "Work conflicts"] },
+        11: { title: "Mars in 11th House - Group Leader", keywords: ["Groups", "Friends", "Causes"], reading: `Mars in the 11th House drives action in groups and for social causes.`, strengths: ["Group leadership", "Activism"], challenges: ["Friend conflicts", "Pushy in groups"] },
+        12: { title: "Mars in 12th House - Hidden Strength", keywords: ["Spirituality", "Hidden", "Subconscious"], reading: `Mars here indicates hidden reserves of strength and action behind the scenes.`, strengths: ["Spiritual warrior", "Hidden strength"], challenges: ["Suppressed anger", "Secret enemies"] }
+    },
+    
+    Jupiter: {
+        1: { title: "Jupiter in 1st House - Lucky Self", keywords: ["Luck", "Expansion", "Optimism"], reading: `Jupiter in the 1st House bestows natural luck, optimism, and an expansive personality.`, strengths: ["Lucky", "Optimistic", "Generous"], challenges: ["Excess", "Overconfidence"] },
+        2: { title: "Jupiter in 2nd House - Abundant Resources", keywords: ["Wealth", "Values", "Growth"], reading: `Jupiter here attracts financial abundance and growth of resources.`, strengths: ["Financial luck", "Generous"], challenges: ["Overspending", "Waste"] },
+        3: { title: "Jupiter in 3rd House - Expansive Mind", keywords: ["Learning", "Teaching", "Communication"], reading: `Jupiter in the 3rd House gives love of learning and ability to teach others.`, strengths: ["Teaching", "Learning"], challenges: ["Know-it-all", "Scattered"] },
+        4: { title: "Jupiter in 4th House - Blessed Home", keywords: ["Home", "Family", "Heritage"], reading: `Jupiter here blesses home and family life with abundance and warmth.`, strengths: ["Happy home", "Family luck"], challenges: ["Excess at home", "Over-indulgence"] },
+        5: { title: "Jupiter in 5th House - Joyful Creator", keywords: ["Creativity", "Children", "Play"], reading: `Jupiter in the 5th House brings joy, creativity, and luck with children.`, strengths: ["Creative abundance", "Joyful"], challenges: ["Excessive pleasure", "Gambling"] },
+        6: { title: "Jupiter in 6th House - Blessed Work", keywords: ["Service", "Health", "Work"], reading: `Jupiter here brings luck in work and service, and robust health.`, strengths: ["Work luck", "Good health"], challenges: ["Laziness", "Weight gain"] },
+        7: { title: "Jupiter in 7th House - Partnership Luck", keywords: ["Marriage", "Partnerships", "Luck"], reading: `Jupiter in the 7th House promises beneficial partnerships and relationship luck.`, strengths: ["Partnership luck", "Generous spouse"], challenges: ["Multiple marriages", "Excess"] },
+        8: { title: "Jupiter in 8th House - Transformative Luck", keywords: ["Inheritance", "Transformation", "Depth"], reading: `Jupiter here brings luck through others' resources and transformative experiences.`, strengths: ["Inheritance luck", "Resilience"], challenges: ["Excess in intensity", "Risk-taking"] },
+        9: { title: "Jupiter in 9th House - Wisdom Seeker", keywords: ["Philosophy", "Travel", "Wisdom"], reading: `Jupiter is at home in the 9th House, giving love of wisdom, travel, and higher learning.`, strengths: ["Wisdom", "Travel luck", "Teaching"], challenges: ["Preachy", "Excessive travel"] },
+        10: { title: "Jupiter in 10th House - Career Luck", keywords: ["Career", "Status", "Recognition"], reading: `Jupiter in the 10th House brings career luck and public recognition.`, strengths: ["Career success", "Recognition"], challenges: ["Overreach", "Status-seeking"] },
+        11: { title: "Jupiter in 11th House - Abundant Friends", keywords: ["Friends", "Groups", "Goals"], reading: `Jupiter here brings lucky friendships and success achieving goals.`, strengths: ["Friend luck", "Goal achievement"], challenges: ["Scattered goals", "Fair-weather friends"] },
+        12: { title: "Jupiter in 12th House - Spiritual Grace", keywords: ["Spirituality", "Compassion", "Hidden Luck"], reading: `Jupiter in the 12th House brings spiritual grace and hidden blessings.`, strengths: ["Spiritual protection", "Compassion"], challenges: ["Hidden excess", "Escapism"] }
+    },
+    
+    Saturn: {
+        1: { title: "Saturn in 1st House - Serious Self", keywords: ["Discipline", "Maturity", "Responsibility"], reading: `Saturn in the 1st House gives a serious, mature demeanor from early childhood.`, strengths: ["Discipline", "Maturity", "Reliability"], challenges: ["Heavy burden", "Self-criticism"] },
+        2: { title: "Saturn in 2nd House - Careful Builder", keywords: ["Money", "Security", "Patience"], reading: `Saturn here teaches lessons about money and building lasting security through patience.`, strengths: ["Financial wisdom", "Patience"], challenges: ["Money fears", "Stinginess"] },
+        3: { title: "Saturn in 3rd House - Structured Thinker", keywords: ["Learning", "Communication", "Discipline"], reading: `Saturn in the 3rd House creates a structured, careful approach to learning and communication.`, strengths: ["Thorough learning", "Careful speech"], challenges: ["Learning difficulties", "Communication blocks"] },
+        4: { title: "Saturn in 4th House - Home Lessons", keywords: ["Home", "Family", "Roots"], reading: `Saturn here indicates lessons around home and family, possibly early responsibilities.`, strengths: ["Family responsibility", "Building foundations"], challenges: ["Cold home", "Early burdens"] },
+        5: { title: "Saturn in 5th House - Serious Creativity", keywords: ["Creativity", "Children", "Discipline"], reading: `Saturn in the 5th House gives disciplined creativity and serious approach to self-expression.`, strengths: ["Disciplined creativity", "Lasting art"], challenges: ["Joy inhibition", "Fear of expression"] },
+        6: { title: "Saturn in 6th House - Dedicated Worker", keywords: ["Work", "Health", "Service"], reading: `Saturn here creates a dedicated, disciplined worker with focus on health.`, strengths: ["Work ethic", "Health discipline"], challenges: ["Overwork", "Health worries"] },
+        7: { title: "Saturn in 7th House - Committed Partner", keywords: ["Marriage", "Commitment", "Lessons"], reading: `Saturn in the 7th House brings serious lessons about commitment and partnership.`, strengths: ["Loyal partnerships", "Commitment"], challenges: ["Delayed marriage", "Heavy relationships"] },
+        8: { title: "Saturn in 8th House - Deep Lessons", keywords: ["Transformation", "Power", "Control"], reading: `Saturn here brings deep lessons about power, control, and transformation.`, strengths: ["Psychological depth", "Control"], challenges: ["Fear of loss", "Control issues"] },
+        9: { title: "Saturn in 9th House - Wise Student", keywords: ["Philosophy", "Education", "Travel"], reading: `Saturn in the 9th House creates a serious student of life and philosophy.`, strengths: ["Wisdom", "Formal education"], challenges: ["Narrow beliefs", "Travel restrictions"] },
+        10: { title: "Saturn in 10th House - Career Builder", keywords: ["Career", "Authority", "Achievement"], reading: `Saturn is at home in the 10th House, giving natural authority and career building ability.`, strengths: ["Career success", "Authority"], challenges: ["Slow rise", "Heavy responsibility"] },
+        11: { title: "Saturn in 11th House - Loyal Friend", keywords: ["Friends", "Groups", "Long-term Goals"], reading: `Saturn here creates loyal, long-lasting friendships and steady progress toward goals.`, strengths: ["Loyal friends", "Long-term planning"], challenges: ["Few friends", "Group restrictions"] },
+        12: { title: "Saturn in 12th House - Spiritual Lessons", keywords: ["Spirituality", "Solitude", "Hidden"], reading: `Saturn in the 12th House brings spiritual lessons and need for solitude and reflection.`, strengths: ["Spiritual discipline", "Inner strength"], challenges: ["Hidden fears", "Isolation"] }
+    };
 
 // Export for use
 if (typeof module !== 'undefined' && module.exports) {
