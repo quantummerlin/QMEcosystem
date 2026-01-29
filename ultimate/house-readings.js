@@ -336,7 +336,8 @@ Respect their need for alone time and quiet. Their sensitivity is real - protect
         10: { title: "Saturn in 10th House - Career Builder", keywords: ["Career", "Authority", "Achievement"], reading: `Saturn is at home in the 10th House, giving natural authority and career building ability.`, strengths: ["Career success", "Authority"], challenges: ["Slow rise", "Heavy responsibility"] },
         11: { title: "Saturn in 11th House - Loyal Friend", keywords: ["Friends", "Groups", "Long-term Goals"], reading: `Saturn here creates loyal, long-lasting friendships and steady progress toward goals.`, strengths: ["Loyal friends", "Long-term planning"], challenges: ["Few friends", "Group restrictions"] },
         12: { title: "Saturn in 12th House - Spiritual Lessons", keywords: ["Spirituality", "Solitude", "Hidden"], reading: `Saturn in the 12th House brings spiritual lessons and need for solitude and reflection.`, strengths: ["Spiritual discipline", "Inner strength"], challenges: ["Hidden fears", "Isolation"] }
-    };
+    }
+};
 
 // Export for use
 if (typeof module !== 'undefined' && module.exports) {

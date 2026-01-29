@@ -168,10 +168,7 @@ The gift is learning perfect timing. Eventually, they develop an instinct for wh
             strength: "Eventually develops excellent timing and balance of action/restraint",
             challenge: "Internal conflict between impulse and restriction creates frustration"
         }
-    }
-    
-    // Additional aspects for other planet pairs would follow...
-    // Mercury-Neptune, Jupiter-Saturn, etc.
+    },
     
     "Sun-Jupiter": {
         Conjunction: {
