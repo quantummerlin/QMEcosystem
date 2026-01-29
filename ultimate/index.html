@@ -1896,14 +1896,11 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const ad2 = createAdSlot();
             container.appendChild(ad2);
             
-            // Store readings globally for save functionality
-            window.lastGeneratedReadings = readings;
-            
-            // Initialize pagination
-            setTimeout(() => {
-                initializePagination();
-            }, 100);
-        }
+            // ============================================
+            // SECTION 3: SOUL MISSION
+            // ============================================
+            const soulSectionWrapper = document.createElement('div');
+            soulSectionWrapper.className = 'reading-section';
             const soulSection = createSection('soul', config.sections.soul);
             
             // North Node with detailed reading
@@ -1942,11 +1939,22 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 []
             ));
             
-            container.appendChild(soulSection);
+            soulSectionWrapper.appendChild(soulSection);
+            container.appendChild(soulSectionWrapper);
+            
+            // Add pagination control after soul section
+            const soulPagination = createPaginationControl();
+            container.appendChild(soulPagination);
+            
+            // Add AdSense slot
+            const ad3 = createAdSlot();
+            container.appendChild(ad3);
             
             // ============================================
             // SECTION 4: FORECASTS
             // ============================================
+            const forecastsSectionWrapper = document.createElement('div');
+            forecastsSectionWrapper.className = 'reading-section';
             const forecastsSection = createSection('forecasts', config.sections.forecasts);
             
             // Personal Year Forecast with detailed reading
@@ -1971,11 +1979,22 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 []
             ));
             
-            container.appendChild(forecastsSection);
+            forecastsSectionWrapper.appendChild(forecastsSection);
+            container.appendChild(forecastsSectionWrapper);
+            
+            // Add pagination control after forecasts section
+            const forecastsPagination = createPaginationControl();
+            container.appendChild(forecastsPagination);
+            
+            // Add AdSense slot
+            const ad4 = createAdSlot();
+            container.appendChild(ad4);
             
             // ============================================
             // SECTION 5: LIFE CYCLES
             // ============================================
+            const cyclesSectionWrapper = document.createElement('div');
+            cyclesSectionWrapper.className = 'reading-section';
             const cyclesSection = createSection('cycles', config.sections.cycles);
             
             // Current Age
@@ -2010,7 +2029,16 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 []
             ));
             
-            container.appendChild(cyclesSection);
+            cyclesSectionWrapper.appendChild(cyclesSection);
+            container.appendChild(cyclesSectionWrapper);
+            
+            // Store readings globally for save functionality
+            window.lastGeneratedReadings = readings;
+            
+            // Initialize pagination after brief delay
+            setTimeout(() => {
+                initializePagination();
+            }, 100);
         }
         
         function createSection(id, sectionConfig) {
