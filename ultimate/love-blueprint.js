@@ -117,7 +117,7 @@ function generateLoveBlueprint(venusSign, marsSign, house7Sign) {
     return {
         title: `Love Blueprint: ${pattern.dynamic}`,
         subtitle: `${venusSign.name} Venus × ${marsSign.name} Mars → ${house7Sign.name} 7th House`,
-        keywords: pattern.keywords,
+        keywords: pattern.keywords.split(',').map(k => k.trim()),
         pattern: pattern.dynamic,
         essence: pattern.essence,
         attracted: attracted,

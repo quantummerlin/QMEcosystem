@@ -2090,32 +2090,46 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const card = document.createElement('div');
             card.className = 'reading-card';
             
+            // Ensure keywords is an array
+            let keywordsArray = [];
+            if (keywords) {
+                if (Array.isArray(keywords)) {
+                    keywordsArray = keywords;
+                } else if (typeof keywords === 'string') {
+                    keywordsArray = keywords.split(',').map(k => k.trim()).filter(k => k);
+                }
+            }
+            
+            // Ensure strengths and challenges are arrays
+            const strengthsArray = Array.isArray(strengths) ? strengths : [];
+            const challengesArray = Array.isArray(challenges) ? challenges : [];
+            
             let keywordsHtml = '';
-            if (keywords && keywords.length > 0) {
+            if (keywordsArray.length > 0) {
                 keywordsHtml = `
                     <div class="keywords">
-                        ${keywords.map(k => `<span class="keyword">${k}</span>`).join('')}
+                        ${keywordsArray.map(k => `<span class="keyword">${k}</span>`).join('')}
                     </div>
                 `;
             }
             
             let strengthsChallengesHtml = '';
-            if ((strengths && strengths.length > 0) || (challenges && challenges.length > 0)) {
+            if (strengthsArray.length > 0 || challengesArray.length > 0) {
                 strengthsChallengesHtml = `
                     <div class="strengths-challenges">
-                        ${strengths && strengths.length > 0 ? `
+                        ${strengthsArray.length > 0 ? `
                             <div>
                                 <h4>✨ Strengths</h4>
                                 <ul>
-                                    ${strengths.map(s => `<li>${s}</li>`).join('')}
+                                    ${strengthsArray.map(s => `<li>${s}</li>`).join('')}
                                 </ul>
                             </div>
                         ` : ''}
-                        ${challenges && challenges.length > 0 ? `
+                        ${challengesArray.length > 0 ? `
                             <div>
                                 <h4>🌱 Growth Areas</h4>
                                 <ul>
-                                    ${challenges.map(c => `<li>${c}</li>`).join('')}
+                                    ${challengesArray.map(c => `<li>${c}</li>`).join('')}}
                                 </ul>
                             </div>
                         ` : ''}
