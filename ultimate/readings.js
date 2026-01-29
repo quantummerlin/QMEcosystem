@@ -2085,6 +2085,145 @@ However, this projection may sometimes seem overwhelming or intimidating. Learni
     }
 };
 
+// ============================================
+// STELLIUM READINGS (3+ planets in one sign)
+// ============================================
+
+const STELLIUM_READINGS = {
+    Aries: {
+        title: "The Warrior Concentration",
+        symbol: "🔥",
+        reading: `With multiple planets concentrated in Aries, this soul carries an extraordinary amount of pioneering fire energy. This stellium creates a powerful drive to initiate, lead, and break new ground.
+
+This concentration amplifies courage, independence, and the instinct to act decisively. Life will repeatedly call this person to step forward as a leader, even when it feels uncomfortable. They were born to start things - movements, businesses, conversations that others fear to begin.
+
+The challenge with this much Aries energy is learning patience and follow-through. The urge to begin new ventures can overshadow the need to complete existing ones. Impulsivity may create situations that require later cleanup.
+
+This stellium gifts an almost warrior-like spirit. When properly channeled, it creates someone capable of extraordinary feats of courage and initiative. The key is learning to temper the fire without extinguishing it.`
+    },
+    Taurus: {
+        title: "The Abundance Concentration",
+        symbol: "🌿",
+        reading: `With multiple planets concentrated in Taurus, this soul carries an extraordinary amount of earth-stabilizing energy. This stellium creates a powerful drive toward security, beauty, and material mastery.
+
+This concentration amplifies determination, sensuality, and the ability to build lasting value. Life will repeatedly call this person to create things of enduring worth - whether physical possessions, businesses, or relationships built to last.
+
+The challenge with this much Taurus energy is avoiding stagnation and over-attachment to comfort. Resistance to change, while providing stability, can also prevent necessary growth and evolution.
+
+This stellium gifts an almost magnetic relationship with abundance. When properly channeled, it creates someone capable of manifesting remarkable material success and creating environments of beauty and comfort. The key is remaining open to change while honoring the need for security.`
+    },
+    Gemini: {
+        title: "The Messenger Concentration",
+        symbol: "💨",
+        reading: `With multiple planets concentrated in Gemini, this soul carries an extraordinary amount of mental air energy. This stellium creates a powerful drive to communicate, learn, and connect ideas and people.
+
+This concentration amplifies curiosity, versatility, and the ability to see multiple perspectives simultaneously. Life will repeatedly call this person to serve as a bridge between different worlds, translating complex ideas into accessible forms.
+
+The challenge with this much Gemini energy is finding focus and depth. The mind may race in multiple directions at once, making it difficult to commit to a single path or master one subject thoroughly.
+
+This stellium gifts an almost supernatural ability with words and ideas. When properly channeled, it creates someone capable of remarkable intellectual achievements and communication breakthroughs. The key is developing focus without losing the gift of versatility.`
+    },
+    Cancer: {
+        title: "The Nurturer Concentration",
+        symbol: "🌙",
+        reading: `With multiple planets concentrated in Cancer, this soul carries an extraordinary amount of lunar emotional energy. This stellium creates a powerful drive to nurture, protect, and create emotional security.
+
+This concentration amplifies intuition, empathy, and the ability to create sacred spaces of belonging. Life will repeatedly call this person to serve as a caretaker, whether of people, places, traditions, or memories.
+
+The challenge with this much Cancer energy is managing emotional sensitivity and avoiding over-protection. The urge to care for others may become smothering, or emotional wounds may take longer to heal.
+
+This stellium gifts an almost psychic level of emotional intelligence. When properly channeled, it creates someone capable of profound healing work and creating environments where others feel truly seen and safe. The key is developing emotional boundaries while keeping the heart open.`
+    },
+    Leo: {
+        title: "The Radiance Concentration",
+        symbol: "☀️",
+        reading: `With multiple planets concentrated in Leo, this soul carries an extraordinary amount of solar creative energy. This stellium creates a powerful drive to shine, create, and inspire through personal expression.
+
+This concentration amplifies charisma, creativity, and the natural ability to lead through magnetic presence. Life will repeatedly call this person to step into the spotlight, whether they seek it or not.
+
+The challenge with this much Leo energy is balancing confidence with humility. The need for recognition may become excessive, or the ego may resist necessary feedback and growth.
+
+This stellium gifts an almost royal quality of presence and creative power. When properly channeled, it creates someone capable of inspiring millions and creating works of lasting artistic significance. The key is using the spotlight to illuminate others, not just oneself.`
+    },
+    Virgo: {
+        title: "The Analyst Concentration",
+        symbol: "🌾",
+        reading: `With multiple planets concentrated in Virgo, this soul carries an extraordinary amount of earth-refining energy. This stellium creates a powerful drive to analyze, improve, and perfect.
+
+This concentration amplifies discernment, skill-building, and the ability to see how things can be made better. Life will repeatedly call this person to serve through practical expertise and attention to detail.
+
+The challenge with this much Virgo energy is managing perfectionism and self-criticism. The pursuit of improvement may become an endless chase that prevents appreciation of what already is.
+
+This stellium gifts an almost supernatural attention to detail and capacity for mastery. When properly channeled, it creates someone capable of extraordinary craftsmanship and service. The key is learning when good enough is truly good enough.`
+    },
+    Libra: {
+        title: "The Harmonizer Concentration",
+        symbol: "⚖️",
+        reading: `With multiple planets concentrated in Libra, this soul carries an extraordinary amount of air-balancing energy. This stellium creates a powerful drive toward beauty, partnership, and justice.
+
+This concentration amplifies diplomacy, aesthetic sense, and the ability to bring opposing forces into harmony. Life will repeatedly call this person to serve as a mediator, beautifier, or advocate for fairness.
+
+The challenge with this much Libra energy is making decisions and maintaining personal boundaries. The desire to please everyone may lead to losing oneself in others' needs and opinions.
+
+This stellium gifts an almost magical ability to create beauty and harmony in any environment. When properly channeled, it creates someone capable of remarkable partnerships and aesthetic achievements. The key is developing a strong inner compass while maintaining the gift of seeing all sides.`
+    },
+    Scorpio: {
+        title: "The Transformer Concentration",
+        symbol: "🦂",
+        reading: `With multiple planets concentrated in Scorpio, this soul carries an extraordinary amount of water-transforming energy. This stellium creates a powerful drive toward depth, truth, and complete transformation.
+
+This concentration amplifies intensity, psychological insight, and the ability to navigate the darkest territories of human experience. Life will repeatedly call this person to serve as a healer, investigator, or agent of profound change.
+
+The challenge with this much Scorpio energy is managing intensity and the tendency toward obsession. The drive to go deep may become consuming, and trust issues may complicate relationships.
+
+This stellium gifts an almost supernatural ability to see beneath surfaces and facilitate healing. When properly channeled, it creates someone capable of remarkable psychological breakthroughs and transformative work. The key is learning when to surface from the depths.`
+    },
+    Sagittarius: {
+        title: "The Explorer Concentration",
+        symbol: "🏹",
+        reading: `With multiple planets concentrated in Sagittarius, this soul carries an extraordinary amount of fire-expanding energy. This stellium creates a powerful drive toward adventure, wisdom, and the expansion of horizons.
+
+This concentration amplifies optimism, philosophical thinking, and the need for freedom and meaning. Life will repeatedly call this person to serve as a teacher, adventurer, or seeker of truth.
+
+The challenge with this much Sagittarius energy is maintaining focus and follow-through. The constant seeking of new horizons may prevent deep roots from forming, and bluntness may unintentionally wound others.
+
+This stellium gifts an almost prophetic ability to inspire hope and illuminate meaning. When properly channeled, it creates someone capable of remarkable teaching and inspiring others toward their own expansions. The key is learning to find the infinite in the immediate.`
+    },
+    Capricorn: {
+        title: "The Achiever Concentration",
+        symbol: "🏔️",
+        reading: `With multiple planets concentrated in Capricorn, this soul carries an extraordinary amount of earth-building energy. This stellium creates a powerful drive toward achievement, mastery, and lasting legacy.
+
+This concentration amplifies ambition, discipline, and the ability to play the long game. Life will repeatedly call this person to build structures - whether businesses, institutions, or other works meant to stand the test of time.
+
+The challenge with this much Capricorn energy is avoiding workaholism and emotional coldness. The drive for achievement may overshadow personal relationships and the need for rest and play.
+
+This stellium gifts an almost ancient sense of wisdom and capability. When properly channeled, it creates someone capable of remarkable achievements and leaving a lasting mark on the world. The key is remembering that the journey matters as much as the destination.`
+    },
+    Aquarius: {
+        title: "The Visionary Concentration",
+        symbol: "⚡",
+        reading: `With multiple planets concentrated in Aquarius, this soul carries an extraordinary amount of air-innovating energy. This stellium creates a powerful drive toward originality, community, and revolutionary change.
+
+This concentration amplifies uniqueness, humanitarian thinking, and the ability to envision futures that others cannot yet see. Life will repeatedly call this person to serve as an innovator, activist, or voice for collective progress.
+
+The challenge with this much Aquarius energy is maintaining connection and avoiding emotional detachment. The focus on the collective may come at the expense of intimate relationships, and the need to be different may become its own form of conformity.
+
+This stellium gifts an almost prophetic ability to see coming trends and innovations. When properly channeled, it creates someone capable of remarkable contributions to human progress and community building. The key is staying connected to individual hearts while working for collective good.`
+    },
+    Pisces: {
+        title: "The Mystic Concentration",
+        symbol: "🌊",
+        reading: `With multiple planets concentrated in Pisces, this soul carries an extraordinary amount of water-dissolving energy. This stellium creates a powerful drive toward transcendence, compassion, and spiritual connection.
+
+This concentration amplifies intuition, creativity, and the ability to sense what lies beyond ordinary perception. Life will repeatedly call this person to serve as an artist, healer, or spiritual guide.
+
+The challenge with this much Pisces energy is maintaining boundaries and staying grounded. The natural tendency toward merging may lead to confusion about where self ends and others begin, and escapism may become tempting.
+
+This stellium gifts an almost supernatural level of compassion and creative imagination. When properly channeled, it creates someone capable of remarkable artistic and spiritual achievements. The key is developing practical anchors while honoring the call to transcendence.`
+    }
+};
+
 // Export for use in other files
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
@@ -2106,6 +2245,7 @@ if (typeof module !== 'undefined' && module.exports) {
         CHALLENGE_NUMBER_READINGS,
         KARMIC_DEBT_READINGS,
         SOUL_URGE_READINGS,
-        PERSONALITY_NUMBER_READINGS
+        PERSONALITY_NUMBER_READINGS,
+        STELLIUM_READINGS
     };
 }

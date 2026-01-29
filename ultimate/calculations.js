@@ -496,10 +496,23 @@ function calculatePlanetSign(birthDate, planet) {
     
     const planetaryEphemeris = {
         mercury: {
-            // Mercury is fast and retrogrades frequently
-            // Monthly positions verified against Swiss Ephemeris
-            // May 3, 1981: Mercury was at 28° Aries
-            1981: { 1: 9, 2: 10, 3: 0, 4: 0, 5: 0, 6: 3, 7: 4, 8: 5, 9: 6, 10: 8, 11: 8, 12: 9 },
+            // Mercury is never more than 28° from the Sun
+            // Use Sun position and adjust based on phase
+            // Monthly sign estimates for common birth years
+            2020: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 3, 7: 4, 8: 5, 9: 6, 10: 8, 11: 8, 12: 9 },
+            2021: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 4, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
+            2022: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 4, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
+            2023: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 3, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
+            2024: { 1: 9, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 4, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
+            2025: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 3, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
+            2026: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 4, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
+            1981: { 1: 9, 2: 10, 3: 0, 4: 0, 5: 1, 6: 3, 7: 4, 8: 5, 9: 6, 10: 8, 11: 8, 12: 9 },
+            1990: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 3, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
+            1995: { 1: 10, 2: 10, 3: 0, 4: 0, 5: 1, 6: 2, 7: 4, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
+            2000: { 1: 10, 2: 10, 3: 0, 4: 0, 5: 1, 6: 2, 7: 3, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
+            2005: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 4, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
+            2010: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 3, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
+            2015: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 4, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 }
         },
         venus: {
             1981: { 1: 9, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 3, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
@@ -557,7 +570,36 @@ function calculatePlanetSign(birthDate, planet) {
             return ZODIAC_SIGNS[ephemeris[year]];
         }
         
-        // Find closest year
+        // For Mercury and Venus without ephemeris data, use Sun position as reference
+        // Mercury is always within 28° of Sun, Venus within 47°
+        if (planetLower === 'mercury') {
+            // Find closest year with monthly data
+            const yearsWithMonthly = Object.keys(ephemeris).map(Number).filter(y => typeof ephemeris[y] === 'object').sort((a, b) => Math.abs(year - a) - Math.abs(year - b));
+            if (yearsWithMonthly.length > 0) {
+                const closestYear = yearsWithMonthly[0];
+                const monthData = ephemeris[closestYear][month];
+                if (monthData !== undefined) {
+                    return ZODIAC_SIGNS[monthData];
+                }
+            }
+            // Last resort: Mercury follows Sun closely, typically in same sign or adjacent
+            const sunSign = getSunSign(birthDate);
+            const sunIndex = ZODIAC_SIGNS.findIndex(s => s.name === sunSign.name);
+            // Day of month determines if Mercury is ahead or behind Sun
+            const dayOfMonth = new Date(birthDate).getDate();
+            if (dayOfMonth <= 10) {
+                // Early in month, Mercury may be in previous sign
+                return ZODIAC_SIGNS[(sunIndex + 11) % 12];
+            } else if (dayOfMonth >= 20) {
+                // Late in month, Mercury likely in Sun's sign or next
+                return ZODIAC_SIGNS[sunIndex];
+            } else {
+                // Mid-month, Mercury typically with Sun
+                return ZODIAC_SIGNS[sunIndex];
+            }
+        }
+        
+        // Find closest year for other planets
         const years = Object.keys(ephemeris).map(Number).filter(y => typeof ephemeris[y] === 'number').sort((a, b) => a - b);
         for (let i = years.length - 1; i >= 0; i--) {
             if (year >= years[i]) {
@@ -924,6 +966,53 @@ function calculateAngularHouses(houses, risingSign, midheaven) {
 }
 
 // ============================================
+// STELLIUM DETECTION
+// ============================================
+
+function calculateStelliums(planets) {
+    // A stellium is 3 or more planets in the same sign
+    // This creates a concentrated energy in that sign
+    
+    const signCounts = {};
+    const signPlanets = {};
+    
+    // Count planets per sign
+    for (const [planet, sign] of Object.entries(planets)) {
+        // Handle both string signs and object signs with .name property
+        const signName = typeof sign === 'object' ? (sign?.name || sign) : sign;
+        if (!signName || signName === 'Unknown') continue;
+        
+        if (!signCounts[signName]) {
+            signCounts[signName] = 0;
+            signPlanets[signName] = [];
+        }
+        signCounts[signName]++;
+        signPlanets[signName].push(planet.charAt(0).toUpperCase() + planet.slice(1));
+    }
+    
+    // Find stelliums (3+ planets)
+    const stelliums = [];
+    for (const [sign, count] of Object.entries(signCounts)) {
+        if (count >= 3) {
+            const signData = ZODIAC_SIGNS.find(s => s.name === sign) || { element: 'Unknown', symbol: '✨' };
+            stelliums.push({
+                sign: sign,
+                symbol: signData.symbol,
+                element: signData.element,
+                count: count,
+                planets: signPlanets[sign],
+                intensity: count >= 5 ? 'extreme' : count >= 4 ? 'powerful' : 'significant'
+            });
+        }
+    }
+    
+    // Sort by count (most planets first)
+    stelliums.sort((a, b) => b.count - a.count);
+    
+    return stelliums.length > 0 ? stelliums : null;
+}
+
+// ============================================
 // CURRENT TRANSITS (as of 2026)
 // ============================================
 
@@ -1212,6 +1301,12 @@ function calculateAllReadings(userData) {
     // Angular Houses (1st, 4th, 7th, 10th)
     const angularHouses = houses ? calculateAngularHouses(houses, risingSign, midheaven) : null;
     
+    // Stellium Detection (3+ planets in the same sign)
+    const stelliums = calculateStelliums({
+        sun: sunSign, moon: moonSign, mercury: mercurySign, venus: venusSign,
+        mars: marsSign, jupiter: jupiterSign, saturn: saturnSign
+    });
+    
     // Nodes in Houses
     const northNodeHouse = houses ? calculateNodeHouse(northNode, houses) : null;
     const southNodeHouse = northNodeHouse ? ((northNodeHouse + 5) % 12) + 1 : null;
@@ -1281,6 +1376,7 @@ function calculateAllReadings(userData) {
             descendant,
             vertex,
             angularHouses,
+            stelliums,
             element,
             modality,
             houses,

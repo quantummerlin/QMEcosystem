@@ -1948,6 +1948,40 @@
             ));
             
             // ============================================
+            // STELLIUM DETECTION (3+ planets in same sign)
+            // ============================================
+            if (readings.astrology.stelliums && readings.astrology.stelliums.length > 0) {
+                const stelliumHeader = document.createElement('div');
+                stelliumHeader.className = 'section-divider';
+                stelliumHeader.innerHTML = '<h3>⚡ Power Concentrations</h3><p>Stelliums - extraordinary energy focus in specific signs</p>';
+                celestialSection.appendChild(stelliumHeader);
+                
+                readings.astrology.stelliums.forEach(stellium => {
+                    const stelliumReading = STELLIUM_READINGS ? STELLIUM_READINGS[stellium.sign] : null;
+                    const intensityLabel = stellium.intensity === 'extreme' ? '🔥 EXTREME' : 
+                                          stellium.intensity === 'powerful' ? '⚡ POWERFUL' : '✨ SIGNIFICANT';
+                    
+                    const stelliumContent = stelliumReading ? 
+                        `<p><strong>${intensityLabel} ${stellium.element.toUpperCase()} STELLIUM</strong></p>
+                        <p><em>Planets concentrated: ${stellium.planets.join(', ')}</em></p>
+                        <p>${stelliumReading.reading}</p>
+                        <p class="cosmic-highlight">This concentration of ${stellium.count} celestial bodies in ${stellium.sign} creates a powerful focal point in ${userData.name}'s cosmic blueprint. This is where their energy naturally wants to express itself most intensely.</p>` :
+                        `<p><strong>${intensityLabel} STELLIUM</strong></p>
+                        <p>With ${stellium.count} planets in ${stellium.sign}, there is an extraordinary concentration of ${stellium.element} energy in this area of life.</p>
+                        <p>Planets: ${stellium.planets.join(', ')}</p>`;
+                    
+                    celestialSection.appendChild(createReadingCard(
+                        `${stellium.symbol} ${stellium.sign} Stellium`,
+                        `${stellium.count} Planets in ${stellium.sign}`,
+                        [stellium.element + ' Energy', 'Power Focus', 'Concentrated Gifts', intensityLabel],
+                        stelliumContent,
+                        ['Exceptional strength in ' + stellium.sign + ' matters', 'Natural mastery potential', 'Magnetic presence in this area'],
+                        ['May overshadow other energies', 'Can be overwhelming to express', 'Needs conscious balance']
+                    ));
+                });
+            }
+            
+            // ============================================
             // HOUSE PLACEMENTS (if birth time available)
             // ============================================
             if (readings.astrology.planetHouses && readings.astrology.houses) {
