@@ -846,8 +846,8 @@ function calculateVertex(birthDate, birthTime, location = 'default') {
     const risingIndex = ZODIAC_SIGNS.findIndex(s => s.name === risingSign.name);
     
     // Get latitude for adjustment
-    const coords = LOCATION_COORDS[location.toLowerCase()] || LOCATION_COORDS['default'];
-    const latitudeAdjust = Math.round(coords.lat / 15); // Adjust based on latitude
+    const coords = LOCATIONS[location.toLowerCase()] || LOCATIONS['default'] || { lat: 40 };
+    const latitudeAdjust = Math.round((coords.lat || 40) / 15); // Adjust based on latitude
     
     // Vertex formula: approximately Descendant + latitude adjustment
     // Typically ends up in 5th-8th house western hemisphere
