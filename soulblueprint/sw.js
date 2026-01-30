@@ -1,5 +1,5 @@
-// Soul Blueprint - Service Worker
-const CACHE_NAME = 'soul-blueprint-v1';
+// The Imprint - Service Worker
+const CACHE_NAME = 'the-imprint-v1';
 const ASSETS_TO_CACHE = [
     '/soulblueprint/',
     '/soulblueprint/index.html',
@@ -20,7 +20,7 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then((cache) => {
-                console.log('📦 Caching Soul Blueprint assets');
+                console.log('Caching The Imprint assets');
                 return cache.addAll(ASSETS_TO_CACHE);
             })
             .then(() => self.skipWaiting())
@@ -35,12 +35,12 @@ self.addEventListener('activate', (event) => {
                 cacheNames
                     .filter((name) => name !== CACHE_NAME)
                     .map((name) => {
-                        console.log('🗑️ Deleting old cache:', name);
+                        console.log('Deleting old cache:', name);
                         return caches.delete(name);
                     })
             );
         }).then(() => {
-            console.log('✅ Service worker activated, claiming clients');
+            console.log('Service worker activated, claiming clients');
             return self.clients.claim();
         })
     );

@@ -1,5 +1,5 @@
 // ============================================
-// COSMIC BLUEPRINT - BRAND CONFIGURATION
+// THE IMPRINT - BRAND CONFIGURATION
 // ============================================
 // Universal branding for all ages
 // Copy this file to config.js to activate
@@ -9,9 +9,9 @@ const BRAND_CONFIG = {
     // ============================================
     // BRAND IDENTITY
     // ============================================
-    brandName: "Soul Blueprint",
-    tagline: "A Portrait of the Soul",
-    subTagline: "65+ Personalized Readings • A Keepsake for Life",
+    brandName: "The Imprint",
+    tagline: "Your Celestial Design Revealed",
+    subTagline: "You were imprinted at birth. This reading reveals the pattern.",
     
     // Who is this reading for?
     subjectType: "person",
@@ -37,13 +37,13 @@ const BRAND_CONFIG = {
         birthPlaceHelper: "Hospital location or city of birth"
     },
     
-    ctaButton: "Create Soul Blueprint",
-    loadingMessage: "Discovering the soul's story...",
+    ctaButton: "Create The Imprint",
+    loadingMessage: "Revealing the pattern...",
     
     // Result page copy
-    resultTitle: "Soul Blueprint",
+    resultTitle: "The Imprint",
     resultSubtitle: "A Portrait of",
-    generatedBy: "Created with love by Soul Blueprint",
+    generatedBy: "Created with love by The Imprint",
     
     // ============================================
     // SECTION NAMES
@@ -51,27 +51,27 @@ const BRAND_CONFIG = {
     sections: {
         celestial: {
             name: "Celestial Gifts",
-            icon: "🌟",
+            icon: "",
             description: "Planetary influences and cosmic personality"
         },
         numbers: {
             name: "Sacred Numbers",
-            icon: "🔢",
+            icon: "",
             description: "The numerological blueprint of the life path"
         },
         soul: {
             name: "Soul Mission",
-            icon: "✨",
+            icon: "",
             description: "Deeper purpose and spiritual gifts"
         },
         forecasts: {
             name: "Life Seasons",
-            icon: "🌈",
+            icon: "",
             description: "What the cosmos has in store"
         },
         cycles: {
             name: "Growth Cycles",
-            icon: "🌱",
+            icon: "",
             description: "Key developmental phases and timing"
         }
     },
@@ -158,7 +158,7 @@ const BRAND_CONFIG = {
     // ============================================
     sharing: {
         hashtags: ["SoulBlueprint", "BirthChart", "SoulReading", "GiftFromTheStars"],
-        defaultMessage: "I just discovered this beautiful soul blueprint! 🌟✨",
+        defaultMessage: "I just discovered The Imprint.",
         twitterHandle: "@quantummerlin"
     },
     
@@ -180,11 +180,11 @@ const BRAND_CONFIG = {
     // FOOTER
     // ============================================
     footer: {
-        copyright: "© 2026 Soul Blueprint",
+        copyright: "© 2026 The Imprint",
         disclaimer: "For entertainment and reflection purposes. Every person is unique and will grow in their own beautiful way.",
         links: [
-            { text: "Privacy Policy", url: "/privacy.html" },
-            { text: "Terms of Service", url: "/terms.html" },
+            { text: "Privacy Policy", url: "/soulblueprint/privacy.html" },
+            { text: "Terms of Service", url: "/soulblueprint/terms.html" },
             { text: "Contact", url: "/contact.html" }
         ]
     },
@@ -193,9 +193,9 @@ const BRAND_CONFIG = {
     // SEO
     // ============================================
     seo: {
-        title: "Soul Blueprint - Complete Astrology & Numerology Reading",
-        description: "Discover a complete soul blueprint with 65+ personalized readings covering astrology, numerology, and soul insights. Free and unlimited access.",
-        keywords: "soul blueprint, astrology reading, numerology reading, birth chart, life path, personalized reading, soul insights"
+        title: "The Imprint - Your Celestial Design Revealed",
+        description: "You were imprinted at birth. This reading reveals the pattern with 65+ personalized insights in astrology and numerology. Free and unlimited access.",
+        keywords: "the imprint, celestial design, astrology reading, numerology reading, birth chart, life path, personalized reading"
     }
 };
 

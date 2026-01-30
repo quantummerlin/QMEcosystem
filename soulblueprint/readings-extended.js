@@ -2154,8 +2154,8 @@ const PROGRESSION_READINGS = {
 // ============================================
 
 const COSMIC_WRAPUP = {
-    title: "The Complete Soul Blueprint",
-    icon: "✨",
+    title: "The Complete Imprint",
+    icon: "",
     
     generate: function(data) {
         // data is a flat object with: name, sunSign, moonSign, risingSign, lifePath, northNode, chineseZodiac, etc.
@@ -2178,31 +2178,31 @@ const COSMIC_WRAPUP = {
         const deepMoon = (typeof DEEP_MOON_READINGS !== 'undefined') ? DEEP_MOON_READINGS[moonSign] : null;
         const deepRising = (typeof DEEP_RISING_READINGS !== 'undefined') ? DEEP_RISING_READINGS[risingSign] : null;
         
-        const opening = `✨ FROM THE STARS TO YOUR ARMS ✨
+        const opening = `FROM THE STARS TO YOUR ARMS
 
-On the day ${name} took their first breath, the cosmos aligned in a pattern that has never existed before and will never exist again. This isn't metaphor—it's mathematical precision. The exact positions of Sun, Moon, planets, and stars at that moment created a celestial fingerprint as unique as the lines on ${name}'s tiny hands.
+    On the day ${name} took their first breath, the cosmos aligned in a pattern that has never existed before and will never exist again. This isn't metaphor—it's mathematical precision. The exact positions of Sun, Moon, planets, and stars at that moment created a celestial fingerprint as unique as the lines on ${name}'s tiny hands.
 
-What follows is ${name}'s energetic birth certificate—the soul blueprint that describes not who they must become, but who they already ARE at their deepest level. These patterns don't limit; they illuminate. They don't predict; they empower.`;
+    What follows is ${name}'s energetic birth certificate—the imprint that describes not who they must become, but who they already ARE at their deepest level. These patterns don't limit; they illuminate. They don't predict; they empower.`;
         
-        const coreEssence = `🌟 THE THREE PILLARS OF SELF
+        const coreEssence = `THE THREE PILLARS OF SELF
 
-Every human operates from three interconnected energy centers. In ${name}, these are:
+    Every human operates from three interconnected energy centers. In ${name}, these are:
 
-💛 THE SUN IN ${sunSign.toUpperCase()}: The Core Light
+    THE SUN IN ${sunSign.toUpperCase()}: The Core Light
 ${deepSun ? deepSun.hook : getSunSummary(sunSign)}
 This is ${name}'s life force—the energy they're here to radiate into the world. Every ${sunSign} Sun is born with a mission: ${deepSun ? deepSun.lifeLesson : 'to shine their unique light'}. Their greatest power lies in ${deepSun ? deepSun.creativeExpression : 'expressing their authentic self'}.
 
 ${deepSun ? `The ${sunSign} Sun needs: ` + deepSun.parentGuidance : ''}
 
-🌙 THE MOON IN ${moonSign.toUpperCase()}: The Inner Sanctuary  
+THE MOON IN ${moonSign.toUpperCase()}: The Inner Sanctuary  
 ${deepMoon ? deepMoon.hook : getMoonSummary(moonSign)}
 This is ${name}'s emotional operating system—how they process feelings, what makes them feel safe, and how they'll need to be comforted. When ${name} cries, they're speaking in ${moonSign} Moon language. ${deepMoon ? deepMoon.parentGuidance : ''}
 
-⬆️ ${risingSign !== 'Unknown' ? `${risingSign.toUpperCase()} RISING: The Outer Expression` : 'THE ASCENDANT'}
+${risingSign !== 'Unknown' ? `${risingSign.toUpperCase()} RISING: The Outer Expression` : 'THE ASCENDANT'}
 ${risingSign !== 'Unknown' ? (deepRising ? deepRising.firstImpression : getRisingSummary(risingSign)) : 'Unknown at birth—requires birth time.'}
 ${risingSign !== 'Unknown' ? `This is how the world will first perceive ${name}. As they grow, they'll develop this persona as their interface with the world. ${deepRising ? deepRising.lifeApproach : ''}` : 'The Rising Sign reveals how others first perceive this soul.'}`;
         
-        const soulPath = `🔮 THE SOUL'S JOURNEY
+        const soulPath = `THE SOUL'S JOURNEY
 
 LIFE PATH ${lifePath}: ${getLifePathTitle(lifePath)}
 ${name}'s entire life will be shaped by the lessons and gifts of the number ${lifePath}. This isn't random—it's calculated from the precise mathematics of their birthdate. ${getLifePathPurpose(lifePath)}.
@@ -2221,9 +2221,9 @@ ${name} carries the ancient energy of the ${chineseZodiac}. ${getChineseSummary(
 ${moonPhase !== 'Unknown' ? `BORN UNDER THE ${moonPhase.toUpperCase()} MOON
 The lunar phase at birth carries significance: ${getMoonPhaseMeaning(moonPhase)}.` : ''}`;
         
-        const gifts = `💎 THE GIFTS ${name.toUpperCase()} BRINGS
+        const gifts = `THE GIFTS ${name.toUpperCase()} BRINGS
 
-${name} didn't arrive empty-handed. The soul blueprint reveals specific gifts:
+    ${name} didn't arrive empty-handed. The imprint reveals specific gifts:
 
 From their ${sunSign} Sun: ${deepSun ? deepSun.affirmation : 'The gift of authentic self-expression'}
 
@@ -2241,7 +2241,7 @@ INNER PLANET SIGNATURES
 • Venus in ${venusSign}: ${getVenusSummary(venusSign)} (how they love and create beauty)
 • Mars in ${marsSign}: ${getMarsSummary(marsSign)} (how they act and assert themselves)`;
         
-        const closing = `🌟 THE SACRED BLESSING
+        const closing = `THE SACRED BLESSING
 
 Dear ${name},
 
@@ -2259,11 +2259,11 @@ You chose this blueprint.
 
 And now the adventure begins.
 
-✨ Welcome to Earth, beloved ${name}. The universe has been waiting for you. ✨`;
+Welcome to Earth, beloved ${name}. The universe has been waiting for you.`;
         
-        const parentGuidance = `💝 FOR ${name.toUpperCase()}'S PARENTS & GUARDIANS
+        const parentGuidance = `FOR ${name.toUpperCase()}'S PARENTS & GUARDIANS
 
-Understanding this soul blueprint is a gift—not a cage. Here's how to use it:
+    Understanding this imprint is a gift—not a cage. Here's how to use it:
 
 THE ${sunSign} SUN NEEDS:
 ${getSunNeed(sunSign)}. Honor their core nature by providing ${getSunNeedSpecific(sunSign)}.
@@ -2286,11 +2286,11 @@ REMEMBER:
 
 Your job isn't to change who ${name} is. It's to create the conditions where who they already are can flourish.
 
-You were chosen for this sacred role. Trust yourself. Trust ${name}. Trust the cosmos that brought you together. 💫`;
+You were chosen for this sacred role. Trust yourself. Trust ${name}. Trust the cosmos that brought you together.`;
         
         return {
-            title: `The Complete Soul Blueprint for ${name}`,
-            keywords: ['Soul Essence', 'Life Purpose', 'Cosmic Gifts', 'Divine Blueprint'],
+            title: `The Complete Imprint for ${name}`,
+            keywords: ['Soul Essence', 'Life Purpose', 'Celestial Gifts', 'Celestial Design'],
             opening: opening,
             coreEssence: coreEssence,
             soulPath: soulPath,
