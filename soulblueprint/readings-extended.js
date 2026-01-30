@@ -2472,6 +2472,42 @@ function getMoonPhaseMeaning(phase) {
     return meanings[phase] || 'A unique lunar influence awaits discovery.';
 }
 
+function getSunNeed(sign) {
+    const needs = {
+        Aries: "Freedom to lead and take bold initiative",
+        Taurus: "Stability, comfort, and a steady rhythm",
+        Gemini: "Variety, learning, and open communication",
+        Cancer: "Emotional safety, belonging, and family closeness",
+        Leo: "Creative expression, recognition, and warmth",
+        Virgo: "Order, usefulness, and meaningful contribution",
+        Libra: "Harmony, beauty, and balanced relationships",
+        Scorpio: "Depth, trust, and honest emotional intensity",
+        Sagittarius: "Adventure, exploration, and room to grow",
+        Capricorn: "Respect, structure, and long-term achievement",
+        Aquarius: "Freedom, originality, and shared ideals",
+        Pisces: "Imagination, compassion, and spiritual nourishment"
+    };
+    return needs[sign] || "Support, encouragement, and space to be themselves";
+}
+
+function getMoonNeed(sign) {
+    const needs = {
+        Aries: "Emotional release through action and movement",
+        Taurus: "Calm, physical comfort, and steady reassurance",
+        Gemini: "Conversation, mental stimulation, and lightness",
+        Cancer: "Nurturing, tenderness, and emotional security",
+        Leo: "Affection, warmth, and being seen for who they are",
+        Virgo: "Clarity, gentle structure, and helpful routines",
+        Libra: "Peace, kindness, and emotional balance",
+        Scorpio: "Deep trust, privacy, and emotional honesty",
+        Sagittarius: "Optimism, perspective, and emotional freedom",
+        Capricorn: "Reliability, respect, and quiet strength",
+        Aquarius: "Acceptance, space, and emotional understanding",
+        Pisces: "Softness, empathy, and imaginative comfort"
+    };
+    return needs[sign] || "Gentle reassurance and a safe emotional space";
+}
+
 function getSunNeedSpecific(sign) {
     const specifics = {
         Aries: "challenges, competition, and room to be first",
