@@ -573,7 +573,7 @@
         
         /* Reading Sections */
         .reading-section {
-            margin-bottom: 50px;
+            margin-bottom: 16px;
             text-align: left;
         }
         
@@ -581,10 +581,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid var(--primary);
+            gap: 8px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary);
             text-align: center;
         }
         
@@ -1071,7 +1071,7 @@
         .reading-card {
             background: var(--card-bg);
             border-radius: 10px;
-            margin-bottom: 6px;
+            margin-bottom: 2px;
             box-shadow: 0 1px 4px rgba(0,0,0,0.04);
             border: 1px solid var(--card-border);
             overflow: hidden;
@@ -1087,7 +1087,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 16px;
+            padding: 10px 14px;
             cursor: pointer;
             user-select: none;
             transition: background 0.2s ease;
@@ -1100,7 +1100,7 @@
         .reading-card-left {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 10px;
             flex: 1;
         }
         
@@ -1174,6 +1174,21 @@
         }
         
         .reading-card .read-badge.is-read::after {
+            content: "✓";
+            font-weight: bold;
+        }
+
+        .reading-card.is-read .read-badge {
+            background: linear-gradient(135deg, #FF69B4 0%, #6BA3D6 100%);
+            border-color: #FF69B4;
+            color: white;
+        }
+
+        .reading-card.is-read .read-badge::before {
+            content: none;
+        }
+
+        .reading-card.is-read .read-badge::after {
             content: "✓";
             font-weight: bold;
         }
@@ -4757,6 +4772,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             // Check if this card was previously marked as read
             const isRead = readSectionIds.includes(cardId);
+            if (isRead) {
+                card.classList.add('is-read');
+            }
             
             card.innerHTML = `
                 <div class="reading-card-header" onclick="toggleCard(this)">
@@ -4779,7 +4797,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                             ${contentParagraphs}
                         </div>
                         ${strengthsChallengesHtml}
-                        <button class="mark-read-btn ${isRead ? 'is-read' : ''}" onclick="markCardAsRead(event, '${cardId}')">
+                        <button type="button" class="mark-read-btn ${isRead ? 'is-read' : ''}" onclick="markCardAsRead(event, '${cardId}')">
                             ${isRead ? '✓ Read' : 'Mark as Read'}
                         </button>
                     </div>
@@ -4811,19 +4829,25 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             const badge = card.querySelector('.read-badge');
             const btn = card.querySelector('.mark-read-btn');
-            const isRead = badge.classList.contains('is-read');
+            const isRead = badge ? badge.classList.contains('is-read') : card.classList.contains('is-read');
             
             if (isRead) {
                 // Unmark as read
-                badge.classList.remove('is-read');
-                btn.classList.remove('is-read');
-                btn.textContent = 'Mark as Read';
+                card.classList.remove('is-read');
+                if (badge) badge.classList.remove('is-read');
+                if (btn) {
+                    btn.classList.remove('is-read');
+                    btn.textContent = 'Mark as Read';
+                }
                 readSectionIds = readSectionIds.filter(id => id !== cardId);
             } else {
                 // Mark as read
-                badge.classList.add('is-read');
-                btn.classList.add('is-read');
-                btn.textContent = '✓ Read';
+                card.classList.add('is-read');
+                if (badge) badge.classList.add('is-read');
+                if (btn) {
+                    btn.classList.add('is-read');
+                    btn.textContent = '✓ Read';
+                }
                 if (!readSectionIds.includes(cardId)) {
                     readSectionIds.push(cardId);
                 }
