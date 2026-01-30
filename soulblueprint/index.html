@@ -53,7 +53,7 @@
             --accent: #00CED1;
             --background: #FFF5F8;
             --background-dark: #1a0a2e;
-            --text: #333333;
+            --text: #2d1b4e;
             --text-light: #ffffff;
             --card-bg: #ffffff;
             --card-border: #FFE4EC;
@@ -231,7 +231,7 @@
             font-size: clamp(1rem, 2.5vw, 1.3rem);
             opacity: 1;
             margin-bottom: 10px;
-            color: #3d2b5e;
+            color: #2d1b4e;
             font-weight: 500;
         }
         
@@ -270,7 +270,7 @@
         
         .form-group .helper-text {
             font-size: 0.85rem;
-            color: #666;
+            color: #4b2a6f;
             margin-top: 5px;
         }
         
@@ -1999,13 +1999,13 @@
         }
 
         function initColorMode() {
-            const stored = localStorage.getItem('sb-color-mode') || 'pink';
+            const stored = localStorage.getItem('sb-color-mode') || 'off';
             setColorMode(stored);
 
             document.querySelectorAll('[data-color-toggle]').forEach(btn => {
                 btn.addEventListener('click', () => {
-                    const current = localStorage.getItem('sb-color-mode') || 'pink';
-                    const next = current === 'pink' ? 'blue' : current === 'blue' ? 'purple' : 'pink';
+                    const current = localStorage.getItem('sb-color-mode') || 'off';
+                    const next = current === 'off' ? 'pink' : current === 'pink' ? 'blue' : current === 'blue' ? 'purple' : 'off';
                     setColorMode(next);
                 });
             });
