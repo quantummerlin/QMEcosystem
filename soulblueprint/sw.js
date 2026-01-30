@@ -1,5 +1,5 @@
 // A Moment in Time - Service Worker
-const CACHE_NAME = 'moment-in-time-v2';
+const CACHE_NAME = 'moment-in-time-v3';
 const ASSETS_TO_CACHE = [
     '/soulblueprint/',
     '/soulblueprint/index.html',
@@ -13,7 +13,7 @@ const ASSETS_TO_CACHE = [
     '/soulblueprint/tone-variations.js',
     '/soulblueprint/save-share.js',
     '/soulblueprint/manifest.json',
-    '/soulblueprint/icon.svg'
+    '/soulblueprint/Amomentintime.jpg'
 ];
 
 // Install event - cache assets
