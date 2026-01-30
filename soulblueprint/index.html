@@ -606,6 +606,67 @@
             margin-top: 5px;
         }
 
+        .section-header .toggle-section-btn {
+            margin-top: 6px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .section-header .toggle-section-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .section-content.collapsed > :not(.section-header) {
+            display: none;
+        }
+
+        .reading-meter {
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .reading-meter-track {
+            width: 100%;
+            height: 8px;
+            background: rgba(0,0,0,0.08);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .reading-meter-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #FF69B4 0%, #6BA3D6 100%);
+            transition: width 0.3s ease;
+        }
+
+        .reading-meter-text {
+            margin-top: 6px;
+            font-size: 0.85rem;
+            opacity: 0.85;
+        }
+
+        body.color-mode-pink .reading-meter-fill {
+            background: linear-gradient(90deg, #ffb6d9 0%, #d4a5ff 50%, #a6c8ff 100%);
+        }
+
+        body.color-mode-blue .reading-meter-fill {
+            background: linear-gradient(90deg, #a6c8ff 0%, #c9a6ff 50%, #ffb6d9 100%);
+        }
+
+        body.color-mode-purple .reading-meter-fill {
+            background: linear-gradient(90deg, #c9a6ff 0%, #ffb6d9 50%, #a6c8ff 100%);
+        }
+
         .section-header .mark-read-btn {
             margin-top: 8px;
             padding: 6px 14px;
@@ -2170,7 +2231,9 @@
             
             // Init progress buttons and restore last position
             initReadProgressButtons();
+            initSectionToggles();
             initScrollPersistence();
+            updateReadingMeter();
             restoreReadingPosition();
         }
         
@@ -3747,6 +3810,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         <p class="description">${sectionConfig.description}</p>
                     </div>
                     <button type="button" class="mark-read-btn" data-section-id="${id}">Mark as read</button>
+                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Collapse</button>
                 </div>
             `;
             
@@ -3791,6 +3855,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
         const READ_PROGRESS_KEY = 'sb-read-progress';
         const SCROLL_POSITION_KEY = 'sb-scroll-y';
         const SCROLL_SECTION_KEY = 'sb-scroll-section';
+        const SECTION_COLLAPSE_KEY = 'sb-section-collapse';
         let scrollPersistBound = false;
         let scrollSaveRaf = null;
 
@@ -3814,6 +3879,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 btn.classList.toggle('is-read', isRead);
                 btn.textContent = isRead ? 'Read ✓' : 'Mark as read';
             });
+            updateReadingMeter();
         }
 
         function initReadProgressButtons() {
@@ -3828,6 +3894,64 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 };
             });
             updateReadButtons();
+        }
+
+        function getSectionCollapseState() {
+            try {
+                return JSON.parse(localStorage.getItem(SECTION_COLLAPSE_KEY)) || {};
+            } catch (e) {
+                return {};
+            }
+        }
+
+        function saveSectionCollapseState(state) {
+            localStorage.setItem(SECTION_COLLAPSE_KEY, JSON.stringify(state));
+        }
+
+        function updateSectionToggleButtons() {
+            const state = getSectionCollapseState();
+            document.querySelectorAll('.toggle-section-btn').forEach(btn => {
+                const id = btn.getAttribute('data-section-id');
+                const section = document.getElementById(`section-${id}`);
+                const isCollapsed = !!state[id];
+                if (section) {
+                    section.classList.toggle('collapsed', isCollapsed);
+                }
+                btn.textContent = isCollapsed ? 'Expand' : 'Collapse';
+            });
+        }
+
+        function initSectionToggles() {
+            document.querySelectorAll('.toggle-section-btn').forEach(btn => {
+                btn.onclick = () => {
+                    const id = btn.getAttribute('data-section-id');
+                    const state = getSectionCollapseState();
+                    state[id] = !state[id];
+                    saveSectionCollapseState(state);
+                    updateSectionToggleButtons();
+                };
+            });
+            updateSectionToggleButtons();
+        }
+
+        function updateReadingMeter() {
+            const totalSections = document.querySelectorAll('.section-content').length || 0;
+            const progress = getReadProgress();
+            const readCount = Object.keys(progress).filter(key => progress[key]).length;
+
+            const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+            const scrollPercent = Math.min(100, Math.max(0, Math.round((window.scrollY / maxScroll) * 100)));
+
+            const meterFill = document.getElementById('readingMeterFill');
+            const meterText = document.getElementById('readingMeterText');
+            if (meterFill) {
+                meterFill.style.width = `${scrollPercent}%`;
+            }
+            if (meterText) {
+                meterText.textContent = totalSections > 0
+                    ? `Reading progress: ${scrollPercent}% • ${readCount}/${totalSections} sections read`
+                    : `Reading progress: ${scrollPercent}%`;
+            }
         }
 
         function saveScrollPosition() {
@@ -3859,6 +3983,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 if (scrollSaveRaf) return;
                 scrollSaveRaf = requestAnimationFrame(() => {
                     saveScrollPosition();
+                    updateReadingMeter();
                     scrollSaveRaf = null;
                 });
             });

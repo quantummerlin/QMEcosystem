@@ -2,10 +2,10 @@
 // SAVE, SHARE & PAGINATION FUNCTIONALITY
 // ============================================
 
-// Pagination state
+// Pagination state (disabled - show all sections)
 let currentPage = 0;
 let totalPages = 0;
-const SECTIONS_PER_PAGE = 1; // Show one major section per page for AdSense
+const SECTIONS_PER_PAGE = 0;
 
 // Initialize pagination after readings are built
 function initializePagination() {
@@ -13,38 +13,29 @@ function initializePagination() {
     totalPages = sections.length;
     
     if (totalPages > 0) {
-        showPage(0);
+        sections.forEach((section) => {
+            section.classList.remove('hidden');
+            section.classList.add('active');
+            section.style.display = 'block';
+        });
+        const controls = document.querySelector('.pagination-controls');
+        if (controls) {
+            controls.style.display = 'none';
+        }
         document.getElementById('action-buttons').style.display = 'flex';
     }
 }
 
 function showPage(pageIndex) {
     const sections = document.querySelectorAll('.reading-section');
-    currentPage = Math.max(0, Math.min(pageIndex, totalPages - 1));
-    
-    // Hide all sections except current
-    sections.forEach((section, index) => {
-        if (index === currentPage) {
-            section.classList.remove('hidden');
-            section.classList.add('active');
-        } else {
-            section.classList.add('hidden');
-            section.classList.remove('active');
-        }
+    sections.forEach((section) => {
+        section.classList.remove('hidden');
+        section.classList.add('active');
+        section.style.display = 'block';
     });
-    
-    // Update pagination controls
-    updatePaginationControls();
-    
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    
-    // Track page view (for AdSense)
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'page_view', {
-            page_title: `Reading Section ${currentPage + 1}`,
-            page_location: window.location.href
-        });
+    const controls = document.querySelector('.pagination-controls');
+    if (controls) {
+        controls.style.display = 'none';
     }
 }
 
@@ -59,15 +50,11 @@ function updatePaginationControls() {
 }
 
 function nextPage() {
-    if (currentPage < totalPages - 1) {
-        showPage(currentPage + 1);
-    }
+    showPage(currentPage);
 }
 
 function prevPage() {
-    if (currentPage > 0) {
-        showPage(currentPage - 1);
-    }
+    showPage(currentPage);
 }
 
 // ============================================
