@@ -1017,6 +1017,44 @@
             transform: scale(1.15);
         }
         
+        .gifted-by-field {
+            margin: 25px 0 15px 0;
+        }
+        
+        .gifted-by-field label {
+            display: block;
+            margin-bottom: 8px;
+            color: #d8b5ff;
+            font-weight: 600;
+        }
+        
+        .gifted-by-field input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid rgba(216, 181, 255, 0.3);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #f0e6ff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .gifted-by-field input:focus {
+            outline: none;
+            border-color: #ff69b4;
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .gifted-by-field input::placeholder {
+            color: rgba(240, 230, 255, 0.4);
+        }
+        
+        .gifted-by-field .helper-text {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 5px;
+        }
+        
         .gift-btn, .coffee-btn {
             display: inline-block;
             padding: 15px 35px;
@@ -1529,6 +1567,11 @@
                             <button class="color-option active" data-color="purple" style="background: linear-gradient(135deg, #d8b5ff, #b19cd9);" onclick="selectGiftColor('purple')" title="Baby Purple">💜</button>
                         </div>
                     </div>
+                    <div class="gifted-by-field">
+                        <label for="giftedByInput">Gifted by: <span class="optional-badge">Optional</span></label>
+                        <input type="text" id="giftedByInput" placeholder="e.g., Grandma & Grandpa, Aunt Sarah..." maxlength="100">
+                        <p class="helper-text">Add your name to personalize this gift ✨</p>
+                    </div>
                     <button class="gift-btn" onclick="giftReading()">✨ Create Gift Version</button>
                 </div>
                 
@@ -1557,18 +1600,18 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=26"></script>
-    <script src="calculations.js?v=26"></script>
-    <script src="readings.js?v=26"></script>
-    <script src="house-readings.js?v=26"></script>
-    <script src="aspect-readings.js?v=26"></script>
-    <script src="advanced-readings.js?v=26"></script>
-    <script src="deep-readings.js?v=26"></script>
-    <script src="deep-planet-readings.js?v=26"></script>
-    <script src="deep-planet-readings-outer.js?v=26"></script>
-    <script src="readings-extended.js?v=26"></script>
-    <script src="love-blueprint.js?v=26"></script>
-    <script src="save-share.js?v=26"></script>
+    <script src="config.js?v=27"></script>
+    <script src="calculations.js?v=27"></script>
+    <script src="readings.js?v=27"></script>
+    <script src="house-readings.js?v=27"></script>
+    <script src="aspect-readings.js?v=27"></script>
+    <script src="advanced-readings.js?v=27"></script>
+    <script src="deep-readings.js?v=27"></script>
+    <script src="deep-planet-readings.js?v=27"></script>
+    <script src="deep-planet-readings-outer.js?v=27"></script>
+    <script src="readings-extended.js?v=27"></script>
+    <script src="love-blueprint.js?v=27"></script>
+    <script src="save-share.js?v=27"></script>
     <script>
         // ============================================
         // GENDER THEME SWITCH
@@ -3548,6 +3591,10 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const userData = window.lastUserData || JSON.parse(localStorage.getItem('lastReading') || '{}');
             const readings = window.lastGeneratedReadings;
             
+            // Get the gifted by value
+            const giftedByInput = document.getElementById('giftedByInput');
+            const giftedBy = giftedByInput ? giftedByInput.value.trim() : '';
+            
             // Check if we have the readings container with content as fallback
             const readingsContainer = document.getElementById('readingsContainer');
             const hasContent = readingsContainer && readingsContainer.children.length > 0;
@@ -3663,6 +3710,14 @@ This isn't a flaw - it's their power source. The tension between these two drive
         .gift-message p {
             font-size: 1.1rem;
         }
+        .gift-message .gifted-signature {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: ${colors.accent};
+            margin-top: 20px;
+            font-weight: 600;
+        }
         .reading-section { margin: 30px 0; }
         .section-content { margin-bottom: 40px; }
         .section-header {
@@ -3746,8 +3801,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
     </div>
     
     <div class="gift-message">
-        <h2>🎁 With Love</h2>
+        <h2>🎁 ${giftedBy ? 'A Gift from ' + giftedBy : 'With Love'}</h2>
         <p>This reading was created with love to celebrate the unique soul that is ${userData.name}. May these cosmic insights illuminate the path ahead and remind you of the infinite potential within.</p>
+        ${giftedBy ? '<p class="gifted-signature">— ' + giftedBy + ' ✨</p>' : ''}
     </div>
     
     ${readingsContainer.innerHTML}
