@@ -205,25 +205,27 @@
         .title-dots .dot {
             display: inline-block;
             animation: dotPulse 2s ease-in-out infinite;
+            -webkit-text-fill-color: #FF69B4;
+            color: #FF69B4;
         }
         
-        .title-dots .dot1 { animation-delay: 0s; }
-        .title-dots .dot2 { animation-delay: 0.3s; }
-        .title-dots .dot3 { animation-delay: 0.6s; }
+        .title-dots .dot1 { animation-delay: 0s; -webkit-text-fill-color: #FF69B4; }
+        .title-dots .dot2 { animation-delay: 0.3s; -webkit-text-fill-color: #9b7bc7; }
+        .title-dots .dot3 { animation-delay: 0.6s; -webkit-text-fill-color: #6BA3D6; }
         
         @keyframes dotPulse {
-            0%, 100% { opacity: 0.3; transform: translateY(0); }
-            50% { opacity: 1; transform: translateY(-3px); }
+            0%, 100% { opacity: 0.4; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(-4px); }
         }
         
         /* Dark mode dot colors */
-        body.color-mode-pink .title-dots .dot1 { color: #ffb6d9; -webkit-text-fill-color: #ffb6d9; }
-        body.color-mode-pink .title-dots .dot2 { color: #d4a5ff; -webkit-text-fill-color: #d4a5ff; }
-        body.color-mode-pink .title-dots .dot3 { color: #a6c8ff; -webkit-text-fill-color: #a6c8ff; }
+        body.color-mode-pink .title-dots .dot1 { -webkit-text-fill-color: #ffb6d9 !important; }
+        body.color-mode-pink .title-dots .dot2 { -webkit-text-fill-color: #d4a5ff !important; }
+        body.color-mode-pink .title-dots .dot3 { -webkit-text-fill-color: #a6c8ff !important; }
         
-        body.color-mode-blue .title-dots .dot1 { color: #a6c8ff; -webkit-text-fill-color: #a6c8ff; }
-        body.color-mode-blue .title-dots .dot2 { color: #c9a6ff; -webkit-text-fill-color: #c9a6ff; }
-        body.color-mode-blue .title-dots .dot3 { color: #ffb6d9; -webkit-text-fill-color: #ffb6d9; }
+        body.color-mode-blue .title-dots .dot1 { -webkit-text-fill-color: #a6c8ff !important; }
+        body.color-mode-blue .title-dots .dot2 { -webkit-text-fill-color: #c9a6ff !important; }
+        body.color-mode-blue .title-dots .dot3 { -webkit-text-fill-color: #ffb6d9 !important; }
         
         .header .tagline {
             font-size: clamp(1rem, 2.5vw, 1.3rem);
