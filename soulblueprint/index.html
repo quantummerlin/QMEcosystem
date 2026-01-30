@@ -944,7 +944,7 @@
             transition: opacity 0.3s;
         }
 
-        .footer-links .color-toggle {
+        .footer-links .dark-toggle {
             background: transparent;
             border: 1px solid rgba(91,58,134,0.35);
             color: #5b3a86;
@@ -957,7 +957,7 @@
             transition: opacity 0.3s, border-color 0.3s, color 0.3s;
         }
 
-        .footer-links .color-toggle:hover {
+        .footer-links .dark-toggle:hover {
             opacity: 1;
         }
 
@@ -1609,7 +1609,7 @@
                 <span>•</span>
                 <a href="/soulblueprint/disclaimer.html" target="_blank">Disclaimer</a>
                 <span>•</span>
-                <button class="color-toggle" type="button" data-color-toggle title="Toggle color mode">Color mode</button>
+                <button class="dark-toggle" type="button" data-color-toggle title="Toggle dark mode">Dark mode</button>
             </div>
         </div>
     </section>
@@ -1672,7 +1672,7 @@
                     <span>•</span>
                     <a href="/soulblueprint/disclaimer.html" target="_blank">Disclaimer</a>
                     <span>•</span>
-                    <button class="color-toggle" type="button" data-color-toggle title="Toggle color mode">Color mode</button>
+                    <button class="dark-toggle" type="button" data-color-toggle title="Toggle dark mode">Dark mode</button>
                 </div>
                 <p class="disclaimer" id="disclaimer">For entertainment purposes only. Not a substitute for professional advice.</p>
             </footer>
@@ -1829,9 +1829,8 @@
 
             localStorage.setItem('sb-color-mode', mode);
 
-            const label = mode === 'pink' ? 'Pink mode' : mode === 'blue' ? 'Blue mode' : 'Color mode';
             document.querySelectorAll('[data-color-toggle]').forEach(btn => {
-                btn.textContent = label;
+                btn.textContent = 'Dark mode';
             });
         }
 
@@ -3756,7 +3755,22 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 }
             };
             
-            const colors = colorSchemes[selectedGiftColor];
+            let colors = colorSchemes[selectedGiftColor];
+            const isDarkPink = document.body.classList.contains('color-mode-pink');
+            const isDarkBlue = document.body.classList.contains('color-mode-blue');
+            if (isDarkPink || isDarkBlue) {
+                colors = {
+                    bg: isDarkPink
+                        ? 'linear-gradient(135deg, #1f142a 0%, #2a1838 50%, #1f142a 100%)'
+                        : 'linear-gradient(135deg, #121a2b 0%, #1a2236 50%, #121a2b 100%)',
+                    text: '#c9a6ff',
+                    accent: '#9c7ddf',
+                    borderColor: 'rgba(201,166,255,0.35)',
+                    cardBg: 'rgba(24,16,36,0.6)',
+                    cardBorder: 'rgba(201,166,255,0.25)',
+                    keywordBg: 'rgba(201,166,255,0.2)'
+                };
+            }
             
             // Create a clean, ad-free HTML document
             const giftHTML = `<!DOCTYPE html>
