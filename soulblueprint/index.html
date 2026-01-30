@@ -605,6 +605,72 @@
             opacity: 0.8;
             margin-top: 5px;
         }
+
+        .section-header .mark-read-btn {
+            margin-top: 8px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .section-header .mark-read-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .section-header .mark-read-btn.is-read {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        body.color-mode-pink .section-header .mark-read-btn,
+        body.color-mode-pink .section-header .mark-read-btn.is-read {
+            border-color: #ffb6d9;
+        }
+
+        body.color-mode-pink .section-header .mark-read-btn {
+            color: #ffb6d9;
+        }
+
+        body.color-mode-pink .section-header .mark-read-btn.is-read {
+            background: #ffb6d9;
+            color: #1f142a;
+        }
+
+        body.color-mode-blue .section-header .mark-read-btn,
+        body.color-mode-blue .section-header .mark-read-btn.is-read {
+            border-color: #a6c8ff;
+        }
+
+        body.color-mode-blue .section-header .mark-read-btn {
+            color: #a6c8ff;
+        }
+
+        body.color-mode-blue .section-header .mark-read-btn.is-read {
+            background: #a6c8ff;
+            color: #121a2b;
+        }
+
+        body.color-mode-purple .section-header .mark-read-btn,
+        body.color-mode-purple .section-header .mark-read-btn.is-read {
+            border-color: #c9a6ff;
+        }
+
+        body.color-mode-purple .section-header .mark-read-btn {
+            color: #c9a6ff;
+        }
+
+        body.color-mode-purple .section-header .mark-read-btn.is-read {
+            background: #c9a6ff;
+            color: #1a1025;
+        }
         
         /* Reading Cards */
         .reading-card {
@@ -2102,8 +2168,10 @@
             // Build Reading Closing Summary
             buildReadingClosing(userData, readings);
             
-            // Scroll to top
-            window.scrollTo(0, 0);
+            // Init progress buttons and restore last position
+            initReadProgressButtons();
+            initScrollPersistence();
+            restoreReadingPosition();
         }
         
         function buildTableOfContents(readings) {
@@ -3678,6 +3746,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         <h2>${sectionConfig.name}</h2>
                         <p class="description">${sectionConfig.description}</p>
                     </div>
+                    <button type="button" class="mark-read-btn" data-section-id="${id}">Mark as read</button>
                 </div>
             `;
             
@@ -3713,6 +3782,110 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 (adsbygoogle = window.adsbygoogle || []).push({});
             } catch(e) {}
             return ad;
+        }
+
+        // ============================================
+        // READING PROGRESS + SCROLL PERSISTENCE
+        // ============================================
+
+        const READ_PROGRESS_KEY = 'sb-read-progress';
+        const SCROLL_POSITION_KEY = 'sb-scroll-y';
+        const SCROLL_SECTION_KEY = 'sb-scroll-section';
+        let scrollPersistBound = false;
+        let scrollSaveRaf = null;
+
+        function getReadProgress() {
+            try {
+                return JSON.parse(localStorage.getItem(READ_PROGRESS_KEY)) || {};
+            } catch (e) {
+                return {};
+            }
+        }
+
+        function saveReadProgress(progress) {
+            localStorage.setItem(READ_PROGRESS_KEY, JSON.stringify(progress));
+        }
+
+        function updateReadButtons() {
+            const progress = getReadProgress();
+            document.querySelectorAll('.mark-read-btn').forEach(btn => {
+                const id = btn.getAttribute('data-section-id');
+                const isRead = !!progress[id];
+                btn.classList.toggle('is-read', isRead);
+                btn.textContent = isRead ? 'Read ✓' : 'Mark as read';
+            });
+        }
+
+        function initReadProgressButtons() {
+            document.querySelectorAll('.mark-read-btn').forEach(btn => {
+                btn.onclick = () => {
+                    const id = btn.getAttribute('data-section-id');
+                    const progress = getReadProgress();
+                    const next = !progress[id];
+                    progress[id] = next;
+                    saveReadProgress(progress);
+                    updateReadButtons();
+                };
+            });
+            updateReadButtons();
+        }
+
+        function saveScrollPosition() {
+            const resultsActive = document.getElementById('resultsSection').classList.contains('active');
+            if (!resultsActive) return;
+
+            const y = window.scrollY || window.pageYOffset || 0;
+            localStorage.setItem(SCROLL_POSITION_KEY, String(y));
+
+            let nearestId = null;
+            let smallestDistance = Infinity;
+            document.querySelectorAll('.section-content').forEach(section => {
+                const dist = Math.abs(y - section.offsetTop);
+                if (dist < smallestDistance) {
+                    smallestDistance = dist;
+                    nearestId = section.id.replace('section-', '');
+                }
+            });
+
+            if (nearestId) {
+                localStorage.setItem(SCROLL_SECTION_KEY, nearestId);
+            }
+        }
+
+        function initScrollPersistence() {
+            if (scrollPersistBound) return;
+            scrollPersistBound = true;
+            window.addEventListener('scroll', () => {
+                if (scrollSaveRaf) return;
+                scrollSaveRaf = requestAnimationFrame(() => {
+                    saveScrollPosition();
+                    scrollSaveRaf = null;
+                });
+            });
+        }
+
+        function restoreReadingPosition() {
+            const sectionId = localStorage.getItem(SCROLL_SECTION_KEY);
+            const y = parseInt(localStorage.getItem(SCROLL_POSITION_KEY), 10);
+
+            if (sectionId) {
+                const section = document.getElementById(`section-${sectionId}`);
+                if (section) {
+                    setTimeout(() => {
+                        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 200);
+                    return;
+                }
+            }
+
+            if (!Number.isNaN(y)) {
+                setTimeout(() => {
+                    window.scrollTo(0, y);
+                }, 200);
+                return;
+            }
+
+            window.scrollTo(0, 0);
         }
         
         function createReadingCard(title, value, keywords, content, strengths, challenges) {
@@ -4149,6 +4322,19 @@ This isn't a flaw - it's their power source. The tension between these two drive
             initColorMode();
             // Set default gender theme (pink)
             setGender('girl');
+
+            // Auto-restore last reading and scroll position
+            const savedReadingRaw = localStorage.getItem('lastReading');
+            if (savedReadingRaw) {
+                try {
+                    const savedReading = JSON.parse(savedReadingRaw);
+                    if (savedReading && savedReading.name && savedReading.birthDate) {
+                        generateReading(savedReading);
+                    }
+                } catch (e) {
+                    // Ignore invalid saved data
+                }
+            }
             
             // Update theme-color meta tag when gender changes
             const themeColorMeta = document.querySelector('meta[name="theme-color"]');
