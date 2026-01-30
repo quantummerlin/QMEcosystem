@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Soul Blueprint</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #D8B5FF;
+            --secondary: #B19CD9;
+            --background: #F8F0FF;
+            --card-bg: #ffffff;
+            --text: #333333;
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body: 'Inter', 'Segoe UI', sans-serif;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: var(--font-body);
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #FF69B4 0%, #D8B5FF 50%, #6BA3D6 100%);
+        }
+        .header h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: #1a0a2e;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #3d2b5e;
+            font-size: 1.1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-family: var(--font-heading);
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(216,181,255,0.3);
+        }
+        h2:first-child {
+            margin-top: 0;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        .back-link:hover {
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255,255,255,0.5);
+            margin-top: 40px;
+        }
+        .footer p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            .content-card {
+                padding: 25px;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>About Soul Blueprint</h1>
+        <p>A reflective reading for anyone, at any time</p>
+    </header>
+
+    <div class="container">
+        <div class="content-card">
+            <h2>Why This Exists</h2>
+            <p>Soul Blueprint is for anyone who wants an energetic picture of who they may be, what they might be capable of, and how that could line up with their life as it unfolds. It is not a rulebook and it is not a prediction. It is a reflective reading designed to be revisited over time.</p>
+
+            <h2>A Reading You Can Return To</h2>
+            <p>Think of it like a good book you can pick up every few years and appreciate with fresh eyes. Or, if you prefer, a movie you rewatch at a different time in life and notice new details. The story may feel different each time because you have changed.</p>
+
+            <h2>What You Do With It Is Yours</h2>
+            <p>If you believe in the positivity of the reading, you might use it as a foundation for a great life. If you see it as metaphor or even nonsense, that is also valid. Soul Blueprint is meant to offer possibility, not certainty.</p>
+
+            <h2>Why The Stars?</h2>
+            <p>There has been an ancient obsession with the stars, constellations, and their relationships to one another, and the idea that these patterns might influence us energetically. Whether you see that as meaningful or not, it has inspired human storytelling for thousands of years. Soul Blueprint is part of that tradition.</p>
+
+            <h2>Where We Are</h2>
+            <p>We are based in Melbourne, Victoria, Australia and serve readers everywhere.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="/soulblueprint/" class="back-link">Back to Soul Blueprint</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 Soul Blueprint by Quantum Merlin. All rights reserved.</p>
+        <p style="margin-top: 10px;">
+            <a href="/soulblueprint/about.html">About</a> •
+            <a href="/soulblueprint/privacy.html">Privacy Policy</a> •
+            <a href="/soulblueprint/terms.html">Terms of Service</a> •
+            <a href="/soulblueprint/disclaimer.html">Disclaimer</a>
+        </p>
+    </footer>
+</body>
+</html>
