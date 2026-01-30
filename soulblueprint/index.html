@@ -708,6 +708,7 @@
             background: #e0e0e0;
             border-radius: 999px;
             overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.08);
         }
         
         .sticky-progress-bar .progress-fill {
@@ -1001,7 +1002,7 @@
             background: rgba(255,255,255,0.05);
         }
 
-        .section-header .mark-read-btn {
+        .section-header .section-mark-read-btn {
             margin-top: 8px;
             padding: 6px 14px;
             border-radius: 999px;
@@ -1014,55 +1015,55 @@
             transition: all 0.2s ease;
         }
 
-        .section-header .mark-read-btn:hover {
+        .section-header .section-mark-read-btn:hover {
             transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        .section-header .mark-read-btn.is-read {
+        .section-header .section-mark-read-btn.is-read {
             background: var(--primary);
             color: #ffffff;
             border-color: var(--primary);
         }
 
-        body.color-mode-pink .section-header .mark-read-btn,
-        body.color-mode-pink .section-header .mark-read-btn.is-read {
+        body.color-mode-pink .section-header .section-mark-read-btn,
+        body.color-mode-pink .section-header .section-mark-read-btn.is-read {
             border-color: #ffb6d9;
         }
 
-        body.color-mode-pink .section-header .mark-read-btn {
+        body.color-mode-pink .section-header .section-mark-read-btn {
             color: #ffb6d9;
         }
 
-        body.color-mode-pink .section-header .mark-read-btn.is-read {
+        body.color-mode-pink .section-header .section-mark-read-btn.is-read {
             background: #ffb6d9;
             color: #1f142a;
         }
 
-        body.color-mode-blue .section-header .mark-read-btn,
-        body.color-mode-blue .section-header .mark-read-btn.is-read {
+        body.color-mode-blue .section-header .section-mark-read-btn,
+        body.color-mode-blue .section-header .section-mark-read-btn.is-read {
             border-color: #a6c8ff;
         }
 
-        body.color-mode-blue .section-header .mark-read-btn {
+        body.color-mode-blue .section-header .section-mark-read-btn {
             color: #a6c8ff;
         }
 
-        body.color-mode-blue .section-header .mark-read-btn.is-read {
+        body.color-mode-blue .section-header .section-mark-read-btn.is-read {
             background: #a6c8ff;
             color: #121a2b;
         }
 
-        body.color-mode-purple .section-header .mark-read-btn,
-        body.color-mode-purple .section-header .mark-read-btn.is-read {
+        body.color-mode-purple .section-header .section-mark-read-btn,
+        body.color-mode-purple .section-header .section-mark-read-btn.is-read {
             border-color: #c9a6ff;
         }
 
-        body.color-mode-purple .section-header .mark-read-btn {
+        body.color-mode-purple .section-header .section-mark-read-btn {
             color: #c9a6ff;
         }
 
-        body.color-mode-purple .section-header .mark-read-btn.is-read {
+        body.color-mode-purple .section-header .section-mark-read-btn.is-read {
             background: #c9a6ff;
             color: #1a1025;
         }
@@ -4482,7 +4483,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         <h2>${sectionConfig.name}</h2>
                         <p class="description">${sectionConfig.description}</p>
                     </div>
-                    <button type="button" class="mark-read-btn" data-section-id="${id}">Mark as read</button>
+                    <button type="button" class="section-mark-read-btn" data-section-id="${id}">Mark as read</button>
                     <button type="button" class="toggle-section-btn" data-section-id="${id}">Collapse</button>
                 </div>
             `;
@@ -4546,7 +4547,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
 
         function updateReadButtons() {
             const progress = getReadProgress();
-            document.querySelectorAll('.mark-read-btn').forEach(btn => {
+            document.querySelectorAll('.section-header .section-mark-read-btn').forEach(btn => {
                 const id = btn.getAttribute('data-section-id');
                 const isRead = !!progress[id];
                 btn.classList.toggle('is-read', isRead);
@@ -4556,7 +4557,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
         }
 
         function initReadProgressButtons() {
-            document.querySelectorAll('.mark-read-btn').forEach(btn => {
+            document.querySelectorAll('.section-header .section-mark-read-btn').forEach(btn => {
                 btn.onclick = () => {
                     const id = btn.getAttribute('data-section-id');
                     const progress = getReadProgress();
