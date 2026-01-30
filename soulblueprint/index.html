@@ -712,7 +712,7 @@
         
         .sticky-progress-bar .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #4CAF50 0%, #8BC34A 100%);
+            background: linear-gradient(90deg, #FF69B4 0%, #6BA3D6 100%);
             transition: width 0.4s ease;
             width: 0%;
         }
@@ -974,11 +974,17 @@
             background: linear-gradient(90deg, #c9a6ff 0%, #ffb6d9 50%, #a6c8ff 100%);
         }
         
-        /* Sticky Progress Bar Color Modes - use green progress bar */
-        body.color-mode-pink .sticky-progress-bar .progress-fill,
-        body.color-mode-blue .sticky-progress-bar .progress-fill,
+        /* Sticky Progress Bar Color Modes */
+        body.color-mode-pink .sticky-progress-bar .progress-fill {
+            background: linear-gradient(90deg, #ffb6d9 0%, #d4a5ff 100%);
+        }
+        
+        body.color-mode-blue .sticky-progress-bar .progress-fill {
+            background: linear-gradient(90deg, #a6c8ff 0%, #c9a6ff 100%);
+        }
+        
         body.color-mode-purple .sticky-progress-bar .progress-fill {
-            background: linear-gradient(90deg, #4CAF50 0%, #8BC34A 100%);
+            background: linear-gradient(90deg, #c9a6ff 0%, #ffb6d9 100%);
         }
         
         /* Big Three Card Color Modes */
@@ -1064,9 +1070,9 @@
         /* Reading Cards - Expandable Accordion Style */
         .reading-card {
             background: var(--card-bg);
-            border-radius: 12px;
-            margin-bottom: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            margin-bottom: 6px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
             border: 1px solid var(--card-border);
             overflow: hidden;
             transition: all 0.3s ease;
@@ -1081,7 +1087,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 16px 20px;
+            padding: 12px 16px;
             cursor: pointer;
             user-select: none;
             transition: background 0.2s ease;
@@ -1158,8 +1164,8 @@
         }
         
         .reading-card .read-badge.is-read {
-            background: #4CAF50;
-            border-color: #4CAF50;
+            background: linear-gradient(135deg, #FF69B4 0%, #6BA3D6 100%);
+            border-color: #FF69B4;
             color: white;
         }
         
@@ -1284,15 +1290,15 @@
         }
         
         .reading-card .mark-read-btn:hover {
-            background: #4CAF50;
+            background: linear-gradient(135deg, #FF69B4 0%, #6BA3D6 100%);
             color: white;
-            border-color: #4CAF50;
+            border-color: #FF69B4;
         }
         
         .reading-card .mark-read-btn.is-read {
-            background: #4CAF50;
+            background: linear-gradient(135deg, #FF69B4 0%, #6BA3D6 100%);
             color: white;
-            border-color: #4CAF50;
+            border-color: #FF69B4;
         }
         
         @media (max-width: 768px) {
@@ -4786,31 +4792,11 @@ This isn't a flaw - it's their power source. The tension between these two drive
         function toggleCard(headerEl) {
             const card = headerEl.closest('.reading-card');
             const isExpanded = card.classList.contains('expanded');
-            const cardId = card.id;
             
             if (isExpanded) {
                 card.classList.remove('expanded');
             } else {
                 card.classList.add('expanded');
-                
-                // Auto-mark as read when expanding
-                if (cardId && !readSectionIds.includes(cardId)) {
-                    const badge = card.querySelector('.read-badge');
-                    const btn = card.querySelector('.mark-read-btn');
-                    
-                    badge.classList.add('is-read');
-                    btn.classList.add('is-read');
-                    btn.textContent = '✓ Read';
-                    readSectionIds.push(cardId);
-                    
-                    try {
-                        localStorage.setItem('sb-read-sections', JSON.stringify(readSectionIds));
-                    } catch(e) {}
-                    
-                    updateProgressDisplay();
-                    checkCompletion();
-                }
-                
                 // Scroll the card into view with some offset
                 setTimeout(() => {
                     card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
