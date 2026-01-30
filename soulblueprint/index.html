@@ -59,15 +59,6 @@
             --card-border: #FFE4EC;
         }
 
-        /* Yellow Theme */
-        body.theme-yellow {
-            --primary: #F9E7A3;
-            --secondary: #FFE9B3;
-            --accent: #E2B84A;
-            --background: #FFF9E6;
-            --card-border: #F5E3B8;
-        }
-
         /* Purple Theme */
         body.theme-purple {
             --primary: #D8B5FF;
@@ -126,10 +117,6 @@
             background: linear-gradient(135deg, #6BA3D6 0%, #87CEEB 100%);
         }
 
-        .theme-bar.theme-selected-yellow {
-            background: linear-gradient(135deg, #F9E7A3 0%, #FFE9B3 100%);
-        }
-
         .theme-bar.theme-selected-purple {
             background: linear-gradient(135deg, #D8B5FF 0%, #B19CD9 100%);
         }
@@ -162,10 +149,6 @@
         
         .theme-bar-btn[data-theme="boy"].active {
             color: #6BA3D6;
-        }
-
-        .theme-bar-btn[data-theme="yellow"].active {
-            color: #E2B84A;
         }
 
         .theme-bar-btn[data-theme="purple"].active {
@@ -1503,9 +1486,6 @@
         <button class="theme-bar-btn" data-theme="boy" onclick="setGender('boy')">
             Blue Theme
         </button>
-        <button class="theme-bar-btn" data-theme="yellow" onclick="setGender('yellow')">
-            Yellow Theme
-        </button>
         <button class="theme-bar-btn" data-theme="purple" onclick="setGender('purple')">
             Purple Theme
         </button>
@@ -1671,11 +1651,11 @@
             
             // Update theme bar background
             const themeBar = document.getElementById('themeBar');
-            themeBar.classList.remove('theme-selected-girl', 'theme-selected-boy', 'theme-selected-yellow', 'theme-selected-purple');
+            themeBar.classList.remove('theme-selected-girl', 'theme-selected-boy', 'theme-selected-purple');
             themeBar.classList.add(`theme-selected-${gender}`);
             
             // Apply theme colors
-            document.body.classList.remove('theme-girl', 'theme-boy', 'theme-yellow', 'theme-purple');
+            document.body.classList.remove('theme-girl', 'theme-boy', 'theme-purple');
             document.body.classList.add(`theme-${gender}`);
             
             // Update CSS variables for dynamic theming
@@ -1683,7 +1663,6 @@
             const themeMap = {
                 girl: { primary: '#FF69B4', secondary: '#FFB6C1', accent: '#FF1493', background: '#FFF0F5', border: '#FFE4EC' },
                 boy: { primary: '#6BA3D6', secondary: '#87CEEB', accent: '#4169E1', background: '#F0F8FF', border: '#B0E0E6' },
-                yellow: { primary: '#FFD54F', secondary: '#FFEB8A', accent: '#FFC107', background: '#FFFDE7', border: '#FFE082' },
                 purple: { primary: '#D8B5FF', secondary: '#B19CD9', accent: '#9B59B6', background: '#F8F0FF', border: '#E6D5F7' }
             };
             const theme = themeMap[gender] || themeMap.girl;
@@ -3663,15 +3642,6 @@ This isn't a flaw - it's their power source. The tension between these two drive
                     cardBg: 'rgba(135,206,235,0.2)',
                     cardBorder: 'rgba(0,119,190,0.2)',
                     keywordBg: 'rgba(0,119,190,0.2)'
-                },
-                yellow: {
-                    bg: 'linear-gradient(135deg, #fff8e1 0%, #ffefc7 50%, #fff8e1 100%)',
-                    text: '#5a4a00',
-                    accent: '#e2b84a',
-                    borderColor: 'rgba(226,184,74,0.3)',
-                    cardBg: 'rgba(249,231,163,0.25)',
-                    cardBorder: 'rgba(226,184,74,0.25)',
-                    keywordBg: 'rgba(226,184,74,0.2)'
                 },
                 purple: {
                     bg: 'linear-gradient(135deg, #f3e5f5 0%, #e1bee7 50%, #f3e5f5 100%)',
