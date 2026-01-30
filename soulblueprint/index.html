@@ -1680,18 +1680,19 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=27"></script>
-    <script src="calculations.js?v=27"></script>
-    <script src="readings.js?v=27"></script>
-    <script src="house-readings.js?v=27"></script>
-    <script src="aspect-readings.js?v=27"></script>
-    <script src="advanced-readings.js?v=27"></script>
-    <script src="deep-readings.js?v=27"></script>
-    <script src="deep-planet-readings.js?v=27"></script>
-    <script src="deep-planet-readings-outer.js?v=27"></script>
-    <script src="readings-extended.js?v=27"></script>
-    <script src="love-blueprint.js?v=27"></script>
-    <script src="save-share.js?v=27"></script>
+    <script src="config.js?v=28"></script>
+    <script src="calculations.js?v=28"></script>
+    <script src="readings.js?v=28"></script>
+    <script src="house-readings.js?v=28"></script>
+    <script src="aspect-readings.js?v=28"></script>
+    <script src="advanced-readings.js?v=28"></script>
+    <script src="deep-readings.js?v=28"></script>
+    <script src="deep-planet-readings.js?v=28"></script>
+    <script src="deep-planet-readings-outer.js?v=28"></script>
+    <script src="readings-extended.js?v=28"></script>
+    <script src="love-blueprint.js?v=28"></script>
+    <script src="tone-variations.js?v=28"></script>
+    <script src="save-share.js?v=28"></script>
     <script>
         // ============================================
         // GENDER THEME SWITCH
@@ -3569,6 +3570,16 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const strengthsArray = Array.isArray(strengths) ? strengths : [];
             const challengesArray = Array.isArray(challenges) ? challenges : [];
             
+            // Apply tone variations based on color mode (pink=feminine, blue=masculine, purple=neutral)
+            let tonedContent = content;
+            let tonedStrengthsArray = strengthsArray;
+            let tonedChallengesArray = challengesArray;
+            if (typeof applyToneVariations === 'function') {
+                tonedContent = applyToneVariations(content);
+                tonedStrengthsArray = strengthsArray.map(s => applyToneVariations(s));
+                tonedChallengesArray = challengesArray.map(c => applyToneVariations(c));
+            }
+            
             let keywordsHtml = '';
             if (keywordsArray.length > 0) {
                 keywordsHtml = `
@@ -3579,22 +3590,22 @@ This isn't a flaw - it's their power source. The tension between these two drive
             }
             
             let strengthsChallengesHtml = '';
-            if (strengthsArray.length > 0 || challengesArray.length > 0) {
+            if (tonedStrengthsArray.length > 0 || tonedChallengesArray.length > 0) {
                 strengthsChallengesHtml = `
                     <div class="strengths-challenges">
-                        ${strengthsArray.length > 0 ? `
+                        ${tonedStrengthsArray.length > 0 ? `
                             <div>
                                 <h4>Strengths</h4>
                                 <ul>
-                                    ${strengthsArray.map(s => `<li>${s}</li>`).join('')}
+                                    ${tonedStrengthsArray.map(s => `<li>${s}</li>`).join('')}
                                 </ul>
                             </div>
                         ` : ''}
-                        ${challengesArray.length > 0 ? `
+                        ${tonedChallengesArray.length > 0 ? `
                             <div>
                                 <h4>Growth Areas</h4>
                                 <ul>
-                                    ${challengesArray.map(c => `<li>${c}</li>`).join('')}
+                                    ${tonedChallengesArray.map(c => `<li>${c}</li>`).join('')}
                                 </ul>
                             </div>
                         ` : ''}
@@ -3603,7 +3614,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             }
             
             // Convert newlines to paragraphs
-            const contentParagraphs = content.split('\n\n').map(p => `<p>${p}</p>`).join('');
+            const contentParagraphs = tonedContent.split('\n\n').map(p => `<p>${p}</p>`).join('');
             
             // Extract emoji from title and put on its own line
             const emojiRegex = /^([\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F000}-\u{1F02F}\u{1F0A0}-\u{1F0FF}♈♉♊♋♌♍♎♏♐♑♒♓]+)\s*/u;
