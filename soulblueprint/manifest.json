@@ -1,0 +1,21 @@
+{
+  "name": "Soul Blueprint",
+  "short_name": "Soul Blueprint",
+  "description": "Complete soul blueprint with 65+ personalized readings",
+  "start_url": "/soulblueprint/",
+  "display": "standalone",
+  "background_color": "#FFF0F5",
+  "theme_color": "#FF69B4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "entertainment"],
+  "lang": "en",
+  "dir": "ltr"
+}

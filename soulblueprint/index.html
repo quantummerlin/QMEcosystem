@@ -1,0 +1,3870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3480541530392777" crossorigin="anonymous"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title id="page-title">Soul Blueprint</title>
+    <meta name="description" id="meta-description" content="Discover a complete soul blueprint with 65+ personalized readings covering astrology, numerology, and soul insights. Perfect for any age — create one for yourself or gift it as a keepsake. Free and unlimited.">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#FF69B4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Soul Blueprint">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Soul Blueprint">
+    <meta name="msapplication-TileColor" content="#FF69B4">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- PWA Manifest & Icons (cache bust) -->
+    <link rel="manifest" href="manifest.json?v=3">
+    <link rel="apple-touch-icon" href="icon.svg?v=3">
+    <link rel="icon" type="image/svg+xml" href="icon.svg?v=3">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" id="og-title" content="Soul Blueprint - 65+ Personalized Readings">
+    <meta property="og:description" id="og-description" content="Discover a complete soul blueprint with 65+ personalized readings. Astrology, numerology, and soul insights for any age. Free and unlimited.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style id="dynamic-styles">
+        /* Base styles - will be customized by config */
+        :root {
+            --primary: #FF69B4;
+            --secondary: #FFD700;
+            --accent: #00CED1;
+            --background: #FFF5F8;
+            --background-dark: #1a0a2e;
+            --text: #333333;
+            --text-light: #ffffff;
+            --card-bg: #ffffff;
+            --card-border: #FFE4EC;
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body: 'Inter', 'Segoe UI', sans-serif;
+        }
+        
+        /* Pink Theme (default for girl) */
+        body.theme-girl {
+            --primary: #FF69B4;
+            --secondary: #FFB6C1;
+            --accent: #FF1493;
+            --background: #FFF0F5;
+            --card-border: #FFE4EC;
+        }
+        
+        /* Blue Theme (for boy) */
+        body.theme-boy {
+            --primary: #6BA3D6;
+            --secondary: #87CEEB;
+            --accent: #4169E1;
+            --background: #F0F8FF;
+            --card-border: #B0E0E6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding-top: 50px;
+        }
+        
+        /* Fixed Theme Bar at Top */
+        .theme-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(90deg, #FF69B4 0%, #FFB6C1 25%, #E6E6FA 50%, #87CEEB 75%, #6BA3D6 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            transition: background 0.5s ease;
+        }
+        
+        .theme-bar.theme-selected-girl {
+            background: linear-gradient(135deg, #FF69B4 0%, #FFB6C1 100%);
+        }
+        
+        .theme-bar.theme-selected-boy {
+            background: linear-gradient(135deg, #6BA3D6 0%, #87CEEB 100%);
+        }
+        
+        .theme-bar-btn {
+            padding: 8px 20px;
+            border: 2px solid white;
+            border-radius: 20px;
+            background: transparent;
+            color: white;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .theme-bar-btn:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+        }
+        
+        .theme-bar-btn.active {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .theme-bar-btn[data-theme="boy"].active {
+            color: #6BA3D6;
+        }
+        
+        body.dark-theme {
+            background: var(--background-dark);
+            color: var(--text-light);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #FF69B4 0%, #FFB6C1 25%, #E6E6FA 50%, #87CEEB 75%, #6BA3D6 100%);
+            color: #2d1b4e;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(90deg, #FF69B4 0%, #6BA3D6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header .tagline {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            opacity: 1;
+            margin-bottom: 10px;
+            color: #3d2b5e;
+            font-weight: 500;
+        }
+        
+        .header .sub-tagline {
+            font-size: 0.9rem;
+            opacity: 1;
+            color: #4d3b6e;
+        }
+        
+        /* Form */
+        .input-form {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .dark-theme .input-form {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        
+        .form-group .helper-text {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .dark-theme .form-group .helper-text {
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid var(--card-border);
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: var(--font-body);
+            transition: all 0.3s ease;
+        }
+        
+        .dark-theme .form-group input {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.2);
+            color: white;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(255,105,180,0.2);
+        }
+        
+        .form-group input::placeholder {
+            color: #999;
+        }
+        
+        /* Gender Switch Buttons */
+        .gender-switch {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .gender-btn {
+            flex: 1;
+            max-width: 200px;
+            padding: 15px 25px;
+            border: 3px solid var(--card-border);
+            border-radius: 15px;
+            background: var(--card-bg);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        .gender-btn .gender-icon {
+            font-size: 2rem;
+        }
+        
+        .gender-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .gender-btn.active {
+            border-color: var(--primary);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            box-shadow: 0 5px 20px rgba(255,105,180,0.3);
+        }
+        
+        .gender-btn[data-gender="boy"].active {
+            background: linear-gradient(135deg, #6BA3D6 0%, #87CEEB 100%);
+            box-shadow: 0 5px 20px rgba(107,163,214,0.3);
+        }
+        
+        .optional-badge {
+            font-size: 0.75rem;
+            background: var(--accent);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 8px;
+            font-weight: normal;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px 30px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--font-body);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255,105,180,0.4);
+        }
+        
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Loading State */
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .loading-overlay.active {
+            display: flex;
+        }
+        
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255,255,255,0.2);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            color: white;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .loading-progress {
+            width: 200px;
+            height: 6px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 3px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+        
+        .loading-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        /* Results Section */
+        .results-section {
+            display: none;
+        }
+        
+        .results-section.active {
+            display: block;
+        }
+        
+        .results-header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #FF69B4 0%, #FFB6C1 25%, #E6E6FA 50%, #87CEEB 75%, #6BA3D6 100%);
+            color: #2d1b4e;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            text-shadow: 0 1px 2px rgba(255,255,255,0.5);
+        }
+        
+        .results-header h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 10px;
+            color: #1a0a2e !important;
+        }
+        
+        .results-header .subject-name {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-family: var(--font-heading);
+            margin-bottom: 15px;
+            color: #2d1b4e !important;
+        }
+        
+        .results-header .birth-info {
+            opacity: 1;
+            font-size: 1rem;
+            color: #3d2b5e !important;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .action-btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+        }
+        
+        .action-btn:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .action-btn.primary {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .action-btn.primary:hover {
+            background: transparent;
+            color: white;
+        }
+        
+        /* Table of Contents */
+        .toc {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .dark-theme .toc {
+            background: rgba(255,255,255,0.05);
+        }
+        
+        .toc h2 {
+            font-family: var(--font-heading);
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .toc-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            background: rgba(255,105,180,0.1);
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+        
+        .dark-theme .toc-item {
+            color: var(--text-light);
+        }
+        
+        .toc-item:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .toc-item .icon {
+            font-size: 1.5rem;
+        }
+        
+        .toc-item .count {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        
+        /* Reading Sections */
+        .reading-section {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .section-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--primary);
+            text-align: center;
+        }
+        
+        .section-header .icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        .section-header .description {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+        
+        /* Reading Cards */
+        .reading-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: none;
+            border-top: 5px solid var(--primary);
+            text-align: center;
+        }
+        
+        .dark-theme .reading-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-top: 5px solid var(--primary);
+        }
+        
+        .reading-card .card-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .reading-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+            display: block;
+            text-align: center;
+        }
+        
+        .reading-card .result-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            padding: 8px 15px;
+            background: rgba(255,215,0,0.15);
+            border-radius: 8px;
+            display: inline-block;
+        }
+        
+        .dark-theme .reading-card .result-value {
+            background: rgba(255,215,0,0.2);
+        }
+        
+        .reading-card .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+            justify-content: center;
+        }
+        
+        .reading-card .keyword {
+            padding: 5px 12px;
+            background: rgba(255,105,180,0.15);
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: var(--primary);
+        }
+        
+        .reading-card .reading-content {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text);
+            text-align: center;
+        }
+        
+        .dark-theme .reading-card .reading-content {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .reading-card .reading-content p {
+            margin-bottom: 15px;
+        }
+        
+        .reading-card .strengths-challenges {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+            text-align: left;
+        }
+        
+        .dark-theme .reading-card .strengths-challenges {
+            border-top-color: rgba(255,255,255,0.1);
+        }
+        
+        .strengths-challenges h4 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .strengths-challenges ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .strengths-challenges li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+        
+        .strengths-challenges li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+        
+        /* Soul Blueprint Summary */
+        .cosmic-blueprint-summary {
+            background: linear-gradient(135deg, rgba(103,58,183,0.08) 0%, rgba(255,105,180,0.08) 100%);
+            border-top: 5px solid linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        
+        .dark-theme .cosmic-blueprint-summary {
+            background: linear-gradient(135deg, rgba(103,58,183,0.15) 0%, rgba(255,105,180,0.15) 100%);
+        }
+        
+        .blueprint-intro {
+            font-size: 1.1rem;
+            margin-bottom: 25px !important;
+            color: var(--text);
+        }
+        
+        .blueprint-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            text-align: left;
+            margin: 25px 0;
+        }
+        
+        .blueprint-category {
+            background: rgba(255,255,255,0.5);
+            border-radius: 12px;
+            padding: 15px 20px;
+            border: 1px solid rgba(103,58,183,0.15);
+        }
+        
+        .dark-theme .blueprint-category {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.1);
+        }
+        
+        .blueprint-category h4 {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(103,58,183,0.2);
+        }
+        
+        .blueprint-items {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .blueprint-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            padding: 5px 0;
+        }
+        
+        .blueprint-item .planet-symbol {
+            font-size: 1.1rem;
+            width: 24px;
+            text-align: center;
+        }
+        
+        .blueprint-item .meaning {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        .dark-theme .blueprint-item .meaning {
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .blueprint-footer {
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-top: 20px !important;
+            margin-bottom: 0 !important;
+        }
+        
+        /* Numerology Explainer */
+        .numerology-explainer {
+            background: linear-gradient(135deg, rgba(255,215,0,0.08) 0%, rgba(255,105,180,0.08) 100%);
+        }
+        
+        .dark-theme .numerology-explainer {
+            background: linear-gradient(135deg, rgba(255,215,0,0.12) 0%, rgba(255,105,180,0.12) 100%);
+        }
+        
+        .num-calc-section {
+            background: rgba(255,255,255,0.5);
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin: 15px 0;
+            text-align: left;
+            border: 1px solid rgba(103,58,183,0.15);
+        }
+        
+        .dark-theme .num-calc-section {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.1);
+        }
+        
+        .num-calc-section h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+        
+        .num-calc-section p {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+        
+        .calc-steps {
+            background: rgba(103,58,183,0.08);
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin: 10px 0;
+        }
+        
+        .dark-theme .calc-steps {
+            background: rgba(103,58,183,0.2);
+        }
+        
+        .calc-step {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            font-size: 0.9rem;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+        }
+        
+        .dark-theme .calc-step {
+            border-bottom-color: rgba(255,255,255,0.1);
+        }
+        
+        .calc-step:last-child {
+            border-bottom: none;
+        }
+        
+        .calc-step.final {
+            background: rgba(255,215,0,0.2);
+            margin: 8px -10px -6px;
+            padding: 10px;
+            border-radius: 0 0 6px 6px;
+            font-weight: 600;
+        }
+        
+        .calc-label {
+            color: var(--text-muted);
+        }
+        
+        .calc-value {
+            font-family: 'Courier New', monospace;
+            color: var(--primary);
+        }
+        
+        .calc-note {
+            font-size: 0.85rem !important;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+        
+        .letter-chart {
+            background: rgba(255,255,255,0.6);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            margin: 10px 0;
+            word-break: break-all;
+        }
+        
+        .dark-theme .letter-chart {
+            background: rgba(0,0,0,0.3);
+        }
+        
+        /* Section Divider */
+        .section-divider {
+            text-align: center;
+            margin: 40px 0 30px;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, rgba(255,105,180,0.1) 0%, rgba(135,206,235,0.1) 100%);
+            border-radius: 15px;
+            border: 2px dashed var(--primary);
+        }
+        
+        .section-divider h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+        }
+        
+        .section-divider p {
+            color: var(--text);
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+        
+        .dark-theme .section-divider {
+            background: linear-gradient(135deg, rgba(255,105,180,0.2) 0%, rgba(135,206,235,0.2) 100%);
+        }
+        
+        @media (max-width: 600px) {
+            .strengths-challenges {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Footer */
+        .results-footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+            border-top: 2px solid var(--card-border);
+        }
+        
+        .dark-theme .results-footer {
+            border-top-color: rgba(255,255,255,0.1);
+        }
+        
+        .results-footer .generated-by {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .results-footer .timestamp {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .results-footer .disclaimer {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-top: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+        
+        .footer-links span {
+            opacity: 0.4;
+        }
+        
+        /* Gift & Support Section */
+        .gift-support-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 60px 0 40px;
+            padding: 0 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .gift-support-section {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .gift-box, .coffee-box {
+            background: linear-gradient(135deg, rgba(255,105,180,0.1) 0%, rgba(138,43,226,0.1) 100%);
+            border: 2px solid var(--card-border);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .dark-theme .gift-box, .dark-theme .coffee-box {
+            background: linear-gradient(135deg, rgba(255,105,180,0.15) 0%, rgba(138,43,226,0.15) 100%);
+            border-color: rgba(255,255,255,0.1);
+        }
+        
+        .gift-box h3, .coffee-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .gift-box p, .coffee-box p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .color-selector {
+            margin: 20px 0;
+        }
+        
+        .color-selector label {
+            display: block;
+            margin-bottom: 10px;
+            color: #d8b5ff;
+            font-weight: 600;
+        }
+        
+        .color-options {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+        
+        .color-option {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .color-option:hover {
+            transform: scale(1.1);
+            border-color: rgba(255,255,255,0.5);
+        }
+        
+        .color-option.active {
+            border-color: #fff;
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+            transform: scale(1.15);
+        }
+        
+        .gifted-by-field {
+            margin: 25px 0 15px 0;
+        }
+        
+        .gifted-by-field label {
+            display: block;
+            margin-bottom: 8px;
+            color: #d8b5ff;
+            font-weight: 600;
+        }
+        
+        .gifted-by-field input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid rgba(216, 181, 255, 0.3);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #f0e6ff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .gifted-by-field input:focus {
+            outline: none;
+            border-color: #ff69b4;
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .gifted-by-field input::placeholder {
+            color: rgba(240, 230, 255, 0.4);
+        }
+        
+        .gifted-by-field .helper-text {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 5px;
+        }
+        
+        .gift-btn, .coffee-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: none;
+        }
+        
+        .gift-btn {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            color: white;
+        }
+        
+        .coffee-btn {
+            background: linear-gradient(135deg, #ffdd00 0%, #fbb034 100%);
+            color: #543c07;
+        }
+        
+        .gift-btn:hover, .coffee-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        /* Reading Closing Summary */
+        .reading-closing {
+            margin: 40px 0;
+            padding: 0 20px;
+        }
+        
+        .closing-card {
+            background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(255,105,180,0.1) 100%);
+            border: 2px solid var(--primary);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .dark-theme .closing-card {
+            background: linear-gradient(135deg, rgba(255,215,0,0.15) 0%, rgba(255,105,180,0.15) 100%);
+        }
+        
+        .closing-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .closing-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto 15px;
+        }
+        
+        .closing-affirmation {
+            font-style: italic;
+            font-size: 1.2rem !important;
+            color: var(--secondary);
+            margin-top: 25px !important;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+        }
+        
+        /* New Reading Button */
+        .new-reading-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        
+        .new-reading-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,105,180,0.4);
+        }
+        
+        /* Action Buttons */
+        #action-buttons {
+            display: none;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .action-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .action-btn.secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        /* Pagination */
+        .reading-section {
+            display: block;
+        }
+
+        .reading-section.hidden {
+            display: none;
+        }
+
+        .reading-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .pagination-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+        }
+
+        .pagination-controls button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .pagination-controls button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .pagination-controls button:not(:disabled):hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .page-indicator {
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* AdSense Placeholder */
+        .ad-container {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            text-align: center;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        .ad-placeholder {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+        }
+        
+        /* Print Styles */
+        @media print {
+            .header, .action-buttons, .new-reading-btn, .toc, .pagination-controls, .ad-container, #action-buttons, #theme-bar {
+                display: none !important;
+            }
+            
+            .reading-section {
+                display: block !important;
+                page-break-after: always;
+            }
+            
+            .results-section {
+                display: block !important;
+            }
+            
+            .reading-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+            }
+        }
+        
+        /* Responsive - Tablet */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 40px 15px;
+            }
+            
+            .input-form {
+                padding: 25px;
+            }
+            
+            .reading-card {
+                padding: 20px;
+            }
+            
+            .gender-switch {
+                flex-direction: row;
+            }
+            
+            .gender-btn {
+                padding: 12px 15px;
+            }
+        }
+        
+        /* Responsive - Mobile */
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 30px 10px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header .tagline {
+                font-size: 1rem;
+            }
+            
+            .input-form {
+                padding: 20px 15px;
+                border-radius: 15px;
+            }
+            
+            .form-group label {
+                font-size: 1rem;
+            }
+            
+            .form-group input {
+                padding: 12px 15px;
+                font-size: 16px; /* Prevents iOS zoom on focus */
+            }
+            
+            .gender-switch {
+                gap: 10px;
+            }
+            
+            .gender-btn {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+            }
+            
+            .gender-btn .gender-icon {
+                font-size: 1.5rem;
+            }
+            
+            .submit-btn {
+                padding: 15px 20px;
+                font-size: 1.1rem;
+            }
+            
+            .results-header {
+                padding: 30px 15px;
+                border-radius: 15px;
+            }
+            
+            .results-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .action-buttons {
+                gap: 10px;
+            }
+            
+            .action-btn {
+                padding: 10px 15px;
+                font-size: 0.85rem;
+            }
+            
+            .toc {
+                padding: 20px 15px;
+            }
+            
+            .toc-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .section-header .icon {
+                font-size: 2.5rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.4rem;
+            }
+            
+            .reading-card {
+                padding: 15px;
+                border-radius: 12px;
+                margin-bottom: 15px;
+            }
+            
+            .reading-card .card-icon {
+                font-size: 2rem;
+            }
+            
+            .reading-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .reading-card .result-value {
+                font-size: 1rem;
+                padding: 6px 12px;
+            }
+            
+            .reading-card .keywords {
+                gap: 6px;
+            }
+            
+            .reading-card .keyword {
+                padding: 4px 10px;
+                font-size: 0.8rem;
+            }
+            
+            .reading-card .reading-content {
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+            
+            .reading-card .strengths-challenges {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .new-reading-btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+        }
+        
+        /* Touch-friendly enhancements */
+        @media (hover: none) and (pointer: coarse) {
+            .submit-btn,
+            .action-btn,
+            .gender-btn,
+            .toc-item,
+            .new-reading-btn {
+                min-height: 44px; /* Apple's recommended touch target */
+            }
+            
+            .form-group input {
+                min-height: 48px;
+            }
+        }
+        
+        /* Safe area insets for notched devices */
+        @supports (padding: max(0px)) {
+            body {
+                padding-left: max(10px, env(safe-area-inset-left));
+                padding-right: max(10px, env(safe-area-inset-right));
+                padding-bottom: max(10px, env(safe-area-inset-bottom));
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Theme Bar -->
+    <div class="theme-bar" id="themeBar">
+        <button class="theme-bar-btn" data-theme="girl" onclick="setGender('girl')">
+            👧 Pink Theme
+        </button>
+        <button class="theme-bar-btn" data-theme="boy" onclick="setGender('boy')">
+            👦 Blue Theme
+        </button>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text" id="loadingText">Discovering the soul's story...</div>
+        <div class="loading-progress">
+            <div class="loading-progress-bar" id="loadingProgressBar"></div>
+        </div>
+    </div>
+    
+    <!-- Input Section -->
+    <section class="input-section" id="inputSection">
+        <header class="header">
+            <h1 id="brandName">Soul Blueprint</h1>
+            <p class="tagline" id="tagline">Your Complete Cosmic Profile</p>
+            <p class="sub-tagline" id="subTagline">58 Readings • One Beautiful Report • Lifetime Guidance</p>
+            
+            <!-- Action Buttons (hidden until reading generated) -->
+            <div id="action-buttons" style="display: none; margin-top: 20px; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                <button type="button" onclick="printReading()" class="action-btn" title="Print or Save as PDF">🖨️ Print/PDF</button>
+                <button type="button" onclick="downloadReading()" class="action-btn" title="Download as HTML file">💾 Download</button>
+                <button type="button" onclick="shareReading()" class="action-btn" title="Share this reading">📤 Share</button>
+                <button type="button" onclick="clearReading()" class="action-btn secondary" title="Start a new reading">🔄 New Reading</button>
+            </div>
+        </header>
+        
+        <div class="container">
+            <form class="input-form" id="readingForm">
+                <div class="form-group">
+                    <label id="nameLabel">Name</label>
+                    <input type="text" id="nameInput" required placeholder="Enter name">
+                    <p class="helper-text" id="nameHelper">The name to use for this reading</p>
+                </div>
+                
+                <div class="form-group">
+                    <label id="birthDateLabel">Date of Birth</label>
+                    <input type="date" id="birthDateInput" required>
+                    <p class="helper-text" id="birthDateHelper">Birth date for calculations</p>
+                </div>
+                
+                <input type="hidden" id="genderInput" value="girl">
+                
+                <div class="form-group" id="birthTimeGroup">
+                    <label id="birthTimeLabel">Time of Birth <span class="optional-badge">Optional</span></label>
+                    <input type="time" id="birthTimeInput">
+                    <p class="helper-text" id="birthTimeHelper">For accurate Rising Sign calculation</p>
+                </div>
+                
+                <div class="form-group" id="birthPlaceGroup">
+                    <label id="birthPlaceLabel">Place of Birth <span class="optional-badge">Optional</span></label>
+                    <input type="text" id="birthPlaceInput" placeholder="City, Country">
+                    <p class="helper-text" id="birthPlaceHelper">Location of birth</p>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">Create Soul Blueprint</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Results Section -->
+    <section class="results-section" id="resultsSection">
+        <div class="results-header">
+            <h1 id="resultTitle" style="color: #1a0a2e !important;">Soul Blueprint</h1>
+            <p class="subject-name" id="subjectName" style="color: #2d1b4e !important;"></p>
+            <p class="birth-info" id="birthInfo" style="color: #3d2b5e !important;"></p>
+            <div class="action-buttons">
+                <button class="action-btn primary" onclick="window.print()">📄 Print Reading</button>
+                <button class="action-btn" onclick="shareReading()">📤 Share</button>
+                <button class="action-btn" onclick="startNewReading()">✨ New Reading</button>
+            </div>
+        </div>
+        
+        <div class="container">
+            <!-- Reading Sections -->
+            <div id="readingsContainer">
+                <!-- Populated by JavaScript -->
+            </div>
+            
+            <!-- Reading Summary & Closing -->
+            <div id="readingClosing" class="reading-closing">
+                <!-- Populated by JavaScript -->
+            </div>
+            
+            <!-- Gift & Support Section -->
+            <div class="gift-support-section">
+                <div class="gift-box">
+                    <h3>🎁 Gift This Reading</h3>
+                    <p>Create a beautiful, ad-free version to share with loved ones or print as a keepsake.</p>
+                    <div class="color-selector">
+                        <label>Choose Gift Color:</label>
+                        <div class="color-options">
+                            <button class="color-option" data-color="pink" style="background: linear-gradient(135deg, #ff69b4, #ff1493);" onclick="selectGiftColor('pink')" title="Pink">💗</button>
+                            <button class="color-option" data-color="blue" style="background: linear-gradient(135deg, #87ceeb, #4682b4);" onclick="selectGiftColor('blue')" title="Blue">💙</button>
+                            <button class="color-option" data-color="yellow" style="background: linear-gradient(135deg, #ffd700, #ffa500);" onclick="selectGiftColor('yellow')" title="Yellow">💛</button>
+                            <button class="color-option active" data-color="purple" style="background: linear-gradient(135deg, #d8b5ff, #b19cd9);" onclick="selectGiftColor('purple')" title="Baby Purple">💜</button>
+                        </div>
+                    </div>
+                    <div class="gifted-by-field">
+                        <label for="giftedByInput">Gifted by: <span class="optional-badge">Optional</span></label>
+                        <input type="text" id="giftedByInput" placeholder="e.g., Grandma & Grandpa, Aunt Sarah..." maxlength="100">
+                        <p class="helper-text">Add your name to personalize this gift ✨</p>
+                    </div>
+                    <button class="gift-btn" onclick="giftReading()">✨ Create Gift Version</button>
+                </div>
+                
+                <div class="coffee-box">
+                    <h3>☕ Did This Reading Bring You Joy?</h3>
+                    <p>You now have <strong>unlimited access</strong> to cosmic readings — probably worth a coffee, right?</p>
+                    <a href="https://buymeacoffee.com/quantummerlin" target="_blank" rel="noopener" class="coffee-btn">☕ Buy Me a Coffee</a>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="results-footer">
+                <p class="generated-by" id="generatedBy">Generated with ✨ by Quantum Merlin</p>
+                <p class="timestamp" id="timestamp"></p>
+                <button class="new-reading-btn" onclick="startNewReading()">✨ Generate Another Reading</button>
+                <div class="footer-links">
+                    <a href="/privacy.html" target="_blank">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="/terms.html" target="_blank">Terms of Service</a>
+                    <span>•</span>
+                    <a href="/disclaimer.html" target="_blank">Disclaimer</a>
+                </div>
+                <p class="disclaimer" id="disclaimer">For entertainment purposes only. Not a substitute for professional advice.</p>
+            </footer>
+        </div>
+    </section>
+    
+    <!-- Scripts with cache bust -->
+    <script src="config.js?v=27"></script>
+    <script src="calculations.js?v=27"></script>
+    <script src="readings.js?v=27"></script>
+    <script src="house-readings.js?v=27"></script>
+    <script src="aspect-readings.js?v=27"></script>
+    <script src="advanced-readings.js?v=27"></script>
+    <script src="deep-readings.js?v=27"></script>
+    <script src="deep-planet-readings.js?v=27"></script>
+    <script src="deep-planet-readings-outer.js?v=27"></script>
+    <script src="readings-extended.js?v=27"></script>
+    <script src="love-blueprint.js?v=27"></script>
+    <script src="save-share.js?v=27"></script>
+    <script>
+        // ============================================
+        // GENDER THEME SWITCH
+        // ============================================
+        
+        let selectedGender = 'girl';
+        
+        function setGender(gender) {
+            selectedGender = gender;
+            document.getElementById('genderInput').value = gender;
+            
+            // Update form button states
+            document.querySelectorAll('.gender-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const formBtn = document.querySelector(`.gender-btn[data-gender="${gender}"]`);
+            if (formBtn) formBtn.classList.add('active');
+            
+            // Update theme bar button states
+            document.querySelectorAll('.theme-bar-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const barBtn = document.querySelector(`.theme-bar-btn[data-theme="${gender}"]`);
+            if (barBtn) barBtn.classList.add('active');
+            
+            // Update theme bar background
+            const themeBar = document.getElementById('themeBar');
+            themeBar.classList.remove('theme-selected-girl', 'theme-selected-boy');
+            themeBar.classList.add(`theme-selected-${gender}`);
+            
+            // Apply theme colors
+            document.body.classList.remove('theme-girl', 'theme-boy');
+            document.body.classList.add(`theme-${gender}`);
+            
+            // Update CSS variables for dynamic theming
+            const root = document.documentElement;
+            if (gender === 'boy') {
+                root.style.setProperty('--primary', '#6BA3D6');
+                root.style.setProperty('--secondary', '#87CEEB');
+                root.style.setProperty('--accent', '#4169E1');
+                root.style.setProperty('--background', '#F0F8FF');
+                root.style.setProperty('--card-border', '#B0E0E6');
+            } else {
+                root.style.setProperty('--primary', '#FF69B4');
+                root.style.setProperty('--secondary', '#FFB6C1');
+                root.style.setProperty('--accent', '#FF1493');
+                root.style.setProperty('--background', '#FFF0F5');
+                root.style.setProperty('--card-border', '#FFE4EC');
+            }
+            
+            // Update PWA theme-color meta tag
+            const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+            if (themeColorMeta) {
+                themeColorMeta.content = gender === 'boy' ? '#6BA3D6' : '#FF69B4';
+            }
+        }
+        
+        // ============================================
+        // APPLY BRAND CONFIGURATION
+        // ============================================
+        
+        function applyBrandConfig() {
+            const config = BRAND_CONFIG;
+            
+            // Apply theme
+            if (config.theme === 'dark' || config.theme === 'cosmic') {
+                document.body.classList.add('dark-theme');
+            }
+            
+            // Apply colors (will be overridden by gender selection)
+            const root = document.documentElement;
+            root.style.setProperty('--primary', config.colors.primary);
+            root.style.setProperty('--secondary', config.colors.secondary);
+            root.style.setProperty('--accent', config.colors.accent);
+            root.style.setProperty('--background', config.colors.background);
+            root.style.setProperty('--background-dark', config.colors.backgroundDark);
+            
+            // Apply fonts
+            root.style.setProperty('--font-heading', config.fonts.heading);
+            root.style.setProperty('--font-body', config.fonts.body);
+            
+            // Apply text content
+            document.getElementById('brandName').textContent = config.brandName;
+            document.getElementById('tagline').textContent = config.tagline;
+            document.getElementById('subTagline').textContent = config.subTagline;
+            
+            // Apply form labels
+            document.getElementById('nameLabel').innerHTML = config.inputLabels.name;
+            document.getElementById('nameInput').placeholder = config.inputLabels.namePlaceholder;
+            document.getElementById('nameHelper').textContent = config.inputLabels.nameHelper;
+            
+            document.getElementById('birthDateLabel').textContent = config.inputLabels.birthDate;
+            document.getElementById('birthDateHelper').textContent = config.inputLabels.birthDateHelper;
+            
+            document.getElementById('birthTimeLabel').innerHTML = config.inputLabels.birthTime + ' <span class="optional-badge">Optional</span>';
+            document.getElementById('birthTimeHelper').textContent = config.inputLabels.birthTimeHelper;
+            
+            document.getElementById('birthPlaceLabel').innerHTML = config.inputLabels.birthPlace + ' <span class="optional-badge">Optional</span>';
+            document.getElementById('birthPlaceInput').placeholder = config.inputLabels.birthPlacePlaceholder;
+            document.getElementById('birthPlaceHelper').textContent = config.inputLabels.birthPlaceHelper;
+            
+            document.getElementById('submitBtn').textContent = config.ctaButton;
+            document.getElementById('loadingText').textContent = config.loadingMessage;
+            
+            // Apply result page text
+            document.getElementById('resultTitle').textContent = config.resultTitle;
+            document.getElementById('generatedBy').textContent = config.generatedBy;
+            document.getElementById('disclaimer').textContent = config.footer.disclaimer;
+            
+            // Apply SEO
+            document.getElementById('page-title').textContent = config.seo.title;
+            document.getElementById('meta-description').content = config.seo.description;
+            document.getElementById('og-title').content = config.seo.title;
+            document.getElementById('og-description').content = config.seo.description;
+            
+            // Show/hide optional fields
+            if (!config.features.showBirthTime) {
+                document.getElementById('birthTimeGroup').style.display = 'none';
+            }
+            if (!config.features.showBirthPlace) {
+                document.getElementById('birthPlaceGroup').style.display = 'none';
+            }
+        }
+        
+        // ============================================
+        // FORM HANDLING
+        // ============================================
+        
+        document.getElementById('readingForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const userData = {
+                name: document.getElementById('nameInput').value.trim(),
+                birthDate: document.getElementById('birthDateInput').value,
+                birthTime: document.getElementById('birthTimeInput').value || null,
+                birthPlace: document.getElementById('birthPlaceInput').value.trim() || null
+            };
+            
+            await generateReading(userData);
+        });
+        
+        // ============================================
+        // READING GENERATION
+        // ============================================
+        
+        async function generateReading(userData) {
+            // Show loading
+            const overlay = document.getElementById('loadingOverlay');
+            const progressBar = document.getElementById('loadingProgressBar');
+            overlay.classList.add('active');
+            
+            // Simulate progress
+            let progress = 0;
+            const progressInterval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress > 90) progress = 90;
+                progressBar.style.width = progress + '%';
+            }, 200);
+            
+            // Small delay for effect
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            
+            // Calculate all readings
+            const readings = calculateAllReadings(userData);
+            
+            // Complete progress
+            clearInterval(progressInterval);
+            progressBar.style.width = '100%';
+            
+            await new Promise(resolve => setTimeout(resolve, 300));
+            
+            // Hide loading
+            overlay.classList.remove('active');
+            
+            // Store userData for gift functionality
+            window.lastUserData = userData;
+            localStorage.setItem('lastReading', JSON.stringify(userData));
+            
+            // Display results
+            displayResults(userData, readings);
+        }
+        
+        // ============================================
+        // DISPLAY RESULTS
+        // ============================================
+        
+        function displayResults(userData, readings) {
+            const config = BRAND_CONFIG;
+            
+            // Hide input, show results
+            document.getElementById('inputSection').style.display = 'none';
+            document.getElementById('resultsSection').classList.add('active');
+            
+            // Set header info
+            document.getElementById('subjectName').textContent = userData.name;
+            
+            const birthDate = new Date(userData.birthDate);
+            let birthInfo = `Born ${birthDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}`;
+            if (userData.birthTime) {
+                birthInfo += ` at ${userData.birthTime}`;
+            }
+            if (userData.birthPlace) {
+                birthInfo += ` in ${userData.birthPlace}`;
+            }
+            document.getElementById('birthInfo').textContent = birthInfo;
+            
+            // Set timestamp
+            document.getElementById('timestamp').textContent = `Generated on ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' })}`;
+            
+            // Build Reading Sections
+            buildReadingSections(userData, readings);
+            
+            // Build Reading Closing Summary
+            buildReadingClosing(userData, readings);
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        function buildTableOfContents(readings) {
+            const config = BRAND_CONFIG;
+            const tocGrid = document.getElementById('tocGrid');
+            tocGrid.innerHTML = '';
+            
+            const sections = [
+                { id: 'celestial', icon: config.sections.celestial.icon, name: config.sections.celestial.name, count: 15 },
+                { id: 'numbers', icon: config.sections.numbers.icon, name: config.sections.numbers.name, count: 12 },
+                { id: 'soul', icon: config.sections.soul.icon, name: config.sections.soul.name, count: 3 },
+                { id: 'forecasts', icon: config.sections.forecasts.icon, name: config.sections.forecasts.name, count: 2 },
+                { id: 'cycles', icon: config.sections.cycles.icon, name: config.sections.cycles.name, count: 3 }
+            ];
+            
+            sections.forEach(section => {
+                const item = document.createElement('a');
+                item.href = `#section-${section.id}`;
+                item.className = 'toc-item';
+                item.innerHTML = `
+                    <span class="icon">${section.icon}</span>
+                    <span>
+                        <strong>${section.name}</strong>
+                        <span class="count">${section.count} readings</span>
+                    </span>
+                `;
+                tocGrid.appendChild(item);
+            });
+        }
+        
+        function buildReadingSections(userData, readings) {
+            const config = BRAND_CONFIG;
+            const container = document.getElementById('readingsContainer');
+            container.innerHTML = '';
+            
+            // ============================================
+            // SECTION 1: CELESTIAL / ASTROLOGY
+            // ============================================
+            const celestialSectionWrapper = document.createElement('div');
+            celestialSectionWrapper.className = 'reading-section active';
+            const celestialSection = createSection('celestial', config.sections.celestial);
+            
+            // ============================================
+            // SOUL BLUEPRINT SUMMARY - Planetary Overview
+            // ============================================
+            const sunSign = readings.astrology.sunSign;
+            const moonSign = readings.astrology.moonSign;
+            const risingSign = readings.astrology.risingSign;
+            const moonPhase = readings.astrology.moonPhase;
+            const mercurySign = readings.astrology.mercurySign;
+            const venusSign = readings.astrology.venusSign;
+            const marsSign = readings.astrology.marsSign;
+            const jupiterSign = readings.astrology.jupiterSign;
+            const saturnSign = readings.astrology.saturnSign;
+            const uranusSign = readings.astrology.uranusSign;
+            const neptuneSign = readings.astrology.neptuneSign;
+            const plutoSign = readings.astrology.plutoSign;
+            const northNode = readings.astrology.northNode;
+            const chineseZodiac = readings.astrology.chineseZodiac;
+            
+            // Build the summary card
+            const blueprintSummary = document.createElement('div');
+            blueprintSummary.className = 'reading-card cosmic-blueprint-summary';
+            blueprintSummary.innerHTML = `
+                <span class="card-icon">🌌</span>
+                <h3>Your Soul Blueprint at a Glance</h3>
+                <p class="blueprint-intro">Before we dive deep into each placement, here's a complete overview of ${userData.name}'s celestial coordinates — the positions of all major celestial bodies at the moment of birth.</p>
+                
+                <div class="blueprint-grid">
+                    <div class="blueprint-category">
+                        <h4>🌟 The Big Three</h4>
+                        <div class="blueprint-items">
+                            <div class="blueprint-item"><span class="planet-symbol">☉</span> <strong>Sun:</strong> ${sunSign.name} <span class="meaning">(Core Identity)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">☽</span> <strong>Moon:</strong> ${moonSign.name} <span class="meaning">(Emotional Nature)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">↑</span> <strong>Rising:</strong> ${risingSign ? risingSign.name : 'Unknown'} <span class="meaning">(First Impression)</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="blueprint-category">
+                        <h4>🪐 Personal Planets</h4>
+                        <div class="blueprint-items">
+                            <div class="blueprint-item"><span class="planet-symbol">☿</span> <strong>Mercury:</strong> ${mercurySign.name} <span class="meaning">(Mind & Communication)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">♀</span> <strong>Venus:</strong> ${venusSign.name} <span class="meaning">(Love & Beauty)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">♂</span> <strong>Mars:</strong> ${marsSign.name} <span class="meaning">(Drive & Action)</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="blueprint-category">
+                        <h4>🌙 Social Planets</h4>
+                        <div class="blueprint-items">
+                            <div class="blueprint-item"><span class="planet-symbol">♃</span> <strong>Jupiter:</strong> ${jupiterSign.name} <span class="meaning">(Luck & Expansion)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">♄</span> <strong>Saturn:</strong> ${saturnSign.name} <span class="meaning">(Discipline & Lessons)</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="blueprint-category">
+                        <h4>🌀 Outer Planets (Generational)</h4>
+                        <div class="blueprint-items">
+                            <div class="blueprint-item"><span class="planet-symbol">⛢</span> <strong>Uranus:</strong> ${uranusSign.name} <span class="meaning">(Innovation & Change)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">♆</span> <strong>Neptune:</strong> ${neptuneSign.name} <span class="meaning">(Dreams & Spirituality)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">♇</span> <strong>Pluto:</strong> ${plutoSign.name} <span class="meaning">(Transformation)</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="blueprint-category">
+                        <h4>🌓 Other Key Points</h4>
+                        <div class="blueprint-items">
+                            <div class="blueprint-item"><span class="planet-symbol">☊</span> <strong>North Node:</strong> ${northNode.name} <span class="meaning">(Life Purpose)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">${moonPhase.icon}</span> <strong>Moon Phase:</strong> ${moonPhase.name} <span class="meaning">(Soul Character)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol">${chineseZodiac.emoji}</span> <strong>Chinese:</strong> ${chineseZodiac.name} <span class="meaning">(Earth Element)</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="blueprint-footer">Each placement tells a different part of ${userData.name}'s story. Scroll down for detailed interpretations of each celestial influence.</p>
+            `;
+            celestialSection.appendChild(blueprintSummary);
+            
+            // Sun Sign - DEEP READING
+            const deepSun = (typeof DEEP_SUN_READINGS !== 'undefined') ? DEEP_SUN_READINGS[sunSign.name] : null;
+            
+            if (deepSun) {
+                const sunContent = `<strong>${deepSun.hook}</strong>
+
+<em>Core Identity:</em> ${deepSun.coreIdentity}
+
+<em>Life Force:</em> ${deepSun.lifeForce}
+
+<em>Creative Expression:</em> ${deepSun.creativeExpression}
+
+<em>Ego Pattern:</em> ${deepSun.egoPattern}
+
+<em>Leadership Style:</em> ${deepSun.leadership}
+
+<em>Life Lesson:</em> ${deepSun.lifeLesson}
+
+<em>Shadow to Watch:</em> ${deepSun.shadow}
+
+<em>Integration Path:</em> ${deepSun.integration}
+
+<em>💫 Parenting Guidance:</em> ${deepSun.parentGuidance}
+
+<em>🌟 Affirmation:</em> "${deepSun.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+                
+                celestialSection.appendChild(createReadingCard(
+                    deepSun.title,
+                    `☉ Sun in ${sunSign.name}`,
+                    ['Core Identity', 'Life Purpose', 'Ego Expression', 'Vitality'],
+                    sunContent,
+                    [],
+                    []
+                ));
+            } else {
+                const sunReading = SUN_SIGN_READINGS[sunSign.name];
+                celestialSection.appendChild(createReadingCard(
+                    config.readingTitles.sunSign,
+                    `${sunSign.symbol} ${sunSign.name}`,
+                    sunReading ? sunReading.keywords : [],
+                    sunReading ? sunReading.reading : `Born under the sign of ${sunSign.name}, a ${sunSign.element} sign.`,
+                    sunReading ? sunReading.strengths : [],
+                    sunReading ? sunReading.challenges : []
+                ));
+            }
+            
+            // Moon Sign - DEEP READING (moonSign already declared in blueprint section)
+            const deepMoon = (typeof DEEP_MOON_READINGS !== 'undefined') ? DEEP_MOON_READINGS[moonSign.name] : null;
+            
+            if (deepMoon) {
+                // Create comprehensive Moon reading from deep content
+                const moonContent = `<strong>${deepMoon.hook}</strong>
+
+<em>Core Emotional Identity:</em> ${deepMoon.coreIdentity}
+
+<em>How Others Experience Them:</em> ${deepMoon.external}
+
+<em>Emotional Behavior Patterns:</em> ${deepMoon.behavior}
+
+<em>Greatest Emotional Strength:</em> ${deepMoon.strength}
+
+<em>Shadow Pattern to Watch:</em> ${deepMoon.shadow}
+
+<em>Path to Integration:</em> ${deepMoon.integration}
+
+<em>Under Stress:</em> ${deepMoon.stress}
+
+<em>In Relationships:</em> ${deepMoon.relationships}
+
+<em>Emotional Growth Edge:</em> ${deepMoon.growth}
+
+<em>Physical Expression:</em> ${deepMoon.somatic}
+
+<em>💫 Parenting Guidance:</em> ${deepMoon.parentGuidance}
+
+<em>🌟 Affirmation:</em> "${deepMoon.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+                
+                celestialSection.appendChild(createReadingCard(
+                    deepMoon.title,
+                    `☽ Moon in ${moonSign.name}`,
+                    ['Emotional Nature', 'Inner Needs', 'Comfort Style', 'Instinctual Response'],
+                    moonContent,
+                    [`${deepMoon.power}`],
+                    []
+                ));
+            } else {
+                // Fallback to basic reading
+                const moonReading = SUN_SIGN_READINGS[moonSign.name];
+                celestialSection.appendChild(createReadingCard(
+                    config.readingTitles.moonSign,
+                    `${moonSign.symbol} ${moonSign.name}`,
+                    ['Emotions', 'Inner Self', 'Instincts', 'Comfort'],
+                    `The Moon in ${moonSign.name} reveals the emotional nature and inner world. This placement suggests ${userData.name}'s emotional responses are colored by ${moonSign.element} energy - ${moonSign.element === 'Fire' ? 'passionate and expressive' : moonSign.element === 'Earth' ? 'stable and grounded' : moonSign.element === 'Air' ? 'intellectual and communicative' : 'deep and intuitive'}.`,
+                    moonReading ? moonReading.strengths : [],
+                    moonReading ? moonReading.challenges : []
+                ));
+            }
+            
+            // Rising Sign - DEEP READING (risingSign already declared in blueprint section)
+            if (risingSign.name && risingSign.name !== 'Unknown') {
+                const deepRising = (typeof DEEP_RISING_READINGS !== 'undefined') ? DEEP_RISING_READINGS[risingSign.name] : null;
+                
+                if (deepRising) {
+                    const risingContent = `<strong>${deepRising.firstImpression}</strong>
+
+<em>Approach to Life:</em> ${deepRising.lifeApproach}
+
+<em>How Others Perceive This Child:</em> ${deepRising.howOthersSee}
+
+<em>Physical Expression:</em> ${deepRising.physicalExpression}
+
+<em>Life Path Theme:</em> ${deepRising.lifePath}
+
+<em>The Gift This Child Brings:</em> ${deepRising.gift}
+
+<em>Growth Challenge:</em> ${deepRising.challenge}
+
+<em>💫 Parenting Guidance:</em> ${deepRising.parentGuidance}
+
+<em>🔮 Synthesis:</em> ${deepRising.synthesis}`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+                    
+                    celestialSection.appendChild(createReadingCard(
+                        deepRising.title,
+                        `⬆️ ${risingSign.name} Rising`,
+                        ['First Impressions', 'Life Approach', 'Outer Expression', 'Physical Presence'],
+                        risingContent,
+                        [],
+                        []
+                    ));
+                } else {
+                    celestialSection.appendChild(createReadingCard(
+                        config.readingTitles.risingSign,
+                        `${risingSign.symbol || '⬆️'} ${risingSign.name}`,
+                        ['First Impressions', 'Appearance', 'Approach to Life'],
+                        `With ${risingSign.name} Rising, ${userData.name} presents to the world with ${risingSign.element} energy. This is the mask worn in new situations and the first impression made on others.`,
+                        [],
+                        []
+                    ));
+                }
+            }
+            
+            // Chinese Zodiac (chineseZodiac already declared in blueprint section)
+            const chineseReading = CHINESE_ZODIAC_READINGS[chineseZodiac.name];
+            celestialSection.appendChild(createReadingCard(
+                config.readingTitles.chineseZodiac,
+                `🐾 Year of the ${chineseZodiac.name}`,
+                chineseReading ? chineseReading.keywords : [],
+                chineseReading ? chineseReading.reading.replace(/this soul/gi, userData.name).replace(/those born under this sign/gi, userData.name) : `Born in the Year of the ${chineseZodiac.name}.`,
+                chineseReading ? chineseReading.strengths : [],
+                chineseReading ? chineseReading.challenges : []
+            ));
+            
+            // Moon Phase - Enhanced with deep readings (moonPhase already declared in blueprint section)
+            const moonPhaseReading = MOON_PHASE_READINGS[moonPhase.name];
+            const deepMoonPhase = typeof DEEP_MOON_PHASE_READINGS !== 'undefined' ? DEEP_MOON_PHASE_READINGS[moonPhase.name] : null;
+            
+            // Build comprehensive moon phase content
+            let moonPhaseContent = '';
+            if (deepMoonPhase) {
+                moonPhaseContent = `<p><em>${deepMoonPhase.hook.replace(/this soul/gi, userData.name)}</em></p>\n\n`;
+                moonPhaseContent += deepMoonPhase.coreNature.replace(/this soul|this child/gi, userData.name) + '\n\n';
+                moonPhaseContent += `<h4>🛤️ Life Path Theme</h4>\n${deepMoonPhase.lifePath.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<h4>🔮 Inner World</h4>\n${deepMoonPhase.innerWorld.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<h4>💕 Relationships</h4>\n${deepMoonPhase.relationships.replace(/this soul|these souls/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<h4>✨ Spiritual Path</h4>\n${deepMoonPhase.spiritualPath.replace(/this soul|these souls/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<h4>👨‍👩‍👧 Parent Guidance</h4>\n${deepMoonPhase.parentGuidance.replace(/this child/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<p><strong>Affirmation:</strong> <em>"${deepMoonPhase.affirmation}"</em></p>`;
+            } else if (moonPhaseReading) {
+                moonPhaseContent = moonPhaseReading.reading.replace(/this soul/gi, userData.name);
+            } else {
+                moonPhaseContent = `Born under the ${moonPhase.name}.`;
+            }
+            
+            celestialSection.appendChild(createReadingCard(
+                config.readingTitles.moonPhase,
+                `${moonPhase.icon} ${moonPhase.name} ${deepMoonPhase ? `- ${deepMoonPhase.title}` : ''}`,
+                deepMoonPhase ? deepMoonPhase.gifts.slice(0, 4) : (moonPhaseReading ? moonPhaseReading.keywords : []),
+                moonPhaseContent,
+                deepMoonPhase ? deepMoonPhase.gifts : (moonPhaseReading ? moonPhaseReading.strengths : []),
+                deepMoonPhase ? deepMoonPhase.shadows : (moonPhaseReading ? moonPhaseReading.challenges : [])
+            ));
+            
+            // Mercury Sign (mercurySign already declared in blueprint section)
+            const mercuryReading = MERCURY_SIGN_READINGS ? MERCURY_SIGN_READINGS[mercurySign.name] : null;
+            const deepMercury = (typeof DEEP_MERCURY_READINGS !== 'undefined') ? DEEP_MERCURY_READINGS[mercurySign.name] : null;
+            
+            let mercuryContent = '';
+            if (deepMercury) {
+                mercuryContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepMercury.hook}</p>`;
+                mercuryContent += `<div style="white-space: pre-line;">${deepMercury.coreNature}</div>`;
+                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">💬 Communication Style</h4>`;
+                mercuryContent += `<div style="white-space: pre-line;">${deepMercury.communication}</div>`;
+                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">📚 Learning Style</h4>`;
+                mercuryContent += `<div style="white-space: pre-line;">${deepMercury.learning}</div>`;
+                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🌙 Shadows & Challenges</h4>`;
+                mercuryContent += `<div style="white-space: pre-line;">${deepMercury.challenges}</div>`;
+                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">👨‍👩‍👧 For Parents</h4>`;
+                mercuryContent += `<div style="white-space: pre-line;">${deepMercury.parentGuidance}</div>`;
+                mercuryContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>✨ Affirmation:</strong> "${deepMercury.affirmation}"</p>`;
+            } else {
+                mercuryContent = mercuryReading ? mercuryReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Mercury in ${mercurySign.name} influences communication and thinking style.`;
+            }
+            
+            celestialSection.appendChild(createReadingCard(
+                config.readingTitles.mercurySign,
+                `☿️ ${mercurySign.name}${deepMercury ? ` - ${deepMercury.title}` : ''}`,
+                mercuryReading ? mercuryReading.keywords : ['Communication', 'Thinking', 'Learning'],
+                mercuryContent,
+                mercuryReading ? mercuryReading.strengths : [],
+                mercuryReading ? mercuryReading.challenges : []
+            ));
+            
+            // Venus Sign (venusSign already declared in blueprint section)
+            const venusReading = VENUS_SIGN_READINGS ? VENUS_SIGN_READINGS[venusSign.name] : null;
+            const deepVenus = (typeof DEEP_VENUS_READINGS !== 'undefined') ? DEEP_VENUS_READINGS[venusSign.name] : null;
+            
+            let venusContent = '';
+            if (deepVenus) {
+                venusContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepVenus.hook}</p>`;
+                venusContent += `<div style="white-space: pre-line;">${deepVenus.coreNature}</div>`;
+                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">💕 Love Style</h4>`;
+                venusContent += `<div style="white-space: pre-line;">${deepVenus.loveStyle}</div>`;
+                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">💝 What They Need in Love</h4>`;
+                venusContent += `<div style="white-space: pre-line;">${deepVenus.needs}</div>`;
+                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🌙 Shadows & Challenges</h4>`;
+                venusContent += `<div style="white-space: pre-line;">${deepVenus.challenges}</div>`;
+                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">👨‍👩‍👧 For Parents</h4>`;
+                venusContent += `<div style="white-space: pre-line;">${deepVenus.parentGuidance}</div>`;
+                venusContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>✨ Affirmation:</strong> "${deepVenus.affirmation}"</p>`;
+            } else {
+                venusContent = venusReading ? venusReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Venus in ${venusSign.name} influences love and relationships.`;
+            }
+            
+            celestialSection.appendChild(createReadingCard(
+                config.readingTitles.venusSign,
+                `♀️ ${venusSign.name}${deepVenus ? ` - ${deepVenus.title}` : ''}`,
+                venusReading ? venusReading.keywords : ['Love', 'Beauty', 'Values'],
+                venusContent,
+                venusReading ? venusReading.strengths : [],
+                venusReading ? venusReading.challenges : []
+            ));
+            
+            // Mars Sign (marsSign already declared in blueprint section)
+            const marsReading = MARS_SIGN_READINGS ? MARS_SIGN_READINGS[marsSign.name] : null;
+            const deepMars = (typeof DEEP_MARS_READINGS !== 'undefined') ? DEEP_MARS_READINGS[marsSign.name] : null;
+            
+            let marsContent = '';
+            if (deepMars) {
+                marsContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepMars.hook}</p>`;
+                marsContent += `<div style="white-space: pre-line;">${deepMars.coreNature}</div>`;
+                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">⚡ Energy Expression</h4>`;
+                marsContent += `<div style="white-space: pre-line;">${deepMars.energy}</div>`;
+                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🎯 Drive & Motivation</h4>`;
+                marsContent += `<div style="white-space: pre-line;">${deepMars.willAndDrive}</div>`;
+                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🌙 Shadows & Challenges</h4>`;
+                marsContent += `<div style="white-space: pre-line;">${deepMars.challenges}</div>`;
+                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">👨‍👩‍👧 For Parents</h4>`;
+                marsContent += `<div style="white-space: pre-line;">${deepMars.parentGuidance}</div>`;
+                marsContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>✨ Affirmation:</strong> "${deepMars.affirmation}"</p>`;
+            } else {
+                marsContent = marsReading ? marsReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Mars in ${marsSign.name} influences energy and drive.`;
+            }
+            
+            celestialSection.appendChild(createReadingCard(
+                config.readingTitles.marsSign,
+                `♂️ ${marsSign.name}${deepMars ? ` - ${deepMars.title}` : ''}`,
+                marsReading ? marsReading.keywords : ['Energy', 'Drive', 'Action'],
+                marsContent,
+                marsReading ? marsReading.strengths : [],
+                marsReading ? marsReading.challenges : []
+            ));
+            
+            // Jupiter Sign (jupiterSign already declared in blueprint section)
+            const jupiterReading = JUPITER_SIGN_READINGS ? JUPITER_SIGN_READINGS[jupiterSign.name] : null;
+            const deepJupiter = (typeof DEEP_JUPITER_READINGS !== 'undefined') ? DEEP_JUPITER_READINGS[jupiterSign.name] : null;
+            
+            let jupiterContent = '';
+            if (deepJupiter) {
+                jupiterContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepJupiter.hook}</p>`;
+                jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.coreNature}</div>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🌱 Path of Expansion</h4>`;
+                jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.expansion}</div>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">📜 Wisdom & Teaching</h4>`;
+                jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.wisdom}</div>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🍀 How Luck Finds Them</h4>`;
+                jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.luck}</div>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🌙 Shadows & Challenges</h4>`;
+                jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.challenges}</div>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">👨‍👩‍👧 For Parents</h4>`;
+                jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.parentGuidance}</div>`;
+                jupiterContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>✨ Affirmation:</strong> "${deepJupiter.affirmation}"</p>`;
+            } else {
+                jupiterContent = jupiterReading ? jupiterReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Jupiter in ${jupiterSign.name} influences luck and expansion.`;
+            }
+            
+            celestialSection.appendChild(createReadingCard(
+                config.readingTitles.jupiterSign,
+                `♃ ${jupiterSign.name}${deepJupiter ? ` - ${deepJupiter.title}` : ''}`,
+                jupiterReading ? jupiterReading.keywords : ['Luck', 'Growth', 'Expansion'],
+                jupiterContent,
+                jupiterReading ? jupiterReading.strengths : [],
+                jupiterReading ? jupiterReading.challenges : []
+            ));
+            
+            // Saturn Sign (saturnSign already declared in blueprint section)
+            const saturnReading = SATURN_SIGN_READINGS ? SATURN_SIGN_READINGS[saturnSign.name] : null;
+            const deepSaturn = (typeof DEEP_SATURN_READINGS !== 'undefined') ? DEEP_SATURN_READINGS[saturnSign.name] : null;
+            
+            let saturnContent = '';
+            if (deepSaturn) {
+                saturnContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepSaturn.hook}</p>`;
+                saturnContent += `<div style="white-space: pre-line;">${deepSaturn.coreNature}</div>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">📚 Life Lessons</h4>`;
+                saturnContent += `<div style="white-space: pre-line;">${deepSaturn.lessons}</div>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🌙 Challenges & Shadow Work</h4>`;
+                saturnContent += `<div style="white-space: pre-line;">${deepSaturn.challenges}</div>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">🏆 Path to Mastery</h4>`;
+                saturnContent += `<div style="white-space: pre-line;">${deepSaturn.mastery}</div>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">✨ Gifts When Integrated</h4>`;
+                saturnContent += `<div style="white-space: pre-line;">${deepSaturn.gifts}</div>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">👨‍👩‍👧 For Parents</h4>`;
+                saturnContent += `<div style="white-space: pre-line;">${deepSaturn.parentGuidance}</div>`;
+                saturnContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>✨ Affirmation:</strong> "${deepSaturn.affirmation}"</p>`;
+            } else {
+                saturnContent = saturnReading ? saturnReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Saturn in ${saturnSign.name} indicates life lessons and areas of mastery.`;
+            }
+            
+            celestialSection.appendChild(createReadingCard(
+                config.readingTitles.saturnSign,
+                `♄ ${saturnSign.name}${deepSaturn ? ` - ${deepSaturn.title}` : ''}`,
+                saturnReading ? saturnReading.keywords : ['Lessons', 'Discipline', 'Mastery'],
+                saturnContent,
+                saturnReading ? saturnReading.strengths : [],
+                saturnReading ? saturnReading.challenges : []
+            ));
+            
+            // Chiron (The Wounded Healer)
+            const chiron = readings.astrology.chiron || { name: 'Aries' };
+            const chironReading = CHIRON_SIGN_READINGS ? CHIRON_SIGN_READINGS[chiron.name] : null;
+            celestialSection.appendChild(createReadingCard(
+                'Chiron - The Healer Within',
+                `⚷ ${chiron.name}`,
+                chironReading ? chironReading.keywords : ['Healing', 'Growth', 'Gift'],
+                chironReading ? chironReading.reading : `Chiron in ${chiron.name} reveals a beautiful capacity for healing and helping others.`,
+                [],
+                []
+            ));
+            
+            // Black Moon Lilith
+            const lilith = readings.astrology.lilith || { name: 'Aries' };
+            const lilithReading = LILITH_SIGN_READINGS ? LILITH_SIGN_READINGS[lilith.name] : null;
+            celestialSection.appendChild(createReadingCard(
+                'Lilith - Hidden Strength',
+                `⚸ ${lilith.name}`,
+                lilithReading ? lilithReading.keywords : ['Strength', 'Independence', 'Authenticity'],
+                lilithReading ? lilithReading.reading : `Lilith in ${lilith.name} reveals inner strength waiting to blossom.`,
+                [],
+                []
+            ));
+            
+            // ============================================
+            // STELLIUM DETECTION (3+ planets in same sign)
+            // ============================================
+            if (readings.astrology.stelliums && readings.astrology.stelliums.length > 0) {
+                const stelliumHeader = document.createElement('div');
+                stelliumHeader.className = 'section-divider';
+                stelliumHeader.innerHTML = '<h3>⚡ Power Concentrations</h3><p>Stelliums - extraordinary energy focus in specific signs</p>';
+                celestialSection.appendChild(stelliumHeader);
+                
+                readings.astrology.stelliums.forEach(stellium => {
+                    const stelliumReading = STELLIUM_READINGS ? STELLIUM_READINGS[stellium.sign] : null;
+                    const intensityLabel = stellium.intensity === 'extreme' ? '🔥 EXTREME' : 
+                                          stellium.intensity === 'powerful' ? '⚡ POWERFUL' : '✨ SIGNIFICANT';
+                    
+                    const stelliumContent = stelliumReading ? 
+                        `<p><strong>${intensityLabel} ${stellium.element.toUpperCase()} STELLIUM</strong></p>
+                        <p><em>Planets concentrated: ${stellium.planets.join(', ')}</em></p>
+                        <p>${stelliumReading.reading}</p>
+                        <p class="cosmic-highlight">This concentration of ${stellium.count} celestial bodies in ${stellium.sign} creates a powerful focal point in ${userData.name}'s soul blueprint. This is where their energy naturally wants to express itself most intensely.</p>` :
+                        `<p><strong>${intensityLabel} STELLIUM</strong></p>
+                        <p>With ${stellium.count} planets in ${stellium.sign}, there is an extraordinary concentration of ${stellium.element} energy in this area of life.</p>
+                        <p>Planets: ${stellium.planets.join(', ')}</p>`;
+                    
+                    celestialSection.appendChild(createReadingCard(
+                        `${stellium.symbol} ${stellium.sign} Stellium`,
+                        `${stellium.count} Planets in ${stellium.sign}`,
+                        [stellium.element + ' Energy', 'Power Focus', 'Concentrated Gifts', intensityLabel],
+                        stelliumContent,
+                        ['Exceptional strength in ' + stellium.sign + ' matters', 'Natural mastery potential', 'Magnetic presence in this area'],
+                        ['May overshadow other energies', 'Can be overwhelming to express', 'Needs conscious balance']
+                    ));
+                });
+            }
+            
+            // ============================================
+            // HOUSE PLACEMENTS (if birth time available)
+            // ============================================
+            if (readings.astrology.planetHouses && readings.astrology.houses) {
+                const planetHouses = readings.astrology.planetHouses;
+                
+                const housesHeader = document.createElement('div');
+                housesHeader.className = 'section-divider';
+                housesHeader.innerHTML = '<h3>🏠 House Placements</h3><p>Where each planet expresses its energy in your life</p>';
+                celestialSection.appendChild(housesHeader);
+                
+                // Sun in House
+                if (planetHouses.sun && HOUSE_READINGS.Sun && HOUSE_READINGS.Sun[planetHouses.sun]) {
+                    const houseReading = HOUSE_READINGS.Sun[planetHouses.sun];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `☉ Sun in House ${planetHouses.sun}`,
+                        houseReading.keywords,
+                        houseReading.reading.replace(/this child/gi, userData.name).replace(/they/gi, 'they'),
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
+                    ));
+                }
+                
+                // Moon in House
+                if (planetHouses.moon && HOUSE_READINGS.Moon && HOUSE_READINGS.Moon[planetHouses.moon]) {
+                    const houseReading = HOUSE_READINGS.Moon[planetHouses.moon];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `☽ Moon in House ${planetHouses.moon}`,
+                        houseReading.keywords,
+                        houseReading.reading.replace(/this child/gi, userData.name),
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
+                    ));
+                }
+                
+                // Mercury in House
+                if (planetHouses.mercury && HOUSE_READINGS.Mercury && HOUSE_READINGS.Mercury[planetHouses.mercury]) {
+                    const houseReading = HOUSE_READINGS.Mercury[planetHouses.mercury];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `☿ Mercury in House ${planetHouses.mercury}`,
+                        houseReading.keywords,
+                        houseReading.reading,
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
+                    ));
+                }
+                
+                // Venus in House
+                if (planetHouses.venus && HOUSE_READINGS.Venus && HOUSE_READINGS.Venus[planetHouses.venus]) {
+                    const houseReading = HOUSE_READINGS.Venus[planetHouses.venus];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `♀ Venus in House ${planetHouses.venus}`,
+                        houseReading.keywords,
+                        houseReading.reading,
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
+                    ));
+                }
+                
+                // Mars in House
+                if (planetHouses.mars && HOUSE_READINGS.Mars && HOUSE_READINGS.Mars[planetHouses.mars]) {
+                    const houseReading = HOUSE_READINGS.Mars[planetHouses.mars];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `♂ Mars in House ${planetHouses.mars}`,
+                        houseReading.keywords,
+                        houseReading.reading,
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
+                    ));
+                }
+                
+                // Jupiter in House
+                if (planetHouses.jupiter && HOUSE_READINGS.Jupiter && HOUSE_READINGS.Jupiter[planetHouses.jupiter]) {
+                    const houseReading = HOUSE_READINGS.Jupiter[planetHouses.jupiter];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `♃ Jupiter in House ${planetHouses.jupiter}`,
+                        houseReading.keywords,
+                        houseReading.reading,
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
+                    ));
+                }
+                
+                // Saturn in House
+                if (planetHouses.saturn && HOUSE_READINGS.Saturn && HOUSE_READINGS.Saturn[planetHouses.saturn]) {
+                    const houseReading = HOUSE_READINGS.Saturn[planetHouses.saturn];
+                    celestialSection.appendChild(createReadingCard(
+                        houseReading.title,
+                        `♄ Saturn in House ${planetHouses.saturn}`,
+                        houseReading.keywords,
+                        houseReading.reading,
+                        houseReading.strengths || [],
+                        houseReading.challenges || []
+                    ));
+                }
+            }
+            
+            // ============================================
+            // PLANETARY ASPECTS
+            // ============================================
+            if (readings.astrology.aspects && readings.astrology.aspects.length > 0) {
+                const aspectsHeader = document.createElement('div');
+                aspectsHeader.className = 'section-divider';
+                aspectsHeader.innerHTML = '<h3>⚡ Planetary Relationships</h3><p>How your planets interact and create your unique cosmic pattern</p>';
+                celestialSection.appendChild(aspectsHeader);
+                
+                // Display major aspects
+                readings.astrology.aspects.forEach(aspect => {
+                    let aspectReading = getAspectReading(aspect.planet1, aspect.planet2, aspect.aspect);
+                    
+                    // Check for additional aspects in readings-extended.js
+                    if (!aspectReading && typeof ADDITIONAL_ASPECT_READINGS !== 'undefined') {
+                        const key = `${aspect.planet1}-${aspect.planet2}`;
+                        const altKey = `${aspect.planet2}-${aspect.planet1}`;
+                        const aspectData = ADDITIONAL_ASPECT_READINGS[key] || ADDITIONAL_ASPECT_READINGS[altKey];
+                        if (aspectData && aspectData[aspect.aspect]) {
+                            aspectReading = aspectData[aspect.aspect];
+                        }
+                    }
+                    
+                    if (aspectReading) {
+                        celestialSection.appendChild(createReadingCard(
+                            aspectReading.title,
+                            `${aspect.symbol} ${aspect.planet1}-${aspect.planet2} ${aspect.aspect}`,
+                            aspectReading.keywords,
+                            aspectReading.reading.replace(/this child/gi, userData.name).replace(/they/gi, 'they'),
+                            aspectReading.strength ? [aspectReading.strength] : [],
+                            aspectReading.challenge ? [aspectReading.challenge] : []
+                        ));
+                    }
+                });
+            }
+            
+            // ============================================
+            // CORE PARADOX SYNTHESIS
+            // ============================================
+            const sunMoonAspect = readings.astrology.aspects ? 
+                readings.astrology.aspects.find(a => 
+                    (a.planet1 === 'Sun' && a.planet2 === 'Moon') || 
+                    (a.planet1 === 'Moon' && a.planet2 === 'Sun')
+                ) : null;
+            
+            if (sunMoonAspect) {
+                const sunSign = readings.astrology.sunSign;
+                const moonSign = readings.astrology.moonSign;
+                
+                const paradoxTitle = "🌟 Core Integration - Sun & Moon";
+                let paradoxReading = '';
+                
+                if (sunMoonAspect.nature === 'harmonious') {
+                    paradoxReading = `${userData.name} has a harmonious ${sunMoonAspect.aspect} between their ${sunSign.name} Sun (core identity) and ${moonSign.name} Moon (emotional nature). This creates beautiful alignment between what they want and what they need emotionally.
+
+Their conscious will and subconscious feelings work together naturally. What brings them joy (Sun) also satisfies their emotional needs (Moon). This internal harmony creates a sense of wholeness and self-understanding that is truly a gift.
+
+Support this natural integration by honoring both their ${sunSign.element} Sun's need for ${sunSign.element === 'Fire' ? 'action and recognition' : sunSign.element === 'Earth' ? 'stability and tangible results' : sunSign.element === 'Air' ? 'mental stimulation and communication' : 'emotional depth and intuitive connection'} and their ${moonSign.element} Moon's need for ${moonSign.element === 'Fire' ? 'emotional expression and excitement' : moonSign.element === 'Earth' ? 'security and routine' : moonSign.element === 'Air' ? 'intellectual processing of feelings' : 'emotional safety and nurturing'}.`;
+                } else {
+                    paradoxReading = `${userData.name} has a ${sunMoonAspect.aspect} between their ${sunSign.name} Sun (conscious identity) and ${moonSign.name} Moon (emotional needs). This creates dynamic tension between what they want and what they need emotionally - a creative friction that shapes their growth.
+
+Their ${sunSign.element} Sun wants ${sunSign.element === 'Fire' ? 'bold action and recognition' : sunSign.element === 'Earth' ? 'stability and material security' : sunSign.element === 'Air' ? 'intellectual freedom and variety' : 'emotional depth and merging'}, while their ${moonSign.element} Moon needs ${moonSign.element === 'Fire' ? 'passionate emotional expression' : moonSign.element === 'Earth' ? 'predictable emotional security' : moonSign.element === 'Air' ? 'mental understanding of feelings' : 'deep emotional bonding'}.
+
+This isn't a flaw - it's their power source. The tension between these two drives creates motivation, self-awareness, and the ability to understand others who also contain contradictions. Help them honor both parts of themselves without forcing them to choose one over the other.`;
+                }
+                
+                celestialSection.appendChild(createReadingCard(
+                    paradoxTitle,
+                    `${sunSign.symbol} ${sunSign.name} ${sunMoonAspect.symbol} ${moonSign.symbol} ${moonSign.name}`,
+                    ['Integration', 'Inner Balance', 'Self-Understanding'],
+                    paradoxReading,
+                    ['Deep self-awareness', 'Understanding complexity'],
+                    sunMoonAspect.nature === 'challenging' ? ['Internal tension requires conscious integration'] : []
+                ));
+            }
+            
+            // ============================================
+            // LOVE BLUEPRINT SYNTHESIS
+            // ============================================
+            if (readings.astrology.loveBlueprint && typeof generateLoveBlueprint === 'function') {
+                const lb = readings.astrology.loveBlueprint;
+                const blueprint = generateLoveBlueprint(lb.venus, lb.mars, lb.house7);
+                
+                const blueprintHeader = document.createElement('div');
+                blueprintHeader.className = 'section-divider';
+                blueprintHeader.innerHTML = '<h3>💕 Love Blueprint</h3><p>How they\'ll love, desire, and attract throughout life</p>';
+                celestialSection.appendChild(blueprintHeader);
+                
+                celestialSection.appendChild(createReadingCard(
+                    blueprint.title,
+                    blueprint.subtitle,
+                    blueprint.keywords,
+                    blueprint.synthesis.replace(/this little one/gi, userData.name).replace(/they/gi, 'they').replace(/their/gi, 'their'),
+                    [`Their heart speaks: ${blueprint.essence}`, `They naturally attract: ${blueprint.attracted}`],
+                    []
+                ));
+            }
+            
+            // ============================================
+            // PART OF FORTUNE
+            // ============================================
+            if (readings.astrology.partOfFortune && PART_OF_FORTUNE_READINGS) {
+                const fortuneSign = readings.astrology.partOfFortune;
+                const fortuneReading = PART_OF_FORTUNE_READINGS[fortuneSign.name];
+                
+                if (fortuneReading) {
+                    celestialSection.appendChild(createReadingCard(
+                        fortuneReading.title,
+                        `🍀 ${fortuneSign.name}`,
+                        fortuneReading.keywords,
+                        fortuneReading.reading.replace(/this child/gi, userData.name).replace(/they/gi, 'they').replace(/them/gi, 'them').replace(/their/gi, 'their'),
+                        [fortuneReading.guidance],
+                        []
+                    ));
+                }
+            }
+            
+            // ============================================
+            // CURRENT TRANSITS
+            // ============================================
+            if (readings.astrology.currentTransits && TRANSIT_READINGS) {
+                const transitsHeader = document.createElement('div');
+                transitsHeader.className = 'section-divider';
+                transitsHeader.innerHTML = '<h3>🌊 Current Cosmic Weather (2026)</h3><p>What the universe is teaching this generation right now</p>';
+                celestialSection.appendChild(transitsHeader);
+                
+                // Saturn transit
+                const saturnTransit = TRANSIT_READINGS.saturn;
+                celestialSection.appendChild(createReadingCard(
+                    saturnTransit.title,
+                    `♄ Saturn in ${saturnTransit.currentSign}`,
+                    saturnTransit.keywords,
+                    saturnTransit.reading.replace(/this little one/gi, userData.name).replace(/they/gi, 'they'),
+                    [saturnTransit.guidance],
+                    []
+                ));
+                
+                // Pluto transit
+                const plutoTransit = TRANSIT_READINGS.pluto;
+                celestialSection.appendChild(createReadingCard(
+                    plutoTransit.title,
+                    `♇ Pluto in ${plutoTransit.currentSign}`,
+                    plutoTransit.keywords,
+                    plutoTransit.reading.replace(/this child/gi, userData.name).replace(/they/gi, 'they'),
+                    [plutoTransit.guidance],
+                    []
+                ));
+                
+                // Jupiter transit
+                const jupiterTransit = TRANSIT_READINGS.jupiter;
+                celestialSection.appendChild(createReadingCard(
+                    jupiterTransit.title,
+                    `♃ Jupiter in ${jupiterTransit.currentSign}`,
+                    jupiterTransit.keywords,
+                    jupiterTransit.reading.replace(/they/gi, 'they'),
+                    [jupiterTransit.guidance],
+                    []
+                ));
+            }
+            
+            celestialSectionWrapper.appendChild(celestialSection);
+            container.appendChild(celestialSectionWrapper);
+            
+            // Add AdSense slot
+            const ad1 = createAdSlot();
+            container.appendChild(ad1);
+            
+            // ============================================
+            // SECTION 2: NUMEROLOGY
+            // ============================================
+            const numbersSectionWrapper = document.createElement('div');
+            numbersSectionWrapper.className = 'reading-section';
+            const numbersSection = createSection('numbers', config.sections.numbers);
+            
+            // ============================================
+            // NUMEROLOGY CALCULATION EXPLAINER
+            // ============================================
+            const { day: birthDay, month: birthMonth, year: birthYear } = parseBirthDate(userData.birthDate);
+            const numExplainer = document.createElement('div');
+            numExplainer.className = 'reading-card numerology-explainer';
+            
+            // Calculate step-by-step for Life Path
+            const dayReduced = reduceToSingleDigit(birthDay);
+            const monthReduced = reduceToSingleDigit(birthMonth);
+            const yearReduced = reduceToSingleDigit(birthYear);
+            const lifePathSum = dayReduced + monthReduced + yearReduced;
+            
+            // Letter to number mapping
+            const letterChart = 'A=1, B=2, C=3, D=4, E=5, F=6, G=7, H=8, I=9, J=1, K=2, L=3, M=4, N=5, O=6, P=7, Q=8, R=9, S=1, T=2, U=3, V=4, W=5, X=6, Y=7, Z=8';
+            
+            numExplainer.innerHTML = `
+                <span class="card-icon">🔢</span>
+                <h3>How Your Numbers Are Calculated</h3>
+                <p class="blueprint-intro">Numerology uses ancient mathematical principles to reveal the energetic blueprint encoded in your birth date and name. Here's exactly how ${userData.name}'s core numbers are calculated:</p>
+                
+                <div class="num-calc-section">
+                    <h4>📊 Life Path Number: ${readings.numerology.lifePath}</h4>
+                    <p>Your Life Path is the most important number — it reveals your life's purpose and the journey you're meant to walk.</p>
+                    <div class="calc-steps">
+                        <div class="calc-step">
+                            <span class="calc-label">Birth Date:</span>
+                            <span class="calc-value">${birthMonth}/${birthDay}/${birthYear}</span>
+                        </div>
+                        <div class="calc-step">
+                            <span class="calc-label">Reduce Month (${birthMonth}):</span>
+                            <span class="calc-value">${birthMonth} → ${monthReduced}</span>
+                        </div>
+                        <div class="calc-step">
+                            <span class="calc-label">Reduce Day (${birthDay}):</span>
+                            <span class="calc-value">${birthDay} → ${dayReduced}</span>
+                        </div>
+                        <div class="calc-step">
+                            <span class="calc-label">Reduce Year (${birthYear}):</span>
+                            <span class="calc-value">${String(birthYear).split('').join(' + ')} = ${String(birthYear).split('').reduce((a,b) => +a + +b)} → ${yearReduced}</span>
+                        </div>
+                        <div class="calc-step final">
+                            <span class="calc-label">Add Together:</span>
+                            <span class="calc-value">${monthReduced} + ${dayReduced} + ${yearReduced} = ${lifePathSum} → <strong>${readings.numerology.lifePath}</strong></span>
+                        </div>
+                    </div>
+                    <p class="calc-note">*Master Numbers (11, 22, 33) are not reduced, as they carry special significance.</p>
+                </div>
+                
+                <div class="num-calc-section">
+                    <h4>💫 Destiny Number: ${readings.numerology.destiny}</h4>
+                    <p>Calculated from your full birth name — each letter has a numeric value. All letters are added and reduced.</p>
+                    <div class="letter-chart">${letterChart}</div>
+                    <p>Add all letter values in "<strong>${userData.fullName}</strong>" and reduce to a single digit (or Master Number).</p>
+                </div>
+                
+                <div class="num-calc-section">
+                    <h4>💖 Soul Urge Number: ${readings.numerology.soulUrge}</h4>
+                    <p>Calculated from only the <strong>vowels</strong> in your full name (A, E, I, O, U). This reveals your heart's deepest desires.</p>
+                </div>
+                
+                <div class="num-calc-section">
+                    <h4>🎭 Personality Number: ${readings.numerology.personality}</h4>
+                    <p>Calculated from only the <strong>consonants</strong> in your full name. This reveals how others perceive you.</p>
+                </div>
+                
+                <div class="num-calc-section">
+                    <h4>🎂 Birthday Number: ${readings.numerology.birthday}</h4>
+                    <p>Simply the day of the month you were born (${birthDay}), reduced if needed. This reveals natural talents and special gifts.</p>
+                </div>
+                
+                <p class="blueprint-footer">Each number carries unique vibrational energy that influences different aspects of your life. Scroll down to discover what each of ${userData.name}'s numbers reveals.</p>
+            `;
+            numbersSection.appendChild(numExplainer);
+            
+            // Life Path
+            const lifePath = readings.numerology.lifePath;
+            const lifePathReading = LIFE_PATH_READINGS[lifePath];
+            numbersSection.appendChild(createReadingCard(
+                config.readingTitles.lifePath,
+                `${lifePath} - ${lifePathReading ? lifePathReading.title : 'Life Path ' + lifePath}`,
+                lifePathReading ? lifePathReading.keywords : [],
+                lifePathReading ? lifePathReading.reading.replace(/this soul/gi, userData.name).replace(/this individual/gi, userData.name) : `Life Path ${lifePath} indicates a journey of growth and discovery.`,
+                lifePathReading ? lifePathReading.strengths : [],
+                lifePathReading ? lifePathReading.challenges : []
+            ));
+            
+            // Destiny Number
+            const destiny = readings.numerology.destiny;
+            const destinyReading = LIFE_PATH_READINGS[destiny];
+            numbersSection.appendChild(createReadingCard(
+                config.readingTitles.destiny,
+                `${destiny} - ${destinyReading ? destinyReading.title : 'Destiny ' + destiny}`,
+                ['Life Purpose', 'Potential', 'Direction'],
+                destinyReading ? `Destiny Number ${destiny} reveals what ${userData.name} is here to accomplish. ${destinyReading.summary}` : `Destiny Number ${destiny} reveals what ${userData.name} is here to accomplish.`,
+                destinyReading ? destinyReading.strengths : [],
+                destinyReading ? destinyReading.challenges : []
+            ));
+            
+            // Soul Urge
+            const soulUrge = readings.numerology.soulUrge;
+            const soulUrgeReading = SOUL_URGE_READINGS ? SOUL_URGE_READINGS[soulUrge] : null;
+            numbersSection.appendChild(createReadingCard(
+                config.readingTitles.soulUrge,
+                `${soulUrge} - ${soulUrgeReading ? soulUrgeReading.title : 'Soul Urge ' + soulUrge}`,
+                ['Heart\'s Desire', 'Inner Motivation', 'True Self'],
+                soulUrgeReading ? soulUrgeReading.reading : `Soul Urge ${soulUrge} reveals ${userData.name}'s deepest desires and what truly motivates from within.`,
+                [],
+                []
+            ));
+            
+            // Personality Number
+            const personality = readings.numerology.personality;
+            const personalityReading = PERSONALITY_NUMBER_READINGS ? PERSONALITY_NUMBER_READINGS[personality] : null;
+            numbersSection.appendChild(createReadingCard(
+                config.readingTitles.personality,
+                `${personality} - ${personalityReading ? personalityReading.title : 'Personality ' + personality}`,
+                ['Outer Self', 'First Impressions', 'Public Image'],
+                personalityReading ? personalityReading.reading : `Personality Number ${personality} shows how ${userData.name} appears to others.`,
+                [],
+                []
+            ));
+            
+            // Birthday Number
+            const birthday = readings.numerology.birthday;
+            const birthdayReading = BIRTHDAY_NUMBER_READINGS ? BIRTHDAY_NUMBER_READINGS[birthday] : null;
+            numbersSection.appendChild(createReadingCard(
+                config.readingTitles.birthday,
+                `${birthday} - ${birthdayReading ? birthdayReading.title : 'Birthday ' + birthday}`,
+                ['Special Talents', 'Natural Gifts', 'Birthday Energy'],
+                birthdayReading ? birthdayReading.reading : `Birthday Number ${birthday} represents special talents and gifts that ${userData.name} brought into this life.`,
+                [],
+                []
+            ));
+            
+            // Personal Year
+            const personalYear = readings.numerology.personalYear;
+            const personalYearReading = PERSONAL_YEAR_READINGS ? PERSONAL_YEAR_READINGS[personalYear] : null;
+            numbersSection.appendChild(createReadingCard(
+                config.readingTitles.personalYear,
+                `${personalYear} - ${personalYearReading ? personalYearReading.title : 'Year ' + personalYear}`,
+                personalYearReading ? personalYearReading.keywords : ['Current Year', 'Annual Theme', 'Opportunities'],
+                personalYearReading ? personalYearReading.reading.replace(/\$\{userData\.name\}/gi, userData.name) : `Personal Year ${personalYear} indicates the theme and energy of the current year.`,
+                [],
+                []
+            ));
+            
+            // Maturity Number
+            const maturity = readings.numerology.maturity;
+            const maturityReading = LIFE_PATH_READINGS[maturity];
+            numbersSection.appendChild(createReadingCard(
+                config.readingTitles.maturity,
+                `${maturity} - ${maturityReading ? maturityReading.title : 'Maturity ' + maturity}`,
+                ['Later Life', 'Wisdom', 'Integration'],
+                `Maturity Number ${maturity} reveals what ${userData.name} is growing toward. ${maturityReading ? maturityReading.summary : 'These qualities become more prominent with age and experience.'}`,
+                [],
+                []
+            ));
+            
+            // Pinnacles with detailed readings
+            const pinnacles = readings.numerology.pinnacles;
+            const p1Reading = PINNACLE_NUMBER_READINGS ? PINNACLE_NUMBER_READINGS[pinnacles.first] : null;
+            const p2Reading = PINNACLE_NUMBER_READINGS ? PINNACLE_NUMBER_READINGS[pinnacles.second] : null;
+            const p3Reading = PINNACLE_NUMBER_READINGS ? PINNACLE_NUMBER_READINGS[pinnacles.third] : null;
+            const p4Reading = PINNACLE_NUMBER_READINGS ? PINNACLE_NUMBER_READINGS[pinnacles.fourth] : null;
+            numbersSection.appendChild(createReadingCard(
+                config.readingTitles.pinnacle,
+                `1st: ${pinnacles.first} | 2nd: ${pinnacles.second} | 3rd: ${pinnacles.third} | 4th: ${pinnacles.fourth}`,
+                ['Life Phases', 'Major Cycles', 'Growth Periods'],
+                `The Pinnacle Numbers reveal the major life phases for ${userData.name}:\n\n• First Pinnacle (${pinnacles.ages.first}): ${p1Reading ? p1Reading.reading : 'Pinnacle ' + pinnacles.first + ' energy'}\n\n• Second Pinnacle (${pinnacles.ages.second}): ${p2Reading ? p2Reading.reading : 'Pinnacle ' + pinnacles.second + ' energy'}\n\n• Third Pinnacle (${pinnacles.ages.third}): ${p3Reading ? p3Reading.reading : 'Pinnacle ' + pinnacles.third + ' energy'}\n\n• Fourth Pinnacle (${pinnacles.ages.fourth}): ${p4Reading ? p4Reading.reading : 'Pinnacle ' + pinnacles.fourth + ' energy'}`,
+                [],
+                []
+            ));
+            
+            // Challenges with detailed readings
+            const challenges = readings.numerology.challenges;
+            const c1Reading = CHALLENGE_NUMBER_READINGS ? CHALLENGE_NUMBER_READINGS[challenges.first] : null;
+            const c2Reading = CHALLENGE_NUMBER_READINGS ? CHALLENGE_NUMBER_READINGS[challenges.second] : null;
+            const c3Reading = CHALLENGE_NUMBER_READINGS ? CHALLENGE_NUMBER_READINGS[challenges.third] : null;
+            const c4Reading = CHALLENGE_NUMBER_READINGS ? CHALLENGE_NUMBER_READINGS[challenges.fourth] : null;
+            numbersSection.appendChild(createReadingCard(
+                config.readingTitles.challenge,
+                `1st: ${challenges.first} | 2nd: ${challenges.second} | 3rd: ${challenges.third} | 4th: ${challenges.fourth}`,
+                ['Growth Areas', 'Life Lessons', 'Obstacles to Overcome'],
+                `The Challenge Numbers reveal the growth areas for ${userData.name}:\n\n• First Challenge: ${c1Reading ? c1Reading.reading : 'Challenge ' + challenges.first}\n\n• Second Challenge: ${c2Reading ? c2Reading.reading : 'Challenge ' + challenges.second}\n\n• Third Challenge (Main): ${c3Reading ? c3Reading.reading : 'Challenge ' + challenges.third}\n\n• Fourth Challenge: ${c4Reading ? c4Reading.reading : 'Challenge ' + challenges.fourth}`,
+                [],
+                []
+            ));
+            
+            // Karmic Debt (if applicable)
+            const karmicDebt = readings.numerology.karmicDebt;
+            if (karmicDebt && karmicDebt.hasDebt && karmicDebt.numbers.length > 0) {
+                const karmicNum = karmicDebt.numbers[0];
+                const karmicReading = KARMIC_DEBT_READINGS ? KARMIC_DEBT_READINGS[karmicNum] : null;
+                numbersSection.appendChild(createReadingCard(
+                    'Karmic Debt',
+                    karmicReading ? karmicReading.title : `Karmic Debt ${karmicNum}`,
+                    ['Past Life Lessons', 'Karmic Balance', 'Soul Growth'],
+                    karmicReading ? karmicReading.reading : `Karmic Debt ${karmicNum} indicates lessons carried from past lives that require attention in this lifetime.`,
+                    [],
+                    []
+                ));
+            }
+            
+            numbersSectionWrapper.appendChild(numbersSection);
+            container.appendChild(numbersSectionWrapper);
+            
+            // Add AdSense slot
+            const ad2 = createAdSlot();
+            container.appendChild(ad2);
+            
+            // ============================================
+            // SECTION 3: SOUL MISSION
+            // ============================================
+            const soulSectionWrapper = document.createElement('div');
+            soulSectionWrapper.className = 'reading-section';
+            const soulSection = createSection('soul', config.sections.soul);
+            
+            // North Node with detailed reading (northNode already declared in blueprint section)
+            const northNodeReading = NORTH_NODE_READINGS ? NORTH_NODE_READINGS[northNode.name] : null;
+            soulSection.appendChild(createReadingCard(
+                config.readingTitles.northNode,
+                `${northNode.symbol} ${northNode.name}`,
+                northNodeReading ? northNodeReading.keywords : ['Soul Direction', 'Growth Path', 'Destiny'],
+                northNodeReading ? northNodeReading.reading : `The North Node in ${northNode.name} points to ${userData.name}'s soul direction.`,
+                [],
+                []
+            ));
+            
+            // South Node (opposite of North Node)
+            const southNode = readings.astrology.southNode;
+            const southNodeSign = southNode.name;
+            soulSection.appendChild(createReadingCard(
+                config.readingTitles.southNode,
+                `${southNode.symbol} ${southNode.name}`,
+                ['Past Gifts', 'Comfort Zone', 'Natural Talents'],
+                `The South Node in ${southNodeSign} represents ${userData.name}'s past life gifts and natural talents - abilities that come easily but may also represent a comfort zone to grow beyond. While these gifts should be honored, over-reliance on them can prevent the soul growth indicated by the North Node in ${northNode.name}.`,
+                [],
+                []
+            ));
+            
+            // Life Lesson (derived from challenges) with detailed reading
+            const coreChallenge = challenges.third;
+            const coreChallengeReading = CHALLENGE_NUMBER_READINGS ? CHALLENGE_NUMBER_READINGS[coreChallenge] : null;
+            soulSection.appendChild(createReadingCard(
+                config.readingTitles.lifeLesson,
+                `Core Challenge ${coreChallenge}`,
+                ['Core Lesson', 'Soul Growth', 'Life Theme'],
+                coreChallengeReading ? `The core life lesson for ${userData.name}: ${coreChallengeReading.reading}` : `The core life lesson for ${userData.name} centers around the energy of ${coreChallenge}.`,
+                [],
+                []
+            ));
+            
+            soulSectionWrapper.appendChild(soulSection);
+            container.appendChild(soulSectionWrapper);
+            
+            // Add AdSense slot
+            const ad3 = createAdSlot();
+            container.appendChild(ad3);
+            
+            // ============================================
+            // SECTION 4: FORECASTS
+            // ============================================
+            const forecastsSectionWrapper = document.createElement('div');
+            forecastsSectionWrapper.className = 'reading-section';
+            const forecastsSection = createSection('forecasts', config.sections.forecasts);
+            
+            // Personal Year Forecast with detailed reading
+            const pyReading = PERSONAL_YEAR_READINGS ? PERSONAL_YEAR_READINGS[personalYear] : null;
+            forecastsSection.appendChild(createReadingCard(
+                config.readingTitles.yearAhead,
+                `Personal Year ${personalYear} - ${pyReading ? pyReading.title : 'Year of ' + personalYear}`,
+                pyReading ? pyReading.keywords : ['Annual Theme', 'Opportunities', 'Focus Areas'],
+                pyReading ? pyReading.reading : `In this Personal Year ${personalYear}, ${userData.name} is experiencing important themes and opportunities.`,
+                [],
+                []
+            ));
+            
+            // Personal Month
+            const personalMonth = readings.numerology.personalMonth;
+            forecastsSection.appendChild(createReadingCard(
+                'Current Month Energy',
+                `Personal Month ${personalMonth}`,
+                ['Monthly Theme', 'Short-term Focus'],
+                `This month carries the energy of ${personalMonth}, adding its influence to the yearly theme. This is a time for ${personalMonth === 1 ? 'initiating new projects' : personalMonth === 2 ? 'cooperation and patience' : personalMonth === 3 ? 'creative expression' : personalMonth === 4 ? 'practical matters' : personalMonth === 5 ? 'embracing change' : personalMonth === 6 ? 'home and family' : personalMonth === 7 ? 'rest and reflection' : personalMonth === 8 ? 'business and finances' : 'wrapping up loose ends'}.`,
+                [],
+                []
+            ));
+            
+            forecastsSectionWrapper.appendChild(forecastsSection);
+            container.appendChild(forecastsSectionWrapper);
+            
+            // Add AdSense slot
+            const ad4 = createAdSlot();
+            container.appendChild(ad4);
+            
+            // ============================================
+            // SECTION 5: LIFE CYCLES
+            // ============================================
+            const cyclesSectionWrapper = document.createElement('div');
+            cyclesSectionWrapper.className = 'reading-section';
+            const cyclesSection = createSection('cycles', config.sections.cycles);
+            
+            // Current Age
+            const age = readings.lifeCycles.age;
+            cyclesSection.appendChild(createReadingCard(
+                'Current Age',
+                `${age.years} years, ${age.months} months, ${age.days} days`,
+                ['Life Stage', 'Current Phase'],
+                `${userData.name} is currently ${age.years} years old, in the ${readings.lifeCycles.lifeStage.stage} stage of life. ${readings.lifeCycles.lifeStage.description}`,
+                [],
+                []
+            ));
+            
+            // Next Birthday
+            const nextBirthday = readings.lifeCycles.nextBirthday;
+            cyclesSection.appendChild(createReadingCard(
+                'Next Birthday',
+                `${nextBirthday.daysUntil} days away`,
+                ['Solar Return', 'New Year Cycle'],
+                `${userData.name}'s next birthday is ${nextBirthday.daysUntil} days away on ${nextBirthday.date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}. This will mark the beginning of a new personal year cycle.`,
+                [],
+                []
+            ));
+            
+            // Life Stage
+            cyclesSection.appendChild(createReadingCard(
+                'Life Stage',
+                readings.lifeCycles.lifeStage.stage,
+                ['Development Phase', 'Growth Period'],
+                readings.lifeCycles.lifeStage.description,
+                [],
+                []
+            ));
+            
+            cyclesSectionWrapper.appendChild(cyclesSection);
+            container.appendChild(cyclesSectionWrapper);
+            
+            // ============================================
+            // SECTION 6: ANGULAR HOUSES - Life Pillars
+            // ============================================
+            if (readings.astrology.angularHouses && typeof ANGULAR_HOUSE_READINGS !== 'undefined') {
+                const angularSectionWrapper = document.createElement('div');
+                angularSectionWrapper.className = 'reading-section';
+                const angularSection = document.createElement('div');
+                angularSection.className = 'section-content';
+                angularSection.id = 'section-angular';
+                
+                angularSection.innerHTML = `
+                    <div class="section-header">
+                        <span class="icon">🏛️</span>
+                        <div>
+                            <h2>The Four Pillars</h2>
+                            <p class="description">The angular houses form the foundation of ${userData.name}'s life chart</p>
+                        </div>
+                    </div>
+                `;
+                
+                const angular = readings.astrology.angularHouses;
+                
+                // 1st House - Ascendant/Self
+                if (angular.first && ANGULAR_HOUSE_READINGS.first && ANGULAR_HOUSE_READINGS.first[angular.first]) {
+                    const houseData = ANGULAR_HOUSE_READINGS.first[angular.first];
+                    angularSection.appendChild(createReadingCard(
+                        houseData.title,
+                        `⬆️ ${angular.first} Rising - The Self`,
+                        houseData.keywords,
+                        houseData.reading.replace(/this child/gi, userData.name),
+                        houseData.strengths || [],
+                        houseData.challenges || []
+                    ));
+                }
+                
+                // 4th House - IC/Roots
+                if (angular.fourth && ANGULAR_HOUSE_READINGS.fourth && ANGULAR_HOUSE_READINGS.fourth[angular.fourth]) {
+                    const houseData = ANGULAR_HOUSE_READINGS.fourth[angular.fourth];
+                    angularSection.appendChild(createReadingCard(
+                        houseData.title,
+                        `🏠 ${angular.fourth} IC - The Roots`,
+                        houseData.keywords,
+                        houseData.reading.replace(/this child/gi, userData.name),
+                        houseData.strengths || [],
+                        houseData.challenges || []
+                    ));
+                }
+                
+                // 7th House - Descendant/Partnerships
+                if (angular.seventh && ANGULAR_HOUSE_READINGS.seventh && ANGULAR_HOUSE_READINGS.seventh[angular.seventh]) {
+                    const houseData = ANGULAR_HOUSE_READINGS.seventh[angular.seventh];
+                    angularSection.appendChild(createReadingCard(
+                        houseData.title,
+                        `🤝 ${angular.seventh} Descendant - The Partners`,
+                        houseData.keywords,
+                        houseData.reading.replace(/this child/gi, userData.name),
+                        houseData.strengths || [],
+                        houseData.challenges || []
+                    ));
+                }
+                
+                // 10th House - MC/Career
+                if (angular.tenth && ANGULAR_HOUSE_READINGS.tenth && ANGULAR_HOUSE_READINGS.tenth[angular.tenth]) {
+                    const houseData = ANGULAR_HOUSE_READINGS.tenth[angular.tenth];
+                    angularSection.appendChild(createReadingCard(
+                        houseData.title,
+                        `👑 ${angular.tenth} Midheaven - The Legacy`,
+                        houseData.keywords,
+                        houseData.reading.replace(/this child/gi, userData.name),
+                        houseData.strengths || [],
+                        houseData.challenges || []
+                    ));
+                }
+                
+                angularSectionWrapper.appendChild(angularSection);
+                container.appendChild(angularSectionWrapper);
+            }
+            
+            // ============================================
+            // SECTION 7: VERTEX - Fated Encounters
+            // ============================================
+            if (readings.astrology.vertex && typeof VERTEX_READINGS !== 'undefined') {
+                const vertex = readings.astrology.vertex;
+                const vertexReading = VERTEX_READINGS[vertex.name || vertex];
+                
+                if (vertexReading) {
+                    const vertexSectionWrapper = document.createElement('div');
+                    vertexSectionWrapper.className = 'reading-section';
+                    const vertexSection = document.createElement('div');
+                    vertexSection.className = 'section-content';
+                    vertexSection.id = 'section-vertex';
+                    
+                    vertexSection.innerHTML = `
+                        <div class="section-header">
+                            <span class="icon">✨</span>
+                            <div>
+                                <h2>Fated Encounters</h2>
+                                <p class="description">The Vertex reveals destined meetings and pivotal life moments</p>
+                            </div>
+                        </div>
+                    `;
+                    
+                    vertexSection.appendChild(createReadingCard(
+                        vertexReading.title,
+                        `⚝ Vertex in ${vertex.name || vertex}`,
+                        vertexReading.keywords,
+                        vertexReading.reading.replace(/this child/gi, userData.name),
+                        vertexReading.fatedThemes || [],
+                        []
+                    ));
+                    
+                    vertexSectionWrapper.appendChild(vertexSection);
+                    container.appendChild(vertexSectionWrapper);
+                }
+            }
+            
+            // ============================================
+            // SECTION 8: NODES IN HOUSES - Soul Path Details
+            // ============================================
+            if ((readings.astrology.northNodeHouse || readings.astrology.southNodeHouse) && typeof NODES_IN_HOUSES !== 'undefined') {
+                const nodesSectionWrapper = document.createElement('div');
+                nodesSectionWrapper.className = 'reading-section';
+                const nodesSection = document.createElement('div');
+                nodesSection.className = 'section-content';
+                nodesSection.id = 'section-nodes-houses';
+                
+                nodesSection.innerHTML = `
+                    <div class="section-header">
+                        <span class="icon">☊</span>
+                        <div>
+                            <h2>Karmic Life Areas</h2>
+                            <p class="description">Where soul evolution unfolds in ${userData.name}'s life</p>
+                        </div>
+                    </div>
+                `;
+                
+                // North Node in House
+                const nnHouse = readings.astrology.northNodeHouse;
+                if (nnHouse && NODES_IN_HOUSES.north && NODES_IN_HOUSES.north[nnHouse]) {
+                    const nnReading = NODES_IN_HOUSES.north[nnHouse];
+                    nodesSection.appendChild(createReadingCard(
+                        nnReading.title,
+                        `☊ North Node in House ${nnHouse}`,
+                        nnReading.keywords,
+                        nnReading.reading.replace(/this child/gi, userData.name),
+                        nnReading.growth || [],
+                        nnReading.resistance || []
+                    ));
+                }
+                
+                // South Node in House
+                const snHouse = readings.astrology.southNodeHouse;
+                if (snHouse && NODES_IN_HOUSES.south && NODES_IN_HOUSES.south[snHouse]) {
+                    const snReading = NODES_IN_HOUSES.south[snHouse];
+                    nodesSection.appendChild(createReadingCard(
+                        snReading.title,
+                        `☋ South Node in House ${snHouse}`,
+                        snReading.keywords,
+                        snReading.reading.replace(/this child/gi, userData.name),
+                        snReading.gifts || [],
+                        snReading.release || []
+                    ));
+                }
+                
+                nodesSectionWrapper.appendChild(nodesSection);
+                container.appendChild(nodesSectionWrapper);
+            }
+            
+            // Add AdSense slot
+            const ad5 = createAdSlot();
+            container.appendChild(ad5);
+            
+            // ============================================
+            // SECTION 9: LIFE SYNTHESIS - Major Life Blueprints
+            // ============================================
+            if (typeof SYNTHESIS_READINGS !== 'undefined') {
+                const synthesisSectionWrapper = document.createElement('div');
+                synthesisSectionWrapper.className = 'reading-section';
+                const synthesisSection = document.createElement('div');
+                synthesisSection.className = 'section-content';
+                synthesisSection.id = 'section-synthesis';
+                
+                synthesisSection.innerHTML = `
+                    <div class="section-header">
+                        <span class="icon">🔮</span>
+                        <div>
+                            <h2>Life Blueprints</h2>
+                            <p class="description">Deep synthesis of ${userData.name}'s cosmic design across key life areas</p>
+                        </div>
+                    </div>
+                `;
+                
+                const chartData = {
+                    sunSign: readings.astrology.sunSign.name,
+                    moonSign: readings.astrology.moonSign.name,
+                    risingSign: readings.astrology.risingSign.name || 'Unknown',
+                    mercurySign: readings.astrology.mercurySign.name,
+                    venusSign: readings.astrology.venusSign.name,
+                    marsSign: readings.astrology.marsSign.name,
+                    jupiterSign: readings.astrology.jupiterSign.name,
+                    saturnSign: readings.astrology.saturnSign.name,
+                    northNode: readings.astrology.northNode.name,
+                    midheaven: readings.astrology.angularHouses ? readings.astrology.angularHouses.tenth : readings.astrology.midheaven?.name,
+                    lifePath: readings.numerology.lifePath,
+                    destiny: readings.numerology.destiny,
+                    name: userData.name
+                };
+                
+                // Career Blueprint
+                if (SYNTHESIS_READINGS.career && typeof SYNTHESIS_READINGS.career.generate === 'function') {
+                    const careerBlueprint = SYNTHESIS_READINGS.career.generate(chartData);
+                    synthesisSection.appendChild(createReadingCard(
+                        careerBlueprint.title,
+                        `💼 Career & Purpose Blueprint`,
+                        careerBlueprint.keywords,
+                        careerBlueprint.reading,
+                        careerBlueprint.strengths || [],
+                        careerBlueprint.watchFor || []
+                    ));
+                }
+                
+                // Spiritual Blueprint
+                if (SYNTHESIS_READINGS.spiritual && typeof SYNTHESIS_READINGS.spiritual.generate === 'function') {
+                    const spiritualBlueprint = SYNTHESIS_READINGS.spiritual.generate(chartData);
+                    synthesisSection.appendChild(createReadingCard(
+                        spiritualBlueprint.title,
+                        `🙏 Spiritual Path Blueprint`,
+                        spiritualBlueprint.keywords,
+                        spiritualBlueprint.reading,
+                        spiritualBlueprint.gifts || [],
+                        spiritualBlueprint.practices || []
+                    ));
+                }
+                
+                // Shadow Blueprint
+                if (SYNTHESIS_READINGS.shadow && typeof SYNTHESIS_READINGS.shadow.generate === 'function') {
+                    const shadowBlueprint = SYNTHESIS_READINGS.shadow.generate(chartData);
+                    synthesisSection.appendChild(createReadingCard(
+                        shadowBlueprint.title,
+                        `🌑 Shadow Work Blueprint`,
+                        shadowBlueprint.keywords,
+                        shadowBlueprint.reading,
+                        shadowBlueprint.integration || [],
+                        shadowBlueprint.patterns || []
+                    ));
+                }
+                
+                // Money Blueprint
+                if (SYNTHESIS_READINGS.money && typeof SYNTHESIS_READINGS.money.generate === 'function') {
+                    const moneyBlueprint = SYNTHESIS_READINGS.money.generate(chartData);
+                    synthesisSection.appendChild(createReadingCard(
+                        moneyBlueprint.title,
+                        `💰 Abundance Blueprint`,
+                        moneyBlueprint.keywords,
+                        moneyBlueprint.reading,
+                        moneyBlueprint.strengths || [],
+                        moneyBlueprint.growth || []
+                    ));
+                }
+                
+                // Health & Wellness Blueprint
+                if (SYNTHESIS_READINGS.health && typeof SYNTHESIS_READINGS.health.generate === 'function') {
+                    const healthBlueprint = SYNTHESIS_READINGS.health.generate(chartData);
+                    synthesisSection.appendChild(createReadingCard(
+                        healthBlueprint.title,
+                        `💚 Wellness & Vitality`,
+                        healthBlueprint.keywords,
+                        healthBlueprint.reading,
+                        healthBlueprint.strengths || [],
+                        healthBlueprint.watchFor || []
+                    ));
+                }
+                
+                // Communication & Learning Blueprint
+                if (SYNTHESIS_READINGS.communication && typeof SYNTHESIS_READINGS.communication.generate === 'function') {
+                    const commBlueprint = SYNTHESIS_READINGS.communication.generate(chartData);
+                    synthesisSection.appendChild(createReadingCard(
+                        commBlueprint.title,
+                        `💬 Communication & Learning`,
+                        commBlueprint.keywords,
+                        commBlueprint.reading,
+                        commBlueprint.strengths || [],
+                        commBlueprint.tips || []
+                    ));
+                }
+                
+                synthesisSectionWrapper.appendChild(synthesisSection);
+                container.appendChild(synthesisSectionWrapper);
+            }
+            
+            // ============================================
+            // SECTION 10: PROGRESSIONS - Soul Evolution
+            // ============================================
+            if (typeof PROGRESSION_READINGS !== 'undefined') {
+                const progressionsSectionWrapper = document.createElement('div');
+                progressionsSectionWrapper.className = 'reading-section';
+                const progressionsSection = document.createElement('div');
+                progressionsSection.className = 'section-content';
+                progressionsSection.id = 'section-progressions';
+                
+                progressionsSection.innerHTML = `
+                    <div class="section-header">
+                        <span class="icon">🌀</span>
+                        <div>
+                            <h2>Soul Evolution</h2>
+                            <p class="description">How ${userData.name}'s inner self is evolving over time</p>
+                        </div>
+                    </div>
+                `;
+                
+                // Calculate progressed signs based on age
+                const birthDate = new Date(userData.date);
+                const now = new Date();
+                const ageYears = Math.floor((now - birthDate) / (365.25 * 24 * 60 * 60 * 1000));
+                
+                // For babies/children, progressed Sun is still natal Sun or maybe next sign
+                const signs = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
+                const natalSunIndex = signs.indexOf(readings.astrology.sunSign.name);
+                const progressedSunIndex = (natalSunIndex + Math.floor(ageYears / 30)) % 12;
+                const progressedSun = signs[progressedSunIndex];
+                
+                const natalMoonIndex = signs.indexOf(readings.astrology.moonSign.name);
+                const progressedMoonIndex = (natalMoonIndex + Math.floor(ageYears / 2.5)) % 12;
+                const progressedMoon = signs[progressedMoonIndex];
+                
+                // Progressed Sun
+                if (PROGRESSION_READINGS.sun && PROGRESSION_READINGS.sun[progressedSun]) {
+                    const sunProg = PROGRESSION_READINGS.sun[progressedSun];
+                    progressionsSection.appendChild(createReadingCard(
+                        sunProg.title,
+                        `☉ Progressed Sun in ${progressedSun}`,
+                        sunProg.keywords,
+                        sunProg.reading.replace(/this soul/gi, userData.name),
+                        sunProg.evolution || [],
+                        []
+                    ));
+                }
+                
+                // Progressed Moon
+                if (PROGRESSION_READINGS.moon && PROGRESSION_READINGS.moon[progressedMoon]) {
+                    const moonProg = PROGRESSION_READINGS.moon[progressedMoon];
+                    progressionsSection.appendChild(createReadingCard(
+                        moonProg.title,
+                        `☽ Progressed Moon in ${progressedMoon}`,
+                        moonProg.keywords,
+                        moonProg.reading.replace(/this soul/gi, userData.name),
+                        moonProg.currentNeeds || [],
+                        []
+                    ));
+                }
+                
+                progressionsSectionWrapper.appendChild(progressionsSection);
+                container.appendChild(progressionsSectionWrapper);
+            }
+            
+            // Add AdSense slot
+            const ad6 = createAdSlot();
+            container.appendChild(ad6);
+            
+            // ============================================
+            // SECTION 11: COSMIC WRAP-UP - The Complete Picture
+            // ============================================
+            if (typeof COSMIC_WRAPUP !== 'undefined' && typeof COSMIC_WRAPUP.generate === 'function') {
+                const wrapupSectionWrapper = document.createElement('div');
+                wrapupSectionWrapper.className = 'reading-section';
+                const wrapupSection = document.createElement('div');
+                wrapupSection.className = 'section-content';
+                wrapupSection.id = 'section-wrapup';
+                
+                wrapupSection.innerHTML = `
+                    <div class="section-header">
+                        <span class="icon">🌟</span>
+                        <div>
+                            <h2>The Complete Soul Blueprint</h2>
+                            <p class="description">A sacred synthesis of ${userData.name}'s energetic signature at birth</p>
+                        </div>
+                    </div>
+                `;
+                
+                const wrapupData = {
+                    name: userData.name,
+                    sunSign: readings.astrology.sunSign.name,
+                    moonSign: readings.astrology.moonSign.name,
+                    risingSign: readings.astrology.risingSign.name || 'Unknown',
+                    sunElement: readings.astrology.sunSign.element,
+                    moonElement: readings.astrology.moonSign.element,
+                    mercurySign: readings.astrology.mercurySign.name,
+                    venusSign: readings.astrology.venusSign.name,
+                    marsSign: readings.astrology.marsSign.name,
+                    jupiterSign: readings.astrology.jupiterSign.name,
+                    saturnSign: readings.astrology.saturnSign.name,
+                    northNode: readings.astrology.northNode.name,
+                    lifePath: readings.numerology.lifePath,
+                    destiny: readings.numerology.destiny,
+                    soulUrge: readings.numerology.soulUrge,
+                    chineseZodiac: readings.astrology.chineseZodiac.name,
+                    moonPhase: readings.astrology.moonPhase.name
+                };
+                
+                const wrapup = COSMIC_WRAPUP.generate(wrapupData);
+                
+                wrapupSection.appendChild(createReadingCard(
+                    wrapup.title,
+                    `✨ ${userData.name}'s Energetic Blueprint`,
+                    wrapup.keywords,
+                    wrapup.opening + '\n\n' + wrapup.coreEssence + '\n\n' + wrapup.soulPath + '\n\n' + wrapup.gifts + '\n\n' + wrapup.closing,
+                    wrapup.affirmations || [],
+                    []
+                ));
+                
+                // Parent guidance card
+                if (wrapup.parentGuidance) {
+                    wrapupSection.appendChild(createReadingCard(
+                        'Guidance for Parents & Caregivers',
+                        `💝 Nurturing ${userData.name}'s Potential`,
+                        ['Parenting', 'Support', 'Understanding'],
+                        wrapup.parentGuidance,
+                        [],
+                        []
+                    ));
+                }
+                
+                wrapupSectionWrapper.appendChild(wrapupSection);
+                container.appendChild(wrapupSectionWrapper);
+            }
+            
+            // Store readings globally for save functionality
+            window.lastGeneratedReadings = readings;
+            
+            // Initialize pagination after brief delay
+            setTimeout(() => {
+                initializePagination();
+            }, 100);
+        }
+        
+        function createSection(id, sectionConfig) {
+            const section = document.createElement('div');
+            section.className = 'section-content';
+            section.id = `section-${id}`;
+            
+            section.innerHTML = `
+                <div class="section-header">
+                    <span class="icon">${sectionConfig.icon}</span>
+                    <div>
+                        <h2>${sectionConfig.name}</h2>
+                        <p class="description">${sectionConfig.description}</p>
+                    </div>
+                </div>
+            `;
+            
+            return section;
+        }
+        
+        function createPaginationControl() {
+            const pagination = document.createElement('div');
+            pagination.className = 'pagination-controls';
+            pagination.innerHTML = `
+                <button type="button" id="prev-page" onclick="prevPage()">← Previous</button>
+                <span class="page-indicator" id="page-indicator">Section 1 of 2</span>
+                <button type="button" id="next-page" onclick="nextPage()">Next →</button>
+            `;
+            return pagination;
+        }
+        
+        function createAdSlot() {
+            const ad = document.createElement('div');
+            ad.className = 'ad-container';
+            ad.innerHTML = `
+                <div class="ad-placeholder">
+                    <ins class="adsbygoogle"
+                         style="display:block; min-height: 100px;"
+                         data-ad-client="ca-pub-3480541530392777"
+                         data-ad-slot="auto"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                </div>
+            `;
+            // Push ad when created
+            try {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            } catch(e) {}
+            return ad;
+        }
+        
+        function createReadingCard(title, value, keywords, content, strengths, challenges) {
+            const card = document.createElement('div');
+            card.className = 'reading-card';
+            
+            // Ensure keywords is an array
+            let keywordsArray = [];
+            if (keywords) {
+                if (Array.isArray(keywords)) {
+                    keywordsArray = keywords;
+                } else if (typeof keywords === 'string') {
+                    keywordsArray = keywords.split(',').map(k => k.trim()).filter(k => k);
+                }
+            }
+            
+            // Ensure strengths and challenges are arrays
+            const strengthsArray = Array.isArray(strengths) ? strengths : [];
+            const challengesArray = Array.isArray(challenges) ? challenges : [];
+            
+            let keywordsHtml = '';
+            if (keywordsArray.length > 0) {
+                keywordsHtml = `
+                    <div class="keywords">
+                        ${keywordsArray.map(k => `<span class="keyword">${k}</span>`).join('')}
+                    </div>
+                `;
+            }
+            
+            let strengthsChallengesHtml = '';
+            if (strengthsArray.length > 0 || challengesArray.length > 0) {
+                strengthsChallengesHtml = `
+                    <div class="strengths-challenges">
+                        ${strengthsArray.length > 0 ? `
+                            <div>
+                                <h4>✨ Strengths</h4>
+                                <ul>
+                                    ${strengthsArray.map(s => `<li>${s}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+                        ${challengesArray.length > 0 ? `
+                            <div>
+                                <h4>🌱 Growth Areas</h4>
+                                <ul>
+                                    ${challengesArray.map(c => `<li>${c}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }
+            
+            // Convert newlines to paragraphs
+            const contentParagraphs = content.split('\n\n').map(p => `<p>${p}</p>`).join('');
+            
+            // Extract emoji from title and put on its own line
+            const emojiRegex = /^([\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F000}-\u{1F02F}\u{1F0A0}-\u{1F0FF}♈♉♊♋♌♍♎♏♐♑♒♓]+)\s*/u;
+            const emojiMatch = title.match(emojiRegex);
+            let iconHtml = '';
+            let cleanTitle = title;
+            
+            if (emojiMatch) {
+                iconHtml = `<span class="card-icon">${emojiMatch[1]}</span>`;
+                cleanTitle = title.replace(emojiRegex, '');
+            }
+            
+            card.innerHTML = `
+                ${iconHtml}
+                <h3>${cleanTitle}</h3>
+                <div class="result-value">${value}</div>
+                ${keywordsHtml}
+                <div class="reading-content">
+                    ${contentParagraphs}
+                </div>
+                ${strengthsChallengesHtml}
+            `;
+            
+            return card;
+        }
+        
+        // ============================================
+        // UTILITY FUNCTIONS
+        // ============================================
+        
+        function startNewReading() {
+            document.getElementById('resultsSection').classList.remove('active');
+            document.getElementById('inputSection').style.display = 'block';
+            document.getElementById('readingForm').reset();
+            window.scrollTo(0, 0);
+        }
+        
+        function shareReading() {
+            const config = BRAND_CONFIG;
+            const name = document.getElementById('subjectName').textContent;
+            const text = `${config.sharing.defaultMessage} Check out ${config.brandName}!`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: `${name}'s Soul Blueprint`,
+                    text: text,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback to clipboard
+                navigator.clipboard.writeText(text + ' ' + window.location.href);
+                alert('Link copied to clipboard!');
+            }
+        }
+        
+        // ============================================
+        // READING CLOSING SUMMARY
+        // ============================================
+        
+        function buildReadingClosing(userData, readings) {
+            const closingContainer = document.getElementById('readingClosing');
+            if (!closingContainer) return;
+            
+            const sunSign = readings.astrology.sunSign.name;
+            const moonSign = readings.astrology.moonSign.name;
+            const lifePath = readings.numerology.lifePath;
+            
+            closingContainer.innerHTML = `
+                <div class="closing-card">
+                    <h3>✨ ${userData.name}'s Cosmic Story Continues...</h3>
+                    <p>You've just explored ${userData.name}'s complete soul blueprint — a unique constellation of energies that has never existed before and will never exist again in quite the same way.</p>
+                    <p>With their ${sunSign} Sun illuminating their core identity, ${moonSign} Moon nurturing their emotional world, and Life Path ${lifePath} guiding their soul's journey, ${userData.name} carries a sacred combination of gifts waiting to unfold.</p>
+                    <p>This reading is a snapshot of potential — the cosmic seeds planted at birth. How these energies blossom depends on love, nurturing, and the unique choices this soul will make.</p>
+                    <p class="closing-affirmation">"Every soul arrives with a purpose. ${userData.name}'s purpose is written in the stars." ✨</p>
+                </div>
+            `;
+        }
+        
+        // ============================================
+        // GIFT READING (AD-FREE VERSION)
+        // ============================================
+        
+        let selectedGiftColor = 'purple'; // Default color
+        
+        function selectGiftColor(color) {
+            selectedGiftColor = color;
+            // Update active state
+            document.querySelectorAll('.color-option').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-color="${color}"]`).classList.add('active');
+        }
+        
+        function giftReading() {
+            // Try multiple sources for userData
+            const userData = window.lastUserData || JSON.parse(localStorage.getItem('lastReading') || '{}');
+            const readings = window.lastGeneratedReadings;
+            
+            // Get the gifted by value
+            const giftedByInput = document.getElementById('giftedByInput');
+            const giftedBy = giftedByInput ? giftedByInput.value.trim() : '';
+            
+            // Check if we have the readings container with content as fallback
+            const readingsContainer = document.getElementById('readingsContainer');
+            const hasContent = readingsContainer && readingsContainer.children.length > 0;
+            
+            if (!userData.name && !hasContent) {
+                alert('Please generate a reading first before creating a gift version.');
+                return;
+            }
+            
+            // If we have content but no userData, get name from the displayed results
+            if (!userData.name && hasContent) {
+                const subjectName = document.getElementById('subjectName');
+                userData.name = subjectName ? subjectName.textContent : 'Unknown';
+            }
+            
+            // Get reading content for the gift version
+            const closingContainer = document.getElementById('readingClosing');
+            
+            // Define color schemes
+            const colorSchemes = {
+                pink: {
+                    bg: 'linear-gradient(135deg, #ffc0cb 0%, #ffb6c1 50%, #ffc0cb 100%)',
+                    text: '#4a0e2e',
+                    accent: '#ff1493',
+                    borderColor: 'rgba(255,20,147,0.3)',
+                    cardBg: 'rgba(255,192,203,0.2)',
+                    cardBorder: 'rgba(255,20,147,0.2)',
+                    keywordBg: 'rgba(255,20,147,0.2)'
+                },
+                blue: {
+                    bg: 'linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 50%, #e0f7fa 100%)',
+                    text: '#0d3d56',
+                    accent: '#0077be',
+                    borderColor: 'rgba(0,119,190,0.3)',
+                    cardBg: 'rgba(135,206,235,0.2)',
+                    cardBorder: 'rgba(0,119,190,0.2)',
+                    keywordBg: 'rgba(0,119,190,0.2)'
+                },
+                yellow: {
+                    bg: 'linear-gradient(135deg, #fffacd 0%, #ffeaa7 50%, #fffacd 100%)',
+                    text: '#5d4e00',
+                    accent: '#ff8c00',
+                    borderColor: 'rgba(255,140,0,0.3)',
+                    cardBg: 'rgba(255,215,0,0.2)',
+                    cardBorder: 'rgba(255,140,0,0.2)',
+                    keywordBg: 'rgba(255,140,0,0.2)'
+                },
+                purple: {
+                    bg: 'linear-gradient(135deg, #f3e5f5 0%, #e1bee7 50%, #f3e5f5 100%)',
+                    text: '#4a148c',
+                    accent: '#9c27b0',
+                    borderColor: 'rgba(156,39,176,0.3)',
+                    cardBg: 'rgba(216,181,255,0.2)',
+                    cardBorder: 'rgba(156,39,176,0.2)',
+                    keywordBg: 'rgba(156,39,176,0.2)'
+                }
+            };
+            
+            const colors = colorSchemes[selectedGiftColor];
+            
+            // Create a clean, ad-free HTML document
+            const giftHTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${userData.name}'s Soul Blueprint - A Gift from the Stars ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: ${colors.bg};
+            color: ${colors.text};
+            line-height: 1.8;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .gift-header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid ${colors.borderColor};
+        }
+        .gift-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: ${colors.accent};
+            margin-bottom: 10px;
+        }
+        .gift-header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .gift-header .birth-info {
+            font-size: 1rem;
+            opacity: 0.7;
+            margin-top: 15px;
+        }
+        .gift-message {
+            text-align: center;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 700px;
+            background: ${colors.cardBg};
+            border-radius: 20px;
+            border: 2px solid ${colors.borderColor};
+        }
+        .gift-message h2 {
+            color: ${colors.accent};
+            margin-bottom: 15px;
+        }
+        .gift-message p {
+            font-size: 1.1rem;
+        }
+        .gift-message .gifted-signature {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: ${colors.accent};
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        .reading-section { margin: 30px 0; }
+        .section-content { margin-bottom: 40px; }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: ${colors.cardBg};
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .section-header .icon { font-size: 2rem; }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: ${colors.accent};
+        }
+        .section-header .description {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+        .reading-card {
+            background: ${colors.cardBg};
+            border: 1px solid ${colors.cardBorder};
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        .reading-card h3 {
+            color: ${colors.accent};
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+        }
+        .reading-card .card-value {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        .reading-card .content { line-height: 1.8; }
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+        .keyword {
+            background: ${colors.keywordBg};
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+        .strengths-challenges {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .strengths-challenges { grid-template-columns: 1fr; }
+        }
+        .strengths h4 { color: #50c878; }
+        .challenges h4 { color: #ff6b6b; }
+        .gift-footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            border-top: 2px solid ${colors.borderColor};
+        }
+        .gift-footer p { margin-bottom: 10px; opacity: 0.8; }
+        .gift-footer .love { font-size: 1.2rem; color: ${colors.accent}; }
+        /* Hide ads and interactive elements */
+        .ad-container, .pagination-controls, #action-buttons, .gift-support-section { display: none !important; }
+        .hidden { display: block !important; }
+    </style>
+</head>
+<body>
+    <div class="gift-header">
+        <h1>✨ ${userData.name}'s Soul Blueprint ✨</h1>
+        <p class="subtitle">A Portrait of the Soul</p>
+        <p class="birth-info">Born ${new Date(userData.birthDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}${userData.birthTime ? ' at ' + userData.birthTime : ''}${userData.birthPlace ? ' in ' + userData.birthPlace : ''}</p>
+    </div>
+    
+    <div class="gift-message">
+        <h2>🎁 ${giftedBy ? 'A Gift from ' + giftedBy : 'With Love'}</h2>
+        <p>This reading was created with love to celebrate the unique soul that is ${userData.name}. May these cosmic insights illuminate the path ahead and remind you of the infinite potential within.</p>
+        ${giftedBy ? '<p class="gifted-signature">— ' + giftedBy + ' ✨</p>' : ''}
+    </div>
+    
+    ${readingsContainer.innerHTML}
+    
+    ${closingContainer ? closingContainer.innerHTML : ''}
+    
+    <div class="gift-footer">
+        <p class="love">Made with ✨ love ✨</p>
+        <p>Generated by Quantum Merlin's Soul Blueprint</p>
+        <p>quantummerlin.com/ultimate</p>
+    </div>
+</body>
+</html>`;
+            
+            // Create downloadable file
+            const blob = new Blob([giftHTML], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${userData.name.replace(/[^a-z0-9]/gi, '-')}-soul-blueprint-${selectedGiftColor}.html`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            // Show success message
+            alert('🎁 Gift version created! The ad-free reading has been downloaded. You can email it or print it as a keepsake!');
+        }
+        
+        // ============================================
+        // SERVICE WORKER REGISTRATION
+        // ============================================
+        
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then((registration) => {
+                        console.log('✨ Service Worker registered:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+        
+        // ============================================
+        // INITIALIZE
+        // ============================================
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            applyBrandConfig();
+            // Set default gender theme (pink)
+            setGender('girl');
+            
+            // Update theme-color meta tag when gender changes
+            const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+            if (themeColorMeta) {
+                const gender = document.getElementById('genderInput').value;
+                themeColorMeta.content = gender === 'boy' ? '#6BA3D6' : '#FF69B4';
+            }
+        });
+    </script>
+</body>
+</html>
