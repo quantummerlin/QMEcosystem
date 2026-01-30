@@ -1004,16 +1004,54 @@
 
         body.color-mode-pink {
             --background: #1f142a;
-            --text: #c9a6ff;
+            --text: #ffb6d9;
             --card-bg: #1f142a;
-            --card-border: rgba(201,166,255,0.25);
+            --card-border: rgba(255,182,217,0.25);
+        }
+        
+        body.color-mode-pink,
+        body.color-mode-pink p,
+        body.color-mode-pink span,
+        body.color-mode-pink li,
+        body.color-mode-pink label,
+        body.color-mode-pink h2,
+        body.color-mode-pink h3,
+        body.color-mode-pink h4,
+        body.color-mode-pink .reading-content,
+        body.color-mode-pink .result-value,
+        body.color-mode-pink .subject-name,
+        body.color-mode-pink .birth-info,
+        body.color-mode-pink .helper-text,
+        body.color-mode-pink .keyword,
+        body.color-mode-pink .footer-links,
+        body.color-mode-pink .footer-links a {
+            color: #ffb6d9 !important;
         }
 
         body.color-mode-blue {
             --background: #121a2b;
-            --text: #c9a6ff;
+            --text: #a6c8ff;
             --card-bg: #121a2b;
-            --card-border: rgba(201,166,255,0.25);
+            --card-border: rgba(166,200,255,0.25);
+        }
+        
+        body.color-mode-blue,
+        body.color-mode-blue p,
+        body.color-mode-blue span,
+        body.color-mode-blue li,
+        body.color-mode-blue label,
+        body.color-mode-blue h2,
+        body.color-mode-blue h3,
+        body.color-mode-blue h4,
+        body.color-mode-blue .reading-content,
+        body.color-mode-blue .result-value,
+        body.color-mode-blue .subject-name,
+        body.color-mode-blue .birth-info,
+        body.color-mode-blue .helper-text,
+        body.color-mode-blue .keyword,
+        body.color-mode-blue .footer-links,
+        body.color-mode-blue .footer-links a {
+            color: #a6c8ff !important;
         }
 
         body.color-mode-pink .header,
@@ -1067,6 +1105,62 @@
         body.color-mode-blue .sub-tagline {
             color: #a6c8ff !important;
         }
+        
+        /* Dark mode - Purple mode */
+        body.color-mode-purple {
+            --background: #1a1025;
+            --text: #c9a6ff;
+            --card-bg: #1a1025;
+            --card-border: rgba(201,166,255,0.25);
+        }
+        
+        body.color-mode-purple,
+        body.color-mode-purple p,
+        body.color-mode-purple span,
+        body.color-mode-purple li,
+        body.color-mode-purple label,
+        body.color-mode-purple h2,
+        body.color-mode-purple h3,
+        body.color-mode-purple h4,
+        body.color-mode-purple .reading-content,
+        body.color-mode-purple .result-value,
+        body.color-mode-purple .subject-name,
+        body.color-mode-purple .birth-info,
+        body.color-mode-purple .helper-text,
+        body.color-mode-purple .keyword,
+        body.color-mode-purple .footer-links,
+        body.color-mode-purple .footer-links a {
+            color: #c9a6ff !important;
+        }
+        
+        body.color-mode-purple .header,
+        body.color-mode-purple .results-header,
+        body.color-mode-purple .theme-bar,
+        body.color-mode-purple .input-form,
+        body.color-mode-purple .reading-card,
+        body.color-mode-purple .toc,
+        body.color-mode-purple .gift-box,
+        body.color-mode-purple .coffee-box {
+            background: #1a1025 !important;
+        }
+        
+        body.color-mode-purple .header h1,
+        body.color-mode-purple .results-header h1 {
+            background: linear-gradient(135deg, #c9a6ff 0%, #ffb6d9 50%, #a6c8ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+        }
+        
+        body.color-mode-purple .tagline,
+        body.color-mode-purple .sub-tagline {
+            color: #c9a6ff !important;
+        }
+        
+        body.color-mode-purple .title-dots .dot1 { -webkit-text-fill-color: #c9a6ff !important; }
+        body.color-mode-purple .title-dots .dot2 { -webkit-text-fill-color: #ffb6d9 !important; }
+        body.color-mode-purple .title-dots .dot3 { -webkit-text-fill-color: #a6c8ff !important; }
         
         .footer-links a:hover {
             opacity: 0.8;
@@ -1892,28 +1986,26 @@
         // ============================================
 
         function setColorMode(mode) {
-            document.body.classList.remove('color-mode-pink', 'color-mode-blue');
+            document.body.classList.remove('color-mode-pink', 'color-mode-blue', 'color-mode-purple');
             if (mode === 'pink') {
                 document.body.classList.add('color-mode-pink');
             } else if (mode === 'blue') {
                 document.body.classList.add('color-mode-blue');
+            } else if (mode === 'purple') {
+                document.body.classList.add('color-mode-purple');
             }
 
             localStorage.setItem('sb-color-mode', mode);
-
-            document.querySelectorAll('[data-color-toggle]').forEach(btn => {
-                btn.textContent = 'Dark mode';
-            });
         }
 
         function initColorMode() {
-            const stored = localStorage.getItem('sb-color-mode') || 'off';
+            const stored = localStorage.getItem('sb-color-mode') || 'pink';
             setColorMode(stored);
 
             document.querySelectorAll('[data-color-toggle]').forEach(btn => {
                 btn.addEventListener('click', () => {
-                    const current = localStorage.getItem('sb-color-mode') || 'off';
-                    const next = current === 'off' ? 'pink' : current === 'pink' ? 'blue' : 'off';
+                    const current = localStorage.getItem('sb-color-mode') || 'pink';
+                    const next = current === 'pink' ? 'blue' : current === 'blue' ? 'purple' : 'pink';
                     setColorMode(next);
                 });
             });
