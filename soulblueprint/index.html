@@ -938,10 +938,32 @@
         }
         
         .footer-links a {
-            color: var(--primary);
+            color: #5b3a86;
             text-decoration: none;
             font-size: 0.9rem;
             transition: opacity 0.3s;
+        }
+
+        .footer-links .dark-toggle {
+            background: transparent;
+            border: 1px solid rgba(91,58,134,0.35);
+            color: #5b3a86;
+            border-radius: 14px;
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            opacity: 0.7;
+            cursor: pointer;
+            transition: opacity 0.3s, border-color 0.3s, color 0.3s;
+        }
+
+        .footer-links .dark-toggle:hover {
+            opacity: 1;
+        }
+
+        .dark-theme .footer-links .dark-toggle {
+            color: #e9d8ff;
+            border-color: rgba(233,216,255,0.4);
         }
         
         .footer-links a:hover {
@@ -1555,6 +1577,8 @@
                 <a href="/soulblueprint/terms.html" target="_blank">Terms of Service</a>
                 <span>•</span>
                 <a href="/soulblueprint/disclaimer.html" target="_blank">Disclaimer</a>
+                <span>•</span>
+                <button class="dark-toggle" type="button" data-dark-toggle title="Toggle dark mode">Dark mode</button>
             </div>
         </div>
     </section>
@@ -1616,6 +1640,8 @@
                     <a href="/soulblueprint/terms.html" target="_blank">Terms of Service</a>
                     <span>•</span>
                     <a href="/soulblueprint/disclaimer.html" target="_blank">Disclaimer</a>
+                    <span>•</span>
+                    <button class="dark-toggle" type="button" data-dark-toggle title="Toggle dark mode">Dark mode</button>
                 </div>
                 <p class="disclaimer" id="disclaimer">For entertainment purposes only. Not a substitute for professional advice.</p>
             </footer>
@@ -1756,6 +1782,32 @@
             if (!config.features.showBirthPlace) {
                 document.getElementById('birthPlaceGroup').style.display = 'none';
             }
+        }
+
+        // ============================================
+        // DARK MODE TOGGLE (SUBTLE)
+        // ============================================
+
+        function setDarkMode(isDark) {
+            document.body.classList.toggle('dark-theme', isDark);
+            localStorage.setItem('sb-dark-mode', isDark ? '1' : '0');
+
+            document.querySelectorAll('[data-dark-toggle]').forEach(btn => {
+                btn.textContent = isDark ? 'Light mode' : 'Dark mode';
+            });
+        }
+
+        function initDarkMode() {
+            const stored = localStorage.getItem('sb-dark-mode');
+            const isDark = stored === '1' ? true : stored === '0' ? false : document.body.classList.contains('dark-theme');
+            setDarkMode(isDark);
+
+            document.querySelectorAll('[data-dark-toggle]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const next = !document.body.classList.contains('dark-theme');
+                    setDarkMode(next);
+                });
+            });
         }
         
         // ============================================
@@ -3868,6 +3920,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
         
         document.addEventListener('DOMContentLoaded', function() {
             applyBrandConfig();
+            initDarkMode();
             // Set default gender theme (pink)
             setGender('girl');
             
