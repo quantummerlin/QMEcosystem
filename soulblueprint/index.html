@@ -1194,6 +1194,8 @@
             transition: all 0.3s ease;
             background: transparent;
             color: var(--text);
+            font-weight: 700;
+            line-height: 1;
         }
         
         .reading-card .read-badge.is-read {
@@ -3722,21 +3724,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             // NUMEROLOGY CALCULATION EXPLAINER
             // ============================================
             const { day: birthDay, month: birthMonth, year: birthYear } = parseBirthDate(userData.birthDate);
-            const numExplainer = document.createElement('div');
-            numExplainer.className = 'reading-card numerology-explainer';
-            
-            // Calculate step-by-step for Life Path
-            const dayReduced = reduceToSingleDigit(birthDay);
-            const monthReduced = reduceToSingleDigit(birthMonth);
-            const yearReduced = reduceToSingleDigit(birthYear);
-            const lifePathSum = dayReduced + monthReduced + yearReduced;
-            
-            // Letter to number mapping
-            const letterChart = 'A=1, B=2, C=3, D=4, E=5, F=6, G=7, H=8, I=9, J=1, K=2, L=3, M=4, N=5, O=6, P=7, Q=8, R=9, S=1, T=2, U=3, V=4, W=5, X=6, Y=7, Z=8';
-            
-            numExplainer.innerHTML = `
-                <span class="card-icon"></span>
-                <h3>How Your Numbers Are Calculated</h3>
+            const numExplainerContent = `
                 <p class="blueprint-intro">Numerology uses ancient mathematical principles to reveal the energetic blueprint encoded in your birth date and name. Here's exactly how ${userData.name}'s core numbers are calculated:</p>
                 
                 <div class="num-calc-section">
@@ -3791,6 +3779,23 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 
                 <p class="blueprint-footer">Each number carries unique vibrational energy that influences different aspects of your life. Scroll down to discover what each of ${userData.name}'s numbers reveals.</p>
             `;
+            
+            // Calculate step-by-step for Life Path
+            const dayReduced = reduceToSingleDigit(birthDay);
+            const monthReduced = reduceToSingleDigit(birthMonth);
+            const yearReduced = reduceToSingleDigit(birthYear);
+            const lifePathSum = dayReduced + monthReduced + yearReduced;
+            
+            // Letter to number mapping
+            const letterChart = 'A=1, B=2, C=3, D=4, E=5, F=6, G=7, H=8, I=9, J=1, K=2, L=3, M=4, N=5, O=6, P=7, Q=8, R=9, S=1, T=2, U=3, V=4, W=5, X=6, Y=7, Z=8';
+            
+            const numExplainer = createCustomReadingCard(
+                'How Your Numbers Are Calculated',
+                'Numerology Overview',
+                '🔢',
+                numExplainerContent
+            );
+            numExplainer.classList.add('numerology-explainer');
             numbersSection.appendChild(numExplainer);
             
             // Life Path
@@ -4826,6 +4831,47 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 </div>
             `;
             
+            return card;
+        }
+
+        function createCustomReadingCard(title, value, icon, bodyHtml) {
+            const card = document.createElement('div');
+            const cardId = `section-${totalSectionCount++}`;
+            card.className = 'reading-card';
+            card.id = cardId;
+            card.setAttribute('data-card-id', cardId);
+
+            const isRead = readSectionIds.includes(cardId);
+            if (isRead) {
+                card.classList.add('is-read');
+            }
+
+            const safeIcon = icon || '✨';
+
+            card.innerHTML = `
+                <div class="reading-card-header" onclick="toggleCard(this)">
+                    <div class="reading-card-left">
+                        <span class="card-icon">${safeIcon}</span>
+                        <div class="reading-card-info">
+                            <h3>${title}</h3>
+                            <span class="result-value">${value || ''}</span>
+                        </div>
+                    </div>
+                    <div class="reading-card-right">
+                        <span class="read-badge ${isRead ? 'is-read' : ''}" title="Mark as read">${isRead ? '✓' : ''}</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                </div>
+                <div class="reading-card-body">
+                    <div class="reading-card-content">
+                        ${bodyHtml}
+                        <button type="button" class="mark-read-btn ${isRead ? 'is-read' : ''}" onclick="markCardAsRead(event, '${cardId}')">
+                            ${isRead ? '✓ Read' : 'Mark as Read'}
+                        </button>
+                    </div>
+                </div>
+            `;
+
             return card;
         }
         
