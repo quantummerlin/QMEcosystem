@@ -58,6 +58,24 @@
             --background: #FFF0F5;
             --card-border: #FFE4EC;
         }
+
+        /* Yellow Theme */
+        body.theme-yellow {
+            --primary: #FFD700;
+            --secondary: #FFA500;
+            --accent: #FF8C00;
+            --background: #FFFAF0;
+            --card-border: #FFE4B5;
+        }
+
+        /* Purple Theme */
+        body.theme-purple {
+            --primary: #D8B5FF;
+            --secondary: #B19CD9;
+            --accent: #9B59B6;
+            --background: #F8F0FF;
+            --card-border: #E6D5F7;
+        }
         
         /* Blue Theme (for boy) */
         body.theme-boy {
@@ -107,6 +125,14 @@
         .theme-bar.theme-selected-boy {
             background: linear-gradient(135deg, #6BA3D6 0%, #87CEEB 100%);
         }
+
+        .theme-bar.theme-selected-yellow {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+        }
+
+        .theme-bar.theme-selected-purple {
+            background: linear-gradient(135deg, #D8B5FF 0%, #B19CD9 100%);
+        }
         
         .theme-bar-btn {
             padding: 8px 20px;
@@ -136,6 +162,14 @@
         
         .theme-bar-btn[data-theme="boy"].active {
             color: #6BA3D6;
+        }
+
+        .theme-bar-btn[data-theme="yellow"].active {
+            color: #FFD700;
+        }
+
+        .theme-bar-btn[data-theme="purple"].active {
+            color: #9B59B6;
         }
         
         body.dark-theme {
@@ -1469,6 +1503,12 @@
         <button class="theme-bar-btn" data-theme="boy" onclick="setGender('boy')">
             👦 Blue Theme
         </button>
+        <button class="theme-bar-btn" data-theme="yellow" onclick="setGender('yellow')">
+            💛 Yellow Theme
+        </button>
+        <button class="theme-bar-btn" data-theme="purple" onclick="setGender('purple')">
+            💜 Purple Theme
+        </button>
     </div>
     
     <!-- Loading Overlay -->
@@ -1558,15 +1598,6 @@
                 <div class="gift-box">
                     <h3>🎁 Gift This Reading</h3>
                     <p>Create a beautiful, ad-free version to share with loved ones or print as a keepsake.</p>
-                    <div class="color-selector">
-                        <label>Choose Gift Color:</label>
-                        <div class="color-options">
-                            <button class="color-option" data-color="pink" style="background: linear-gradient(135deg, #ff69b4, #ff1493);" onclick="selectGiftColor('pink')" title="Pink">💗</button>
-                            <button class="color-option" data-color="blue" style="background: linear-gradient(135deg, #87ceeb, #4682b4);" onclick="selectGiftColor('blue')" title="Blue">💙</button>
-                            <button class="color-option" data-color="yellow" style="background: linear-gradient(135deg, #ffd700, #ffa500);" onclick="selectGiftColor('yellow')" title="Yellow">💛</button>
-                            <button class="color-option active" data-color="purple" style="background: linear-gradient(135deg, #d8b5ff, #b19cd9);" onclick="selectGiftColor('purple')" title="Baby Purple">💜</button>
-                        </div>
-                    </div>
                     <div class="gifted-by-field">
                         <label for="giftedByInput">Gifted by: <span class="optional-badge">Optional</span></label>
                         <input type="text" id="giftedByInput" placeholder="e.g., Grandma & Grandpa, Aunt Sarah..." maxlength="100">
@@ -1621,6 +1652,7 @@
         
         function setGender(gender) {
             selectedGender = gender;
+            selectedGiftColor = gender;
             document.getElementById('genderInput').value = gender;
             
             // Update form button states
@@ -1639,33 +1671,32 @@
             
             // Update theme bar background
             const themeBar = document.getElementById('themeBar');
-            themeBar.classList.remove('theme-selected-girl', 'theme-selected-boy');
+            themeBar.classList.remove('theme-selected-girl', 'theme-selected-boy', 'theme-selected-yellow', 'theme-selected-purple');
             themeBar.classList.add(`theme-selected-${gender}`);
             
             // Apply theme colors
-            document.body.classList.remove('theme-girl', 'theme-boy');
+            document.body.classList.remove('theme-girl', 'theme-boy', 'theme-yellow', 'theme-purple');
             document.body.classList.add(`theme-${gender}`);
             
             // Update CSS variables for dynamic theming
             const root = document.documentElement;
-            if (gender === 'boy') {
-                root.style.setProperty('--primary', '#6BA3D6');
-                root.style.setProperty('--secondary', '#87CEEB');
-                root.style.setProperty('--accent', '#4169E1');
-                root.style.setProperty('--background', '#F0F8FF');
-                root.style.setProperty('--card-border', '#B0E0E6');
-            } else {
-                root.style.setProperty('--primary', '#FF69B4');
-                root.style.setProperty('--secondary', '#FFB6C1');
-                root.style.setProperty('--accent', '#FF1493');
-                root.style.setProperty('--background', '#FFF0F5');
-                root.style.setProperty('--card-border', '#FFE4EC');
-            }
+            const themeMap = {
+                girl: { primary: '#FF69B4', secondary: '#FFB6C1', accent: '#FF1493', background: '#FFF0F5', border: '#FFE4EC' },
+                boy: { primary: '#6BA3D6', secondary: '#87CEEB', accent: '#4169E1', background: '#F0F8FF', border: '#B0E0E6' },
+                yellow: { primary: '#FFD700', secondary: '#FFA500', accent: '#FF8C00', background: '#FFFAF0', border: '#FFE4B5' },
+                purple: { primary: '#D8B5FF', secondary: '#B19CD9', accent: '#9B59B6', background: '#F8F0FF', border: '#E6D5F7' }
+            };
+            const theme = themeMap[gender] || themeMap.girl;
+            root.style.setProperty('--primary', theme.primary);
+            root.style.setProperty('--secondary', theme.secondary);
+            root.style.setProperty('--accent', theme.accent);
+            root.style.setProperty('--background', theme.background);
+            root.style.setProperty('--card-border', theme.border);
             
             // Update PWA theme-color meta tag
             const themeColorMeta = document.querySelector('meta[name="theme-color"]');
             if (themeColorMeta) {
-                themeColorMeta.content = gender === 'boy' ? '#6BA3D6' : '#FF69B4';
+                themeColorMeta.content = theme.primary;
             }
         }
         
