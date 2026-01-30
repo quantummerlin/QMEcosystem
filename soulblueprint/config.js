@@ -37,7 +37,7 @@ const BRAND_CONFIG = {
         birthPlaceHelper: "Hospital location or city of birth"
     },
     
-    ctaButton: "✨ Create Soul Blueprint",
+    ctaButton: "Create Soul Blueprint",
     loadingMessage: "Discovering the soul's story...",
     
     // Result page copy
