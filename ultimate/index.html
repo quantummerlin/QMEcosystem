@@ -976,6 +976,47 @@
             line-height: 1.6;
         }
         
+        .color-selector {
+            margin: 20px 0;
+        }
+        
+        .color-selector label {
+            display: block;
+            margin-bottom: 10px;
+            color: #d8b5ff;
+            font-weight: 600;
+        }
+        
+        .color-options {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+        
+        .color-option {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .color-option:hover {
+            transform: scale(1.1);
+            border-color: rgba(255,255,255,0.5);
+        }
+        
+        .color-option.active {
+            border-color: #fff;
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+            transform: scale(1.15);
+        }
+        
         .gift-btn, .coffee-btn {
             display: inline-block;
             padding: 15px 35px;
@@ -1479,6 +1520,15 @@
                 <div class="gift-box">
                     <h3>🎁 Gift This Reading</h3>
                     <p>Create a beautiful, ad-free version to share with loved ones or print as a keepsake.</p>
+                    <div class="color-selector">
+                        <label>Choose Gift Color:</label>
+                        <div class="color-options">
+                            <button class="color-option" data-color="pink" style="background: linear-gradient(135deg, #ff69b4, #ff1493);" onclick="selectGiftColor('pink')" title="Pink">💗</button>
+                            <button class="color-option" data-color="blue" style="background: linear-gradient(135deg, #87ceeb, #4682b4);" onclick="selectGiftColor('blue')" title="Blue">💙</button>
+                            <button class="color-option" data-color="yellow" style="background: linear-gradient(135deg, #ffd700, #ffa500);" onclick="selectGiftColor('yellow')" title="Yellow">💛</button>
+                            <button class="color-option active" data-color="purple" style="background: linear-gradient(135deg, #d8b5ff, #b19cd9);" onclick="selectGiftColor('purple')" title="Baby Purple">💜</button>
+                        </div>
+                    </div>
                     <button class="gift-btn" onclick="giftReading()">✨ Create Gift Version</button>
                 </div>
                 
@@ -1507,18 +1557,18 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=25"></script>
-    <script src="calculations.js?v=25"></script>
-    <script src="readings.js?v=25"></script>
-    <script src="house-readings.js?v=25"></script>
-    <script src="aspect-readings.js?v=25"></script>
-    <script src="advanced-readings.js?v=25"></script>
-    <script src="deep-readings.js?v=25"></script>
-    <script src="deep-planet-readings.js?v=25"></script>
-    <script src="deep-planet-readings-outer.js?v=25"></script>
-    <script src="readings-extended.js?v=25"></script>
-    <script src="love-blueprint.js?v=25"></script>
-    <script src="save-share.js?v=25"></script>
+    <script src="config.js?v=26"></script>
+    <script src="calculations.js?v=26"></script>
+    <script src="readings.js?v=26"></script>
+    <script src="house-readings.js?v=26"></script>
+    <script src="aspect-readings.js?v=26"></script>
+    <script src="advanced-readings.js?v=26"></script>
+    <script src="deep-readings.js?v=26"></script>
+    <script src="deep-planet-readings.js?v=26"></script>
+    <script src="deep-planet-readings-outer.js?v=26"></script>
+    <script src="readings-extended.js?v=26"></script>
+    <script src="love-blueprint.js?v=26"></script>
+    <script src="save-share.js?v=26"></script>
     <script>
         // ============================================
         // GENDER THEME SWITCH
@@ -3482,6 +3532,17 @@ This isn't a flaw - it's their power source. The tension between these two drive
         // GIFT READING (AD-FREE VERSION)
         // ============================================
         
+        let selectedGiftColor = 'purple'; // Default color
+        
+        function selectGiftColor(color) {
+            selectedGiftColor = color;
+            // Update active state
+            document.querySelectorAll('.color-option').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-color="${color}"]`).classList.add('active');
+        }
+        
         function giftReading() {
             // Try multiple sources for userData
             const userData = window.lastUserData || JSON.parse(localStorage.getItem('lastReading') || '{}');
@@ -3505,20 +3566,62 @@ This isn't a flaw - it's their power source. The tension between these two drive
             // Get reading content for the gift version
             const closingContainer = document.getElementById('readingClosing');
             
+            // Define color schemes
+            const colorSchemes = {
+                pink: {
+                    bg: 'linear-gradient(135deg, #ffc0cb 0%, #ffb6c1 50%, #ffc0cb 100%)',
+                    text: '#4a0e2e',
+                    accent: '#ff1493',
+                    borderColor: 'rgba(255,20,147,0.3)',
+                    cardBg: 'rgba(255,192,203,0.2)',
+                    cardBorder: 'rgba(255,20,147,0.2)',
+                    keywordBg: 'rgba(255,20,147,0.2)'
+                },
+                blue: {
+                    bg: 'linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 50%, #e0f7fa 100%)',
+                    text: '#0d3d56',
+                    accent: '#0077be',
+                    borderColor: 'rgba(0,119,190,0.3)',
+                    cardBg: 'rgba(135,206,235,0.2)',
+                    cardBorder: 'rgba(0,119,190,0.2)',
+                    keywordBg: 'rgba(0,119,190,0.2)'
+                },
+                yellow: {
+                    bg: 'linear-gradient(135deg, #fffacd 0%, #ffeaa7 50%, #fffacd 100%)',
+                    text: '#5d4e00',
+                    accent: '#ff8c00',
+                    borderColor: 'rgba(255,140,0,0.3)',
+                    cardBg: 'rgba(255,215,0,0.2)',
+                    cardBorder: 'rgba(255,140,0,0.2)',
+                    keywordBg: 'rgba(255,140,0,0.2)'
+                },
+                purple: {
+                    bg: 'linear-gradient(135deg, #f3e5f5 0%, #e1bee7 50%, #f3e5f5 100%)',
+                    text: '#4a148c',
+                    accent: '#9c27b0',
+                    borderColor: 'rgba(156,39,176,0.3)',
+                    cardBg: 'rgba(216,181,255,0.2)',
+                    cardBorder: 'rgba(156,39,176,0.2)',
+                    keywordBg: 'rgba(156,39,176,0.2)'
+                }
+            };
+            
+            const colors = colorSchemes[selectedGiftColor];
+            
             // Create a clean, ad-free HTML document
             const giftHTML = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${userData.name}'s Cosmic Blueprint - A Gift from the Stars ✨</title>
+    <title>${userData.name}'s Soul Blueprint - A Gift from the Stars ✨</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Nunito', sans-serif;
-            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%);
-            color: #f0e6ff;
+            background: ${colors.bg};
+            color: ${colors.text};
             line-height: 1.8;
             min-height: 100vh;
             padding: 40px 20px;
@@ -3527,12 +3630,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
             text-align: center;
             padding: 40px 20px;
             margin-bottom: 40px;
-            border-bottom: 2px solid rgba(255,105,180,0.3);
+            border-bottom: 2px solid ${colors.borderColor};
         }
         .gift-header h1 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
-            color: #ff69b4;
+            color: ${colors.accent};
             margin-bottom: 10px;
         }
         .gift-header .subtitle {
@@ -3549,12 +3652,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
             padding: 30px;
             margin: 40px auto;
             max-width: 700px;
-            background: linear-gradient(135deg, rgba(255,105,180,0.15) 0%, rgba(138,43,226,0.15) 100%);
+            background: ${colors.cardBg};
             border-radius: 20px;
-            border: 2px solid rgba(255,105,180,0.3);
+            border: 2px solid ${colors.borderColor};
         }
         .gift-message h2 {
-            color: #ff69b4;
+            color: ${colors.accent};
             margin-bottom: 15px;
         }
         .gift-message p {
@@ -3567,7 +3670,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             align-items: center;
             gap: 15px;
             padding: 20px;
-            background: rgba(255,255,255,0.05);
+            background: ${colors.cardBg};
             border-radius: 15px;
             margin-bottom: 20px;
         }
@@ -3575,21 +3678,21 @@ This isn't a flaw - it's their power source. The tension between these two drive
         .section-header h2 {
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
-            color: #ff69b4;
+            color: ${colors.accent};
         }
         .section-header .description {
             font-size: 0.95rem;
             opacity: 0.8;
         }
         .reading-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: ${colors.cardBg};
+            border: 1px solid ${colors.cardBorder};
             border-radius: 15px;
             padding: 25px;
             margin-bottom: 20px;
         }
         .reading-card h3 {
-            color: #ff69b4;
+            color: ${colors.accent};
             font-family: 'Playfair Display', serif;
             margin-bottom: 10px;
         }
@@ -3606,7 +3709,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             margin: 15px 0;
         }
         .keyword {
-            background: rgba(255,105,180,0.2);
+            background: ${colors.keywordBg};
             padding: 5px 12px;
             border-radius: 15px;
             font-size: 0.85rem;
@@ -3626,10 +3729,10 @@ This isn't a flaw - it's their power source. The tension between these two drive
             text-align: center;
             padding: 40px;
             margin-top: 60px;
-            border-top: 2px solid rgba(255,105,180,0.3);
+            border-top: 2px solid ${colors.borderColor};
         }
         .gift-footer p { margin-bottom: 10px; opacity: 0.8; }
-        .gift-footer .love { font-size: 1.2rem; color: #ff69b4; }
+        .gift-footer .love { font-size: 1.2rem; color: ${colors.accent}; }
         /* Hide ads and interactive elements */
         .ad-container, .pagination-controls, #action-buttons, .gift-support-section { display: none !important; }
         .hidden { display: block !important; }
@@ -3637,8 +3740,8 @@ This isn't a flaw - it's their power source. The tension between these two drive
 </head>
 <body>
     <div class="gift-header">
-        <h1>✨ ${userData.name}'s Cosmic Blueprint ✨</h1>
-        <p class="subtitle">A Sacred Gift from the Stars</p>
+        <h1>✨ ${userData.name}'s Soul Blueprint ✨</h1>
+        <p class="subtitle">A Portrait of the Soul</p>
         <p class="birth-info">Born ${new Date(userData.birthDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}${userData.birthTime ? ' at ' + userData.birthTime : ''}${userData.birthPlace ? ' in ' + userData.birthPlace : ''}</p>
     </div>
     
@@ -3653,7 +3756,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
     
     <div class="gift-footer">
         <p class="love">Made with ✨ love ✨</p>
-        <p>Generated by Quantum Merlin's Cosmic Blueprint</p>
+        <p>Generated by Quantum Merlin's Soul Blueprint</p>
         <p>quantummerlin.com/ultimate</p>
     </div>
 </body>
@@ -3664,7 +3767,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `${userData.name.replace(/[^a-z0-9]/gi, '-')}-cosmic-blueprint-gift.html`;
+            a.download = `${userData.name.replace(/[^a-z0-9]/gi, '-')}-soul-blueprint-${selectedGiftColor}.html`;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
