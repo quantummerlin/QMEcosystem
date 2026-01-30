@@ -1,5 +1,5 @@
-// The Imprint - Service Worker
-const CACHE_NAME = 'the-imprint-v1';
+// A Moment in Time - Service Worker
+const CACHE_NAME = 'moment-in-time-v1';
 const ASSETS_TO_CACHE = [
     '/soulblueprint/',
     '/soulblueprint/index.html',
@@ -20,7 +20,7 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then((cache) => {
-                console.log('Caching The Imprint assets');
+                console.log('Caching A Moment in Time assets');
                 return cache.addAll(ASSETS_TO_CACHE);
             })
             .then(() => self.skipWaiting())

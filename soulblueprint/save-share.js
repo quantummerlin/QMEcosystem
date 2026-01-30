@@ -95,7 +95,7 @@ function printReading() {
 
 function downloadReading() {
     const userData = JSON.parse(localStorage.getItem('lastReading') || '{}');
-    const fileName = `${userData.name || 'imprint'}-reading-${new Date().toISOString().split('T')[0]}.html`;
+    const fileName = `${userData.name || 'moment'}-reading-${new Date().toISOString().split('T')[0]}.html`;
     
     // Clone the page content
     const clone = document.cloneNode(true);
@@ -117,7 +117,7 @@ function downloadReading() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Imprint for ${userData.name}</title>
+    <title>A Moment in Time for ${userData.name}</title>
     <style>
         ${document.getElementById('dynamic-styles').innerHTML}
     </style>
@@ -125,7 +125,7 @@ function downloadReading() {
 <body>
     <div class="container">
         <header>
-            <h1>The Imprint for ${userData.name}</h1>
+            <h1>A Moment in Time for ${userData.name}</h1>
             <p>Born: ${formatDate(userData.birthDate)} at ${userData.birthTime || 'unknown time'}</p>
             <p>Location: ${userData.birthPlace || 'unknown location'}</p>
             <p>Generated: ${new Date().toLocaleDateString()}</p>
@@ -159,8 +159,8 @@ function formatDate(dateStr) {
 async function shareReading() {
     const userData = JSON.parse(localStorage.getItem('lastReading') || '{}');
     const shareData = {
-        title: `The Imprint for ${userData.name}`,
-        text: `Check out ${userData.name}'s Imprint reading with 65+ personalized insights!`,
+        title: `A Moment in Time for ${userData.name}`,
+        text: `Check out ${userData.name}'s Moment in Time reading with 65+ personalized insights!`,
         url: window.location.href
     };
     

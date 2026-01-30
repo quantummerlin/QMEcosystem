@@ -1,5 +1,5 @@
 // ============================================
-// THE IMPRINT - BRAND CONFIGURATION
+// A MOMENT IN TIME - BRAND CONFIGURATION
 // ============================================
 // Universal branding for all ages
 // Copy this file to config.js to activate
@@ -9,9 +9,9 @@ const BRAND_CONFIG = {
     // ============================================
     // BRAND IDENTITY
     // ============================================
-    brandName: "The Imprint",
-    tagline: "Your Celestial Design Revealed",
-    subTagline: "You were imprinted at birth. This reading reveals the pattern.",
+    brandName: "A Moment in Time",
+    tagline: "Your Complete Cosmic Reading • No Sign-Up • Always Free",
+    subTagline: "At the exact moment you were born, the universe created a pattern.",
     
     // Who is this reading for?
     subjectType: "person",
@@ -37,13 +37,13 @@ const BRAND_CONFIG = {
         birthPlaceHelper: "Hospital location or city of birth"
     },
     
-    ctaButton: "Create The Imprint",
-    loadingMessage: "Revealing the pattern...",
+    ctaButton: "Generate Your Reading",
+    loadingMessage: "Capturing your moment...",
     
     // Result page copy
-    resultTitle: "The Imprint",
+    resultTitle: "A Moment in Time",
     resultSubtitle: "A Portrait of",
-    generatedBy: "Created with love by The Imprint",
+    generatedBy: "Created with love by A Moment in Time",
     
     // ============================================
     // SECTION NAMES
@@ -158,7 +158,7 @@ const BRAND_CONFIG = {
     // ============================================
     sharing: {
         hashtags: ["SoulBlueprint", "BirthChart", "SoulReading", "GiftFromTheStars"],
-        defaultMessage: "I just discovered The Imprint.",
+        defaultMessage: "I just got my reading from A Moment in Time.",
         twitterHandle: "@quantummerlin"
     },
     
@@ -180,7 +180,7 @@ const BRAND_CONFIG = {
     // FOOTER
     // ============================================
     footer: {
-        copyright: "© 2026 The Imprint",
+        copyright: "© 2026 A Moment in Time",
         disclaimer: "For entertainment and reflection purposes. Every person is unique and will grow in their own beautiful way.",
         links: [
             { text: "Privacy Policy", url: "/soulblueprint/privacy.html" },
@@ -193,9 +193,9 @@ const BRAND_CONFIG = {
     // SEO
     // ============================================
     seo: {
-        title: "The Imprint - Your Celestial Design Revealed",
-        description: "You were imprinted at birth. This reading reveals the pattern with 65+ personalized insights in astrology and numerology. Free and unlimited access.",
-        keywords: "the imprint, celestial design, astrology reading, numerology reading, birth chart, life path, personalized reading"
+        title: "A Moment in Time - Your Complete Cosmic Reading",
+        description: "At the exact moment you were born, the universe created a pattern. Get 65+ personalized insights in astrology and numerology. Free and unlimited access.",
+        keywords: "a moment in time, astrology reading, numerology reading, birth chart, life path, personalized reading"
     }
 };
 

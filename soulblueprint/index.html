@@ -6,16 +6,16 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title id="page-title">The Imprint</title>
-    <meta name="description" id="meta-description" content="You were imprinted at birth. This reading reveals the pattern with 65+ personalized insights in astrology and numerology. Free and unlimited.">
+    <title id="page-title">A Moment in Time</title>
+    <meta name="description" id="meta-description" content="At the exact moment you were born, the universe created a pattern. Get 65+ personalized insights in astrology and numerology. Free and unlimited.">
     
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#FF69B4">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="The Imprint">
+    <meta name="apple-mobile-web-app-title" content="A Moment in Time">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="The Imprint">
+    <meta name="application-name" content="A Moment in Time">
     <meta name="msapplication-TileColor" content="#FF69B4">
     <meta name="format-detection" content="telephone=no">
     
@@ -25,8 +25,8 @@
     <link rel="icon" type="image/svg+xml" href="icon.svg?v=3">
     
     <!-- Open Graph -->
-    <meta property="og:title" id="og-title" content="The Imprint - Your Celestial Design Revealed">
-    <meta property="og:description" id="og-description" content="You were imprinted at birth. This reading reveals the pattern with 65+ personalized insights in astrology and numerology. Free and unlimited.">
+    <meta property="og:title" id="og-title" content="A Moment in Time - Your Complete Cosmic Reading">
+    <meta property="og:description" id="og-description" content="At the exact moment you were born, the universe created a pattern. Get 65+ personalized insights in astrology and numerology. Free and unlimited.">
     <meta property="og:type" content="website">
     
     <!-- Fonts -->
@@ -683,7 +683,7 @@
             color: var(--primary);
         }
         
-        /* The Imprint Summary */
+        /* A Moment in Time Summary */
         .cosmic-blueprint-summary {
             background: linear-gradient(135deg, rgba(103,58,183,0.08) 0%, rgba(255,105,180,0.08) 100%);
             border-top: 5px solid linear-gradient(90deg, var(--primary), var(--secondary));
@@ -1535,13 +1535,13 @@
     <!-- Theme Bar -->
     <div class="theme-bar" id="themeBar">
         <button class="theme-bar-btn" data-theme="girl" onclick="setGender('girl')">
-            Pink Theme
+            Pink
         </button>
         <button class="theme-bar-btn" data-theme="purple" onclick="setGender('purple')">
-            Purple Theme
+            Purple
         </button>
         <button class="theme-bar-btn" data-theme="boy" onclick="setGender('boy')">
-            Blue Theme
+            Blue
         </button>
     </div>
     
@@ -1557,9 +1557,9 @@
     <!-- Input Section -->
     <section class="input-section" id="inputSection">
         <header class="header">
-            <h1 id="brandName">The Imprint</h1>
-            <p class="tagline" id="tagline">Your Celestial Design Revealed</p>
-            <p class="sub-tagline" id="subTagline">You were imprinted at birth. This reading reveals the pattern.</p>
+            <h1 id="brandName">A Moment in Time</h1>
+            <p class="tagline" id="tagline">Your Complete Cosmic Reading • No Sign-Up • Always Free</p>
+            <p class="sub-tagline" id="subTagline">At the exact moment you were born, the universe created a pattern.</p>
             
             <!-- Action Buttons (hidden until reading generated) -->
             <div id="action-buttons" style="display: none; margin-top: 20px; gap: 10px; flex-wrap: wrap; justify-content: center;">
@@ -1598,7 +1598,7 @@
                     <p class="helper-text" id="birthPlaceHelper">Location of birth</p>
                 </div>
                 
-                <button type="submit" class="submit-btn" id="submitBtn">Create The Imprint</button>
+                <button type="submit" class="submit-btn" id="submitBtn">Generate Your Reading</button>
             </form>
             <div class="footer-links" aria-label="Legal links">
                 <a href="/soulblueprint/about.html" target="_blank">About</a>
@@ -1617,7 +1617,7 @@
     <!-- Results Section -->
     <section class="results-section" id="resultsSection">
         <div class="results-header">
-            <h1 id="resultTitle" style="color: #1a0a2e !important;">The Imprint</h1>
+            <h1 id="resultTitle" style="color: #1a0a2e !important;">A Moment in Time</h1>
             <p class="subject-name" id="subjectName" style="color: #2d1b4e !important;"></p>
             <p class="birth-info" id="birthInfo" style="color: #3d2b5e !important;"></p>
             <div class="action-buttons">
@@ -1983,7 +1983,7 @@
             const celestialSection = createSection('celestial', config.sections.celestial);
             
             // ============================================
-            // THE IMPRINT SUMMARY - Planetary Overview
+            // A MOMENT IN TIME SUMMARY - Planetary Overview
             // ============================================
             const sunSign = readings.astrology.sunSign;
             const moonSign = readings.astrology.moonSign;
@@ -2005,7 +2005,7 @@
             blueprintSummary.className = 'reading-card cosmic-blueprint-summary';
             blueprintSummary.innerHTML = `
                 <span class="card-icon"></span>
-                <h3>Your Imprint at a Glance</h3>
+                <h3>Your Moment at a Glance</h3>
                 <p class="blueprint-intro">Before we dive deep into each placement, here's a complete overview of ${userData.name}'s celestial coordinates — the positions of all major celestial bodies at the moment of birth.</p>
                 
                 <div class="blueprint-grid">
@@ -2436,7 +2436,7 @@
                         `<p><strong>${intensityLabel} ${stellium.element.toUpperCase()} STELLIUM</strong></p>
                         <p><em>Planets concentrated: ${stellium.planets.join(', ')}</em></p>
                         <p>${stelliumReading.reading}</p>
-                        <p class="cosmic-highlight">This concentration of ${stellium.count} celestial bodies in ${stellium.sign} creates a powerful focal point in ${userData.name}'s imprint. This is where their energy naturally wants to express itself most intensely.</p>` :
+                        <p class="cosmic-highlight">This concentration of ${stellium.count} celestial bodies in ${stellium.sign} creates a powerful focal point in ${userData.name}'s moment in time. This is where their energy naturally wants to express itself most intensely.</p>` :
                         `<p><strong>${intensityLabel} STELLIUM</strong></p>
                         <p>With ${stellium.count} planets in ${stellium.sign}, there is an extraordinary concentration of ${stellium.element} energy in this area of life.</p>
                         <p>Planets: ${stellium.planets.join(', ')}</p>`;
@@ -3440,7 +3440,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                     <div class="section-header">
                         <span class="icon"></span>
                         <div>
-                            <h2>The Complete Imprint</h2>
+                            <h2>The Complete Moment in Time</h2>
                             <p class="description">A sacred synthesis of ${userData.name}'s energetic signature at birth</p>
                         </div>
                     </div>
@@ -3648,7 +3648,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             if (navigator.share) {
                 navigator.share({
-                    title: `The Imprint for ${name}`,
+                    title: `A Moment in Time for ${name}`,
                     text: text,
                     url: window.location.href
                 });
@@ -3674,7 +3674,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             closingContainer.innerHTML = `
                 <div class="closing-card">
                     <h3>${userData.name}'s Cosmic Story Continues...</h3>
-                    <p>You've just explored ${userData.name}'s complete imprint — a unique constellation of energies that has never existed before and will never exist again in quite the same way.</p>
+                    <p>You've just explored ${userData.name}'s complete moment in time — a unique constellation of energies that has never existed before and will never exist again in quite the same way.</p>
                     <p>With their ${sunSign} Sun illuminating their core identity, ${moonSign} Moon nurturing their emotional world, and Life Path ${lifePath} guiding their soul's journey, ${userData.name} carries a sacred combination of gifts waiting to unfold.</p>
                     <p>This reading is a snapshot of potential — the cosmic seeds planted at birth. How these energies blossom depends on love, nurturing, and the unique choices this soul will make.</p>
                     <p class="closing-affirmation">"Every soul arrives with a purpose. ${userData.name}'s purpose is written in the stars."</p>
@@ -3778,7 +3778,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Imprint for ${userData.name} - A Gift from the Stars</title>
+    <title>A Moment in Time for ${userData.name} - A Gift from the Stars</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -3912,7 +3912,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
 </head>
 <body>
     <div class="gift-header">
-        <h1>The Imprint for ${userData.name}</h1>
+        <h1>A Moment in Time for ${userData.name}</h1>
         <p class="subtitle">Your Celestial Design Revealed</p>
         <p class="birth-info">Born ${new Date(userData.birthDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}${userData.birthTime ? ' at ' + userData.birthTime : ''}${userData.birthPlace ? ' in ' + userData.birthPlace : ''}</p>
     </div>
@@ -3929,7 +3929,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
     
     <div class="gift-footer">
         <p class="love">Made with love</p>
-        <p>Generated by The Imprint by Quantum Merlin</p>
+        <p>Generated by A Moment in Time by Quantum Merlin</p>
         <p>quantummerlin.com/soulblueprint</p>
     </div>
 </body>
