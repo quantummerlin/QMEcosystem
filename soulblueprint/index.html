@@ -654,6 +654,300 @@
             font-size: 0.85rem;
             opacity: 0.85;
         }
+        
+        /* Sticky Progress Header */
+        .sticky-progress-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--background);
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--card-border);
+            margin: -20px -20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .sticky-progress-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .sticky-progress-info .back-btn {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 4px;
+            color: var(--text);
+        }
+        
+        .sticky-progress-info .reading-for {
+            font-size: 0.9rem;
+            color: var(--text);
+            opacity: 0.8;
+        }
+        
+        .sticky-progress-info .reading-for strong {
+            color: var(--text);
+            opacity: 1;
+        }
+        
+        .sticky-progress-bar {
+            flex: 1;
+            max-width: 200px;
+            margin-left: 20px;
+        }
+        
+        .sticky-progress-bar .progress-track {
+            width: 100%;
+            height: 6px;
+            background: rgba(0,0,0,0.1);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+        
+        .sticky-progress-bar .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF69B4 0%, #6BA3D6 100%);
+            transition: width 0.4s ease;
+            width: 0%;
+        }
+        
+        .sticky-progress-bar .progress-text {
+            font-size: 0.75rem;
+            text-align: right;
+            margin-top: 4px;
+            color: var(--text);
+            opacity: 0.7;
+        }
+        
+        .dark-theme .sticky-progress-header {
+            background: rgba(31, 20, 42, 0.95);
+        }
+        
+        .dark-theme .sticky-progress-bar .progress-track {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        /* Cosmic Snapshot - Big Three Card */
+        .cosmic-snapshot {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid var(--card-border);
+        }
+        
+        .dark-theme .cosmic-snapshot {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.1);
+        }
+        
+        .cosmic-snapshot-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .cosmic-snapshot-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+        
+        .cosmic-snapshot-header p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            color: var(--text);
+        }
+        
+        .big-three-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        
+        .big-three-item {
+            text-align: center;
+            padding: 16px 12px;
+            background: linear-gradient(135deg, rgba(255,182,217,0.1), rgba(182,227,255,0.1));
+            border-radius: 12px;
+        }
+        
+        .big-three-item .planet-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        
+        .big-three-item .planet-name {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+            margin-bottom: 4px;
+            color: var(--text);
+        }
+        
+        .big-three-item .sign-name {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .big-three-item .sign-desc {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            margin-top: 4px;
+            color: var(--text);
+        }
+        
+        @media (max-width: 600px) {
+            .big-three-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .big-three-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                text-align: left;
+                padding: 14px;
+            }
+            
+            .big-three-item .planet-icon {
+                font-size: 1.6rem;
+                margin-bottom: 0;
+            }
+            
+            .sticky-progress-header {
+                padding: 10px 15px;
+            }
+            
+            .sticky-progress-bar {
+                max-width: 120px;
+            }
+        }
+        
+        /* Section Group Dividers */
+        .section-group {
+            margin-bottom: 32px;
+        }
+        
+        .section-group-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .section-group-header .group-icon {
+            font-size: 1.5rem;
+        }
+        
+        .section-group-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--primary);
+            flex: 1;
+        }
+        
+        .section-group-header .group-progress {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            color: var(--text);
+        }
+        
+        /* Completion Celebration */
+        .completion-celebration {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(255,182,217,0.2), rgba(182,227,255,0.2));
+            border-radius: 16px;
+            margin-top: 24px;
+            display: none;
+        }
+        
+        .completion-celebration.show {
+            display: block;
+            animation: celebrateIn 0.5s ease;
+        }
+        
+        @keyframes celebrateIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .completion-celebration .celebration-icon {
+            font-size: 4rem;
+            margin-bottom: 16px;
+        }
+        
+        .completion-celebration h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        
+        .completion-celebration p {
+            opacity: 0.8;
+            color: var(--text);
+        }
+        
+        /* Hero Welcome Card */
+        .hero-welcome {
+            text-align: center;
+            padding: 32px 24px;
+            background: linear-gradient(135deg, rgba(255,182,217,0.15), rgba(182,227,255,0.15));
+            border-radius: 16px;
+            margin-bottom: 24px;
+            border: 1px solid var(--card-border);
+        }
+        
+        .hero-welcome .hero-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+        
+        .hero-welcome h2 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        
+        .hero-welcome p {
+            color: var(--text);
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+        
+        .hero-welcome .insights-count {
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .dark-theme .hero-welcome,
+        body.color-mode-pink .hero-welcome,
+        body.color-mode-blue .hero-welcome,
+        body.color-mode-purple .hero-welcome {
+            background: rgba(255,255,255,0.05);
+        }
 
         body.color-mode-pink .reading-meter-fill {
             background: linear-gradient(90deg, #ffb6d9 0%, #d4a5ff 50%, #a6c8ff 100%);
@@ -665,6 +959,46 @@
 
         body.color-mode-purple .reading-meter-fill {
             background: linear-gradient(90deg, #c9a6ff 0%, #ffb6d9 50%, #a6c8ff 100%);
+        }
+        
+        /* Sticky Progress Bar Color Modes */
+        body.color-mode-pink .sticky-progress-bar .progress-fill {
+            background: linear-gradient(90deg, #ffb6d9 0%, #d4a5ff 50%, #a6c8ff 100%);
+        }
+        
+        body.color-mode-blue .sticky-progress-bar .progress-fill {
+            background: linear-gradient(90deg, #a6c8ff 0%, #c9a6ff 50%, #ffb6d9 100%);
+        }
+        
+        body.color-mode-purple .sticky-progress-bar .progress-fill {
+            background: linear-gradient(90deg, #c9a6ff 0%, #ffb6d9 50%, #a6c8ff 100%);
+        }
+        
+        body.color-mode-pink .sticky-progress-header,
+        body.color-mode-blue .sticky-progress-header,
+        body.color-mode-purple .sticky-progress-header {
+            background: rgba(31, 20, 42, 0.95);
+            border-color: rgba(255,255,255,0.1);
+        }
+        
+        body.color-mode-pink .sticky-progress-bar .progress-track,
+        body.color-mode-blue .sticky-progress-bar .progress-track,
+        body.color-mode-purple .sticky-progress-bar .progress-track {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        /* Big Three Card Color Modes */
+        body.color-mode-pink .cosmic-snapshot,
+        body.color-mode-blue .cosmic-snapshot,
+        body.color-mode-purple .cosmic-snapshot {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.1);
+        }
+        
+        body.color-mode-pink .big-three-item,
+        body.color-mode-blue .big-three-item,
+        body.color-mode-purple .big-three-item {
+            background: rgba(255,255,255,0.05);
         }
 
         .section-header .mark-read-btn {
@@ -733,51 +1067,243 @@
             color: #1a1025;
         }
         
-        /* Reading Cards */
+        /* Reading Cards - Expandable Accordion Style */
         .reading-card {
             background: var(--card-bg);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            border-left: none;
-            border-top: 5px solid var(--primary);
-            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid var(--card-border);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .reading-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+        
+        .reading-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s ease;
+        }
+        
+        .reading-card-header:hover {
+            background: rgba(0,0,0,0.02);
+        }
+        
+        .reading-card-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex: 1;
+        }
+        
+        .reading-card .card-icon {
+            font-size: 1.75rem;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(255,182,217,0.2), rgba(182,227,255,0.2));
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+        
+        .reading-card-info {
+            flex: 1;
+        }
+        
+        .reading-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 4px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .reading-card .result-value {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .reading-card-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .reading-card .read-badge {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid var(--card-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            transition: all 0.3s ease;
+        }
+        
+        .reading-card .read-badge.is-read {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        .reading-card .read-badge.is-read::after {
+            content: "✓";
+        }
+        
+        .reading-card .expand-icon {
+            font-size: 0.85rem;
+            color: var(--text);
+            opacity: 0.5;
+            transition: transform 0.3s ease;
+        }
+        
+        .reading-card.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+        
+        /* Collapsed content hidden */
+        .reading-card-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        
+        .reading-card.expanded .reading-card-body {
+            max-height: 5000px;
+        }
+        
+        .reading-card-content {
+            padding: 0 20px 20px;
+        }
+        
+        .reading-card .keywords {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        
+        .reading-card .keyword {
+            background: linear-gradient(135deg, rgba(255,182,217,0.15), rgba(182,227,255,0.15));
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text);
+        }
+        
+        .reading-card .reading-content {
+            text-align: left;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        
+        .reading-card .reading-content p {
+            margin-bottom: 14px;
+            color: var(--text);
+        }
+        
+        .reading-card .strengths-challenges {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding-top: 16px;
+            border-top: 1px solid var(--card-border);
+            margin-bottom: 16px;
+        }
+        
+        .reading-card .strengths-challenges h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        
+        .reading-card .strengths-challenges ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .reading-card .strengths-challenges li {
+            padding: 4px 0;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+        
+        .reading-card .strengths-challenges li::before {
+            margin-right: 8px;
+            font-weight: bold;
+        }
+        
+        .reading-card .strengths li::before {
+            content: "✓";
+            color: #6BA3D6;
+        }
+        
+        .reading-card .growth-areas li::before,
+        .reading-card .strengths-challenges > div:last-child li::before {
+            content: "→";
+            color: #FF69B4;
+        }
+        
+        .reading-card .mark-read-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, rgba(255,182,217,0.15), rgba(182,227,255,0.15));
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            font-weight: 600;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .reading-card .mark-read-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .reading-card .mark-read-btn.is-read {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .reading-card .strengths-challenges {
+                grid-template-columns: 1fr;
+            }
+            
+            .reading-card .card-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.4rem;
+            }
+            
+            .reading-card h3 {
+                font-size: 1rem;
+            }
         }
         
         .dark-theme .reading-card {
             background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.1);
-            border-top: 5px solid var(--primary);
         }
-        
-        .reading-card .card-icon {
-            font-size: 2.5rem;
-            display: block;
-            margin-bottom: 10px;
-        }
-        
-        .reading-card h3 {
-            font-family: var(--font-heading);
-            font-size: 1.4rem;
-            color: var(--primary);
-            margin-bottom: 8px;
-            display: block;
-            text-align: center;
-        }
-        
-        .reading-card .result-value {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--secondary);
-            margin-bottom: 15px;
-            padding: 8px 15px;
-            background: rgba(255,215,0,0.15);
-            border-radius: 8px;
-            display: inline-block;
-        }
-        
-        .dark-theme .reading-card .result-value {
             background: rgba(255,215,0,0.2);
         }
         
@@ -1610,7 +2136,7 @@
         
         /* Print Styles */
         @media print {
-            .header, .action-buttons, .new-reading-btn, .toc, .pagination-controls, .ad-container, #action-buttons, #theme-bar {
+            .header, .action-buttons, .new-reading-btn, .toc, .pagination-controls, .ad-container, #action-buttons, #theme-bar, .sticky-progress-header, .mark-read-btn, .read-badge, .expand-icon {
                 display: none !important;
             }
             
@@ -1627,6 +2153,15 @@
                 break-inside: avoid;
                 box-shadow: none;
                 border: 1px solid #ddd;
+            }
+            
+            /* Expand all cards for print */
+            .reading-card-body {
+                max-height: none !important;
+            }
+            
+            .reading-card-header {
+                cursor: default;
             }
             
             body {
@@ -1920,9 +2455,65 @@
         </div>
         
         <div class="container">
+            <!-- Sticky Progress Header -->
+            <div class="sticky-progress-header">
+                <div class="sticky-progress-info">
+                    <button class="back-btn" onclick="startNewReading()" title="New Reading">←</button>
+                    <span class="reading-for">Reading for <strong id="stickyName">...</strong></span>
+                </div>
+                <div class="sticky-progress-bar">
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-text">0/65 read</div>
+                </div>
+            </div>
+            
+            <!-- Hero Welcome Card -->
+            <div class="hero-welcome">
+                <div class="hero-icon">🌟</div>
+                <h2>Your Cosmic Reading is Ready</h2>
+                <p><span class="insights-count" id="insightsCount">65</span> unique insights are waiting to be explored. Tap any section below to dive in.</p>
+            </div>
+            
+            <!-- Cosmic Snapshot - Big Three -->
+            <div class="cosmic-snapshot" id="cosmicSnapshot">
+                <div class="cosmic-snapshot-header">
+                    <h2>✨ Your Cosmic Snapshot</h2>
+                    <p>The Big Three — your core celestial identity</p>
+                </div>
+                <div class="big-three-grid">
+                    <div class="big-three-item">
+                        <span class="planet-icon">☀️</span>
+                        <div class="planet-name">Sun Sign</div>
+                        <div class="sign-name" id="bigThreeSun">—</div>
+                        <div class="sign-desc">Core Identity</div>
+                    </div>
+                    <div class="big-three-item">
+                        <span class="planet-icon">🌙</span>
+                        <div class="planet-name">Moon Sign</div>
+                        <div class="sign-name" id="bigThreeMoon">—</div>
+                        <div class="sign-desc">Emotional Self</div>
+                    </div>
+                    <div class="big-three-item">
+                        <span class="planet-icon">⬆️</span>
+                        <div class="planet-name">Rising Sign</div>
+                        <div class="sign-name" id="bigThreeRising">—</div>
+                        <div class="sign-desc">First Impression</div>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Reading Sections -->
             <div id="readingsContainer">
                 <!-- Populated by JavaScript -->
+            </div>
+            
+            <!-- Completion Celebration -->
+            <div class="completion-celebration">
+                <div class="celebration-icon">🎉</div>
+                <h3>Reading Complete!</h3>
+                <p>You've explored all the cosmic insights for this moment in time.</p>
             </div>
             
             <!-- Reading Summary & Closing -->
@@ -1972,19 +2563,19 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=28"></script>
-    <script src="calculations.js?v=28"></script>
-    <script src="readings.js?v=28"></script>
-    <script src="house-readings.js?v=28"></script>
-    <script src="aspect-readings.js?v=28"></script>
-    <script src="advanced-readings.js?v=28"></script>
-    <script src="deep-readings.js?v=28"></script>
-    <script src="deep-planet-readings.js?v=28"></script>
-    <script src="deep-planet-readings-outer.js?v=28"></script>
-    <script src="readings-extended.js?v=28"></script>
-    <script src="love-blueprint.js?v=28"></script>
-    <script src="tone-variations.js?v=28"></script>
-    <script src="save-share.js?v=28"></script>
+    <script src="config.js?v=29"></script>
+    <script src="calculations.js?v=29"></script>
+    <script src="readings.js?v=29"></script>
+    <script src="house-readings.js?v=29"></script>
+    <script src="aspect-readings.js?v=29"></script>
+    <script src="advanced-readings.js?v=29"></script>
+    <script src="deep-readings.js?v=29"></script>
+    <script src="deep-planet-readings.js?v=29"></script>
+    <script src="deep-planet-readings-outer.js?v=29"></script>
+    <script src="readings-extended.js?v=29"></script>
+    <script src="love-blueprint.js?v=29"></script>
+    <script src="tone-variations.js?v=29"></script>
+    <script src="save-share.js?v=29"></script>
     <script>
         // ============================================
         // GENDER THEME SWITCH
@@ -2270,6 +2861,13 @@
             const container = document.getElementById('readingsContainer');
             container.innerHTML = '';
             
+            // Reset section counter and load saved progress
+            totalSectionCount = 0;
+            loadSavedProgress();
+            
+            // Populate sticky header name
+            document.getElementById('stickyName').textContent = userData.name;
+            
             // ============================================
             // SECTION 1: CELESTIAL / ASTROLOGY
             // ============================================
@@ -2294,6 +2892,11 @@
             const plutoSign = readings.astrology.plutoSign;
             const northNode = readings.astrology.northNode;
             const chineseZodiac = readings.astrology.chineseZodiac;
+            
+            // Populate Cosmic Snapshot (Big Three)
+            document.getElementById('bigThreeSun').textContent = sunSign.name;
+            document.getElementById('bigThreeMoon').textContent = moonSign.name;
+            document.getElementById('bigThreeRising').textContent = risingSign ? risingSign.name : 'Unknown';
             
             // Build the summary card
             const blueprintSummary = document.createElement('div');
@@ -3791,8 +4394,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
             // Store readings globally for save functionality
             window.lastGeneratedReadings = readings;
             
-            // Initialize pagination after brief delay
+            // Update progress display after all sections are built
             setTimeout(() => {
+                updateProgressDisplay();
                 initializePagination();
             }, 100);
         }
@@ -4013,9 +4617,16 @@ This isn't a flaw - it's their power source. The tension between these two drive
             window.scrollTo(0, 0);
         }
         
+        // Track total sections for progress
+        let totalSectionCount = 0;
+        let readSectionIds = [];
+        
         function createReadingCard(title, value, keywords, content, strengths, challenges) {
             const card = document.createElement('div');
+            const cardId = `section-${totalSectionCount++}`;
             card.className = 'reading-card';
+            card.id = cardId;
+            card.setAttribute('data-card-id', cardId);
             
             // Ensure keywords is an array
             let keywordsArray = [];
@@ -4055,7 +4666,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 strengthsChallengesHtml = `
                     <div class="strengths-challenges">
                         ${tonedStrengthsArray.length > 0 ? `
-                            <div>
+                            <div class="strengths">
                                 <h4>Strengths</h4>
                                 <ul>
                                     ${tonedStrengthsArray.map(s => `<li>${s}</li>`).join('')}
@@ -4063,7 +4674,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                             </div>
                         ` : ''}
                         ${tonedChallengesArray.length > 0 ? `
-                            <div>
+                            <div class="growth-areas">
                                 <h4>Growth Areas</h4>
                                 <ul>
                                     ${tonedChallengesArray.map(c => `<li>${c}</li>`).join('')}
@@ -4084,22 +4695,138 @@ This isn't a flaw - it's their power source. The tension between these two drive
             let cleanTitle = title;
             
             if (emojiMatch) {
-                iconHtml = `<span class="card-icon">${emojiMatch[1]}</span>`;
+                iconHtml = emojiMatch[1];
                 cleanTitle = title.replace(emojiRegex, '');
+            } else {
+                iconHtml = '✨';
             }
             
+            // Check if this card was previously marked as read
+            const isRead = readSectionIds.includes(cardId);
+            
             card.innerHTML = `
-                ${iconHtml}
-                <h3>${cleanTitle}</h3>
-                <div class="result-value">${value}</div>
-                ${keywordsHtml}
-                <div class="reading-content">
-                    ${contentParagraphs}
+                <div class="reading-card-header" onclick="toggleCard(this)">
+                    <div class="reading-card-left">
+                        <span class="card-icon">${iconHtml}</span>
+                        <div class="reading-card-info">
+                            <h3>${cleanTitle}</h3>
+                            <span class="result-value">${value}</span>
+                        </div>
+                    </div>
+                    <div class="reading-card-right">
+                        <span class="read-badge ${isRead ? 'is-read' : ''}" title="Mark as read"></span>
+                        <span class="expand-icon">▼</span>
+                    </div>
                 </div>
-                ${strengthsChallengesHtml}
+                <div class="reading-card-body">
+                    <div class="reading-card-content">
+                        ${keywordsHtml}
+                        <div class="reading-content">
+                            ${contentParagraphs}
+                        </div>
+                        ${strengthsChallengesHtml}
+                        <button class="mark-read-btn ${isRead ? 'is-read' : ''}" onclick="markCardAsRead(event, '${cardId}')">
+                            ${isRead ? '✓ Read' : 'Mark as Read'}
+                        </button>
+                    </div>
+                </div>
             `;
             
             return card;
+        }
+        
+        function toggleCard(headerEl) {
+            const card = headerEl.closest('.reading-card');
+            const isExpanded = card.classList.contains('expanded');
+            
+            if (isExpanded) {
+                card.classList.remove('expanded');
+            } else {
+                card.classList.add('expanded');
+                // Scroll the card into view with some offset
+                setTimeout(() => {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        }
+        
+        function markCardAsRead(event, cardId) {
+            event.stopPropagation();
+            const card = document.getElementById(cardId);
+            if (!card) return;
+            
+            const badge = card.querySelector('.read-badge');
+            const btn = card.querySelector('.mark-read-btn');
+            const isRead = badge.classList.contains('is-read');
+            
+            if (isRead) {
+                // Unmark as read
+                badge.classList.remove('is-read');
+                btn.classList.remove('is-read');
+                btn.textContent = 'Mark as Read';
+                readSectionIds = readSectionIds.filter(id => id !== cardId);
+            } else {
+                // Mark as read
+                badge.classList.add('is-read');
+                btn.classList.add('is-read');
+                btn.textContent = '✓ Read';
+                if (!readSectionIds.includes(cardId)) {
+                    readSectionIds.push(cardId);
+                }
+            }
+            
+            // Save to localStorage
+            try {
+                localStorage.setItem('sb-read-sections', JSON.stringify(readSectionIds));
+            } catch(e) {}
+            
+            // Update progress
+            updateProgressDisplay();
+            
+            // Check for completion
+            checkCompletion();
+        }
+        
+        function updateProgressDisplay() {
+            const readCount = readSectionIds.length;
+            const percent = totalSectionCount > 0 ? Math.round((readCount / totalSectionCount) * 100) : 0;
+            const remaining = totalSectionCount - readCount;
+            
+            // Update sticky header progress bar
+            const progressFill = document.querySelector('.sticky-progress-bar .progress-fill');
+            const progressText = document.querySelector('.sticky-progress-bar .progress-text');
+            if (progressFill) progressFill.style.width = percent + '%';
+            if (progressText) progressText.textContent = `${readCount}/${totalSectionCount} read`;
+            
+            // Update hero insights count
+            const insightsCount = document.getElementById('insightsCount');
+            if (insightsCount) {
+                insightsCount.textContent = remaining > 0 ? remaining : totalSectionCount;
+            }
+            
+            // Update the old reading meter if it exists
+            const meterFill = document.querySelector('.reading-meter-fill');
+            const meterText = document.querySelector('.reading-meter-text');
+            if (meterFill) meterFill.style.width = percent + '%';
+            if (meterText) meterText.textContent = `${readCount} of ${totalSectionCount} insights explored`;
+        }
+        
+        function checkCompletion() {
+            const celebration = document.querySelector('.completion-celebration');
+            if (celebration && readSectionIds.length === totalSectionCount && totalSectionCount > 0) {
+                celebration.classList.add('show');
+            }
+        }
+        
+        function loadSavedProgress() {
+            try {
+                const saved = localStorage.getItem('sb-read-sections');
+                if (saved) {
+                    readSectionIds = JSON.parse(saved);
+                }
+            } catch(e) {
+                readSectionIds = [];
+            }
         }
         
         // ============================================
