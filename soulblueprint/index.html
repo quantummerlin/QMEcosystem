@@ -197,6 +197,34 @@
             background-clip: text;
         }
         
+        /* Animated title dots */
+        .title-dots {
+            display: inline;
+        }
+        
+        .title-dots .dot {
+            display: inline-block;
+            animation: dotPulse 2s ease-in-out infinite;
+        }
+        
+        .title-dots .dot1 { animation-delay: 0s; }
+        .title-dots .dot2 { animation-delay: 0.3s; }
+        .title-dots .dot3 { animation-delay: 0.6s; }
+        
+        @keyframes dotPulse {
+            0%, 100% { opacity: 0.3; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(-3px); }
+        }
+        
+        /* Dark mode dot colors */
+        body.color-mode-pink .title-dots .dot1 { color: #ffb6d9; -webkit-text-fill-color: #ffb6d9; }
+        body.color-mode-pink .title-dots .dot2 { color: #d4a5ff; -webkit-text-fill-color: #d4a5ff; }
+        body.color-mode-pink .title-dots .dot3 { color: #a6c8ff; -webkit-text-fill-color: #a6c8ff; }
+        
+        body.color-mode-blue .title-dots .dot1 { color: #a6c8ff; -webkit-text-fill-color: #a6c8ff; }
+        body.color-mode-blue .title-dots .dot2 { color: #c9a6ff; -webkit-text-fill-color: #c9a6ff; }
+        body.color-mode-blue .title-dots .dot3 { color: #ffb6d9; -webkit-text-fill-color: #ffb6d9; }
+        
         .header .tagline {
             font-size: clamp(1rem, 2.5vw, 1.3rem);
             opacity: 1;
@@ -1008,6 +1036,36 @@
             background: #121a2b !important;
         }
         
+        /* Dark mode title styling - Pink mode */
+        body.color-mode-pink .header h1,
+        body.color-mode-pink .results-header h1 {
+            background: linear-gradient(135deg, #ffb6d9 0%, #d4a5ff 50%, #a6c8ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+        }
+        
+        body.color-mode-pink .tagline,
+        body.color-mode-pink .sub-tagline {
+            color: #ffb6d9 !important;
+        }
+        
+        /* Dark mode title styling - Blue mode */
+        body.color-mode-blue .header h1,
+        body.color-mode-blue .results-header h1 {
+            background: linear-gradient(135deg, #a6c8ff 0%, #c9a6ff 50%, #ffb6d9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+        }
+        
+        body.color-mode-blue .tagline,
+        body.color-mode-blue .sub-tagline {
+            color: #a6c8ff !important;
+        }
+        
         .footer-links a:hover {
             opacity: 0.8;
             text-decoration: underline;
@@ -1568,7 +1626,7 @@
     <!-- Input Section -->
     <section class="input-section" id="inputSection">
         <header class="header">
-            <h1 id="brandName">A Moment in Time</h1>
+            <h1 id="brandName">A Moment in Time<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
             <p class="tagline" id="tagline">Your Complete Cosmic Reading • No Sign-Up • Always Free</p>
             <p class="sub-tagline" id="subTagline">At the exact moment you were born, the universe created a pattern.</p>
             
@@ -1628,7 +1686,7 @@
     <!-- Results Section -->
     <section class="results-section" id="resultsSection">
         <div class="results-header">
-            <h1 id="resultTitle" style="color: #1a0a2e !important;">A Moment in Time</h1>
+            <h1 id="resultTitle">A Moment in Time<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
             <p class="subject-name" id="subjectName" style="color: #2d1b4e !important;"></p>
             <p class="birth-info" id="birthInfo" style="color: #3d2b5e !important;"></p>
             <div class="action-buttons">
