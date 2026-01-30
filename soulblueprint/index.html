@@ -944,7 +944,7 @@
             transition: opacity 0.3s;
         }
 
-        .footer-links .dark-toggle {
+        .footer-links .color-toggle {
             background: transparent;
             border: 1px solid rgba(91,58,134,0.35);
             color: #5b3a86;
@@ -957,13 +957,44 @@
             transition: opacity 0.3s, border-color 0.3s, color 0.3s;
         }
 
-        .footer-links .dark-toggle:hover {
+        .footer-links .color-toggle:hover {
             opacity: 1;
         }
 
-        .dark-theme .footer-links .dark-toggle {
-            color: #e9d8ff;
-            border-color: rgba(233,216,255,0.4);
+        body.color-mode-pink {
+            --background: #FFE5F1;
+            --text: #4b2a6f;
+            --card-bg: #FFE5F1;
+            --card-border: rgba(75,42,111,0.2);
+        }
+
+        body.color-mode-blue {
+            --background: #E6F2FF;
+            --text: #4b2a6f;
+            --card-bg: #E6F2FF;
+            --card-border: rgba(75,42,111,0.2);
+        }
+
+        body.color-mode-pink .header,
+        body.color-mode-pink .results-header,
+        body.color-mode-pink .theme-bar,
+        body.color-mode-pink .input-form,
+        body.color-mode-pink .reading-card,
+        body.color-mode-pink .toc,
+        body.color-mode-pink .gift-box,
+        body.color-mode-pink .coffee-box {
+            background: #FFE5F1 !important;
+        }
+
+        body.color-mode-blue .header,
+        body.color-mode-blue .results-header,
+        body.color-mode-blue .theme-bar,
+        body.color-mode-blue .input-form,
+        body.color-mode-blue .reading-card,
+        body.color-mode-blue .toc,
+        body.color-mode-blue .gift-box,
+        body.color-mode-blue .coffee-box {
+            background: #E6F2FF !important;
         }
         
         .footer-links a:hover {
@@ -1578,7 +1609,7 @@
                 <span>•</span>
                 <a href="/soulblueprint/disclaimer.html" target="_blank">Disclaimer</a>
                 <span>•</span>
-                <button class="dark-toggle" type="button" data-dark-toggle title="Toggle dark mode">Dark mode</button>
+                <button class="color-toggle" type="button" data-color-toggle title="Toggle color mode">Color mode</button>
             </div>
         </div>
     </section>
@@ -1641,7 +1672,7 @@
                     <span>•</span>
                     <a href="/soulblueprint/disclaimer.html" target="_blank">Disclaimer</a>
                     <span>•</span>
-                    <button class="dark-toggle" type="button" data-dark-toggle title="Toggle dark mode">Dark mode</button>
+                    <button class="color-toggle" type="button" data-color-toggle title="Toggle color mode">Color mode</button>
                 </div>
                 <p class="disclaimer" id="disclaimer">For entertainment purposes only. Not a substitute for professional advice.</p>
             </footer>
@@ -1785,27 +1816,34 @@
         }
 
         // ============================================
-        // DARK MODE TOGGLE (SUBTLE)
+        // COLOR MODE TOGGLE (SUBTLE)
         // ============================================
 
-        function setDarkMode(isDark) {
-            document.body.classList.toggle('dark-theme', isDark);
-            localStorage.setItem('sb-dark-mode', isDark ? '1' : '0');
+        function setColorMode(mode) {
+            document.body.classList.remove('color-mode-pink', 'color-mode-blue');
+            if (mode === 'pink') {
+                document.body.classList.add('color-mode-pink');
+            } else if (mode === 'blue') {
+                document.body.classList.add('color-mode-blue');
+            }
 
-            document.querySelectorAll('[data-dark-toggle]').forEach(btn => {
-                btn.textContent = isDark ? 'Light mode' : 'Dark mode';
+            localStorage.setItem('sb-color-mode', mode);
+
+            const label = mode === 'pink' ? 'Pink mode' : mode === 'blue' ? 'Blue mode' : 'Color mode';
+            document.querySelectorAll('[data-color-toggle]').forEach(btn => {
+                btn.textContent = label;
             });
         }
 
-        function initDarkMode() {
-            const stored = localStorage.getItem('sb-dark-mode');
-            const isDark = stored === '1' ? true : stored === '0' ? false : document.body.classList.contains('dark-theme');
-            setDarkMode(isDark);
+        function initColorMode() {
+            const stored = localStorage.getItem('sb-color-mode') || 'off';
+            setColorMode(stored);
 
-            document.querySelectorAll('[data-dark-toggle]').forEach(btn => {
+            document.querySelectorAll('[data-color-toggle]').forEach(btn => {
                 btn.addEventListener('click', () => {
-                    const next = !document.body.classList.contains('dark-theme');
-                    setDarkMode(next);
+                    const current = localStorage.getItem('sb-color-mode') || 'off';
+                    const next = current === 'off' ? 'pink' : current === 'pink' ? 'blue' : 'off';
+                    setColorMode(next);
                 });
             });
         }
@@ -3920,7 +3958,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
         
         document.addEventListener('DOMContentLoaded', function() {
             applyBrandConfig();
-            initDarkMode();
+            initColorMode();
             // Set default gender theme (pink)
             setGender('girl');
             
