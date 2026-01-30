@@ -573,7 +573,7 @@
         
         /* Reading Sections */
         .reading-section {
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             text-align: left;
         }
         
@@ -581,9 +581,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
+            gap: 6px;
+            margin-bottom: 8px;
+            padding-bottom: 6px;
             border-bottom: 2px solid var(--primary);
             text-align: center;
         }
@@ -955,6 +955,34 @@
             font-weight: 700;
             color: var(--primary);
         }
+
+        .hero-progress {
+            margin-top: 16px;
+        }
+
+        .hero-progress-track {
+            width: 100%;
+            height: 10px;
+            background: rgba(0,0,0,0.08);
+            border-radius: 999px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .hero-progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #FF69B4 0%, #6BA3D6 100%);
+            transition: width 0.4s ease;
+        }
+
+        .hero-progress-text {
+            margin-top: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text);
+            opacity: 0.85;
+        }
         
         .dark-theme .hero-welcome,
         body.color-mode-pink .hero-welcome,
@@ -979,12 +1007,24 @@
         body.color-mode-pink .sticky-progress-bar .progress-fill {
             background: linear-gradient(90deg, #ffb6d9 0%, #d4a5ff 100%);
         }
+
+        body.color-mode-pink .hero-progress-fill {
+            background: linear-gradient(90deg, #ffb6d9 0%, #d4a5ff 100%);
+        }
         
         body.color-mode-blue .sticky-progress-bar .progress-fill {
             background: linear-gradient(90deg, #a6c8ff 0%, #c9a6ff 100%);
         }
+
+        body.color-mode-blue .hero-progress-fill {
+            background: linear-gradient(90deg, #a6c8ff 0%, #c9a6ff 100%);
+        }
         
         body.color-mode-purple .sticky-progress-bar .progress-fill {
+            background: linear-gradient(90deg, #c9a6ff 0%, #ffb6d9 100%);
+        }
+
+        body.color-mode-purple .hero-progress-fill {
             background: linear-gradient(90deg, #c9a6ff 0%, #ffb6d9 100%);
         }
         
@@ -1153,15 +1193,7 @@
             font-size: 0.8rem;
             transition: all 0.3s ease;
             background: transparent;
-        }
-        
-        .reading-card .read-badge::before {
-            content: "";
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--card-border);
-            transition: all 0.3s ease;
+            color: var(--text);
         }
         
         .reading-card .read-badge.is-read {
@@ -1169,29 +1201,11 @@
             border-color: #FF69B4;
             color: white;
         }
-        
-        .reading-card .read-badge.is-read::before {
-            content: none;
-        }
-        
-        .reading-card .read-badge.is-read::after {
-            content: "✓";
-            font-weight: bold;
-        }
 
         .reading-card.is-read .read-badge {
             background: linear-gradient(135deg, #FF69B4 0%, #6BA3D6 100%);
             border-color: #FF69B4;
             color: white;
-        }
-
-        .reading-card.is-read .read-badge::before {
-            content: none;
-        }
-
-        .reading-card.is-read .read-badge::after {
-            content: "✓";
-            font-weight: bold;
         }
         
         .reading-card .expand-icon {
@@ -1217,7 +1231,7 @@
         }
         
         .reading-card-content {
-            padding: 0 20px 20px;
+            padding: 12px 24px 24px;
         }
         
         .reading-card .keywords {
@@ -1240,6 +1254,7 @@
             text-align: left;
             line-height: 1.8;
             margin-bottom: 16px;
+            font-size: 1rem;
         }
         
         .reading-card .reading-content p {
@@ -2541,6 +2556,12 @@
                 <div class="hero-icon">🌟</div>
                 <h2>Your Cosmic Reading is Ready</h2>
                 <p><span class="insights-count" id="insightsCount">65</span> unique insights are waiting to be explored. Tap any section below to dive in.</p>
+                <div class="hero-progress">
+                    <div class="hero-progress-track">
+                        <div class="hero-progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="hero-progress-text" id="heroProgressText">0/65 read</div>
+                </div>
             </div>
             
             <!-- Cosmic Snapshot - Big Three -->
@@ -4787,7 +4808,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         </div>
                     </div>
                     <div class="reading-card-right">
-                        <span class="read-badge ${isRead ? 'is-read' : ''}" title="Mark as read"></span>
+                        <span class="read-badge ${isRead ? 'is-read' : ''}" title="Mark as read">${isRead ? '✓' : ''}</span>
                         <span class="expand-icon">▼</span>
                     </div>
                 </div>
@@ -4835,7 +4856,10 @@ This isn't a flaw - it's their power source. The tension between these two drive
             if (isRead) {
                 // Unmark as read
                 card.classList.remove('is-read');
-                if (badge) badge.classList.remove('is-read');
+                if (badge) {
+                    badge.classList.remove('is-read');
+                    badge.textContent = '';
+                }
                 if (btn) {
                     btn.classList.remove('is-read');
                     btn.textContent = 'Mark as Read';
@@ -4844,7 +4868,10 @@ This isn't a flaw - it's their power source. The tension between these two drive
             } else {
                 // Mark as read
                 card.classList.add('is-read');
-                if (badge) badge.classList.add('is-read');
+                if (badge) {
+                    badge.classList.add('is-read');
+                    badge.textContent = '✓';
+                }
                 if (btn) {
                     btn.classList.add('is-read');
                     btn.textContent = '✓ Read';
@@ -4876,6 +4903,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const progressText = document.querySelector('.sticky-progress-bar .progress-text');
             if (progressFill) progressFill.style.width = percent + '%';
             if (progressText) progressText.textContent = `${readCount}/${totalSectionCount} read`;
+
+            // Update hero progress bar
+            const heroFill = document.querySelector('.hero-progress-fill');
+            const heroText = document.getElementById('heroProgressText');
+            if (heroFill) heroFill.style.width = percent + '%';
+            if (heroText) heroText.textContent = `${readCount}/${totalSectionCount} read`;
             
             // Update hero insights count
             const insightsCount = document.getElementById('insightsCount');
