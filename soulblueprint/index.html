@@ -5576,7 +5576,11 @@ This isn't a flaw - it's their power source. The tension between these two drive
         }
         
         function updateProgressDisplay() {
-            const readCount = readSectionIds.length;
+            const domReadCount = document.querySelectorAll('.reading-card .read-badge.is-read').length;
+            if (domReadCount !== readSectionIds.length) {
+                syncCardReadProgressFromDom();
+            }
+            const readCount = domReadCount;
             const percent = totalSectionCount > 0 ? Math.round((readCount / totalSectionCount) * 100) : 0;
             const remaining = totalSectionCount - readCount;
             
