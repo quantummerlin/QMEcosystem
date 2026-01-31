@@ -6743,7 +6743,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 }
             };
             
-            let colors = colorSchemes[selectedGiftColor];
+            let colors = colorSchemes[selectedGiftColor] || colorSchemes.pink;
             const isDarkPink = document.body.classList.contains('color-mode-pink');
             const isDarkBlue = document.body.classList.contains('color-mode-blue');
             if (isDarkPink || isDarkBlue) {
@@ -6758,6 +6758,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
                     cardBorder: 'rgba(201,166,255,0.25)',
                     keywordBg: 'rgba(201,166,255,0.2)'
                 };
+            }
+            if (!colors) {
+                colors = colorSchemes.pink;
             }
             
             // Create a clean, ad-free HTML document

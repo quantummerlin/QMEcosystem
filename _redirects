@@ -1,1 +1,1 @@
-/soulblueprint/r/:id  /soulblueprint/view.html?id=:id  200
+/soulblueprint/r/*  /soulblueprint/view.html?id=:splat  200
