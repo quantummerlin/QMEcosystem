@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3480541530392777" crossorigin="anonymous"></script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title id="page-title">A Moment in Time</title>
@@ -573,12 +570,40 @@
         
         /* Reading Sections */
         .reading-section {
-            margin-bottom: 8px;
+            margin: 0 0 6px 0;
+            padding: 0;
             text-align: left;
         }
         
         .reading-section:has(.collapsed) {
-            margin-bottom: 8px;
+            margin: 0 0 6px 0;
+        }
+
+        #readingsContainer .reading-section {
+            margin: 0 0 6px 0;
+            padding: 0;
+        }
+
+        #readingsContainer .section-content {
+            margin: 0;
+            padding: 0;
+        }
+
+        #readingsContainer .section-header {
+            margin-bottom: 0;
+        }
+
+        #readingsContainer .ad-container,
+        #readingsContainer .ad-placeholder,
+        #readingsContainer ins.adsbygoogle,
+        #readingsContainer iframe {
+            display: none !important;
+            height: 0 !important;
+            min-height: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+            overflow: hidden !important;
         }
 
         .section-header {
@@ -2474,23 +2499,18 @@
             color: white;
         }
 
-        /* AdSense Placeholder */
+        /* AdSense Placeholder (disabled to remove gaps) */
         .ad-container {
-            margin: 30px 0;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 10px;
-            text-align: center;
-            min-height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed rgba(255, 255, 255, 0.1);
+            display: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            min-height: 0 !important;
+            border: 0 !important;
+            background: none !important;
         }
 
         .ad-placeholder {
-            color: rgba(255, 255, 255, 0.3);
-            font-size: 14px;
+            display: none !important;
         }
         
         /* Print Styles */
@@ -4042,9 +4062,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
             celestialSectionWrapper.appendChild(celestialSection);
             container.appendChild(celestialSectionWrapper);
             
-            // Add AdSense slot
+            // Add AdSense slot (disabled)
             const ad1 = createAdSlot();
-            container.appendChild(ad1);
+            if (ad1) container.appendChild(ad1);
             
             // ============================================
             // SECTION 2: NUMEROLOGY
@@ -4265,9 +4285,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
             numbersSectionWrapper.appendChild(numbersSection);
             container.appendChild(numbersSectionWrapper);
             
-            // Add AdSense slot
+            // Add AdSense slot (disabled)
             const ad2 = createAdSlot();
-            container.appendChild(ad2);
+            if (ad2) container.appendChild(ad2);
             
             // ============================================
             // SECTION 3: SOUL MISSION
@@ -4316,9 +4336,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
             soulSectionWrapper.appendChild(soulSection);
             container.appendChild(soulSectionWrapper);
             
-            // Add AdSense slot
+            // Add AdSense slot (disabled)
             const ad3 = createAdSlot();
-            container.appendChild(ad3);
+            if (ad3) container.appendChild(ad3);
             
             // ============================================
             // SECTION 4: FORECASTS
@@ -4354,9 +4374,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
             forecastsSectionWrapper.appendChild(forecastsSection);
             container.appendChild(forecastsSectionWrapper);
             
-            // Add AdSense slot
+            // Add AdSense slot (disabled)
             const ad4 = createAdSlot();
-            container.appendChild(ad4);
+            if (ad4) container.appendChild(ad4);
             
             // ============================================
             // SECTION 5: LIFE CYCLES
@@ -4551,9 +4571,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 container.appendChild(nodesSectionWrapper);
             }
             
-            // Add AdSense slot
+            // Add AdSense slot (disabled)
             const ad5 = createAdSlot();
-            container.appendChild(ad5);
+            if (ad5) container.appendChild(ad5);
             
             // ============================================
             // SECTION 9: LIFE SYNTHESIS - Major Life Blueprints
@@ -4724,9 +4744,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 container.appendChild(progressionsSectionWrapper);
             }
             
-            // Add AdSense slot
+            // Add AdSense slot (disabled)
             const ad6 = createAdSlot();
-            container.appendChild(ad6);
+            if (ad6) container.appendChild(ad6);
             
             // ============================================
             // SECTION 11: COSMIC WRAP-UP - The Complete Picture
@@ -4790,6 +4810,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             // Store readings globally for save functionality
             window.lastGeneratedReadings = readings;
+
+            // Remove any ad slots that may have been injected
+            removeAdSlots();
             
             // Update progress display after all sections are built
             setTimeout(() => {
@@ -4852,23 +4875,13 @@ This isn't a flaw - it's their power source. The tension between these two drive
         }
         
         function createAdSlot() {
-            const ad = document.createElement('div');
-            ad.className = 'ad-container';
-            ad.innerHTML = `
-                <div class="ad-placeholder">
-                    <ins class="adsbygoogle"
-                         style="display:block; min-height: 100px;"
-                         data-ad-client="ca-pub-3480541530392777"
-                         data-ad-slot="auto"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                </div>
-            `;
-            // Push ad when created
-            try {
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            } catch(e) {}
-            return ad;
+            return null;
+        }
+
+        function removeAdSlots() {
+            document.querySelectorAll('.ad-container, .ad-placeholder, ins.adsbygoogle, iframe').forEach(node => {
+                node.remove();
+            });
         }
 
         // ============================================
@@ -6160,6 +6173,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             applyBrandConfig();
             initColorMode();
+            removeAdSlots();
             // Restore saved gender theme or default to girl
             const savedGender = localStorage.getItem('sb-gender') || 'girl';
             setGender(savedGender);
