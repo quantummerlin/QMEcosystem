@@ -6549,7 +6549,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             try {
                 // Get the reading HTML content (cleaned)
-                const readingHtml = readingsContainer.innerHTML;
+                const cleanContainer = readingsContainer.cloneNode(true);
+                cleanContainer.querySelectorAll('.ad-container, .ad-placeholder, ins.adsbygoogle, iframe, .pagination-controls, .action-buttons, #action-buttons').forEach(node => node.remove());
+                const readingHtml = cleanContainer.innerHTML;
                 
                 // Prepare data for saving
                 const saveData = {
