@@ -3703,40 +3703,47 @@
             // Small delay for effect
             await new Promise(resolve => setTimeout(resolve, 1500));
             
-            // Calculate all readings
-            const readings = calculateAllReadings(userData);
-            
-            // Complete progress
-            clearInterval(progressInterval);
-            progressBar.style.width = '100%';
-            
-            await new Promise(resolve => setTimeout(resolve, 300));
-            
-            // Hide loading
-            overlay.classList.remove('active');
-            
-            // Generate reading ID and save to multi-reading storage
-            const readingId = generateReadingId(userData);
-            currentReadingId = readingId;
-            saveReading(readingId, userData, readings);
-            
-            // Store userData for gift functionality (legacy)
-            window.lastUserData = userData;
-            localStorage.setItem('lastReading', JSON.stringify(userData));
-            
-            // Clear legacy progress for new reading
-            localStorage.removeItem(READ_PROGRESS_KEY);
-            localStorage.removeItem(SECTION_COLLAPSE_KEY);
-            localStorage.removeItem(SCROLL_POSITION_KEY);
-            localStorage.removeItem(SCROLL_SECTION_KEY);
-            localStorage.removeItem('sb-read-sections');
-            readSectionIds = [];
-            
-            // Display results
-            displayResults(userData, readings);
-            
-            // Update dashboard
-            renderDashboard();
+            try {
+                // Calculate all readings
+                const readings = calculateAllReadings(userData);
+                
+                // Complete progress
+                clearInterval(progressInterval);
+                progressBar.style.width = '100%';
+                
+                await new Promise(resolve => setTimeout(resolve, 300));
+                
+                // Hide loading
+                overlay.classList.remove('active');
+                
+                // Generate reading ID and save to multi-reading storage
+                const readingId = generateReadingId(userData);
+                currentReadingId = readingId;
+                saveReading(readingId, userData, readings);
+                
+                // Store userData for gift functionality (legacy)
+                window.lastUserData = userData;
+                localStorage.setItem('lastReading', JSON.stringify(userData));
+                
+                // Clear legacy progress for new reading
+                localStorage.removeItem(READ_PROGRESS_KEY);
+                localStorage.removeItem(SECTION_COLLAPSE_KEY);
+                localStorage.removeItem(SCROLL_POSITION_KEY);
+                localStorage.removeItem(SCROLL_SECTION_KEY);
+                localStorage.removeItem('sb-read-sections');
+                readSectionIds = [];
+                
+                // Display results
+                displayResults(userData, readings);
+                
+                // Update dashboard
+                renderDashboard();
+            } catch (error) {
+                console.error('Error generating reading:', error);
+                clearInterval(progressInterval);
+                overlay.classList.remove('active');
+                alert('Something went wrong while generating the reading. Please try again or refresh the page.');
+            }
         }
         
         // ============================================
