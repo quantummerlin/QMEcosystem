@@ -573,17 +573,21 @@
         
         /* Reading Sections */
         .reading-section {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             text-align: left;
         }
         
+        .reading-section:has(.collapsed) {
+            margin-bottom: 8px;
+        }
+
         .section-header {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
             gap: 16px;
-            margin-bottom: 16px;
+            margin-bottom: 0;
             padding: 18px 24px;
             border: 2px dotted var(--primary);
             border-radius: 16px;
@@ -645,7 +649,16 @@
         }
 
         .section-content.collapsed > :not(.section-header) {
-            display: none;
+            display: none !important;
+        }
+        
+        .section-content.collapsed {
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        .section-content.collapsed .reading-card {
+            display: none !important;
         }
 
         .reading-meter {
@@ -2249,19 +2262,29 @@
         .gifted-by-field label {
             display: block;
             margin-bottom: 8px;
-            color: #d8b5ff;
+            color: var(--primary);
             font-weight: 600;
+        }
+
+        .dark-theme .gifted-by-field label {
+            color: #d8b5ff;
         }
         
         .gifted-by-field input {
             width: 100%;
             padding: 12px 15px;
-            border: 2px solid rgba(216, 181, 255, 0.3);
+            border: 2px solid var(--card-border);
             border-radius: 10px;
-            background: rgba(255, 255, 255, 0.05);
-            color: #f0e6ff;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text);
             font-size: 1rem;
             transition: all 0.3s ease;
+        }
+
+        .dark-theme .gifted-by-field input {
+            background: rgba(255, 255, 255, 0.05);
+            color: #f0e6ff;
+            border-color: rgba(216, 181, 255, 0.3);
         }
         
         .gifted-by-field input:focus {
@@ -2842,7 +2865,7 @@
                         <div class="sign-desc">Emotional Self</div>
                     </div>
                     <div class="big-three-item">
-                        <span class="planet-icon">⬆️</span>
+                        <span class="planet-icon"></span>
                         <div class="planet-name">Rising Sign</div>
                         <div class="sign-name" id="bigThreeRising">—</div>
                         <div class="sign-desc">First Impression</div>
@@ -3149,7 +3172,9 @@
             
             // Hide input, show results
             document.getElementById('inputSection').style.display = 'none';
-            document.getElementById('resultsSection').classList.add('active');
+            const resultsEl = document.getElementById('resultsSection');
+            resultsEl.style.display = '';  // Clear any inline display style
+            resultsEl.classList.add('active');
             
             // Set header info
             document.getElementById('subjectName').textContent = userData.name;
@@ -4391,11 +4416,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const angular = readings.astrology.angularHouses;
                 
                 // 1st House - Ascendant/Self
-                if (angular.first && ANGULAR_HOUSE_READINGS.first && ANGULAR_HOUSE_READINGS.first[angular.first]) {
-                    const houseData = ANGULAR_HOUSE_READINGS.first[angular.first];
+                const firstSign = angular.first?.sign || angular.first;
+                if (firstSign && ANGULAR_HOUSE_READINGS.first && ANGULAR_HOUSE_READINGS.first[firstSign]) {
+                    const houseData = ANGULAR_HOUSE_READINGS.first[firstSign];
                     angularSection.appendChild(createReadingCard(
                         houseData.title,
-                        `${angular.first} Rising - The Self`,
+                        `${firstSign} Rising - The Self`,
                         houseData.keywords,
                         houseData.reading.replace(/this child/gi, userData.name),
                         houseData.strengths || [],
@@ -4404,11 +4430,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 }
                 
                 // 4th House - IC/Roots
-                if (angular.fourth && ANGULAR_HOUSE_READINGS.fourth && ANGULAR_HOUSE_READINGS.fourth[angular.fourth]) {
-                    const houseData = ANGULAR_HOUSE_READINGS.fourth[angular.fourth];
+                const fourthSign = angular.fourth?.sign || angular.fourth;
+                if (fourthSign && ANGULAR_HOUSE_READINGS.fourth && ANGULAR_HOUSE_READINGS.fourth[fourthSign]) {
+                    const houseData = ANGULAR_HOUSE_READINGS.fourth[fourthSign];
                     angularSection.appendChild(createReadingCard(
                         houseData.title,
-                        `${angular.fourth} IC - The Roots`,
+                        `${fourthSign} IC - The Roots`,
                         houseData.keywords,
                         houseData.reading.replace(/this child/gi, userData.name),
                         houseData.strengths || [],
@@ -4417,11 +4444,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 }
                 
                 // 7th House - Descendant/Partnerships
-                if (angular.seventh && ANGULAR_HOUSE_READINGS.seventh && ANGULAR_HOUSE_READINGS.seventh[angular.seventh]) {
-                    const houseData = ANGULAR_HOUSE_READINGS.seventh[angular.seventh];
+                const seventhSign = angular.seventh?.sign || angular.seventh;
+                if (seventhSign && ANGULAR_HOUSE_READINGS.seventh && ANGULAR_HOUSE_READINGS.seventh[seventhSign]) {
+                    const houseData = ANGULAR_HOUSE_READINGS.seventh[seventhSign];
                     angularSection.appendChild(createReadingCard(
                         houseData.title,
-                        `${angular.seventh} Descendant - The Partners`,
+                        `${seventhSign} Descendant - The Partners`,
                         houseData.keywords,
                         houseData.reading.replace(/this child/gi, userData.name),
                         houseData.strengths || [],
@@ -4430,11 +4458,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 }
                 
                 // 10th House - MC/Career
-                if (angular.tenth && ANGULAR_HOUSE_READINGS.tenth && ANGULAR_HOUSE_READINGS.tenth[angular.tenth]) {
-                    const houseData = ANGULAR_HOUSE_READINGS.tenth[angular.tenth];
+                const tenthSign = angular.tenth?.sign || angular.tenth;
+                if (tenthSign && ANGULAR_HOUSE_READINGS.tenth && ANGULAR_HOUSE_READINGS.tenth[tenthSign]) {
+                    const houseData = ANGULAR_HOUSE_READINGS.tenth[tenthSign];
                     angularSection.appendChild(createReadingCard(
                         houseData.title,
-                        `${angular.tenth} Midheaven - The Legacy`,
+                        `${tenthSign} Midheaven - The Legacy`,
                         houseData.keywords,
                         houseData.reading.replace(/this child/gi, userData.name),
                         houseData.strengths || [],
@@ -5771,13 +5800,27 @@ This isn't a flaw - it's their power source. The tension between these two drive
             localStorage.removeItem(SCROLL_SECTION_KEY);
             localStorage.removeItem('sb-read-sections');
             
-            document.getElementById('resultsSection').classList.remove('active');
-            document.getElementById('inputSection').style.display = 'block';
+            // Hide results and show input form
+            const resultsSection = document.getElementById('resultsSection');
+            const inputSection = document.getElementById('inputSection');
+            
+            if (resultsSection) {
+                resultsSection.classList.remove('active');
+                resultsSection.style.display = 'none';
+            }
+            if (inputSection) {
+                inputSection.style.display = 'block';
+            }
+            
             document.getElementById('readingForm').reset();
             
-            // Clear the reading container
-            const container = document.getElementById('readingData');
+            // Clear the readings container (correct ID)
+            const container = document.getElementById('readingsContainer');
             if (container) container.innerHTML = '';
+            
+            // Clear closing section too
+            const closing = document.getElementById('readingClosing');
+            if (closing) closing.innerHTML = '';
             
             window.scrollTo(0, 0);
         }
@@ -6112,6 +6155,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
         // ============================================
         
         document.addEventListener('DOMContentLoaded', function() {
+            // Always scroll to top on page load/refresh
+            window.scrollTo(0, 0);
+            
             applyBrandConfig();
             initColorMode();
             // Restore saved gender theme or default to girl
