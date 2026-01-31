@@ -3951,6 +3951,8 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const monthReduced = reduceToSingleDigit(birthMonth);
             const yearReduced = reduceToSingleDigit(birthYear);
             const lifePathSum = dayReduced + monthReduced + yearReduced;
+            // Letter to number mapping - defined before template that uses it
+            const letterChart = 'A=1, B=2, C=3, D=4, E=5, F=6, G=7, H=8, I=9, J=1, K=2, L=3, M=4, N=5, O=6, P=7, Q=8, R=9, S=1, T=2, U=3, V=4, W=5, X=6, Y=7, Z=8';
             const numExplainerContent = `
                 <p class="blueprint-intro">Numerology uses ancient mathematical principles to reveal the energetic blueprint encoded in your birth date and name. Here's exactly how ${userData.name}'s core numbers are calculated:</p>
                 
@@ -4006,9 +4008,6 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 
                 <p class="blueprint-footer">Each number carries unique vibrational energy that influences different aspects of your life. Scroll down to discover what each of ${userData.name}'s numbers reveals.</p>
             `;
-            
-            // Letter to number mapping
-            const letterChart = 'A=1, B=2, C=3, D=4, E=5, F=6, G=7, H=8, I=9, J=1, K=2, L=3, M=4, N=5, O=6, P=7, Q=8, R=9, S=1, T=2, U=3, V=4, W=5, X=6, Y=7, Z=8';
             
             const numExplainer = createCustomReadingCard(
                 'How Your Numbers Are Calculated',
