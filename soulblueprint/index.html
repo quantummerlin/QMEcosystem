@@ -85,6 +85,171 @@
             --card-border: #B0E0E6;
         }
         
+        /* My Readings Dashboard */
+        .my-readings-section {
+            margin: 20px 0 30px;
+            padding: 0 20px;
+        }
+        
+        .my-readings-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .my-readings-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .my-readings-header .reading-count {
+            background: var(--primary);
+            color: white;
+            font-size: 0.85rem;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-family: var(--font-body);
+        }
+        
+        .readings-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .saved-reading-card {
+            background: var(--card-bg);
+            border: 2px solid var(--card-border);
+            border-radius: 16px;
+            padding: 16px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .saved-reading-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .saved-reading-card.active {
+            border-color: var(--primary);
+            background: linear-gradient(135deg, rgba(255,105,180,0.05) 0%, rgba(255,182,193,0.05) 100%);
+        }
+        
+        .saved-reading-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .saved-reading-info {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .saved-reading-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .saved-reading-meta {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 2px;
+        }
+        
+        .saved-reading-progress {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+        
+        .saved-reading-progress-bar {
+            width: 60px;
+            height: 6px;
+            background: var(--card-border);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .saved-reading-progress-fill {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+        
+        .saved-reading-progress-text {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            min-width: 45px;
+        }
+        
+        .saved-reading-delete {
+            width: 32px;
+            height: 32px;
+            border: none;
+            background: rgba(255,0,0,0.1);
+            color: #ff4444;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+        
+        .saved-reading-delete:hover {
+            background: #ff4444;
+            color: white;
+        }
+        
+        .new-reading-prompt {
+            text-align: center;
+            padding: 20px;
+            color: var(--text);
+            opacity: 0.7;
+        }
+        
+        .section-reading-count {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            background: rgba(255,105,180,0.15);
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin-left: 10px;
+        }
+        
+        .dark-theme .section-reading-count,
+        body.color-mode-pink .section-reading-count,
+        body.color-mode-blue .section-reading-count {
+            background: rgba(255,255,255,0.15);
+            color: inherit;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -2955,6 +3120,16 @@
         </header>
         
         <div class="container">
+            <!-- My Readings Dashboard -->
+            <div class="my-readings-section" id="myReadingsSection" style="display: none;">
+                <div class="my-readings-header">
+                    <h2>📚 My Readings <span class="reading-count" id="readingCount">0</span></h2>
+                </div>
+                <div class="readings-list" id="readingsList">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+            
             <form class="input-form" id="readingForm">
                 <div class="form-group">
                     <label id="nameLabel">Name</label>
@@ -3133,20 +3308,210 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=30"></script>
-    <script src="calculations.js?v=30"></script>
-    <script src="readings.js?v=30"></script>
-    <script src="house-readings.js?v=30"></script>
-    <script src="aspect-readings.js?v=30"></script>
-    <script src="advanced-readings.js?v=30"></script>
-    <script src="deep-readings.js?v=30"></script>
-    <script src="deep-planet-readings.js?v=30"></script>
-    <script src="deep-planet-readings-outer.js?v=30"></script>
-    <script src="readings-extended.js?v=30"></script>
-    <script src="love-blueprint.js?v=30"></script>
-    <script src="tone-variations.js?v=30"></script>
-    <script src="save-share.js?v=30"></script>
+    <script src="config.js?v=31"></script>
+    <script src="calculations.js?v=31"></script>
+    <script src="readings.js?v=31"></script>
+    <script src="house-readings.js?v=31"></script>
+    <script src="aspect-readings.js?v=31"></script>
+    <script src="advanced-readings.js?v=31"></script>
+    <script src="deep-readings.js?v=31"></script>
+    <script src="deep-planet-readings.js?v=31"></script>
+    <script src="deep-planet-readings-outer.js?v=31"></script>
+    <script src="readings-extended.js?v=31"></script>
+    <script src="love-blueprint.js?v=31"></script>
+    <script src="tone-variations.js?v=31"></script>
+    <script src="save-share.js?v=31"></script>
     <script>
+        // ============================================
+        // MULTI-READING STORAGE SYSTEM
+        // ============================================
+        
+        const READINGS_STORAGE_KEY = 'sb-saved-readings';
+        let currentReadingId = null;
+        
+        // Generate unique reading ID
+        function generateReadingId(userData) {
+            const namePart = (userData.name || 'reading').toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 20);
+            const datePart = userData.birthDate.replace(/-/g, '');
+            const timePart = Date.now().toString(36);
+            return `${namePart}-${datePart}-${timePart}`;
+        }
+        
+        // Get all saved readings
+        function getAllReadings() {
+            try {
+                return JSON.parse(localStorage.getItem(READINGS_STORAGE_KEY)) || {};
+            } catch (e) {
+                return {};
+            }
+        }
+        
+        // Save a reading
+        function saveReading(readingId, userData, readings) {
+            const allReadings = getAllReadings();
+            allReadings[readingId] = {
+                id: readingId,
+                userData: userData,
+                readings: readings,
+                createdAt: Date.now(),
+                updatedAt: Date.now(),
+                progress: {},
+                sectionCollapseState: {},
+                scrollPosition: 0
+            };
+            localStorage.setItem(READINGS_STORAGE_KEY, JSON.stringify(allReadings));
+            return readingId;
+        }
+        
+        // Get a specific reading
+        function getReading(readingId) {
+            const allReadings = getAllReadings();
+            return allReadings[readingId] || null;
+        }
+        
+        // Update reading progress
+        function updateReadingProgress(readingId, progressData) {
+            const allReadings = getAllReadings();
+            if (allReadings[readingId]) {
+                allReadings[readingId].progress = progressData;
+                allReadings[readingId].updatedAt = Date.now();
+                localStorage.setItem(READINGS_STORAGE_KEY, JSON.stringify(allReadings));
+            }
+        }
+        
+        // Update reading collapse state
+        function updateReadingCollapseState(readingId, collapseState) {
+            const allReadings = getAllReadings();
+            if (allReadings[readingId]) {
+                allReadings[readingId].sectionCollapseState = collapseState;
+                localStorage.setItem(READINGS_STORAGE_KEY, JSON.stringify(allReadings));
+            }
+        }
+        
+        // Update reading scroll position
+        function updateReadingScrollPosition(readingId, scrollY) {
+            const allReadings = getAllReadings();
+            if (allReadings[readingId]) {
+                allReadings[readingId].scrollPosition = scrollY;
+                localStorage.setItem(READINGS_STORAGE_KEY, JSON.stringify(allReadings));
+            }
+        }
+        
+        // Delete a reading
+        function deleteReading(readingId) {
+            const allReadings = getAllReadings();
+            delete allReadings[readingId];
+            localStorage.setItem(READINGS_STORAGE_KEY, JSON.stringify(allReadings));
+            // Clear current if it was the deleted one
+            if (currentReadingId === readingId) {
+                currentReadingId = null;
+            }
+            renderDashboard();
+        }
+        
+        // Get reading progress count
+        function getReadingProgressCount(readingId) {
+            const reading = getReading(readingId);
+            if (!reading || !reading.progress) return { read: 0, total: 0 };
+            const readCount = Object.keys(reading.progress).filter(k => reading.progress[k]).length;
+            // Estimate total based on typical reading (around 65 sections)
+            return { read: readCount, total: 65 };
+        }
+        
+        // Render the dashboard
+        function renderDashboard() {
+            const allReadings = getAllReadings();
+            const readingsList = document.getElementById('readingsList');
+            const readingCount = document.getElementById('readingCount');
+            const myReadingsSection = document.getElementById('myReadingsSection');
+            
+            const readingsArray = Object.values(allReadings).sort((a, b) => b.updatedAt - a.updatedAt);
+            
+            readingCount.textContent = readingsArray.length;
+            
+            if (readingsArray.length === 0) {
+                myReadingsSection.style.display = 'none';
+                return;
+            }
+            
+            myReadingsSection.style.display = 'block';
+            
+            readingsList.innerHTML = readingsArray.map(reading => {
+                const progress = getReadingProgressCount(reading.id);
+                const progressPercent = progress.total > 0 ? Math.round((progress.read / progress.total) * 100) : 0;
+                const birthDate = new Date(reading.userData.birthDate);
+                const formattedDate = birthDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                const initial = (reading.userData.name || 'R').charAt(0).toUpperCase();
+                const isActive = currentReadingId === reading.id ? 'active' : '';
+                
+                return `
+                    <div class="saved-reading-card ${isActive}" onclick="loadSavedReading('${reading.id}')" data-reading-id="${reading.id}">
+                        <div class="saved-reading-avatar">${initial}</div>
+                        <div class="saved-reading-info">
+                            <div class="saved-reading-name">${reading.userData.name || 'Unnamed Reading'}</div>
+                            <div class="saved-reading-meta">Born ${formattedDate}</div>
+                        </div>
+                        <div class="saved-reading-progress">
+                            <div class="saved-reading-progress-bar">
+                                <div class="saved-reading-progress-fill" style="width: ${progressPercent}%"></div>
+                            </div>
+                            <span class="saved-reading-progress-text">${progressPercent}%</span>
+                        </div>
+                        <button class="saved-reading-delete" onclick="event.stopPropagation(); confirmDeleteReading('${reading.id}', '${(reading.userData.name || 'this reading').replace(/'/g, "\\'")}')" title="Delete reading">🗑️</button>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Confirm delete reading
+        function confirmDeleteReading(readingId, name) {
+            if (confirm(`Delete reading for "${name}"? This cannot be undone.`)) {
+                deleteReading(readingId);
+            }
+        }
+        
+        // Load a saved reading
+        function loadSavedReading(readingId) {
+            const reading = getReading(readingId);
+            if (!reading) {
+                alert('Reading not found');
+                return;
+            }
+            
+            currentReadingId = readingId;
+            
+            // Store for legacy compatibility
+            window.lastUserData = reading.userData;
+            localStorage.setItem('lastReading', JSON.stringify(reading.userData));
+            
+            // Display the reading
+            displayResults(reading.userData, reading.readings);
+            
+            // Restore progress after display
+            setTimeout(() => {
+                // Restore read sections from the reading's progress
+                if (reading.progress) {
+                    readSectionIds = Object.keys(reading.progress).filter(k => reading.progress[k]);
+                    localStorage.setItem('sb-read-sections', JSON.stringify(readSectionIds));
+                }
+                
+                // Restore collapse states
+                if (reading.sectionCollapseState) {
+                    localStorage.setItem(SECTION_COLLAPSE_KEY, JSON.stringify(reading.sectionCollapseState));
+                    updateSectionArrows();
+                }
+                
+                // Update progress display
+                updateProgressDisplay();
+                updateReadButtons();
+                
+                // Restore scroll position
+                if (reading.scrollPosition > 0) {
+                    window.scrollTo(0, reading.scrollPosition);
+                }
+            }, 100);
+        }
+        
         // ============================================
         // GENDER THEME SWITCH
         // ============================================
@@ -3350,12 +3715,28 @@
             // Hide loading
             overlay.classList.remove('active');
             
-            // Store userData for gift functionality
+            // Generate reading ID and save to multi-reading storage
+            const readingId = generateReadingId(userData);
+            currentReadingId = readingId;
+            saveReading(readingId, userData, readings);
+            
+            // Store userData for gift functionality (legacy)
             window.lastUserData = userData;
             localStorage.setItem('lastReading', JSON.stringify(userData));
             
+            // Clear legacy progress for new reading
+            localStorage.removeItem(READ_PROGRESS_KEY);
+            localStorage.removeItem(SECTION_COLLAPSE_KEY);
+            localStorage.removeItem(SCROLL_POSITION_KEY);
+            localStorage.removeItem(SCROLL_SECTION_KEY);
+            localStorage.removeItem('sb-read-sections');
+            readSectionIds = [];
+            
             // Display results
             displayResults(userData, readings);
+            
+            // Update dashboard
+            renderDashboard();
         }
         
         // ============================================
@@ -4992,6 +5373,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
             // Remove any ad slots that may have been injected
             removeAdSlots();
             
+            // Update section header counts
+            updateSectionCounts();
+            
             // Update progress display after all sections are built
             setTimeout(() => {
                 updateProgressDisplay();
@@ -4999,17 +5383,37 @@ This isn't a flaw - it's their power source. The tension between these two drive
             }, 100);
         }
         
-        function createSection(id, sectionConfig) {
+        // Update section headers with reading counts
+        function updateSectionCounts() {
+            document.querySelectorAll('.section-content').forEach(section => {
+                const cards = section.querySelectorAll('.reading-card');
+                const count = cards.length;
+                if (count > 0) {
+                    const h2 = section.querySelector('.section-header h2');
+                    if (h2 && !h2.querySelector('.section-reading-count')) {
+                        const countSpan = document.createElement('span');
+                        countSpan.className = 'section-reading-count';
+                        countSpan.textContent = `${count} reading${count !== 1 ? 's' : ''}`;
+                        h2.appendChild(countSpan);
+                    }
+                }
+            });
+        }
+        
+        function createSection(id, sectionConfig, readingCount = 0) {
             const section = document.createElement('div');
             section.className = 'section-content collapsed';
             section.id = `section-${id}`;
+            section.setAttribute('data-section-id', id);
+            
+            const countHtml = readingCount > 0 ? `<span class="section-reading-count">${readingCount} readings</span>` : '';
             
             section.innerHTML = `
                 <div class="section-header" onclick="toggleSection('${id}')">
                     <div class="section-header-content">
                         <span class="icon">${sectionConfig.icon}</span>
                         <div class="section-header-text">
-                            <h2>${sectionConfig.name}</h2>
+                            <h2>${sectionConfig.name}${countHtml}</h2>
                             <p class="description">${sectionConfig.description}</p>
                         </div>
                     </div>
@@ -5020,17 +5424,20 @@ This isn't a flaw - it's their power source. The tension between these two drive
             return section;
         }
 
-        function createCustomSection(id, icon, name, description) {
+        function createCustomSection(id, icon, name, description, readingCount = 0) {
             const section = document.createElement('div');
             section.className = 'section-content collapsed';
             section.id = `section-${id}`;
+            section.setAttribute('data-section-id', id);
+            
+            const countHtml = readingCount > 0 ? `<span class="section-reading-count">${readingCount} readings</span>` : '';
 
             section.innerHTML = `
                 <div class="section-header" onclick="toggleSection('${id}')">
                     <div class="section-header-content">
                         <span class="icon">${icon}</span>
                         <div class="section-header-text">
-                            <h2>${name}</h2>
+                            <h2>${name}${countHtml}</h2>
                             <p class="description">${description}</p>
                         </div>
                     </div>
@@ -5511,6 +5918,10 @@ This isn't a flaw - it's their power source. The tension between these two drive
 
         function saveReadProgress(progress) {
             localStorage.setItem(READ_PROGRESS_KEY, JSON.stringify(progress));
+            // Also save to current reading if exists
+            if (currentReadingId) {
+                updateReadingProgress(currentReadingId, progress);
+            }
         }
 
         function updateReadButtons() {
@@ -5548,6 +5959,10 @@ This isn't a flaw - it's their power source. The tension between these two drive
 
         function saveSectionCollapseState(state) {
             localStorage.setItem(SECTION_COLLAPSE_KEY, JSON.stringify(state));
+            // Also save to current reading if exists
+            if (currentReadingId) {
+                updateReadingCollapseState(currentReadingId, state);
+            }
         }
 
         function toggleSection(id) {
@@ -5620,6 +6035,11 @@ This isn't a flaw - it's their power source. The tension between these two drive
 
             const y = window.scrollY || window.pageYOffset || 0;
             localStorage.setItem(SCROLL_POSITION_KEY, String(y));
+            
+            // Also save to current reading if exists
+            if (currentReadingId) {
+                updateReadingScrollPosition(currentReadingId, y);
+            }
 
             let nearestId = null;
             let smallestDistance = Infinity;
@@ -5983,13 +6403,17 @@ This isn't a flaw - it's their power source. The tension between these two drive
         // ============================================
         
         function startNewReading() {
-            // Clear saved reading so it doesn't auto-restore
+            // Clear current reading ID (but keep saved readings)
+            currentReadingId = null;
+            
+            // Clear legacy storage for new reading
             localStorage.removeItem('lastReading');
             localStorage.removeItem(READ_PROGRESS_KEY);
             localStorage.removeItem(SECTION_COLLAPSE_KEY);
             localStorage.removeItem(SCROLL_POSITION_KEY);
             localStorage.removeItem(SCROLL_SECTION_KEY);
             localStorage.removeItem('sb-read-sections');
+            readSectionIds = [];
             
             // Hide results and show input form
             const resultsSection = document.getElementById('resultsSection');
@@ -6012,6 +6436,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
             // Clear closing section too
             const closing = document.getElementById('readingClosing');
             if (closing) closing.innerHTML = '';
+            
+            // Re-render dashboard
+            renderDashboard();
             
             window.scrollTo(0, 0);
         }
@@ -6525,20 +6952,34 @@ This isn't a flaw - it's their power source. The tension between these two drive
             applyBrandConfig();
             initColorMode();
             removeAdSlots();
+            
             // Restore saved gender theme or default to girl
             const savedGender = localStorage.getItem('sb-gender') || 'girl';
             setGender(savedGender);
+            
+            // Render the dashboard (shows saved readings)
+            renderDashboard();
 
-            // Auto-restore last reading and scroll position
-            const savedReadingRaw = localStorage.getItem('lastReading');
-            if (savedReadingRaw) {
-                try {
-                    const savedReading = JSON.parse(savedReadingRaw);
-                    if (savedReading && savedReading.name && savedReading.birthDate) {
-                        generateReading(savedReading);
+            // Check for saved readings - prioritize multi-reading system
+            const allReadings = getAllReadings();
+            const readingsArray = Object.values(allReadings).sort((a, b) => b.updatedAt - a.updatedAt);
+            
+            // If we have saved readings in the new system, load the most recent
+            if (readingsArray.length > 0) {
+                const mostRecent = readingsArray[0];
+                loadSavedReading(mostRecent.id);
+            } else {
+                // Fallback: Auto-restore last reading from legacy storage
+                const savedReadingRaw = localStorage.getItem('lastReading');
+                if (savedReadingRaw) {
+                    try {
+                        const savedReading = JSON.parse(savedReadingRaw);
+                        if (savedReading && savedReading.name && savedReading.birthDate) {
+                            generateReading(savedReading);
+                        }
+                    } catch (e) {
+                        // Ignore invalid saved data
                     }
-                } catch (e) {
-                    // Ignore invalid saved data
                 }
             }
             
