@@ -837,6 +837,292 @@ const DEEP_PERSONALITY_NUMBER_READINGS = {
 };
 
 // ============================================
+// DEEP BIRTHDAY NUMBER READINGS
+// ============================================
+
+const DEEP_BIRTHDAY_NUMBER_READINGS = {
+    1: {
+        title: "Born on the 1st - The Natural Leader",
+        gift: "You entered this world with an innate leadership quality. The 1st vibration gives you independence, originality, and the courage to stand alone when necessary.",
+        talent: "Your special gift is pioneering—you see opportunities others miss and have the courage to act first. You're naturally innovative and don't need consensus to move forward.",
+        expression: "You express this gift through initiative and self-reliance. You thrive when you can make independent decisions and forge your own path.",
+        challenge: "Learning to balance your strong independence with collaboration. You may struggle with asking for help or working in overly structured environments.",
+        activation: "This gift activates when you trust your own vision and take the lead on projects that matter to you. Start things—you're here to be first.",
+        affirmation: "I was born to lead. My independent spirit opens new paths."
+    },
+    2: {
+        title: "Born on the 2nd - The Natural Peacemaker",
+        gift: "You entered this world with exceptional sensitivity and diplomatic skills. The 2nd vibration gives you the ability to see both sides and create harmony.",
+        talent: "Your special gift is mediation—you can bridge differences and help people understand each other. Your intuition about others is remarkably accurate.",
+        expression: "You express this gift through cooperation and attention to emotional nuance. You thrive in partnerships and collaborative environments.",
+        challenge: "Learning to maintain your identity while being deeply connected to others. You may struggle with codependency or being overly affected by discord.",
+        activation: "This gift activates when you use your sensitivity to create peace without losing yourself. Partner, don't disappear.",
+        affirmation: "I was born to connect. My sensitivity builds bridges between hearts."
+    },
+    3: {
+        title: "Born on the 3rd - The Natural Communicator",
+        gift: "You entered this world with creative expression bubbling inside you. The 3rd vibration gives you natural charisma and the ability to inspire through words and art.",
+        talent: "Your special gift is communication—whether through speaking, writing, art, or performance. You make life more beautiful and interesting wherever you go.",
+        expression: "You express this gift through creativity and social interaction. You thrive when you can create, perform, or share your unique perspective.",
+        challenge: "Learning to channel your scattered energy into focused creation. You may struggle with completing projects or taking yourself seriously.",
+        activation: "This gift activates when you commit to your creative voice and share it generously. The world needs your joy.",
+        affirmation: "I was born to create and inspire. My expression brings light to others."
+    },
+    4: {
+        title: "Born on the 4th - The Natural Builder",
+        gift: "You entered this world with practical wisdom and the ability to create lasting structures. The 4th vibration gives you discipline, reliability, and organizational genius.",
+        talent: "Your special gift is building—turning visions into concrete reality through patient, systematic work. You create foundations others can depend on.",
+        expression: "You express this gift through practical application and step-by-step progress. You thrive in roles requiring organization and follow-through.",
+        challenge: "Learning flexibility within your love of structure. You may struggle with change or seeing the forest for the trees.",
+        activation: "This gift activates when you apply your practical skills to meaningful projects. Build something that lasts.",
+        affirmation: "I was born to build. My steady work creates real and lasting value."
+    },
+    5: {
+        title: "Born on the 5th - The Natural Explorer",
+        gift: "You entered this world craving freedom and experience. The 5th vibration gives you adaptability, charisma, and the ability to thrive in change.",
+        talent: "Your special gift is versatility—you can adapt to any situation and help others embrace change gracefully. Your enthusiasm for life is contagious.",
+        expression: "You express this gift through variety and movement. You thrive when life offers new experiences, travel, and freedom to explore.",
+        challenge: "Learning to commit deeply without feeling trapped. You may struggle with routine or following through on long-term projects.",
+        activation: "This gift activates when you channel your love of freedom into purposeful exploration. Adventure with intention.",
+        affirmation: "I was born for freedom and experience. My adaptability is my strength."
+    },
+    6: {
+        title: "Born on the 6th - The Natural Nurturer",
+        gift: "You entered this world with a deep capacity for love and responsibility. The 6th vibration gives you warmth, aesthetic sense, and the desire to care for others.",
+        talent: "Your special gift is nurturing—creating beauty and harmony while ensuring everyone is cared for. You make any space feel like home.",
+        expression: "You express this gift through service and beautification. You thrive when you can care for others and create harmonious environments.",
+        challenge: "Learning to receive as well as give. You may struggle with martyrdom or controlling through caretaking.",
+        activation: "This gift activates when you nurture without depleting yourself. Love yourself as you love others.",
+        affirmation: "I was born to love and nurture. My care heals and my presence creates home."
+    },
+    7: {
+        title: "Born on the 7th - The Natural Seeker",
+        gift: "You entered this world with a philosophical mind and spiritual depth. The 7th vibration gives you analytical ability and the need to understand what's beneath the surface.",
+        talent: "Your special gift is wisdom—you can penetrate mysteries and understand what others overlook. Your depth is a gift to shallow times.",
+        expression: "You express this gift through research, contemplation, and spiritual practice. You thrive when you have time to think deeply and be alone.",
+        challenge: "Learning to share your insights without isolating. You may struggle with feeling understood or getting too lost in thought.",
+        activation: "This gift activates when you balance solitude with connection. Wisdom is meant to be shared.",
+        affirmation: "I was born to seek truth. My depth reveals what others cannot see."
+    },
+    8: {
+        title: "Born on the 8th - The Natural Achiever",
+        gift: "You entered this world with executive ability and material mastery. The 8th vibration gives you power, ambition, and the ability to manifest in the physical world.",
+        talent: "Your special gift is manifestation—turning vision into reality at scale. You understand money, power, and how to make things happen.",
+        expression: "You express this gift through leadership and achievement. You thrive in positions of authority and when building substantial success.",
+        challenge: "Learning that power is for service, not just accumulation. You may struggle with workaholism or measuring worth by achievement.",
+        activation: "This gift activates when you use your power wisely and generously. Build empires that serve.",
+        affirmation: "I was born for abundance and power. My success serves something greater."
+    },
+    9: {
+        title: "Born on the 9th - The Natural Humanitarian",
+        gift: "You entered this world with wisdom and universal compassion. The 9th vibration gives you the ability to see the bigger picture and serve humanity.",
+        talent: "Your special gift is completion and release—you help others finish cycles and move forward. Your compassion knows no boundaries.",
+        expression: "You express this gift through service and artistic expression. You thrive when working for causes larger than yourself.",
+        challenge: "Learning healthy detachment without coldness. You may struggle with letting go or becoming everyone's savior.",
+        activation: "This gift activates when you serve without martyrdom. Your love includes yourself.",
+        affirmation: "I was born to serve humanity. My compassion heals the world."
+    },
+    10: {
+        title: "Born on the 10th - The Independent Innovator",
+        gift: "You entered this world with double leadership energy (1+0=1). You have powerful independence combined with the potential of new beginnings.",
+        talent: "Your special gift is starting fresh and leading with renewed vision. You can reinvent yourself and help others do the same.",
+        expression: "You express this gift through bold initiatives and original thinking. You're not just a leader—you're a pioneer of new paradigms.",
+        challenge: "Learning that your independence doesn't mean loneliness. Even revolutionaries need allies.",
+        activation: "This gift activates when you lead with both courage and wisdom. Pioneer with purpose.",
+        affirmation: "I was born to innovate and lead. My fresh vision creates new possibilities."
+    },
+    11: {
+        title: "Born on the 11th - The Spiritual Messenger",
+        gift: "You entered this world with Master Number 11—a double dose of intuition and inspiration. You're here to illuminate and inspire.",
+        talent: "Your special gift is channeling inspiration from higher sources. You receive visions and insights that can awaken others.",
+        expression: "You express this gift through teaching, healing, or creative work that uplifts. You're a natural spiritual messenger.",
+        challenge: "Learning to ground your visions practically. You may struggle with nervous energy or feeling too sensitive for this world.",
+        activation: "This gift activates when you trust your intuition completely and share your light without fear.",
+        affirmation: "I was born to inspire. My light illuminates paths for others."
+    },
+    12: {
+        title: "Born on the 12th - The Creative Expresser",
+        gift: "You entered this world with the combined gifts of independence (1), cooperation (2), and creativity (3). You're a bridge between vision and expression.",
+        talent: "Your special gift is creative communication—you can take innovative ideas and express them in ways that connect with people emotionally.",
+        expression: "You express this gift through art, writing, speaking, or any medium that combines originality with emotional resonance.",
+        challenge: "Learning to focus your diverse talents. You may struggle with scattered energy or not taking your gifts seriously enough.",
+        activation: "This gift activates when you commit to a creative path and develop your unique voice.",
+        affirmation: "I was born to create and communicate. My voice carries light and truth."
+    },
+    13: {
+        title: "Born on the 13th - The Transformative Builder",
+        gift: "You entered this world with the power of transformation (1+3=4). You rebuild what's broken and create new structures from ruins.",
+        talent: "Your special gift is practical transformation—you can take what isn't working and systematically rebuild it into something solid.",
+        expression: "You express this gift through hard work, perseverance, and the willingness to do what others won't. You're a phoenix in human form.",
+        challenge: "Learning that transformation doesn't require suffering. Sometimes the path can be easier than you make it.",
+        activation: "This gift activates when you apply your incredible work ethic to meaningful transformation, not just endless hustle.",
+        affirmation: "I was born to transform and rebuild. My persistence creates lasting change."
+    },
+    14: {
+        title: "Born on the 14th - The Adventurous Creator",
+        gift: "You entered this world with creative freedom (1+4=5). You need both stability and change, structure and adventure.",
+        talent: "Your special gift is constructive freedom—you can build systems that allow for flexibility and create structures that enable adventure.",
+        expression: "You express this gift through varied pursuits that have practical application. You're the organized adventurer, the methodical explorer.",
+        challenge: "Learning to balance your need for security with your craving for change. You may struggle with feeling torn between stability and freedom.",
+        activation: "This gift activates when you create a life with reliable foundations that support constant growth and change.",
+        affirmation: "I was born for structured adventure. I build the life that sets me free."
+    },
+    15: {
+        title: "Born on the 15th - The Loving Teacher",
+        gift: "You entered this world with nurturing creativity (1+5=6). You teach through love and heal through beauty and expression.",
+        talent: "Your special gift is loving communication—you can express care in creative ways and help others feel seen and valued through your words and art.",
+        expression: "You express this gift through teaching, counseling, or any creative work that serves others' wellbeing.",
+        challenge: "Learning to set boundaries in your giving. You may struggle with over-responsibility or creative people-pleasing.",
+        activation: "This gift activates when you combine your creativity with service in ways that don't deplete you.",
+        affirmation: "I was born to nurture through creativity. My loving expression heals hearts."
+    },
+    16: {
+        title: "Born on the 16th - The Spiritual Analyst",
+        gift: "You entered this world with deep intuitive wisdom (1+6=7). You combine spiritual insight with analytical precision.",
+        talent: "Your special gift is spiritual understanding—you can analyze both physical reality and metaphysical truth with equal skill.",
+        expression: "You express this gift through research, writing, or spiritual teaching that bridges the mystical and the practical.",
+        challenge: "Learning to balance solitude with connection. You may struggle with perfectionism or overthinking emotional matters.",
+        activation: "This gift activates when you trust both your mind and your intuition equally. Logic and mysticism are one.",
+        affirmation: "I was born to understand deeply. My wisdom bridges heaven and earth."
+    },
+    17: {
+        title: "Born on the 17th - The Manifesting Mystic",
+        gift: "You entered this world with material mastery combined with spiritual wisdom (1+7=8). You can manifest spiritual vision into physical form.",
+        talent: "Your special gift is grounded mysticism—you understand both the spiritual laws and how to apply them practically for material success.",
+        expression: "You express this gift through building spiritual businesses, creating abundance with integrity, or leading with both power and wisdom.",
+        challenge: "Learning to balance material ambition with spiritual values. You may struggle with choosing between money and meaning.",
+        activation: "This gift activates when you realize that true power serves spirit and true spirituality isn't afraid of material success.",
+        affirmation: "I was born to manifest with wisdom. My power serves the highest good."
+    },
+    18: {
+        title: "Born on the 18th - The Compassionate Leader",
+        gift: "You entered this world with humanitarian leadership (1+8=9). You lead through service and achieve through compassion.",
+        talent: "Your special gift is influential compassion—you can create change at scale while keeping your heart open to all beings.",
+        expression: "You express this gift through leadership roles in service organizations, humanitarian work, or any position where power meets compassion.",
+        challenge: "Learning that you can't save everyone. You may struggle with taking on the world's pain or burnout from over-giving.",
+        activation: "This gift activates when you use your considerable power and influence for the highest good of all.",
+        affirmation: "I was born to lead with love. My power serves humanity's evolution."
+    },
+    19: {
+        title: "Born on the 19th - The Complete Innovator",
+        gift: "You entered this world with powerful independence doubled (1+9=10=1). You're here to start completely new paradigms.",
+        talent: "Your special gift is radical originality—you don't just lead, you completely reinvent what leadership means. You end old eras and begin new ones.",
+        expression: "You express this gift through revolutionary work that challenges existing structures and creates entirely new ways of being.",
+        challenge: "Learning that even revolutionaries need support. You may struggle with extreme independence or feeling like no one understands.",
+        activation: "This gift activates when you embrace your role as a paradigm-shifter and find others who share your vision.",
+        affirmation: "I was born to revolutionize. My vision creates new worlds."
+    },
+    20: {
+        title: "Born on the 20th - The Intuitive Partner",
+        gift: "You entered this world with doubled sensitivity (2+0=2). You're exquisitely attuned to emotional and spiritual currents.",
+        talent: "Your special gift is profound empathy—you feel what others feel and can create deep soul connections. Your intuition is remarkably accurate.",
+        expression: "You express this gift through counseling, healing work, or any role where emotional intelligence and partnership are central.",
+        challenge: "Learning to distinguish between your feelings and others'. You may struggle with emotional overwhelm or losing your identity in relationships.",
+        activation: "This gift activates when you honor your sensitivity as sacred and use it to heal without absorbing others' pain.",
+        affirmation: "I was born to feel deeply and connect truly. My sensitivity is my superpower."
+    },
+    21: {
+        title: "Born on the 21st - The Joyful Creator",
+        gift: "You entered this world with optimistic creativity (2+1=3). You combine emotional intelligence with expressive talent.",
+        talent: "Your special gift is emotional artistry—you can create work that touches hearts and express feelings in ways that heal and inspire.",
+        expression: "You express this gift through any creative medium that allows emotional expression—music, art, writing, performance, or design.",
+        challenge: "Learning to channel your emotional sensitivity into focused creative work. You may struggle with scattered energy or emotional volatility.",
+        activation: "This gift activates when you use your creativity to process and share emotional truth, not just entertain.",
+        affirmation: "I was born to create from the heart. My art heals emotional wounds."
+    },
+    22: {
+        title: "Born on the 22nd - The Master Builder",
+        gift: "You entered this world with Master Number 22—the highest manifestation energy. You're here to build something that serves generations.",
+        talent: "Your special gift is visionary construction—you can see grand visions and have the practical ability to actually build them in the physical world.",
+        expression: "You express this gift through large-scale projects, institutions, or systems that have lasting impact and serve many people.",
+        challenge: "Learning to handle the pressure of your own potential without breaking. You may struggle with the weight of what you came to do.",
+        activation: "This gift activates when you accept your role as a master builder and commit to your legacy work.",
+        affirmation: "I was born to build for humanity. My work serves generations to come."
+    },
+    23: {
+        title: "Born on the 23rd - The Dynamic Communicator",
+        gift: "You entered this world with expressive freedom (2+3=5). You need to communicate freely and express yourself in diverse ways.",
+        talent: "Your special gift is versatile expression—you can adapt your communication style to any audience and make complex ideas accessible and engaging.",
+        expression: "You express this gift through teaching, speaking, writing, or media work that reaches diverse audiences with emotional intelligence.",
+        challenge: "Learning to commit to a message without needing to please everyone. You may struggle with saying what you really think.",
+        activation: "This gift activates when you use your communication gifts with authenticity, not just to entertain or placate.",
+        affirmation: "I was born to communicate truth with grace. My words create understanding."
+    },
+    24: {
+        title: "Born on the 24th - The Caring Organizer",
+        gift: "You entered this world with nurturing practicality (2+4=6). You care for others through creating systems and structures that support wellbeing.",
+        talent: "Your special gift is systematic care—you can organize family life, create sustainable support systems, and build beautiful, functional environments.",
+        expression: "You express this gift through home management, healthcare, education, or any field where caring meets practical organization.",
+        challenge: "Learning that perfection isn't required for love. You may struggle with control disguised as care or excessive worry.",
+        activation: "This gift activates when you build sustainable systems of care that don't require your constant presence.",
+        affirmation: "I was born to nurture with wisdom. My organized love creates lasting security."
+    },
+    25: {
+        title: "Born on the 25th - The Wise Adventurer",
+        gift: "You entered this world with seeking freedom (2+5=7). You need both deep understanding and diverse experience.",
+        talent: "Your special gift is philosophical exploration—you seek truth through experience and gain wisdom through adventure, not just books.",
+        expression: "You express this gift through travel, teaching, writing, or spiritual work that combines intellectual depth with real-world experience.",
+        challenge: "Learning to balance your need for solitude with your love of variety. You may struggle with restlessness or intellectual escapism.",
+        activation: "This gift activates when you pursue wisdom through both inner exploration and outer adventure.",
+        affirmation: "I was born to seek truth everywhere. My wisdom comes from living fully."
+    },
+    26: {
+        title: "Born on the 26th - The Powerful Nurturer",
+        gift: "You entered this world with ambitious caring (2+6=8). You want to care for others at scale and create security through achievement.",
+        talent: "Your special gift is influential nurturing—you can build systems, businesses, or organizations that care for many people effectively.",
+        expression: "You express this gift through leadership in healthcare, education, family business, or any enterprise that serves wellbeing.",
+        challenge: "Learning that caring doesn't mean controlling. You may struggle with providing for others while neglecting yourself.",
+        activation: "This gift activates when you build structures of care without losing your own needs in the process.",
+        affirmation: "I was born to nurture with power. My care creates lasting impact."
+    },
+    27: {
+        title: "Born on the 27th - The Compassionate Mystic",
+        gift: "You entered this world with humanitarian wisdom (2+7=9). You combine deep spiritual understanding with universal compassion.",
+        talent: "Your special gift is spiritual service—you can access profound wisdom and share it in ways that heal and awaken others.",
+        expression: "You express this gift through healing, spiritual teaching, counseling, or any work that serves humanity's evolution.",
+        challenge: "Learning to stay grounded while accessing higher wisdom. You may struggle with being too otherworldly or taking on others' karma.",
+        activation: "This gift activates when you anchor your spiritual gifts in service without losing yourself.",
+        affirmation: "I was born to heal with wisdom. My compassion knows no bounds."
+    },
+    28: {
+        title: "Born on the 28th - The Empowered Creator",
+        gift: "You entered this world with creative independence (2+8=10=1). You express yourself powerfully and create with authority.",
+        talent: "Your special gift is authoritative creativity—you can lead creative projects, build artistic enterprises, or express yourself with confidence and power.",
+        expression: "You express this gift through creative leadership, artistic direction, or building platforms that showcase creative talent.",
+        challenge: "Learning to collaborate without losing your vision. You may struggle with needing too much control over creative output.",
+        activation: "This gift activates when you own your creative power and use it to elevate others' voices too.",
+        affirmation: "I was born to create with power. My vision manifests boldly."
+    },
+    29: {
+        title: "Born on the 29th - The Master Intuitive",
+        gift: "You entered this world with Master Number 11 energy (2+9=11). You have powerful intuition combined with universal compassion.",
+        talent: "Your special gift is inspired service—you receive spiritual guidance and use it to serve humanity's highest good.",
+        expression: "You express this gift through spiritual teaching, healing, or creative work that awakens and inspires collective consciousness.",
+        challenge: "Learning to ground your powerful intuition. You may struggle with overwhelm from being so open or difficulty functioning in mundane reality.",
+        activation: "This gift activates when you trust your visions completely and share them courageously in service of all.",
+        affirmation: "I was born to channel light. My intuition serves humanity's awakening."
+    },
+    30: {
+        title: "Born on the 30th - The Expressive Communicator",
+        gift: "You entered this world with pure creative expression (3+0=3). Your creativity is your purpose and your joy.",
+        talent: "Your special gift is joyful creation—you naturally uplift others through your words, art, presence, or creative spirit.",
+        expression: "You express this gift through any creative medium that allows pure self-expression and brings joy to others.",
+        challenge: "Learning to take your gifts seriously. You may struggle with scattered focus or undervaluing your creative contributions.",
+        activation: "This gift activates when you commit fully to your creative path and share your joy without holding back.",
+        affirmation: "I was born to create joy. My expression is medicine for weary souls."
+    },
+    31: {
+        title: "Born on the 31st - The Practical Creator",
+        gift: "You entered this world with grounded creativity (3+1=4). You can manifest creative visions into tangible, lasting form.",
+        talent: "Your special gift is sustainable artistry—you combine creative talent with practical application, building creative work that endures.",
+        expression: "You express this gift through creative businesses, applied arts, or any field where imagination meets discipline and produces real results.",
+        challenge: "Learning to balance creative freedom with necessary structure. You may struggle with feeling torn between artistic flow and practical demands.",
+        activation: "This gift activates when you build systems that support your creativity rather than stifle it.",
+        affirmation: "I was born to create with discipline. My art is both beautiful and built to last."
+    }
+};
+
+// ============================================
 // Export for use
 // ============================================
 if (typeof module !== 'undefined' && module.exports) {
@@ -844,6 +1130,7 @@ if (typeof module !== 'undefined' && module.exports) {
         DEEP_LIFE_PATH_READINGS,
         DEEP_DESTINY_READINGS,
         DEEP_SOUL_URGE_READINGS,
-        DEEP_PERSONALITY_NUMBER_READINGS
+        DEEP_PERSONALITY_NUMBER_READINGS,
+        DEEP_BIRTHDAY_NUMBER_READINGS
     };
 }

@@ -4865,17 +4865,44 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 ));
             }
             
-            // Birthday Number
+            // Birthday Number - DEEP READING
             const birthday = readings.numerology.birthday;
-            const birthdayReading = BIRTHDAY_NUMBER_READINGS ? BIRTHDAY_NUMBER_READINGS[birthday] : null;
-            numbersSection.appendChild(createReadingCard(
-                config.readingTitles.birthday,
-                `${birthday} - ${birthdayReading ? birthdayReading.title : 'Birthday ' + birthday}`,
-                ['Special Talents', 'Natural Gifts', 'Birthday Energy'],
-                birthdayReading ? birthdayReading.reading : `Birthday Number ${birthday} represents special talents and gifts that ${userData.name} brought into this life.`,
-                [],
-                []
-            ));
+            const deepBirthday = (typeof DEEP_BIRTHDAY_NUMBER_READINGS !== 'undefined') ? DEEP_BIRTHDAY_NUMBER_READINGS[birthday] : null;
+            
+            if (deepBirthday) {
+                // Create comprehensive Birthday reading from deep content
+                const birthdayContent = `<strong>${deepBirthday.gift}</strong>
+
+<em>Your Special Talent:</em> ${deepBirthday.talent}
+
+<em>How You Express This Gift:</em> ${deepBirthday.expression}
+
+<em>Your Growth Challenge:</em> ${deepBirthday.challenge}
+
+<em>Activating This Gift:</em> ${deepBirthday.activation}
+
+<em>Affirmation:</em> "${deepBirthday.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+                
+                numbersSection.appendChild(createReadingCard(
+                    deepBirthday.title,
+                    `Birthday ${birthday}`,
+                    ['Special Gift', 'Natural Talent', 'Born With', 'Innate Ability'],
+                    birthdayContent,
+                    [],
+                    []
+                ));
+            } else {
+                // Fallback to basic reading
+                const birthdayReading = BIRTHDAY_NUMBER_READINGS ? BIRTHDAY_NUMBER_READINGS[birthday] : null;
+                numbersSection.appendChild(createReadingCard(
+                    config.readingTitles.birthday,
+                    `${birthday} - ${birthdayReading ? birthdayReading.title : 'Birthday ' + birthday}`,
+                    ['Special Talents', 'Natural Gifts', 'Birthday Energy'],
+                    birthdayReading ? birthdayReading.reading : `Birthday Number ${birthday} represents special talents and gifts that ${userData.name} brought into this life.`,
+                    [],
+                    []
+                ));
+            }
             
             // Personal Year
             const personalYear = readings.numerology.personalYear;
