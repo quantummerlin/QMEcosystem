@@ -1,0 +1,40 @@
+# Netlify Configuration for QM Ecosystem
+# =======================================
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Redirects for clean URLs
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Shared reading page with dynamic ID
+[[redirects]]
+  from = "/soulblueprint/r/:id"
+  to = "/soulblueprint/view.html?id=:id"
+  status = 200
+
+# Headers for security and caching
+[[headers]]
+  for = "/netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+
+[[headers]]
+  for = "/soulblueprint/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+
+# Scheduled function for cleanup (runs daily at midnight UTC)
+[functions.cleanup-readings]
+  schedule = "@daily"
+
+# Edge function settings
+[functions]
+  node_bundler = "esbuild"

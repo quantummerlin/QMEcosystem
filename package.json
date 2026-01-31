@@ -1,0 +1,20 @@
+{
+  "name": "qm-ecosystem-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for Quantum Merlin Ecosystem",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.0.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  },
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "netlify deploy --prod"
+  }
+}

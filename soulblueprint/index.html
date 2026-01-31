@@ -2136,7 +2136,7 @@
         /* Dark mode - Purple mode */
         body.color-mode-purple {
             --background: #1a1025;
-            --text: #c9a6ff;
+            --text: #b996f2;
             --card-bg: #1a1025;
             --card-border: rgba(201,166,255,0.25);
         }
@@ -2157,7 +2157,7 @@
         body.color-mode-purple .keyword,
         body.color-mode-purple .footer-links,
         body.color-mode-purple .footer-links a {
-            color: #c9a6ff !important;
+            color: #b996f2 !important;
         }
         
         body.color-mode-purple .header,
@@ -2353,6 +2353,184 @@
         .gift-btn:hover, .coffee-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .gift-btn:disabled {
+            opacity: 0.7;
+            cursor: wait;
+        }
+        
+        /* Gift Share Dialog */
+        .gift-dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .gift-dialog {
+            background: linear-gradient(135deg, #1a1025 0%, #2a1838 50%, #1a1025 100%);
+            border-radius: 20px;
+            padding: 35px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            border: 2px solid rgba(201, 166, 255, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: slideUp 0.3s ease;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .gift-dialog h2 {
+            color: #c9a6ff;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .gift-dialog p {
+            color: #e0d6f0;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .share-url-box {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .share-url-box input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid rgba(201, 166, 255, 0.3);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #f0e6ff;
+            font-size: 0.9rem;
+        }
+        
+        .share-url-box button {
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #9c7ddf 0%, #7b5dc4 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .share-url-box button:hover {
+            transform: scale(1.05);
+        }
+        
+        .share-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 25px 0;
+        }
+        
+        .share-btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .share-btn.whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        
+        .share-btn.email {
+            background: #EA4335;
+            color: white;
+        }
+        
+        .share-btn.sms {
+            background: #5BC236;
+            color: white;
+        }
+        
+        .share-btn.native {
+            background: rgba(201, 166, 255, 0.2);
+            color: #c9a6ff;
+            border: 2px solid rgba(201, 166, 255, 0.3);
+        }
+        
+        .expiry-note {
+            font-size: 0.9rem;
+            color: #b8a6d8;
+            margin: 20px 0;
+        }
+        
+        .expiry-note small {
+            opacity: 0.7;
+        }
+        
+        .dialog-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        
+        .dialog-actions .download-btn {
+            padding: 12px 25px;
+            background: transparent;
+            color: #c9a6ff;
+            border: 2px solid rgba(201, 166, 255, 0.3);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .dialog-actions .download-btn:hover {
+            background: rgba(201, 166, 255, 0.1);
+        }
+        
+        .dialog-actions .close-btn {
+            padding: 12px 35px;
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .dialog-actions .close-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.3);
         }
         
         /* Reading Closing Summary */
@@ -2955,19 +3133,19 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=29"></script>
-    <script src="calculations.js?v=29"></script>
-    <script src="readings.js?v=29"></script>
-    <script src="house-readings.js?v=29"></script>
-    <script src="aspect-readings.js?v=29"></script>
-    <script src="advanced-readings.js?v=29"></script>
-    <script src="deep-readings.js?v=29"></script>
-    <script src="deep-planet-readings.js?v=29"></script>
-    <script src="deep-planet-readings-outer.js?v=29"></script>
-    <script src="readings-extended.js?v=29"></script>
-    <script src="love-blueprint.js?v=29"></script>
-    <script src="tone-variations.js?v=29"></script>
-    <script src="save-share.js?v=29"></script>
+    <script src="config.js?v=30"></script>
+    <script src="calculations.js?v=30"></script>
+    <script src="readings.js?v=30"></script>
+    <script src="house-readings.js?v=30"></script>
+    <script src="aspect-readings.js?v=30"></script>
+    <script src="advanced-readings.js?v=30"></script>
+    <script src="deep-readings.js?v=30"></script>
+    <script src="deep-planet-readings.js?v=30"></script>
+    <script src="deep-planet-readings-outer.js?v=30"></script>
+    <script src="readings-extended.js?v=30"></script>
+    <script src="love-blueprint.js?v=30"></script>
+    <script src="tone-variations.js?v=30"></script>
+    <script src="save-share.js?v=30"></script>
     <script>
         // ============================================
         // GENDER THEME SWITCH
@@ -5884,6 +6062,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
         // ============================================
         
         let selectedGiftColor = 'purple'; // Default color
+        let isCreatingGift = false; // Prevent double clicks
         
         function selectGiftColor(color) {
             selectedGiftColor = color;
@@ -5894,7 +6073,10 @@ This isn't a flaw - it's their power source. The tension between these two drive
             document.querySelector(`[data-color="${color}"]`).classList.add('active');
         }
         
-        function giftReading() {
+        // Create shareable gift link (saves to backend)
+        async function giftReading() {
+            if (isCreatingGift) return;
+            
             // Try multiple sources for userData
             const userData = window.lastUserData || JSON.parse(localStorage.getItem('lastReading') || '{}');
             const readings = window.lastGeneratedReadings;
@@ -5917,6 +6099,175 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const subjectName = document.getElementById('subjectName');
                 userData.name = subjectName ? subjectName.textContent : 'Unknown';
             }
+            
+            // Show loading state
+            isCreatingGift = true;
+            const giftBtn = document.querySelector('.gift-btn');
+            const originalText = giftBtn.textContent;
+            giftBtn.textContent = 'Creating...';
+            giftBtn.disabled = true;
+            
+            try {
+                // Get the reading HTML content (cleaned)
+                const readingHtml = readingsContainer.innerHTML;
+                
+                // Prepare data for saving
+                const saveData = {
+                    html: readingHtml,
+                    userData: {
+                        name: userData.name,
+                        birthDate: userData.birthDate,
+                        birthTime: userData.birthTime || null,
+                        birthPlace: userData.birthPlace || null,
+                        giftedBy: giftedBy || null
+                    },
+                    colorScheme: selectedGiftColor
+                };
+                
+                // Save to backend
+                const response = await fetch('/api/save-reading', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(saveData)
+                });
+                
+                const result = await response.json();
+                
+                if (!response.ok) {
+                    throw new Error(result.error || 'Failed to save reading');
+                }
+                
+                // Show success dialog with sharing options
+                showGiftShareDialog(result.shareUrl, userData.name, result.expiresAt);
+                
+            } catch (error) {
+                console.error('Error creating gift:', error);
+                // Fallback to download if backend fails
+                alert('Could not create shareable link. Downloading gift version instead...');
+                downloadGiftReading(userData, giftedBy, readingsContainer);
+            } finally {
+                // Reset button
+                giftBtn.textContent = originalText;
+                giftBtn.disabled = false;
+                isCreatingGift = false;
+            }
+        }
+        
+        // Show dialog with share options
+        function showGiftShareDialog(shareUrl, recipientName, expiresAt) {
+            // Remove any existing dialog
+            const existing = document.getElementById('gift-share-dialog');
+            if (existing) existing.remove();
+            
+            const expiryDate = new Date(expiresAt).toLocaleDateString('en-US', { 
+                year: 'numeric', month: 'long', day: 'numeric' 
+            });
+            
+            const dialog = document.createElement('div');
+            dialog.id = 'gift-share-dialog';
+            dialog.innerHTML = `
+                <div class="gift-dialog-overlay">
+                    <div class="gift-dialog">
+                        <h2>✨ Gift Created!</h2>
+                        <p>Your ad-free reading for <strong>${recipientName}</strong> is ready to share!</p>
+                        
+                        <div class="share-url-box">
+                            <input type="text" id="share-url-input" value="${shareUrl}" readonly>
+                            <button onclick="copyGiftLink()">Copy</button>
+                        </div>
+                        
+                        <div class="share-buttons">
+                            <button class="share-btn whatsapp" onclick="shareVia('whatsapp', '${shareUrl}', '${recipientName}')">
+                                WhatsApp
+                            </button>
+                            <button class="share-btn email" onclick="shareVia('email', '${shareUrl}', '${recipientName}')">
+                                Email
+                            </button>
+                            <button class="share-btn sms" onclick="shareVia('sms', '${shareUrl}', '${recipientName}')">
+                                SMS
+                            </button>
+                            <button class="share-btn native" onclick="shareVia('native', '${shareUrl}', '${recipientName}')">
+                                More...
+                            </button>
+                        </div>
+                        
+                        <p class="expiry-note">
+                            📅 This link expires on ${expiryDate}<br>
+                            <small>Recipients can save to homescreen for permanent offline access</small>
+                        </p>
+                        
+                        <div class="dialog-actions">
+                            <button class="download-btn" onclick="downloadGiftFromDialog()">Download Copy</button>
+                            <button class="close-btn" onclick="closeGiftDialog()">Done</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(dialog);
+            
+            // Store URL for download fallback
+            dialog.dataset.shareUrl = shareUrl;
+        }
+        
+        function copyGiftLink() {
+            const input = document.getElementById('share-url-input');
+            input.select();
+            navigator.clipboard.writeText(input.value).then(() => {
+                const btn = input.nextElementSibling;
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = 'Copy', 2000);
+            }).catch(() => {
+                document.execCommand('copy');
+                const btn = input.nextElementSibling;
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = 'Copy', 2000);
+            });
+        }
+        
+        function shareVia(method, url, name) {
+            const text = `I created a special Moment in Time reading for ${name}! Check out their cosmic blueprint:`;
+            
+            switch(method) {
+                case 'whatsapp':
+                    window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
+                    break;
+                case 'email':
+                    window.open(`mailto:?subject=A Moment in Time for ${name}&body=${encodeURIComponent(text + '\n\n' + url)}`, '_blank');
+                    break;
+                case 'sms':
+                    window.open(`sms:?body=${encodeURIComponent(text + ' ' + url)}`, '_blank');
+                    break;
+                case 'native':
+                    if (navigator.share) {
+                        navigator.share({
+                            title: `A Moment in Time for ${name}`,
+                            text: text,
+                            url: url
+                        });
+                    } else {
+                        copyGiftLink();
+                        alert('Link copied! You can paste it anywhere to share.');
+                    }
+                    break;
+            }
+        }
+        
+        function closeGiftDialog() {
+            const dialog = document.getElementById('gift-share-dialog');
+            if (dialog) dialog.remove();
+        }
+        
+        function downloadGiftFromDialog() {
+            const userData = window.lastUserData || JSON.parse(localStorage.getItem('lastReading') || '{}');
+            const giftedByInput = document.getElementById('giftedByInput');
+            const giftedBy = giftedByInput ? giftedByInput.value.trim() : '';
+            const readingsContainer = document.getElementById('readingsContainer');
+            downloadGiftReading(userData, giftedBy, readingsContainer);
+        }
+        
+        // Fallback: Download reading as HTML file
+        function downloadGiftReading(userData, giftedBy, readingsContainer) {
             
             // Get reading content for the gift version
             const closingContainer = document.getElementById('readingClosing');

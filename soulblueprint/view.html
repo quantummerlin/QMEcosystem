@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Moment in Time - Shared Reading</title>
+    <meta name="description" content="A personalized cosmic reading gift from the stars">
+    <meta name="theme-color" content="#FF69B4">
+    
+    <!-- Open Graph for sharing -->
+    <meta property="og:title" content="A Moment in Time - Cosmic Reading">
+    <meta property="og:description" content="A personalized cosmic reading with 65+ insights">
+    <meta property="og:image" content="/soulblueprint/Amomentintime.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="Amomentintime.jpg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --bg: linear-gradient(135deg, #ffc0cb 0%, #ffb6c1 50%, #ffc0cb 100%);
+            --text: #4a0e2e;
+            --accent: #ff1493;
+            --border-color: rgba(255,20,147,0.3);
+            --card-bg: rgba(255,192,203,0.2);
+            --card-border: rgba(255,20,147,0.2);
+            --keyword-bg: rgba(255,20,147,0.2);
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Loading State */
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            text-align: center;
+        }
+        
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--card-border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Error State */
+        .error-container {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .error-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        .error-container h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .error-container p {
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Reading Content */
+        .gift-header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .gift-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        
+        .gift-header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .gift-header .birth-info {
+            font-size: 1rem;
+            opacity: 0.7;
+            margin-top: 15px;
+        }
+        
+        .gift-message {
+            text-align: center;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 700px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 2px solid var(--border-color);
+        }
+        
+        .gift-message h2 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .gift-message p {
+            font-size: 1.1rem;
+        }
+        
+        .gift-message .gifted-signature {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--accent);
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        
+        /* Actions bar */
+        .actions-bar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 15px;
+        }
+        
+        .action-btn {
+            padding: 12px 24px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .action-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+        
+        /* Reading sections */
+        #reading-content {
+            margin-top: 30px;
+        }
+        
+        .reading-section { margin: 30px 0; }
+        .section-content { margin-bottom: 40px; }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section-header .icon { font-size: 2rem; }
+        
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+        
+        .section-header .description {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+        
+        .reading-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .reading-card h3 {
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+        }
+        
+        .reading-card .card-value {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .reading-card .content { line-height: 1.8; }
+        
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+        
+        .keyword {
+            background: var(--keyword-bg);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+        
+        .strengths-challenges {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .strengths-challenges { grid-template-columns: 1fr; }
+        }
+        
+        .strengths h4 { color: #50c878; }
+        .challenges h4 { color: #ff6b6b; }
+        
+        /* Footer */
+        .gift-footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            border-top: 2px solid var(--border-color);
+        }
+        
+        .gift-footer p { margin-bottom: 10px; opacity: 0.8; }
+        .gift-footer .love { font-size: 1.2rem; color: var(--accent); }
+        
+        .footer-links {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        /* Expiry notice */
+        .expiry-notice {
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-top: 20px;
+            padding: 15px;
+            background: var(--card-bg);
+            border-radius: 10px;
+        }
+        
+        /* Install prompt */
+        .install-prompt {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 30px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+            display: none;
+            align-items: center;
+            gap: 15px;
+            z-index: 1000;
+            max-width: 90%;
+        }
+        
+        .install-prompt.show { display: flex; }
+        
+        .install-prompt button {
+            background: white;
+            color: var(--accent);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .install-prompt .close-btn {
+            background: transparent;
+            color: white;
+            font-size: 1.2rem;
+            padding: 0;
+        }
+        
+        /* Color scheme: Blue */
+        body.color-blue {
+            --bg: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 50%, #e0f7fa 100%);
+            --text: #0d3d56;
+            --accent: #0077be;
+            --border-color: rgba(0,119,190,0.3);
+            --card-bg: rgba(135,206,235,0.2);
+            --card-border: rgba(0,119,190,0.2);
+            --keyword-bg: rgba(0,119,190,0.2);
+        }
+        
+        /* Color scheme: Purple */
+        body.color-purple {
+            --bg: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 50%, #f3e5f5 100%);
+            --text: #4a148c;
+            --accent: #9c27b0;
+            --border-color: rgba(156,39,176,0.3);
+            --card-bg: rgba(216,181,255,0.2);
+            --card-border: rgba(156,39,176,0.2);
+            --keyword-bg: rgba(156,39,176,0.2);
+        }
+        
+        /* Color scheme: Dark */
+        body.color-dark {
+            --bg: linear-gradient(135deg, #1f142a 0%, #2a1838 50%, #1f142a 100%);
+            --text: #c9a6ff;
+            --accent: #9c7ddf;
+            --border-color: rgba(201,166,255,0.35);
+            --card-bg: rgba(24,16,36,0.6);
+            --card-border: rgba(201,166,255,0.25);
+            --keyword-bg: rgba(201,166,255,0.2);
+        }
+        
+        /* Hide interactive elements from main page that might be in saved HTML */
+        .ad-container, .pagination-controls, #action-buttons, .gift-support-section { 
+            display: none !important; 
+        }
+        
+        /* Print styles */
+        @media print {
+            .actions-bar, .install-prompt, .footer-links { display: none !important; }
+            body { padding: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Loading State -->
+        <div id="loading" class="loading">
+            <div class="loading-spinner"></div>
+            <p>Loading your cosmic reading...</p>
+        </div>
+        
+        <!-- Error State (hidden by default) -->
+        <div id="error" class="error-container" style="display: none;">
+            <div class="error-icon">✨</div>
+            <h1>Reading Not Found</h1>
+            <p id="error-message">This reading may have expired or been removed.</p>
+            <a href="/soulblueprint/" class="btn">Create Your Own Reading</a>
+        </div>
+        
+        <!-- Reading Content (hidden until loaded) -->
+        <div id="reading-wrapper" style="display: none;">
+            <header class="gift-header">
+                <h1 id="reading-title">A Moment in Time</h1>
+                <p class="subtitle">Your Celestial Design Revealed</p>
+                <p class="birth-info" id="birth-info"></p>
+            </header>
+            
+            <div class="gift-message" id="gift-message" style="display: none;">
+                <h2 id="gift-from">With Love</h2>
+                <p id="gift-text"></p>
+                <p class="gifted-signature" id="gift-signature"></p>
+            </div>
+            
+            <div class="actions-bar">
+                <button class="action-btn" onclick="saveToHomescreen()">📱 Save to Homescreen</button>
+                <button class="action-btn secondary" onclick="downloadReading()">⬇️ Download</button>
+                <button class="action-btn secondary" onclick="printReading()">🖨️ Print</button>
+                <button class="action-btn secondary" onclick="shareReading()">📤 Share</button>
+            </div>
+            
+            <div id="reading-content">
+                <!-- Reading sections will be injected here -->
+            </div>
+            
+            <footer class="gift-footer">
+                <p class="love">Made with love ✨</p>
+                <p>Generated by A Moment in Time by Quantum Merlin</p>
+                <div class="expiry-notice" id="expiry-notice"></div>
+                <div class="footer-links">
+                    <a href="/soulblueprint/">Create Your Own</a>
+                    <span>•</span>
+                    <a href="/soulblueprint/about.html">About</a>
+                    <span>•</span>
+                    <a href="/soulblueprint/privacy.html">Privacy</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <!-- Install Prompt -->
+    <div class="install-prompt" id="install-prompt">
+        <span>Save this reading offline!</span>
+        <button onclick="installApp()">Install</button>
+        <button class="close-btn" onclick="dismissInstall()">×</button>
+    </div>
+    
+    <script>
+        // Global state
+        let readingData = null;
+        let deferredPrompt = null;
+        
+        // Get reading ID from URL
+        function getReadingId() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id');
+        }
+        
+        // Fetch and display reading
+        async function loadReading() {
+            const id = getReadingId();
+            
+            if (!id) {
+                showError('No reading ID provided');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/api/get-reading?id=${id}`);
+                const data = await response.json();
+                
+                if (!response.ok) {
+                    showError(data.message || data.error || 'Failed to load reading');
+                    return;
+                }
+                
+                readingData = data.reading;
+                displayReading(readingData);
+                
+            } catch (error) {
+                console.error('Error loading reading:', error);
+                showError('Failed to load reading. Please try again.');
+            }
+        }
+        
+        // Display the reading
+        function displayReading(reading) {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('reading-wrapper').style.display = 'block';
+            
+            // Apply color scheme
+            if (reading.colorScheme) {
+                document.body.className = `color-${reading.colorScheme}`;
+            }
+            
+            // Set header info
+            const userData = reading.userData;
+            document.getElementById('reading-title').textContent = `A Moment in Time for ${userData.name}`;
+            document.title = `A Moment in Time for ${userData.name}`;
+            
+            // Update meta tags for sharing
+            updateMetaTags(userData.name);
+            
+            // Birth info
+            const birthDate = new Date(userData.birthDate);
+            const birthInfo = `Born ${birthDate.toLocaleDateString('en-US', { 
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
+            })}${userData.birthTime ? ' at ' + userData.birthTime : ''}${userData.birthPlace ? ' in ' + userData.birthPlace : ''}`;
+            document.getElementById('birth-info').textContent = birthInfo;
+            
+            // Gift message
+            if (userData.giftedBy) {
+                const giftMessage = document.getElementById('gift-message');
+                giftMessage.style.display = 'block';
+                document.getElementById('gift-from').textContent = `A Gift from ${userData.giftedBy}`;
+                document.getElementById('gift-text').textContent = 
+                    `This reading was created with love to celebrate the unique soul that is ${userData.name}. ` +
+                    `May these cosmic insights illuminate the path ahead and remind you of the infinite potential within.`;
+                document.getElementById('gift-signature').textContent = `— ${userData.giftedBy}`;
+            }
+            
+            // Inject reading content
+            document.getElementById('reading-content').innerHTML = reading.html;
+            
+            // Show expiry notice
+            if (reading.expiresAt) {
+                const expiryDate = new Date(reading.expiresAt);
+                document.getElementById('expiry-notice').textContent = 
+                    `This shared reading will expire on ${expiryDate.toLocaleDateString()}. Save to homescreen for permanent offline access.`;
+            }
+        }
+        
+        // Update meta tags for sharing
+        function updateMetaTags(name) {
+            const title = `A Moment in Time for ${name}`;
+            const description = `A personalized cosmic reading for ${name} with 65+ insights from the stars`;
+            
+            document.querySelector('meta[property="og:title"]')?.setAttribute('content', title);
+            document.querySelector('meta[property="og:description"]')?.setAttribute('content', description);
+        }
+        
+        // Show error state
+        function showError(message) {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('error').style.display = 'block';
+            document.getElementById('error-message').textContent = message;
+        }
+        
+        // Save to homescreen / Install PWA
+        function saveToHomescreen() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                    }
+                    deferredPrompt = null;
+                });
+            } else {
+                // Show manual instructions
+                const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+                const isAndroid = /Android/.test(navigator.userAgent);
+                
+                if (isIOS) {
+                    alert('To save this reading:\n\n1. Tap the Share button (📤) at the bottom of Safari\n2. Scroll down and tap "Add to Home Screen"\n3. Tap "Add" in the top right\n\nYou\'ll have offline access forever!');
+                } else if (isAndroid) {
+                    alert('To save this reading:\n\n1. Tap the menu (⋮) in your browser\n2. Tap "Add to Home Screen" or "Install App"\n3. Confirm the installation\n\nYou\'ll have offline access forever!');
+                } else {
+                    alert('To save this reading:\n\n1. Press Ctrl+S (Cmd+S on Mac) to save the page\n2. Or use the Download button to get an HTML file\n\nThe downloaded file works offline forever!');
+                }
+            }
+        }
+        
+        // Download reading as HTML file
+        function downloadReading() {
+            if (!readingData) return;
+            
+            const html = document.documentElement.outerHTML;
+            const blob = new Blob([html], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${readingData.userData.name.replace(/[^a-z0-9]/gi, '-')}-reading.html`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        
+        // Print reading
+        function printReading() {
+            window.print();
+        }
+        
+        // Share reading
+        async function shareReading() {
+            const shareData = {
+                title: document.title,
+                text: `Check out this Moment in Time reading for ${readingData?.userData?.name}!`,
+                url: window.location.href
+            };
+            
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                } catch (err) {
+                    if (err.name !== 'AbortError') {
+                        copyToClipboard(shareData.url);
+                    }
+                }
+            } else {
+                copyToClipboard(shareData.url);
+            }
+        }
+        
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Link copied to clipboard!');
+            }).catch(() => {
+                // Fallback
+                const input = document.createElement('input');
+                input.value = text;
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand('copy');
+                document.body.removeChild(input);
+                alert('Link copied to clipboard!');
+            });
+        }
+        
+        // PWA Install prompt
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            // Show install prompt after a delay
+            setTimeout(() => {
+                document.getElementById('install-prompt').classList.add('show');
+            }, 5000);
+        });
+        
+        function installApp() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt = null;
+            }
+            document.getElementById('install-prompt').classList.remove('show');
+        }
+        
+        function dismissInstall() {
+            document.getElementById('install-prompt').classList.remove('show');
+        }
+        
+        // Register service worker for offline support
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/soulblueprint/sw.js')
+                .then(reg => console.log('Service Worker registered'))
+                .catch(err => console.log('Service Worker registration failed:', err));
+        }
+        
+        // Load reading on page load
+        document.addEventListener('DOMContentLoaded', loadReading);
+    </script>
+</body>
+</html>
