@@ -4904,19 +4904,53 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 ));
             }
             
-            // Personal Year
+            // Personal Year - DEEP READING
             const personalYear = readings.numerology.personalYear;
-            const personalYearReading = PERSONAL_YEAR_READINGS ? PERSONAL_YEAR_READINGS[personalYear] : null;
+            const deepPersonalYear = (typeof DEEP_PERSONAL_YEAR_READINGS !== 'undefined') ? DEEP_PERSONAL_YEAR_READINGS[personalYear] : null;
             const personalYearEnhancements = getReadingEnhancements('personalYear', personalYear);
-            numbersSection.appendChild(createReadingCard(
-                config.readingTitles.personalYear,
-                `${personalYear} - ${personalYearReading ? personalYearReading.title : 'Year ' + personalYear}`,
-                personalYearReading ? personalYearReading.keywords : ['Current Year', 'Annual Theme', 'Opportunities'],
-                personalYearReading ? personalYearReading.reading.replace(/\$\{userData\.name\}/gi, userData.name) : `Personal Year ${personalYear} indicates the theme and energy of the current year.`,
-                [],
-                [],
-                personalYearEnhancements
-            ));
+            
+            if (deepPersonalYear) {
+                // Create comprehensive Personal Year reading from deep content
+                const personalYearContent = `<strong>${deepPersonalYear.theme}</strong>
+
+<em>The Energy of This Year:</em> ${deepPersonalYear.energy}
+
+<em>Opportunities:</em> ${deepPersonalYear.opportunities}
+
+<em>Challenges:</em> ${deepPersonalYear.challenges}
+
+<em>Relationships:</em> ${deepPersonalYear.relationships}
+
+<em>Career & Money:</em> ${deepPersonalYear.career}
+
+<em>Spiritual Focus:</em> ${deepPersonalYear.spiritual}
+
+<em>Guidance:</em> ${deepPersonalYear.advice}
+
+<em>Affirmation:</em> "${deepPersonalYear.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+                
+                numbersSection.appendChild(createReadingCard(
+                    deepPersonalYear.title,
+                    `Year ${personalYear} (2026)`,
+                    ['Annual Theme', 'This Year\'s Focus', 'Timing', 'Cycles'],
+                    personalYearContent,
+                    [],
+                    [],
+                    personalYearEnhancements
+                ));
+            } else {
+                // Fallback to basic reading
+                const personalYearReading = PERSONAL_YEAR_READINGS ? PERSONAL_YEAR_READINGS[personalYear] : null;
+                numbersSection.appendChild(createReadingCard(
+                    config.readingTitles.personalYear,
+                    `${personalYear} - ${personalYearReading ? personalYearReading.title : 'Year ' + personalYear}`,
+                    personalYearReading ? personalYearReading.keywords : ['Current Year', 'Annual Theme', 'Opportunities'],
+                    personalYearReading ? personalYearReading.reading.replace(/\$\{userData\.name\}/gi, userData.name) : `Personal Year ${personalYear} indicates the theme and energy of the current year.`,
+                    [],
+                    [],
+                    personalYearEnhancements
+                ));
+            }
             
             // Maturity Number
             const maturity = readings.numerology.maturity;

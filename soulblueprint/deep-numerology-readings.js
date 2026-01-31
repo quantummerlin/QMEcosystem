@@ -1123,6 +1123,121 @@ const DEEP_BIRTHDAY_NUMBER_READINGS = {
 };
 
 // ============================================
+// DEEP PERSONAL YEAR READINGS
+// ============================================
+
+const DEEP_PERSONAL_YEAR_READINGS = {
+    1: {
+        title: "Personal Year 1 - The Year of New Beginnings",
+        theme: "This is your fresh start year—a time to plant seeds, initiate projects, and step into a new chapter of your life with courage and independence.",
+        energy: "The energy of this year is pioneering, independent, and action-oriented. You'll feel a strong pull to start something new, whether it's a project, relationship, career path, or personal transformation. This is not a year for maintaining the status quo—it's a year for bold moves.",
+        opportunities: "Opportunities arrive through initiative and courage. Start that business. Make that big change. Take the lead on a project. Assert your independence. Begin the thing you've been thinking about. The universe rewards decisive action this year.",
+        challenges: "The challenges include impatience, isolation, and the temptation to rush without planning. You may feel lonely as you forge ahead, or frustrated when others don't move at your pace. Learning to balance independence with collaboration is key.",
+        relationships: "In relationships, you may feel more independent or even selfish this year. New relationships begun now often have a karmic, destiny quality. Existing relationships need you to maintain your identity while staying connected.",
+        career: "Career-wise, this is THE year for new beginnings—starting a business, launching a product, taking a leadership role, or changing fields entirely. Your professional confidence is high. Use it.",
+        spiritual: "Spiritually, you're learning about self-reliance and the courage to walk your unique path. This year teaches you that you have everything you need within you to begin again.",
+        advice: "Do the thing you're afraid to do. Start before you're ready. Take the lead. Be bold. This year will not come again for 9 years—make it count.",
+        affirmation: "I courageously begin. This is my year to lead and initiate."
+    },
+    2: {
+        title: "Personal Year 2 - The Year of Partnerships",
+        theme: "This is your cooperation year—a time to build relationships, practice patience, and let things develop at their own pace.",
+        energy: "The energy of this year is receptive, cooperative, and relationship-focused. After last year's bold initiatives, this year asks you to slow down, nurture connections, and pay attention to details. Partnership and diplomacy are your superpowers now.",
+        opportunities: "Opportunities arrive through collaboration and patience. Partnership opportunities appear—in business, romance, or friendship. Projects begun last year need careful tending. Your ability to listen and cooperate opens doors.",
+        challenges: "The challenges include impatience with slow progress, codependency, and hypersensitivity. You may feel like nothing is happening or that you're too dependent on others. Trust the process—seeds planted last year are germinating underground.",
+        relationships: "In relationships, this is a powerful year for deepening bonds and for significant relationships to enter your life. You're more emotionally available and intuitive about others' needs. Meaningful partnerships form now.",
+        career: "Career-wise, this is a year for teamwork, support roles, and behind-the-scenes work. You advance through collaboration, not solo achievement. Build alliances. Be the essential partner.",
+        spiritual: "Spiritually, you're learning about receptivity, divine timing, and the power of the pause. This year teaches you that doing nothing is sometimes doing everything.",
+        advice: "Be patient. Nurture what you started. Build relationships. Pay attention to details. Trust that things are developing even when you can't see progress. This is germination time.",
+        affirmation: "I trust divine timing. My patience and cooperation create lasting bonds."
+    },
+    3: {
+        title: "Personal Year 3 - The Year of Creative Expression",
+        theme: "This is your expression year—a time to create, communicate, play, and let your unique voice be heard.",
+        energy: "The energy of this year is creative, social, and expressive. You'll feel lighter, more optimistic, and creatively inspired. This is the year to share your gifts, enjoy life, and express yourself authentically.",
+        opportunities: "Opportunities arrive through creativity and communication. Creative projects flourish. Social invitations increase. Your voice finds its audience. This is THE year to share your art, write that book, start that channel, or express yourself publicly.",
+        challenges: "The challenges include scattered energy, superficiality, and creative blocks born from self-judgment. You may start many things without finishing them, or use socializing to avoid deeper work. Focus is your friend.",
+        relationships: "In relationships, this is a fun, light year. You're more charming and socially active. Romance has a playful quality. You attract people through your creative expression and joy.",
+        career: "Career-wise, this is excellent for creative fields, communication roles, teaching, marketing, or any work requiring self-expression. You shine when speaking, presenting, or showcasing your talents.",
+        spiritual: "Spiritually, you're learning that joy is sacred and that your creative expression is a spiritual act. This year teaches you that your unique voice matters.",
+        advice: "Create. Express. Play. Don't worry so much about perfection—just share. Take that creative risk. Your joy is medicine for others. Let yourself be seen.",
+        affirmation: "I express my authentic self with joy. My creativity flows freely and abundantly."
+    },
+    4: {
+        title: "Personal Year 4 - The Year of Building Foundations",
+        theme: "This is your foundation year—a time to work hard, create structure, and build something that will last.",
+        energy: "The energy of this year is practical, disciplined, and work-focused. After last year's creative expansion, this year asks you to get serious, organize, and put in the effort. This is not a glamorous year, but it's essential.",
+        opportunities: "Opportunities arrive through hard work and practical application. Real estate, home projects, career advancement through diligence, and creating systems all favor you now. Your perseverance pays off.",
+        challenges: "The challenges include overwork, rigidity, and missing the forest for the trees. You may feel burdened by responsibility or frustrated by slow progress. Remember: you're building a foundation, and foundations take time.",
+        relationships: "In relationships, this is a year to create stability and commitment. Relationships either deepen through shared responsibility or reveal themselves as unstable. You need partners who are reliable.",
+        career: "Career-wise, this is a year of solid progress through consistent effort. Promotions come through proving your reliability. Building your business brick by brick. Establishing your reputation.",
+        spiritual: "Spiritually, you're learning that the sacred lives in the ordinary, that enlightenment can be found in daily practice. This year teaches you that commitment itself is a spiritual path.",
+        advice: "Do the work. Build the foundation. Stay disciplined. Don't cut corners. What you build this year will support you for years to come. Trust the process, even when it's unglamorous.",
+        affirmation: "I build lasting value through patient, consistent effort. My foundation is solid."
+    },
+    5: {
+        title: "Personal Year 5 - The Year of Freedom and Change",
+        theme: "This is your freedom year—a time for adventure, change, and embracing the unexpected.",
+        energy: "The energy of this year is dynamic, unpredictable, and liberating. After last year's hard work, this year brings movement, variety, and change. Expect the unexpected. Life speeds up.",
+        opportunities: "Opportunities arrive through change and new experiences. Travel, relocation, career changes, new people, learning opportunities, and adventures of all kinds. Say yes to what's new and different.",
+        challenges: "The challenges include restlessness, irresponsibility, and change addiction. You may struggle with commitment or make impulsive decisions. Not all change is progress—discern between liberating change and running away.",
+        relationships: "In relationships, this can be a year of new romantic adventures or freedom struggles in existing partnerships. You need breathing room. Relationships that are too confining may end; flexible ones can thrive.",
+        career: "Career-wise, this year favors variety, travel, sales, marketing, consulting, or any work with flexibility and change. You may change jobs or roles. Entrepreneurial ventures that offer freedom are favored.",
+        spiritual: "Spiritually, you're learning that the only constant is change and that freedom is an inner state. This year teaches you to embrace uncertainty with faith.",
+        advice: "Embrace change. Take calculated risks. Travel. Learn something new. Meet new people. But don't burn down your entire life on a whim. Freedom works best with a foundation (which you built last year).",
+        affirmation: "I embrace change with grace and courage. Freedom is my birthright."
+    },
+    6: {
+        title: "Personal Year 6 - The Year of Love and Responsibility",
+        theme: "This is your love year—a time to nurture relationships, take responsibility, and create beauty and harmony in your life.",
+        energy: "The energy of this year is nurturing, responsible, and heart-centered. After last year's adventures, this year asks you to come home—literally and figuratively. Family, home, and close relationships take center stage.",
+        opportunities: "Opportunities arrive through service and relationships. Marriage, commitment, family expansion, home purchases, creative projects that serve others, healing work, and beautification all flourish now.",
+        challenges: "The challenges include over-responsibility, martyrdom, and controlling through caretaking. You may sacrifice too much or become resentful about obligations. Learning to serve without depleting yourself is key.",
+        relationships: "In relationships, this is THE year for commitment, marriage, or deepening family bonds. You're more nurturing and available. Single people often meet significant partners. This is a love-focused year.",
+        career: "Career-wise, this year favors service professions—teaching, healing, counseling, design, or any work that helps others. You advance through being helpful and creating harmony.",
+        spiritual: "Spiritually, you're learning that love is action, that service is sacred, and that your worth isn't dependent on being needed. This year teaches you unconditional love—including self-love.",
+        advice: "Love deeply. Take responsibility. Create beauty. Serve others. But don't forget to fill your own cup. The best nurturers are those who also nurture themselves.",
+        affirmation: "I love and serve from a full heart. My care creates harmony and healing."
+    },
+    7: {
+        title: "Personal Year 7 - The Year of Spiritual Growth",
+        theme: "This is your wisdom year—a time to go inward, seek truth, and deepen your spiritual understanding.",
+        energy: "The energy of this year is introspective, spiritual, and contemplative. After last year's relationship focus, this year asks you to retreat, reflect, and go deep. This is your hermit year.",
+        opportunities: "Opportunities arrive through study, spiritual practice, and inner work. Education, research, writing, spiritual retreats, therapy, and solo pursuits all flourish. Your intuition is heightened.",
+        challenges: "The challenges include isolation, overthinking, and spiritual bypassing. You may withdraw too much or get lost in analysis. Balance solitude with connection. Not everything can be understood intellectually.",
+        relationships: "In relationships, you may need more alone time or feel less socially available. This can strain partnerships that don't understand your need for solitude. It's not a high-energy year for new relationships.",
+        career: "Career-wise, this year favors research, analysis, writing, spiritual work, consulting, or any role requiring deep expertise. You may take time off for study or sabbatical. Quality over quantity.",
+        spiritual: "Spiritually, this is YOUR year. Deep meditation, spiritual study, mystical experiences, and profound insights are all possible. You're being prepared for something. Trust the inner journey.",
+        advice: "Go inward. Study. Meditate. Trust your intuition. Take time alone without guilt. This is preparation time—you're gathering wisdom and strength for what's coming. Honor the pause.",
+        affirmation: "I trust my inner wisdom. My solitude deepens my understanding and power."
+    },
+    8: {
+        title: "Personal Year 8 - The Year of Power and Abundance",
+        theme: "This is your power year—a time to step into authority, manifest abundance, and reap what you've sown.",
+        energy: "The energy of this year is powerful, ambitious, and results-oriented. After last year's inner preparation, this year brings external achievement. Your personal power is at its peak. Use it wisely.",
+        opportunities: "Opportunities arrive through leadership and manifestation. Business success, financial gains, promotions, recognition, and material abundance all favor you now. What you've built over the past 7 years bears fruit.",
+        challenges: "The challenges include workaholism, materialism, and misuse of power. You may become so focused on achievement that you neglect relationships or health. True power serves something larger than ego.",
+        relationships: "In relationships, you may attract powerful partners or power struggles. You need equals who respect your ambition. Watch for a tendency to dominate or let work consume your personal life.",
+        career: "Career-wise, this is THE year for advancement, raises, promotions, starting businesses, or achieving significant professional milestones. Your executive abilities are at their peak. Lead.",
+        spiritual: "Spiritually, you're learning that abundance is a flow, that power is for service, and that material success and spiritual growth aren't opposites. This year teaches you sacred success.",
+        advice: "Step into your power. Lead. Build. Achieve. But remember that true abundance includes all areas of life—not just money. Use your power wisely and generously.",
+        affirmation: "I claim my power and create abundant success. My achievements serve the highest good."
+    },
+    9: {
+        title: "Personal Year 9 - The Year of Completion",
+        theme: "This is your completion year—a time to release, forgive, let go, and prepare for a new 9-year cycle beginning next year.",
+        energy: "The energy of this year is releasing, compassionate, and transitional. This is the ending of a 9-year cycle. What needs to complete will complete. What needs to go will go. Clear space for new beginnings.",
+        opportunities: "Opportunities arrive through letting go and service. Humanitarian work, artistic expression, teaching, healing, closure on long-standing issues, forgiveness, and spiritual deepening all favor you now.",
+        challenges: "The challenges include holding on when you should release, drama about endings, or premature new beginnings. This is not the year to start major new ventures—it's the year to finish and release. Patience.",
+        relationships: "In relationships, this can be a year of completions—relationships that have run their course may end. Or you may complete old patterns within relationships. Forgiveness is key. Let go with love.",
+        career: "Career-wise, you may complete major projects, leave a job, or retire. This is not the year to start new ventures (wait for next year's Personal Year 1). Finish what you started. Close loops.",
+        spiritual: "Spiritually, this is a powerful year for forgiveness, release, and preparation. You're clearing karma, completing soul lessons, and preparing for rebirth. Trust the endings—they're making space for magic.",
+        advice: "Let go. Forgive. Complete. Don't cling to what's ending. Don't start major new things yet. This is the inhale before the exhale. Clear space. Grieve what's passing. Trust what's coming.",
+        affirmation: "I release with love and gratitude. Endings create space for new beginnings."
+    }
+};
+
+// ============================================
 // Export for use
 // ============================================
 if (typeof module !== 'undefined' && module.exports) {
@@ -1131,6 +1246,7 @@ if (typeof module !== 'undefined' && module.exports) {
         DEEP_DESTINY_READINGS,
         DEEP_SOUL_URGE_READINGS,
         DEEP_PERSONALITY_NUMBER_READINGS,
-        DEEP_BIRTHDAY_NUMBER_READINGS
+        DEEP_BIRTHDAY_NUMBER_READINGS,
+        DEEP_PERSONAL_YEAR_READINGS
     };
 }
