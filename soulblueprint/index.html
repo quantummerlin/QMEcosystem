@@ -4281,19 +4281,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
             if (readings.astrology.angularHouses && typeof ANGULAR_HOUSE_READINGS !== 'undefined') {
                 const angularSectionWrapper = document.createElement('div');
                 angularSectionWrapper.className = 'reading-section';
-                const angularSection = document.createElement('div');
-                angularSection.className = 'section-content';
-                angularSection.id = 'section-angular';
-                
-                angularSection.innerHTML = `
-                    <div class="section-header">
-                        <span class="icon">🏛️</span>
-                        <div>
-                            <h2>The Four Pillars</h2>
-                            <p class="description">The angular houses form the foundation of ${userData.name}'s life chart</p>
-                        </div>
-                    </div>
-                `;
+                const angularSection = createCustomSection(
+                    'angular',
+                    '🏛️',
+                    'The Four Pillars',
+                    `The angular houses form the foundation of ${userData.name}'s life chart`
+                );
                 
                 const angular = readings.astrology.angularHouses;
                 
@@ -4363,19 +4356,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 if (vertexReading) {
                     const vertexSectionWrapper = document.createElement('div');
                     vertexSectionWrapper.className = 'reading-section';
-                    const vertexSection = document.createElement('div');
-                    vertexSection.className = 'section-content';
-                    vertexSection.id = 'section-vertex';
-                    
-                    vertexSection.innerHTML = `
-                        <div class="section-header">
-                            <span class="icon"></span>
-                            <div>
-                                <h2>Fated Encounters</h2>
-                                <p class="description">The Vertex reveals destined meetings and pivotal life moments</p>
-                            </div>
-                        </div>
-                    `;
+                    const vertexSection = createCustomSection(
+                        'vertex',
+                        '⚝',
+                        'Fated Encounters',
+                        'The Vertex reveals destined meetings and pivotal life moments'
+                    );
                     
                     vertexSection.appendChild(createReadingCard(
                         vertexReading.title,
@@ -4397,19 +4383,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
             if ((readings.astrology.northNodeHouse || readings.astrology.southNodeHouse) && typeof NODES_IN_HOUSES !== 'undefined') {
                 const nodesSectionWrapper = document.createElement('div');
                 nodesSectionWrapper.className = 'reading-section';
-                const nodesSection = document.createElement('div');
-                nodesSection.className = 'section-content';
-                nodesSection.id = 'section-nodes-houses';
-                
-                nodesSection.innerHTML = `
-                    <div class="section-header">
-                        <span class="icon"></span>
-                        <div>
-                            <h2>Karmic Life Areas</h2>
-                            <p class="description">Where soul evolution unfolds in ${userData.name}'s life</p>
-                        </div>
-                    </div>
-                `;
+                const nodesSection = createCustomSection(
+                    'nodes-houses',
+                    '🧭',
+                    'Karmic Life Areas',
+                    `Where soul evolution unfolds in ${userData.name}'s life`
+                );
                 
                 // North Node in House
                 const nnHouse = readings.astrology.northNodeHouse;
@@ -4453,19 +4432,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
             if (typeof SYNTHESIS_READINGS !== 'undefined') {
                 const synthesisSectionWrapper = document.createElement('div');
                 synthesisSectionWrapper.className = 'reading-section';
-                const synthesisSection = document.createElement('div');
-                synthesisSection.className = 'section-content';
-                synthesisSection.id = 'section-synthesis';
-                
-                synthesisSection.innerHTML = `
-                    <div class="section-header">
-                        <span class="icon"></span>
-                        <div>
-                            <h2>Life Blueprints</h2>
-                            <p class="description">Deep synthesis of ${userData.name}'s cosmic design across key life areas</p>
-                        </div>
-                    </div>
-                `;
+                const synthesisSection = createCustomSection(
+                    'synthesis',
+                    '🧬',
+                    'Life Blueprints',
+                    `Deep synthesis of ${userData.name}'s cosmic design across key life areas`
+                );
                 
                 const chartData = {
                     sunSign: readings.astrology.sunSign.name,
@@ -4571,19 +4543,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
             if (typeof PROGRESSION_READINGS !== 'undefined') {
                 const progressionsSectionWrapper = document.createElement('div');
                 progressionsSectionWrapper.className = 'reading-section';
-                const progressionsSection = document.createElement('div');
-                progressionsSection.className = 'section-content';
-                progressionsSection.id = 'section-progressions';
-                
-                progressionsSection.innerHTML = `
-                    <div class="section-header">
-                        <span class="icon"></span>
-                        <div>
-                            <h2>Soul Evolution</h2>
-                            <p class="description">How ${userData.name}'s inner self is evolving over time</p>
-                        </div>
-                    </div>
-                `;
+                const progressionsSection = createCustomSection(
+                    'progressions',
+                    '🌀',
+                    'Soul Evolution',
+                    `How ${userData.name}'s inner self is evolving over time`
+                );
                 
                 // Calculate progressed signs based on age
                 const birthDate = new Date(userData.date);
@@ -4640,19 +4605,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
             if (typeof COSMIC_WRAPUP !== 'undefined' && typeof COSMIC_WRAPUP.generate === 'function') {
                 const wrapupSectionWrapper = document.createElement('div');
                 wrapupSectionWrapper.className = 'reading-section';
-                const wrapupSection = document.createElement('div');
-                wrapupSection.className = 'section-content';
-                wrapupSection.id = 'section-wrapup';
-                
-                wrapupSection.innerHTML = `
-                    <div class="section-header">
-                        <span class="icon"></span>
-                        <div>
-                            <h2>The Complete Moment in Time</h2>
-                            <p class="description">A sacred synthesis of ${userData.name}'s energetic signature at birth</p>
-                        </div>
-                    </div>
-                `;
+                const wrapupSection = createCustomSection(
+                    'wrapup',
+                    '🌌',
+                    'The Complete Moment in Time',
+                    `A sacred synthesis of ${userData.name}'s energetic signature at birth`
+                );
                 
                 const wrapupData = {
                     name: userData.name,
@@ -4713,7 +4671,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
         
         function createSection(id, sectionConfig) {
             const section = document.createElement('div');
-            section.className = 'section-content';
+            section.className = 'section-content collapsed';
             section.id = `section-${id}`;
             
             section.innerHTML = `
@@ -4724,10 +4682,30 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         <p class="description">${sectionConfig.description}</p>
                     </div>
                     <button type="button" class="section-mark-read-btn" data-section-id="${id}">Mark as read</button>
-                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Collapse</button>
+                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Expand</button>
                 </div>
             `;
             
+            return section;
+        }
+
+        function createCustomSection(id, icon, name, description) {
+            const section = document.createElement('div');
+            section.className = 'section-content collapsed';
+            section.id = `section-${id}`;
+
+            section.innerHTML = `
+                <div class="section-header">
+                    <span class="icon">${icon}</span>
+                    <div>
+                        <h2>${name}</h2>
+                        <p class="description">${description}</p>
+                    </div>
+                    <button type="button" class="section-mark-read-btn" data-section-id="${id}">Mark as read</button>
+                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Expand</button>
+                </div>
+            `;
+
             return section;
         }
         
@@ -5255,7 +5233,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             document.querySelectorAll('.toggle-section-btn').forEach(btn => {
                 const id = btn.getAttribute('data-section-id');
                 const section = document.getElementById(`section-${id}`);
-                const isCollapsed = !!state[id];
+                const isCollapsed = Object.prototype.hasOwnProperty.call(state, id) ? !!state[id] : true;
                 if (section) {
                     section.classList.toggle('collapsed', isCollapsed);
                 }
@@ -5267,8 +5245,10 @@ This isn't a flaw - it's their power source. The tension between these two drive
             document.querySelectorAll('.toggle-section-btn').forEach(btn => {
                 btn.onclick = () => {
                     const id = btn.getAttribute('data-section-id');
+                    const section = document.getElementById(`section-${id}`);
                     const state = getSectionCollapseState();
-                    state[id] = !state[id];
+                    const isCollapsed = section ? section.classList.contains('collapsed') : true;
+                    state[id] = !isCollapsed;
                     saveSectionCollapseState(state);
                     updateSectionToggleButtons();
                 };
