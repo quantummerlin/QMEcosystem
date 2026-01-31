@@ -1001,6 +1001,17 @@
             padding: 0;
         }
         
+        /* Color scheme: Pink (default, same as :root) */
+        body.color-pink {
+            --bg: linear-gradient(135deg, #ffc0cb 0%, #ffb6c1 50%, #ffc0cb 100%);
+            --text: #4a0e2e;
+            --accent: #ff1493;
+            --border-color: rgba(255,20,147,0.3);
+            --card-bg: rgba(255,192,203,0.2);
+            --card-border: rgba(255,20,147,0.2);
+            --keyword-bg: rgba(255,20,147,0.2);
+        }
+        
         /* Color scheme: Blue */
         body.color-blue {
             --bg: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 50%, #e0f7fa 100%);
@@ -1153,9 +1164,11 @@
             document.getElementById('loading').style.display = 'none';
             document.getElementById('reading-wrapper').style.display = 'block';
             
-            // Apply color scheme
+            // Apply color scheme (map legacy values)
             if (reading.colorScheme) {
-                document.body.className = `color-${reading.colorScheme}`;
+                const colorMap = { girl: 'pink', boy: 'blue', pink: 'pink', blue: 'blue', purple: 'purple', dark: 'dark' };
+                const mappedColor = colorMap[reading.colorScheme] || 'pink';
+                document.body.className = `color-${mappedColor}`;
             }
             
             // Set header info

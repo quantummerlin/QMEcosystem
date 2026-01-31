@@ -6554,6 +6554,10 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const readingHtml = cleanContainer.innerHTML;
                 
                 // Prepare data for saving
+                // Map gender values to color names
+                const colorMap = { girl: 'pink', boy: 'blue', pink: 'pink', blue: 'blue', purple: 'purple' };
+                const colorScheme = colorMap[selectedGiftColor] || 'pink';
+                
                 const saveData = {
                     html: readingHtml,
                     userData: {
@@ -6563,7 +6567,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         birthPlace: userData.birthPlace || null,
                         giftedBy: giftedBy || null
                     },
-                    colorScheme: selectedGiftColor
+                    colorScheme: colorScheme
                 };
                 
                 // Save to backend
