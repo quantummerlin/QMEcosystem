@@ -2855,6 +2855,7 @@
             selectedGender = gender;
             selectedGiftColor = gender;
             document.getElementById('genderInput').value = gender;
+            localStorage.setItem('sb-gender', gender);
             
             // Update form button states
             document.querySelectorAll('.gender-btn').forEach(btn => {
@@ -5248,8 +5249,8 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const id = btn.getAttribute('data-section-id');
                 const section = document.getElementById(`section-${id}`);
                 // state[id] = true means expanded, false means collapsed
-                // Default to expanded (true) if no saved state
-                const isExpanded = Object.prototype.hasOwnProperty.call(state, id) ? !!state[id] : true;
+                // Default to collapsed (false) if no saved state
+                const isExpanded = Object.prototype.hasOwnProperty.call(state, id) ? !!state[id] : false;
                 const isCollapsed = !isExpanded;
                 if (section) {
                     section.classList.toggle('collapsed', isCollapsed);
@@ -6000,8 +6001,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
         document.addEventListener('DOMContentLoaded', function() {
             applyBrandConfig();
             initColorMode();
-            // Set default gender theme (pink)
-            setGender('girl');
+            // Restore saved gender theme or default to girl
+            const savedGender = localStorage.getItem('sb-gender') || 'girl';
+            setGender(savedGender);
 
             // Auto-restore last reading and scroll position
             const savedReadingRaw = localStorage.getItem('lastReading');
