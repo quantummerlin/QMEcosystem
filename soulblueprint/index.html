@@ -3317,6 +3317,7 @@
     <script src="deep-readings.js?v=31"></script>
     <script src="deep-planet-readings.js?v=31"></script>
     <script src="deep-planet-readings-outer.js?v=31"></script>
+    <script src="deep-numerology-readings.js?v=31"></script>
     <script src="readings-extended.js?v=31"></script>
     <script src="love-blueprint.js?v=31"></script>
     <script src="tone-variations.js?v=31"></script>
@@ -4729,41 +4730,140 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 lifePathEnhancements
             ));
             
-            // Destiny Number
+            // Destiny Number - DEEP READING
             const destiny = readings.numerology.destiny;
-            const destinyReading = LIFE_PATH_READINGS[destiny];
-            numbersSection.appendChild(createReadingCard(
-                config.readingTitles.destiny,
-                `${destiny} - ${destinyReading ? destinyReading.title : 'Destiny ' + destiny}`,
-                ['Life Purpose', 'Potential', 'Direction'],
-                destinyReading ? `Destiny Number ${destiny} reveals what ${userData.name} is here to accomplish. ${destinyReading.summary}` : `Destiny Number ${destiny} reveals what ${userData.name} is here to accomplish.`,
-                destinyReading ? destinyReading.strengths : [],
-                destinyReading ? destinyReading.challenges : []
-            ));
+            const deepDestiny = (typeof DEEP_DESTINY_READINGS !== 'undefined') ? DEEP_DESTINY_READINGS[destiny] : null;
             
-            // Soul Urge
+            if (deepDestiny) {
+                // Create comprehensive Destiny reading from deep content
+                const destinyContent = `<strong>${deepDestiny.hook}</strong>
+
+<em>Core Identity:</em> ${deepDestiny.coreIdentity}
+
+<em>Life Purpose:</em> ${deepDestiny.lifePurpose}
+
+<em>Challenges on the Path:</em> ${deepDestiny.challenges}
+
+<em>Natural Gifts:</em> ${deepDestiny.gifts}
+
+<em>Relationship Destiny:</em> ${deepDestiny.relationships}
+
+<em>Career Path:</em> ${deepDestiny.career}
+
+<em>Spiritual Journey:</em> ${deepDestiny.spiritualPath}
+
+<em>Affirmation:</em> "${deepDestiny.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+                
+                numbersSection.appendChild(createReadingCard(
+                    deepDestiny.title,
+                    `Destiny Number ${destiny}`,
+                    ['Life Purpose', 'Soul Mission', 'Destiny Path', 'Karmic Direction'],
+                    destinyContent,
+                    [],
+                    []
+                ));
+            } else {
+                // Fallback to basic reading
+                const destinyReading = LIFE_PATH_READINGS[destiny];
+                numbersSection.appendChild(createReadingCard(
+                    config.readingTitles.destiny,
+                    `${destiny} - ${destinyReading ? destinyReading.title : 'Destiny ' + destiny}`,
+                    ['Life Purpose', 'Potential', 'Direction'],
+                    destinyReading ? `Destiny Number ${destiny} reveals what ${userData.name} is here to accomplish. ${destinyReading.summary}` : `Destiny Number ${destiny} reveals what ${userData.name} is here to accomplish.`,
+                    destinyReading ? destinyReading.strengths : [],
+                    destinyReading ? destinyReading.challenges : []
+                ));
+            }
+            
+            // Soul Urge - DEEP READING
             const soulUrge = readings.numerology.soulUrge;
-            const soulUrgeReading = SOUL_URGE_READINGS ? SOUL_URGE_READINGS[soulUrge] : null;
-            numbersSection.appendChild(createReadingCard(
-                config.readingTitles.soulUrge,
-                `${soulUrge} - ${soulUrgeReading ? soulUrgeReading.title : 'Soul Urge ' + soulUrge}`,
-                ['Heart\'s Desire', 'Inner Motivation', 'True Self'],
-                soulUrgeReading ? soulUrgeReading.reading : `Soul Urge ${soulUrge} reveals ${userData.name}'s deepest desires and what truly motivates from within.`,
-                [],
-                []
-            ));
+            const deepSoulUrge = (typeof DEEP_SOUL_URGE_READINGS !== 'undefined') ? DEEP_SOUL_URGE_READINGS[soulUrge] : null;
             
-            // Personality Number
+            if (deepSoulUrge) {
+                // Create comprehensive Soul Urge reading from deep content
+                const soulUrgeContent = `<strong>${deepSoulUrge.hook}</strong>
+
+<em>Core Desire:</em> ${deepSoulUrge.coreDesire}
+
+<em>Inner World:</em> ${deepSoulUrge.innerWorld}
+
+<em>Hidden Fears:</em> ${deepSoulUrge.hiddenFears}
+
+<em>Path to Fulfillment:</em> ${deepSoulUrge.fulfillment}
+
+<em>In Relationships:</em> ${deepSoulUrge.relationships}
+
+<em>Shadow Manifestation:</em> ${deepSoulUrge.shadowManifestation}
+
+<em>Spiritual Growth:</em> ${deepSoulUrge.spiritualGrowth}
+
+<em>Affirmation:</em> "${deepSoulUrge.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+                
+                numbersSection.appendChild(createReadingCard(
+                    deepSoulUrge.title,
+                    `Soul Urge ${soulUrge}`,
+                    ['Heart\'s Desire', 'Deep Motivation', 'Inner Yearning', 'True Self'],
+                    soulUrgeContent,
+                    [],
+                    []
+                ));
+            } else {
+                // Fallback to basic reading
+                const soulUrgeReading = SOUL_URGE_READINGS ? SOUL_URGE_READINGS[soulUrge] : null;
+                numbersSection.appendChild(createReadingCard(
+                    config.readingTitles.soulUrge,
+                    `${soulUrge} - ${soulUrgeReading ? soulUrgeReading.title : 'Soul Urge ' + soulUrge}`,
+                    ['Heart\'s Desire', 'Inner Motivation', 'True Self'],
+                    soulUrgeReading ? soulUrgeReading.reading : `Soul Urge ${soulUrge} reveals ${userData.name}'s deepest desires and what truly motivates from within.`,
+                    [],
+                    []
+                ));
+            }
+            
+            // Personality Number - DEEP READING
             const personality = readings.numerology.personality;
-            const personalityReading = PERSONALITY_NUMBER_READINGS ? PERSONALITY_NUMBER_READINGS[personality] : null;
-            numbersSection.appendChild(createReadingCard(
-                config.readingTitles.personality,
-                `${personality} - ${personalityReading ? personalityReading.title : 'Personality ' + personality}`,
-                ['Outer Self', 'First Impressions', 'Public Image'],
-                personalityReading ? personalityReading.reading : `Personality Number ${personality} shows how ${userData.name} appears to others.`,
-                [],
-                []
-            ));
+            const deepPersonality = (typeof DEEP_PERSONALITY_NUMBER_READINGS !== 'undefined') ? DEEP_PERSONALITY_NUMBER_READINGS[personality] : null;
+            
+            if (deepPersonality) {
+                // Create comprehensive Personality reading from deep content
+                const personalityContent = `<strong>${deepPersonality.hook}</strong>
+
+<em>First Impression:</em> ${deepPersonality.firstImpression}
+
+<em>Personal Style:</em> ${deepPersonality.style}
+
+<em>Social Presence:</em> ${deepPersonality.socialPresence}
+
+<em>Projected Strengths:</em> ${deepPersonality.projectedStrengths}
+
+<em>Projected Challenges:</em> ${deepPersonality.projectedChallenges}
+
+<em>How Others See Them:</em> ${deepPersonality.perception}
+
+<em>Path to Integration:</em> ${deepPersonality.integration}
+
+<em>Affirmation:</em> "${deepPersonality.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+                
+                numbersSection.appendChild(createReadingCard(
+                    deepPersonality.title,
+                    `Personality Number ${personality}`,
+                    ['Outer Self', 'First Impressions', 'Public Image', 'Social Mask'],
+                    personalityContent,
+                    [],
+                    []
+                ));
+            } else {
+                // Fallback to basic reading
+                const personalityReading = PERSONALITY_NUMBER_READINGS ? PERSONALITY_NUMBER_READINGS[personality] : null;
+                numbersSection.appendChild(createReadingCard(
+                    config.readingTitles.personality,
+                    `${personality} - ${personalityReading ? personalityReading.title : 'Personality ' + personality}`,
+                    ['Outer Self', 'First Impressions', 'Public Image'],
+                    personalityReading ? personalityReading.reading : `Personality Number ${personality} shows how ${userData.name} appears to others.`,
+                    [],
+                    []
+                ));
+            }
             
             // Birthday Number
             const birthday = readings.numerology.birthday;
