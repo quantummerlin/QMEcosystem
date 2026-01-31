@@ -4957,11 +4957,17 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             // Next Birthday
             const nextBirthday = readings.lifeCycles.nextBirthday;
+            const nextBirthdayDate = nextBirthday && nextBirthday.date
+                ? (nextBirthday.date instanceof Date ? nextBirthday.date : new Date(nextBirthday.date))
+                : null;
+            const nextBirthdayLabel = nextBirthdayDate && !isNaN(nextBirthdayDate)
+                ? nextBirthdayDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
+                : 'an upcoming date';
             cyclesSection.appendChild(createReadingCard(
                 'Next Birthday',
                 `${nextBirthday.daysUntil} days away`,
                 ['Solar Return', 'New Year Cycle'],
-                `${userData.name}'s next birthday is ${nextBirthday.daysUntil} days away on ${nextBirthday.date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}. This will mark the beginning of a new personal year cycle.`,
+                `${userData.name}'s next birthday is ${nextBirthday.daysUntil} days away on ${nextBirthdayLabel}. This will mark the beginning of a new personal year cycle.`,
                 [],
                 []
             ));
