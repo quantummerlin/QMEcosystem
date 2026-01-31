@@ -5671,9 +5671,22 @@ This isn't a flaw - it's their power source. The tension between these two drive
         // ============================================
         
         function startNewReading() {
+            // Clear saved reading so it doesn't auto-restore
+            localStorage.removeItem('lastReading');
+            localStorage.removeItem(READ_PROGRESS_KEY);
+            localStorage.removeItem(SECTION_COLLAPSE_KEY);
+            localStorage.removeItem(SCROLL_POSITION_KEY);
+            localStorage.removeItem(SCROLL_SECTION_KEY);
+            localStorage.removeItem('sb-read-sections');
+            
             document.getElementById('resultsSection').classList.remove('active');
             document.getElementById('inputSection').style.display = 'block';
             document.getElementById('readingForm').reset();
+            
+            // Clear the reading container
+            const container = document.getElementById('readingData');
+            if (container) container.innerHTML = '';
+            
             window.scrollTo(0, 0);
         }
         
