@@ -1,10 +1,9 @@
 // Netlify Scheduled Function: Cleanup Readings
 // Runs daily to delete readings older than 12 months
-// Configured in netlify.toml to run @daily
 
-import { getStore } from "@netlify/blobs";
+const { getStore } = require("@netlify/blobs");
 
-export default async (request, context) => {
+exports.handler = async (event, context) => {
     console.log('Starting scheduled cleanup of expired readings...');
     
     try {
@@ -38,26 +37,23 @@ export default async (request, context) => {
         
         console.log(`Cleanup complete. Checked: ${checkedCount}, Deleted: ${deletedCount}`);
         
-        return new Response(JSON.stringify({
-            success: true,
-            checked: checkedCount,
-            deleted: deletedCount,
-            timestamp: now.toISOString()
-        }), {
-            status: 200,
-            headers: { 'Content-Type': 'application/json' }
-        });
+        return {
+            statusCode: 200,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                success: true,
+                checked: checkedCount,
+                deleted: deletedCount,
+                timestamp: now.toISOString()
+            })
+        };
         
     } catch (error) {
         console.error('Cleanup function error:', error);
-        return new Response(JSON.stringify({ error: 'Cleanup failed' }), {
-            status: 500,
-            headers: { 'Content-Type': 'application/json' }
-        });
+        return {
+            statusCode: 500,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ error: 'Cleanup failed' })
+        };
     }
-};
-
-// This export tells Netlify this is a scheduled function
-export const config = {
-    schedule: "@daily"
 };

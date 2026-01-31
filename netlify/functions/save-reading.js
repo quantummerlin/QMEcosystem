@@ -1,8 +1,7 @@
 // Netlify Function: Save Reading
 // Stores a reading in Netlify Blobs and returns a shareable ID
-// Readings auto-expire after 12 months
 
-import { getStore } from "@netlify/blobs";
+const { getStore } = require("@netlify/blobs");
 
 // Generate a unique, URL-friendly ID
 function generateReadingId() {
@@ -15,35 +14,38 @@ function generateReadingId() {
     return `${timestamp}-${random}`;
 }
 
-export default async (request, context) => {
+exports.handler = async (event, context) => {
     // Handle CORS preflight
-    if (request.method === 'OPTIONS') {
-        return new Response(null, {
-            status: 204,
+    if (event.httpMethod === 'OPTIONS') {
+        return {
+            statusCode: 204,
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'POST, OPTIONS',
                 'Access-Control-Allow-Headers': 'Content-Type'
-            }
-        });
+            },
+            body: ''
+        };
     }
 
-    if (request.method !== 'POST') {
-        return new Response(JSON.stringify({ error: 'Method not allowed' }), {
-            status: 405,
-            headers: { 'Content-Type': 'application/json' }
-        });
+    if (event.httpMethod !== 'POST') {
+        return {
+            statusCode: 405,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ error: 'Method not allowed' })
+        };
     }
 
     try {
-        const body = await request.json();
+        const body = JSON.parse(event.body);
         
         // Validate required fields
         if (!body.html || !body.userData) {
-            return new Response(JSON.stringify({ error: 'Missing required fields' }), {
-                status: 400,
-                headers: { 'Content-Type': 'application/json' }
-            });
+            return {
+                statusCode: 400,
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ error: 'Missing required fields' })
+            };
         }
 
         // Generate unique ID
@@ -64,37 +66,36 @@ export default async (request, context) => {
             },
             colorScheme: body.colorScheme || 'pink',
             createdAt: new Date().toISOString(),
-            expiresAt: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString() // 12 months
+            expiresAt: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString()
         };
 
         await store.setJSON(readingId, readingData);
 
         // Return the shareable URL
-        const baseUrl = new URL(request.url).origin;
-        const shareUrl = `${baseUrl}/soulblueprint/r/${readingId}`;
+        const host = event.headers.host || 'quantummerlin.com';
+        const protocol = host.includes('localhost') ? 'http' : 'https';
+        const shareUrl = `${protocol}://${host}/soulblueprint/r/${readingId}`;
 
-        return new Response(JSON.stringify({
-            success: true,
-            id: readingId,
-            shareUrl: shareUrl,
-            expiresAt: readingData.expiresAt
-        }), {
-            status: 200,
+        return {
+            statusCode: 200,
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
-            }
-        });
+            },
+            body: JSON.stringify({
+                success: true,
+                id: readingId,
+                shareUrl: shareUrl,
+                expiresAt: readingData.expiresAt
+            })
+        };
 
     } catch (error) {
         console.error('Error saving reading:', error);
-        return new Response(JSON.stringify({ error: 'Failed to save reading' }), {
-            status: 500,
-            headers: { 'Content-Type': 'application/json' }
-        });
+        return {
+            statusCode: 500,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ error: 'Failed to save reading' })
+        };
     }
-};
-
-export const config = {
-    path: "/api/save-reading"
 };
