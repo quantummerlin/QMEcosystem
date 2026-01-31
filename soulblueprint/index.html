@@ -6567,7 +6567,8 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 };
                 
                 // Save to backend
-                const response = await fetch('/api/save-reading', {
+                const API_BASE = 'https://qm-shared-readings.waynegifford1981.workers.dev';
+                const response = await fetch(`${API_BASE}/api/save-reading`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(saveData)
