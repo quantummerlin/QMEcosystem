@@ -66,8 +66,8 @@ async function handleSaveReading(request, env) {
       expirationTtl: ONE_YEAR_SECONDS
     });
 
-    const url = new URL(request.url);
-    const shareUrl = `${url.origin}/soulblueprint/r/${readingId}`;
+    // Use query param format since GitHub Pages doesn't support redirects
+    const shareUrl = `https://quantummerlin.com/soulblueprint/view.html?id=${readingId}`;
 
     return jsonResponse({
       success: true,
