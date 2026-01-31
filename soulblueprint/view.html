@@ -114,37 +114,52 @@
         /* Reading Content */
         .gift-header {
             text-align: center;
-            padding: 40px 20px;
-            margin-bottom: 40px;
-            border-bottom: 2px solid var(--border-color);
+            padding: 50px 30px;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
+            border-radius: 24px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
         }
         
         .gift-header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
             color: var(--accent);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            letter-spacing: 0.02em;
         }
         
         .gift-header .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1.15rem;
+            opacity: 0.85;
+            margin-bottom: 8px;
         }
         
         .gift-header .birth-info {
-            font-size: 1rem;
+            font-size: 0.95rem;
             opacity: 0.7;
-            margin-top: 15px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
         }
         
         .gift-message {
             text-align: center;
-            padding: 30px;
-            margin: 40px auto;
+            padding: 35px;
+            margin: 30px auto;
             max-width: 700px;
-            background: var(--card-bg);
+            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.15) 100%);
             border-radius: 20px;
             border: 2px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        
+        .gift-message::before {
+            content: "🎁";
+            display: block;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
         }
         
         .gift-message h2 {
@@ -918,39 +933,42 @@
         
         /* Hide interactive elements */
         .sticky-progress-header, .mark-read-btn, .read-badge, .expand-icon,
-        .section-arrow, .reading-meter, .section-mark-read-btn {
+        .section-arrow, .reading-meter, .section-mark-read-btn, .reading-card-header {
             display: none !important;
         }
         
-        /* Ensure cards are expanded in shared view */
+        /* Ensure cards are expanded and content visible in shared view */
         .reading-card-body {
             max-height: none !important;
+            display: block !important;
+        }
+        
+        .reading-card-content {
+            display: block !important;
+            padding: 20px 24px 24px !important;
         }
         
         .section-content.collapsed > :not(.section-header) {
             display: block !important;
         }
         
-        /* Footer */
-        .gift-footer {
-            text-align: center;
-            padding: 40px;
-            margin-top: 60px;
-            border-top: 2px solid var(--border-color);
+        /* Make reading cards look nicer without the collapsible header */
+        .reading-card {
+            padding: 0 !important;
+            margin-bottom: 20px !important;
         }
         
-        .gift-footer p { margin-bottom: 10px; opacity: 0.8; }
-        .gift-footer .love { font-size: 1.2rem; color: var(--accent); }
-        
-        .footer-links {
-            margin-top: 20px;
-            font-size: 0.9rem;
+        .reading-card h3 {
+            padding: 20px 24px 0 !important;
+            font-size: 1.2rem !important;
+            margin-bottom: 8px !important;
         }
         
-        .footer-links a {
-            color: var(--accent);
-            text-decoration: none;
-            margin: 0 10px;
+        .reading-card .card-value,
+        .reading-card .result-value {
+            padding: 0 24px !important;
+            margin-bottom: 10px !important;
+            font-size: 1.1rem !important;
         }
         
         /* Expiry notice */
@@ -1050,9 +1068,115 @@
             display: none !important; 
         }
         
+        /* Create Your Own Invitation */
+        .create-invitation {
+            text-align: center;
+            padding: 50px 30px;
+            margin: 50px 0 30px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.15) 100%);
+            border-radius: 24px;
+            border: 2px dashed var(--accent);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+        }
+        
+        .create-invitation .invite-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .create-invitation h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .create-invitation p {
+            font-size: 1.05rem;
+            max-width: 500px;
+            margin: 0 auto 25px;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+        
+        .create-invitation .cta-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, var(--accent) 0%, #FF69B4 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(255,20,147,0.3);
+        }
+        
+        .create-invitation .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,20,147,0.4);
+        }
+        
+        .create-invitation .invite-note {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 20px;
+        }
+        
+        /* Gift Footer */
+        .gift-footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+            border-top: 2px solid var(--border-color);
+        }
+        
+        .gift-footer .love {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        
+        .gift-footer .brand {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+        
+        .gift-footer .expiry-notice {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            background: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 500px;
+        }
+        
+        .gift-footer .footer-links {
+            margin-top: 25px;
+            font-size: 0.9rem;
+        }
+        
+        .gift-footer .footer-links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 8px;
+            transition: opacity 0.3s;
+        }
+        
+        .gift-footer .footer-links a:hover {
+            opacity: 0.7;
+        }
+        
+        .gift-footer .footer-links span {
+            opacity: 0.4;
+        }
+        
         /* Print styles */
         @media print {
-            .actions-bar, .install-prompt, .footer-links { display: none !important; }
+            .actions-bar, .install-prompt, .footer-links, .create-invitation { display: none !important; }
             body { padding: 0; }
         }
     </style>
@@ -1098,14 +1222,23 @@
                 <!-- Reading sections will be injected here -->
             </div>
             
+            <!-- Create Your Own Invitation -->
+            <div class="create-invitation">
+                <span class="invite-icon">✨</span>
+                <h3>Discover Your Own Cosmic Story</h3>
+                <p>Loved this reading? Every soul has a unique celestial design waiting to be revealed. Create personalized readings for yourself, your family, or anyone special in your life.</p>
+                <a href="/soulblueprint/" class="cta-btn">Create a Free Reading</a>
+                <p class="invite-note">65+ personalized insights • Completely free • Takes 30 seconds</p>
+            </div>
+            
             <footer class="gift-footer">
                 <p class="love">Made with love ✨</p>
-                <p>Generated by A Moment in Time by Quantum Merlin</p>
+                <p class="brand">Generated by A Moment in Time by Quantum Merlin</p>
                 <div class="expiry-notice" id="expiry-notice"></div>
                 <div class="footer-links">
-                    <a href="/soulblueprint/">Create Your Own</a>
+                    <a href="/soulblueprint/">Create Reading</a>
                     <span>•</span>
-                    <a href="/soulblueprint/about.html">About</a>
+                    <a href="/">Quantum Merlin</a>
                     <span>•</span>
                     <a href="/soulblueprint/privacy.html">Privacy</a>
                 </div>
