@@ -3088,6 +3088,10 @@
             // Build Reading Closing Summary
             buildReadingClosing(userData, readings);
             
+            // Sync read progress from any pre-ticked cards
+            syncCardReadProgressFromDom();
+            updateProgressDisplay();
+            
             // Init progress buttons and restore last position
             initReadProgressButtons();
             initSectionToggles();
@@ -5617,6 +5621,21 @@ This isn't a flaw - it's their power source. The tension between these two drive
             } catch(e) {
                 readSectionIds = [];
             }
+        }
+
+        function syncCardReadProgressFromDom() {
+            const ids = [];
+            document.querySelectorAll('.reading-card[data-card-id]').forEach(card => {
+                const id = card.getAttribute('data-card-id');
+                const isRead = card.classList.contains('is-read') || !!card.querySelector('.read-badge.is-read');
+                if (isRead && id) {
+                    ids.push(id);
+                }
+            });
+            readSectionIds = ids;
+            try {
+                localStorage.setItem('sb-read-sections', JSON.stringify(readSectionIds));
+            } catch (e) {}
         }
         
         // ============================================
