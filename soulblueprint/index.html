@@ -4694,7 +4694,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
         
         function createSection(id, sectionConfig) {
             const section = document.createElement('div');
-            section.className = 'section-content collapsed';
+            section.className = 'section-content';
             section.id = `section-${id}`;
             
             section.innerHTML = `
@@ -4705,7 +4705,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         <p class="description">${sectionConfig.description}</p>
                     </div>
                     <button type="button" class="section-mark-read-btn" data-section-id="${id}">Mark as read</button>
-                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Expand</button>
+                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Collapse</button>
                 </div>
             `;
             
@@ -4714,7 +4714,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
 
         function createCustomSection(id, icon, name, description) {
             const section = document.createElement('div');
-            section.className = 'section-content collapsed';
+            section.className = 'section-content';
             section.id = `section-${id}`;
 
             section.innerHTML = `
@@ -4725,7 +4725,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         <p class="description">${description}</p>
                     </div>
                     <button type="button" class="section-mark-read-btn" data-section-id="${id}">Mark as read</button>
-                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Expand</button>
+                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Collapse</button>
                 </div>
             `;
 
@@ -5256,10 +5256,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             document.querySelectorAll('.toggle-section-btn').forEach(btn => {
                 const id = btn.getAttribute('data-section-id');
                 const section = document.getElementById(`section-${id}`);
-                // state[id] = true means expanded, false means collapsed
-                // Default to collapsed (false) if no saved state
-                const isExpanded = Object.prototype.hasOwnProperty.call(state, id) ? !!state[id] : false;
-                const isCollapsed = !isExpanded;
+                const isCollapsed = !!state[id];
                 if (section) {
                     section.classList.toggle('collapsed', isCollapsed);
                 }
@@ -5271,10 +5268,8 @@ This isn't a flaw - it's their power source. The tension between these two drive
             document.querySelectorAll('.toggle-section-btn').forEach(btn => {
                 btn.onclick = () => {
                     const id = btn.getAttribute('data-section-id');
-                    const section = document.getElementById(`section-${id}`);
                     const state = getSectionCollapseState();
-                    const isCollapsed = section ? section.classList.contains('collapsed') : true;
-                    state[id] = !isCollapsed;
+                    state[id] = !state[id];
                     saveSectionCollapseState(state);
                     updateSectionToggleButtons();
                 };
