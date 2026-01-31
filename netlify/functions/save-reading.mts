@@ -1,7 +1,7 @@
-// Netlify Function: Save Reading
+// Netlify Function: Save Reading (v2 format)
 // Stores a reading in Netlify Blobs and returns a shareable ID
 
-const { getStore } = require("@netlify/blobs");
+import { getStore } from "@netlify/blobs";
 
 // Generate a unique, URL-friendly ID
 function generateReadingId() {
@@ -14,38 +14,35 @@ function generateReadingId() {
     return `${timestamp}-${random}`;
 }
 
-exports.handler = async (event, context) => {
+export default async (req, context) => {
     // Handle CORS preflight
-    if (event.httpMethod === 'OPTIONS') {
-        return {
-            statusCode: 204,
+    if (req.method === 'OPTIONS') {
+        return new Response(null, {
+            status: 204,
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'POST, OPTIONS',
                 'Access-Control-Allow-Headers': 'Content-Type'
-            },
-            body: ''
-        };
+            }
+        });
     }
 
-    if (event.httpMethod !== 'POST') {
-        return {
-            statusCode: 405,
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ error: 'Method not allowed' })
-        };
+    if (req.method !== 'POST') {
+        return new Response(JSON.stringify({ error: 'Method not allowed' }), {
+            status: 405,
+            headers: { 'Content-Type': 'application/json' }
+        });
     }
 
     try {
-        const body = JSON.parse(event.body);
+        const body = await req.json();
         
         // Validate required fields
         if (!body.html || !body.userData) {
-            return {
-                statusCode: 400,
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ error: 'Missing required fields' })
-            };
+            return new Response(JSON.stringify({ error: 'Missing required fields' }), {
+                status: 400,
+                headers: { 'Content-Type': 'application/json' }
+            });
         }
 
         // Generate unique ID
@@ -72,30 +69,27 @@ exports.handler = async (event, context) => {
         await store.setJSON(readingId, readingData);
 
         // Return the shareable URL
-        const host = event.headers.host || 'quantummerlin.com';
-        const protocol = host.includes('localhost') ? 'http' : 'https';
-        const shareUrl = `${protocol}://${host}/soulblueprint/r/${readingId}`;
+        const url = new URL(req.url);
+        const shareUrl = `${url.origin}/soulblueprint/r/${readingId}`;
 
-        return {
-            statusCode: 200,
+        return new Response(JSON.stringify({
+            success: true,
+            id: readingId,
+            shareUrl: shareUrl,
+            expiresAt: readingData.expiresAt
+        }), {
+            status: 200,
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
-            },
-            body: JSON.stringify({
-                success: true,
-                id: readingId,
-                shareUrl: shareUrl,
-                expiresAt: readingData.expiresAt
-            })
-        };
+            }
+        });
 
     } catch (error) {
         console.error('Error saving reading:', error);
-        return {
-            statusCode: 500,
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ error: 'Failed to save reading' })
-        };
+        return new Response(JSON.stringify({ error: 'Failed to save reading', details: error.message }), {
+            status: 500,
+            headers: { 'Content-Type': 'application/json' }
+        });
     }
 };
