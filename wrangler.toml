@@ -1,0 +1,15 @@
+name = "qm-shared-readings"
+main = "cloudflare/worker.js"
+compatibility_date = "2026-01-31"
+
+[[kv_namespaces]]
+binding = "SHARED_READINGS"
+id = "c24dc159a9b94613a1c0c0070b1216f8"
+
+[triggers]
+crons = ["0 0 * * *"]
+
+# Routes: set these in Cloudflare dashboard or via Wrangler
+# routes = [
+#   { pattern = "yourdomain.com/api/*", zone_name = "yourdomain.com" }
+# ]
