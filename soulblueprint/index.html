@@ -579,21 +579,40 @@
         
         .section-header {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            gap: 8px;
+            justify-content: space-between;
+            gap: 16px;
             margin-bottom: 16px;
-            padding: 20px 24px;
+            padding: 18px 24px;
             border: 2px dotted var(--primary);
             border-radius: 16px;
-            text-align: center;
             background: linear-gradient(135deg, rgba(255,182,217,0.08), rgba(182,227,255,0.08));
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .section-header:hover {
+            background: linear-gradient(135deg, rgba(255,182,217,0.15), rgba(182,227,255,0.15));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        
+        .section-header-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+            flex: 1;
+        }
+        
+        .section-header-text {
+            text-align: left;
         }
         
         .section-header .icon {
-            font-size: 3rem;
-            display: block;
-            margin-bottom: 5px;
+            font-size: 2rem;
+            flex-shrink: 0;
         }
         
         .section-header .icon:empty {
@@ -602,36 +621,27 @@
         
         .section-header h2 {
             font-family: var(--font-heading);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--primary);
-            margin: 0;
+            margin: 0 0 4px 0;
         }
         
         .section-header .description {
-            font-size: 0.9rem;
-            opacity: 0.75;
-            margin: 0;
-            max-width: 400px;
-        }
-
-        .section-header .toggle-section-btn {
-            margin-top: 8px;
-            padding: 8px 18px;
-            border-radius: 999px;
-            border: 1px solid var(--primary);
-            background: transparent;
-            color: var(--primary);
-            font-weight: 600;
             font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
+            opacity: 0.7;
+            margin: 0;
+            color: var(--text);
         }
-
-        .section-header .toggle-section-btn:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        
+        .section-arrow {
+            font-size: 1.2rem;
+            color: var(--primary);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .section-content:not(.collapsed) .section-arrow {
+            transform: rotate(180deg);
         }
 
         .section-content.collapsed > :not(.section-header) {
@@ -4765,14 +4775,15 @@ This isn't a flaw - it's their power source. The tension between these two drive
             section.id = `section-${id}`;
             
             section.innerHTML = `
-                <div class="section-header">
-                    <span class="icon">${sectionConfig.icon}</span>
-                    <div>
-                        <h2>${sectionConfig.name}</h2>
-                        <p class="description">${sectionConfig.description}</p>
+                <div class="section-header" onclick="toggleSection('${id}')">
+                    <div class="section-header-content">
+                        <span class="icon">${sectionConfig.icon}</span>
+                        <div class="section-header-text">
+                            <h2>${sectionConfig.name}</h2>
+                            <p class="description">${sectionConfig.description}</p>
+                        </div>
                     </div>
-                    <button type="button" class="section-mark-read-btn" data-section-id="${id}">Mark as read</button>
-                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Expand</button>
+                    <span class="section-arrow">▼</span>
                 </div>
             `;
             
@@ -4785,14 +4796,15 @@ This isn't a flaw - it's their power source. The tension between these two drive
             section.id = `section-${id}`;
 
             section.innerHTML = `
-                <div class="section-header">
-                    <span class="icon">${icon}</span>
-                    <div>
-                        <h2>${name}</h2>
-                        <p class="description">${description}</p>
+                <div class="section-header" onclick="toggleSection('${id}')">
+                    <div class="section-header-content">
+                        <span class="icon">${icon}</span>
+                        <div class="section-header-text">
+                            <h2>${name}</h2>
+                            <p class="description">${description}</p>
+                        </div>
                     </div>
-                    <button type="button" class="section-mark-read-btn" data-section-id="${id}">Mark as read</button>
-                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Expand</button>
+                    <span class="section-arrow">▼</span>
                 </div>
             `;
 
@@ -5318,35 +5330,48 @@ This isn't a flaw - it's their power source. The tension between these two drive
             localStorage.setItem(SECTION_COLLAPSE_KEY, JSON.stringify(state));
         }
 
-        function updateSectionToggleButtons() {
+        function toggleSection(id) {
+            const section = document.getElementById(`section-${id}`);
+            if (!section) return;
+            
             const state = getSectionCollapseState();
-            document.querySelectorAll('.toggle-section-btn').forEach(btn => {
-                const id = btn.getAttribute('data-section-id');
-                const section = document.getElementById(`section-${id}`);
+            const isCurrentlyCollapsed = section.classList.contains('collapsed');
+            
+            // Toggle the state
+            section.classList.toggle('collapsed');
+            
+            // Save state (true = expanded, false = collapsed)
+            state[id] = isCurrentlyCollapsed; // If it was collapsed, now it's expanded
+            saveSectionCollapseState(state);
+            
+            // Update arrow direction
+            const arrow = section.querySelector('.section-arrow');
+            if (arrow) {
+                arrow.textContent = isCurrentlyCollapsed ? '▲' : '▼';
+            }
+        }
+
+        function updateSectionArrows() {
+            const state = getSectionCollapseState();
+            document.querySelectorAll('.section-content').forEach(section => {
+                const id = section.id.replace('section-', '');
                 // state[id] = true means expanded, false means collapsed
                 // Default to collapsed (false) if no saved state
                 const isExpanded = Object.prototype.hasOwnProperty.call(state, id) ? !!state[id] : false;
                 const isCollapsed = !isExpanded;
-                if (section) {
-                    section.classList.toggle('collapsed', isCollapsed);
+                
+                section.classList.toggle('collapsed', isCollapsed);
+                
+                const arrow = section.querySelector('.section-arrow');
+                if (arrow) {
+                    arrow.textContent = isCollapsed ? '▼' : '▲';
                 }
-                btn.textContent = isCollapsed ? 'Expand' : 'Collapse';
             });
         }
 
         function initSectionToggles() {
-            document.querySelectorAll('.toggle-section-btn').forEach(btn => {
-                btn.onclick = () => {
-                    const id = btn.getAttribute('data-section-id');
-                    const section = document.getElementById(`section-${id}`);
-                    const state = getSectionCollapseState();
-                    const isCollapsed = section ? section.classList.contains('collapsed') : true;
-                    state[id] = !isCollapsed;
-                    saveSectionCollapseState(state);
-                    updateSectionToggleButtons();
-                };
-            });
-            updateSectionToggleButtons();
+            // Apply saved states on load
+            updateSectionArrows();
         }
 
         function updateReadingMeter() {
