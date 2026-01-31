@@ -1640,6 +1640,181 @@
             }
         }
         
+        /* ============================================
+           ACTIONABLE CONTENT BLOCKS - Enhanced Value
+           ============================================ */
+        
+        .action-block {
+            background: linear-gradient(135deg, rgba(255,182,193,0.15) 0%, rgba(135,206,250,0.15) 100%);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-left: 4px solid var(--primary);
+            text-align: left;
+        }
+        
+        .action-block h5 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .action-block p, .action-block li {
+            font-size: 0.95rem;
+            color: var(--text);
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .action-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .action-block li {
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .action-block li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .dark-theme .action-block {
+            background: linear-gradient(135deg, rgba(255,105,180,0.12) 0%, rgba(107,163,214,0.12) 100%);
+        }
+        
+        /* Journal Prompt Block */
+        .journal-block {
+            background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(255,182,193,0.1) 100%);
+            border-left-color: #FFD700;
+        }
+        
+        .journal-block h5 {
+            color: #D4A500;
+        }
+        
+        .journal-block .prompt {
+            font-style: italic;
+            padding: 12px 16px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 8px;
+            margin: 10px 0;
+            border: 1px dashed rgba(255,215,0,0.4);
+        }
+        
+        .dark-theme .journal-block .prompt {
+            background: rgba(255,255,255,0.05);
+        }
+        
+        /* Daily Practice Block */
+        .practice-block {
+            background: linear-gradient(135deg, rgba(0,206,209,0.1) 0%, rgba(135,206,250,0.1) 100%);
+            border-left-color: #00CED1;
+        }
+        
+        .practice-block h5 {
+            color: #00A5A7;
+        }
+        
+        /* Try This Block */
+        .try-this-block {
+            background: linear-gradient(135deg, rgba(147,112,219,0.12) 0%, rgba(255,105,180,0.08) 100%);
+            border-left-color: #9370DB;
+        }
+        
+        .try-this-block h5 {
+            color: #8A2BE2;
+        }
+        
+        /* Affirmation Block */
+        .affirmation-block {
+            background: linear-gradient(135deg, #FF69B4 0%, #6BA3D6 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 16px 0;
+            border: none;
+        }
+        
+        .affirmation-block h5 {
+            color: white;
+            justify-content: center;
+        }
+        
+        .affirmation-block .affirmation-text {
+            font-size: 1.15rem;
+            font-style: italic;
+            font-weight: 500;
+            color: white;
+            margin: 0;
+        }
+        
+        /* Quick Insight Callout */
+        .quick-insight {
+            display: flex;
+            gap: 12px;
+            padding: 14px 16px;
+            background: rgba(255,105,180,0.08);
+            border-radius: 10px;
+            margin: 12px 0;
+            align-items: flex-start;
+        }
+        
+        .quick-insight .insight-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+        
+        .quick-insight .insight-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--text);
+        }
+        
+        .quick-insight .insight-text strong {
+            color: var(--primary);
+        }
+        
+        .dark-theme .quick-insight {
+            background: rgba(255,105,180,0.15);
+        }
+        
+        /* Key Takeaway */
+        .key-takeaway {
+            background: linear-gradient(135deg, rgba(255,215,0,0.15) 0%, rgba(255,105,180,0.1) 100%);
+            border: 2px solid rgba(255,215,0,0.3);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            text-align: center;
+        }
+        
+        .key-takeaway h5 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #D4A500;
+            margin-bottom: 8px;
+        }
+        
+        .key-takeaway p {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 0;
+        }
+        
         /* Footer */
         .results-footer {
             text-align: center;
@@ -3075,28 +3250,35 @@
 
 <em>Affirmation:</em> "${deepSun.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
                 
+                // Get actionable enhancements for this Sun sign
+                const sunEnhancements = getReadingEnhancements('sunSign', sunSign.name);
+                
                 celestialSection.appendChild(createReadingCard(
                     deepSun.title,
                     `Sun in ${sunSign.name}`,
                     ['Core Identity', 'Life Purpose', 'Ego Expression', 'Vitality'],
                     sunContent,
                     [],
-                    []
+                    [],
+                    sunEnhancements
                 ));
             } else {
                 const sunReading = SUN_SIGN_READINGS[sunSign.name];
+                const sunEnhancements = getReadingEnhancements('sunSign', sunSign.name);
                 celestialSection.appendChild(createReadingCard(
                     config.readingTitles.sunSign,
                     `${sunSign.symbol} ${sunSign.name}`,
                     sunReading ? sunReading.keywords : [],
                     sunReading ? sunReading.reading : `Born under the sign of ${sunSign.name}, a ${sunSign.element} sign.`,
                     sunReading ? sunReading.strengths : [],
-                    sunReading ? sunReading.challenges : []
+                    sunReading ? sunReading.challenges : [],
+                    sunEnhancements
                 ));
             }
             
             // Moon Sign - DEEP READING (moonSign already declared in blueprint section)
             const deepMoon = (typeof DEEP_MOON_READINGS !== 'undefined') ? DEEP_MOON_READINGS[moonSign.name] : null;
+            const moonEnhancements = getReadingEnhancements('moonSign', moonSign.name);
             
             if (deepMoon) {
                 // Create comprehensive Moon reading from deep content
@@ -3132,7 +3314,8 @@
                     ['Emotional Nature', 'Inner Needs', 'Comfort Style', 'Instinctual Response'],
                     moonContent,
                     [`${deepMoon.power}`],
-                    []
+                    [],
+                    moonEnhancements
                 ));
             } else {
                 // Fallback to basic reading
@@ -3143,7 +3326,8 @@
                     ['Emotions', 'Inner Self', 'Instincts', 'Comfort'],
                     `The Moon in ${moonSign.name} reveals the emotional nature and inner world. This placement suggests ${userData.name}'s emotional responses are colored by ${moonSign.element} energy - ${moonSign.element === 'Fire' ? 'passionate and expressive' : moonSign.element === 'Earth' ? 'stable and grounded' : moonSign.element === 'Air' ? 'intellectual and communicative' : 'deep and intuitive'}.`,
                     moonReading ? moonReading.strengths : [],
-                    moonReading ? moonReading.challenges : []
+                    moonReading ? moonReading.challenges : [],
+                    moonEnhancements
                 ));
             }
             
@@ -3801,13 +3985,15 @@ This isn't a flaw - it's their power source. The tension between these two drive
             // Life Path
             const lifePath = readings.numerology.lifePath;
             const lifePathReading = LIFE_PATH_READINGS[lifePath];
+            const lifePathEnhancements = getReadingEnhancements('lifePath', lifePath);
             numbersSection.appendChild(createReadingCard(
                 config.readingTitles.lifePath,
                 `${lifePath} - ${lifePathReading ? lifePathReading.title : 'Life Path ' + lifePath}`,
                 lifePathReading ? lifePathReading.keywords : [],
                 lifePathReading ? lifePathReading.reading.replace(/this soul/gi, userData.name).replace(/this individual/gi, userData.name) : `Life Path ${lifePath} indicates a journey of growth and discovery.`,
                 lifePathReading ? lifePathReading.strengths : [],
-                lifePathReading ? lifePathReading.challenges : []
+                lifePathReading ? lifePathReading.challenges : [],
+                lifePathEnhancements
             ));
             
             // Destiny Number
@@ -3861,13 +4047,15 @@ This isn't a flaw - it's their power source. The tension between these two drive
             // Personal Year
             const personalYear = readings.numerology.personalYear;
             const personalYearReading = PERSONAL_YEAR_READINGS ? PERSONAL_YEAR_READINGS[personalYear] : null;
+            const personalYearEnhancements = getReadingEnhancements('personalYear', personalYear);
             numbersSection.appendChild(createReadingCard(
                 config.readingTitles.personalYear,
                 `${personalYear} - ${personalYearReading ? personalYearReading.title : 'Year ' + personalYear}`,
                 personalYearReading ? personalYearReading.keywords : ['Current Year', 'Annual Theme', 'Opportunities'],
                 personalYearReading ? personalYearReading.reading.replace(/\$\{userData\.name\}/gi, userData.name) : `Personal Year ${personalYear} indicates the theme and energy of the current year.`,
                 [],
-                []
+                [],
+                personalYearEnhancements
             ));
             
             // Maturity Number
@@ -3943,13 +4131,15 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             // North Node with detailed reading (northNode already declared in blueprint section)
             const northNodeReading = NORTH_NODE_READINGS ? NORTH_NODE_READINGS[northNode.name] : null;
+            const northNodeEnhancements = getReadingEnhancements('northNode', northNode.name);
             soulSection.appendChild(createReadingCard(
                 config.readingTitles.northNode,
                 `${northNode.symbol} ${northNode.name}`,
                 northNodeReading ? northNodeReading.keywords : ['Soul Direction', 'Growth Path', 'Destiny'],
                 northNodeReading ? northNodeReading.reading : `The North Node in ${northNode.name} points to ${userData.name}'s soul direction.`,
                 [],
-                []
+                [],
+                northNodeEnhancements
             ));
             
             // South Node (opposite of North Node)
@@ -3992,13 +4182,15 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             // Personal Year Forecast with detailed reading
             const pyReading = PERSONAL_YEAR_READINGS ? PERSONAL_YEAR_READINGS[personalYear] : null;
+            const pyEnhancements = getReadingEnhancements('personalYear', personalYear);
             forecastsSection.appendChild(createReadingCard(
                 config.readingTitles.yearAhead,
                 `Personal Year ${personalYear} - ${pyReading ? pyReading.title : 'Year of ' + personalYear}`,
                 pyReading ? pyReading.keywords : ['Annual Theme', 'Opportunities', 'Focus Areas'],
                 pyReading ? pyReading.reading : `In this Personal Year ${personalYear}, ${userData.name} is experiencing important themes and opportunities.`,
                 [],
-                []
+                [],
+                pyEnhancements
             ));
             
             // Personal Month
@@ -4549,6 +4741,434 @@ This isn't a flaw - it's their power source. The tension between these two drive
         }
 
         // ============================================
+        // ACTIONABLE CONTENT GENERATORS
+        // ============================================
+        
+        const READING_ENHANCEMENTS = {
+            // Sun Sign enhancements
+            sunSign: {
+                Aries: {
+                    tryThis: ["Start each day with a physical activity — even 5 minutes of movement ignites their fire", "Give them small leadership roles (picking the family movie, leading the way on walks)", "Celebrate their courage, not just their victories"],
+                    journalPrompt: "What makes you feel brave? When you try something new, how does it feel in your body?",
+                    dailyPractice: "Morning power pose: Stand tall like a superhero for 30 seconds to start the day strong",
+                    affirmation: "I am a brave leader. My fire lights the way."
+                },
+                Taurus: {
+                    tryThis: ["Create a cozy reading nook with soft textures they can touch", "Involve them in cooking or gardening — they love sensory experiences", "Give them time to process changes; rushing creates resistance"],
+                    journalPrompt: "What are 5 things that make you feel safe and comfortable? What do they smell, feel, or taste like?",
+                    dailyPractice: "Grounding walk: Feel your feet on the earth and notice 3 beautiful things in nature",
+                    affirmation: "I am steady and strong. Good things come to me naturally."
+                },
+                Gemini: {
+                    tryThis: ["Keep conversations going with 'what if' and 'why' questions", "Rotate toys and books frequently to satisfy their need for variety", "Let them explain things to you — teaching deepens their learning"],
+                    journalPrompt: "If you could learn any skill in the world, what would it be? Who would you teach it to?",
+                    dailyPractice: "Curiosity moment: Learn one new fact each day and share it with someone",
+                    affirmation: "My mind is a treasure chest. Every question opens new doors."
+                },
+                Cancer: {
+                    tryThis: ["Create family rituals they can count on (bedtime stories, Sunday pancakes)", "Keep a memory box together with photos and mementos", "Validate their feelings with 'I see you're feeling...'"],
+                    journalPrompt: "Draw your safe place. Who is there with you? What makes it feel like home?",
+                    dailyPractice: "Heart check-in: Put hand on heart and ask 'How am I feeling right now?'",
+                    affirmation: "My feelings are my superpower. I am loved exactly as I am."
+                },
+                Leo: {
+                    tryThis: ["Create a 'stage' where they can perform — even if it's just the living room", "Celebrate their creative efforts with genuine enthusiasm", "Let them pick their own outfits and express their personal style"],
+                    journalPrompt: "What do you love most about yourself? What makes you special and unique?",
+                    dailyPractice: "Shine moment: Do one thing today that lets your creative light shine",
+                    affirmation: "I am a radiant star. My light inspires others to shine too."
+                },
+                Virgo: {
+                    tryThis: ["Give them age-appropriate helpful tasks that make a real difference", "Praise effort and improvement, not just perfection", "Create organized spaces with labels and clear systems"],
+                    journalPrompt: "What small thing could you do today to help someone? How does helping others make you feel?",
+                    dailyPractice: "Mindful moment: Before bed, name 3 things that went well today",
+                    affirmation: "I make the world better just by being me. Progress, not perfection."
+                },
+                Libra: {
+                    tryThis: ["Expose them to art, music, and beautiful environments", "Model healthy conflict resolution — they're watching closely", "Give them choices between options to build decision-making skills"],
+                    journalPrompt: "What does fairness mean to you? Describe a time when you helped make things fair.",
+                    dailyPractice: "Beauty break: Notice one beautiful thing today and tell someone about it",
+                    affirmation: "I create harmony wherever I go. My kindness makes the world more beautiful."
+                },
+                Scorpio: {
+                    tryThis: ["Respect their privacy while staying emotionally available", "Engage in deep conversations about life's mysteries", "Validate intensity rather than asking them to 'calm down'"],
+                    journalPrompt: "What is something most people don't know about you? What secret power do you have?",
+                    dailyPractice: "Deep breath: When emotions feel big, take 3 deep breaths and let them flow through",
+                    affirmation: "I feel deeply and that is my strength. I can transform anything."
+                },
+                Sagittarius: {
+                    tryThis: ["Plan adventures — even small ones like exploring a new park", "Expose them to different cultures through food, music, and stories", "Answer their philosophical questions honestly, even the hard ones"],
+                    journalPrompt: "If you could travel anywhere in the world, where would you go? What would you discover?",
+                    dailyPractice: "Wonder moment: Look up at the sky and imagine all the places waiting to be explored",
+                    affirmation: "The world is full of wonder. Every day is a new adventure."
+                },
+                Capricorn: {
+                    tryThis: ["Set achievable goals together and celebrate milestones", "Show them that rest and play are also productive", "Share stories of people who succeeded through persistence"],
+                    journalPrompt: "What do you want to be really good at someday? What small step can you take today?",
+                    dailyPractice: "Mountain climber: Each night, name one thing you accomplished today",
+                    affirmation: "I am capable of amazing things. Step by step, I reach my goals."
+                },
+                Aquarius: {
+                    tryThis: ["Encourage their unique ideas, even unconventional ones", "Connect them with causes they care about", "Give them independence while staying emotionally close"],
+                    journalPrompt: "If you could change one thing to make the world better, what would it be?",
+                    dailyPractice: "Genius moment: Do something your own way today, just because it feels right",
+                    affirmation: "I am wonderfully unique. My different way of thinking changes the world."
+                },
+                Pisces: {
+                    tryThis: ["Provide creative outlets: art supplies, music, imaginative play", "Create calm spaces for them to recharge their sensitive system", "Believe their intuitive hits — they often know things they can't explain"],
+                    journalPrompt: "If your dreams could send you a message, what would they say?",
+                    dailyPractice: "Imagination time: Spend 5 minutes daydreaming or creating something from your heart",
+                    affirmation: "My imagination is a gift. I am connected to something magical."
+                }
+            },
+            
+            // Moon Sign enhancements
+            moonSign: {
+                Aries: {
+                    tryThis: ["Allow healthy outlets for emotional intensity like physical play", "Name emotions quickly - they process feelings through action", "Create space for spontaneous emotional expression"],
+                    journalPrompt: "When I feel big emotions, my body wants to... What helps me feel emotionally brave?",
+                    dailyPractice: "Emotional energy release: When feelings are intense, do 10 jumping jacks or run in place",
+                    affirmation: "My emotions are powerful and I can handle them. I feel things fully and quickly."
+                },
+                Taurus: {
+                    tryThis: ["Maintain consistent routines for emotional security", "Use sensory comforts during transitions (favorite blanket, snack)", "Give extra time to process emotional changes"],
+                    journalPrompt: "What makes me feel safe and cozy inside? What 5 things always comfort me?",
+                    dailyPractice: "Grounding touch: When upset, hold something soft or warm for 30 seconds",
+                    affirmation: "I am safe and loved. I take my time with my feelings and that's okay."
+                },
+                Gemini: {
+                    tryThis: ["Encourage talking through feelings", "Read stories about emotions together", "Write or draw about how they feel when words are hard"],
+                    journalPrompt: "If my feelings could talk, what would they say? Draw a picture of your emotions today.",
+                    dailyPractice: "Feelings check-in: Tell someone about three feelings you noticed today",
+                    affirmation: "I can understand my feelings. Talking about emotions helps me feel better."
+                },
+                Cancer: {
+                    tryThis: ["Create sacred family rituals and maintain them consistently", "Validate all feelings without trying to fix them", "Keep meaningful mementos and comfort objects accessible"],
+                    journalPrompt: "Who do I feel safest with? What memory always makes me feel loved?",
+                    dailyPractice: "Heart connection: Before bed, think of someone who loves you and send them love",
+                    affirmation: "I am deeply loved. My tender heart is a gift to the world."
+                },
+                Leo: {
+                    tryThis: ["Celebrate emotional courage with warmth and praise", "Let them express feelings dramatically - it's healthy processing", "Never dismiss or minimize their emotional experiences"],
+                    journalPrompt: "When did you feel proud of yourself today? What makes your heart shine?",
+                    dailyPractice: "Heart shine moment: Do one thing that makes you feel proud and happy inside",
+                    affirmation: "My feelings matter. My heart is warm and generous and I love who I am."
+                },
+                Virgo: {
+                    tryThis: ["Help them organize and understand their feelings", "Avoid criticism during emotional moments", "Create calming rituals for worry or anxiety"],
+                    journalPrompt: "Make a list of 3 worries and 3 things that are going well. What small step could help?",
+                    dailyPractice: "Worry jar: Write one worry on paper and put it in a jar to release it",
+                    affirmation: "I don't have to be perfect. It's okay to have feelings and make mistakes."
+                },
+                Libra: {
+                    tryThis: ["Create peaceful environments for emotional processing", "Teach that conflict is okay and can be healthy", "Model expressing needs clearly and directly"],
+                    journalPrompt: "What do I really want right now? Is there something I need to say to someone?",
+                    dailyPractice: "True feelings check: Ask yourself 'What do I really feel?' not 'What should I feel?'",
+                    affirmation: "My feelings are valid even if others feel differently. My needs matter."
+                },
+                Scorpio: {
+                    tryThis: ["Honor their emotional depth and privacy needs", "Never betray their trust or share their secrets", "Teach healthy ways to process intense emotions"],
+                    journalPrompt: "What am I feeling deep down that I haven't told anyone? What do I need right now?",
+                    dailyPractice: "Deep breath release: Breathe in love, breathe out anything heavy in your heart",
+                    affirmation: "I feel deeply and that is my superpower. I can transform any feeling."
+                },
+                Sagittarius: {
+                    tryThis: ["Give them space and freedom when emotionally overwhelmed", "Use humor gently to lift their spirits", "Connect feelings to bigger meaning and purpose"],
+                    journalPrompt: "What is this feeling teaching me? What adventure would make my heart feel free?",
+                    dailyPractice: "Joy hunting: Find one thing to feel excited or hopeful about today",
+                    affirmation: "My feelings are part of my adventure. Even hard feelings help me grow."
+                },
+                Capricorn: {
+                    tryThis: ["Respect their dignity even during emotional moments", "Don't force them to be vulnerable before they're ready", "Praise emotional maturity without demanding it"],
+                    journalPrompt: "What emotion feels hardest to show others? What would happen if you let yourself feel it?",
+                    dailyPractice: "Permission slip: Give yourself permission to feel whatever you're feeling today",
+                    affirmation: "It's safe to have feelings. Emotions don't make me weak - they make me wise."
+                },
+                Aquarius: {
+                    tryThis: ["Respect their need for emotional independence", "Connect feelings to ideas and understanding", "Allow unconventional ways of processing emotions"],
+                    journalPrompt: "If feelings were colors or sounds, what would yours be today? Draw or describe them.",
+                    dailyPractice: "Unique feelings check: Notice how YOUR emotions work - they're allowed to be different",
+                    affirmation: "I feel things in my own unique way. My emotional style is valid and special."
+                },
+                Pisces: {
+                    tryThis: ["Create calm, beautiful spaces for emotional recharging", "Validate their sensitivity as a gift, not a weakness", "Help them distinguish their feelings from others'"],
+                    journalPrompt: "Close your eyes and imagine a safe, magical place. What does it look like? How do you feel there?",
+                    dailyPractice: "Energy clearing: Shake your body for 30 seconds to release any emotions that aren't yours",
+                    affirmation: "I feel everything deeply and that's beautiful. I can protect my sensitive heart."
+                }
+            },
+            
+            // Life Path enhancements
+            lifePath: {
+                1: {
+                    tryThis: ["Start a project that's completely your own creation", "Practice making decisions without seeking others' approval", "Set one bold goal this year that scares you a little"],
+                    journalPrompt: "When do you feel most like a leader? What would you do if you knew you couldn't fail?",
+                    dailyPractice: "Pioneer moment: Do something first today — be the one who starts",
+                    affirmation: "I am a creative force. I lead by being authentically myself."
+                },
+                2: {
+                    tryThis: ["Practice active listening in every conversation", "Create harmony in one relationship that needs attention", "Notice when intuition speaks and trust its guidance"],
+                    journalPrompt: "Who in your life needs your gentle support right now? How can you be a bridge?",
+                    dailyPractice: "Harmony check: Before speaking, ask 'Will this bring people together?'",
+                    affirmation: "I am a peacemaker. My sensitivity is a gift to the world."
+                },
+                3: {
+                    tryThis: ["Express yourself creatively today — write, draw, sing, or create", "Share your joy openly; your enthusiasm is contagious", "Start a creative project you've been putting off"],
+                    journalPrompt: "What form of creative expression feels most natural to you? What stops you from creating more?",
+                    dailyPractice: "Joy spark: Create something today, no matter how small",
+                    affirmation: "My creativity flows endlessly. I inspire others with my expression."
+                },
+                4: {
+                    tryThis: ["Build something tangible: a habit, a space, a system", "Break big goals into practical step-by-step plans", "Create structure in one area of life that feels chaotic"],
+                    journalPrompt: "What are you building for the future? What foundation are you laying today?",
+                    dailyPractice: "Builder's check: Complete one task fully before starting another",
+                    affirmation: "I create lasting foundations. My steady work creates real results."
+                },
+                5: {
+                    tryThis: ["Try something completely new this week", "Plan an adventure, even a small one", "Practice finding freedom within responsibilities"],
+                    journalPrompt: "What does freedom mean to you? Where in life do you crave more change?",
+                    dailyPractice: "Freedom moment: Break one routine today and try a different way",
+                    affirmation: "I am free to explore and change. Life is an exciting adventure."
+                },
+                6: {
+                    tryThis: ["Beautify one space in your home", "Reach out to someone who needs care", "Balance giving to others with nurturing yourself"],
+                    journalPrompt: "How do you show love? Are you giving yourself the same care you give others?",
+                    dailyPractice: "Heart gift: Do one loving act for another and one for yourself today",
+                    affirmation: "I am a nurturing presence. Love flows through me to heal the world."
+                },
+                7: {
+                    tryThis: ["Spend time in quiet contemplation or meditation", "Research a topic that fascinates you deeply", "Trust your inner knowing over external opinions"],
+                    journalPrompt: "What truth are you searching for? When do you feel most connected to something greater?",
+                    dailyPractice: "Wisdom pause: Take 5 minutes of complete silence to listen within",
+                    affirmation: "I am a seeker of truth. My inner wisdom guides me perfectly."
+                },
+                8: {
+                    tryThis: ["Take charge of one area where you've been holding back", "Create a vision board for your goals", "Practice receiving as generously as you give"],
+                    journalPrompt: "What does abundance mean to you? Where do you already have power you're not using?",
+                    dailyPractice: "Power stance: Step into one situation today with full confidence",
+                    affirmation: "I am powerful and abundant. I create success in all areas of life."
+                },
+                9: {
+                    tryThis: ["Do something kind for a stranger", "Let go of one thing you've been holding onto too long", "Share wisdom that could help others"],
+                    journalPrompt: "What have you learned that could help someone else? What are you ready to release?",
+                    dailyPractice: "Completion moment: Finish or release one thing that's been weighing on you",
+                    affirmation: "I am here to serve and uplift. I release the old to welcome the new."
+                },
+                11: {
+                    tryThis: ["Pay attention to intuitive hits and synchronicities", "Share your vision with someone who can support it", "Ground your spiritual insights with practical action"],
+                    journalPrompt: "What vision keeps calling you? How can you be a light for others?",
+                    dailyPractice: "Channel moment: Ask your intuition one question and trust the first answer",
+                    affirmation: "I am a spiritual messenger. My light illuminates the path for others."
+                },
+                22: {
+                    tryThis: ["Take one step toward your biggest vision", "Connect your practical skills to a larger purpose", "Build something that will outlast you"],
+                    journalPrompt: "What legacy do you want to leave? What dream feels almost too big to believe?",
+                    dailyPractice: "Master builder moment: Connect today's work to your highest vision",
+                    affirmation: "I am a master builder. I turn dreams into reality that serves all."
+                },
+                33: {
+                    tryThis: ["Share healing wisdom with someone who needs it", "Create beauty that uplifts others", "Practice unconditional love, starting with yourself"],
+                    journalPrompt: "How do you heal others? Where do you need to receive the love you give?",
+                    dailyPractice: "Compassion moment: Send love to yourself and three others",
+                    affirmation: "I am a master healer. My love transforms everything it touches."
+                }
+            },
+            
+            // Personal Year enhancements
+            personalYear: {
+                1: {
+                    focus: "New beginnings, fresh starts, planting seeds",
+                    activities: ["Start a new project or habit", "Take initiative in one stuck area", "Define what you want for the next 9-year cycle"],
+                    monthlyFocus: "Each month, ask: What am I creating? What needs to be initiated?"
+                },
+                2: {
+                    focus: "Patience, partnerships, behind-the-scenes growth",
+                    activities: ["Strengthen key relationships", "Practice patience with timing", "Nurture seeds planted last year"],
+                    monthlyFocus: "Each month, ask: Where am I being called to cooperate? What needs patience?"
+                },
+                3: {
+                    focus: "Expression, creativity, social expansion",
+                    activities: ["Take a creative class or start a project", "Expand your social circle", "Express yourself authentically"],
+                    monthlyFocus: "Each month, ask: How can I express my joy? What wants to be created?"
+                },
+                4: {
+                    focus: "Hard work, foundation building, discipline",
+                    activities: ["Create systems and structures", "Build healthy habits", "Work steadily toward goals"],
+                    monthlyFocus: "Each month, ask: What foundation am I strengthening? Where do I need discipline?"
+                },
+                5: {
+                    focus: "Change, freedom, adventure, expansion",
+                    activities: ["Travel or try new experiences", "Embrace unexpected changes", "Break free from limiting patterns"],
+                    monthlyFocus: "Each month, ask: What change is calling me? Where do I need more freedom?"
+                },
+                6: {
+                    focus: "Love, family, responsibility, beauty",
+                    activities: ["Beautify your home", "Deepen family connections", "Balance giving with self-care"],
+                    monthlyFocus: "Each month, ask: Where is love calling me? What needs nurturing?"
+                },
+                7: {
+                    focus: "Rest, reflection, inner wisdom, spirituality",
+                    activities: ["Take a retreat or sabbatical", "Study something meaningful", "Trust your intuition more"],
+                    monthlyFocus: "Each month, ask: What am I learning? Where do I need rest and reflection?"
+                },
+                8: {
+                    focus: "Power, abundance, achievement, recognition",
+                    activities: ["Go after what you want professionally", "Handle finances wisely", "Step into leadership"],
+                    monthlyFocus: "Each month, ask: Where am I being called to step into my power?"
+                },
+                9: {
+                    focus: "Completion, release, service, endings",
+                    activities: ["Complete unfinished projects", "Let go of what no longer serves", "Give back and help others"],
+                    monthlyFocus: "Each month, ask: What needs to be completed? What am I ready to release?"
+                }
+            },
+            
+            // North Node (Soul Mission) enhancements
+            northNode: {
+                Aries: {
+                    tryThis: ["Practice asserting yourself in small ways daily", "Take on a solo project without asking for others' approval", "Lead one activity or conversation"],
+                    journalPrompt: "What would I do if I only considered MY needs? What scares me about being first?",
+                    dailyPractice: "Courage step: Do one thing today that feels brave, even if it's small",
+                    affirmation: "I am learning to put myself first. My independence benefits everyone."
+                },
+                Taurus: {
+                    tryThis: ["Build something lasting with your own hands", "Practice enjoying simple pleasures without guilt", "Ground yourself in nature regularly"],
+                    journalPrompt: "What do I truly value? What would make me feel secure and stable?",
+                    dailyPractice: "Grounding moment: Feel your feet on the earth and appreciate one simple pleasure",
+                    affirmation: "I am learning to value myself. My peace comes from within."
+                },
+                Gemini: {
+                    tryThis: ["Stay curious about everyday things", "Start conversations with new people", "Learn something new each week"],
+                    journalPrompt: "What am I curious about right now? Who has a perspective I haven't heard yet?",
+                    dailyPractice: "Curiosity spark: Ask one genuine question and really listen to the answer",
+                    affirmation: "I am learning through every experience. My curiosity is sacred."
+                },
+                Cancer: {
+                    tryThis: ["Create a nurturing home environment", "Express feelings to people you trust", "Allow yourself to need others"],
+                    journalPrompt: "What does emotional safety feel like to me? Who do I want to nurture and be nurtured by?",
+                    dailyPractice: "Heart opening: Let yourself feel tender about something or someone today",
+                    affirmation: "I am learning to feel and nurture. My vulnerability is my strength."
+                },
+                Leo: {
+                    tryThis: ["Share your creative work without waiting for perfection", "Accept compliments graciously", "Let yourself be seen fully"],
+                    journalPrompt: "What do I want to be recognized for? What am I hiding that wants to shine?",
+                    dailyPractice: "Spotlight moment: Do something that lets your unique light shine today",
+                    affirmation: "I am learning to shine. The world needs my unique creative light."
+                },
+                Virgo: {
+                    tryThis: ["Create helpful systems and routines", "Focus on practical solutions over idealistic dreams", "Offer service without losing yourself"],
+                    journalPrompt: "How can I be more helpful in practical ways? What small improvements would make big differences?",
+                    dailyPractice: "Service moment: Do one small thing that improves someone's day (including yours)",
+                    affirmation: "I am learning to be useful. My discernment heals and helps."
+                },
+                Libra: {
+                    tryThis: ["Practice compromise in relationships", "Create more beauty in your environment", "See situations from others' perspectives"],
+                    journalPrompt: "Where in my life do I need more balance? What relationship needs more harmony?",
+                    dailyPractice: "Harmony check: Consider someone else's perspective before responding today",
+                    affirmation: "I am learning to partner. My relationships teach me who I am."
+                },
+                Scorpio: {
+                    tryThis: ["Go deeper into emotions instead of avoiding them", "Allow yourself to be transformed by challenges", "Trust the process of letting go"],
+                    journalPrompt: "What am I afraid to feel? What needs to die so something new can be born?",
+                    dailyPractice: "Truth moment: Acknowledge one feeling you've been avoiding and let it exist",
+                    affirmation: "I am learning to transform. My depths contain treasure."
+                },
+                Sagittarius: {
+                    tryThis: ["Explore new philosophies or belief systems", "Plan an adventure that expands your worldview", "Trust your intuition about meaning and purpose"],
+                    journalPrompt: "What do I believe about life's meaning? What adventure is calling me?",
+                    dailyPractice: "Vision expansion: Learn one thing that challenges or expands your current beliefs",
+                    affirmation: "I am learning to trust life. My journey has sacred meaning."
+                },
+                Capricorn: {
+                    tryThis: ["Set long-term goals and work toward them steadily", "Accept responsibility for something important", "Build your reputation through consistent effort"],
+                    journalPrompt: "What legacy do I want to leave? What am I willing to work hard for?",
+                    dailyPractice: "Master builder moment: Take one step toward a meaningful long-term goal",
+                    affirmation: "I am learning to achieve. My discipline creates lasting impact."
+                },
+                Aquarius: {
+                    tryThis: ["Join groups aligned with your values", "Contribute to causes larger than yourself", "Embrace your unique perspective"],
+                    journalPrompt: "How can I contribute to the collective good? What makes me wonderfully different?",
+                    dailyPractice: "Innovation moment: Do something your own unique way, for the benefit of all",
+                    affirmation: "I am learning to serve humanity. My uniqueness is my gift to the world."
+                },
+                Pisces: {
+                    tryThis: ["Trust your intuition more than logic sometimes", "Create art or music for spiritual expression", "Practice compassion without losing boundaries"],
+                    journalPrompt: "What is my soul whispering to me? How can I be more spiritually connected?",
+                    dailyPractice: "Spirit moment: Close your eyes and feel connected to something larger than yourself",
+                    affirmation: "I am learning to surrender. My spiritual gifts are awakening."
+                }
+            }
+        };
+        
+        function generateActionBlock(type, data) {
+            if (!data) return '';
+            
+            switch(type) {
+                case 'tryThis':
+                    if (!data.tryThis || data.tryThis.length === 0) return '';
+                    return `
+                        <div class="action-block try-this-block">
+                            <h5>💡 Try This</h5>
+                            <ul>
+                                ${data.tryThis.map(tip => `<li>${tip}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `;
+                    
+                case 'journal':
+                    if (!data.journalPrompt) return '';
+                    return `
+                        <div class="action-block journal-block">
+                            <h5>📝 Journal Prompt</h5>
+                            <div class="prompt">${data.journalPrompt}</div>
+                        </div>
+                    `;
+                    
+                case 'practice':
+                    if (!data.dailyPractice) return '';
+                    return `
+                        <div class="action-block practice-block">
+                            <h5>✨ Daily Practice</h5>
+                            <p>${data.dailyPractice}</p>
+                        </div>
+                    `;
+                    
+                case 'affirmation':
+                    if (!data.affirmation) return '';
+                    return `
+                        <div class="affirmation-block">
+                            <h5>🌟 Affirmation</h5>
+                            <p class="affirmation-text">"${data.affirmation}"</p>
+                        </div>
+                    `;
+                    
+                case 'yearFocus':
+                    if (!data.focus) return '';
+                    return `
+                        <div class="key-takeaway">
+                            <h5>🎯 This Year's Focus</h5>
+                            <p>${data.focus}</p>
+                        </div>
+                        <div class="action-block">
+                            <h5>📅 Suggested Activities</h5>
+                            <ul>
+                                ${data.activities.map(a => `<li>${a}</li>`).join('')}
+                            </ul>
+                            <p style="margin-top: 12px; font-style: italic;">${data.monthlyFocus}</p>
+                        </div>
+                    `;
+                    
+                default:
+                    return '';
+            }
+        }
+        
+        function getReadingEnhancements(readingType, value) {
+            const category = READING_ENHANCEMENTS[readingType];
+            if (!category) return null;
+            return category[value] || null;
+        }
+
+        // ============================================
         // READING PROGRESS + SCROLL PERSISTENCE
         // ============================================
 
@@ -4717,7 +5337,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
         let totalSectionCount = 0;
         let readSectionIds = [];
         
-        function createReadingCard(title, value, keywords, content, strengths, challenges) {
+        function createReadingCard(title, value, keywords, content, strengths, challenges, enhancements) {
             const card = document.createElement('div');
             const cardId = `section-${totalSectionCount++}`;
             card.className = 'reading-card';
@@ -4784,6 +5404,17 @@ This isn't a flaw - it's their power source. The tension between these two drive
             // Convert newlines to paragraphs
             const contentParagraphs = tonedContent.split('\n\n').map(p => `<p>${p}</p>`).join('');
             
+            // Generate actionable content blocks if enhancements provided
+            let enhancementsHtml = '';
+            if (enhancements) {
+                enhancementsHtml = 
+                    generateActionBlock('tryThis', enhancements) +
+                    generateActionBlock('journal', enhancements) +
+                    generateActionBlock('practice', enhancements) +
+                    generateActionBlock('affirmation', enhancements) +
+                    generateActionBlock('yearFocus', enhancements);
+            }
+            
             // Extract emoji from title and put on its own line
             const emojiRegex = /^([\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F000}-\u{1F02F}\u{1F0A0}-\u{1F0FF}♈♉♊♋♌♍♎♏♐♑♒♓]+)\s*/u;
             const emojiMatch = title.match(emojiRegex);
@@ -4824,6 +5455,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                             ${contentParagraphs}
                         </div>
                         ${strengthsChallengesHtml}
+                        ${enhancementsHtml}
                         <button type="button" class="mark-read-btn ${isRead ? 'is-read' : ''}" onclick="markCardAsRead(event, '${cardId}')">
                             ${isRead ? '✓ Read' : 'Mark as Read'}
                         </button>
