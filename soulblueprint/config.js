@@ -52,27 +52,27 @@ const BRAND_CONFIG = {
         celestial: {
             name: "Celestial Gifts",
             icon: "",
-            description: "Planetary influences and cosmic personality"
+            description: "Your planetary influences and cosmic personality"
         },
         numbers: {
-            name: "Sacred Numbers",
+            name: "Karmic Numbers & Soul Codes",
             icon: "",
-            description: "The numerological blueprint of the life path"
+            description: "The numerological blueprint encoded in your birth"
         },
         soul: {
             name: "Soul Mission",
             icon: "",
-            description: "Deeper purpose and spiritual gifts"
+            description: "Your deeper purpose and spiritual gifts"
         },
         forecasts: {
-            name: "Life Seasons",
+            name: "Life Chapters",
             icon: "",
-            description: "What the cosmos has in store"
+            description: "The major evolutionary phases of your journey"
         },
         cycles: {
-            name: "Growth Cycles",
+            name: "Long-Arc Life Forecast",
             icon: "",
-            description: "Key developmental phases and timing"
+            description: "Your lifelong evolution path and timing"
         }
     },
     

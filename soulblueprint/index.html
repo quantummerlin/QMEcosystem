@@ -581,11 +581,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 6px;
-            margin-bottom: 8px;
-            padding-bottom: 6px;
-            border-bottom: 2px solid var(--primary);
+            gap: 8px;
+            margin-bottom: 16px;
+            padding: 20px 24px;
+            border: 2px dotted var(--primary);
+            border-radius: 16px;
             text-align: center;
+            background: linear-gradient(135deg, rgba(255,182,217,0.08), rgba(182,227,255,0.08));
         }
         
         .section-header .icon {
@@ -600,19 +602,21 @@
         
         .section-header h2 {
             font-family: var(--font-heading);
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--primary);
+            margin: 0;
         }
         
         .section-header .description {
-            font-size: 0.95rem;
-            opacity: 0.8;
-            margin-top: 5px;
+            font-size: 0.9rem;
+            opacity: 0.75;
+            margin: 0;
+            max-width: 400px;
         }
 
         .section-header .toggle-section-btn {
-            margin-top: 6px;
-            padding: 6px 14px;
+            margin-top: 8px;
+            padding: 8px 18px;
             border-radius: 999px;
             border: 1px solid var(--primary);
             background: transparent;
@@ -624,6 +628,8 @@
         }
 
         .section-header .toggle-section-btn:hover {
+            background: var(--primary);
+            color: white;
             transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
@@ -754,11 +760,11 @@
         /* Cosmic Snapshot - Big Three Card */
         .cosmic-snapshot {
             background: var(--card-bg);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 24px;
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 28px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            border: 1px solid var(--card-border);
+            border: 2px dotted var(--primary);
         }
         
         .dark-theme .cosmic-snapshot {
@@ -768,14 +774,14 @@
         
         .cosmic-snapshot-header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
         
         .cosmic-snapshot-header h2 {
             font-family: var(--font-heading);
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: var(--primary);
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
         
         .cosmic-snapshot-header p {
@@ -927,7 +933,58 @@
             color: var(--text);
         }
         
-        /* Hero Welcome Card */
+        /* Opening Letter */
+        .opening-letter {
+            text-align: center;
+            padding: 40px 28px;
+            background: linear-gradient(135deg, rgba(255,182,217,0.12), rgba(182,227,255,0.12));
+            border-radius: 20px;
+            margin-bottom: 28px;
+            border: 2px dotted var(--primary);
+            position: relative;
+        }
+        
+        .opening-letter-header h1 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+            letter-spacing: 0.02em;
+        }
+        
+        .opening-letter-header .reading-subtitle {
+            font-size: 1.1rem;
+            color: var(--text);
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .opening-letter-header .reading-subtitle strong {
+            color: var(--primary);
+        }
+        
+        .opening-letter-body {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            line-height: 1.7;
+        }
+        
+        .opening-letter-body p {
+            margin-bottom: 14px;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+        
+        .opening-letter-body .opening-note {
+            font-size: 0.85rem;
+            font-style: italic;
+            opacity: 0.75;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        /* Hero Welcome Card (legacy - now using opening-letter) */
         .hero-welcome {
             text-align: center;
             padding: 32px 24px;
@@ -2725,7 +2782,6 @@
             <!-- Sticky Progress Header -->
             <div class="sticky-progress-header">
                 <div class="sticky-progress-info">
-                    <button class="back-btn" onclick="startNewReading()" title="New Reading">←</button>
                     <span class="reading-for">Reading for <strong id="stickyName">...</strong></span>
                 </div>
                 <div class="sticky-progress-bar">
@@ -2736,16 +2792,23 @@
                 </div>
             </div>
             
-            <!-- Hero Welcome Card -->
-            <div class="hero-welcome">
-                <div class="hero-icon"></div>
-                <h2>Your Cosmic Reading is Ready</h2>
-                <p><span class="insights-count" id="insightsCount">65</span> unique insights are waiting to be explored. Tap any section below to dive in.</p>
+            <!-- Opening Letter -->
+            <div class="opening-letter">
+                <div class="opening-letter-header">
+                    <h1>Your Complete Moment in Time</h1>
+                    <p class="reading-subtitle">Reading for <strong id="openingName">...</strong></p>
+                </div>
+                <div class="opening-letter-body" id="openingLetterBody">
+                    <p>At the exact moment you were born, the cosmos arranged itself in a pattern that has never existed before and will never exist again.</p>
+                    <p>This reading captures that unique configuration — not as a prediction of who you must become, but as a map of the gifts, challenges, and potentials encoded in your birth moment.</p>
+                    <p>Take your time exploring each section. Some insights will resonate immediately; others may reveal their meaning over years. This is your cosmic blueprint — a lifelong companion, not a daily forecast.</p>
+                    <p class="opening-note">If any birth details are incorrect, tap "New Reading" to regenerate with accurate information.</p>
+                </div>
                 <div class="hero-progress">
                     <div class="hero-progress-track">
                         <div class="hero-progress-fill" style="width: 0%"></div>
                     </div>
-                    <div class="hero-progress-text" id="heroProgressText">0/65 read</div>
+                    <div class="hero-progress-text" id="heroProgressText">0/<span id="insightsCount">65</span> explored</div>
                 </div>
             </div>
             
@@ -3071,12 +3134,16 @@
         function displayResults(userData, readings) {
             const config = BRAND_CONFIG;
             
+            // Always scroll to top on page load
+            window.scrollTo(0, 0);
+            
             // Hide input, show results
             document.getElementById('inputSection').style.display = 'none';
             document.getElementById('resultsSection').classList.add('active');
             
             // Set header info
             document.getElementById('subjectName').textContent = userData.name;
+            document.getElementById('openingName').textContent = userData.name;
             
             const birthDate = new Date(userData.birthDate);
             let birthInfo = `Born ${birthDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}`;
@@ -3895,12 +3962,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
             }
             
             // ============================================
-            // CURRENT TRANSITS
+            // GENERATIONAL FORCES
             // ============================================
             if (readings.astrology.currentTransits && TRANSIT_READINGS) {
                 const transitsHeader = document.createElement('div');
                 transitsHeader.className = 'section-divider';
-                transitsHeader.innerHTML = '<h3>Current Cosmic Weather (2026)</h3><p>What the universe is teaching this generation right now</p>';
+                transitsHeader.innerHTML = '<h3>Generational Forces</h3><p>The outer planets shaping your generation\'s collective journey</p>';
                 celestialSection.appendChild(transitsHeader);
                 
                 // Saturn transit
@@ -4307,8 +4374,8 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const angularSection = createCustomSection(
                     'angular',
                     '',
-                    'The Four Pillars',
-                    `The angular houses form the foundation of ${userData.name}'s life chart`
+                    'The Four Life Pillars',
+                    `The foundational anchors shaping ${userData.name}'s life path`
                 );
                 
                 const angular = readings.astrology.angularHouses;
@@ -4370,7 +4437,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             }
             
             // ============================================
-            // SECTION 7: VERTEX - Fated Encounters
+            // SECTION 7: VERTEX - Fated Activation Points
             // ============================================
             if (readings.astrology.vertex && typeof VERTEX_READINGS !== 'undefined') {
                 const vertex = readings.astrology.vertex;
@@ -4382,8 +4449,8 @@ This isn't a flaw - it's their power source. The tension between these two drive
                     const vertexSection = createCustomSection(
                         'vertex',
                         '',
-                        'Fated Encounters',
-                        'The Vertex reveals destined meetings and pivotal life moments'
+                        'Fated Activation Points',
+                        'Destined turning points and pivotal life moments'
                     );
                     
                     vertexSection.appendChild(createReadingCard(
@@ -4694,7 +4761,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
         
         function createSection(id, sectionConfig) {
             const section = document.createElement('div');
-            section.className = 'section-content';
+            section.className = 'section-content collapsed';
             section.id = `section-${id}`;
             
             section.innerHTML = `
@@ -4705,7 +4772,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         <p class="description">${sectionConfig.description}</p>
                     </div>
                     <button type="button" class="section-mark-read-btn" data-section-id="${id}">Mark as read</button>
-                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Collapse</button>
+                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Expand</button>
                 </div>
             `;
             
@@ -4714,7 +4781,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
 
         function createCustomSection(id, icon, name, description) {
             const section = document.createElement('div');
-            section.className = 'section-content';
+            section.className = 'section-content collapsed';
             section.id = `section-${id}`;
 
             section.innerHTML = `
@@ -4725,7 +4792,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         <p class="description">${description}</p>
                     </div>
                     <button type="button" class="section-mark-read-btn" data-section-id="${id}">Mark as read</button>
-                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Collapse</button>
+                    <button type="button" class="toggle-section-btn" data-section-id="${id}">Expand</button>
                 </div>
             `;
 
@@ -5256,7 +5323,10 @@ This isn't a flaw - it's their power source. The tension between these two drive
             document.querySelectorAll('.toggle-section-btn').forEach(btn => {
                 const id = btn.getAttribute('data-section-id');
                 const section = document.getElementById(`section-${id}`);
-                const isCollapsed = !!state[id];
+                // state[id] = true means expanded, false means collapsed
+                // Default to collapsed (false) if no saved state
+                const isExpanded = Object.prototype.hasOwnProperty.call(state, id) ? !!state[id] : false;
+                const isCollapsed = !isExpanded;
                 if (section) {
                     section.classList.toggle('collapsed', isCollapsed);
                 }
@@ -5268,8 +5338,10 @@ This isn't a flaw - it's their power source. The tension between these two drive
             document.querySelectorAll('.toggle-section-btn').forEach(btn => {
                 btn.onclick = () => {
                     const id = btn.getAttribute('data-section-id');
+                    const section = document.getElementById(`section-${id}`);
                     const state = getSectionCollapseState();
-                    state[id] = !state[id];
+                    const isCollapsed = section ? section.classList.contains('collapsed') : true;
+                    state[id] = !isCollapsed;
                     saveSectionCollapseState(state);
                     updateSectionToggleButtons();
                 };
