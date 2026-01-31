@@ -1303,8 +1303,16 @@ function calculateAllReadings(userData) {
     
     // Stellium Detection (3+ planets in the same sign)
     const stelliums = calculateStelliums({
-        sun: sunSign, moon: moonSign, mercury: mercurySign, venus: venusSign,
-        mars: marsSign, jupiter: jupiterSign, saturn: saturnSign
+        sun: sunSign,
+        moon: moonSign,
+        mercury: mercurySign,
+        venus: venusSign,
+        mars: marsSign,
+        jupiter: jupiterSign,
+        saturn: saturnSign,
+        uranus: uranusSign,
+        neptune: neptuneSign,
+        pluto: plutoSign
     });
     
     // Nodes in Houses

@@ -3629,6 +3629,25 @@
                         ['May overshadow other energies', 'Can be overwhelming to express', 'Needs conscious balance']
                     ));
                 });
+
+                if (readings.astrology.stelliums.length > 1) {
+                    const combined = readings.astrology.stelliums;
+                    const signList = combined.map(s => s.sign).join(' + ');
+                    const elementList = combined.map(s => s.element).join(' + ');
+                    const planetBreakdown = combined
+                        .map(s => `${s.sign}: ${s.planets.join(', ')}`)
+                        .join('\n\n');
+                    const combinedContent = `This chart contains ${combined.length} stelliums, creating multiple power centers that work together. This means ${userData.name} carries more than one dominant energy signature, and their life themes are shaped by how these concentrations interact.\n\n${planetBreakdown}\n\nWhen multiple stelliums are present, growth comes from learning when to emphasize each energy and how to blend them. The combination of ${signList} creates a unique inner balance of ${elementList} energies that can feel intense but also extremely gifted when integrated.`;
+
+                    celestialSection.appendChild(createReadingCard(
+                        'Stellium Synthesis',
+                        `${signList}`,
+                        ['Integrated Power', 'Multi-Sign Focus', 'Composite Gifts'],
+                        combinedContent,
+                        ['Exceptional range of strengths', 'Multiple life arenas of mastery', 'High potential for impact'],
+                        ['Inner pulls between dominant energies', 'Needs conscious integration', 'May feel intense or complex at times']
+                    ));
+                }
             }
             
             // ============================================
