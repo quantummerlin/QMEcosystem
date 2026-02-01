@@ -885,6 +885,10 @@
             font-size: 1.3rem;
         }
         
+        .sub-section-header .sub-icon:empty {
+            display: none;
+        }
+        
         .sub-section-header h4 {
             font-family: var(--font-heading);
             font-size: 1.05rem;
@@ -893,9 +897,11 @@
         }
         
         .sub-section-header .sub-count {
-            font-size: 0.8rem;
+            display: block;
+            font-size: 0.75rem;
             opacity: 0.6;
-            margin-left: 8px;
+            margin-top: 2px;
+            font-weight: normal;
         }
         
         .sub-section-arrow {
@@ -919,6 +925,41 @@
         
         .sub-section-body .reading-card {
             margin: 8px 0;
+        }
+        
+        /* Cosmic blueprint content within sub-section */
+        .cosmic-blueprint-content {
+            padding: 12px;
+        }
+        
+        .cosmic-blueprint-content .blueprint-intro {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            margin-bottom: 16px;
+        }
+        
+        .cosmic-blueprint-content .blueprint-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        
+        .cosmic-blueprint-content .blueprint-category h4 {
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin: 0 0 8px 0;
+            padding-bottom: 4px;
+            border-bottom: 1px solid rgba(var(--primary-rgb, 255, 107, 156), 0.2);
+        }
+        
+        .cosmic-blueprint-content .blueprint-item {
+            font-size: 0.85rem;
+            padding: 4px 0;
+        }
+        
+        .cosmic-blueprint-content .meaning {
+            opacity: 0.6;
+            font-size: 0.8rem;
         }
 
         .reading-meter {
@@ -3957,73 +3998,80 @@
             document.getElementById('bigThreeMoon').textContent = moonSign.name;
             document.getElementById('bigThreeRising').textContent = risingSign ? risingSign.name : 'Unknown';
             
-            // Build the summary card
+            // Build the summary card as a collapsible sub-section
             const blueprintSummary = document.createElement('div');
-            blueprintSummary.className = 'reading-card cosmic-blueprint-summary';
+            blueprintSummary.className = 'sub-section collapsed';
+            blueprintSummary.id = 'subsection-cosmic-snapshot';
             blueprintSummary.innerHTML = `
-                <span class="card-icon"></span>
-                <h3>Your Moment at a Glance</h3>
-                <p class="blueprint-intro">Before we dive deep into each placement, here's a complete overview of ${userData.name}'s celestial coordinates — the positions of all major celestial bodies at the moment of birth.</p>
-                
-                <div class="blueprint-grid">
-                    <div class="blueprint-category">
-                        <h4>The Big Three</h4>
-                        <div class="blueprint-items">
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Sun:</strong> ${sunSign.name} <span class="meaning">(Core Identity)</span></div>
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Moon:</strong> ${moonSign.name} <span class="meaning">(Emotional Nature)</span></div>
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Rising:</strong> ${risingSign ? risingSign.name : 'Unknown'} <span class="meaning">(First Impression)</span></div>
-                        </div>
+                <div class="sub-section-header" onclick="toggleSubSection('cosmic-snapshot')">
+                    <div class="sub-section-header-content">
+                        <h4>Cosmic Snapshot</h4>
                     </div>
-                    
-                    <div class="blueprint-category">
-                        <h4>Personal Planets</h4>
-                        <div class="blueprint-items">
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Mercury:</strong> ${mercurySign.name} <span class="meaning">(Mind & Communication)</span></div>
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Venus:</strong> ${venusSign.name} <span class="meaning">(Love & Beauty)</span></div>
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Mars:</strong> ${marsSign.name} <span class="meaning">(Drive & Action)</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="blueprint-category">
-                        <h4>Social Planets</h4>
-                        <div class="blueprint-items">
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Jupiter:</strong> ${jupiterSign.name} <span class="meaning">(Luck & Expansion)</span></div>
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Saturn:</strong> ${saturnSign.name} <span class="meaning">(Discipline & Lessons)</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="blueprint-category">
-                        <h4>Outer Planets (Generational)</h4>
-                        <div class="blueprint-items">
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Uranus:</strong> ${uranusSign.name} <span class="meaning">(Innovation & Change)</span></div>
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Neptune:</strong> ${neptuneSign.name} <span class="meaning">(Dreams & Spirituality)</span></div>
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Pluto:</strong> ${plutoSign.name} <span class="meaning">(Transformation)</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="blueprint-category">
-                        <h4>Other Key Points</h4>
-                        <div class="blueprint-items">
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>North Node:</strong> ${northNode.name} <span class="meaning">(Life Purpose)</span></div>
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Moon Phase:</strong> ${moonPhase.name} <span class="meaning">(Soul Character)</span></div>
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Chinese:</strong> ${chineseZodiac.name} <span class="meaning">(${chineseZodiac.element} Element)</span></div>
+                    <span class="sub-section-arrow">▼</span>
+                </div>
+                <div class="sub-section-body">
+                    <div class="cosmic-blueprint-content">
+                        <p class="blueprint-intro">A complete overview of ${userData.name}'s celestial coordinates — the positions of all major celestial bodies at the moment of birth.</p>
+                        
+                        <div class="blueprint-grid">
+                            <div class="blueprint-category">
+                                <h4>The Big Three</h4>
+                                <div class="blueprint-items">
+                                    <div class="blueprint-item"><strong>Sun:</strong> ${sunSign.name} <span class="meaning">(Core Identity)</span></div>
+                                    <div class="blueprint-item"><strong>Moon:</strong> ${moonSign.name} <span class="meaning">(Emotional Nature)</span></div>
+                                    <div class="blueprint-item"><strong>Rising:</strong> ${risingSign ? risingSign.name : 'Unknown'} <span class="meaning">(First Impression)</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="blueprint-category">
+                                <h4>Personal Planets</h4>
+                                <div class="blueprint-items">
+                                    <div class="blueprint-item"><strong>Mercury:</strong> ${mercurySign.name} <span class="meaning">(Mind & Communication)</span></div>
+                                    <div class="blueprint-item"><strong>Venus:</strong> ${venusSign.name} <span class="meaning">(Love & Beauty)</span></div>
+                                    <div class="blueprint-item"><strong>Mars:</strong> ${marsSign.name} <span class="meaning">(Drive & Action)</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="blueprint-category">
+                                <h4>Social Planets</h4>
+                                <div class="blueprint-items">
+                                    <div class="blueprint-item"><strong>Jupiter:</strong> ${jupiterSign.name} <span class="meaning">(Luck & Expansion)</span></div>
+                                    <div class="blueprint-item"><strong>Saturn:</strong> ${saturnSign.name} <span class="meaning">(Discipline & Lessons)</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="blueprint-category">
+                                <h4>Outer Planets</h4>
+                                <div class="blueprint-items">
+                                    <div class="blueprint-item"><strong>Uranus:</strong> ${uranusSign.name} <span class="meaning">(Innovation)</span></div>
+                                    <div class="blueprint-item"><strong>Neptune:</strong> ${neptuneSign.name} <span class="meaning">(Dreams)</span></div>
+                                    <div class="blueprint-item"><strong>Pluto:</strong> ${plutoSign.name} <span class="meaning">(Transformation)</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="blueprint-category">
+                                <h4>Other Key Points</h4>
+                                <div class="blueprint-items">
+                                    <div class="blueprint-item"><strong>North Node:</strong> ${northNode.name} <span class="meaning">(Life Purpose)</span></div>
+                                    <div class="blueprint-item"><strong>Moon Phase:</strong> ${moonPhase.name} <span class="meaning">(Soul Character)</span></div>
+                                    <div class="blueprint-item"><strong>Chinese:</strong> ${chineseZodiac.name} <span class="meaning">(${chineseZodiac.element})</span></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <p class="blueprint-footer">Each placement tells a different part of ${userData.name}'s story. Scroll down for detailed interpretations of each celestial influence.</p>
             `;
             celestialSection.appendChild(blueprintSummary);
             
             // Create collapsible sub-sections for organizing the celestial readings
-            const coreSubSection = createSubSection('core-planets', '☀️', 'Core Identity (Sun, Moon, Rising)', false);
-            const personalSubSection = createSubSection('personal-planets', '💫', 'Personal Planets (Mercury, Venus, Mars)');
-            const socialSubSection = createSubSection('social-planets', '🌟', 'Social Planets (Jupiter, Saturn)');
-            const outerSubSection = createSubSection('outer-planets', '🌌', 'Outer Planets (Uranus, Neptune, Pluto)');
-            const soulSubSection = createSubSection('soul-points', '✨', 'Soul Points (Nodes, Chiron, Lilith)');
-            const housesSubSection = createSubSection('houses', '🏠', 'House Placements');
-            const aspectsSubSection = createSubSection('aspects', '🔗', 'Aspects & Connections');
-            const specialSubSection = createSubSection('special', '💎', 'Special Features');
+            const coreSubSection = createSubSection('core-planets', '', 'Core Identity (Sun, Moon, Rising)', false);
+            const personalSubSection = createSubSection('personal-planets', '', 'Personal Planets (Mercury, Venus, Mars)');
+            const socialSubSection = createSubSection('social-planets', '', 'Social Planets (Jupiter, Saturn)');
+            const outerSubSection = createSubSection('outer-planets', '', 'Outer Planets (Uranus, Neptune, Pluto)');
+            const soulSubSection = createSubSection('soul-points', '', 'Soul Points (Nodes, Chiron, Lilith)');
+            const housesSubSection = createSubSection('houses', '', 'House Placements');
+            const aspectsSubSection = createSubSection('aspects', '', 'Aspects & Connections');
+            const specialSubSection = createSubSection('special', '', 'Special Features');
             
             // Sun Sign - DEEP READING
             const deepSun = (typeof DEEP_SUN_READINGS !== 'undefined') ? DEEP_SUN_READINGS[sunSign.name] : null;
@@ -5980,10 +6028,10 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const body = subSection.querySelector('.sub-section-body');
             if (body) {
                 body.appendChild(card);
-                // Update count
+                // Update count - show on new line under title
                 const count = body.querySelectorAll('.reading-card').length;
                 const countEl = subSection.querySelector('.sub-count');
-                if (countEl) countEl.textContent = ` (${count})`;
+                if (countEl) countEl.textContent = `${count} reading${count !== 1 ? 's' : ''}`;
             }
         }
         
