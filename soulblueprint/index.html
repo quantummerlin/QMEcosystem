@@ -6995,6 +6995,16 @@ This isn't a flaw - it's their power source. The tension between these two drive
             // Auto-collapse the card when marked as read (not when unmarking)
             if (!isRead) {
                 card.classList.remove('expanded');
+                // Scroll so the just-read card is at the top of the screen
+                // This positions the user to naturally read the next card
+                setTimeout(() => {
+                    const headerOffset = 80; // Account for sticky header
+                    const cardTop = card.getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({
+                        top: cardTop - headerOffset,
+                        behavior: 'smooth'
+                    });
+                }, 100);
             }
             
             // Update progress
