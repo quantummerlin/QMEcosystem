@@ -5537,8 +5537,8 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 
                 // 1st House - Ascendant/Self
                 const firstSign = angular.first?.sign || angular.first;
-                if (firstSign && ANGULAR_HOUSE_READINGS.first && ANGULAR_HOUSE_READINGS.first[firstSign]) {
-                    const houseData = ANGULAR_HOUSE_READINGS.first[firstSign];
+                if (firstSign && ANGULAR_HOUSE_READINGS[1] && ANGULAR_HOUSE_READINGS[1][firstSign]) {
+                    const houseData = ANGULAR_HOUSE_READINGS[1][firstSign];
                     angularSection.appendChild(createReadingCard(
                         houseData.title,
                         `${firstSign} Rising - The Self`,
@@ -5551,8 +5551,8 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 
                 // 4th House - IC/Roots
                 const fourthSign = angular.fourth?.sign || angular.fourth;
-                if (fourthSign && ANGULAR_HOUSE_READINGS.fourth && ANGULAR_HOUSE_READINGS.fourth[fourthSign]) {
-                    const houseData = ANGULAR_HOUSE_READINGS.fourth[fourthSign];
+                if (fourthSign && ANGULAR_HOUSE_READINGS[4] && ANGULAR_HOUSE_READINGS[4][fourthSign]) {
+                    const houseData = ANGULAR_HOUSE_READINGS[4][fourthSign];
                     angularSection.appendChild(createReadingCard(
                         houseData.title,
                         `${fourthSign} IC - The Roots`,
@@ -5565,8 +5565,8 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 
                 // 7th House - Descendant/Partnerships
                 const seventhSign = angular.seventh?.sign || angular.seventh;
-                if (seventhSign && ANGULAR_HOUSE_READINGS.seventh && ANGULAR_HOUSE_READINGS.seventh[seventhSign]) {
-                    const houseData = ANGULAR_HOUSE_READINGS.seventh[seventhSign];
+                if (seventhSign && ANGULAR_HOUSE_READINGS[7] && ANGULAR_HOUSE_READINGS[7][seventhSign]) {
+                    const houseData = ANGULAR_HOUSE_READINGS[7][seventhSign];
                     angularSection.appendChild(createReadingCard(
                         houseData.title,
                         `${seventhSign} Descendant - The Partners`,
@@ -5579,8 +5579,8 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 
                 // 10th House - MC/Career
                 const tenthSign = angular.tenth?.sign || angular.tenth;
-                if (tenthSign && ANGULAR_HOUSE_READINGS.tenth && ANGULAR_HOUSE_READINGS.tenth[tenthSign]) {
-                    const houseData = ANGULAR_HOUSE_READINGS.tenth[tenthSign];
+                if (tenthSign && ANGULAR_HOUSE_READINGS[10] && ANGULAR_HOUSE_READINGS[10][tenthSign]) {
+                    const houseData = ANGULAR_HOUSE_READINGS[10][tenthSign];
                     angularSection.appendChild(createReadingCard(
                         houseData.title,
                         `${tenthSign} Midheaven - The Legacy`,
@@ -5800,9 +5800,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 );
                 
                 // Calculate progressed signs based on age
-                const birthDate = new Date(userData.date);
+                const birthDateProg = new Date(userData.birthDate);
                 const now = new Date();
-                const ageYears = Math.floor((now - birthDate) / (365.25 * 24 * 60 * 60 * 1000));
+                const ageYears = Math.floor((now - birthDateProg) / (365.25 * 24 * 60 * 60 * 1000));
                 
                 // For babies/children, progressed Sun is still natal Sun or maybe next sign
                 const signs = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
