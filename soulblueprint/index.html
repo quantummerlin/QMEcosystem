@@ -5144,19 +5144,59 @@ This isn't a flaw - it's their power source. The tension between these two drive
             numExplainer.classList.add('numerology-explainer');
             numbersSection.appendChild(numExplainer);
             
-            // Life Path
+            // Life Path - DEEP READING
             const lifePath = readings.numerology.lifePath;
-            const lifePathReading = LIFE_PATH_READINGS[lifePath];
-            const lifePathEnhancements = getReadingEnhancements('lifePath', lifePath);
-            numbersSection.appendChild(createReadingCard(
-                config.readingTitles.lifePath,
-                `${lifePath} - ${lifePathReading ? lifePathReading.title : 'Life Path ' + lifePath}`,
-                lifePathReading ? lifePathReading.keywords : [],
-                lifePathReading ? lifePathReading.reading.replace(/this soul/gi, userData.name).replace(/this individual/gi, userData.name) : `Life Path ${lifePath} indicates a journey of growth and discovery.`,
-                lifePathReading ? lifePathReading.strengths : [],
-                lifePathReading ? lifePathReading.challenges : [],
-                lifePathEnhancements
-            ));
+            const deepLifePath = (typeof DEEP_LIFE_PATH_READINGS !== 'undefined') ? DEEP_LIFE_PATH_READINGS[lifePath] : null;
+            
+            if (deepLifePath) {
+                // Create comprehensive Life Path reading from deep content
+                const lifePathContent = `<strong>${deepLifePath.hook}</strong>
+
+<em>Core Identity:</em> ${deepLifePath.coreIdentity}
+
+<em>Life Force:</em> ${deepLifePath.lifeForce}
+
+<em>Creative Expression:</em> ${deepLifePath.creativeExpression}
+
+<em>Soul Lesson:</em> ${deepLifePath.soulLesson}
+
+<em>Shadow to Watch:</em> ${deepLifePath.shadow}
+
+<em>Relationships:</em> ${deepLifePath.relationships}
+
+<em>Career Path:</em> ${deepLifePath.career}
+
+<em>Money & Resources:</em> ${deepLifePath.money}
+
+<em>Health Patterns:</em> ${deepLifePath.health}
+
+<em>Spiritual Path:</em> ${deepLifePath.spiritualPath}
+
+<em>Parenting Guidance:</em> ${deepLifePath.parentGuidance}
+
+<em>Growth Edge:</em> ${deepLifePath.growthEdge}
+
+<em>Affirmation:</em> "${deepLifePath.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+
+                numbersSection.appendChild(createReadingCard(
+                    config.readingTitles.lifePath,
+                    deepLifePath.title,
+                    ['Soul Blueprint', 'Life Purpose', 'Core Energy'],
+                    lifePathContent.replace(/this soul/gi, userData.name).replace(/this child/gi, userData.name),
+                    [],
+                    []
+                ));
+            } else {
+                const lifePathReading = LIFE_PATH_READINGS[lifePath];
+                numbersSection.appendChild(createReadingCard(
+                    config.readingTitles.lifePath,
+                    `${lifePath} - ${lifePathReading ? lifePathReading.title : 'Life Path ' + lifePath}`,
+                    lifePathReading ? lifePathReading.keywords : [],
+                    lifePathReading ? lifePathReading.reading.replace(/this soul/gi, userData.name) : `Life Path ${lifePath} indicates a journey of growth and discovery.`,
+                    lifePathReading ? lifePathReading.strengths : [],
+                    lifePathReading ? lifePathReading.challenges : []
+                ));
+            }
             
             // Destiny Number - DEEP READING
             const destiny = readings.numerology.destiny;
@@ -5380,29 +5420,61 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 ));
             }
             
-            // Maturity Number
+            // Maturity Number with deep reading
             const maturity = readings.numerology.maturity;
-            const maturityReading = LIFE_PATH_READINGS[maturity];
+            const deepMaturity = (typeof DEEP_MATURITY_READINGS !== 'undefined') ? DEEP_MATURITY_READINGS[maturity] : null;
             numbersSection.appendChild(createReadingCard(
                 config.readingTitles.maturity,
-                `${maturity} - ${maturityReading ? maturityReading.title : 'Maturity ' + maturity}`,
-                ['Later Life', 'Wisdom', 'Integration'],
-                `Maturity Number ${maturity} reveals what ${userData.name} is growing toward. ${maturityReading ? maturityReading.summary : 'These qualities become more prominent with age and experience.'}`,
+                deepMaturity ? `${maturity} - ${deepMaturity.title}` : `Maturity Number ${maturity}`,
+                deepMaturity ? deepMaturity.keywords : ['Later Life', 'Wisdom', 'Integration'],
+                deepMaturity ? deepMaturity.reading : `Maturity Number ${maturity} reveals what ${userData.name} is growing toward. These qualities become more prominent with age and experience.`,
                 [],
                 []
             ));
             
-            // Pinnacles with detailed readings
+            // Pinnacles with detailed readings - show each separately for depth
             const pinnacles = readings.numerology.pinnacles;
             const p1Reading = PINNACLE_NUMBER_READINGS ? PINNACLE_NUMBER_READINGS[pinnacles.first] : null;
             const p2Reading = PINNACLE_NUMBER_READINGS ? PINNACLE_NUMBER_READINGS[pinnacles.second] : null;
             const p3Reading = PINNACLE_NUMBER_READINGS ? PINNACLE_NUMBER_READINGS[pinnacles.third] : null;
             const p4Reading = PINNACLE_NUMBER_READINGS ? PINNACLE_NUMBER_READINGS[pinnacles.fourth] : null;
+            
+            // First Pinnacle - typically ages 0 to late 20s
             numbersSection.appendChild(createReadingCard(
-                config.readingTitles.pinnacle,
-                `1st: ${pinnacles.first} | 2nd: ${pinnacles.second} | 3rd: ${pinnacles.third} | 4th: ${pinnacles.fourth}`,
-                ['Life Phases', 'Major Cycles', 'Growth Periods'],
-                `The Pinnacle Numbers reveal the major life phases for ${userData.name}:\n\n• First Pinnacle (${pinnacles.ages.first}): ${p1Reading ? p1Reading.reading : 'Pinnacle ' + pinnacles.first + ' energy'}\n\n• Second Pinnacle (${pinnacles.ages.second}): ${p2Reading ? p2Reading.reading : 'Pinnacle ' + pinnacles.second + ' energy'}\n\n• Third Pinnacle (${pinnacles.ages.third}): ${p3Reading ? p3Reading.reading : 'Pinnacle ' + pinnacles.third + ' energy'}\n\n• Fourth Pinnacle (${pinnacles.ages.fourth}): ${p4Reading ? p4Reading.reading : 'Pinnacle ' + pinnacles.fourth + ' energy'}`,
+                `First Pinnacle (${pinnacles.ages.first})`,
+                p1Reading ? `${pinnacles.first} - ${p1Reading.title}` : `Pinnacle ${pinnacles.first}`,
+                ['Foundation Years', 'Early Development', 'Initial Direction'],
+                p1Reading ? p1Reading.reading : `Pinnacle ${pinnacles.first} energy influences this period.`,
+                [],
+                []
+            ));
+            
+            // Second Pinnacle - typically 9-year period
+            numbersSection.appendChild(createReadingCard(
+                `Second Pinnacle (${pinnacles.ages.second})`,
+                p2Reading ? `${pinnacles.second} - ${p2Reading.title}` : `Pinnacle ${pinnacles.second}`,
+                ['Development Period', 'Building Phase', 'Core Growth'],
+                p2Reading ? p2Reading.reading : `Pinnacle ${pinnacles.second} energy influences this period.`,
+                [],
+                []
+            ));
+            
+            // Third Pinnacle - the peak, typically 9-year period
+            numbersSection.appendChild(createReadingCard(
+                `Third Pinnacle (${pinnacles.ages.third})`,
+                p3Reading ? `${pinnacles.third} - ${p3Reading.title}` : `Pinnacle ${pinnacles.third}`,
+                ['Peak Period', 'Full Expression', 'Maximum Power'],
+                p3Reading ? p3Reading.reading : `Pinnacle ${pinnacles.third} energy influences this period.`,
+                [],
+                []
+            ));
+            
+            // Fourth Pinnacle - from mid-life to end
+            numbersSection.appendChild(createReadingCard(
+                `Fourth Pinnacle (${pinnacles.ages.fourth})`,
+                p4Reading ? `${pinnacles.fourth} - ${p4Reading.title}` : `Pinnacle ${pinnacles.fourth}`,
+                ['Culmination', 'Wisdom Years', 'Final Expression'],
+                p4Reading ? p4Reading.reading : `Pinnacle ${pinnacles.fourth} energy influences this period.`,
                 [],
                 []
             ));
@@ -5413,16 +5485,48 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const c2Reading = CHALLENGE_NUMBER_READINGS ? CHALLENGE_NUMBER_READINGS[challenges.second] : null;
             const c3Reading = CHALLENGE_NUMBER_READINGS ? CHALLENGE_NUMBER_READINGS[challenges.third] : null;
             const c4Reading = CHALLENGE_NUMBER_READINGS ? CHALLENGE_NUMBER_READINGS[challenges.fourth] : null;
+            
+            // First Challenge
             numbersSection.appendChild(createReadingCard(
-                config.readingTitles.challenge,
-                `1st: ${challenges.first} | 2nd: ${challenges.second} | 3rd: ${challenges.third} | 4th: ${challenges.fourth}`,
-                ['Growth Areas', 'Life Lessons', 'Obstacles to Overcome'],
-                `The Challenge Numbers reveal the growth areas for ${userData.name}:\n\n• First Challenge: ${c1Reading ? c1Reading.reading : 'Challenge ' + challenges.first}\n\n• Second Challenge: ${c2Reading ? c2Reading.reading : 'Challenge ' + challenges.second}\n\n• Third Challenge (Main): ${c3Reading ? c3Reading.reading : 'Challenge ' + challenges.third}\n\n• Fourth Challenge: ${c4Reading ? c4Reading.reading : 'Challenge ' + challenges.fourth}`,
+                'First Life Challenge',
+                c1Reading ? `${challenges.first} - ${c1Reading.title}` : `Challenge ${challenges.first}`,
+                ['Early Growth', 'Foundation Lesson', 'Initial Obstacle'],
+                c1Reading ? c1Reading.reading : `Challenge ${challenges.first} presents lessons in this area.`,
                 [],
                 []
             ));
             
-            // Karmic Debt (if applicable)
+            // Second Challenge  
+            numbersSection.appendChild(createReadingCard(
+                'Second Life Challenge',
+                c2Reading ? `${challenges.second} - ${c2Reading.title}` : `Challenge ${challenges.second}`,
+                ['Development Lesson', 'Growth Edge', 'Ongoing Work'],
+                c2Reading ? c2Reading.reading : `Challenge ${challenges.second} presents lessons in this area.`,
+                [],
+                []
+            ));
+            
+            // Third Challenge (Main)
+            numbersSection.appendChild(createReadingCard(
+                'Main Life Challenge',
+                c3Reading ? `${challenges.third} - ${c3Reading.title}` : `Challenge ${challenges.third}`,
+                ['Core Lesson', 'Primary Growth', 'Central Theme'],
+                c3Reading ? c3Reading.reading : `Challenge ${challenges.third} is the main life lesson.`,
+                [],
+                []
+            ));
+            
+            // Fourth Challenge
+            numbersSection.appendChild(createReadingCard(
+                'Fourth Life Challenge',
+                c4Reading ? `${challenges.fourth} - ${c4Reading.title}` : `Challenge ${challenges.fourth}`,
+                ['Later Life Lesson', 'Wisdom Challenge', 'Final Growth'],
+                c4Reading ? c4Reading.reading : `Challenge ${challenges.fourth} presents lessons in this area.`,
+                [],
+                []
+            ));
+            
+            // Karmic Debt (if applicable, or show "no debt" message)
             const karmicDebt = readings.numerology.karmicDebt;
             if (karmicDebt && karmicDebt.hasDebt && karmicDebt.numbers.length > 0) {
                 const karmicNum = karmicDebt.numbers[0];
@@ -5432,6 +5536,16 @@ This isn't a flaw - it's their power source. The tension between these two drive
                     karmicReading ? karmicReading.title : `Karmic Debt ${karmicNum}`,
                     ['Past Life Lessons', 'Karmic Balance', 'Soul Growth'],
                     karmicReading ? karmicReading.reading : `Karmic Debt ${karmicNum} indicates lessons carried from past lives that require attention in this lifetime.`,
+                    [],
+                    []
+                ));
+            } else {
+                // No karmic debt numbers - show affirming message
+                numbersSection.appendChild(createReadingCard(
+                    'Karmic Patterns',
+                    'Clear Karmic Slate',
+                    ['Evolutionary Growth', 'Natural Flow', 'Forward Momentum'],
+                    `<strong>No Classic Karmic Debt Numbers Detected</strong>\n\n${userData.name}'s numerological chart shows no 13, 14, 16, or 19 patterns in the core numbers. This is significant and worth celebrating.\n\n<strong>What This Means:</strong> The absence of karmic debt numbers suggests that this soul's lessons are primarily <em>evolutionary</em> rather than <em>corrective</em>. Where karmic debt indicates specific past-life patterns requiring repair, a clear karmic slate suggests this incarnation is more focused on new growth than old resolution.\n\n<strong>The Opportunity:</strong> Without the weight of karmic debt, ${userData.name} has greater freedom to chart their own course. Energy that might otherwise go toward resolving past patterns can instead be directed toward new achievements, creative expression, and building something original.\n\n<strong>The Responsibility:</strong> A clear karmic slate is not permission for carelessness. The numerological wisdom suggests that choices made in this lifetime are being written fresh—they will form the karmic patterns of future incarnations. This is both liberating and calls for conscious living.\n\n<strong>Integration:</strong> This soul can focus fully on their Life Path lessons, Destiny calling, and Pinnacle opportunities without the undertow of unfinished business. Trust the forward momentum. The universe is not asking for repayment—it's inviting contribution.`,
                     [],
                     []
                 ));
@@ -5552,17 +5666,27 @@ This isn't a flaw - it's their power source. The tension between these two drive
             forecastsSectionWrapper.className = 'reading-section';
             const forecastsSection = createSection('forecasts', config.sections.forecasts);
             
-            // Personal Year Forecast with detailed reading
-            const pyReading = PERSONAL_YEAR_READINGS ? PERSONAL_YEAR_READINGS[personalYear] : null;
-            const pyEnhancements = getReadingEnhancements('personalYear', personalYear);
+            // Personal Year Forecast with deep reading
+            const deepPY = (typeof DEEP_PERSONAL_YEAR_READINGS !== 'undefined') ? DEEP_PERSONAL_YEAR_READINGS[personalYear] : null;
+            let pyContent = '';
+            if (deepPY) {
+                pyContent = `<strong>${deepPY.theme}</strong>\n\n`;
+                pyContent += `<strong>The Energy:</strong> ${deepPY.energy}\n\n`;
+                pyContent += `<strong>Opportunities:</strong> ${deepPY.opportunities}\n\n`;
+                pyContent += `<strong>Challenges:</strong> ${deepPY.challenges}\n\n`;
+                pyContent += `<strong>Relationships:</strong> ${deepPY.relationships}\n\n`;
+                pyContent += `<strong>Career:</strong> ${deepPY.career}\n\n`;
+                pyContent += `<strong>Spiritual Growth:</strong> ${deepPY.spiritual}\n\n`;
+                pyContent += `<strong>Advice:</strong> ${deepPY.advice}\n\n`;
+                pyContent += `<em>"${deepPY.affirmation}"</em>`;
+            }
             forecastsSection.appendChild(createReadingCard(
                 config.readingTitles.yearAhead,
-                `Personal Year ${personalYear} - ${pyReading ? pyReading.title : 'Year of ' + personalYear}`,
-                pyReading ? pyReading.keywords : ['Annual Theme', 'Opportunities', 'Focus Areas'],
-                pyReading ? pyReading.reading : `In this Personal Year ${personalYear}, ${userData.name} is experiencing important themes and opportunities.`,
+                deepPY ? deepPY.title : `Personal Year ${personalYear}`,
+                ['Annual Theme', 'Opportunities', 'Challenges', 'Career', 'Relationships', 'Spiritual Growth'],
+                pyContent || `In this Personal Year ${personalYear}, ${userData.name} is experiencing important themes and opportunities.`,
                 [],
-                [],
-                pyEnhancements
+                []
             ));
             
             // Personal Month
@@ -5599,11 +5723,22 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const angular = readings.astrology.angularHouses;
                 let angularCardsAdded = 0;
                 
+                // Debug logging for Four Pillars
+                console.log('Four Pillars Debug:', {
+                    angular,
+                    first: angular?.first,
+                    firstSign: angular?.first?.sign,
+                    firstSignName: angular?.first?.sign?.name
+                });
+                
                 const getSignName = (value) => {
                     if (!value) return null;
                     if (typeof value === 'string') return value;
+                    // Check for nested sign object first (angular house structure)
+                    if (value.sign && typeof value.sign === 'object' && value.sign.name) return value.sign.name;
+                    if (value.sign && typeof value.sign === 'string') return value.sign;
+                    // Then check direct name property (simple sign object)
                     if (value.name) return value.name;
-                    if (value.sign && value.sign.name) return value.sign.name;
                     return null;
                 };
                 

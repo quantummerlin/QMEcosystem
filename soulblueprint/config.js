@@ -65,9 +65,9 @@ var BRAND_CONFIG = {
             description: "Your deeper purpose and spiritual gifts"
         },
         forecasts: {
-            name: "Life Chapters",
+            name: "Current Cycles",
             icon: "",
-            description: "The major evolutionary phases of your journey"
+            description: "The energetic rhythms influencing your present moment"
         }
     },
     
