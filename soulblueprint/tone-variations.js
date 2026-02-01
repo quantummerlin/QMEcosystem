@@ -11,7 +11,7 @@
  * Word substitutions based on tone
  * Format: { neutral: { feminine: "word", masculine: "word", neutral: "word" } }
  */
-const TONE_SUBSTITUTIONS = {
+var TONE_SUBSTITUTIONS = {
     // Pronouns and references
     "This individual": { feminine: "She", masculine: "He", neutral: "This soul" },
     "this individual": { feminine: "she", masculine: "he", neutral: "this soul" },
@@ -54,7 +54,7 @@ const TONE_SUBSTITUTIONS = {
 /**
  * Phrase-level substitutions for more natural reading
  */
-const PHRASE_SUBSTITUTIONS = {
+var PHRASE_SUBSTITUTIONS = {
     "destined to lead": { feminine: "destined to inspire and lead", masculine: "destined to lead", neutral: "destined to guide" },
     "born to fight": { feminine: "born to advocate", masculine: "born to fight", neutral: "born to champion" },
     "natural-born leader": { feminine: "natural-born leader and nurturer", masculine: "natural-born leader", neutral: "natural guide" },

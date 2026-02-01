@@ -4,7 +4,7 @@
 // Readings for major aspects between planets
 // ============================================
 
-const ASPECT_READINGS = {
+var ASPECT_READINGS = {
     "Sun-Moon": {
         Conjunction: {
             title: "Sun-Moon Conjunction - Unified Spirit",

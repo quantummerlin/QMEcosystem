@@ -9,7 +9,7 @@
 // LIFE PATH READINGS
 // ============================================
 
-const LIFE_PATH_READINGS = {
+var LIFE_PATH_READINGS = {
     1: {
         title: "The Pioneer",
         keywords: ["Leadership", "Independence", "Innovation", "Courage"],
@@ -253,7 +253,7 @@ Their greatest fulfillment comes through service that transforms lives. They are
 // SUN SIGN READINGS
 // ============================================
 
-const SUN_SIGN_READINGS = {
+var SUN_SIGN_READINGS = {
     Aries: {
         symbol: "♈",
         element: "Fire",
@@ -511,7 +511,7 @@ This soul is here to teach others about compassion and the reality of the unseen
 // CHINESE ZODIAC READINGS
 // ============================================
 
-const CHINESE_ZODIAC_READINGS = {
+var CHINESE_ZODIAC_READINGS = {
     Rat: {
         element: "Water",
         yin_yang: "Yang",
@@ -709,7 +709,7 @@ In relationships, Pigs are devoted and generous. They need partners who apprecia
 // MOON PHASE READINGS
 // ============================================
 
-const MOON_PHASE_READINGS = {
+var MOON_PHASE_READINGS = {
     'New Moon': {
         icon: '🌑',
         keywords: ["New Beginnings", "Potential", "Introspection", "Planting Seeds"],
@@ -835,7 +835,7 @@ In life, these individuals often experience a sense of completing something impo
 // PLANETARY SIGN READINGS
 // ============================================
 
-const MERCURY_SIGN_READINGS = {
+var MERCURY_SIGN_READINGS = {
     Aries: {
         keywords: ["Quick Thinker", "Direct", "Impulsive", "Bold"],
         summary: "Fast, direct communication with a competitive edge.",
@@ -922,7 +922,7 @@ const MERCURY_SIGN_READINGS = {
     }
 };
 
-const VENUS_SIGN_READINGS = {
+var VENUS_SIGN_READINGS = {
     Aries: {
         keywords: ["Passionate", "Impulsive", "Independent", "Exciting"],
         summary: "Bold, exciting love that thrives on passion and challenge.",
@@ -1009,7 +1009,7 @@ const VENUS_SIGN_READINGS = {
     }
 };
 
-const MARS_SIGN_READINGS = {
+var MARS_SIGN_READINGS = {
     Aries: {
         keywords: ["Aggressive", "Direct", "Competitive", "Pioneering"],
         summary: "Pure, direct energy that takes immediate action.",
@@ -1096,7 +1096,7 @@ const MARS_SIGN_READINGS = {
     }
 };
 
-const JUPITER_SIGN_READINGS = {
+var JUPITER_SIGN_READINGS = {
     Aries: {
         keywords: ["Pioneering", "Bold", "Independent", "Enthusiastic"],
         summary: "Luck through initiative, courage, and bold action.",
@@ -1183,7 +1183,7 @@ const JUPITER_SIGN_READINGS = {
     }
 };
 
-const SATURN_SIGN_READINGS = {
+var SATURN_SIGN_READINGS = {
     Aries: {
         keywords: ["Disciplined Action", "Controlled Energy", "Patient Leadership", "Earned Authority"],
         summary: "Learning discipline through patience with action and assertion.",
@@ -1274,7 +1274,7 @@ const SATURN_SIGN_READINGS = {
 // OUTER PLANET READINGS
 // ============================================
 
-const CHIRON_SIGN_READINGS = {
+var CHIRON_SIGN_READINGS = {
     Aries: {
         keywords: ["Identity Wound", "Leadership Healing", "Courage Recovery", "Self-Discovery"],
         reading: `Chiron in Aries indicates a core wound around identity, self-assertion, and the right to exist and take up space. Early experiences may have challenged the sense of self or the ability to assert needs confidently. The healing journey involves reclaiming the right to be an individual and to lead. The gift that emerges is the ability to help others find their courage and authentic self-expression.`
@@ -1325,7 +1325,7 @@ const CHIRON_SIGN_READINGS = {
     }
 };
 
-const LILITH_SIGN_READINGS = {
+var LILITH_SIGN_READINGS = {
     Aries: {
         keywords: ["Suppressed Rage", "Hidden Warrior", "Shadow Independence", "Reclaimed Power"],
         reading: `Black Moon Lilith in Aries represents suppressed or rejected anger, independence, and warrior energy. There may be hidden power around assertiveness that was shamed or punished. The shadow work involves reclaiming the right to be angry and to fight for oneself. The gift of integration is becoming a fierce protector who uses anger constructively.`
@@ -1376,7 +1376,7 @@ const LILITH_SIGN_READINGS = {
     }
 };
 
-const NORTH_NODE_READINGS = {
+var NORTH_NODE_READINGS = {
     Aries: {
         keywords: ["Independence", "Courage", "Self-Focus", "Initiative"],
         summary: "Soul growth through developing independence and self-assertion.",
@@ -1443,7 +1443,7 @@ const NORTH_NODE_READINGS = {
 // ADDITIONAL NUMEROLOGY READINGS
 // ============================================
 
-const BIRTHDAY_NUMBER_READINGS = {
+var BIRTHDAY_NUMBER_READINGS = {
     1: { 
         title: "The Leader", 
         reading: `Birthday 1 brings natural leadership, originality, and pioneering spirit into this life. This soul came in knowing how to initiate, to be first, to forge new paths.
@@ -1756,7 +1756,7 @@ For children with Birthday 31: They create with unusual follow-through. Support 
     }
 };
 
-const PERSONAL_YEAR_READINGS = {
+var PERSONAL_YEAR_READINGS = {
     1: {
         title: "New Beginnings",
         keywords: ["Fresh Start", "Initiative", "Independence", "Planting Seeds"],
@@ -1804,7 +1804,7 @@ const PERSONAL_YEAR_READINGS = {
     }
 };
 
-const PINNACLE_NUMBER_READINGS = {
+var PINNACLE_NUMBER_READINGS = {
     1: { reading: "A Pinnacle of 1 brings opportunities for independence, leadership, and new beginnings. This period emphasizes developing self-reliance and pioneering spirit." },
     2: { reading: "A Pinnacle of 2 brings opportunities for partnership, patience, and cooperation. This period emphasizes diplomacy, sensitivity, and working with others." },
     3: { reading: "A Pinnacle of 3 brings opportunities for creativity, self-expression, and joy. This period emphasizes communication, social connections, and artistic pursuits." },
@@ -1818,7 +1818,7 @@ const PINNACLE_NUMBER_READINGS = {
     22: { reading: "A Pinnacle of 22 brings opportunities for manifesting grand visions and building something of lasting significance. This Master Number period emphasizes practical idealism and large-scale achievement." }
 };
 
-const CHALLENGE_NUMBER_READINGS = {
+var CHALLENGE_NUMBER_READINGS = {
     0: { reading: "A Challenge of 0 indicates a choice of challenges, or the challenge of finding one's own path without clear obstacles. This can be the most difficult challenge - developing direction from complete freedom." },
     1: { reading: "A Challenge of 1 involves lessons around independence, self-reliance, and ego. Learning to lead without dominating, to be confident without being arrogant, and to stand alone when necessary." },
     2: { reading: "A Challenge of 2 involves lessons around sensitivity, cooperation, and patience. Learning to balance give and take, to handle criticism, and to assert needs while maintaining harmony." },
@@ -1830,7 +1830,7 @@ const CHALLENGE_NUMBER_READINGS = {
     8: { reading: "A Challenge of 8 involves lessons around power, money, and authority. Learning to use power ethically, to balance material and spiritual, and to claim success without compromising values." }
 };
 
-const KARMIC_DEBT_READINGS = {
+var KARMIC_DEBT_READINGS = {
     13: {
         title: "Karmic Debt 13/4",
         reading: `Karmic Debt 13 (which reduces to 4) indicates past life misuse of work ethic or laziness at others' expense. In this life, hard work may seem to bring less reward than expected, and shortcuts don't work. The lesson is developing genuine discipline and accepting that meaningful achievement requires sustained effort. Success comes through honest, persistent work without trying to take the easy way. Once this lesson is mastered, the ability to accomplish great things through dedicated effort becomes a strength.`
@@ -1849,7 +1849,7 @@ const KARMIC_DEBT_READINGS = {
     }
 };
 
-const SOUL_URGE_READINGS = {
+var SOUL_URGE_READINGS = {
     1: { 
         title: "Desire for Independence", 
         reading: `Soul Urge 1 craves independence, leadership, and being first. At the deepest level, this soul needs to feel original, pioneering, and self-reliant.
@@ -1972,7 +1972,7 @@ For children with this Soul Urge: They carry enormous spiritual responsibility �
     }
 };
 
-const PERSONALITY_NUMBER_READINGS = {
+var PERSONALITY_NUMBER_READINGS = {
     1: { 
         title: "Projects Leadership", 
         reading: `Personality Number 1 projects confidence, independence, and leadership. Others see someone capable and self-assured who can take charge and lead the way.
@@ -2089,7 +2089,7 @@ However, this projection may sometimes seem overwhelming or intimidating. Learni
 // STELLIUM READINGS (3+ planets in one sign)
 // ============================================
 
-const STELLIUM_READINGS = {
+var STELLIUM_READINGS = {
     Aries: {
         title: "The Warrior Concentration",
         symbol: "🔥",
@@ -2254,7 +2254,7 @@ if (typeof module !== 'undefined' && module.exports) {
 // SOUTH NODE READINGS
 // ============================================
 
-const SOUTH_NODE_READINGS = {
+var SOUTH_NODE_READINGS = {
     Aries: {
         keywords: ["Past Independence", "Warrior Energy", "Self-Focus", "Courage"],
         summary: "Past life gifts of independence, courage, and self-assertion.",

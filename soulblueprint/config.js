@@ -5,7 +5,7 @@
 // Copy this file to config.js to activate
 // ============================================
 
-const BRAND_CONFIG = {
+var BRAND_CONFIG = {
     // ============================================
     // BRAND IDENTITY
     // ============================================
@@ -200,7 +200,7 @@ const BRAND_CONFIG = {
 };
 
 // Keep BRAND_PRESETS for reference
-const BRAND_PRESETS = {
+var BRAND_PRESETS = {
     baby: BRAND_CONFIG
 };
 

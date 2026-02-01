@@ -4,7 +4,7 @@
 // Readings for planets in each of the 12 houses
 // ============================================
 
-const HOUSE_READINGS = {
+var HOUSE_READINGS = {
     Sun: {
         1: {
             title: "Sun in 1st House - Radiant Self",

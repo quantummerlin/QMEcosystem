@@ -15,7 +15,7 @@
 // ANGULAR HOUSES - The Four Pillars of Life
 // ============================================
 
-const ANGULAR_HOUSE_READINGS = {
+var ANGULAR_HOUSE_READINGS = {
     1: { // Ascendant/Rising - Self & Identity
         Aries: {
             title: "The Warrior Emergence",
@@ -657,7 +657,7 @@ The life lesson in career is learning to maintain boundaries while remaining com
 // ADDITIONAL PLANETARY ASPECTS
 // ============================================
 
-const ADDITIONAL_ASPECT_READINGS = {
+var ADDITIONAL_ASPECT_READINGS = {
     'Mercury-Mars': {
         conjunction: {
             title: "The Swift Warrior",
@@ -807,7 +807,7 @@ const ADDITIONAL_ASPECT_READINGS = {
 // VERTEX BY SIGN - Fated Encounters
 // ============================================
 
-const VERTEX_READINGS = {
+var VERTEX_READINGS = {
     Aries: {
         title: "Fated Courage",
         keywords: ["Destiny Through Action", "Fated Independence", "Karmic Leadership", "Encounter Initiation"],
@@ -946,7 +946,7 @@ The gift is learning that fate connects to the divine. The challenge is remainin
 // NODES IN HOUSES
 // ============================================
 
-const NODES_IN_HOUSES = {
+var NODES_IN_HOUSES = {
     north: {
         1: {
             title: "North Node in 1st House - Identity Journey",
@@ -1149,7 +1149,7 @@ The lesson is to use these gifts while developing the opposite: practical servic
 // SYNTHESIS READINGS
 // ============================================
 
-const SYNTHESIS_READINGS = {
+var SYNTHESIS_READINGS = {
     career: {
         title: "Career Path Synthesis",
         icon: "💼",
@@ -1995,7 +1995,7 @@ function getParentCommTip(mercury, moon) {
 // PROGRESSIONS - Current Life Phase
 // ============================================
 
-const PROGRESSION_READINGS = {
+var PROGRESSION_READINGS = {
     description: "Progressions show how the birth chart evolves over time",
     
     sun: {
@@ -2153,7 +2153,7 @@ const PROGRESSION_READINGS = {
 // COSMIC WRAP-UP - The Great Summary
 // ============================================
 
-const COSMIC_WRAPUP = {
+var COSMIC_WRAPUP = {
     title: "The Complete Moment in Time",
     icon: "",
     

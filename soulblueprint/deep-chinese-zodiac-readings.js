@@ -644,7 +644,7 @@ Challenging matches include Snakes (too secretive and strategic for the open Pig
 // Overlays that modify the base animal reading
 // ============================================
 
-const CHINESE_ELEMENT_INFLUENCES = {
+var CHINESE_ELEMENT_INFLUENCES = {
     Wood: {
         title: "Wood Element",
         nature: "Growth & Creativity",

@@ -6,7 +6,7 @@
 // PART OF FORTUNE BY SIGN
 // ============================================
 
-const PART_OF_FORTUNE_READINGS = {
+var PART_OF_FORTUNE_READINGS = {
     Aries: {
         title: "Part of Fortune in Aries - Joy Through Action",
         keywords: ["Initiative", "Courage", "Independence", "Leadership"],
@@ -168,7 +168,7 @@ The universe rewards their compassion and faith. When they're cynical or hardhea
 // CURRENT TRANSITS READINGS (2026)
 // ============================================
 
-const TRANSIT_READINGS = {
+var TRANSIT_READINGS = {
     saturn: {
         title: "Saturn's Lessons - Building Foundations",
         currentSign: "Pisces",

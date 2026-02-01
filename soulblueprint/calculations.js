@@ -56,7 +56,7 @@ function parseBirthDate(dateStr) {
 // ============================================
 
 // Location data for accurate calculations
-const LOCATIONS = {
+var LOCATIONS = {
     'abu dhabi': { lat: 24.4539, lon: 54.3773, tz: 4, name: 'Abu Dhabi, UAE' },
     'dubai': { lat: 25.2048, lon: 55.2708, tz: 4, name: 'Dubai, UAE' },
     'new york': { lat: 40.7128, lon: -74.0060, tz: -5, name: 'New York, USA' },
@@ -69,7 +69,7 @@ const LOCATIONS = {
     'default': { lat: 0, lon: 0, tz: 0, name: 'Greenwich' }
 };
 
-const ZODIAC_SIGNS = [
+var ZODIAC_SIGNS = [
     { name: 'Aries', symbol: '♈', element: 'Fire', start: [3, 21], end: [4, 19] },
     { name: 'Taurus', symbol: '♉', element: 'Earth', start: [4, 20], end: [5, 20] },
     { name: 'Gemini', symbol: '♊', element: 'Air', start: [5, 21], end: [6, 20] },
