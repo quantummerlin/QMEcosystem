@@ -850,6 +850,76 @@
         .section-content.collapsed .reading-card {
             display: none !important;
         }
+        
+        /* Sub-section styles for nested collapsible groups within main sections */
+        .sub-section {
+            margin: 12px 0;
+            border-radius: 12px;
+            border: 1px solid rgba(var(--primary-rgb, 255, 107, 156), 0.15);
+            background: rgba(255, 255, 255, 0.5);
+            overflow: hidden;
+        }
+        
+        .sub-section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 18px;
+            background: linear-gradient(135deg, rgba(255,182,217,0.06), rgba(182,227,255,0.06));
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .sub-section-header:hover {
+            background: linear-gradient(135deg, rgba(255,182,217,0.12), rgba(182,227,255,0.12));
+        }
+        
+        .sub-section-header-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .sub-section-header .sub-icon {
+            font-size: 1.3rem;
+        }
+        
+        .sub-section-header h4 {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .sub-section-header .sub-count {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-left: 8px;
+        }
+        
+        .sub-section-arrow {
+            font-size: 0.9rem;
+            color: var(--primary);
+            transition: transform 0.3s ease;
+            opacity: 0.7;
+        }
+        
+        .sub-section:not(.collapsed) .sub-section-arrow {
+            transform: rotate(180deg);
+        }
+        
+        .sub-section.collapsed .sub-section-body {
+            display: none;
+        }
+        
+        .sub-section-body {
+            padding: 8px;
+        }
+        
+        .sub-section-body .reading-card {
+            margin: 8px 0;
+        }
 
         .reading-meter {
             margin-top: 10px;
@@ -1631,8 +1701,6 @@
         .dark-theme .reading-card {
             background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.1);
-        }
-            background: rgba(255,215,0,0.2);
         }
         
         .reading-card .keywords {
@@ -3363,7 +3431,8 @@
                 updatedAt: Date.now(),
                 progress: {},
                 sectionCollapseState: {},
-                scrollPosition: 0
+                scrollPosition: 0,
+                totalSectionCount: 0
             };
             localStorage.setItem(READINGS_STORAGE_KEY, JSON.stringify(allReadings));
             return readingId;
@@ -3394,6 +3463,15 @@
             }
         }
         
+        // Update reading total section count
+        function updateReadingTotalCount(readingId, count) {
+            const allReadings = getAllReadings();
+            if (allReadings[readingId]) {
+                allReadings[readingId].totalSectionCount = count;
+                localStorage.setItem(READINGS_STORAGE_KEY, JSON.stringify(allReadings));
+            }
+        }
+        
         // Update reading scroll position
         function updateReadingScrollPosition(readingId, scrollY) {
             const allReadings = getAllReadings();
@@ -3420,8 +3498,9 @@
             const reading = getReading(readingId);
             if (!reading || !reading.progress) return { read: 0, total: 0 };
             const readCount = Object.keys(reading.progress).filter(k => reading.progress[k]).length;
-            // Estimate total based on typical reading (around 65 sections)
-            return { read: readCount, total: 65 };
+            // Use stored totalSectionCount, fallback to counting progress keys or default
+            const total = reading.totalSectionCount || Object.keys(reading.progress).length || readCount || 0;
+            return { read: readCount, total: total > 0 ? total : readCount };
         }
         
         // Render the dashboard
@@ -3742,6 +3821,11 @@
                 // Display results
                 displayResults(userData, readings);
                 
+                // Save the total section count to the reading
+                if (currentReadingId) {
+                    updateReadingTotalCount(currentReadingId, totalSectionCount);
+                }
+                
                 // Update dashboard
                 renderDashboard();
             } catch (error) {
@@ -3930,6 +4014,16 @@
                 <p class="blueprint-footer">Each placement tells a different part of ${userData.name}'s story. Scroll down for detailed interpretations of each celestial influence.</p>
             `;
             celestialSection.appendChild(blueprintSummary);
+            
+            // Create collapsible sub-sections for organizing the celestial readings
+            const coreSubSection = createSubSection('core-planets', '☀️', 'Core Identity (Sun, Moon, Rising)', false);
+            const personalSubSection = createSubSection('personal-planets', '💫', 'Personal Planets (Mercury, Venus, Mars)');
+            const socialSubSection = createSubSection('social-planets', '🌟', 'Social Planets (Jupiter, Saturn)');
+            const outerSubSection = createSubSection('outer-planets', '🌌', 'Outer Planets (Uranus, Neptune, Pluto)');
+            const soulSubSection = createSubSection('soul-points', '✨', 'Soul Points (Nodes, Chiron, Lilith)');
+            const housesSubSection = createSubSection('houses', '🏠', 'House Placements');
+            const aspectsSubSection = createSubSection('aspects', '🔗', 'Aspects & Connections');
+            const specialSubSection = createSubSection('special', '💎', 'Special Features');
             
             // Sun Sign - DEEP READING
             const deepSun = (typeof DEEP_SUN_READINGS !== 'undefined') ? DEEP_SUN_READINGS[sunSign.name] : null;
@@ -4374,7 +4468,6 @@
             ));
             
             // Uranus - Revolutionary Energy
-            const uranusSign = readings.astrology.uranusSign || { name: 'Aries' };
             const deepUranus = typeof DEEP_URANUS_READINGS !== 'undefined' ? DEEP_URANUS_READINGS[uranusSign.name] : null;
             
             let uranusContent = '';
@@ -4403,7 +4496,6 @@
             ));
             
             // Neptune - Mystical Realm
-            const neptuneSign = readings.astrology.neptuneSign || { name: 'Pisces' };
             const deepNeptune = typeof DEEP_NEPTUNE_READINGS !== 'undefined' ? DEEP_NEPTUNE_READINGS[neptuneSign.name] : null;
             
             let neptuneContent = '';
@@ -4432,7 +4524,6 @@
             ));
             
             // Pluto - Transformation
-            const plutoSign = readings.astrology.plutoSign || { name: 'Scorpio' };
             const deepPluto = typeof DEEP_PLUTO_READINGS !== 'undefined' ? DEEP_PLUTO_READINGS[plutoSign.name] : null;
             
             let plutoContent = '';
@@ -4791,6 +4882,18 @@ This isn't a flaw - it's their power source. The tension between these two drive
                     []
                 ));
             }
+            
+            // Organize cards into sub-sections based on their content
+            organizeCelestialSubSections(celestialSection, {
+                core: coreSubSection,
+                personal: personalSubSection,
+                social: socialSubSection,
+                outer: outerSubSection,
+                soul: soulSubSection,
+                houses: housesSubSection,
+                aspects: aspectsSubSection,
+                special: specialSubSection
+            });
             
             celestialSectionWrapper.appendChild(celestialSection);
             container.appendChild(celestialSectionWrapper);
@@ -5838,6 +5941,124 @@ This isn't a flaw - it's their power source. The tension between these two drive
             return section;
         }
         
+        // Create a collapsible sub-section within a main section
+        function createSubSection(id, icon, title, startCollapsed = true) {
+            const subSection = document.createElement('div');
+            subSection.className = 'sub-section' + (startCollapsed ? ' collapsed' : '');
+            subSection.id = `subsection-${id}`;
+            subSection.setAttribute('data-subsection-id', id);
+            
+            const header = document.createElement('div');
+            header.className = 'sub-section-header';
+            header.onclick = function() { toggleSubSection(id); };
+            header.innerHTML = `
+                <div class="sub-section-header-content">
+                    <span class="sub-icon">${icon}</span>
+                    <h4>${title}<span class="sub-count"></span></h4>
+                </div>
+                <span class="sub-section-arrow">▼</span>
+            `;
+            
+            const body = document.createElement('div');
+            body.className = 'sub-section-body';
+            
+            subSection.appendChild(header);
+            subSection.appendChild(body);
+            
+            return subSection;
+        }
+        
+        function toggleSubSection(id) {
+            const subSection = document.getElementById(`subsection-${id}`);
+            if (subSection) {
+                subSection.classList.toggle('collapsed');
+            }
+        }
+        
+        // Helper to add card to a sub-section body
+        function addToSubSection(subSection, card) {
+            const body = subSection.querySelector('.sub-section-body');
+            if (body) {
+                body.appendChild(card);
+                // Update count
+                const count = body.querySelectorAll('.reading-card').length;
+                const countEl = subSection.querySelector('.sub-count');
+                if (countEl) countEl.textContent = ` (${count})`;
+            }
+        }
+        
+        // Organize celestial reading cards into collapsible sub-sections
+        function organizeCelestialSubSections(celestialSection, subSections) {
+            // Get all reading cards (skip the summary card)
+            const cards = Array.from(celestialSection.querySelectorAll('.reading-card:not(.cosmic-blueprint-summary)'));
+            const dividers = Array.from(celestialSection.querySelectorAll('.section-divider'));
+            
+            // Remove dividers (we'll use sub-sections instead)
+            dividers.forEach(d => d.remove());
+            
+            // Categorize cards based on their title/value text
+            cards.forEach(card => {
+                const titleEl = card.querySelector('h3');
+                const valueEl = card.querySelector('.result-value');
+                const title = titleEl ? titleEl.textContent.toLowerCase() : '';
+                const value = valueEl ? valueEl.textContent.toLowerCase() : '';
+                const combined = title + ' ' + value;
+                
+                let targetSubSection = null;
+                
+                // Core planets (Sun, Moon, Rising)
+                if (combined.includes('sun in') || combined.includes('moon in') || 
+                    combined.includes('rising') || combined.includes('ascendant')) {
+                    targetSubSection = subSections.core;
+                }
+                // Personal planets (Mercury, Venus, Mars)
+                else if (combined.includes('mercury') || combined.includes('venus') || combined.includes('mars')) {
+                    targetSubSection = subSections.personal;
+                }
+                // Social planets (Jupiter, Saturn)
+                else if (combined.includes('jupiter') || combined.includes('saturn')) {
+                    targetSubSection = subSections.social;
+                }
+                // Outer planets (Uranus, Neptune, Pluto)
+                else if (combined.includes('uranus') || combined.includes('neptune') || combined.includes('pluto')) {
+                    targetSubSection = subSections.outer;
+                }
+                // Soul points (Nodes, Chiron, Lilith, Moon Phase, Chinese Zodiac)
+                else if (combined.includes('north node') || combined.includes('south node') || 
+                         combined.includes('chiron') || combined.includes('lilith') ||
+                         combined.includes('moon phase') || combined.includes('chinese')) {
+                    targetSubSection = subSections.soul;
+                }
+                // Houses
+                else if (combined.includes('house') || combined.includes('ic') || 
+                         combined.includes('descendant') || combined.includes('midheaven')) {
+                    targetSubSection = subSections.houses;
+                }
+                // Aspects
+                else if (combined.includes('aspect') || combined.includes('conjunction') || 
+                         combined.includes('square') || combined.includes('trine') ||
+                         combined.includes('opposition') || combined.includes('sextile')) {
+                    targetSubSection = subSections.aspects;
+                }
+                // Special features (Stellium, Love Blueprint, Part of Fortune, Vertex, etc.)
+                else {
+                    targetSubSection = subSections.special;
+                }
+                
+                if (targetSubSection) {
+                    addToSubSection(targetSubSection, card);
+                }
+            });
+            
+            // Add sub-sections to celestial section (only if they have cards)
+            Object.values(subSections).forEach(subSection => {
+                const body = subSection.querySelector('.sub-section-body');
+                if (body && body.children.length > 0) {
+                    celestialSection.appendChild(subSection);
+                }
+            });
+        }
+        
         function createPaginationControl() {
             const pagination = document.createElement('div');
             pagination.className = 'pagination-controls';
@@ -6713,6 +6934,20 @@ This isn't a flaw - it's their power source. The tension between these two drive
             try {
                 localStorage.setItem('sb-read-sections', JSON.stringify(readSectionIds));
             } catch(e) {}
+            
+            // Save to current reading progress if exists
+            if (currentReadingId) {
+                const progressObj = {};
+                readSectionIds.forEach(id => progressObj[id] = true);
+                updateReadingProgress(currentReadingId, progressObj);
+                // Also update totalSectionCount in reading
+                updateReadingTotalCount(currentReadingId, totalSectionCount);
+            }
+            
+            // Auto-collapse the card when marked as read (not when unmarking)
+            if (!isRead) {
+                card.classList.remove('expanded');
+            }
             
             // Update progress
             updateProgressDisplay();
