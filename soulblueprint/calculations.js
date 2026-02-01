@@ -631,19 +631,35 @@ function calculatePlanetSign(birthDate, planet) {
     return ZODIAC_SIGNS[Math.floor(longitude / 30)];
 }
 
+function calculateChineseElement(year) {
+    // Chinese elements cycle every 2 years (each element has yin and yang year)
+    // The cycle: Wood, Fire, Earth, Metal, Water
+    // Starting from 1924 (Yang Wood Rat year)
+    const elements = ['Wood', 'Wood', 'Fire', 'Fire', 'Earth', 'Earth', 'Metal', 'Metal', 'Water', 'Water'];
+    const baseYear = 1924;
+    const index = ((year - baseYear) % 10 + 10) % 10;
+    return elements[index];
+}
+
 function calculateChineseZodiac(birthDate) {
     const { year } = parseBirthDate(birthDate);
     
     for (const animal of CHINESE_ZODIAC) {
         if (animal.years.includes(year)) {
-            return animal;
+            return {
+                ...animal,
+                element: calculateChineseElement(year)
+            };
         }
     }
     
     // Calculate for years not in the list
     const baseYear = 1924; // Year of the Rat
     const index = ((year - baseYear) % 12 + 12) % 12;
-    return CHINESE_ZODIAC[index];
+    return {
+        ...CHINESE_ZODIAC[index],
+        element: calculateChineseElement(year)
+    };
 }
 
 function calculateMoonPhase(birthDate) {
@@ -1422,6 +1438,7 @@ if (typeof module !== 'undefined' && module.exports) {
         calculateMoonSign,
         calculateRisingSign,
         calculateChineseZodiac,
+        calculateChineseElement,
         calculateMoonPhase,
         // ... export all functions
     };
