@@ -22,7 +22,10 @@ function initializePagination() {
         if (controls) {
             controls.style.display = 'none';
         }
-        document.getElementById('action-buttons').style.display = 'flex';
+        const actionButtons = document.getElementById('action-buttons');
+        if (actionButtons) {
+            actionButtons.style.display = 'flex';
+        }
     }
 }
 
