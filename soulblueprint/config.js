@@ -24,10 +24,10 @@ const BRAND_CONFIG = {
     inputLabels: {
         name: "Name",
         namePlaceholder: "Enter name",
-        nameHelper: "First name or nickname",
+        nameHelper: "",
         
         birthDate: "Date of Birth",
-        birthDateHelper: "Birthday",
+        birthDateHelper: "",
         
         birthTime: "Time of Birth",
         birthTimeHelper: "For accurate Rising Sign (check birth certificate)",

@@ -64,6 +64,7 @@ const LOCATIONS = {
     'los angeles': { lat: 34.0522, lon: -118.2437, tz: -8, name: 'Los Angeles, USA' },
     'tokyo': { lat: 35.6762, lon: 139.6503, tz: 9, name: 'Tokyo, Japan' },
     'sydney': { lat: -33.8688, lon: 151.2093, tz: 10, name: 'Sydney, Australia' },
+    'melbourne': { lat: -37.8136, lon: 144.9631, tz: 10, name: 'Melbourne, Australia' },
     'paris': { lat: 48.8566, lon: 2.3522, tz: 1, name: 'Paris, France' },
     'default': { lat: 0, lon: 0, tz: 0, name: 'Greenwich' }
 };
@@ -311,7 +312,7 @@ function calculateMoonSign(birthDate, birthTime, location = 'default') {
         1973: 82,    // Gemini
         1974: 5,     // Aries
         1975: 289,   // Capricorn
-        1976: 213,   // Scorpio
+        1976: 262,   // Sagittarius (CORRECTED - was 213)
         1977: 137,   // Leo
         1978: 61,    // Taurus
         1979: 345,   // Pisces
@@ -506,6 +507,7 @@ function calculatePlanetSign(birthDate, planet) {
             2024: { 1: 9, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 4, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
             2025: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 3, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
             2026: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 4, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
+            1976: { 1: 9, 2: 10, 3: 11, 4: 0, 5: 1, 6: 3, 7: 4, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
             1981: { 1: 9, 2: 10, 3: 0, 4: 0, 5: 1, 6: 3, 7: 4, 8: 5, 9: 6, 10: 8, 11: 8, 12: 9 },
             1990: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 3, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
             1995: { 1: 10, 2: 10, 3: 0, 4: 0, 5: 1, 6: 2, 7: 4, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
@@ -515,15 +517,18 @@ function calculatePlanetSign(birthDate, planet) {
             2015: { 1: 10, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 4, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 }
         },
         venus: {
+            1976: { 1: 8, 2: 9, 3: 10, 4: 11, 5: 0, 6: 1, 7: 2, 8: 4, 9: 5, 10: 6, 11: 7, 12: 8 },
             1981: { 1: 9, 2: 10, 3: 11, 4: 0, 5: 1, 6: 2, 7: 3, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9 },
         },
         mars: {
+            // Feb 20, 1976: Mars was at 19° Gemini
+            1976: { 1: 2, 2: 2, 3: 3, 4: 3, 5: 3, 6: 4, 7: 4, 8: 5, 9: 5, 10: 6, 11: 6, 12: 7 },
             // May 3, 1981: Mars was at 5° Taurus
             1981: { 1: 10, 2: 11, 3: 0, 4: 0, 5: 1, 6: 2, 7: 3, 8: 4, 9: 5, 10: 5, 11: 6, 12: 7 },
         },
         jupiter: {
             // Jupiter moves slowly through each sign (~1 year per sign)
-            1980: 5, 1981: 6, 1982: 7, 1983: 8, 1984: 9, 1985: 10, 1986: 11, 1987: 0,
+            1976: 0, 1977: 1, 1978: 2, 1979: 3, 1980: 5, 1981: 6, 1982: 7, 1983: 8, 1984: 9, 1985: 10, 1986: 11, 1987: 0,
             1988: 1, 1989: 2, 1990: 3, 1991: 4, 1992: 5, 1993: 6, 1994: 7, 1995: 8,
             1996: 9, 1997: 10, 1998: 11, 1999: 0, 2000: 1, 2001: 2, 2002: 3, 2003: 4,
             2004: 5, 2005: 6, 2006: 7, 2007: 8, 2008: 9, 2009: 10, 2010: 11, 2011: 0,
@@ -532,7 +537,7 @@ function calculatePlanetSign(birthDate, planet) {
         },
         saturn: {
             // Saturn: ~2.5 years per sign
-            1980: 5, 1981: 6, 1982: 6, 1983: 7, 1984: 7, 1985: 8, 1986: 8, 1987: 8,
+            1974: 2, 1975: 3, 1976: 3, 1977: 4, 1978: 4, 1979: 5, 1980: 5, 1981: 6, 1982: 6, 1983: 7, 1984: 7, 1985: 8, 1986: 8, 1987: 8,
             1988: 9, 1989: 9, 1990: 9, 1991: 10, 1992: 10, 1993: 10, 1994: 11, 1995: 11,
             1996: 11, 1997: 0, 1998: 0, 1999: 0, 2000: 1, 2001: 1, 2002: 2, 2003: 2,
             2004: 3, 2005: 3, 2006: 4, 2007: 4, 2008: 5, 2009: 5, 2010: 5, 2011: 6,
@@ -541,7 +546,8 @@ function calculatePlanetSign(birthDate, planet) {
         },
         uranus: {
             // Uranus: ~7 years per sign
-            1975: 7, 1981: 8, 1988: 9, 1996: 10, 2003: 11, 2011: 0, 2019: 1, 2026: 2
+            // Uranus entered Scorpio Nov 1981, so early 1981 still Scorpio
+            1975: 7, 1981: 7, 1982: 8, 1988: 9, 1996: 10, 2003: 11, 2011: 0, 2019: 1, 2026: 2
         },
         neptune: {
             // Neptune: ~14 years per sign
@@ -819,9 +825,10 @@ function calculateLilith(birthDate) {
     // Black Moon Lilith (Mean Lunar Apogee) - 8.85 year cycle
     // Lilith moves ~40.7 degrees per year (prograde)
     
-    // Reference: Jan 1, 2000 Lilith was at approximately 175 degrees (Virgo)
+    // Reference: Jan 1, 2000 Lilith was at approximately 265 degrees (Sagittarius)
+    // Verified against Swiss Ephemeris
     const refDate = new Date('2000-01-01T00:00:00Z');
-    const refLongitude = 175; // Virgo
+    const refLongitude = 265; // Sagittarius
     
     const daysSinceRef = (new Date(birthDate) - refDate) / (1000 * 60 * 60 * 24);
     const lilithDailyMotion = 0.1114; // degrees per day
@@ -838,12 +845,74 @@ function calculateMidheaven(birthDate, birthTime, location = 'default') {
         return { name: 'Unknown', note: 'Birth time required' };
     }
     
-    // MC is typically 90 degrees (3 signs) ahead of Ascendant
-    const risingSign = calculateRisingSign(birthDate, birthTime, location);
-    const risingIndex = ZODIAC_SIGNS.findIndex(s => s.name === risingSign.name);
-    const mcIndex = (risingIndex + 9) % 12; // 9 signs = 270 degrees from Ascendant
+    // MC calculation using RAMC (Right Ascension of Midheaven)
+    // MC = atan(tan(RAMC) / cos(obliquity))
+    const locationData = LOCATIONS[location.toLowerCase()] || LOCATIONS['default'];
+    const [hours, minutes] = birthTime.split(':').map(Number);
+    const { day, month, year } = parseBirthDate(birthDate);
     
-    return ZODIAC_SIGNS[mcIndex];
+    // Convert local time to UT (Universal Time)
+    const localTimeDecimal = hours + minutes / 60;
+    let utHours = localTimeDecimal - locationData.tz;
+    
+    // Handle day rollover
+    let utDay = day;
+    if (utHours < 0) {
+        utHours += 24;
+        utDay -= 1;
+    } else if (utHours >= 24) {
+        utHours -= 24;
+        utDay += 1;
+    }
+    
+    // Calculate Julian Day Number at 0h UT
+    let y = year;
+    let m = month;
+    if (m <= 2) {
+        y -= 1;
+        m += 12;
+    }
+    const A = Math.floor(y / 100);
+    const B = 2 - A + Math.floor(A / 4);
+    const JD0 = Math.floor(365.25 * (y + 4716)) + Math.floor(30.6001 * (m + 1)) + utDay + B - 1524.5;
+    
+    // Calculate Sidereal Time at Greenwich at 0h UT of this date
+    const T0 = (JD0 - 2451545.0) / 36525;
+    let GMST0h = 100.46061837 + 36000.770053608 * T0 + 0.000387933 * T0 * T0;
+    GMST0h = GMST0h % 360;
+    if (GMST0h < 0) GMST0h += 360;
+    
+    // Add the sidereal time elapsed since 0h UT (sidereal rate: 1.00273790935)
+    const siderealHours = utHours * 1.00273790935;
+    let GMST = GMST0h + siderealHours * 15; // 15 degrees per hour
+    GMST = GMST % 360;
+    if (GMST < 0) GMST += 360;
+    
+    // Local Sidereal Time = RAMC (Right Ascension of MC)
+    let RAMC = GMST + locationData.lon;
+    RAMC = ((RAMC % 360) + 360) % 360;
+    
+    // MC = atan(tan(RAMC) / cos(obliquity))
+    const obliquity = 23.4393; // degrees
+    const oblRad = obliquity * Math.PI / 180;
+    const ramcRad = RAMC * Math.PI / 180;
+    
+    // Calculate MC longitude
+    let mc = Math.atan(Math.tan(ramcRad) / Math.cos(oblRad)) * 180 / Math.PI;
+    
+    // Adjust quadrant based on RAMC
+    if (RAMC >= 90 && RAMC < 270) {
+        mc += 180;
+    } else if (RAMC >= 270) {
+        mc += 360;
+    }
+    
+    mc = ((mc % 360) + 360) % 360;
+    
+    // Convert degrees to zodiac sign (each sign = 30 degrees)
+    const signIndex = Math.floor(mc / 30);
+    
+    return ZODIAC_SIGNS[signIndex];
 }
 
 function calculateDescendant(risingSign) {

@@ -87,8 +87,11 @@
         
         /* My Readings Dashboard */
         .my-readings-section {
-            margin: 20px 0 30px;
-            padding: 0 20px;
+            margin: 30px 0 20px;
+            padding: 25px 20px;
+            background: linear-gradient(135deg, rgba(255,182,217,0.08), rgba(182,227,255,0.08));
+            border-radius: 20px;
+            border: 1px solid rgba(255,105,180,0.15);
         }
         
         .my-readings-header {
@@ -243,11 +246,23 @@
             margin-left: 10px;
         }
         
+        .section-reading-count.all-read {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+        }
+        
         .dark-theme .section-reading-count,
         body.color-mode-pink .section-reading-count,
         body.color-mode-blue .section-reading-count {
             background: rgba(255,255,255,0.15);
             color: inherit;
+        }
+        
+        .dark-theme .section-reading-count.all-read,
+        body.color-mode-pink .section-reading-count.all-read,
+        body.color-mode-blue .section-reading-count.all-read {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
         }
 
         * {
@@ -1744,6 +1759,56 @@
             border: 1px solid rgba(255,255,255,0.1);
         }
         
+        /* Birth Time Required Card Styles */
+        .reading-card.birth-time-required {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.05) 0%, rgba(255, 105, 180, 0.05) 100%);
+            border: 2px dashed rgba(138, 43, 226, 0.3);
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .birth-time-message {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .birth-time-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .birth-time-message h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .birth-time-message p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        
+        .birth-time-tip {
+            font-size: 0.9rem;
+            padding: 12px 15px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 10px;
+            border-left: 3px solid gold;
+            text-align: left;
+            margin-top: 20px !important;
+        }
+        
+        .dark-theme .reading-card.birth-time-required {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(255, 105, 180, 0.1) 100%);
+            border-color: rgba(138, 43, 226, 0.4);
+        }
+        
         .reading-card .keywords {
             display: flex;
             flex-wrap: wrap;
@@ -2867,15 +2932,6 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(255,105,180,0.4);
         }
-        
-        /* Action Buttons */
-        #action-buttons {
-            display: none;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
 
         .action-btn {
             padding: 12px 24px;
@@ -3119,6 +3175,12 @@
                 font-size: 1.4rem;
             }
             
+            .section-reading-count {
+                font-size: 0.75rem;
+                padding: 2px 8px;
+                margin-left: 6px;
+            }
+            
             .reading-card {
                 padding: 15px;
                 border-radius: 12px;
@@ -3218,27 +3280,9 @@
             <h1 id="brandName">A Moment in Time<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
             <p class="tagline" id="tagline">Your Complete Cosmic Reading • No Sign-Up • Always Free</p>
             <p class="sub-tagline" id="subTagline">At the exact moment you were born, the universe created a pattern.</p>
-            
-            <!-- Action Buttons (hidden until reading generated) -->
-            <div id="action-buttons" style="display: none; margin-top: 20px; gap: 10px; flex-wrap: wrap; justify-content: center;">
-                <button type="button" onclick="printReading()" class="action-btn" title="Print or Save as PDF">Print/PDF</button>
-                <button type="button" onclick="downloadReading()" class="action-btn" title="Download as HTML file">Download</button>
-                <button type="button" onclick="shareReading()" class="action-btn" title="Share this reading">Share</button>
-                <button type="button" onclick="clearReading()" class="action-btn secondary" title="Start a new reading">New Reading</button>
-            </div>
         </header>
         
         <div class="container">
-            <!-- My Readings Dashboard -->
-            <div class="my-readings-section" id="myReadingsSection" style="display: none;">
-                <div class="my-readings-header">
-                    <h2>📚 My Readings <span class="reading-count" id="readingCount">0</span></h2>
-                </div>
-                <div class="readings-list" id="readingsList">
-                    <!-- Populated by JavaScript -->
-                </div>
-            </div>
-            
             <form class="input-form" id="readingForm">
                 <div class="form-group">
                     <label id="nameLabel">Name</label>
@@ -3268,6 +3312,17 @@
                 
                 <button type="submit" class="submit-btn" id="submitBtn">Generate Your Reading</button>
             </form>
+            
+            <!-- My Readings Dashboard (below Generate button) -->
+            <div class="my-readings-section" id="myReadingsSection" style="display: none;">
+                <div class="my-readings-header">
+                    <h2>📚 My Readings <span class="reading-count" id="readingCount">0</span></h2>
+                </div>
+                <div class="readings-list" id="readingsList">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+            
             <div class="footer-links" aria-label="Legal links">
                 <a href="/soulblueprint/about.html" target="_blank">About</a>
                 <span>•</span>
@@ -3630,6 +3685,7 @@
                 // Update progress display
                 updateProgressDisplay();
                 updateReadButtons();
+                updateSectionCounts();
                 
                 // Restore scroll position
                 if (reading.scrollPosition > 0) {
@@ -4769,6 +4825,17 @@
                         houseReading.challenges || []
                     ));
                 }
+            } else {
+                // Show birth time required message for House Placements
+                const housesHeader = document.createElement('div');
+                housesHeader.className = 'section-divider';
+                housesHeader.innerHTML = '<h3>House Placements</h3><p>Where each planet expresses its energy in your life</p>';
+                celestialSection.appendChild(housesHeader);
+                
+                celestialSection.appendChild(createBirthTimeRequiredCard(
+                    'House Placements',
+                    `House placements reveal WHERE each planet expresses its energy in ${userData.name}'s life - career, relationships, home, creativity, and more. The 12 houses divide the sky based on the exact birth time and location, creating a unique map of life themes and areas of focus.`
+                ));
             }
             
             // ============================================
@@ -5593,6 +5660,22 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 
                 angularSectionWrapper.appendChild(angularSection);
                 container.appendChild(angularSectionWrapper);
+            } else if (typeof ANGULAR_HOUSE_READINGS !== 'undefined') {
+                // Show birth time required message for Four Pillars
+                const angularSectionWrapper = document.createElement('div');
+                angularSectionWrapper.className = 'reading-section';
+                const angularSection = createCustomSection(
+                    'angular',
+                    '',
+                    'The Four Life Pillars',
+                    `The foundational anchors shaping ${userData.name}'s life path`
+                );
+                angularSection.appendChild(createBirthTimeRequiredCard(
+                    'The Four Life Pillars',
+                    `The Four Pillars reveal the Ascendant (your visible self), IC (your roots & home), Descendant (your partnerships), and Midheaven (your public legacy). These angles are calculated from exact birth time and location, showing how ${userData.name}'s energy manifests in the four crucial life areas.`
+                ));
+                angularSectionWrapper.appendChild(angularSection);
+                container.appendChild(angularSectionWrapper);
             }
             
             // ============================================
@@ -5624,6 +5707,22 @@ This isn't a flaw - it's their power source. The tension between these two drive
                     vertexSectionWrapper.appendChild(vertexSection);
                     container.appendChild(vertexSectionWrapper);
                 }
+            } else if (typeof VERTEX_READINGS !== 'undefined') {
+                // Show birth time required message for Vertex
+                const vertexSectionWrapper = document.createElement('div');
+                vertexSectionWrapper.className = 'reading-section';
+                const vertexSection = createCustomSection(
+                    'vertex',
+                    '',
+                    'Fated Activation Points',
+                    'Destined turning points and pivotal life moments'
+                );
+                vertexSection.appendChild(createBirthTimeRequiredCard(
+                    'Fated Activation Points',
+                    `The Vertex is a mathematically sensitive point that reveals fated encounters and destined turning points in ${userData.name}'s life. This cosmic activation point requires precise birth time to calculate, as it indicates where the universe orchestrates pivotal moments of destiny.`
+                ));
+                vertexSectionWrapper.appendChild(vertexSection);
+                container.appendChild(vertexSectionWrapper);
             }
             
             // ============================================
@@ -5667,6 +5766,22 @@ This isn't a flaw - it's their power source. The tension between these two drive
                     ));
                 }
                 
+                nodesSectionWrapper.appendChild(nodesSection);
+                container.appendChild(nodesSectionWrapper);
+            } else if (typeof NODES_IN_HOUSES !== 'undefined') {
+                // Show birth time required message for Nodes in Houses
+                const nodesSectionWrapper = document.createElement('div');
+                nodesSectionWrapper.className = 'reading-section';
+                const nodesSection = createCustomSection(
+                    'nodes-houses',
+                    '',
+                    'Karmic Life Areas',
+                    `Where soul evolution unfolds in ${userData.name}'s life`
+                );
+                nodesSection.appendChild(createBirthTimeRequiredCard(
+                    'Karmic Life Areas',
+                    `The Nodes in Houses reveal which specific life areas ${userData.name}'s soul is growing toward (North Node) and what past-life gifts they bring (South Node). These house positions require precise birth time to determine which of life's 12 theaters host this karmic journey.`
+                ));
                 nodesSectionWrapper.appendChild(nodesSection);
                 container.appendChild(nodesSectionWrapper);
             }
@@ -5924,18 +6039,31 @@ This isn't a flaw - it's their power source. The tension between these two drive
             }, 100);
         }
         
-        // Update section headers with reading counts
+        // Update section headers with reading progress (read/total format)
         function updateSectionCounts() {
             document.querySelectorAll('.section-content').forEach(section => {
                 const cards = section.querySelectorAll('.reading-card');
-                const count = cards.length;
-                if (count > 0) {
+                const totalCount = cards.length;
+                const readCount = section.querySelectorAll('.reading-card .read-badge.is-read').length;
+                
+                if (totalCount > 0) {
                     const h2 = section.querySelector('.section-header h2');
-                    if (h2 && !h2.querySelector('.section-reading-count')) {
-                        const countSpan = document.createElement('span');
-                        countSpan.className = 'section-reading-count';
-                        countSpan.textContent = `${count} reading${count !== 1 ? 's' : ''}`;
-                        h2.appendChild(countSpan);
+                    if (h2) {
+                        let countSpan = h2.querySelector('.section-reading-count');
+                        if (!countSpan) {
+                            countSpan = document.createElement('span');
+                            countSpan.className = 'section-reading-count';
+                            h2.appendChild(countSpan);
+                        }
+                        countSpan.textContent = `${readCount}/${totalCount}`;
+                        
+                        // Add visual indicator when all are read
+                        if (readCount === totalCount && totalCount > 0) {
+                            countSpan.classList.add('all-read');
+                            countSpan.textContent = `✓ ${readCount}/${totalCount}`;
+                        } else {
+                            countSpan.classList.remove('all-read');
+                        }
                     }
                 }
             });
@@ -5947,7 +6075,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             section.id = `section-${id}`;
             section.setAttribute('data-section-id', id);
             
-            const countHtml = readingCount > 0 ? `<span class="section-reading-count">${readingCount} readings</span>` : '';
+            const countHtml = readingCount > 0 ? `<span class="section-reading-count">0/${readingCount}</span>` : '';
             
             section.innerHTML = `
                 <div class="section-header" onclick="toggleSection('${id}')">
@@ -5971,7 +6099,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             section.id = `section-${id}`;
             section.setAttribute('data-section-id', id);
             
-            const countHtml = readingCount > 0 ? `<span class="section-reading-count">${readingCount} readings</span>` : '';
+            const countHtml = readingCount > 0 ? `<span class="section-reading-count">0/${readingCount}</span>` : '';
 
             section.innerHTML = `
                 <div class="section-header" onclick="toggleSection('${id}')">
@@ -6126,6 +6254,21 @@ This isn't a flaw - it's their power source. The tension between these two drive
             document.querySelectorAll('.ad-container, .ad-placeholder, ins.adsbygoogle, iframe').forEach(node => {
                 node.remove();
             });
+        }
+        
+        // Create a "birth time required" message card
+        function createBirthTimeRequiredCard(sectionName, description) {
+            const card = document.createElement('div');
+            card.className = 'reading-card birth-time-required';
+            card.innerHTML = `
+                <div class="birth-time-message">
+                    <span class="birth-time-icon">🕐</span>
+                    <h4>Birth Time Required</h4>
+                    <p>${description || `To unlock ${sectionName}, we need the exact birth time. This allows us to calculate precise house positions and angles that reveal where these energies express in life.`}</p>
+                    <p class="birth-time-tip">💡 <strong>Tip:</strong> Check the birth certificate, hospital records, or ask family members for the birth time. Even an approximate time helps!</p>
+                </div>
+            `;
+            return card;
         }
 
         // ============================================
@@ -7009,6 +7152,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             // Update progress
             updateProgressDisplay();
+            
+            // Update section counts (read/total badges)
+            updateSectionCounts();
             
             // Check for completion
             checkCompletion();

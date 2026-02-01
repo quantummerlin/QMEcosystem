@@ -2012,7 +2012,77 @@ The ultimate expression is the relationship transformer who has died to codepend
         affirmation: "I transform through relationship death and rebirth. My partnerships emerge from wholeness not need. I face power dynamics honestly. My relating transforms me and my partners."
     },
     
-    Scorpio: { title: "Pluto in Scorpio - Ultimate Transformation", archetype: "The Death Master", hook: "Pluto in its home sign - ultimate death and rebirth, transforming taboos, power, and depth.", transformation: "Most intense transformation capacity - death and rebirth mastery.", power: "Immense power for transformation and regeneration.", shadow: "Destruction, obsession, or power abuse at peak intensity.", obsession: "Obsession with transformation, power, or hidden realms.", crisis: "Constant crisis as way of life and growth.", rebirth: "Phoenix rising repeatedly, transformation as identity.", generational: "Major global transformation and power shifts.", relationships: "Intensely transformative intimacy and merged power.", lifeWork: "Deep transformation work - psychology, occult, crisis.", shadowIntegration: "Facing ultimate shadow and destructive capacity.", spiritualMeaning: "Death as doorway, transformation as spiritual path.", affirmation: "I am transformation itself - death and rebirth incarnate." },
+    Scorpio: {
+        title: "Pluto in Scorpio - Ultimate Transformation",
+        archetype: "The Death Master",
+        hook: "With Pluto in Scorpio, this soul embodies pure transformative power - Pluto in its home sign. They are here for the deepest death and rebirth, to master the shadow realms, to transform humanity's relationship with power, sexuality, and the hidden dimensions of existence.",
+        
+        transformation: `Pluto in Scorpio creates the ultimate transformer - someone who experiences death and rebirth at the most profound levels, repeatedly throughout life. This is Pluto fully expressed, transformation as a way of being rather than an occasional experience.
+
+These souls may experience complete ego annihilation multiple times, each destruction more total than the last, each rebirth revealing deeper layers of authentic power. Nothing is off-limits in their transformation process.
+
+Their gift is capacity to face absolutely anything - the darkest shadow, the most taboo truth, the complete dissolution of self - and not only survive but emerge with power that comes from having nothing left to fear. They are phoenixes who have mastered the fire.`,
+        
+        power: `Their power is immense and primal. They have access to depths of will, intensity, and transformative force that others cannot comprehend. This is raw, elemental power - the force that destroys and creates worlds.
+
+But they must learn the ultimate lesson about power: that true power is not over others but over self, that the deepest strength comes from complete surrender, that mastery of shadow means integration not domination.
+
+The most powerful expression is someone who has faced their own capacity for destruction so completely that they no longer fear it - and therefore no longer need to use it. They hold power like a sleeping volcano: immense potential, conscious restraint.`,
+        
+        shadow: `Their shadow is the shadow itself - they have intimate relationship with humanity's darkest impulses: destruction, obsession, manipulation, the will to power at any cost. When unconscious, they can become what they were meant to transform.
+
+They have capacity for profound destructiveness - psychological manipulation at masterful levels, sexual power used to control, or complete self-destruction through addiction, obsession, or suicidal transformation.
+
+The deeper shadow is becoming so identified with darkness that they forget they're also light, using their understanding of shadow to justify shadow behavior, or becoming so intense that all relationships become power struggles and all intimacy becomes merger or combat.`,
+        
+        obsession: `Obsession is their natural state until transformed. They may become consumed by power, control, sexual conquest, revenge, or transformation itself. The intensity has no middle setting - everything becomes life-or-death.
+
+Or they obsess about their wounds, the abuses they've suffered or witnessed, the corruption they see everywhere. They may become obsessed with exposing hidden evil or accumulating hidden power.
+
+The key is recognizing that obsession is misdirected transformative energy. Where they're obsessed is where they're being called to die more completely, to release attachment, to discover they can let go of anything and survive.`,
+        
+        crisis: `Crisis is home. They don't just experience crisis - they generate it, attract it, or unconsciously create it because intensity is where they feel most alive. Survival situations, near-death experiences, complete breakdowns become opportunities for their deepest work.
+
+They may unconsciously orchestrate their own destruction repeatedly, pushing until everything falls apart, because the phoenix process is their soul's chosen path of evolution.
+
+The gift is that in any crisis, they remain calm where others panic. When everything is falling apart, they finally feel like themselves. They have capacity to function in conditions that would destroy others, to find clarity in chaos, to lead through apocalypse.`,
+        
+        rebirth: `Each rebirth is more complete than the last. They don't just change - they become entirely new beings, sometimes unrecognizable from who they were before. Old self completely dies; new self emerges with no sentimentality about what was lost.
+
+The phoenix process for them is not metaphor but lived reality. They may experience literal near-death experiences, symbolic deaths through loss of everything, or psychological deaths through complete ego dissolution.
+
+The mature expression is someone who has died so many times that death has become ally rather than enemy. They no longer fear transformation because they've discovered that what remains after each death is more essentially themselves than what was lost.`,
+        
+        generational: `As generational influence, Pluto in Scorpio (approximately 1983-1995) marks a generation born during Pluto's transit through its home sign - maximum transformative intensity. This generation witnessed and will catalyze the death of old power structures, sexual revolutions, psychological depths explored, shadow of humanity confronted.
+
+On personal level, this generation carries collective shadow work. They're here to transform humanity's relationship with power, death, sexuality, and hidden truths. Many experienced or witnessed abuse, addiction, or intensity from early childhood - preparation for their transformative mission.`,
+        
+        relationships: `In relationships, they experience soul-level intensity or nothing. Casual relating feels pointless; they want merger, transformation, power dynamics that strip both people to essence. Love and war blend; intimacy becomes initiation.
+
+Power struggles can dominate until they learn that true intimacy requires vulnerability, that the deepest power exchange is mutual surrender, that intensity can be generative rather than destructive.
+
+The evolved expression is bringing transformative intensity to partnership in ways that serve both people's evolution - creating relationships so deep, so honest, so transformative that both people repeatedly die and are reborn through the connection.`,
+        
+        lifeWork: `Their life work involves the deepest transformation - depth psychology, trauma healing, working with death and dying, addiction recovery, shadow integration, sacred sexuality, power dynamics, or any field that requires going where others fear.
+
+They're here to be shamans, psychologists, healers of the deepest wounds, transformers of the most entrenched patterns. They can work with what others cannot face because they've faced it in themselves.
+
+The most fulfilling path is one where their intensity serves others' transformation, where their intimate knowledge of shadow becomes medicine, where their capacity to survive anything becomes guidance for those in crisis.`,
+        
+        shadowIntegration: `Shadow work isn't optional for them - it's their life purpose. They must develop intimate relationship with their own destructive capacity, their hunger for power, their sexual intensity, their fascination with death. Denying shadow makes it dangerous; integrating it makes it medicine.
+
+The work is becoming so familiar with darkness that light and dark no longer seem separate, that they can move through shadow realms while remaining conscious, that their power becomes healing force rather than destructive one.
+
+Integration means becoming someone who has such intimate relationship with death that they become master of life - the healer who has been wounded, the guide who has been lost, the transformer who has been destroyed and remade countless times.`,
+        
+        spiritualMeaning: `Spiritually, Pluto in Scorpio represents souls who incarnated for the ultimate transformation - to face death completely and discover what lies beyond, to integrate collective shadow, to show humanity that what we fear most is doorway to power.
+
+Their spiritual gift is demonstrating that nothing needs to be hidden, that shadow fully faced becomes light, that death is not end but transformation, that power surrendered to higher purpose becomes blessing rather than curse.
+
+The ultimate expression is the death master who has died and been reborn so completely they embody resurrection - showing humanity that we can face anything, that no darkness is beyond transformation, that the deepest descent leads to the highest ascent.`,
+        
+        affirmation: "I am transformation itself. I die and am reborn with mastery. My shadow fully integrated becomes my greatest gift. I face what others fear and emerge with power that heals. Death is my ally, rebirth is my nature."
+    },
     
     Sagittarius: {
         title: "Pluto in Sagittarius - Truth Transformation",
