@@ -5599,8 +5599,16 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const angular = readings.astrology.angularHouses;
                 let angularCardsAdded = 0;
                 
+                const getSignName = (value) => {
+                    if (!value) return null;
+                    if (typeof value === 'string') return value;
+                    if (value.name) return value.name;
+                    if (value.sign && value.sign.name) return value.sign.name;
+                    return null;
+                };
+                
                 // 1st House - Ascendant/Self
-                const firstSign = angular.first?.sign || angular.first;
+                const firstSign = getSignName(angular.first);
                 if (firstSign && ANGULAR_HOUSE_READINGS[1] && ANGULAR_HOUSE_READINGS[1][firstSign]) {
                     const houseData = ANGULAR_HOUSE_READINGS[1][firstSign];
                     angularSection.appendChild(createReadingCard(
@@ -5615,7 +5623,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 }
                 
                 // 4th House - IC/Roots
-                const fourthSign = angular.fourth?.sign || angular.fourth;
+                const fourthSign = getSignName(angular.fourth);
                 if (fourthSign && ANGULAR_HOUSE_READINGS[4] && ANGULAR_HOUSE_READINGS[4][fourthSign]) {
                     const houseData = ANGULAR_HOUSE_READINGS[4][fourthSign];
                     angularSection.appendChild(createReadingCard(
@@ -5630,7 +5638,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 }
                 
                 // 7th House - Descendant/Partnerships
-                const seventhSign = angular.seventh?.sign || angular.seventh;
+                const seventhSign = getSignName(angular.seventh);
                 if (seventhSign && ANGULAR_HOUSE_READINGS[7] && ANGULAR_HOUSE_READINGS[7][seventhSign]) {
                     const houseData = ANGULAR_HOUSE_READINGS[7][seventhSign];
                     angularSection.appendChild(createReadingCard(
@@ -5645,7 +5653,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 }
                 
                 // 10th House - MC/Career
-                const tenthSign = angular.tenth?.sign || angular.tenth;
+                const tenthSign = getSignName(angular.tenth);
                 if (tenthSign && ANGULAR_HOUSE_READINGS[10] && ANGULAR_HOUSE_READINGS[10][tenthSign]) {
                     const houseData = ANGULAR_HOUSE_READINGS[10][tenthSign];
                     angularSection.appendChild(createReadingCard(
