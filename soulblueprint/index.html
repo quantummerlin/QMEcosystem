@@ -2590,6 +2590,35 @@
             line-height: 1.6;
         }
         
+        /* Coming Soon Banner */
+        .coming-soon-banner {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #1a0a2e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+        }
+        
+        .coming-soon-icon {
+            font-size: 1.1rem;
+        }
+        
+        .gift-box .gift-btn.disabled,
+        .gift-box .gifted-by-field.disabled input {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .gift-box .gifted-by-field.disabled {
+            opacity: 0.6;
+        }
+        
         .color-selector {
             margin: 20px 0;
         }
@@ -3357,7 +3386,6 @@
             <p class="birth-info" id="birthInfo" style="color: #3d2b5e !important;"></p>
             <div class="action-buttons">
                 <button class="action-btn" onclick="startNewReading()">New Reading</button>
-                <button class="action-btn gift-btn" onclick="generateGiftReading()">🎁 Create Gift</button>
             </div>
         </div>
         
@@ -3443,14 +3471,18 @@
             <!-- Gift & Support Section -->
             <div class="gift-support-section">
                 <div class="gift-box">
+                    <div class="coming-soon-banner">
+                        <span class="coming-soon-icon">✨</span>
+                        <span class="coming-soon-text">Coming Soon</span>
+                    </div>
                     <h3>Gift This Reading</h3>
                     <p>Create a beautiful, ad-free version to share with loved ones or print as a keepsake.</p>
-                    <div class="gifted-by-field">
+                    <div class="gifted-by-field disabled">
                         <label for="giftedByInput">Gifted by: <span class="optional-badge">Optional</span></label>
-                        <input type="text" id="giftedByInput" placeholder="e.g., Grandma & Grandpa, Aunt Sarah..." maxlength="100">
+                        <input type="text" id="giftedByInput" placeholder="e.g., Grandma & Grandpa, Aunt Sarah..." maxlength="100" disabled>
                         <p class="helper-text">Add your name to personalize this gift</p>
                     </div>
-                    <button class="gift-btn" onclick="giftReading()">Create Gift Version</button>
+                    <button class="gift-btn disabled" disabled>Create Gift Version</button>
                 </div>
                 
                 <div class="coffee-box">
