@@ -583,11 +583,11 @@ function showGiftConfirmation(name) {
     // Create a nice modal confirmation
     const modal = document.createElement('div');
     modal.className = 'gift-modal';
-    modal.innerHTML = \`
+    modal.innerHTML = `
         <div class="gift-modal-content">
             <div class="gift-modal-icon">🎁</div>
             <h2>Gift Created!</h2>
-            <p>A beautiful gift reading for <strong>\${name}</strong> has been downloaded.</p>
+            <p>A beautiful gift reading for <strong>${name}</strong> has been downloaded.</p>
             <div class="gift-modal-tips">
                 <p>📁 Find it in your Downloads folder</p>
                 <p>📧 Email it to someone special</p>
@@ -596,10 +596,10 @@ function showGiftConfirmation(name) {
             </div>
             <button onclick="this.parentElement.parentElement.remove()" class="gift-modal-close">✨ Got it! ✨</button>
         </div>
-    \`;
+    `;
     
     // Add modal styles
-    modal.style.cssText = \`
+    modal.style.cssText = `
         position: fixed;
         top: 0;
         left: 0;
@@ -611,10 +611,10 @@ function showGiftConfirmation(name) {
         justify-content: center;
         z-index: 10000;
         animation: fadeIn 0.3s ease;
-    \`;
+    `;
     
     const style = document.createElement('style');
-    style.textContent = \`
+    style.textContent = `
         .gift-modal-content {
             background: linear-gradient(135deg, #2d1b4e, #1a0a2e);
             border: 2px solid rgba(255,215,0,0.4);
@@ -673,7 +673,7 @@ function showGiftConfirmation(name) {
             from { transform: scale(0.8); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
         }
-    \`;
+    `;
     
     document.head.appendChild(style);
     document.body.appendChild(modal);
