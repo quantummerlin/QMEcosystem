@@ -4006,8 +4006,7 @@
                 { id: 'celestial', icon: config.sections.celestial.icon, name: config.sections.celestial.name, count: 15 },
                 { id: 'numbers', icon: config.sections.numbers.icon, name: config.sections.numbers.name, count: 12 },
                 { id: 'soul', icon: config.sections.soul.icon, name: config.sections.soul.name, count: 3 },
-                { id: 'forecasts', icon: config.sections.forecasts.icon, name: config.sections.forecasts.name, count: 2 },
-                { id: 'cycles', icon: config.sections.cycles.icon, name: config.sections.cycles.name, count: 3 }
+                { id: 'forecasts', icon: config.sections.forecasts.icon, name: config.sections.forecasts.name, count: 2 }
             ];
             
             sections.forEach(section => {
@@ -5553,55 +5552,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             if (ad4) container.appendChild(ad4);
             
             // ============================================
-            // SECTION 5: LIFE CYCLES
-            // ============================================
-            const cyclesSectionWrapper = document.createElement('div');
-            cyclesSectionWrapper.className = 'reading-section';
-            const cyclesSection = createSection('cycles', config.sections.cycles);
-            
-            // Current Age
-            const age = readings.lifeCycles.age;
-            cyclesSection.appendChild(createReadingCard(
-                'Current Age',
-                `${age.years} years, ${age.months} months, ${age.days} days`,
-                ['Life Stage', 'Current Phase'],
-                `${userData.name} is currently ${age.years} years old, in the ${readings.lifeCycles.lifeStage.stage} stage of life. ${readings.lifeCycles.lifeStage.description}`,
-                [],
-                []
-            ));
-            
-            // Next Birthday
-            const nextBirthday = readings.lifeCycles.nextBirthday;
-            const nextBirthdayDate = nextBirthday && nextBirthday.date
-                ? (nextBirthday.date instanceof Date ? nextBirthday.date : new Date(nextBirthday.date))
-                : null;
-            const nextBirthdayLabel = nextBirthdayDate && !isNaN(nextBirthdayDate)
-                ? nextBirthdayDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
-                : 'an upcoming date';
-            cyclesSection.appendChild(createReadingCard(
-                'Next Birthday',
-                `${nextBirthday.daysUntil} days away`,
-                ['Solar Return', 'New Year Cycle'],
-                `${userData.name}'s next birthday is ${nextBirthday.daysUntil} days away on ${nextBirthdayLabel}. This will mark the beginning of a new personal year cycle.`,
-                [],
-                []
-            ));
-            
-            // Life Stage
-            cyclesSection.appendChild(createReadingCard(
-                'Life Stage',
-                readings.lifeCycles.lifeStage.stage,
-                ['Development Phase', 'Growth Period'],
-                readings.lifeCycles.lifeStage.description,
-                [],
-                []
-            ));
-            
-            cyclesSectionWrapper.appendChild(cyclesSection);
-            container.appendChild(cyclesSectionWrapper);
-            
-            // ============================================
-            // SECTION 6: ANGULAR HOUSES - Life Pillars
+            // SECTION 5: ANGULAR HOUSES - Life Pillars
             // ============================================
             if (readings.astrology.angularHouses && typeof ANGULAR_HOUSE_READINGS !== 'undefined') {
                 const angularSectionWrapper = document.createElement('div');

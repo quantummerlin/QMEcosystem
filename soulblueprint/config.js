@@ -68,11 +68,6 @@ var BRAND_CONFIG = {
             name: "Life Chapters",
             icon: "",
             description: "The major evolutionary phases of your journey"
-        },
-        cycles: {
-            name: "Long-Arc Life Forecast",
-            icon: "",
-            description: "Your lifelong evolution path and timing"
         }
     },
     
