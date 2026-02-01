@@ -691,6 +691,18 @@
             color: white;
         }
         
+        .action-btn.gift-btn {
+            background: linear-gradient(135deg, #ffd700, #daa520);
+            border: 2px solid #ffd700;
+            color: #1a0a2e;
+        }
+        
+        .action-btn.gift-btn:hover {
+            background: transparent;
+            color: #ffd700;
+            box-shadow: 0 0 20px rgba(255,215,0,0.4);
+        }
+        
         /* Table of Contents */
         .toc {
             background: var(--card-bg);
@@ -3345,6 +3357,7 @@
             <p class="birth-info" id="birthInfo" style="color: #3d2b5e !important;"></p>
             <div class="action-buttons">
                 <button class="action-btn" onclick="startNewReading()">New Reading</button>
+                <button class="action-btn gift-btn" onclick="generateGiftReading()">🎁 Create Gift</button>
             </div>
         </div>
         
