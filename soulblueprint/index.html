@@ -3290,7 +3290,6 @@
             }
         }
     </style>
-<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
     <!-- Theme Bar -->
@@ -7114,8 +7113,13 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 `;
             }
             
-            // Convert newlines to paragraphs
-            const contentParagraphs = tonedContent.split('\n\n').map(p => `<p>${p}</p>`).join('');
+            // Convert newlines to paragraphs and add line breaks after sentences for mobile readability
+            // First, add line breaks after sentences (period followed by space and capital letter or end)
+            let formattedContent = tonedContent
+                .replace(/\.\s+(?=[A-Z])/g, '.<br>')  // Break after period + space + capital letter
+                .replace(/\?\s+(?=[A-Z])/g, '?<br>')  // Break after question mark + space + capital
+                .replace(/!\s+(?=[A-Z])/g, '!<br>');  // Break after exclamation + space + capital
+            const contentParagraphs = formattedContent.split('\n\n').map(p => `<p>${p}</p>`).join('');
             
             // Generate actionable content blocks if enhancements provided
             let enhancementsHtml = '';
