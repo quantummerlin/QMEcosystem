@@ -287,10 +287,9 @@ The deeper teaching is that you serve humanity best when you're being fully your
 Ultimately, this placement is about learning that creativity, joy, and self-expression aren't frivolous - they're the point. When you shine, you give others permission to shine too. Your individual radiance serves the whole.`,
         
         affirmation: "I shine unapologetically. I follow my heart. I express my unique gifts. I accept recognition graciously. My joy and creativity serve the world. I am the star of my own life."
-    }
-};
+    },
 
-Virgo: {
+    Virgo: {
         title: "North Node in Virgo - The Path of Sacred Service",
         archetype: "From Mystic to Practitioner",
         southNode: "Pisces",
@@ -732,7 +731,7 @@ There can be anger issues - not because you're an angry person, but because you 
 
 The darkest shadow is isolation - being so independent that you can't let anyone in, so self-sufficient that you never experience true partnership. The warrior who wins every battle but ends up alone.`,
         
-        gift ToNorthNode: `The gift you bring to your North Node journey in Libra is strength. You're not learning partnership from weakness or codependency - you're learning it as a strong individual who can stand alone but chooses partnership.
+        giftToNorthNode: `The gift you bring to your North Node journey in Libra is strength. You're not learning partnership from weakness or codependency - you're learning it as a strong individual who can stand alone but chooses partnership.
 
 Your Aries courage allows you to engage in conflict within relationship rather than avoiding it to keep peace. Your decisiveness balances Libra indecision. Your independence ensures you don't lose yourself in others.
 
