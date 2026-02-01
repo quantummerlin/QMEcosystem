@@ -3,7 +3,7 @@
 // Comprehensive readings for Jupiter and Saturn
 // ============================================
 
-const DEEP_JUPITER_READINGS = {
+var DEEP_JUPITER_READINGS = {
     Aries: {
         title: "The Pioneer's Luck",
         hook: "Fortune favors the bold first step.",
@@ -369,7 +369,7 @@ Teach them practical skills and healthy boundaries without crushing their tender
 // DEEP SATURN READINGS
 // ============================================
 
-const DEEP_SATURN_READINGS = {
+var DEEP_SATURN_READINGS = {
     Aries: {
         title: "The Disciplined Pioneer",
         hook: "Learning courage through patience.",

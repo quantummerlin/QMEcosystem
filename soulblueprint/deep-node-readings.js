@@ -3,7 +3,7 @@
 // The Karmic Axis - Soul's Journey and Past Patterns
 // ============================================
 
-const DEEP_NORTH_NODE_READINGS = {
+var DEEP_NORTH_NODE_READINGS = {
     Aries: {
         title: "North Node in Aries - The Warrior's Path",
         archetype: "From Harmony Keeper to Independent Warrior",
@@ -694,7 +694,7 @@ Ultimately, this placement is about learning that spiritual service is as valuab
 // The Comfort Zone - Past Life Patterns and Familiar Territory
 // ============================================
 
-const DEEP_SOUTH_NODE_READINGS = {
+var DEEP_SOUTH_NODE_READINGS = {
     Aries: {
         title: "South Node in Aries - The Warrior's Comfort Zone",
         archetype: "From Independence to Partnership",

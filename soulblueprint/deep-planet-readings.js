@@ -3,7 +3,7 @@
 // Comprehensive readings for Mercury, Venus, Mars, Jupiter, Saturn
 // ============================================
 
-const DEEP_MERCURY_READINGS = {
+var DEEP_MERCURY_READINGS = {
     Aries: {
         title: "The Lightning Mind",
         hook: "A mind that moves at the speed of fire itself.",
@@ -321,7 +321,7 @@ Help them ground their ideas in practical expression. Teach them to organize tho
 // DEEP VENUS READINGS
 // ============================================
 
-const DEEP_VENUS_READINGS = {
+var DEEP_VENUS_READINGS = {
     Aries: {
         title: "The Warrior Heart",
         hook: "A love nature that pursues and conquers.",
@@ -639,7 +639,7 @@ Teach them that love includes protecting themselves, that boundaries are loving 
 // DEEP MARS READINGS
 // ============================================
 
-const DEEP_MARS_READINGS = {
+var DEEP_MARS_READINGS = {
     Aries: {
         title: "The Warrior Spirit",
         hook: "Pure fire expressing through action and courage.",

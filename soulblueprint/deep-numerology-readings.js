@@ -9,7 +9,7 @@
 // DEEP LIFE PATH READINGS
 // ============================================
 
-const DEEP_LIFE_PATH_READINGS = {
+var DEEP_LIFE_PATH_READINGS = {
     1: {
         title: "The Pioneer Spirit",
         hook: "This soul arrived with the blueprint of the trailblazer—here to forge paths that didn't exist before and light the way for others to follow.",
@@ -387,7 +387,7 @@ const DEEP_LIFE_PATH_READINGS = {
 // DEEP DESTINY NUMBER READINGS
 // ============================================
 
-const DEEP_DESTINY_READINGS = {
+var DEEP_DESTINY_READINGS = {
     1: {
         title: "The Destined Leader",
         hook: "This soul's life path leads inexorably toward leadership, innovation, and the courage to stand alone when necessary.",
@@ -538,7 +538,7 @@ const DEEP_DESTINY_READINGS = {
 // DEEP SOUL URGE READINGS
 // ============================================
 
-const DEEP_SOUL_URGE_READINGS = {
+var DEEP_SOUL_URGE_READINGS = {
     1: {
         title: "The Soul That Craves Sovereignty",
         hook: "At the deepest level, this soul yearns to be utterly, authentically, unapologetically themselves—beholden to no one.",
@@ -689,7 +689,7 @@ const DEEP_SOUL_URGE_READINGS = {
 // DEEP PERSONALITY NUMBER READINGS
 // ============================================
 
-const DEEP_PERSONALITY_NUMBER_READINGS = {
+var DEEP_PERSONALITY_NUMBER_READINGS = {
     1: {
         title: "The Appearance of Leadership",
         hook: "They walk into a room and others unconsciously make space—there's an unmistakable energy of someone who belongs in charge.",
@@ -840,7 +840,7 @@ const DEEP_PERSONALITY_NUMBER_READINGS = {
 // DEEP BIRTHDAY NUMBER READINGS
 // ============================================
 
-const DEEP_BIRTHDAY_NUMBER_READINGS = {
+var DEEP_BIRTHDAY_NUMBER_READINGS = {
     1: {
         title: "Born on the 1st - The Natural Leader",
         gift: "You entered this world with an innate leadership quality. The 1st vibration gives you independence, originality, and the courage to stand alone when necessary.",
@@ -1126,7 +1126,7 @@ const DEEP_BIRTHDAY_NUMBER_READINGS = {
 // DEEP PERSONAL YEAR READINGS
 // ============================================
 
-const DEEP_PERSONAL_YEAR_READINGS = {
+var DEEP_PERSONAL_YEAR_READINGS = {
     1: {
         title: "Personal Year 1 - The Year of New Beginnings",
         theme: "This is your fresh start year—a time to plant seeds, initiate projects, and step into a new chapter of your life with courage and independence.",

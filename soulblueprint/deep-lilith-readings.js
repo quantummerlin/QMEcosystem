@@ -3,7 +3,7 @@
 // Black Moon Lilith - Suppressed Power and Shadow Feminine
 // ============================================
 
-const DEEP_LILITH_READINGS = {
+var DEEP_LILITH_READINGS = {
     Aries: {
         title: "Lilith in Aries - The Suppressed Warrior",
         archetype: "Reclaiming Primal Anger and Independence",

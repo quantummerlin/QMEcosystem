@@ -9,7 +9,7 @@
 // DEEP MOON SIGN READINGS
 // ============================================
 
-const DEEP_MOON_READINGS = {
+var DEEP_MOON_READINGS = {
     "Aries": {
         title: "The Emotional Warrior",
         hook: "This soul feels everything with urgency and fire — emotions hit fast, burn bright, and move through quickly. Their inner world is a battlefield of passionate feelings demanding immediate expression.",
@@ -243,7 +243,7 @@ const DEEP_MOON_READINGS = {
 // DEEP RISING SIGN READINGS (EXPANDED)
 // ============================================
 
-const DEEP_RISING_READINGS = {
+var DEEP_RISING_READINGS = {
     "Aries": {
         title: "The Trailblazer Arrives",
         firstImpression: "This child enters every room with bold, direct energy. Their presence announces itself before they speak — there's an unmistakable vitality and forward-moving quality from the first breath. People sense immediately that this is someone who acts rather than waits, who leads rather than follows.",
@@ -405,7 +405,7 @@ const DEEP_RISING_READINGS = {
 // DEEP SUN SIGN READINGS
 // ============================================
 
-const DEEP_SUN_READINGS = {
+var DEEP_SUN_READINGS = {
     "Aries": {
         title: "The Pioneer Spirit",
         hook: "This soul arrived with fire in their veins, here to break new ground and lead the way into unexplored territory.",
@@ -603,7 +603,7 @@ const DEEP_SUN_READINGS = {
 // ULTIMATE COSMIC WRAP-UP
 // ============================================
 
-const COSMIC_WRAPUP_TEMPLATES = {
+var COSMIC_WRAPUP_TEMPLATES = {
     introduction: `This soul arrived on ${'{DATE}'} at ${'{TIME}'} with a cosmic blueprint that has never existed before and will never exist again. Every planetary position, every aspect, every house cusp aligned in this unique moment to create ${'{NAME}'}.
 
 What follows is not prediction — it's recognition. This reading doesn't tell ${'{NAME}'} who to become; it reveals who they already are. The stars don't control destiny — they illuminate the unique gifts, challenges, and potentials this soul carries.`,
@@ -659,7 +659,7 @@ Welcome to Earth, little star. We've been waiting for you.
 // DEEP MOON PHASE READINGS
 // ============================================
 
-const DEEP_MOON_PHASE_READINGS = {
+var DEEP_MOON_PHASE_READINGS = {
     "New Moon": {
         title: "The Seed Carrier",
         icon: "🌑",

@@ -3,7 +3,7 @@
 // The Wounded Healer - Core wounds and healing gifts
 // ============================================
 
-const DEEP_CHIRON_READINGS = {
+var DEEP_CHIRON_READINGS = {
     Aries: {
         title: "Chiron in Aries - The Wounded Warrior",
         archetype: "Reclaiming the Right to Exist",

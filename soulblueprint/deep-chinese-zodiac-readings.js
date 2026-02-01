@@ -3,7 +3,7 @@
 // Complete readings for all 12 animals with elemental variations
 // ============================================
 
-const DEEP_CHINESE_ZODIAC_READINGS = {
+var DEEP_CHINESE_ZODIAC_READINGS = {
     Rat: {
         title: "Year of the Rat",
         archetype: "The Clever Survivor",

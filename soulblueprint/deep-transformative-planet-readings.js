@@ -3,7 +3,7 @@
 // Comprehensive readings for Uranus, Neptune, and Pluto
 // ============================================
 
-const DEEP_URANUS_READINGS = {
+var DEEP_URANUS_READINGS = {
     Aries: {
         title: "Uranus in Aries - Revolutionary Pioneer",
         archetype: "The Lightning Strike Leader",
@@ -801,7 +801,7 @@ The ultimate expression is the spiritual revolutionary whose innovations make my
     }
 };
 
-const DEEP_NEPTUNE_READINGS = {
+var DEEP_NEPTUNE_READINGS = {
     Aries: {
         title: "Neptune in Aries - Spiritual Warrior",
         archetype: "The Divine Action",
@@ -1505,7 +1505,7 @@ The ultimate expression is someone so completely dissolved into divine that they
     }
 };
 
-const DEEP_PLUTO_READINGS = {
+var DEEP_PLUTO_READINGS = {
     Aries: {
         title: "Pluto in Aries - Power Reclaimed",
         archetype: "The Death and Rebirth of Self",

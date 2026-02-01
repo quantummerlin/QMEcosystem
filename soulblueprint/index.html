@@ -3472,25 +3472,25 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=31"></script>
-    <script src="calculations.js?v=31"></script>
-    <script src="readings.js?v=31"></script>
-    <script src="house-readings.js?v=31"></script>
-    <script src="aspect-readings.js?v=31"></script>
-    <script src="advanced-readings.js?v=31"></script>
-    <script src="deep-readings.js?v=32"></script>
-    <script src="deep-planet-readings.js?v=32"></script>
-    <script src="deep-planet-readings-outer.js?v=32"></script>
-    <script src="deep-numerology-readings.js?v=32"></script>
-    <script src="deep-chinese-zodiac-readings.js?v=32"></script>
-    <script src="deep-chiron-readings.js?v=32"></script>
-    <script src="deep-lilith-readings.js?v=32"></script>
-    <script src="deep-node-readings.js?v=32"></script>
-    <script src="deep-transformative-planet-readings.js?v=32"></script>
-    <script src="readings-extended.js?v=31"></script>
-    <script src="love-blueprint.js?v=31"></script>
-    <script src="tone-variations.js?v=31"></script>
-    <script src="save-share.js?v=31"></script>
+    <script src="config.js?v=33"></script>
+    <script src="calculations.js?v=33"></script>
+    <script src="readings.js?v=33"></script>
+    <script src="house-readings.js?v=33"></script>
+    <script src="aspect-readings.js?v=33"></script>
+    <script src="advanced-readings.js?v=33"></script>
+    <script src="deep-readings.js?v=33"></script>
+    <script src="deep-planet-readings.js?v=33"></script>
+    <script src="deep-planet-readings-outer.js?v=33"></script>
+    <script src="deep-numerology-readings.js?v=33"></script>
+    <script src="deep-chinese-zodiac-readings.js?v=33"></script>
+    <script src="deep-chiron-readings.js?v=33"></script>
+    <script src="deep-lilith-readings.js?v=33"></script>
+    <script src="deep-node-readings.js?v=33"></script>
+    <script src="deep-transformative-planet-readings.js?v=33"></script>
+    <script src="readings-extended.js?v=33"></script>
+    <script src="love-blueprint.js?v=33"></script>
+    <script src="tone-variations.js?v=33"></script>
+    <script src="save-share.js?v=33"></script>
     <script>
         // ============================================
         // MULTI-READING STORAGE SYSTEM
@@ -5601,6 +5601,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 );
                 
                 const angular = readings.astrology.angularHouses;
+                let angularCardsAdded = 0;
                 
                 // 1st House - Ascendant/Self
                 const firstSign = angular.first?.sign || angular.first;
@@ -5614,6 +5615,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         houseData.strengths || [],
                         houseData.challenges || []
                     ));
+                    angularCardsAdded += 1;
                 }
                 
                 // 4th House - IC/Roots
@@ -5628,6 +5630,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         houseData.strengths || [],
                         houseData.challenges || []
                     ));
+                    angularCardsAdded += 1;
                 }
                 
                 // 7th House - Descendant/Partnerships
@@ -5642,6 +5645,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         houseData.strengths || [],
                         houseData.challenges || []
                     ));
+                    angularCardsAdded += 1;
                 }
                 
                 // 10th House - MC/Career
@@ -5655,6 +5659,14 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         houseData.reading.replace(/this child/gi, userData.name),
                         houseData.strengths || [],
                         houseData.challenges || []
+                    ));
+                    angularCardsAdded += 1;
+                }
+
+                if (angularCardsAdded === 0) {
+                    angularSection.appendChild(createBirthTimeRequiredCard(
+                        'The Four Life Pillars',
+                        `The Four Pillars reveal the Ascendant (your visible self), IC (your roots & home), Descendant (your partnerships), and Midheaven (your public legacy). These angles are calculated from exact birth time and location, showing how ${userData.name}'s energy manifests in the four crucial life areas.`
                     ));
                 }
                 
