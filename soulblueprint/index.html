@@ -3318,6 +3318,9 @@
     <script src="deep-planet-readings.js?v=31"></script>
     <script src="deep-planet-readings-outer.js?v=31"></script>
     <script src="deep-numerology-readings.js?v=31"></script>
+    <script src="deep-chinese-zodiac-readings.js?v=31"></script>
+    <script src="deep-chiron-readings.js?v=31"></script>
+    <script src="deep-lilith-readings.js?v=31"></script>
     <script src="readings-extended.js?v=31"></script>
     <script src="love-blueprint.js?v=31"></script>
     <script src="tone-variations.js?v=31"></script>
@@ -3917,7 +3920,7 @@
                         <div class="blueprint-items">
                             <div class="blueprint-item"><span class="planet-symbol"></span> <strong>North Node:</strong> ${northNode.name} <span class="meaning">(Life Purpose)</span></div>
                             <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Moon Phase:</strong> ${moonPhase.name} <span class="meaning">(Soul Character)</span></div>
-                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Chinese:</strong> ${chineseZodiac.name} <span class="meaning">(Earth Element)</span></div>
+                            <div class="blueprint-item"><span class="planet-symbol"></span> <strong>Chinese:</strong> ${chineseZodiac.name} <span class="meaning">(${chineseZodiac.element} Element)</span></div>
                         </div>
                     </div>
                 </div>
@@ -4076,13 +4079,45 @@
                 }
             }
             
-            // Chinese Zodiac (chineseZodiac already declared in blueprint section)
+            // Chinese Zodiac - Enhanced with deep readings and elemental influences
             const chineseReading = CHINESE_ZODIAC_READINGS[chineseZodiac.name];
+            const deepChinese = typeof DEEP_CHINESE_ZODIAC_READINGS !== 'undefined' ? DEEP_CHINESE_ZODIAC_READINGS[chineseZodiac.name] : null;
+            const elementInfluence = typeof CHINESE_ELEMENT_INFLUENCES !== 'undefined' ? CHINESE_ELEMENT_INFLUENCES[chineseZodiac.element] : null;
+            
+            // Build comprehensive Chinese Zodiac content
+            let chineseContent = '';
+            if (deepChinese) {
+                chineseContent = `<p><strong>${deepChinese.hook.replace(/this soul/gi, userData.name)}</strong></p>\n\n`;
+                chineseContent += `<em>Core Nature:</em> ${deepChinese.coreNature.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chineseContent += `<em>Strengths:</em> ${deepChinese.strengths.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chineseContent += `<em>Shadow Aspects:</em> ${deepChinese.shadows.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chineseContent += `<em>In Relationships:</em> ${deepChinese.relationships.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chineseContent += `<em>Career Path:</em> ${deepChinese.career.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chineseContent += `<em>Spiritual Journey:</em> ${deepChinese.spiritualPath.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                
+                // Add elemental influence
+                if (elementInfluence) {
+                    chineseContent += `<h4>${chineseZodiac.element} Element Influence</h4>\n`;
+                    chineseContent += `<p><strong>${elementInfluence.nature}</strong></p>\n`;
+                    chineseContent += `${elementInfluence.influence}\n\n`;
+                    chineseContent += `<em>Elemental Gifts:</em> ${elementInfluence.gifts}\n\n`;
+                    chineseContent += `<em>Elemental Challenges:</em> ${elementInfluence.challenges}\n\n`;
+                }
+                
+                chineseContent += `<em>Life Cycles:</em> ${deepChinese.lifeCycles}\n\n`;
+                chineseContent += `<em>Compatibility:</em> ${deepChinese.compatibility}\n\n`;
+                chineseContent += `<p><strong>Affirmation:</strong> <em>"${deepChinese.affirmation}"</em></p>`;
+            } else if (chineseReading) {
+                chineseContent = chineseReading.reading.replace(/this soul/gi, userData.name).replace(/those born under this sign/gi, userData.name);
+            } else {
+                chineseContent = `Born in the Year of the ${chineseZodiac.name}.`;
+            }
+            
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.chineseZodiac,
-                `Year of the ${chineseZodiac.name}`,
-                chineseReading ? chineseReading.keywords : [],
-                chineseReading ? chineseReading.reading.replace(/this soul/gi, userData.name).replace(/those born under this sign/gi, userData.name) : `Born in the Year of the ${chineseZodiac.name}.`,
+                `Year of the ${chineseZodiac.element} ${chineseZodiac.name}`,
+                deepChinese ? [deepChinese.archetype] : (chineseReading ? chineseReading.keywords : []),
+                chineseContent,
                 chineseReading ? chineseReading.strengths : [],
                 chineseReading ? chineseReading.challenges : []
             ));
@@ -4271,26 +4306,67 @@
                 saturnReading ? saturnReading.challenges : []
             ));
             
-            // Chiron (The Wounded Healer)
+            // Chiron - Enhanced with deep readings
             const chiron = readings.astrology.chiron || { name: 'Aries' };
             const chironReading = CHIRON_SIGN_READINGS ? CHIRON_SIGN_READINGS[chiron.name] : null;
+            const deepChiron = typeof DEEP_CHIRON_READINGS !== 'undefined' ? DEEP_CHIRON_READINGS[chiron.name] : null;
+            
+            // Build comprehensive Chiron content
+            let chironContent = '';
+            if (deepChiron) {
+                chironContent = `<p><strong>${deepChiron.hook.replace(/this soul/gi, userData.name)}</strong></p>\n\n`;
+                chironContent += `<em>Core Wound:</em> ${deepChiron.coreWound.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Wounded Patterns:</em> ${deepChiron.woundedPatterns.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Healing Journey:</em> ${deepChiron.healingJourney.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Healer Gift:</em> ${deepChiron.healerGift.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Spiritual Lesson:</em> ${deepChiron.spiritualLesson.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Shadow Integration:</em> ${deepChiron.shadowIntegration.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Relationship Healing:</em> ${deepChiron.relationshipHealing.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Career Expression:</em> ${deepChiron.careerExpression.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<p><strong>Affirmation:</strong> <em>"${deepChiron.affirmation}"</em></p>`;
+            } else if (chironReading) {
+                chironContent = chironReading.reading;
+            } else {
+                chironContent = `Chiron in ${chiron.name} reveals a beautiful capacity for healing and helping others.`;
+            }
+            
             celestialSection.appendChild(createReadingCard(
                 'Chiron - The Healer Within',
-                `${chiron.name}`,
-                chironReading ? chironReading.keywords : ['Healing', 'Growth', 'Gift'],
-                chironReading ? chironReading.reading : `Chiron in ${chiron.name} reveals a beautiful capacity for healing and helping others.`,
+                deepChiron ? `${chiron.name} - ${deepChiron.archetype}` : chiron.name,
+                deepChiron ? [deepChiron.archetype] : (chironReading ? chironReading.keywords : ['Healing', 'Growth', 'Gift']),
+                chironContent,
                 [],
                 []
             ));
             
-            // Black Moon Lilith
+            // Black Moon Lilith - Enhanced with deep readings
             const lilith = readings.astrology.lilith || { name: 'Aries' };
             const lilithReading = LILITH_SIGN_READINGS ? LILITH_SIGN_READINGS[lilith.name] : null;
+            const deepLilith = typeof DEEP_LILITH_READINGS !== 'undefined' ? DEEP_LILITH_READINGS[lilith.name] : null;
+            
+            // Build comprehensive Lilith content
+            let lilithContent = '';
+            if (deepLilith) {
+                lilithContent = `<p><strong>${deepLilith.hook.replace(/this soul/gi, userData.name)}</strong></p>\n\n`;
+                lilithContent += `<em>Suppressed Power:</em> ${deepLilith.suppressedPower.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<em>How It Manifests:</em> ${deepLilith.howItManifests.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<em>Shadow Work:</em> ${deepLilith.shadowWork.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<em>Reclaimed Gift:</em> ${deepLilith.reclaimedGift.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<em>Sexual Expression:</em> ${deepLilith.sexualExpression.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<em>In Relationships:</em> ${deepLilith.relationships.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<em>Spiritual Meaning:</em> ${deepLilith.spiritualMeaning.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<p><strong>Affirmation:</strong> <em>"${deepLilith.affirmation}"</em></p>`;
+            } else if (lilithReading) {
+                lilithContent = lilithReading.reading;
+            } else {
+                lilithContent = `Lilith in ${lilith.name} reveals inner strength waiting to blossom.`;
+            }
+            
             celestialSection.appendChild(createReadingCard(
                 'Lilith - Hidden Strength',
-                `${lilith.name}`,
-                lilithReading ? lilithReading.keywords : ['Strength', 'Independence', 'Authenticity'],
-                lilithReading ? lilithReading.reading : `Lilith in ${lilith.name} reveals inner strength waiting to blossom.`,
+                deepLilith ? `${lilith.name} - ${deepLilith.archetype}` : lilith.name,
+                deepLilith ? [deepLilith.archetype] : (lilithReading ? lilithReading.keywords : ['Strength', 'Independence', 'Authenticity']),
+                lilithContent,
                 [],
                 []
             ));
