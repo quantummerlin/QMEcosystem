@@ -3314,13 +3314,15 @@
     <script src="house-readings.js?v=31"></script>
     <script src="aspect-readings.js?v=31"></script>
     <script src="advanced-readings.js?v=31"></script>
-    <script src="deep-readings.js?v=31"></script>
-    <script src="deep-planet-readings.js?v=31"></script>
-    <script src="deep-planet-readings-outer.js?v=31"></script>
-    <script src="deep-numerology-readings.js?v=31"></script>
-    <script src="deep-chinese-zodiac-readings.js?v=31"></script>
-    <script src="deep-chiron-readings.js?v=31"></script>
-    <script src="deep-lilith-readings.js?v=31"></script>
+    <script src="deep-readings.js?v=32"></script>
+    <script src="deep-planet-readings.js?v=32"></script>
+    <script src="deep-planet-readings-outer.js?v=32"></script>
+    <script src="deep-numerology-readings.js?v=32"></script>
+    <script src="deep-chinese-zodiac-readings.js?v=32"></script>
+    <script src="deep-chiron-readings.js?v=32"></script>
+    <script src="deep-lilith-readings.js?v=32"></script>
+    <script src="deep-node-readings.js?v=32"></script>
+    <script src="deep-transformative-planet-readings.js?v=32"></script>
     <script src="readings-extended.js?v=31"></script>
     <script src="love-blueprint.js?v=31"></script>
     <script src="tone-variations.js?v=31"></script>
@@ -4371,6 +4373,94 @@
                 []
             ));
             
+            // Uranus - Revolutionary Energy
+            const uranusSign = readings.astrology.uranusSign || { name: 'Aries' };
+            const deepUranus = typeof DEEP_URANUS_READINGS !== 'undefined' ? DEEP_URANUS_READINGS[uranusSign.name] : null;
+            
+            let uranusContent = '';
+            if (deepUranus) {
+                uranusContent = `<p><strong>${deepUranus.hook.replace(/this soul/gi, userData.name)}</strong></p>\n\n`;
+                uranusContent += `<em>Core Expression:</em> ${deepUranus.coreExpression.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Innovation:</em> ${deepUranus.innovation.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Rebellion & Freedom:</em> ${deepUranus.rebellion.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Genius Expression:</em> ${deepUranus.genius.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Relationships:</em> ${deepUranus.relationships.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Life Work:</em> ${deepUranus.lifeWork.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Shadow Work:</em> ${deepUranus.shadowWork.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Spiritual Meaning:</em> ${deepUranus.spiritualMeaning.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<p><strong>Affirmation:</strong> <em>"${deepUranus.affirmation}"</em></p>`;
+            } else {
+                uranusContent = `Uranus in ${uranusSign.name} brings revolutionary energy and innovative thinking.`;
+            }
+            
+            celestialSection.appendChild(createReadingCard(
+                'Uranus - Innovation & Change',
+                deepUranus ? `${uranusSign.name} - ${deepUranus.archetype}` : uranusSign.name,
+                deepUranus ? [deepUranus.archetype] : ['Innovation', 'Revolution', 'Freedom'],
+                uranusContent,
+                [],
+                []
+            ));
+            
+            // Neptune - Mystical Realm
+            const neptuneSign = readings.astrology.neptuneSign || { name: 'Pisces' };
+            const deepNeptune = typeof DEEP_NEPTUNE_READINGS !== 'undefined' ? DEEP_NEPTUNE_READINGS[neptuneSign.name] : null;
+            
+            let neptuneContent = '';
+            if (deepNeptune) {
+                neptuneContent = `<p><strong>${deepNeptune.hook.replace(/this soul/gi, userData.name)}</strong></p>\n\n`;
+                neptuneContent += `<em>Dream Vision:</em> ${deepNeptune.dreamVision.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Dissolution & Boundaries:</em> ${deepNeptune.dissolution.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Spiritual Gift:</em> ${deepNeptune.spiritualGift.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Illusion & Shadow:</em> ${deepNeptune.illusion.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Compassion:</em> ${deepNeptune.compassion.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Creativity:</em> ${deepNeptune.creativity.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Healing Path:</em> ${deepNeptune.healingPath.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Spiritual Lesson:</em> ${deepNeptune.spiritualLesson.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<p><strong>Affirmation:</strong> <em>"${deepNeptune.affirmation}"</em></p>`;
+            } else {
+                neptuneContent = `Neptune in ${neptuneSign.name} influences spirituality, dreams, and creative imagination.`;
+            }
+            
+            celestialSection.appendChild(createReadingCard(
+                'Neptune - Dreams & Spirituality',
+                deepNeptune ? `${neptuneSign.name} - ${deepNeptune.archetype}` : neptuneSign.name,
+                deepNeptune ? [deepNeptune.archetype] : ['Dreams', 'Spirituality', 'Creativity'],
+                neptuneContent,
+                [],
+                []
+            ));
+            
+            // Pluto - Transformation
+            const plutoSign = readings.astrology.plutoSign || { name: 'Scorpio' };
+            const deepPluto = typeof DEEP_PLUTO_READINGS !== 'undefined' ? DEEP_PLUTO_READINGS[plutoSign.name] : null;
+            
+            let plutoContent = '';
+            if (deepPluto) {
+                plutoContent = `<p><strong>${deepPluto.hook.replace(/this soul/gi, userData.name)}</strong></p>\n\n`;
+                plutoContent += `<em>Transformation:</em> ${deepPluto.transformation.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Power:</em> ${deepPluto.power.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Shadow:</em> ${deepPluto.shadow.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Obsession:</em> ${deepPluto.obsession.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Crisis as Catalyst:</em> ${deepPluto.crisis.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Rebirth:</em> ${deepPluto.rebirth.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Relationships:</em> ${deepPluto.relationships.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Shadow Integration:</em> ${deepPluto.shadowIntegration.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Spiritual Meaning:</em> ${deepPluto.spiritualMeaning.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<p><strong>Affirmation:</strong> <em>"${deepPluto.affirmation}"</em></p>`;
+            } else {
+                plutoContent = `Pluto in ${plutoSign.name} reveals transformative power and capacity for deep change.`;
+            }
+            
+            celestialSection.appendChild(createReadingCard(
+                'Pluto - Transformation & Power',
+                deepPluto ? `${plutoSign.name} - ${deepPluto.archetype}` : plutoSign.name,
+                deepPluto ? [deepPluto.archetype] : ['Transformation', 'Power', 'Rebirth'],
+                plutoContent,
+                [],
+                []
+            ));
+            
             // ============================================
             // STELLIUM DETECTION (3+ planets in same sign)
             // ============================================
@@ -5099,27 +5189,77 @@ This isn't a flaw - it's their power source. The tension between these two drive
             soulSectionWrapper.className = 'reading-section';
             const soulSection = createSection('soul', config.sections.soul);
             
-            // North Node with detailed reading (northNode already declared in blueprint section)
-            const northNodeReading = NORTH_NODE_READINGS ? NORTH_NODE_READINGS[northNode.name] : null;
+            // North Node with deep reading
+            const northNodeReading = typeof DEEP_NORTH_NODE_READINGS !== 'undefined' && DEEP_NORTH_NODE_READINGS[northNode.name] 
+                ? DEEP_NORTH_NODE_READINGS[northNode.name]
+                : (NORTH_NODE_READINGS ? NORTH_NODE_READINGS[northNode.name] : null);
+            
+            let northNodeContent = '';
+            if (northNodeReading && northNodeReading.hook) {
+                // Deep reading available
+                northNodeContent = `<p><em>${northNodeReading.hook}</em></p>`;
+                
+                if (northNodeReading.pastLifePatterns) northNodeContent += `<p><em>Past Life Patterns:</em><br>${northNodeReading.pastLifePatterns.replace(/this soul/gi, userData.name)}</p>`;
+                if (northNodeReading.oldComfortZone) northNodeContent += `<p><em>Old Comfort Zone:</em><br>${northNodeReading.oldComfortZone.replace(/this soul/gi, userData.name)}</p>`;
+                if (northNodeReading.newDirection) northNodeContent += `<p><em>New Direction:</em><br>${northNodeReading.newDirection.replace(/this soul/gi, userData.name)}</p>`;
+                if (northNodeReading.evolutionaryGoal) northNodeContent += `<p><em>Evolutionary Goal:</em><br>${northNodeReading.evolutionaryGoal.replace(/this soul/gi, userData.name)}</p>`;
+                if (northNodeReading.challenges) northNodeContent += `<p><em>Challenges:</em><br>${northNodeReading.challenges.replace(/this soul/gi, userData.name)}</p>`;
+                if (northNodeReading.relationships) northNodeContent += `<p><em>Relationships:</em><br>${northNodeReading.relationships.replace(/this soul/gi, userData.name)}</p>`;
+                if (northNodeReading.careerPath) northNodeContent += `<p><em>Career Path:</em><br>${northNodeReading.careerPath.replace(/this soul/gi, userData.name)}</p>`;
+                if (northNodeReading.spiritualLesson) northNodeContent += `<p><em>Spiritual Lesson:</em><br>${northNodeReading.spiritualLesson.replace(/this soul/gi, userData.name)}</p>`;
+                if (northNodeReading.affirmation) northNodeContent += `<p><em>Affirmation:</em><br>"${northNodeReading.affirmation}"</p>`;
+            } else if (northNodeReading) {
+                // Basic reading
+                northNodeContent = northNodeReading.reading || `The North Node in ${northNode.name} points to ${userData.name}'s soul direction.`;
+            } else {
+                northNodeContent = `The North Node in ${northNode.name} points to ${userData.name}'s soul direction.`;
+            }
+            
             const northNodeEnhancements = getReadingEnhancements('northNode', northNode.name);
             soulSection.appendChild(createReadingCard(
                 config.readingTitles.northNode,
                 `${northNode.symbol} ${northNode.name}`,
-                northNodeReading ? northNodeReading.keywords : ['Soul Direction', 'Growth Path', 'Destiny'],
-                northNodeReading ? northNodeReading.reading : `The North Node in ${northNode.name} points to ${userData.name}'s soul direction.`,
+                northNodeReading && northNodeReading.keywords ? northNodeReading.keywords : ['Soul Direction', 'Growth Path', 'Destiny'],
+                northNodeContent,
                 [],
                 [],
                 northNodeEnhancements
             ));
             
-            // South Node (opposite of North Node)
+            // South Node with deep reading
             const southNode = readings.astrology.southNode;
             const southNodeSign = southNode.name;
+            const southNodeReading = typeof DEEP_SOUTH_NODE_READINGS !== 'undefined' && DEEP_SOUTH_NODE_READINGS[southNodeSign]
+                ? DEEP_SOUTH_NODE_READINGS[southNodeSign]
+                : (SOUTH_NODE_READINGS ? SOUTH_NODE_READINGS[southNodeSign] : null);
+            
+            let southNodeContent = '';
+            if (southNodeReading && southNodeReading.hook) {
+                // Deep reading available
+                southNodeContent = `<p><em>${southNodeReading.hook}</em></p>`;
+                
+                if (southNodeReading.masterPattern) southNodeContent += `<p><em>Mastered Pattern:</em><br>${southNodeReading.masterPattern.replace(/this soul/gi, userData.name)}</p>`;
+                if (southNodeReading.comfortablePattern) southNodeContent += `<p><em>Comfortable Pattern:</em><br>${southNodeReading.comfortablePattern.replace(/this soul/gi, userData.name)}</p>`;
+                if (southNodeReading.whenItServes) southNodeContent += `<p><em>When It Serves:</em><br>${southNodeReading.whenItServes.replace(/this soul/gi, userData.name)}</p>`;
+                if (southNodeReading.whenItLimits) southNodeContent += `<p><em>When It Limits:</em><br>${southNodeReading.whenItLimits.replace(/this soul/gi, userData.name)}</p>`;
+                if (southNodeReading.shadowExpression) southNodeContent += `<p><em>Shadow Expression:</em><br>${southNodeReading.shadowExpression.replace(/this soul/gi, userData.name)}</p>`;
+                if (southNodeReading.giftToNorthNode) southNodeContent += `<p><em>Gift to North Node:</em><br>${southNodeReading.giftToNorthNode.replace(/this soul/gi, userData.name)}</p>`;
+                if (southNodeReading.evolutionPath) southNodeContent += `<p><em>Evolution Path:</em><br>${southNodeReading.evolutionPath.replace(/this soul/gi, userData.name)}</p>`;
+                if (southNodeReading.relationshipPattern) southNodeContent += `<p><em>Relationship Pattern:</em><br>${southNodeReading.relationshipPattern.replace(/this soul/gi, userData.name)}</p>`;
+                if (southNodeReading.spiritualMeaning) southNodeContent += `<p><em>Spiritual Meaning:</em><br>${southNodeReading.spiritualMeaning.replace(/this soul/gi, userData.name)}</p>`;
+                if (southNodeReading.affirmation) southNodeContent += `<p><em>Affirmation:</em><br>"${southNodeReading.affirmation}"</p>`;
+            } else if (southNodeReading) {
+                // Basic reading
+                southNodeContent = southNodeReading.reading || `The South Node in ${southNodeSign} represents ${userData.name}'s past life gifts.`;
+            } else {
+                southNodeContent = `The South Node in ${southNodeSign} represents ${userData.name}'s past life gifts and natural talents - abilities that come easily but may also represent a comfort zone to grow beyond. While these gifts should be honored, over-reliance on them can prevent the soul growth indicated by the North Node in ${northNode.name}.`;
+            }
+            
             soulSection.appendChild(createReadingCard(
                 config.readingTitles.southNode,
                 `${southNode.symbol} ${southNode.name}`,
-                ['Past Gifts', 'Comfort Zone', 'Natural Talents'],
-                `The South Node in ${southNodeSign} represents ${userData.name}'s past life gifts and natural talents - abilities that come easily but may also represent a comfort zone to grow beyond. While these gifts should be honored, over-reliance on them can prevent the soul growth indicated by the North Node in ${northNode.name}.`,
+                southNodeReading && southNodeReading.keywords ? southNodeReading.keywords : ['Past Gifts', 'Comfort Zone', 'Natural Talents'],
+                southNodeContent,
                 [],
                 []
             ));
