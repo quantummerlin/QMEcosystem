@@ -1,1 +1,6 @@
 /soulblueprint/r/*  /soulblueprint/view.html?id=:splat  200
+
+# A Moment in Time redirects
+/amomentintime/r/*  /amomentintime/view.html?id=:splat  200
+/amomentintime/esp/r/*  /amomentintime/esp/view.html?id=:splat  200
+/amomentintime/pt/r/*  /amomentintime/pt/view.html?id=:splat  200
