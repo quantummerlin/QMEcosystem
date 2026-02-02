@@ -62,7 +62,7 @@ export function HeroSection({ onStartClick }: HeroSectionProps) {
           transition={{ duration: 0.6 }}
         >
           <Sparkles className="w-4 h-4" />
-          <span className="text-sm font-medium">Discover Your Destiny</span>
+          <span className="text-sm font-medium">Quantum Merlin • Chinese Zodiac</span>
         </motion.div>
 
         {/* Main title */}
@@ -72,7 +72,7 @@ export function HeroSection({ onStartClick }: HeroSectionProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <AnimatedText text="Ultimate Chinese" delay={0.3} />
+          <AnimatedText text="Quantum Merlin" delay={0.3} />
           <br />
           <motion.span 
             className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-pink-300"
@@ -89,7 +89,7 @@ export function HeroSection({ onStartClick }: HeroSectionProps) {
               ease: 'easeInOut',
             }}
           >
-            Zodiac Guide
+            Chinese Zodiac Guide
           </motion.span>
         </motion.h1>
 
@@ -100,7 +100,7 @@ export function HeroSection({ onStartClick }: HeroSectionProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          Discover your complete fortune with animal and element wisdom for daily, weekly, monthly, and yearly guidance
+          Discover your complete fortune with animal and element wisdom for daily, weekly, monthly, and yearly guidance from Quantum Merlin
         </motion.p>
 
         {/* CTA Button */}

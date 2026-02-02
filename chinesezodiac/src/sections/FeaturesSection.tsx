@@ -68,7 +68,7 @@ export function FeaturesSection() {
             Complete Zodiac Wisdom
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover insights across all time periods with our comprehensive Chinese zodiac guidance system
+            Discover insights across all time periods with Quantum Merlin's comprehensive Chinese zodiac guidance system
           </p>
         </motion.div>
 

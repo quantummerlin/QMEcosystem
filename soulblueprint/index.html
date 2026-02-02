@@ -5721,15 +5721,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 
                 const angular = readings.astrology.angularHouses;
                 let angularCardsAdded = 0;
-                
-                // Debug logging for Four Pillars
-                console.log('Four Pillars Debug:', {
-                    angular,
-                    first: angular?.first,
-                    firstSign: angular?.first?.sign,
-                    firstSignName: angular?.first?.sign?.name
-                });
-                
+
                 const getSignName = (value) => {
                     if (!value) return null;
                     if (typeof value === 'string') return value;
