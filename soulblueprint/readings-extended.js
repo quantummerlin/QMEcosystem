@@ -804,141 +804,225 @@ var ADDITIONAL_ASPECT_READINGS = {
 };
 
 // ============================================
-// VERTEX BY SIGN - Fated Encounters
+// VERTEX BY SIGN - Fated Encounters (Deep Version)
 // ============================================
 
 var VERTEX_READINGS = {
     Aries: {
         title: "Fated Courage",
         keywords: ["Destiny Through Action", "Fated Independence", "Karmic Leadership", "Encounter Initiation"],
-        reading: `The Vertex in Aries indicates fated encounters that awaken courage, independence, and the warrior spirit. Key relationships and events seem destined to push this soul toward greater self-assertion and pioneering action.
+        reading: `The Vertex in Aries marks the soul as destined to encounter pivotal moments and people who awaken their inner warrior. This is not a gentle unfolding—it's a lightning strike of activation. The universe has encoded into this life a series of fated meetings and events designed to ignite courage, independence, and the willingness to pioneer.
 
-Fated people will enter life who challenge them to be braver, more independent, more willing to fight for what they want. These encounters may feel uncomfortable at first but are ultimately activating their own warrior energy.
+<strong>The Fated Encounters:</strong> People will enter this life who demand action rather than contemplation. These are the catalysts—sometimes aggressive, sometimes simply bold—who refuse to let this soul remain passive. A chance meeting with someone who challenges them to fight for themselves. A crisis that requires immediate, independent response. A relationship that ends specifically to force them into self-reliance. These are not accidents; they are destiny appointments.
 
-The soul is being called toward leadership and independent action through seemingly destined circumstances. They'll find themselves "accidentally" put in positions requiring courage.
+<strong>The Activation Pattern:</strong> The Vertex in Aries creates a life punctuated by moments that feel like fate stepping in to light a fire. Just when they might settle into comfortable passivity, destiny sends a wake-up call that requires courage. These activations often feel uncomfortable at first—who wants to be forced into bravery? But they are precisely what the soul has scheduled for its evolution.
 
-The gift is learning that fate conspires to make them stronger. The challenge is not resisting the call to action that destiny brings.`
+<strong>Karmic Signatures:</strong> There may be past-life patterns of over-depending on others, waiting to be rescued, or avoiding conflict at the cost of authenticity. This lifetime's Vertex appointments are designed to break those patterns. The soul is learning that it came equipped with everything it needs to lead its own life.
+
+<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often an immediate, visceral recognition that something important is happening. The heart races, adrenaline flows, and there's a sense of "this matters" that transcends ordinary experience. These are the moments when fate reveals its hand.
+
+<strong>The Gift:</strong> Through these destined encounters, the soul develops authentic courage—not the absence of fear, but action despite fear. They become someone who can begin things, who doesn't wait for permission, who knows that sometimes the brave thing is also the fated thing.
+
+<strong>The Challenge:</strong> The temptation is to resist these activations, to resent the people and circumstances that demand courage. But resistance only delays what is inevitable. The challenge is learning to recognize destiny's knock and answering with: "I'm ready."`,
+        fatedThemes: ["Initiators and catalysts", "Crisis that demands action", "Relationships that activate independence", "Moments requiring courage"]
     },
     Taurus: {
         title: "Fated Security",
         keywords: ["Destiny Through Stability", "Fated Worth", "Karmic Resources", "Encounter Value"],
-        reading: `The Vertex in Taurus indicates fated encounters that awaken self-worth, material security, and appreciation of beauty. Key relationships and events seem destined to teach lessons about value - both self-value and material resources.
+        reading: `The Vertex in Taurus marks the soul as destined to encounter pivotal moments and people who awaken their relationship with security, self-worth, and the material world. Fate will speak through matters of value—both the value of things and the value of self.
 
-Fated people will enter life who affect finances, possessions, or sense of worth. These relationships may involve shared resources or lessons about what's truly valuable.
+<strong>The Fated Encounters:</strong> People will enter this life who affect finances, possessions, or sense of worth in profound ways. A partner who transforms their financial situation. A mentor who teaches them their true value. A loss that forces them to discover what really matters. These aren't random events—they're destiny's curriculum on the nature of true security.
 
-The soul is being called toward stability, beauty, and self-worth through seemingly destined circumstances. They'll find themselves in situations requiring them to know their value.
+<strong>The Activation Pattern:</strong> The Vertex in Taurus creates a life where the most transformative moments involve resources, beauty, and self-worth. Just when they think they understand their value (or lack thereof), fate sends someone or something that completely reframes the conversation. These activations teach that security is ultimately internal, not external.
 
-The gift is learning that fate brings lessons about true worth. The challenge is remaining open when fated events challenge material security.`
+<strong>Karmic Signatures:</strong> There may be past-life patterns around poverty and wealth, worthlessness and excess, taking and giving. This lifetime's Vertex appointments are designed to find the middle path—genuine self-worth that doesn't depend on bank accounts, authentic appreciation of beauty that doesn't become attachment.
+
+<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a felt sense in the body—a grounding, a settling, or its opposite: profound ungrounding that demands they find new footing. These moments often involve sensory richness—the smell of money, the touch of beauty, the taste of abundance or scarcity.
+
+<strong>The Gift:</strong> Through these destined encounters, the soul develops an unshakeable knowing of their own worth. They learn that true abundance is a state of being, not a state of having. They become someone who can appreciate beauty without grasping, who knows that the only security that lasts is inner security.
+
+<strong>The Challenge:</strong> The temptation is to cling to what fate brings or to collapse when fate takes away. But the Vertex in Taurus teaches that flow, not grip, is the way. The challenge is learning to receive what comes and release what goes, trusting that worth remains constant through all changes.`,
+        fatedThemes: ["Financial turning points", "Teachers of self-worth", "Beauty that transforms", "Losses that reveal true value"]
     },
     Gemini: {
         title: "Fated Communication",
         keywords: ["Destiny Through Learning", "Fated Connections", "Karmic Communication", "Encounter Ideas"],
-        reading: `The Vertex in Gemini indicates fated encounters that awaken curiosity, communication skills, and mental agility. Key relationships and events seem destined to bring important information or learning opportunities.
+        reading: `The Vertex in Gemini marks the soul as destined to encounter pivotal moments and people who awaken their intellectual gifts and communication abilities. Fate speaks through words, connections, and the exchange of ideas.
 
-Fated people will enter life who teach, communicate, or share vital information. These relationships often involve siblings, neighbors, or people met through communication channels.
+<strong>The Fated Encounters:</strong> People will enter this life who bring essential information or who catalyze communication breakthroughs. A teacher who changes their worldview. A sibling relationship that teaches profound lessons. A chance conversation that redirects their entire path. A book that falls open to exactly the right page. These are not coincidences—they are destiny's way of ensuring the right information reaches the right soul at the right time.
 
-The soul is being called toward learning and communication through seemingly destined circumstances. They'll find themselves "accidentally" receiving important messages or connections.
+<strong>The Activation Pattern:</strong> The Vertex in Gemini creates a life where the most transformative moments involve learning, speaking, writing, or connecting. Just when they might settle into intellectual stagnation, fate sends a messenger. These activations often come through seemingly small moments—a phrase overheard, a question asked, a connection made in passing that proves to be pivotal.
 
-The gift is learning that fate brings the teachers and information needed. The challenge is paying attention when destiny speaks.`
+<strong>Karmic Signatures:</strong> There may be past-life patterns around communication—voices silenced, truth unspoken, knowledge hoarded or scattered. This lifetime's Vertex appointments are designed to find authentic expression, to become both student and teacher, to understand that ideas want to be shared.
+
+<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a mental quickening—thoughts accelerate, connections form, understanding dawns. There may be literal goosebumps as important information lands. The mind lights up in recognition that something significant is being communicated.
+
+<strong>The Gift:</strong> Through these destined encounters, the soul develops the gift of being a conduit for information. They become someone who asks the right questions, who knows when to speak and when to listen, who can translate between worlds of understanding.
+
+<strong>The Challenge:</strong> The temptation is to scatter attention across too many inputs or to dismiss the importance of small moments. But the Vertex in Gemini teaches that the universe speaks constantly—the challenge is learning to listen.`,
+        fatedThemes: ["Life-changing conversations", "Teachers who appear at the right moment", "Information that redirects life", "Sibling and peer connections"]
     },
     Cancer: {
         title: "Fated Nurturing",
         keywords: ["Destiny Through Family", "Fated Home", "Karmic Nurturing", "Encounter Belonging"],
-        reading: `The Vertex in Cancer indicates fated encounters that awaken emotional needs, family bonds, and the need for belonging. Key relationships and events seem destined to affect home and family life.
+        reading: `The Vertex in Cancer marks the soul as destined to encounter pivotal moments and people who awaken their deepest emotional needs and their capacity to nurture. Fate speaks through matters of home, family, and the heart's longing to belong.
 
-Fated people will enter life who become family or trigger deep emotional responses. These relationships often feel instantly familiar, like reconnecting with someone from before.
+<strong>The Fated Encounters:</strong> People will enter this life who become family—not necessarily by blood, but by soul. A chosen family that heals childhood wounds. A home that appears at exactly the right moment. A parent figure who gives what was never received. A child (literal or metaphorical) who teaches the soul about unconditional love. These are destiny's way of ensuring that no one walks through life without the experience of belonging.
 
-The soul is being called toward emotional depth and nurturing through seemingly destined circumstances. They'll find themselves creating or joining families in unexpected ways.
+<strong>The Activation Pattern:</strong> The Vertex in Cancer creates a life where the most transformative moments involve emotional bonding, creating home, or confronting family patterns. Just when they might armor their heart, fate sends someone or something that requires vulnerability. These activations often feel deeply personal, touching the most tender parts of the psyche.
 
-The gift is learning that fate brings the belonging that's needed. The challenge is remaining open to emotional vulnerability when destiny calls.`
+<strong>Karmic Signatures:</strong> There may be past-life patterns around family—abandonment, enmeshment, the failure to nurture or be nurtured. This lifetime's Vertex appointments are designed to heal these patterns, to learn that home is a feeling that can be created anywhere, with anyone, at any time.
+
+<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often an immediate feeling of "home"—of recognizing someone or someplace as if from a dream. The heart opens involuntarily. There may be tears that seem to come from a deeper well than the present moment warrants.
+
+<strong>The Gift:</strong> Through these destined encounters, the soul develops the capacity to create belonging wherever they go. They become someone who can mother/father the wounded, who makes strangers feel like family, who knows that the most powerful force in the universe is love.
+
+<strong>The Challenge:</strong> The temptation is to cling to family (biological or chosen) or to flee from the vulnerability that belonging requires. But the Vertex in Cancer teaches that the heart must be kept open. The challenge is learning that love cannot be owned, only experienced.`,
+        fatedThemes: ["Chosen family arriving", "Home that transforms life", "Healing of family patterns", "Children and nurturing relationships"]
     },
     Leo: {
         title: "Fated Creativity",
         keywords: ["Destiny Through Expression", "Fated Joy", "Karmic Creativity", "Encounter Heart"],
-        reading: `The Vertex in Leo indicates fated encounters that awaken creative expression, joy, and the courage to be seen. Key relationships and events seem destined to put the spotlight on their unique gifts.
+        reading: `The Vertex in Leo marks the soul as destined to encounter pivotal moments and people who awaken their creative fire and their courage to be seen. Fate speaks through matters of self-expression, joy, romance, and the heart's need to shine.
 
-Fated people will enter life who encourage creative expression or offer love and recognition. These relationships may involve artists, children, or romantic partners.
+<strong>The Fated Encounters:</strong> People will enter this life who demand that this soul stop hiding. An artist who inspires creative awakening. A lover who sees and celebrates their unique brilliance. A child who needs their playful presence. An audience that appears when they finally dare to perform. These are not random admirers—they are destiny's way of ensuring this soul claims its spotlight.
 
-The soul is being called toward creative self-expression through seemingly destined circumstances. They'll find themselves "accidentally" in the spotlight or receiving recognition.
+<strong>The Activation Pattern:</strong> The Vertex in Leo creates a life where the most transformative moments involve creative expression, romantic love, or stepping into visibility. Just when they might settle for the audience rather than the stage, fate sends a catalyst that says "your turn to shine." These activations often feel dramatic—appropriate for a Leo Vertex—like scenes from a movie where everything changes.
 
-The gift is learning that fate wants them to shine. The challenge is accepting the call to visibility when destiny offers the stage.`
+<strong>Karmic Signatures:</strong> There may be past-life patterns around creative suppression, dimming one's light, or alternatively, ego inflation and misuse of attention. This lifetime's Vertex appointments are designed to find authentic expression—shining for the joy of it, not for the applause; creating because one must, not for recognition.
+
+<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a feeling of heart opening, of warmth spreading through the chest. There may be a sense of recognition—this is what I was born for. The colors seem brighter, the music louder, life more vivid. It feels like falling in love—with a person, a project, or life itself.
+
+<strong>The Gift:</strong> Through these destined encounters, the soul develops the courage to be fully themselves without apology. They become someone who gives permission for others to shine by shining first, who knows that creativity is not optional but essential, who understands that joy is a legitimate life purpose.
+
+<strong>The Challenge:</strong> The temptation is to hide (out of false humility) or to make it all about applause (out of ego). But the Vertex in Leo teaches that authentic expression cares little for audience response. The challenge is learning to create and express because it's who you are—whether anyone watches or not.`,
+        fatedThemes: ["Creative awakenings", "Romantic destiny", "Being seen and celebrated", "Children and playfulness"]
     },
     Virgo: {
         title: "Fated Service",
         keywords: ["Destiny Through Healing", "Fated Work", "Karmic Service", "Encounter Improvement"],
-        reading: `The Vertex in Virgo indicates fated encounters that awaken the desire to serve, heal, and improve. Key relationships and events seem destined to involve health, work, or service to others.
+        reading: `The Vertex in Virgo marks the soul as destined to encounter pivotal moments and people who awaken their capacity for service, healing, and meaningful work. Fate speaks through matters of health, craft, and the sacred opportunity to be useful.
 
-Fated people will enter life who need help or who offer opportunities to be useful. These relationships often involve health practitioners, coworkers, or people who benefit from their skills.
+<strong>The Fated Encounters:</strong> People will enter this life who need exactly what this soul can offer. A patient who teaches them about healing by being healed. A coworker who becomes a life-changing mentor. A crisis in health that redirects their entire life path. A job that doesn't just pay bills but serves purpose. These are not mere employment opportunities—they are destiny's way of ensuring this soul finds meaningful work.
 
-The soul is being called toward service and healing through seemingly destined circumstances. They'll find themselves in positions where their skills are exactly what's needed.
+<strong>The Activation Pattern:</strong> The Vertex in Virgo creates a life where the most transformative moments involve service, health, or the development of mastery. Just when they might drift into purposelessness, fate sends someone or something that needs their unique skills. These activations often feel practical and grounded—not dramatic, but deeply significant.
 
-The gift is learning that fate brings opportunities to be useful. The challenge is accepting the call to service without becoming a martyr.`
+<strong>Karmic Signatures:</strong> There may be past-life patterns around service—martyrdom, servitude, perfectionism that paralyzed, or the failure to develop useful skills. This lifetime's Vertex appointments are designed to find sacred service—helping others without losing self, excellence without perfectionism, work as spiritual practice.
+
+<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a sense of "rightness"—of being exactly where one should be, doing exactly what needs doing. There may be a felt sense of puzzle pieces clicking into place, of skills meeting needs in satisfying ways.
+
+<strong>The Gift:</strong> Through these destined encounters, the soul develops the gift of being genuinely helpful. They become someone whose presence improves situations, whose attention heals, whose craft serves purposes beyond personal gain.
+
+<strong>The Challenge:</strong> The temptation is to serve until depleted or to use perfectionism as an excuse not to serve at all. But the Vertex in Virgo teaches that sacred service fills rather than drains. The challenge is learning to be helpful without becoming a martyr.`,
+        fatedThemes: ["Healing encounters", "Work that serves purpose", "Health crises that redirect life", "Mentors in craft and skill"]
     },
     Libra: {
         title: "Fated Partnership",
         keywords: ["Destiny Through Others", "Fated Relationships", "Karmic Balance", "Encounter Harmony"],
-        reading: `The Vertex in Libra indicates fated encounters that awaken through partnership, balance, and harmony. Key relationships and events seem destined to bring significant others who transform life direction.
+        reading: `The Vertex in Libra marks the soul as destined to encounter pivotal moments and people who awaken their understanding of partnership, balance, and the art of relating. Fate speaks through significant others—romantic, business, or creative partners who change everything.
 
-Fated people will enter life who become partners in love, business, or art. These relationships feel destined and life-changing from the first meeting.
+<strong>The Fated Encounters:</strong> People will enter this life who feel immediately significant—soul recognition from the first meeting. A partner who completes something. An adversary who teaches through opposition. A collaborator who doubles creative output. A mirror who reveals what can't be seen alone. These are not casual acquaintances—they are destiny's way of teaching that some things can only be learned through relationship.
 
-The soul is being called toward partnership and balance through seemingly destined circumstances. They'll find themselves meeting people who feel like fate.
+<strong>The Activation Pattern:</strong> The Vertex in Libra creates a life where the most transformative moments involve significant one-on-one relationships. Just when they might settle into isolation or superficial relating, fate sends someone who demands authentic partnership. These activations often feel romantic in quality—even business partnerships may carry a sense of fated connection.
 
-The gift is learning that fate brings the partners who are needed. The challenge is maintaining self within relationships that feel so destined.`
+<strong>Karmic Signatures:</strong> There may be past-life patterns around relationship—isolation, enmeshment, using others or being used. This lifetime's Vertex appointments are designed to find genuine partnership—two whole people choosing to create something together, neither losing themselves nor remaining separate.
+
+<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often immediate recognition—"I know you" even when just meeting. Time may seem to stop or accelerate. There's a gravitational pull toward the other person that transcends ordinary attraction.
+
+<strong>The Gift:</strong> Through these destined encounters, the soul develops the art of true partnership. They become someone who can be fully themselves while fully with another, who knows that relationship is a spiritual path, who can balance giving and receiving.
+
+<strong>The Challenge:</strong> The temptation is to lose self in partnership or to avoid intimacy by remaining superficial. But the Vertex in Libra teaches that the real relationship is where two wholes meet, not two halves. The challenge is learning to relate without losing.`,
+        fatedThemes: ["Soul-recognition partnerships", "Business partnerships that transform", "Enemies who teach", "Marriage and committed union"]
     },
     Scorpio: {
         title: "Fated Transformation",
         keywords: ["Destiny Through Crisis", "Fated Depth", "Karmic Transformation", "Encounter Power"],
-        reading: `The Vertex in Scorpio indicates fated encounters that awaken through intensity, transformation, and facing the shadow. Key relationships and events seem destined to bring profound change.
+        reading: `The Vertex in Scorpio marks the soul as destined to encounter pivotal moments and people who awaken their power through transformation. Fate speaks through intensity, crisis, and the requirement to die and be reborn—metaphorically, and sometimes quite literally in life circumstances.
 
-Fated people will enter life who trigger transformation or who require confronting hidden aspects of self. These relationships are intense, sometimes difficult, but always transformative.
+<strong>The Fated Encounters:</strong> People will enter this life who cannot be kept at surface level. A lover who demands full merger. A therapist who excavates the shadow. A business partner who requires total trust. A crisis that burns away everything false. These are not comfortable connections—they are destiny's way of ensuring this soul doesn't sleepwalk through life.
 
-The soul is being called toward depth and transformation through seemingly destined circumstances. They'll find themselves in situations that require facing what they'd rather avoid.
+<strong>The Activation Pattern:</strong> The Vertex in Scorpio creates a life where the most transformative moments involve facing darkness—their own or others'. Just when they might avoid the depths, fate sends a catalyst that demands descent. These activations often feel like initiations—ordeals that mark the before and after of a soul.
 
-The gift is learning that fate brings the transformation that's needed. The challenge is trusting the process when destiny brings darkness before light.`
+<strong>Karmic Signatures:</strong> There may be past-life patterns around power—its abuse, its absence, trauma unhealed, deaths unmourned. This lifetime's Vertex appointments are designed to reclaim authentic power—not over others, but over one's own depths. To transform rather than repeat.
+
+<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often an intensity of feeling that cannot be denied. This may manifest as obsession, fear, fascination, or all three simultaneously. The body may respond with visceral knowing—desire, repulsion, or the strange combination that signals shadow work.
+
+<strong>The Gift:</strong> Through these destined encounters, the soul develops phoenix energy—the ability to rise from any ashes, to transform any crisis into growth, to face any darkness and return with gifts.
+
+<strong>The Challenge:</strong> The temptation is to avoid the intensity (and miss the transformation) or to become addicted to crisis and power dynamics. But the Vertex in Scorpio teaches that the only way out is through. The challenge is learning to face the shadow voluntarily rather than waiting for fate to force the confrontation.`,
+        fatedThemes: ["Transformative crisis", "Intense relationships", "Near-death experiences (literal or metaphorical)", "Power and intimacy lessons"]
     },
     Sagittarius: {
         title: "Fated Adventure",
         keywords: ["Destiny Through Expansion", "Fated Learning", "Karmic Journey", "Encounter Meaning"],
-        reading: `The Vertex in Sagittarius indicates fated encounters that awaken through adventure, learning, and the search for meaning. Key relationships and events seem destined to expand horizons.
+        reading: `The Vertex in Sagittarius marks the soul as destined to encounter pivotal moments and people who awaken their hunger for meaning, expansion, and adventure. Fate speaks through journeys—physical, intellectual, and spiritual.
 
-Fated people will enter life who are teachers, travelers, or truth-seekers. These relationships often involve people from different cultures or philosophical backgrounds.
+<strong>The Fated Encounters:</strong> People will enter this life who expand horizons—teachers, travelers, philosophers, foreigners, anyone who represents the unknown. A mentor who opens doors to worlds unimagined. A travel companion on a journey that changes everything. A book or teaching that provides the meaning they've been seeking. These are not random connections—they are destiny's way of ensuring this soul never settles for a too-small life.
 
-The soul is being called toward expansion and meaning through seemingly destined circumstances. They'll find themselves "accidentally" traveling, learning, or encountering new philosophies.
+<strong>The Activation Pattern:</strong> The Vertex in Sagittarius creates a life where the most transformative moments involve expansion—geographic, philosophical, or spiritual. Just when they might settle into comfortable certainty, fate sends an adventure that expands everything they thought they knew. These activations often feel exhilarating—the call to adventure that makes the heart race.
 
-The gift is learning that fate expands rather than limits. The challenge is saying yes when destiny calls to adventure.`
+<strong>Karmic Signatures:</strong> There may be past-life patterns around philosophy and religion—rigid beliefs, lost faith, wisdom hoarded or squandered. This lifetime's Vertex appointments are designed to find personal truth—not borrowed beliefs but earned wisdom, the faith that comes from experience.
+
+<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a sense of expansion—of perspective widening, of possibilities multiplying. There may be a feeling of "of course!"—as if remembering something always known but forgotten. The soul recognizes truth by how it frees rather than binds.
+
+<strong>The Gift:</strong> Through these destined encounters, the soul develops genuine wisdom. They become someone who inspires others toward growth, who holds beliefs lightly while living them deeply, who knows that the journey is the destination.
+
+<strong>The Challenge:</strong> The temptation is to become a perpetual seeker who never finds (or never applies what's found) or to become a dogmatic teacher who stops learning. But the Vertex in Sagittarius teaches that wisdom requires both seeking and finding. The challenge is learning when to quest and when to rest in what has been found.`,
+        fatedThemes: ["Life-changing journeys", "Teachers who transform worldview", "Cultural encounters", "Spiritual awakening"]
     },
     Capricorn: {
         title: "Fated Achievement",
         keywords: ["Destiny Through Responsibility", "Fated Authority", "Karmic Achievement", "Encounter Mastery"],
-        reading: `The Vertex in Capricorn indicates fated encounters that awaken through responsibility, achievement, and mastery. Key relationships and events seem destined to involve career and public standing.
+        reading: `The Vertex in Capricorn marks the soul as destined to encounter pivotal moments and people who awaken their capacity for achievement, responsibility, and mastery. Fate speaks through matters of career, reputation, and the long game of building something that lasts.
 
-Fated people will enter life who are authority figures or who affect career direction. These relationships often involve mentors, bosses, or people who offer advancement opportunities.
+<strong>The Fated Encounters:</strong> People will enter this life who embody authority—mentors who show the path to mastery, bosses who promote or challenge, father figures who teach (by presence or absence) about responsibility. A career opportunity that appears at exactly the right moment. A failure that teaches more than any success could. These are not mere professional developments—they are destiny's way of ensuring this soul climbs its mountain.
 
-The soul is being called toward achievement and responsibility through seemingly destined circumstances. They'll find themselves in positions of increasing authority.
+<strong>The Activation Pattern:</strong> The Vertex in Capricorn creates a life where the most transformative moments involve achievement, responsibility, and public standing. Just when they might avoid the hard work of mastery, fate sends a calling that demands they step up. These activations often feel heavy with significance—not the lightness of play but the weight of purpose.
 
-The gift is learning that fate builds through patience and effort. The challenge is accepting responsibility when destiny promotes them.`
+<strong>Karmic Signatures:</strong> There may be past-life patterns around authority—its abuse, its avoidance, ambition unfulfilled or corrupted. This lifetime's Vertex appointments are designed to find healthy relationship with power—achievement that serves more than ego, authority that respects rather than oppresses.
+
+<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a sense of gravity—of something important happening that will have long-term consequences. There may be a feeling of stepping into shoes that have been waiting, of accepting a mantle that was always theirs.
+
+<strong>The Gift:</strong> Through these destined encounters, the soul develops earned authority. They become someone whose achievements are built on genuine mastery, whose leadership emerges from service, whose legacy will outlast their years.
+
+<strong>The Challenge:</strong> The temptation is to pursue achievement for ego's sake or to avoid responsibility out of fear of failure. But the Vertex in Capricorn teaches that true success is measured by contribution, not accolade. The challenge is learning to climb the right mountain—the one that matters to the soul, not just to the world.`,
+        fatedThemes: ["Career turning points", "Mentors and authority figures", "Public recognition", "Father lessons"]
     },
     Aquarius: {
         title: "Fated Innovation",
         keywords: ["Destiny Through Uniqueness", "Fated Community", "Karmic Freedom", "Encounter Progress"],
-        reading: `The Vertex in Aquarius indicates fated encounters that awaken through uniqueness, community, and progressive thinking. Key relationships and events seem destined to involve groups and innovation.
+        reading: `The Vertex in Aquarius marks the soul as destined to encounter pivotal moments and people who awaken their capacity for innovation, community, and authentic originality. Fate speaks through groups, causes, and the call to be uniquely themselves for the benefit of all.
 
-Fated people will enter life who are unusual, progressive, or connected to groups and causes. These relationships often involve friends, organizations, or visionary thinkers.
+<strong>The Fated Encounters:</strong> People will enter this life who are ahead of their time—visionaries, rebels, reformers, anyone who represents the future. A friend group that becomes chosen family. A cause that gives life purpose beyond personal concerns. A technology or idea that transforms perspective. These are not random associations—they are destiny's way of ensuring this soul contributes to the evolution of the collective.
 
-The soul is being called toward originality and community through seemingly destined circumstances. They'll find themselves joining movements or meeting people who change their worldview.
+<strong>The Activation Pattern:</strong> The Vertex in Aquarius creates a life where the most transformative moments involve community, innovation, or the embrace of authentic uniqueness. Just when they might conform to expectations, fate sends a catalyst that demands originality. These activations often feel electric—the shock of the new, the excitement of evolution.
 
-The gift is learning that fate connects to the collective. The challenge is maintaining individuality while answering destiny's call to community.`
+<strong>Karmic Signatures:</strong> There may be past-life patterns around individuality and community—the outsider, the revolutionary, the one who couldn't fit in, or conversely, the one who lost self in group identity. This lifetime's Vertex appointments are designed to find the balance—being uniquely themselves while contributing to something larger.
+
+<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a sense of the future arriving. There may be a feeling of meeting one's tribe, of encountering ideas that resonate with something deep and progressive. The soul recognizes destiny by how it frees and connects simultaneously.
+
+<strong>The Gift:</strong> Through these destined encounters, the soul develops the gift of being a bridge between present and future. They become someone who can bring innovation without alienating, who belongs to groups without losing individuality, who serves the collective while remaining authentically themselves.
+
+<strong>The Challenge:</strong> The temptation is to be so unique that they can't connect (rebellion as identity) or to surrender individuality to group belonging. But the Vertex in Aquarius teaches that the collective needs authentic individuals. The challenge is learning to be both unique and united.`,
+        fatedThemes: ["Revolutionary friendships", "Causes that claim the heart", "Technological breakthroughs", "Finding one's tribe"]
     },
     Pisces: {
         title: "Fated Transcendence",
         keywords: ["Destiny Through Spirit", "Fated Compassion", "Karmic Healing", "Encounter Unity"],
-        reading: `The Vertex in Pisces indicates fated encounters that awaken through spirituality, compassion, and transcendent experience. Key relationships and events seem destined to dissolve boundaries.
+        reading: `The Vertex in Pisces marks the soul as destined to encounter pivotal moments and people who awaken their connection to the spiritual, the artistic, and the transcendent. Fate speaks through dreams, intuitions, and experiences that dissolve the boundaries between self and everything else.
 
-Fated people will enter life who are healers, artists, or spiritual teachers. These relationships often feel otherworldly, as if connecting across lifetimes or dimensions.
+<strong>The Fated Encounters:</strong> People will enter this life who carry spiritual significance—healers, artists, mystics, or simply those whose suffering calls forth compassion. A spiritual teacher who appears at the perfect moment. An artistic experience that opens channels of awareness. A loss that breaks the heart open to universal love. These are not ordinary meetings—they are destiny's way of ensuring this soul remembers what lies beyond the material.
 
-The soul is being called toward spiritual awakening through seemingly destined circumstances. They'll find themselves in situations that require faith, surrender, or service.
+<strong>The Activation Pattern:</strong> The Vertex in Pisces creates a life where the most transformative moments involve surrender, spirituality, or the dissolution of boundaries. Just when they might become too solid in material identity, fate sends an experience that reminds them of the ineffable. These activations often feel dreamlike—boundaries blur, synchronicities multiply, the veil thins.
 
-The gift is learning that fate connects to the divine. The challenge is remaining grounded when destiny calls to transcendence.`
+<strong>Karmic Signatures:</strong> There may be past-life patterns around transcendence—spiritual gifts misused, martyrdom, escapism, boundary dissolution that went too far. This lifetime's Vertex appointments are designed to find healthy transcendence—spiritual connection that enriches rather than escapes, compassion with boundaries, service with self-care.
+
+<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a feeling of coming home to something larger than self. There may be tears that seem to come from an ocean of feeling, a sense of unity with all beings, or artistic inspiration that feels channeled from beyond.
+
+<strong>The Gift:</strong> Through these destined encounters, the soul develops the gift of being a bridge between worlds. They become someone who can translate spiritual experience into earthly help, whose art or healing carries something of the infinite, whose compassion is practical as well as profound.
+
+<strong>The Challenge:</strong> The temptation is to escape into transcendence (spiritual bypassing) or to wall off from spiritual experience entirely. But the Vertex in Pisces teaches that heaven and earth need each other. The challenge is learning to be in this world while connected to what transcends it.`,
+        fatedThemes: ["Spiritual awakening", "Artistic transcendence", "Healing and being healed", "Compassion calling"]
     }
 };
 
@@ -994,13 +1078,23 @@ This lifetime calls for creative expression, romantic passion, and childlike pla
 Growth comes through making art, having fun, taking center stage, and following the heart. The soul purpose involves shining as an individual and inspiring others through authentic expression.`
         },
         6: {
-            title: "North Node in 6th House - Service Journey",
-            keywords: ["Practical Service", "Daily Routine", "Health", "Improvement"],
-            reading: `The North Node in the 6th House indicates this soul's growth path involves developing practical skills, serving others concretely, and establishing healthy routines. Past patterns (South Node in 12th House) involved escapism, martyrdom, or avoiding practical reality.
+            title: "North Node in 6th House - The Sacred Service Journey",
+            keywords: ["Practical Service", "Daily Routine", "Health", "Skilled Improvement", "Grounded Spirituality"],
+            reading: `The North Node in the 6th House marks one of the most profound spiritual journeys: learning that the divine lives in the ordinary, that enlightenment is found not in transcendence but in showing up fully for the tasks at hand. This soul has spent lifetimes (South Node in 12th House) exploring the ethereal realms—developing intuition, surrendering to the universe, perhaps even martyring themselves for higher causes. Now they are called to bring all that spiritual wisdom down to earth.
 
-This lifetime calls for grounded service, attention to health, and mastering daily tasks. They're here to learn that showing up in the ordinary world is a spiritual practice.
+<strong>The Past Life Pattern:</strong> The South Node in the 12th House indicates a soul deeply familiar with transcendence—meditation, mysticism, isolation, institutions, perhaps monasteries or hospitals. There may have been lifetimes of sacrifice, of dissolving ego, of merging with the cosmic. While beautiful, this pattern can create difficulty engaging with practical reality. The escape hatch is always available: "I'm too sensitive for this world," or "The spiritual is more important than the mundane."
 
-Growth comes through developing useful skills, serving without losing self, and taking care of body and environment. The soul purpose involves being genuinely helpful in concrete ways.`
+<strong>The Growth Edge:</strong> This lifetime demands that all that spiritual development be applied in practical service. The universe is asking: "Can you be as present while filing paperwork as you were in meditation? Can you find the sacred in the routine, the divine in the details?" The 6th House North Node is learning that attending to the body, developing useful skills, and serving others in concrete ways IS the spiritual practice.
+
+<strong>The Work Path:</strong> Work takes on special significance for this soul. They're not here to have any job—they're here to find work that allows them to be genuinely useful. The most fulfilling career paths involve helping, healing, improving, or fixing. They may be drawn to health fields, service professions, or any work where skill meets need. The key is showing up consistently—not just when inspiration strikes.
+
+<strong>Health & Body:</strong> The 6th House rules health, and this soul is learning to inhabit their body fully. Where the 12th House South Node may have neglected physical reality, the 6th House North Node asks for attention to diet, exercise, sleep, and wellness routines. Health practices become spiritual practices. Taking care of the body becomes a form of prayer.
+
+<strong>The Daily Practice:</strong> Routine, often resisted by the 12th House South Node, becomes the teacher. This soul grows not through dramatic spiritual experiences but through showing up every day, doing the small things well, being reliable. Making the bed, answering emails, keeping appointments—these ordinary acts become the curriculum.
+
+<strong>The Service Orientation:</strong> The highest expression of this placement involves service without martyrdom. Unlike the 12th House pattern of sacrificing self completely, the 6th House North Node learns to serve while maintaining healthy boundaries. They become the helper who doesn't burn out, the healer who also heals themselves, the worker who knows when to rest.
+
+<strong>The Integration:</strong> The beauty of this nodal axis is that the 12th House gifts are not abandoned but grounded. Intuition guides practical decisions. Spiritual wisdom informs daily choices. Compassion motivates service. The goal is not to leave behind the transcendent but to bring it into every ordinary moment.`
         },
         7: {
             title: "North Node in 7th House - Partnership Journey",
@@ -1136,11 +1230,21 @@ The lesson is to use these gifts while developing the opposite: home, emotional 
 The lesson is to use these gifts while developing the opposite: personal creativity, heart-centered expression, and individual joy (North Node in 5th House). The community skills developed in other lifetimes now support personal expression.`
         },
         12: {
-            title: "South Node in 12th House - Spiritual Gifts",
-            keywords: ["Natural Intuition", "Spiritual Connection", "Compassion", "Past Transcendence"],
-            reading: `The South Node in the 12th House indicates natural gifts around spirituality, intuition, and transcendence. These are abilities brought from past lives - natural ability to connect to the unseen. The comfort zone involves escape, sacrifice, or withdrawal.
+            title: "South Node in 12th House - The Transcendent Past",
+            keywords: ["Natural Intuition", "Spiritual Connection", "Compassion", "Past Transcendence", "Mystic Memory"],
+            reading: `The South Node in the 12th House reveals a soul with profound spiritual gifts accumulated over many lifetimes. This is the placement of the mystic, the healer, the one who has walked between worlds. The veil is thin for this soul—they came into this life already knowing things that others spend lifetimes seeking.
 
-The lesson is to use these gifts while developing the opposite: practical service, grounded work, and attention to daily life (North Node in 6th House). The spiritual abilities developed in other lifetimes now support being useful in the real world.`
+<strong>Past Life Imprints:</strong> The 12th House South Node carries memories (conscious or not) of monasteries and ashrams, of solitary spiritual practice, of service that dissolved the sense of separate self. There may have been lifetimes as monks, nuns, hermits, hospital workers, or those who cared for the dying. The soul knows the taste of transcendence, the peace that comes from surrender.
+
+<strong>The Natural Gifts:</strong> Intuition comes naturally—they often know things without knowing how they know. Compassion is instinctive; they feel others' pain as their own. Spiritual practices that others struggle with come easily. Dreams may be vivid and meaningful. Creative inspiration may feel channeled from somewhere beyond. There's a natural ability to be with suffering without needing to fix it.
+
+<strong>The Shadow Patterns:</strong> However, these gifts can become traps. The soul may use spirituality to avoid practical responsibility. "I'm too sensitive for this world" becomes an excuse. Martyrdom patterns may emerge—sacrificing self completely, losing identity in service. There may be tendencies toward addiction, escapism, or simply checking out when reality gets difficult. Boundaries may be chronically weak.
+
+<strong>The Integration Challenge:</strong> The North Node in 6th House calls this soul to ground their spiritual gifts in practical service. The lesson is not to abandon transcendence but to bring it into daily life. The meditation practice must extend to the workplace. The compassion must be structured into helpful action. The intuition must guide practical decisions.
+
+<strong>The Gift to the World:</strong> When integrated, this South Node placement produces healers who work in the real world, spiritual teachers who also do their own laundry, caregivers who maintain healthy boundaries. They bring the sacred into the ordinary, showing others that the divine is not somewhere else but right here, in this task, this moment, this body.
+
+<strong>The Deep Memory:</strong> There's often a sense of having seen too much, of being old beyond years, of carrying the weight of many lifetimes. This is accurate. The soul does carry that weight—and the 6th House North Node provides the counterbalance: groundedness, routine, the simplicity of doing one useful thing at a time.`
         }
     }
 };
@@ -1996,155 +2100,351 @@ function getParentCommTip(mercury, moon) {
 // ============================================
 
 var PROGRESSION_READINGS = {
-    description: "Progressions show how the birth chart evolves over time",
+    description: "Progressions show how the birth chart evolves over time - the unfolding of the soul's development",
     
     sun: {
         Aries: {
-            title: "Progressed Sun in Aries",
-            keywords: ['Initiative', 'New Beginnings', 'Courage', 'Identity'],
-            reading: "The Progressed Sun in Aries marks a period of new beginnings and self-discovery. This soul is in an initiating phase, learning to assert their identity and take bold action. Independence and courage are being developed now.",
-            evolution: ['Developing leadership', 'Learning self-assertion', 'Building confidence']
+            title: "Progressed Sun in Aries - The Awakening Warrior",
+            keywords: ['Initiative', 'New Beginnings', 'Courage', 'Identity Rebirth'],
+            reading: `The Progressed Sun entering Aries marks one of the most significant turning points in the soul's development. This is a cosmic rebirth—a complete new cycle beginning that will color approximately 30 years of life (the time it takes to progress through one sign).
+
+<strong>The Initiation:</strong> Something has awakened. A fire has been lit. The soul is being called from whatever came before into a brand-new chapter that requires courage, initiative, and the willingness to pioneer. There's an unmistakable sense of "time to start over" or "time to become myself."
+
+<strong>The Energy:</strong> Everything becomes more direct, more action-oriented. Where before there may have been hesitation, now there's impulse. Where before there may have been dependency, now there's fierce independence. The soul is learning to trust its own instincts and act on them.
+
+<strong>Current Development:</strong> Leadership abilities are being activated. The soul is developing the courage to go first, to act without a map, to trust that the path will appear by walking. Independence becomes not just desired but necessary.
+
+<strong>The Challenge:</strong> Impatience, ego inflation, and the temptation to run over others in the rush to become. Learning to be assertive without being aggressive, independent without being isolated.
+
+<strong>The Gift:</strong> By the time the Progressed Sun leaves Aries, this soul will have developed an unshakeable core of self that knows how to initiate, how to lead, and how to begin again whenever necessary.`,
+            evolution: ['Developing leadership', 'Learning self-assertion', 'Building authentic confidence', 'Pioneer identity']
         },
         Taurus: {
-            title: "Progressed Sun in Taurus",
+            title: "Progressed Sun in Taurus - The Grounded Builder",
             keywords: ['Stability', 'Building', 'Values', 'Patience'],
-            reading: "The Progressed Sun in Taurus brings focus to security, values, and steady building. This is a consolidating phase where foundations are being laid. Patience and persistence are key themes being developed.",
-            evolution: ['Developing patience', 'Building security', 'Clarifying values']
+            reading: `The Progressed Sun entering Taurus signals a major shift from initiation to consolidation. After the fire of Aries comes the earth of Taurus—the soul is learning to build, to sustain, to create something that lasts.
+
+<strong>The Grounding:</strong> Whatever was started in the Aries phase now needs roots. The soul is learning the value of patience, of steady progress, of building brick by brick rather than racing forward. This is a slower, more deliberate energy.
+
+<strong>The Energy:</strong> Sensory awareness heightens. Beauty matters more. Comfort becomes important. The soul is developing appreciation for the physical world—nature, art, food, touch. There's a settling into the body that may not have been present before.
+
+<strong>Current Development:</strong> Values are being clarified. What really matters becomes clear. The soul is developing the ability to assess worth—both material value and self-worth. Building financial security or establishing material foundations becomes important.
+
+<strong>The Challenge:</strong> Stubbornness, resistance to necessary change, and over-attachment to comfort. Learning to be stable without being stuck, patient without being stagnant.
+
+<strong>The Gift:</strong> By the time the Progressed Sun leaves Taurus, this soul will know its own worth, have developed patience, and understand how to build things that last.`,
+            evolution: ['Developing patience', 'Building lasting security', 'Clarifying core values', 'Grounding the self']
         },
         Gemini: {
-            title: "Progressed Sun in Gemini",
-            keywords: ['Learning', 'Communication', 'Curiosity', 'Connections'],
-            reading: "The Progressed Sun in Gemini activates mental development and communication skills. This is a learning phase where curiosity drives growth. Multiple interests and versatility are being developed.",
-            evolution: ['Developing communication', 'Expanding knowledge', 'Building connections']
+            title: "Progressed Sun in Gemini - The Curious Learner",
+            keywords: ['Learning', 'Communication', 'Curiosity', 'Mental Expansion'],
+            reading: `The Progressed Sun entering Gemini activates the mind and communication centers. After the grounding of Taurus comes the mental quickening of Gemini—the soul is learning to think, communicate, and connect.
+
+<strong>The Awakening Mind:</strong> Suddenly there's so much to learn, so many questions to ask, so many connections to make. The soul that may have been content with steady building now craves mental stimulation and variety.
+
+<strong>The Energy:</strong> Everything speeds up mentally. Curiosity becomes insatiable. There's a need to know, to communicate, to exchange ideas. Writing, speaking, learning—any form of information exchange becomes compelling.
+
+<strong>Current Development:</strong> Communication skills are being honed. The soul is learning how to express ideas, how to listen actively, how to make connections between disparate pieces of information. The mind becomes a tool of growth.
+
+<strong>The Challenge:</strong> Scattered attention, superficiality, and the tendency to know a little about everything but deeply about nothing. Learning to focus the brilliant mind and follow through on what is started.
+
+<strong>The Gift:</strong> By the time the Progressed Sun leaves Gemini, this soul will have developed powerful communication abilities, a versatile mind, and the capacity to make connections that others miss.`,
+            evolution: ['Developing communication mastery', 'Expanding knowledge base', 'Building diverse connections', 'Mental agility']
         },
         Cancer: {
-            title: "Progressed Sun in Cancer",
-            keywords: ['Nurturing', 'Emotions', 'Home', 'Security'],
-            reading: "The Progressed Sun in Cancer deepens emotional awareness and family connections. This is a nurturing phase focused on belonging and emotional security. Sensitivity and care for others is being developed.",
-            evolution: ['Deepening emotions', 'Creating home', 'Developing nurturing']
+            title: "Progressed Sun in Cancer - The Emotional Deepening",
+            keywords: ['Nurturing', 'Emotional Depth', 'Home', 'Family'],
+            reading: `The Progressed Sun entering Cancer signals a profound emotional awakening. After the mental expansion of Gemini comes the heart-opening of Cancer—the soul is learning to feel, to nurture, to create belonging.
+
+<strong>The Heart Opening:</strong> Emotions that may have been kept at bay or processed intellectually now demand to be felt. The soul is developing emotional depth, learning that feelings are not obstacles but essential information.
+
+<strong>The Energy:</strong> Home and family become central concerns. There's a need to create sanctuary, to nurture and be nurtured, to belong somewhere. The past becomes important—family history, roots, heritage.
+
+<strong>Current Development:</strong> Emotional intelligence is being developed. The soul is learning to attune to feelings—their own and others'. Nurturing abilities emerge, along with the capacity to create safe spaces.
+
+<strong>The Challenge:</strong> Over-sensitivity, moodiness, and the tendency to retreat into the shell when threatened. Learning to protect the heart without armoring it entirely.
+
+<strong>The Gift:</strong> By the time the Progressed Sun leaves Cancer, this soul will have developed profound emotional intelligence, the capacity to nurture, and the knowledge that home is ultimately an internal state.`,
+            evolution: ['Deepening emotional intelligence', 'Creating true home', 'Developing nurturing capacity', 'Healing family patterns']
         },
         Leo: {
-            title: "Progressed Sun in Leo",
-            keywords: ['Creativity', 'Self-Expression', 'Heart', 'Joy'],
-            reading: "The Progressed Sun in Leo activates creative self-expression and heart-centered living. This is a phase of shining, playing, and developing authentic confidence. Joy and creative expression are key themes.",
-            evolution: ['Expressing creativity', 'Building confidence', 'Following heart']
+            title: "Progressed Sun in Leo - The Creative Flowering",
+            keywords: ['Creativity', 'Self-Expression', 'Heart-Centered Living', 'Joy'],
+            reading: `The Progressed Sun entering Leo activates creative self-expression and heart-centered living. After the emotional deepening of Cancer comes the radiant self-expression of Leo—the soul is learning to shine.
+
+<strong>The Creative Awakening:</strong> Something creative wants to be born. The soul feels compelled to express, to create, to share its unique light. Hiding is no longer an option; visibility becomes necessary for growth.
+
+<strong>The Energy:</strong> Confidence builds. There's a warmth, a generosity, a natural magnetism that develops. Creative projects call. Romance may flourish. Joy becomes a legitimate pursuit rather than a luxury.
+
+<strong>Current Development:</strong> The soul is learning to express authentically without apology. Creative abilities are being developed and shared. The courage to be seen, to perform, to risk rejection for the sake of authentic expression.
+
+<strong>The Challenge:</strong> Ego inflation, need for constant attention, and the tendency to make everything about self. Learning to shine without requiring applause, to express without demanding validation.
+
+<strong>The Gift:</strong> By the time the Progressed Sun leaves Leo, this soul will have developed creative confidence, the courage to be fully visible, and the ability to inspire others through authentic self-expression.`,
+            evolution: ['Expressing authentic creativity', 'Building heart-centered confidence', 'Following joy', 'Inspiring others through being']
         },
         Virgo: {
-            title: "Progressed Sun in Virgo",
-            keywords: ['Service', 'Skills', 'Health', 'Improvement'],
-            reading: "The Progressed Sun in Virgo focuses on skill development and service. This is a phase of refinement, where attention to detail and health become important. Practical improvement is the theme.",
-            evolution: ['Developing skills', 'Improving health', 'Learning service']
+            title: "Progressed Sun in Virgo - The Sacred Craftsperson",
+            keywords: ['Service', 'Skill Development', 'Health', 'Practical Wisdom'],
+            reading: `The Progressed Sun entering Virgo focuses energy on skill development, service, and practical improvement. After the creative expansion of Leo comes the refinement of Virgo—the soul is learning to perfect its craft.
+
+<strong>The Refinement:</strong> What was created now needs polishing. The soul develops an eye for detail, a desire to improve, and a genuine interest in being useful. Service becomes meaningful rather than obligatory.
+
+<strong>The Energy:</strong> Health and daily routines become important. There's attention to what works and what doesn't, what helps and what hinders. The body becomes a priority as the vehicle for doing good work.
+
+<strong>Current Development:</strong> Skills are being honed to mastery. The soul is learning the sacredness of ordinary work done well. Service is understood not as servitude but as the highest expression of care.
+
+<strong>The Challenge:</strong> Perfectionism, self-criticism, and the tendency to notice what's wrong while missing what's right. Learning to improve without being paralyzed by imperfection.
+
+<strong>The Gift:</strong> By the time the Progressed Sun leaves Virgo, this soul will have developed genuine mastery in chosen areas, an understanding of sacred service, and the knowledge that the divine lives in the details.`,
+            evolution: ['Developing practical mastery', 'Refining health practices', 'Learning sacred service', 'Perfecting craft']
         },
         Libra: {
-            title: "Progressed Sun in Libra",
-            keywords: ['Partnership', 'Balance', 'Harmony', 'Relationships'],
-            reading: "The Progressed Sun in Libra emphasizes relationships and finding balance. This is a phase of learning through partnership and developing social awareness. Harmony and fairness are key themes.",
-            evolution: ['Learning partnership', 'Developing diplomacy', 'Finding balance']
+            title: "Progressed Sun in Libra - The Relationship Artist",
+            keywords: ['Partnership', 'Balance', 'Harmony', 'Social Grace'],
+            reading: `The Progressed Sun entering Libra shifts focus to relationships and the art of balance. After the service-oriented Virgo phase comes the partnership-focused Libra—the soul is learning to relate, to harmonize, to find beauty in connection.
+
+<strong>The Partnership Focus:</strong> Others become mirrors for self-understanding. The soul is drawn to significant partnerships and is learning that some growth can only happen through relationship.
+
+<strong>The Energy:</strong> Social awareness heightens. There's a new appreciation for beauty, harmony, and balance. Conflict becomes uncomfortable as the soul seeks ways to create peace and fairness.
+
+<strong>Current Development:</strong> Relationship skills are being developed. The soul is learning diplomacy, compromise, and the art of seeing both sides. The ability to create harmony without losing self.
+
+<strong>The Challenge:</strong> People-pleasing, indecision, and losing self in partnerships. Learning to relate deeply while maintaining identity, to seek harmony without abandoning truth.
+
+<strong>The Gift:</strong> By the time the Progressed Sun leaves Libra, this soul will have developed refined relationship skills, an aesthetic sense, and the ability to create beauty and harmony wherever it goes.`,
+            evolution: ['Mastering partnership dynamics', 'Developing diplomatic wisdom', 'Creating aesthetic beauty', 'Balancing self and other']
         },
         Scorpio: {
-            title: "Progressed Sun in Scorpio",
-            keywords: ['Transformation', 'Depth', 'Intensity', 'Power'],
-            reading: "The Progressed Sun in Scorpio brings deep transformation and intensity. This is a phase of facing shadows, developing power, and learning emotional depth. Regeneration through crisis is possible.",
-            evolution: ['Developing depth', 'Transforming patterns', 'Building inner power']
+            title: "Progressed Sun in Scorpio - The Deep Transformer",
+            keywords: ['Transformation', 'Psychological Depth', 'Intensity', 'Regeneration'],
+            reading: `The Progressed Sun entering Scorpio initiates a period of profound transformation. After the social refinement of Libra comes the depth-seeking intensity of Scorpio—the soul is learning to face darkness and emerge transformed.
+
+<strong>The Descent:</strong> Something needs to die for something new to be born. The soul is called into the underworld of the psyche—confronting shadows, releasing what no longer serves, and finding power in the depths.
+
+<strong>The Energy:</strong> Everything becomes more intense. Superficiality is intolerable. There's a need to understand the hidden workings, the psychological depths, the transformative power of facing what has been denied.
+
+<strong>Current Development:</strong> The soul is developing psychological depth and the courage to face shadow material. Power is being reclaimed from where it was lost. Intimacy becomes the arena of growth.
+
+<strong>The Challenge:</strong> Obsession, manipulation, and getting lost in darkness. Learning to transform without destroying, to go deep without drowning, to claim power without misusing it.
+
+<strong>The Gift:</strong> By the time the Progressed Sun leaves Scorpio, this soul will have undergone genuine transformation, developed psychological power, and learned that facing darkness is the path to light.`,
+            evolution: ['Developing transformative power', 'Mastering psychological depths', 'Building regenerative strength', 'Facing and integrating shadow']
         },
         Sagittarius: {
-            title: "Progressed Sun in Sagittarius",
-            keywords: ['Expansion', 'Faith', 'Adventure', 'Meaning'],
-            reading: "The Progressed Sun in Sagittarius expands horizons and develops faith. This is an adventurous phase focused on meaning, learning, and optimism. Philosophy and big-picture thinking are developing.",
-            evolution: ['Expanding vision', 'Developing faith', 'Seeking meaning']
+            title: "Progressed Sun in Sagittarius - The Truth Seeker",
+            keywords: ['Expansion', 'Faith', 'Adventure', 'Meaning-Making'],
+            reading: `The Progressed Sun entering Sagittarius expands horizons and develops faith. After the intense depth of Scorpio comes the soaring expansion of Sagittarius—the soul is learning to reach for meaning, adventure, and truth.
+
+<strong>The Expansion:</strong> After going deep, now the soul needs to go wide. There's a hunger for meaning, for adventure, for understanding how all the pieces fit together. Horizons expand in every direction.
+
+<strong>The Energy:</strong> Optimism returns or develops. There's faith that things work out, that life has meaning, that the journey is worth taking. Travel, learning, and philosophical exploration all call.
+
+<strong>Current Development:</strong> The soul is developing a personal philosophy, a sense of meaning that guides decisions. Faith is being tested and strengthened. The teacher within is awakening.
+
+<strong>The Challenge:</strong> Over-extension, preachiness, and the tendency to see the horizon while missing what's right here. Learning to expand without escaping, to seek meaning without forcing answers.
+
+<strong>The Gift:</strong> By the time the Progressed Sun leaves Sagittarius, this soul will have developed genuine wisdom, a personal philosophy, and the ability to inspire others toward their own truths.`,
+            evolution: ['Expanding worldview', 'Developing personal philosophy', 'Building faith', 'Becoming a truth-seeker']
         },
         Capricorn: {
-            title: "Progressed Sun in Capricorn",
-            keywords: ['Achievement', 'Discipline', 'Responsibility', 'Mastery'],
-            reading: "The Progressed Sun in Capricorn focuses on achievement and responsibility. This is a phase of building toward goals, developing discipline, and earning authority. Long-term success is being built.",
-            evolution: ['Building achievement', 'Developing discipline', 'Earning respect']
+            title: "Progressed Sun in Capricorn - The Master Achiever",
+            keywords: ['Achievement', 'Discipline', 'Responsibility', 'Legacy Building'],
+            reading: `The Progressed Sun entering Capricorn focuses energy on achievement and legacy building. After the expansive seeking of Sagittarius comes the disciplined building of Capricorn—the soul is learning to manifest real-world results.
+
+<strong>The Achievement Call:</strong> It's time to build something that lasts. The soul feels called to take responsibility, to work toward long-term goals, to create something that will stand the test of time.
+
+<strong>The Energy:</strong> Patience and persistence develop. There's willingness to delay gratification for larger goals. Authority becomes important—earning it, accepting it, using it wisely.
+
+<strong>Current Development:</strong> The soul is developing the ability to plan and execute long-term projects. Discipline becomes a ally rather than a constraint. The satisfaction of real achievement becomes the reward.
+
+<strong>The Challenge:</strong> Workaholism, coldness, and the tendency to sacrifice personal life for achievement. Learning to build without becoming the work, to achieve without losing heart.
+
+<strong>The Gift:</strong> By the time the Progressed Sun leaves Capricorn, this soul will have developed genuine mastery, earned authority, and built something that contributes beyond individual life.`,
+            evolution: ['Building lasting achievement', 'Developing strategic discipline', 'Earning authentic authority', 'Creating meaningful legacy']
         },
         Aquarius: {
-            title: "Progressed Sun in Aquarius",
-            keywords: ['Innovation', 'Freedom', 'Community', 'Uniqueness'],
-            reading: "The Progressed Sun in Aquarius activates uniqueness and humanitarian focus. This is a phase of innovation, breaking free from limitations, and serving the collective. Independence and originality are key.",
-            evolution: ['Embracing uniqueness', 'Serving community', 'Innovating']
+            title: "Progressed Sun in Aquarius - The Visionary Revolutionary",
+            keywords: ['Innovation', 'Freedom', 'Community', 'Authentic Uniqueness'],
+            reading: `The Progressed Sun entering Aquarius activates uniqueness and humanitarian vision. After the structured building of Capricorn comes the revolutionary freedom of Aquarius—the soul is learning to innovate and serve the collective.
+
+<strong>The Liberation:</strong> Something breaks free. Rules that once seemed necessary now feel confining. The soul is discovering its own unique rhythm, its own original contribution, its own unconventional path.
+
+<strong>The Energy:</strong> Innovation becomes natural. There's attraction to the new, the different, the progressive. Community and friendship matter, but not at the cost of individuality.
+
+<strong>Current Development:</strong> The soul is developing the courage to be genuinely unique, not just different for its own sake. Vision for the future emerges. Service to the collective becomes meaningful.
+
+<strong>The Challenge:</strong> Disconnection, rebellion for its own sake, and the tendency to value uniqueness over connection. Learning to be individual while remaining human, to innovate while staying grounded.
+
+<strong>The Gift:</strong> By the time the Progressed Sun leaves Aquarius, this soul will have embraced its authentic uniqueness, developed vision for collective benefit, and learned to be both individual and belonging.`,
+            evolution: ['Embracing authentic uniqueness', 'Developing humanitarian vision', 'Innovating meaningfully', 'Serving collective evolution']
         },
         Pisces: {
-            title: "Progressed Sun in Pisces",
-            keywords: ['Spirituality', 'Compassion', 'Intuition', 'Surrender'],
-            reading: "The Progressed Sun in Pisces deepens spirituality and compassion. This is a phase of surrender, intuitive development, and connection to the transcendent. Empathy and imagination flourish.",
-            evolution: ['Developing intuition', 'Deepening compassion', 'Spiritual growth']
+            title: "Progressed Sun in Pisces - The Spiritual Completion",
+            keywords: ['Spirituality', 'Compassion', 'Intuition', 'Transcendent Unity'],
+            reading: `The Progressed Sun entering Pisces deepens spirituality and compassion. After the individuating freedom of Aquarius comes the dissolving boundaries of Pisces—the soul is learning to merge, to surrender, to return to source.
+
+<strong>The Dissolution:</strong> Boundaries that once seemed essential begin to dissolve. The soul is learning that separation is illusion, that compassion is natural, that surrender can be strength.
+
+<strong>The Energy:</strong> Intuition heightens. Dreams become meaningful. There's sensitivity to the unseen, the subtle, the spiritual. Art, music, and mystical experience all call.
+
+<strong>Current Development:</strong> The soul is developing spiritual awareness and the capacity for unconditional compassion. Ego boundaries soften. Connection to something larger than self becomes real.
+
+<strong>The Challenge:</strong> Escapism, victimhood, and the tendency to dissolve too completely. Learning to transcend without escaping, to surrender without losing, to be spiritual while remaining embodied.
+
+<strong>The Gift:</strong> By the time the Progressed Sun leaves Pisces, this soul will have developed genuine spiritual wisdom, the capacity for boundless compassion, and the knowing that separation was always illusion.`,
+            evolution: ['Developing spiritual depth', 'Cultivating boundless compassion', 'Surrendering to flow', 'Merging with the infinite']
         }
     },
     
     moon: {
         Aries: {
-            title: "Progressed Moon in Aries",
-            keywords: ['Emotional Independence', 'New Feelings', 'Courage'],
-            reading: "The Progressed Moon in Aries brings emotional new beginnings. Feelings are direct and action-oriented. There's a need for emotional independence and courage in expressing feelings.",
-            currentNeeds: ['Emotional freedom', 'New experiences', 'Direct expression']
+            title: "Progressed Moon in Aries - Emotional Ignition",
+            keywords: ['Emotional Independence', 'New Feelings', 'Courage', 'Fresh Start'],
+            reading: `The Progressed Moon in Aries marks an emotional new beginning. For approximately 2.5 years, the emotional body is being renewed, energized, and called to independence.
+
+<strong>The Emotional Climate:</strong> Feelings are direct, immediate, and action-oriented. There's no patience for processing endlessly—emotions want to be expressed and moved. This is a time of emotional courage.
+
+<strong>Current Needs:</strong> Freedom to feel what is felt without censorship. Space to be emotionally independent. Permission to start fresh emotionally. Action that expresses feelings rather than suppresses them.
+
+<strong>The Growth:</strong> Learning to honor immediate emotional responses. Developing the courage to feel fully without analyzing. Trusting emotional instincts.`,
+            currentNeeds: ['Emotional freedom', 'New emotional experiences', 'Direct expression', 'Independence']
         },
         Taurus: {
-            title: "Progressed Moon in Taurus",
-            keywords: ['Emotional Security', 'Comfort', 'Stability'],
-            reading: "The Progressed Moon in Taurus stabilizes emotions and seeks comfort. This phase brings need for emotional security, routine, and sensory satisfaction. Patience with feelings develops.",
-            currentNeeds: ['Comfort', 'Security', 'Slow processing']
+            title: "Progressed Moon in Taurus - Emotional Grounding",
+            keywords: ['Emotional Security', 'Comfort', 'Stability', 'Sensory Satisfaction'],
+            reading: `The Progressed Moon in Taurus brings emotional stabilization and the need for comfort. For approximately 2.5 years, the emotional body is seeking security, pleasure, and sensory satisfaction.
+
+<strong>The Emotional Climate:</strong> Feelings slow down and deepen. There's need for consistency, reliability, and the comfort of routine. Emotions are processed through the body—through touch, taste, beauty.
+
+<strong>Current Needs:</strong> Physical comfort and sensory pleasure. Financial and material security. Consistency in emotional environment. Time to process feelings slowly.
+
+<strong>The Growth:</strong> Learning that emotional security comes from within. Developing appreciation for simple pleasures. Building emotional resilience through stability.`,
+            currentNeeds: ['Physical comfort', 'Material security', 'Slow processing time', 'Sensory satisfaction']
         },
         Gemini: {
-            title: "Progressed Moon in Gemini",
-            keywords: ['Emotional Curiosity', 'Communication', 'Variety'],
-            reading: "The Progressed Moon in Gemini stimulates emotional curiosity and need for communication. Feelings are processed through talking and thinking. Variety in emotional experiences is sought.",
-            currentNeeds: ['Communication', 'Mental stimulation', 'Variety']
+            title: "Progressed Moon in Gemini - Emotional Curiosity",
+            keywords: ['Emotional Variety', 'Communication', 'Mental Processing', 'Social Connection'],
+            reading: `The Progressed Moon in Gemini stimulates emotional curiosity and the need for communication. For approximately 2.5 years, feelings are processed through talking, thinking, and connecting.
+
+<strong>The Emotional Climate:</strong> Emotions become more mental. There's need to understand feelings, to talk about them, to gather information about them. Variety in emotional experiences is sought rather than depth.
+
+<strong>Current Needs:</strong> Verbal processing of emotions. Mental stimulation alongside emotional engagement. Variety and change. Social connection.
+
+<strong>The Growth:</strong> Learning to communicate feelings effectively. Developing emotional flexibility. Understanding that thinking about feelings is one valid way to process them.`,
+            currentNeeds: ['Communication', 'Mental stimulation', 'Emotional variety', 'Social processing']
         },
         Cancer: {
-            title: "Progressed Moon in Cancer",
+            title: "Progressed Moon in Cancer - Emotional Deepening",
+            keywords: ['Emotional Depth', 'Home', 'Nurturing', 'Family'],
+            reading: `The Progressed Moon in Cancer brings emotional deepening and heightened sensitivity. For approximately 2.5 years, the soul is called home to the heart, to family, to the depths of feeling.
+
+<strong>The Emotional Climate:</strong> Sensitivity increases dramatically. Feelings are felt more deeply, more personally. There's need for safety, for nurturing, for emotional connection that goes beyond surface.
+
+<strong>Current Needs:</strong> Emotional safety and nurturing. Family connection or creating family. Time to process feelings fully. Permission to be sensitive.
+
+<strong>The Growth:</strong> Learning to honor sensitivity as a gift. Developing capacity to nurture self and others. Understanding emotional needs as legitimate.`,
+            currentNeeds: ['Emotional safety', 'Nurturing connection', 'Home sanctuary', 'Deep feeling']
+        },
             keywords: ['Deep Emotions', 'Nurturing', 'Home'],
             reading: "The Progressed Moon in Cancer deepens emotional sensitivity and need for nurturing. This phase emphasizes home, family, and emotional security. Feelings are intense and protective.",
             currentNeeds: ['Emotional closeness', 'Family connection', 'Security']
         },
         Leo: {
-            title: "Progressed Moon in Leo",
-            keywords: ['Emotional Expression', 'Joy', 'Recognition'],
-            reading: "The Progressed Moon in Leo brightens emotional expression and need for recognition. Feelings are warm, dramatic, and heart-centered. There's need for appreciation and creative emotional outlets.",
-            currentNeeds: ['Recognition', 'Creative expression', 'Warmth']
+            title: "Progressed Moon in Leo - Emotional Radiance",
+            keywords: ['Emotional Expression', 'Joy', 'Recognition', 'Heart Opening'],
+            reading: `The Progressed Moon in Leo brightens the emotional landscape and calls for creative expression of feelings. For approximately 2.5 years, the heart opens and demands to be seen.
+
+<strong>The Emotional Climate:</strong> Feelings become warmer, more dramatic, more expressive. There's no desire to hide emotions—they want to be performed, celebrated, shared. The heart leads.
+
+<strong>Current Needs:</strong> Recognition and appreciation. Creative outlets for emotions. Play, romance, and joy. Permission to be the center of attention emotionally.
+
+<strong>The Growth:</strong> Learning that emotional expression is a gift, not a weakness. Developing the courage to show the heart fully. Understanding that joy is a legitimate emotional need.`,
+            currentNeeds: ['Recognition', 'Creative expression', 'Warmth', 'Appreciation']
         },
         Virgo: {
-            title: "Progressed Moon in Virgo",
-            keywords: ['Emotional Service', 'Analysis', 'Improvement'],
-            reading: "The Progressed Moon in Virgo brings emotional focus on service and improvement. Feelings are processed analytically. There's need for usefulness and helping others.",
-            currentNeeds: ['Being helpful', 'Order', 'Practical care']
+            title: "Progressed Moon in Virgo - Emotional Refinement",
+            keywords: ['Emotional Service', 'Analysis', 'Improvement', 'Practical Care'],
+            reading: `The Progressed Moon in Virgo brings emotional focus on service, improvement, and practical expression of care. For approximately 2.5 years, feelings are processed through action and analysis.
+
+<strong>The Emotional Climate:</strong> Feelings become more analytical, more concerned with practical expression. There's need to improve, to be useful, to show love through doing. Emotions seek practical outlets.
+
+<strong>Current Needs:</strong> Being helpful and useful. Order and organization in emotional environment. Practical ways to show care. Health and routine.
+
+<strong>The Growth:</strong> Learning that service is love in action. Developing the ability to improve without criticizing. Understanding that small acts of care are emotionally significant.`,
+            currentNeeds: ['Being helpful', 'Order', 'Practical care', 'Health focus']
         },
         Libra: {
-            title: "Progressed Moon in Libra",
-            keywords: ['Emotional Balance', 'Partnership', 'Harmony'],
-            reading: "The Progressed Moon in Libra seeks emotional balance and partnership. Feelings are processed through relationships. There's strong need for harmony and fair treatment.",
-            currentNeeds: ['Partnership', 'Harmony', 'Beauty']
+            title: "Progressed Moon in Libra - Emotional Harmony",
+            keywords: ['Emotional Balance', 'Partnership', 'Harmony', 'Beauty'],
+            reading: `The Progressed Moon in Libra seeks emotional balance and partnership harmony. For approximately 2.5 years, relationships become the primary arena for emotional processing.
+
+<strong>The Emotional Climate:</strong> Feelings want to be shared, balanced, harmonized. Conflict becomes emotionally unbearable. There's strong need for fairness and beauty in all emotional exchanges.
+
+<strong>Current Needs:</strong> Partnership and significant relationship. Harmony in environment. Beauty and aesthetics. Fair treatment in emotional matters.
+
+<strong>The Growth:</strong> Learning to balance own needs with others'. Developing diplomatic emotional expression. Understanding that beauty in environment affects emotional wellbeing.`,
+            currentNeeds: ['Partnership', 'Harmony', 'Beauty', 'Fairness']
         },
         Scorpio: {
-            title: "Progressed Moon in Scorpio",
-            keywords: ['Emotional Intensity', 'Depth', 'Transformation'],
-            reading: "The Progressed Moon in Scorpio intensifies emotional experience. Feelings run deep and transformative. There's need for emotional truth and processing of powerful feelings.",
-            currentNeeds: ['Emotional depth', 'Truth', 'Transformation']
+            title: "Progressed Moon in Scorpio - Emotional Depth",
+            keywords: ['Emotional Intensity', 'Depth', 'Transformation', 'Truth'],
+            reading: `The Progressed Moon in Scorpio intensifies the entire emotional experience. For approximately 2.5 years, feelings run deeper than ever, demanding truth, transformation, and authentic connection.
+
+<strong>The Emotional Climate:</strong> Surface emotions are intolerable. There's need to go deep, to understand the psychology behind feelings, to transform patterns that no longer serve. Intensity is the default.
+
+<strong>Current Needs:</strong> Emotional truth and authenticity. Deep intimate connection. Space to transform old patterns. Permission to feel intensely.
+
+<strong>The Growth:</strong> Learning that emotional depth is strength. Developing the capacity to transform pain into power. Understanding that facing emotional truth is the path to freedom.`,
+            currentNeeds: ['Emotional depth', 'Truth', 'Transformation', 'Intimacy']
         },
         Sagittarius: {
-            title: "Progressed Moon in Sagittarius",
-            keywords: ['Emotional Freedom', 'Adventure', 'Faith'],
-            reading: "The Progressed Moon in Sagittarius lightens emotions and seeks adventure. Feelings are optimistic and freedom-loving. There's need for meaning and emotional expansion.",
-            currentNeeds: ['Freedom', 'Adventure', 'Optimism']
+            title: "Progressed Moon in Sagittarius - Emotional Expansion",
+            keywords: ['Emotional Freedom', 'Adventure', 'Faith', 'Optimism'],
+            reading: `The Progressed Moon in Sagittarius lightens and expands the emotional landscape. For approximately 2.5 years, feelings seek adventure, meaning, and freedom.
+
+<strong>The Emotional Climate:</strong> Emotions become more optimistic, more adventurous, more philosophical. Heavy feelings are processed through meaning-making. There's need for emotional freedom and expansion.
+
+<strong>Current Needs:</strong> Freedom and space for feelings. Adventure and new experiences. Meaning and philosophical context for emotions. Optimism and hope.
+
+<strong>The Growth:</strong> Learning that emotions can be teachers of truth. Developing faith that feelings will work out. Understanding that emotional expansion requires risk.`,
+            currentNeeds: ['Freedom', 'Adventure', 'Optimism', 'Meaning']
         },
         Capricorn: {
-            title: "Progressed Moon in Capricorn",
-            keywords: ['Emotional Maturity', 'Responsibility', 'Achievement'],
-            reading: "The Progressed Moon in Capricorn brings emotional maturity and self-reliance. Feelings are contained and goal-oriented. There's need for emotional achievement and respect.",
-            currentNeeds: ['Achievement', 'Structure', 'Respect']
+            title: "Progressed Moon in Capricorn - Emotional Maturity",
+            keywords: ['Emotional Maturity', 'Responsibility', 'Achievement', 'Structure'],
+            reading: `The Progressed Moon in Capricorn brings emotional maturity and self-reliance. For approximately 2.5 years, feelings become more contained, more goal-oriented, more serious.
+
+<strong>The Emotional Climate:</strong> Emotions are managed rather than freely expressed. There's need for emotional achievement, for mastering feelings, for responsible emotional behavior. The inner parent strengthens.
+
+<strong>Current Needs:</strong> Achievement and accomplishment. Structure and predictability. Respect from self and others. Emotional self-reliance.
+
+<strong>The Growth:</strong> Learning that emotional maturity is powerful. Developing the capacity to contain feelings appropriately. Understanding that emotional responsibility builds trust.`,
+            currentNeeds: ['Achievement', 'Structure', 'Respect', 'Responsibility']
         },
         Aquarius: {
-            title: "Progressed Moon in Aquarius",
-            keywords: ['Emotional Independence', 'Uniqueness', 'Community'],
-            reading: "The Progressed Moon in Aquarius detaches and objectifies emotions. Feelings need intellectual processing. There's need for emotional freedom and community connection.",
-            currentNeeds: ['Space', 'Uniqueness', 'Friendship']
+            title: "Progressed Moon in Aquarius - Emotional Liberation",
+            keywords: ['Emotional Independence', 'Uniqueness', 'Community', 'Objectivity'],
+            reading: `The Progressed Moon in Aquarius brings emotional objectivity and the need for space. For approximately 2.5 years, feelings are processed through intellect and community rather than intimacy.
+
+<strong>The Emotional Climate:</strong> Emotions become more detached, more objective. There's need to understand feelings intellectually, to have space for processing, to connect emotionally through friendship rather than intensity.
+
+<strong>Current Needs:</strong> Emotional space and independence. Intellectual processing of feelings. Community and friendship. Permission to be emotionally unique.
+
+<strong>The Growth:</strong> Learning that emotional detachment can be healthy. Developing capacity to feel while remaining objective. Understanding that friendship is an emotionally valid need.`,
+            currentNeeds: ['Space', 'Uniqueness', 'Friendship', 'Intellectual processing']
         },
         Pisces: {
-            title: "Progressed Moon in Pisces",
-            keywords: ['Emotional Sensitivity', 'Intuition', 'Compassion'],
-            reading: "The Progressed Moon in Pisces heightens emotional sensitivity and intuition. Feelings are boundless and compassionate. There's need for spiritual connection and emotional transcendence.",
-            currentNeeds: ['Spiritual connection', 'Compassion', 'Dream time']
+            title: "Progressed Moon in Pisces - Emotional Transcendence",
+            keywords: ['Emotional Sensitivity', 'Intuition', 'Compassion', 'Spirituality'],
+            reading: `The Progressed Moon in Pisces heightens emotional sensitivity to its peak. For approximately 2.5 years, feelings become boundless, intuitive, and spiritually connected.
+
+<strong>The Emotional Climate:</strong> Boundaries between self and other dissolve emotionally. There's profound sensitivity to everything—others' feelings, environmental energies, spiritual impressions. Compassion expands infinitely.
+
+<strong>Current Needs:</strong> Spiritual connection and meaning. Artistic and imaginative outlets. Compassion expressed and received. Time for dreams and retreat.
+
+<strong>The Growth:</strong> Learning that emotional boundlessness is a gift. Developing capacity to feel universally while remaining grounded. Understanding that sensitivity serves healing.`,
+            currentNeeds: ['Spiritual connection', 'Compassion', 'Dream time', 'Artistic expression']
         }
     }
 };

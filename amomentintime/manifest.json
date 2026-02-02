@@ -1,12 +1,14 @@
 {
-  "name": "A Moment in Time",
-  "short_name": "Moment in Time",
-  "description": "Your complete cosmic reading with 65+ personalized insights. At the exact moment you were born, the universe created a pattern.",
+  "name": "A Moment in Time - Cosmic Reading",
+  "short_name": "A Moment in Time",
+  "description": "Get 65+ personalized astrology and numerology insights based on your birth moment. Free cosmic reading with sun sign, moon sign, rising sign, and life path number.",
   "start_url": "/amomentintime/",
+  "id": "/amomentintime/",
   "display": "standalone",
   "background_color": "#0a1628",
   "theme_color": "#c9a6ff",
   "orientation": "portrait-primary",
+  "lang": "en",
   "icons": [
     {
       "src": "Amomentintime.jpg?v=1",

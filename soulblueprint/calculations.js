@@ -150,9 +150,32 @@ function calculateMaturityNumber(lifePath, destiny) {
     return reduceToSingleDigit(lifePath + destiny, true);
 }
 
-function calculatePersonalYear(birthDate, currentYear = new Date().getFullYear()) {
+function calculatePersonalYear(birthDate, referenceDate = new Date()) {
     const { day, month } = parseBirthDate(birthDate);
-    const sum = reduceToSingleDigit(day) + reduceToSingleDigit(month) + reduceToSingleDigit(currentYear);
+    
+    // Personal Year runs from birthday to birthday, not calendar year
+    // If the birthday hasn't occurred yet this year, use last year's cycle
+    let currentYear, currentMonth, currentDay;
+    
+    if (typeof referenceDate === 'number') {
+        // Legacy support: if a year number is passed, use current date logic
+        currentYear = referenceDate;
+        currentMonth = new Date().getMonth() + 1;
+        currentDay = new Date().getDate();
+    } else {
+        currentYear = referenceDate.getFullYear();
+        currentMonth = referenceDate.getMonth() + 1;
+        currentDay = referenceDate.getDate();
+    }
+    
+    // Determine which Personal Year cycle we're in
+    let cycleYear = currentYear;
+    if (currentMonth < month || (currentMonth === month && currentDay < day)) {
+        // Birthday hasn't happened yet this year, still in previous cycle
+        cycleYear = currentYear - 1;
+    }
+    
+    const sum = reduceToSingleDigit(day) + reduceToSingleDigit(month) + reduceToSingleDigit(cycleYear);
     return reduceToSingleDigit(sum, true);
 }
 

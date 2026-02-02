@@ -1238,6 +1238,181 @@ var DEEP_PERSONAL_YEAR_READINGS = {
 };
 
 // ============================================
+// DEEP MATURITY NUMBER READINGS
+// ============================================
+
+var DEEP_MATURITY_READINGS = {
+    1: {
+        title: "The Elder Pioneer",
+        essence: "Leadership and Independence in Later Life",
+        reading: `Maturity Number 1 reveals that as life progresses, this soul will increasingly embody the pioneer archetype. The second half of life calls for greater independence, original thinking, and the courage to lead rather than follow.
+
+<strong>The Emerging Pattern:</strong> Whether or not they were natural leaders in youth, later years will demand they step into greater self-reliance and initiative. The universe is grooming them for a role that requires standing alone—not in loneliness, but in the strength of authentic individuality.
+
+<strong>Later Life Themes:</strong> Expect increasing desire for independence and self-direction. There may be projects, businesses, or creative endeavors that are purely their own. Leadership roles may emerge, or they may simply become someone others look to for direction. The urge to start something new—even in later years—will be strong.
+
+<strong>The Integration:</strong> This Maturity Number asks them to synthesize everything they've learned into original wisdom that is uniquely theirs. They're not meant to repeat what others have done; they're meant to forge new paths even as the world expects them to settle down.
+
+<strong>The Gift:</strong> The later years can bring remarkable creative vitality, the courage to be authentically themselves without apology, and the satisfaction of seeing their pioneering efforts bear fruit.`,
+        keywords: ["Independence", "Leadership", "Self-Direction", "Original Path"]
+    },
+    2: {
+        title: "The Elder Diplomat",
+        essence: "Partnership and Harmony in Later Life",
+        reading: `Maturity Number 2 reveals that as life progresses, this soul will increasingly embody the peacemaker archetype. The second half of life calls for deeper partnership, refined diplomacy, and the subtle power of cooperation.
+
+<strong>The Emerging Pattern:</strong> Later years will emphasize relationships over solo achievement. The soul is being prepared for a role that involves partnership, mediation, or the delicate art of bringing people together. Personal success becomes less important than harmony.
+
+<strong>Later Life Themes:</strong> Expect relationships to take center stage—deepening partnerships, new connections, or roles that involve supporting others. There may be involvement in community, counseling, or any work requiring sensitivity to others' needs. The ability to listen and hold space for others becomes a superpower.
+
+<strong>The Integration:</strong> This Maturity Number asks them to synthesize their life experiences into relationship wisdom. They're meant to become masters of the gentle arts—patience, tact, cooperation, and the ability to create peace without forcing it.
+
+<strong>The Gift:</strong> The later years can bring profoundly satisfying partnerships, the peace that comes from genuine harmony, and the joy of seeing connections they've nurtured flourish.`,
+        keywords: ["Partnership", "Diplomacy", "Harmony", "Patience"]
+    },
+    3: {
+        title: "The Elder Artist",
+        essence: "Creative Expression in Later Life",
+        reading: `Maturity Number 3 reveals that as life progresses, this soul will increasingly embody the creative archetype. The second half of life calls for joyful self-expression, artistic endeavors, and the wisdom that comes through play.
+
+<strong>The Emerging Pattern:</strong> Later years will demand creative expression—not as hobby but as necessity. The universe is preparing them for a role that involves communicating, inspiring, or bringing joy through whatever medium calls. Suppressed creativity will insist on emerging.
+
+<strong>Later Life Themes:</strong> Expect increasing desire to create, express, and communicate. There may be writing, art, teaching, or any form of sharing their unique perspective. Social connection becomes vital—not superficial networking but genuine, joyful engagement. The inner child wants to play.
+
+<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into creative wisdom that inspires others. They're meant to become living examples that joy is not frivolous but essential.
+
+<strong>The Gift:</strong> The later years can bring remarkable creative flowering, renewed playfulness, and the satisfaction of touching others through authentic self-expression.`,
+        keywords: ["Creativity", "Expression", "Joy", "Communication"]
+    },
+    4: {
+        title: "The Elder Builder",
+        essence: "Foundation and Legacy in Later Life",
+        reading: `Maturity Number 4 reveals that as life progresses, this soul will increasingly embody the builder archetype. The second half of life calls for creating lasting structures—whether physical, organizational, or conceptual.
+
+<strong>The Emerging Pattern:</strong> Later years will emphasize building something that lasts beyond the current moment. The soul is being prepared for a role that involves creating stability for others, establishing systems, or leaving practical legacy. Random creativity matters less than purposeful construction.
+
+<strong>Later Life Themes:</strong> Expect increasing focus on what endures. There may be property, business structures, organizations, or any framework that will outlast individual effort. Practicality becomes a virtue, not a limitation. The satisfaction comes from knowing the work matters.
+
+<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into practical wisdom that creates lasting value. They're meant to become someone whose contributions stand the test of time.
+
+<strong>The Gift:</strong> The later years can bring the deep satisfaction of seeing lasting results, the respect that comes from reliability, and the security of knowing their efforts built something real.`,
+        keywords: ["Building", "Structure", "Stability", "Legacy"]
+    },
+    5: {
+        title: "The Elder Adventurer",
+        essence: "Freedom and Experience in Later Life",
+        reading: `Maturity Number 5 reveals that as life progresses, this soul will increasingly embody the adventurer archetype. The second half of life calls for more freedom, not less—for embracing change and refusing to become rigid.
+
+<strong>The Emerging Pattern:</strong> Later years will demand variety, adventure, and the courage to keep evolving. The soul is being prepared for a role that involves teaching others about adaptability, demonstrating that growth doesn't stop, and modeling vibrant engagement with life at any age.
+
+<strong>Later Life Themes:</strong> Expect increasing restlessness with routine and growing desire for new experiences. There may be travel, new learning, changed circumstances, or simply a refusal to settle into expected patterns. The spirit stays young through continuous movement.
+
+<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into the wisdom of flexibility. They're meant to become living proof that change is not the enemy but the essence of life.
+
+<strong>The Gift:</strong> The later years can bring remarkable vitality through change, the freedom of releasing what no longer serves, and the excitement of discovering that life's adventures never truly end.`,
+        keywords: ["Freedom", "Adventure", "Change", "Vitality"]
+    },
+    6: {
+        title: "The Elder Nurturer",
+        essence: "Love and Service in Later Life",
+        reading: `Maturity Number 6 reveals that as life progresses, this soul will increasingly embody the nurturer archetype. The second half of life calls for deepening love, family connection, and service to those who need care.
+
+<strong>The Emerging Pattern:</strong> Later years will emphasize love and responsibility—not as burden but as purpose. The soul is being prepared for a role that involves nurturing family, community, or those in need. The heart expands to hold more, not less.
+
+<strong>Later Life Themes:</strong> Expect family to take center stage—grandchildren, extended family, chosen family. There may be caregiving roles, community involvement, or any work that allows the expression of nurturing love. Home becomes increasingly important as sanctuary.
+
+<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into the wisdom of unconditional love. They're meant to become a living heart—someone whose presence is healing, whose home is haven.
+
+<strong>The Gift:</strong> The later years can bring the profound satisfaction of deep family bonds, the love that comes from nurturing others, and the peace of knowing they've made a difference through care.`,
+        keywords: ["Love", "Nurturing", "Family", "Service"]
+    },
+    7: {
+        title: "The Elder Sage",
+        essence: "Wisdom and Contemplation in Later Life",
+        reading: `Maturity Number 7 reveals that as life progresses, this soul will increasingly embody the sage archetype. The second half of life calls for depth over breadth, wisdom over knowledge, and the peace that comes from inner knowing.
+
+<strong>The Emerging Pattern:</strong> Later years will demand more solitude and contemplation—not isolation, but meaningful retreat. The soul is being prepared for a role that involves sharing hard-won wisdom, going deep rather than wide, and finding truth through reflection.
+
+<strong>Later Life Themes:</strong> Expect increasing desire for quiet time, spiritual practice, and meaningful inquiry. There may be writing, teaching, or simply becoming someone others seek for wisdom. The superficial becomes intolerable; only the real satisfies.
+
+<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into spiritual wisdom. They're meant to become someone whose insight comes from depth, whose presence conveys peace, whose understanding reaches beyond the obvious.
+
+<strong>The Gift:</strong> The later years can bring profound spiritual deepening, the respect that comes from genuine wisdom, and the peace of knowing the answers that matter have been found.`,
+        keywords: ["Wisdom", "Contemplation", "Spirituality", "Insight"]
+    },
+    8: {
+        title: "The Elder Manifestor",
+        essence: "Power and Abundance in Later Life",
+        reading: `Maturity Number 8 reveals that as life progresses, this soul will increasingly embody the manifestor archetype. The second half of life calls for stepping into authentic power, creating abundance, and leaving material legacy.
+
+<strong>The Emerging Pattern:</strong> Later years will emphasize achievement, authority, and material mastery. The soul is being prepared for a role that involves building wealth (in all senses), leading with power, and demonstrating that success and spirituality can coexist.
+
+<strong>Later Life Themes:</strong> Expect increasing opportunities for financial growth, leadership positions, and material achievement—even after traditional "retirement" age. There may be businesses, investments, or any endeavor requiring executive ability. The desire to leave something substantial is strong.
+
+<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into empowered wisdom. They're meant to become someone who demonstrates that power well-used is a gift to the world.
+
+<strong>The Gift:</strong> The later years can bring remarkable material success, the satisfaction of building something substantial, and the respect that comes from demonstrated achievement.`,
+        keywords: ["Power", "Achievement", "Abundance", "Legacy"]
+    },
+    9: {
+        title: "The Elder Humanitarian",
+        essence: "Compassion and Completion in Later Life",
+        reading: `Maturity Number 9 reveals that as life progresses, this soul will increasingly embody the humanitarian archetype. The second half of life calls for expanding compassion, releasing what's finished, and serving something larger than self.
+
+<strong>The Emerging Pattern:</strong> Later years will demand letting go and giving back. The soul is being prepared for a role that involves completion of major life chapters, compassionate service, and wisdom that encompasses the full human experience.
+
+<strong>Later Life Themes:</strong> Expect increasing concern for the world beyond personal sphere—humanitarian causes, artistic legacy, or any work that serves the collective. There may be release of old attachments, forgiveness of old wounds, and the peace that comes from completing cycles.
+
+<strong>The Integration:</strong> This Maturity Number asks them to synthesize all life experiences into universal wisdom. They're meant to become someone whose compassion is boundless, whose forgiveness is complete, whose vision includes all humanity.
+
+<strong>The Gift:</strong> The later years can bring profound peace through completion, the satisfaction of giving back, and the transcendent joy of knowing that life's deepest lessons have been learned.`,
+        keywords: ["Compassion", "Completion", "Service", "Wisdom"]
+    },
+    11: {
+        title: "The Elder Visionary",
+        essence: "Inspiration and Illumination in Later Life",
+        reading: `Maturity Number 11 reveals that as life progresses, this soul will increasingly embody the master visionary archetype. The second half of life calls for channeling higher inspiration, illuminating paths for others, and embracing the responsibility of spiritual insight.
+
+<strong>The Emerging Pattern:</strong> Later years will intensify spiritual sensitivity and visionary capacity. The soul is being prepared for a role that involves inspiring others, receiving and sharing higher truths, and demonstrating that the invisible world is as real as the visible.
+
+<strong>Later Life Themes:</strong> Expect increasing psychic or intuitive experiences, growing ability to inspire others, and perhaps a public role in spiritual teaching. There may be moments of profound illumination that demand to be shared. The ordinary becomes insufficient.
+
+<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into spiritual illumination. They're meant to become a channel for higher truth—someone whose presence inspires, whose insights illuminate.
+
+<strong>The Gift:</strong> The later years can bring remarkable spiritual awakening, the joy of inspiring others toward their own awakening, and the peace of being a clear channel for truth.`,
+        keywords: ["Vision", "Inspiration", "Illumination", "Spiritual Teaching"]
+    },
+    22: {
+        title: "The Elder Master Builder",
+        essence: "Manifesting Vision in Later Life",
+        reading: `Maturity Number 22 reveals that as life progresses, this soul will increasingly embody the master builder archetype. The second half of life calls for manifesting large-scale vision into practical reality, leaving substantial legacy, and demonstrating that dreams can be built into form.
+
+<strong>The Emerging Pattern:</strong> Later years will bring opportunities to build on a grand scale—not ego projects but contributions that serve many. The soul is being prepared for a role that involves turning visionary ideas into practical structures that outlast individual effort.
+
+<strong>Later Life Themes:</strong> Expect large-scale projects, community-serving enterprises, or any endeavor that builds lasting benefit for many. There may be philanthropic efforts, organizational building, or any work that marries vision with practical achievement. The scope expands.
+
+<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into masterful creation. They're meant to become someone whose vision manifests in practical form, whose building serves the collective, whose legacy is both spiritual and substantial.
+
+<strong>The Gift:</strong> The later years can bring the profound satisfaction of seeing grand visions realized, the respect that comes from building something that serves many, and the peace of knowing the dream became real.`,
+        keywords: ["Master Building", "Large Vision", "Practical Manifestation", "Lasting Legacy"]
+    },
+    33: {
+        title: "The Elder Master Teacher",
+        essence: "Healing Love in Later Life",
+        reading: `Maturity Number 33 reveals that as life progresses, this soul will increasingly embody the master teacher/healer archetype. The second half of life calls for expressing unconditional love in action, healing through presence, and teaching through being.
+
+<strong>The Emerging Pattern:</strong> Later years will bring expanded capacity to love, teach, and heal. The soul is being prepared for a role that involves being love in action—not perfect love, but authentic, transforming love that heals those it touches.
+
+<strong>Later Life Themes:</strong> Expect deepening capacity for unconditional love, possible teaching or healing roles, and the kind of presence that transforms others simply by being near. There may be spiritual leadership, healing work, or simply becoming someone whose love is palpable.
+
+<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into the highest expression of love. They're meant to become living examples of love's healing power.
+
+<strong>The Gift:</strong> The later years can bring the profound joy of being a healing presence, the satisfaction of seeing love transform lives, and the peace of embodying what they came here to share.`,
+        keywords: ["Master Teaching", "Healing Love", "Unconditional Love", "Transformation"]
+    }
+};
+
+// ============================================
 // Export for use
 // ============================================
 if (typeof module !== 'undefined' && module.exports) {
@@ -1247,6 +1422,7 @@ if (typeof module !== 'undefined' && module.exports) {
         DEEP_SOUL_URGE_READINGS,
         DEEP_PERSONALITY_NUMBER_READINGS,
         DEEP_BIRTHDAY_NUMBER_READINGS,
-        DEEP_PERSONAL_YEAR_READINGS
+        DEEP_PERSONAL_YEAR_READINGS,
+        DEEP_MATURITY_READINGS
     };
 }

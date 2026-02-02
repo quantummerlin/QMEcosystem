@@ -1,8 +1,10 @@
 {
-  "name": "A Moment in Time",
-  "short_name": "Moment in Time",
-  "description": "Your complete cosmic reading with 65+ personalized insights. At the exact moment you were born, the universe created a pattern.",
+  "name": "Soul Blueprint - Cosmic Reading",
+  "short_name": "Soul Blueprint",
+  "description": "Discover your Soul Blueprint with 65+ personalized cosmic readings. Birth chart astrology, numerology insights, and spiritual guidance.",
   "start_url": "/soulblueprint/",
+  "lang": "en",
+  "id": "soul-blueprint-cosmic-reading",
   "display": "standalone",
   "background_color": "#0a1628",
   "theme_color": "#c9a6ff",

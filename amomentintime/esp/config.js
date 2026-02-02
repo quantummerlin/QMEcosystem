@@ -10,64 +10,64 @@ var BRAND_CONFIG = {
     // BRAND IDENTITY
     // ============================================
     brandName: "A Moment in Time",
-    tagline: "Your Complete Cosmic Reading • No Sign-Up • Always Free",
-    subTagline: "At the exact moment you were born, the universe created a pattern.",
+    tagline: "Tu lectura cósmica completa • Sin registro • Siempre gratis",
+    subTagline: "En el exacto momento en que naciste, el universo creó un patrón.",
     
     // Who is this reading for?
     subjectType: "person",
-    subjectLabel: "Person",
-    subjectLabelPlural: "People",
+    subjectLabel: "Persona",
+    subjectLabelPlural: "Personas",
     
     // ============================================
     // COPY & LANGUAGE
     // ============================================
     inputLabels: {
-        name: "Name",
-        namePlaceholder: "Enter name",
+        name: "Nombre",
+        namePlaceholder: "Ingresa el nombre",
         nameHelper: "",
         
-        birthDate: "Date of Birth",
+        birthDate: "Fecha de nacimiento",
         birthDateHelper: "",
         
-        birthTime: "Time of Birth",
-        birthTimeHelper: "For accurate Rising Sign (check birth certificate)",
+        birthTime: "Hora de nacimiento",
+        birthTimeHelper: "Para ascendente preciso (ver acta de nacimiento)",
         
-        birthPlace: "Place of Birth",
-        birthPlacePlaceholder: "City, Country",
-        birthPlaceHelper: "Hospital location or city of birth"
+        birthPlace: "Lugar de nacimiento",
+        birthPlacePlaceholder: "Ciudad, país",
+        birthPlaceHelper: "Hospital o ciudad de nacimiento"
     },
     
-    ctaButton: "Generate Your Reading",
-    loadingMessage: "Capturing your moment...",
+    ctaButton: "Generar tu lectura",
+    loadingMessage: "Capturando tu momento...",
     
     // Result page copy
     resultTitle: "A Moment in Time",
-    resultSubtitle: "A Portrait of",
-    generatedBy: "Created with love by A Moment in Time",
+    resultSubtitle: "Un retrato de",
+    generatedBy: "Creado con amor por A Moment in Time",
     
     // ============================================
     // SECTION NAMES
     // ============================================
     sections: {
         celestial: {
-            name: "Celestial Gifts",
+            name: "Dones celestiales",
             icon: "",
-            description: "Your planetary influences and cosmic personality"
+            description: "Tus influencias planetarias y personalidad cósmica"
         },
         numbers: {
-            name: "Karmic Numbers & Soul Codes",
+            name: "Números kármicos y códigos del alma",
             icon: "",
-            description: "The numerological blueprint encoded in your birth"
+            description: "El mapa numerológico codificado en tu nacimiento"
         },
         soul: {
-            name: "Soul Mission",
+            name: "Misión del alma",
             icon: "",
-            description: "Your deeper purpose and spiritual gifts"
+            description: "Tu propósito profundo y dones espirituales"
         },
         forecasts: {
-            name: "Current Cycles",
+            name: "Ciclos actuales",
             icon: "",
-            description: "The energetic rhythms influencing your present moment"
+            description: "Los ritmos energéticos que influyen en tu presente"
         }
     },
     
@@ -75,34 +75,34 @@ var BRAND_CONFIG = {
     // READING TITLES
     // ============================================
     readingTitles: {
-        sunSign: "Sun Sign - Core Personality",
-        moonSign: "Moon Sign - Emotional Nature",
-        risingSign: "Rising Sign - First Impressions",
-        mercurySign: "Mercury - How They'll Communicate",
-        venusSign: "Venus - How They'll Love",
-        marsSign: "Mars - Their Energy & Drive",
-        jupiterSign: "Jupiter - Their Luck & Growth",
-        saturnSign: "Saturn - Life Lessons Ahead",
-        chineseZodiac: "Chinese Zodiac Animal",
-        moonPhase: "Birth Moon Phase",
+        sunSign: "Signo solar - Personalidad esencial",
+        moonSign: "Signo lunar - Naturaleza emocional",
+        risingSign: "Signo ascendente - Primeras impresiones",
+        mercurySign: "Mercurio - Cómo se comunica",
+        venusSign: "Venus - Cómo ama",
+        marsSign: "Marte - Energía y empuje",
+        jupiterSign: "Júpiter - Suerte y expansión",
+        saturnSign: "Saturno - Lecciones de vida",
+        chineseZodiac: "Animal del zodiaco chino",
+        moonPhase: "Fase lunar al nacer",
         
-        lifePath: "Life Path Number - Soul's Journey",
-        destiny: "Destiny Number - Life Purpose",
-        soulUrge: "Soul Urge - Heart's Desire",
-        personality: "Personality Number - How Others See Them",
-        birthday: "Birthday Number - Special Gifts",
-        maturity: "Maturity Number - Who They'll Become",
+        lifePath: "Número de camino de vida - Viaje del alma",
+        destiny: "Número de destino - Propósito de vida",
+        soulUrge: "Impulso del alma - Deseo del corazón",
+        personality: "Número de personalidad - Cómo te ven",
+        birthday: "Número de cumpleaños - Dones especiales",
+        maturity: "Número de madurez - En quién te convertirás",
         
-        personalYear: "Current Year Energy",
-        pinnacle: "Life Pinnacles - Major Phases",
-        challenge: "Life Challenges - Growth Areas",
+        personalYear: "Energía del año actual",
+        pinnacle: "Cúspides de vida - Etapas clave",
+        challenge: "Desafíos de vida - Áreas de crecimiento",
         
-        northNode: "North Node - Soul's Direction",
-        southNode: "South Node - Past Life Gifts",
-        lifeLesson: "Core Life Lesson",
+        northNode: "Nodo norte - Dirección del alma",
+        southNode: "Nodo sur - Dones de vidas pasadas",
+        lifeLesson: "Lección central de vida",
         
-        yearAhead: "First Year Forecast",
-        firstYear: "First Year Milestones"
+        yearAhead: "Pronóstico del primer año",
+        firstYear: "Hitos del primer año"
     },
     
     // ============================================
@@ -153,7 +153,7 @@ var BRAND_CONFIG = {
     // ============================================
     sharing: {
         hashtags: ["SoulBlueprint", "BirthChart", "SoulReading", "GiftFromTheStars"],
-        defaultMessage: "I just got my reading from A Moment in Time.",
+        defaultMessage: "Acabo de recibir mi lectura de A Moment in Time.",
         twitterHandle: "@quantummerlin"
     },
     
@@ -164,10 +164,10 @@ var BRAND_CONFIG = {
         enabled: false,
         price: "$11.11",
         features: [
-            "PDF Download",
-            "No Ads",
-            "Printable Format",
-            "Yearly Updates"
+            "Descarga en PDF",
+            "Sin anuncios",
+            "Formato imprimible",
+            "Actualizaciones anuales"
         ]
     },
     
@@ -176,7 +176,7 @@ var BRAND_CONFIG = {
     // ============================================
     footer: {
         copyright: "© 2026 A Moment in Time",
-        disclaimer: "For entertainment and reflection purposes. Every person is unique and will grow in their own beautiful way.",
+        disclaimer: "Con fines de entretenimiento y reflexión. Cada persona es única y crecerá a su manera.",
         links: [
             { text: "Privacy Policy", url: "/amomentintime/privacy.html" },
             { text: "Terms of Service", url: "/amomentintime/terms.html" },
@@ -188,9 +188,9 @@ var BRAND_CONFIG = {
     // SEO
     // ============================================
     seo: {
-        title: "A Moment in Time - Your Complete Cosmic Reading",
-        description: "At the exact moment you were born, the universe created a pattern. Get 65+ personalized insights in astrology and numerology. Free and unlimited access.",
-        keywords: "a moment in time, astrology reading, numerology reading, birth chart, life path, personalized reading"
+        title: "A Moment in Time - Tu lectura cósmica completa",
+        description: "En el exacto momento en que naciste, el universo creó un patrón. Obtén más de 65 insights personalizados de astrología y numerología. Acceso gratuito e ilimitado.",
+        keywords: "a moment in time, lectura de astrología, lectura de numerología, carta natal, camino de vida, lectura personalizada"
     }
 };
 

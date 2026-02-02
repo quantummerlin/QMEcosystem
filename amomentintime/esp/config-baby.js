@@ -10,69 +10,69 @@ const BRAND_CONFIG = {
     // BRAND IDENTITY
     // ============================================
     brandName: "Cosmic Baby Blueprint",
-    tagline: "Your Child's Complete Cosmic Profile",
-    subTagline: "58 Readings • One Beautiful Report • Lifetime Guidance",
+    tagline: "El perfil cósmico completo de tu bebé",
+    subTagline: "58 lecturas • Un hermoso informe • Guía para toda la vida",
     
     // Who is this reading for?
     subjectType: "baby",
-    subjectLabel: "Baby",
-    subjectLabelPlural: "Babies",
+    subjectLabel: "Bebé",
+    subjectLabelPlural: "Bebés",
     
     // ============================================
     // COPY & LANGUAGE
     // ============================================
     inputLabels: {
-        name: "Baby's Name",
-        namePlaceholder: "Enter your baby's name",
-        nameHelper: "The name your child will be called (or birth name)",
+        name: "Nombre del bebé",
+        namePlaceholder: "Ingresa el nombre de tu bebé",
+        nameHelper: "El nombre con el que se le llamará (o nombre de nacimiento)",
         
-        birthDate: "Date of Birth",
-        birthDateHelper: "Your baby's birthday",
+        birthDate: "Fecha de nacimiento",
+        birthDateHelper: "El cumpleaños de tu bebé",
         
-        birthTime: "Time of Birth",
-        birthTimeHelper: "For accurate Rising Sign (check birth certificate)",
+        birthTime: "Hora de nacimiento",
+        birthTimeHelper: "Para ascendente preciso (ver acta de nacimiento)",
         
-        birthPlace: "Place of Birth",
-        birthPlacePlaceholder: "City, Country",
-        birthPlaceHelper: "Hospital location or city of birth"
+        birthPlace: "Lugar de nacimiento",
+        birthPlacePlaceholder: "Ciudad, país",
+        birthPlaceHelper: "Hospital o ciudad de nacimiento"
     },
     
-    ctaButton: "✨ Generate My Baby's Cosmic Blueprint",
-    loadingMessage: "Calculating your baby's cosmic blueprint...",
+    ctaButton: "✨ Generar el plano cósmico de mi bebé",
+    loadingMessage: "Calculando el plano cósmico de tu bebé...",
     
     // Result page copy
-    resultTitle: "Complete Cosmic Blueprint",
-    resultSubtitle: "A Lifetime Guide for",
-    generatedBy: "Generated with love by Cosmic Baby Blueprint",
+    resultTitle: "Plano cósmico completo",
+    resultSubtitle: "Guía para toda la vida de",
+    generatedBy: "Generado con amor por Cosmic Baby Blueprint",
     
     // ============================================
     // SECTION NAMES
     // ============================================
     sections: {
         celestial: {
-            name: "Celestial Gifts",
+            name: "Dones celestiales",
             icon: "🌟",
-            description: "Your baby's planetary influences and cosmic personality"
+            description: "Influencias planetarias y personalidad cósmica de tu bebé"
         },
         numbers: {
-            name: "Sacred Numbers",
+            name: "Números sagrados",
             icon: "🔢",
-            description: "The numerological blueprint of your child's life path"
+            description: "El plano numerológico del camino de vida de tu bebé"
         },
         soul: {
-            name: "Soul Mission",
+            name: "Misión del alma",
             icon: "✨",
-            description: "Your baby's deeper purpose and spiritual gifts"
+            description: "Propósito profundo y dones espirituales de tu bebé"
         },
         forecasts: {
-            name: "Life Seasons",
+            name: "Estaciones de vida",
             icon: "🌈",
-            description: "What the cosmos has in store for your little one"
+            description: "Lo que el cosmos tiene preparado para tu pequeño"
         },
         cycles: {
-            name: "Growth Cycles",
+            name: "Ciclos de crecimiento",
             icon: "🌱",
-            description: "Key developmental phases and timing"
+            description: "Fases clave de desarrollo y su timing"
         }
     },
     
@@ -80,34 +80,34 @@ const BRAND_CONFIG = {
     // READING TITLES
     // ============================================
     readingTitles: {
-        sunSign: "Sun Sign - Core Personality",
-        moonSign: "Moon Sign - Emotional Nature",
-        risingSign: "Rising Sign - First Impressions",
-        mercurySign: "Mercury - How They'll Communicate",
-        venusSign: "Venus - How They'll Love",
-        marsSign: "Mars - Their Energy & Drive",
-        jupiterSign: "Jupiter - Their Luck & Growth",
-        saturnSign: "Saturn - Life Lessons Ahead",
-        chineseZodiac: "Chinese Zodiac Animal",
-        moonPhase: "Birth Moon Phase",
+        sunSign: "Signo solar - Personalidad esencial",
+        moonSign: "Signo lunar - Naturaleza emocional",
+        risingSign: "Signo ascendente - Primeras impresiones",
+        mercurySign: "Mercurio - Cómo se comunica",
+        venusSign: "Venus - Cómo ama",
+        marsSign: "Marte - Energía y empuje",
+        jupiterSign: "Júpiter - Suerte y expansión",
+        saturnSign: "Saturno - Lecciones de vida",
+        chineseZodiac: "Animal del zodiaco chino",
+        moonPhase: "Fase lunar al nacer",
         
-        lifePath: "Life Path Number - Soul's Journey",
-        destiny: "Destiny Number - Life Purpose",
-        soulUrge: "Soul Urge - Heart's Desire",
-        personality: "Personality Number - How Others See Them",
-        birthday: "Birthday Number - Special Gifts",
-        maturity: "Maturity Number - Who They'll Become",
+        lifePath: "Número de camino de vida - Viaje del alma",
+        destiny: "Número de destino - Propósito de vida",
+        soulUrge: "Impulso del alma - Deseo del corazón",
+        personality: "Número de personalidad - Cómo los ven",
+        birthday: "Número de cumpleaños - Dones especiales",
+        maturity: "Número de madurez - En quién se convertirá",
         
-        personalYear: "Current Year Energy",
-        pinnacle: "Life Pinnacles - Major Phases",
-        challenge: "Life Challenges - Growth Areas",
+        personalYear: "Energía del año actual",
+        pinnacle: "Cúspides de vida - Etapas clave",
+        challenge: "Desafíos de vida - Áreas de crecimiento",
         
-        northNode: "North Node - Soul's Direction",
-        southNode: "South Node - Past Life Gifts",
-        lifeLesson: "Core Life Lesson",
+        northNode: "Nodo norte - Dirección del alma",
+        southNode: "Nodo sur - Dones de vidas pasadas",
+        lifeLesson: "Lección central de vida",
         
-        yearAhead: "First Year Forecast",
-        firstYear: "First Year Milestones"
+        yearAhead: "Pronóstico del primer año",
+        firstYear: "Hitos del primer año"
     },
     
     // ============================================
@@ -158,7 +158,7 @@ const BRAND_CONFIG = {
     // ============================================
     sharing: {
         hashtags: ["CosmicBaby", "BabyReading", "NewbornAstrology", "BabyNumerology"],
-        defaultMessage: "I just discovered my baby's complete cosmic blueprint! 🌟👶",
+        defaultMessage: "¡Acabo de descubrir el plano cósmico completo de mi bebé! 🌟👶",
         twitterHandle: "@cosmicbaby"
     },
     
@@ -169,10 +169,10 @@ const BRAND_CONFIG = {
         enabled: false,
         price: "$11.11",
         features: [
-            "PDF Download",
-            "No Ads",
-            "Printable Format",
-            "Yearly Updates"
+            "Descarga en PDF",
+            "Sin anuncios",
+            "Formato imprimible",
+            "Actualizaciones anuales"
         ]
     },
     
@@ -181,11 +181,11 @@ const BRAND_CONFIG = {
     // ============================================
     footer: {
         copyright: "© 2025 Cosmic Baby Blueprint",
-        disclaimer: "For entertainment and reflection purposes. Every child is unique and will develop in their own beautiful way.",
+        disclaimer: "Con fines de entretenimiento y reflexión. Cada niño es único y se desarrollará a su manera.",
         links: [
-            { text: "Privacy Policy", url: "/privacy.html" },
-            { text: "Terms of Service", url: "/terms.html" },
-            { text: "Contact", url: "/contact.html" }
+            { text: "Política de privacidad", url: "/privacy.html" },
+            { text: "Términos de servicio", url: "/terms.html" },
+            { text: "Contacto", url: "/contact.html" }
         ]
     },
     
@@ -193,9 +193,9 @@ const BRAND_CONFIG = {
     // SEO
     // ============================================
     seo: {
-        title: "Cosmic Baby Blueprint - Complete Newborn Astrology & Numerology Reading",
-        description: "Discover your baby's complete cosmic profile with 58 personalized readings including astrology, numerology, and life path analysis. Free comprehensive birth chart for newborns.",
-        keywords: "baby astrology, newborn numerology, baby birth chart, baby horoscope, newborn reading, baby life path, cosmic baby, baby zodiac, newborn personality"
+        title: "Cosmic Baby Blueprint - Lectura completa de astrología y numerología para recién nacidos",
+        description: "Descubre el perfil cósmico completo de tu bebé con 58 lecturas personalizadas que incluyen astrología, numerología y análisis de camino de vida. Carta natal gratuita y completa para recién nacidos.",
+        keywords: "astrología para bebés, numerología para recién nacidos, carta natal de bebé, horóscopo de bebé, lectura de recién nacido, camino de vida de bebé, cosmic baby, zodiaco de bebé, personalidad de recién nacido"
     }
 };
 

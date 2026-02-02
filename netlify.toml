@@ -18,6 +18,23 @@
   to = "/soulblueprint/view.html?id=:id"
   status = 200
 
+# A Moment in Time - shared reading redirects
+[[redirects]]
+  from = "/amomentintime/r/:id"
+  to = "/amomentintime/view.html?id=:id"
+  status = 200
+
+[[redirects]]
+  from = "/amomentintime/esp/r/:id"
+  to = "/amomentintime/esp/view.html?id=:id"
+  status = 200
+
+# Trailing slash redirects for clean URLs
+[[redirects]]
+  from = "/amomentintime/esp"
+  to = "/amomentintime/esp/"
+  status = 301
+
 # Headers for security and caching
 [[headers]]
   for = "/netlify/functions/*"

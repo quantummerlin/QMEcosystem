@@ -1805,29 +1805,231 @@ var PERSONAL_YEAR_READINGS = {
 };
 
 var PINNACLE_NUMBER_READINGS = {
-    1: { reading: "A Pinnacle of 1 brings opportunities for independence, leadership, and new beginnings. This period emphasizes developing self-reliance and pioneering spirit." },
-    2: { reading: "A Pinnacle of 2 brings opportunities for partnership, patience, and cooperation. This period emphasizes diplomacy, sensitivity, and working with others." },
-    3: { reading: "A Pinnacle of 3 brings opportunities for creativity, self-expression, and joy. This period emphasizes communication, social connections, and artistic pursuits." },
-    4: { reading: "A Pinnacle of 4 brings opportunities for building, hard work, and creating foundations. This period emphasizes discipline, organization, and practical achievement." },
-    5: { reading: "A Pinnacle of 5 brings opportunities for change, freedom, and adventure. This period emphasizes adaptability, travel, and embracing new experiences." },
-    6: { reading: "A Pinnacle of 6 brings opportunities for love, family, and responsibility. This period emphasizes home, relationships, and service to loved ones." },
-    7: { reading: "A Pinnacle of 7 brings opportunities for spiritual growth, study, and inner development. This period emphasizes introspection, wisdom, and seeking truth." },
-    8: { reading: "A Pinnacle of 8 brings opportunities for achievement, power, and material success. This period emphasizes business, authority, and karmic rewards." },
-    9: { reading: "A Pinnacle of 9 brings opportunities for humanitarian service, completion, and wisdom. This period emphasizes compassion, letting go, and universal love." },
-    11: { reading: "A Pinnacle of 11 brings opportunities for spiritual illumination, inspiration, and leadership through higher consciousness. This Master Number period emphasizes intuition and visionary thinking." },
-    22: { reading: "A Pinnacle of 22 brings opportunities for manifesting grand visions and building something of lasting significance. This Master Number period emphasizes practical idealism and large-scale achievement." }
+    1: { 
+        title: "The Pioneer Pinnacle",
+        reading: `This Pinnacle of 1 opens a powerful chapter of independence, leadership, and new beginnings. The universe is calling for courage, self-reliance, and the willingness to pioneer.
+
+<strong>The Energy:</strong> This period emphasizes individuality, originality, and the courage to stand alone. Life circumstances will require initiative, self-starting ability, and the confidence to lead rather than follow.
+
+<strong>The Opportunities:</strong> Starting new ventures, stepping into leadership, developing personal identity, and making independent decisions. This is the time to begin things, not wait for others. Original ideas are favored.
+
+<strong>The Challenges:</strong> Learning to lead without dominating, to be confident without arrogance, and to stand alone without isolation. Balancing self-focus with awareness of others.
+
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with stronger self-identity, proven leadership abilities, and the knowledge that you can initiate and complete things on your own terms.`
+    },
+    2: { 
+        title: "The Partnership Pinnacle",
+        reading: `This Pinnacle of 2 opens a powerful chapter of partnership, patience, and cooperation. The universe is calling for diplomacy, sensitivity, and the ability to work harmoniously with others.
+
+<strong>The Energy:</strong> This period emphasizes relationships, collaboration, and the subtle art of give-and-take. Life circumstances will require patience, tact, and the ability to support rather than lead.
+
+<strong>The Opportunities:</strong> Deepening partnerships, developing diplomatic skills, finding harmony in relationships, and learning to receive as well as give. This is the time for collaboration and teamwork.
+
+<strong>The Challenges:</strong> Maintaining identity while partnering, developing patience with slow progress, and handling the sensitivity that comes with this vibration. Avoiding both doormat and distant extremes.
+
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with refined relationship skills, deeper emotional intelligence, and the knowledge that some goals are best achieved together.`
+    },
+    3: { 
+        title: "The Creative Pinnacle",
+        reading: `This Pinnacle of 3 opens a powerful chapter of creativity, self-expression, and joy. The universe is calling for communication, artistic expression, and the willingness to share your unique gifts.
+
+<strong>The Energy:</strong> This period emphasizes creativity, social connection, and the power of words. Life circumstances will encourage self-expression, artistic pursuits, and joyful engagement with life.
+
+<strong>The Opportunities:</strong> Creative projects, communication ventures, social expansion, and any form of self-expression. This is the time to write, speak, create, and share your unique perspective.
+
+<strong>The Challenges:</strong> Scattered energy, superficiality, and self-doubt about creative abilities. Learning to focus creative energy and complete what is started.
+
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with developed creative abilities, stronger communication skills, and the confidence to express yourself authentically.`
+    },
+    4: { 
+        title: "The Builder Pinnacle",
+        reading: `This Pinnacle of 4 opens a powerful chapter of building, discipline, and creating lasting foundations. The universe is calling for hard work, organization, and commitment to practical achievement.
+
+<strong>The Energy:</strong> This period emphasizes structure, discipline, and methodical progress. Life circumstances will require steady effort, attention to detail, and the patience to build something that lasts.
+
+<strong>The Opportunities:</strong> Establishing foundations, building career or business, creating systems, and achieving through persistent effort. This is the time for practical work that creates lasting value.
+
+<strong>The Challenges:</strong> Rigid thinking, overwork, and frustration with slow progress. Learning to work hard without becoming a workhorse, and to create structure without rigidity.
+
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with something solid built, proven work ethic, and the knowledge that patient effort creates lasting results.`
+    },
+    5: { 
+        title: "The Freedom Pinnacle",
+        reading: `This Pinnacle of 5 opens a powerful chapter of change, freedom, and adventure. The universe is calling for adaptability, courage to embrace the unknown, and willingness to expand horizons.
+
+<strong>The Energy:</strong> This period emphasizes variety, movement, and change. Life circumstances will require flexibility, adventurous spirit, and the ability to thrive amidst uncertainty.
+
+<strong>The Opportunities:</strong> Travel, new experiences, major life changes, learning new things, and breaking free from limiting situations. This is the time for expansion and exploration.
+
+<strong>The Challenges:</strong> Restlessness, instability, and temptation toward excess. Learning to embrace change without creating chaos, and to be free without being irresponsible.
+
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge more adaptable, with expanded horizons, and the knowledge that change is not the enemy but the essence of growth.`
+    },
+    6: { 
+        title: "The Love Pinnacle",
+        reading: `This Pinnacle of 6 opens a powerful chapter of love, responsibility, and family. The universe is calling for nurturing, service to loved ones, and creating harmony in close relationships.
+
+<strong>The Energy:</strong> This period emphasizes home, family, and responsibility for others. Life circumstances will require caretaking, creating beauty, and attending to the needs of those you love.
+
+<strong>The Opportunities:</strong> Marriage, family expansion, home establishment, and any work involving service to others. This is the time for commitment, nurturing, and creating loving environments.
+
+<strong>The Challenges:</strong> Over-responsibility, perfectionism, and martyr patterns. Learning to care for others while maintaining self-care, and to help without controlling.
+
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with deepened capacity for love, understanding of healthy responsibility, and the satisfaction of having nurtured what matters.`
+    },
+    7: { 
+        title: "The Wisdom Pinnacle",
+        reading: `This Pinnacle of 7 opens a powerful chapter of spiritual growth, study, and inner development. The universe is calling for introspection, seeking truth, and developing wisdom through reflection.
+
+<strong>The Energy:</strong> This period emphasizes the inner life—study, meditation, analysis, and spiritual development. Life circumstances will require solitude, deep thinking, and faith in unseen realities.
+
+<strong>The Opportunities:</strong> Education, research, spiritual practice, writing, and any pursuit requiring depth over breadth. This is the time for going deep rather than wide.
+
+<strong>The Challenges:</strong> Isolation, overthinking, and difficulty with material matters. Learning to balance solitude with connection, and intellect with intuition.
+
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with genuine wisdom, developed intuition, and the peace that comes from knowing the answers that matter.`
+    },
+    8: { 
+        title: "The Power Pinnacle",
+        reading: `This Pinnacle of 8 opens a powerful chapter of achievement, authority, and material mastery. The universe is calling for stepping into power, building wealth, and accepting the responsibility of success.
+
+<strong>The Energy:</strong> This period emphasizes business, money, power, and visible achievement. Life circumstances will require executive ability, ambition, and willingness to take charge.
+
+<strong>The Opportunities:</strong> Career advancement, business success, financial growth, and leadership positions. This is the time for ambitious goals and material achievement.
+
+<strong>The Challenges:</strong> Workaholism, materialism, and misuse of power. Learning to achieve without compromising values, and to use power wisely.
+
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with earned authority, material success, and the knowledge that power used well is a gift to the world.`
+    },
+    9: { 
+        title: "The Humanitarian Pinnacle",
+        reading: `This Pinnacle of 9 opens a powerful chapter of humanitarian service, completion, and universal love. The universe is calling for expanding compassion, letting go of what's finished, and serving something larger than self.
+
+<strong>The Energy:</strong> This period emphasizes service, release, and universal consciousness. Life circumstances will require letting go, forgiving, and extending compassion beyond personal sphere.
+
+<strong>The Opportunities:</strong> Humanitarian work, artistic achievement, teaching, healing, and any service that benefits many. This is the time for giving back and completing major life chapters.
+
+<strong>The Challenges:</strong> Difficulty with endings, impersonal relationships, and scattered compassion. Learning to let go gracefully and to serve without depleting.
+
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with expanded compassion, completed major cycles, and the peace that comes from knowing you've contributed to the greater good.`
+    },
+    11: { 
+        title: "The Illumination Pinnacle",
+        reading: `This Master Pinnacle of 11 opens a powerful chapter of spiritual illumination, inspiration, and leadership through higher consciousness. The universe is calling for visionary thinking, intuitive development, and inspiring others toward awakening.
+
+<strong>The Energy:</strong> This period emphasizes intuition, inspiration, and spiritual leadership. Life circumstances will require trusting inner guidance, channeling higher truths, and being willing to illuminate paths for others.
+
+<strong>The Opportunities:</strong> Spiritual teaching, artistic inspiration, psychic development, and any role where intuition guides leadership. This is the time for visionary work.
+
+<strong>The Challenges:</strong> Nervous tension, impracticality, and the weight of high sensitivity. Learning to ground spiritual insights in practical reality.
+
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with developed intuitive abilities, proven ability to inspire, and the knowledge that you can be a channel for higher truth.`
+    },
+    22: { 
+        title: "The Master Builder Pinnacle",
+        reading: `This Master Pinnacle of 22 opens a powerful chapter of manifesting grand visions and building something of lasting significance. The universe is calling for practical idealism, large-scale achievement, and turning dreams into reality.
+
+<strong>The Energy:</strong> This period emphasizes building on a large scale, practical manifestation of vision, and creating structures that serve many. Life circumstances will require combining idealism with practical ability.
+
+<strong>The Opportunities:</strong> Large projects, community service, organizational leadership, and any endeavor that serves the collective. This is the time for building something that outlasts individual effort.
+
+<strong>The Challenges:</strong> Overwhelm from the scope of vision, nervous tension, and difficulty with details. Learning to manifest the grand vision step by step.
+
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with demonstrated ability to manifest vision, proven practical idealism, and the satisfaction of having built something significant.`
+    }
 };
 
 var CHALLENGE_NUMBER_READINGS = {
-    0: { reading: "A Challenge of 0 indicates a choice of challenges, or the challenge of finding one's own path without clear obstacles. This can be the most difficult challenge - developing direction from complete freedom." },
-    1: { reading: "A Challenge of 1 involves lessons around independence, self-reliance, and ego. Learning to lead without dominating, to be confident without being arrogant, and to stand alone when necessary." },
-    2: { reading: "A Challenge of 2 involves lessons around sensitivity, cooperation, and patience. Learning to balance give and take, to handle criticism, and to assert needs while maintaining harmony." },
-    3: { reading: "A Challenge of 3 involves lessons around self-expression, creativity, and joy. Learning to communicate effectively, to overcome self-doubt about talents, and to find authentic expression." },
-    4: { reading: "A Challenge of 4 involves lessons around discipline, work, and limitations. Learning to build steadily, to accept necessary restrictions, and to develop patience with process." },
-    5: { reading: "A Challenge of 5 involves lessons around freedom, change, and excess. Learning to embrace change without chaos, to be adaptable without being scattered, and to find freedom responsibly." },
-    6: { reading: "A Challenge of 6 involves lessons around responsibility, perfectionism, and relationships. Learning to help without controlling, to accept imperfection, and to balance self-care with service." },
-    7: { reading: "A Challenge of 7 involves lessons around faith, isolation, and analysis. Learning to trust intuition, to connect with others despite need for solitude, and to balance intellect with spirit." },
-    8: { reading: "A Challenge of 8 involves lessons around power, money, and authority. Learning to use power ethically, to balance material and spiritual, and to claim success without compromising values." }
+    0: { 
+        title: "The Choice Challenge",
+        reading: `The Challenge of 0 is perhaps the most complex—it represents the challenge of having no single obvious challenge, which paradoxically can be the most difficult of all.
+
+<strong>The Nature:</strong> Without a clear obstacle to overcome, there's no clear direction to grow toward. The challenge is developing purpose and direction from complete freedom—finding one's own path without external resistance to push against.
+
+<strong>The Lesson:</strong> Learning to create structure from freedom, to choose direction without being forced, and to develop inner motivation when nothing external demands it. The 0 Challenge asks you to become your own teacher.
+
+<strong>The Mastery:</strong> When this challenge is met, the ability to direct your own life with wisdom, to find purpose without external pressure, and to be genuinely self-motivated becomes a profound gift.`
+    },
+    1: { 
+        title: "The Independence Challenge",
+        reading: `The Challenge of 1 involves lessons around independence, self-reliance, and the proper use of will.
+
+<strong>The Nature:</strong> This challenge may manifest as difficulty standing alone, fear of leadership, or its opposite—excessive ego and domination. The balance between self and others is at stake.
+
+<strong>The Lesson:</strong> Learning to lead without dominating, to be confident without arrogance, and to stand alone when necessary without isolation. Developing authentic self-reliance while remaining connected to others.
+
+<strong>The Mastery:</strong> When this challenge is met, the ability to be genuinely independent while maintaining healthy relationships, and to lead with confidence and humility, becomes a strength.`
+    },
+    2: { 
+        title: "The Sensitivity Challenge",
+        reading: `The Challenge of 2 involves lessons around sensitivity, cooperation, and emotional boundaries.
+
+<strong>The Nature:</strong> This challenge may manifest as hypersensitivity to criticism, difficulty asserting needs, or fear of conflict. The balance between self and others is at stake in a different way than Challenge 1—here it's about receiving and boundaries.
+
+<strong>The Lesson:</strong> Learning to cooperate without losing self, to be sensitive without being overwhelmed, and to assert needs while maintaining harmony. Developing patience without becoming passive.
+
+<strong>The Mastery:</strong> When this challenge is met, the ability to be deeply sensitive while maintaining healthy boundaries, and to cooperate without losing identity, becomes a gift.`
+    },
+    3: { 
+        title: "The Expression Challenge",
+        reading: `The Challenge of 3 involves lessons around self-expression, creativity, and authentic communication.
+
+<strong>The Nature:</strong> This challenge may manifest as suppressed creativity, fear of being seen, difficulty communicating authentically, or its opposite—superficiality and scattered expression. The voice is at stake.
+
+<strong>The Lesson:</strong> Learning to express authentic self without fear of judgment, to create without needing perfection, and to communicate from the heart. Overcoming self-doubt about creative and expressive abilities.
+
+<strong>The Mastery:</strong> When this challenge is met, the ability to express joyfully and authentically, to create without self-censorship, and to communicate with heart and power becomes a gift.`
+    },
+    4: { 
+        title: "The Discipline Challenge",
+        reading: `The Challenge of 4 involves lessons around discipline, work, and accepting necessary limitations.
+
+<strong>The Nature:</strong> This challenge may manifest as resistance to hard work, difficulty with structure, or its opposite—becoming rigid and workaholic. The relationship with effort and structure is at stake.
+
+<strong>The Lesson:</strong> Learning to build steadily without resentment, to accept necessary restrictions without feeling imprisoned, and to develop patience with process. Finding meaning in methodical work.
+
+<strong>The Mastery:</strong> When this challenge is met, the ability to work effectively without overwork, to create structure without rigidity, and to achieve through patient effort becomes a strength.`
+    },
+    5: { 
+        title: "The Freedom Challenge",
+        reading: `The Challenge of 5 involves lessons around freedom, change, and the proper use of variety.
+
+<strong>The Nature:</strong> This challenge may manifest as fear of change, excessive restlessness, addictive tendencies, or inability to commit. The relationship with freedom and responsibility is at stake.
+
+<strong>The Lesson:</strong> Learning to embrace change without creating chaos, to be adaptable without being scattered, and to find freedom through responsibility rather than escape. Moderation in pleasures.
+
+<strong>The Mastery:</strong> When this challenge is met, the ability to change gracefully, to enjoy freedom responsibly, and to remain adaptable while staying centered becomes a gift.`
+    },
+    6: { 
+        title: "The Responsibility Challenge",
+        reading: `The Challenge of 6 involves lessons around responsibility, perfectionism, and the balance between service and self-care.
+
+<strong>The Nature:</strong> This challenge may manifest as excessive responsibility, perfectionism, controlling caretaking, or its opposite—avoiding responsibility entirely. The relationship with service is at stake.
+
+<strong>The Lesson:</strong> Learning to help without controlling, to serve without martyring, and to accept imperfection in self and others. Finding the balance between caring for others and caring for self.
+
+<strong>The Mastery:</strong> When this challenge is met, the ability to love without smothering, to serve without depleting, and to maintain healthy boundaries while remaining devoted becomes a gift.`
+    },
+    7: { 
+        title: "The Faith Challenge",
+        reading: `The Challenge of 7 involves lessons around faith, analysis, and the balance between intellect and intuition.
+
+<strong>The Nature:</strong> This challenge may manifest as excessive analysis, difficulty trusting intuition, isolation, or spiritual doubt. The relationship with the unseen and with inner knowing is at stake.
+
+<strong>The Lesson:</strong> Learning to trust intuition alongside intellect, to connect with others despite need for solitude, and to develop faith in what cannot be proven. Balancing mind and spirit.
+
+<strong>The Mastery:</strong> When this challenge is met, the ability to think deeply while trusting inner guidance, to be alone without being lonely, and to have faith in the unseen becomes a gift.`
+    },
+    8: { 
+        title: "The Power Challenge",
+        reading: `The Challenge of 8 involves lessons around power, money, and authority—the proper use of material force.
+
+<strong>The Nature:</strong> This challenge may manifest as fear of power, money issues, misuse of authority, or feeling powerless in the material world. The relationship with success and power is at stake.
+
+<strong>The Lesson:</strong> Learning to use power ethically, to balance material and spiritual, and to claim success without compromising values. Becoming comfortable with authority and abundance.
+
+<strong>The Mastery:</strong> When this challenge is met, the ability to achieve in the material world without losing soul, to use power wisely, and to manifest abundance ethically becomes a gift.`
+    }
 };
 
 var KARMIC_DEBT_READINGS = {
