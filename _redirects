@@ -1,5 +1,10 @@
 /soulblueprint/r/*  /soulblueprint/view.html?id=:splat  200
 
+# Trailing slash redirects
+/amomentintime  /amomentintime/  301
+/amomentintime/esp  /amomentintime/esp/  301
+/amomentintime/pt  /amomentintime/pt/  301
+
 # A Moment in Time redirects
 /amomentintime/r/*  /amomentintime/view.html?id=:splat  200
 /amomentintime/esp/r/*  /amomentintime/esp/view.html?id=:splat  200
