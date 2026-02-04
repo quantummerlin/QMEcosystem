@@ -14,6 +14,7 @@ export function AdBanner({
   responsive = true 
 }: AdBannerProps) {
   const adRef = useRef<HTMLDivElement>(null);
+  const hasPushedRef = useRef(false);
   useEffect(() => {
     // Only load ads in production
     if (import.meta.env.DEV) {
@@ -21,27 +22,18 @@ export function AdBanner({
       return;
     }
 
-    // Check for ad blocker
-    const checkAdBlocker = () => {
-      const testAd = document.createElement('div');
-      testAd.innerHTML = '&nbsp;';
-      testAd.className = 'adsbox';
-      document.body.appendChild(testAd);
-      
-      const isBlocked = testAd.offsetHeight === 0;
-      document.body.removeChild(testAd);
-      
-      if (isBlocked) {
-        console.warn('Ad blocker detected - ads may not display');
-      }
-    };
+    const ins = adRef.current?.querySelector('ins.adsbygoogle') as HTMLModElement | null;
+    if (!ins) return;
 
-    checkAdBlocker();
+    // Prevent duplicate pushes for the same ad element
+    if (hasPushedRef.current || ins.getAttribute('data-ad-status') === 'done') {
+      return;
+    }
 
-    // Push ad to Google AdSense
     try {
       if (window.adsbygoogle) {
-        window.adsbygoogle.push({});
+        (window.adsbygoogle as any).push({});
+        hasPushedRef.current = true;
       }
     } catch (error) {
       console.error('AdSense error:', error);

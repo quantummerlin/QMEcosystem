@@ -1,13 +1,4 @@
-import { useEffect } from 'react';
-
 export function AdSenseManager() {
-  useEffect(() => {
-    // Initialize AdSense (no page-level ads to avoid duplicate enable errors)
-    if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
-      (window as any).adsbygoogle.push({});
-    }
-  }, []);
-
   return null;
 }
 
