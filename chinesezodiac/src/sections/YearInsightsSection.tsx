@@ -409,9 +409,13 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
   // Get element-specific modifier for the user's birth element
   const elementMod = elementModifiers[result.element] || elementModifiers.Wood;
 
+  // Calculate current month for filtering forecasts
+  const now = new Date();
+  const currentMonth = now.getMonth(); // 0-indexed (0 = January)
+
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [checked, setChecked] = useState<Record<string, boolean>>({});
-  const [activeMonthIndex, setActiveMonthIndex] = useState(0);
+  const [activeMonthIndex, setActiveMonthIndex] = useState(currentMonth);
 
   useEffect(() => {
     const stored = localStorage.getItem('cny-prep');
@@ -520,11 +524,46 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
         lucky: enhancedLucky,
         avoid: enhancedAvoid,
         elementBoost: isStrongMonth ? 'strong' : isWeakMonth ? 'weak' : null,
+        monthIndex: index, // Add month index for filtering
       };
     });
   }, [result.animal, result.element, elementMod]);
 
-  const activeMonth = monthlyForecasts[activeMonthIndex];
+  // Filter to show only current month and future months within the Chinese year
+  // The Snake year ends Feb 16, 2026, so if we're past CNY, we shouldn't show those months
+  const relevantMonthlyForecasts = useMemo(() => {
+    // Check if we're still in the Snake year (before Feb 17, 2026)
+    const now_check = new Date();
+    const cnyEnd = new Date('2026-02-17');
+    
+    if (now_check >= cnyEnd) {
+      // Chinese New Year has passed - Snake year forecasts no longer relevant
+      return [];
+    }
+    
+    // Filter to show current month onward
+    // But only up to January if we're in 2026 (since Snake year ends Feb 16)
+    return monthlyForecasts.filter((_, index) => {
+      const monthNum = index; // 0-indexed
+      const nowMonth = now_check.getMonth();
+      const nowYear = now_check.getFullYear();
+      
+      // If we're in 2025, show current month onwards
+      if (nowYear === 2025 || (nowYear === 2026 && nowMonth === 0)) {
+        return monthNum >= nowMonth;
+      }
+      
+      // If we're in Feb 2026 (before CNY), only show Feb
+      if (nowYear === 2026 && nowMonth === 1 && now_check < cnyEnd) {
+        return monthNum === 1; // February only
+      }
+      
+      return false;
+    });
+  }, [monthlyForecasts, currentMonth]);
+
+  // Get active month from all forecasts (for the month picker)
+  const activeMonth = monthlyForecasts[activeMonthIndex] || monthlyForecasts[0];
 
   // Theme icons for flip cards
   const themeIcons: Record<string, { icon: string; gradient: string }> = {
@@ -755,30 +794,41 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
       {/* Fortune Timeline - Mini Flip Cards */}
       <motion.div className="bg-white rounded-3xl shadow-xl p-8 text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <h3 className="text-2xl md:text-3xl font-bold text-gray-800">Your {currentYear.year} Fortune Map</h3>
-        <p className="text-gray-500 mt-2">Tap any month to reveal your forecast</p>
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mt-6">
-          {monthlyForecasts.map((m) => (
-            <FlipCard
-              key={m.month}
-              className="h-28"
-              frontBg={`bg-gradient-to-br ${fortuneColors[m.type].bg}`}
-              backBg="bg-gradient-to-br from-slate-700 to-slate-900"
-              frontContent={
-                <div className="flex flex-col items-center justify-center h-full text-white">
-                  <div className="text-xl">{fortuneColors[m.type].icon}</div>
-                  <div className="text-lg font-bold mt-1">{m.month}</div>
-                  <div className="text-xs opacity-80 mt-1">{'⭐'.repeat(m.rating)}</div>
-                </div>
-              }
-              backContent={
-                <div className="flex flex-col justify-center h-full text-white text-xs text-left">
-                  <p className="leading-relaxed line-clamp-3">{m.focus}</p>
-                  <div className="mt-2 text-green-300">✓ {m.lucky[0]}</div>
-                </div>
-              }
-            />
-          ))}
-        </div>
+        <p className="text-gray-500 mt-2">
+          {relevantMonthlyForecasts.length > 0 
+            ? `Showing ${relevantMonthlyForecasts.length} remaining month${relevantMonthlyForecasts.length > 1 ? 's' : ''} • Tap to reveal`
+            : 'The Snake year has ended'}
+        </p>
+        {relevantMonthlyForecasts.length > 0 ? (
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mt-6">
+            {relevantMonthlyForecasts.map((m, idx) => (
+              <FlipCard
+                key={m.month}
+                className={`h-28 ${idx === 0 ? 'ring-2 ring-purple-500 ring-offset-2' : ''}`}
+                frontBg={`bg-gradient-to-br ${fortuneColors[m.type].bg}`}
+                backBg="bg-gradient-to-br from-slate-700 to-slate-900"
+                frontContent={
+                  <div className="flex flex-col items-center justify-center h-full text-white">
+                    {idx === 0 && <div className="absolute top-1 left-1 text-xs bg-white/20 rounded px-1">NOW</div>}
+                    <div className="text-xl">{fortuneColors[m.type].icon}</div>
+                    <div className="text-lg font-bold mt-1">{m.month}</div>
+                    <div className="text-xs opacity-80 mt-1">{'⭐'.repeat(m.rating)}</div>
+                  </div>
+                }
+                backContent={
+                  <div className="flex flex-col justify-center h-full text-white text-xs text-left">
+                    <p className="leading-relaxed line-clamp-3">{m.focus}</p>
+                    <div className="mt-2 text-green-300">✓ {m.lucky[0]}</div>
+                  </div>
+                }
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="mt-6 p-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl">
+            <p className="text-gray-700">🎊 The Year of the Fire Horse has begun! Check back for 2026 forecasts.</p>
+          </div>
+        )}
       </motion.div>
 
       {/* Countdown */}
