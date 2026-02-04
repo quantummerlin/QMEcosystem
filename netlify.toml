@@ -4,7 +4,7 @@
 [build]
   publish = "."
   functions = "netlify/functions"
-  command = "npm install && cd chinesezodiac && npm install && npm run build && mkdir -p ../chinesezodiac/site && cp -r dist/* ../chinesezodiac/site/"
+  command = "npm install && cd chinesezodiac && npm install && npm run build && cp -r dist/* ../chinesezodiac/"
 
 # Redirects for clean URLs
 [[redirects]]
@@ -14,7 +14,7 @@
 
 [[redirects]]
   from = "/chinesezodiac/*"
-  to = "/chinesezodiac/site/:splat"
+  to = "/chinesezodiac/index.html"
   status = 200
 
 # Shared reading page with dynamic ID
