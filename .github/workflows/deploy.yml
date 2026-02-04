@@ -35,25 +35,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-      - name: Build Chinese Zodiac app
-        run: |
-          cd chinesezodiac
-          npm ci
-          npm run build
-          # List what's in dist for debugging
-          echo "=== Contents of dist ==="
-          ls -la dist/
-          echo "=== Contents of dist/assets ==="
-          ls -la dist/assets/
-          # Remove the source index.html first
-          rm -f index.html
-          # Copy built files to current directory
-          cp -r dist/* .
-          # Verify index.html has the built assets
-          echo "=== Checking built index.html ==="
-          grep -o 'index-[^"]*' index.html || echo "No assets found!"
-          # Remove source files that shouldn't be deployed
-          rm -rf src/ node_modules/ package*.json tsconfig*.json vite.config.ts .gitignore *.md public/ dist/ 2>/dev/null || true
       - name: Remove large/unnecessary files before upload
         run: |
           rm -rf Expand/ || true
