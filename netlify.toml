@@ -4,12 +4,17 @@
 [build]
   publish = "."
   functions = "netlify/functions"
-  command = "npm install"
+  command = "npm install && cd chinesezodiac && npm install && npm run build && mkdir -p ../chinesezodiac/site && cp -r dist/* ../chinesezodiac/site/"
 
 # Redirects for clean URLs
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/chinesezodiac/*"
+  to = "/chinesezodiac/site/:splat"
   status = 200
 
 # Shared reading page with dynamic ID
