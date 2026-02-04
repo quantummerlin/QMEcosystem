@@ -1,10 +1,8 @@
 const CACHE_NAME = 'zodiac-guide-v1';
 const urlsToCache = [
-  './',
-  './index.html',
-  './manifest.json',
-  './assets/index-B5nlCyM9.js',
-  './assets/index-mTNYOSWF.css',
+  '/chinesezodiac/',
+  '/chinesezodiac/index.html',
+  '/chinesezodiac/manifest.json',
 ];
 
 // Install event - cache resources
@@ -51,7 +49,7 @@ self.addEventListener('fetch', (event) => {
           return response;
         }).catch(() => {
           // Return offline fallback if needed
-          return caches.match('./index.html');
+          return caches.match('/chinesezodiac/index.html');
         });
       })
   );
@@ -88,8 +86,8 @@ self.addEventListener('sync', (event) => {
 self.addEventListener('push', (event) => {
   const options = {
     body: event.data ? event.data.text() : 'Your zodiac fortune is ready!',
-    icon: '/icons/icon-192x192.png',
-    badge: '/icons/icon-72x72.png',
+    icon: '/chinesezodiac/icons/icon-192x192.svg',
+    badge: '/chinesezodiac/icons/icon-72x72.svg',
     vibrate: [200, 100, 200],
     data: {
       dateOfArrival: Date.now(),

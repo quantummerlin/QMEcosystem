@@ -7,7 +7,7 @@ import { ErrorBoundary } from './components/ErrorBoundary'
 // Register service worker for PWA
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('/chinesezodiac/sw.js')
       .then((registration) => {
         console.log('SW registered: ', registration);
       })

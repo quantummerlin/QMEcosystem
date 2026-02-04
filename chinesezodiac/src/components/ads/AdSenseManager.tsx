@@ -2,12 +2,9 @@ import { useEffect } from 'react';
 
 export function AdSenseManager() {
   useEffect(() => {
-    // Initialize AdSense configuration
+    // Initialize AdSense (no page-level ads to avoid duplicate enable errors)
     if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
-      (window as any).adsbygoogle.push({
-        google_ad_client: 'ca-pub-3480541530392777',
-        enable_page_level_ads: true,
-      });
+      (window as any).adsbygoogle.push({});
     }
   }, []);
 

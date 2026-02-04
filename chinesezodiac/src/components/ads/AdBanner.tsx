@@ -89,7 +89,7 @@ export function AdBanner({
             width: dimensions.width,
             height: dimensions.height !== 'auto' ? dimensions.height : undefined,
           }}
-          data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+          data-ad-client="ca-pub-3480541530392777"
           data-ad-slot={adSlot}
           data-ad-format={responsive ? 'auto' : adFormat}
           data-full-width-responsive={responsive.toString()}
