@@ -2,43 +2,116 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Sparkles, Calendar, Moon, Star, Zap, Heart } from 'lucide-react';
+import { FeatureFlipCard } from '../components/FlipCard';
 
 const features = [
   {
-    icon: Sparkles,
+    icon: <Sparkles className="w-7 h-7" />,
     title: 'Daily Guidance',
     description: 'Get personalized insights for each day based on your zodiac animal and element.',
     color: 'from-blue-500 to-cyan-500',
+    backContent: (
+      <>
+        <Sparkles className="w-10 h-10 mb-3" />
+        <h4 className="text-xl font-bold mb-3">Daily Guidance</h4>
+        <ul className="text-sm text-white/90 space-y-2 text-left">
+          <li>• Morning energy readings</li>
+          <li>• Afternoon focus tips</li>
+          <li>• Evening reflection prompts</li>
+          <li>• Lucky hours guidance</li>
+        </ul>
+      </>
+    ),
   },
   {
-    icon: Calendar,
+    icon: <Calendar className="w-7 h-7" />,
     title: 'Weekly Forecast',
     description: 'Plan your week ahead with comprehensive weekly guidance and energy levels.',
     color: 'from-purple-500 to-pink-500',
+    backContent: (
+      <>
+        <Calendar className="w-10 h-10 mb-3" />
+        <h4 className="text-xl font-bold mb-3">Weekly Forecast</h4>
+        <ul className="text-sm text-white/90 space-y-2 text-left">
+          <li>• Career opportunities</li>
+          <li>• Relationship dynamics</li>
+          <li>• Financial insights</li>
+          <li>• Health & wellness tips</li>
+        </ul>
+      </>
+    ),
   },
   {
-    icon: Moon,
+    icon: <Moon className="w-7 h-7" />,
     title: 'Monthly Overview',
     description: 'Understand the broader trends affecting your month and make informed decisions.',
     color: 'from-orange-500 to-red-500',
+    backContent: (
+      <>
+        <Moon className="w-10 h-10 mb-3" />
+        <h4 className="text-xl font-bold mb-3">Monthly Overview</h4>
+        <ul className="text-sm text-white/90 space-y-2 text-left">
+          <li>• Monthly theme analysis</li>
+          <li>• Key dates to remember</li>
+          <li>• Growth opportunities</li>
+          <li>• Challenge navigation</li>
+        </ul>
+      </>
+    ),
   },
   {
-    icon: Star,
+    icon: <Star className="w-7 h-7" />,
     title: 'Yearly Predictions',
     description: 'Get a complete picture of what the year holds for your zodiac sign.',
     color: 'from-green-500 to-emerald-500',
+    backContent: (
+      <>
+        <Star className="w-10 h-10 mb-3" />
+        <h4 className="text-xl font-bold mb-3">Yearly Predictions</h4>
+        <ul className="text-sm text-white/90 space-y-2 text-left">
+          <li>• Annual fortune overview</li>
+          <li>• Major life transitions</li>
+          <li>• Success predictions</li>
+          <li>• Personal growth areas</li>
+        </ul>
+      </>
+    ),
   },
   {
-    icon: Zap,
+    icon: <Zap className="w-7 h-7" />,
     title: 'Element Wisdom',
     description: 'Discover how your element (Wood, Fire, Earth, Metal, Water) influences your destiny.',
     color: 'from-yellow-500 to-amber-500',
+    backContent: (
+      <>
+        <Zap className="w-10 h-10 mb-3" />
+        <h4 className="text-xl font-bold mb-3">Element Wisdom</h4>
+        <ul className="text-sm text-white/90 space-y-2 text-left">
+          <li>• Element personality traits</li>
+          <li>• Element compatibility</li>
+          <li>• Balancing techniques</li>
+          <li>• Element enhancement tips</li>
+        </ul>
+      </>
+    ),
   },
   {
-    icon: Heart,
+    icon: <Heart className="w-7 h-7" />,
     title: 'Love & Compatibility',
     description: 'Find your best matches and understand relationship dynamics.',
     color: 'from-pink-500 to-rose-500',
+    backContent: (
+      <>
+        <Heart className="w-10 h-10 mb-3" />
+        <h4 className="text-xl font-bold mb-3">Love & Compatibility</h4>
+        <ul className="text-sm text-white/90 space-y-2 text-left">
+          <li>• Best zodiac matches</li>
+          <li>• Relationship advice</li>
+          <li>• Communication tips</li>
+          <li>• Love timing insights</li>
+        </ul>
+      </>
+    ),
   },
 ];
 
@@ -68,48 +141,21 @@ export function FeaturesSection() {
             Complete Zodiac Wisdom
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover insights across all time periods with Quantum Merlin's comprehensive Chinese zodiac guidance system
+            Click on any card to flip and discover more about each feature
           </p>
         </motion.div>
 
-        {/* Features Grid */}
+        {/* Features Grid with Flip Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
-            <motion.div
+          {features.map((feature) => (
+            <FeatureFlipCard
               key={feature.title}
-              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-            >
-              {/* Background gradient on hover */}
-              <motion.div
-                className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
-              />
-
-              {/* Icon */}
-              <motion.div
-                className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-white mb-6`}
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ type: 'spring', stiffness: 400 }}
-              >
-                <feature.icon className="w-7 h-7" />
-              </motion.div>
-
-              {/* Content */}
-              <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {feature.description}
-              </p>
-
-              {/* Decorative corner */}
-              <motion.div
-                className={`absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br ${feature.color} opacity-10 rounded-full blur-2xl group-hover:opacity-20 transition-opacity`}
-              />
-            </motion.div>
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+              color={feature.color}
+              backContent={feature.backContent}
+            />
           ))}
         </div>
 

@@ -305,3 +305,109 @@
 .wave-animation span:nth-child(3) { animation-delay: 0.2s; }
 .wave-animation span:nth-child(4) { animation-delay: 0.3s; }
 .wave-animation span:nth-child(5) { animation-delay: 0.4s; }
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  /* Reduce animation complexity on mobile */
+  .particle-canvas {
+    opacity: 0.5;
+  }
+  
+  /* Optimize touch targets */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Reduce shadow intensity for better performance */
+  .shadow-2xl {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Optimize text rendering */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Disable hover effects on touch devices */
+  @media (hover: none) {
+    .hover-lift:hover {
+      transform: none;
+    }
+  }
+  
+  /* Improve scroll performance */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Prevent pull-to-refresh on mobile */
+  body {
+    overscroll-behavior-y: contain;
+  }
+  
+  /* Optimize tap highlight color */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Improve button feedback */
+  button:active {
+    opacity: 0.7;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover states */
+  .hover-lift:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Add active feedback */
+  button:active,
+  a:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .particle-canvas {
+    display: none;
+  }
+}
+
+/* Safe area insets for notched phones */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+}
+
+/* Landscape mobile optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+  .h-80 {
+    height: 12rem;
+  }
+  
+  .h-72 {
+    height: 10rem;
+  }
+  
+  .h-64 {
+    height: 8rem;
+  }
+}

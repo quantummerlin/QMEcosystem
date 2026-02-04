@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Sparkles, ChevronDown } from 'lucide-react';
 import { AnimatedText } from '../components/AnimatedText';
+import { useState } from 'react';
 
 interface HeroSectionProps {
   onStartClick: () => void;
@@ -62,7 +63,7 @@ export function HeroSection({ onStartClick }: HeroSectionProps) {
           transition={{ duration: 0.6 }}
         >
           <Sparkles className="w-4 h-4" />
-          <span className="text-sm font-medium">Quantum Merlin • Chinese Zodiac</span>
+          <span className="text-sm font-medium">Discover Your Destiny</span>
         </motion.div>
 
         {/* Main title */}
@@ -72,7 +73,7 @@ export function HeroSection({ onStartClick }: HeroSectionProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <AnimatedText text="Quantum Merlin" delay={0.3} />
+          <AnimatedText text="Ultimate Chinese" delay={0.3} />
           <br />
           <motion.span 
             className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-pink-300"
@@ -89,19 +90,29 @@ export function HeroSection({ onStartClick }: HeroSectionProps) {
               ease: 'easeInOut',
             }}
           >
-            Chinese Zodiac Guide
+            Zodiac Guide
           </motion.span>
         </motion.h1>
 
         {/* Subtitle */}
         <motion.p
-          className="text-xl md:text-2xl text-white/80 mb-12 max-w-2xl mx-auto"
+          className="text-xl md:text-2xl text-white/80 mb-8 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          Discover your complete fortune with animal and element wisdom for daily, weekly, monthly, and yearly guidance from Quantum Merlin
+          Discover your complete fortune with animal and element wisdom for daily, weekly, monthly, and yearly guidance
         </motion.p>
+
+        {/* Flip Card Preview */}
+        <motion.div
+          className="mb-10 flex justify-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <HeroFlipCards />
+        </motion.div>
 
         {/* CTA Button */}
         <motion.button
@@ -109,7 +120,7 @@ export function HeroSection({ onStartClick }: HeroSectionProps) {
           className="group relative px-8 py-4 bg-white text-purple-600 rounded-full font-bold text-lg shadow-2xl overflow-hidden"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -174,5 +185,65 @@ export function HeroSection({ onStartClick }: HeroSectionProps) {
         ))}
       </div>
     </section>
+  );
+}
+
+// Hero Flip Cards Component
+function HeroFlipCards() {
+  const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
+
+  const previewZodiacs = [
+    { animal: 'Dragon', icon: '🐉', element: 'Fire', trait: 'Powerful' },
+    { animal: 'Tiger', icon: '🐅', element: 'Wood', trait: 'Courageous' },
+    { animal: 'Rabbit', icon: '🐇', element: 'Wood', trait: 'Gentle' },
+  ];
+
+  const elementColors: Record<string, string> = {
+    Wood: 'from-green-400 to-emerald-600',
+    Fire: 'from-red-400 to-orange-600',
+    Earth: 'from-yellow-400 to-amber-600',
+    Metal: 'from-gray-400 to-slate-600',
+    Water: 'from-blue-400 to-cyan-600',
+  };
+
+  return (
+    <div className="flex gap-4 justify-center">
+      {previewZodiacs.map((zodiac, index) => (
+        <motion.div
+          key={zodiac.animal}
+          className="w-24 h-32 perspective-1000 cursor-pointer"
+          onClick={() => setFlippedIndex(flippedIndex === index ? null : index)}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 + index * 0.1 }}
+        >
+          <motion.div
+            className="relative w-full h-full"
+            animate={{ rotateY: flippedIndex === index ? 180 : 0 }}
+            transition={{ duration: 0.6, ease: [0.68, -0.55, 0.265, 1.55] }}
+            style={{ transformStyle: 'preserve-3d' }}
+          >
+            {/* Front */}
+            <motion.div
+              className={`absolute inset-0 rounded-xl bg-gradient-to-br ${elementColors[zodiac.element]} p-3 flex flex-col items-center justify-center text-white shadow-lg`}
+              style={{ backfaceVisibility: 'hidden' }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <span className="text-3xl mb-1">{zodiac.icon}</span>
+              <span className="text-xs font-bold">{zodiac.animal}</span>
+            </motion.div>
+
+            {/* Back */}
+            <motion.div
+              className="absolute inset-0 rounded-xl bg-white p-3 flex flex-col items-center justify-center shadow-lg border-2 border-purple-400"
+              style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+            >
+              <span className="text-2xl mb-1">{zodiac.icon}</span>
+              <span className="text-xs text-purple-600 font-bold">{zodiac.trait}</span>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      ))}
+    </div>
   );
 }

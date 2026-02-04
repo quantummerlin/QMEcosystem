@@ -54,9 +54,34 @@ export function CalculatorSection({ onCalculate }: CalculatorSectionProps) {
 
   const validateStep = (step: number) => {
     const newErrors: Record<string, boolean> = {};
-    if (step === 1 && !year) newErrors.year = true;
-    if (step === 2 && !month) newErrors.month = true;
-    if (step === 3 && !day) newErrors.day = true;
+    const currentYear = new Date().getFullYear();
+    
+    if (step === 1) {
+      if (!year) {
+        newErrors.year = true;
+      } else {
+        const yearNum = parseInt(year);
+        if (yearNum < 1900 || yearNum > currentYear) {
+          newErrors.year = true;
+        }
+      }
+    }
+    
+    if (step === 2 && !month) {
+      newErrors.month = true;
+    }
+    
+    if (step === 3) {
+      if (!day) {
+        newErrors.day = true;
+      } else {
+        const dayNum = parseInt(day);
+        if (dayNum < 1 || dayNum > daysInMonth) {
+          newErrors.day = true;
+        }
+      }
+    }
+    
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };

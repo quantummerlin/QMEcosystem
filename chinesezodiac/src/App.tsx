@@ -1,12 +1,17 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Toaster } from 'sonner';
 import { ParticleBackground } from './components/ParticleBackground';
+import { PWAInstaller } from './components/PWAInstaller';
+import { CNYConfetti } from './components/CNYConfetti';
+import { AdSenseManager } from './components/ads/AdSenseManager';
+import { AdBanner } from './components/ads/AdBanner';
 import { HeroSection } from './sections/HeroSection';
 import { CalculatorSection } from './sections/CalculatorSection';
 import { ResultsSection } from './sections/ResultsSection';
 import { FeaturesSection } from './sections/FeaturesSection';
 import { ZodiacShowcase } from './sections/ZodiacShowcase';
+import { ZodiacStorySection } from './sections/ZodiacStorySection';
 import { FooterSection } from './sections/FooterSection';
 import type { ZodiacResult } from './sections/CalculatorSection';
 
@@ -31,19 +36,41 @@ function App() {
       {/* Particle Background */}
       <ParticleBackground />
 
+      {/* Chinese New Year Celebration - 48 hours of confetti! */}
+      <CNYConfetti duration={48} />
+
+      {/* AdSense Manager */}
+      <AdSenseManager />
+
       {/* Toast notifications */}
       <Toaster position="top-center" richColors />
+
+      {/* PWA Install Prompt */}
+      <PWAInstaller />
 
       {/* Main Content */}
       <div className="relative z-10">
         {/* Hero Section */}
         <HeroSection onStartClick={scrollToCalculator} />
 
+        {/* Top Ad Banner */}
+        <div className="container mx-auto px-4 py-4">
+          <AdBanner adSlot="1234567890" adFormat="horizontal" className="w-full" />
+        </div>
+
         {/* Features Section */}
         <FeaturesSection />
 
+        {/* Mid-Page Ad Banner */}
+        <div className="container mx-auto px-4 py-4">
+          <AdBanner adSlot="0987654321" adFormat="rectangle" className="max-w-md mx-auto" />
+        </div>
+
         {/* Zodiac Showcase */}
         <ZodiacShowcase />
+
+        {/* The Great Race Story */}
+        <ZodiacStorySection />
 
         {/* Calculator Section */}
         <div ref={calculatorRef}>
@@ -65,6 +92,11 @@ function App() {
           )}
         </AnimatePresence>
 
+        {/* Bottom Ad Banner */}
+        <div className="container mx-auto px-4 py-4">
+          <AdBanner adSlot="5432167890" adFormat="rectangle" className="max-w-md mx-auto" />
+        </div>
+
         {/* Footer */}
         <FooterSection />
       </div>
@@ -83,12 +115,17 @@ function ScrollToTopButton() {
     setIsVisible(window.scrollY > 500);
   };
 
-  // Add scroll listener
-  window.addEventListener('scroll', handleScroll, { passive: true });
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  // Add and remove scroll listener properly
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <AnimatePresence>

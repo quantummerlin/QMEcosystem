@@ -17,3 +17,40 @@ export function useIsMobile() {
 
   return !!isMobile
 }
+
+export function useIsTablet() {
+  const [isTablet, setIsTablet] = React.useState<boolean | undefined>(undefined)
+
+  React.useEffect(() => {
+    const mql = window.matchMedia('(min-width: 768px) and (max-width: 1023px)')
+    const onChange = () => {
+      setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024)
+    }
+    mql.addEventListener("change", onChange)
+    setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024)
+    return () => mql.removeEventListener("change", onChange)
+  }, [])
+
+  return !!isTablet
+}
+
+export function useTouch() {
+  const [isTouch, setIsTouch] = React.useState(false)
+
+  React.useEffect(() => {
+    const checkTouch = () => {
+      setIsTouch(
+        'ontouchstart' in window ||
+        navigator.maxTouchPoints > 0 ||
+        (navigator as any).msMaxTouchPoints > 0
+      )
+    }
+
+    checkTouch()
+    window.addEventListener('touchstart', checkTouch, { once: true })
+    
+    return () => window.removeEventListener('touchstart', checkTouch)
+  }, [])
+
+  return isTouch
+}

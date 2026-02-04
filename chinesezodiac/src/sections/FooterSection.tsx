@@ -8,7 +8,7 @@ export function FooterSection() {
 
   const handleShare = (platform: string) => {
     const url = window.location.href;
-    const text = 'Discover your Quantum Merlin Chinese Zodiac fortune!';
+    const text = 'Discover your Chinese Zodiac fortune!';
 
     switch (platform) {
       case 'facebook':
@@ -107,20 +107,13 @@ export function FooterSection() {
             >
               <Heart className="w-5 h-5 text-red-500 fill-red-500" />
             </motion.span>
-            <span>by Quantum Merlin</span>
+            <span>for zodiac enthusiasts</span>
           </div>
           
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Quantum Merlin. Discover your destiny with ancient wisdom.
+            © {new Date().getFullYear()} Chinese Zodiac Fortune Guide. 
+            Discover your destiny with ancient wisdom.
           </p>
-
-          <div className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-gray-400">
-            <a className="hover:text-white transition-colors" href="/chinesezodiac/terms.html">Terms</a>
-            <span className="text-gray-600">•</span>
-            <a className="hover:text-white transition-colors" href="/chinesezodiac/privacy.html">Privacy</a>
-            <span className="text-gray-600">•</span>
-            <a className="hover:text-white transition-colors" href="/chinesezodiac/disclaimer.html">Disclaimer</a>
-          </div>
         </motion.div>
       </div>
     </footer>
