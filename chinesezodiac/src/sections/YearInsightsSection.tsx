@@ -108,6 +108,7 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
 
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [checked, setChecked] = useState<Record<string, boolean>>({});
+  const [activeMonthIndex, setActiveMonthIndex] = useState(0);
 
   useEffect(() => {
     const stored = localStorage.getItem('cny-prep');
@@ -142,12 +143,44 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
   }, []);
 
   const monthlyForecasts = useMemo(() => {
-    return months.map((month, index) => ({
-      month,
-      type: fortunePattern[index],
-      focus: fortunePattern[index] === 'caution' ? 'Slow down and plan' : fortunePattern[index] === 'excellent' ? 'Take initiative' : 'Keep momentum steady',
-    }));
+    return months.map((month, index) => {
+      const type = fortunePattern[index];
+      const rating = type === 'excellent' ? 5 : type === 'good' ? 4 : type === 'neutral' ? 3 : type === 'caution' ? 2 : 1;
+      const focus = type === 'caution'
+        ? 'Slow down, review plans, and protect your energy.'
+        : type === 'excellent'
+          ? 'Take initiative and push key goals forward.'
+          : type === 'good'
+            ? 'Make steady progress and build momentum.'
+            : type === 'neutral'
+              ? 'Stabilize routines and refine your direction.'
+              : 'Rest, reduce risk, and simplify commitments.';
+
+      const lucky = type === 'excellent'
+        ? ['Bold decisions', 'Networking', 'Visibility']
+        : type === 'good'
+          ? ['Consistency', 'Skill building', 'Supportive allies']
+          : type === 'neutral'
+            ? ['Organization', 'Study', 'Planning']
+            : type === 'caution'
+              ? ['Budgeting', 'Boundaries', 'Self-care']
+              : ['Recovery', 'Quiet reflection', 'Low-stakes tasks'];
+
+      const avoid = type === 'excellent'
+        ? ['Overcommitting', 'Impulsive spending']
+        : type === 'good'
+          ? ['Shortcuts', 'Ignoring details']
+          : type === 'neutral'
+            ? ['Mixed signals', 'Unclear agreements']
+            : type === 'caution'
+              ? ['Major risks', 'Emotional reactions']
+              : ['Big purchases', 'High-stress conflicts'];
+
+      return { month, type, rating, focus, lucky, avoid };
+    });
   }, []);
+
+  const activeMonth = monthlyForecasts[activeMonthIndex];
 
   return (
     <section className="mt-10 space-y-10">
@@ -198,13 +231,44 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
             </ul>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
-          {monthlyForecasts.map((m) => (
-            <div key={m.month} className={`rounded-xl text-white px-3 py-2 text-sm bg-gradient-to-br ${fortuneColors[m.type].bg}`}>
-              <div className="font-semibold">{m.month}</div>
-              <div className="text-xs opacity-90">{m.focus}</div>
+        <div className="mt-6">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <button
+              className="px-3 py-1 rounded-full border border-gray-200 text-sm"
+              onClick={() => setActiveMonthIndex((prev) => (prev === 0 ? months.length - 1 : prev - 1))}
+              aria-label="Previous month"
+            >
+              ◀
+            </button>
+            <div className={`px-4 py-2 rounded-full text-white text-sm bg-gradient-to-r ${fortuneColors[activeMonth.type].bg}`}>
+              {fortuneColors[activeMonth.type].icon} {activeMonth.month}
             </div>
-          ))}
+            <button
+              className="px-3 py-1 rounded-full border border-gray-200 text-sm"
+              onClick={() => setActiveMonthIndex((prev) => (prev === months.length - 1 ? 0 : prev + 1))}
+              aria-label="Next month"
+            >
+              ▶
+            </button>
+          </div>
+          <div className="rounded-2xl border border-gray-100 p-4 text-left max-w-2xl mx-auto">
+            <div className="text-sm text-gray-500 mb-1">Monthly Forecast • Rating: {'⭐'.repeat(activeMonth.rating)}{'☆'.repeat(5 - activeMonth.rating)}</div>
+            <p className="text-gray-700 mb-3">{activeMonth.focus}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+              <div>
+                <div className="font-semibold text-gray-800">Lucky Focus</div>
+                <ul className="text-gray-600 space-y-1">
+                  {activeMonth.lucky.map((item) => <li key={item}>• {item}</li>)}
+                </ul>
+              </div>
+              <div>
+                <div className="font-semibold text-gray-800">Avoid</div>
+                <ul className="text-gray-600 space-y-1">
+                  {activeMonth.avoid.map((item) => <li key={item}>• {item}</li>)}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </motion.div>
 
@@ -212,13 +276,20 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
       <motion.div className="bg-white rounded-3xl shadow-xl p-8 text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <h3 className="text-2xl md:text-3xl font-bold text-gray-800">Your {currentYear.year} Fortune Map</h3>
         <div className="flex flex-wrap justify-center gap-2 mt-4">
-          {monthlyForecasts.map((m) => (
-            <button key={m.month} className={`px-3 py-2 rounded-full text-white text-sm bg-gradient-to-r ${fortuneColors[m.type].bg}`}>
+          {monthlyForecasts.map((m, index) => (
+            <button
+              key={m.month}
+              className={`px-3 py-2 rounded-full text-white text-sm bg-gradient-to-r ${fortuneColors[m.type].bg} ${index === activeMonthIndex ? 'ring-2 ring-purple-400' : ''}`}
+              onClick={() => setActiveMonthIndex(index)}
+            >
               {fortuneColors[m.type].icon} {m.month}
             </button>
           ))}
         </div>
-        <p className="text-gray-600 mt-4">Tap a month above to reflect on your focus. Your strongest windows cluster around the “✨” months.</p>
+        <div className="mt-4 rounded-2xl border border-gray-100 p-4 text-left max-w-2xl mx-auto">
+          <div className="text-sm text-gray-500 mb-1">Focus for {activeMonth.month}</div>
+          <p className="text-gray-700">{activeMonth.focus}</p>
+        </div>
       </motion.div>
 
       {/* Countdown */}
