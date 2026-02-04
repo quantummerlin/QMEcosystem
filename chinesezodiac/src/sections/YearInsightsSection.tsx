@@ -16,6 +16,58 @@ const fortuneColors: Record<FortuneType, { bg: string; text: string; icon: strin
   challenging: { bg: 'from-red-400 to-rose-600', text: 'text-red-700', icon: '🚫' },
 };
 
+// Element-specific modifiers and advice for 2025 (Wood Snake Year)
+// Wood feeds Fire, overcomes Earth, is overcome by Metal, rests on Water
+const elementModifiers: Record<string, {
+  yearAffinity: 'aligned' | 'supportive' | 'neutral' | 'tension' | 'draining';
+  ratingBoost: number;
+  theme: string;
+  extraLucky: string[];
+  extraAvoid: string[];
+  monthlyBoost: { strong: number[]; weak: number[] };
+}> = {
+  Wood: {
+    yearAffinity: 'aligned',
+    ratingBoost: 1,
+    theme: '2025 resonates deeply with your Wood element. Growth, learning, and expansion feel natural this year.',
+    extraLucky: ['New ventures', 'Education', 'Spring initiatives'],
+    extraAvoid: ['Overextension', 'Rigid plans'],
+    monthlyBoost: { strong: [2, 3, 4], weak: [9, 10] }, // Spring strong, fall weaker
+  },
+  Fire: {
+    yearAffinity: 'supportive',
+    ratingBoost: 0,
+    theme: 'Wood feeds your Fire—expect inspiration, visibility, and creative momentum this year.',
+    extraLucky: ['Leadership', 'Visibility', 'Creative projects'],
+    extraAvoid: ['Burnout', 'Impulsive decisions'],
+    monthlyBoost: { strong: [5, 6, 7], weak: [11, 12, 1] }, // Summer strong, winter weaker
+  },
+  Earth: {
+    yearAffinity: 'tension',
+    ratingBoost: -1,
+    theme: 'Wood challenges Earth—expect growth through disruption and necessary change.',
+    extraLucky: ['Flexibility', 'Letting go', 'Fresh structures'],
+    extraAvoid: ['Stubbornness', 'Over-control'],
+    monthlyBoost: { strong: [8, 9], weak: [2, 3, 4] }, // Late summer strong, spring weaker
+  },
+  Metal: {
+    yearAffinity: 'neutral',
+    ratingBoost: 0,
+    theme: 'Metal shapes Wood—use your precision to carve out clear goals this year.',
+    extraLucky: ['Refinement', 'Cutting ties', 'Precision'],
+    extraAvoid: ['Over-criticism', 'Harsh judgments'],
+    monthlyBoost: { strong: [9, 10], weak: [2, 3] }, // Autumn strong, early spring weaker
+  },
+  Water: {
+    yearAffinity: 'draining',
+    ratingBoost: 0,
+    theme: 'Water nourishes Wood—your energy fuels growth, but pace yourself to avoid depletion.',
+    extraLucky: ['Rest cycles', 'Intuition', 'Flowing with change'],
+    extraAvoid: ['Over-giving', 'Ignoring fatigue'],
+    monthlyBoost: { strong: [11, 12, 1], weak: [5, 6] }, // Winter strong, summer weaker
+  },
+};
+
 const currentYear = {
   year: 2025,
   zodiac: 'Snake',
@@ -277,6 +329,9 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
 
   const horseRating = compatibilityHorseYear[result.animal] ?? 3;
 
+  // Get element-specific modifier for the user's birth element
+  const elementMod = elementModifiers[result.element] || elementModifiers.Wood;
+
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [checked, setChecked] = useState<Record<string, boolean>>({});
   const [activeMonthIndex, setActiveMonthIndex] = useState(0);
@@ -314,11 +369,8 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
   }, []);
 
   const monthlyForecasts = useMemo(() => {
-    if (customMonthlyForecasts[result.animal]) {
-      return customMonthlyForecasts[result.animal];
-    }
-
-    return months.map((month, index) => {
+    // Get base forecasts for the animal
+    const baseForecasts = customMonthlyForecasts[result.animal] || months.map((month, index) => {
       const type = fortunePattern[index];
       const rating = type === 'excellent' ? 5 : type === 'good' ? 4 : type === 'neutral' ? 3 : type === 'caution' ? 2 : 1;
       const focus = type === 'caution'
@@ -353,7 +405,47 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
 
       return { month, type, rating, focus, lucky, avoid };
     });
-  }, []);
+
+    // Apply element modifiers to each month
+    return baseForecasts.map((forecast, index) => {
+      const monthNum = index + 1;
+      const isStrongMonth = elementMod.monthlyBoost.strong.includes(monthNum);
+      const isWeakMonth = elementMod.monthlyBoost.weak.includes(monthNum);
+      
+      // Calculate adjusted rating
+      let adjustedRating = forecast.rating + elementMod.ratingBoost;
+      if (isStrongMonth) adjustedRating = Math.min(5, adjustedRating + 1);
+      if (isWeakMonth) adjustedRating = Math.max(1, adjustedRating - 1);
+      adjustedRating = Math.max(1, Math.min(5, adjustedRating));
+
+      // Determine adjusted type based on new rating
+      let adjustedType: FortuneType = forecast.type;
+      if (adjustedRating >= 5) adjustedType = 'excellent';
+      else if (adjustedRating >= 4) adjustedType = 'good';
+      else if (adjustedRating >= 3) adjustedType = 'neutral';
+      else if (adjustedRating >= 2) adjustedType = 'caution';
+      else adjustedType = 'challenging';
+
+      // Add element-specific lucky items on strong months
+      const enhancedLucky = isStrongMonth 
+        ? [...forecast.lucky, elementMod.extraLucky[0]]
+        : forecast.lucky;
+
+      // Add element-specific avoid items on weak months
+      const enhancedAvoid = isWeakMonth
+        ? [...forecast.avoid, elementMod.extraAvoid[0]]
+        : forecast.avoid;
+
+      return {
+        ...forecast,
+        rating: adjustedRating,
+        type: adjustedType,
+        lucky: enhancedLucky,
+        avoid: enhancedAvoid,
+        elementBoost: isStrongMonth ? 'strong' : isWeakMonth ? 'weak' : null,
+      };
+    });
+  }, [result.animal, result.element, elementMod]);
 
   const activeMonth = monthlyForecasts[activeMonthIndex];
 
@@ -427,7 +519,15 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
             </button>
           </div>
           <div className="rounded-2xl border border-gray-100 p-4 text-left max-w-2xl mx-auto">
-            <div className="text-sm text-gray-500 mb-1">Monthly Forecast • Rating: {'⭐'.repeat(activeMonth.rating)}{'☆'.repeat(5 - activeMonth.rating)}</div>
+            <div className="flex items-center justify-between mb-1">
+              <div className="text-sm text-gray-500">Monthly Forecast • Rating: {'⭐'.repeat(activeMonth.rating)}{'☆'.repeat(5 - activeMonth.rating)}</div>
+              {activeMonth.elementBoost === 'strong' && (
+                <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">🌿 {result.element} Boost</span>
+              )}
+              {activeMonth.elementBoost === 'weak' && (
+                <span className="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full">⚠️ {result.element} Caution</span>
+              )}
+            </div>
             <p className="text-gray-700 mb-3">{activeMonth.focus}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
               <div>
@@ -443,6 +543,43 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Element Influence */}
+      <motion.div className="bg-white rounded-3xl shadow-xl p-8 text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-800">Your {result.element} Element in {currentYear.year}</h3>
+        <p className="text-gray-500 mt-2">How your birth element interacts with the Wood Snake year</p>
+        <div className={`mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm ${
+          elementMod.yearAffinity === 'aligned' ? 'bg-green-100 text-green-700' :
+          elementMod.yearAffinity === 'supportive' ? 'bg-blue-100 text-blue-700' :
+          elementMod.yearAffinity === 'neutral' ? 'bg-gray-100 text-gray-700' :
+          elementMod.yearAffinity === 'tension' ? 'bg-amber-100 text-amber-700' :
+          'bg-purple-100 text-purple-700'
+        }`}>
+          {elementMod.yearAffinity === 'aligned' && '🌿'}
+          {elementMod.yearAffinity === 'supportive' && '🔥'}
+          {elementMod.yearAffinity === 'neutral' && '⚖️'}
+          {elementMod.yearAffinity === 'tension' && '⚡'}
+          {elementMod.yearAffinity === 'draining' && '💧'}
+          {elementMod.yearAffinity.charAt(0).toUpperCase() + elementMod.yearAffinity.slice(1)} Energy
+        </div>
+        <p className="text-gray-700 mt-4">{elementMod.theme}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 text-sm">
+          <div className="rounded-2xl border border-green-200 bg-green-50 p-4">
+            <div className="font-semibold text-green-800 mb-2">🌟 Element Strengths</div>
+            <ul className="text-green-700 space-y-1">
+              {elementMod.extraLucky.map((item) => <li key={item}>• {item}</li>)}
+            </ul>
+            <p className="text-xs text-green-600 mt-2">Strong months: {elementMod.monthlyBoost.strong.map(m => months[m-1]).join(', ')}</p>
+          </div>
+          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4">
+            <div className="font-semibold text-amber-800 mb-2">⚠️ Element Cautions</div>
+            <ul className="text-amber-700 space-y-1">
+              {elementMod.extraAvoid.map((item) => <li key={item}>• {item}</li>)}
+            </ul>
+            <p className="text-xs text-amber-600 mt-2">Careful months: {elementMod.monthlyBoost.weak.map(m => months[m-1]).join(', ')}</p>
           </div>
         </div>
       </motion.div>
