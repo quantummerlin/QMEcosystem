@@ -57,17 +57,173 @@ function parseBirthDate(dateStr) {
 
 // Location data for accurate calculations
 var LOCATIONS = {
+    // Middle East
     'abu dhabi': { lat: 24.4539, lon: 54.3773, tz: 4, name: 'Abu Dhabi, UAE' },
     'dubai': { lat: 25.2048, lon: 55.2708, tz: 4, name: 'Dubai, UAE' },
+    'sharjah': { lat: 25.3462, lon: 55.4211, tz: 4, name: 'Sharjah, UAE' },
+    'doha': { lat: 25.2854, lon: 51.5310, tz: 3, name: 'Doha, Qatar' },
+    'riyadh': { lat: 24.7136, lon: 46.6753, tz: 3, name: 'Riyadh, Saudi Arabia' },
+    'jeddah': { lat: 21.4858, lon: 39.1925, tz: 3, name: 'Jeddah, Saudi Arabia' },
+    'kuwait city': { lat: 29.3759, lon: 47.9774, tz: 3, name: 'Kuwait City, Kuwait' },
+    'muscat': { lat: 23.5880, lon: 58.3829, tz: 4, name: 'Muscat, Oman' },
+    'manama': { lat: 26.2285, lon: 50.5860, tz: 3, name: 'Manama, Bahrain' },
+    'tehran': { lat: 35.6892, lon: 51.3890, tz: 3.5, name: 'Tehran, Iran' },
+    'beirut': { lat: 33.8938, lon: 35.5018, tz: 2, name: 'Beirut, Lebanon' },
+    'amman': { lat: 31.9454, lon: 35.9284, tz: 2, name: 'Amman, Jordan' },
+    'jerusalem': { lat: 31.7683, lon: 35.2137, tz: 2, name: 'Jerusalem, Israel' },
+    'tel aviv': { lat: 32.0853, lon: 34.7818, tz: 2, name: 'Tel Aviv, Israel' },
+    'cairo': { lat: 30.0444, lon: 31.2357, tz: 2, name: 'Cairo, Egypt' },
+    'istanbul': { lat: 41.0082, lon: 28.9784, tz: 3, name: 'Istanbul, Turkey' },
+    // USA - Major Cities
     'new york': { lat: 40.7128, lon: -74.0060, tz: -5, name: 'New York, USA' },
-    'london': { lat: 51.5074, lon: -0.1278, tz: 0, name: 'London, UK' },
+    'new york city': { lat: 40.7128, lon: -74.0060, tz: -5, name: 'New York, USA' },
+    'nyc': { lat: 40.7128, lon: -74.0060, tz: -5, name: 'New York, USA' },
+    'brooklyn': { lat: 40.6782, lon: -73.9442, tz: -5, name: 'Brooklyn, NY, USA' },
+    'manhattan': { lat: 40.7831, lon: -73.9712, tz: -5, name: 'Manhattan, NY, USA' },
     'los angeles': { lat: 34.0522, lon: -118.2437, tz: -8, name: 'Los Angeles, USA' },
+    'la': { lat: 34.0522, lon: -118.2437, tz: -8, name: 'Los Angeles, USA' },
+    'chicago': { lat: 41.8781, lon: -87.6298, tz: -6, name: 'Chicago, USA' },
+    'houston': { lat: 29.7604, lon: -95.3698, tz: -6, name: 'Houston, USA' },
+    'phoenix': { lat: 33.4484, lon: -112.0740, tz: -7, name: 'Phoenix, USA' },
+    'philadelphia': { lat: 39.9526, lon: -75.1652, tz: -5, name: 'Philadelphia, USA' },
+    'san antonio': { lat: 29.4241, lon: -98.4936, tz: -6, name: 'San Antonio, USA' },
+    'san diego': { lat: 32.7157, lon: -117.1611, tz: -8, name: 'San Diego, USA' },
+    'dallas': { lat: 32.7767, lon: -96.7970, tz: -6, name: 'Dallas, USA' },
+    'san jose': { lat: 37.3382, lon: -121.8863, tz: -8, name: 'San Jose, USA' },
+    'austin': { lat: 30.2672, lon: -97.7431, tz: -6, name: 'Austin, USA' },
+    'jacksonville': { lat: 30.3322, lon: -81.6557, tz: -5, name: 'Jacksonville, USA' },
+    'san francisco': { lat: 37.7749, lon: -122.4194, tz: -8, name: 'San Francisco, USA' },
+    'seattle': { lat: 47.6062, lon: -122.3321, tz: -8, name: 'Seattle, USA' },
+    'denver': { lat: 39.7392, lon: -104.9903, tz: -7, name: 'Denver, USA' },
+    'washington': { lat: 38.9072, lon: -77.0369, tz: -5, name: 'Washington DC, USA' },
+    'washington dc': { lat: 38.9072, lon: -77.0369, tz: -5, name: 'Washington DC, USA' },
+    'boston': { lat: 42.3601, lon: -71.0589, tz: -5, name: 'Boston, USA' },
+    'atlanta': { lat: 33.7490, lon: -84.3880, tz: -5, name: 'Atlanta, USA' },
+    'miami': { lat: 25.7617, lon: -80.1918, tz: -5, name: 'Miami, USA' },
+    'orlando': { lat: 28.5383, lon: -81.3792, tz: -5, name: 'Orlando, USA' },
+    'las vegas': { lat: 36.1699, lon: -115.1398, tz: -8, name: 'Las Vegas, USA' },
+    'detroit': { lat: 42.3314, lon: -83.0458, tz: -5, name: 'Detroit, USA' },
+    'minneapolis': { lat: 44.9778, lon: -93.2650, tz: -6, name: 'Minneapolis, USA' },
+    'portland': { lat: 45.5152, lon: -122.6784, tz: -8, name: 'Portland, USA' },
+    // UK & Ireland
+    'london': { lat: 51.5074, lon: -0.1278, tz: 0, name: 'London, UK' },
+    'birmingham': { lat: 52.4862, lon: -1.8904, tz: 0, name: 'Birmingham, UK' },
+    'manchester': { lat: 53.4808, lon: -2.2426, tz: 0, name: 'Manchester, UK' },
+    'glasgow': { lat: 55.8642, lon: -4.2518, tz: 0, name: 'Glasgow, UK' },
+    'edinburgh': { lat: 55.9533, lon: -3.1883, tz: 0, name: 'Edinburgh, UK' },
+    'liverpool': { lat: 53.4084, lon: -2.9916, tz: 0, name: 'Liverpool, UK' },
+    'dublin': { lat: 53.3498, lon: -6.2603, tz: 0, name: 'Dublin, Ireland' },
+    // Europe
+    'paris': { lat: 48.8566, lon: 2.3522, tz: 1, name: 'Paris, France' },
+    'berlin': { lat: 52.5200, lon: 13.4050, tz: 1, name: 'Berlin, Germany' },
+    'munich': { lat: 48.1351, lon: 11.5820, tz: 1, name: 'Munich, Germany' },
+    'frankfurt': { lat: 50.1109, lon: 8.6821, tz: 1, name: 'Frankfurt, Germany' },
+    'amsterdam': { lat: 52.3676, lon: 4.9041, tz: 1, name: 'Amsterdam, Netherlands' },
+    'brussels': { lat: 50.8503, lon: 4.3517, tz: 1, name: 'Brussels, Belgium' },
+    'vienna': { lat: 48.2082, lon: 16.3738, tz: 1, name: 'Vienna, Austria' },
+    'zurich': { lat: 47.3769, lon: 8.5417, tz: 1, name: 'Zurich, Switzerland' },
+    'geneva': { lat: 46.2044, lon: 6.1432, tz: 1, name: 'Geneva, Switzerland' },
+    'rome': { lat: 41.9028, lon: 12.4964, tz: 1, name: 'Rome, Italy' },
+    'milan': { lat: 45.4642, lon: 9.1900, tz: 1, name: 'Milan, Italy' },
+    'madrid': { lat: 40.4168, lon: -3.7038, tz: 1, name: 'Madrid, Spain' },
+    'barcelona': { lat: 41.3851, lon: 2.1734, tz: 1, name: 'Barcelona, Spain' },
+    'lisbon': { lat: 38.7223, lon: -9.1393, tz: 0, name: 'Lisbon, Portugal' },
+    'athens': { lat: 37.9838, lon: 23.7275, tz: 2, name: 'Athens, Greece' },
+    'prague': { lat: 50.0755, lon: 14.4378, tz: 1, name: 'Prague, Czech Republic' },
+    'warsaw': { lat: 52.2297, lon: 21.0122, tz: 1, name: 'Warsaw, Poland' },
+    'budapest': { lat: 47.4979, lon: 19.0402, tz: 1, name: 'Budapest, Hungary' },
+    'copenhagen': { lat: 55.6761, lon: 12.5683, tz: 1, name: 'Copenhagen, Denmark' },
+    'stockholm': { lat: 59.3293, lon: 18.0686, tz: 1, name: 'Stockholm, Sweden' },
+    'oslo': { lat: 59.9139, lon: 10.7522, tz: 1, name: 'Oslo, Norway' },
+    'helsinki': { lat: 60.1699, lon: 24.9384, tz: 2, name: 'Helsinki, Finland' },
+    'moscow': { lat: 55.7558, lon: 37.6173, tz: 3, name: 'Moscow, Russia' },
+    // Asia
     'tokyo': { lat: 35.6762, lon: 139.6503, tz: 9, name: 'Tokyo, Japan' },
+    'osaka': { lat: 34.6937, lon: 135.5023, tz: 9, name: 'Osaka, Japan' },
+    'beijing': { lat: 39.9042, lon: 116.4074, tz: 8, name: 'Beijing, China' },
+    'shanghai': { lat: 31.2304, lon: 121.4737, tz: 8, name: 'Shanghai, China' },
+    'hong kong': { lat: 22.3193, lon: 114.1694, tz: 8, name: 'Hong Kong' },
+    'singapore': { lat: 1.3521, lon: 103.8198, tz: 8, name: 'Singapore' },
+    'seoul': { lat: 37.5665, lon: 126.9780, tz: 9, name: 'Seoul, South Korea' },
+    'bangkok': { lat: 13.7563, lon: 100.5018, tz: 7, name: 'Bangkok, Thailand' },
+    'kuala lumpur': { lat: 3.1390, lon: 101.6869, tz: 8, name: 'Kuala Lumpur, Malaysia' },
+    'jakarta': { lat: -6.2088, lon: 106.8456, tz: 7, name: 'Jakarta, Indonesia' },
+    'manila': { lat: 14.5995, lon: 120.9842, tz: 8, name: 'Manila, Philippines' },
+    'mumbai': { lat: 19.0760, lon: 72.8777, tz: 5.5, name: 'Mumbai, India' },
+    'delhi': { lat: 28.7041, lon: 77.1025, tz: 5.5, name: 'Delhi, India' },
+    'new delhi': { lat: 28.6139, lon: 77.2090, tz: 5.5, name: 'New Delhi, India' },
+    'bangalore': { lat: 12.9716, lon: 77.5946, tz: 5.5, name: 'Bangalore, India' },
+    'chennai': { lat: 13.0827, lon: 80.2707, tz: 5.5, name: 'Chennai, India' },
+    'kolkata': { lat: 22.5726, lon: 88.3639, tz: 5.5, name: 'Kolkata, India' },
+    'karachi': { lat: 24.8607, lon: 67.0011, tz: 5, name: 'Karachi, Pakistan' },
+    'lahore': { lat: 31.5204, lon: 74.3587, tz: 5, name: 'Lahore, Pakistan' },
+    'dhaka': { lat: 23.8103, lon: 90.4125, tz: 6, name: 'Dhaka, Bangladesh' },
+    // Australia & New Zealand
     'sydney': { lat: -33.8688, lon: 151.2093, tz: 10, name: 'Sydney, Australia' },
     'melbourne': { lat: -37.8136, lon: 144.9631, tz: 10, name: 'Melbourne, Australia' },
-    'paris': { lat: 48.8566, lon: 2.3522, tz: 1, name: 'Paris, France' },
+    'brisbane': { lat: -27.4698, lon: 153.0251, tz: 10, name: 'Brisbane, Australia' },
+    'perth': { lat: -31.9505, lon: 115.8605, tz: 8, name: 'Perth, Australia' },
+    'auckland': { lat: -36.8509, lon: 174.7645, tz: 12, name: 'Auckland, New Zealand' },
+    'wellington': { lat: -41.2865, lon: 174.7762, tz: 12, name: 'Wellington, New Zealand' },
+    // South America
+    'sao paulo': { lat: -23.5505, lon: -46.6333, tz: -3, name: 'São Paulo, Brazil' },
+    'rio de janeiro': { lat: -22.9068, lon: -43.1729, tz: -3, name: 'Rio de Janeiro, Brazil' },
+    'buenos aires': { lat: -34.6037, lon: -58.3816, tz: -3, name: 'Buenos Aires, Argentina' },
+    'santiago': { lat: -33.4489, lon: -70.6693, tz: -4, name: 'Santiago, Chile' },
+    'lima': { lat: -12.0464, lon: -77.0428, tz: -5, name: 'Lima, Peru' },
+    'bogota': { lat: 4.7110, lon: -74.0721, tz: -5, name: 'Bogotá, Colombia' },
+    'mexico city': { lat: 19.4326, lon: -99.1332, tz: -6, name: 'Mexico City, Mexico' },
+    // Africa
+    'johannesburg': { lat: -26.2041, lon: 28.0473, tz: 2, name: 'Johannesburg, South Africa' },
+    'cape town': { lat: -33.9249, lon: 18.4241, tz: 2, name: 'Cape Town, South Africa' },
+    'lagos': { lat: 6.5244, lon: 3.3792, tz: 1, name: 'Lagos, Nigeria' },
+    'nairobi': { lat: -1.2921, lon: 36.8219, tz: 3, name: 'Nairobi, Kenya' },
+    'casablanca': { lat: 33.5731, lon: -7.5898, tz: 1, name: 'Casablanca, Morocco' },
+    // Canada
+    'toronto': { lat: 43.6532, lon: -79.3832, tz: -5, name: 'Toronto, Canada' },
+    'vancouver': { lat: 49.2827, lon: -123.1207, tz: -8, name: 'Vancouver, Canada' },
+    'montreal': { lat: 45.5017, lon: -73.5673, tz: -5, name: 'Montreal, Canada' },
+    'calgary': { lat: 51.0447, lon: -114.0719, tz: -7, name: 'Calgary, Canada' },
+    'ottawa': { lat: 45.4215, lon: -75.6972, tz: -5, name: 'Ottawa, Canada' },
+    // Default
     'default': { lat: 0, lon: 0, tz: 0, name: 'Greenwich' }
 };
+
+// Fuzzy location matcher - finds best match from LOCATIONS
+function findLocation(input) {
+    if (!input) return LOCATIONS['default'];
+    
+    const normalized = input.toLowerCase().trim();
+    
+    // Direct match
+    if (LOCATIONS[normalized]) {
+        return LOCATIONS[normalized];
+    }
+    
+    // Check if input contains any location key
+    for (const key of Object.keys(LOCATIONS)) {
+        if (key === 'default') continue;
+        if (normalized.includes(key) || key.includes(normalized)) {
+            return LOCATIONS[key];
+        }
+    }
+    
+    // Check for partial matches (first word of input vs keys)
+    const firstWord = normalized.split(/[,\s]+/)[0];
+    if (firstWord && LOCATIONS[firstWord]) {
+        return LOCATIONS[firstWord];
+    }
+    
+    // Check if any key starts with the first word
+    for (const key of Object.keys(LOCATIONS)) {
+        if (key === 'default') continue;
+        if (key.startsWith(firstWord) || firstWord.startsWith(key.split(' ')[0])) {
+            return LOCATIONS[key];
+        }
+    }
+    
+    return LOCATIONS['default'];
+}
 
 var ZODIAC_SIGNS = [
     { name: 'Aries', symbol: '♈', element: 'Fire', start: [3, 21], end: [4, 19] },
@@ -313,7 +469,7 @@ function calculateMoonSign(birthDate, birthTime, location = 'default') {
     // Moon moves 13.176358 degrees per day through the zodiac
     
     const birth = new Date(birthDate);
-    const locationData = LOCATIONS[location.toLowerCase()] || LOCATIONS['default'];
+    const locationData = findLocation(location);
     
     // Convert to UTC by subtracting timezone offset
     if (birthTime) {
@@ -434,7 +590,7 @@ function calculateRisingSign(birthDate, birthTime, location = 'default') {
         return { name: 'Unknown', note: 'Birth time required for accurate Rising Sign' };
     }
     
-    const locationData = LOCATIONS[location.toLowerCase()] || LOCATIONS['default'];
+    const locationData = findLocation(location);
     const [hours, minutes] = birthTime.split(':').map(Number);
     const { day, month, year } = parseBirthDate(birthDate);
     
@@ -870,7 +1026,7 @@ function calculateMidheaven(birthDate, birthTime, location = 'default') {
     
     // MC calculation using RAMC (Right Ascension of Midheaven)
     // MC = atan(tan(RAMC) / cos(obliquity))
-    const locationData = LOCATIONS[location.toLowerCase()] || LOCATIONS['default'];
+    const locationData = findLocation(location);
     const [hours, minutes] = birthTime.split(':').map(Number);
     const { day, month, year } = parseBirthDate(birthDate);
     
@@ -1000,7 +1156,7 @@ function calculateVertex(birthDate, birthTime, location = 'default') {
     const risingIndex = ZODIAC_SIGNS.findIndex(s => s.name === risingSign.name);
     
     // Get latitude for adjustment
-    const coords = LOCATIONS[location.toLowerCase()] || LOCATIONS['default'] || { lat: 40 };
+    const coords = findLocation(location);
     const latitudeAdjust = Math.round((coords.lat || 40) / 15); // Adjust based on latitude
     
     // Vertex formula: approximately Descendant + latitude adjustment
