@@ -40,8 +40,8 @@ jobs:
           cd chinesezodiac
           npm ci
           npm run build
-          # Remove source files and keep only built dist
-          rm -rf src/ node_modules/ package*.json tsconfig*.json vite.config.ts index.html .gitignore *.md 2>/dev/null || true
+          # Remove ALL source files and old assets
+          rm -rf src/ node_modules/ package*.json tsconfig*.json vite.config.ts index.html .gitignore *.md public/ assets/ 2>/dev/null || true
           # Move dist contents to chinesezodiac folder root
           cp -r dist/* .
           rm -rf dist
