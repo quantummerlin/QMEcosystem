@@ -2,8 +2,9 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { ChevronDown, Heart, Briefcase, Sparkles, Users } from 'lucide-react';
 import { ZodiacFlipCard, GuidanceFlipCard, LuckyNumberFlipCard, CompatibilityFlipCard } from '../components/FlipCard';
+import { YearInsightsSection } from './YearInsightsSection';
 import { DailyDashboard } from '../components/DailyDashboard';
-import { elementData } from '../components/ZodiacData';
+import { animalNaturalElements, elementData } from '../components/ZodiacData';
 import type { ZodiacResult } from './CalculatorSection';
 
 interface ResultsSectionProps {
@@ -66,6 +67,73 @@ export function ResultsSection({ result }: ResultsSectionProps) {
   if (!result) return null;
 
   const elementInfo = elementData[result.element.toLowerCase()];
+  const naturalElement = animalNaturalElements[result.animal] || result.element;
+
+  const generateCycle: Record<string, string> = {
+    Wood: 'Fire',
+    Fire: 'Earth',
+    Earth: 'Metal',
+    Metal: 'Water',
+    Water: 'Wood',
+  };
+
+  const controlCycle: Record<string, string> = {
+    Wood: 'Earth',
+    Earth: 'Water',
+    Water: 'Fire',
+    Fire: 'Metal',
+    Metal: 'Wood',
+  };
+
+  const getElementBlend = () => {
+    if (result.element === naturalElement) {
+      return {
+        title: 'Aligned Elements',
+        tone: 'text-green-600',
+        description: 'Your birth element matches your animal’s natural element. This amplifies core traits and makes your sign feel “pure” and direct in expression.',
+      };
+    }
+
+    if (generateCycle[result.element] === naturalElement) {
+      return {
+        title: 'Supportive Flow',
+        tone: 'text-emerald-600',
+        description: `Your ${result.element} element feeds your animal’s ${naturalElement} nature. This supports your natural traits and adds momentum and confidence.`,
+      };
+    }
+
+    if (generateCycle[naturalElement] === result.element) {
+      return {
+        title: 'Nurtured Core',
+        tone: 'text-teal-600',
+        description: `Your animal’s ${naturalElement} nature nourishes your ${result.element} element. This softens your edges and adds depth and balance.`,
+      };
+    }
+
+    if (controlCycle[result.element] === naturalElement) {
+      return {
+        title: 'Active Tension',
+        tone: 'text-amber-600',
+        description: `Your ${result.element} element restrains your animal’s ${naturalElement} nature. This can create inner friction, but also discipline and self-mastery.`,
+      };
+    }
+
+    if (controlCycle[naturalElement] === result.element) {
+      return {
+        title: 'Self-Challenging',
+        tone: 'text-orange-600',
+        description: `Your animal’s ${naturalElement} nature presses on your ${result.element} element. This can feel like a push to grow, developing resilience and perspective.`,
+      };
+    }
+
+    return {
+      title: 'Mixed Blend',
+      tone: 'text-purple-600',
+      description: 'Your elements are different, creating a nuanced mix. This often shows up as a complex personality that adapts to different situations.',
+    };
+  };
+
+  const elementBlend = getElementBlend();
   const now = new Date();
   
   // Get week info
@@ -145,6 +213,25 @@ export function ResultsSection({ result }: ResultsSectionProps) {
             tips={elementInfo.tips}
           />
         </motion.div>
+
+        <motion.div
+          className="bg-white rounded-2xl shadow-lg p-6 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.25 }}
+        >
+          <h3 className={`text-xl font-bold mb-2 ${elementBlend.tone}`}>{elementBlend.title}</h3>
+          <p className="text-sm text-gray-500 mb-3">
+            Birth Element: <span className="font-semibold text-gray-700">{result.element}</span> · Animal’s Natural Element:{' '}
+            <span className="font-semibold text-gray-700">{naturalElement}</span>
+          </p>
+          <p className="text-gray-700 leading-relaxed">{elementBlend.description}</p>
+          <p className="text-sm text-gray-500 mt-3">
+            Different elements don’t cancel each other — they blend. Think of your animal as your core style and your element as the way it shows up.
+          </p>
+        </motion.div>
+
+        <YearInsightsSection result={result} />
 
         {/* Guidance Flip Cards Grid */}
         <div>
