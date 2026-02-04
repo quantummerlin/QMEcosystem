@@ -268,7 +268,7 @@ All tools follow the same design system:
 - Pure HTML/CSS/JavaScript
 - No backend required for free tools
 - Local storage for user data
-- Zero hosting cost (can use GitHub Pages, Netlify, Vercel)
+- Zero hosting cost (can use GitHub Pages or Vercel)
 
 ### Backend Required (Premium)
 - Node.js server for payment processing

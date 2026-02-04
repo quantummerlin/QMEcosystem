@@ -107,7 +107,7 @@ Each of the 6 categories (Health, Creativity, Relationships, Money, Strategy, Vi
 
 ### Production Deployment:
 1. Register domain (quantummerlin.com)
-2. Deploy to Vercel/Netlify (free tier)
+2. Deploy to Vercel (free tier)
 3. Set up custom domain
 4. Enable analytics (Google Analytics)
 5. Add monetization (AdSense, affiliates)

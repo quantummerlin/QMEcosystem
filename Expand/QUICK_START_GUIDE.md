@@ -41,8 +41,7 @@ You now possess a complete blueprint for building a profitable quantum tools eco
     - Sign up at pages.cloudflare.com
     - Connect your domain
     - Free SSL included
-  - Option 2: Netlify (netlify.com)
-  - Option 3: Vercel (vercel.com)
+  - Option 2: Vercel (vercel.com)
 
 - [ ] **Configure DNS** (15 minutes)
   - Point domain to hosting
@@ -91,7 +90,7 @@ You now possess a complete blueprint for building a profitable quantum tools eco
 
 - [ ] **Deploy to hosting** (30 minutes)
   - Push to GitHub
-  - Connect to Cloudflare Pages/Netlify
+  - Connect to Cloudflare Pages
   - Verify it's live
 
 ### Hour 9-12: Analytics Setup

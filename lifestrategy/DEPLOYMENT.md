@@ -78,19 +78,7 @@ After implementing:
 
 **Cost**: $0/month (free tier sufficient for 100k visitors/month)
 
-### Option 2: Netlify
-**Pros**: Free tier, drag-and-drop deployment, form handling
-**Cons**: Slightly slower than Vercel
-
-**Steps**:
-1. Sign up at netlify.com
-2. Drag `/workspace` folder to Netlify
-3. Deploy
-4. Add custom domain
-
-**Cost**: $0/month (free tier sufficient)
-
-### Option 3: GitHub Pages
+### Option 2: GitHub Pages
 **Pros**: 100% free, simple
 **Cons**: No serverless functions, slower
 

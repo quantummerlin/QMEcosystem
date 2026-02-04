@@ -686,7 +686,7 @@ User creates Sigil
 **4. Technical Issues**
 - **Risk:** Site downtime, bugs, poor performance
 - **Mitigation:**
-  - Use reliable hosting (Cloudflare Pages, Netlify)
+   - Use reliable hosting (Cloudflare Pages)
   - Extensive testing
   - User feedback loops
   - Regular maintenance
@@ -782,7 +782,7 @@ User creates Sigil
 
 **Day 1-2: Foundation**
 - [ ] Secure domain (quantummerlin.com)
-- [ ] Set up hosting (Cloudflare Pages or Netlify)
+- [ ] Set up hosting (Cloudflare Pages)
 - [ ] Create GitHub repository
 - [ ] Set up Google Analytics
 - [ ] Apply for AdSense

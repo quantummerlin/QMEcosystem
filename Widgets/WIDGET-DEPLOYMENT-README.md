@@ -27,7 +27,7 @@ This zip file contains everything you need to deploy the Quantum Merlin Widget E
 ## ⚡ Quick Deployment (2 Hours)
 
 ### Option 1: Static Hosting (Free/Easy)
-1. Upload all files to GitHub Pages, Netlify, or Vercel
+1. Upload all files to GitHub Pages or Vercel
 2. Widgets work immediately (except enhanced versions that need API)
 3. Cost: $0-20/month
 

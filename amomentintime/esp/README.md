@@ -28,7 +28,6 @@ Simply open `index.html` in your browser. No server required!
 ### 3. Deploy
 
 Upload all files to any static hosting:
-- Netlify (free)
 - Vercel (free)
 - Cloudflare Pages (free)
 - GitHub Pages (free)

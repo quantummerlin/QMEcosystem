@@ -34,7 +34,7 @@
 ## 🚀 Deployment Options
 
 ### Option 1: Static Hosting (Recommended for Quick Start)
-**Platform**: GitHub Pages, Netlify, Vercel  
+**Platform**: GitHub Pages, Vercel  
 **Cost**: $0-20/month  
 **Features**: Basic widgets work immediately  
 **Time**: 2 hours

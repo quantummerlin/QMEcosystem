@@ -2,12 +2,12 @@
   "name": "Chinese Zodiac Fortune Guide",
   "short_name": "Zodiac Guide",
   "description": "Discover your Chinese zodiac sign and daily fortune with personalized insights",
-  "start_url": "./",
+  "start_url": "/chinesezodiac/",
   "display": "standalone",
   "background_color": "#f9fafb",
   "theme_color": "#9333ea",
   "orientation": "portrait-primary",
-  "scope": "./",
+  "scope": "/chinesezodiac/",
   "icons": [
     {
       "src": "./icons/icon-72x72.svg",

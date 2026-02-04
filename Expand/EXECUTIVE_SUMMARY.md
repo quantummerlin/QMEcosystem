@@ -239,7 +239,7 @@ Every tool links to 2-3 related tools, creating a natural exploration flow that 
 ### Tools & Costs
 
 **Essential (Free):**
-- Hosting: Cloudflare Pages, Netlify, or Vercel
+- Hosting: Cloudflare Pages or Vercel
 - Development: VS Code, GitHub
 - Analytics: Google Analytics, Search Console
 - Design: Figma

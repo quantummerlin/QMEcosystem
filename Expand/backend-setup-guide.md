@@ -7,7 +7,7 @@
 
 1. **Square Account** - For payment processing
 2. **Email Service** - For sending readings (SendGrid, Mailgun, or Gmail)
-3. **Simple Backend** - Node.js server (can run on Vercel, Netlify, or any hosting)
+3. **Simple Backend** - Node.js server (can run on Vercel or any hosting)
 
 ---
 

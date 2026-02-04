@@ -266,7 +266,7 @@ hashtags: 'quantummerlin,numerology'
 | `robots.txt` | Search engine directives |
 | `sitemap.xml` | Sitemap for SEO |
 | `ads.txt` | Ads configuration |
-| `_headers` | HTTP headers (Cloudflare/Netlify) |
+| `_headers` | HTTP headers (Cloudflare) |
 
 ---
 

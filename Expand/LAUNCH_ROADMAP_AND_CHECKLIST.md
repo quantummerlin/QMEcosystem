@@ -26,9 +26,8 @@ This document provides a detailed, actionable roadmap for launching the Quantum 
 
 - [ ] **Set Up Hosting**
   - Option 1: Cloudflare Pages (FREE, recommended)
-  - Option 2: Netlify (FREE tier)
-  - Option 3: Vercel (FREE tier)
-  - Option 4: GitHub Pages (FREE)
+  - Option 2: Vercel (FREE tier)
+  - Option 3: GitHub Pages (FREE)
 
 - [ ] **Configure DNS**
   - Point domain to hosting
@@ -873,7 +872,7 @@ This document provides a detailed, actionable roadmap for launching the Quantum 
 ### Development
 - **Code Editor:** VS Code
 - **Version Control:** Git + GitHub
-- **Hosting:** Cloudflare Pages, Netlify, or Vercel
+- **Hosting:** Cloudflare Pages or Vercel
 - **Domain:** Namecheap, Google Domains, or Cloudflare
 
 ### Design

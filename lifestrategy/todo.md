@@ -292,7 +292,7 @@ Full enhanced system with week-by-week and day-by-day breakdowns ready for deplo
 
 ### 1. Deploy to Production (Day 1)
 - [ ] Register quantummerlin.com domain
-- [ ] Deploy to Vercel/Netlify
+- [ ] Deploy to Vercel
 - [ ] Set up custom domain
 - [ ] Test all functionality in production
 - [ ] Fix any deployment issues
