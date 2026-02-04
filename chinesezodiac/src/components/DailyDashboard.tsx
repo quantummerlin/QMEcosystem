@@ -7,6 +7,7 @@ import {
   Compass, Coffee
 } from 'lucide-react';
 import { generateDailyInsight, hourlyGuidance } from './DailyInsights';
+import { QuickStatFlipCard, RitualFlipCard } from './FlipCard';
 
 interface DailyDashboardProps {
   animal: string;
@@ -124,7 +125,7 @@ export function DailyDashboard({ animal, element, icon }: DailyDashboardProps) {
 
               {/* Quick Stats Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <QuickStatCard
+                <QuickStatFlipCard
                   icon={<Clock className="w-5 h-5" />}
                   title="Lucky Hours"
                   value={insight.luckyHours.length}
@@ -132,7 +133,7 @@ export function DailyDashboard({ animal, element, icon }: DailyDashboardProps) {
                   color="from-blue-400 to-cyan-500"
                   detail={insight.luckyHours.join(', ')}
                 />
-                <QuickStatCard
+                <QuickStatFlipCard
                   icon={<Compass className="w-5 h-5" />}
                   title="Directions"
                   value={insight.luckyDirections.length}
@@ -140,7 +141,7 @@ export function DailyDashboard({ animal, element, icon }: DailyDashboardProps) {
                   color="from-green-400 to-emerald-500"
                   detail={insight.luckyDirections.join(', ')}
                 />
-                <QuickStatCard
+                <QuickStatFlipCard
                   icon={<Palette className="w-5 h-5" />}
                   title="Colors"
                   value={insight.luckyColors.length}
@@ -148,7 +149,7 @@ export function DailyDashboard({ animal, element, icon }: DailyDashboardProps) {
                   color="from-pink-400 to-rose-500"
                   detail={insight.luckyColors.join(', ')}
                 />
-                <QuickStatCard
+                <QuickStatFlipCard
                   icon={<CheckCircle className="w-5 h-5" />}
                   title="Activities"
                   value={insight.auspiciousActivities.length}
@@ -188,23 +189,26 @@ export function DailyDashboard({ animal, element, icon }: DailyDashboardProps) {
 
               {/* Daily Rituals */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <RitualCard
+                <RitualFlipCard
                   icon={<Sunrise className="w-5 h-5" />}
                   time="Morning"
                   ritual={insight.morningRitual}
                   color="from-orange-400 to-yellow-500"
+                  tip="Start with intention and gratitude"
                 />
-                <RitualCard
+                <RitualFlipCard
                   icon={<Sun className="w-5 h-5" />}
                   time="Afternoon"
                   ritual={insight.afternoonFocus}
                   color="from-blue-400 to-cyan-500"
+                  tip="Channel your peak energy wisely"
                 />
-                <RitualCard
+                <RitualFlipCard
                   icon={<Moon className="w-5 h-5" />}
                   time="Evening"
                   ritual={insight.eveningReflection}
                   color="from-purple-400 to-indigo-500"
+                  tip="Wind down and release the day"
                 />
               </div>
 
@@ -536,74 +540,5 @@ export function DailyDashboard({ animal, element, icon }: DailyDashboardProps) {
         </div>
       </div>
     </div>
-  );
-}
-
-// Quick Stat Card Component
-interface QuickStatCardProps {
-  icon: React.ReactNode;
-  title: string;
-  value: number;
-  suffix: string;
-  color: string;
-  detail: string;
-}
-
-function QuickStatCard({ icon, title, value, suffix, color, detail }: QuickStatCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  return (
-    <motion.div
-      className="bg-white rounded-xl p-4 shadow-md cursor-pointer border border-gray-100"
-      onClick={() => setIsExpanded(!isExpanded)}
-      whileHover={{ y: -2 }}
-    >
-      <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${color} flex items-center justify-center text-white mb-2`}>
-        {icon}
-      </div>
-      <div className="flex items-baseline gap-1">
-        <span className="text-2xl font-bold text-gray-800">{value}</span>
-        <span className="text-xs text-gray-500">{suffix}</span>
-      </div>
-      <p className="text-xs text-gray-500 mt-1">{title}</p>
-      
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden"
-          >
-            <div className="pt-2 mt-2 border-t border-gray-100">
-              <p className="text-xs text-gray-600">{detail}</p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
-  );
-}
-
-// Ritual Card Component
-interface RitualCardProps {
-  icon: React.ReactNode;
-  time: string;
-  ritual: string;
-  color: string;
-}
-
-function RitualCard({ icon, time, ritual, color }: RitualCardProps) {
-  return (
-    <motion.div
-      className={`bg-gradient-to-br ${color} rounded-xl p-4 text-white`}
-      whileHover={{ scale: 1.02 }}
-    >
-      <div className="flex items-center gap-2 mb-2">
-        {icon}
-        <span className="font-medium">{time}</span>
-      </div>
-      <p className="text-sm text-white/90">{ritual}</p>
-    </motion.div>
   );
 }

@@ -500,3 +500,235 @@ export function CompatibilityFlipCard({ animal, icon, compatibility, delay = 0 }
     </motion.div>
   );
 }
+
+// Quick Stat Flip Card
+interface QuickStatFlipCardProps {
+  icon: React.ReactNode;
+  title: string;
+  value: number;
+  suffix: string;
+  color: string;
+  detail: string;
+}
+
+export function QuickStatFlipCard({ icon, title, value, suffix, color, detail }: QuickStatFlipCardProps) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <motion.div
+      className="w-full h-32 perspective-1000 cursor-pointer"
+      onClick={() => setIsFlipped(!isFlipped)}
+      whileHover={{ y: -2 }}
+    >
+      <motion.div
+        className="relative w-full h-full"
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ duration: 0.5, ease: [0.68, -0.55, 0.265, 1.55] }}
+        style={{ transformStyle: 'preserve-3d' }}
+      >
+        {/* Front */}
+        <motion.div
+          className="absolute inset-0 bg-white rounded-xl p-4 shadow-md border border-gray-100 flex flex-col justify-center"
+          style={{ backfaceVisibility: 'hidden' }}
+        >
+          <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${color} flex items-center justify-center text-white mb-2`}>
+            {icon}
+          </div>
+          <div className="flex items-baseline gap-1">
+            <span className="text-2xl font-bold text-gray-800">{value}</span>
+            <span className="text-xs text-gray-500">{suffix}</span>
+          </div>
+          <p className="text-xs text-gray-500 mt-1">{title}</p>
+        </motion.div>
+
+        {/* Back */}
+        <motion.div
+          className={`absolute inset-0 rounded-xl p-4 bg-gradient-to-br ${color} text-white flex flex-col items-center justify-center shadow-lg`}
+          style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+        >
+          <div className="text-2xl mb-2">{icon}</div>
+          <p className="text-sm text-center text-white/90">{detail}</p>
+        </motion.div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+// Ritual Flip Card
+interface RitualFlipCardProps {
+  icon: React.ReactNode;
+  time: string;
+  ritual: string;
+  color: string;
+  tip?: string;
+}
+
+export function RitualFlipCard({ icon, time, ritual, color, tip }: RitualFlipCardProps) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <motion.div
+      className="w-full h-36 perspective-1000 cursor-pointer"
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <motion.div
+        className="relative w-full h-full"
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ duration: 0.5, ease: [0.68, -0.55, 0.265, 1.55] }}
+        style={{ transformStyle: 'preserve-3d' }}
+      >
+        {/* Front */}
+        <motion.div
+          className={`absolute inset-0 bg-gradient-to-br ${color} rounded-xl p-4 text-white flex flex-col justify-center shadow-lg`}
+          style={{ backfaceVisibility: 'hidden' }}
+          whileHover={{ scale: 1.02 }}
+        >
+          <div className="flex items-center gap-2 mb-2">
+            {icon}
+            <span className="font-medium">{time}</span>
+          </div>
+          <p className="text-sm text-white/90">{ritual}</p>
+          <span className="text-xs text-white/60 mt-2">Tap for tip</span>
+        </motion.div>
+
+        {/* Back */}
+        <motion.div
+          className="absolute inset-0 bg-white rounded-xl p-4 flex flex-col items-center justify-center shadow-lg border-2 border-gray-100"
+          style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+        >
+          <div className={`w-10 h-10 rounded-full bg-gradient-to-r ${color} flex items-center justify-center text-white mb-2`}>
+            {icon}
+          </div>
+          <p className="text-xs text-gray-700 text-center">{tip || `Focus on ${time.toLowerCase()} energy`}</p>
+        </motion.div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+// Section Flip Card (replaces CollapsibleSection)
+interface SectionFlipCardProps {
+  title: string;
+  icon: React.ReactNode;
+  frontSummary: string;
+  children: React.ReactNode;
+}
+
+export function SectionFlipCard({ title, icon, frontSummary, children }: SectionFlipCardProps) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <motion.div
+      className="w-full min-h-[280px] perspective-1000 cursor-pointer"
+      onClick={() => setIsFlipped(!isFlipped)}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.div
+        className="relative w-full h-full"
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ duration: 0.6, ease: [0.68, -0.55, 0.265, 1.55] }}
+        style={{ transformStyle: 'preserve-3d' }}
+      >
+        {/* Front */}
+        <motion.div
+          className="absolute inset-0 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center"
+          style={{ backfaceVisibility: 'hidden' }}
+          whileHover={{ scale: 1.01 }}
+        >
+          <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white mb-4">
+            {icon}
+          </div>
+          <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
+          <p className="text-gray-600 text-center text-sm">{frontSummary}</p>
+          <span className="text-xs text-purple-500 mt-4">Tap to reveal details</span>
+        </motion.div>
+
+        {/* Back */}
+        <motion.div
+          className="absolute inset-0 bg-white rounded-2xl shadow-lg p-6 overflow-auto"
+          style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white">
+              {icon}
+            </div>
+            <h3 className="text-lg font-bold text-gray-800">{title}</h3>
+          </div>
+          <div className="text-gray-700 text-sm">{children}</div>
+          <span className="text-xs text-purple-500 mt-4 block text-center">Tap to flip back</span>
+        </motion.div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+// Element Blend Flip Card
+interface ElementBlendFlipCardProps {
+  title: string;
+  tone: string;
+  birthElement: string;
+  naturalElement: string;
+  description: string;
+}
+
+export function ElementBlendFlipCard({ title, tone, birthElement, naturalElement, description }: ElementBlendFlipCardProps) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const elementIcons: Record<string, string> = {
+    Wood: '🌲',
+    Fire: '🔥',
+    Earth: '🌍',
+    Metal: '⚙️',
+    Water: '💧',
+  };
+
+  return (
+    <motion.div
+      className="w-full h-64 perspective-1000 cursor-pointer"
+      onClick={() => setIsFlipped(!isFlipped)}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.25 }}
+    >
+      <motion.div
+        className="relative w-full h-full"
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ duration: 0.6, ease: [0.68, -0.55, 0.265, 1.55] }}
+        style={{ transformStyle: 'preserve-3d' }}
+      >
+        {/* Front */}
+        <motion.div
+          className="absolute inset-0 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center"
+          style={{ backfaceVisibility: 'hidden' }}
+          whileHover={{ scale: 1.02 }}
+        >
+          <div className="flex items-center gap-4 mb-4">
+            <span className="text-4xl">{elementIcons[birthElement]}</span>
+            <span className="text-2xl text-gray-400">↔</span>
+            <span className="text-4xl">{elementIcons[naturalElement]}</span>
+          </div>
+          <h3 className={`text-xl font-bold mb-2 ${tone}`}>{title}</h3>
+          <p className="text-sm text-gray-500">
+            {birthElement} + {naturalElement}
+          </p>
+          <span className="text-xs text-purple-500 mt-4">Tap for insight</span>
+        </motion.div>
+
+        {/* Back */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center text-white"
+          style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+        >
+          <h4 className="text-lg font-bold mb-3">{title}</h4>
+          <p className="text-sm text-white/90 text-center leading-relaxed">{description}</p>
+          <p className="text-xs text-white/70 mt-4 text-center">
+            Elements blend, not cancel. Your animal is your core style, your element is how it shows up.
+          </p>
+        </motion.div>
+      </motion.div>
+    </motion.div>
+  );
+}

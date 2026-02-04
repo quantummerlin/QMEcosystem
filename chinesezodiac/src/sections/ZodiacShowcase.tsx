@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
-import { animals, animalIcons, animalSubtitles, elements } from '../components/ZodiacData';
+import { animals, animalIcons, animalSubtitles, animalNaturalElements, elements } from '../components/ZodiacData';
 import { ZodiacMiniFlipCard } from '../components/FlipCard';
 
 const zodiacData = animals.map((animal, i) => ({
   name: animal,
   icon: animalIcons[i],
   subtitle: animalSubtitles[i],
-  element: elements[i % 5],
+  element: animalNaturalElements[animal],
 }));
 
 export function ZodiacShowcase() {

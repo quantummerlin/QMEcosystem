@@ -19,6 +19,21 @@ export const animalSubtitles = [
 
 export const elements = ['Wood', 'Fire', 'Earth', 'Metal', 'Water'];
 
+export const animalNaturalElements: Record<string, string> = {
+  Rat: 'Water',
+  Ox: 'Earth',
+  Tiger: 'Wood',
+  Rabbit: 'Wood',
+  Dragon: 'Earth',
+  Snake: 'Fire',
+  Horse: 'Fire',
+  Goat: 'Earth',
+  Monkey: 'Metal',
+  Rooster: 'Metal',
+  Dog: 'Earth',
+  Pig: 'Water',
+};
+
 export const elementData: Record<string, { name: string; description: string; tips: string[] }> = {
   wood: {
     name: 'Wood',

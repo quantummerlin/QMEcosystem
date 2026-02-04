@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { ChevronDown, Heart, Briefcase, Sparkles, Users } from 'lucide-react';
-import { ZodiacFlipCard, GuidanceFlipCard, LuckyNumberFlipCard, CompatibilityFlipCard } from '../components/FlipCard';
+import { Heart, Briefcase, Sparkles, Users } from 'lucide-react';
+import { ZodiacFlipCard, GuidanceFlipCard, LuckyNumberFlipCard, CompatibilityFlipCard, SectionFlipCard, ElementBlendFlipCard } from '../components/FlipCard';
 import { YearInsightsSection } from './YearInsightsSection';
 import { DailyDashboard } from '../components/DailyDashboard';
 import { animalNaturalElements, elementData } from '../components/ZodiacData';
@@ -9,58 +9,6 @@ import type { ZodiacResult } from './CalculatorSection';
 
 interface ResultsSectionProps {
   result: ZodiacResult | null;
-}
-
-interface CollapsibleSectionProps {
-  title: string;
-  icon: React.ReactNode;
-  children: React.ReactNode;
-  defaultOpen?: boolean;
-}
-
-function CollapsibleSection({ title, icon, children, defaultOpen = false }: CollapsibleSectionProps) {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
-
-  return (
-    <motion.div
-      className="bg-white rounded-2xl shadow-lg overflow-hidden"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-    >
-      <motion.button
-        className="w-full p-6 flex items-center justify-between text-center"
-        onClick={() => setIsOpen(!isOpen)}
-        whileHover={{ backgroundColor: 'rgba(0,0,0,0.02)' }}
-      >
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white">
-            {icon}
-          </div>
-          <h3 className="text-xl font-bold text-gray-800">{title}</h3>
-        </div>
-        <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <ChevronDown className="w-6 h-6 text-gray-400" />
-        </motion.div>
-      </motion.button>
-
-      <motion.div
-        initial={false}
-        animate={{
-          height: isOpen ? 'auto' : 0,
-          opacity: isOpen ? 1 : 0,
-        }}
-        transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="overflow-hidden"
-      >
-        <div className="px-6 pb-6">{children}</div>
-      </motion.div>
-    </motion.div>
-  );
 }
 
 export function ResultsSection({ result }: ResultsSectionProps) {
@@ -214,22 +162,13 @@ export function ResultsSection({ result }: ResultsSectionProps) {
           />
         </motion.div>
 
-        <motion.div
-          className="bg-white rounded-2xl shadow-lg p-6 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.25 }}
-        >
-          <h3 className={`text-xl font-bold mb-2 ${elementBlend.tone}`}>{elementBlend.title}</h3>
-          <p className="text-sm text-gray-500 mb-3">
-            Birth Element: <span className="font-semibold text-gray-700">{result.element}</span> · Animal’s Natural Element:{' '}
-            <span className="font-semibold text-gray-700">{naturalElement}</span>
-          </p>
-          <p className="text-gray-700 leading-relaxed">{elementBlend.description}</p>
-          <p className="text-sm text-gray-500 mt-3">
-            Different elements don’t cancel each other — they blend. Think of your animal as your core style and your element as the way it shows up.
-          </p>
-        </motion.div>
+        <ElementBlendFlipCard
+          title={elementBlend.title}
+          tone={elementBlend.tone}
+          birthElement={result.element}
+          naturalElement={naturalElement}
+          description={elementBlend.description}
+        />
 
         <YearInsightsSection result={result} />
 
@@ -320,80 +259,86 @@ export function ResultsSection({ result }: ResultsSectionProps) {
           </div>
         </motion.div>
 
-        {/* Detailed Sections */}
-        <div className="space-y-4">
-          <CollapsibleSection title="Personality & Nature" icon={<Sparkles className="w-5 h-5" />}>
+        {/* Detailed Sections - Flip Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <SectionFlipCard 
+            title="Personality & Nature" 
+            icon={<Sparkles className="w-6 h-6" />}
+            frontSummary={`${result.reading.traits.slice(0, 3).join(', ')} and more...`}
+          >
             <p className="text-gray-700 mb-4">{result.reading.personality}</p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4">
-              {result.reading.traits.map((trait, i) => (
-                <motion.span
+            <div className="flex flex-wrap gap-2 mb-4">
+              {result.reading.traits.map((trait) => (
+                <span
                   key={trait}
-                  className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-medium text-center"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: i * 0.05 }}
+                  className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-xs font-medium"
                 >
                   {trait}
-                </motion.span>
+                </span>
               ))}
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2">
               <div>
-                <h4 className="font-semibold text-green-600 mb-1">Strengths</h4>
-                <p className="text-gray-600 text-sm">{result.reading.strengths}</p>
+                <span className="font-semibold text-green-600 text-xs">Strengths: </span>
+                <span className="text-gray-600 text-xs">{result.reading.strengths}</span>
               </div>
               <div>
-                <h4 className="font-semibold text-red-500 mb-1">Challenges</h4>
-                <p className="text-gray-600 text-sm">{result.reading.weaknesses}</p>
+                <span className="font-semibold text-red-500 text-xs">Growth: </span>
+                <span className="text-gray-600 text-xs">{result.reading.weaknesses}</span>
               </div>
             </div>
-          </CollapsibleSection>
+          </SectionFlipCard>
 
-          <CollapsibleSection title="Career & Success" icon={<Briefcase className="w-5 h-5" />}>
-            <p className="text-gray-700">{result.reading.career}</p>
-          </CollapsibleSection>
+          <SectionFlipCard 
+            title="Career & Success" 
+            icon={<Briefcase className="w-6 h-6" />}
+            frontSummary="Discover your professional path and success strategies"
+          >
+            <p className="text-gray-700 text-sm">{result.reading.career}</p>
+          </SectionFlipCard>
 
-          <CollapsibleSection title="Love & Relationships" icon={<Heart className="w-5 h-5" />}>
-            <p className="text-gray-700 mb-4">{result.reading.love}</p>
-            <h4 className="font-semibold text-purple-600 mb-2">Best Matches</h4>
-            <div className="flex flex-wrap gap-2">
+          <SectionFlipCard 
+            title="Love & Relationships" 
+            icon={<Heart className="w-6 h-6" />}
+            frontSummary={`Best matches: ${result.reading.bestMatches.map(m => m.split(' ')[0]).join(', ')}`}
+          >
+            <p className="text-gray-700 mb-3 text-sm">{result.reading.love}</p>
+            <div className="flex flex-wrap gap-1">
               {result.reading.bestMatches.map((match) => (
                 <span
                   key={match}
-                  className="px-4 py-2 bg-pink-100 text-pink-700 rounded-full text-sm font-medium"
+                  className="px-2 py-1 bg-pink-100 text-pink-700 rounded-full text-xs font-medium"
                 >
                   {match}
                 </span>
               ))}
             </div>
-          </CollapsibleSection>
+          </SectionFlipCard>
 
-          <CollapsibleSection title="Lucky Elements" icon={<Users className="w-5 h-5" />}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-gradient-to-br from-pink-400 to-red-500 rounded-xl p-4 text-white">
-                <h4 className="font-semibold mb-2">Lucky Numbers</h4>
-                <div className="flex flex-wrap gap-2">
+          <SectionFlipCard 
+            title="Lucky Elements" 
+            icon={<Users className="w-6 h-6" />}
+            frontSummary={`Numbers: ${result.reading.luckyNumbers.join(', ')}`}
+          >
+            <div className="space-y-3">
+              <div className="bg-gradient-to-br from-pink-400 to-red-500 rounded-lg p-3 text-white">
+                <h4 className="font-semibold text-sm mb-1">Lucky Numbers</h4>
+                <div className="flex gap-2">
                   {result.reading.luckyNumbers.map((num) => (
-                    <motion.span 
-                      key={num} 
-                      className="text-2xl font-bold"
-                      whileHover={{ scale: 1.2 }}
-                    >
-                      {num}
-                    </motion.span>
+                    <span key={num} className="text-lg font-bold">{num}</span>
                   ))}
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-purple-400 to-indigo-500 rounded-xl p-4 text-white">
-                <h4 className="font-semibold mb-2">Lucky Colors</h4>
-                <div className="flex flex-wrap gap-2">
+              <div className="bg-gradient-to-br from-purple-400 to-indigo-500 rounded-lg p-3 text-white">
+                <h4 className="font-semibold text-sm mb-1">Lucky Colors</h4>
+                <div className="flex gap-2 flex-wrap">
                   {result.reading.luckyColors.map((color) => (
-                    <span key={color} className="text-lg">{color}</span>
+                    <span key={color} className="text-sm">{color}</span>
                   ))}
                 </div>
               </div>
             </div>
-          </CollapsibleSection>
+          </SectionFlipCard>
         </div>
       </div>
     </section>
