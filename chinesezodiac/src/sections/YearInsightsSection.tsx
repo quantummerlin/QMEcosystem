@@ -8,6 +8,51 @@ interface YearInsightsSectionProps {
 
 type FortuneType = 'excellent' | 'good' | 'neutral' | 'caution' | 'challenging';
 
+// Flip Card Component for interactive reveals
+interface FlipCardProps {
+  frontContent: React.ReactNode;
+  backContent: React.ReactNode;
+  frontBg?: string;
+  backBg?: string;
+  className?: string;
+}
+
+function FlipCard({ frontContent, backContent, frontBg = 'bg-white', backBg = 'bg-gradient-to-br from-purple-500 to-pink-500', className = '' }: FlipCardProps) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <div
+      className={`relative cursor-pointer ${className}`}
+      style={{ perspective: '1000px' }}
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <motion.div
+        className="relative w-full h-full"
+        style={{ transformStyle: 'preserve-3d' }}
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ duration: 0.6, type: 'spring', stiffness: 100 }}
+      >
+        {/* Front */}
+        <div
+          className={`absolute inset-0 w-full h-full rounded-2xl shadow-lg p-4 ${frontBg}`}
+          style={{ backfaceVisibility: 'hidden' }}
+        >
+          {frontContent}
+          <div className="absolute bottom-2 right-2 text-xs text-gray-400 animate-pulse">👆 Tap to reveal</div>
+        </div>
+        {/* Back */}
+        <div
+          className={`absolute inset-0 w-full h-full rounded-2xl shadow-lg p-4 ${backBg} text-white`}
+          style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+        >
+          {backContent}
+          <div className="absolute bottom-2 right-2 text-xs text-white/60">👆 Tap to flip back</div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
 const fortuneColors: Record<FortuneType, { bg: string; text: string; icon: string }> = {
   excellent: { bg: 'from-green-400 to-emerald-600', text: 'text-green-700', icon: '✨' },
   good: { bg: 'from-blue-400 to-cyan-600', text: 'text-blue-700', icon: '⭐' },
@@ -449,6 +494,14 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
 
   const activeMonth = monthlyForecasts[activeMonthIndex];
 
+  // Theme icons for flip cards
+  const themeIcons: Record<string, { icon: string; gradient: string }> = {
+    career: { icon: '💼', gradient: 'bg-gradient-to-br from-blue-500 to-indigo-600' },
+    wealth: { icon: '💰', gradient: 'bg-gradient-to-br from-amber-500 to-yellow-600' },
+    love: { icon: '❤️', gradient: 'bg-gradient-to-br from-pink-500 to-rose-600' },
+    health: { icon: '🌿', gradient: 'bg-gradient-to-br from-green-500 to-emerald-600' },
+  };
+
   return (
     <section className="mt-10 space-y-10">
       {/* Current Year Overview */}
@@ -457,14 +510,30 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
         <h3 className="text-2xl md:text-3xl font-bold text-gray-800">{currentYear.year}: Year of the {currentYear.element} {currentYear.zodiac}</h3>
         <p className="text-gray-500 mt-2">{currentYear.startDate} – {currentYear.endDate}</p>
         <p className="text-gray-700 mt-4">{currentYear.description}</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+        
+        {/* Flip Cards for Year Themes */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
           {Object.entries(currentYear.themes).map(([key, value]) => (
-            <div key={key} className="rounded-2xl border border-gray-100 p-4 shadow-sm">
-              <div className="text-lg font-semibold text-gray-800 capitalize">{key}</div>
-              <p className="text-sm text-gray-600 mt-2">{value}</p>
-            </div>
+            <FlipCard
+              key={key}
+              className="h-36"
+              frontBg="bg-white border border-gray-100"
+              backBg={themeIcons[key]?.gradient || 'bg-gradient-to-br from-purple-500 to-pink-500'}
+              frontContent={
+                <div className="flex flex-col items-center justify-center h-full">
+                  <div className="text-3xl mb-2">{themeIcons[key]?.icon || '✨'}</div>
+                  <div className="text-lg font-semibold text-gray-800 capitalize">{key}</div>
+                </div>
+              }
+              backContent={
+                <div className="flex flex-col justify-center h-full text-sm">
+                  <p className="text-white/90">{value}</p>
+                </div>
+              }
+            />
           ))}
         </div>
+        
         <div className="flex flex-wrap justify-center gap-4 mt-6 text-sm text-gray-600">
           <span>Lucky Colors: {currentYear.luckyColors.join(', ')}</span>
           <span>Lucky Numbers: {currentYear.luckyNumbers.join(', ')}</span>
@@ -547,60 +616,121 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
         </div>
       </motion.div>
 
-      {/* Element Influence */}
+      {/* Element Influence - Flip Card */}
       <motion.div className="bg-white rounded-3xl shadow-xl p-8 text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <h3 className="text-2xl md:text-3xl font-bold text-gray-800">Your {result.element} Element in {currentYear.year}</h3>
         <p className="text-gray-500 mt-2">How your birth element interacts with the Wood Snake year</p>
-        <div className={`mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm ${
-          elementMod.yearAffinity === 'aligned' ? 'bg-green-100 text-green-700' :
-          elementMod.yearAffinity === 'supportive' ? 'bg-blue-100 text-blue-700' :
-          elementMod.yearAffinity === 'neutral' ? 'bg-gray-100 text-gray-700' :
-          elementMod.yearAffinity === 'tension' ? 'bg-amber-100 text-amber-700' :
-          'bg-purple-100 text-purple-700'
-        }`}>
-          {elementMod.yearAffinity === 'aligned' && '🌿'}
-          {elementMod.yearAffinity === 'supportive' && '🔥'}
-          {elementMod.yearAffinity === 'neutral' && '⚖️'}
-          {elementMod.yearAffinity === 'tension' && '⚡'}
-          {elementMod.yearAffinity === 'draining' && '💧'}
-          {elementMod.yearAffinity.charAt(0).toUpperCase() + elementMod.yearAffinity.slice(1)} Energy
+        
+        {/* Main Element Flip Card */}
+        <div className="flex justify-center mt-6">
+          <FlipCard
+            className="w-64 h-48"
+            frontBg={`${
+              elementMod.yearAffinity === 'aligned' ? 'bg-gradient-to-br from-green-400 to-emerald-600' :
+              elementMod.yearAffinity === 'supportive' ? 'bg-gradient-to-br from-orange-400 to-red-500' :
+              elementMod.yearAffinity === 'neutral' ? 'bg-gradient-to-br from-gray-400 to-slate-600' :
+              elementMod.yearAffinity === 'tension' ? 'bg-gradient-to-br from-amber-400 to-orange-600' :
+              'bg-gradient-to-br from-blue-400 to-cyan-600'
+            }`}
+            backBg="bg-gradient-to-br from-purple-600 to-indigo-700"
+            frontContent={
+              <div className="flex flex-col items-center justify-center h-full text-white">
+                <div className="text-5xl mb-2">
+                  {result.element === 'Wood' && '🌳'}
+                  {result.element === 'Fire' && '🔥'}
+                  {result.element === 'Earth' && '🌍'}
+                  {result.element === 'Metal' && '⚔️'}
+                  {result.element === 'Water' && '💧'}
+                </div>
+                <div className="text-2xl font-bold">{result.element}</div>
+                <div className="text-sm mt-2 opacity-80">
+                  {elementMod.yearAffinity === 'aligned' && '🌿 Aligned'}
+                  {elementMod.yearAffinity === 'supportive' && '🔥 Supportive'}
+                  {elementMod.yearAffinity === 'neutral' && '⚖️ Neutral'}
+                  {elementMod.yearAffinity === 'tension' && '⚡ Tension'}
+                  {elementMod.yearAffinity === 'draining' && '💧 Draining'}
+                </div>
+              </div>
+            }
+            backContent={
+              <div className="flex flex-col justify-center h-full text-white text-sm">
+                <p className="text-white/90 leading-relaxed">{elementMod.theme}</p>
+              </div>
+            }
+          />
         </div>
-        <p className="text-gray-700 mt-4">{elementMod.theme}</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 text-sm">
-          <div className="rounded-2xl border border-green-200 bg-green-50 p-4">
-            <div className="font-semibold text-green-800 mb-2">🌟 Element Strengths</div>
-            <ul className="text-green-700 space-y-1">
-              {elementMod.extraLucky.map((item) => <li key={item}>• {item}</li>)}
-            </ul>
-            <p className="text-xs text-green-600 mt-2">Strong months: {elementMod.monthlyBoost.strong.map(m => months[m-1]).join(', ')}</p>
-          </div>
-          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4">
-            <div className="font-semibold text-amber-800 mb-2">⚠️ Element Cautions</div>
-            <ul className="text-amber-700 space-y-1">
-              {elementMod.extraAvoid.map((item) => <li key={item}>• {item}</li>)}
-            </ul>
-            <p className="text-xs text-amber-600 mt-2">Careful months: {elementMod.monthlyBoost.weak.map(m => months[m-1]).join(', ')}</p>
-          </div>
+
+        {/* Strengths & Cautions Flip Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+          <FlipCard
+            className="h-40"
+            frontBg="bg-gradient-to-br from-green-400 to-emerald-600"
+            backBg="bg-gradient-to-br from-green-500 to-teal-600"
+            frontContent={
+              <div className="flex flex-col items-center justify-center h-full text-white">
+                <div className="text-3xl mb-2">🌟</div>
+                <div className="text-lg font-semibold">Element Strengths</div>
+                <div className="text-sm opacity-80 mt-1">{elementMod.extraLucky.length} advantages</div>
+              </div>
+            }
+            backContent={
+              <div className="flex flex-col justify-center h-full text-white text-sm text-left">
+                <ul className="space-y-1">
+                  {elementMod.extraLucky.map((item) => <li key={item}>✓ {item}</li>)}
+                </ul>
+                <p className="text-xs mt-3 opacity-80">Strong: {elementMod.monthlyBoost.strong.map(m => months[m-1]).join(', ')}</p>
+              </div>
+            }
+          />
+          <FlipCard
+            className="h-40"
+            frontBg="bg-gradient-to-br from-amber-400 to-orange-600"
+            backBg="bg-gradient-to-br from-amber-500 to-red-600"
+            frontContent={
+              <div className="flex flex-col items-center justify-center h-full text-white">
+                <div className="text-3xl mb-2">⚠️</div>
+                <div className="text-lg font-semibold">Element Cautions</div>
+                <div className="text-sm opacity-80 mt-1">{elementMod.extraAvoid.length} watch-outs</div>
+              </div>
+            }
+            backContent={
+              <div className="flex flex-col justify-center h-full text-white text-sm text-left">
+                <ul className="space-y-1">
+                  {elementMod.extraAvoid.map((item) => <li key={item}>✗ {item}</li>)}
+                </ul>
+                <p className="text-xs mt-3 opacity-80">Careful: {elementMod.monthlyBoost.weak.map(m => months[m-1]).join(', ')}</p>
+              </div>
+            }
+          />
         </div>
       </motion.div>
 
-      {/* Fortune Timeline */}
+      {/* Fortune Timeline - Mini Flip Cards */}
       <motion.div className="bg-white rounded-3xl shadow-xl p-8 text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <h3 className="text-2xl md:text-3xl font-bold text-gray-800">Your {currentYear.year} Fortune Map</h3>
-        <div className="flex flex-wrap justify-center gap-2 mt-4">
-          {monthlyForecasts.map((m, index) => (
-            <button
+        <p className="text-gray-500 mt-2">Tap any month to reveal your forecast</p>
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mt-6">
+          {monthlyForecasts.map((m) => (
+            <FlipCard
               key={m.month}
-              className={`px-3 py-2 rounded-full text-white text-sm bg-gradient-to-r ${fortuneColors[m.type].bg} ${index === activeMonthIndex ? 'ring-2 ring-purple-400' : ''}`}
-              onClick={() => setActiveMonthIndex(index)}
-            >
-              {fortuneColors[m.type].icon} {m.month}
-            </button>
+              className="h-28"
+              frontBg={`bg-gradient-to-br ${fortuneColors[m.type].bg}`}
+              backBg="bg-gradient-to-br from-slate-700 to-slate-900"
+              frontContent={
+                <div className="flex flex-col items-center justify-center h-full text-white">
+                  <div className="text-xl">{fortuneColors[m.type].icon}</div>
+                  <div className="text-lg font-bold mt-1">{m.month}</div>
+                  <div className="text-xs opacity-80 mt-1">{'⭐'.repeat(m.rating)}</div>
+                </div>
+              }
+              backContent={
+                <div className="flex flex-col justify-center h-full text-white text-xs text-left">
+                  <p className="leading-relaxed line-clamp-3">{m.focus}</p>
+                  <div className="mt-2 text-green-300">✓ {m.lucky[0]}</div>
+                </div>
+              }
+            />
           ))}
-        </div>
-        <div className="mt-4 rounded-2xl border border-gray-100 p-4 text-left max-w-2xl mx-auto">
-          <div className="text-sm text-gray-500 mb-1">Focus for {activeMonth.month}</div>
-          <p className="text-gray-700">{activeMonth.focus}</p>
         </div>
       </motion.div>
 
@@ -650,29 +780,79 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
         </div>
       </motion.div>
 
-      {/* Next Year Preview */}
+      {/* Next Year Preview - Flip Cards */}
       <motion.div className="bg-white rounded-3xl shadow-xl p-8 text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <div className="text-4xl mb-2">🐴</div>
         <h3 className="text-2xl md:text-3xl font-bold text-gray-800">{nextYear.year}: Year of the {nextYear.element} {nextYear.zodiac}</h3>
         <p className="text-gray-700 mt-3">{nextYear.description}</p>
         <div className="mt-4 text-2xl">Compatibility Preview: {'⭐'.repeat(horseRating)}{'☆'.repeat(5 - horseRating)}</div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 text-sm">
-          <div className="rounded-2xl border border-gray-100 p-4">
-            <div className="font-semibold text-gray-800 mb-2">Career</div>
-            <p className="text-gray-600">{nextYear.predictions.career}</p>
-          </div>
-          <div className="rounded-2xl border border-gray-100 p-4">
-            <div className="font-semibold text-gray-800 mb-2">Wealth</div>
-            <p className="text-gray-600">{nextYear.predictions.wealth}</p>
-          </div>
-          <div className="rounded-2xl border border-gray-100 p-4">
-            <div className="font-semibold text-gray-800 mb-2">Love</div>
-            <p className="text-gray-600">{nextYear.predictions.love}</p>
-          </div>
-          <div className="rounded-2xl border border-gray-100 p-4">
-            <div className="font-semibold text-gray-800 mb-2">Health</div>
-            <p className="text-gray-600">{nextYear.predictions.health}</p>
-          </div>
+        
+        {/* 2026 Predictions Flip Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+          <FlipCard
+            className="h-36"
+            frontBg="bg-gradient-to-br from-red-400 to-orange-500"
+            backBg="bg-gradient-to-br from-red-500 to-rose-600"
+            frontContent={
+              <div className="flex flex-col items-center justify-center h-full text-white">
+                <div className="text-3xl mb-2">🔥</div>
+                <div className="text-lg font-semibold">Career</div>
+              </div>
+            }
+            backContent={
+              <div className="flex flex-col justify-center h-full text-white text-sm">
+                <p>{nextYear.predictions.career}</p>
+              </div>
+            }
+          />
+          <FlipCard
+            className="h-36"
+            frontBg="bg-gradient-to-br from-yellow-400 to-amber-500"
+            backBg="bg-gradient-to-br from-amber-500 to-orange-600"
+            frontContent={
+              <div className="flex flex-col items-center justify-center h-full text-white">
+                <div className="text-3xl mb-2">💰</div>
+                <div className="text-lg font-semibold">Wealth</div>
+              </div>
+            }
+            backContent={
+              <div className="flex flex-col justify-center h-full text-white text-sm">
+                <p>{nextYear.predictions.wealth}</p>
+              </div>
+            }
+          />
+          <FlipCard
+            className="h-36"
+            frontBg="bg-gradient-to-br from-pink-400 to-rose-500"
+            backBg="bg-gradient-to-br from-rose-500 to-pink-600"
+            frontContent={
+              <div className="flex flex-col items-center justify-center h-full text-white">
+                <div className="text-3xl mb-2">❤️</div>
+                <div className="text-lg font-semibold">Love</div>
+              </div>
+            }
+            backContent={
+              <div className="flex flex-col justify-center h-full text-white text-sm">
+                <p>{nextYear.predictions.love}</p>
+              </div>
+            }
+          />
+          <FlipCard
+            className="h-36"
+            frontBg="bg-gradient-to-br from-green-400 to-emerald-500"
+            backBg="bg-gradient-to-br from-emerald-500 to-teal-600"
+            frontContent={
+              <div className="flex flex-col items-center justify-center h-full text-white">
+                <div className="text-3xl mb-2">🌿</div>
+                <div className="text-lg font-semibold">Health</div>
+              </div>
+            }
+            backContent={
+              <div className="flex flex-col justify-center h-full text-white text-sm">
+                <p>{nextYear.predictions.health}</p>
+              </div>
+            }
+          />
         </div>
       </motion.div>
     </section>
