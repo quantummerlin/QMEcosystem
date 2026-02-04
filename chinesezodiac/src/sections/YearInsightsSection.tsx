@@ -70,46 +70,58 @@ const elementModifiers: Record<string, {
   extraLucky: string[];
   extraAvoid: string[];
   monthlyBoost: { strong: number[]; weak: number[] };
+  strategy: string;
+  mantra: string;
 }> = {
   Wood: {
     yearAffinity: 'aligned',
     ratingBoost: 1,
     theme: '2025 resonates deeply with your Wood element. Growth, learning, and expansion feel natural this year.',
-    extraLucky: ['New ventures', 'Education', 'Spring initiatives'],
-    extraAvoid: ['Overextension', 'Rigid plans'],
-    monthlyBoost: { strong: [2, 3, 4], weak: [9, 10] }, // Spring strong, fall weaker
+    extraLucky: ['New ventures', 'Education', 'Spring initiatives', 'Teaching others'],
+    extraAvoid: ['Overextension', 'Rigid plans', 'Ignoring rest'],
+    monthlyBoost: { strong: [2, 3, 4], weak: [9, 10] },
+    strategy: 'Plant seeds early (Jan-Apr), nurture through summer, harvest wisdom in fall. Your natural growth energy is amplified—use it for learning and launching.',
+    mantra: 'I grow at my own pace, rooted and rising.',
   },
   Fire: {
     yearAffinity: 'supportive',
     ratingBoost: 0,
     theme: 'Wood feeds your Fire—expect inspiration, visibility, and creative momentum this year.',
-    extraLucky: ['Leadership', 'Visibility', 'Creative projects'],
-    extraAvoid: ['Burnout', 'Impulsive decisions'],
-    monthlyBoost: { strong: [5, 6, 7], weak: [11, 12, 1] }, // Summer strong, winter weaker
+    extraLucky: ['Leadership', 'Visibility', 'Creative projects', 'Public speaking'],
+    extraAvoid: ['Burnout', 'Impulsive decisions', 'Scattered energy'],
+    monthlyBoost: { strong: [5, 6, 7], weak: [11, 12, 1] },
+    strategy: 'Channel the Wood energy fueling you into focused projects, not scattered flames. Summer is your peak—plan visibility moves for May-July.',
+    mantra: 'I shine brightly without burning out.',
   },
   Earth: {
     yearAffinity: 'tension',
     ratingBoost: -1,
     theme: 'Wood challenges Earth—expect growth through disruption and necessary change.',
-    extraLucky: ['Flexibility', 'Letting go', 'Fresh structures'],
-    extraAvoid: ['Stubbornness', 'Over-control'],
-    monthlyBoost: { strong: [8, 9], weak: [2, 3, 4] }, // Late summer strong, spring weaker
+    extraLucky: ['Flexibility', 'Letting go', 'Fresh structures', 'Adaptability'],
+    extraAvoid: ['Stubbornness', 'Over-control', 'Resistance to change'],
+    monthlyBoost: { strong: [8, 9], weak: [2, 3, 4] },
+    strategy: 'Spring brings disruption—lean into it rather than resist. Late summer (Aug-Sep) is your stable window for major decisions. Use tension as fertilizer for growth.',
+    mantra: 'I bend without breaking. Change enriches me.',
   },
   Metal: {
     yearAffinity: 'neutral',
     ratingBoost: 0,
     theme: 'Metal shapes Wood—use your precision to carve out clear goals this year.',
-    extraLucky: ['Refinement', 'Cutting ties', 'Precision'],
-    extraAvoid: ['Over-criticism', 'Harsh judgments'],
-    monthlyBoost: { strong: [9, 10], weak: [2, 3] }, // Autumn strong, early spring weaker
+    extraLucky: ['Refinement', 'Cutting ties', 'Precision', 'Editing life'],
+    extraAvoid: ['Over-criticism', 'Harsh judgments', 'Perfectionism paralysis'],
+    monthlyBoost: { strong: [9, 10], weak: [2, 3] },
+    strategy: "Your clarity can shape the Wood energy into something refined. Autumn (Sep-Oct) is your power window. Focus on pruning what doesn't serve you.",
+    mantra: 'I refine, release, and rise sharper.',
   },
   Water: {
     yearAffinity: 'draining',
     ratingBoost: 0,
     theme: 'Water nourishes Wood—your energy fuels growth, but pace yourself to avoid depletion.',
-    extraLucky: ['Rest cycles', 'Intuition', 'Flowing with change'],
-    extraAvoid: ['Over-giving', 'Ignoring fatigue'],
-    monthlyBoost: { strong: [11, 12, 1], weak: [5, 6] }, // Winter strong, summer weaker
+    extraLucky: ['Rest cycles', 'Intuition', 'Flowing with change', 'Deep reflection'],
+    extraAvoid: ['Over-giving', 'Ignoring fatigue', 'Saying yes to everything'],
+    monthlyBoost: { strong: [11, 12, 1], weak: [5, 6] },
+    strategy: 'You naturally feed the Wood energy of 2025—which can deplete you. Winter (Nov-Jan) is your recharge window. Build in rest before summer drains you.',
+    mantra: 'I nourish others by first filling my own well.',
   },
 };
 
@@ -121,10 +133,30 @@ const currentYear = {
   endDate: 'February 16, 2026',
   description: 'A year of wisdom, transformation, and strategic thinking. The Wood Snake invites patient growth, sharper intuition, and long-term planning.',
   themes: {
-    career: 'Strategic moves beat quick wins. Learn, plan, and position yourself for the long game.',
-    wealth: 'Steady gains over risky leaps. Build reserves and invest in skills that compound.',
-    love: 'Honest communication deepens bonds. Slow, sincere connections thrive.',
-    health: 'Nervous-system care matters. Prioritize sleep, calm routines, and gentle movement.',
+    career: {
+      summary: 'Strategic moves beat quick wins. Learn, plan, and position yourself for the long game.',
+      details: 'The Snake favors those who think three steps ahead. Build expertise quietly, cultivate mentors, and avoid announcing plans prematurely. April and October bring peak visibility—save major launches for these windows.',
+      bestMonths: ['April', 'October'],
+      action: 'Invest 30 mins daily in a skill that compounds.',
+    },
+    wealth: {
+      summary: 'Steady gains over risky leaps. Build reserves and invest in skills that compound.',
+      details: 'Snake years reward patience over speculation. Build a 3-6 month emergency fund before investing. Focus on income diversification rather than get-rich-quick schemes. March and September favor financial decisions.',
+      bestMonths: ['March', 'September'],
+      action: 'Automate savings before spending each month.',
+    },
+    love: {
+      summary: 'Honest communication deepens bonds. Slow, sincere connections thrive.',
+      details: 'Snake energy favors depth over breadth. One meaningful conversation outweighs ten superficial ones. Singles: quality connections arrive when you stop searching. Couples: vulnerability strengthens bonds.',
+      bestMonths: ['February', 'July'],
+      action: 'Ask one deeper question in every conversation.',
+    },
+    health: {
+      summary: 'Nervous-system care matters. Prioritize sleep, calm routines, and gentle movement.',
+      details: 'Snake governs the nervous system and intuition. Chronic stress depletes faster this year. Prioritize sleep hygiene, reduce stimulants, and add gentle practices like walking or stretching. May and November need extra rest.',
+      bestMonths: ['June', 'August'],
+      action: 'Create a wind-down ritual 1 hour before bed.',
+    },
   },
   luckyColors: ['Emerald', 'Teal', 'Soft Gold'],
   luckyNumbers: [2, 6, 9],
@@ -513,21 +545,26 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
         
         {/* Flip Cards for Year Themes */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-          {Object.entries(currentYear.themes).map(([key, value]) => (
+          {Object.entries(currentYear.themes).map(([key, theme]) => (
             <FlipCard
               key={key}
-              className="h-36"
+              className="h-48 md:h-52"
               frontBg="bg-white border border-gray-100"
               backBg={themeIcons[key]?.gradient || 'bg-gradient-to-br from-purple-500 to-pink-500'}
               frontContent={
                 <div className="flex flex-col items-center justify-center h-full">
                   <div className="text-3xl mb-2">{themeIcons[key]?.icon || '✨'}</div>
                   <div className="text-lg font-semibold text-gray-800 capitalize">{key}</div>
+                  <p className="text-xs text-gray-500 mt-2 text-center px-2 line-clamp-2">{theme.summary}</p>
                 </div>
               }
               backContent={
-                <div className="flex flex-col justify-center h-full text-sm">
-                  <p className="text-white/90">{value}</p>
+                <div className="flex flex-col justify-between h-full text-xs">
+                  <p className="text-white/90 leading-relaxed line-clamp-4">{theme.details}</p>
+                  <div className="mt-2 space-y-1">
+                    <div className="text-white/70">📅 Best: {theme.bestMonths.join(', ')}</div>
+                    <div className="bg-white/20 rounded-lg px-2 py-1 text-white font-medium">💡 {theme.action}</div>
+                  </div>
                 </div>
               }
             />
@@ -624,7 +661,7 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
         {/* Main Element Flip Card */}
         <div className="flex justify-center mt-6">
           <FlipCard
-            className="w-64 h-48"
+            className="w-72 h-56"
             frontBg={`${
               elementMod.yearAffinity === 'aligned' ? 'bg-gradient-to-br from-green-400 to-emerald-600' :
               elementMod.yearAffinity === 'supportive' ? 'bg-gradient-to-br from-orange-400 to-red-500' :
@@ -644,17 +681,20 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
                 </div>
                 <div className="text-2xl font-bold">{result.element}</div>
                 <div className="text-sm mt-2 opacity-80">
-                  {elementMod.yearAffinity === 'aligned' && '🌿 Aligned'}
-                  {elementMod.yearAffinity === 'supportive' && '🔥 Supportive'}
-                  {elementMod.yearAffinity === 'neutral' && '⚖️ Neutral'}
-                  {elementMod.yearAffinity === 'tension' && '⚡ Tension'}
-                  {elementMod.yearAffinity === 'draining' && '💧 Draining'}
+                  {elementMod.yearAffinity === 'aligned' && '🌿 Aligned with Wood Snake'}
+                  {elementMod.yearAffinity === 'supportive' && '🔥 Energized by Wood Snake'}
+                  {elementMod.yearAffinity === 'neutral' && '⚖️ Balanced with Wood Snake'}
+                  {elementMod.yearAffinity === 'tension' && '⚡ Challenged by Wood Snake'}
+                  {elementMod.yearAffinity === 'draining' && '💧 Giving to Wood Snake'}
                 </div>
               </div>
             }
             backContent={
-              <div className="flex flex-col justify-center h-full text-white text-sm">
-                <p className="text-white/90 leading-relaxed">{elementMod.theme}</p>
+              <div className="flex flex-col justify-between h-full text-white text-sm text-left">
+                <p className="text-white/90 leading-relaxed">{elementMod.strategy}</p>
+                <div className="bg-white/20 rounded-lg px-3 py-2 mt-2 text-center italic">
+                  "{elementMod.mantra}"
+                </div>
               </div>
             }
           />
@@ -663,42 +703,49 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
         {/* Strengths & Cautions Flip Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
           <FlipCard
-            className="h-40"
+            className="h-44"
             frontBg="bg-gradient-to-br from-green-400 to-emerald-600"
             backBg="bg-gradient-to-br from-green-500 to-teal-600"
             frontContent={
               <div className="flex flex-col items-center justify-center h-full text-white">
                 <div className="text-3xl mb-2">🌟</div>
                 <div className="text-lg font-semibold">Element Strengths</div>
-                <div className="text-sm opacity-80 mt-1">{elementMod.extraLucky.length} advantages</div>
+                <div className="text-sm opacity-80 mt-1">{elementMod.extraLucky.length} advantages this year</div>
               </div>
             }
             backContent={
-              <div className="flex flex-col justify-center h-full text-white text-sm text-left">
+              <div className="flex flex-col justify-between h-full text-white text-sm text-left">
                 <ul className="space-y-1">
                   {elementMod.extraLucky.map((item) => <li key={item}>✓ {item}</li>)}
                 </ul>
-                <p className="text-xs mt-3 opacity-80">Strong: {elementMod.monthlyBoost.strong.map(m => months[m-1]).join(', ')}</p>
+                <div className="bg-white/20 rounded-lg px-2 py-1 mt-2 text-xs">
+                  📅 Peak months: {elementMod.monthlyBoost.strong.map(m => months[m-1]).join(', ')}
+                </div>
               </div>
             }
           />
           <FlipCard
-            className="h-40"
+            className="w-72 h-56"
             frontBg="bg-gradient-to-br from-amber-400 to-orange-600"
             backBg="bg-gradient-to-br from-amber-500 to-red-600"
             frontContent={
               <div className="flex flex-col items-center justify-center h-full text-white">
                 <div className="text-3xl mb-2">⚠️</div>
-                <div className="text-lg font-semibold">Element Cautions</div>
-                <div className="text-sm opacity-80 mt-1">{elementMod.extraAvoid.length} watch-outs</div>
+                <div className="text-lg font-semibold">Energy Drains</div>
+                <div className="text-sm opacity-80 mt-1">{elementMod.extraAvoid.length} patterns to avoid</div>
+                <div className="text-xs opacity-60 mt-2">Tap for awareness guide</div>
               </div>
             }
             backContent={
-              <div className="flex flex-col justify-center h-full text-white text-sm text-left">
-                <ul className="space-y-1">
-                  {elementMod.extraAvoid.map((item) => <li key={item}>✗ {item}</li>)}
+              <div className="flex flex-col justify-center h-full text-white text-xs text-left p-1">
+                <ul className="space-y-1 mb-2">
+                  {elementMod.extraAvoid.map((item) => <li key={item}>🚫 {item}</li>)}
                 </ul>
-                <p className="text-xs mt-3 opacity-80">Careful: {elementMod.monthlyBoost.weak.map(m => months[m-1]).join(', ')}</p>
+                <div className="bg-black/20 rounded-lg px-2 py-1.5">
+                  <div className="font-semibold text-amber-200">⏰ Low-Energy Months:</div>
+                  <div className="opacity-90">{elementMod.monthlyBoost.weak.map(m => months[m-1]).join(', ')}</div>
+                  <div className="text-[10px] opacity-70 mt-1 italic">Slow down, don't force outcomes during these periods</div>
+                </div>
               </div>
             }
           />
