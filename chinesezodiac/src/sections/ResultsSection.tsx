@@ -29,7 +29,7 @@ function CollapsibleSection({ title, icon, children, defaultOpen = false }: Coll
       transition={{ duration: 0.5 }}
     >
       <motion.button
-        className="w-full p-6 flex items-center justify-between text-left"
+        className="w-full p-6 flex items-center justify-between text-center"
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ backgroundColor: 'rgba(0,0,0,0.02)' }}
       >

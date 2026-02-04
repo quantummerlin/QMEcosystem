@@ -14,7 +14,7 @@ const features = [
       <>
         <Sparkles className="w-10 h-10 mb-3" />
         <h4 className="text-xl font-bold mb-3">Daily Guidance</h4>
-        <ul className="text-sm text-white/90 space-y-2 text-left">
+        <ul className="text-sm text-white/90 space-y-2 text-center">
           <li>• Morning energy readings</li>
           <li>• Afternoon focus tips</li>
           <li>• Evening reflection prompts</li>
@@ -32,7 +32,7 @@ const features = [
       <>
         <Calendar className="w-10 h-10 mb-3" />
         <h4 className="text-xl font-bold mb-3">Weekly Forecast</h4>
-        <ul className="text-sm text-white/90 space-y-2 text-left">
+        <ul className="text-sm text-white/90 space-y-2 text-center">
           <li>• Career opportunities</li>
           <li>• Relationship dynamics</li>
           <li>• Financial insights</li>
@@ -50,7 +50,7 @@ const features = [
       <>
         <Moon className="w-10 h-10 mb-3" />
         <h4 className="text-xl font-bold mb-3">Monthly Overview</h4>
-        <ul className="text-sm text-white/90 space-y-2 text-left">
+        <ul className="text-sm text-white/90 space-y-2 text-center">
           <li>• Monthly theme analysis</li>
           <li>• Key dates to remember</li>
           <li>• Growth opportunities</li>
@@ -68,7 +68,7 @@ const features = [
       <>
         <Star className="w-10 h-10 mb-3" />
         <h4 className="text-xl font-bold mb-3">Yearly Predictions</h4>
-        <ul className="text-sm text-white/90 space-y-2 text-left">
+        <ul className="text-sm text-white/90 space-y-2 text-center">
           <li>• Annual fortune overview</li>
           <li>• Major life transitions</li>
           <li>• Success predictions</li>
@@ -86,7 +86,7 @@ const features = [
       <>
         <Zap className="w-10 h-10 mb-3" />
         <h4 className="text-xl font-bold mb-3">Element Wisdom</h4>
-        <ul className="text-sm text-white/90 space-y-2 text-left">
+        <ul className="text-sm text-white/90 space-y-2 text-center">
           <li>• Element personality traits</li>
           <li>• Element compatibility</li>
           <li>• Balancing techniques</li>
@@ -104,7 +104,7 @@ const features = [
       <>
         <Heart className="w-10 h-10 mb-3" />
         <h4 className="text-xl font-bold mb-3">Love & Compatibility</h4>
-        <ul className="text-sm text-white/90 space-y-2 text-left">
+        <ul className="text-sm text-white/90 space-y-2 text-center">
           <li>• Best zodiac matches</li>
           <li>• Relationship advice</li>
           <li>• Communication tips</li>
