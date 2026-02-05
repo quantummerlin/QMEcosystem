@@ -3863,8 +3863,19 @@
         }
         
         .privacy-note .icon {
-            font-size: 1.5rem;
             flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .privacy-note .lock-icon::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: #2d5a3d;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1C8.676 1 6 3.676 6 7v2H4v14h16V9h-2V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4zm0 10c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z'/%3E%3C/svg%3E") center/contain no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1C8.676 1 6 3.676 6 7v2H4v14h16V9h-2V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4zm0 10c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z'/%3E%3C/svg%3E") center/contain no-repeat;
         }
         
         .privacy-note p {
@@ -3879,14 +3890,13 @@
     <div class="welcome-modal" id="welcomeModal" style="display: none;">
         <div class="welcome-content">
             <div class="welcome-header">
-                <h2>✨ Welcome to Your Reading ✨</h2>
+                <h2>Welcome to Your Reading</h2>
                 <p>A moment in time, captured forever</p>
             </div>
             
             <div class="welcome-body">
                 <!-- Step 1: Introduction -->
                 <div class="welcome-step active" data-step="1">
-                    <div class="welcome-icon">🌟</div>
                     <h3>How This Works</h3>
                     <p>Enter a birth date and time, and we'll reveal the cosmic patterns that were written in the stars at that exact moment.</p>
                     <p>You'll receive <strong>65+ personalized readings</strong> combining astrology, numerology, and ancient wisdom—a complete soul blueprint.</p>
@@ -3897,7 +3907,6 @@
                 
                 <!-- Step 2: Theme Selection -->
                 <div class="welcome-step" data-step="2">
-                    <div class="welcome-icon">🎨</div>
                     <h3>Choose Your Theme</h3>
                     <p>Pick a color that resonates with you. This subtly adjusts the tone and energy of your reading.</p>
                     <div class="theme-preview-btns">
@@ -3910,7 +3919,6 @@
                 
                 <!-- Step 3: How to Read -->
                 <div class="welcome-step" data-step="3">
-                    <div class="welcome-icon">📖</div>
                     <h3>No Pressure to Read Everything</h3>
                     <p>This is a <strong>substantial amount of information</strong>—think of it as an instruction manual for understanding a soul, not something to rush through.</p>
                     <p>Take your time. Come back to different sections when they feel relevant. Some insights might click immediately; others may make sense months from now.</p>
@@ -3921,7 +3929,6 @@
                 
                 <!-- Step 4: Accuracy Note -->
                 <div class="welcome-step" data-step="4">
-                    <div class="welcome-icon">💫</div>
                     <h3>A Gentle Note on Accuracy</h3>
                     <p>Perhaps <strong>70% will feel uncannily accurate</strong>. The rest? The stars and numbers capture your absolute potential—they cannot know your traumas, circumstances, or the choices you've made along the way.</p>
                     <p>If something doesn't resonate, it might be unlived potential waiting to be discovered. Or simply not your path.</p>
@@ -3929,7 +3936,7 @@
                         <p>"Maybe, just maybe, this is the reading that sets you on the path to who you were always meant to be."</p>
                     </div>
                     <div class="privacy-note">
-                        <span class="icon">🔒</span>
+                        <span class="icon lock-icon"></span>
                         <p><strong>Your data stays with you.</strong> Everything is stored locally on your device. We never see, collect, or share your birth information.</p>
                     </div>
                 </div>
