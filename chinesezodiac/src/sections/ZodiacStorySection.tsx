@@ -195,11 +195,11 @@ export function ZodiacStorySection() {
             transition={{ duration: 0.5, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <div className="px-8 md:px-10 pb-10 space-y-6">
+            <div className="px-6 md:px-10 pb-10 space-y-4">
               {zodiacStory.chapters.slice(1).map((chapter, index) => (
                 <motion.div
                   key={index}
-                  className={`rounded-2xl p-6 cursor-pointer transition-all ${
+                  className={`rounded-2xl p-6 md:p-8 cursor-pointer transition-all mb-4 ${
                     activeChapter === index
                       ? 'bg-gradient-to-r from-red-100 to-orange-100 shadow-lg'
                       : 'bg-gray-50 hover:bg-gray-100'

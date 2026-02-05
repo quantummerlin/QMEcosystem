@@ -86,12 +86,12 @@ export function DailyDashboard({ animal, element, icon }: DailyDashboardProps) {
       </div>
 
       {/* Navigation Tabs */}
-      <div className="flex overflow-x-auto border-b border-gray-100 scrollbar-hide">
+      <div className="flex overflow-x-auto border-b border-gray-100 scrollbar-hide px-2">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`flex items-center gap-2 px-4 py-3 whitespace-nowrap transition-colors ${
+            className={`flex items-center gap-2 px-5 py-4 whitespace-nowrap transition-colors min-w-fit ${
               activeTab === tab.id 
                 ? 'text-purple-600 border-b-2 border-purple-600 bg-purple-50' 
                 : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
