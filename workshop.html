@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3480541530392777" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merlin's Workshop — Instruments in Formation</title>
+    <meta name="description" content="A hidden space within the Quantum Merlin ecosystem where new tools are being forged, refined, and summoned into existence.">
+    <meta name="keywords" content="quantum merlin, workshop, spiritual tools, metaphysical, experimental, beta">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Merlin's Workshop — Instruments in Formation">
+    <meta property="og:description" content="Where unfinished instruments wait to be summoned into existence.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/workshop">
+    <meta property="og:site_name" content="Quantum Merlin">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://quantummerlin.com/workshop">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ═══════════════════════════════════════════════════════
+           ROOT & RESET
+           ═══════════════════════════════════════════════════════ */
+        :root {
+            --bg-dark: #0a0a0f;
+            --bg-parchment: rgba(30, 24, 18, 0.6);
+            --bg-drawer: rgba(20, 16, 12, 0.8);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-muted: rgba(255, 255, 255, 0.45);
+            --gold: #c9a84c;
+            --gold-dim: rgba(201, 168, 76, 0.5);
+            --gold-glow: rgba(201, 168, 76, 0.15);
+            --amber: #b8860b;
+            --warm-stone: #8a7a6a;
+            --wood-dark: rgba(60, 42, 25, 0.5);
+            --wood-light: rgba(90, 65, 38, 0.4);
+            --iron: rgba(120, 120, 130, 0.6);
+            --forming: #6a8fa7;       /* ✧ cool muted blue */
+            --refining: #c9a84c;      /* ✦ warm gold */
+            --stabilised: #7eb87e;    /* ✶ sage green */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.8;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           BACKGROUND — Stone workshop atmosphere
+           ═══════════════════════════════════════════════════════ */
+        .workshop-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background:
+                radial-gradient(ellipse at 30% 20%, rgba(201, 168, 76, 0.03), transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(184, 134, 11, 0.02), transparent 50%),
+                linear-gradient(180deg, #0a0a0f 0%, #0d0b08 40%, #0a0a0f 100%);
+        }
+
+        /* Faint stone-texture grid */
+        .workshop-bg::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(201, 168, 76, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(201, 168, 76, 0.025) 1px, transparent 1px);
+            background-size: 80px 80px;
+            animation: stoneShift 40s linear infinite;
+        }
+
+        @keyframes stoneShift {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(80px, 80px); }
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           HEADER — Minimal, mythic
+           ═══════════════════════════════════════════════════════ */
+        .ws-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+        }
+
+        .ws-header a {
+            text-decoration: none;
+        }
+
+        .ws-back {
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            color: var(--gold-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .ws-back:hover { color: var(--gold); }
+
+        .ws-brand {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           MAIN CONTAINER
+           ═══════════════════════════════════════════════════════ */
+        .ws-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           HERO — The mythic introduction
+           ═══════════════════════════════════════════════════════ */
+        .ws-hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+        }
+
+        .ws-hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 30px;
+            text-shadow: 0 0 40px rgba(201, 168, 76, 0.15);
+        }
+
+        .ws-hero .intro-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 620px;
+            margin: 0 auto;
+            line-height: 2;
+            font-style: italic;
+        }
+
+        .ws-hero .intro-text p {
+            margin-bottom: 18px;
+        }
+
+        .ws-hero .intro-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           STATUS KEY — The legend
+           ═══════════════════════════════════════════════════════ */
+        .status-key {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 20px;
+            margin: 0 0 50px;
+            border: 1px solid rgba(201, 168, 76, 0.08);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .status-key-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .status-marker {
+            font-size: 1rem;
+        }
+
+        .status-marker.forming { color: var(--forming); }
+        .status-marker.refining { color: var(--refining); }
+        .status-marker.stabilised { color: var(--stabilised); }
+
+        /* ═══════════════════════════════════════════════════════
+           CATEGORY DRAWERS — Expandable sections
+           ═══════════════════════════════════════════════════════ */
+        .category-drawer {
+            margin-bottom: 20px;
+            border: 1px solid rgba(201, 168, 76, 0.1);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+
+        .category-drawer:hover {
+            border-color: rgba(201, 168, 76, 0.2);
+        }
+
+        .drawer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 22px 28px;
+            background: var(--bg-parchment);
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.3s ease;
+        }
+
+        .drawer-header:hover {
+            background: rgba(40, 32, 22, 0.7);
+        }
+
+        .drawer-header-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .drawer-icon {
+            font-size: 1.5rem;
+            filter: drop-shadow(0 0 6px rgba(201, 168, 76, 0.2));
+        }
+
+        .drawer-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
+        .drawer-count {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-left: 10px;
+        }
+
+        .drawer-chevron {
+            font-size: 0.9rem;
+            color: var(--gold-dim);
+            transition: transform 0.4s ease;
+        }
+
+        .category-drawer.open .drawer-chevron {
+            transform: rotate(180deg);
+        }
+
+        .drawer-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            background: var(--bg-drawer);
+        }
+
+        .category-drawer.open .drawer-body {
+            max-height: 2000px;
+        }
+
+        .drawer-content {
+            padding: 10px 28px 25px;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           INSTRUMENT ITEMS — Tools inside drawers
+           ═══════════════════════════════════════════════════════ */
+        .instrument-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.06);
+        }
+
+        .instrument-item:last-child {
+            border-bottom: none;
+        }
+
+        .instrument-status {
+            flex-shrink: 0;
+            font-size: 1rem;
+            margin-top: 3px;
+        }
+
+        .instrument-status.forming { color: var(--forming); }
+        .instrument-status.refining { color: var(--refining); }
+        .instrument-status.stabilised { color: var(--stabilised); }
+
+        .instrument-info {
+            flex: 1;
+        }
+
+        .instrument-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .instrument-name a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .instrument-name a:hover {
+            color: var(--gold);
+        }
+
+        .instrument-desc {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .instrument-actions {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .summon-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 14px;
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            border-radius: 20px;
+            background: transparent;
+            color: var(--gold-dim);
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .summon-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: var(--gold-glow);
+        }
+
+        .summon-btn.voted {
+            border-color: var(--stabilised);
+            color: var(--stabilised);
+            background: rgba(126, 184, 126, 0.1);
+        }
+
+        .summon-btn .vote-count {
+            font-weight: 600;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           BOUNDARY — The final edge
+           ═══════════════════════════════════════════════════════ */
+        .boundary {
+            text-align: center;
+            margin: 70px 0 30px;
+            padding: 30px 20px;
+        }
+
+        .boundary-line {
+            width: 120px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.3), transparent);
+            margin: 0 auto 25px;
+        }
+
+        .boundary-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           FOOTER
+           ═══════════════════════════════════════════════════════ */
+        .ws-footer {
+            padding: 30px 20px;
+            border-top: 1px solid rgba(201, 168, 76, 0.06);
+            text-align: center;
+        }
+
+        .ws-footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin-bottom: 15px;
+        }
+
+        .ws-footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+
+        .ws-footer-links a:hover { color: var(--gold); }
+
+        .ws-footer p {
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 0.8rem;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           RESPONSIVE
+           ═══════════════════════════════════════════════════════ */
+        @media (max-width: 768px) {
+            .ws-header { padding: 15px 20px; }
+            .drawer-header { padding: 18px 20px; }
+            .drawer-content { padding: 10px 20px 20px; }
+            .status-key { gap: 18px; }
+            .instrument-item { flex-wrap: wrap; }
+            .instrument-actions { width: 100%; margin-top: 8px; }
+        }
+
+        @media (max-width: 480px) {
+            .ws-hero { padding: 50px 15px 40px; }
+            .status-key { flex-direction: column; align-items: center; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background -->
+    <div class="workshop-bg"></div>
+
+    <!-- Header -->
+    <header class="ws-header">
+        <a href="/hub.html" class="ws-back">← Return to the Sanctum</a>
+        <span class="ws-brand">Quantum Merlin</span>
+    </header>
+
+    <!-- Main Content -->
+    <main class="ws-container">
+
+        <!-- ══════════════════════════════════════════════
+             HERO — The mythic greeting
+             ══════════════════════════════════════════════ -->
+        <section class="ws-hero">
+            <h1>Merlin's Workshop</h1>
+            <div class="intro-text">
+                <p>
+                    You were not meant to find this easily.
+                </p>
+                <p>
+                    Behind the finished instruments — the polished readings, the perfected
+                    sigils — there is a room where new things are still taking shape.
+                    Half-forged tools. Unfinished curiosities. Ideas pulled from the ether
+                    and not yet ready for daylight.
+                </p>
+                <p>
+                    Some of what you find here will become permanent.
+                    Some will change beyond recognition. And some may vanish entirely,
+                    folded back into the silence they came from.
+                </p>
+                <p>
+                    Tread carefully. Nothing here is guaranteed — but everything here is real.
+                </p>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════
+             STATUS KEY — The legend
+             ══════════════════════════════════════════════ -->
+        <div class="status-key">
+            <div class="status-key-item">
+                <span class="status-marker forming">✧</span>
+                <span>Forming — just emerged, shape uncertain</span>
+            </div>
+            <div class="status-key-item">
+                <span class="status-marker refining">✦</span>
+                <span>Refining — takes shape, under the flame</span>
+            </div>
+            <div class="status-key-item">
+                <span class="status-marker stabilised">✶</span>
+                <span>Stabilised — nearly forged, awaiting final tempering</span>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════
+             CATEGORY: THE SEEING STONES
+             Insight & detection tools
+             ══════════════════════════════════════════════ -->
+        <div class="category-drawer open">
+            <div class="drawer-header" onclick="toggleDrawer(this)">
+                <div class="drawer-header-left">
+                    <span class="drawer-icon">🪨</span>
+                    <span class="drawer-title">The Seeing Stones</span>
+                    <span class="drawer-count">6 instruments</span>
+                </div>
+                <span class="drawer-chevron">▼</span>
+            </div>
+            <div class="drawer-body">
+                <div class="drawer-content">
+
+                    <div class="instrument-item">
+                        <span class="instrument-status refining">✦</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/hidden-strengths-revealer.html">Hidden Strengths Revealer</a></div>
+                            <div class="instrument-desc">Surfaces the abilities you've been carrying but not yet claiming</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status refining">✦</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/identity-split-detector.html">Identity Split Detector</a></div>
+                            <div class="instrument-desc">Reveals where your inner selves are pulling in different directions</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status refining">✦</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/energyleak.html">Energy Leak Scanner</a></div>
+                            <div class="instrument-desc">Maps where your vitality quietly escapes — and what's draining it</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status refining">✦</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/power-avoidance-pattern.html">Power Avoidance Pattern</a></div>
+                            <div class="instrument-desc">Detects the ways you unconsciously step back from your own authority</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status refining">✦</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/trust-radar.html">Trust Radar</a></div>
+                            <div class="instrument-desc">Calibrates your instinct for who and what to let close</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status forming">✧</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/identityfull.html">Identity Split — Full Reading</a></div>
+                            <div class="instrument-desc">The extended version — deeper fracture mapping, longer integration path</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════
+             CATEGORY: THE FORGE
+             Manifestation & creation tools
+             ══════════════════════════════════════════════ -->
+        <div class="category-drawer">
+            <div class="drawer-header" onclick="toggleDrawer(this)">
+                <div class="drawer-header-left">
+                    <span class="drawer-icon">🔥</span>
+                    <span class="drawer-title">The Forge</span>
+                    <span class="drawer-count">6 instruments</span>
+                </div>
+                <span class="drawer-chevron">▼</span>
+            </div>
+            <div class="drawer-body">
+                <div class="drawer-content">
+
+                    <div class="instrument-item">
+                        <span class="instrument-status stabilised">✶</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/quantum-sigil-generator.html">Quantum Sigil Generator</a></div>
+                            <div class="instrument-desc">Transmutes intention into geometric form — sacred sigils born from your words</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status stabilised">✶</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/birth-sigil.html">Birth Sigil</a></div>
+                            <div class="instrument-desc">Your personal sigil, drawn from the numbers encoded in your birth</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status refining">✦</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/manifest.html">Manifestation Instrument</a></div>
+                            <div class="instrument-desc">A structured ritual for turning vision into reality — intention made tangible</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status forming">✧</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/manifestfull.html">Manifestation — Full Ritual</a></div>
+                            <div class="instrument-desc">The expanded ceremony — deeper alignment, layered frequency work</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status refining">✦</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/quantum-sigil-gallery.html">Sigil Gallery</a></div>
+                            <div class="instrument-desc">A growing collection of generated sigils — browsable, shareable, alive</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status refining">✦</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/reading-generator.html">Reading Generator</a></div>
+                            <div class="instrument-desc">A flexible engine for generating custom readings — pick your lens</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════
+             CATEGORY: THE OBSERVATORY
+             Cosmic readings & forecasts
+             ══════════════════════════════════════════════ -->
+        <div class="category-drawer">
+            <div class="drawer-header" onclick="toggleDrawer(this)">
+                <div class="drawer-header-left">
+                    <span class="drawer-icon">🔭</span>
+                    <span class="drawer-title">The Observatory</span>
+                    <span class="drawer-count">5 instruments</span>
+                </div>
+                <span class="drawer-chevron">▼</span>
+            </div>
+            <div class="drawer-body">
+                <div class="drawer-content">
+
+                    <div class="instrument-item">
+                        <span class="instrument-status refining">✦</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/forecasts.html">Cosmic Forecasts</a></div>
+                            <div class="instrument-desc">Upcoming alignments and what they mean for your path</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status refining">✦</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/quantum-rose.html">Quantum Rose</a></div>
+                            <div class="instrument-desc">The heart oracle — intuitive guidance through the feminine lens</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status refining">✦</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/soulcard.html">Soul Card</a></div>
+                            <div class="instrument-desc">A single card drawn from the soul's library — your message for now</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status stabilised">✶</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/angel-number-full-reading.html">Angel Number Full Reading</a></div>
+                            <div class="instrument-desc">Beyond the quick decode — a full channelled interpretation of your number</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status forming">✧</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/quantum-forum.html">Quantum Forum</a></div>
+                            <div class="instrument-desc">A place for seekers to gather — not yet open, but the door is being carved</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Summon this into reality <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════
+             CATEGORY: THE DEEP VAULTS
+             Extended / "full" versions of tools
+             ══════════════════════════════════════════════ -->
+        <div class="category-drawer">
+            <div class="drawer-header" onclick="toggleDrawer(this)">
+                <div class="drawer-header-left">
+                    <span class="drawer-icon">🕯️</span>
+                    <span class="drawer-title">The Deep Vaults</span>
+                    <span class="drawer-count">5 instruments</span>
+                </div>
+                <span class="drawer-chevron">▼</span>
+            </div>
+            <div class="drawer-body">
+                <div class="drawer-content">
+
+                    <div class="instrument-item">
+                        <span class="instrument-status forming">✧</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/energyleakfull.html">Energy Leak — Full Diagnostic</a></div>
+                            <div class="instrument-desc">The complete energy audit — every leak mapped, every remedy surfaced</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status forming">✧</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/strengthsfull.html">Hidden Strengths — Full Revelation</a></div>
+                            <div class="instrument-desc">The extended excavation — deeper layers, rarer abilities</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status forming">✧</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/powerfull.html">Power Avoidance — Full Pattern</a></div>
+                            <div class="instrument-desc">Every shadow route you take to avoid stepping into your own authority</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status forming">✧</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/trustfull.html">Trust Radar — Full Calibration</a></div>
+                            <div class="instrument-desc">The deep scan — trust patterns across every domain of your life</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status forming">✧</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/contractfull.html">Soul Contract — Full Reading</a></div>
+                            <div class="instrument-desc">The agreements your soul made before arriving — fully decoded</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════
+             CATEGORY: THE RESONANCE CHAMBER
+             Frequency & sound tools
+             ══════════════════════════════════════════════ -->
+        <div class="category-drawer">
+            <div class="drawer-header" onclick="toggleDrawer(this)">
+                <div class="drawer-header-left">
+                    <span class="drawer-icon">🎵</span>
+                    <span class="drawer-title">The Resonance Chamber</span>
+                    <span class="drawer-count">3 instruments</span>
+                </div>
+                <span class="drawer-chevron">▼</span>
+            </div>
+            <div class="drawer-body">
+                <div class="drawer-content">
+
+                    <div class="instrument-item">
+                        <span class="instrument-status stabilised">✶</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/40hz/">40 Hz Frequency Generator</a></div>
+                            <div class="instrument-desc">Pure 40 Hz binaural tone — for focus, cognition, and neural coherence</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status refining">✦</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/gravity7/">Gravity Pause</a></div>
+                            <div class="instrument-desc">Seven seconds of intentional stillness — a micro-ritual for recalibration</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status forming">✧</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/animation.html">Portal Animation</a></div>
+                            <div class="instrument-desc">A visual gateway — still forming, but the particles know where they're going</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Summon this into reality <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════
+             CATEGORY: THE COMPATIBILITY ALCOVE
+             Relationship & pairing tools
+             ══════════════════════════════════════════════ -->
+        <div class="category-drawer">
+            <div class="drawer-header" onclick="toggleDrawer(this)">
+                <div class="drawer-header-left">
+                    <span class="drawer-icon">💫</span>
+                    <span class="drawer-title">The Compatibility Alcove</span>
+                    <span class="drawer-count">3 instruments</span>
+                </div>
+                <span class="drawer-chevron">▼</span>
+            </div>
+            <div class="drawer-body">
+                <div class="drawer-content">
+
+                    <div class="instrument-item">
+                        <span class="instrument-status stabilised">✶</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/compatibility.html">Compatibility Check</a></div>
+                            <div class="instrument-desc">Two birth dates, one truth — see where your energies align and clash</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status forming">✧</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/contract.html">Soul Contract</a></div>
+                            <div class="instrument-desc">The deeper bond — what agreements did your souls make before this life?</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Signal interest <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <span class="instrument-status forming">✧</span>
+                        <div class="instrument-info">
+                            <div class="instrument-name"><a href="/kpop/">K-Pop Band Builder</a></div>
+                            <div class="instrument-desc">Build your cosmic K-Pop unit — match energies, assign roles, debut</div>
+                        </div>
+                        <div class="instrument-actions">
+                            <button class="summon-btn" onclick="vote(this)">Summon this into reality <span class="vote-count">0</span></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════
+             BOUNDARY — Final edge
+             ══════════════════════════════════════════════ -->
+        <div class="boundary">
+            <div class="boundary-line"></div>
+            <p class="boundary-text">Beyond this point, nothing is yet formed.</p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="ws-footer">
+        <div class="ws-footer-links">
+            <a href="/hub.html">Hub</a>
+            <a href="/about-new.html">About</a>
+            <a href="/contact-new.html">Contact</a>
+            <a href="https://buymeacoffee.com/quantumreality" target="_blank">☕ Support</a>
+        </div>
+        <p>&copy; 2025 Quantum Merlin. For entertainment and spiritual exploration.</p>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SCRIPTS
+         ═══════════════════════════════════════════════════════ -->
+    <script>
+        // ── Drawer toggle ──
+        function toggleDrawer(header) {
+            const drawer = header.closest('.category-drawer');
+            drawer.classList.toggle('open');
+        }
+
+        // ── Voting (localStorage-based) ──
+        const VOTE_KEY = 'merlin_workshop_votes';
+
+        function getVotes() {
+            try {
+                return JSON.parse(localStorage.getItem(VOTE_KEY)) || {};
+            } catch {
+                return {};
+            }
+        }
+
+        function saveVotes(votes) {
+            try {
+                localStorage.setItem(VOTE_KEY, JSON.stringify(votes));
+            } catch { /* silent */ }
+        }
+
+        function vote(btn) {
+            const item = btn.closest('.instrument-item');
+            const nameEl = item.querySelector('.instrument-name a');
+            if (!nameEl) return;
+            const toolId = nameEl.getAttribute('href');
+            const votes = getVotes();
+
+            if (votes[toolId]) {
+                // Already voted — toggle off
+                delete votes[toolId];
+                btn.classList.remove('voted');
+            } else {
+                // Cast vote
+                votes[toolId] = true;
+                btn.classList.add('voted');
+            }
+
+            saveVotes(votes);
+            updateAllVoteCounts();
+        }
+
+        function updateAllVoteCounts() {
+            const votes = getVotes();
+            document.querySelectorAll('.instrument-item').forEach(item => {
+                const nameEl = item.querySelector('.instrument-name a');
+                if (!nameEl) return;
+                const toolId = nameEl.getAttribute('href');
+                const btn = item.querySelector('.summon-btn');
+                if (!btn) return;
+
+                if (votes[toolId]) {
+                    btn.classList.add('voted');
+                } else {
+                    btn.classList.remove('voted');
+                }
+            });
+        }
+
+        // Initialise on load
+        document.addEventListener('DOMContentLoaded', updateAllVoteCounts);
+
+        // ── Analytics event for workshop page view ──
+        if (typeof gtag === 'function') {
+            gtag('event', 'page_view', {
+                page_title: "Merlin's Workshop",
+                page_location: window.location.href,
+                custom_dimension: 'workshop'
+            });
+        }
+    </script>
+</body>
+</html>
