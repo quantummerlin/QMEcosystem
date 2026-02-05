@@ -1,4 +1,4 @@
-const CACHE_NAME = 'zodiac-guide-v2';
+const CACHE_NAME = 'zodiac-guide-v1';
 const urlsToCache = [
   '/chinesezodiac/',
   '/chinesezodiac/index.html',
@@ -7,7 +7,6 @@ const urlsToCache = [
 
 // Install event - cache resources
 self.addEventListener('install', (event) => {
-  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
@@ -22,35 +21,24 @@ self.addEventListener('install', (event) => {
 
 // Fetch event - serve from cache, fall back to network
 self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate') {
-    event.respondWith(
-      fetch(event.request)
-        .then((response) => {
-          const responseToCache = response.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put('/chinesezodiac/index.html', responseToCache);
-          });
-          return response;
-        })
-        .catch(() => caches.match('/chinesezodiac/index.html'))
-    );
-    return;
-  }
-
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
+        // Cache hit - return response
         if (response) {
           return response;
         }
 
+        // Clone the request
         const fetchRequest = event.request.clone();
 
         return fetch(fetchRequest).then((response) => {
+          // Check if valid response
           if (!response || response.status !== 200 || response.type !== 'basic') {
             return response;
           }
 
+          // Clone the response
           const responseToCache = response.clone();
 
           caches.open(CACHE_NAME)
@@ -59,7 +47,10 @@ self.addEventListener('fetch', (event) => {
             });
 
           return response;
-        }).catch(() => caches.match('/chinesezodiac/index.html'));
+        }).catch(() => {
+          // Return offline fallback if needed
+          return caches.match('/chinesezodiac/index.html');
+        });
       })
   );
 });
@@ -77,7 +68,7 @@ self.addEventListener('activate', (event) => {
           }
         })
       );
-    }).then(() => self.clients.claim())
+    })
   );
 });
 
