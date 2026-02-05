@@ -3328,6 +3328,283 @@
                 padding-bottom: max(10px, env(safe-area-inset-bottom));
             }
         }
+        
+        /* ============================================
+           ADVANCED ANALYSIS STYLES
+           ============================================ */
+        
+        /* Calculation Methodology Display */
+        .calc-methodology {
+            background: linear-gradient(135deg, rgba(103,58,183,0.08) 0%, rgba(255,105,180,0.08) 100%);
+            border: 1px solid rgba(103,58,183,0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-family: 'Courier New', monospace;
+            text-align: left;
+        }
+        
+        .calc-methodology .formula {
+            font-size: 0.95rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .calc-methodology .breakdown {
+            font-size: 0.85rem;
+            color: var(--text);
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        .dark-theme .calc-methodology {
+            background: linear-gradient(135deg, rgba(103,58,183,0.15) 0%, rgba(255,105,180,0.15) 100%);
+            border-color: rgba(103,58,183,0.3);
+        }
+        
+        /* Rarity Badge */
+        .rarity-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 8px 4px;
+        }
+        
+        .rarity-badge.legendary {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #1a1a2e;
+            box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+        }
+        
+        .rarity-badge.epic {
+            background: linear-gradient(135deg, #9B59B6, #8E44AD);
+            color: white;
+            box-shadow: 0 2px 8px rgba(155, 89, 182, 0.4);
+        }
+        
+        .rarity-badge.rare {
+            background: linear-gradient(135deg, #3498DB, #2980B9);
+            color: white;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.4);
+        }
+        
+        .rarity-badge.uncommon {
+            background: linear-gradient(135deg, #2ECC71, #27AE60);
+            color: white;
+            box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4);
+        }
+        
+        /* Archetype Cards */
+        .archetype-highlight {
+            background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(255,105,180,0.1) 100%);
+            border: 2px solid rgba(255,215,0,0.3);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 16px 0;
+            text-align: left;
+        }
+        
+        .archetype-highlight h4 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .archetype-highlight .icon {
+            font-size: 1.5rem;
+        }
+        
+        .archetype-highlight .description {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        
+        .archetype-highlight .superpower {
+            margin-top: 12px;
+            padding: 12px 16px;
+            background: rgba(255,215,0,0.1);
+            border-radius: 10px;
+            border-left: 3px solid gold;
+        }
+        
+        .archetype-highlight .superpower-label {
+            font-weight: 700;
+            color: #D4AF37;
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+        }
+        
+        /* Timing Grid */
+        .timing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 16px 0;
+        }
+        
+        .timing-item {
+            background: rgba(255,255,255,0.5);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+        
+        .timing-item .label {
+            font-size: 0.85rem;
+            color: var(--text);
+            opacity: 0.7;
+            margin-bottom: 6px;
+        }
+        
+        .timing-item .value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .dark-theme .timing-item {
+            background: rgba(255,255,255,0.05);
+        }
+        
+        /* Chakra Display */
+        .chakra-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin: 8px 4px;
+        }
+        
+        .chakra-indicator.throat {
+            background: linear-gradient(135deg, rgba(0,191,255,0.2), rgba(30,144,255,0.2));
+            border: 2px solid #1E90FF;
+            color: #1E90FF;
+        }
+        
+        .chakra-indicator.root {
+            background: linear-gradient(135deg, rgba(220,20,60,0.2), rgba(139,0,0,0.2));
+            border: 2px solid #DC143C;
+            color: #DC143C;
+        }
+        
+        .chakra-indicator.sacral {
+            background: linear-gradient(135deg, rgba(255,140,0,0.2), rgba(255,69,0,0.2));
+            border: 2px solid #FF8C00;
+            color: #FF8C00;
+        }
+        
+        .chakra-indicator.solar {
+            background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,165,0,0.2));
+            border: 2px solid #FFD700;
+            color: #B8860B;
+        }
+        
+        .chakra-indicator.heart {
+            background: linear-gradient(135deg, rgba(0,128,0,0.2), rgba(34,139,34,0.2));
+            border: 2px solid #228B22;
+            color: #228B22;
+        }
+        
+        .chakra-indicator.third-eye {
+            background: linear-gradient(135deg, rgba(75,0,130,0.2), rgba(138,43,226,0.2));
+            border: 2px solid #4B0082;
+            color: #4B0082;
+        }
+        
+        .chakra-indicator.crown {
+            background: linear-gradient(135deg, rgba(148,0,211,0.2), rgba(186,85,211,0.2));
+            border: 2px solid #9400D3;
+            color: #9400D3;
+        }
+        
+        /* Wealth Blueprint Special */
+        .wealth-blueprint-card {
+            background: linear-gradient(135deg, rgba(0,128,0,0.05) 0%, rgba(255,215,0,0.05) 100%);
+            border: 2px solid rgba(0,128,0,0.2);
+        }
+        
+        /* Triple Number Highlight */
+        .triple-number-highlight {
+            background: linear-gradient(135deg, #FFD700, #FF8C00);
+            color: #1a1a2e;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin: 4px;
+            box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+        }
+        
+        /* Health Blueprint Styles */
+        .health-blueprint-card {
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.05) 0%, rgba(39, 174, 96, 0.05) 100%);
+            border: 2px solid rgba(46, 204, 113, 0.2);
+        }
+        
+        .health-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: rgba(46, 204, 113, 0.1);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #27ae60;
+            margin: 4px;
+        }
+        
+        /* Teaching Style Styles */
+        .teaching-style-card {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(41, 128, 185, 0.05) 100%);
+            border: 2px solid rgba(52, 152, 219, 0.2);
+        }
+        
+        /* Philosophy Framework Styles */
+        .philosophy-card {
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.05) 0%, rgba(142, 68, 173, 0.05) 100%);
+            border: 2px solid rgba(155, 89, 182, 0.2);
+        }
+        
+        /* Location Styles */
+        .location-card {
+            background: linear-gradient(135deg, rgba(230, 126, 34, 0.05) 0%, rgba(211, 84, 0, 0.05) 100%);
+            border: 2px solid rgba(230, 126, 34, 0.2);
+        }
+        
+        .location-coordinates {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--primary);
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .timing-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .archetype-highlight {
+                padding: 16px;
+            }
+            
+            .calc-methodology {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -3559,6 +3836,7 @@
     <script src="calculations.js?v=35"></script>
     <script src="readings.js?v=35"></script>
     <script src="house-readings.js?v=35"></script>
+    <script src="deep-house-readings.js?v=35"></script>
     <script src="aspect-readings.js?v=35"></script>
     <script src="advanced-readings.js?v=35"></script>
     <script src="deep-readings.js?v=35"></script>
@@ -4775,18 +5053,47 @@
                     const combined = readings.astrology.stelliums;
                     const signList = combined.map(s => s.sign).join(' + ');
                     const elementList = combined.map(s => s.element).join(' + ');
+                    const totalPlanets = combined.reduce((sum, s) => sum + s.count, 0);
                     const planetBreakdown = combined
-                        .map(s => `${s.planets.join(', ')} in ${s.sign}`)
-                        .join('\n\n');
-                    const combinedContent = `This chart contains ${combined.length} stelliums, creating multiple power centers that work together. This means ${userData.name} carries more than one dominant energy signature, and their life themes are shaped by how these concentrations interact.\n\n${planetBreakdown}\n\nWhen multiple stelliums are present, growth comes from learning when to emphasize each energy and how to blend them. The combination of ${signList} creates a unique inner balance of ${elementList} energies that can feel intense but also extremely gifted when integrated.`;
+                        .map(s => `<strong>${s.planets.join(', ')}</strong> concentrated in <strong>${s.sign}</strong>`)
+                        .join('<br>');
+                    
+                    const combinedContent = `<strong>The Dominant Force Shaping This Life:</strong>
+
+This is not a common chart. ${totalPlanets} celestial bodies concentrated into ${combined.length} distinct power centers creates something rare and significant: a soul with multiple gravitational centers, each pulling toward mastery, each demanding expression.
+
+<em>Configuration:</em>
+${planetBreakdown}
+
+<strong>What This Means Psychologically:</strong>
+
+${userData.name} doesn't have a single "type" — they contain multitudes that sometimes cooperate and sometimes compete. The ${signList} combination creates internal complexity that others often sense but can't quite name. There's a density to their presence, a feeling that there's more happening beneath the surface than most people carry.
+
+This is both gift and weight. Multiple stelliums mean multiple areas of concentrated talent, but also multiple areas demanding attention simultaneously. Life rarely allows focus on just one thing — growth comes from learning to honour all parts without fragmenting.
+
+<strong>The Integration Challenge:</strong>
+
+The ${elementList} energies don't automatically harmonise. ${combined[0].element} energy wants ${combined[0].element === 'Fire' ? 'action, recognition, forward movement' : combined[0].element === 'Earth' ? 'stability, tangible results, material security' : combined[0].element === 'Air' ? 'mental stimulation, communication, variety' : 'emotional depth, intuitive connection, feeling'}. ${combined[1] ? combined[1].element + ' energy wants ' + (combined[1].element === 'Fire' ? 'passionate expression and spontaneity' : combined[1].element === 'Earth' ? 'practical grounding and patience' : combined[1].element === 'Air' ? 'intellectual freedom and social connection' : 'emotional safety and creative flow') + '.' : ''}
+
+The growth edge is finding the rhythm — knowing when to emphasise which energy, rather than trying to express all of them at maximum volume simultaneously.
+
+<strong>The Hidden Pattern:</strong>
+
+People with multiple stelliums often feel that life keeps bringing them back to the same themes, the same types of situations, the same kinds of growth edges. This is the stelliums talking. They create attractors in the psyche — life circumstances that match their concentrated energy keep appearing because that's where the soul work is.
+
+<strong>The Opportunity:</strong>
+
+When integrated, this configuration produces someone with unusual range and depth. Not a specialist but a powerful generalist. Not simple but fascinating. The combination of ${signList} creates a unique inner alchemy that, when consciously developed, allows ${userData.name} to bridge worlds others can't even imagine connecting.
+
+<em>Integration Affirmation:</em> "I am not fragmented — I am multifaceted. Each part of me has purpose. I learn to honour all of who I am."`;
 
                     celestialSection.appendChild(createReadingCard(
                         'Stellium Synthesis',
-                        `${signList}`,
-                        ['Integrated Power', 'Multi-Sign Focus', 'Composite Gifts'],
+                        `${signList} Power Configuration`,
+                        ['Psychological Complexity', 'Multiple Power Centers', 'Integrated Mastery', 'Rare Configuration'],
                         combinedContent,
-                        ['Exceptional range of strengths', 'Multiple life arenas of mastery', 'High potential for impact'],
-                        ['Inner pulls between dominant energies', 'Needs conscious integration', 'May feel intense or complex at times']
+                        ['Exceptional range of natural talents', 'Ability to bridge multiple domains', 'Depth and complexity that fascinates others', 'High potential for significant impact'],
+                        ['Inner pulls between dominant energies require conscious balance', 'May feel overwhelming before integration', 'Others may find complexity hard to understand']
                     ));
                 }
             } else {
@@ -4830,9 +5137,12 @@
                     ));
                 }
                 
-                // Moon in House
+                // Moon in House - check for deep reading first
                 if (planetHouses.moon && HOUSE_READINGS.Moon && HOUSE_READINGS.Moon[planetHouses.moon]) {
-                    const houseReading = HOUSE_READINGS.Moon[planetHouses.moon];
+                    const deepReading = (typeof DEEP_HOUSE_READINGS !== 'undefined' && DEEP_HOUSE_READINGS.Moon && DEEP_HOUSE_READINGS.Moon[planetHouses.moon]) 
+                        ? DEEP_HOUSE_READINGS.Moon[planetHouses.moon] 
+                        : null;
+                    const houseReading = deepReading || HOUSE_READINGS.Moon[planetHouses.moon];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
                         `Moon in House ${planetHouses.moon}`,
@@ -4843,66 +5153,81 @@
                     ));
                 }
                 
-                // Mercury in House
+                // Mercury in House - check for deep reading first
                 if (planetHouses.mercury && HOUSE_READINGS.Mercury && HOUSE_READINGS.Mercury[planetHouses.mercury]) {
-                    const houseReading = HOUSE_READINGS.Mercury[planetHouses.mercury];
+                    const deepReading = (typeof DEEP_HOUSE_READINGS !== 'undefined' && DEEP_HOUSE_READINGS.Mercury && DEEP_HOUSE_READINGS.Mercury[planetHouses.mercury]) 
+                        ? DEEP_HOUSE_READINGS.Mercury[planetHouses.mercury] 
+                        : null;
+                    const houseReading = deepReading || HOUSE_READINGS.Mercury[planetHouses.mercury];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
                         `Mercury in House ${planetHouses.mercury}`,
                         houseReading.keywords,
-                        houseReading.reading,
+                        houseReading.reading.replace(/this child/gi, userData.name),
                         houseReading.strengths || [],
                         houseReading.challenges || []
                     ));
                 }
                 
-                // Venus in House
+                // Venus in House - check for deep reading first
                 if (planetHouses.venus && HOUSE_READINGS.Venus && HOUSE_READINGS.Venus[planetHouses.venus]) {
-                    const houseReading = HOUSE_READINGS.Venus[planetHouses.venus];
+                    const deepReading = (typeof DEEP_HOUSE_READINGS !== 'undefined' && DEEP_HOUSE_READINGS.Venus && DEEP_HOUSE_READINGS.Venus[planetHouses.venus]) 
+                        ? DEEP_HOUSE_READINGS.Venus[planetHouses.venus] 
+                        : null;
+                    const houseReading = deepReading || HOUSE_READINGS.Venus[planetHouses.venus];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
                         `Venus in House ${planetHouses.venus}`,
                         houseReading.keywords,
-                        houseReading.reading,
+                        houseReading.reading.replace(/this child/gi, userData.name),
                         houseReading.strengths || [],
                         houseReading.challenges || []
                     ));
                 }
                 
-                // Mars in House
+                // Mars in House - check for deep reading first
                 if (planetHouses.mars && HOUSE_READINGS.Mars && HOUSE_READINGS.Mars[planetHouses.mars]) {
-                    const houseReading = HOUSE_READINGS.Mars[planetHouses.mars];
+                    const deepReading = (typeof DEEP_HOUSE_READINGS !== 'undefined' && DEEP_HOUSE_READINGS.Mars && DEEP_HOUSE_READINGS.Mars[planetHouses.mars]) 
+                        ? DEEP_HOUSE_READINGS.Mars[planetHouses.mars] 
+                        : null;
+                    const houseReading = deepReading || HOUSE_READINGS.Mars[planetHouses.mars];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
                         `Mars in House ${planetHouses.mars}`,
                         houseReading.keywords,
-                        houseReading.reading,
+                        houseReading.reading.replace(/this child/gi, userData.name),
                         houseReading.strengths || [],
                         houseReading.challenges || []
                     ));
                 }
                 
-                // Jupiter in House
+                // Jupiter in House - check for deep reading first
                 if (planetHouses.jupiter && HOUSE_READINGS.Jupiter && HOUSE_READINGS.Jupiter[planetHouses.jupiter]) {
-                    const houseReading = HOUSE_READINGS.Jupiter[planetHouses.jupiter];
+                    const deepReading = (typeof DEEP_HOUSE_READINGS !== 'undefined' && DEEP_HOUSE_READINGS.Jupiter && DEEP_HOUSE_READINGS.Jupiter[planetHouses.jupiter]) 
+                        ? DEEP_HOUSE_READINGS.Jupiter[planetHouses.jupiter] 
+                        : null;
+                    const houseReading = deepReading || HOUSE_READINGS.Jupiter[planetHouses.jupiter];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
                         `Jupiter in House ${planetHouses.jupiter}`,
                         houseReading.keywords,
-                        houseReading.reading,
+                        houseReading.reading.replace(/this child/gi, userData.name),
                         houseReading.strengths || [],
                         houseReading.challenges || []
                     ));
                 }
                 
-                // Saturn in House
+                // Saturn in House - check for deep reading first
                 if (planetHouses.saturn && HOUSE_READINGS.Saturn && HOUSE_READINGS.Saturn[planetHouses.saturn]) {
-                    const houseReading = HOUSE_READINGS.Saturn[planetHouses.saturn];
+                    const deepReading = (typeof DEEP_HOUSE_READINGS !== 'undefined' && DEEP_HOUSE_READINGS.Saturn && DEEP_HOUSE_READINGS.Saturn[planetHouses.saturn]) 
+                        ? DEEP_HOUSE_READINGS.Saturn[planetHouses.saturn] 
+                        : null;
+                    const houseReading = deepReading || HOUSE_READINGS.Saturn[planetHouses.saturn];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
                         `Saturn in House ${planetHouses.saturn}`,
                         houseReading.keywords,
-                        houseReading.reading,
+                        houseReading.reading.replace(/this child/gi, userData.name),
                         houseReading.strengths || [],
                         houseReading.challenges || []
                     ));
@@ -4972,29 +5297,115 @@
                 const paradoxTitle = "Core Integration - Sun & Moon";
                 let paradoxReading = '';
                 
+                // Define element needs for rich interpretation
+                const elementNeeds = {
+                    Fire: { sun: 'recognition, action, self-expression, and the freedom to lead', moon: 'passionate emotional expression, excitement, and enthusiasm', stress: 'through action and physical movement', decision: 'quickly and instinctively, trusting gut reactions', safety: 'feeling admired, respected, and free to be themselves' },
+                    Earth: { sun: 'stability, tangible results, material security, and practical achievement', moon: 'predictable emotional security, physical comfort, and routine', stress: 'through physical grounding and practical problem-solving', decision: 'slowly and deliberately, needing time and evidence', safety: 'in stable environments with clear expectations and material security' },
+                    Air: { sun: 'mental stimulation, communication, variety, and intellectual freedom', moon: 'mental understanding of feelings, space to process, and social connection', stress: 'through talking, analysing, and reframing thoughts', decision: 'through discussion, weighing options, and seeking multiple perspectives', safety: 'with intellectual rapport and freedom from emotional pressure' },
+                    Water: { sun: 'emotional depth, meaningful connection, and intuitive expression', moon: 'deep emotional bonding, nurturing, and feeling truly understood', stress: 'through emotional expression, solitude, and creative outlets', decision: 'based on feelings and intuition rather than logic alone', safety: 'when emotionally connected and free to feel without judgment' }
+                };
+                
+                const sunNeeds = elementNeeds[sunSign.element];
+                const moonNeeds = elementNeeds[moonSign.element];
+                
                 if (sunMoonAspect.nature === 'harmonious') {
-                    paradoxReading = `${userData.name} has a harmonious ${sunMoonAspect.aspect} between their ${sunSign.name} Sun (core identity) and ${moonSign.name} Moon (emotional nature). This creates beautiful alignment between what they want and what they need emotionally.
+                    paradoxReading = `<strong>The Psychological Spine of This Chart:</strong>
 
-Their conscious will and subconscious feelings work together naturally. What brings them joy (Sun) also satisfies their emotional needs (Moon). This internal harmony creates a sense of wholeness and self-understanding that is truly a gift.
+${userData.name} has a harmonious ${sunMoonAspect.aspect} between their ${sunSign.name} Sun and ${moonSign.name} Moon — and this is one of the most significant blessings a chart can contain. What they consciously want and what they emotionally need are fundamentally aligned.
 
-Support this natural integration by honoring both their ${sunSign.element} Sun's need for ${sunSign.element === 'Fire' ? 'action and recognition' : sunSign.element === 'Earth' ? 'stability and tangible results' : sunSign.element === 'Air' ? 'mental stimulation and communication' : 'emotional depth and intuitive connection'} and their ${moonSign.element} Moon's need for ${moonSign.element === 'Fire' ? 'emotional expression and excitement' : moonSign.element === 'Earth' ? 'security and routine' : moonSign.element === 'Air' ? 'intellectual processing of feelings' : 'emotional safety and nurturing'}.`;
+<strong>What This Means Internally:</strong>
+
+Most people live with some degree of internal conflict between who they're trying to become (Sun) and what they need to feel safe (Moon). ${userData.name} has unusual coherence here. Their conscious identity and their emotional foundation support rather than undermine each other.
+
+This doesn't mean life is easy — it means their inner resources are unified rather than divided. When challenges come, they can draw on both their ${sunSign.element} will and their ${moonSign.element} emotional resilience without one sabotaging the other.
+
+<strong>Identity & Emotional Needs:</strong>
+
+Their ${sunSign.name} Sun seeks ${sunNeeds.sun}. Their ${moonSign.name} Moon needs ${moonNeeds.moon}.
+
+With ${sunSign.element} and ${moonSign.element} in harmony, these drives naturally support each other. When they pursue their Sun's goals, their Moon feels nurtured. When they honour their Moon's needs, their Sun feels expressed. This creates a virtuous cycle that builds confidence and self-trust.
+
+<strong>Relationship Patterns:</strong>
+
+This integration makes them relatively easy to love — what you see is close to what you get. They're not hiding major contradictions that emerge only in intimacy. Partners don't have to navigate dramatic splits between their public and private selves.
+
+They tend to attract and be attracted to people who appreciate both their ${sunSign.element} identity and their ${moonSign.element} emotional nature, because these aren't in conflict.
+
+<strong>Decision-Making Style:</strong>
+
+They process decisions ${sunNeeds.decision.replace('quickly', 'relatively quickly')} because their gut (Moon) and their conscious will (Sun) usually agree. When they feel conflicted, it's worth paying attention — something genuinely complex may be occurring.
+
+<strong>Stress Response:</strong>
+
+Under stress, they can access both their ${sunSign.element} coping strategies (${sunNeeds.stress}) and their ${moonSign.element} emotional processing (${moonNeeds.stress}) without one approach blocking the other.
+
+<strong>What Makes Them Feel Safe:</strong>
+
+${userData.name} feels most secure ${moonNeeds.safety}. Because their Sun supports rather than contradicts this need, they can usually create these conditions for themselves rather than depending entirely on others to provide them.
+
+<strong>Integration Affirmation:</strong>
+<em>"My conscious will and emotional truth are allies. What I want and what I need support each other. I trust my unified inner guidance."</em>`;
                 } else {
-                    paradoxReading = `${userData.name} has a ${sunMoonAspect.aspect} between their ${sunSign.name} Sun (conscious identity) and ${moonSign.name} Moon (emotional needs). This creates dynamic tension between what they want and what they need emotionally - a creative friction that shapes their growth.
+                    paradoxReading = `<strong>The Psychological Spine of This Chart:</strong>
 
-Their ${sunSign.element} Sun wants ${sunSign.element === 'Fire' ? 'bold action and recognition' : sunSign.element === 'Earth' ? 'stability and material security' : sunSign.element === 'Air' ? 'intellectual freedom and variety' : 'emotional depth and merging'}, while their ${moonSign.element} Moon needs ${moonSign.element === 'Fire' ? 'passionate emotional expression' : moonSign.element === 'Earth' ? 'predictable emotional security' : moonSign.element === 'Air' ? 'mental understanding of feelings' : 'deep emotional bonding'}.
+${userData.name} has a ${sunMoonAspect.aspect} between their ${sunSign.name} Sun and ${moonSign.name} Moon — creating one of the most important growth dynamics in their chart. What they consciously want and what they emotionally need don't naturally align, creating creative tension that shapes their entire development.
 
-This isn't a flaw - it's their power source. The tension between these two drives creates motivation, self-awareness, and the ability to understand others who also contain contradictions. Help them honor both parts of themselves without forcing them to choose one over the other.`;
+<strong>This Is Not a Flaw — It's a Power Source:</strong>
+
+The tension between ${sunSign.element} Sun and ${moonSign.element} Moon creates internal complexity that, when understood, becomes the engine of profound self-awareness. People with harmonious Sun-Moon aspects often coast through life without examining themselves deeply. ${userData.name} doesn't have that luxury — and ultimately, that's a gift.
+
+<strong>The Core Tension:</strong>
+
+Their ${sunSign.name} Sun seeks ${sunNeeds.sun}. Their ${moonSign.name} Moon needs ${moonNeeds.moon}.
+
+These drives can feel contradictory. When they pursue their Sun's goals, their Moon may feel unsettled or unsafe. When they honour their Moon's needs, their Sun may feel frustrated or unexpressed. Growth comes from learning to alternate between these needs rather than trying to satisfy both simultaneously.
+
+<strong>Identity vs. Emotional Needs:</strong>
+
+You may notice ${userData.name} sometimes feels pulled in two directions — what they think they should want versus what actually makes them feel okay. This isn't weakness or confusion; it's the Sun-Moon square or opposition doing its work.
+
+The ${sunSign.element} part of them wants to ${sunSign.element === 'Fire' ? 'act boldly and be recognised' : sunSign.element === 'Earth' ? 'build something tangible and stable' : sunSign.element === 'Air' ? 'think freely and communicate widely' : 'connect deeply and express creatively'}. The ${moonSign.element} part needs ${moonNeeds.moon}. Both are valid. Both deserve attention.
+
+<strong>Relationship Patterns:</strong>
+
+In relationships, partners may see different versions of ${userData.name} — the ${sunSign.name} self they present consciously and the ${moonSign.name} self that emerges in emotional intimacy. This isn't deception; it's complexity.
+
+Successful partners learn to love both versions and help them integrate rather than forcing a choice. ${userData.name}'s growth edge is letting both parts be seen without shame.
+
+<strong>Decision-Making Style:</strong>
+
+Decisions can feel difficult because their head (Sun) and heart (Moon) often disagree. They may ${sunNeeds.decision}, but then find their ${moonSign.element} emotional truth pulling them another direction.
+
+The key is recognising that both voices contain wisdom. Neither should consistently override the other.
+
+<strong>Stress Response:</strong>
+
+Under stress, these two parts may fragment rather than cooperate. They might try to cope ${sunNeeds.stress} when their Moon actually needs ${moonNeeds.stress}. Learning to ask "which part of me needs attention right now?" is crucial.
+
+<strong>What Makes Them Feel Safe:</strong>
+
+${userData.name}'s ${moonSign.name} Moon feels most secure ${moonNeeds.safety}. But their ${sunSign.name} Sun may resist these conditions as too limiting or contrary to their conscious goals. The work is finding creative ways to honour both.
+
+<strong>The Integration Path:</strong>
+
+Growth doesn't come from eliminating this tension — it comes from using it consciously. The friction between Sun and Moon creates the heat that forges character. People with this aspect often become deeply self-aware precisely because they had to be.
+
+<strong>Integration Affirmation:</strong>
+<em>"I contain creative tensions that make me complex and interesting. I learn to honour both my conscious will and my emotional truth, knowing that I am large enough to hold both."</em>`;
                 }
                 
                 celestialSection.appendChild(createReadingCard(
                     paradoxTitle,
                     `${sunSign.symbol} ${sunSign.name} ${sunMoonAspect.symbol} ${moonSign.symbol} ${moonSign.name}`,
-                    ['Integration', 'Inner Balance', 'Self-Understanding'],
+                    ['Psychological Foundation', 'Identity-Emotion Dynamic', 'Inner Landscape', 'Self-Understanding'],
                     paradoxReading,
-                    ['Deep self-awareness', 'Understanding complexity'],
-                    sunMoonAspect.nature === 'challenging' ? ['Internal tension requires conscious integration'] : []
-                ));
-            }
+                    sunMoonAspect.nature === 'harmonious' 
+                        ? ['Unified inner resources', 'Authentic self-expression', 'Emotional-identity coherence', 'Natural self-trust']
+                        : ['Depth through complexity', 'Creative inner tension', 'Capacity for profound self-awareness', 'Understanding of human contradiction'],
+                    sunMoonAspect.nature === 'challenging' 
+                        ? ['Requires conscious integration work', 'May feel internally divided at times', 'Partners must appreciate complexity'] 
+                        : []
+                ));\n            }
             
             // ============================================
             // LOVE BLUEPRINT SYNTHESIS
@@ -5038,46 +5449,322 @@ This isn't a flaw - it's their power source. The tension between these two drive
             }
             
             // ============================================
-            // GENERATIONAL FORCES
+            // ADVANCED ANALYSIS: HOUSE CONCENTRATION
             // ============================================
-            if (readings.astrology.currentTransits && TRANSIT_READINGS) {
-                const transitsHeader = document.createElement('div');
-                transitsHeader.className = 'section-divider';
-                transitsHeader.innerHTML = '<h3>Generational Forces</h3><p>The outer planets shaping your generation\'s collective journey</p>';
-                celestialSection.appendChild(transitsHeader);
+            if (readings.astrology.planetHouses && typeof analyzeHouseConcentration === 'function') {
+                const houseConcentrations = analyzeHouseConcentration(readings.astrology.planetHouses);
                 
-                // Saturn transit
-                const saturnTransit = TRANSIT_READINGS.saturn;
-                celestialSection.appendChild(createReadingCard(
-                    saturnTransit.title,
-                    `Saturn in ${saturnTransit.currentSign}`,
-                    saturnTransit.keywords,
-                    saturnTransit.reading.replace(/this little one/gi, userData.name).replace(/they/gi, 'they'),
-                    [saturnTransit.guidance],
-                    []
-                ));
+                if (houseConcentrations && houseConcentrations.length > 0) {
+                    const houseConcentrationHeader = document.createElement('div');
+                    houseConcentrationHeader.className = 'section-divider';
+                    houseConcentrationHeader.innerHTML = '<h3>🎯 House Concentrations</h3><p>Extraordinary focus of energy in specific life areas</p>';
+                    celestialSection.appendChild(houseConcentrationHeader);
+                    
+                    houseConcentrations.forEach(concentration => {
+                        if (concentration.reading) {
+                            let concentrationContent = `<p><strong>${concentration.reading.archetype}</strong></p>`;
+                            
+                            if (concentration.rarity) {
+                                concentrationContent += `<div class="rarity-badge"><span class="rarity-label">Rarity:</span> ${concentration.rarity.odds}</div>`;
+                                concentrationContent += `<p><em>${concentration.rarity.significance}</em></p>`;
+                            }
+                            
+                            concentrationContent += `<p><strong>Planets Present:</strong> ${concentration.planets.join(', ')}</p>`;
+                            concentrationContent += concentration.reading.reading.replace(/\n\n/g, '</p><p>');
+                            
+                            if (concentration.reading.superpower) {
+                                concentrationContent += `<p><strong>Superpower:</strong> ${concentration.reading.superpower}</p>`;
+                            }
+                            if (concentration.reading.paradox) {
+                                concentrationContent += `<p><strong>The Paradox:</strong> ${concentration.reading.paradox}</p>`;
+                            }
+                            if (concentration.reading.integration) {
+                                concentrationContent += `<p><strong>Integration Path:</strong> ${concentration.reading.integration}</p>`;
+                            }
+                            
+                            celestialSection.appendChild(createReadingCard(
+                                concentration.reading.title,
+                                `${concentration.count} Planets in House ${concentration.house}`,
+                                concentration.reading.keywords,
+                                concentrationContent,
+                                [concentration.reading.superpower || ''],
+                                [concentration.reading.shadow || '']
+                            ));
+                        }
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: WEALTH BLUEPRINT
+            // ============================================
+            if (typeof analyzeWealthBlueprint === 'function') {
+                const wealthIndicators = analyzeWealthBlueprint(readings);
                 
-                // Pluto transit
-                const plutoTransit = TRANSIT_READINGS.pluto;
-                celestialSection.appendChild(createReadingCard(
-                    plutoTransit.title,
-                    `Pluto in ${plutoTransit.currentSign}`,
-                    plutoTransit.keywords,
-                    plutoTransit.reading.replace(/this child/gi, userData.name).replace(/they/gi, 'they'),
-                    [plutoTransit.guidance],
-                    []
-                ));
+                if (wealthIndicators && wealthIndicators.length > 0) {
+                    const wealthHeader = document.createElement('div');
+                    wealthHeader.className = 'section-divider';
+                    wealthHeader.innerHTML = '<h3>💰 Wealth Blueprint</h3><p>Natural relationship with resources, value, and material success</p>';
+                    celestialSection.appendChild(wealthHeader);
+                    
+                    wealthIndicators.forEach(indicator => {
+                        if (indicator.reading) {
+                            let wealthContent = indicator.reading.reading.replace(/\n\n/g, '</p><p>');
+                            if (indicator.reading.guidance) {
+                                wealthContent += `<p><strong>Guidance:</strong> ${indicator.reading.guidance}</p>`;
+                            }
+                            if (indicator.reading.timing) {
+                                wealthContent += `<p><strong>Timing:</strong> ${indicator.reading.timing}</p>`;
+                            }
+                            
+                            celestialSection.appendChild(createReadingCard(
+                                indicator.reading.title,
+                                indicator.planets ? indicator.planets.join(', ') : 'Financial Intelligence',
+                                indicator.reading.keywords,
+                                wealthContent,
+                                ['Natural wealth-building instincts'],
+                                []
+                            ));
+                        }
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: UNIQUE ARCHETYPES
+            // ============================================
+            if (typeof analyzeArchetypes === 'function') {
+                const archetypes = analyzeArchetypes(readings);
                 
-                // Jupiter transit
-                const jupiterTransit = TRANSIT_READINGS.jupiter;
-                celestialSection.appendChild(createReadingCard(
-                    jupiterTransit.title,
-                    `Jupiter in ${jupiterTransit.currentSign}`,
-                    jupiterTransit.keywords,
-                    jupiterTransit.reading.replace(/they/gi, 'they'),
-                    [jupiterTransit.guidance],
-                    []
-                ));
+                if (archetypes && archetypes.length > 0) {
+                    const archetypeHeader = document.createElement('div');
+                    archetypeHeader.className = 'section-divider';
+                    archetypeHeader.innerHTML = '<h3>✨ Unique Archetypes</h3><p>Special patterns revealed by your specific chart combination</p>';
+                    celestialSection.appendChild(archetypeHeader);
+                    
+                    archetypes.forEach(archetype => {
+                        let archetypeContent = archetype.reading.replace(/\n\n/g, '</p><p>');
+                        if (archetype.practiceGuidance) {
+                            archetypeContent += `<p><strong>Practice Guidance:</strong> ${archetype.practiceGuidance}</p>`;
+                        }
+                        if (archetype.challenge) {
+                            archetypeContent += `<p><strong>Key Challenge:</strong> ${archetype.challenge}</p>`;
+                        }
+                        if (archetype.lifeWork) {
+                            archetypeContent += `<p><strong>Natural Life Work:</strong> ${archetype.lifeWork}</p>`;
+                        }
+                        if (archetype.optimalEnvironment) {
+                            archetypeContent += `<p><strong>Optimal Environment:</strong> ${archetype.optimalEnvironment}</p>`;
+                        }
+                        
+                        celestialSection.appendChild(createReadingCard(
+                            archetype.title,
+                            archetype.archetype || 'Unique Pattern',
+                            archetype.triggers || [],
+                            archetypeContent,
+                            [],
+                            archetype.shadow ? [archetype.shadow] : []
+                        ));
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: CHAKRA BLUEPRINT (Taurus emphasis)
+            // ============================================
+            if (readings.astrology.stelliums && typeof CHAKRA_BLUEPRINT_READINGS !== 'undefined') {
+                const taurusStellium = readings.astrology.stelliums.find(s => s.sign === 'Taurus');
+                
+                if (taurusStellium && CHAKRA_BLUEPRINT_READINGS.taurusThroat) {
+                    const chakraHeader = document.createElement('div');
+                    chakraHeader.className = 'section-divider';
+                    chakraHeader.innerHTML = '<h3>🔵 Chakra Blueprint</h3><p>Energy center activation based on your placements</p>';
+                    celestialSection.appendChild(chakraHeader);
+                    
+                    const chakra = CHAKRA_BLUEPRINT_READINGS.taurusThroat;
+                    let chakraContent = `<p><strong>${chakra.chakra}</strong> - ${chakra.bodyArea}</p>`;
+                    chakraContent += chakra.reading.replace(/\n\n/g, '</p><p>');
+                    
+                    if (chakra.healingPractices) {
+                        chakraContent += `<p><strong>Healing Practices:</strong></p><ul>`;
+                        chakra.healingPractices.forEach(practice => {
+                            chakraContent += `<li>${practice}</li>`;
+                        });
+                        chakraContent += `</ul>`;
+                    }
+                    
+                    chakraContent += `<p><strong>Affirmation:</strong> <em>"${chakra.affirmation}"</em></p>`;
+                    
+                    celestialSection.appendChild(createReadingCard(
+                        chakra.title,
+                        'Self-Expression & Voice',
+                        chakra.keywords,
+                        chakraContent,
+                        ['Natural voice power', 'Healing through expression'],
+                        ['Throat sensitivity when suppressing truth']
+                    ));
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: SUN-MOON SAME SIGN (RARITY)
+            // ============================================
+            if (typeof analyzeSunMoonConjunction === 'function') {
+                const sunMoonSame = analyzeSunMoonConjunction(readings);
+                
+                if (sunMoonSame) {
+                    const rarityHeader = document.createElement('div');
+                    rarityHeader.className = 'section-divider';
+                    rarityHeader.innerHTML = '<h3>🌟 Statistical Rarity</h3><p>Unusual patterns that make this chart unique</p>';
+                    celestialSection.appendChild(rarityHeader);
+                    
+                    celestialSection.appendChild(createReadingCard(
+                        'Sun-Moon Conjunction by Sign',
+                        `Both in ${sunMoonSame.sign} (${sunMoonSame.odds})`,
+                        ['Rare', 'Unified Identity', 'Emotional Coherence'],
+                        `<p>${sunMoonSame.description}</p><p><strong>What This Means:</strong> ${sunMoonSame.synthesis}</p>`,
+                        ['Powerful internal alignment', 'Clear sense of self'],
+                        []
+                    ));
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: HEALTH BLUEPRINT
+            // ============================================
+            if (typeof analyzeHealthBlueprint === 'function') {
+                const healthIndicators = analyzeHealthBlueprint(readings);
+                
+                if (healthIndicators && healthIndicators.length > 0) {
+                    const healthHeader = document.createElement('div');
+                    healthHeader.className = 'section-divider';
+                    healthHeader.innerHTML = '<h3>💚 Health Blueprint</h3><p>Body-mind connections based on celestial patterns</p>';
+                    celestialSection.appendChild(healthHeader);
+                    
+                    healthIndicators.forEach(indicator => {
+                        if (indicator.reading) {
+                            let healthContent = '';
+                            if (indicator.reading.vulnerabilities) {
+                                healthContent += indicator.reading.vulnerabilities.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
+                            } else if (indicator.reading.reading) {
+                                healthContent += indicator.reading.reading.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
+                            }
+                            if (indicator.reading.guidance) {
+                                healthContent += `<p><strong>Guidance:</strong> ${indicator.reading.guidance}</p>`;
+                            }
+                            if (indicator.reading.affirmation) {
+                                healthContent += `<p><em>Affirmation: "${indicator.reading.affirmation}"</em></p>`;
+                            }
+                            
+                            celestialSection.appendChild(createReadingCard(
+                                indicator.reading.title,
+                                indicator.reading.bodyRuler || indicator.reading.emphasis || '',
+                                indicator.reading.keywords || ['Health', 'Wellness', 'Body'],
+                                healthContent,
+                                [],
+                                []
+                            ));
+                        }
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: TEACHING STYLE
+            // ============================================
+            if (typeof analyzeTeachingStyle === 'function') {
+                const teachingIndicators = analyzeTeachingStyle(readings);
+                
+                if (teachingIndicators && teachingIndicators.length > 0) {
+                    const teachingHeader = document.createElement('div');
+                    teachingHeader.className = 'section-divider';
+                    teachingHeader.innerHTML = '<h3>📚 Teaching & Learning Style</h3><p>How you learn best and share wisdom with others</p>';
+                    celestialSection.appendChild(teachingHeader);
+                    
+                    teachingIndicators.forEach(indicator => {
+                        if (indicator.reading) {
+                            let teachingContent = indicator.reading.reading.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
+                            if (indicator.reading.superpower) {
+                                teachingContent += `<p><strong>Teaching Superpower:</strong> ${indicator.reading.superpower}</p>`;
+                            }
+                            if (indicator.reading.shadow) {
+                                teachingContent += `<p><em>Shadow to Watch:</em> ${indicator.reading.shadow}</p>`;
+                            }
+                            
+                            celestialSection.appendChild(createReadingCard(
+                                indicator.reading.title,
+                                indicator.reading.subtitle || '',
+                                indicator.reading.keywords || ['Teaching', 'Learning', 'Wisdom'],
+                                teachingContent,
+                                [],
+                                []
+                            ));
+                        }
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: PHILOSOPHICAL FRAMEWORK
+            // ============================================
+            if (typeof analyzePhilosophicalFramework === 'function') {
+                const philosophyIndicators = analyzePhilosophicalFramework(readings);
+                
+                if (philosophyIndicators && philosophyIndicators.length > 0) {
+                    const philosophyHeader = document.createElement('div');
+                    philosophyHeader.className = 'section-divider';
+                    philosophyHeader.innerHTML = '<h3>🔮 Philosophical Framework</h3><p>The belief system encoded in your cosmic design</p>';
+                    celestialSection.appendChild(philosophyHeader);
+                    
+                    philosophyIndicators.forEach(indicator => {
+                        if (indicator.reading) {
+                            let philosophyContent = indicator.reading.reading.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
+                            if (indicator.reading.keyInsight) {
+                                philosophyContent += `<p><strong>Key Insight:</strong> ${indicator.reading.keyInsight}</p>`;
+                            }
+                            if (indicator.reading.integration) {
+                                philosophyContent += `<p><em>Integration Path:</em> ${indicator.reading.integration}</p>`;
+                            }
+                            
+                            celestialSection.appendChild(createReadingCard(
+                                indicator.reading.title,
+                                indicator.reading.subtitle || '',
+                                indicator.reading.keywords || ['Philosophy', 'Belief', 'Meaning'],
+                                philosophyContent,
+                                [],
+                                []
+                            ));
+                        }
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: BIRTH LOCATION
+            // ============================================
+            if (typeof analyzeBirthLocation === 'function' && userData.birthPlace) {
+                const locationReading = analyzeBirthLocation(userData.birthPlace);
+                
+                if (locationReading) {
+                    const locationHeader = document.createElement('div');
+                    locationHeader.className = 'section-divider';
+                    locationHeader.innerHTML = '<h3>📍 Birth Location Significance</h3><p>The energy of where you chose to be born</p>';
+                    celestialSection.appendChild(locationHeader);
+                    
+                    let locationContent = locationReading.significance.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
+                    if (locationReading.guidance) {
+                        locationContent += `<p><strong>Guidance:</strong> ${locationReading.guidance}</p>`;
+                    }
+                    
+                    celestialSection.appendChild(createReadingCard(
+                        locationReading.title,
+                        locationReading.coordinates || userData.birthPlace,
+                        ['Birth Place', 'Geographic Energy', 'Location'],
+                        locationContent,
+                        [],
+                        []
+                    ));
+                }
             }
             
             // Organize cards into sub-sections based on their content
@@ -5410,14 +6097,36 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 ));
             }
             
-            // Personal Year - DEEP READING
+            // Personal Year - DEEP READING with METHODOLOGY
             const personalYear = readings.numerology.personalYear;
             const deepPersonalYear = (typeof DEEP_PERSONAL_YEAR_READINGS !== 'undefined') ? DEEP_PERSONAL_YEAR_READINGS[personalYear] : null;
             const personalYearEnhancements = getReadingEnhancements('personalYear', personalYear);
             
+            // Calculate Personal Year with details for transparency
+            const personalYearDetails = (typeof calculatePersonalYearWithDetails === 'function') 
+                ? calculatePersonalYearWithDetails(userData.birthDate, new Date())
+                : null;
+            
+            // Get timing granularity if available
+            const timingDetails = (typeof TIMING_READINGS !== 'undefined' && TIMING_READINGS.personalYearDetailed) 
+                ? TIMING_READINGS.personalYearDetailed[personalYear] 
+                : null;
+            
             if (deepPersonalYear) {
                 // Create comprehensive Personal Year reading from deep content
-                const personalYearContent = `<strong>${deepPersonalYear.theme}</strong>
+                let personalYearContent = `<strong>${deepPersonalYear.theme}</strong>`;
+                
+                // Add calculation methodology
+                if (personalYearDetails) {
+                    personalYearContent += `
+<div class="calc-methodology">
+<p><strong>📊 Calculation Method:</strong></p>
+<p><em>${personalYearDetails.calculation.formula}</em></p>
+<p class="calc-note">Personal Year = Birth Month + Birth Day + Current Year (each reduced)</p>
+</div>`;
+                }
+                
+                personalYearContent += `
 
 <em>The Energy of This Year:</em> ${deepPersonalYear.energy}
 
@@ -5429,11 +6138,25 @@ This isn't a flaw - it's their power source. The tension between these two drive
 
 <em>Career & Money:</em> ${deepPersonalYear.career}
 
-<em>Spiritual Focus:</em> ${deepPersonalYear.spiritual}
+<em>Spiritual Focus:</em> ${deepPersonalYear.spiritual}`;
+
+                // Add timing granularity
+                if (timingDetails) {
+                    personalYearContent += `
+
+<em>⏰ Power Timing:</em>
+• <strong>Peak Months:</strong> ${timingDetails.powerMonths.map(m => ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m-1]).join(', ')}
+• <strong>Daily Power Time:</strong> ${timingDetails.dailyPowerTime}
+• <strong>Seasonal Pattern:</strong> ${timingDetails.seasonalPattern}`;
+                }
+
+                personalYearContent += `
 
 <em>Guidance:</em> ${deepPersonalYear.advice}
 
-<em>Affirmation:</em> "${deepPersonalYear.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+<em>Affirmation:</em> "${deepPersonalYear.affirmation}"`;
+
+                personalYearContent = personalYearContent.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
                 
                 numbersSection.appendChild(createReadingCard(
                     deepPersonalYear.title,
@@ -5447,11 +6170,21 @@ This isn't a flaw - it's their power source. The tension between these two drive
             } else {
                 // Fallback to basic reading
                 const personalYearReading = PERSONAL_YEAR_READINGS ? PERSONAL_YEAR_READINGS[personalYear] : null;
+                
+                let basicContent = personalYearReading ? personalYearReading.reading.replace(/\$\{userData\.name\}/gi, userData.name) : `Personal Year ${personalYear} indicates the theme and energy of the current year.`;
+                
+                // Add calculation methodology even for basic reading
+                if (personalYearDetails) {
+                    basicContent = `<div class="calc-methodology">
+<p><strong>📊 Calculation:</strong> <em>${personalYearDetails.calculation.formula}</em></p>
+</div>` + basicContent;
+                }
+                
                 numbersSection.appendChild(createReadingCard(
                     config.readingTitles.personalYear,
                     `${personalYear} - ${personalYearReading ? personalYearReading.title : 'Year ' + personalYear}`,
                     personalYearReading ? personalYearReading.keywords : ['Current Year', 'Annual Theme', 'Opportunities'],
-                    personalYearReading ? personalYearReading.reading.replace(/\$\{userData\.name\}/gi, userData.name) : `Personal Year ${personalYear} indicates the theme and energy of the current year.`,
+                    basicContent,
                     [],
                     [],
                     personalYearEnhancements
@@ -5698,55 +6431,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             if (ad3) container.appendChild(ad3);
             
             // ============================================
-            // SECTION 4: FORECASTS
-            // ============================================
-            const forecastsSectionWrapper = document.createElement('div');
-            forecastsSectionWrapper.className = 'reading-section';
-            const forecastsSection = createSection('forecasts', config.sections.forecasts);
-            
-            // Personal Year Forecast with deep reading
-            const deepPY = (typeof DEEP_PERSONAL_YEAR_READINGS !== 'undefined') ? DEEP_PERSONAL_YEAR_READINGS[personalYear] : null;
-            let pyContent = '';
-            if (deepPY) {
-                pyContent = `<strong>${deepPY.theme}</strong>\n\n`;
-                pyContent += `<strong>The Energy:</strong> ${deepPY.energy}\n\n`;
-                pyContent += `<strong>Opportunities:</strong> ${deepPY.opportunities}\n\n`;
-                pyContent += `<strong>Challenges:</strong> ${deepPY.challenges}\n\n`;
-                pyContent += `<strong>Relationships:</strong> ${deepPY.relationships}\n\n`;
-                pyContent += `<strong>Career:</strong> ${deepPY.career}\n\n`;
-                pyContent += `<strong>Spiritual Growth:</strong> ${deepPY.spiritual}\n\n`;
-                pyContent += `<strong>Advice:</strong> ${deepPY.advice}\n\n`;
-                pyContent += `<em>"${deepPY.affirmation}"</em>`;
-            }
-            forecastsSection.appendChild(createReadingCard(
-                config.readingTitles.yearAhead,
-                deepPY ? deepPY.title : `Personal Year ${personalYear}`,
-                ['Annual Theme', 'Opportunities', 'Challenges', 'Career', 'Relationships', 'Spiritual Growth'],
-                pyContent || `In this Personal Year ${personalYear}, ${userData.name} is experiencing important themes and opportunities.`,
-                [],
-                []
-            ));
-            
-            // Personal Month
-            const personalMonth = readings.numerology.personalMonth;
-            forecastsSection.appendChild(createReadingCard(
-                'Current Month Energy',
-                `Personal Month ${personalMonth}`,
-                ['Monthly Theme', 'Short-term Focus'],
-                `This month carries the energy of ${personalMonth}, adding its influence to the yearly theme. This is a time for ${personalMonth === 1 ? 'initiating new projects' : personalMonth === 2 ? 'cooperation and patience' : personalMonth === 3 ? 'creative expression' : personalMonth === 4 ? 'practical matters' : personalMonth === 5 ? 'embracing change' : personalMonth === 6 ? 'home and family' : personalMonth === 7 ? 'rest and reflection' : personalMonth === 8 ? 'business and finances' : 'wrapping up loose ends'}.`,
-                [],
-                []
-            ));
-            
-            forecastsSectionWrapper.appendChild(forecastsSection);
-            container.appendChild(forecastsSectionWrapper);
-            
-            // Add AdSense slot (disabled)
-            const ad4 = createAdSlot();
-            if (ad4) container.appendChild(ad4);
-            
-            // ============================================
-            // SECTION 5: ANGULAR HOUSES - Life Pillars
+            // SECTION 4: ANGULAR HOUSES - Life Pillars
             // ============================================
             if (readings.astrology.angularHouses && typeof ANGULAR_HOUSE_READINGS !== 'undefined') {
                 const angularSectionWrapper = document.createElement('div');
@@ -6082,70 +6767,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 container.appendChild(synthesisSectionWrapper);
             }
             
-            // ============================================
-            // SECTION 10: PROGRESSIONS - Soul Evolution
-            // ============================================
-            if (typeof PROGRESSION_READINGS !== 'undefined') {
-                const progressionsSectionWrapper = document.createElement('div');
-                progressionsSectionWrapper.className = 'reading-section';
-                const progressionsSection = createCustomSection(
-                    'progressions',
-                    '',
-                    'Soul Evolution',
-                    `How ${userData.name}'s inner self is evolving over time`
-                );
-                
-                // Calculate progressed signs based on age
-                const birthDateProg = new Date(userData.birthDate);
-                const now = new Date();
-                const ageYears = Math.floor((now - birthDateProg) / (365.25 * 24 * 60 * 60 * 1000));
-                
-                // For babies/children, progressed Sun is still natal Sun or maybe next sign
-                const signs = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
-                const natalSunIndex = signs.indexOf(readings.astrology.sunSign.name);
-                const progressedSunIndex = (natalSunIndex + Math.floor(ageYears / 30)) % 12;
-                const progressedSun = signs[progressedSunIndex];
-                
-                const natalMoonIndex = signs.indexOf(readings.astrology.moonSign.name);
-                const progressedMoonIndex = (natalMoonIndex + Math.floor(ageYears / 2.5)) % 12;
-                const progressedMoon = signs[progressedMoonIndex];
-                
-                // Progressed Sun
-                if (PROGRESSION_READINGS.sun && PROGRESSION_READINGS.sun[progressedSun]) {
-                    const sunProg = PROGRESSION_READINGS.sun[progressedSun];
-                    progressionsSection.appendChild(createReadingCard(
-                        sunProg.title,
-                        `Progressed Sun in ${progressedSun}`,
-                        sunProg.keywords,
-                        sunProg.reading.replace(/this soul/gi, userData.name),
-                        sunProg.evolution || [],
-                        []
-                    ));
-                }
-                
-                // Progressed Moon
-                if (PROGRESSION_READINGS.moon && PROGRESSION_READINGS.moon[progressedMoon]) {
-                    const moonProg = PROGRESSION_READINGS.moon[progressedMoon];
-                    progressionsSection.appendChild(createReadingCard(
-                        moonProg.title,
-                        `Progressed Moon in ${progressedMoon}`,
-                        moonProg.keywords,
-                        moonProg.reading.replace(/this soul/gi, userData.name),
-                        moonProg.currentNeeds || [],
-                        []
-                    ));
-                }
-                
-                progressionsSectionWrapper.appendChild(progressionsSection);
-                container.appendChild(progressionsSectionWrapper);
-            }
-            
             // Add AdSense slot (disabled)
             const ad6 = createAdSlot();
             if (ad6) container.appendChild(ad6);
             
             // ============================================
-            // SECTION 11: COSMIC WRAP-UP - The Complete Picture
+            // SECTION 10: COSMIC WRAP-UP - The Complete Picture
             // ============================================
             if (typeof COSMIC_WRAPUP !== 'undefined' && typeof COSMIC_WRAPUP.generate === 'function') {
                 const wrapupSectionWrapper = document.createElement('div');
