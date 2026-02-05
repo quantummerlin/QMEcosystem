@@ -7,6 +7,38 @@ import { DailyDashboard } from '../components/DailyDashboard';
 import { animalNaturalElements, elementData } from '../components/ZodiacData';
 import type { ZodiacResult } from './CalculatorSection';
 
+// Complete Chinese Zodiac Compatibility Matrix
+// Based on traditional compatibility: Trines (best), Sextiles (good), Neutral, Clashing (avoid)
+const zodiacCompatibility: Record<string, Record<string, 'Excellent' | 'Good' | 'Moderate' | 'Challenging'>> = {
+  Rat: { Rat: 'Good', Ox: 'Excellent', Tiger: 'Moderate', Rabbit: 'Moderate', Dragon: 'Excellent', Snake: 'Good', Horse: 'Challenging', Goat: 'Moderate', Monkey: 'Excellent', Rooster: 'Moderate', Dog: 'Moderate', Pig: 'Good' },
+  Ox: { Rat: 'Excellent', Ox: 'Good', Tiger: 'Moderate', Rabbit: 'Moderate', Dragon: 'Good', Snake: 'Excellent', Horse: 'Challenging', Goat: 'Challenging', Monkey: 'Good', Rooster: 'Excellent', Dog: 'Moderate', Pig: 'Good' },
+  Tiger: { Rat: 'Moderate', Ox: 'Moderate', Tiger: 'Good', Rabbit: 'Good', Dragon: 'Excellent', Snake: 'Challenging', Horse: 'Excellent', Goat: 'Good', Monkey: 'Challenging', Rooster: 'Moderate', Dog: 'Excellent', Pig: 'Excellent' },
+  Rabbit: { Rat: 'Moderate', Ox: 'Moderate', Tiger: 'Good', Rabbit: 'Good', Dragon: 'Moderate', Snake: 'Good', Horse: 'Good', Goat: 'Excellent', Monkey: 'Moderate', Rooster: 'Challenging', Dog: 'Excellent', Pig: 'Excellent' },
+  Dragon: { Rat: 'Excellent', Ox: 'Good', Tiger: 'Excellent', Rabbit: 'Moderate', Dragon: 'Good', Snake: 'Good', Horse: 'Good', Goat: 'Moderate', Monkey: 'Excellent', Rooster: 'Excellent', Dog: 'Challenging', Pig: 'Good' },
+  Snake: { Rat: 'Good', Ox: 'Excellent', Tiger: 'Challenging', Rabbit: 'Good', Dragon: 'Good', Snake: 'Good', Horse: 'Moderate', Goat: 'Moderate', Monkey: 'Good', Rooster: 'Excellent', Dog: 'Moderate', Pig: 'Challenging' },
+  Horse: { Rat: 'Challenging', Ox: 'Challenging', Tiger: 'Excellent', Rabbit: 'Good', Dragon: 'Good', Snake: 'Moderate', Horse: 'Good', Goat: 'Excellent', Monkey: 'Moderate', Rooster: 'Moderate', Dog: 'Excellent', Pig: 'Good' },
+  Goat: { Rat: 'Moderate', Ox: 'Challenging', Tiger: 'Good', Rabbit: 'Excellent', Dragon: 'Moderate', Snake: 'Moderate', Horse: 'Excellent', Goat: 'Good', Monkey: 'Good', Rooster: 'Moderate', Dog: 'Good', Pig: 'Excellent' },
+  Monkey: { Rat: 'Excellent', Ox: 'Good', Tiger: 'Challenging', Rabbit: 'Moderate', Dragon: 'Excellent', Snake: 'Good', Horse: 'Moderate', Goat: 'Good', Monkey: 'Good', Rooster: 'Moderate', Dog: 'Good', Pig: 'Moderate' },
+  Rooster: { Rat: 'Moderate', Ox: 'Excellent', Tiger: 'Moderate', Rabbit: 'Challenging', Dragon: 'Excellent', Snake: 'Excellent', Horse: 'Moderate', Goat: 'Moderate', Monkey: 'Moderate', Rooster: 'Good', Dog: 'Challenging', Pig: 'Good' },
+  Dog: { Rat: 'Moderate', Ox: 'Moderate', Tiger: 'Excellent', Rabbit: 'Excellent', Dragon: 'Challenging', Snake: 'Moderate', Horse: 'Excellent', Goat: 'Good', Monkey: 'Good', Rooster: 'Challenging', Dog: 'Good', Pig: 'Good' },
+  Pig: { Rat: 'Good', Ox: 'Good', Tiger: 'Excellent', Rabbit: 'Excellent', Dragon: 'Good', Snake: 'Challenging', Horse: 'Good', Goat: 'Excellent', Monkey: 'Moderate', Rooster: 'Good', Dog: 'Good', Pig: 'Good' },
+};
+
+const allZodiacAnimals = [
+  { name: 'Rat', icon: '🐀' },
+  { name: 'Ox', icon: '🐂' },
+  { name: 'Tiger', icon: '🐅' },
+  { name: 'Rabbit', icon: '🐇' },
+  { name: 'Dragon', icon: '🐉' },
+  { name: 'Snake', icon: '🐍' },
+  { name: 'Horse', icon: '🐎' },
+  { name: 'Goat', icon: '🐐' },
+  { name: 'Monkey', icon: '🐒' },
+  { name: 'Rooster', icon: '🐓' },
+  { name: 'Dog', icon: '🐕' },
+  { name: 'Pig', icon: '🐖' },
+];
+
 interface ResultsSectionProps {
   result: ZodiacResult | null;
 }
@@ -16,6 +48,9 @@ export function ResultsSection({ result }: ResultsSectionProps) {
 
   const elementInfo = elementData[result.element.toLowerCase()];
   const naturalElement = animalNaturalElements[result.animal] || result.element;
+  
+  // Get compatibility for this animal
+  const userCompatibility = zodiacCompatibility[result.animal] || {};
 
   const generateCycle: Record<string, string> = {
     Wood: 'Fire',
@@ -234,28 +269,62 @@ export function ResultsSection({ result }: ResultsSectionProps) {
           </div>
         </motion.div>
 
-        {/* Best Matches - Flip Cards */}
+        {/* Full Zodiac Compatibility Spectrum */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9 }}
+          className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6"
         >
-          <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">Best Matches</h3>
-          <p className="text-gray-500 text-center mb-6">Click to see compatibility level</p>
-          <div className="grid grid-cols-3 gap-4 max-w-md mx-auto">
-            {result.reading.bestMatches.map((match, i) => {
-              const [animalName, icon] = match.split(' ');
-              const compatibility = ['Excellent', 'Good', 'Good'][i];
+          <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">Your Zodiac Compatibility</h3>
+          <p className="text-gray-500 text-center mb-4">See how your {result.animal} matches with all 12 signs</p>
+          
+          {/* Legend */}
+          <div className="flex flex-wrap justify-center gap-3 mb-6 text-xs">
+            <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-full bg-gradient-to-r from-green-400 to-emerald-600"></span> Excellent</span>
+            <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-full bg-gradient-to-r from-blue-400 to-cyan-600"></span> Good</span>
+            <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-full bg-gradient-to-r from-yellow-400 to-orange-600"></span> Moderate</span>
+            <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-full bg-gradient-to-r from-red-400 to-pink-600"></span> Challenging</span>
+          </div>
+          
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+            {allZodiacAnimals.map((animal, i) => {
+              const compatibility = userCompatibility[animal.name] || 'Moderate';
+              const isSelf = animal.name === result.animal;
               return (
                 <CompatibilityFlipCard
-                  key={animalName}
-                  animal={animalName}
-                  icon={icon}
-                  compatibility={compatibility}
-                  delay={1 + i * 0.1}
+                  key={animal.name}
+                  animal={animal.name}
+                  icon={animal.icon}
+                  compatibility={isSelf ? 'Good' : compatibility}
+                  delay={1 + i * 0.05}
                 />
               );
             })}
+          </div>
+          
+          {/* Summary */}
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+            <div className="bg-white/70 rounded-xl p-4">
+              <h4 className="font-semibold text-green-600 mb-2">💚 Best Matches</h4>
+              <div className="flex flex-wrap gap-1">
+                {allZodiacAnimals
+                  .filter(a => userCompatibility[a.name] === 'Excellent')
+                  .map(a => (
+                    <span key={a.name} className="px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs">{a.icon} {a.name}</span>
+                  ))}
+              </div>
+            </div>
+            <div className="bg-white/70 rounded-xl p-4">
+              <h4 className="font-semibold text-red-500 mb-2">⚠️ Handle With Care</h4>
+              <div className="flex flex-wrap gap-1">
+                {allZodiacAnimals
+                  .filter(a => userCompatibility[a.name] === 'Challenging')
+                  .map(a => (
+                    <span key={a.name} className="px-2 py-1 bg-red-100 text-red-700 rounded-full text-xs">{a.icon} {a.name}</span>
+                  ))}
+              </div>
+            </div>
           </div>
         </motion.div>
 
