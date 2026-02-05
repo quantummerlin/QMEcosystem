@@ -43,7 +43,7 @@ export function AnimatedText({ text, className = '', delay = 0, type = 'word' }:
   return (
     <motion.span
       ref={ref}
-      className={`inline-flex flex-wrap ${className}`}
+      className={`inline-flex flex-wrap justify-center ${className}`}
       variants={container}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}

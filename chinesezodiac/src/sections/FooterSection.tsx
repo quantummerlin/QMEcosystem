@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Heart, Facebook, Twitter, MessageCircle, Link2 } from 'lucide-react';
+import { Heart, Facebook, Twitter, MessageCircle, Link2, Coffee, Shield, FileText } from 'lucide-react';
 import { useState } from 'react';
 import { toast } from 'sonner';
 
@@ -114,6 +114,46 @@ export function FooterSection() {
             © {new Date().getFullYear()} Chinese Zodiac Fortune Guide. 
             Discover your destiny with ancient wisdom.
           </p>
+
+          {/* Legal Links */}
+          <div className="flex justify-center gap-6 mt-4 text-sm">
+            <a href="/chinesezodiac/privacy.html" className="text-gray-400 hover:text-white transition-colors flex items-center gap-1">
+              <Shield className="w-4 h-4" />
+              Privacy Policy
+            </a>
+            <a href="/chinesezodiac/terms.html" className="text-gray-400 hover:text-white transition-colors flex items-center gap-1">
+              <FileText className="w-4 h-4" />
+              Terms of Service
+            </a>
+          </div>
+        </motion.div>
+
+        {/* Buy Me a Coffee Card */}
+        <motion.div
+          className="mt-12 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+        >
+          <div className="inline-block bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-2xl p-6 max-w-md">
+            <Coffee className="w-10 h-10 text-yellow-400 mx-auto mb-3" />
+            <h4 className="text-xl font-bold text-white mb-2">Enjoy the Zodiac Guide?</h4>
+            <p className="text-gray-300 mb-4 text-sm">
+              If this free tool brought you insight or joy, consider buying me a coffee to keep the cosmic wisdom flowing!
+            </p>
+            <motion.a
+              href="https://www.buymeacoffee.com/quantummerlin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all shadow-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Coffee className="w-5 h-5" />
+              Buy Me a Coffee
+            </motion.a>
+          </div>
         </motion.div>
       </div>
     </footer>
