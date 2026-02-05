@@ -4642,56 +4642,56 @@
             blueprintSummary.innerHTML = `
                 <div class="sub-section-header" onclick="toggleSubSection('cosmic-snapshot')">
                     <div class="sub-section-header-content">
-                        <h4>Cosmic Snapshot</h4>
+                        <h4>Resumen cósmico</h4>
                     </div>
                     <span class="sub-section-arrow">▼</span>
                 </div>
                 <div class="sub-section-body">
                     <div class="cosmic-blueprint-content">
-                        <p class="blueprint-intro">A complete overview of ${userData.name}'s celestial coordinates — the positions of all major celestial bodies at the moment of birth.</p>
+                        <p class="blueprint-intro">Un panorama completo de las coordenadas celestes de ${userData.name} — las posiciones de todos los cuerpos celestes principales en el momento del nacimiento.</p>
                         
                         <div class="blueprint-grid">
                             <div class="blueprint-category">
-                                <h4>The Big Three</h4>
+                                <h4>Los tres grandes</h4>
                                 <div class="blueprint-items">
-                                    <div class="blueprint-item"><strong>Sun:</strong> ${sunSign.name} <span class="meaning">(Core Identity)</span></div>
-                                    <div class="blueprint-item"><strong>Moon:</strong> ${moonSign.name} <span class="meaning">(Emotional Nature)</span></div>
+                                    <div class="blueprint-item"><strong>Sol:</strong> ${sunSign.name} <span class="meaning">(Identidad central)</span></div>
+                                    <div class="blueprint-item"><strong>Luna:</strong> ${moonSign.name} <span class="meaning">(Naturaleza emocional)</span></div>
                                     <div class="blueprint-item"><strong>Ascendente:</strong> ${risingSign ? risingSign.name : 'Desconocido'} <span class="meaning">(Primera Impresión)</span></div>
                                 </div>
                             </div>
                             
                             <div class="blueprint-category">
-                                <h4>Personal Planets</h4>
+                                <h4>Planetas personales</h4>
                                 <div class="blueprint-items">
-                                    <div class="blueprint-item"><strong>Mercury:</strong> ${mercurySign.name} <span class="meaning">(Mind & Communication)</span></div>
-                                    <div class="blueprint-item"><strong>Venus:</strong> ${venusSign.name} <span class="meaning">(Love & Beauty)</span></div>
-                                    <div class="blueprint-item"><strong>Mars:</strong> ${marsSign.name} <span class="meaning">(Drive & Action)</span></div>
+                                    <div class="blueprint-item"><strong>Mercurio:</strong> ${mercurySign.name} <span class="meaning">(Mente y comunicación)</span></div>
+                                    <div class="blueprint-item"><strong>Venus:</strong> ${venusSign.name} <span class="meaning">(Amor y belleza)</span></div>
+                                    <div class="blueprint-item"><strong>Marte:</strong> ${marsSign.name} <span class="meaning">(Impulso y acción)</span></div>
                                 </div>
                             </div>
                             
                             <div class="blueprint-category">
-                                <h4>Social Planets</h4>
+                                <h4>Planetas sociales</h4>
                                 <div class="blueprint-items">
-                                    <div class="blueprint-item"><strong>Jupiter:</strong> ${jupiterSign.name} <span class="meaning">(Luck & Expansion)</span></div>
-                                    <div class="blueprint-item"><strong>Saturn:</strong> ${saturnSign.name} <span class="meaning">(Discipline & Lessons)</span></div>
+                                    <div class="blueprint-item"><strong>Júpiter:</strong> ${jupiterSign.name} <span class="meaning">(Suerte y expansión)</span></div>
+                                    <div class="blueprint-item"><strong>Saturno:</strong> ${saturnSign.name} <span class="meaning">(Disciplina y lecciones)</span></div>
                                 </div>
                             </div>
                             
                             <div class="blueprint-category">
-                                <h4>Outer Planets</h4>
+                                <h4>Planetas externos</h4>
                                 <div class="blueprint-items">
-                                    <div class="blueprint-item"><strong>Uranus:</strong> ${uranusSign.name} <span class="meaning">(Innovation)</span></div>
-                                    <div class="blueprint-item"><strong>Neptune:</strong> ${neptuneSign.name} <span class="meaning">(Dreams)</span></div>
-                                    <div class="blueprint-item"><strong>Pluto:</strong> ${plutoSign.name} <span class="meaning">(Transformation)</span></div>
+                                    <div class="blueprint-item"><strong>Urano:</strong> ${uranusSign.name} <span class="meaning">(Innovación)</span></div>
+                                    <div class="blueprint-item"><strong>Neptuno:</strong> ${neptuneSign.name} <span class="meaning">(Sueños)</span></div>
+                                    <div class="blueprint-item"><strong>Plutón:</strong> ${plutoSign.name} <span class="meaning">(Transformación)</span></div>
                                 </div>
                             </div>
                             
                             <div class="blueprint-category">
-                                <h4>Other Key Points</h4>
+                                <h4>Otros puntos clave</h4>
                                 <div class="blueprint-items">
-                                    <div class="blueprint-item"><strong>North Node:</strong> ${northNode.name} <span class="meaning">(Life Purpose)</span></div>
-                                    <div class="blueprint-item"><strong>Moon Phase:</strong> ${moonPhase.name} <span class="meaning">(Soul Character)</span></div>
-                                    <div class="blueprint-item"><strong>Chinese:</strong> ${chineseZodiac.name} <span class="meaning">(${chineseZodiac.element})</span></div>
+                                    <div class="blueprint-item"><strong>Nodo Norte:</strong> ${northNode.name} <span class="meaning">(Propósito de vida)</span></div>
+                                    <div class="blueprint-item"><strong>Fase lunar:</strong> ${moonPhase.name} <span class="meaning">(Carácter del alma)</span></div>
+                                    <div class="blueprint-item"><strong>Zodiaco chino:</strong> ${chineseZodiac.name} <span class="meaning">(${chineseZodiac.element})</span></div>
                                 </div>
                             </div>
                         </div>
@@ -4701,14 +4701,14 @@
             celestialSection.appendChild(blueprintSummary);
             
             // Create collapsible sub-sections for organizing the celestial readings
-            const coreSubSection = createSubSection('core-planets', '', 'Core Identity (Sun, Moon, Rising)', false);
-            const personalSubSection = createSubSection('personal-planets', '', 'Personal Planets (Mercury, Venus, Mars)');
-            const socialSubSection = createSubSection('social-planets', '', 'Social Planets (Jupiter, Saturn)');
-            const outerSubSection = createSubSection('outer-planets', '', 'Outer Planets (Uranus, Neptune, Pluto)');
-            const soulSubSection = createSubSection('soul-points', '', 'Soul Points (Nodes, Chiron, Lilith)');
-            const housesSubSection = createSubSection('houses', '', 'House Placements');
-            const aspectsSubSection = createSubSection('aspects', '', 'Aspects & Connections');
-            const specialSubSection = createSubSection('special', '', 'Special Features');
+            const coreSubSection = createSubSection('core-planets', '', 'Identidad central (Sol, Luna, Ascendente)', false);
+            const personalSubSection = createSubSection('personal-planets', '', 'Planetas personales (Mercurio, Venus, Marte)');
+            const socialSubSection = createSubSection('social-planets', '', 'Planetas sociales (Júpiter, Saturno)');
+            const outerSubSection = createSubSection('outer-planets', '', 'Planetas externos (Urano, Neptuno, Plutón)');
+            const soulSubSection = createSubSection('soul-points', '', 'Puntos del alma (Nodos, Quirón, Lilith)');
+            const housesSubSection = createSubSection('houses', '', 'Posiciones por casas');
+            const aspectsSubSection = createSubSection('aspects', '', 'Aspectos y conexiones');
+            const specialSubSection = createSubSection('special', '', 'Rasgos especiales');
             
             // Sun Sign - DEEP READING
             const deepSun = (typeof DEEP_SUN_READINGS !== 'undefined') ? DEEP_SUN_READINGS[sunSign.name] : null;
@@ -4716,33 +4716,33 @@
             if (deepSun) {
                 const sunContent = `<strong>${deepSun.hook}</strong>
 
-<em>Core Identity:</em> ${deepSun.coreIdentity}
+<em>Identidad central:</em> ${deepSun.coreIdentity}
 
-<em>Life Force:</em> ${deepSun.lifeForce}
+<em>Fuerza vital:</em> ${deepSun.lifeForce}
 
-<em>Creative Expression:</em> ${deepSun.creativeExpression}
+<em>Expresión creativa:</em> ${deepSun.creativeExpression}
 
-<em>Ego Pattern:</em> ${deepSun.egoPattern}
+<em>Patrón del ego:</em> ${deepSun.egoPattern}
 
-<em>Leadership Style:</em> ${deepSun.leadership}
+<em>Estilo de liderazgo:</em> ${deepSun.leadership}
 
-<em>Life Lesson:</em> ${deepSun.lifeLesson}
+<em>Lección de vida:</em> ${deepSun.lifeLesson}
 
-<em>Shadow to Watch:</em> ${deepSun.shadow}
+<em>Sombra a vigilar:</em> ${deepSun.shadow}
 
-<em>Integration Path:</em> ${deepSun.integration}
+<em>Camino de integración:</em> ${deepSun.integration}
 
-<em>Parenting Guidance:</em> ${deepSun.parentGuidance}
+<em>Guía para padres:</em> ${deepSun.parentGuidance}
 
-<em>Affirmation:</em> "${deepSun.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+<em>Afirmación:</em> "${deepSun.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
                 
                 // Get actionable enhancements for this Sun sign
                 const sunEnhancements = getReadingEnhancements('sunSign', sunSign.name);
                 
                 celestialSection.appendChild(createReadingCard(
                     deepSun.title,
-                    `Sun in ${sunSign.name}`,
-                    ['Core Identity', 'Life Purpose', 'Ego Expression', 'Vitality'],
+                    `Sol en ${sunSign.name}`,
+                    ['Identidad central', 'Propósito de vida', 'Expresión del ego', 'Vitalidad'],
                     sunContent,
                     [],
                     [],
@@ -4755,7 +4755,7 @@
                     config.readingTitles.sunSign,
                     `${sunSign.symbol} ${sunSign.name}`,
                     sunReading ? sunReading.keywords : [],
-                    sunReading ? sunReading.reading : `Born under the sign of ${sunSign.name}, a ${sunSign.element} sign.`,
+                    sunReading ? sunReading.reading : `Nacido bajo el signo de ${sunSign.name}, un signo de ${sunSign.element}.`,
                     sunReading ? sunReading.strengths : [],
                     sunReading ? sunReading.challenges : [],
                     sunEnhancements
@@ -4770,34 +4770,34 @@
                 // Create comprehensive Moon reading from deep content
                 const moonContent = `<strong>${deepMoon.hook}</strong>
 
-<em>Core Emotional Identity:</em> ${deepMoon.coreIdentity}
+<em>Identidad emocional central:</em> ${deepMoon.coreIdentity}
 
-<em>How Others Experience Them:</em> ${deepMoon.external}
+<em>Cómo los demás le perciben:</em> ${deepMoon.external}
 
-<em>Emotional Behavior Patterns:</em> ${deepMoon.behavior}
+<em>Patrones de conducta emocional:</em> ${deepMoon.behavior}
 
-<em>Greatest Emotional Strength:</em> ${deepMoon.strength}
+<em>Mayor fortaleza emocional:</em> ${deepMoon.strength}
 
-<em>Shadow Pattern to Watch:</em> ${deepMoon.shadow}
+<em>Patrón de sombra a vigilar:</em> ${deepMoon.shadow}
 
-<em>Path to Integration:</em> ${deepMoon.integration}
+<em>Camino de integración:</em> ${deepMoon.integration}
 
-<em>Under Stress:</em> ${deepMoon.stress}
+<em>Bajo estrés:</em> ${deepMoon.stress}
 
-<em>In Relationships:</em> ${deepMoon.relationships}
+<em>En relaciones:</em> ${deepMoon.relationships}
 
-<em>Emotional Growth Edge:</em> ${deepMoon.growth}
+<em>Borde de crecimiento emocional:</em> ${deepMoon.growth}
 
-<em>Physical Expression:</em> ${deepMoon.somatic}
+<em>Expresión física:</em> ${deepMoon.somatic}
 
-<em>Parenting Guidance:</em> ${deepMoon.parentGuidance}
+<em>Guía para padres:</em> ${deepMoon.parentGuidance}
 
-<em>Affirmation:</em> "${deepMoon.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+<em>Afirmación:</em> "${deepMoon.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
                 
                 celestialSection.appendChild(createReadingCard(
                     deepMoon.title,
-                    `Moon in ${moonSign.name}`,
-                    ['Emotional Nature', 'Inner Needs', 'Comfort Style', 'Instinctual Response'],
+                    `Luna en ${moonSign.name}`,
+                    ['Naturaleza emocional', 'Necesidades internas', 'Estilo de consuelo', 'Respuesta instintiva'],
                     moonContent,
                     [`${deepMoon.power}`],
                     [],
@@ -4809,8 +4809,8 @@
                 celestialSection.appendChild(createReadingCard(
                     config.readingTitles.moonSign,
                     `${moonSign.symbol} ${moonSign.name}`,
-                    ['Emotions', 'Inner Self', 'Instincts', 'Comfort'],
-                    `The Moon in ${moonSign.name} reveals the emotional nature and inner world. This placement suggests ${userData.name}'s emotional responses are colored by ${moonSign.element} energy - ${moonSign.element === 'Fire' ? 'passionate and expressive' : moonSign.element === 'Earth' ? 'stable and grounded' : moonSign.element === 'Air' ? 'intellectual and communicative' : 'deep and intuitive'}.`,
+                    ['Emociones', 'Mundo interno', 'Instintos', 'Consuelo'],
+                    `La Luna en ${moonSign.name} revela la naturaleza emocional y el mundo interno. Este emplazamiento sugiere que las respuestas emocionales de ${userData.name} están teñidas por la energía ${moonSign.element} — ${moonSign.element === 'Fire' ? 'apasionada y expresiva' : moonSign.element === 'Earth' ? 'estable y con los pies en la tierra' : moonSign.element === 'Air' ? 'intelectual y comunicativa' : 'profunda e intuitiva'}.`,
                     moonReading ? moonReading.strengths : [],
                     moonReading ? moonReading.challenges : [],
                     moonEnhancements
@@ -4824,26 +4824,26 @@
                 if (deepRising) {
                     const risingContent = `<strong>${deepRising.firstImpression}</strong>
 
-<em>Approach to Life:</em> ${deepRising.lifeApproach}
+<em>Enfoque de vida:</em> ${deepRising.lifeApproach}
 
-<em>How Others Perceive This Child:</em> ${deepRising.howOthersSee}
+<em>Cómo los demás perciben a este niño:</em> ${deepRising.howOthersSee}
 
-<em>Physical Expression:</em> ${deepRising.physicalExpression}
+<em>Expresión física:</em> ${deepRising.physicalExpression}
 
-<em>Life Path Theme:</em> ${deepRising.lifePath}
+<em>Tema del camino de vida:</em> ${deepRising.lifePath}
 
-<em>The Gift This Child Brings:</em> ${deepRising.gift}
+<em>El don que trae este niño:</em> ${deepRising.gift}
 
-<em>Growth Challenge:</em> ${deepRising.challenge}
+<em>Desafío de crecimiento:</em> ${deepRising.challenge}
 
-<em>Parenting Guidance:</em> ${deepRising.parentGuidance}
+<em>Guía para padres:</em> ${deepRising.parentGuidance}
 
-<em>Synthesis:</em> ${deepRising.synthesis}`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+<em>Síntesis:</em> ${deepRising.synthesis}`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
                     
                     celestialSection.appendChild(createReadingCard(
                         deepRising.title,
-                        `${risingSign.name} Rising`,
-                        ['First Impressions', 'Life Approach', 'Outer Expression', 'Physical Presence'],
+                        `${risingSign.name} Ascendente`,
+                        ['Primeras impresiones', 'Enfoque de vida', 'Expresión externa', 'Presencia física'],
                         risingContent,
                         [],
                         []
@@ -4852,15 +4852,15 @@
                     celestialSection.appendChild(createReadingCard(
                         config.readingTitles.risingSign,
                         `${risingSign.symbol || ''} ${risingSign.name}`,
-                        ['First Impressions', 'Appearance', 'Approach to Life'],
-                        `With ${risingSign.name} Rising, ${userData.name} presents to the world with ${risingSign.element} energy. This is the mask worn in new situations and the first impression made on others.`,
+                        ['Primeras impresiones', 'Apariencia', 'Enfoque de vida'],
+                        `Con Ascendente en ${risingSign.name}, ${userData.name} se presenta al mundo con energía ${risingSign.element}. Es la máscara que se usa en situaciones nuevas y la primera impresión que se deja en los demás.`,
                         [],
                         []
                     ));
                 }
             }
             
-            // Chinese Zodiac - Enhanced with deep readings and elemental influences
+            // Zodiaco chino - Mejorado con lecturas profundas e influencias elementales
             const chineseReading = CHINESE_ZODIAC_READINGS[chineseZodiac.name];
             const deepChinese = typeof DEEP_CHINESE_ZODIAC_READINGS !== 'undefined' ? DEEP_CHINESE_ZODIAC_READINGS[chineseZodiac.name] : null;
             const elementInfluence = typeof CHINESE_ELEMENT_INFLUENCES !== 'undefined' ? CHINESE_ELEMENT_INFLUENCES[chineseZodiac.element] : null;
@@ -4869,41 +4869,41 @@
             let chineseContent = '';
             if (deepChinese) {
                 chineseContent = `<p><strong>${deepChinese.hook.replace(/this soul/gi, userData.name)}</strong></p>\n\n`;
-                chineseContent += `<em>Core Nature:</em> ${deepChinese.coreNature.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                chineseContent += `<em>Strengths:</em> ${deepChinese.strengths.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                chineseContent += `<em>Shadow Aspects:</em> ${deepChinese.shadows.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                chineseContent += `<em>In Relationships:</em> ${deepChinese.relationships.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                chineseContent += `<em>Career Path:</em> ${deepChinese.career.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                chineseContent += `<em>Spiritual Journey:</em> ${deepChinese.spiritualPath.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chineseContent += `<em>Naturaleza esencial:</em> ${deepChinese.coreNature.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chineseContent += `<em>Fortalezas:</em> ${deepChinese.strengths.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chineseContent += `<em>Aspectos de sombra:</em> ${deepChinese.shadows.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chineseContent += `<em>En relaciones:</em> ${deepChinese.relationships.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chineseContent += `<em>Camino profesional:</em> ${deepChinese.career.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chineseContent += `<em>Camino espiritual:</em> ${deepChinese.spiritualPath.replace(/this soul|this child/gi, userData.name)}\n\n`;
                 
                 // Add elemental influence
                 if (elementInfluence) {
-                    chineseContent += `<h4>${chineseZodiac.element} Element Influence</h4>\n`;
+                    chineseContent += `<h4>Influencia del elemento ${chineseZodiac.element}</h4>\n`;
                     chineseContent += `<p><strong>${elementInfluence.nature}</strong></p>\n`;
                     chineseContent += `${elementInfluence.influence}\n\n`;
-                    chineseContent += `<em>Elemental Gifts:</em> ${elementInfluence.gifts}\n\n`;
-                    chineseContent += `<em>Elemental Challenges:</em> ${elementInfluence.challenges}\n\n`;
+                    chineseContent += `<em>Dones elementales:</em> ${elementInfluence.gifts}\n\n`;
+                    chineseContent += `<em>Desafíos elementales:</em> ${elementInfluence.challenges}\n\n`;
                 }
                 
-                chineseContent += `<em>Life Cycles:</em> ${deepChinese.lifeCycles}\n\n`;
-                chineseContent += `<em>Compatibility:</em> ${deepChinese.compatibility}\n\n`;
-                chineseContent += `<p><strong>Affirmation:</strong> <em>"${deepChinese.affirmation}"</em></p>`;
+                chineseContent += `<em>Ciclos de vida:</em> ${deepChinese.lifeCycles}\n\n`;
+                chineseContent += `<em>Compatibilidad:</em> ${deepChinese.compatibility}\n\n`;
+                chineseContent += `<p><strong>Afirmación:</strong> <em>"${deepChinese.affirmation}"</em></p>`;
             } else if (chineseReading) {
                 chineseContent = chineseReading.reading.replace(/this soul/gi, userData.name).replace(/those born under this sign/gi, userData.name);
             } else {
-                chineseContent = `Born in the Year of the ${chineseZodiac.name}.`;
+                chineseContent = `Nacido en el año de ${chineseZodiac.name}.`;
             }
             
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.chineseZodiac,
-                `Year of the ${chineseZodiac.element} ${chineseZodiac.name}`,
+                `Año del ${chineseZodiac.element} ${chineseZodiac.name}`,
                 deepChinese ? [deepChinese.archetype] : (chineseReading ? chineseReading.keywords : []),
                 chineseContent,
                 chineseReading ? chineseReading.strengths : [],
                 chineseReading ? chineseReading.challenges : []
             ));
             
-            // Moon Phase - Enhanced with deep readings (moonPhase already declared in blueprint section)
+            // Fase lunar - Mejorada con lecturas profundas (moonPhase ya declarado en la sección del resumen)
             const moonPhaseReading = MOON_PHASE_READINGS[moonPhase.name];
             const deepMoonPhase = typeof DEEP_MOON_PHASE_READINGS !== 'undefined' ? DEEP_MOON_PHASE_READINGS[moonPhase.name] : null;
             
@@ -4912,16 +4912,16 @@
             if (deepMoonPhase) {
                 moonPhaseContent = `<p><em>${deepMoonPhase.hook.replace(/this soul/gi, userData.name)}</em></p>\n\n`;
                 moonPhaseContent += deepMoonPhase.coreNature.replace(/this soul|this child/gi, userData.name) + '\n\n';
-                moonPhaseContent += `<h4>Life Path Theme</h4>\n${deepMoonPhase.lifePath.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                moonPhaseContent += `<h4>Inner World</h4>\n${deepMoonPhase.innerWorld.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                moonPhaseContent += `<h4>Relationships</h4>\n${deepMoonPhase.relationships.replace(/this soul|these souls/gi, userData.name)}\n\n`;
-                moonPhaseContent += `<h4>Spiritual Path</h4>\n${deepMoonPhase.spiritualPath.replace(/this soul|these souls/gi, userData.name)}\n\n`;
-                moonPhaseContent += `<h4>Parent Guidance</h4>\n${deepMoonPhase.parentGuidance.replace(/this child/gi, userData.name)}\n\n`;
-                moonPhaseContent += `<p><strong>Affirmation:</strong> <em>"${deepMoonPhase.affirmation}"</em></p>`;
+                moonPhaseContent += `<h4>Tema del camino de vida</h4>\n${deepMoonPhase.lifePath.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<h4>Mundo interno</h4>\n${deepMoonPhase.innerWorld.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<h4>Relaciones</h4>\n${deepMoonPhase.relationships.replace(/this soul|these souls/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<h4>Camino espiritual</h4>\n${deepMoonPhase.spiritualPath.replace(/this soul|these souls/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<h4>Guía para padres</h4>\n${deepMoonPhase.parentGuidance.replace(/this child/gi, userData.name)}\n\n`;
+                moonPhaseContent += `<p><strong>Afirmación:</strong> <em>"${deepMoonPhase.affirmation}"</em></p>`;
             } else if (moonPhaseReading) {
                 moonPhaseContent = moonPhaseReading.reading.replace(/this soul/gi, userData.name);
             } else {
-                moonPhaseContent = `Born under the ${moonPhase.name}.`;
+                moonPhaseContent = `Nacido bajo la fase ${moonPhase.name}.`;
             }
             
             celestialSection.appendChild(createReadingCard(
@@ -4941,23 +4941,23 @@
             if (deepMercury) {
                 mercuryContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepMercury.hook}</p>`;
                 mercuryContent += `<div style="white-space: pre-line;">${deepMercury.coreNature}</div>`;
-                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Communication Style</h4>`;
+                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Estilo de comunicación</h4>`;
                 mercuryContent += `<div style="white-space: pre-line;">${deepMercury.communication}</div>`;
-                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Learning Style</h4>`;
+                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Estilo de aprendizaje</h4>`;
                 mercuryContent += `<div style="white-space: pre-line;">${deepMercury.learning}</div>`;
-                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Shadows & Challenges</h4>`;
+                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Sombras y desafíos</h4>`;
                 mercuryContent += `<div style="white-space: pre-line;">${deepMercury.challenges}</div>`;
-                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
+                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Para madres y padres</h4>`;
                 mercuryContent += `<div style="white-space: pre-line;">${deepMercury.parentGuidance}</div>`;
-                mercuryContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Affirmation:</strong> "${deepMercury.affirmation}"</p>`;
+                mercuryContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Afirmación:</strong> "${deepMercury.affirmation}"</p>`;
             } else {
-                mercuryContent = mercuryReading ? mercuryReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Mercury in ${mercurySign.name} influences communication and thinking style.`;
+                mercuryContent = mercuryReading ? mercuryReading.reading.replace(/this placement/gi, `Este emplazamiento para ${userData.name}`) : `Mercurio en ${mercurySign.name} influye en la comunicación y el estilo de pensamiento.`;
             }
             
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.mercurySign,
                 `${mercurySign.name}${deepMercury ? ` - ${deepMercury.title}` : ''}`,
-                mercuryReading ? mercuryReading.keywords : ['Communication', 'Thinking', 'Learning'],
+                mercuryReading ? mercuryReading.keywords : ['Comunicación', 'Pensamiento', 'Aprendizaje'],
                 mercuryContent,
                 mercuryReading ? mercuryReading.strengths : [],
                 mercuryReading ? mercuryReading.challenges : []
@@ -4971,23 +4971,23 @@
             if (deepVenus) {
                 venusContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepVenus.hook}</p>`;
                 venusContent += `<div style="white-space: pre-line;">${deepVenus.coreNature}</div>`;
-                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Love Style</h4>`;
+                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Estilo de amor</h4>`;
                 venusContent += `<div style="white-space: pre-line;">${deepVenus.loveStyle}</div>`;
-                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">What They Need in Love</h4>`;
+                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Lo que necesita en el amor</h4>`;
                 venusContent += `<div style="white-space: pre-line;">${deepVenus.needs}</div>`;
-                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Shadows & Challenges</h4>`;
+                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Sombras y desafíos</h4>`;
                 venusContent += `<div style="white-space: pre-line;">${deepVenus.challenges}</div>`;
-                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
+                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Para madres y padres</h4>`;
                 venusContent += `<div style="white-space: pre-line;">${deepVenus.parentGuidance}</div>`;
-                venusContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Affirmation:</strong> "${deepVenus.affirmation}"</p>`;
+                venusContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Afirmación:</strong> "${deepVenus.affirmation}"</p>`;
             } else {
-                venusContent = venusReading ? venusReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Venus in ${venusSign.name} influences love and relationships.`;
+                venusContent = venusReading ? venusReading.reading.replace(/this placement/gi, `Este emplazamiento para ${userData.name}`) : `Venus en ${venusSign.name} influye en el amor y las relaciones.`;
             }
             
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.venusSign,
                 `${venusSign.name}${deepVenus ? ` - ${deepVenus.title}` : ''}`,
-                venusReading ? venusReading.keywords : ['Love', 'Beauty', 'Values'],
+                venusReading ? venusReading.keywords : ['Amor', 'Belleza', 'Valores'],
                 venusContent,
                 venusReading ? venusReading.strengths : [],
                 venusReading ? venusReading.challenges : []
@@ -5001,23 +5001,23 @@
             if (deepMars) {
                 marsContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepMars.hook}</p>`;
                 marsContent += `<div style="white-space: pre-line;">${deepMars.coreNature}</div>`;
-                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Energy Expression</h4>`;
+                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Expresión de la energía</h4>`;
                 marsContent += `<div style="white-space: pre-line;">${deepMars.energy}</div>`;
-                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Drive & Motivation</h4>`;
+                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Impulso y motivación</h4>`;
                 marsContent += `<div style="white-space: pre-line;">${deepMars.willAndDrive}</div>`;
-                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Shadows & Challenges</h4>`;
+                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Sombras y desafíos</h4>`;
                 marsContent += `<div style="white-space: pre-line;">${deepMars.challenges}</div>`;
-                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
+                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Para madres y padres</h4>`;
                 marsContent += `<div style="white-space: pre-line;">${deepMars.parentGuidance}</div>`;
-                marsContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Affirmation:</strong> "${deepMars.affirmation}"</p>`;
+                marsContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Afirmación:</strong> "${deepMars.affirmation}"</p>`;
             } else {
-                marsContent = marsReading ? marsReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Mars in ${marsSign.name} influences energy and drive.`;
+                marsContent = marsReading ? marsReading.reading.replace(/this placement/gi, `Este emplazamiento para ${userData.name}`) : `Marte en ${marsSign.name} influye en la energía y el impulso.`;
             }
             
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.marsSign,
                 `${marsSign.name}${deepMars ? ` - ${deepMars.title}` : ''}`,
-                marsReading ? marsReading.keywords : ['Energy', 'Drive', 'Action'],
+                marsReading ? marsReading.keywords : ['Energía', 'Impulso', 'Acción'],
                 marsContent,
                 marsReading ? marsReading.strengths : [],
                 marsReading ? marsReading.challenges : []
@@ -5033,23 +5033,23 @@
                 jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.coreNature}</div>`;
                 jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Path of Expansion</h4>`;
                 jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.expansion}</div>`;
-                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Wisdom & Teaching</h4>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Sabiduría y enseñanza</h4>`;
                 jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.wisdom}</div>`;
-                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">How Luck Finds Them</h4>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Cómo llega la suerte</h4>`;
                 jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.luck}</div>`;
-                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Shadows & Challenges</h4>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Sombras y desafíos</h4>`;
                 jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.challenges}</div>`;
-                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
+                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Para madres y padres</h4>`;
                 jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.parentGuidance}</div>`;
-                jupiterContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Affirmation:</strong> "${deepJupiter.affirmation}"</p>`;
+                jupiterContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Afirmación:</strong> "${deepJupiter.affirmation}"</p>`;
             } else {
-                jupiterContent = jupiterReading ? jupiterReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Jupiter in ${jupiterSign.name} influences luck and expansion.`;
+                jupiterContent = jupiterReading ? jupiterReading.reading.replace(/this placement/gi, `Este emplazamiento para ${userData.name}`) : `Júpiter en ${jupiterSign.name} influye en la suerte y la expansión.`;
             }
             
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.jupiterSign,
                 `${jupiterSign.name}${deepJupiter ? ` - ${deepJupiter.title}` : ''}`,
-                jupiterReading ? jupiterReading.keywords : ['Luck', 'Growth', 'Expansion'],
+                jupiterReading ? jupiterReading.keywords : ['Suerte', 'Crecimiento', 'Expansión'],
                 jupiterContent,
                 jupiterReading ? jupiterReading.strengths : [],
                 jupiterReading ? jupiterReading.challenges : []
@@ -5063,25 +5063,25 @@
             if (deepSaturn) {
                 saturnContent = `<p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">${deepSaturn.hook}</p>`;
                 saturnContent += `<div style="white-space: pre-line;">${deepSaturn.coreNature}</div>`;
-                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Life Lessons</h4>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Lecciones de vida</h4>`;
                 saturnContent += `<div style="white-space: pre-line;">${deepSaturn.lessons}</div>`;
-                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Challenges & Shadow Work</h4>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Desafíos y trabajo de sombra</h4>`;
                 saturnContent += `<div style="white-space: pre-line;">${deepSaturn.challenges}</div>`;
-                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Path to Mastery</h4>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Camino hacia la maestría</h4>`;
                 saturnContent += `<div style="white-space: pre-line;">${deepSaturn.mastery}</div>`;
-                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Gifts When Integrated</h4>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Dones cuando se integra</h4>`;
                 saturnContent += `<div style="white-space: pre-line;">${deepSaturn.gifts}</div>`;
-                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
+                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Para madres y padres</h4>`;
                 saturnContent += `<div style="white-space: pre-line;">${deepSaturn.parentGuidance}</div>`;
-                saturnContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Affirmation:</strong> "${deepSaturn.affirmation}"</p>`;
+                saturnContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Afirmación:</strong> "${deepSaturn.affirmation}"</p>`;
             } else {
-                saturnContent = saturnReading ? saturnReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Saturn in ${saturnSign.name} indicates life lessons and areas of mastery.`;
+                saturnContent = saturnReading ? saturnReading.reading.replace(/this placement/gi, `Este emplazamiento para ${userData.name}`) : `Saturno en ${saturnSign.name} indica lecciones de vida y áreas de maestría.`;
             }
             
             celestialSection.appendChild(createReadingCard(
                 config.readingTitles.saturnSign,
                 `${saturnSign.name}${deepSaturn ? ` - ${deepSaturn.title}` : ''}`,
-                saturnReading ? saturnReading.keywords : ['Lessons', 'Discipline', 'Mastery'],
+                saturnReading ? saturnReading.keywords : ['Lecciones', 'Disciplina', 'Maestría'],
                 saturnContent,
                 saturnReading ? saturnReading.strengths : [],
                 saturnReading ? saturnReading.challenges : []
@@ -5096,25 +5096,25 @@
             let chironContent = '';
             if (deepChiron) {
                 chironContent = `<p><strong>${deepChiron.hook.replace(/this soul/gi, userData.name)}</strong></p>\n\n`;
-                chironContent += `<em>Core Wound:</em> ${deepChiron.coreWound.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                chironContent += `<em>Wounded Patterns:</em> ${deepChiron.woundedPatterns.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                chironContent += `<em>Healing Journey:</em> ${deepChiron.healingJourney.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                chironContent += `<em>Healer Gift:</em> ${deepChiron.healerGift.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                chironContent += `<em>Spiritual Lesson:</em> ${deepChiron.spiritualLesson.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                chironContent += `<em>Shadow Integration:</em> ${deepChiron.shadowIntegration.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                chironContent += `<em>Relationship Healing:</em> ${deepChiron.relationshipHealing.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                chironContent += `<em>Career Expression:</em> ${deepChiron.careerExpression.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                chironContent += `<p><strong>Affirmation:</strong> <em>"${deepChiron.affirmation}"</em></p>`;
+                chironContent += `<em>Herida central:</em> ${deepChiron.coreWound.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Patrones heridos:</em> ${deepChiron.woundedPatterns.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Camino de sanación:</em> ${deepChiron.healingJourney.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Don sanador:</em> ${deepChiron.healerGift.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Lección espiritual:</em> ${deepChiron.spiritualLesson.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Integración de la sombra:</em> ${deepChiron.shadowIntegration.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Sanación en relaciones:</em> ${deepChiron.relationshipHealing.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<em>Expresión profesional:</em> ${deepChiron.careerExpression.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                chironContent += `<p><strong>Afirmación:</strong> <em>"${deepChiron.affirmation}"</em></p>`;
             } else if (chironReading) {
                 chironContent = chironReading.reading;
             } else {
-                chironContent = `Chiron in ${chiron.name} reveals a beautiful capacity for healing and helping others.`;
+                chironContent = `Quirón en ${chiron.name} revela una hermosa capacidad para sanar y ayudar a otros.`;
             }
             
             celestialSection.appendChild(createReadingCard(
-                'Chiron - The Healer Within',
+                'Quirón - El sanador interior',
                 deepChiron ? `${chiron.name} - ${deepChiron.archetype}` : chiron.name,
-                deepChiron ? [deepChiron.archetype] : (chironReading ? chironReading.keywords : ['Healing', 'Growth', 'Gift']),
+                deepChiron ? [deepChiron.archetype] : (chironReading ? chironReading.keywords : ['Sanación', 'Crecimiento', 'Don']),
                 chironContent,
                 [],
                 []
@@ -5129,24 +5129,24 @@
             let lilithContent = '';
             if (deepLilith) {
                 lilithContent = `<p><strong>${deepLilith.hook.replace(/this soul/gi, userData.name)}</strong></p>\n\n`;
-                lilithContent += `<em>Suppressed Power:</em> ${deepLilith.suppressedPower.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                lilithContent += `<em>How It Manifests:</em> ${deepLilith.howItManifests.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                lilithContent += `<em>Shadow Work:</em> ${deepLilith.shadowWork.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                lilithContent += `<em>Reclaimed Gift:</em> ${deepLilith.reclaimedGift.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                lilithContent += `<em>Sexual Expression:</em> ${deepLilith.sexualExpression.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                lilithContent += `<em>In Relationships:</em> ${deepLilith.relationships.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                lilithContent += `<em>Spiritual Meaning:</em> ${deepLilith.spiritualMeaning.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                lilithContent += `<p><strong>Affirmation:</strong> <em>"${deepLilith.affirmation}"</em></p>`;
+                lilithContent += `<em>Poder reprimido:</em> ${deepLilith.suppressedPower.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<em>Cómo se manifiesta:</em> ${deepLilith.howItManifests.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<em>Trabajo de sombra:</em> ${deepLilith.shadowWork.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<em>Don recuperado:</em> ${deepLilith.reclaimedGift.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<em>Expresión sexual:</em> ${deepLilith.sexualExpression.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<em>En relaciones:</em> ${deepLilith.relationships.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<em>Significado espiritual:</em> ${deepLilith.spiritualMeaning.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                lilithContent += `<p><strong>Afirmación:</strong> <em>"${deepLilith.affirmation}"</em></p>`;
             } else if (lilithReading) {
                 lilithContent = lilithReading.reading;
             } else {
-                lilithContent = `Lilith in ${lilith.name} reveals inner strength waiting to blossom.`;
+                lilithContent = `Lilith en ${lilith.name} revela una fuerza interior lista para florecer.`;
             }
             
             celestialSection.appendChild(createReadingCard(
-                'Lilith - Hidden Strength',
+                'Lilith - Fuerza oculta',
                 deepLilith ? `${lilith.name} - ${deepLilith.archetype}` : lilith.name,
-                deepLilith ? [deepLilith.archetype] : (lilithReading ? lilithReading.keywords : ['Strength', 'Independence', 'Authenticity']),
+                deepLilith ? [deepLilith.archetype] : (lilithReading ? lilithReading.keywords : ['Fuerza', 'Independencia', 'Autenticidad']),
                 lilithContent,
                 [],
                 []
@@ -5158,23 +5158,23 @@
             let uranusContent = '';
             if (deepUranus) {
                 uranusContent = `<p><strong>${deepUranus.hook.replace(/this soul/gi, userData.name)}</strong></p>\n\n`;
-                uranusContent += `<em>Core Expression:</em> ${deepUranus.coreExpression.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                uranusContent += `<em>Innovation:</em> ${deepUranus.innovation.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                uranusContent += `<em>Rebellion & Freedom:</em> ${deepUranus.rebellion.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                uranusContent += `<em>Genius Expression:</em> ${deepUranus.genius.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                uranusContent += `<em>Relationships:</em> ${deepUranus.relationships.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                uranusContent += `<em>Life Work:</em> ${deepUranus.lifeWork.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                uranusContent += `<em>Shadow Work:</em> ${deepUranus.shadowWork.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                uranusContent += `<em>Spiritual Meaning:</em> ${deepUranus.spiritualMeaning.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                uranusContent += `<p><strong>Affirmation:</strong> <em>"${deepUranus.affirmation}"</em></p>`;
+                uranusContent += `<em>Expresión central:</em> ${deepUranus.coreExpression.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Innovación:</em> ${deepUranus.innovation.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Rebeldía y libertad:</em> ${deepUranus.rebellion.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Expresión del genio:</em> ${deepUranus.genius.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Relaciones:</em> ${deepUranus.relationships.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Obra de vida:</em> ${deepUranus.lifeWork.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Trabajo de sombra:</em> ${deepUranus.shadowWork.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<em>Significado espiritual:</em> ${deepUranus.spiritualMeaning.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                uranusContent += `<p><strong>Afirmación:</strong> <em>"${deepUranus.affirmation}"</em></p>`;
             } else {
-                uranusContent = `Uranus in ${uranusSign.name} brings revolutionary energy and innovative thinking.`;
+                uranusContent = `Urano en ${uranusSign.name} aporta energía revolucionaria y pensamiento innovador.`;
             }
             
             celestialSection.appendChild(createReadingCard(
-                'Uranus - Innovation & Change',
+                'Urano - Innovación y cambio',
                 deepUranus ? `${uranusSign.name} - ${deepUranus.archetype}` : uranusSign.name,
-                deepUranus ? [deepUranus.archetype] : ['Innovation', 'Revolution', 'Freedom'],
+                deepUranus ? [deepUranus.archetype] : ['Innovación', 'Revolución', 'Libertad'],
                 uranusContent,
                 [],
                 []
@@ -5186,23 +5186,23 @@
             let neptuneContent = '';
             if (deepNeptune) {
                 neptuneContent = `<p><strong>${deepNeptune.hook.replace(/this soul/gi, userData.name)}</strong></p>\n\n`;
-                neptuneContent += `<em>Dream Vision:</em> ${deepNeptune.dreamVision.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                neptuneContent += `<em>Dissolution & Boundaries:</em> ${deepNeptune.dissolution.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                neptuneContent += `<em>Spiritual Gift:</em> ${deepNeptune.spiritualGift.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                neptuneContent += `<em>Illusion & Shadow:</em> ${deepNeptune.illusion.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                neptuneContent += `<em>Compassion:</em> ${deepNeptune.compassion.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                neptuneContent += `<em>Creativity:</em> ${deepNeptune.creativity.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                neptuneContent += `<em>Healing Path:</em> ${deepNeptune.healingPath.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                neptuneContent += `<em>Spiritual Lesson:</em> ${deepNeptune.spiritualLesson.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                neptuneContent += `<p><strong>Affirmation:</strong> <em>"${deepNeptune.affirmation}"</em></p>`;
+                neptuneContent += `<em>Visión onírica:</em> ${deepNeptune.dreamVision.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Disolución y límites:</em> ${deepNeptune.dissolution.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Don espiritual:</em> ${deepNeptune.spiritualGift.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Ilusión y sombra:</em> ${deepNeptune.illusion.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Compasión:</em> ${deepNeptune.compassion.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Creatividad:</em> ${deepNeptune.creativity.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Camino de sanación:</em> ${deepNeptune.healingPath.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<em>Lección espiritual:</em> ${deepNeptune.spiritualLesson.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                neptuneContent += `<p><strong>Afirmación:</strong> <em>"${deepNeptune.affirmation}"</em></p>`;
             } else {
-                neptuneContent = `Neptune in ${neptuneSign.name} influences spirituality, dreams, and creative imagination.`;
+                neptuneContent = `Neptuno en ${neptuneSign.name} influye en la espiritualidad, los sueños y la imaginación creativa.`;
             }
             
             celestialSection.appendChild(createReadingCard(
-                'Neptune - Dreams & Spirituality',
+                'Neptuno - Sueños y espiritualidad',
                 deepNeptune ? `${neptuneSign.name} - ${deepNeptune.archetype}` : neptuneSign.name,
-                deepNeptune ? [deepNeptune.archetype] : ['Dreams', 'Spirituality', 'Creativity'],
+                deepNeptune ? [deepNeptune.archetype] : ['Sueños', 'Espiritualidad', 'Creatividad'],
                 neptuneContent,
                 [],
                 []
@@ -5214,24 +5214,24 @@
             let plutoContent = '';
             if (deepPluto) {
                 plutoContent = `<p><strong>${deepPluto.hook.replace(/this soul/gi, userData.name)}</strong></p>\n\n`;
-                plutoContent += `<em>Transformation:</em> ${deepPluto.transformation.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                plutoContent += `<em>Power:</em> ${deepPluto.power.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                plutoContent += `<em>Shadow:</em> ${deepPluto.shadow.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                plutoContent += `<em>Obsession:</em> ${deepPluto.obsession.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                plutoContent += `<em>Crisis as Catalyst:</em> ${deepPluto.crisis.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                plutoContent += `<em>Rebirth:</em> ${deepPluto.rebirth.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                plutoContent += `<em>Relationships:</em> ${deepPluto.relationships.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                plutoContent += `<em>Shadow Integration:</em> ${deepPluto.shadowIntegration.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                plutoContent += `<em>Spiritual Meaning:</em> ${deepPluto.spiritualMeaning.replace(/this soul|this child/gi, userData.name)}\n\n`;
-                plutoContent += `<p><strong>Affirmation:</strong> <em>"${deepPluto.affirmation}"</em></p>`;
+                plutoContent += `<em>Transformación:</em> ${deepPluto.transformation.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Poder:</em> ${deepPluto.power.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Sombra:</em> ${deepPluto.shadow.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Obsesión:</em> ${deepPluto.obsession.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Crisis como catalizador:</em> ${deepPluto.crisis.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Renacimiento:</em> ${deepPluto.rebirth.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Relaciones:</em> ${deepPluto.relationships.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Integración de la sombra:</em> ${deepPluto.shadowIntegration.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<em>Significado espiritual:</em> ${deepPluto.spiritualMeaning.replace(/this soul|this child/gi, userData.name)}\n\n`;
+                plutoContent += `<p><strong>Afirmación:</strong> <em>"${deepPluto.affirmation}"</em></p>`;
             } else {
-                plutoContent = `Pluto in ${plutoSign.name} reveals transformative power and capacity for deep change.`;
+                plutoContent = `Plutón en ${plutoSign.name} revela poder transformador y capacidad de cambio profundo.`;
             }
             
             celestialSection.appendChild(createReadingCard(
-                'Pluto - Transformation & Power',
+                'Plutón - Transformación y poder',
                 deepPluto ? `${plutoSign.name} - ${deepPluto.archetype}` : plutoSign.name,
-                deepPluto ? [deepPluto.archetype] : ['Transformation', 'Power', 'Rebirth'],
+                deepPluto ? [deepPluto.archetype] : ['Transformación', 'Poder', 'Renacimiento'],
                 plutoContent,
                 [],
                 []
@@ -5243,30 +5243,30 @@
             if (readings.astrology.stelliums && readings.astrology.stelliums.length > 0) {
                 const stelliumHeader = document.createElement('div');
                 stelliumHeader.className = 'section-divider';
-                stelliumHeader.innerHTML = '<h3>Power Concentrations</h3><p>Stelliums - extraordinary energy focus in specific signs</p>';
+                stelliumHeader.innerHTML = '<h3>Concentraciones de poder</h3><p>Estelios: enfoque energético extraordinario en signos específicos</p>';
                 celestialSection.appendChild(stelliumHeader);
                 
                 readings.astrology.stelliums.forEach(stellium => {
                     const stelliumReading = STELLIUM_READINGS ? STELLIUM_READINGS[stellium.sign] : null;
-                    const intensityLabel = stellium.intensity === 'extreme' ? 'EXTREME' : 
-                                          stellium.intensity === 'powerful' ? 'POWERFUL' : 'SIGNIFICANT';
+                    const intensityLabel = stellium.intensity === 'extreme' ? 'EXTREMO' : 
+                                          stellium.intensity === 'powerful' ? 'PODEROSO' : 'SIGNIFICATIVO';
                     
                     const stelliumContent = stelliumReading ? 
-                        `<p><strong>${intensityLabel} ${stellium.element.toUpperCase()} STELLIUM</strong></p>
-                        <p><em>Planets concentrated: ${stellium.planets.join(', ')}</em></p>
+                        `<p><strong>${intensityLabel} ESTELIO ${stellium.element.toUpperCase()}</strong></p>
+                        <p><em>Planetas concentrados: ${stellium.planets.join(', ')}</em></p>
                         <p>${stelliumReading.reading}</p>
-                        <p class="cosmic-highlight">This concentration of ${stellium.count} celestial bodies in ${stellium.sign} creates a powerful focal point in ${userData.name}'s moment in time. This is where their energy naturally wants to express itself most intensely.</p>` :
-                        `<p><strong>${intensityLabel} STELLIUM</strong></p>
-                        <p>With ${stellium.count} planets in ${stellium.sign}, there is an extraordinary concentration of ${stellium.element} energy in this area of life.</p>
-                        <p>Planets: ${stellium.planets.join(', ')}</p>`;
+                        <p class="cosmic-highlight">Esta concentración de ${stellium.count} cuerpos celestes en ${stellium.sign} crea un punto focal poderoso en el momento de nacimiento de ${userData.name}. Aquí es donde su energía quiere expresarse con mayor intensidad.</p>` :
+                        `<p><strong>${intensityLabel} ESTELIO</strong></p>
+                        <p>Con ${stellium.count} planetas en ${stellium.sign}, hay una concentración extraordinaria de energía ${stellium.element} en esta área de la vida.</p>
+                        <p>Planetas: ${stellium.planets.join(', ')}</p>`;
                     
                     celestialSection.appendChild(createReadingCard(
-                        `${stellium.symbol} ${stellium.sign} Stellium`,
-                        `${stellium.count} Planets in ${stellium.sign}`,
-                        [stellium.element + ' Energy', 'Power Focus', 'Concentrated Gifts', intensityLabel],
+                        `${stellium.symbol} Estelio en ${stellium.sign}`,
+                        `${stellium.count} planetas en ${stellium.sign}`,
+                        [stellium.element + ' Energía', 'Foco de poder', 'Dones concentrados', intensityLabel],
                         stelliumContent,
-                        ['Exceptional strength in ' + stellium.sign + ' matters', 'Natural mastery potential', 'Magnetic presence in this area'],
-                        ['May overshadow other energies', 'Can be overwhelming to express', 'Needs conscious balance']
+                        ['Fuerza excepcional en temas de ' + stellium.sign, 'Potencial natural de maestría', 'Presencia magnética en esta área'],
+                        ['Puede eclipsar otras energías', 'Puede resultar abrumador de expresar', 'Necesita equilibrio consciente']
                     ));
                 });
 
@@ -5275,32 +5275,32 @@
                     const signList = combined.map(s => s.sign).join(' + ');
                     const elementList = combined.map(s => s.element).join(' + ');
                     const planetBreakdown = combined
-                        .map(s => `${s.planets.join(', ')} in ${s.sign}`)
+                        .map(s => `${s.planets.join(', ')} en ${s.sign}`)
                         .join('\n\n');
-                    const combinedContent = `This chart contains ${combined.length} stelliums, creating multiple power centers that work together. This means ${userData.name} carries more than one dominant energy signature, and their life themes are shaped by how these concentrations interact.\n\n${planetBreakdown}\n\nWhen multiple stelliums are present, growth comes from learning when to emphasize each energy and how to blend them. The combination of ${signList} creates a unique inner balance of ${elementList} energies that can feel intense but also extremely gifted when integrated.`;
+                    const combinedContent = `Esta carta contiene ${combined.length} estelios, creando múltiples centros de poder que trabajan en conjunto. Esto significa que ${userData.name} lleva más de una firma energética dominante, y sus temas de vida se moldean por cómo interactúan estas concentraciones.\n\n${planetBreakdown}\n\nCuando hay varios estelios, el crecimiento surge al aprender cuándo enfatizar cada energía y cómo integrarlas. La combinación de ${signList} crea un equilibrio interno único de energías ${elementList} que puede sentirse intenso pero también muy dotado cuando se integra.`;
 
                     celestialSection.appendChild(createReadingCard(
-                        'Stellium Synthesis',
+                        'Síntesis de estelios',
                         `${signList}`,
-                        ['Integrated Power', 'Multi-Sign Focus', 'Composite Gifts'],
+                        ['Poder integrado', 'Enfoque multisigno', 'Dones compuestos'],
                         combinedContent,
-                        ['Exceptional range of strengths', 'Multiple life arenas of mastery', 'High potential for impact'],
-                        ['Inner pulls between dominant energies', 'Needs conscious integration', 'May feel intense or complex at times']
+                        ['Rango excepcional de fortalezas', 'Múltiples áreas de maestría', 'Alto potencial de impacto'],
+                        ['Tensiones internas entre energías dominantes', 'Necesita integración consciente', 'Puede sentirse intenso o complejo a veces']
                     ));
                 }
             } else {
                 // No stellium - add a nice message about balanced energy
                 const balanceHeader = document.createElement('div');
                 balanceHeader.className = 'section-divider';
-                balanceHeader.innerHTML = '<h3>Balanced Energy Distribution</h3><p>A harmoniously spread cosmic blueprint</p>';
+                balanceHeader.innerHTML = '<h3>Distribución equilibrada de energía</h3><p>Un mapa cósmico armoniosamente distribuido</p>';
                 celestialSection.appendChild(balanceHeader);
                 
                 celestialSection.appendChild(createReadingCard(
-                    'Harmonious Cosmic Spread',
-                    'No Stellium - Balanced Gifts',
-                    ['Versatility', 'Adaptability', 'Well-Rounded'],
-                    `${userData.name}'s chart shows a beautifully balanced distribution of planetary energies across the zodiac. Rather than having concentrated power in one area, there is a harmonious spread that brings versatility and adaptability.\n\nThis balanced configuration means ${userData.name} can draw upon different energies as needed, moving fluidly between various life areas without being pulled too strongly in any one direction. There's a natural grace in being able to adapt to different situations and express multiple facets of personality with equal ease.\n\nPeople with balanced charts often become skilled at bridging different worlds, connecting with a wide variety of people, and finding creative solutions that draw from multiple perspectives.`,
-                    ['Natural versatility across life areas', 'Ability to adapt to many situations', 'Well-rounded personality development'],
+                    'Distribución cósmica armoniosa',
+                    'Sin estelio - Dones equilibrados',
+                    ['Versatilidad', 'Adaptabilidad', 'Equilibrio'],
+                    `La carta de ${userData.name} muestra una distribución equilibrada de energías planetarias en el zodiaco. En lugar de concentrar poder en un solo área, hay una expansión armoniosa que aporta versatilidad y adaptabilidad.\n\nEsta configuración equilibrada permite a ${userData.name} recurrir a distintas energías según se necesiten, moviéndose con fluidez entre áreas de la vida sin quedar demasiado atraído por una sola dirección. Hay una gracia natural en adaptarse a distintas situaciones y expresar múltiples facetas de la personalidad con la misma facilidad.\n\nLas personas con cartas equilibradas suelen conectar mundos distintos, relacionarse con una gran variedad de personas y encontrar soluciones creativas desde múltiples perspectivas.`,
+                    ['Versatilidad natural en distintas áreas', 'Capacidad de adaptarse a muchas situaciones', 'Desarrollo de personalidad equilibrada'],
                     []
                 ));
             }
@@ -5313,7 +5313,7 @@
                 
                 const housesHeader = document.createElement('div');
                 housesHeader.className = 'section-divider';
-                housesHeader.innerHTML = '<h3>House Placements</h3><p>Where each planet expresses its energy in your life</p>';
+                housesHeader.innerHTML = '<h3>Posiciones por casas</h3><p>Dónde expresa cada planeta su energía en tu vida</p>';
                 celestialSection.appendChild(housesHeader);
                 
                 // Sun in House
@@ -5321,7 +5321,7 @@
                     const houseReading = HOUSE_READINGS.Sun[planetHouses.sun];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
-                        `Sun in House ${planetHouses.sun}`,
+                        `Sol en la casa ${planetHouses.sun}`,
                         houseReading.keywords,
                         houseReading.reading.replace(/this child/gi, userData.name).replace(/they/gi, 'they'),
                         houseReading.strengths || [],
@@ -5334,7 +5334,7 @@
                     const houseReading = HOUSE_READINGS.Moon[planetHouses.moon];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
-                        `Moon in House ${planetHouses.moon}`,
+                        `Luna en la casa ${planetHouses.moon}`,
                         houseReading.keywords,
                         houseReading.reading.replace(/this child/gi, userData.name),
                         houseReading.strengths || [],
@@ -5347,7 +5347,7 @@
                     const houseReading = HOUSE_READINGS.Mercury[planetHouses.mercury];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
-                        `Mercury in House ${planetHouses.mercury}`,
+                        `Mercurio en la casa ${planetHouses.mercury}`,
                         houseReading.keywords,
                         houseReading.reading,
                         houseReading.strengths || [],
@@ -5360,7 +5360,7 @@
                     const houseReading = HOUSE_READINGS.Venus[planetHouses.venus];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
-                        `Venus in House ${planetHouses.venus}`,
+                        `Venus en la casa ${planetHouses.venus}`,
                         houseReading.keywords,
                         houseReading.reading,
                         houseReading.strengths || [],
@@ -5373,7 +5373,7 @@
                     const houseReading = HOUSE_READINGS.Mars[planetHouses.mars];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
-                        `Mars in House ${planetHouses.mars}`,
+                        `Marte en la casa ${planetHouses.mars}`,
                         houseReading.keywords,
                         houseReading.reading,
                         houseReading.strengths || [],
@@ -5386,7 +5386,7 @@
                     const houseReading = HOUSE_READINGS.Jupiter[planetHouses.jupiter];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
-                        `Jupiter in House ${planetHouses.jupiter}`,
+                        `Júpiter en la casa ${planetHouses.jupiter}`,
                         houseReading.keywords,
                         houseReading.reading,
                         houseReading.strengths || [],
@@ -5399,7 +5399,7 @@
                     const houseReading = HOUSE_READINGS.Saturn[planetHouses.saturn];
                     celestialSection.appendChild(createReadingCard(
                         houseReading.title,
-                        `Saturn in House ${planetHouses.saturn}`,
+                        `Saturno en la casa ${planetHouses.saturn}`,
                         houseReading.keywords,
                         houseReading.reading,
                         houseReading.strengths || [],
@@ -5410,12 +5410,12 @@
                 // Show birth time required message for House Placements
                 const housesHeader = document.createElement('div');
                 housesHeader.className = 'section-divider';
-                housesHeader.innerHTML = '<h3>House Placements</h3><p>Where each planet expresses its energy in your life</p>';
+                housesHeader.innerHTML = '<h3>Posiciones por casas</h3><p>Dónde expresa cada planeta su energía en tu vida</p>';
                 celestialSection.appendChild(housesHeader);
                 
                 celestialSection.appendChild(createBirthTimeRequiredCard(
-                    'House Placements',
-                    `House placements reveal WHERE each planet expresses its energy in ${userData.name}'s life - career, relationships, home, creativity, and more. The 12 houses divide the sky based on the exact birth time and location, creating a unique map of life themes and areas of focus.`
+                    'Posiciones por casas',
+                    `Las posiciones por casas muestran DÓNDE expresa cada planeta su energía en la vida de ${userData.name}: carrera, relaciones, hogar, creatividad y más. Las 12 casas dividen el cielo según la hora y el lugar exactos de nacimiento, creando un mapa único de temas de vida y áreas de enfoque.`
                 ));
             }
             
@@ -5425,7 +5425,7 @@
             if (readings.astrology.aspects && readings.astrology.aspects.length > 0) {
                 const aspectsHeader = document.createElement('div');
                 aspectsHeader.className = 'section-divider';
-                aspectsHeader.innerHTML = '<h3>Planetary Relationships</h3><p>How your planets interact and create your unique cosmic pattern</p>';
+                aspectsHeader.innerHTML = '<h3>Relaciones planetarias</h3><p>Cómo interactúan tus planetas y crean tu patrón cósmico único</p>';
                 celestialSection.appendChild(aspectsHeader);
                 
                 // Display major aspects
@@ -5468,30 +5468,30 @@
                 const sunSign = readings.astrology.sunSign;
                 const moonSign = readings.astrology.moonSign;
                 
-                const paradoxTitle = "Core Integration - Sun & Moon";
+                const paradoxTitle = "Integración central - Sol y Luna";
                 let paradoxReading = '';
                 
                 if (sunMoonAspect.nature === 'harmonious') {
-                    paradoxReading = `${userData.name} has a harmonious ${sunMoonAspect.aspect} between their ${sunSign.name} Sun (core identity) and ${moonSign.name} Moon (emotional nature). This creates beautiful alignment between what they want and what they need emotionally.
+                    paradoxReading = `${userData.name} tiene un ${sunMoonAspect.aspect} armonioso entre su Sol en ${sunSign.name} (identidad central) y su Luna en ${moonSign.name} (naturaleza emocional). Esto crea una hermosa alineación entre lo que desea y lo que necesita emocionalmente.
 
-Their conscious will and subconscious feelings work together naturally. What brings them joy (Sun) also satisfies their emotional needs (Moon). This internal harmony creates a sense of wholeness and self-understanding that is truly a gift.
+Su voluntad consciente y sus sentimientos subconscientes trabajan juntos de forma natural. Lo que le trae alegría (Sol) también satisface sus necesidades emocionales (Luna). Esta armonía interna crea una sensación de plenitud y autocomprensión que es un verdadero regalo.
 
-Support this natural integration by honoring both their ${sunSign.element} Sun's need for ${sunSign.element === 'Fire' ? 'action and recognition' : sunSign.element === 'Earth' ? 'stability and tangible results' : sunSign.element === 'Air' ? 'mental stimulation and communication' : 'emotional depth and intuitive connection'} and their ${moonSign.element} Moon's need for ${moonSign.element === 'Fire' ? 'emotional expression and excitement' : moonSign.element === 'Earth' ? 'security and routine' : moonSign.element === 'Air' ? 'intellectual processing of feelings' : 'emotional safety and nurturing'}.`;
+Apoya esta integración natural honrando tanto la necesidad del Sol en ${sunSign.element} de ${sunSign.element === 'Fire' ? 'acción y reconocimiento' : sunSign.element === 'Earth' ? 'estabilidad y resultados tangibles' : sunSign.element === 'Air' ? 'estimulación mental y comunicación' : 'profundidad emocional y conexión intuitiva'} como la necesidad de la Luna en ${moonSign.element} de ${moonSign.element === 'Fire' ? 'expresión emocional y entusiasmo' : moonSign.element === 'Earth' ? 'seguridad y rutina' : moonSign.element === 'Air' ? 'procesamiento intelectual de los sentimientos' : 'seguridad emocional y contención'}.`;
                 } else {
-                    paradoxReading = `${userData.name} has a ${sunMoonAspect.aspect} between their ${sunSign.name} Sun (conscious identity) and ${moonSign.name} Moon (emotional needs). This creates dynamic tension between what they want and what they need emotionally - a creative friction that shapes their growth.
+                    paradoxReading = `${userData.name} tiene un ${sunMoonAspect.aspect} entre su Sol en ${sunSign.name} (identidad consciente) y su Luna en ${moonSign.name} (necesidades emocionales). Esto crea una tensión dinámica entre lo que desea y lo que necesita emocionalmente: una fricción creativa que impulsa su crecimiento.
 
-Their ${sunSign.element} Sun wants ${sunSign.element === 'Fire' ? 'bold action and recognition' : sunSign.element === 'Earth' ? 'stability and material security' : sunSign.element === 'Air' ? 'intellectual freedom and variety' : 'emotional depth and merging'}, while their ${moonSign.element} Moon needs ${moonSign.element === 'Fire' ? 'passionate emotional expression' : moonSign.element === 'Earth' ? 'predictable emotional security' : moonSign.element === 'Air' ? 'mental understanding of feelings' : 'deep emotional bonding'}.
+Su Sol en ${sunSign.element} desea ${sunSign.element === 'Fire' ? 'acción audaz y reconocimiento' : sunSign.element === 'Earth' ? 'estabilidad y seguridad material' : sunSign.element === 'Air' ? 'libertad intelectual y variedad' : 'profundidad emocional y fusión'}, mientras que su Luna en ${moonSign.element} necesita ${moonSign.element === 'Fire' ? 'expresión emocional apasionada' : moonSign.element === 'Earth' ? 'seguridad emocional predecible' : moonSign.element === 'Air' ? 'comprensión mental de los sentimientos' : 'vínculo emocional profundo'}.
 
-This isn't a flaw - it's their power source. The tension between these two drives creates motivation, self-awareness, and the ability to understand others who also contain contradictions. Help them honor both parts of themselves without forcing them to choose one over the other.`;
+Esto no es un defecto: es su fuente de poder. La tensión entre estas dos fuerzas crea motivación, autoconciencia y la capacidad de comprender a otros que también contienen contradicciones. Ayúdale a honrar ambas partes de sí sin obligarle a elegir una sobre la otra.`;
                 }
                 
                 celestialSection.appendChild(createReadingCard(
                     paradoxTitle,
                     `${sunSign.symbol} ${sunSign.name} ${sunMoonAspect.symbol} ${moonSign.symbol} ${moonSign.name}`,
-                    ['Integration', 'Inner Balance', 'Self-Understanding'],
+                    ['Integración', 'Equilibrio interior', 'Autocomprensión'],
                     paradoxReading,
-                    ['Deep self-awareness', 'Understanding complexity'],
-                    sunMoonAspect.nature === 'challenging' ? ['Internal tension requires conscious integration'] : []
+                    ['Profunda autoconciencia', 'Comprender la complejidad'],
+                    sunMoonAspect.nature === 'challenging' ? ['La tensión interna requiere integración consciente'] : []
                 ));
             }
             
@@ -5504,7 +5504,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 
                 const blueprintHeader = document.createElement('div');
                 blueprintHeader.className = 'section-divider';
-                blueprintHeader.innerHTML = '<h3>Love Blueprint</h3><p>How they\'ll love, desire, and attract throughout life</p>';
+                blueprintHeader.innerHTML = '<h3>Mapa del amor</h3><p>Cómo amará, deseará y atraerá a lo largo de la vida</p>';
                 celestialSection.appendChild(blueprintHeader);
                 
                 celestialSection.appendChild(createReadingCard(
@@ -5512,7 +5512,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                     blueprint.subtitle,
                     blueprint.keywords,
                     blueprint.synthesis.replace(/this little one/gi, userData.name).replace(/they/gi, 'they').replace(/their/gi, 'their'),
-                    [`Their heart speaks: ${blueprint.essence}`, `They naturally attract: ${blueprint.attracted}`],
+                    [`Su corazón expresa: ${blueprint.essence}`, `Atrae naturalmente: ${blueprint.attracted}`],
                     []
                 ));
             }
