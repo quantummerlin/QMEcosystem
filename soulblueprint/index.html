@@ -180,6 +180,92 @@
             color: var(--secondary);
         }
         
+        /* Comprehensive dark mode text overrides */
+        body.dark-theme,
+        body.dark-theme .tagline,
+        body.dark-theme .sub-tagline,
+        body.dark-theme .helper-text,
+        body.dark-theme .form-group label,
+        body.dark-theme .reading-card,
+        body.dark-theme .section-header,
+        body.dark-theme .section-header p,
+        body.dark-theme .cosmic-snapshot,
+        body.dark-theme .cosmic-snapshot p,
+        body.dark-theme .blueprint-item,
+        body.dark-theme .blueprint-item .meaning,
+        body.dark-theme .toc-item,
+        body.dark-theme .footer-links,
+        body.dark-theme .footer-links a,
+        body.dark-theme .birth-info,
+        body.dark-theme .subject-name,
+        body.dark-theme .reading-content,
+        body.dark-theme .reading-content p,
+        body.dark-theme .reading-content li,
+        body.dark-theme .strengths-challenges,
+        body.dark-theme .strengths-challenges li,
+        body.dark-theme .keyword-tag,
+        body.dark-theme .numerology-explainer,
+        body.dark-theme .numerology-explainer p,
+        body.dark-theme .hero-welcome,
+        body.dark-theme .hero-welcome p,
+        body.dark-theme .theme-descriptions p,
+        body.dark-theme .welcome-highlight p,
+        body.dark-theme .saved-readings-note p,
+        body.dark-theme .privacy-note p {
+            color: var(--text) !important;
+        }
+        
+        body.dark-theme h1,
+        body.dark-theme h2,
+        body.dark-theme h3,
+        body.dark-theme h4,
+        body.dark-theme h5,
+        body.dark-theme h6,
+        body.dark-theme .section-header h2,
+        body.dark-theme .section-header h3,
+        body.dark-theme .reading-card h3,
+        body.dark-theme .reading-card h4,
+        body.dark-theme .blueprint-category h3,
+        body.dark-theme .my-readings-header h2 {
+            color: var(--primary) !important;
+        }
+        
+        body.dark-theme strong,
+        body.dark-theme b,
+        body.dark-theme .reading-card strong {
+            color: var(--secondary) !important;
+        }
+        
+        body.dark-theme a:not(.action-btn):not(.submit-btn) {
+            color: var(--primary) !important;
+        }
+        
+        body.dark-theme .reading-card {
+            background: var(--card-bg) !important;
+            border-color: var(--card-border) !important;
+        }
+        
+        body.dark-theme .cosmic-snapshot,
+        body.dark-theme .hero-welcome,
+        body.dark-theme .numerology-explainer,
+        body.dark-theme .blueprint-category {
+            background: var(--card-bg) !important;
+            border-color: var(--card-border) !important;
+        }
+        
+        body.dark-theme input,
+        body.dark-theme select {
+            background: var(--card-bg) !important;
+            color: var(--text) !important;
+            border-color: var(--card-border) !important;
+        }
+        
+        body.dark-theme input::placeholder {
+            color: var(--text) !important;
+            opacity: 0.5;
+        }
+        }
+        
         /* My Readings Dashboard */
         .my-readings-section {
             margin: 30px 0 20px;
