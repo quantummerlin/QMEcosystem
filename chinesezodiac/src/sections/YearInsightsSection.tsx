@@ -587,19 +587,19 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
           {Object.entries(currentYear.themes).map(([key, theme]) => (
             <FlipCard
               key={key}
-              className="h-48 md:h-52"
+              className="h-56 md:h-64"
               frontBg="bg-white border border-gray-100"
               backBg={themeIcons[key]?.gradient || 'bg-gradient-to-br from-purple-500 to-pink-500'}
               frontContent={
                 <div className="flex flex-col items-center justify-center h-full">
                   <div className="text-3xl mb-2">{themeIcons[key]?.icon || '✨'}</div>
                   <div className="text-lg font-semibold text-gray-800 capitalize">{key}</div>
-                  <p className="text-xs text-gray-500 mt-2 text-center px-2 line-clamp-2">{theme.summary}</p>
+                  <p className="text-xs text-gray-500 mt-2 text-center px-2">{theme.summary}</p>
                 </div>
               }
               backContent={
                 <div className="flex flex-col justify-between h-full text-xs">
-                  <p className="text-white/90 leading-relaxed line-clamp-4">{theme.details}</p>
+                  <p className="text-white/90 leading-relaxed text-[11px]">{theme.details}</p>
                   <div className="mt-2 space-y-1">
                     <div className="text-white/70">📅 Best: {theme.bestMonths.join(', ')}</div>
                     <div className="bg-white/20 rounded-lg px-2 py-1 text-white font-medium">💡 {theme.action}</div>
@@ -804,7 +804,7 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
             {relevantMonthlyForecasts.map((m, idx) => (
               <FlipCard
                 key={m.month}
-                className={`h-28 ${idx === 0 ? 'ring-2 ring-purple-500 ring-offset-2' : ''}`}
+                className={`h-36 ${idx === 0 ? 'ring-2 ring-purple-500 ring-offset-2' : ''}`}
                 frontBg={`bg-gradient-to-br ${fortuneColors[m.type].bg}`}
                 backBg="bg-gradient-to-br from-slate-700 to-slate-900"
                 frontContent={
@@ -817,8 +817,8 @@ export function YearInsightsSection({ result }: YearInsightsSectionProps) {
                 }
                 backContent={
                   <div className="flex flex-col justify-center h-full text-white text-xs text-left">
-                    <p className="leading-relaxed line-clamp-3">{m.focus}</p>
-                    <div className="mt-2 text-green-300">✓ {m.lucky[0]}</div>
+                    <p className="leading-relaxed text-[11px]">{m.focus}</p>
+                    <div className="mt-2 text-green-300 text-[10px]">✓ {m.lucky[0]}</div>
                   </div>
                 }
               />
