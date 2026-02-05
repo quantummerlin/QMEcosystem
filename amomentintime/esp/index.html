@@ -126,6 +126,148 @@
             --background: #F0F8FF;
             --card-border: #B0E0E6;
         }
+
+        /* Dark Mode Theme Combinations */
+        body.dark-theme.theme-girl {
+            --background: #1a0a1e;
+            --text: #ffd6e8;
+            --card-bg: #2d1a2e;
+            --card-border: #4a2a4e;
+            --primary: #FF69B4;
+            --secondary: #FFB6C1;
+        }
+        
+        body.dark-theme.theme-purple {
+            --background: #1a0a2e;
+            --text: #e6d5f7;
+            --card-bg: #2d1a4e;
+            --card-border: #4a2a6e;
+            --primary: #D8B5FF;
+            --secondary: #B19CD9;
+        }
+        
+        body.dark-theme.theme-boy {
+            --background: #0a1a2e;
+            --text: #d6e8ff;
+            --card-bg: #1a2d4e;
+            --card-border: #2a4a6e;
+            --primary: #6BA3D6;
+            --secondary: #87CEEB;
+        }
+        
+        body.dark-theme {
+            color: var(--text);
+        }
+        
+        body.dark-theme h1,
+        body.dark-theme h2,
+        body.dark-theme h3,
+        body.dark-theme h4,
+        body.dark-theme h5,
+        body.dark-theme h6 {
+            color: var(--primary);
+        }
+        
+        body.dark-theme p,
+        body.dark-theme span,
+        body.dark-theme li,
+        body.dark-theme label {
+            color: var(--text);
+        }
+        
+        body.dark-theme .reading-card .reading-content,
+        body.dark-theme .reading-card .reading-content p {
+            color: var(--text);
+        }
+        
+        body.dark-theme strong {
+            color: var(--secondary);
+        }
+
+        /* Comprehensive dark mode text overrides */
+        body.dark-theme,
+        body.dark-theme .tagline,
+        body.dark-theme .sub-tagline,
+        body.dark-theme .helper-text,
+        body.dark-theme .form-group label,
+        body.dark-theme .reading-card,
+        body.dark-theme .section-header,
+        body.dark-theme .section-header p,
+        body.dark-theme .cosmic-snapshot,
+        body.dark-theme .cosmic-snapshot p,
+        body.dark-theme .blueprint-item,
+        body.dark-theme .blueprint-item .meaning,
+        body.dark-theme .toc-item,
+        body.dark-theme .footer-links,
+        body.dark-theme .footer-links a,
+        body.dark-theme .birth-info,
+        body.dark-theme .subject-name,
+        body.dark-theme .reading-content,
+        body.dark-theme .reading-content p,
+        body.dark-theme .reading-content li,
+        body.dark-theme .strengths-challenges,
+        body.dark-theme .strengths-challenges li,
+        body.dark-theme .keyword-tag,
+        body.dark-theme .numerology-explainer,
+        body.dark-theme .numerology-explainer p,
+        body.dark-theme .hero-welcome,
+        body.dark-theme .hero-welcome p,
+        body.dark-theme .theme-descriptions p,
+        body.dark-theme .welcome-highlight p,
+        body.dark-theme .saved-readings-note p,
+        body.dark-theme .privacy-note p {
+            color: var(--text) !important;
+        }
+        
+        body.dark-theme h1,
+        body.dark-theme h2,
+        body.dark-theme h3,
+        body.dark-theme h4,
+        body.dark-theme h5,
+        body.dark-theme h6,
+        body.dark-theme .section-header h2,
+        body.dark-theme .section-header h3,
+        body.dark-theme .reading-card h3,
+        body.dark-theme .reading-card h4,
+        body.dark-theme .blueprint-category h3,
+        body.dark-theme .my-readings-header h2 {
+            color: var(--primary) !important;
+        }
+        
+        body.dark-theme strong,
+        body.dark-theme b,
+        body.dark-theme .reading-card strong {
+            color: var(--secondary) !important;
+        }
+        
+        body.dark-theme a:not(.action-btn):not(.submit-btn) {
+            color: var(--primary) !important;
+        }
+        
+        body.dark-theme .reading-card {
+            background: var(--card-bg) !important;
+            border-color: var(--card-border) !important;
+        }
+        
+        body.dark-theme .cosmic-snapshot,
+        body.dark-theme .hero-welcome,
+        body.dark-theme .numerology-explainer,
+        body.dark-theme .blueprint-category {
+            background: var(--card-bg) !important;
+            border-color: var(--card-border) !important;
+        }
+        
+        body.dark-theme input,
+        body.dark-theme select {
+            background: var(--card-bg) !important;
+            color: var(--text) !important;
+            border-color: var(--card-border) !important;
+        }
+        
+        body.dark-theme input::placeholder {
+            color: var(--text) !important;
+            opacity: 0.5;
+        }
         
         /* My Readings Dashboard */
         .my-readings-section {
@@ -3308,6 +3450,282 @@
             }
         }
         
+        /* Welcome Modal */
+        .welcome-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .welcome-content {
+            background: white;
+            border-radius: 24px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.5s ease;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .welcome-header {
+            background: linear-gradient(135deg, #FF69B4 0%, #FFB6C1 25%, #E6E6FA 50%, #87CEEB 75%, #6BA3D6 100%);
+            padding: 30px 25px;
+            text-align: center;
+            border-radius: 24px 24px 0 0;
+        }
+        
+        .welcome-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: #2d1b4e;
+            margin: 0 0 8px;
+        }
+        
+        .welcome-header p {
+            color: #4a3b6e;
+            font-size: 1rem;
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        .welcome-body {
+            padding: 25px;
+        }
+        
+        .welcome-step {
+            display: none;
+        }
+        
+        .welcome-step.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .welcome-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .welcome-step h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 0 0 15px;
+            text-align: center;
+        }
+        
+        .welcome-step p {
+            color: #555;
+            line-height: 1.7;
+            margin: 0 0 15px;
+            font-size: 0.95rem;
+        }
+        
+        .welcome-highlight {
+            background: linear-gradient(135deg, rgba(255,105,180,0.1) 0%, rgba(135,206,235,0.1) 100%);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .welcome-highlight p {
+            margin: 0;
+            font-style: italic;
+            color: #444;
+        }
+        
+        .theme-preview-btns {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .theme-preview-btn {
+            padding: 12px 24px;
+            border-radius: 25px;
+            border: 2px solid transparent;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .theme-preview-btn.pink {
+            background: linear-gradient(135deg, #FF69B4, #FFB6C1);
+            color: white;
+        }
+        
+        .theme-preview-btn.purple {
+            background: linear-gradient(135deg, #D8B5FF, #B19CD9);
+            color: white;
+        }
+        
+        .theme-preview-btn.blue {
+            background: linear-gradient(135deg, #6BA3D6, #87CEEB);
+            color: white;
+        }
+        
+        .theme-preview-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .theme-preview-btn.selected {
+            border-color: #2d1b4e;
+            box-shadow: 0 0 0 3px rgba(45,27,78,0.2);
+        }
+        
+        .welcome-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            border-top: 1px solid #eee;
+        }
+        
+        .welcome-dots {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .welcome-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            transition: all 0.3s ease;
+        }
+        
+        .welcome-dot.active {
+            background: var(--primary);
+            width: 24px;
+            border-radius: 5px;
+        }
+        
+        .welcome-nav-btn {
+            padding: 12px 28px;
+            border-radius: 25px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .welcome-nav-btn.secondary {
+            background: #f0f0f0;
+            color: #666;
+        }
+        
+        .welcome-nav-btn.primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .welcome-nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .welcome-nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .privacy-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: #f8fff8;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+            border: 1px solid #d4edda;
+        }
+        
+        .privacy-note .icon {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .privacy-note .lock-icon::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: #2d5a3d;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1C8.676 1 6 3.676 6 7v2H4v14h16V9h-2V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4zm0 10c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z'/%3E%3C/svg%3E") center/contain no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1C8.676 1 6 3.676 6 7v2H4v14h16V9h-2V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4zm0 10c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z'/%3E%3C/svg%3E") center/contain no-repeat;
+        }
+        
+        .privacy-note p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #2d5a3d;
+        }
+
+        .theme-descriptions {
+            background: #f8f8f8;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .theme-descriptions p {
+            margin: 8px 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .theme-descriptions p:first-child {
+            margin-top: 0;
+        }
+        
+        .theme-descriptions p:last-child {
+            margin-bottom: 0;
+        }
+
+        .saved-readings-note {
+            background: linear-gradient(135deg, rgba(107,163,214,0.1) 0%, rgba(135,206,235,0.1) 100%);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+            border-left: 4px solid #6BA3D6;
+        }
+        
+        .saved-readings-note p {
+            margin: 0 0 8px;
+            font-size: 0.9rem;
+            color: #444;
+        }
+        
+        .saved-readings-note p:last-child {
+            margin-bottom: 0;
+        }
+
         /* Touch-friendly enhancements */
         @media (hover: none) and (pointer: coarse) {
             .submit-btn,
@@ -3334,6 +3752,84 @@
     </style>
 </head>
 <body>
+    <!-- Welcome Modal -->
+    <div class="welcome-modal" id="welcomeModal" style="display: none;">
+        <div class="welcome-content">
+            <div class="welcome-header">
+                <h2>Bienvenido a tu lectura</h2>
+                <p>Un momento en el tiempo, capturado para siempre</p>
+            </div>
+
+            <div class="welcome-body">
+                <!-- Step 1: Introduction -->
+                <div class="welcome-step active" data-step="1">
+                    <h3>Cómo funciona</h3>
+                    <p>Introduce una fecha y hora de nacimiento, y revelaremos los patrones cósmicos escritos en las estrellas en ese instante.</p>
+                    <p>Recibirás <strong>65+ lecturas personalizadas</strong> que combinan astrología, numerología y sabiduría ancestral: un perfil cósmico completo.</p>
+                    <div class="welcome-highlight">
+                        <p>"En el exacto momento en que naciste, el universo creó un patrón único para ti."</p>
+                    </div>
+                </div>
+
+                <!-- Step 2: Theme Selection -->
+                <div class="welcome-step" data-step="2">
+                    <h3>Elige tu voz</h3>
+                    <p>Esta elección determina cómo te habla tu lectura:</p>
+                    <div class="theme-preview-btns">
+                        <button class="theme-preview-btn pink selected" onclick="selectWelcomeTheme('girl')">Pink</button>
+                        <button class="theme-preview-btn purple" onclick="selectWelcomeTheme('purple')">Purple</button>
+                        <button class="theme-preview-btn blue" onclick="selectWelcomeTheme('boy')">Blue</button>
+                    </div>
+                    <div class="theme-descriptions">
+                        <p><strong>Pink</strong> — Energía femenina. Lenguaje más suave y nutritivo.</p>
+                        <p><strong>Purple</strong> — Energía neutral. Tono equilibrado y universal.</p>
+                        <p><strong>Blue</strong> — Energía masculina. Lenguaje directo y sólido.</p>
+                    </div>
+                    <p style="text-align: center; font-size: 0.85rem; opacity: 0.7; margin-top: 15px;">Puedes cambiarlo en cualquier momento desde la barra superior</p>
+                </div>
+
+                <!-- Step 3: How to Read -->
+                <div class="welcome-step" data-step="3">
+                    <h3>Sin presión para leerlo todo</h3>
+                    <p>Esta es una <strong>cantidad considerable de información</strong>—piensa en ella como un manual para comprender un alma, no algo para leer a toda prisa.</p>
+                    <p>Tómate tu tiempo. Vuelve a distintas secciones cuando se sientan relevantes. Algunas ideas conectan al instante; otras cobran sentido meses después.</p>
+                    <div class="welcome-highlight">
+                        <p>"Úsalo como guía, no como un examen que hay que completar."</p>
+                    </div>
+                    <div class="saved-readings-note">
+                        <p><strong>Tus lecturas se guardan automáticamente.</strong></p>
+                        <p>Haz clic en "Nueva lectura" cuando quieras y encontrarás todos tus perfiles guardados al final de la página. Crea lecturas para amigos, familia o para ti: todas quedarán allí esperando.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4: Accuracy Note -->
+                <div class="welcome-step" data-step="4">
+                    <h3>Una nota amable sobre la precisión</h3>
+                    <p>Quizá <strong>el 70% se sienta sorprendentemente preciso</strong>. El resto es tu potencial: las estrellas y los números no pueden conocer tus traumas, circunstancias o decisiones.</p>
+                    <p>Si algo no resuena, podría ser un potencial no vivido esperando ser descubierto. O simplemente no es tu camino.</p>
+                    <div class="welcome-highlight">
+                        <p>"Tal vez, solo tal vez, esta sea la lectura que te lleve a quien siempre estuviste destinado a ser."</p>
+                    </div>
+                    <div class="privacy-note">
+                        <span class="icon lock-icon"></span>
+                        <p><strong>Tus datos se quedan contigo.</strong> Todo se guarda localmente en tu dispositivo. Nunca vemos, recopilamos ni compartimos tu información de nacimiento.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="welcome-footer">
+                <button class="welcome-nav-btn secondary" id="welcomeBackBtn" onclick="welcomeBack()" disabled>Atrás</button>
+                <div class="welcome-dots">
+                    <div class="welcome-dot active" data-dot="1"></div>
+                    <div class="welcome-dot" data-dot="2"></div>
+                    <div class="welcome-dot" data-dot="3"></div>
+                    <div class="welcome-dot" data-dot="4"></div>
+                </div>
+                <button class="welcome-nav-btn primary" id="welcomeNextBtn" onclick="welcomeNext()">Siguiente</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Theme Bar -->
     <div class="theme-bar" id="themeBar">
         <button class="theme-bar-btn" data-theme="girl" onclick="setGender('girl')">
@@ -8018,7 +8514,84 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const gender = document.getElementById('genderInput').value;
                 themeColorMeta.content = gender === 'boy' ? '#6BA3D6' : '#FF69B4';
             }
+
+            // Show welcome modal for first-time visitors
+            if (!localStorage.getItem('amit-welcome-seen')) {
+                document.getElementById('welcomeModal').style.display = 'flex';
+            }
         });
+
+        // ============================================
+        // WELCOME MODAL FUNCTIONS
+        // ============================================
+
+        let welcomeCurrentStep = 1;
+        const welcomeTotalSteps = 4;
+        const welcomeStorageKey = 'amit-welcome-seen';
+        const welcomeGetStartedLabel = 'Comenzar';
+
+        function selectWelcomeTheme(theme) {
+            // Update button states
+            document.querySelectorAll('.theme-preview-btn').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            const themeClass = theme === 'girl' ? 'pink' : (theme === 'boy' ? 'blue' : 'purple');
+            document.querySelector(`.theme-preview-btn.${themeClass}`).classList.add('selected');
+
+            // Actually apply the theme
+            setGender(theme);
+        }
+
+        function welcomeNext() {
+            if (welcomeCurrentStep < welcomeTotalSteps) {
+                welcomeCurrentStep++;
+                updateWelcomeStep();
+            } else {
+                closeWelcome();
+            }
+        }
+
+        function welcomeBack() {
+            if (welcomeCurrentStep > 1) {
+                welcomeCurrentStep--;
+                updateWelcomeStep();
+            }
+        }
+
+        function updateWelcomeStep() {
+            // Update step visibility
+            document.querySelectorAll('.welcome-step').forEach(step => {
+                step.classList.remove('active');
+            });
+            document.querySelector(`.welcome-step[data-step="${welcomeCurrentStep}"]`).classList.add('active');
+
+            // Scroll welcome content to top
+            const welcomeContent = document.querySelector('.welcome-content');
+            if (welcomeContent) welcomeContent.scrollTop = 0;
+
+            // Update dots
+            document.querySelectorAll('.welcome-dot').forEach(dot => {
+                dot.classList.remove('active');
+            });
+            document.querySelector(`.welcome-dot[data-dot="${welcomeCurrentStep}"]`).classList.add('active');
+
+            // Update buttons
+            document.getElementById('welcomeBackBtn').disabled = welcomeCurrentStep === 1;
+            document.getElementById('welcomeNextBtn').textContent = welcomeCurrentStep === welcomeTotalSteps ? welcomeGetStartedLabel : 'Siguiente';
+        }
+
+        function closeWelcome() {
+            localStorage.setItem(welcomeStorageKey, 'true');
+            const modal = document.getElementById('welcomeModal');
+            modal.style.opacity = '0';
+            modal.style.transition = 'opacity 0.3s ease';
+            setTimeout(() => {
+                modal.style.display = 'none';
+                modal.style.opacity = '1';
+                // Scroll page to top when welcome closes
+                window.scrollTo(0, 0);
+            }, 300);
+        }
     </script>
 </body>
 </html>
