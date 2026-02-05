@@ -17,6 +17,8 @@ export interface ZodiacResult {
   reading: typeof ZODIAC_READINGS.rat;
 }
 
+const STORAGE_KEY = 'chinesezodiac-birthdate';
+
 export function CalculatorSection({ onCalculate }: CalculatorSectionProps) {
   const [currentStep, setCurrentStep] = useState(1);
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
@@ -29,6 +31,21 @@ export function CalculatorSection({ onCalculate }: CalculatorSectionProps) {
   const [errors, setErrors] = useState<Record<string, boolean>>({});
 
   const currentYear = new Date().getFullYear();
+
+  // Load saved birth date from localStorage on mount
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const { year: savedYear, month: savedMonth, day: savedDay } = JSON.parse(saved);
+        if (savedYear) setYear(savedYear);
+        if (savedMonth) setMonth(savedMonth);
+        if (savedDay) setDay(savedDay);
+      }
+    } catch (e) {
+      // Ignore localStorage errors
+    }
+  }, []);
   const years = Array.from({ length: currentYear - 1939 }, (_, i) => currentYear - i);
   const months = [
     'January', 'February', 'March', 'April', 'May', 'June',
@@ -99,6 +116,13 @@ export function CalculatorSection({ onCalculate }: CalculatorSectionProps) {
 
   const handleCalculate = () => {
     setIsLoading(true);
+    
+    // Save birth date to localStorage
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ year, month, day }));
+    } catch (e) {
+      // Ignore localStorage errors
+    }
     
     setTimeout(() => {
       const y = parseInt(year);

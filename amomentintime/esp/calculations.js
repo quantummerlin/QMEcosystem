@@ -587,7 +587,7 @@ function calculateRisingSign(birthDate, birthTime, location = 'default') {
     // Rising sign (Ascendant) calculation using RAMC method
     // More accurate than direct atan2 approach
     if (!birthTime) {
-        return { name: 'Unknown', note: 'Birth time required for accurate Rising Sign' };
+        return { name: 'Desconocido', note: 'Se requiere hora de nacimiento para calcular el Signo Ascendente' };
     }
     
     const locationData = findLocation(location);
@@ -1021,7 +1021,7 @@ function calculateLilith(birthDate) {
 
 function calculateMidheaven(birthDate, birthTime, location = 'default') {
     if (!birthTime) {
-        return { name: 'Unknown', note: 'Birth time required' };
+        return { name: 'Desconocido', note: 'Se requiere hora de nacimiento' };
     }
     
     // MC calculation using RAMC (Right Ascension of Midheaven)
@@ -1142,13 +1142,13 @@ function calculateVertex(birthDate, birthTime, location = 'default') {
     // The Vertex is roughly opposite to the Ascendant + 6 houses, adjusted by co-latitude
     
     if (!birthTime) {
-        return { name: 'Unknown', note: 'Birth time required' };
+        return { name: 'Desconocido', note: 'Se requiere hora de nacimiento' };
     }
     
     // Get the Ascendant first
     const risingSign = calculateRisingSign(birthDate, birthTime, location);
-    if (!risingSign || risingSign.name === 'Unknown') {
-        return { name: 'Unknown', note: 'Unable to calculate' };
+    if (!risingSign || risingSign.name === 'Desconocido') {
+        return { name: 'Desconocido', note: 'No se pudo calcular' };
     }
     
     // The Vertex is typically in the 5th, 6th, 7th, or 8th house

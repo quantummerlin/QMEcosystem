@@ -2494,11 +2494,11 @@ This is ${name}'s life force—the energy they're here to radiate into the world
 
 ${deepSun ? `The ${sunSign} Sun needs: ` + deepSun.parentGuidance : ''}
 
-THE MOON IN ${moonSign.toUpperCase()}: The Inner Sanctuary  
+THE MOON IN ${moonSign.toUpperCase()}: The Inner Sanctuary
 ${deepMoon ? deepMoon.hook : getMoonSummary(moonSign)}
 This is ${name}'s emotional operating system—how they process feelings, what makes them feel safe, and how they'll need to be comforted. When ${name} cries, they're speaking in ${moonSign} Moon language. ${deepMoon ? deepMoon.parentGuidance : ''}
 
-${risingSign !== 'Unknown' ? `${risingSign.toUpperCase()} RISING: The Outer Expression` : 'THE ASCENDANT'}
+${risingSign !== 'Unknown' ?`${risingSign.toUpperCase()} RISING: The Outer Expression` : 'THE ASCENDANT'}
 ${risingSign !== 'Unknown' ? (deepRising ? deepRising.firstImpression : getRisingSummary(risingSign)) : 'Unknown at birth—requires birth time.'}
 ${risingSign !== 'Unknown' ? `This is how the world will first perceive ${name}. As they grow, they'll develop this persona as their interface with the world. ${deepRising ? deepRising.lifeApproach : ''}` : 'The Rising Sign reveals how others first perceive this soul.'}`;
         

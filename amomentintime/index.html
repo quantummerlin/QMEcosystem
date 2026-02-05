@@ -5039,49 +5039,6 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 }
             }
             
-            // ============================================
-            // GENERATIONAL FORCES
-            // ============================================
-            if (readings.astrology.currentTransits && TRANSIT_READINGS) {
-                const transitsHeader = document.createElement('div');
-                transitsHeader.className = 'section-divider';
-                transitsHeader.innerHTML = '<h3>Generational Forces</h3><p>The outer planets shaping your generation\'s collective journey</p>';
-                celestialSection.appendChild(transitsHeader);
-                
-                // Saturn transit
-                const saturnTransit = TRANSIT_READINGS.saturn;
-                celestialSection.appendChild(createReadingCard(
-                    saturnTransit.title,
-                    `Saturn in ${saturnTransit.currentSign}`,
-                    saturnTransit.keywords,
-                    saturnTransit.reading.replace(/this little one/gi, userData.name).replace(/they/gi, 'they'),
-                    [saturnTransit.guidance],
-                    []
-                ));
-                
-                // Pluto transit
-                const plutoTransit = TRANSIT_READINGS.pluto;
-                celestialSection.appendChild(createReadingCard(
-                    plutoTransit.title,
-                    `Pluto in ${plutoTransit.currentSign}`,
-                    plutoTransit.keywords,
-                    plutoTransit.reading.replace(/this child/gi, userData.name).replace(/they/gi, 'they'),
-                    [plutoTransit.guidance],
-                    []
-                ));
-                
-                // Jupiter transit
-                const jupiterTransit = TRANSIT_READINGS.jupiter;
-                celestialSection.appendChild(createReadingCard(
-                    jupiterTransit.title,
-                    `Jupiter in ${jupiterTransit.currentSign}`,
-                    jupiterTransit.keywords,
-                    jupiterTransit.reading.replace(/they/gi, 'they'),
-                    [jupiterTransit.guidance],
-                    []
-                ));
-            }
-            
             // Organize cards into sub-sections based on their content
             organizeCelestialSubSections(celestialSection, {
                 core: coreSubSection,
@@ -5700,55 +5657,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             if (ad3) container.appendChild(ad3);
             
             // ============================================
-            // SECTION 4: FORECASTS
-            // ============================================
-            const forecastsSectionWrapper = document.createElement('div');
-            forecastsSectionWrapper.className = 'reading-section';
-            const forecastsSection = createSection('forecasts', config.sections.forecasts);
-            
-            // Personal Year Forecast with deep reading
-            const deepPY = (typeof DEEP_PERSONAL_YEAR_READINGS !== 'undefined') ? DEEP_PERSONAL_YEAR_READINGS[personalYear] : null;
-            let pyContent = '';
-            if (deepPY) {
-                pyContent = `<strong>${deepPY.theme}</strong>\n\n`;
-                pyContent += `<strong>The Energy:</strong> ${deepPY.energy}\n\n`;
-                pyContent += `<strong>Opportunities:</strong> ${deepPY.opportunities}\n\n`;
-                pyContent += `<strong>Challenges:</strong> ${deepPY.challenges}\n\n`;
-                pyContent += `<strong>Relationships:</strong> ${deepPY.relationships}\n\n`;
-                pyContent += `<strong>Career:</strong> ${deepPY.career}\n\n`;
-                pyContent += `<strong>Spiritual Growth:</strong> ${deepPY.spiritual}\n\n`;
-                pyContent += `<strong>Advice:</strong> ${deepPY.advice}\n\n`;
-                pyContent += `<em>"${deepPY.affirmation}"</em>`;
-            }
-            forecastsSection.appendChild(createReadingCard(
-                config.readingTitles.yearAhead,
-                deepPY ? deepPY.title : `Personal Year ${personalYear}`,
-                ['Annual Theme', 'Opportunities', 'Challenges', 'Career', 'Relationships', 'Spiritual Growth'],
-                pyContent || `In this Personal Year ${personalYear}, ${userData.name} is experiencing important themes and opportunities.`,
-                [],
-                []
-            ));
-            
-            // Personal Month
-            const personalMonth = readings.numerology.personalMonth;
-            forecastsSection.appendChild(createReadingCard(
-                'Current Month Energy',
-                `Personal Month ${personalMonth}`,
-                ['Monthly Theme', 'Short-term Focus'],
-                `This month carries the energy of ${personalMonth}, adding its influence to the yearly theme. This is a time for ${personalMonth === 1 ? 'initiating new projects' : personalMonth === 2 ? 'cooperation and patience' : personalMonth === 3 ? 'creative expression' : personalMonth === 4 ? 'practical matters' : personalMonth === 5 ? 'embracing change' : personalMonth === 6 ? 'home and family' : personalMonth === 7 ? 'rest and reflection' : personalMonth === 8 ? 'business and finances' : 'wrapping up loose ends'}.`,
-                [],
-                []
-            ));
-            
-            forecastsSectionWrapper.appendChild(forecastsSection);
-            container.appendChild(forecastsSectionWrapper);
-            
-            // Add AdSense slot (disabled)
-            const ad4 = createAdSlot();
-            if (ad4) container.appendChild(ad4);
-            
-            // ============================================
-            // SECTION 5: ANGULAR HOUSES - Life Pillars
+            // SECTION 4: ANGULAR HOUSES - Life Pillars
             // ============================================
             if (readings.astrology.angularHouses && typeof ANGULAR_HOUSE_READINGS !== 'undefined') {
                 const angularSectionWrapper = document.createElement('div');
@@ -6082,64 +5991,6 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 
                 synthesisSectionWrapper.appendChild(synthesisSection);
                 container.appendChild(synthesisSectionWrapper);
-            }
-            
-            // ============================================
-            // SECTION 10: PROGRESSIONS - Soul Evolution
-            // ============================================
-            if (typeof PROGRESSION_READINGS !== 'undefined') {
-                const progressionsSectionWrapper = document.createElement('div');
-                progressionsSectionWrapper.className = 'reading-section';
-                const progressionsSection = createCustomSection(
-                    'progressions',
-                    '',
-                    'Soul Evolution',
-                    `How ${userData.name}'s inner self is evolving over time`
-                );
-                
-                // Calculate progressed signs based on age
-                const birthDateProg = new Date(userData.birthDate);
-                const now = new Date();
-                const ageYears = Math.floor((now - birthDateProg) / (365.25 * 24 * 60 * 60 * 1000));
-                
-                // For babies/children, progressed Sun is still natal Sun or maybe next sign
-                const signs = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
-                const natalSunIndex = signs.indexOf(readings.astrology.sunSign.name);
-                const progressedSunIndex = (natalSunIndex + Math.floor(ageYears / 30)) % 12;
-                const progressedSun = signs[progressedSunIndex];
-                
-                const natalMoonIndex = signs.indexOf(readings.astrology.moonSign.name);
-                const progressedMoonIndex = (natalMoonIndex + Math.floor(ageYears / 2.5)) % 12;
-                const progressedMoon = signs[progressedMoonIndex];
-                
-                // Progressed Sun
-                if (PROGRESSION_READINGS.sun && PROGRESSION_READINGS.sun[progressedSun]) {
-                    const sunProg = PROGRESSION_READINGS.sun[progressedSun];
-                    progressionsSection.appendChild(createReadingCard(
-                        sunProg.title,
-                        `Progressed Sun in ${progressedSun}`,
-                        sunProg.keywords,
-                        sunProg.reading.replace(/this soul/gi, userData.name),
-                        sunProg.evolution || [],
-                        []
-                    ));
-                }
-                
-                // Progressed Moon
-                if (PROGRESSION_READINGS.moon && PROGRESSION_READINGS.moon[progressedMoon]) {
-                    const moonProg = PROGRESSION_READINGS.moon[progressedMoon];
-                    progressionsSection.appendChild(createReadingCard(
-                        moonProg.title,
-                        `Progressed Moon in ${progressedMoon}`,
-                        moonProg.keywords,
-                        moonProg.reading.replace(/this soul/gi, userData.name),
-                        moonProg.currentNeeds || [],
-                        []
-                    ));
-                }
-                
-                progressionsSectionWrapper.appendChild(progressionsSection);
-                container.appendChild(progressionsSectionWrapper);
             }
             
             // Add AdSense slot (disabled)

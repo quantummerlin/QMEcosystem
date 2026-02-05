@@ -3350,7 +3350,7 @@
     <!-- Loading Overlay -->
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-spinner"></div>
-        <div class="loading-text" id="loadingText">Discovering the soul's story...</div>
+        <div class="loading-text" id="loadingText">Descubriendo la historia del alma...</div>
         <div class="loading-progress">
             <div class="loading-progress-bar" id="loadingProgressBar"></div>
         </div>
@@ -3359,40 +3359,40 @@
     <!-- Input Section -->
     <section class="input-section" id="inputSection">
         <header class="header">
-            <h1 id="brandName">A Moment in Time<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
-            <p class="tagline" id="tagline">Your Complete Cosmic Reading • No Sign-Up • Always Free</p>
-            <p class="sub-tagline" id="subTagline">At the exact moment you were born, the universe created a pattern.</p>
+            <h1 id="brandName">Un Momento en el Tiempo<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
+            <p class="tagline" id="tagline">Tu lectura cósmica completa • Sin registro • Siempre gratis</p>
+            <p class="sub-tagline" id="subTagline">En el momento exacto en que naciste, el universo creó un patrón.</p>
         </header>
         
         <div class="container">
             <form class="input-form" id="readingForm">
                 <div class="form-group">
-                    <label id="nameLabel">Name</label>
-                    <input type="text" id="nameInput" required placeholder="Enter name">
-                    <p class="helper-text" id="nameHelper">The name to use for this reading</p>
+                    <label id="nameLabel">Nombre</label>
+                    <input type="text" id="nameInput" required placeholder="Ingresa tu nombre">
+                    <p class="helper-text" id="nameHelper">El nombre a usar para esta lectura</p>
                 </div>
                 
                 <div class="form-group">
-                    <label id="birthDateLabel">Date of Birth</label>
+                    <label id="birthDateLabel">Fecha de nacimiento</label>
                     <input type="date" id="birthDateInput" required>
-                    <p class="helper-text" id="birthDateHelper">Birth date for calculations</p>
+                    <p class="helper-text" id="birthDateHelper">Fecha de nacimiento para los cálculos</p>
                 </div>
                 
                 <input type="hidden" id="genderInput" value="girl">
                 
                 <div class="form-group" id="birthTimeGroup">
-                    <label id="birthTimeLabel">Time of Birth <span class="optional-badge">Optional</span></label>
+                    <label id="birthTimeLabel">Hora de nacimiento <span class="optional-badge">Opcional</span></label>
                     <input type="time" id="birthTimeInput">
-                    <p class="helper-text" id="birthTimeHelper">For accurate Rising Sign calculation</p>
+                    <p class="helper-text" id="birthTimeHelper">Para cálculo preciso del Signo Ascendente</p>
                 </div>
                 
                 <div class="form-group" id="birthPlaceGroup">
-                    <label id="birthPlaceLabel">Place of Birth <span class="optional-badge">Optional</span></label>
-                    <input type="text" id="birthPlaceInput" placeholder="City, Country">
-                    <p class="helper-text" id="birthPlaceHelper">Location of birth</p>
+                    <label id="birthPlaceLabel">Lugar de nacimiento <span class="optional-badge">Opcional</span></label>
+                    <input type="text" id="birthPlaceInput" placeholder="Ciudad, País">
+                    <p class="helper-text" id="birthPlaceHelper">Lugar de nacimiento</p>
                 </div>
                 
-                <button type="submit" class="submit-btn" id="submitBtn">Generate Your Reading</button>
+                <button type="submit" class="submit-btn" id="submitBtn">Generar tu lectura</button>
             </form>
             
             <!-- My Readings Dashboard (below Generate button) -->
@@ -3422,11 +3422,11 @@
     <!-- Results Section -->
     <section class="results-section" id="resultsSection">
         <div class="results-header">
-            <h1 id="resultTitle">A Moment in Time<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
+            <h1 id="resultTitle">Un Momento en el Tiempo<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
             <p class="subject-name" id="subjectName" style="color: #2d1b4e !important;"></p>
             <p class="birth-info" id="birthInfo" style="color: #3d2b5e !important;"></p>
             <div class="action-buttons">
-                <button class="action-btn" onclick="startNewReading()">New Reading</button>
+                <button class="action-btn" onclick="startNewReading()">Nueva lectura</button>
             </div>
         </div>
         
@@ -3434,60 +3434,60 @@
             <!-- Sticky Progress Header -->
             <div class="sticky-progress-header">
                 <div class="sticky-progress-info">
-                    <span class="reading-for">Reading for <strong id="stickyName">...</strong></span>
+                    <span class="reading-for">Lectura para <strong id="stickyName">...</strong></span>
                 </div>
                 <div class="sticky-progress-bar">
                     <div class="progress-track">
                         <div class="progress-fill" style="width: 0%"></div>
                     </div>
-                    <div class="progress-text">0/65 read</div>
+                    <div class="progress-text">0/65 leídos</div>
                 </div>
             </div>
             
             <!-- Opening Letter -->
             <div class="opening-letter">
                 <div class="opening-letter-header">
-                    <h1>Your Complete Moment in Time</h1>
-                    <p class="reading-subtitle">Reading for <strong id="openingName">...</strong></p>
+                    <h1>Tu Momento Completo en el Tiempo</h1>
+                    <p class="reading-subtitle">Lectura para <strong id="openingName">...</strong></p>
                 </div>
                 <div class="opening-letter-body" id="openingLetterBody">
-                    <p>At the exact moment you were born, the cosmos arranged itself in a pattern that has never existed before and will never exist again.</p>
-                    <p>This reading captures that unique configuration — not as a prediction of who you must become, but as a map of the gifts, challenges, and potentials encoded in your birth moment.</p>
-                    <p>Take your time exploring each section. Some insights will resonate immediately; others may reveal their meaning over years. This is your cosmic blueprint — a lifelong companion, not a daily forecast.</p>
-                    <p class="opening-note">If any birth details are incorrect, tap "New Reading" to regenerate with accurate information.</p>
+                    <p>En el momento exacto en que naciste, el cosmos se organizó en un patrón que nunca ha existido antes y nunca volverá a existir.</p>
+                    <p>Esta lectura captura esa configuración única — no como una predicción de quién debes llegar a ser, sino como un mapa de los dones, desafíos y potenciales codificados en tu momento de nacimiento.</p>
+                    <p>Tómate tu tiempo explorando cada sección. Algunas percepciones resonarán inmediatamente; otras pueden revelar su significado con el tiempo. Este es tu plan cósmico — un compañero de por vida, no un pronóstico diario.</p>
+                    <p class="opening-note">Si algún detalle del nacimiento es incorrecto, toca "Nueva lectura" para regenerar con información precisa.</p>
                 </div>
                 <div class="hero-progress">
                     <div class="hero-progress-track">
                         <div class="hero-progress-fill" style="width: 0%"></div>
                     </div>
-                    <div class="hero-progress-text" id="heroProgressText">0/<span id="insightsCount">65</span> explored</div>
+                    <div class="hero-progress-text" id="heroProgressText">0/<span id="insightsCount">65</span> explorados</div>
                 </div>
             </div>
             
             <!-- Cosmic Snapshot - Big Three -->
             <div class="cosmic-snapshot" id="cosmicSnapshot">
                 <div class="cosmic-snapshot-header">
-                    <h2>Your Cosmic Snapshot</h2>
-                    <p>The Big Three — your core celestial identity</p>
+                    <h2>Tu Resumen Cósmico</h2>
+                    <p>Los Tres Grandes — tu identidad celestial esencial</p>
                 </div>
                 <div class="big-three-grid">
                     <div class="big-three-item">
                         <span class="planet-icon"></span>
-                        <div class="planet-name">Sun Sign</div>
+                        <div class="planet-name">Signo Solar</div>
                         <div class="sign-name" id="bigThreeSun">—</div>
-                        <div class="sign-desc">Core Identity</div>
+                        <div class="sign-desc">Identidad Esencial</div>
                     </div>
                     <div class="big-three-item">
                         <span class="planet-icon"></span>
-                        <div class="planet-name">Moon Sign</div>
+                        <div class="planet-name">Signo Lunar</div>
                         <div class="sign-name" id="bigThreeMoon">—</div>
-                        <div class="sign-desc">Emotional Self</div>
+                        <div class="sign-desc">Yo Emocional</div>
                     </div>
                     <div class="big-three-item">
                         <span class="planet-icon"></span>
-                        <div class="planet-name">Rising Sign</div>
+                        <div class="planet-name">Signo Ascendente</div>
                         <div class="sign-name" id="bigThreeRising">—</div>
-                        <div class="sign-desc">First Impression</div>
+                        <div class="sign-desc">Primera Impresión</div>
                     </div>
                 </div>
             </div>
@@ -3500,8 +3500,8 @@
             <!-- Completion Celebration -->
             <div class="completion-celebration">
                 <div class="celebration-icon"></div>
-                <h3>Reading Complete!</h3>
-                <p>You've explored all the cosmic insights for this moment in time.</p>
+                <h3>¡Lectura Completa!</h3>
+                <p>Has explorado todas las percepciones cósmicas de este momento en el tiempo.</p>
             </div>
             
             <!-- Reading Summary & Closing -->
@@ -3514,16 +3514,16 @@
                 <div class="gift-box">
                     <div class="coming-soon-banner">
                         <span class="coming-soon-icon">✨</span>
-                        <span class="coming-soon-text">Coming Soon</span>
+                        <span class="coming-soon-text">Próximamente</span>
                     </div>
-                    <h3>Gift This Reading</h3>
-                    <p>Create a beautiful, ad-free version to share with loved ones or print as a keepsake.</p>
+                    <h3>Regalar esta Lectura</h3>
+                    <p>Crea una versión hermosa sin anuncios para compartir con seres queridos o imprimir como recuerdo.</p>
                     <div class="gifted-by-field disabled">
-                        <label for="giftedByInput">Gifted by: <span class="optional-badge">Optional</span></label>
-                        <input type="text" id="giftedByInput" placeholder="e.g., Grandma & Grandpa, Aunt Sarah..." maxlength="100" disabled>
-                        <p class="helper-text">Add your name to personalize this gift</p>
+                        <label for="giftedByInput">Regalado por: <span class="optional-badge">Opcional</span></label>
+                        <input type="text" id="giftedByInput" placeholder="ej., Abuela y Abuelo, Tía María..." maxlength="100" disabled>
+                        <p class="helper-text">Agrega tu nombre para personalizar este regalo</p>
                     </div>
-                    <button class="gift-btn disabled" disabled>Create Gift Version</button>
+                    <button class="gift-btn disabled" disabled>Crear Versión de Regalo</button>
                 </div>
                 
                 <div class="coffee-box">
@@ -3535,7 +3535,7 @@
             
             <!-- Footer -->
             <footer class="results-footer">
-                <p class="generated-by" id="generatedBy">Generated by Quantum Merlin</p>
+                <p class="generated-by" id="generatedBy">Generado por Quantum Merlin</p>
                 <p class="timestamp" id="timestamp"></p>
                 <div class="footer-actions">
                     <button class="action-btn" onclick="shareReading()">Compartir lectura</button>
@@ -3558,25 +3558,25 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=35"></script>
-    <script src="calculations.js?v=35"></script>
-    <script src="readings.js?v=35"></script>
-    <script src="house-readings.js?v=35"></script>
-    <script src="aspect-readings.js?v=35"></script>
-    <script src="advanced-readings.js?v=35"></script>
-    <script src="deep-readings.js?v=35"></script>
-    <script src="deep-planet-readings.js?v=35"></script>
-    <script src="deep-planet-readings-outer.js?v=35"></script>
-    <script src="deep-numerology-readings.js?v=35"></script>
-    <script src="deep-chinese-zodiac-readings.js?v=35"></script>
-    <script src="deep-chiron-readings.js?v=35"></script>
-    <script src="deep-lilith-readings.js?v=35"></script>
-    <script src="deep-node-readings.js?v=35"></script>
-    <script src="deep-transformative-planet-readings.js?v=35"></script>
-    <script src="readings-extended.js?v=35"></script>
-    <script src="love-blueprint.js?v=35"></script>
-    <script src="tone-variations.js?v=35"></script>
-    <script src="save-share.js?v=35"></script>
+    <script src="config.js?v=36"></script>
+    <script src="calculations.js?v=36"></script>
+    <script src="readings.js?v=36"></script>
+    <script src="house-readings.js?v=36"></script>
+    <script src="aspect-readings.js?v=36"></script>
+    <script src="advanced-readings.js?v=36"></script>
+    <script src="deep-readings.js?v=36"></script>
+    <script src="deep-planet-readings.js?v=36"></script>
+    <script src="deep-planet-readings-outer.js?v=36"></script>
+    <script src="deep-numerology-readings.js?v=36"></script>
+    <script src="deep-chinese-zodiac-readings.js?v=36"></script>
+    <script src="deep-chiron-readings.js?v=36"></script>
+    <script src="deep-lilith-readings.js?v=36"></script>
+    <script src="deep-node-readings.js?v=36"></script>
+    <script src="deep-transformative-planet-readings.js?v=36"></script>
+    <script src="readings-extended.js?v=36"></script>
+    <script src="love-blueprint.js?v=36"></script>
+    <script src="tone-variations.js?v=36"></script>
+    <script src="save-share.js?v=36"></script>
     <script>
         // ============================================
         // MULTI-READING STORAGE SYSTEM
@@ -3724,7 +3724,7 @@
                             </div>
                             <span class="saved-reading-progress-text">${progressPercent}%</span>
                         </div>
-                        <button class="saved-reading-delete" onclick="event.stopPropagation(); confirmDeleteReading('${reading.id}', '${(reading.userData.name || 'this reading').replace(/'/g, "\\'")}')" title="Delete reading">🗑️</button>
+                        <button class="saved-reading-delete" onclick="event.stopPropagation(); confirmDeleteReading('${reading.id}', '${(reading.userData.name || 'esta lectura').replace(/'/g, "\\'")}')" title="Eliminar lectura">🗑️</button>
                     </div>
                 `;
             }).join('');
@@ -3732,7 +3732,7 @@
         
         // Confirm delete reading
         function confirmDeleteReading(readingId, name) {
-            if (confirm(`Delete reading for "${name}"? This cannot be undone.`)) {
+            if (confirm(`¿Eliminar lectura de "${name}"? Esto no se puede deshacer.`)) {
                 deleteReading(readingId);
             }
         }
@@ -3741,7 +3741,7 @@
         function loadSavedReading(readingId) {
             const reading = getReading(readingId);
             if (!reading) {
-                alert('Reading not found');
+                alert('Lectura no encontrada');
                 return;
             }
             
@@ -4015,7 +4015,7 @@
                 console.error('Error generating reading:', error);
                 clearInterval(progressInterval);
                 overlay.classList.remove('active');
-                alert('Something went wrong while generating the reading. Please try again or refresh the page.');
+                alert('Algo salió mal al generar la lectura. Por favor inténtalo de nuevo o recarga la página.');
             }
         }
         
@@ -4137,7 +4137,7 @@
             // Populate Cosmic Snapshot (Big Three)
             document.getElementById('bigThreeSun').textContent = sunSign.name;
             document.getElementById('bigThreeMoon').textContent = moonSign.name;
-            document.getElementById('bigThreeRising').textContent = risingSign ? risingSign.name : 'Unknown';
+            document.getElementById('bigThreeRising').textContent = risingSign ? risingSign.name : 'Desconocido';
             
             // Build the summary card as a collapsible sub-section
             const blueprintSummary = document.createElement('div');
@@ -4160,7 +4160,7 @@
                                 <div class="blueprint-items">
                                     <div class="blueprint-item"><strong>Sun:</strong> ${sunSign.name} <span class="meaning">(Core Identity)</span></div>
                                     <div class="blueprint-item"><strong>Moon:</strong> ${moonSign.name} <span class="meaning">(Emotional Nature)</span></div>
-                                    <div class="blueprint-item"><strong>Rising:</strong> ${risingSign ? risingSign.name : 'Unknown'} <span class="meaning">(First Impression)</span></div>
+                                    <div class="blueprint-item"><strong>Ascendente:</strong> ${risingSign ? risingSign.name : 'Desconocido'} <span class="meaning">(Primera Impresión)</span></div>
                                 </div>
                             </div>
                             
@@ -4322,7 +4322,7 @@
             }
             
             // Rising Sign - DEEP READING (risingSign already declared in blueprint section)
-            if (risingSign.name && risingSign.name !== 'Unknown') {
+            if (risingSign.name && risingSign.name !== 'Desconocido') {
                 const deepRising = (typeof DEEP_RISING_READINGS !== 'undefined') ? DEEP_RISING_READINGS[risingSign.name] : null;
                 
                 if (deepRising) {
@@ -5851,12 +5851,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const angularSection = createCustomSection(
                     'angular',
                     '',
-                    'The Four Life Pillars',
-                    `The foundational anchors shaping ${userData.name}'s life path`
+                    'Los Cuatro Pilares de Vida',
+                    `Los anclajes fundamentales que dan forma al camino de vida de ${userData.name}`
                 );
                 angularSection.appendChild(createBirthTimeRequiredCard(
-                    'The Four Life Pillars',
-                    `The Four Pillars reveal the Ascendant (your visible self), IC (your roots & home), Descendant (your partnerships), and Midheaven (your public legacy). These angles are calculated from exact birth time and location, showing how ${userData.name}'s energy manifests in the four crucial life areas.`
+                    'Los Cuatro Pilares de Vida',
+                    `Los Cuatro Pilares revelan el Ascendente (tu yo visible), IC (tus raíces y hogar), Descendente (tus asociaciones) y Medio Cielo (tu legado público). Estos ángulos se calculan a partir de la hora y lugar exactos de nacimiento, mostrando cómo la energía de ${userData.name} se manifiesta en las cuatro áreas cruciales de la vida.`
                 ));
                 angularSectionWrapper.appendChild(angularSection);
                 container.appendChild(angularSectionWrapper);
@@ -5875,8 +5875,8 @@ This isn't a flaw - it's their power source. The tension between these two drive
                     const vertexSection = createCustomSection(
                         'vertex',
                         '',
-                        'Fated Activation Points',
-                        'Destined turning points and pivotal life moments'
+                        'Puntos de Activación del Destino',
+                        'Momentos decisivos destinados y puntos de inflexión vitales'
                     );
                     
                     vertexSection.appendChild(createReadingCard(
@@ -5898,12 +5898,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const vertexSection = createCustomSection(
                     'vertex',
                     '',
-                    'Fated Activation Points',
-                    'Destined turning points and pivotal life moments'
+                    'Puntos de Activación del Destino',
+                    'Momentos decisivos destinados y puntos de inflexión vitales'
                 );
                 vertexSection.appendChild(createBirthTimeRequiredCard(
-                    'Fated Activation Points',
-                    `The Vertex is a mathematically sensitive point that reveals fated encounters and destined turning points in ${userData.name}'s life. This cosmic activation point requires precise birth time to calculate, as it indicates where the universe orchestrates pivotal moments of destiny.`
+                    'Puntos de Activación del Destino',
+                    `El Vertex es un punto matemáticamente sensible que revela encuentros del destino y momentos decisivos en la vida de ${userData.name}. Este punto de activación cósmica requiere la hora exacta de nacimiento para calcularse, ya que indica dónde el universo orquesta momentos fundamentales del destino.`
                 ));
                 vertexSectionWrapper.appendChild(vertexSection);
                 container.appendChild(vertexSectionWrapper);
@@ -5959,12 +5959,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const nodesSection = createCustomSection(
                     'nodes-houses',
                     '',
-                    'Karmic Life Areas',
-                    `Where soul evolution unfolds in ${userData.name}'s life`
+                    'Áreas Kármicas de Vida',
+                    `Donde se despliega la evolución del alma en la vida de ${userData.name}`
                 );
                 nodesSection.appendChild(createBirthTimeRequiredCard(
-                    'Karmic Life Areas',
-                    `The Nodes in Houses reveal which specific life areas ${userData.name}'s soul is growing toward (North Node) and what past-life gifts they bring (South Node). These house positions require precise birth time to determine which of life's 12 theaters host this karmic journey.`
+                    'Áreas Kármicas de Vida',
+                    `Los Nodos en las Casas revelan en qué áreas específicas de la vida el alma de ${userData.name} está creciendo (Nodo Norte) y qué dones de vidas pasadas trae (Nodo Sur). Estas posiciones de casas requieren la hora exacta de nacimiento para determinar cuáles de los 12 teatros de la vida albergan este viaje kármico.`
                 ));
                 nodesSectionWrapper.appendChild(nodesSection);
                 container.appendChild(nodesSectionWrapper);
@@ -5983,14 +5983,14 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const synthesisSection = createCustomSection(
                     'synthesis',
                     '',
-                    'Life Blueprints',
-                    `Deep synthesis of ${userData.name}'s cosmic design across key life areas`
+                    'Planos de Vida',
+                    `Síntesis profunda del diseño cósmico de ${userData.name} en áreas clave de la vida`
                 );
                 
                 const chartData = {
                     sunSign: readings.astrology.sunSign.name,
                     moonSign: readings.astrology.moonSign.name,
-                    risingSign: readings.astrology.risingSign.name || 'Unknown',
+                    risingSign: readings.astrology.risingSign.name || 'Desconocido',
                     mercurySign: readings.astrology.mercurySign.name,
                     venusSign: readings.astrology.venusSign.name,
                     marsSign: readings.astrology.marsSign.name,
@@ -6094,8 +6094,8 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const progressionsSection = createCustomSection(
                     'progressions',
                     '',
-                    'Soul Evolution',
-                    `How ${userData.name}'s inner self is evolving over time`
+                    'Evolución del Alma',
+                    `Cómo está evolucionando el ser interior de ${userData.name} con el tiempo`
                 );
                 
                 // Calculate progressed signs based on age
@@ -6156,15 +6156,15 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const wrapupSection = createCustomSection(
                     'wrapup',
                     '',
-                    'The Complete Moment in Time',
-                    `A sacred synthesis of ${userData.name}'s energetic signature at birth`
+                    'El Momento Completo en el Tiempo',
+                    `Una síntesis sagrada de la firma energética de ${userData.name} al nacer`
                 );
                 
                 const wrapupData = {
                     name: userData.name,
                     sunSign: readings.astrology.sunSign.name,
                     moonSign: readings.astrology.moonSign.name,
-                    risingSign: readings.astrology.risingSign.name || 'Unknown',
+                    risingSign: readings.astrology.risingSign.name || 'Desconocido',
                     sunElement: readings.astrology.sunSign.element,
                     moonElement: readings.astrology.moonSign.element,
                     mercurySign: readings.astrology.mercurySign.name,
@@ -6447,9 +6447,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
             card.innerHTML = `
                 <div class="birth-time-message">
                     <span class="birth-time-icon">🕐</span>
-                    <h4>Birth Time Required</h4>
-                    <p>${description || `To unlock ${sectionName}, we need the exact birth time. This allows us to calculate precise house positions and angles that reveal where these energies express in life.`}</p>
-                    <p class="birth-time-tip">💡 <strong>Tip:</strong> Check the birth certificate, hospital records, or ask family members for the birth time. Even an approximate time helps!</p>
+                    <h4>Se Requiere Hora de Nacimiento</h4>
+                    <p>${description || `Para desbloquear ${sectionName}, necesitamos la hora exacta de nacimiento. Esto nos permite calcular posiciones precisas de casas y ángulos que revelan dónde se expresan estas energías en la vida.`}</p>
+                    <p class="birth-time-tip">💡 <strong>Consejo:</strong> Revisa el acta de nacimiento, registros del hospital, o pregunta a familiares por la hora de nacimiento. ¡Incluso una hora aproximada ayuda!</p>
                 </div>
             `;
             return card;
@@ -6916,7 +6916,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 const id = btn.getAttribute('data-section-id');
                 const isRead = !!progress[id];
                 btn.classList.toggle('is-read', isRead);
-                btn.textContent = isRead ? 'Read ✓' : 'Mark as read';
+                btn.textContent = isRead ? 'Leído ✓' : 'Marcar como leído';
             });
             updateReadingMeter();
         }
@@ -7195,7 +7195,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         </div>
                     </div>
                     <div class="reading-card-right">
-                        <span class="read-badge ${isRead ? 'is-read' : ''}" title="Mark as read">${isRead ? '✓' : ''}</span>
+                        <span class="read-badge ${isRead ? 'is-read' : ''}" title="Marcar como leído">${isRead ? '✓' : ''}</span>
                         <span class="expand-icon">▼</span>
                     </div>
                 </div>
@@ -7208,7 +7208,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         ${strengthsChallengesHtml}
                         ${enhancementsHtml}
                         <button type="button" class="mark-read-btn ${isRead ? 'is-read' : ''}" onclick="markCardAsRead(event, '${cardId}')">
-                            ${isRead ? '✓ Read' : 'Mark as Read'}
+                            ${isRead ? '✓ Leído' : 'Marcar como Leído'}
                         </button>
                     </div>
                 </div>
@@ -7241,7 +7241,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         </div>
                     </div>
                     <div class="reading-card-right">
-                        <span class="read-badge ${isRead ? 'is-read' : ''}" title="Mark as read">${isRead ? '✓' : ''}</span>
+                        <span class="read-badge ${isRead ? 'is-read' : ''}" title="Marcar como leído">${isRead ? '✓' : ''}</span>
                         <span class="expand-icon">▼</span>
                     </div>
                 </div>
@@ -7249,7 +7249,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                     <div class="reading-card-content">
                         ${bodyHtml}
                         <button type="button" class="mark-read-btn ${isRead ? 'is-read' : ''}" onclick="markCardAsRead(event, '${cardId}')">
-                            ${isRead ? '✓ Read' : 'Mark as Read'}
+                            ${isRead ? '✓ Leído' : 'Marcar como Leído'}
                         </button>
                     </div>
                 </div>
@@ -7291,7 +7291,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 }
                 if (btn) {
                     btn.classList.remove('is-read');
-                    btn.textContent = 'Mark as Read';
+                    btn.textContent = 'Marcar como Leído';
                 }
                 readSectionIds = readSectionIds.filter(id => id !== cardId);
             } else {
@@ -7303,7 +7303,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 }
                 if (btn) {
                     btn.classList.add('is-read');
-                    btn.textContent = '✓ Read';
+                    btn.textContent = '✓ Leído';
                 }
                 if (!readSectionIds.includes(cardId)) {
                     readSectionIds.push(cardId);
@@ -7380,7 +7380,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const meterFill = document.querySelector('.reading-meter-fill');
             const meterText = document.querySelector('.reading-meter-text');
             if (meterFill) meterFill.style.width = percent + '%';
-            if (meterText) meterText.textContent = `${readCount} of ${totalSectionCount} insights explored`;
+            if (meterText) meterText.textContent = `${readCount} de ${totalSectionCount} percepciones exploradas`;
         }
         
         function checkCompletion() {
@@ -7468,14 +7468,14 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             if (navigator.share) {
                 navigator.share({
-                    title: `A Moment in Time for ${name}`,
+                    title: `Un Momento en el Tiempo para ${name}`,
                     text: text,
                     url: window.location.href
                 });
             } else {
                 // Fallback to clipboard
                 navigator.clipboard.writeText(text + ' ' + window.location.href);
-                alert('Link copied to clipboard!');
+                alert('¡Enlace copiado al portapapeles!');
             }
         }
         
@@ -7493,11 +7493,11 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             closingContainer.innerHTML = `
                 <div class="closing-card">
-                    <h3>${userData.name}'s Cosmic Story Continues...</h3>
-                    <p>You've just explored ${userData.name}'s complete moment in time — a unique constellation of energies that has never existed before and will never exist again in quite the same way.</p>
-                    <p>With their ${sunSign} Sun illuminating their core identity, ${moonSign} Moon nurturing their emotional world, and Life Path ${lifePath} guiding their soul's journey, ${userData.name} carries a sacred combination of gifts waiting to unfold.</p>
-                    <p>This reading is a snapshot of potential — the cosmic seeds planted at birth. How these energies blossom depends on love, nurturing, and the unique choices this soul will make.</p>
-                    <p class="closing-affirmation">"Every soul arrives with a purpose. ${userData.name}'s purpose is written in the stars."</p>
+                    <h3>La Historia Cósmica de ${userData.name} Continúa...</h3>
+                    <p>Acabas de explorar el momento completo en el tiempo de ${userData.name} — una constelación única de energías que nunca ha existido antes y nunca existirá de la misma manera.</p>
+                    <p>Con su Sol en ${sunSign} iluminando su identidad esencial, Luna en ${moonSign} nutriendo su mundo emocional, y el Camino de Vida ${lifePath} guiando el viaje de su alma, ${userData.name} lleva una combinación sagrada de dones esperando a desplegarse.</p>
+                    <p>Esta lectura es una instantánea del potencial — las semillas cósmicas plantadas al nacer. Cómo florecen estas energías depende del amor, la nutrición y las elecciones únicas que esta alma hará.</p>
+                    <p class="closing-affirmation">"Cada alma llega con un propósito. El propósito de ${userData.name} está escrito en las estrellas."</p>
                 </div>
             `;
         }
@@ -7535,14 +7535,14 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const hasContent = readingsContainer && readingsContainer.children.length > 0;
             
             if (!userData.name && !hasContent) {
-                alert('Please generate a reading first before creating a gift version.');
+                alert('Por favor genera una lectura primero antes de crear una versión de regalo.');
                 return;
             }
             
             // If we have content but no userData, get name from the displayed results
             if (!userData.name && hasContent) {
                 const subjectName = document.getElementById('subjectName');
-                userData.name = subjectName ? subjectName.textContent : 'Unknown';
+                userData.name = subjectName ? subjectName.textContent : 'Desconocido';
             }
             
             // Show loading state
@@ -7595,7 +7595,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             } catch (error) {
                 console.error('Error creating gift:', error);
                 // Fallback to download if backend fails
-                alert('Could not create shareable link. Downloading gift version instead...');
+                alert('No se pudo crear el enlace compartible. Descargando versión de regalo en su lugar...');
                 downloadGiftReading(userData, giftedBy, readingsContainer);
             } finally {
                 // Reset button
@@ -7611,7 +7611,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const existing = document.getElementById('gift-share-dialog');
             if (existing) existing.remove();
             
-            const expiryDate = new Date(expiresAt).toLocaleDateString('en-US', { 
+            const expiryDate = new Date(expiresAt).toLocaleDateString('es-ES', { 
                 year: 'numeric', month: 'long', day: 'numeric' 
             });
             
@@ -7620,12 +7620,12 @@ This isn't a flaw - it's their power source. The tension between these two drive
             dialog.innerHTML = `
                 <div class="gift-dialog-overlay">
                     <div class="gift-dialog">
-                        <h2>✨ Gift Created!</h2>
-                        <p>Your ad-free reading for <strong>${recipientName}</strong> is ready to share!</p>
+                        <h2>✨ ¡Regalo Creado!</h2>
+                        <p>¡Tu lectura sin anuncios para <strong>${recipientName}</strong> está lista para compartir!</p>
                         
                         <div class="share-url-box">
                             <input type="text" id="share-url-input" value="${shareUrl}" readonly>
-                            <button onclick="copyGiftLink()">Copy</button>
+                            <button onclick="copyGiftLink()">Copiar</button>
                         </div>
                         
                         <div class="share-buttons">
@@ -7633,24 +7633,24 @@ This isn't a flaw - it's their power source. The tension between these two drive
                                 WhatsApp
                             </button>
                             <button class="share-btn email" onclick="shareVia('email', '${shareUrl}', '${recipientName}')">
-                                Email
+                                Correo
                             </button>
                             <button class="share-btn sms" onclick="shareVia('sms', '${shareUrl}', '${recipientName}')">
                                 SMS
                             </button>
                             <button class="share-btn native" onclick="shareVia('native', '${shareUrl}', '${recipientName}')">
-                                More...
+                                Más...
                             </button>
                         </div>
                         
                         <p class="expiry-note">
-                            📅 This link expires on ${expiryDate}<br>
-                            <small>Recipients can save to homescreen for permanent offline access</small>
+                            📅 Este enlace expira el ${expiryDate}<br>
+                            <small>Los destinatarios pueden guardar en pantalla de inicio para acceso permanente sin conexión</small>
                         </p>
                         
                         <div class="dialog-actions">
-                            <button class="download-btn" onclick="downloadGiftFromDialog()">Download Copy</button>
-                            <button class="close-btn" onclick="closeGiftDialog()">Done</button>
+                            <button class="download-btn" onclick="downloadGiftFromDialog()">Descargar Copia</button>
+                            <button class="close-btn" onclick="closeGiftDialog()">Listo</button>
                         </div>
                     </div>
                 </div>
@@ -7667,25 +7667,25 @@ This isn't a flaw - it's their power source. The tension between these two drive
             input.select();
             navigator.clipboard.writeText(input.value).then(() => {
                 const btn = input.nextElementSibling;
-                btn.textContent = 'Copied!';
-                setTimeout(() => btn.textContent = 'Copy', 2000);
+                btn.textContent = '¡Copiado!';
+                setTimeout(() => btn.textContent = 'Copiar', 2000);
             }).catch(() => {
                 document.execCommand('copy');
                 const btn = input.nextElementSibling;
-                btn.textContent = 'Copied!';
-                setTimeout(() => btn.textContent = 'Copy', 2000);
+                btn.textContent = '¡Copiado!';
+                setTimeout(() => btn.textContent = 'Copiar', 2000);
             });
         }
         
         function shareVia(method, url, name) {
-            const text = `I created a special Moment in Time reading for ${name}! Check out their cosmic blueprint:`;
+            const text = `¡Creé una lectura especial de Un Momento en el Tiempo para ${name}! Mira su diseño cósmico:`;
             
             switch(method) {
                 case 'whatsapp':
                     window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
                     break;
                 case 'email':
-                    window.open(`mailto:?subject=A Moment in Time for ${name}&body=${encodeURIComponent(text + '\n\n' + url)}`, '_blank');
+                    window.open(`mailto:?subject=Un Momento en el Tiempo para ${name}&body=${encodeURIComponent(text + '\n\n' + url)}`, '_blank');
                     break;
                 case 'sms':
                     window.open(`sms:?body=${encodeURIComponent(text + ' ' + url)}`, '_blank');
@@ -7693,13 +7693,13 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 case 'native':
                     if (navigator.share) {
                         navigator.share({
-                            title: `A Moment in Time for ${name}`,
+                            title: `Un Momento en el Tiempo para ${name}`,
                             text: text,
                             url: url
                         });
                     } else {
                         copyGiftLink();
-                        alert('Link copied! You can paste it anywhere to share.');
+                        alert('¡Enlace copiado! Puedes pegarlo en cualquier lugar para compartir.');
                     }
                     break;
             }
@@ -7777,11 +7777,11 @@ This isn't a flaw - it's their power source. The tension between these two drive
             
             // Create a clean, ad-free HTML document
             const giftHTML = `<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Moment in Time for ${userData.name} - A Gift from the Stars</title>
+    <title>Un Momento en el Tiempo para ${userData.name} - Un Regalo de las Estrellas</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -7915,15 +7915,16 @@ This isn't a flaw - it's their power source. The tension between these two drive
 </head>
 <body>
     <div class="gift-header">
-        <h1>A Moment in Time for ${userData.name}</h1>
-        <p class="subtitle">Your Celestial Design Revealed</p>
-        <p class="birth-info">Born ${new Date(userData.birthDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}${userData.birthTime ? ' at ' + userData.birthTime : ''}${userData.birthPlace ? ' in ' + userData.birthPlace : ''}</p>
+        <h1>Un Momento en el Tiempo para ${userData.name}</h1>
+        <p class="subtitle">Tu Diseño Celestial Revelado</p>
+        <p class="birth-info">Nacido/a el ${new Date(userData.birthDate).toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}${userData.birthTime ? ' a las ' + userData.birthTime : ''}${userData.birthPlace ? ' en ' + userData.birthPlace : ''}</p>
     </div>
     
     <div class="gift-message">
-        <h2>${giftedBy ? 'A Gift from ' + giftedBy : 'With Love'}</h2>
-        <p>This reading was created with love to celebrate the unique soul that is ${userData.name}. May these cosmic insights illuminate the path ahead and remind you of the infinite potential within.</p>
+        <h2>${giftedBy ? 'Un Regalo de ' + giftedBy : 'Con Amor'}</h2>
+        <p>Esta lectura fue creada con amor para celebrar el alma única que es ${userData.name}. Que estas percepciones cósmicas iluminen el camino por delante y te recuerden el potencial infinito que llevas dentro.</p>
         ${giftedBy ? '<p class="gifted-signature">— ' + giftedBy + '</p>' : ''}
+    </div>
     </div>
     
     ${readingsContainer.innerHTML}
@@ -7931,9 +7932,9 @@ This isn't a flaw - it's their power source. The tension between these two drive
     ${closingContainer ? closingContainer.innerHTML : ''}
     
     <div class="gift-footer">
-        <p class="love">Made with love</p>
-        <p>Generated by A Moment in Time by Quantum Merlin</p>
-        <p>quantummerlin.com/amomentintime</p>
+        <p class="love">Hecho con amor</p>
+        <p>Generado por Un Momento en el Tiempo de Quantum Merlin</p>
+        <p>quantummerlin.com/amomentintime/esp</p>
     </div>
 </body>
 </html>`;
@@ -7950,7 +7951,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             URL.revokeObjectURL(url);
             
             // Show success message
-            alert('Gift version created! The ad-free reading has been downloaded. You can email it or print it as a keepsake!');
+            alert('¡Versión de regalo creada! La lectura sin anuncios ha sido descargada. ¡Puedes enviarla por correo o imprimirla como recuerdo!');
         }
         
         // ============================================

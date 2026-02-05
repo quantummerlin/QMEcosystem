@@ -45,7 +45,7 @@ Es posible que respondan más lentamente que sus compañeros y necesiten tiempo 
 
 La paciencia es su superpoder en el aprendizaje. Puede que les lleve más tiempo comprender algo al principio, pero una vez aprendido, se aprende para siempre. Construyen entendimiento ladrillo a ladrillo hasta que la estructura es inquebrantable. Abarrotar no funciona; un estudio constante y consistente sí lo hace.`,
         
-        challenges: `La sombra de esta ubicación es la terquedad mental. Una vez que se forma una opinión, cambiarla requiere mucha evidencia y tiempo. Es posible que se mantengan intelectualmente firmes incluso cuando la flexibilidad les vendría mejor.
+        challenges: `La sombra de esta ubicación es la terquedad mental. Una vez que se forma una opinión, cambiarla requiere evidencia y tiempo significativos. Es posible que se mantengan intelectualmente firmes incluso cuando la flexibilidad les vendría mejor.
 
 También pueden resistirse a nuevas ideas simplemente porque son nuevas. La comodidad con lo familiar puede convertirse en una excusa para evitar el crecimiento mental. Aprender a aceptar el cambio como una oportunidad y no como una amenaza es una lección para toda la vida.`,
         

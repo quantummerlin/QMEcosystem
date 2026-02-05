@@ -9,7 +9,7 @@ var BRAND_CONFIG = {
     // ============================================
     // BRAND IDENTITY
     // ============================================
-    brandName: "A Moment in Time",
+    brandName: "Un Momento en el Tiempo",
     tagline: "Tu lectura cósmica completa • Sin registro • Siempre gratis",
     subTagline: "En el exacto momento en que naciste, el universo creó un patrón.",
     
@@ -41,9 +41,9 @@ var BRAND_CONFIG = {
     loadingMessage: "Capturando tu momento...",
     
     // Result page copy
-    resultTitle: "A Moment in Time",
+    resultTitle: "Un Momento en el Tiempo",
     resultSubtitle: "Un retrato de",
-    generatedBy: "Creado con amor por A Moment in Time",
+    generatedBy: "Creado con amor por Un Momento en el Tiempo",
     
     // ============================================
     // SECTION NAMES
@@ -152,8 +152,8 @@ var BRAND_CONFIG = {
     // SOCIAL SHARING
     // ============================================
     sharing: {
-        hashtags: ["SoulBlueprint", "BirthChart", "SoulReading", "GiftFromTheStars"],
-        defaultMessage: "Acabo de recibir mi lectura de A Moment in Time.",
+        hashtags: ["UnMomentoEnElTiempo", "CartaNatal", "LecturaDelAlma", "RegaloDelasEstrellas"],
+        defaultMessage: "Acabo de recibir mi lectura de Un Momento en el Tiempo.",
         twitterHandle: "@quantummerlin"
     },
     
@@ -175,12 +175,12 @@ var BRAND_CONFIG = {
     // FOOTER
     // ============================================
     footer: {
-        copyright: "© 2026 A Moment in Time",
+        copyright: "© 2026 Un Momento en el Tiempo",
         disclaimer: "Con fines de entretenimiento y reflexión. Cada persona es única y crecerá a su manera.",
         links: [
-            { text: "Privacy Policy", url: "/amomentintime/privacy.html" },
-            { text: "Terms of Service", url: "/amomentintime/terms.html" },
-            { text: "Contact", url: "/contact.html" }
+            { text: "Política de Privacidad", url: "/amomentintime/esp/privacy.html" },
+            { text: "Términos de Servicio", url: "/amomentintime/esp/terms.html" },
+            { text: "Contacto", url: "/contact.html" }
         ]
     },
     
@@ -188,9 +188,9 @@ var BRAND_CONFIG = {
     // SEO
     // ============================================
     seo: {
-        title: "A Moment in Time - Tu lectura cósmica completa",
+        title: "Un Momento en el Tiempo - Tu lectura cósmica completa",
         description: "En el exacto momento en que naciste, el universo creó un patrón. Obtén más de 65 insights personalizados de astrología y numerología. Acceso gratuito e ilimitado.",
-        keywords: "a moment in time, lectura de astrología, lectura de numerología, carta natal, camino de vida, lectura personalizada"
+        keywords: "un momento en el tiempo, lectura de astrología, lectura de numerología, carta natal, camino de vida, lectura personalizada"
     }
 };
 
