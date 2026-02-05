@@ -3,6 +3,7 @@ const urlsToCache = [
   '/chinesezodiac/',
   '/chinesezodiac/index.html',
   '/chinesezodiac/manifest.json',
+  '/chinesezodiac/tile.jpg',
 ];
 
 // Install event - cache resources
