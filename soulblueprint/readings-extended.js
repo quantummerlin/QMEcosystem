@@ -2346,10 +2346,6 @@ var PROGRESSION_READINGS = {
 <strong>The Growth:</strong> Learning to honor sensitivity as a gift. Developing capacity to nurture self and others. Understanding emotional needs as legitimate.`,
             currentNeeds: ['Emotional safety', 'Nurturing connection', 'Home sanctuary', 'Deep feeling']
         },
-            keywords: ['Deep Emotions', 'Nurturing', 'Home'],
-            reading: "The Progressed Moon in Cancer deepens emotional sensitivity and need for nurturing. This phase emphasizes home, family, and emotional security. Feelings are intense and protective.",
-            currentNeeds: ['Emotional closeness', 'Family connection', 'Security']
-        },
         Leo: {
             title: "Progressed Moon in Leo - Emotional Radiance",
             keywords: ['Emotional Expression', 'Joy', 'Recognition', 'Heart Opening'],

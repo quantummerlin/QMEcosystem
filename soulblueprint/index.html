@@ -3646,9 +3646,308 @@
                 font-size: 0.9rem;
             }
         }
+        
+        /* Welcome Modal */
+        .welcome-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .welcome-content {
+            background: white;
+            border-radius: 24px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.5s ease;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .welcome-header {
+            background: linear-gradient(135deg, #FF69B4 0%, #FFB6C1 25%, #E6E6FA 50%, #87CEEB 75%, #6BA3D6 100%);
+            padding: 30px 25px;
+            text-align: center;
+            border-radius: 24px 24px 0 0;
+        }
+        
+        .welcome-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: #2d1b4e;
+            margin: 0 0 8px;
+        }
+        
+        .welcome-header p {
+            color: #4a3b6e;
+            font-size: 1rem;
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        .welcome-body {
+            padding: 25px;
+        }
+        
+        .welcome-step {
+            display: none;
+        }
+        
+        .welcome-step.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .welcome-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .welcome-step h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 0 0 15px;
+            text-align: center;
+        }
+        
+        .welcome-step p {
+            color: #555;
+            line-height: 1.7;
+            margin: 0 0 15px;
+            font-size: 0.95rem;
+        }
+        
+        .welcome-highlight {
+            background: linear-gradient(135deg, rgba(255,105,180,0.1) 0%, rgba(135,206,235,0.1) 100%);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .welcome-highlight p {
+            margin: 0;
+            font-style: italic;
+            color: #444;
+        }
+        
+        .theme-preview-btns {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .theme-preview-btn {
+            padding: 12px 24px;
+            border-radius: 25px;
+            border: 2px solid transparent;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .theme-preview-btn.pink {
+            background: linear-gradient(135deg, #FF69B4, #FFB6C1);
+            color: white;
+        }
+        
+        .theme-preview-btn.purple {
+            background: linear-gradient(135deg, #D8B5FF, #B19CD9);
+            color: white;
+        }
+        
+        .theme-preview-btn.blue {
+            background: linear-gradient(135deg, #6BA3D6, #87CEEB);
+            color: white;
+        }
+        
+        .theme-preview-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .theme-preview-btn.selected {
+            border-color: #2d1b4e;
+            box-shadow: 0 0 0 3px rgba(45,27,78,0.2);
+        }
+        
+        .welcome-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            border-top: 1px solid #eee;
+        }
+        
+        .welcome-dots {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .welcome-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            transition: all 0.3s ease;
+        }
+        
+        .welcome-dot.active {
+            background: var(--primary);
+            width: 24px;
+            border-radius: 5px;
+        }
+        
+        .welcome-nav-btn {
+            padding: 12px 28px;
+            border-radius: 25px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .welcome-nav-btn.secondary {
+            background: #f0f0f0;
+            color: #666;
+        }
+        
+        .welcome-nav-btn.primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .welcome-nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .welcome-nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .privacy-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: #f8fff8;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+            border: 1px solid #d4edda;
+        }
+        
+        .privacy-note .icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .privacy-note p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #2d5a3d;
+        }
     </style>
 </head>
 <body>
+    <!-- Welcome Modal -->
+    <div class="welcome-modal" id="welcomeModal" style="display: none;">
+        <div class="welcome-content">
+            <div class="welcome-header">
+                <h2>✨ Welcome to Your Reading ✨</h2>
+                <p>A moment in time, captured forever</p>
+            </div>
+            
+            <div class="welcome-body">
+                <!-- Step 1: Introduction -->
+                <div class="welcome-step active" data-step="1">
+                    <div class="welcome-icon">🌟</div>
+                    <h3>How This Works</h3>
+                    <p>Enter a birth date and time, and we'll reveal the cosmic patterns that were written in the stars at that exact moment.</p>
+                    <p>You'll receive <strong>65+ personalized readings</strong> combining astrology, numerology, and ancient wisdom—a complete soul blueprint.</p>
+                    <div class="welcome-highlight">
+                        <p>"At the exact moment you were born, the universe created a unique pattern just for you."</p>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Theme Selection -->
+                <div class="welcome-step" data-step="2">
+                    <div class="welcome-icon">🎨</div>
+                    <h3>Choose Your Theme</h3>
+                    <p>Pick a color that resonates with you. This subtly adjusts the tone and energy of your reading.</p>
+                    <div class="theme-preview-btns">
+                        <button class="theme-preview-btn pink selected" onclick="selectWelcomeTheme('girl')">Pink</button>
+                        <button class="theme-preview-btn purple" onclick="selectWelcomeTheme('purple')">Purple</button>
+                        <button class="theme-preview-btn blue" onclick="selectWelcomeTheme('boy')">Blue</button>
+                    </div>
+                    <p style="text-align: center; font-size: 0.85rem; opacity: 0.7;">You can change this anytime from the bar at the top</p>
+                </div>
+                
+                <!-- Step 3: How to Read -->
+                <div class="welcome-step" data-step="3">
+                    <div class="welcome-icon">📖</div>
+                    <h3>No Pressure to Read Everything</h3>
+                    <p>This is a <strong>substantial amount of information</strong>—think of it as an instruction manual for understanding a soul, not something to rush through.</p>
+                    <p>Take your time. Come back to different sections when they feel relevant. Some insights might click immediately; others may make sense months from now.</p>
+                    <div class="welcome-highlight">
+                        <p>"Use this as a reference guide, not a test to complete."</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Accuracy Note -->
+                <div class="welcome-step" data-step="4">
+                    <div class="welcome-icon">💫</div>
+                    <h3>A Gentle Note on Accuracy</h3>
+                    <p>Perhaps <strong>70% will feel uncannily accurate</strong>. The rest? The stars and numbers capture your absolute potential—they cannot know your traumas, circumstances, or the choices you've made along the way.</p>
+                    <p>If something doesn't resonate, it might be unlived potential waiting to be discovered. Or simply not your path.</p>
+                    <div class="welcome-highlight">
+                        <p>"Maybe, just maybe, this is the reading that sets you on the path to who you were always meant to be."</p>
+                    </div>
+                    <div class="privacy-note">
+                        <span class="icon">🔒</span>
+                        <p><strong>Your data stays with you.</strong> Everything is stored locally on your device. We never see, collect, or share your birth information.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="welcome-footer">
+                <button class="welcome-nav-btn secondary" id="welcomeBackBtn" onclick="welcomeBack()" disabled>Back</button>
+                <div class="welcome-dots">
+                    <div class="welcome-dot active" data-dot="1"></div>
+                    <div class="welcome-dot" data-dot="2"></div>
+                    <div class="welcome-dot" data-dot="3"></div>
+                    <div class="welcome-dot" data-dot="4"></div>
+                </div>
+                <button class="welcome-nav-btn primary" id="welcomeNextBtn" onclick="welcomeNext()">Next</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Theme Bar -->
     <div class="theme-bar" id="themeBar">
         <button class="theme-bar-btn" data-theme="girl" onclick="setGender('girl')">
@@ -5446,7 +5745,8 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                     sunMoonAspect.nature === 'challenging' 
                         ? ['Requires conscious integration work', 'May feel internally divided at times', 'Partners must appreciate complexity'] 
                         : []
-                ));\n            }
+                ));
+            }
             
             // ============================================
             // LOVE BLUEPRINT SYNTHESIS
@@ -8682,7 +8982,76 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 const gender = document.getElementById('genderInput').value;
                 themeColorMeta.content = gender === 'boy' ? '#6BA3D6' : '#FF69B4';
             }
+            
+            // Show welcome modal for first-time visitors
+            if (!localStorage.getItem('sb-welcome-seen')) {
+                document.getElementById('welcomeModal').style.display = 'flex';
+            }
         });
+        
+        // ============================================
+        // WELCOME MODAL FUNCTIONS
+        // ============================================
+        
+        let welcomeCurrentStep = 1;
+        const welcomeTotalSteps = 4;
+        
+        function selectWelcomeTheme(theme) {
+            // Update button states
+            document.querySelectorAll('.theme-preview-btn').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            const themeClass = theme === 'girl' ? 'pink' : (theme === 'boy' ? 'blue' : 'purple');
+            document.querySelector(`.theme-preview-btn.${themeClass}`).classList.add('selected');
+            
+            // Actually apply the theme
+            setGender(theme);
+        }
+        
+        function welcomeNext() {
+            if (welcomeCurrentStep < welcomeTotalSteps) {
+                welcomeCurrentStep++;
+                updateWelcomeStep();
+            } else {
+                closeWelcome();
+            }
+        }
+        
+        function welcomeBack() {
+            if (welcomeCurrentStep > 1) {
+                welcomeCurrentStep--;
+                updateWelcomeStep();
+            }
+        }
+        
+        function updateWelcomeStep() {
+            // Update step visibility
+            document.querySelectorAll('.welcome-step').forEach(step => {
+                step.classList.remove('active');
+            });
+            document.querySelector(`.welcome-step[data-step="${welcomeCurrentStep}"]`).classList.add('active');
+            
+            // Update dots
+            document.querySelectorAll('.welcome-dot').forEach(dot => {
+                dot.classList.remove('active');
+            });
+            document.querySelector(`.welcome-dot[data-dot="${welcomeCurrentStep}"]`).classList.add('active');
+            
+            // Update buttons
+            document.getElementById('welcomeBackBtn').disabled = welcomeCurrentStep === 1;
+            document.getElementById('welcomeNextBtn').textContent = welcomeCurrentStep === welcomeTotalSteps ? 'Get Started' : 'Next';
+        }
+        
+        function closeWelcome() {
+            localStorage.setItem('sb-welcome-seen', 'true');
+            const modal = document.getElementById('welcomeModal');
+            modal.style.opacity = '0';
+            modal.style.transition = 'opacity 0.3s ease';
+            setTimeout(() => {
+                modal.style.display = 'none';
+                modal.style.opacity = '1';
+            }, 300);
+        }
     </script>
 </body>
 </html>
