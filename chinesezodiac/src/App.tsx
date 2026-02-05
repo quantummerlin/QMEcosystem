@@ -4,8 +4,8 @@ import { Toaster } from 'sonner';
 import { ParticleBackground } from './components/ParticleBackground';
 import { PWAInstaller } from './components/PWAInstaller';
 import { CNYConfetti } from './components/CNYConfetti';
-import { AdSenseManager } from './components/ads/AdSenseManager';
-import { AdBanner } from './components/ads/AdBanner';
+// import { AdSenseManager } from './components/ads/AdSenseManager';
+// import { AdBanner } from './components/ads/AdBanner';
 import { HeroSection } from './sections/HeroSection';
 import { CalculatorSection } from './sections/CalculatorSection';
 import { ResultsSection } from './sections/ResultsSection';
@@ -39,8 +39,8 @@ function App() {
       {/* Chinese New Year Celebration - 48 hours of confetti! */}
       <CNYConfetti duration={48} />
 
-      {/* AdSense Manager */}
-      <AdSenseManager />
+      {/* AdSense Manager - DISABLED FOR NOW */}
+      {/* <AdSenseManager /> */}
 
       {/* Toast notifications */}
       <Toaster position="top-center" richColors />
@@ -53,18 +53,18 @@ function App() {
         {/* Hero Section */}
         <HeroSection onStartClick={scrollToCalculator} />
 
-        {/* Top Ad Banner */}
-        <div className="container mx-auto px-4 py-4">
+        {/* Top Ad Banner - DISABLED FOR NOW */}
+        {/* <div className="container mx-auto px-4 py-4">
           <AdBanner adSlot="1234567890" adFormat="horizontal" className="w-full" />
-        </div>
+        </div> */}
 
         {/* Features Section */}
         <FeaturesSection />
 
-        {/* Mid-Page Ad Banner */}
-        <div className="container mx-auto px-4 py-4">
+        {/* Mid-Page Ad Banner - DISABLED FOR NOW */}
+        {/* <div className="container mx-auto px-4 py-4">
           <AdBanner adSlot="0987654321" adFormat="rectangle" className="max-w-md mx-auto" />
-        </div>
+        </div> */}
 
         {/* Zodiac Showcase */}
         <ZodiacShowcase />
@@ -92,10 +92,10 @@ function App() {
           )}
         </AnimatePresence>
 
-        {/* Bottom Ad Banner */}
-        <div className="container mx-auto px-4 py-4">
+        {/* Bottom Ad Banner - DISABLED FOR NOW */}
+        {/* <div className="container mx-auto px-4 py-4">
           <AdBanner adSlot="5432167890" adFormat="rectangle" className="max-w-md mx-auto" />
-        </div>
+        </div> */}
 
         {/* Footer */}
         <FooterSection />
