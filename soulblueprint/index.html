@@ -123,6 +123,63 @@
             --card-border: #B0E0E6;
         }
         
+        /* Dark Mode Theme Combinations */
+        body.dark-theme.theme-girl {
+            --background: #1a0a1e;
+            --text: #ffd6e8;
+            --card-bg: #2d1a2e;
+            --card-border: #4a2a4e;
+            --primary: #FF69B4;
+            --secondary: #FFB6C1;
+        }
+        
+        body.dark-theme.theme-purple {
+            --background: #1a0a2e;
+            --text: #e6d5f7;
+            --card-bg: #2d1a4e;
+            --card-border: #4a2a6e;
+            --primary: #D8B5FF;
+            --secondary: #B19CD9;
+        }
+        
+        body.dark-theme.theme-boy {
+            --background: #0a1a2e;
+            --text: #d6e8ff;
+            --card-bg: #1a2d4e;
+            --card-border: #2a4a6e;
+            --primary: #6BA3D6;
+            --secondary: #87CEEB;
+        }
+        
+        body.dark-theme {
+            color: var(--text);
+        }
+        
+        body.dark-theme h1,
+        body.dark-theme h2,
+        body.dark-theme h3,
+        body.dark-theme h4,
+        body.dark-theme h5,
+        body.dark-theme h6 {
+            color: var(--primary);
+        }
+        
+        body.dark-theme p,
+        body.dark-theme span,
+        body.dark-theme li,
+        body.dark-theme label {
+            color: var(--text);
+        }
+        
+        body.dark-theme .reading-card .reading-content,
+        body.dark-theme .reading-card .reading-content p {
+            color: var(--text);
+        }
+        
+        body.dark-theme strong {
+            color: var(--secondary);
+        }
+        
         /* My Readings Dashboard */
         .my-readings-section {
             margin: 30px 0 20px;
@@ -3883,6 +3940,27 @@
             font-size: 0.9rem;
             color: #2d5a3d;
         }
+        
+        .theme-descriptions {
+            background: #f8f8f8;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .theme-descriptions p {
+            margin: 8px 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .theme-descriptions p:first-child {
+            margin-top: 0;
+        }
+        
+        .theme-descriptions p:last-child {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -3907,14 +3985,19 @@
                 
                 <!-- Step 2: Theme Selection -->
                 <div class="welcome-step" data-step="2">
-                    <h3>Choose Your Theme</h3>
-                    <p>Pick a color that resonates with you. This subtly adjusts the tone and energy of your reading.</p>
+                    <h3>Choose Your Voice</h3>
+                    <p>This choice shapes how your reading speaks to you:</p>
                     <div class="theme-preview-btns">
                         <button class="theme-preview-btn pink selected" onclick="selectWelcomeTheme('girl')">Pink</button>
                         <button class="theme-preview-btn purple" onclick="selectWelcomeTheme('purple')">Purple</button>
                         <button class="theme-preview-btn blue" onclick="selectWelcomeTheme('boy')">Blue</button>
                     </div>
-                    <p style="text-align: center; font-size: 0.85rem; opacity: 0.7;">You can change this anytime from the bar at the top</p>
+                    <div class="theme-descriptions">
+                        <p><strong>Pink</strong> — Feminine energy. Softer, nurturing language.</p>
+                        <p><strong>Purple</strong> — Neutral energy. Balanced, universal tone.</p>
+                        <p><strong>Blue</strong> — Masculine energy. Direct, grounded language.</p>
+                    </div>
+                    <p style="text-align: center; font-size: 0.85rem; opacity: 0.7; margin-top: 15px;">You can change this anytime from the bar at the top</p>
                 </div>
                 
                 <!-- Step 3: How to Read -->
@@ -9038,6 +9121,10 @@ Growth doesn't come from eliminating this tension — it comes from using it con
             });
             document.querySelector(`.welcome-step[data-step="${welcomeCurrentStep}"]`).classList.add('active');
             
+            // Scroll welcome content to top
+            const welcomeContent = document.querySelector('.welcome-content');
+            if (welcomeContent) welcomeContent.scrollTop = 0;
+            
             // Update dots
             document.querySelectorAll('.welcome-dot').forEach(dot => {
                 dot.classList.remove('active');
@@ -9057,6 +9144,8 @@ Growth doesn't come from eliminating this tension — it comes from using it con
             setTimeout(() => {
                 modal.style.display = 'none';
                 modal.style.opacity = '1';
+                // Scroll page to top when welcome closes
+                window.scrollTo(0, 0);
             }, 300);
         }
     </script>
