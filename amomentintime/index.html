@@ -323,21 +323,20 @@
         }
         
         .saved-reading-card:hover {
-            border-color: var(--primary);
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            filter: brightness(1.05);
         }
         
         .saved-reading-card.active {
-            border-color: var(--primary);
-            background: linear-gradient(135deg, rgba(255,105,180,0.05) 0%, rgba(255,182,193,0.05) 100%);
+            /* Active styling applied via inline styles in renderDashboard */
         }
         
         .saved-reading-avatar {
             width: 44px;
             height: 44px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            /* Gradient applied via inline styles per-card */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -389,7 +388,6 @@
         
         .saved-reading-progress-fill {
             height: 100%;
-            background: var(--primary);
             border-radius: 3px;
             transition: width 0.3s ease;
         }
@@ -397,7 +395,6 @@
         .saved-reading-progress-text {
             font-size: 0.75rem;
             font-weight: 600;
-            color: var(--primary);
             text-align: center;
         }
         
@@ -4199,6 +4196,7 @@
                 id: readingId,
                 userData: userData,
                 readings: readings,
+                theme: selectedGender || 'girl',
                 createdAt: Date.now(),
                 updatedAt: Date.now(),
                 progress: {},
@@ -4293,6 +4291,13 @@
             
             myReadingsSection.style.display = 'block';
             
+            // Theme color map for per-card coloring
+            const cardThemeMap = {
+                girl: { primary: '#FF69B4', secondary: '#FFB6C1', border: '#FFE4EC' },
+                boy: { primary: '#6BA3D6', secondary: '#87CEEB', border: '#B0E0E6' },
+                purple: { primary: '#D8B5FF', secondary: '#B19CD9', border: '#E6D5F7' }
+            };
+            
             readingsList.innerHTML = readingsArray.map(reading => {
                 const progress = getReadingProgressCount(reading.id);
                 const progressPercent = progress.total > 0 ? Math.round((progress.read / progress.total) * 100) : 0;
@@ -4301,18 +4306,21 @@
                 const initial = (reading.userData.name || 'R').charAt(0).toUpperCase();
                 const isActive = currentReadingId === reading.id ? 'active' : '';
                 
+                // Use stored theme, fallback to current for old readings
+                const cardTheme = cardThemeMap[reading.theme] || cardThemeMap[selectedGender] || cardThemeMap.girl;
+                
                 return `
-                    <div class="saved-reading-card ${isActive}" onclick="loadSavedReading('${reading.id}')" data-reading-id="${reading.id}">
-                        <div class="saved-reading-avatar">${initial}</div>
+                    <div class="saved-reading-card ${isActive}" onclick="loadSavedReading('${reading.id}')" data-reading-id="${reading.id}" style="border-color: ${isActive ? cardTheme.primary : cardTheme.border}; ${isActive ? 'background: linear-gradient(135deg, ' + cardTheme.primary + '10 0%, ' + cardTheme.secondary + '10 100%)' : ''}">
+                        <div class="saved-reading-avatar" style="background: linear-gradient(135deg, ${cardTheme.primary} 0%, ${cardTheme.secondary} 100%)">${initial}</div>
                         <div class="saved-reading-info">
                             <div class="saved-reading-name">${reading.userData.name || 'Unnamed Reading'}</div>
                             <div class="saved-reading-meta">Born ${formattedDate}</div>
                         </div>
                         <div class="saved-reading-progress">
                             <div class="saved-reading-progress-bar">
-                                <div class="saved-reading-progress-fill" style="width: ${progressPercent}%"></div>
+                                <div class="saved-reading-progress-fill" style="width: ${progressPercent}%; background: ${cardTheme.primary}"></div>
                             </div>
-                            <span class="saved-reading-progress-text">${progressPercent}%</span>
+                            <span class="saved-reading-progress-text" style="color: ${cardTheme.primary}">${progressPercent}%</span>
                         </div>
                         <button class="saved-reading-delete" onclick="event.stopPropagation(); confirmDeleteReading('${reading.id}', '${(reading.userData.name || 'this reading').replace(/'/g, "\\'")}')" title="Delete reading">🗑️</button>
                     </div>
@@ -4336,6 +4344,11 @@
             }
             
             currentReadingId = readingId;
+            
+            // Restore the theme this reading was generated with
+            if (reading.theme) {
+                setGender(reading.theme);
+            }
             
             // Store for legacy compatibility
             window.lastUserData = reading.userData;
