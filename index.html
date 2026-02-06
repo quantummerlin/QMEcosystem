@@ -1,12 +1,720 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3480541530392777" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=/hub.html">
-    <title>Quantum Merlin — Redirecting</title>
-    <link rel="canonical" href="https://quantummerlin.com/hub.html">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Merlin — The Complete Metaphysical Toolkit</title>
+    <meta name="description" content="Explore the full Quantum Merlin ecosystem: astrology, numerology, tarot, frequencies, sigils, compatibility, and over 100 mystical tools — all free.">
+    <meta name="keywords" content="quantum merlin, metaphysical tools, astrology, numerology, tarot, soul blueprint, birth chart, frequencies, spiritual technology">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://quantummerlin.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://quantummerlin.com/apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum Merlin — The Complete Metaphysical Toolkit">
+    <meta property="og:description" content="Over 100 free spiritual and metaphysical tools. Astrology, numerology, tarot, frequencies, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/">
+    <meta property="og:site_name" content="Quantum Merlin">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Quantum Merlin — The Complete Metaphysical Toolkit">
+    <meta name="twitter:description" content="Over 100 free spiritual and metaphysical tools.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://quantummerlin.com/">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="/shared/css/quantum-core.css">
+
+    <style>
+        /* ═══════════════════════════════════════════════════════
+           HUB PAGE STYLES
+           ═══════════════════════════════════════════════════════ */
+        .hub-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero */
+        .hub-hero {
+            text-align: center;
+            padding: 100px 20px 60px;
+        }
+
+        .hub-hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta), var(--neon-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: titleShimmer 8s ease-in-out infinite;
+            background-size: 200% 200%;
+        }
+
+        @keyframes titleShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hub-hero .tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin: 70px 0 40px;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .section-header .section-line {
+            width: 80px;
+            height: 2px;
+            margin: 15px auto 0;
+            border-radius: 1px;
+        }
+
+        .section-header.cyan h2 { color: var(--neon-cyan); }
+        .section-header.cyan .section-line { background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent); }
+        .section-header.magenta h2 { color: var(--neon-magenta); }
+        .section-header.magenta .section-line { background: linear-gradient(90deg, transparent, var(--neon-magenta), transparent); }
+        .section-header.gold h2 { color: var(--neon-gold); }
+        .section-header.gold .section-line { background: linear-gradient(90deg, transparent, var(--neon-gold), transparent); }
+        .section-header.purple h2 { color: var(--neon-purple); }
+        .section-header.purple .section-line { background: linear-gradient(90deg, transparent, var(--neon-purple), transparent); }
+
+        /* ═══════════════════════════════════════════════════════
+           FEATURED APPS — Large Tile Cards
+           ═══════════════════════════════════════════════════════ */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .featured-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background: var(--glass-bg, rgba(20, 20, 35, 0.6));
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border, rgba(255,255,255,0.08));
+            border-radius: 20px;
+            padding: 35px 30px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .featured-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            border-radius: 20px 20px 0 0;
+            opacity: 0.7;
+            transition: opacity 0.4s ease;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(0, 245, 255, 0.3);
+        }
+
+        .featured-card:hover::before {
+            opacity: 1;
+        }
+
+        .featured-card .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .featured-card .card-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .featured-card .card-desc {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .featured-card .card-tag {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-family: 'Exo 2', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Card accent colours */
+        .featured-card.accent-cyan::before { background: linear-gradient(90deg, var(--neon-cyan), transparent); }
+        .featured-card.accent-cyan:hover { box-shadow: 0 15px 40px rgba(0, 245, 255, 0.15); }
+        .featured-card.accent-cyan .card-title { color: var(--neon-cyan); }
+        .featured-card.accent-cyan .card-tag { background: rgba(0, 245, 255, 0.12); color: var(--neon-cyan); border: 1px solid rgba(0, 245, 255, 0.25); }
+
+        .featured-card.accent-magenta::before { background: linear-gradient(90deg, var(--neon-magenta), transparent); }
+        .featured-card.accent-magenta:hover { box-shadow: 0 15px 40px rgba(255, 0, 255, 0.15); }
+        .featured-card.accent-magenta .card-title { color: var(--neon-magenta); }
+        .featured-card.accent-magenta .card-tag { background: rgba(255, 0, 255, 0.12); color: var(--neon-magenta); border: 1px solid rgba(255, 0, 255, 0.25); }
+
+        .featured-card.accent-gold::before { background: linear-gradient(90deg, var(--neon-gold), transparent); }
+        .featured-card.accent-gold:hover { box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15); }
+        .featured-card.accent-gold .card-title { color: var(--neon-gold); }
+        .featured-card.accent-gold .card-tag { background: rgba(255, 215, 0, 0.12); color: var(--neon-gold); border: 1px solid rgba(255, 215, 0, 0.25); }
+
+        .featured-card.accent-purple::before { background: linear-gradient(90deg, var(--neon-purple), transparent); }
+        .featured-card.accent-purple:hover { box-shadow: 0 15px 40px rgba(157, 0, 255, 0.15); }
+        .featured-card.accent-purple .card-title { color: var(--neon-purple); }
+        .featured-card.accent-purple .card-tag { background: rgba(157, 0, 255, 0.12); color: var(--neon-purple); border: 1px solid rgba(157, 0, 255, 0.25); }
+
+        .featured-card.accent-pink::before { background: linear-gradient(90deg, var(--neon-pink), transparent); }
+        .featured-card.accent-pink:hover { box-shadow: 0 15px 40px rgba(255, 20, 147, 0.15); }
+        .featured-card.accent-pink .card-title { color: var(--neon-pink); }
+        .featured-card.accent-pink .card-tag { background: rgba(255, 20, 147, 0.12); color: var(--neon-pink); border: 1px solid rgba(255, 20, 147, 0.25); }
+
+        .featured-card.accent-blue::before { background: linear-gradient(90deg, var(--neon-blue), transparent); }
+        .featured-card.accent-blue:hover { box-shadow: 0 15px 40px rgba(0, 168, 255, 0.15); }
+        .featured-card.accent-blue .card-title { color: var(--neon-blue); }
+        .featured-card.accent-blue .card-tag { background: rgba(0, 168, 255, 0.12); color: var(--neon-blue); border: 1px solid rgba(0, 168, 255, 0.25); }
+
+        .featured-card.accent-orange::before { background: linear-gradient(90deg, var(--neon-orange), transparent); }
+        .featured-card.accent-orange:hover { box-shadow: 0 15px 40px rgba(255, 140, 0, 0.15); }
+        .featured-card.accent-orange .card-title { color: var(--neon-orange); }
+        .featured-card.accent-orange .card-tag { background: rgba(255, 140, 0, 0.12); color: var(--neon-orange); border: 1px solid rgba(255, 140, 0, 0.25); }
+
+        /* ═══════════════════════════════════════════════════════
+           TOOL GRID — Smaller badge links
+           ═══════════════════════════════════════════════════════ */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+        }
+
+        .tool-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 245, 255, 0.15);
+            border-radius: 12px;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .tool-badge:hover {
+            background: rgba(0, 245, 255, 0.08);
+            border-color: var(--neon-cyan);
+            transform: translateX(4px);
+        }
+
+        .tool-badge .icon { font-size: 1.4rem; flex-shrink: 0; }
+        .tool-badge .name { font-size: 0.9rem; }
+
+        /* ═══════════════════════════════════════════════════════
+           WORKSHOP DOOR — The hidden entry
+           ═══════════════════════════════════════════════════════ */
+        .workshop-section {
+            margin: 100px 0 60px;
+            text-align: center;
+        }
+
+        .workshop-door {
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+            color: var(--text-primary);
+            padding: 50px 60px;
+            border-radius: 20px;
+            background:
+                radial-gradient(ellipse at 50% 80%, rgba(255, 215, 0, 0.06), transparent 60%),
+                linear-gradient(180deg, rgba(60, 40, 20, 0.35), rgba(40, 25, 12, 0.5));
+            border: 1px solid rgba(139, 90, 43, 0.35);
+            transition: all 0.6s ease;
+            overflow: hidden;
+        }
+
+        .workshop-door::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 4px;
+            height: 60%;
+            transform: translate(-50%, -50%);
+            background: rgba(139, 90, 43, 0.3);
+            border-radius: 2px;
+        }
+
+        .workshop-door::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(0deg, rgba(255, 215, 0, 0.04), transparent);
+            pointer-events: none;
+            transition: all 0.6s ease;
+        }
+
+        .workshop-door:hover {
+            border-color: rgba(255, 215, 0, 0.4);
+            transform: translateY(-4px);
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.4),
+                0 0 60px rgba(255, 215, 0, 0.08);
+        }
+
+        .workshop-door:hover::after {
+            height: 60%;
+            background: linear-gradient(0deg, rgba(255, 215, 0, 0.08), transparent);
+        }
+
+        .workshop-door .door-icon {
+            font-size: 2.8rem;
+            display: block;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.3));
+            transition: filter 0.4s ease;
+        }
+
+        .workshop-door:hover .door-icon {
+            filter: drop-shadow(0 0 14px rgba(255, 215, 0, 0.5));
+        }
+
+        .workshop-door .door-label {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: rgba(255, 215, 0, 0.7);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.4s ease;
+        }
+
+        .workshop-door:hover .door-label {
+            color: rgba(255, 215, 0, 0.9);
+        }
+
+        .workshop-door .door-hint {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           FOOTER AREA
+           ═══════════════════════════════════════════════════════ */
+        .hub-footer {
+            margin-top: 80px;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+        }
+
+        .hub-footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .hub-footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .hub-footer-links a:hover { color: var(--neon-cyan); }
+
+        .hub-footer p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           RESPONSIVE
+           ═══════════════════════════════════════════════════════ */
+        @media (max-width: 768px) {
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+            .tools-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+            .hub-hero {
+                padding: 80px 15px 40px;
+            }
+            .workshop-door {
+                padding: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>Redirecting to <a href="/hub.html">Quantum Merlin Hub</a>…</p>
+    <!-- Quantum Background -->
+    <div class="quantum-bg">
+        <div class="quantum-grid"></div>
+        <div class="energy-orb energy-orb-1"></div>
+        <div class="energy-orb energy-orb-2"></div>
+        <div class="energy-orb energy-orb-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <a href="/" class="logo">
+                <div class="logo-icon">QM</div>
+                <span class="logo-text">Quantum Merlin</span>
+            </a>
+            <div class="header-controls">
+                <a href="https://buymeacoffee.com/quantumreality" target="_blank" class="support-btn">
+                    ☕ Support
+                </a>
+                <div class="nav-dropdown">
+                    <button class="nav-toggle">☰ Explore</button>
+                    <div class="dropdown-menu">
+                        <a href="/amomentintime/">A Moment in Time</a>
+                        <a href="/stranger/tools_index.html">Stranger Patterns</a>
+                        <a href="/quantum-merlin-hub/codes-new.html">Reality Codes</a>
+                        <a href="/quantum-merlin-hub/tarot-new.html">Tarot</a>
+                        <a href="/genesis/index-enhanced.html">Frequencies</a>
+                        <a href="/quantum-merlin-hub/astrology-new.html">Astrology</a>
+                        <a href="/about-new.html">About</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="hub-container">
+
+        <!-- ══════════════════════════════════════════════
+             HERO
+             ══════════════════════════════════════════════ -->
+        <section class="hub-hero">
+            <h1>Quantum Merlin</h1>
+            <p class="tagline">
+                Over 100 mystical tools — astrology, numerology, tarot, frequencies, sigils, and ancient wisdom —
+                all free, all waiting for you.
+            </p>
+        </section>
+
+        <!-- ══════════════════════════════════════════════
+             FEATURED APPS
+             ══════════════════════════════════════════════ -->
+        <div class="section-header cyan">
+            <h2>✦ Featured Experiences</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="featured-grid">
+
+            <!-- A Moment in Time -->
+            <a href="/amomentintime/" class="featured-card accent-pink">
+                <span class="card-icon">🌌</span>
+                <h3 class="card-title">A Moment in Time</h3>
+                <p class="card-desc">
+                    At the exact moment you were born, the universe created a pattern.
+                    65+ personalised insights in astrology and numerology — your complete cosmic portrait.
+                </p>
+                <span class="card-tag">Multilingual · EN · ES · PT</span>
+            </a>
+
+            <!-- Soul Blueprint -->
+            <a href="/soulblueprint/" class="featured-card accent-magenta">
+                <span class="card-icon">🔮</span>
+                <h3 class="card-title">Soul Blueprint</h3>
+                <p class="card-desc">
+                    A deep-dive into your soul's architecture — life path, destiny number,
+                    karmic lessons, and the hidden forces shaping your purpose.
+                </p>
+                <span class="card-tag">Deep Reading</span>
+            </a>
+
+            <!-- Stranger Patterns -->
+            <a href="/stranger/tools_index.html" class="featured-card accent-purple">
+                <span class="card-icon">🧿</span>
+                <h3 class="card-title">Stranger Patterns</h3>
+                <p class="card-desc">
+                    70+ numerology and astrology micro-tools — life path, moon sign, rising sign,
+                    venus readings, chiron, lilith, and far more.
+                </p>
+                <span class="card-tag">70+ Tools</span>
+            </a>
+
+            <!-- Ultimate Reading -->
+            <a href="/ultimate/" class="featured-card accent-gold">
+                <span class="card-icon">⚡</span>
+                <h3 class="card-title">Ultimate Reading</h3>
+                <p class="card-desc">
+                    The most comprehensive reading in the ecosystem — every number, every sign,
+                    every aspect, woven into a single narrative.
+                </p>
+                <span class="card-tag">Complete</span>
+            </a>
+
+            <!-- Chinese Zodiac -->
+            <a href="/chinesezodiac/" class="featured-card accent-orange">
+                <span class="card-icon">🐉</span>
+                <h3 class="card-title">Chinese Zodiac</h3>
+                <p class="card-desc">
+                    Discover your Chinese zodiac animal, element, and compatibility.
+                    Ancient Eastern wisdom meets modern interactive experience.
+                </p>
+                <span class="card-tag">Interactive</span>
+            </a>
+
+            <!-- Kosmic K-Pop -->
+            <a href="/kosmickpop/" class="featured-card accent-magenta">
+                <span class="card-icon">🎤</span>
+                <h3 class="card-title">Kosmic K-Pop</h3>
+                <p class="card-desc">
+                    What if your birth chart was a K-Pop group?
+                    Discover which idols share your cosmic energy and build your dream lineup.
+                </p>
+                <span class="card-tag">Fun · Entertainment</span>
+            </a>
+
+        </div>
+
+        <!-- ══════════════════════════════════════════════
+             REALITY CODES & MYSTICAL TOOLS
+             ══════════════════════════════════════════════ -->
+        <div class="section-header magenta">
+            <h2>✧ Reality Codes & Mystical Tools</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="tools-grid">
+            <a href="/quantum-merlin-hub/codes-new.html" class="tool-badge">
+                <span class="icon">🧬</span>
+                <span class="name">Reality Code Generator</span>
+            </a>
+            <a href="/quantum-merlin-hub/tarot-new.html" class="tool-badge">
+                <span class="icon">🃏</span>
+                <span class="name">Tarot Reading</span>
+            </a>
+            <a href="/quantum-merlin-hub/gematria-new.html" class="tool-badge">
+                <span class="icon">🔢</span>
+                <span class="name">Gematria Calculator</span>
+            </a>
+            <a href="/quantum-merlin-hub/sigils-new.html" class="tool-badge">
+                <span class="icon">✒️</span>
+                <span class="name">Sigil Creator</span>
+            </a>
+            <a href="/quantum-merlin-hub/astrology-new.html" class="tool-badge">
+                <span class="icon">⭐</span>
+                <span class="name">Astrology</span>
+            </a>
+            <a href="/quantum-merlin-hub/chinese-new.html" class="tool-badge">
+                <span class="icon">🐲</span>
+                <span class="name">Chinese Zodiac (Hub)</span>
+            </a>
+            <a href="/quantum-merlin-hub/crystals-new.html" class="tool-badge">
+                <span class="icon">💎</span>
+                <span class="name">Crystal Guide</span>
+            </a>
+            <a href="/quantum-merlin-hub/water-new.html" class="tool-badge">
+                <span class="icon">💧</span>
+                <span class="name">Water Charging</span>
+            </a>
+            <a href="/quantum-merlin-hub/forecasts-new.html" class="tool-badge">
+                <span class="icon">🌙</span>
+                <span class="name">Cosmic Forecasts</span>
+            </a>
+            <a href="/genesis/index-enhanced.html" class="tool-badge">
+                <span class="icon">🎵</span>
+                <span class="name">Genesis Frequencies</span>
+            </a>
+            <a href="/quantum-merlin-hub/jukebox-new.html" class="tool-badge">
+                <span class="icon">🎶</span>
+                <span class="name">My Library / Jukebox</span>
+            </a>
+            <a href="/40hz/" class="tool-badge">
+                <span class="icon">〰️</span>
+                <span class="name">40 Hz Generator</span>
+            </a>
+        </div>
+
+        <!-- ══════════════════════════════════════════════
+             MICRO-TOOLS & READINGS
+             ══════════════════════════════════════════════ -->
+        <div class="section-header gold">
+            <h2>✶ Micro-Tools & Quick Readings</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="tools-grid">
+            <a href="/angel-number-calculator-new.html" class="tool-badge">
+                <span class="icon">👼</span>
+                <span class="name">Angel Number Calculator</span>
+            </a>
+            <a href="/angel-number-full-reading.html" class="tool-badge">
+                <span class="icon">✨</span>
+                <span class="name">Angel Number Full Reading</span>
+            </a>
+            <a href="/birth-sigil.html" class="tool-badge">
+                <span class="icon">🔯</span>
+                <span class="name">Birth Sigil Generator</span>
+            </a>
+            <a href="/compatibility.html" class="tool-badge">
+                <span class="icon">💕</span>
+                <span class="name">Compatibility Check</span>
+            </a>
+            <a href="/soulcard.html" class="tool-badge">
+                <span class="icon">🎴</span>
+                <span class="name">Soul Card</span>
+            </a>
+            <a href="/quantum-sigil-generator.html" class="tool-badge">
+                <span class="icon">🌀</span>
+                <span class="name">Quantum Sigil Generator</span>
+            </a>
+            <a href="/quantum-rose.html" class="tool-badge">
+                <span class="icon">🌹</span>
+                <span class="name">Quantum Rose</span>
+            </a>
+            <a href="/reading-generator.html" class="tool-badge">
+                <span class="icon">📖</span>
+                <span class="name">Reading Generator</span>
+            </a>
+            <a href="/forecasts.html" class="tool-badge">
+                <span class="icon">🔭</span>
+                <span class="name">Forecasts</span>
+            </a>
+            <a href="/gravity7/" class="tool-badge">
+                <span class="icon">🌊</span>
+                <span class="name">Gravity Pause</span>
+            </a>
+        </div>
+
+        <!-- ══════════════════════════════════════════════
+             SHADOW & INSIGHT TOOLS
+             ══════════════════════════════════════════════ -->
+        <div class="section-header purple">
+            <h2>🜃 Shadow & Insight Detectors</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="tools-grid">
+            <a href="/hidden-strengths-revealer.html" class="tool-badge">
+                <span class="icon">💪</span>
+                <span class="name">Hidden Strengths Revealer</span>
+            </a>
+            <a href="/identity-split-detector.html" class="tool-badge">
+                <span class="icon">🪞</span>
+                <span class="name">Identity Split Detector</span>
+            </a>
+            <a href="/energyleak.html" class="tool-badge">
+                <span class="icon">🔋</span>
+                <span class="name">Energy Leak Scanner</span>
+            </a>
+            <a href="/power-avoidance-pattern.html" class="tool-badge">
+                <span class="icon">⚔️</span>
+                <span class="name">Power Avoidance Pattern</span>
+            </a>
+            <a href="/trust-radar.html" class="tool-badge">
+                <span class="icon">📡</span>
+                <span class="name">Trust Radar</span>
+            </a>
+            <a href="/manifest.html" class="tool-badge">
+                <span class="icon">🎯</span>
+                <span class="name">Manifestation Tool</span>
+            </a>
+        </div>
+
+        <!-- ══════════════════════════════════════════════
+             MERLIN'S WORKSHOP — The Hidden Door
+             ══════════════════════════════════════════════ -->
+        <section class="workshop-section">
+            <a href="/workshop.html" class="workshop-door">
+                <span class="door-icon">🚪</span>
+                <span class="door-label">Merlin's Workshop</span>
+                <span class="door-hint">Where unfinished instruments wait to be summoned…</span>
+            </a>
+        </section>
+
+        <!-- ══════════════════════════════════════════════
+             FOOTER
+             ══════════════════════════════════════════════ -->
+        <footer class="hub-footer">
+            <div class="hub-footer-links">
+                <a href="/about-new.html">About</a>
+                <a href="/contact-new.html">Contact</a>
+                <a href="/privacy.html">Privacy</a>
+                <a href="/terms.html">Terms</a>
+                <a href="/disclaimer.html">Disclaimer</a>
+                <a href="https://buymeacoffee.com/quantumreality" target="_blank">☕ Support</a>
+            </div>
+            <p>&copy; 2025 Quantum Merlin. For entertainment and spiritual exploration.</p>
+        </footer>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="/shared/js/quantum-core.js"></script>
+    <script src="/shared/js/quantum-analytics.js"></script>
 </body>
 </html>
