@@ -313,12 +313,13 @@
             background: var(--card-bg);
             border: 2px solid var(--card-border);
             border-radius: 16px;
-            padding: 16px 20px;
+            padding: 14px 16px;
             cursor: pointer;
             transition: all 0.3s ease;
-            display: flex;
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
         
         .saved-reading-card:hover {
@@ -333,48 +334,54 @@
         }
         
         .saved-reading-avatar {
-            width: 50px;
-            height: 50px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
             color: white;
             flex-shrink: 0;
         }
         
         .saved-reading-info {
-            flex: 1;
             min-width: 0;
+            overflow: hidden;
         }
         
         .saved-reading-name {
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--text);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.3;
+        }
+        
+        .saved-reading-meta {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: 2px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
         
-        .saved-reading-meta {
-            font-size: 0.85rem;
-            opacity: 0.7;
-            margin-top: 2px;
-        }
-        
         .saved-reading-progress {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 2px;
             flex-shrink: 0;
         }
         
         .saved-reading-progress-bar {
-            width: 60px;
-            height: 6px;
+            width: 40px;
+            height: 5px;
             background: var(--card-border);
             border-radius: 3px;
             overflow: hidden;
@@ -388,23 +395,26 @@
         }
         
         .saved-reading-progress-text {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
             color: var(--primary);
-            min-width: 45px;
+            text-align: center;
         }
         
         .saved-reading-delete {
             width: 32px;
             height: 32px;
             border: none;
-            background: rgba(255,0,0,0.1);
-            color: #ff4444;
+            background: rgba(255,0,0,0.08);
+            color: #ff6666;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 0.9rem;
             transition: all 0.2s ease;
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .saved-reading-delete:hover {
@@ -412,6 +422,38 @@
             color: white;
         }
         
+
+        /* Mobile-specific card layout */
+        @media (max-width: 420px) {
+            .saved-reading-card {
+                grid-template-columns: auto 1fr auto auto;
+                gap: 10px;
+                padding: 12px;
+            }
+            .saved-reading-avatar {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+            .saved-reading-name {
+                font-size: 0.95rem;
+            }
+            .saved-reading-meta {
+                font-size: 0.75rem;
+            }
+            .saved-reading-progress-bar {
+                width: 32px;
+            }
+            .saved-reading-progress-text {
+                font-size: 0.7rem;
+            }
+            .saved-reading-delete {
+                width: 28px;
+                height: 28px;
+                font-size: 0.8rem;
+            }
+        }
+
         .new-reading-prompt {
             text-align: center;
             padding: 20px;
@@ -3748,6 +3790,58 @@
                 padding-bottom: max(10px, env(safe-area-inset-bottom));
             }
         }
+    
+        /* Comprehensive dark mode text overrides */
+        .dark-mode .tagline,
+        .dark-mode .sub-tagline {
+            color: #e0e0e0 !important;
+        }
+        .dark-mode .reading-content,
+        .dark-mode .reading-content p,
+        .dark-mode .reading-content li,
+        .dark-mode .reading-content span {
+            color: #d4d4d4 !important;
+        }
+        .dark-mode .cosmic-snapshot-grid .snapshot-item .snapshot-label {
+            color: #b0b0b0 !important;
+        }
+        .dark-mode .cosmic-snapshot-grid .snapshot-item .snapshot-value {
+            color: #e0e0e0 !important;
+        }
+        .dark-mode .blueprint-item .blueprint-value {
+            color: #d4d4d4 !important;
+        }
+        .dark-mode .blueprint-item .blueprint-label {
+            color: #b0b0b0 !important;
+        }
+        .dark-mode .toc-item .toc-title {
+            color: #e0e0e0 !important;
+        }
+        .dark-mode .toc-item .toc-subtitle {
+            color: #b0b0b0 !important;
+        }
+        .dark-mode .footer-links a {
+            color: #b0b0b0 !important;
+        }
+        .dark-mode .reading-section h3 {
+            color: #e8e8e8 !important;
+        }
+        .dark-mode .reading-section h4 {
+            color: #d8d8d8 !important;
+        }
+        .dark-mode .section-reading-count {
+            color: var(--primary) !important;
+        }
+        .dark-mode .saved-reading-name {
+            color: #e0e0e0 !important;
+        }
+        .dark-mode .saved-reading-meta {
+            color: #b0b0b0 !important;
+        }
+        .dark-mode .new-reading-prompt {
+            color: #b0b0b0 !important;
+        }
+
     </style>
 </head>
 <body>
@@ -4057,6 +4151,7 @@
     <script src="calculations.js?v=35"></script>
     <script src="readings.js?v=35"></script>
     <script src="house-readings.js?v=35"></script>
+    <script src="deep-house-readings.js?v=35"></script>
     <script src="aspect-readings.js?v=35"></script>
     <script src="advanced-readings.js?v=35"></script>
     <script src="deep-readings.js?v=35"></script>
@@ -5514,6 +5609,24 @@ This isn't a flaw - it's their power source. The tension between these two drive
                     [`Their heart speaks: ${blueprint.essence}`, `They naturally attract: ${blueprint.attracted}`],
                     []
                 ));
+                
+                // Add expanded Relationship Style analysis
+                if (typeof analyzeRelationshipStyle === 'function') {
+                    const relStyle = analyzeRelationshipStyle(readings);
+                    if (relStyle && relStyle.sections.length > 0) {
+                        relStyle.sections.forEach(section => {
+                            let relContent = section.content.replace(/\n\n/g, '</p><p>');
+                            celestialSection.appendChild(createReadingCard(
+                                section.subtitle,
+                                'Relationship Style Analysis',
+                                ['Love Style', 'Attraction Patterns', 'Partnership'],
+                                relContent,
+                                [],
+                                []
+                            ));
+                        });
+                    }
+                }
             }
             
             // ============================================
@@ -5535,6 +5648,373 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 }
             }
             
+            // ============================================
+            // ADVANCED ANALYSIS: HOUSE CONCENTRATION
+            // ============================================
+            if (readings.astrology.planetHouses && typeof analyzeHouseConcentration === 'function') {
+                const houseConcentrations = analyzeHouseConcentration(readings.astrology.planetHouses);
+                
+                if (houseConcentrations && houseConcentrations.length > 0) {
+                    const houseConcentrationHeader = document.createElement('div');
+                    houseConcentrationHeader.className = 'section-divider';
+                    houseConcentrationHeader.innerHTML = '<h3>🎯 House Concentrations</h3><p>Extraordinary focus of energy in specific life areas</p>';
+                    celestialSection.appendChild(houseConcentrationHeader);
+                    
+                    houseConcentrations.forEach(concentration => {
+                        if (concentration.reading) {
+                            let concentrationContent = `<p><strong>${concentration.reading.archetype}</strong></p>`;
+                            
+                            if (concentration.rarity) {
+                                concentrationContent += `<div class="rarity-badge"><span class="rarity-label">Rarity:</span> ${concentration.rarity.odds}</div>`;
+                                concentrationContent += `<p><em>${concentration.rarity.significance}</em></p>`;
+                            }
+                            
+                            concentrationContent += `<p><strong>Planets Present:</strong> ${concentration.planets.join(', ')}</p>`;
+                            concentrationContent += concentration.reading.reading.replace(/\n\n/g, '</p><p>');
+                            
+                            if (concentration.reading.superpower) {
+                                concentrationContent += `<p><strong>Superpower:</strong> ${concentration.reading.superpower}</p>`;
+                            }
+                            if (concentration.reading.paradox) {
+                                concentrationContent += `<p><strong>The Paradox:</strong> ${concentration.reading.paradox}</p>`;
+                            }
+                            if (concentration.reading.integration) {
+                                concentrationContent += `<p><strong>Integration Path:</strong> ${concentration.reading.integration}</p>`;
+                            }
+                            if (concentration.reading.practicalAdvice && concentration.reading.practicalAdvice.length > 0) {
+                                concentrationContent += '<p><strong>Practical Steps:</strong></p><ul>';
+                                concentration.reading.practicalAdvice.forEach(advice => {
+                                    concentrationContent += `<li>${advice}</li>`;
+                                });
+                                concentrationContent += '</ul>';
+                            }
+                            
+                            celestialSection.appendChild(createReadingCard(
+                                concentration.reading.title,
+                                `${concentration.count} Planets in House ${concentration.house}`,
+                                concentration.reading.keywords,
+                                concentrationContent,
+                                [concentration.reading.superpower || ''],
+                                [concentration.reading.shadow || '']
+                            ));
+                        }
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: STELLIUM INTEGRATION
+            // Cross-reference multiple house stelliums
+            // ============================================
+            if (typeof analyzeStelliumIntegration === 'function') {
+                const stelliumIntegrations = analyzeStelliumIntegration(readings);
+                
+                if (stelliumIntegrations && stelliumIntegrations.length > 0) {
+                    const integrationHeader = document.createElement('div');
+                    integrationHeader.className = 'section-divider';
+                    integrationHeader.innerHTML = '<h3>House Stellium Synthesis</h3><p>How your multiple stelliums work together as a unified life theme</p>';
+                    celestialSection.appendChild(integrationHeader);
+                    
+                    stelliumIntegrations.forEach(integration => {
+                        let integrationContent = integration.reading.replace(/\n\n/g, '</p><p>');
+                        
+                        if (integration.guidance) {
+                            integrationContent += `<p><strong>Key Guidance:</strong> ${integration.guidance}</p>`;
+                        }
+                        
+                        if (integration.practicalSteps && integration.practicalSteps.length > 0) {
+                            integrationContent += '<p><strong>Practical Steps:</strong></p><ul>';
+                            integration.practicalSteps.forEach(step => {
+                                integrationContent += `<li>${step}</li>`;
+                            });
+                            integrationContent += '</ul>';
+                        }
+                        
+                        celestialSection.appendChild(createReadingCard(
+                            integration.title,
+                            integration.subtitle || 'Stellium Synthesis',
+                            integration.keywords || ['Integration', 'Synthesis', 'Life Theme'],
+                            integrationContent,
+                            [],
+                            []
+                        ));
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: WEALTH BLUEPRINT
+            // ============================================
+            if (typeof analyzeWealthBlueprint === 'function') {
+                const wealthIndicators = analyzeWealthBlueprint(readings);
+                
+                if (wealthIndicators && wealthIndicators.length > 0) {
+                    const wealthHeader = document.createElement('div');
+                    wealthHeader.className = 'section-divider';
+                    wealthHeader.innerHTML = '<h3>💰 Wealth Blueprint</h3><p>Natural relationship with resources, value, and material success</p>';
+                    celestialSection.appendChild(wealthHeader);
+                    
+                    wealthIndicators.forEach(indicator => {
+                        if (indicator.reading) {
+                            let wealthContent = indicator.reading.reading.replace(/\n\n/g, '</p><p>');
+                            if (indicator.reading.guidance) {
+                                wealthContent += `<p><strong>Guidance:</strong> ${indicator.reading.guidance}</p>`;
+                            }
+                            if (indicator.reading.timing) {
+                                wealthContent += `<p><strong>Timing:</strong> ${indicator.reading.timing}</p>`;
+                            }
+                            
+                            celestialSection.appendChild(createReadingCard(
+                                indicator.reading.title,
+                                indicator.planets ? indicator.planets.join(', ') : 'Financial Intelligence',
+                                indicator.reading.keywords,
+                                wealthContent,
+                                ['Natural wealth-building instincts'],
+                                []
+                            ));
+                        }
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: UNIQUE ARCHETYPES
+            // ============================================
+            if (typeof analyzeArchetypes === 'function') {
+                const archetypes = analyzeArchetypes(readings);
+                
+                if (archetypes && archetypes.length > 0) {
+                    const archetypeHeader = document.createElement('div');
+                    archetypeHeader.className = 'section-divider';
+                    archetypeHeader.innerHTML = '<h3>✨ Unique Archetypes</h3><p>Special patterns revealed by your specific chart combination</p>';
+                    celestialSection.appendChild(archetypeHeader);
+                    
+                    archetypes.forEach(archetype => {
+                        let archetypeContent = archetype.reading.replace(/\n\n/g, '</p><p>');
+                        if (archetype.practiceGuidance) {
+                            archetypeContent += `<p><strong>Practice Guidance:</strong> ${archetype.practiceGuidance}</p>`;
+                        }
+                        if (archetype.challenge) {
+                            archetypeContent += `<p><strong>Key Challenge:</strong> ${archetype.challenge}</p>`;
+                        }
+                        if (archetype.lifeWork) {
+                            archetypeContent += `<p><strong>Natural Life Work:</strong> ${archetype.lifeWork}</p>`;
+                        }
+                        if (archetype.optimalEnvironment) {
+                            archetypeContent += `<p><strong>Optimal Environment:</strong> ${archetype.optimalEnvironment}</p>`;
+                        }
+                        
+                        celestialSection.appendChild(createReadingCard(
+                            archetype.title,
+                            archetype.archetype || 'Unique Pattern',
+                            archetype.triggers || [],
+                            archetypeContent,
+                            [],
+                            archetype.shadow ? [archetype.shadow] : []
+                        ));
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: CHAKRA BLUEPRINT (Taurus emphasis)
+            // ============================================
+            if (readings.astrology.stelliums && typeof CHAKRA_BLUEPRINT_READINGS !== 'undefined') {
+                const taurusStellium = readings.astrology.stelliums.find(s => s.sign === 'Taurus');
+                
+                if (taurusStellium && CHAKRA_BLUEPRINT_READINGS.taurusThroat) {
+                    const chakraHeader = document.createElement('div');
+                    chakraHeader.className = 'section-divider';
+                    chakraHeader.innerHTML = '<h3>🔵 Chakra Blueprint</h3><p>Energy center activation based on your placements</p>';
+                    celestialSection.appendChild(chakraHeader);
+                    
+                    const chakra = CHAKRA_BLUEPRINT_READINGS.taurusThroat;
+                    let chakraContent = `<p><strong>${chakra.chakra}</strong> - ${chakra.bodyArea}</p>`;
+                    chakraContent += chakra.reading.replace(/\n\n/g, '</p><p>');
+                    
+                    if (chakra.healingPractices) {
+                        chakraContent += `<p><strong>Healing Practices:</strong></p><ul>`;
+                        chakra.healingPractices.forEach(practice => {
+                            chakraContent += `<li>${practice}</li>`;
+                        });
+                        chakraContent += `</ul>`;
+                    }
+                    
+                    chakraContent += `<p><strong>Affirmation:</strong> <em>"${chakra.affirmation}"</em></p>`;
+                    
+                    celestialSection.appendChild(createReadingCard(
+                        chakra.title,
+                        'Self-Expression & Voice',
+                        chakra.keywords,
+                        chakraContent,
+                        ['Natural voice power', 'Healing through expression'],
+                        ['Throat sensitivity when suppressing truth']
+                    ));
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: SUN-MOON SAME SIGN (RARITY)
+            // ============================================
+            if (typeof analyzeSunMoonConjunction === 'function') {
+                const sunMoonSame = analyzeSunMoonConjunction(readings);
+                
+                if (sunMoonSame) {
+                    const rarityHeader = document.createElement('div');
+                    rarityHeader.className = 'section-divider';
+                    rarityHeader.innerHTML = '<h3>🌟 Statistical Rarity</h3><p>Unusual patterns that make this chart unique</p>';
+                    celestialSection.appendChild(rarityHeader);
+                    
+                    celestialSection.appendChild(createReadingCard(
+                        'Sun-Moon Conjunction by Sign',
+                        `Both in ${sunMoonSame.sign} (${sunMoonSame.odds})`,
+                        ['Rare', 'Unified Identity', 'Emotional Coherence'],
+                        `<p>${sunMoonSame.description}</p><p><strong>What This Means:</strong> ${sunMoonSame.synthesis}</p>`,
+                        ['Powerful internal alignment', 'Clear sense of self'],
+                        []
+                    ));
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: HEALTH BLUEPRINT
+            // ============================================
+            if (typeof analyzeHealthBlueprint === 'function') {
+                const healthIndicators = analyzeHealthBlueprint(readings);
+                
+                if (healthIndicators && healthIndicators.length > 0) {
+                    const healthHeader = document.createElement('div');
+                    healthHeader.className = 'section-divider';
+                    healthHeader.innerHTML = '<h3>💚 Health Blueprint</h3><p>Body-mind connections based on celestial patterns</p>';
+                    celestialSection.appendChild(healthHeader);
+                    
+                    healthIndicators.forEach(indicator => {
+                        if (indicator.reading) {
+                            let healthContent = '';
+                            if (indicator.reading.vulnerabilities) {
+                                healthContent += indicator.reading.vulnerabilities.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
+                            } else if (indicator.reading.reading) {
+                                healthContent += indicator.reading.reading.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
+                            }
+                            if (indicator.reading.guidance) {
+                                healthContent += `<p><strong>Guidance:</strong> ${indicator.reading.guidance}</p>`;
+                            }
+                            if (indicator.reading.affirmation) {
+                                healthContent += `<p><em>Affirmation: "${indicator.reading.affirmation}"</em></p>`;
+                            }
+                            
+                            celestialSection.appendChild(createReadingCard(
+                                indicator.reading.title,
+                                indicator.reading.bodyRuler || indicator.reading.emphasis || '',
+                                indicator.reading.keywords || ['Health', 'Wellness', 'Body'],
+                                healthContent,
+                                [],
+                                []
+                            ));
+                        }
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: TEACHING STYLE
+            // ============================================
+            if (typeof analyzeTeachingStyle === 'function') {
+                const teachingIndicators = analyzeTeachingStyle(readings);
+                
+                if (teachingIndicators && teachingIndicators.length > 0) {
+                    const teachingHeader = document.createElement('div');
+                    teachingHeader.className = 'section-divider';
+                    teachingHeader.innerHTML = '<h3>📚 Teaching & Learning Style</h3><p>How you learn best and share wisdom with others</p>';
+                    celestialSection.appendChild(teachingHeader);
+                    
+                    teachingIndicators.forEach(indicator => {
+                        if (indicator.reading) {
+                            let teachingContent = indicator.reading.reading.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
+                            if (indicator.reading.superpower) {
+                                teachingContent += `<p><strong>Teaching Superpower:</strong> ${indicator.reading.superpower}</p>`;
+                            }
+                            if (indicator.reading.shadow) {
+                                teachingContent += `<p><em>Shadow to Watch:</em> ${indicator.reading.shadow}</p>`;
+                            }
+                            
+                            celestialSection.appendChild(createReadingCard(
+                                indicator.reading.title,
+                                indicator.reading.subtitle || '',
+                                indicator.reading.keywords || ['Teaching', 'Learning', 'Wisdom'],
+                                teachingContent,
+                                [],
+                                []
+                            ));
+                        }
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: PHILOSOPHICAL FRAMEWORK
+            // ============================================
+            if (typeof analyzePhilosophicalFramework === 'function') {
+                const philosophyIndicators = analyzePhilosophicalFramework(readings);
+                
+                if (philosophyIndicators && philosophyIndicators.length > 0) {
+                    const philosophyHeader = document.createElement('div');
+                    philosophyHeader.className = 'section-divider';
+                    philosophyHeader.innerHTML = '<h3>🔮 Philosophical Framework</h3><p>The belief system encoded in your cosmic design</p>';
+                    celestialSection.appendChild(philosophyHeader);
+                    
+                    philosophyIndicators.forEach(indicator => {
+                        if (indicator.reading) {
+                            let philosophyContent = indicator.reading.reading.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
+                            if (indicator.reading.keyInsight) {
+                                philosophyContent += `<p><strong>Key Insight:</strong> ${indicator.reading.keyInsight}</p>`;
+                            }
+                            if (indicator.reading.integration) {
+                                philosophyContent += `<p><em>Integration Path:</em> ${indicator.reading.integration}</p>`;
+                            }
+                            
+                            celestialSection.appendChild(createReadingCard(
+                                indicator.reading.title,
+                                indicator.reading.subtitle || '',
+                                indicator.reading.keywords || ['Philosophy', 'Belief', 'Meaning'],
+                                philosophyContent,
+                                [],
+                                []
+                            ));
+                        }
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: BIRTH LOCATION
+            // ============================================
+            if (typeof analyzeBirthLocation === 'function' && userData.birthPlace) {
+                const locationReading = analyzeBirthLocation(userData.birthPlace);
+                
+                if (locationReading) {
+                    const locationHeader = document.createElement('div');
+                    locationHeader.className = 'section-divider';
+                    locationHeader.innerHTML = '<h3>📍 Birth Location Significance</h3><p>The energy of where you chose to be born</p>';
+                    celestialSection.appendChild(locationHeader);
+                    
+                    let locationContent = locationReading.significance.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
+                    if (locationReading.guidance) {
+                        locationContent += `<p><strong>Guidance:</strong> ${locationReading.guidance}</p>`;
+                    }
+                    
+                    celestialSection.appendChild(createReadingCard(
+                        locationReading.title,
+                        locationReading.coordinates || userData.birthPlace,
+                        ['Birth Place', 'Geographic Energy', 'Location'],
+                        locationContent,
+                        [],
+                        []
+                    ));
+                }
+            }
+            
+
             // Organize cards into sub-sections based on their content
             organizeCelestialSubSections(celestialSection, {
                 core: coreSubSection,
@@ -5865,14 +6345,46 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 ));
             }
             
-            // Personal Year - DEEP READING
+            // Personal Year - DEEP READING with METHODOLOGY
             const personalYear = readings.numerology.personalYear;
             const deepPersonalYear = (typeof DEEP_PERSONAL_YEAR_READINGS !== 'undefined') ? DEEP_PERSONAL_YEAR_READINGS[personalYear] : null;
             const personalYearEnhancements = getReadingEnhancements('personalYear', personalYear);
             
+            // Calculate Personal Year with details for transparency
+            const personalYearDetails = (typeof calculatePersonalYearWithDetails === 'function') 
+                ? calculatePersonalYearWithDetails(userData.birthDate, new Date())
+                : null;
+            
+            // Get timing granularity if available
+            const timingDetails = (typeof TIMING_READINGS !== 'undefined' && TIMING_READINGS.personalYearDetailed) 
+                ? TIMING_READINGS.personalYearDetailed[personalYear] 
+                : null;
+            
             if (deepPersonalYear) {
                 // Create comprehensive Personal Year reading from deep content
-                const personalYearContent = `<strong>${deepPersonalYear.theme}</strong>
+                let personalYearContent = `<strong>${deepPersonalYear.theme}</strong>`;
+                
+                // Add calculation methodology with birthday-to-birthday timing
+                if (personalYearDetails) {
+                    // Calculate the birthday-to-birthday cycle dates
+                    const birthParts = userData.birthDate.split('-');
+                    const birthMonth = parseInt(birthParts[1]);
+                    const birthDay = parseInt(birthParts[2]);
+                    const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+                    const cycleStart = `${monthNames[birthMonth-1]} ${birthDay}, ${personalYearDetails.cycleYear}`;
+                    const cycleEnd = `${monthNames[birthMonth-1]} ${birthDay - 1 > 0 ? birthDay - 1 : birthDay}, ${personalYearDetails.cycleYear + 1}`;
+                    
+                    personalYearContent += `
+<div class="calc-methodology">
+<p><strong>📊 Calculation Method:</strong></p>
+<p><em>${personalYearDetails.calculation.formula}</em></p>
+<p class="calc-note">Personal Year = Birth Month + Birth Day + Current Year (each reduced)</p>
+<p><strong>🗓 Your Cycle Period:</strong> ${cycleStart} through ${cycleEnd}</p>
+<p class="calc-note">Personal Year cycles run from birthday to birthday, not January to January. This year's energy began on your last birthday and shifts on your next one.</p>
+</div>`;
+                }
+                
+                personalYearContent += `
 
 <em>The Energy of This Year:</em> ${deepPersonalYear.energy}
 
@@ -5884,11 +6396,25 @@ This isn't a flaw - it's their power source. The tension between these two drive
 
 <em>Career & Money:</em> ${deepPersonalYear.career}
 
-<em>Spiritual Focus:</em> ${deepPersonalYear.spiritual}
+<em>Spiritual Focus:</em> ${deepPersonalYear.spiritual}`;
+
+                // Add timing granularity
+                if (timingDetails) {
+                    personalYearContent += `
+
+<em>⏰ Power Timing:</em>
+• <strong>Peak Months:</strong> ${timingDetails.powerMonths.map(m => ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m-1]).join(', ')}
+• <strong>Daily Power Time:</strong> ${timingDetails.dailyPowerTime}
+• <strong>Seasonal Pattern:</strong> ${timingDetails.seasonalPattern}`;
+                }
+
+                personalYearContent += `
 
 <em>Guidance:</em> ${deepPersonalYear.advice}
 
-<em>Affirmation:</em> "${deepPersonalYear.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+<em>Affirmation:</em> "${deepPersonalYear.affirmation}"`;
+
+                personalYearContent = personalYearContent.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
                 
                 numbersSection.appendChild(createReadingCard(
                     deepPersonalYear.title,
@@ -6292,6 +6818,27 @@ This isn't a flaw - it's their power source. The tension between these two drive
                         []
                     ));
                     
+                    // Add Vertex Activation Timing
+                    if (typeof analyzeVertexActivation === 'function') {
+                        const vertexActivation = analyzeVertexActivation(readings);
+                        if (vertexActivation) {
+                            let activationContent = vertexActivation.generalReading.replace(/\n\n/g, '</p><p>');
+                            
+                            if (vertexActivation.signSpecific) {
+                                activationContent += `<p><strong>Your Vertex in ${vertexActivation.vertexSign}:</strong> ${vertexActivation.signSpecific}</p>`;
+                            }
+                            
+                            vertexSection.appendChild(createReadingCard(
+                                'Vertex Activation Timing',
+                                `When Destiny Activates for ${userData.name}`,
+                                ['Fated Timing', 'Destined Encounters', 'Activation Periods'],
+                                activationContent,
+                                ['Fated meetings feel like recognition, not surprise'],
+                                []
+                            ));
+                        }
+                    }
+                    
                     vertexSectionWrapper.appendChild(vertexSection);
                     container.appendChild(vertexSectionWrapper);
                 }
@@ -6377,6 +6924,59 @@ This isn't a flaw - it's their power source. The tension between these two drive
             // Add AdSense slot (disabled)
             const ad5 = createAdSlot();
             if (ad5) container.appendChild(ad5);
+            
+
+            // ============================================
+            // SECTION: AGE-SPECIFIC LIFE TIMELINE
+            // ============================================
+            if (typeof generateAgeTimeline === 'function') {
+                const ageTimeline = generateAgeTimeline(readings, userData.birthDate);
+                
+                if (ageTimeline && ageTimeline.length > 0) {
+                    const timelineSectionWrapper = document.createElement('div');
+                    timelineSectionWrapper.className = 'reading-section';
+                    const timelineSection = createCustomSection(
+                        'age-timeline',
+                        '',
+                        'Life Timeline',
+                        `Key cosmic milestones and phases across ${userData.name}'s lifetime`
+                    );
+                    
+                    ageTimeline.forEach(phase => {
+                        let phaseContent = `<p>${phase.reading}</p>`;
+                        
+                        if (phase.signContext) {
+                            phaseContent += `<p><em>${phase.signContext}</em></p>`;
+                        }
+                        
+                        if (phase.personalYearNote) {
+                            phaseContent += `<p><strong>Current Energy:</strong> ${phase.personalYearNote}</p>`;
+                        }
+                        
+                        // Visual status indicator
+                        let statusLabel = '';
+                        if (phase.status === 'current') {
+                            statusLabel = ' (YOU ARE HERE)';
+                        } else if (phase.status === 'completed') {
+                            statusLabel = ' (Completed)';
+                        } else {
+                            statusLabel = ` (${phase.startYear}-${phase.endYear})`;
+                        }
+                        
+                        timelineSection.appendChild(createReadingCard(
+                            phase.title,
+                            phase.description + statusLabel,
+                            phase.status === 'current' ? ['Active Phase', 'Current Focus'] : ['Life Phase', 'Development'],
+                            phaseContent,
+                            [],
+                            []
+                        ));
+                    });
+                    
+                    timelineSectionWrapper.appendChild(timelineSection);
+                    container.appendChild(timelineSectionWrapper);
+                }
+            }
             
             // ============================================
             // SECTION 9: LIFE SYNTHESIS - Major Life Blueprints

@@ -310,7 +310,7 @@ function calculatePersonalYear(birthDate, referenceDate = new Date()) {
     const { day, month } = parseBirthDate(birthDate);
     
     // Personal Year runs from birthday to birthday, not calendar year
-    // If the birthday hasn't occurred yet this year, use last year's cycle
+    // Formula: Birth Month + Birth Day + Current Year (all reduced to single digits)
     let currentYear, currentMonth, currentDay;
     
     if (typeof referenceDate === 'number') {
@@ -325,14 +325,61 @@ function calculatePersonalYear(birthDate, referenceDate = new Date()) {
     }
     
     // Determine which Personal Year cycle we're in
+    // If birthday hasn't occurred yet this year, still in previous year's cycle
     let cycleYear = currentYear;
     if (currentMonth < month || (currentMonth === month && currentDay < day)) {
-        // Birthday hasn't happened yet this year, still in previous cycle
         cycleYear = currentYear - 1;
     }
     
-    const sum = reduceToSingleDigit(day) + reduceToSingleDigit(month) + reduceToSingleDigit(cycleYear);
+    // CORRECT METHOD: Reduce each component separately, then add
+    // Birth Month + Birth Day + Year (reduced) = Personal Year
+    const reducedMonth = reduceToSingleDigit(month, false);
+    const reducedDay = reduceToSingleDigit(day, false);
+    const reducedYear = reduceToSingleDigit(cycleYear, false);
+    
+    const sum = reducedMonth + reducedDay + reducedYear;
     return reduceToSingleDigit(sum, true);
+}
+
+// Enhanced calculation showing methodology for transparency
+function calculatePersonalYearWithDetails(birthDate, referenceDate = new Date()) {
+    const { day, month } = parseBirthDate(birthDate);
+    
+    let currentYear;
+    let currentMonth, currentDay;
+    
+    if (typeof referenceDate === 'number') {
+        currentYear = referenceDate;
+        currentMonth = new Date().getMonth() + 1;
+        currentDay = new Date().getDate();
+    } else {
+        currentYear = referenceDate.getFullYear();
+        currentMonth = referenceDate.getMonth() + 1;
+        currentDay = referenceDate.getDate();
+    }
+    
+    let cycleYear = currentYear;
+    if (currentMonth < month || (currentMonth === month && currentDay < day)) {
+        cycleYear = currentYear - 1;
+    }
+    
+    const reducedMonth = reduceToSingleDigit(month, false);
+    const reducedDay = reduceToSingleDigit(day, false);
+    const reducedYear = reduceToSingleDigit(cycleYear, false);
+    const sum = reducedMonth + reducedDay + reducedYear;
+    const personalYear = reduceToSingleDigit(sum, true);
+    
+    return {
+        personalYear,
+        cycleYear,
+        calculation: {
+            month: { original: month, reduced: reducedMonth },
+            day: { original: day, reduced: reducedDay },
+            year: { original: cycleYear, reduced: reducedYear },
+            sum: sum,
+            formula: `${reducedMonth} (month) + ${reducedDay} (day) + ${reducedYear} (${cycleYear}) = ${sum} = ${personalYear}`
+        }
+    };
 }
 
 function calculatePersonalMonth(birthDate, currentYear, currentMonth) {
@@ -587,7 +634,7 @@ function calculateRisingSign(birthDate, birthTime, location = 'default') {
     // Rising sign (Ascendant) calculation using RAMC method
     // More accurate than direct atan2 approach
     if (!birthTime) {
-        return { name: 'Desconocido', note: 'Se requiere hora de nacimiento para calcular el Signo Ascendente' };
+        return { name: 'Unknown', note: 'Birth time required for accurate Rising Sign' };
     }
     
     const locationData = findLocation(location);
@@ -1021,7 +1068,7 @@ function calculateLilith(birthDate) {
 
 function calculateMidheaven(birthDate, birthTime, location = 'default') {
     if (!birthTime) {
-        return { name: 'Desconocido', note: 'Se requiere hora de nacimiento' };
+        return { name: 'Unknown', note: 'Birth time required' };
     }
     
     // MC calculation using RAMC (Right Ascension of Midheaven)
@@ -1142,13 +1189,13 @@ function calculateVertex(birthDate, birthTime, location = 'default') {
     // The Vertex is roughly opposite to the Ascendant + 6 houses, adjusted by co-latitude
     
     if (!birthTime) {
-        return { name: 'Desconocido', note: 'Se requiere hora de nacimiento' };
+        return { name: 'Unknown', note: 'Birth time required' };
     }
     
     // Get the Ascendant first
     const risingSign = calculateRisingSign(birthDate, birthTime, location);
-    if (!risingSign || risingSign.name === 'Desconocido') {
-        return { name: 'Desconocido', note: 'No se pudo calcular' };
+    if (!risingSign || risingSign.name === 'Unknown') {
+        return { name: 'Unknown', note: 'Unable to calculate' };
     }
     
     // The Vertex is typically in the 5th, 6th, 7th, or 8th house

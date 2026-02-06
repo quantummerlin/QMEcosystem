@@ -5966,6 +5966,24 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                     [`Their heart speaks: ${blueprint.essence}`, `They naturally attract: ${blueprint.attracted}`],
                     []
                 ));
+                
+                // Add expanded Relationship Style analysis
+                if (typeof analyzeRelationshipStyle === 'function') {
+                    const relStyle = analyzeRelationshipStyle(readings);
+                    if (relStyle && relStyle.sections.length > 0) {
+                        relStyle.sections.forEach(section => {
+                            let relContent = section.content.replace(/\n\n/g, '</p><p>');
+                            celestialSection.appendChild(createReadingCard(
+                                section.subtitle,
+                                'Relationship Style Analysis',
+                                ['Love Style', 'Attraction Patterns', 'Partnership'],
+                                relContent,
+                                [],
+                                []
+                            ));
+                        });
+                    }
+                }
             }
             
             // ============================================
@@ -6020,6 +6038,13 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                             if (concentration.reading.integration) {
                                 concentrationContent += `<p><strong>Integration Path:</strong> ${concentration.reading.integration}</p>`;
                             }
+                            if (concentration.reading.practicalAdvice && concentration.reading.practicalAdvice.length > 0) {
+                                concentrationContent += '<p><strong>Practical Steps:</strong></p><ul>';
+                                concentration.reading.practicalAdvice.forEach(advice => {
+                                    concentrationContent += `<li>${advice}</li>`;
+                                });
+                                concentrationContent += '</ul>';
+                            }
                             
                             celestialSection.appendChild(createReadingCard(
                                 concentration.reading.title,
@@ -6030,6 +6055,46 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                                 [concentration.reading.shadow || '']
                             ));
                         }
+                    });
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: STELLIUM INTEGRATION
+            // Cross-reference multiple house stelliums
+            // ============================================
+            if (typeof analyzeStelliumIntegration === 'function') {
+                const stelliumIntegrations = analyzeStelliumIntegration(readings);
+                
+                if (stelliumIntegrations && stelliumIntegrations.length > 0) {
+                    const integrationHeader = document.createElement('div');
+                    integrationHeader.className = 'section-divider';
+                    integrationHeader.innerHTML = '<h3>House Stellium Synthesis</h3><p>How your multiple stelliums work together as a unified life theme</p>';
+                    celestialSection.appendChild(integrationHeader);
+                    
+                    stelliumIntegrations.forEach(integration => {
+                        let integrationContent = integration.reading.replace(/\n\n/g, '</p><p>');
+                        
+                        if (integration.guidance) {
+                            integrationContent += `<p><strong>Key Guidance:</strong> ${integration.guidance}</p>`;
+                        }
+                        
+                        if (integration.practicalSteps && integration.practicalSteps.length > 0) {
+                            integrationContent += '<p><strong>Practical Steps:</strong></p><ul>';
+                            integration.practicalSteps.forEach(step => {
+                                integrationContent += `<li>${step}</li>`;
+                            });
+                            integrationContent += '</ul>';
+                        }
+                        
+                        celestialSection.appendChild(createReadingCard(
+                            integration.title,
+                            integration.subtitle || 'Stellium Synthesis',
+                            integration.keywords || ['Integration', 'Synthesis', 'Life Theme'],
+                            integrationContent,
+                            [],
+                            []
+                        ));
                     });
                 }
             }
@@ -6655,13 +6720,23 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 // Create comprehensive Personal Year reading from deep content
                 let personalYearContent = `<strong>${deepPersonalYear.theme}</strong>`;
                 
-                // Add calculation methodology
+                // Add calculation methodology with birthday-to-birthday timing
                 if (personalYearDetails) {
+                    // Calculate the birthday-to-birthday cycle dates
+                    const birthParts = userData.birthDate.split('-');
+                    const birthMonth = parseInt(birthParts[1]);
+                    const birthDay = parseInt(birthParts[2]);
+                    const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+                    const cycleStart = `${monthNames[birthMonth-1]} ${birthDay}, ${personalYearDetails.cycleYear}`;
+                    const cycleEnd = `${monthNames[birthMonth-1]} ${birthDay - 1 > 0 ? birthDay - 1 : birthDay}, ${personalYearDetails.cycleYear + 1}`;
+                    
                     personalYearContent += `
 <div class="calc-methodology">
 <p><strong>📊 Calculation Method:</strong></p>
 <p><em>${personalYearDetails.calculation.formula}</em></p>
 <p class="calc-note">Personal Year = Birth Month + Birth Day + Current Year (each reduced)</p>
+<p><strong>🗓 Your Cycle Period:</strong> ${cycleStart} through ${cycleEnd}</p>
+<p class="calc-note">Personal Year cycles run from birthday to birthday, not January to January. This year's energy began on your last birthday and shifts on your next one.</p>
 </div>`;
                 }
                 
@@ -7109,6 +7184,27 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                         []
                     ));
                     
+                    // Add Vertex Activation Timing
+                    if (typeof analyzeVertexActivation === 'function') {
+                        const vertexActivation = analyzeVertexActivation(readings);
+                        if (vertexActivation) {
+                            let activationContent = vertexActivation.generalReading.replace(/\n\n/g, '</p><p>');
+                            
+                            if (vertexActivation.signSpecific) {
+                                activationContent += `<p><strong>Your Vertex in ${vertexActivation.vertexSign}:</strong> ${vertexActivation.signSpecific}</p>`;
+                            }
+                            
+                            vertexSection.appendChild(createReadingCard(
+                                'Vertex Activation Timing',
+                                `When Destiny Activates for ${userData.name}`,
+                                ['Fated Timing', 'Destined Encounters', 'Activation Periods'],
+                                activationContent,
+                                ['Fated meetings feel like recognition, not surprise'],
+                                []
+                            ));
+                        }
+                    }
+                    
                     vertexSectionWrapper.appendChild(vertexSection);
                     container.appendChild(vertexSectionWrapper);
                 }
@@ -7194,6 +7290,58 @@ Growth doesn't come from eliminating this tension — it comes from using it con
             // Add AdSense slot (disabled)
             const ad5 = createAdSlot();
             if (ad5) container.appendChild(ad5);
+            
+            // ============================================
+            // SECTION: AGE-SPECIFIC LIFE TIMELINE
+            // ============================================
+            if (typeof generateAgeTimeline === 'function') {
+                const ageTimeline = generateAgeTimeline(readings, userData.birthDate);
+                
+                if (ageTimeline && ageTimeline.length > 0) {
+                    const timelineSectionWrapper = document.createElement('div');
+                    timelineSectionWrapper.className = 'reading-section';
+                    const timelineSection = createCustomSection(
+                        'age-timeline',
+                        '',
+                        'Life Timeline',
+                        `Key cosmic milestones and phases across ${userData.name}'s lifetime`
+                    );
+                    
+                    ageTimeline.forEach(phase => {
+                        let phaseContent = `<p>${phase.reading}</p>`;
+                        
+                        if (phase.signContext) {
+                            phaseContent += `<p><em>${phase.signContext}</em></p>`;
+                        }
+                        
+                        if (phase.personalYearNote) {
+                            phaseContent += `<p><strong>Current Energy:</strong> ${phase.personalYearNote}</p>`;
+                        }
+                        
+                        // Visual status indicator
+                        let statusLabel = '';
+                        if (phase.status === 'current') {
+                            statusLabel = ' (YOU ARE HERE)';
+                        } else if (phase.status === 'completed') {
+                            statusLabel = ' (Completed)';
+                        } else {
+                            statusLabel = ` (${phase.startYear}-${phase.endYear})`;
+                        }
+                        
+                        timelineSection.appendChild(createReadingCard(
+                            phase.title,
+                            phase.description + statusLabel,
+                            phase.status === 'current' ? ['Active Phase', 'Current Focus'] : ['Life Phase', 'Development'],
+                            phaseContent,
+                            [],
+                            []
+                        ));
+                    });
+                    
+                    timelineSectionWrapper.appendChild(timelineSection);
+                    container.appendChild(timelineSectionWrapper);
+                }
+            }
             
             // ============================================
             // SECTION 9: LIFE SYNTHESIS - Major Life Blueprints

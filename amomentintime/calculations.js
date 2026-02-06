@@ -310,7 +310,7 @@ function calculatePersonalYear(birthDate, referenceDate = new Date()) {
     const { day, month } = parseBirthDate(birthDate);
     
     // Personal Year runs from birthday to birthday, not calendar year
-    // If the birthday hasn't occurred yet this year, use last year's cycle
+    // Formula: Birth Month + Birth Day + Current Year (all reduced to single digits)
     let currentYear, currentMonth, currentDay;
     
     if (typeof referenceDate === 'number') {
@@ -325,14 +325,61 @@ function calculatePersonalYear(birthDate, referenceDate = new Date()) {
     }
     
     // Determine which Personal Year cycle we're in
+    // If birthday hasn't occurred yet this year, still in previous year's cycle
     let cycleYear = currentYear;
     if (currentMonth < month || (currentMonth === month && currentDay < day)) {
-        // Birthday hasn't happened yet this year, still in previous cycle
         cycleYear = currentYear - 1;
     }
     
-    const sum = reduceToSingleDigit(day) + reduceToSingleDigit(month) + reduceToSingleDigit(cycleYear);
+    // CORRECT METHOD: Reduce each component separately, then add
+    // Birth Month + Birth Day + Year (reduced) = Personal Year
+    const reducedMonth = reduceToSingleDigit(month, false);
+    const reducedDay = reduceToSingleDigit(day, false);
+    const reducedYear = reduceToSingleDigit(cycleYear, false);
+    
+    const sum = reducedMonth + reducedDay + reducedYear;
     return reduceToSingleDigit(sum, true);
+}
+
+// Enhanced calculation showing methodology for transparency
+function calculatePersonalYearWithDetails(birthDate, referenceDate = new Date()) {
+    const { day, month } = parseBirthDate(birthDate);
+    
+    let currentYear;
+    let currentMonth, currentDay;
+    
+    if (typeof referenceDate === 'number') {
+        currentYear = referenceDate;
+        currentMonth = new Date().getMonth() + 1;
+        currentDay = new Date().getDate();
+    } else {
+        currentYear = referenceDate.getFullYear();
+        currentMonth = referenceDate.getMonth() + 1;
+        currentDay = referenceDate.getDate();
+    }
+    
+    let cycleYear = currentYear;
+    if (currentMonth < month || (currentMonth === month && currentDay < day)) {
+        cycleYear = currentYear - 1;
+    }
+    
+    const reducedMonth = reduceToSingleDigit(month, false);
+    const reducedDay = reduceToSingleDigit(day, false);
+    const reducedYear = reduceToSingleDigit(cycleYear, false);
+    const sum = reducedMonth + reducedDay + reducedYear;
+    const personalYear = reduceToSingleDigit(sum, true);
+    
+    return {
+        personalYear,
+        cycleYear,
+        calculation: {
+            month: { original: month, reduced: reducedMonth },
+            day: { original: day, reduced: reducedDay },
+            year: { original: cycleYear, reduced: reducedYear },
+            sum: sum,
+            formula: `${reducedMonth} (month) + ${reducedDay} (day) + ${reducedYear} (${cycleYear}) = ${sum} = ${personalYear}`
+        }
+    };
 }
 
 function calculatePersonalMonth(birthDate, currentYear, currentMonth) {
