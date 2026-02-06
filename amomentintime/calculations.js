@@ -455,26 +455,46 @@ function calculateHiddenPassion(fullName) {
     return passion;
 }
 
-function calculateKarmicDebt(lifePath, destiny, soulUrge, personality) {
+function calculateKarmicDebt(birthDate, fullName) {
     const karmicNumbers = [13, 14, 16, 19];
     const debts = [];
     
-    // Check if any core numbers reduce from karmic numbers
-    const checkKarmic = (num) => {
-        for (const karmic of karmicNumbers) {
-            if (reduceToSingleDigit(karmic, false) === num) {
-                return karmic;
+    // Helper: check if a number passes through any karmic number during reduction
+    const findKarmicInChain = (num) => {
+        const found = [];
+        while (num > 9) {
+            if ([11, 22, 33].includes(num)) break; // Master numbers stop the chain
+            if (karmicNumbers.includes(num)) {
+                found.push(num);
             }
+            num = String(num).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
         }
-        return null;
+        return found;
     };
     
-    // Simplified check - just return if life path suggests karmic lessons
-    if ([4, 5, 7, 1].includes(lifePath)) {
-        return { hasDebt: true, numbers: [lifePath === 4 ? 13 : lifePath === 5 ? 14 : lifePath === 7 ? 16 : 19] };
+    // Life Path: sum of individually reduced month + day + year
+    const { day, month, year } = parseBirthDate(birthDate);
+    const lifePathSum = reduceToSingleDigit(month) + reduceToSingleDigit(day) + reduceToSingleDigit(year);
+    findKarmicInChain(lifePathSum).forEach(k => { if (!debts.includes(k)) debts.push(k); });
+    
+    // Birthday: check if birth day itself is a karmic number (13th, 14th, 16th, 19th)
+    if (karmicNumbers.includes(day)) {
+        if (!debts.includes(day)) debts.push(day);
     }
     
-    return { hasDebt: false, numbers: [] };
+    // Destiny/Expression: total sum of all letters in full name
+    const destinySum = nameToNumber(fullName.replace(/[^a-zA-Z]/g, ''));
+    findKarmicInChain(destinySum).forEach(k => { if (!debts.includes(k)) debts.push(k); });
+    
+    // Soul Urge: sum of vowels
+    const soulUrgeSum = nameToNumber(getVowels(fullName));
+    findKarmicInChain(soulUrgeSum).forEach(k => { if (!debts.includes(k)) debts.push(k); });
+    
+    // Personality: sum of consonants
+    const personalitySum = nameToNumber(getConsonants(fullName));
+    findKarmicInChain(personalitySum).forEach(k => { if (!debts.includes(k)) debts.push(k); });
+    
+    return { hasDebt: debts.length > 0, numbers: debts };
 }
 
 function calculateMasterNumber(lifePath, destiny, soulUrge) {
@@ -1561,7 +1581,7 @@ function calculateAllReadings(userData) {
     const pinnacles = calculatePinnacles(birthDate);
     const challenges = calculateChallenges(birthDate);
     const hiddenPassion = calculateHiddenPassion(name);
-    const karmicDebt = calculateKarmicDebt(lifePath, destiny, soulUrge, personality);
+    const karmicDebt = calculateKarmicDebt(birthDate, name);
     const masterNumbers = calculateMasterNumber(lifePath, destiny, soulUrge);
     
     // Astrology - now with location awareness
