@@ -6384,6 +6384,99 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 }
             }
             
+            // ============================================
+            // ADVANCED ANALYSIS: CAREER PATH SCENARIOS
+            // ============================================
+            if (typeof analyzeCareerSynthesis === 'function') {
+                const careerSynthesis = analyzeCareerSynthesis(readings);
+                
+                if (careerSynthesis && careerSynthesis.scenarios.length > 0) {
+                    const careerHeader = document.createElement('div');
+                    careerHeader.className = 'section-divider';
+                    careerHeader.innerHTML = '<h3>💼 Career Path Scenarios</h3><p>Real-world career paths aligned with this unique chart</p>';
+                    celestialSection.appendChild(careerHeader);
+                    
+                    let careerContent = `<p>${careerSynthesis.summary}</p>`;
+                    
+                    careerSynthesis.scenarios.forEach((scenario, idx) => {
+                        careerContent += `<p><strong>${idx + 1}. ${scenario.title}</strong><br>`;
+                        careerContent += `<em>Domain:</em> ${scenario.domain}<br>`;
+                        careerContent += `<em>Why it works:</em> ${scenario.why}<br>`;
+                        careerContent += `<em>Best approach:</em> ${scenario.signNote}</p>`;
+                    });
+                    
+                    celestialSection.appendChild(createReadingCard(
+                        careerSynthesis.title,
+                        careerSynthesis.subtitle,
+                        ['Career', 'Vocation', 'Life Purpose', 'Professional Path'],
+                        careerContent,
+                        ['Natural alignment with chart energy'],
+                        ['May need to combine multiple paths for full satisfaction']
+                    ));
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: IDEAL PARTNER PROFILE
+            // ============================================
+            if (typeof analyzeIdealPartner === 'function') {
+                const partnerProfile = analyzeIdealPartner(readings);
+                
+                if (partnerProfile && partnerProfile.sections.length > 0) {
+                    const partnerHeader = document.createElement('div');
+                    partnerHeader.className = 'section-divider';
+                    partnerHeader.innerHTML = '<h3>💕 Ideal Partner Profile</h3><p>The relationship blueprint encoded in your chart</p>';
+                    celestialSection.appendChild(partnerHeader);
+                    
+                    let partnerContent = '';
+                    partnerProfile.sections.forEach(section => {
+                        partnerContent += `<p><strong>${section.title}</strong><br>${section.content}</p>`;
+                    });
+                    
+                    celestialSection.appendChild(createReadingCard(
+                        'Relationship Blueprint',
+                        'Who you attract and what you need in partnership',
+                        ['Partnership', 'Love', 'Compatibility', 'Attraction'],
+                        partnerContent,
+                        ['Deep self-awareness in relationships'],
+                        ['Remember that real people are more than their chart']
+                    ));
+                }
+            }
+            
+            // ============================================
+            // ADVANCED ANALYSIS: CHART TENSIONS
+            // ============================================
+            if (typeof analyzeChartTensions === 'function') {
+                const chartTensions = analyzeChartTensions(readings);
+                
+                if (chartTensions && chartTensions.length > 0) {
+                    const tensionHeader = document.createElement('div');
+                    tensionHeader.className = 'section-divider';
+                    tensionHeader.innerHTML = '<h3>⚡ Creative Tensions</h3><p>Opposing energies in your chart and how to integrate them</p>';
+                    celestialSection.appendChild(tensionHeader);
+                    
+                    chartTensions.forEach(tension => {
+                        let tensionContent = `<p>Your chart holds significant energy on both sides of the <strong>${tension.pole1.name}</strong> vs <strong>${tension.pole2.name}</strong> spectrum. This isn't a flaw - it's a creative tension that, once integrated, becomes your greatest strength.</p>`;
+                        
+                        tensionContent += `<p><strong>🌅 Daily Rhythm:</strong><br>${tension.resolution.daily}</p>`;
+                        tensionContent += `<p><strong>📅 Weekly Rhythm:</strong><br>${tension.resolution.weekly}</p>`;
+                        tensionContent += `<p><strong>🗓️ Yearly Rhythm:</strong><br>${tension.resolution.yearly}</p>`;
+                        tensionContent += `<p><strong>🌀 Life Rhythm:</strong><br>${tension.resolution.life}</p>`;
+                        tensionContent += `<p><strong>✨ The Integration:</strong><br>${tension.resolution.integration}</p>`;
+                        
+                        celestialSection.appendChild(createReadingCard(
+                            tension.title,
+                            `${tension.pole1.name.charAt(0).toUpperCase() + tension.pole1.name.slice(1)} (${tension.pole1.score.toFixed(1)}) meets ${tension.pole2.name.charAt(0).toUpperCase() + tension.pole2.name.slice(1)} (${tension.pole2.score.toFixed(1)})`,
+                            [tension.pole1.name, tension.pole2.name, 'Integration', 'Creative Tension'],
+                            tensionContent,
+                            ['Both sides become superpowers when integrated'],
+                            ['Feeling torn is normal - the rhythm resolves it']
+                        ));
+                    });
+                }
+            }
+            
             // Organize cards into sub-sections based on their content
             organizeCelestialSubSections(celestialSection, {
                 core: coreSubSection,

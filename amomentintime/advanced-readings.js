@@ -228,7 +228,10 @@ if (typeof module !== 'undefined' && module.exports) {
         analyzeHealthBlueprint,
         analyzeTeachingStyle,
         analyzePhilosophicalFramework,
-        analyzeBirthLocation
+        analyzeBirthLocation,
+        analyzeCareerSynthesis,
+        analyzeIdealPartner,
+        analyzeChartTensions
     };
 }
 
@@ -1686,4 +1689,402 @@ function analyzeRelationshipStyle(readings) {
     }
     
     return result.sections.length > 0 ? result : null;
+}
+
+// ============================================
+// CAREER SYNTHESIS ENGINE
+// Generates specific career path suggestions based
+// on house stelliums, sign emphasis, and key placements
+// ============================================
+
+var HOUSE_CAREER_THEMES = {
+    1: { domain: "Personal Branding & Leadership", paths: ["Personal coaching", "Fitness or image consulting", "Entrepreneurship", "Influencing or public-facing roles"], verb: "leading by personal example" },
+    2: { domain: "Finance & Value Creation", paths: ["Financial advising or planning", "Real estate investment", "Luxury goods or curation", "Art dealing or appraisal"], verb: "building and managing resources" },
+    3: { domain: "Communication & Media", paths: ["Writing, blogging, or journalism", "Social media management", "Teaching or tutoring", "Podcasting or broadcasting"], verb: "communicating and connecting ideas" },
+    4: { domain: "Home & Family Services", paths: ["Interior design or real estate", "Family therapy or counseling", "Hospitality or food industry", "Property management or renovation"], verb: "creating safe, nurturing spaces" },
+    5: { domain: "Creative Arts & Entertainment", paths: ["Performing arts or music", "Content creation or filmmaking", "Children's education or entertainment", "Game design or recreational programming"], verb: "creative expression and inspiring joy" },
+    6: { domain: "Health & Service Industries", paths: ["Healthcare or nutrition", "Veterinary services or animal care", "Quality assurance or consulting", "Wellness coaching or holistic health"], verb: "improving systems and serving others" },
+    7: { domain: "Partnership & Mediation", paths: ["Law or mediation", "Couples counseling", "Diplomatic or PR roles", "Business partnership ventures"], verb: "creating harmony between people" },
+    8: { domain: "Transformation & Shared Resources", paths: ["Psychology or therapy", "Financial management of others' assets", "Research or investigation", "Crisis management or hospice work"], verb: "facilitating deep transformation" },
+    9: { domain: "Education & Expansion", paths: ["Higher education or university teaching", "Travel industry or cross-cultural work", "Publishing or thought leadership", "Spiritual or philosophical teaching"], verb: "expanding horizons and sharing wisdom" },
+    10: { domain: "Executive Leadership & Legacy", paths: ["Corporate leadership or management", "Government or politics", "Architecture or urban planning", "Executive coaching or mentoring"], verb: "building lasting public achievement" },
+    11: { domain: "Technology & Humanitarian Work", paths: ["Tech innovation or software development", "Nonprofit leadership", "Community organizing", "Social entrepreneurship"], verb: "innovating for collective benefit" },
+    12: { domain: "Spirituality & Behind-the-Scenes", paths: ["Spiritual counseling or ministry", "Institutional care (hospitals, retreats)", "Music, art, or film production", "Research or archival work"], verb: "working with unseen dimensions" }
+};
+
+var SIGN_CAREER_FLAVORS = {
+    Aries: { style: "pioneering and competitive", modifier: "in fast-paced, first-to-market environments" },
+    Taurus: { style: "patient and quality-focused", modifier: "emphasizing craftsmanship, beauty, and lasting value" },
+    Gemini: { style: "versatile and communicative", modifier: "involving multiple projects, networking, and information exchange" },
+    Cancer: { style: "nurturing and intuitive", modifier: "centered on care, family needs, and emotional connection" },
+    Leo: { style: "creative and charismatic", modifier: "with visibility, performance, and inspiring leadership" },
+    Virgo: { style: "meticulous and service-oriented", modifier: "with attention to detail, efficiency, and practical improvement" },
+    Libra: { style: "collaborative and aesthetic", modifier: "through partnerships, beauty, and balanced approaches" },
+    Scorpio: { style: "intense and investigative", modifier: "involving depth, research, and transformative impact" },
+    Sagittarius: { style: "adventurous and philosophical", modifier: "with travel, teaching, and big-picture thinking" },
+    Capricorn: { style: "disciplined and ambitious", modifier: "building authority, structure, and long-term legacy" },
+    Aquarius: { style: "innovative and humanitarian", modifier: "using technology, community, and unconventional methods" },
+    Pisces: { style: "imaginative and compassionate", modifier: "through artistic vision, healing, and spiritual service" }
+};
+
+function analyzeCareerSynthesis(readings) {
+    if (!readings?.astrology) return null;
+
+    const planetHouses = readings.astrology.planetHouses || {};
+    const sunSign = readings.astrology.sunSign?.name;
+    const mcSign = readings.astrology.midheaven?.name || readings.astrology.mc?.name;
+
+    // Count planets per house
+    const houseCounts = {};
+    const houseDetails = {};
+    for (const [planet, house] of Object.entries(planetHouses)) {
+        if (house) {
+            houseCounts[house] = (houseCounts[house] || 0) + 1;
+            if (!houseDetails[house]) houseDetails[house] = [];
+            houseDetails[house].push(planet);
+        }
+    }
+
+    // Get house stelliums (3+) and strong houses (2+)
+    const stelliumHouses = [];
+    const strongHouses = [];
+    for (const [h, count] of Object.entries(houseCounts)) {
+        const hNum = parseInt(h);
+        if (count >= 3) stelliumHouses.push(hNum);
+        if (count >= 2) strongHouses.push(hNum);
+    }
+
+    if (stelliumHouses.length === 0 && strongHouses.length === 0) return null;
+
+    // Determine dominant sign energy
+    const signCounts = {};
+    if (readings.astrology.stelliums) {
+        readings.astrology.stelliums.forEach(s => {
+            signCounts[s.sign] = (signCounts[s.sign] || 0) + s.count;
+        });
+    }
+    if (sunSign) signCounts[sunSign] = (signCounts[sunSign] || 0) + 2;
+    const dominantSign = Object.entries(signCounts).sort((a, b) => b[1] - a[1])[0]?.[0];
+    const signFlavor = SIGN_CAREER_FLAVORS[dominantSign] || SIGN_CAREER_FLAVORS[sunSign] || { style: "unique", modifier: "in their own distinctive way" };
+
+    const scenarios = [];
+
+    // Build career scenarios by combining house themes
+    const primaryHouses = stelliumHouses.length > 0 ? stelliumHouses : strongHouses.slice(0, 2);
+
+    primaryHouses.forEach((h, idx) => {
+        const theme = HOUSE_CAREER_THEMES[h];
+        if (!theme) return;
+        const planets = houseDetails[h] || [];
+
+        // Create primary scenario
+        const scenario = {
+            title: theme.paths[0],
+            domain: theme.domain,
+            why: `${planets.join(', ')} in House ${h} creates natural talent for ${theme.verb}`,
+            signNote: `Their ${signFlavor.style} approach means this works best ${signFlavor.modifier}`
+        };
+        scenarios.push(scenario);
+    });
+
+    // Cross-pollinate: if 2+ stellium houses, create combo career
+    if (primaryHouses.length >= 2) {
+        const h1 = HOUSE_CAREER_THEMES[primaryHouses[0]];
+        const h2 = HOUSE_CAREER_THEMES[primaryHouses[1]];
+        if (h1 && h2) {
+            scenarios.push({
+                title: `${h1.domain} × ${h2.domain} Fusion`,
+                domain: "Cross-Domain Innovation",
+                why: `The rare combination of House ${primaryHouses[0]} (${h1.verb}) and House ${primaryHouses[1]} (${h2.verb}) creates a unique career sweet spot`,
+                signNote: `Best expressed ${signFlavor.modifier}`
+            });
+        }
+    }
+
+    // Add MC-based scenario if available
+    if (mcSign && SIGN_CAREER_FLAVORS[mcSign]) {
+        const mcFlavor = SIGN_CAREER_FLAVORS[mcSign];
+        scenarios.push({
+            title: `${mcSign} Midheaven Path`,
+            domain: "Public Reputation & Calling",
+            why: `With ${mcSign} at the Midheaven, the public role is ${mcFlavor.style}`,
+            signNote: `Career fulfilment comes ${mcFlavor.modifier}`
+        });
+    }
+
+    return {
+        title: "Career Path Scenarios",
+        subtitle: "Real-world paths aligned with this chart",
+        dominantSign: dominantSign,
+        signFlavor: signFlavor,
+        scenarios: scenarios,
+        primaryHouses: primaryHouses,
+        summary: stelliumHouses.length > 0
+            ? `With stellium energy concentrated in House${stelliumHouses.length > 1 ? 's' : ''} ${stelliumHouses.join(' & ')}, career fulfilment comes through ${stelliumHouses.map(h => HOUSE_CAREER_THEMES[h]?.verb || 'focused purpose').join(' combined with ')}. The ${signFlavor.style} nature means this works best ${signFlavor.modifier}.`
+            : `Strong planetary focus in House${strongHouses.slice(0, 2).length > 1 ? 's' : ''} ${strongHouses.slice(0, 2).join(' & ')} points toward ${strongHouses.slice(0, 2).map(h => HOUSE_CAREER_THEMES[h]?.verb || 'focused purpose').join(' and ')}.`
+    };
+}
+
+// ============================================
+// IDEAL PARTNER PROFILE GENERATOR
+// Builds a dynamic partner profile from Descendant,
+// Venus, Mars, Moon, and 7th House placements
+// ============================================
+
+var SIGN_PARTNER_QUALITIES = {
+    Aries: { qualities: "bold, independent, energetic, courageous", lifestyle: "active, adventurous, spontaneous", warning: "Can be too impulsive or competitive; may clash with need for calm" },
+    Taurus: { qualities: "stable, sensual, patient, reliable", lifestyle: "comfort-loving, nature-connected, routine-oriented", warning: "Can be too stubborn or possessive; may resist necessary change" },
+    Gemini: { qualities: "witty, curious, adaptable, communicative", lifestyle: "socially active, intellectually stimulating, variety-seeking", warning: "Can be too scattered or non-committal; may struggle with emotional depth" },
+    Cancer: { qualities: "nurturing, emotionally deep, protective, intuitive", lifestyle: "home-centered, family-focused, emotionally available", warning: "Can be too clingy or moody; may take things too personally" },
+    Leo: { qualities: "warm, generous, creative, confident", lifestyle: "expressive, socially magnetic, celebration-oriented", warning: "Can be too attention-seeking or dramatic; may need constant validation" },
+    Virgo: { qualities: "thoughtful, detail-oriented, helpful, health-conscious", lifestyle: "organized, wellness-focused, self-improving", warning: "Can be too critical or perfectionistic; may overthink emotions" },
+    Libra: { qualities: "charming, fair-minded, romantic, harmonious", lifestyle: "beauty-appreciating, socially graceful, partnership-oriented", warning: "Can be too indecisive or conflict-avoidant; may suppress true feelings for peace" },
+    Scorpio: { qualities: "intense, loyal, perceptive, emotionally brave", lifestyle: "deeply private, transformation-seeking, all-or-nothing", warning: "Can be too controlling or secretive; may test loyalty to extremes" },
+    Sagittarius: { qualities: "adventurous, optimistic, honest, philosophical", lifestyle: "travel-loving, growth-seeking, freedom-valuing", warning: "Can be too restless or blunt; may struggle with routine or emotional nuance" },
+    Capricorn: { qualities: "ambitious, responsible, disciplined, provider-type", lifestyle: "goal-oriented, structured, tradition-respecting", warning: "Can be too rigid or emotionally guarded; may prioritize work over connection" },
+    Aquarius: { qualities: "unique, intellectual, humanitarian, independent", lifestyle: "unconventional, community-minded, future-focused", warning: "Can be too detached or emotionally distant; may intellectualize feelings" },
+    Pisces: { qualities: "compassionate, creative, spiritual, empathetic", lifestyle: "artistic, intuition-led, spiritually open", warning: "Can be too escapist or boundary-less; may idealize partners unrealistically" }
+};
+
+var SIGN_COMPLEMENTS = {
+    Aries: "Libra", Taurus: "Scorpio", Gemini: "Sagittarius", Cancer: "Capricorn",
+    Leo: "Aquarius", Virgo: "Pisces", Libra: "Aries", Scorpio: "Taurus",
+    Sagittarius: "Gemini", Capricorn: "Cancer", Aquarius: "Leo", Pisces: "Virgo"
+};
+
+var ELEMENT_MAP = {
+    Aries: "Fire", Taurus: "Earth", Gemini: "Air", Cancer: "Water",
+    Leo: "Fire", Virgo: "Earth", Libra: "Air", Scorpio: "Water",
+    Sagittarius: "Fire", Capricorn: "Earth", Aquarius: "Air", Pisces: "Water"
+};
+
+function analyzeIdealPartner(readings) {
+    if (!readings?.astrology) return null;
+
+    const descendantSign = readings.astrology.descendant?.name;
+    const venusSign = readings.astrology.venus?.name;
+    const marsSign = readings.astrology.mars?.name;
+    const moonSign = readings.astrology.moonSign?.name;
+    const sunSign = readings.astrology.sunSign?.name;
+    const risingSign = readings.astrology.risingSign?.name;
+
+    if (!descendantSign && !venusSign) return null;
+
+    const result = { sections: [] };
+
+    // 1. Core partner profile from Descendant
+    if (descendantSign && SIGN_PARTNER_QUALITIES[descendantSign]) {
+        const descData = SIGN_PARTNER_QUALITIES[descendantSign];
+        result.sections.push({
+            title: `${descendantSign} Descendant - Who You Attract`,
+            content: `The 7th House cusp in ${descendantSign} reveals the qualities most needed in a life partner. You naturally attract and are drawn to people who are ${descData.qualities}. An ideal partner's lifestyle is ${descData.lifestyle}. This reflects qualities that complement your own ${risingSign || sunSign || ''} energy - what you admire in others is often what you're learning to integrate in yourself.`
+        });
+    }
+
+    // 2. Emotional security needs from Moon
+    if (moonSign && SIGN_PARTNER_QUALITIES[moonSign]) {
+        const moonData = SIGN_PARTNER_QUALITIES[moonSign];
+        result.sections.push({
+            title: `Moon in ${moonSign} - Emotional Security Needs`,
+            content: `For emotional safety in partnership, the Moon in ${moonSign} needs a partner who is ${moonData.qualities}. The ideal home life together is ${moonData.lifestyle}. Without this emotional foundation, no amount of attraction will sustain the relationship long-term.`
+        });
+    }
+
+    // 3. Venus love language
+    if (venusSign && RELATIONSHIP_STYLE_READINGS.byVenusSign[venusSign]) {
+        const venusData = RELATIONSHIP_STYLE_READINGS.byVenusSign[venusSign];
+        result.sections.push({
+            title: `Venus in ${venusSign} - Love Language`,
+            content: `Venus shows how love is given and received. ${venusData.loveStyle} Attraction pattern: ${venusData.attractionPattern}`
+        });
+    }
+
+    // 4. Mars chemistry
+    if (marsSign && SIGN_PARTNER_QUALITIES[marsSign]) {
+        const marsData = SIGN_PARTNER_QUALITIES[marsSign];
+        result.sections.push({
+            title: `Mars in ${marsSign} - Chemistry & Pursuit`,
+            content: `Mars reveals what ignites passion and how pursuit works. With Mars in ${marsSign}, chemistry sparks with someone who is ${marsData.qualities}. The pursuit style is ${marsData.lifestyle}. Physical and energetic compatibility flows best when these qualities are present.`
+        });
+    }
+
+    // 5. Composite ideal profile
+    const keySignals = [descendantSign, moonSign, venusSign].filter(Boolean);
+    const elements = keySignals.map(s => ELEMENT_MAP[s]).filter(Boolean);
+    const elementCounts = {};
+    elements.forEach(e => elementCounts[e] = (elementCounts[e] || 0) + 1);
+    const dominantElement = Object.entries(elementCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || 'balanced';
+
+    const idealQualities = keySignals
+        .map(s => SIGN_PARTNER_QUALITIES[s]?.qualities)
+        .filter(Boolean)
+        .join(', ')
+        .split(', ');
+    const uniqueQualities = [...new Set(idealQualities)].slice(0, 6);
+
+    result.sections.push({
+        title: "Composite Ideal Partner Profile",
+        content: `Combining all relationship indicators, the ideal partner carries a strong ${dominantElement} element emphasis with qualities including: ${uniqueQualities.join(', ')}. ${descendantSign ? `A partner with ${descendantSign} Sun or Rising would strongly activate the Descendant.` : ''} ${moonSign ? `A ${moonSign} Moon or ${SIGN_COMPLEMENTS[moonSign] || 'compatible'} Moon provides the deepest emotional security.` : ''} The relationship thrives when both partners honour each other's need for ${keySignals.map(s => SIGN_PARTNER_QUALITIES[s]?.lifestyle?.split(',')[0]).filter(Boolean).join(', ')}.`
+    });
+
+    // 6. Red flags
+    const redFlagSigns = [];
+    if (moonSign) {
+        const moonElement = ELEMENT_MAP[moonSign];
+        const clashElements = { Fire: 'Water', Water: 'Fire', Earth: 'Air', Air: 'Earth' };
+        const clashElement = clashElements[moonElement];
+        if (clashElement) {
+            const clashSigns = Object.entries(ELEMENT_MAP).filter(([s, e]) => e === clashElement).map(([s]) => s);
+            redFlagSigns.push(...clashSigns.slice(0, 2));
+        }
+    }
+    if (redFlagSigns.length > 0) {
+        result.sections.push({
+            title: "Compatibility Challenges",
+            content: `Partners with strong ${redFlagSigns.join(' or ')} energy may create friction - not because these signs are inherently incompatible, but because their core needs can clash with the emotional security patterns here. These partnerships require extra conscious effort to bridge elemental differences. The key is understanding each other's emotional language rather than assuming one way is "right."`
+        });
+    }
+
+    return result;
+}
+
+// ============================================
+// CHART TENSION RESOLVER
+// Detects opposing chart energies and generates
+// rhythm-based integration guidance
+// ============================================
+
+var ENERGY_AXES = {
+    "stability-adventure": {
+        title: "The Stability-Adventure Paradox",
+        signs: { stability: ["Taurus", "Cancer", "Virgo", "Capricorn"], adventure: ["Sagittarius", "Aries", "Gemini", "Aquarius"] },
+        houses: { stability: [2, 4, 6], adventure: [3, 9, 11] },
+        resolution: {
+            daily: "Morning: Stable routine, grounding practices. Midday: Expansive work, creative exploration. Evening: Return to comfort, familiar spaces.",
+            weekly: "Weekdays: Steady, focused work and building. Weekends: Exploration, learning, new experiences.",
+            yearly: "Most of the year: Deep, consistent work building foundations. A few months: Travel, study, horizon-expanding adventures.",
+            life: "Build a secure base, then launch adventures FROM that base. Return to integrate what was learned. Expand the base with new wisdom. Repeat.",
+            integration: "This soul isn't choosing between stability and adventure - they're creating a life where stability ENABLES adventure, and adventure ENRICHES stability. The home base is the launchpad, not the prison."
+        }
+    },
+    "independence-partnership": {
+        title: "The Independence-Partnership Paradox",
+        signs: { independence: ["Aries", "Aquarius", "Sagittarius"], partnership: ["Libra", "Cancer", "Pisces"] },
+        houses: { independence: [1, 11], partnership: [7, 4, 8] },
+        resolution: {
+            daily: "Solo time for independent projects. Shared time for connection and collaboration. Neither dominates the whole day.",
+            weekly: "Dedicated alone time for personal pursuits. Dedicated together time for deep relating. Both are non-negotiable.",
+            yearly: "Periods of intense togetherness balanced with periods of personal adventure or solo projects.",
+            life: "Partnerships that celebrate individuality. Independence that makes space for deep connection. Choosing partners who want a teammate, not a clone.",
+            integration: "This soul needs partnerships that enhance rather than diminish their independence. They bring the most to relationships when they're also fulfilled individually."
+        }
+    },
+    "emotion-logic": {
+        title: "The Heart-Mind Paradox",
+        signs: { emotion: ["Cancer", "Pisces", "Scorpio"], logic: ["Virgo", "Gemini", "Aquarius", "Capricorn"] },
+        houses: { emotion: [4, 8, 12], logic: [3, 6, 10] },
+        resolution: {
+            daily: "Start decisions with intuition (what does this feel like?), then validate with logic (does this make sense?). Neither alone gives the full picture.",
+            weekly: "Allow emotional processing time without demanding rational explanations. Allow analytical time without demanding feelings.",
+            yearly: "Creative, intuitive seasons alternate with structured, practical seasons. Both are productive in different ways.",
+            life: "The greatest breakthroughs come when heart and mind agree. Develop BOTH emotional intelligence and analytical skill - they're complementary, not competing.",
+            integration: "This soul has access to both deep feeling and sharp thinking. The gift is becoming bilingual - fluent in both the language of emotion and the language of reason."
+        }
+    },
+    "visibility-privacy": {
+        title: "The Spotlight-Sanctuary Paradox",
+        signs: { visibility: ["Leo", "Aries", "Sagittarius"], privacy: ["Scorpio", "Cancer", "Pisces", "Virgo"] },
+        houses: { visibility: [1, 5, 10], privacy: [4, 8, 12] },
+        resolution: {
+            daily: "Public-facing work during peak energy hours. Private restoration during quiet hours. Respect the natural rhythm.",
+            weekly: "Days for being 'on' and visible. Days for retreat and restoration. Don't let either dominate the entire week.",
+            yearly: "Seasons of visibility, launching, and public engagement. Seasons of retreat, reflection, and creative incubation.",
+            life: "Build a public life that's authentic enough to sustain, and a private life that's rich enough to nourish. The stage needs a backstage.",
+            integration: "This soul shines brightest when they've had enough darkness to recharge. Their public power comes FROM their private depth."
+        }
+    },
+    "structure-freedom": {
+        title: "The Structure-Freedom Paradox",
+        signs: { structure: ["Capricorn", "Virgo", "Taurus"], freedom: ["Aquarius", "Sagittarius", "Aries", "Gemini"] },
+        houses: { structure: [6, 10], freedom: [5, 9, 11] },
+        resolution: {
+            daily: "Structured morning routine provides the container for afternoon creative freedom. The structure CREATES freedom.",
+            weekly: "Disciplined work blocks earn free exploration blocks. Neither works without the other.",
+            yearly: "Goal-setting and discipline in career. Spontaneous adventure in personal life. Both feed each other.",
+            life: "Build structures that serve your freedom, not prisons that limit it. Rules and routines should be chosen, not imposed.",
+            integration: "This soul discovers that structure and freedom aren't opposites - structure is the skeleton that lets the body of freedom dance."
+        }
+    },
+    "material-spiritual": {
+        title: "The Material-Spiritual Paradox",
+        signs: { material: ["Taurus", "Virgo", "Capricorn"], spiritual: ["Pisces", "Sagittarius", "Scorpio"] },
+        houses: { material: [2, 6, 10], spiritual: [9, 12, 8] },
+        resolution: {
+            daily: "Ground spiritual insights into practical action. Let practical work become a meditation. Neither realm is 'higher' than the other.",
+            weekly: "Material world engagement (work, money, body) balanced with spiritual practices (meditation, reflection, nature).",
+            yearly: "Periods of worldly ambition fuelled by periods of spiritual renewal. Neither is sustainable alone.",
+            life: "The goal isn't choosing between wealth and wisdom - it's making wisdom profitable and wealth meaningful. Become the bridge between heaven and earth.",
+            integration: "This soul's unique gift is bringing spiritual depth into material reality. They make the sacred practical and the practical sacred."
+        }
+    }
+};
+
+function analyzeChartTensions(readings) {
+    if (!readings?.astrology) return null;
+
+    const tensions = [];
+    const planetHouses = readings.astrology.planetHouses || {};
+
+    // Collect all active signs in the chart
+    const chartSigns = [];
+    if (readings.astrology.sunSign?.name) chartSigns.push(readings.astrology.sunSign.name);
+    if (readings.astrology.moonSign?.name) chartSigns.push(readings.astrology.moonSign.name);
+    if (readings.astrology.risingSign?.name) chartSigns.push(readings.astrology.risingSign.name);
+    if (readings.astrology.venus?.name) chartSigns.push(readings.astrology.venus.name);
+    if (readings.astrology.mars?.name) chartSigns.push(readings.astrology.mars.name);
+    if (readings.astrology.mercury?.name) chartSigns.push(readings.astrology.mercury.name);
+    if (readings.astrology.jupiter?.name) chartSigns.push(readings.astrology.jupiter.name);
+    if (readings.astrology.saturn?.name) chartSigns.push(readings.astrology.saturn.name);
+
+    // Collect active houses
+    const activeHouses = Object.values(planetHouses).filter(Boolean).map(Number);
+
+    // Check each axis for tension
+    for (const [axisKey, axis] of Object.entries(ENERGY_AXES)) {
+        const [pole1Name, pole2Name] = axisKey.split('-');
+        const pole1Signs = axis.signs[pole1Name] || [];
+        const pole2Signs = axis.signs[pole2Name] || [];
+        const pole1Houses = axis.houses[pole1Name] || [];
+        const pole2Houses = axis.houses[pole2Name] || [];
+
+        // Count how many chart placements fall on each side
+        let pole1Score = 0;
+        let pole2Score = 0;
+
+        chartSigns.forEach(sign => {
+            if (pole1Signs.includes(sign)) pole1Score++;
+            if (pole2Signs.includes(sign)) pole2Score++;
+        });
+
+        activeHouses.forEach(h => {
+            if (pole1Houses.includes(h)) pole1Score += 0.5;
+            if (pole2Houses.includes(h)) pole2Score += 0.5;
+        });
+
+        // Only flag tension if BOTH sides have significant presence (2+)
+        if (pole1Score >= 2 && pole2Score >= 2) {
+            tensions.push({
+                title: axis.title,
+                pole1: { name: pole1Name, score: pole1Score },
+                pole2: { name: pole2Name, score: pole2Score },
+                resolution: axis.resolution,
+                strength: Math.min(pole1Score, pole2Score) // higher = more intense tension
+            });
+        }
+    }
+
+    // Sort by tension strength (most intense first)
+    tensions.sort((a, b) => b.strength - a.strength);
+
+    return tensions.length > 0 ? tensions : null;
 }
