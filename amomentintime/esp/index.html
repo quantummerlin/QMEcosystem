@@ -788,21 +788,25 @@
         
         /* Loading State */
         .loading-overlay {
-            display: none;
+            display: flex;
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.85);
             z-index: 1000;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
         }
         
         .loading-overlay.active {
-            display: flex;
+            opacity: 1;
+            pointer-events: auto;
         }
         
         .loading-spinner {
@@ -3514,7 +3518,10 @@
             max-width: 500px;
             width: 100%;
             max-height: 90vh;
-            overflow-y: auto;
+            max-height: 90dvh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
             box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
             animation: slideUp 0.5s ease;
         }
@@ -3526,9 +3533,10 @@
         
         .welcome-header {
             background: linear-gradient(135deg, #FF69B4 0%, #FFB6C1 25%, #E6E6FA 50%, #87CEEB 75%, #6BA3D6 100%);
-            padding: 30px 25px;
+            padding: 24px 20px;
             text-align: center;
             border-radius: 24px 24px 0 0;
+            flex-shrink: 0;
         }
         
         .welcome-header h2 {
@@ -3547,6 +3555,11 @@
         
         .welcome-body {
             padding: 25px;
+            overflow-y: auto;
+            flex: 1 1 auto;
+            min-height: 0;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
         }
         
         .welcome-step {
@@ -3639,8 +3652,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 25px;
+            padding: 16px 20px;
             border-top: 1px solid #eee;
+            flex-shrink: 0;
+            background: white;
+            border-radius: 0 0 24px 24px;
         }
         
         .welcome-dots {
@@ -3840,6 +3856,77 @@
             color: #b0b0b0 !important;
         }
 
+
+        /* Mobile welcome fixes */
+        @media (max-height: 700px) {
+            .welcome-header {
+                padding: 16px 16px;
+            }
+            .welcome-header h2 {
+                font-size: 1.4rem;
+            }
+            .welcome-body {
+                padding: 16px;
+            }
+            .welcome-step h3 {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+            .welcome-step p {
+                font-size: 0.88rem;
+                margin-bottom: 10px;
+            }
+            .welcome-highlight {
+                padding: 10px;
+                margin: 10px 0;
+            }
+            .welcome-footer {
+                padding: 12px 16px;
+            }
+            .welcome-nav-btn {
+                padding: 10px 22px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-height: 550px) {
+            .welcome-content {
+                max-height: 95vh;
+                max-height: 95dvh;
+            }
+            .welcome-header {
+                padding: 12px;
+            }
+            .welcome-header h2 {
+                font-size: 1.2rem;
+                margin-bottom: 4px;
+            }
+            .welcome-header p {
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* Smooth loading enhancements */
+        .loading-spinner {
+            animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        }
+        
+        .loading-text {
+            transition: opacity 0.4s ease;
+        }
+        
+        .loading-progress-bar {
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes loadPulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        
+        .loading-overlay.active .loading-text {
+            animation: loadPulse 2s ease-in-out infinite;
+        }
     </style>
 </head>
 <body>
@@ -4562,18 +4649,42 @@
             // Show loading
             const overlay = document.getElementById('loadingOverlay');
             const progressBar = document.getElementById('loadingProgressBar');
+            const loadingText = document.getElementById('loadingText');
+            progressBar.style.width = '0%';
             overlay.classList.add('active');
             
-            // Simulate progress
+            // Cycling loading messages
+            const loadingMessages = [
+                'Mapping the stars at your moment of birth…',
+                'Calculating planetary positions…',
+                'Reading the numerology of your name…',
+                'Discovering hidden patterns…',
+                'Weaving your cosmic blueprint…',
+                'Aligning the houses…',
+                'Revealing your soul\'s story…'
+            ];
+            let msgIndex = 0;
+            loadingText.textContent = loadingMessages[0];
+            const messageInterval = setInterval(() => {
+                msgIndex = (msgIndex + 1) % loadingMessages.length;
+                loadingText.style.opacity = '0';
+                setTimeout(() => {
+                    loadingText.textContent = loadingMessages[msgIndex];
+                    loadingText.style.opacity = '1';
+                }, 300);
+            }, 2200);
+            
+            // Smooth progress curve (fast start, slows near end)
             let progress = 0;
             const progressInterval = setInterval(() => {
-                progress += Math.random() * 15;
+                const remaining = 90 - progress;
+                progress += remaining * 0.08 + 0.5;
                 if (progress > 90) progress = 90;
                 progressBar.style.width = progress + '%';
-            }, 200);
+            }, 150);
             
             // Small delay for effect
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            await new Promise(resolve => setTimeout(resolve, 1800));
             
             try {
                 // Calculate all readings
@@ -4581,12 +4692,20 @@
                 
                 // Complete progress
                 clearInterval(progressInterval);
+                clearInterval(messageInterval);
+                loadingText.style.opacity = '0';
+                setTimeout(() => {
+                    loadingText.textContent = 'Your reading is ready ✨';
+                    loadingText.style.opacity = '1';
+                }, 200);
                 progressBar.style.width = '100%';
                 
-                await new Promise(resolve => setTimeout(resolve, 300));
+                await new Promise(resolve => setTimeout(resolve, 600));
                 
                 // Hide loading
                 overlay.classList.remove('active');
+                // Reset for next time
+                setTimeout(() => { progressBar.style.width = '0%'; }, 500);
                 
                 // Generate reading ID and save to multi-reading storage
                 const readingId = generateReadingId(userData);
@@ -4618,7 +4737,9 @@
             } catch (error) {
                 console.error('Error generating reading:', error);
                 clearInterval(progressInterval);
+                clearInterval(messageInterval);
                 overlay.classList.remove('active');
+                setTimeout(() => { progressBar.style.width = '0%'; }, 500);
                 alert('Algo salió mal al generar la lectura. Por favor inténtalo de nuevo o recarga la página.');
             }
         }
