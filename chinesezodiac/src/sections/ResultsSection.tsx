@@ -5,6 +5,7 @@ import { ZodiacFlipCard, GuidanceFlipCard, LuckyNumberFlipCard, CompatibilityFli
 import { YearInsightsSection } from './YearInsightsSection';
 import { DailyDashboard } from '../components/DailyDashboard';
 import { animalNaturalElements, elementData } from '../components/ZodiacData';
+import { generateDailyInsight } from '../components/DailyInsights';
 import type { ZodiacResult } from './CalculatorSection';
 
 // Complete Chinese Zodiac Compatibility Matrix
@@ -125,17 +126,42 @@ export function ResultsSection({ result }: ResultsSectionProps) {
   const weekEnd = new Date(weekStart);
   weekEnd.setDate(weekStart.getDate() + 6);
 
-  // Get random guidance
-  const getRandomGuidance = (guidance: { high: string[]; medium: string[]; low: string[] }) => {
-    const keys = ['high', 'medium', 'low'] as const;
-    const key = keys[Math.floor(Math.random() * keys.length)];
-    return { level: key, items: guidance[key] };
+  // Get the energy level from DailyInsights so guidance cards stay consistent
+  const dailyInsight = generateDailyInsight(result.animal.toLowerCase(), result.element);
+  
+  // Deterministic date-seeded guidance selection
+  // Uses a simple hash of date + animal + period to pick guidance level consistently per day/week/month/year
+  const getSeededGuidance = (
+    guidance: { high: string[]; medium: string[]; low: string[] },
+    period: 'daily' | 'weekly' | 'monthly' | 'yearly'
+  ) => {
+    let level: 'high' | 'medium' | 'low';
+    
+    if (period === 'daily') {
+      // Daily guidance MUST match the DailyDashboard energy level
+      level = dailyInsight.energyLevel;
+    } else {
+      // For other periods, use a date-seeded deterministic pick
+      // Create a numeric seed from the date + animal + period
+      const seedDate = period === 'weekly' ? weekStart : 
+                       period === 'monthly' ? new Date(now.getFullYear(), now.getMonth(), 1) :
+                       new Date(now.getFullYear(), 0, 1);
+      const seedStr = `${result.animal}-${period}-${seedDate.toISOString().slice(0, 10)}`;
+      let hash = 0;
+      for (let i = 0; i < seedStr.length; i++) {
+        hash = ((hash << 5) - hash + seedStr.charCodeAt(i)) | 0;
+      }
+      const keys = ['high', 'medium', 'low'] as const;
+      level = keys[Math.abs(hash) % 3];
+    }
+    
+    return { level, items: guidance[level] };
   };
 
-  const daily = getRandomGuidance(result.reading.guidance.daily);
-  const weekly = getRandomGuidance(result.reading.guidance.weekly);
-  const monthly = getRandomGuidance(result.reading.guidance.monthly);
-  const yearly = getRandomGuidance(result.reading.guidance.yearly);
+  const daily = getSeededGuidance(result.reading.guidance.daily, 'daily');
+  const weekly = getSeededGuidance(result.reading.guidance.weekly, 'weekly');
+  const monthly = getSeededGuidance(result.reading.guidance.monthly, 'monthly');
+  const yearly = getSeededGuidance(result.reading.guidance.yearly, 'yearly');
 
   // Lucky number meanings
   const luckyMeanings = [
