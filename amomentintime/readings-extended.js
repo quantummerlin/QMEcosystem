@@ -1033,49 +1033,111 @@ var VERTEX_READINGS = {
 var NODES_IN_HOUSES = {
     north: {
         1: {
-            title: "North Node in 1st House - Identity Journey",
-            keywords: ["Self-Discovery", "Independence", "Personal Initiative", "Identity Development"],
-            reading: `The North Node in the 1st House indicates this soul's growth path involves developing a strong sense of self, independent identity, and personal initiative. Past patterns (South Node in 7th House) involved over-focus on others, partnerships, and accommodating.
+            title: "North Node in 1st House - The Identity Awakening",
+            keywords: ["Self-Discovery", "Independence", "Personal Initiative", "Authentic Identity"],
+            reading: `The North Node in the 1st House marks one of the most personal soul journeys possible: learning to exist as a distinct individual, to act from personal desire rather than obligation, and to discover that "selfish" isn't always a dirty word. This soul has spent lifetimes (South Node in 7th House) defined by relationships — merging, accommodating, compromising until the original self became almost invisible.
 
-This lifetime calls for learning to put themselves first, develop personal goals, and act independently. They're here to learn that "I" is as important as "we."
+<strong>The Past Life Pattern:</strong> The South Node in the 7th House reveals a soul intimately familiar with partnership. There have been lifetimes as the devoted spouse, the diplomatic mediator, the one who kept the peace at any cost. Relationship skills are second nature — reading others, anticipating needs, smoothing conflict before it begins. The problem is that all this outward attention came at the expense of knowing who they actually are when nobody else is in the room.
 
-Growth comes through taking initiative, developing self-reliance, and allowing others to adjust to them rather than always adjusting. The soul purpose involves discovering and expressing who they truly are.`
+There's often a subtle but persistent pattern of asking "what do you think?" before forming their own opinion, of scanning others' faces for approval before committing to a choice. Not because they lack intelligence or ability, but because the soul's default setting is oriented outward. The mirror has been held up to others for so long that turning it around feels almost transgressive.
+
+<strong>The Growth Edge:</strong> This lifetime demands the courage to be someone specific. Not vaguely agreeable. Not whoever the situation requires. But a distinct individual with preferences, opinions, boundaries, and goals that exist independently of any relationship. The universe will create circumstances that force self-reliance — periods of aloneness, partnerships that fail when the self disappears into them, moments where no one else can make the decision.
+
+The 1st House is the house of "I am." The soul is learning to complete that sentence honestly: I am angry. I am ambitious. I am leaving. I am enough on my own. Each declaration of self, each moment of choosing personal truth over relational harmony, is the curriculum being completed.
+
+<strong>The Body Connection:</strong> The 1st House rules physical appearance and vitality. This soul is learning to inhabit their body fully — to dress for themselves rather than for others' approval, to pursue physical goals for personal satisfaction, to take up space unapologetically. Exercise, physical challenges, and anything that builds a visceral sense of "this is MY body, MY life" supports the nodal journey.
+
+<strong>The Relationship Paradox:</strong> Ironically, this soul becomes a better partner by learning to be a better individual first. The South Node gifts of diplomacy and empathy don't disappear — they become more authentic when offered from a place of fullness rather than emptiness. The healthiest relationships for this placement are ones where both people maintain distinct identities.
+
+<strong>The Integration:</strong> Growth isn't about abandoning relationships or becoming selfishly isolated. It's about learning to bring a whole person to the table. The past-life gifts of cooperation and empathy become truly powerful when backed by a solid sense of self. The goal is to be someone worth partnering with, not just someone who's good at partnering.`,
+            growth: ["Developing authentic self-expression", "Making decisions without consensus", "Physical self-confidence"],
+            resistance: ["Fear of being seen as selfish", "Discomfort with conflict", "Losing identity in relationships"]
         },
         2: {
-            title: "North Node in 2nd House - Value Journey",
+            title: "North Node in 2nd House - The Worth Excavation",
             keywords: ["Self-Worth", "Personal Resources", "Material Security", "Values Development"],
-            reading: `The North Node in the 2nd House indicates this soul's growth path involves developing self-worth, building personal resources, and creating material security. Past patterns (South Node in 8th House) involved depending on others' resources or intensity.
+            reading: `The North Node in the 2nd House calls this soul toward a profound reckoning with worth — not theoretical worth, not spiritual worth, but the grounded, tangible kind. What do you value? What are you worth? Can you build something that's yours? These are the questions this lifetime is organized around. The South Node in the 8th House means this soul arrives already fluent in crisis, transformation, and living off shared resources. Now it's time to build something of their own.
 
-This lifetime calls for building their own security, knowing their worth, and enjoying simple pleasures. They're here to learn that they can provide for themselves.
+<strong>The Past Life Pattern:</strong> The South Node in the 8th House carries memories of intensity — lives shaped by inheritance, shared finances, power dynamics, and psychological depth. This soul knows how to merge with others, how to navigate crisis, how to transform through destruction and rebirth. There may have been lifetimes as healers, therapists, occultists, or those who managed others' resources. The comfort zone is depth, intensity, and complexity.
 
-Growth comes through developing practical skills, earning their own money, and appreciating what they have. The soul purpose involves discovering and living by their authentic values.`
+The shadow of this pattern is a subtle avoidance of simplicity. If life isn't dramatic enough, something must be wrong. There can be an unconscious reliance on others' resources — financially or emotionally — a sense that everything meaningful must be shared, merged, or co-created. Building something purely personal can feel lonely or pointless.
+
+<strong>The Growth Edge:</strong> This lifetime demands learning to stand on your own two feet materially and psychologically. The universe will create situations requiring financial independence, self-reliance, and the development of personal skills that generate personal income. The question shifts from "what's ours?" to "what's mine?" — not from greed, but from the soul's need to discover its own capacity.
+
+Self-worth is the deeper lesson. Not the 8th House worth that comes from being needed in crisis or valued for psychological insight, but the simple, steady worth of a person who knows what they bring to the table and doesn't need external validation to believe it.
+
+<strong>The Simplicity Practice:</strong> The 2nd House rules simple pleasures — good food, physical comfort, nature, beauty you can touch. This soul grows through learning to find satisfaction in the uncomplicated. A well-cooked meal. Money in the bank. A garden that grows because you tended it. These seemingly mundane things are the spiritual curriculum.
+
+<strong>The Values Anchor:</strong> Perhaps the deepest work involves clarifying personal values that aren't borrowed from partners, inherited from family, or absorbed from culture. What do YOU actually care about? What would you spend money on if nobody were watching? What would you fight for even if you were the only one fighting? These questions, honestly answered, become the foundation of a life that feels genuinely yours.
+
+<strong>The Integration:</strong> The 8th House gifts of depth and psychological insight don't disappear — they become grounded. This soul can understand the depths while standing on solid ground. The combination of 8th House perception and 2nd House stability creates someone who sees clearly without being pulled under. Transformative wisdom served with practical application.`,
+            growth: ["Building personal financial security", "Discovering authentic values", "Finding beauty in simplicity"],
+            resistance: ["Defaulting to crisis mode", "Depending on others' resources", "Avoiding the 'boring' work of building"]
         },
         3: {
-            title: "North Node in 3rd House - Communication Journey",
+            title: "North Node in 3rd House - The Curious Messenger",
             keywords: ["Learning", "Communication", "Curiosity", "Daily Connection"],
-            reading: `The North Node in the 3rd House indicates this soul's growth path involves developing communication skills, staying curious, and connecting with immediate environment. Past patterns (South Node in 9th House) involved focus on higher truths at the expense of practical learning.
+            reading: `The North Node in the 3rd House calls this soul to trade certainty for curiosity, preaching for listening, and grand truths for small conversations that actually change things. The South Node in the 9th House means this soul arrives already loaded with philosophical frameworks, spiritual convictions, and big-picture understanding. The problem is that all that wisdom means nothing if you can't communicate it in a way ordinary people can use.
 
-This lifetime calls for asking questions, learning from everyone, and communicating clearly. They're here to learn that simple connection matters as much as grand understanding.
+<strong>The Past Life Pattern:</strong> The South Node in the 9th House speaks of lifetimes as the teacher, the preacher, the philosopher, the one who had the answers. There's an almost automatic tendency to frame everything in terms of meaning, purpose, and universal truth. This soul doesn't just experience things — they interpret them, usually from a height that makes the details hard to see.
 
-Growth comes through writing, teaching, learning, and engaging with siblings and neighbors. The soul purpose involves becoming a messenger who shares information helpfully.`
+The shadow shows up as intellectual arrogance disguised as open-mindedness. "I'm open to all perspectives" really means "I've already decided mine is the most evolved." There can be a subtle condescension toward small talk, local concerns, or practical knowledge — as though the only conversations worth having are about God, the universe, and the meaning of existence.
+
+<strong>The Growth Edge:</strong> This lifetime demands the humility to learn from everyone — the neighbor, the child, the person at the bus stop whose life experience holds wisdom no university teaches. The 3rd House rules communication, siblings, neighbors, short journeys, and the exchange of information. Growth comes through asking questions rather than providing answers, through listening with genuine curiosity rather than waiting for a pause to insert wisdom.
+
+Writing, speaking, teaching at a practical level, journalism, podcasting, blogging — any form of communication that requires clarity and accessibility serves the North Node. The test is: can you explain your deepest insight to a twelve-year-old? If not, you haven't learned it well enough yet.
+
+<strong>The Sibling/Neighbor Connection:</strong> Siblings, cousins, and local community often play significant roles in this soul's growth. These relationships teach the 3rd House lessons of everyday connection, of showing up for the unglamorous but essential bonds that hold life together.
+
+<strong>The Curiosity Practice:</strong> Growth accelerates when this soul stays genuinely curious — reading widely, exploring their immediate environment, trying new routes to familiar places, asking "how does that work?" about ordinary things. The 9th House instinct to fly always seeks distant horizons. The 3rd House corrective says: there are discoveries to be made in your own neighborhood if you bother to look.
+
+<strong>The Integration:</strong> The 9th House gifts of meaning-making and philosophical depth become powerful when expressed through 3rd House clarity. This soul can become a translator — taking complex truths and making them accessible, bridging the gap between wisdom and daily life. The sage who also writes well. The philosopher who also listens.`,
+            growth: ["Asking questions instead of giving answers", "Writing and communicating clearly", "Finding wisdom in ordinary conversations"],
+            resistance: ["Intellectual superiority", "Dismissing 'small' knowledge", "Preaching instead of listening"]
         },
         4: {
-            title: "North Node in 4th House - Home Journey",
+            title: "North Node in 4th House - The Homecoming",
             keywords: ["Emotional Security", "Home Building", "Family", "Inner Foundation"],
-            reading: `The North Node in the 4th House indicates this soul's growth path involves developing emotional security, creating home, and building inner foundations. Past patterns (South Node in 10th House) involved over-focus on career and public achievement.
+            reading: `The North Node in the 4th House calls this soul home — not to a building, but to themselves. After lifetimes of climbing, achieving, and building public reputations (South Node in 10th House), this incarnation asks a deceptively simple question: can you feel at peace when no one is watching? Can you be someone who isn't defined by what they've accomplished?
 
-This lifetime calls for developing emotional intelligence, creating family, and finding security within. They're here to learn that home and feeling are as important as achievement.
+<strong>The Past Life Pattern:</strong> The South Node in the 10th House reveals a soul deeply familiar with ambition, public roles, and the weight of authority. There have been lifetimes of leadership, career building, and the relentless pursuit of respect and recognition. Achievement is second nature. These souls often display unusual maturity from a young age — the child who seems like a small adult, who understands responsibility before they understand play.
 
-Growth comes through nurturing self and others, establishing roots, and processing emotions. The soul purpose involves creating a sanctuary and discovering that security is internal.`
+The shadow is a life organized around external markers of success at the expense of emotional depth. There can be a persistent feeling that rest must be earned, that downtime is wasted time, that if you aren't productive, you aren't valuable. Vulnerability feels like weakness. Needing others feels like failure.
+
+<strong>The Growth Edge:</strong> This lifetime demands the development of emotional intelligence, the creation of genuine home (internal and external), and the courage to be vulnerable. The universe will create circumstances that redirect attention from career to family, from public to private, from doing to feeling. This might come through career disruptions, family responsibilities that can't be delegated, or simply an increasing sense that all the achievements ring hollow without someone to come home to.
+
+The 4th House rules home, family, roots, and the inner emotional foundation. Growth comes through nesting — literally creating a space that feels like sanctuary, and figuratively building an inner life rich enough to sustain you when the external world stops applauding.
+
+<strong>The Emotional Curriculum:</strong> Feelings are the coursework here. This soul is learning to sit with sadness without strategizing about it, to express need without viewing it as leverage, to cry without calling it a breakdown. Emotional fluency — the ability to identify, express, and process feelings in real time — is the skill being developed.
+
+<strong>The Family Work:</strong> Family relationships, particularly with parents and children, often provide the most intense growth opportunities. There may be healing needed around the relationship with the mother or the concept of nurturing itself. Creating family — whether biological or chosen — is part of the soul's assignment.
+
+<strong>The Inner Home:</strong> Perhaps the deepest lesson involves building an internal sense of security that doesn't depend on external achievement. A quiet confidence that exists even on unemployed Tuesdays. A sense of being enough that doesn't require a business card to prove it. This internal home is the real foundation this soul is learning to build.
+
+<strong>The Integration:</strong> The 10th House gifts of discipline, leadership, and achievement don't disappear — they become sustainable. A person with deep emotional foundations can achieve without burning out, lead without losing themselves, and build a public life that's rooted in private truth. The career that grows from genuine calling rather than ego need. The leader who cries and is stronger for it.`,
+            growth: ["Creating genuine sanctuary", "Developing emotional fluency", "Prioritising inner peace over outer achievement"],
+            resistance: ["Workaholism as identity", "Vulnerability avoidance", "Measuring worth by productivity"]
         },
         5: {
-            title: "North Node in 5th House - Creative Journey",
+            title: "North Node in 5th House - The Joyful Creator",
             keywords: ["Self-Expression", "Creativity", "Joy", "Heart-Centered Living"],
-            reading: `The North Node in the 5th House indicates this soul's growth path involves developing creative self-expression, finding joy, and following the heart. Past patterns (South Node in 11th House) involved losing self in group causes or future focus.
+            reading: `The North Node in the 5th House calls this soul toward something it may have forgotten is allowed: personal joy. After lifetimes of collective focus, humanitarian service, and sublimating individual desires for the group good (South Node in 11th House), this incarnation hands back the permission slip to shine as an individual, to create for the pleasure of creating, and to follow the heart even when the head has a more rational plan.
 
-This lifetime calls for creative expression, romantic passion, and childlike play. They're here to learn that personal joy matters as much as collective good.
+<strong>The Past Life Pattern:</strong> The South Node in the 11th House reveals a soul deeply embedded in collective consciousness. There have been lifetimes of group work, social causes, and future-oriented thinking. The ability to see the big picture and work toward collective goals is instinctive. But somewhere along the way, the individual got lost in the collective. Personal desires were dismissed as selfish. Creative impulses were redirected toward "useful" outcomes. Joy was allowed only when it served the group.
 
-Growth comes through making art, having fun, taking center stage, and following the heart. The soul purpose involves shining as an individual and inspiring others through authentic expression.`
+The shadow shows up as difficulty knowing what YOU want — separate from what the group needs, what friends expect, or what would be best for humanity. There can be an almost allergic reaction to personal attention or creative risk-taking, a persistent sense that standing out is somehow betraying the team.
+
+<strong>The Growth Edge:</strong> This lifetime demands creative courage. The universe will create opportunities — and sometimes force through circumstances — for personal expression, romantic passion, and joyful play. The soul is learning that individual creativity isn't selfish; it's necessary. The world needs your specific light, not just your contribution to the collective.
+
+The 5th House rules creativity, romance, children, play, and self-expression. Growth comes through making things (art, music, stories, love, babies, anything that didn't exist before you showed up), through romantic connection that isn't primarily intellectual, and through the radical act of having fun for its own sake.
+
+<strong>The Heart Over Head:</strong> This soul tends to approach even personal matters with 11th House detachment — analyzing attraction instead of feeling it, planning creative projects instead of playing with them, thinking about joy instead of experiencing it. The growth comes from dropping into the heart and staying there, even when the head protests that this isn't productive or useful.
+
+<strong>The Creative Risk:</strong> Creating something personal and putting it out there — a painting, a performance, a love letter, a dance — is terrifying for this soul because it can't hide behind the collective. It's just you. And that exposure is exactly the medicine. Each creative risk that's taken, each moment of genuine self-expression, completes another step of the soul's curriculum.
+
+<strong>The Integration:</strong> The 11th House gifts of vision, community connection, and progressive thinking become magnificent when fueled by genuine creative passion. This soul can inspire groups not through strategy alone, but through the infectious energy of someone who's genuinely alive. The humanitarian who also paints. The activist whose joy is their most powerful tool for change.`,
+            growth: ["Creating without needing it to be 'useful'", "Following the heart over the head", "Accepting personal spotlight"],
+            resistance: ["Hiding in group identity", "Intellectualising emotion", "Dismissing joy as frivolous"]
         },
         6: {
             title: "North Node in 6th House - The Sacred Service Journey",
@@ -1097,137 +1159,301 @@ Growth comes through making art, having fun, taking center stage, and following 
 <strong>The Integration:</strong> The beauty of this nodal axis is that the 12th House gifts are not abandoned but grounded. Intuition guides practical decisions. Spiritual wisdom informs daily choices. Compassion motivates service. The goal is not to leave behind the transcendent but to bring it into every ordinary moment.`
         },
         7: {
-            title: "North Node in 7th House - Partnership Journey",
-            keywords: ["Relationship", "Cooperation", "Others' Perspectives", "Balance"],
-            reading: `The North Node in the 7th House indicates this soul's growth path involves developing relationship skills, cooperating with others, and learning to truly see partners. Past patterns (South Node in 1st House) involved self-focus and independent action.
+            title: "North Node in 7th House - The Partnership Awakening",
+            keywords: ["Relationship", "Cooperation", "Others' Perspectives", "True Partnership"],
+            reading: `The North Node in the 7th House calls this soul toward the thing it finds most terrifying: genuine dependence on another person. After lifetimes of fierce independence and self-reliance (South Node in 1st House), this incarnation asks whether you can let someone else matter as much as you do. Whether you can compromise without feeling like you're disappearing. Whether partnership might actually make you more, not less.
 
-This lifetime calls for partnership, compromise, and considering others' needs. They're here to learn that "we" is as important as "I."
+<strong>The Past Life Pattern:</strong> The South Node in the 1st House reveals a soul who has been fiercely, sometimes brutally, independent across many lifetimes. Self-reliance isn't just comfortable — it's identity. There have been lifetimes as the lone warrior, the solo pioneer, the one who did everything themselves because trusting others felt like a risk they couldn't afford. Initiative, courage, and personal strength are hard-wired.
 
-Growth comes through committed relationship, cooperation, and allowing others to matter. The soul purpose involves learning the art of true partnership and balanced give-and-take.`
+The shadow is a life where "I don't need anyone" isn't strength but armor. Where independence becomes isolation dressed up as self-sufficiency. Where every compromise feels like capitulation and every request for help feels like failure. The soul is so practiced at being one that it struggles to become two.
+
+<strong>The Growth Edge:</strong> This lifetime demands the radical vulnerability of genuine partnership. The universe will create circumstances that simply cannot be navigated alone — relationships that demand compromise, collaborations where the other person's contribution is essential, situations where the only way forward is together. Solitary approaches that worked for lifetimes will systematically fail until the lesson lands.
+
+The 7th House rules committed partnership, marriage, business partnerships, and the art of seeing yourself through another's eyes. Growth comes through staying when every instinct says leave, through compromising when every fiber says hold your ground, through discovering that "we" contains a version of "I" you never could have found alone.
+
+<strong>The Mirror Work:</strong> The 7th House is the house of the mirror — other people reflect back the parts of yourself you can't see. This soul grows through genuinely listening to feedback, through considering that the partner's perspective might be just as valid (or more so), and through the humbling recognition that self-knowledge has limits when you're only consulting yourself.
+
+<strong>The Commitment Curriculum:</strong> Commitment isn't just a relationship status for this soul — it's the spiritual practice. Each day of staying, each argument worked through instead of walked away from, each moment of putting the relationship's needs alongside personal ones, is the soul completing its assignment. It's not about finding the perfect partner. It's about becoming someone who can truly partner.
+
+<strong>The Equality Lesson:</strong> Perhaps the deepest growth involves learning that interdependence isn't weakness. That asking for help isn't failure. That the strongest thing a fiercely independent soul can do is say "I need you" and mean it. Equality in relationship — genuine give and take — requires the most courage from someone who's always been the one to give or go.
+
+<strong>The Integration:</strong> The 1st House gifts of independence, initiative, and personal strength don't disappear — they become the foundation for extraordinary partnership. A person who knows who they are can partner without losing themselves. The self-reliance of many lifetimes becomes the stability that makes genuine intimacy safe. The warrior learns that the bravest battle is the one fought for love.`,
+            growth: ["Genuine compromise without resentment", "Seeing yourself through others' eyes", "Interdependence as strength"],
+            resistance: ["Reflexive self-reliance", "Leaving before things get hard", "Viewing compromise as weakness"]
         },
         8: {
-            title: "North Node in 8th House - Transformation Journey",
-            keywords: ["Deep Intimacy", "Shared Resources", "Transformation", "Psychology"],
-            reading: `The North Node in the 8th House indicates this soul's growth path involves developing intimacy, sharing resources, and embracing transformation. Past patterns (South Node in 2nd House) involved self-reliance and holding onto personal resources.
+            title: "North Node in 8th House - The Deep Dive",
+            keywords: ["Deep Intimacy", "Shared Resources", "Transformation", "Psychological Depth"],
+            reading: `The North Node in the 8th House calls this soul into the depths — of intimacy, of psychology, of shared resources, of everything that can't be controlled by holding on tighter. After lifetimes of building personal security and maintaining comfortable independence (South Node in 2nd House), this incarnation demands the terrifying surrender of letting someone else in. Really in. Past the carefully maintained walls.
 
-This lifetime calls for learning to merge, to share, and to transform through crisis. They're here to learn that letting go can bring more than holding on.
+<strong>The Past Life Pattern:</strong> The South Node in the 2nd House reveals a soul deeply invested in personal security, self-sufficiency, and the comfort of knowing exactly what's theirs. There have been lifetimes of building, accumulating, and protecting resources — material and emotional. Stability isn't just preferred; it's sacred. These souls often arrive with a natural talent for money, an instinctive understanding of value, and an almost physical need for things to stay as they are.
 
-Growth comes through intimate relationship, shared finances, psychological depth, and facing the shadow. The soul purpose involves learning that transformation requires surrender.`
+The shadow is a life where comfort becomes a prison. Where the fear of losing what you've built prevents you from experiencing anything deeper. Where "what's mine is mine" extends to emotions, keeping the inner life as carefully guarded as the bank account. There can be a stubborn resistance to change that goes beyond preference into outright rigidity.
+
+<strong>The Growth Edge:</strong> This lifetime demands transformation through surrender. The universe will create circumstances that force merging — intimate relationships where surface-level connection won't cut it, financial situations requiring shared resources, losses that strip away the security blanket. The soul must learn that some things only become available when you let go of what you're holding.
+
+The 8th House rules shared resources, intimacy, psychology, death and rebirth, inheritance, and the taboo. Growth comes through allowing yourself to be truly known by another person, through sharing resources without keeping score, through facing the parts of yourself you'd rather keep buried.
+
+<strong>The Intimacy Practice:</strong> Real intimacy — not the comfortable companionship the 2nd House South Node prefers, but the raw, exposed, nothing-hidden kind — is the growth edge. This means being seen in your weakness, sharing your fears, letting someone else hold something precious to you without any guarantee they won't break it. Every act of emotional nakedness moves this soul forward.
+
+<strong>The Transformation Through Crisis:</strong> The 8th House is where things die and are reborn. This soul's growth often comes through experiences of profound change — losing something cherished, facing mortality, navigating crisis. These aren't punishments. They're the curriculum. Each time something falls apart and this soul discovers they can survive it, the 2nd House grip loosens and 8th House trust deepens.
+
+<strong>The Power and Psychology:</strong> There's often a fascination with — and fear of — power dynamics in relationships. Learning to navigate shared power, to merge without being consumed, to be vulnerable without being victimised, is the sophisticated emotional work of this placement.
+
+<strong>The Integration:</strong> The 2nd House gifts of self-reliance, stability, and practical wisdom don't disappear — they become the ground from which deep connection grows. A person who knows their own worth can share intimately without losing themselves. The financial wisdom of many lifetimes becomes the foundation for generous merging. The steady hand that built personal security now builds shared wealth — material and spiritual.`,
+            growth: ["Allowing emotional vulnerability", "Sharing resources without scorekeeping", "Embracing transformation through crisis"],
+            resistance: ["Clinging to personal security", "Keeping emotional distance", "Resisting change at all costs"]
         },
         9: {
-            title: "North Node in 9th House - Expansion Journey",
-            keywords: ["Higher Learning", "Travel", "Philosophy", "Faith"],
-            reading: `The North Node in the 9th House indicates this soul's growth path involves developing faith, seeking higher truth, and expanding horizons. Past patterns (South Node in 3rd House) involved local focus and gathering information without finding meaning.
+            title: "North Node in 9th House - The Truth Seeker",
+            keywords: ["Higher Learning", "Travel", "Philosophy", "Faith Development"],
+            reading: `The North Node in the 9th House calls this soul out of the familiar and into the vast — away from the neighbourhood and toward the horizon, away from facts and toward meaning, away from knowing everything about something small and toward understanding something about everything. The South Node in the 3rd House means this soul arrives with a mind like quicksilver — fast, adaptable, endlessly curious — but possibly stuck in an information loop that never quite reaches wisdom.
 
-This lifetime calls for adventure, higher education, and developing a personal philosophy. They're here to learn that meaning matters as much as facts.
+<strong>The Past Life Pattern:</strong> The South Node in the 3rd House reveals a soul deeply familiar with communication, local knowledge, and mental agility. There have been lifetimes as writers, teachers, messengers, merchants — people who dealt in information and thrived on variety. The mind is the sharpest tool in the kit: quick to learn, quick to speak, quick to adapt.
 
-Growth comes through travel, study, teaching, and developing wisdom. The soul purpose involves becoming a truth-seeker who inspires others toward growth.`
+The shadow is a mind that never stops gathering and never starts integrating. Information without meaning. Facts without philosophy. A thousand interesting conversations that never go deep enough to change anything. There can be a restless mental energy that jumps from topic to topic, a gossipy quality that mistakes talking about things for understanding them, and an unconscious avoidance of commitment to any single truth.
+
+<strong>The Growth Edge:</strong> This lifetime demands that all that mental agility serve something larger. The universe will create a hunger for meaning that information alone can't satisfy, opportunities for travel that change worldview rather than just adding stamps to a passport, and encounters with teachers or belief systems that challenge the comfortable habit of knowing a little about everything.
+
+The 9th House rules higher education, long-distance travel, philosophy, religion, publishing, and the law. Growth comes through committing to deep study rather than surface scanning, through experiencing cultures radically different from your own, and through the courage to actually believe in something.
+
+<strong>The Faith Curriculum:</strong> Developing faith — not necessarily religious, but the deep trust that life has meaning — is perhaps the most important lesson. The 3rd House South Node is comfortable with doubt, with "on the other hand," with keeping options open. The 9th House North Node asks: at some point, can you stand for something? Can you trust something you can't verify with a quick Google search?
+
+<strong>The Teaching Path:</strong> Many souls with this placement eventually become teachers, but not the 3rd House kind who relay information. The 9th House teacher transmits wisdom — hard-won understanding that comes from experience, travel, study, and the integration of knowledge into something that actually changes how people see the world.
+
+<strong>The Integration:</strong> The 3rd House gifts of communication and mental agility become extraordinary when aimed at 9th House purposes. This soul can make philosophy accessible, translate foreign ideas into local language, and bridge cultures with unusual ease. The writer who also seeks truth. The communicator whose message actually means something.`,
+            growth: ["Committing to a belief system", "Travelling for transformation not tourism", "Teaching from wisdom not just information"],
+            resistance: ["Surface-level engagement with ideas", "Mental restlessness", "Avoiding commitment to any truth"]
         },
         10: {
-            title: "North Node in 10th House - Achievement Journey",
-            keywords: ["Career", "Public Role", "Achievement", "Responsibility"],
-            reading: `The North Node in the 10th House indicates this soul's growth path involves developing career, public standing, and responsible authority. Past patterns (South Node in 4th House) involved over-focus on home, family, and emotional security.
+            title: "North Node in 10th House - The Public Calling",
+            keywords: ["Career Purpose", "Public Role", "Achievement", "Responsible Authority"],
+            reading: `The North Node in the 10th House calls this soul out of the private sphere and into public life — out of the nest and up the mountain, out of emotional safety and into the exposed vulnerability of visible achievement. After lifetimes of focusing on home, family, and emotional security (South Node in 4th House), this incarnation demands that the inner strength built in private be expressed on the public stage.
 
-This lifetime calls for stepping into the public eye, building career, and accepting authority. They're here to learn that achievement in the world matters too.
+<strong>The Past Life Pattern:</strong> The South Node in the 4th House reveals a soul deeply rooted in domestic life, family bonds, and the comforts of home. There have been lifetimes of nurturing, of creating sanctuary, of placing family above all else. Emotional intelligence is instinctive — they read feelings the way others read words. Home isn't just where they live; it's who they are.
 
-Growth comes through professional development, public contribution, and accepting responsibility. The soul purpose involves making a mark on the world through visible achievement.`
+The shadow is a life where the private sphere becomes a hiding place. Where "family comes first" becomes the excuse never to take professional risks. Where emotional sensitivity is used to avoid the harsher world outside the front door. There can be a persistent feeling that the world is too cold, too competitive, too unlike the warmth of home — and a subtle but powerful resistance to going out and finding a place in it anyway.
+
+<strong>The Growth Edge:</strong> This lifetime demands visible contribution. The universe will create circumstances that push toward career development, public roles, and the acceptance of authority. There may be family situations that force early responsibility, career opportunities that arrive whether invited or not, or a growing restlessness with the limitations of private life that can only be resolved by stepping into the public arena.
+
+The 10th House rules career, public reputation, authority, achievement, and legacy. Growth comes through setting professional goals and pursuing them with the same dedication this soul naturally gives to family, through accepting leadership positions even when they feel exposed, and through building something in the world that others can see and benefit from.
+
+<strong>The Authority Work:</strong> Learning to be an authority — not just in the gentle, nurturing 4th House way, but in the visible, accountable, sometimes lonely 10th House way — is core curriculum. This means making hard decisions, accepting that not everyone will like the outcomes, and standing behind the work with your name on it. The emotional sensitivity of the South Node must be integrated with professional backbone.
+
+<strong>The Legacy Question:</strong> What will you have built when you leave? Not the home you maintained or the family you nurtured (the 4th House already handled that), but the visible mark you made on the wider world. A career. A contribution. A reputation earned through sustained effort. These are the 10th House assignments.
+
+<strong>The Integration:</strong> The 4th House gifts of emotional intelligence, nurturing, and the ability to create belonging become remarkable leadership qualities when applied to the public sphere. This soul can lead with heart in environments that desperately need it, can build organizations that feel like families, and can achieve publicly without losing the private warmth that makes them human. The executive who remembers that everyone on the team has a home to get back to.`,
+            growth: ["Visible professional achievement", "Accepting authority and accountability", "Building public legacy"],
+            resistance: ["Hiding in domestic comfort", "Using family as an excuse to avoid risk", "Fear of public exposure"]
         },
         11: {
-            title: "North Node in 11th House - Community Journey",
-            keywords: ["Community", "Future Vision", "Friendship", "Collective Good"],
-            reading: `The North Node in the 11th House indicates this soul's growth path involves developing community connection, future vision, and concern for collective good. Past patterns (South Node in 5th House) involved self-focused creativity or personal drama.
+            title: "North Node in 11th House - The Community Architect",
+            keywords: ["Community", "Future Vision", "Friendship", "Collective Purpose"],
+            reading: `The North Node in the 11th House calls this soul out of the spotlight and into the tribe — away from personal drama and toward collective vision, away from "look at me" and toward "look what we can do together." After lifetimes of personal creative expression, romantic intensity, and centre-stage living (South Node in 5th House), this incarnation asks whether the individual flame can be used to light something bigger.
 
-This lifetime calls for joining groups, thinking of the future, and contributing to causes beyond self. They're here to learn that belonging to something larger is fulfilling.
+<strong>The Past Life Pattern:</strong> The South Node in the 5th House reveals a soul deeply familiar with personal creativity, romance, self-expression, and the particular buzz of being noticed. There have been lifetimes as artists, performers, lovers, and those who lived from the heart with dramatic flair. Creative talent is instinctive, and there's a natural ability to captivate an audience — whether that's a theatre crowd or a dinner table.
 
-Growth comes through friendship, group participation, and working for collective benefit. The soul purpose involves becoming part of something larger while maintaining individuality.`
+The shadow is a life where everything becomes personal drama. Where every group situation is really about whether you're getting enough attention. Where creative gifts are used for ego gratification rather than genuine contribution, and where romantic intensity substitutes for the deeper connection of true friendship. There can be a childlike self-centredness that's charming in small doses but exhausting in daily life.
+
+<strong>The Growth Edge:</strong> This lifetime demands expanding beyond personal expression to collective purpose. The universe will create opportunities for group involvement, friendships that matter more than romances, and causes that ignite passion without requiring personal spotlight. The soul is learning that the most powerful creation isn't the solo masterpiece but the movement that changes the world.
+
+The 11th House rules friendship, groups, social causes, future vision, technology, and collective consciousness. Growth comes through genuine friendship (not an audience), through contributing to groups where you're one of many rather than the star, and through developing a vision for the future that extends beyond personal desires.
+
+<strong>The Friendship Lesson:</strong> Real friendship — egalitarian, non-dramatic, consistent — is often this soul's greatest teacher. The 5th House South Node is accustomed to the intensity of romance and the adrenaline of creative performance. Friendship offers something quieter but ultimately more sustaining: being valued for who you are rather than what you create or how you perform. Learning to be a good friend, reliably and without drama, is profound growth.
+
+<strong>The Collective Vision:</strong> Finding a cause, a community, or a vision larger than personal concerns channels the 5th House creativity into something with lasting impact. The passion that once fueled personal art now fuels social change. The charisma that once drew audiences now inspires movements.
+
+<strong>The Integration:</strong> The 5th House gifts of creativity, passion, and personal magnetism become extraordinary tools when placed in service of collective goals. This soul can inspire groups not through cold strategy but through genuine creative fire. The performer becomes the activist. The artist becomes the visionary. The individual who knows how to shine teaches the whole group how to glow.`,
+            growth: ["Building genuine friendships", "Contributing to causes beyond self", "Thinking in terms of 'we' not 'me'"],
+            resistance: ["Need for personal spotlight", "Treating groups as audiences", "Avoiding commitment to collective goals"]
         },
         12: {
-            title: "North Node in 12th House - Spiritual Journey",
+            title: "North Node in 12th House - The Mystic's Return",
             keywords: ["Spirituality", "Surrender", "Compassion", "Transcendence"],
-            reading: `The North Node in the 12th House indicates this soul's growth path involves developing spirituality, practicing surrender, and connecting to the transcendent. Past patterns (South Node in 6th House) involved over-focus on work, details, and practical service.
+            reading: `The North Node in the 12th House calls this soul toward the invisible — away from to-do lists and toward surrender, away from fixing and toward faith, away from the tangible and into the territory where things can only be felt, never measured. After lifetimes of practical service, meticulous work, and devotion to usefulness (South Node in 6th House), this incarnation asks the hardest question a doer can face: can you stop doing and simply be?
 
-This lifetime calls for faith, meditation, and allowing life to flow rather than controlling every detail. They're here to learn that some things cannot be fixed, only surrendered.
+<strong>The Past Life Pattern:</strong> The South Node in the 6th House reveals a soul deeply identified with work, service, and practical competence. There have been lifetimes as healers, workers, servants, craftspeople — those who found identity through being useful. Skills are sharp. Work ethic is unquestionable. There's an almost physical need to be productive, to improve things, to fix what's broken.
 
-Growth comes through spiritual practice, solitude, compassion, and letting go. The soul purpose involves connecting to something greater than the material world.`
+The shadow is a life where busyness becomes a spiritual bypass. Where there's always another task to complete, another problem to solve, another person to help — and the constant doing serves as protection against the terrifying stillness where God (or the void, or the truth) might actually be encountered. Perfectionism, anxiety, and chronic overwork are common manifestations.
+
+<strong>The Growth Edge:</strong> This lifetime demands surrender of control. The universe will create circumstances that cannot be fixed through effort — situations that only resolve through letting go, problems that worsen with more intervention, and periods of enforced stillness (illness, isolation, waiting) that strip away the ability to do and leave only the ability to be.
+
+The 12th House rules spirituality, the unconscious, dreams, isolation, transcendence, compassion, and the dissolution of ego boundaries. Growth comes through meditation, through time alone that isn't productive, through allowing things to unfold without managing them, and through the radical acceptance that some suffering cannot be fixed — only witnessed with compassion.
+
+<strong>The Surrender Practice:</strong> For a soul hardwired to be useful, surrender feels like death. But the 12th House North Node is asking for exactly that — the death of the identity that says "I am what I do." Learning to sit with discomfort without rushing to fix it, to watch suffering without immediately intervening, to trust that the universe can handle things without personal supervision — this is the growth edge.
+
+<strong>The Compassion Expansion:</strong> The 6th House South Node serves individuals — this patient, that task, this specific problem. The 12th House North Node expands compassion to encompass everything. It's the difference between nursing one person and praying for the world. Between fixing a broken machine and sitting with the mystery of why things break at all.
+
+<strong>The Integration:</strong> The 6th House gifts of practical skill, attention to detail, and genuine helpfulness don't disappear — they become grounded spiritual practice. This soul can bring order to spiritual communities, can translate mystical experiences into practical wisdom, and can serve the invisible with the same dedication they once gave to the visible. The healer who also prays. The worker who also surrenders.`,
+            growth: ["Developing a meditation or spiritual practice", "Allowing things to unfold without controlling", "Finding identity beyond productivity"],
+            resistance: ["Chronic busyness as spiritual avoidance", "Perfectionism preventing surrender", "Anxiety about being useless"]
         }
     },
     south: {
         1: {
-            title: "South Node in 1st House - Identity Gifts",
+            title: "South Node in 1st House - The Independent Soul",
             keywords: ["Natural Independence", "Self-Awareness", "Personal Power", "Past Self-Focus"],
-            reading: `The South Node in the 1st House indicates natural gifts around identity, independence, and self-assertion. These are abilities brought from past lives - natural self-reliance that came easily. The comfort zone involves self-focus and going it alone.
+            reading: `The South Node in the 1st House marks a soul who has spent lifetimes mastering the art of being alone. Independence isn't something learned in this life — it was forged across many. Self-reliance, personal courage, and the ability to act decisively without consulting anyone are as natural as breathing.
 
-The lesson is to use these gifts while developing the opposite: partnership, consideration of others, and cooperation (North Node in 7th House). The self-knowledge gained in other lifetimes now serves relationship learning.`
+<strong>The Gifts You Arrived With:</strong> There's a powerful sense of personal identity here. This soul knows who they are — or at least who they've been — with unusual clarity. They can walk into a room and hold their own. They can start things, initiate action, and function as a one-person operation with impressive efficiency. Physical courage and a pioneering spirit come standard.
+
+<strong>The Comfort Zone:</strong> The trap is that independence becomes the only mode of operation. "I'll do it myself" isn't just preference — it's reflex. There can be a subtle (or not so subtle) resistance to truly needing anyone, a habit of making decisions unilaterally, and an unconscious belief that partnership means losing yourself. The soul is so practiced at being self-sufficient that asking for help feels like failure.
+
+<strong>What's Being Released:</strong> This lifetime asks the soul to soften the grip on total independence — not to abandon it, but to discover that strength can include vulnerability. The 7th House North Node is calling for genuine partnership, and that requires loosening the 1st House armor enough to let someone else in. The courage that once served solo missions now serves the harder mission of learning to love as an equal.
+
+<strong>The Integration:</strong> When balanced, this South Node produces people who bring incredible strength to partnerships. They don't need a relationship to complete them — they want one because they've chosen to grow. Their self-knowledge becomes the foundation for knowing another. Their independence ensures they'll never be codependent.`,
+            gifts: ["Natural self-reliance", "Courage under pressure", "Quick decisive action"],
+            release: ["Compulsive independence", "Resistance to compromise", "Going it alone when help is available"]
         },
         2: {
-            title: "South Node in 2nd House - Resource Gifts",
+            title: "South Node in 2nd House - The Self-Made Soul",
             keywords: ["Natural Self-Worth", "Material Skills", "Values Clarity", "Past Security"],
-            reading: `The South Node in the 2nd House indicates natural gifts around self-worth, material security, and knowing personal values. These are abilities brought from past lives - natural ability to create security. The comfort zone involves self-reliance and holding onto resources.
+            reading: `The South Node in the 2nd House reveals a soul who has spent lifetimes building — wealth, security, stability, and an unshakeable sense of personal value. There's a natural talent with money and material resources that didn't develop in this lifetime. It arrived fully formed, like a skill remembered from a dream.
 
-The lesson is to use these gifts while developing the opposite: sharing, intimacy, and transformation through merging (North Node in 8th House). The stability developed in other lifetimes now supports deep connection.`
+<strong>The Gifts You Arrived With:</strong> Financial instincts are strong. There's an innate understanding of what things are worth, how to build material security, and how to create comfort from scratch. Self-worth doesn't fluctuate with external validation — it's grounded in something deeper, earned over lifetimes. There may be a beautiful relationship with the physical world: good taste, sensory appreciation, and an ability to create beauty in tangible form.
+
+<strong>The Comfort Zone:</strong> The trap is that security becomes the highest priority and change becomes the enemy. There can be a stubborn attachment to routine, possessions, and the familiar. "What's mine is mine" extends beyond finances to emotions, ideas, and even people. The soul may unconsciously resist any situation that requires sharing control over resources or surrendering personal comfort for something deeper.
+
+<strong>What's Being Released:</strong> This lifetime calls for the 8th House journey — vulnerability, shared resources, psychological depth, and the kind of intimacy that can't be controlled. The soul is being asked to discover that the deepest security isn't financial but emotional, and that some treasures only become available when you open the vault and let someone else inside.
+
+<strong>The Integration:</strong> When balanced, this South Node produces people who bring remarkable stability to intimate relationships. They can be trusted with shared resources because they've already mastered personal ones. Their groundedness becomes the container that makes deep transformation safe.`,
+            gifts: ["Natural financial wisdom", "Unshakeable self-worth", "Ability to create material security"],
+            release: ["Hoarding resources or emotions", "Resistance to vulnerability", "Valuing stability over growth"]
         },
         3: {
-            title: "South Node in 3rd House - Communication Gifts",
+            title: "South Node in 3rd House - The Quick Mind",
             keywords: ["Natural Curiosity", "Communication Skills", "Mental Agility", "Past Learning"],
-            reading: `The South Node in the 3rd House indicates natural gifts around communication, learning, and mental agility. These are abilities brought from past lives - natural ability to gather and share information. The comfort zone involves staying in the mental realm.
+            reading: `The South Node in the 3rd House reveals a soul with a mind that has been sharpened across lifetimes of learning, speaking, writing, and connecting. Communication isn't just a skill — it's an identity. Information flows through this soul like water, collected and redistributed with natural ease.
 
-The lesson is to use these gifts while developing the opposite: wisdom, faith, and meaning-making (North Node in 9th House). The communication skills developed in other lifetimes now serve the search for truth.`
+<strong>The Gifts You Arrived With:</strong> Mental agility is remarkable. This soul can learn quickly, speak persuasively, write clearly, and juggle multiple streams of information simultaneously. There's a natural curiosity about everything and an ability to connect dots that others miss. Siblings, neighbours, and local community may play important roles, and there's an instinct for networking and staying connected.
+
+<strong>The Comfort Zone:</strong> The trap is a mind that never stops skimming and never starts diving. Information is gathered endlessly but rarely integrated into wisdom. Conversations are fascinating but rarely transformative. There's a restlessness that moves from topic to topic, idea to idea, plan to plan — always learning, never truly knowing. Gossip can substitute for genuine communication, and cleverness can mask a fear of committing to any single truth.
+
+<strong>What's Being Released:</strong> This lifetime calls for the 9th House journey — depth over breadth, meaning over facts, wisdom over information. The soul is being asked to stop scanning the surface and plunge into something that can't be summarised in a paragraph. Travel that changes worldview, education that reshapes identity, and beliefs worth standing behind are the curriculum.
+
+<strong>The Integration:</strong> When balanced, this South Node produces extraordinary communicators of deep truth. The quick mind becomes a vehicle for philosophy rather than just facts. The ability to connect with local community extends to connecting cultures. The writer becomes a wisdom teacher, the talker becomes a truth-teller.`,
+            gifts: ["Quick learning ability", "Natural communication skills", "Mental flexibility and adaptability"],
+            release: ["Surface-level engagement", "Mental restlessness", "Avoiding depth through constant distraction"]
         },
         4: {
-            title: "South Node in 4th House - Emotional Gifts",
+            title: "South Node in 4th House - The Nurturer's Legacy",
             keywords: ["Natural Nurturing", "Emotional Intelligence", "Family Connection", "Past Security"],
-            reading: `The South Node in the 4th House indicates natural gifts around emotional intelligence, nurturing, and creating security. These are abilities brought from past lives - natural ability to create home and family. The comfort zone involves staying in the private sphere.
+            reading: `The South Node in the 4th House reveals a soul deeply rooted in family, home, and emotional belonging. Across many lifetimes, this soul has been the heart of the household — the one who created warmth, maintained traditions, and made sure everyone felt held. Nurturing isn't learned; it's remembered in the bones.
 
-The lesson is to use these gifts while developing the opposite: career, public contribution, and visible achievement (North Node in 10th House). The emotional foundation built in other lifetimes now supports worldly success.`
+<strong>The Gifts You Arrived With:</strong> Emotional intelligence is instinctive and profound. This soul reads feelings the way others read text — naturally, immediately, accurately. Creating a sense of home comes effortlessly, whether that's a physical space or an emotional atmosphere. There's a deep connection to family, ancestry, and roots. The past feels alive and close. Cooking, caring, creating sanctuary — these come as naturally as breathing.
+
+<strong>The Comfort Zone:</strong> The trap is using home and family as a hiding place from the wider world. "Family comes first" is noble until it becomes the reason you never step outside the front door. There can be an over-identification with the role of caretaker, a tendency to mother everyone (whether they want it or not), and a persistent belief that the outside world is too harsh for someone this sensitive. Emotional manipulation — the guilt trip, the tears, the "after all I've done for you" — can be unconscious tools.
+
+<strong>What's Being Released:</strong> This lifetime calls for the 10th House journey — career, public contribution, visible achievement, and the kind of authority that extends beyond the family dinner table. The soul is being asked to take all that emotional intelligence and use it in the world, not just the living room. To build something visible, accountable, and lasting.
+
+<strong>The Integration:</strong> When balanced, this South Node produces leaders with genuine heart. The emotional gifts become the foundation for compassionate authority. The ability to create belonging transforms organisations. The nurturer becomes the leader — one who builds empires that feel like family.`,
+            gifts: ["Deep emotional intelligence", "Natural ability to create belonging", "Connection to ancestry and roots"],
+            release: ["Using family as a hiding place", "Over-identification with caretaker role", "Fear of public exposure"]
         },
         5: {
-            title: "South Node in 5th House - Creative Gifts",
+            title: "South Node in 5th House - The Creative Heart",
             keywords: ["Natural Creativity", "Self-Expression", "Heart-Centered Living", "Past Joy"],
-            reading: `The South Node in the 5th House indicates natural gifts around creativity, self-expression, and following the heart. These are abilities brought from past lives - natural ability to shine and create joy. The comfort zone involves personal drama and center-stage.
+            reading: `The South Node in the 5th House reveals a soul who has spent lifetimes in the spotlight — creating, performing, loving, and living from the heart with dramatic flair. Creative talent didn't develop in this lifetime. It arrived polished and ready, a gift from incarnations as artists, performers, lovers, and those who knew how to make life beautiful.
 
-The lesson is to use these gifts while developing the opposite: community, collective good, and future vision (North Node in 11th House). The creative gifts developed in other lifetimes now serve something larger.`
+<strong>The Gifts You Arrived With:</strong> Creativity flows naturally and abundantly. There's a magnetic quality — people are drawn to this soul's warmth, expressiveness, and ability to make ordinary moments feel special. Romance comes easily, as does the ability to play, to find joy, and to follow the heart without hesitation. Children (or the inner child) may be particularly important. There's a natural charisma that fills rooms.
+
+<strong>The Comfort Zone:</strong> The trap is a life that revolves around personal drama, romantic intensity, and the addictive need to be the centre of attention. Every situation becomes a performance, every relationship a romance novel, and every group gathering an opportunity to shine. Creative gifts may be used for ego validation rather than genuine contribution, and the need for applause can become exhausting for everyone nearby.
+
+<strong>What's Being Released:</strong> This lifetime calls for the 11th House journey — community, collective purpose, genuine friendship, and the vision to see beyond personal desires. The soul is being asked whether the creative fire can light something bigger than one person's spotlight. Whether the charisma can serve a cause. Whether the heart can expand from "my joy" to "our future."
+
+<strong>The Integration:</strong> When balanced, this South Node produces people who bring creative magic to collective endeavours. The performer becomes the inspiring community leader. The romantic becomes the one who loves humanity. The artist creates not for applause but for change.`,
+            gifts: ["Natural creative ability", "Personal magnetism and warmth", "Courage to follow the heart"],
+            release: ["Need for constant validation", "Personal drama as identity", "Treating communities as audiences"]
         },
         6: {
-            title: "South Node in 6th House - Service Gifts",
+            title: "South Node in 6th House - The Sacred Worker",
             keywords: ["Natural Helpfulness", "Practical Skills", "Work Ethic", "Past Service"],
-            reading: `The South Node in the 6th House indicates natural gifts around service, practical skills, and attention to detail. These are abilities brought from past lives - natural ability to be useful and fix things. The comfort zone involves working and improving.
+            reading: `The South Node in the 6th House reveals a soul who has spent lifetimes in service — working, fixing, helping, and devoting themselves to practical usefulness with quiet dedication. This isn't someone who needs to learn work ethic. It's someone who needs to learn when to stop working.
 
-The lesson is to use these gifts while developing the opposite: spirituality, surrender, and connection to the transcendent (North Node in 12th House). The service skills developed in other lifetimes now support spiritual growth.`
+<strong>The Gifts You Arrived With:</strong> Practical skills are exceptional. There's an eye for detail, a capacity for sustained effort, and a genuine desire to be helpful that goes beyond social nicety. Health awareness may be strong, and there's often skill in healing, bodywork, nutrition, or any practice that involves careful attention to systems. The ability to improve things — processes, bodies, situations — is almost compulsive.
+
+<strong>The Comfort Zone:</strong> The trap is defining yourself entirely through productivity. The to-do list never ends because completing it would mean facing the terrifying question of who you are when you're not doing something useful. There can be chronic anxiety about imperfection, a tendency to serve until depleted, and a subtle self-righteousness about being the hardest worker in the room. Health problems may arise from the body finally refusing to keep up with the mind's demands.
+
+<strong>What's Being Released:</strong> This lifetime calls for the 12th House journey — surrender, spirituality, and the dissolution of the identity that says "I am what I do." The soul is being asked to discover that existence has value beyond productivity, that some problems aren't meant to be fixed, and that the deepest service might be simply being present without an agenda.
+
+<strong>The Integration:</strong> When balanced, this South Node produces people who bring extraordinary practical skill to spiritual work. The healer who also prays. The worker who also meditates. The perfectionist who discovers the perfection in imperfection.`,
+            gifts: ["Exceptional work ethic", "Eye for detail and improvement", "Genuine desire to be of service"],
+            release: ["Defining worth through productivity", "Chronic overwork and anxiety", "Inability to surrender control"]
         },
         7: {
-            title: "South Node in 7th House - Partnership Gifts",
+            title: "South Node in 7th House - The Natural Partner",
             keywords: ["Natural Diplomacy", "Relationship Skills", "Cooperation", "Past Partnership"],
-            reading: `The South Node in the 7th House indicates natural gifts around partnership, diplomacy, and cooperation. These are abilities brought from past lives - natural ability to relate and compromise. The comfort zone involves focusing on others and partnerships.
+            reading: `The South Node in the 7th House reveals a soul who has spent lifetimes perfecting the art of partnership. Compromise, diplomacy, and the ability to see every situation from another person's perspective didn't develop in this life — they were mastered long ago. Relationships are second nature, which is both the gift and the trap.
 
-The lesson is to use these gifts while developing the opposite: independence, self-assertion, and personal identity (North Node in 1st House). The relationship skills developed in other lifetimes now support self-development.`
+<strong>The Gifts You Arrived With:</strong> Social grace and relationship intelligence are remarkable. This soul can navigate the most complex interpersonal dynamics with ease, mediating conflicts, building bridges, and creating harmony in even the most tense environments. There's a natural gift for seeing the other person's point of view, for knowing what to say to smooth things over, and for making others feel valued and understood. Partnership feels like home.
+
+<strong>The Comfort Zone:</strong> The trap is disappearing into relationships. When you're so skilled at considering others' perspectives, you can lose track of your own. When compromise comes this easily, you may never discover what you actually want when you're not accommodating someone else. There can be a chronic inability to make decisions alone, a fear of conflict that prevents authentic expression, and an identity that shifts to match whoever is in the room. People-pleasing becomes a lifestyle, and the question "but what do YOU want?" can feel genuinely baffling.
+
+<strong>What's Being Released:</strong> This lifetime calls for the 1st House journey — self-discovery, independence, and the courage to stand alone. The soul is being asked to find out who they are when they're not reflecting someone else, to make decisions without consulting anyone, and to discover that conflict isn't the end of the world — it might be the beginning of authenticity.
+
+<strong>The Integration:</strong> When balanced, this South Node produces people who can be powerfully independent while maintaining extraordinary relationship skills. The diplomat who also has backbone. The peacemaker who can also go to war when necessary. The partner who never loses themselves.`,
+            gifts: ["Natural diplomacy and grace", "Ability to see all perspectives", "Skill in creating harmony"],
+            release: ["Losing identity in relationships", "Chronic people-pleasing", "Fear of standing alone"]
         },
         8: {
-            title: "South Node in 8th House - Transformation Gifts",
+            title: "South Node in 8th House - The Phoenix Soul",
             keywords: ["Natural Depth", "Psychological Insight", "Transformative Power", "Past Intensity"],
-            reading: `The South Node in the 8th House indicates natural gifts around transformation, psychological depth, and intimate connection. These are abilities brought from past lives - natural ability to merge and transform. The comfort zone involves intensity and others' resources.
+            reading: `The South Node in the 8th House reveals a soul who has been through the fire — repeatedly. Transformation, crisis, psychological depth, and intimate merging are not new experiences. They're the familiar territory of many lifetimes, and while this creates extraordinary resilience, it can also create an addiction to intensity.
 
-The lesson is to use these gifts while developing the opposite: self-worth, personal resources, and simplicity (North Node in 2nd House). The transformative power developed in other lifetimes now supports building personal security.`
+<strong>The Gifts You Arrived With:</strong> Psychological insight is profound and instinctive. This soul can see beneath surfaces — reading motivations, detecting lies, and understanding the hidden dynamics in any situation with unsettling accuracy. There's a natural comfort with the taboo, with crisis, with the subjects that make others uncomfortable. Intimacy at the deepest level comes naturally. There may be gifts in psychology, research, finance, or any field that requires looking under the hood.
+
+<strong>The Comfort Zone:</strong> The trap is an addiction to intensity. When you've lived many lifetimes in the deep end, the shallow end feels unbearable. Simple pleasures seem boring. Stable relationships feel flat. There can be a tendency to create drama when none exists, to plunge into crisis mode unnecessarily, and to mistake chaos for depth. Trust issues may be profound — the soul has been betrayed before and the armor is thick. Control issues around shared resources can be fierce.
+
+<strong>What's Being Released:</strong> This lifetime calls for the 2nd House journey — simplicity, personal values, self-reliance, and the quiet pleasure of building something stable. The soul is being asked to discover that peace isn't boring, that stability isn't stagnation, and that the most radical transformation might be learning to enjoy an ordinary Tuesday.
+
+<strong>The Integration:</strong> When balanced, this South Node produces people who bring remarkable depth to practical life. The crisis manager who also builds steady businesses. The psychologist who also knows how to garden. The survivor who finally discovers they can also thrive.`,
+            gifts: ["Profound psychological insight", "Resilience through transformation", "Comfort with life's depths"],
+            release: ["Addiction to intensity and crisis", "Controlling behaviour", "Mistaking chaos for meaning"]
         },
         9: {
-            title: "South Node in 9th House - Wisdom Gifts",
+            title: "South Node in 9th House - The Philosopher's Return",
             keywords: ["Natural Faith", "Philosophical Mind", "Teaching Ability", "Past Adventure"],
-            reading: `The South Node in the 9th House indicates natural gifts around wisdom, faith, and big-picture thinking. These are abilities brought from past lives - natural ability to see meaning and teach truth. The comfort zone involves preaching and certainty.
+            reading: `The South Node in the 9th House reveals a soul who has spent lifetimes pursuing truth — through travel, education, philosophy, religion, and the big questions that don't have simple answers. Wisdom and faith didn't develop in this lifetime. They're the inheritance of many incarnations as seekers, teachers, explorers, and believers.
 
-The lesson is to use these gifts while developing the opposite: curiosity, listening, and learning from everyone (North Node in 3rd House). The wisdom developed in other lifetimes now supports ongoing learning.`
+<strong>The Gifts You Arrived With:</strong> Big-picture thinking comes naturally. This soul can see the forest when others are stuck examining bark. There's an instinctive philosophical orientation — a tendency to search for meaning in everything — and a natural teaching ability that transmits enthusiasm along with information. Travel may feel like homecoming. Higher education may come easily. Faith in something larger than the self is the default setting.
+
+<strong>The Comfort Zone:</strong> The trap is getting lost in the big picture and missing the details. There can be a tendency to pontificate rather than listen, to have opinions on everything and curiosity about nothing, and to mistake certainty for wisdom. Intellectual arrogance can develop — the belief that having travelled widely or studied deeply makes one's perspective superior. The preacher in the soul can become preachy in life. "I already know this" becomes a way to avoid learning anything new from ordinary sources.
+
+<strong>What's Being Released:</strong> This lifetime calls for the 3rd House journey — curiosity, local connection, the willingness to learn from everyone (not just gurus and professors), and the humility to ask questions instead of always having answers. The soul is being asked to discover that the neighbour might have as much wisdom as the Tibetan monk.
+
+<strong>The Integration:</strong> When balanced, this South Node produces people who combine philosophical depth with genuine curiosity. The professor who still asks questions. The teacher who still learns from students. The world traveller who can also appreciate the corner shop.`,
+            gifts: ["Natural wisdom and faith", "Big-picture perspective", "Teaching ability that inspires"],
+            release: ["Intellectual arrogance", "Preaching instead of listening", "Dismissing ordinary knowledge"]
         },
         10: {
-            title: "South Node in 10th House - Achievement Gifts",
+            title: "South Node in 10th House - The Accomplished Soul",
             keywords: ["Natural Authority", "Career Skills", "Public Presence", "Past Achievement"],
-            reading: `The South Node in the 10th House indicates natural gifts around authority, career success, and public standing. These are abilities brought from past lives - natural ability to achieve and lead. The comfort zone involves work and public role.
+            reading: `The South Node in the 10th House reveals a soul who has spent lifetimes achieving, leading, and building reputation in the public eye. Authority, career success, and the weight of responsibility aren't new. They're well-worn grooves from many incarnations in positions of power, and while the skills are impressive, the soul is tired of performing for the world.
 
-The lesson is to use these gifts while developing the opposite: home, emotional connection, and inner security (North Node in 4th House). The achievement skills developed in other lifetimes now support creating true home.`
+<strong>The Gifts You Arrived With:</strong> Leadership and professional competence are instinctive. This soul understands hierarchy, ambition, and the strategic patience required to build something significant. There's a natural authority that others recognise and respect. Career success may come relatively easily — the soul knows the game because it's been playing for lifetimes. Public speaking, organisational management, and long-term planning are second nature.
+
+<strong>The Comfort Zone:</strong> The trap is defining yourself entirely through achievement and public standing. When career success has been the identity for lifetimes, slowing down feels like dying. There can be a workaholic tendency, a difficulty connecting emotionally (because feelings are inefficient), and a subtle coldness that prioritises results over relationships. The most personal question — "how do you feel?" — may be the hardest to answer. Home life may suffer because it doesn't have KPIs.
+
+<strong>What's Being Released:</strong> This lifetime calls for the 4th House journey — emotional vulnerability, family connection, inner security, and the creation of home as a place of genuine belonging rather than a base camp for the next career push. The soul is being asked to build an inner life as impressive as the outer one.
+
+<strong>The Integration:</strong> When balanced, this South Node produces people who bring worldly competence to personal life. The executive who is also a present parent. The leader who has genuine emotional depth. The achiever who discovers that the most important legacy might be the one left at the kitchen table.`,
+            gifts: ["Natural leadership and authority", "Professional competence", "Strategic thinking and planning"],
+            release: ["Workaholism as identity", "Emotional unavailability", "Valuing achievement over connection"]
         },
         11: {
-            title: "South Node in 11th House - Community Gifts",
+            title: "South Node in 11th House - The Collective Soul",
             keywords: ["Natural Group Skills", "Future Vision", "Humanitarian Concern", "Past Community"],
-            reading: `The South Node in the 11th House indicates natural gifts around community, future vision, and collective connection. These are abilities brought from past lives - natural ability to join and serve groups. The comfort zone involves belonging to groups and causes.
+            reading: `The South Node in the 11th House reveals a soul who has spent lifetimes immersed in groups, communities, and collective causes. Teamwork, social awareness, and the ability to subordinate personal desires for the greater good didn't develop in this lifetime — they're the muscle memory of many incarnations as activists, community builders, and those who found identity through belonging.
 
-The lesson is to use these gifts while developing the opposite: personal creativity, heart-centered expression, and individual joy (North Node in 5th House). The community skills developed in other lifetimes now support personal expression.`
+<strong>The Gifts You Arrived With:</strong> Group dynamics are understood instinctively. This soul can walk into any collective and quickly identify the dynamics, the alliances, and the unspoken rules. There's a natural concern for fairness, a progressive orientation that questions established norms, and an ability to inspire collective action. Friendship comes easily, and there's often an extensive social network. Technology and innovation may be natural interests.
+
+<strong>The Comfort Zone:</strong> The trap is losing individual identity in the group. When belonging has been the primary mode of existence for lifetimes, standing out feels terrifying. There can be a tendency to suppress personal desires because they feel selfish, to defer creative expression because it's "not about me," and to hide behind collective identity rather than risk individual exposure. The most dangerous version is the revolutionary who has no idea what they'd do with a free afternoon.
+
+<strong>What's Being Released:</strong> This lifetime calls for the 5th House journey — personal creativity, romantic love, individual expression, and the courage to put your own heart on display without the safety net of a group. The soul is being asked to discover what joy looks like when it's not collective — when it's just yours, unapologetically, in all its dramatic, personal, glorious specificity.
+
+<strong>The Integration:</strong> When balanced, this South Node produces people who bring genuine personal flair to group endeavours. The activist who is also an artist. The community leader who also falls madly in love. The humanitarian who paints on weekends — not for the cause, just for the sheer joy of colour on canvas.`,
+            gifts: ["Natural teamwork and collaboration", "Instinct for social dynamics", "Humanitarian vision and fairness"],
+            release: ["Losing self in groups", "Suppressing personal creativity", "Fear of individual spotlight"]
         },
         12: {
             title: "South Node in 12th House - The Transcendent Past",

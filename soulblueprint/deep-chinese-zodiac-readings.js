@@ -648,24 +648,19 @@ var CHINESE_ELEMENT_INFLUENCES = {
     Wood: {
         title: "Wood Element",
         nature: "Growth & Creativity",
-        influence: `The Wood element adds qualities of growth, creativity, and expansiveness. Wood energy is spring - new growth, fresh ideas, and expansion in all directions. It brings flexibility, idealism, and a focus on development.
+        influence: `The Wood element infuses this soul with the energy of spring itself — new growth, fresh ideas, and a constant pull toward expansion. There's something fundamentally optimistic about Wood energy. It's the first green shoot pushing through frozen ground, the branch that bends in the storm instead of breaking.
 
-Wood-influenced individuals tend to be:
-- **More creative and innovative** - generating new ideas and approaches
-- **Growth-oriented** - always expanding, learning, developing
-- **Idealistic and principled** - driven by vision and values
-- **Collaborative** - understanding that growth happens in community
-- **Flexible yet strong** - like bamboo, bending without breaking`,
+People shaped by Wood tend to be genuinely creative, not in a forced or performative way, but in the way a vine finds sunlight — naturally, persistently, and often from unexpected angles. They're drawn to growth in all its forms: personal development, education, building something from nothing. There's an idealism here too, a belief that things can be better, that people can evolve, that the future holds more than the past. They collaborate instinctively, understanding that a forest is stronger than a single tree. And like bamboo, they combine flexibility with surprising strength — they'll bend with circumstances rather than snap, but make no mistake about their resilience.`,
         
-        gifts: "Wood element enhances creativity, ethical leadership, and the ability to envision and manifest growth. These individuals often become innovators, teachers, or leaders in fields requiring vision and development.",
+        gifts: "Wood element enhances creativity, ethical leadership, and the ability to envision things that don't yet exist and then actually build them. These individuals often become innovators, teachers, or leaders in fields that demand both vision and follow-through.",
         
-        challenges: "The shadow of Wood can manifest as over-idealism, difficulty with practical constraints, or expansion beyond sustainable limits. There may be tendency to spread too thin or frustration when growth is limited.",
+        challenges: "The shadow side of Wood shows up as over-idealism — expecting too much too fast, spreading energy across too many projects, or becoming genuinely frustrated when reality doesn't match the vision. There can be a tendency to keep planting new seeds without tending what's already growing.",
         
-        relationships: "Wood element brings collaborative energy to relationships. These individuals invest in growth - their own, their partner's, and the relationship itself. They're oriented toward future possibilities.",
+        relationships: "In relationships, Wood energy shows up as investment. These aren't people who coast — they actively nurture the partnership, encourage their partner's growth, and think about where things are heading. The challenge is remembering that not every relationship needs to be a project. Sometimes just being together is enough.",
         
-        career: "Wood energy excels in fields involving education, innovation, development, or environmental work. They're natural at building things from the ground up and creating systems that grow.",
+        career: "Wood energy thrives in education, innovation, development, environmental work, or anything that involves building something meaningful from the ground up. They're the ones who see potential in empty lots and struggling startups alike.",
         
-        spiritualPath: "The spiritual journey involves learning to balance expansion with consolidation, idealism with pragmatism, and growth with stability. Wood must learn that sometimes pruning is necessary for healthier growth.",
+        spiritualPath: "The spiritual lesson for Wood is learning when to stop growing outward and start growing inward. Not every direction needs to be explored. Sometimes the wisest growth is the kind you can't see — roots going deeper rather than branches reaching higher.",
         
         affirmation: "I grow wisely and sustainably. My expansion serves the greater good."
     },
@@ -673,24 +668,19 @@ Wood-influenced individuals tend to be:
     Fire: {
         title: "Fire Element",
         nature: "Passion & Transformation",
-        influence: `The Fire element adds qualities of passion, energy, and transformation. Fire energy is summer - heat, light, rapid change, and dramatic transformation. It brings enthusiasm, charisma, and intensity.
+        influence: `The Fire element charges this soul with summer's intensity — heat, light, and the power to transform whatever it touches. Fire people don't enter rooms, they change the temperature. There's a natural magnetism here, a warmth that draws others in and an energy that can feel almost electric.
 
-Fire-influenced individuals tend to be:
-- **Passionate and enthusiastic** - bringing heat and energy to everything
-- **Charismatic and magnetic** - naturally drawing attention and followership
-- **Transformative** - catalyzing change in themselves and others
-- **Quick and decisive** - making rapid decisions and taking bold action
-- **Expressive and dramatic** - feeling and showing emotions fully`,
+People shaped by Fire tend to be genuinely passionate rather than merely enthusiastic. They feel things at full volume and aren't particularly interested in turning it down. They make decisions quickly, often from the gut, and they'd rather course-correct at speed than deliberate at a standstill. There's a dramatic quality to their emotional life — not drama for its own sake, but the kind of intensity that makes moments memorable. When a Fire person loves something, you know it. When they're angry, everyone in the building knows it. They're natural catalysts, the ones who walk into stagnant situations and somehow get things moving again.`,
         
-        gifts: "Fire element enhances leadership, the ability to inspire others, and the power to transform situations quickly. These individuals often become leaders, performers, or change agents.",
+        gifts: "Fire element amplifies leadership, the ability to inspire without trying too hard, and the raw power to transform stuck situations. These individuals often become leaders, performers, or the person everyone calls when something needs to change yesterday.",
         
-        challenges: "The shadow of Fire can manifest as burnout, impulsiveness, or consuming resources too quickly. There may be tendency toward drama, impatience, or burning bridges through intensity.",
+        challenges: "Fire's shadow is burnout, plain and simple. That incredible intensity isn't always sustainable. There can be impulsiveness — acting before thinking, burning bridges that took years to build, or consuming resources (emotional and otherwise) faster than they can be replenished. Not every situation needs the full blaze.",
         
-        relationships: "Fire element brings passion and intensity to relationships. These individuals love deeply and dramatically. They need partners who can match their energy or complement it with cooling elements.",
+        relationships: "Fire brings passion and intensity to partnerships in ways that can be both thrilling and exhausting. They love hard and fight hard. The key is finding someone who can match that energy without feeding the flames, or someone whose cooler temperament provides balance without dampening the spark entirely.",
         
-        career: "Fire energy excels in high-visibility leadership, performance, sales, or any field requiring charisma and transformative impact. They're natural at inspiring teams and driving rapid change.",
+        career: "Fire energy excels in high-visibility leadership, performance, entrepreneurship, emergency services, or any field where charisma and decisive action matter more than careful deliberation. They're the ones who thrive under pressure that would crush others.",
         
-        spiritualPath: "The spiritual journey involves learning to sustain rather than consume, to channel intensity rather than explode, and to transform with awareness rather than chaos. Fire must learn controlled burn.",
+        spiritualPath: "The spiritual journey for Fire is learning that controlled burns are more powerful than wildfires. Intensity channeled with awareness transforms. Intensity without awareness just destroys. The lesson is sustaining the flame, not just igniting it.",
         
         affirmation: "I channel my passion wisely. My intensity transforms with purpose."
     },
@@ -698,24 +688,19 @@ Fire-influenced individuals tend to be:
     Earth: {
         title: "Earth Element",
         nature: "Stability & Nourishment",
-        influence: `The Earth element adds qualities of stability, reliability, and nurturing. Earth energy is the transition between seasons - grounding, centering, providing foundation. It brings practicality, patience, and a focus on tangible results.
+        influence: `The Earth element grounds this soul with the energy of the harvest — patient, reliable, and deeply connected to what's real and tangible. Earth people are the bedrock others build their lives on, often without fully appreciating it until the ground shakes and the Earth person is still standing.
 
-Earth-influenced individuals tend to be:
-- **Stable and reliable** - providing consistent presence and support
-- **Practical and grounded** - focused on what works in reality
-- **Nurturing and supportive** - naturally caring for others' needs
-- **Patient and persistent** - willing to work steadily over time
-- **Connected to physical reality** - appreciating tangible results`,
+People shaped by Earth tend to be practical in a way that goes beyond mere common sense — they have an instinct for what works, what lasts, and what's worth the effort. They're naturally nurturing, the ones who remember to ask if you've eaten, who show up with exactly what's needed without being asked. Patience isn't something they practice; it's how they're wired. They work steadily rather than in bursts, and the results tend to outlast everyone else's. There's a deep appreciation for physical reality here — good food, comfortable spaces, the satisfaction of holding something you built with your own hands.`,
         
-        gifts: "Earth element enhances reliability, the ability to manifest tangible results, and the power to nurture growth in others. These individuals often become trusted advisors, builders, or caregivers.",
+        gifts: "Earth element enhances dependability, the ability to turn abstract plans into concrete results, and a natural talent for making others feel safe and supported. These are the people who actually finish what they start.",
         
-        challenges: "The shadow of Earth can manifest as stubbornness, resistance to change, or becoming stuck in material concerns. There may be tendency toward worry, over-caution, or difficulty with abstract thinking.",
+        challenges: "Earth's shadow shows up as stubbornness that gets mistaken for strength, resistance to change that gets called 'being realistic,' and a tendency to get so focused on material security that the soul's needs go unmet. The ground doesn't move easily, and sometimes that's exactly the problem.",
         
-        relationships: "Earth element brings stability and nurturing to relationships. These individuals create secure, comfortable partnerships and are devoted to their loved ones' physical and emotional well-being.",
+        relationships: "In relationships, Earth energy means showing up. Consistently. These aren't the partners who sweep you off your feet with grand gestures — they're the ones who are still there at 3am when life falls apart, making tea and saying very little but meaning everything. The risk is becoming so comfortable that the relationship stops growing.",
         
-        career: "Earth energy excels in fields requiring reliability, practical skill, or caregiving. Agriculture, construction, healthcare, administration, or any work producing tangible results suits Earth energy.",
+        career: "Earth energy thrives in anything requiring sustained effort and tangible outcomes — healthcare, construction, agriculture, administration, cooking, or any craft where patience and precision produce something real. They build careers the way they build everything else: brick by brick.",
         
-        spiritualPath: "The spiritual journey involves learning to balance stability with flexibility, material focus with spiritual awareness, and nurturing others with self-care. Earth must learn that change is also natural.",
+        spiritualPath: "The spiritual lesson for Earth is learning that change isn't the enemy. The ground needs to shift sometimes for new things to grow. Letting go of control, trusting the unseen, and accepting that not everything valuable can be held in your hands — these are Earth's deeper assignments.",
         
         affirmation: "I am both stable and flexible. My grounding supports growth."
     },
@@ -723,24 +708,19 @@ Earth-influenced individuals tend to be:
     Metal: {
         title: "Metal Element",
         nature: "Precision & Clarity",
-        influence: `The Metal element adds qualities of precision, clarity, and refinement. Metal energy is autumn - harvest time, cutting away excess, distilling to essence. It brings discernment, high standards, and focus on quality.
+        influence: `The Metal element sharpens this soul with autumn's energy — the time of harvest, distillation, and cutting away what's no longer needed. Metal people see clearly where others see fog. They have standards, and those standards aren't negotiable.
 
-Metal-influenced individuals tend to be:
-- **Precise and exacting** - maintaining high standards in all things
-- **Clear and direct** - communicating without ambiguity
-- **Refined and sophisticated** - appreciating and creating quality
-- **Organized and systematic** - bringing order to chaos
-- **Discerning** - able to distinguish valuable from worthless`,
+People shaped by Metal tend to be precise in everything they do, from how they communicate to how they organize their lives. There's nothing vague about them. They say what they mean, they mean what they say, and they have little patience for people who can't do the same. Quality matters to them — they'd rather have one excellent thing than ten mediocre ones. They're natural organizers, the ones who walk into chaos and somehow have it sorted before lunch. And they're discerning in a way that can look like judgment but is really just clarity — they can tell the difference between what's valuable and what's just shiny.`,
         
-        gifts: "Metal element enhances precision, the ability to create and recognize quality, and the power to cut through to essentials. These individuals often excel in fields requiring exactness and refinement.",
+        gifts: "Metal element sharpens perception, elevates craftsmanship, and brings the kind of clarity that cuts through confusion like a blade through silk. These individuals set the standard that others aspire to, often without trying.",
         
-        challenges: "The shadow of Metal can manifest as rigidity, excessive criticism, or coldness. There may be tendency toward perfectionism, emotional distance, or difficulty accepting imperfection.",
+        challenges: "Metal's shadow is rigidity dressed up as high standards. The same precision that produces excellence can also produce a person who is impossible to please — including themselves. Emotional coldness, excessive criticism, and the inability to accept 'good enough' can isolate Metal energy from the very people who admire it.",
         
-        relationships: "Metal element brings clarity and high standards to relationships. These individuals know what they want and communicate it clearly. They need partners who appreciate precision and can meet their standards.",
+        relationships: "In relationships, Metal energy brings clarity and directness. You always know where you stand. The challenge is that emotional messiness is part of love, and Metal's instinct to clean it up or cut it away can make partners feel like they're being audited rather than loved. Learning that some imperfections are features, not bugs, is Metal's relationship homework.",
         
-        career: "Metal energy excels in fields requiring precision - surgery, editing, engineering, accounting, law, or craftsmanship. They bring exceptional quality and systematic thinking to their work.",
+        career: "Metal energy excels in surgery, engineering, editing, law, accounting, fine craftsmanship, or any field where precision isn't optional. They produce work of exceptional quality and hold themselves and their colleagues to standards that elevate everything.",
         
-        spiritualPath: "The spiritual journey involves learning to balance precision with acceptance, clarity with compassion, and standards with flexibility. Metal must learn that perfection isn't always the goal.",
+        spiritualPath: "The spiritual lesson for Metal is learning that the sharpest blade knows when to stay in its sheath. Not everything needs to be refined. Not every flaw needs fixing. The deepest wisdom Metal can reach is accepting imperfection as part of the design, not a failure of quality control.",
         
         affirmation: "I maintain high standards while accepting imperfection. My clarity serves compassion."
     },
@@ -748,24 +728,19 @@ Metal-influenced individuals tend to be:
     Water: {
         title: "Water Element",
         nature: "Flow & Wisdom",
-        influence: `The Water element adds qualities of flow, depth, and intuitive wisdom. Water energy is winter - stillness, introspection, depth beneath surface. It brings adaptability, intuition, and connection to unconscious realms.
+        influence: `The Water element deepens this soul with winter's energy — still on the surface, vast underneath, and more powerful than anything that tries to stop it. Water people carry a kind of ancient knowing, as though they've been here before and remember more than they let on.
 
-Water-influenced individuals tend to be:
-- **Adaptable and flowing** - adjusting naturally to changing circumstances
-- **Intuitive and perceptive** - sensing undercurrents others miss
-- **Deep and reflective** - comfortable with complexity and mystery
-- **Resourceful** - finding paths like water finds its way
-- **Connected to emotions** - accessing depth of feeling`,
+People shaped by Water tend to be adaptable in ways that can look effortless but aren't. They read rooms the way rivers read landscapes — finding the path of least resistance while never losing their essential nature. Their intuition runs deep enough to be unsettling sometimes, picking up on currents and undercurrents that others miss entirely. They're comfortable with complexity, with ambiguity, with the spaces between certainties where most people feel lost. Emotions aren't something Water people manage — emotions are their element, their medium, the thing they navigate as naturally as breathing.`,
         
-        gifts: "Water element enhances intuition, the ability to navigate complex emotional terrain, and the power to adapt while maintaining essence. These individuals often become healers, artists, or wisdom-keepers.",
+        gifts: "Water element enhances intuition, emotional intelligence, and the ability to navigate situations that would drown less adaptable souls. These individuals often become healers, artists, counsellors, or the person everyone confides in without quite knowing why.",
         
-        challenges: "The shadow of Water can manifest as excessive emotionality, lack of boundaries, or getting lost in depths. There may be tendency toward fear, over-adaptation, or difficulty with direct action.",
+        challenges: "Water's shadow is losing yourself. Without boundaries, Water spreads until there's nothing left — absorbing everyone else's emotions, adapting so completely that the original self disappears, or retreating into depths where no one can follow. Fear can become the dominant current, and excessive caution can prevent the very flow that makes Water powerful.",
         
-        relationships: "Water element brings emotional depth and adaptability to relationships. These individuals connect at soul levels and adjust to their partners' needs. They need depth and emotional authenticity.",
+        relationships: "In relationships, Water energy connects at levels most people don't even know exist. They feel their partner's moods before words are spoken. The risk is over-merging — becoming so attuned to the other person that their own needs become invisible. Healthy Water relationships require the container of boundaries, not to restrict the flow, but to give it shape.",
         
-        career: "Water energy excels in fields requiring emotional intelligence, intuition, or adaptability. Counseling, healing arts, creative work, or diplomacy all suit Water energy well.",
+        career: "Water energy thrives in counselling, healing arts, creative work, diplomacy, research, or any field where reading between the lines matters more than reading the lines themselves. They excel wherever emotional intelligence is the real skill being tested.",
         
-        spiritualPath: "The spiritual journey involves learning to balance flow with boundaries, depth with action, and intuition with reason. Water must learn to contain itself while maintaining fluidity.",
+        spiritualPath: "The spiritual lesson for Water is learning that depth doesn't require drowning. Boundaries aren't walls — they're riverbanks, and without them, even the mightiest river becomes a swamp. The wisdom Water seeks is already inside, waiting to be still enough to hear it.",
         
         affirmation: "I flow wisely. My depth is strength, and my boundaries are healthy."
     }
