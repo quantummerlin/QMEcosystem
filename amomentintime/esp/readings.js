@@ -11,241 +11,241 @@
 
 var LIFE_PATH_READINGS = {
     1: {
-        title: "El pionero",
-        keywords: ["Liderazgo", "Independencia", "Innovación", "Coraje"],
-        summary: "Un líder nato destinado a forjar su propio camino.",
-        reading: `Esta alma ha llegado con la energía del pionero y pionero. Life Path 1 indica un destino lleno de oportunidades para liderar, innovar y mantenerse independiente. Desde los primeros días, habrá un notable impulso por hacer las cosas a su manera.
+        title: "The Pioneer",
+        keywords: ["Leadership", "Independence", "Innovation", "Courage"],
+        summary: "A natural-born leader destined to forge their own path.",
+        reading: `This soul has arrived with the energy of the pioneer and trailblazer. Life Path 1 indicates a destiny filled with opportunities to lead, innovate, and stand independently. From the earliest days, there will be a noticeable drive to do things their own way.
 
-Este individuo posee un coraje innato que le servirá durante toda la vida. Están aquí para aprender las lecciones de la autosuficiencia y desarrollar la confianza necesaria para confiar en sus propios instintos. Mientras que otros pueden seguir a la multitud, esta alma está destinada a crear nuevos caminos para que otros los sigan.
+This individual possesses an innate courage that will serve them throughout life. They are here to learn the lessons of self-reliance and to develop the confidence to trust their own instincts. While others may follow the crowd, this soul is meant to create new paths for others to follow.
 
-El viaje de Life Path 1 implica aprender a equilibrar la independencia con la cooperación. A temprana edad, pueden tener dificultades con figuras de autoridad o sentirse frustrados cuando se les obliga a conformarse. Esto es natural: su espíritu está diseñado para cuestionar, desafiar y, en última instancia, mejorar los sistemas existentes.
+The journey of a Life Path 1 involves learning to balance independence with cooperation. Early in life, they may struggle with authority figures or feel frustrated when forced to conform. This is natural - their spirit is designed to question, challenge, and ultimately improve upon existing systems.
 
-Las fortalezas clave incluyen la originalidad, la determinación y la capacidad de inspirar a otros con el ejemplo. Pueden surgir desafíos en torno a la terquedad, la impaciencia o la dificultad para aceptar la ayuda de los demás. El mayor crecimiento se produce cuando aprenden que el verdadero liderazgo implica animar a los demás, no simplemente avanzar solos.
+Key strengths include originality, determination, and the ability to inspire others through example. Challenges may arise around stubbornness, impatience, or difficulty accepting help from others. The greatest growth comes when they learn that true leadership involves lifting others up, not just charging ahead alone.
 
-En las relaciones, la carrera y el desarrollo personal, esta alma prosperará cuando se le dé la libertad de expresar su visión única. Están aquí para mostrarle al mundo que una persona con convicciones realmente puede marcar la diferencia.`,
-        strengths: ["Liderazgo natural", "Pensamiento creativo", "Automotivación", "Coraje bajo presión"],
-        challenges: ["Testarudez", "Impaciencia", "Dificultad para delegar", "Miedo a la dependencia"],
-        advice: "Confía en tus instintos, pero recuerda que incluso los pioneros necesitan compañeros en el viaje."
+In relationships, career, and personal development, this soul will thrive when given the freedom to express their unique vision. They are here to show the world that one person with conviction can indeed make a difference.`,
+        strengths: ["Natural leadership", "Creative thinking", "Self-motivation", "Courage under pressure"],
+        challenges: ["Stubbornness", "Impatience", "Difficulty delegating", "Fear of dependence"],
+        advice: "Trust your instincts, but remember that even pioneers need companions on the journey."
     },
     
     2: {
-        title: "El pacificador",
-        keywords: ["Armonía", "Cooperación", "Sensibilidad", "Diplomacia"],
-        summary: "Un alma gentil destinada a unir a las personas.",
-        reading: `Esta alma ha llegado con el don de la sensibilidad y la misión de crear armonía. Life Path 2 indica un destino centrado en las relaciones, la cooperación y el arte sutil de unir a las personas.
+        title: "The Peacemaker",
+        keywords: ["Harmony", "Cooperation", "Sensitivity", "Diplomacy"],
+        summary: "A gentle soul destined to bring people together.",
+        reading: `This soul has arrived with the gift of sensitivity and the mission of creating harmony. Life Path 2 indicates a destiny centered around relationships, cooperation, and the subtle art of bringing people together.
 
-Desde el principio, este individuo demostrará una conciencia inusual de los sentimientos y necesidades de los demás. Poseen una comprensión intuitiva de las corrientes emocionales subyacentes que otros suelen pasar por alto. Esta sensibilidad es a la vez su mayor don y su desafío más importante.
+From early on, this individual will demonstrate an unusual awareness of others' feelings and needs. They possess an intuitive understanding of emotional undercurrents that others often miss. This sensitivity is both their greatest gift and their most significant challenge.
 
-El viaje de Life Path 2 implica aprender a honrar su naturaleza amable mientras se desarrollan límites saludables. Son mediadores y pacificadores naturales, y a menudo se encuentran en el papel de puente entre las partes en conflicto. Su presencia tiene un efecto calmante en los demás.
+The journey of a Life Path 2 involves learning to honor their gentle nature while developing healthy boundaries. They are natural mediators and peacemakers, often finding themselves in the role of the bridge between conflicting parties. Their presence has a calming effect on others.
 
-Las fortalezas clave incluyen la empatía, la paciencia y la capacidad de ver múltiples perspectivas. Se destacan en asociaciones y entornos colaborativos. Pueden surgir desafíos en torno a la indecisión, la excesiva sensibilidad a las críticas o perderse en las necesidades de los demás.
+Key strengths include empathy, patience, and the ability to see multiple perspectives. They excel in partnerships and collaborative environments. Challenges may arise around indecision, over-sensitivity to criticism, or losing themselves in others' needs.
 
-Esta alma está aquí para enseñarle al mundo sobre el poder de la gentileza y la cooperación. En un mundo que a menudo valora la agresión y la competencia, nos recuerdan que las soluciones duraderas llegan a través de la comprensión y el compromiso.
+This soul is here to teach the world about the power of gentleness and cooperation. In a world that often values aggression and competition, they remind us that lasting solutions come through understanding and compromise.
 
-Su mayor satisfacción se produce a través de conexiones significativas y de contribuir al bien común a través de roles de apoyo. Puede que no siempre estén en el centro de atención, pero su influencia es profunda y duradera.`,
-        strengths: ["Empatía profunda", "Habilidades diplomáticas", "Paciencia", "Comprensión intuitiva"],
-        challenges: ["hipersensibilidad", "Indecisión", "complacer a la gente", "Autodescuido"],
-        advice: "Tu sensibilidad es un superpoder, no una debilidad. Aprenda a proteger su energía mientras comparte sus dones."
+Their greatest fulfillment comes through meaningful connections and contributing to the greater good through supportive roles. They may not always be in the spotlight, but their influence is profound and lasting.`,
+        strengths: ["Deep empathy", "Diplomatic skills", "Patience", "Intuitive understanding"],
+        challenges: ["Over-sensitivity", "Indecision", "People-pleasing", "Self-neglect"],
+        advice: "Your sensitivity is a superpower, not a weakness. Learn to protect your energy while sharing your gifts."
     },
     
     3: {
-        title: "El creativo",
-        keywords: ["Expresión", "Alegría", "Creatividad", "Comunicación"],
-        summary: "Un alma vibrante destinada a inspirar a través de la expresión creativa.",
-        reading: `Esta alma ha llegado repleta de energía creativa y el don de la expresión alegre. Life Path 3 indica un destino lleno de oportunidades para crear, comunicar y traer luz al mundo a través de esfuerzos artísticos.
+        title: "The Creative",
+        keywords: ["Expression", "Joy", "Creativity", "Communication"],
+        summary: "A vibrant soul destined to inspire through creative expression.",
+        reading: `This soul has arrived bursting with creative energy and the gift of joyful expression. Life Path 3 indicates a destiny filled with opportunities to create, communicate, and bring light to the world through artistic endeavors.
 
-Desde los primeros momentos, habrá un brillo notable: un encanto natural y un entusiasmo que atrae a los demás. Este individuo está aquí para recordarle al mundo la importancia del juego, la creatividad y la autoexpresión.
+From the earliest moments, there will be a noticeable sparkle - a natural charm and enthusiasm that draws others in. This individual is here to remind the world of the importance of play, creativity, and self-expression.
 
-El viaje de Life Path 3 implica aprender a canalizar productivamente su abundante energía creativa. Poseen talentos naturales para la comunicación, ya sea a través de las palabras, el arte, la música u otras formas de expresión. Su desafío es desarrollar la disciplina para manifestar plenamente sus visiones creativas.
+The journey of a Life Path 3 involves learning to channel their abundant creative energy productively. They possess natural talents in communication, whether through words, art, music, or other forms of expression. Their challenge is to develop the discipline to fully manifest their creative visions.
 
-Las fortalezas clave incluyen el optimismo, la imaginación y la capacidad de levantar el ánimo de los demás. Tienen el don de ver la belleza y las posibilidades donde otros sólo ven lo ordinario. Pueden surgir desafíos en torno a la energía dispersa, la dificultad para seguir adelante o el uso del humor para evitar emociones más profundas.
+Key strengths include optimism, imagination, and the ability to uplift others' spirits. They have a gift for seeing beauty and possibility where others see only the ordinary. Challenges may arise around scattered energy, difficulty with follow-through, or using humor to avoid deeper emotions.
 
-Esta alma está aquí para enseñarle al mundo sobre el poder curativo de la creatividad y la alegría. Su presencia recuerda a los demás que no se tomen la vida demasiado en serio y que la autoexpresión es esencial para el bienestar.
+This soul is here to teach the world about the healing power of creativity and joy. Their presence reminds others not to take life too seriously and that self-expression is essential to well-being.
 
-Su mayor realización proviene de proyectos creativos que les permiten compartir su perspectiva única con el mundo. Ya sea a través del arte, el entretenimiento, la enseñanza o cualquier forma de comunicación, están destinados a inspirar y deleitar.`,
-        strengths: ["creatividad natural", "Optimismo", "Habilidades de comunicación", "Capacidad de inspirar alegría."],
-        challenges: ["Enfoque disperso", "Evitando la profundidad", "Dudas sobre los talentos", "dificultad con la rutina"],
-        advice: "Tu creatividad es tu regalo para el mundo. Desarrolla la disciplina para expresar plenamente tu visión."
+Their greatest fulfillment comes through creative projects that allow them to share their unique perspective with the world. Whether through art, entertainment, teaching, or any form of communication, they are meant to inspire and delight.`,
+        strengths: ["Natural creativity", "Optimism", "Communication skills", "Ability to inspire joy"],
+        challenges: ["Scattered focus", "Avoiding depth", "Self-doubt about talents", "Difficulty with routine"],
+        advice: "Your creativity is your gift to the world. Develop the discipline to fully express your vision."
     },
     
     4: {
-        title: "el constructor",
-        keywords: ["Estabilidad", "Trabajo duro", "Sentido práctico", "Base"],
-        summary: "Un alma cimentada destinada a crear estructuras duraderas.",
-        reading: `Esta alma ha llegado con la energía del maestro constructor y la misión de crear cimientos duraderos. Life Path 4 indica un destino centrado en el trabajo duro, la practicidad y la construcción de cosas duraderas.
+        title: "The Builder",
+        keywords: ["Stability", "Hard Work", "Practicality", "Foundation"],
+        summary: "A grounded soul destined to create lasting structures.",
+        reading: `This soul has arrived with the energy of the master builder and the mission of creating lasting foundations. Life Path 4 indicates a destiny centered around hard work, practicality, and building things that endure.
 
-Desde temprano, este individuo demostrará una inclinación natural hacia el orden, la estructura y el pensamiento sistemático. Encuentran consuelo en la rutina y se sienten satisfechos al ver resultados tangibles de sus esfuerzos.
+From early on, this individual will demonstrate a natural inclination toward order, structure, and systematic thinking. They find comfort in routine and take satisfaction in seeing tangible results from their efforts.
 
-El viaje de Life Path 4 implica aprender a equilibrar su necesidad de seguridad con la apertura al cambio. Son los arquitectos del zodíaco, capaces de convertir los sueños en realidad mediante un esfuerzo metódico y una determinación inquebrantable.
+The journey of a Life Path 4 involves learning to balance their need for security with openness to change. They are the architects of the zodiac, capable of turning dreams into reality through methodical effort and unwavering determination.
 
-Las fortalezas clave incluyen confiabilidad, habilidades organizativas y la capacidad de trabajar de manera constante hacia objetivos a largo plazo. Se destacan en la creación de sistemas y estructuras que benefician a otros. Pueden surgir desafíos en torno a la rigidez, la adicción al trabajo o la dificultad para adaptarse a cambios inesperados.
+Key strengths include reliability, organizational skills, and the ability to work steadily toward long-term goals. They excel at creating systems and structures that benefit others. Challenges may arise around rigidity, workaholism, or difficulty adapting to unexpected changes.
 
-Esta alma está aquí para enseñarle al mundo el valor de la paciencia, la perseverancia y las bases sólidas. En un mundo que a menudo busca soluciones rápidas, nos recuerdan que el éxito duradero se construye ladrillo a ladrillo.
+This soul is here to teach the world about the value of patience, persistence, and solid foundations. In a world that often seeks quick fixes, they remind us that lasting success is built brick by brick.
 
-Su mayor satisfacción se produce al crear algo de valor duradero, ya sea un negocio, una familia, un hogar o cualquier estructura que resista el paso del tiempo. Son ellos quienes convierten las visiones en realidad.`,
-        strengths: ["Fiabilidad", "Habilidades organizativas", "Determinación", "Sabiduría práctica"],
-        challenges: ["Rigidez", "Resistencia al cambio", "Adicción al trabajo", "Pesimismo"],
-        advice: "Tu naturaleza estable es tu fuerza. Recuerde incorporar flexibilidad y tiempo para la alegría."
+Their greatest fulfillment comes through creating something of lasting value - whether a business, a family, a home, or any structure that will stand the test of time. They are the ones who turn visions into reality.`,
+        strengths: ["Reliability", "Organizational skills", "Determination", "Practical wisdom"],
+        challenges: ["Rigidity", "Resistance to change", "Workaholism", "Pessimism"],
+        advice: "Your steady nature is your strength. Remember to build in flexibility and time for joy."
     },
     
     5: {
-        title: "El buscador de libertad",
-        keywords: ["Aventura", "Cambiar", "Libertad", "Versatilidad"],
-        summary: "Un alma dinámica destinada a experimentar el espectro completo de la vida.",
-        reading: `Esta alma ha llegado con una curiosidad insaciable y la misión de experimentar todo lo que la vida tiene para ofrecer. Life Path 5 indica un destino lleno de aventuras, cambios y la búsqueda de la libertad.
+        title: "The Freedom Seeker",
+        keywords: ["Adventure", "Change", "Freedom", "Versatility"],
+        summary: "A dynamic soul destined to experience life's full spectrum.",
+        reading: `This soul has arrived with an insatiable curiosity and the mission of experiencing all that life has to offer. Life Path 5 indicates a destiny filled with adventure, change, and the pursuit of freedom.
 
-Desde los primeros días, habrá una energía inquieta: una necesidad de explorar, cuestionar y experimentar. Este individuo está aquí para aprender a través de la experiencia directa y no del conocimiento de segunda mano.
+From the earliest days, there will be a restless energy - a need to explore, question, and experience. This individual is here to learn through direct experience rather than secondhand knowledge.
 
-El viaje de Life Path 5 implica aprender a equilibrar su necesidad de libertad con responsabilidad. Son aventureros natos, atraídos por los viajes, las nuevas experiencias y cualquier cosa que rompa la monotonía de la rutina.
+The journey of a Life Path 5 involves learning to balance their need for freedom with responsibility. They are natural adventurers, drawn to travel, new experiences, and anything that breaks the monotony of routine.
 
-Las fortalezas clave incluyen la adaptabilidad, el ingenio y la capacidad de prosperar en circunstancias cambiantes. Aportan entusiasmo y nuevas perspectivas dondequiera que vayan. Pueden surgir desafíos en torno al compromiso, la impulsividad o la dificultad con la rutina y la responsabilidad.
+Key strengths include adaptability, resourcefulness, and the ability to thrive in changing circumstances. They bring excitement and fresh perspectives wherever they go. Challenges may arise around commitment, impulsiveness, or difficulty with routine and responsibility.
 
-Esta alma está aquí para enseñarle al mundo la importancia de aceptar el cambio y vivir plenamente. Su entusiasmo por la vida es contagioso e inspira a otros a salir de su zona de confort.
+This soul is here to teach the world about the importance of embracing change and living fully. Their enthusiasm for life is contagious, inspiring others to step outside their comfort zones.
 
-Su mayor satisfacción llega a través de experiencias que amplían su comprensión del mundo y de ellos mismos. Están destinados a ser el puente entre diferentes culturas, ideas y formas de ser.`,
-        strengths: ["Adaptabilidad", "Entusiasmo", "Versatilidad", "Coraje para probar cosas nuevas."],
-        challenges: ["Inquietud", "Cuestiones de compromiso", "Impulsividad", "Energía dispersa"],
-        advice: "Tu amor por la libertad es hermoso. Aprenda que la verdadera libertad incluye la libertad de comprometerse."
+Their greatest fulfillment comes through experiences that expand their understanding of the world and themselves. They are meant to be the bridge between different cultures, ideas, and ways of being.`,
+        strengths: ["Adaptability", "Enthusiasm", "Versatility", "Courage to try new things"],
+        challenges: ["Restlessness", "Commitment issues", "Impulsiveness", "Scattered energy"],
+        advice: "Your love of freedom is beautiful. Learn that true freedom includes the freedom to commit."
     },
     
     6: {
-        title: "El cuidador",
-        keywords: ["Amar", "Responsabilidad", "Familia", "Servicio"],
-        summary: "Un alma amorosa destinada a cuidar y sanar a los demás.",
-        reading: `Esta alma ha llegado con el corazón lleno de amor y la misión de nutrir a los demás. Life Path 6 indica un destino centrado en la familia, la responsabilidad y el servicio a los seres queridos y a la comunidad.
+        title: "The Nurturer",
+        keywords: ["Love", "Responsibility", "Family", "Service"],
+        summary: "A loving soul destined to care for and heal others.",
+        reading: `This soul has arrived with a heart full of love and the mission of nurturing others. Life Path 6 indicates a destiny centered around family, responsibility, and service to loved ones and community.
 
-Desde el principio, este individuo demostrará una inclinación natural a preocuparse por los demás. Tienen un sentido innato de responsabilidad y a menudo asumen el papel de cuidadores, incluso desde una edad temprana.
+From early on, this individual will demonstrate a natural inclination to care for others. They have an innate sense of responsibility and often take on the role of caretaker, even from a young age.
 
-El viaje de Life Path 6 implica aprender a equilibrar dar con recibir. Son sanadores y consejeros naturales, atraídos por roles en los que pueden marcar una diferencia en la vida de los demás. Su desafío es cuidar de sí mismos con tanto amor como cuidan de los demás.
+The journey of a Life Path 6 involves learning to balance giving with receiving. They are natural healers and counselors, drawn to roles where they can make a difference in others' lives. Their challenge is to care for themselves as lovingly as they care for others.
 
-Las fortalezas clave incluyen la compasión, la confiabilidad y la capacidad de crear armonía en su entorno. Se destacan por hacer que los demás se sientan amados y apoyados. Pueden surgir desafíos en torno al perfeccionismo, la generosidad o la dificultad para aceptar ayuda.
+Key strengths include compassion, reliability, and the ability to create harmony in their environment. They excel at making others feel loved and supported. Challenges may arise around perfectionism, over-giving, or difficulty accepting help.
 
-Esta alma está aquí para enseñarle al mundo sobre el amor incondicional y la belleza del servicio. Su presencia crea una sensación de hogar y pertenencia dondequiera que vayan.
+This soul is here to teach the world about unconditional love and the beauty of service. Their presence creates a sense of home and belonging wherever they go.
 
-Su mayor realización se produce a través de relaciones significativas y de contribuir al bienestar de su familia y su comunidad. Son el corazón de cualquier grupo al que pertenecen.`,
-        strengths: ["Compasión profunda", "Fiabilidad", "Presencia sanadora", "Capacidad de crear armonía."],
-        challenges: ["perfeccionismo", "Dar demasiado", "dificultad para recibir", "Martirio"],
-        advice: "Tu naturaleza amorosa es tu regalo. Recuerda que no puedes servir de una taza vacía."
+Their greatest fulfillment comes through meaningful relationships and contributing to the well-being of their family and community. They are the heart of any group they belong to.`,
+        strengths: ["Deep compassion", "Reliability", "Healing presence", "Ability to create harmony"],
+        challenges: ["Perfectionism", "Over-giving", "Difficulty receiving", "Martyrdom"],
+        advice: "Your loving nature is your gift. Remember that you cannot pour from an empty cup."
     },
     
     7: {
-        title: "El buscador",
-        keywords: ["Sabiduría", "Introspección", "Espiritualidad", "Análisis"],
-        summary: "Un alma reflexiva destinada a buscar verdades más profundas.",
-        reading: `Esta alma ha llegado con una mente interrogativa y la misión de buscar una comprensión más profunda. Life Path 7 indica un destino centrado en la sabiduría, la espiritualidad y la búsqueda de la verdad.
+        title: "The Seeker",
+        keywords: ["Wisdom", "Introspection", "Spirituality", "Analysis"],
+        summary: "A thoughtful soul destined to seek deeper truths.",
+        reading: `This soul has arrived with a questioning mind and the mission of seeking deeper understanding. Life Path 7 indicates a destiny centered around wisdom, spirituality, and the pursuit of truth.
 
-Desde temprano, este individuo demostrará una naturaleza contemplativa y una necesidad de soledad. Son filósofos naturales, atraídos por preguntas sobre el significado de la vida y la naturaleza de la realidad.
+From early on, this individual will demonstrate a contemplative nature and a need for solitude. They are natural philosophers, drawn to questions about the meaning of life and the nature of reality.
 
-El viaje de Life Path 7 implica aprender a equilibrar su mundo interior con el compromiso exterior. Son analistas e investigadores talentosos, capaces de ver patrones y conexiones que otros pasan por alto. Su desafío es compartir sus ideas en lugar de permanecer aislados en sus pensamientos.
+The journey of a Life Path 7 involves learning to balance their inner world with outer engagement. They are gifted analysts and researchers, capable of seeing patterns and connections that others miss. Their challenge is to share their insights rather than remaining isolated in their thoughts.
 
-Las fortalezas clave incluyen capacidad analítica, intuición y profundidad de comprensión. Se destacan en campos que requieren investigación, análisis o conocimiento espiritual. Pueden surgir desafíos en torno al aislamiento, el escepticismo o la dificultad para conectarse emocionalmente con los demás.
+Key strengths include analytical ability, intuition, and depth of understanding. They excel in fields requiring research, analysis, or spiritual insight. Challenges may arise around isolation, skepticism, or difficulty connecting emotionally with others.
 
-Esta alma está aquí para enseñar al mundo sobre el valor de la contemplación y la búsqueda de la sabiduría. En un mundo centrado en los logros externos, nos recuerdan la importancia del desarrollo interior.
+This soul is here to teach the world about the value of contemplation and the pursuit of wisdom. In a world focused on external achievement, they remind us of the importance of inner development.
 
-Su mayor realización llega a través de la comprensión, ya sea mediante el estudio, la meditación o la experiencia espiritual directa. Son los buscadores que iluminan el camino de los demás.`,
-        strengths: ["Mente analítica", "Intuición", "Profundidad de pensamiento", "Conciencia espiritual"],
-        challenges: ["Aislamiento", "Cavilaciones", "Distancia emocional", "perfeccionismo"],
-        advice: "Tu búsqueda de la verdad es noble. Recuerde compartir su sabiduría y conectarse con los demás."
+Their greatest fulfillment comes through understanding - whether through study, meditation, or direct spiritual experience. They are the seekers who illuminate the path for others.`,
+        strengths: ["Analytical mind", "Intuition", "Depth of thought", "Spiritual awareness"],
+        challenges: ["Isolation", "Over-thinking", "Emotional distance", "Perfectionism"],
+        advice: "Your quest for truth is noble. Remember to share your wisdom and connect with others."
     },
     
     8: {
-        title: "La potencia",
-        keywords: ["Logro", "Abundancia", "Autoridad", "Éxito"],
-        summary: "Un alma ambiciosa destinada al dominio material y espiritual.",
-        reading: `Esta alma ha llegado con una energía poderosa y la misión de dominar el mundo material. Life Path 8 indica un destino centrado en los logros, la abundancia y el uso responsable del poder.
+        title: "The Powerhouse",
+        keywords: ["Achievement", "Abundance", "Authority", "Success"],
+        summary: "An ambitious soul destined for material and spiritual mastery.",
+        reading: `This soul has arrived with powerful energy and the mission of mastering the material world. Life Path 8 indicates a destiny centered around achievement, abundance, and the responsible use of power.
 
-Desde el principio, este individuo demostrará ambición y una comprensión natural de cómo funciona el mundo material. Se sienten atraídos por posiciones de autoridad y tienen una capacidad innata para manifestar sus objetivos.
+From early on, this individual will demonstrate ambition and a natural understanding of how the material world works. They are drawn to positions of authority and have an innate ability to manifest their goals.
 
-El viaje de Life Path 8 implica aprender a equilibrar el éxito material con los valores espirituales. Son líderes naturales en los negocios y las finanzas, capaces de construir imperios. Su desafío es usar su poder para un bien mayor y recordar que la verdadera riqueza incluye más que dinero.
+The journey of a Life Path 8 involves learning to balance material success with spiritual values. They are natural leaders in business and finance, capable of building empires. Their challenge is to use their power for the greater good and to remember that true wealth includes more than money.
 
-Las fortalezas clave incluyen determinación, perspicacia para los negocios y la capacidad de manifestar abundancia. Se destacan en roles de liderazgo y tienen una autoridad natural que los demás respetan. Pueden surgir desafíos en torno a la adicción al trabajo, el materialismo o el mal uso del poder.
+Key strengths include determination, business acumen, and the ability to manifest abundance. They excel in leadership roles and have a natural authority that others respect. Challenges may arise around workaholism, materialism, or misuse of power.
 
-Esta alma está aquí para enseñarle al mundo sobre el uso responsable del poder y los recursos. Demuestran que el éxito material y la integridad espiritual pueden coexistir.
+This soul is here to teach the world about the responsible use of power and resources. They demonstrate that material success and spiritual integrity can coexist.
 
-Su mayor satisfacción se produce a través de logros que benefician no sólo a ellos mismos sino también a los demás. Deben ser administradores de los recursos y utilizar su poder para crear cambios positivos.`,
-        strengths: ["autoridad natural", "Habilidades comerciales", "Determinación", "capacidad de manifestación"],
-        challenges: ["Adicción al trabajo", "Materialismo", "Problemas de control", "Descuidar las relaciones"],
-        advice: "Tu poder está destinado a servir. Recuerde que el verdadero éxito incluye amor y satisfacción."
+Their greatest fulfillment comes through achievements that benefit not just themselves but others as well. They are meant to be stewards of resources, using their power to create positive change.`,
+        strengths: ["Natural authority", "Business skills", "Determination", "Manifestation ability"],
+        challenges: ["Workaholism", "Materialism", "Control issues", "Neglecting relationships"],
+        advice: "Your power is meant to serve. Remember that true success includes love and fulfillment."
     },
     
     9: {
-        title: "El humanitario",
-        keywords: ["Compasión", "Sabiduría", "Servicio", "Terminación"],
-        summary: "Un alma vieja destinada a servir a la humanidad.",
-        reading: `Esta alma ha llegado con la sabiduría de muchas vidas y la misión de servir a la humanidad. Life Path 9 indica un destino centrado en la compasión, el amor universal y la contribución al bien común.
+        title: "The Humanitarian",
+        keywords: ["Compassion", "Wisdom", "Service", "Completion"],
+        summary: "An old soul destined to serve humanity.",
+        reading: `This soul has arrived with the wisdom of many lifetimes and the mission of serving humanity. Life Path 9 indicates a destiny centered around compassion, universal love, and contributing to the greater good.
 
-Desde temprano, este individuo demostrará una madurez inusual y una preocupación por los demás que se extiende más allá de su círculo inmediato. Parecen comprender el sufrimiento y tener un deseo natural de aliviarlo.
+From early on, this individual will demonstrate unusual maturity and a concern for others that extends beyond their immediate circle. They seem to understand suffering and have a natural desire to alleviate it.
 
-El viaje de un Life Path 9 implica aprender a equilibrar su idealismo con la acción práctica. Son humanitarios natos, atraídos por causas que benefician a la humanidad en su conjunto. Su desafío es liberar el apego a los resultados y confiar en el plan más amplio.
+The journey of a Life Path 9 involves learning to balance their idealism with practical action. They are natural humanitarians, drawn to causes that benefit humanity as a whole. Their challenge is to release attachment to outcomes and trust in the larger plan.
 
-Las fortalezas clave incluyen la sabiduría, la compasión y la capacidad de ver el panorama general. Se destacan en roles que les permiten marcar la diferencia a gran escala. Pueden surgir desafíos en torno a la decepción con la humanidad, las dificultades con las relaciones personales o el descuido de sus propias necesidades.
+Key strengths include wisdom, compassion, and the ability to see the big picture. They excel in roles that allow them to make a difference on a large scale. Challenges may arise around disappointment with humanity, difficulty with personal relationships, or neglecting their own needs.
 
-Esta alma está aquí para enseñarle al mundo sobre el amor incondicional y la interconexión de todos los seres. Nos recuerdan que todos somos parte de una familia humana.
+This soul is here to teach the world about unconditional love and the interconnectedness of all beings. They remind us that we are all part of one human family.
 
-Su mayor realización se produce a través de un servicio que trasciende el beneficio personal. Son ellos los que dejan el mundo mejor de como lo encontraron.`,
-        strengths: ["compasión universal", "Sabiduría", "talento artístico", "Capacidad de inspirar"],
-        challenges: ["Idealismo", "Dificultad con los finales.", "donaciones dispersas", "Negligencia personal"],
-        advice: "Tu compasión es ilimitada. Recuerda incluirte en el círculo de tu amor."
+Their greatest fulfillment comes through service that transcends personal gain. They are the ones who leave the world better than they found it.`,
+        strengths: ["Universal compassion", "Wisdom", "Artistic talent", "Ability to inspire"],
+        challenges: ["Idealism", "Difficulty with endings", "Scattered giving", "Personal neglect"],
+        advice: "Your compassion is boundless. Remember to include yourself in the circle of your love."
     },
     
     11: {
-        title: "El iluminador",
-        keywords: ["Intuición", "Inspiración", "Mensajero Espiritual", "Visionario"],
-        summary: "Un alma maestra destinada a iluminar e inspirar.",
-        reading: `Esta alma ha llegado con extraordinarios dones espirituales y la misión de iluminar el camino a los demás. Life Path 11 es un número maestro que indica un destino de mayor intuición, inspiración y liderazgo espiritual.
+        title: "The Illuminator",
+        keywords: ["Intuition", "Inspiration", "Spiritual Messenger", "Visionary"],
+        summary: "A master soul destined to illuminate and inspire.",
+        reading: `This soul has arrived with extraordinary spiritual gifts and the mission of illuminating the path for others. Life Path 11 is a Master Number, indicating a destiny of heightened intuition, inspiration, and spiritual leadership.
 
-Desde el principio, este individuo demostrará una sensibilidad y una conciencia inusuales. Puede parecer que saben cosas sin que se las digan y que tienen experiencias que a otros les resultan difíciles de entender.
+From early on, this individual will demonstrate unusual sensitivity and awareness. They may seem to know things without being told and have experiences that others find difficult to understand.
 
-El viaje de un Life Path 11 implica aprender a gestionar su elevada sensibilidad mientras cumple su papel como mensajero espiritual. Son canales naturales de sabiduría superior, capaces de inspirar a otros a través de sus palabras y presencia.
+The journey of a Life Path 11 involves learning to manage their heightened sensitivity while fulfilling their role as a spiritual messenger. They are natural channels for higher wisdom, capable of inspiring others through their words and presence.
 
-Las fortalezas clave incluyen una intuición poderosa, capacidad de inspiración y conexión con reinos superiores. Se destacan en roles que les permiten compartir conocimientos espirituales o visiones creativas. Pueden surgir desafíos en torno a la tensión nerviosa, las dudas sobre uno mismo o la dificultad para basar sus visiones en la realidad.
+Key strengths include powerful intuition, inspirational ability, and connection to higher realms. They excel in roles that allow them to share spiritual insights or creative visions. Challenges may arise around nervous tension, self-doubt, or difficulty grounding their visions in reality.
 
-Esta alma está aquí para enseñarle al mundo acerca de la realidad de la dimensión espiritual y el poder de la inspiración. Son puentes entre los mundos visible e invisible.
+This soul is here to teach the world about the reality of the spiritual dimension and the power of inspiration. They are bridges between the seen and unseen worlds.
 
-Su mayor satisfacción se produce al compartir sus conocimientos de manera que animen e inspiren a otros. Están destinados a ser faros de luz en tiempos de oscuridad.`,
-        strengths: ["Intuición poderosa", "Presencia inspiradora", "Conciencia espiritual", "Visión creativa"],
-        challenges: ["tensión nerviosa", "dudas sobre uno mismo", "dificultad para aterrizar", "Abrumar"],
-        advice: "Tu sensibilidad es tu don. Aprenda a fundamentar sus visiones y a confiar en su conocimiento interior."
+Their greatest fulfillment comes through sharing their insights in ways that uplift and inspire others. They are meant to be beacons of light in times of darkness.`,
+        strengths: ["Powerful intuition", "Inspirational presence", "Spiritual awareness", "Creative vision"],
+        challenges: ["Nervous tension", "Self-doubt", "Difficulty grounding", "Overwhelm"],
+        advice: "Your sensitivity is your gift. Learn to ground your visions and trust your inner knowing."
     },
     
     22: {
-        title: "El maestro constructor",
-        keywords: ["Visión", "Manifestación", "Legado", "Impacto global"],
-        summary: "Un alma maestra destinada a construir legados duraderos.",
-        reading: `Esta alma ha llegado con la rara habilidad de convertir grandes visiones en realidad. Life Path 22 es un número maestro que indica el destino de construir estructuras y sistemas que beneficien a la humanidad a gran escala.
+        title: "The Master Builder",
+        keywords: ["Vision", "Manifestation", "Legacy", "Global Impact"],
+        summary: "A master soul destined to build lasting legacies.",
+        reading: `This soul has arrived with the rare ability to turn grand visions into reality. Life Path 22 is a Master Number, indicating a destiny of building structures and systems that benefit humanity on a large scale.
 
-Desde el principio, este individuo demostrará tanto pensamiento visionario como capacidad práctica. Tienen la rara combinación de poder ver el panorama general y al mismo tiempo comprender los pasos necesarios para llegar allí.
+From early on, this individual will demonstrate both visionary thinking and practical ability. They have the rare combination of being able to see the big picture while also understanding the steps needed to get there.
 
-El viaje de un Life Path 22 implica aprender a gestionar el enorme potencial que conlleva. Son capaces de lograr logros que a otros les parecen imposibles, pero este potencial conlleva una gran responsabilidad y presión.
+The journey of a Life Path 22 involves learning to manage the enormous potential they carry. They are capable of achievements that seem impossible to others, but this potential comes with great responsibility and pressure.
 
-Las fortalezas clave incluyen pensamiento visionario, capacidad organizativa y el poder de manifestarse a gran escala. Se destacan en roles que les permiten construir estructuras o sistemas duraderos. Pueden surgir desafíos en torno a la presión de su potencial, adicción al trabajo o dificultades con los aspectos mundanos de la vida.
+Key strengths include visionary thinking, organizational ability, and the power to manifest on a large scale. They excel in roles that allow them to build lasting structures or systems. Challenges may arise around the pressure of their potential, workaholism, or difficulty with the mundane aspects of life.
 
-Esta alma está aquí para enseñarle al mundo sobre el poder de combinar la visión con la acción práctica. Demuestran que los sueños pueden hacerse realidad mediante un esfuerzo dedicado.
+This soul is here to teach the world about the power of combining vision with practical action. They demonstrate that dreams can become reality through dedicated effort.
 
-Su mayor satisfacción se produce al crear algo de valor duradero que beneficie a muchas personas. Ellos son los arquitectos de un mundo mejor.`,
-        strengths: ["Pensamiento visionario", "habilidad practica", "Liderazgo", "poder de manifestación"],
-        challenges: ["Presión de potencial", "Adicción al trabajo", "Impaciencia", "Abrumar"],
-        advice: "Tu potencial es extraordinario. Recuerde controlar su ritmo y celebrar las pequeñas victorias."
+Their greatest fulfillment comes through creating something of lasting value that benefits many people. They are the architects of a better world.`,
+        strengths: ["Visionary thinking", "Practical ability", "Leadership", "Manifestation power"],
+        challenges: ["Pressure of potential", "Workaholism", "Impatience", "Overwhelm"],
+        advice: "Your potential is extraordinary. Remember to pace yourself and celebrate small victories."
     },
     
     33: {
-        title: "El maestro maestro",
-        keywords: ["Cicatrización", "Enseñanza", "Servicio desinteresado", "Maestría Espiritual"],
-        summary: "Un alma maestra destinada a sanar y enseñar a través del amor.",
-        reading: `Esta alma ha llegado con la más alta vibración de amor y la misión de sanar y enseñar a través del servicio desinteresado. Life Path 33 es el Número Maestro más raro, que indica un destino de maestría espiritual y profundo servicio a la humanidad.
+        title: "The Master Teacher",
+        keywords: ["Healing", "Teaching", "Selfless Service", "Spiritual Mastery"],
+        summary: "A master soul destined to heal and teach through love.",
+        reading: `This soul has arrived with the highest vibration of love and the mission of healing and teaching through selfless service. Life Path 33 is the rarest Master Number, indicating a destiny of spiritual mastery and profound service to humanity.
 
-Desde el principio, este individuo demostrará una compasión extraordinaria y una capacidad natural para sanar a los demás sólo con su presencia. Parecen llevar una luz que atrae a otros.
+From early on, this individual will demonstrate extraordinary compassion and a natural ability to heal others through their presence alone. They seem to carry a light that others are drawn to.
 
-El viaje de Life Path 33 implica aprender a encarnar el amor incondicional manteniendo límites saludables. Son sanadores y maestros naturales, capaces de transformar vidas a través de su ejemplo y guía.
+The journey of a Life Path 33 involves learning to embody unconditional love while maintaining healthy boundaries. They are natural healers and teachers, capable of transforming lives through their example and guidance.
 
-Las fortalezas clave incluyen la presencia sanadora, la capacidad de enseñar y la capacidad de amar incondicionalmente. Se destacan en roles que les permiten servir y elevar a los demás. Pueden surgir desafíos en torno al martirio, dificultades con las necesidades personales o el peso de las expectativas de los demás.
+Key strengths include healing presence, teaching ability, and the capacity for unconditional love. They excel in roles that allow them to serve and uplift others. Challenges may arise around martyrdom, difficulty with personal needs, or the weight of others' expectations.
 
-Esta alma está aquí para enseñarle al mundo sobre el poder transformador del amor. Demuestran que la curación ocurre a través de la presencia y la compasión.
+This soul is here to teach the world about the transformative power of love. They demonstrate that healing happens through presence and compassion.
 
-Su mayor realización proviene del servicio que transforma vidas. Son la encarnación del amor en acción.`,
-        strengths: ["Presencia sanadora", "Capacidad de enseñanza", "amor incondicional", "Sabiduría espiritual"],
-        challenges: ["Martirio", "Autodescuido", "Responsabilidad abrumadora", "Altas expectativas"],
-        advice: "Tu amor es transformador. Recuerda que tú también mereces el amor que das tan libremente."
+Their greatest fulfillment comes through service that transforms lives. They are the embodiment of love in action.`,
+        strengths: ["Healing presence", "Teaching ability", "Unconditional love", "Spiritual wisdom"],
+        challenges: ["Martyrdom", "Self-neglect", "Overwhelming responsibility", "High expectations"],
+        advice: "Your love is transformative. Remember that you too deserve the love you give so freely."
     }
 };
 
@@ -256,254 +256,254 @@ Su mayor realización proviene del servicio que transforma vidas. Son la encarna
 var SUN_SIGN_READINGS = {
     Aries: {
         symbol: "♈",
-        element: "Fuego",
-        ruling: "Marte",
-        keywords: ["Coraje", "Iniciativa", "Energía", "Liderazgo"],
-        summary: "Audaz, enérgico y siempre dispuesto a tomar la iniciativa.",
-        reading: `Nacida bajo el signo del Carnero, esta alma lleva el fuego de nuevos comienzos y el coraje para avanzar donde otros dudan. La energía de Aries es pura iniciativa: la chispa que enciende el fuego, el primer paso valiente hacia un territorio desconocido.
+        element: "Fire",
+        ruling: "Mars",
+        keywords: ["Courage", "Initiative", "Energy", "Leadership"],
+        summary: "Bold, energetic, and always ready to take the lead.",
+        reading: `Born under the sign of the Ram, this soul carries the fire of new beginnings and the courage to charge forward where others hesitate. Aries energy is pure initiative - the spark that starts the fire, the first brave step into unknown territory.
 
-Esta ubicación aporta habilidades de liderazgo naturales y un entusiasmo contagioso por la vida. Hay un espíritu pionero aquí, una voluntad de ser los primeros y abrir caminos para que otros los sigan. La competencia energiza en lugar de intimidar.
+This placement brings natural leadership abilities and an infectious enthusiasm for life. There's a pioneering spirit here, a willingness to be first and to blaze trails for others to follow. Competition energizes rather than intimidates.
 
-La naturaleza de Aries es directa y honesta, a veces hasta el extremo. Hay poca paciencia para los juegos o la manipulación: lo que ves es lo que obtienes. Esta autenticidad es refrescante en un mundo de simulación.
+The Aries nature is direct and honest, sometimes to a fault. There's little patience for games or manipulation - what you see is what you get. This authenticity is refreshing in a world of pretense.
 
-Pueden surgir desafíos en torno a la impulsividad, la impaciencia o la dificultad para llevar los proyectos hasta su finalización. La emoción de empezar algo nuevo puede eclipsar la satisfacción de terminarlo. Aprender a controlar esa abundante energía es una lección para toda la vida.
+Challenges may arise around impulsiveness, impatience, or difficulty seeing projects through to completion. The excitement of starting something new can overshadow the satisfaction of finishing. Learning to pace that abundant energy is a lifelong lesson.
 
-En las relaciones, Aries aporta pasión y entusiasmo. Necesitan socios que puedan igualar su energía y apreciar su independencia. El aburrimiento es el enemigo: prosperan con alguien que mantiene la vida interesante.
+In relationships, Aries brings passion and excitement. They need partners who can match their energy and appreciate their independence. Boredom is the enemy - they thrive with someone who keeps life interesting.
 
-Esta alma está aquí para enseñar a otros sobre el coraje y el poder de actuar. Nos recuerdan que a veces la mejor estrategia es simplemente empezar.`,
-        strengths: ["Coraje", "Liderazgo", "Entusiasmo", "Honestidad"],
-        challenges: ["Impulsividad", "Impaciencia", "Egocentrismo", "temperamento rápido"]
+This soul is here to teach others about courage and the power of taking action. They remind us that sometimes the best strategy is simply to begin.`,
+        strengths: ["Courage", "Leadership", "Enthusiasm", "Honesty"],
+        challenges: ["Impulsiveness", "Impatience", "Self-centeredness", "Quick temper"]
     },
     
     Taurus: {
         symbol: "♉",
-        element: "Tierra",
+        element: "Earth",
         ruling: "Venus",
-        keywords: ["Estabilidad", "Sensualidad", "Paciencia", "Determinación"],
-        summary: "Con los pies en la tierra, sensuales y firmes en sus objetivos.",
-        reading: `Nacida bajo el signo del Toro, esta alma lleva la energía de la tierra misma: estable, paciente y profundamente conectada con el mundo físico. La energía de Tauro consiste en construir, sostener y apreciar la belleza de la existencia material.
+        keywords: ["Stability", "Sensuality", "Patience", "Determination"],
+        summary: "Grounded, sensual, and steadfast in their pursuits.",
+        reading: `Born under the sign of the Bull, this soul carries the energy of the earth itself - stable, patient, and deeply connected to the physical world. Taurus energy is about building, sustaining, and appreciating the beauty of material existence.
 
-Esta ubicación brinda una apreciación natural por la comodidad, la belleza y las cosas buenas de la vida. Existe una comprensión innata de que la vida debe disfrutarse a través de los sentidos: buena comida, bellos alrededores, afecto físico.
+This placement brings a natural appreciation for comfort, beauty, and the finer things in life. There's an innate understanding that life is meant to be enjoyed through the senses - good food, beautiful surroundings, physical affection.
 
-La naturaleza de Tauro es confiable y decidida. Una vez comprometidos con un camino, lo llevan a cabo con notable persistencia. Son ellos los que aparecen, día tras día, construyendo algo duradero a través de un esfuerzo constante.
+The Taurus nature is reliable and determined. Once committed to a path, they see it through with remarkable persistence. They are the ones who show up, day after day, building something lasting through steady effort.
 
-Pueden surgir desafíos relacionados con la terquedad, la resistencia al cambio o el apego excesivo a la comodidad y la seguridad. El deseo de estabilidad a veces puede convertirse en rigidez. Aprender a aceptar los cambios necesarios es parte de su crecimiento.
+Challenges may arise around stubbornness, resistance to change, or becoming too attached to comfort and security. The desire for stability can sometimes become rigidity. Learning to embrace necessary changes is part of their growth.
 
-En las relaciones, Tauro aporta lealtad y sensualidad. Necesitan socios que aprecien su carácter estable y compartan sus valores en materia de seguridad y comodidad. La confianza se construye lentamente pero es profunda.
+In relationships, Taurus brings loyalty and sensuality. They need partners who appreciate their steady nature and share their values around security and comfort. Trust is built slowly but runs deep.
 
-Esta alma está aquí para enseñar a otros sobre el valor de la paciencia y la belleza del mundo físico. Nos recuerdan que el éxito duradero se construye mediante un esfuerzo constante.`,
-        strengths: ["Fiabilidad", "Paciencia", "Sensualidad", "Determinación"],
-        challenges: ["Testarudez", "Posesividad", "Resistencia al cambio", "Materialismo"]
+This soul is here to teach others about the value of patience and the beauty of the physical world. They remind us that lasting success is built through consistent effort.`,
+        strengths: ["Reliability", "Patience", "Sensuality", "Determination"],
+        challenges: ["Stubbornness", "Possessiveness", "Resistance to change", "Materialism"]
     },
     
     Gemini: {
         symbol: "♊",
-        element: "Aire",
-        ruling: "Mercurio",
-        keywords: ["Comunicación", "Curiosidad", "Adaptabilidad", "Inteligencia"],
-        summary: "Ingenioso, curioso e infinitamente comunicativo.",
-        reading: `Nacida bajo el signo de los Gemelos, esta alma lleva la energía del eterno estudiante: curioso, comunicativo e infinitamente fascinado por el mundo de las ideas. La energía de Géminis se trata de conexión, aprendizaje y intercambio de información.
+        element: "Air",
+        ruling: "Mercury",
+        keywords: ["Communication", "Curiosity", "Adaptability", "Intelligence"],
+        summary: "Quick-witted, curious, and endlessly communicative.",
+        reading: `Born under the sign of the Twins, this soul carries the energy of the eternal student - curious, communicative, and endlessly fascinated by the world of ideas. Gemini energy is about connection, learning, and sharing information.
 
-Esta ubicación aporta habilidades de comunicación naturales y una mente rápida y ágil. Hay aquí una curiosidad insaciable, una necesidad de saber un poco de todo. El aburrimiento es el enemigo; la variedad es esencial para la felicidad.
+This placement brings natural communication abilities and a quick, agile mind. There's an insatiable curiosity here, a need to know a little about everything. Boredom is the enemy - variety is essential for happiness.
 
-La naturaleza de Géminis es adaptable y social. Pueden hablar con cualquiera sobre cualquier cosa y tienen el don de hacer conexiones entre ideas aparentemente no relacionadas. Sus mentes trabajan rápidamente, a menudo haciendo malabarismos con múltiples pensamientos simultáneamente.
+The Gemini nature is adaptable and social. They can talk to anyone about anything and have a gift for making connections between seemingly unrelated ideas. Their minds work quickly, often juggling multiple thoughts simultaneously.
 
-Pueden surgir desafíos en torno a la inconsistencia, la superficialidad o la dificultad con el compromiso. El amor a la variedad a veces puede impedir el dominio profundo de cualquier cosa. Aprender a concentrarse y seguir adelante es parte de su crecimiento.
+Challenges may arise around inconsistency, superficiality, or difficulty with commitment. The love of variety can sometimes prevent deep mastery of any one thing. Learning to focus and follow through is part of their growth.
 
-En las relaciones, Géminis aporta estimulación intelectual y diversión. Necesitan socios que puedan involucrar sus mentes y apreciar su necesidad de variedad y conexión social. La comunicación es la base de sus vínculos.
+In relationships, Gemini brings intellectual stimulation and fun. They need partners who can engage their minds and appreciate their need for variety and social connection. Communication is the foundation of their bonds.
 
-Esta alma está aquí para enseñar a otros sobre el poder de la comunicación y el placer de aprender. Nos recuerdan que la vida es infinitamente interesante cuando mantenemos la curiosidad.`,
-        strengths: ["Comunicación", "Adaptabilidad", "Inteligencia", "Ingenio"],
-        challenges: ["Inconsecuencia", "Superficialidad", "Inquietud", "Indecisión"]
+This soul is here to teach others about the power of communication and the joy of learning. They remind us that life is endlessly interesting when we stay curious.`,
+        strengths: ["Communication", "Adaptability", "Intelligence", "Wit"],
+        challenges: ["Inconsistency", "Superficiality", "Restlessness", "Indecision"]
     },
     
     Cancer: {
         symbol: "♋",
-        element: "Agua",
-        ruling: "Luna",
-        keywords: ["Criando", "Emoción", "Protección", "Intuición"],
-        summary: "Profundamente cariñoso, intuitivo y protector de sus seres queridos.",
-        reading: `Nacida bajo el signo del Cangrejo, esta alma lleva la energía de la Gran Madre: nutritiva, protectora y profundamente conectada con el reino emocional. La energía del cáncer tiene que ver con el hogar, la familia y los vínculos que nos sostienen.
+        element: "Water",
+        ruling: "Moon",
+        keywords: ["Nurturing", "Emotion", "Protection", "Intuition"],
+        summary: "Deeply caring, intuitive, and protective of loved ones.",
+        reading: `Born under the sign of the Crab, this soul carries the energy of the Great Mother - nurturing, protective, and deeply connected to the emotional realm. Cancer energy is about home, family, and the bonds that sustain us.
 
-Esta ubicación aporta habilidades de crianza naturales y una profunda inteligencia emocional. Hay una comprensión intuitiva de las necesidades de los demás y un deseo genuino de brindar comodidad y seguridad.
+This placement brings natural nurturing abilities and profound emotional intelligence. There's an intuitive understanding of others' needs and a genuine desire to provide comfort and security.
 
-La naturaleza de Cáncer es sensible y cariñosa. Crean un hogar dondequiera que vayan, haciendo que los demás se sientan seguros y bienvenidos. Su memoria para las experiencias emocionales es notable: nunca olvidan cómo alguien los hizo sentir.
+The Cancer nature is sensitive and caring. They create home wherever they go, making others feel safe and welcomed. Their memory for emotional experiences is remarkable - they never forget how someone made them feel.
 
-Pueden surgir desafíos relacionados con el mal humor, la hipersensibilidad o la dificultad para dejar atrás el pasado. El caparazón protector a veces puede convertirse en una prisión. Aprender a equilibrar la autoprotección con la apertura es parte de su crecimiento.
+Challenges may arise around moodiness, over-sensitivity, or difficulty letting go of the past. The protective shell can sometimes become a prison. Learning to balance self-protection with openness is part of their growth.
 
-En las relaciones, Cáncer aporta una profunda devoción y profundidad emocional. Necesitan socios que aprecien su sensibilidad y puedan brindarles la seguridad que anhelan. La familia y la vida hogareña son fundamentales para su felicidad.
+In relationships, Cancer brings deep devotion and emotional depth. They need partners who appreciate their sensitivity and can provide the security they crave. Family and home life are central to their happiness.
 
-Esta alma está aquí para enseñar a otros sobre la importancia de los vínculos emocionales y el poder de la crianza. Nos recuerdan que todos necesitamos un puerto seguro.`,
-        strengths: ["Criando", "Intuición", "Lealtad", "Profundidad emocional"],
-        challenges: ["Mal humor", "hipersensibilidad", "apego", "Viviendo en el pasado"]
+This soul is here to teach others about the importance of emotional bonds and the power of nurturing. They remind us that we all need a safe harbor.`,
+        strengths: ["Nurturing", "Intuition", "Loyalty", "Emotional depth"],
+        challenges: ["Moodiness", "Over-sensitivity", "Clinginess", "Living in the past"]
     },
     
     Leo: {
         symbol: "♌",
-        element: "Fuego",
-        ruling: "Sol",
-        keywords: ["Creatividad", "Liderazgo", "Generosidad", "Drama"],
-        summary: "Radiante, creativa y nacida para brillar.",
-        reading: `Nacida bajo el signo del León, esta alma lleva la energía del Sol mismo: radiante, creativa y, naturalmente, llamando la atención. La energía de Leo tiene que ver con la autoexpresión, la creatividad y el coraje de ser visto.
+        element: "Fire",
+        ruling: "Sun",
+        keywords: ["Creativity", "Leadership", "Generosity", "Drama"],
+        summary: "Radiant, creative, and born to shine.",
+        reading: `Born under the sign of the Lion, this soul carries the energy of the Sun itself - radiant, creative, and naturally commanding attention. Leo energy is about self-expression, creativity, and the courage to be seen.
 
-Esta ubicación aporta carisma natural y habilidades creativas. Hay una calidez aquí que atrae a los demás, un espíritu generoso que quiere compartir el centro de atención y animar a los demás.
+This placement brings natural charisma and creative abilities. There's a warmth here that draws others in, a generous spirit that wants to share the spotlight and lift others up.
 
-La naturaleza de Leo es segura y expresiva. Tienen el don de hacer que la vida sea más dramática y emocionante. Su entusiasmo es contagioso y su lealtad hacia sus seres queridos es feroz.
+The Leo nature is confident and expressive. They have a gift for making life feel more dramatic and exciting. Their enthusiasm is contagious, and their loyalty to loved ones is fierce.
 
-Pueden surgir desafíos en torno al ego, la necesidad de atención o la dificultad para aceptar críticas. El deseo de brillar a veces puede eclipsar a los demás. Aprender a compartir el escenario con gracia es parte de su crecimiento.
+Challenges may arise around ego, need for attention, or difficulty accepting criticism. The desire to shine can sometimes overshadow others. Learning to share the stage gracefully is part of their growth.
 
-En las relaciones, Leo aporta pasión, romance y generosidad. Necesitan socios que aprecien su necesidad de admiración y puedan igualar su calidez. El amor debería sentirse como una gran aventura.
+In relationships, Leo brings passion, romance, and generosity. They need partners who appreciate their need for admiration and can match their warmth. Love should feel like a grand adventure.
 
-Esta alma está aquí para enseñar a otros sobre el coraje de ser auténticamente ellos mismos. Nos recuerdan que todos tenemos una luz interior destinada a brillar.`,
-        strengths: ["Creatividad", "Generosidad", "Liderazgo", "Calor"],
-        challenges: ["Orgullo", "Necesidad de atención", "Testarudez", "Reacciones dramáticas"]
+This soul is here to teach others about the courage to be authentically themselves. They remind us that we all have an inner light meant to shine.`,
+        strengths: ["Creativity", "Generosity", "Leadership", "Warmth"],
+        challenges: ["Pride", "Need for attention", "Stubbornness", "Dramatic reactions"]
     },
     
     Virgo: {
         symbol: "♍",
-        element: "Tierra",
-        ruling: "Mercurio",
-        keywords: ["Análisis", "Servicio", "perfeccionismo", "Salud"],
-        summary: "Analítico, servicial y dedicado a la mejora.",
-        reading: `Nacida bajo el signo de la Virgen, esta alma lleva la energía del siervo sagrado: analítico, servicial y dedicado a mejorar las cosas. La energía de Virgo tiene que ver con el refinamiento, el servicio y la búsqueda de la excelencia.
+        element: "Earth",
+        ruling: "Mercury",
+        keywords: ["Analysis", "Service", "Perfectionism", "Health"],
+        summary: "Analytical, helpful, and dedicated to improvement.",
+        reading: `Born under the sign of the Virgin, this soul carries the energy of the sacred servant - analytical, helpful, and dedicated to making things better. Virgo energy is about refinement, service, and the pursuit of excellence.
 
-Esta ubicación aporta habilidades analíticas naturales y un gran ojo para los detalles. Existe un deseo genuino de ser útil, de contribuir con algo de valor, de ayudar a que los sistemas y las personas funcionen mejor.
+This placement brings natural analytical abilities and a keen eye for detail. There's a genuine desire to be useful, to contribute something of value, to help systems and people function better.
 
-La naturaleza de Virgo es práctica y exigente. Ven lo que necesita mejorar y tienen las habilidades para hacerlo realidad. Sus estándares son altos, ante todo para ellos mismos.
+The Virgo nature is practical and discerning. They see what needs improvement and have the skills to make it happen. Their standards are high, first and foremost for themselves.
 
-Pueden surgir desafíos en torno al perfeccionismo, la crítica o la ansiedad por no ser lo suficientemente bueno. El deseo de mejora puede volverse obsesivo. Aprender a aceptar la imperfección es parte de su crecimiento.
+Challenges may arise around perfectionism, criticism, or anxiety about not being good enough. The desire for improvement can become obsessive. Learning to accept imperfection is part of their growth.
 
-En las relaciones, Virgo aporta devoción y apoyo práctico. Necesitan socios que aprecien su naturaleza servicial y no confundan sus sugerencias con críticas. El amor se demuestra a través de actos de servicio.
+In relationships, Virgo brings devotion and practical support. They need partners who appreciate their helpful nature and don't mistake their suggestions for criticism. Love is shown through acts of service.
 
-Esta alma está aquí para enseñar a otros sobre la naturaleza sagrada del servicio y la belleza de la atención al detalle. Nos recuerdan que las pequeñas mejoras suman la transformación.`,
-        strengths: ["Mente analítica", "Utilidad", "Atención al detalle", "Sentido práctico"],
-        challenges: ["perfeccionismo", "Sobrecrítica", "Ansiedad", "dudas sobre uno mismo"]
+This soul is here to teach others about the sacred nature of service and the beauty of attention to detail. They remind us that small improvements add up to transformation.`,
+        strengths: ["Analytical mind", "Helpfulness", "Attention to detail", "Practicality"],
+        challenges: ["Perfectionism", "Over-criticism", "Anxiety", "Self-doubt"]
     },
     
     Libra: {
         symbol: "♎",
-        element: "Aire",
+        element: "Air",
         ruling: "Venus",
-        keywords: ["Balance", "Armonía", "Asociación", "Belleza"],
-        summary: "Diplomático, artístico y dedicado a la armonía.",
-        reading: `Nacida bajo el signo de Libra, esta alma lleva la energía del pacificador: diplomático, artístico y dedicado a crear armonía. La energía de Libra tiene que ver con el equilibrio, la belleza y el arte de la relación.
+        keywords: ["Balance", "Harmony", "Partnership", "Beauty"],
+        summary: "Diplomatic, artistic, and devoted to harmony.",
+        reading: `Born under the sign of the Scales, this soul carries the energy of the peacemaker - diplomatic, artistic, and devoted to creating harmony. Libra energy is about balance, beauty, and the art of relationship.
 
-Esta ubicación aporta habilidades diplomáticas naturales y una sensibilidad estética. Existe una comprensión innata de cómo unir a las personas y crear entornos de belleza y paz.
+This placement brings natural diplomatic abilities and an aesthetic sensibility. There's an innate understanding of how to bring people together and create environments of beauty and peace.
 
-La naturaleza de Libra es amable y justa. Ven todos los lados de cada situación y realmente quieren que todos sean felices. Su encanto abre puertas y suaviza conflictos.
+The Libra nature is gracious and fair-minded. They see all sides of every situation and genuinely want everyone to be happy. Their charm opens doors and smooths conflicts.
 
-Pueden surgir desafíos en torno a la indecisión, agradar a las personas o evitar conflictos necesarios. El deseo de armonía a veces puede significar sacrificar la autenticidad. Aprender a tomar una postura es parte de su crecimiento.
+Challenges may arise around indecision, people-pleasing, or avoiding necessary conflict. The desire for harmony can sometimes mean sacrificing authenticity. Learning to take a stand is part of their growth.
 
-En las relaciones, Libra aporta habilidades románticas y de asociación. Necesitan parejas que valoren la armonía y puedan participar en la danza del toma y daca. La relación es su hábitat natural.
+In relationships, Libra brings romance and partnership skills. They need partners who value harmony and can engage in the dance of give and take. Relationship is their natural habitat.
 
-Esta alma está aquí para enseñar a otros sobre el arte del equilibrio y la importancia de la belleza. Nos recuerdan que vale la pena trabajar por la paz.`,
-        strengths: ["Diplomacia", "Justicia", "Encanto", "Sentido artístico"],
-        challenges: ["Indecisión", "complacer a la gente", "Evitación de conflictos", "Superficialidad"]
+This soul is here to teach others about the art of balance and the importance of beauty. They remind us that peace is worth working for.`,
+        strengths: ["Diplomacy", "Fairness", "Charm", "Artistic sense"],
+        challenges: ["Indecision", "People-pleasing", "Conflict avoidance", "Superficiality"]
     },
     
     Scorpio: {
         symbol: "♏",
-        element: "Agua",
-        ruling: "Plutón",
-        keywords: ["Intensidad", "Transformación", "Fuerza", "Misterio"],
-        summary: "Intenso, transformador y profundamente perceptivo.",
-        reading: `Nacida bajo el signo de Escorpión, esta alma lleva la energía de la transformación: intensa, perceptiva y sin miedo a las profundidades de la vida. La energía de Escorpio tiene que ver con el poder, la regeneración y el coraje para afrontar lo que otros evitan.
+        element: "Water",
+        ruling: "Pluto",
+        keywords: ["Intensity", "Transformation", "Power", "Mystery"],
+        summary: "Intense, transformative, and deeply perceptive.",
+        reading: `Born under the sign of the Scorpion, this soul carries the energy of transformation - intense, perceptive, and unafraid of life's depths. Scorpio energy is about power, regeneration, and the courage to face what others avoid.
 
-Esta ubicación aporta una visión psicológica natural y una intensidad emocional. Existe la capacidad de ver debajo de las superficies, de comprender motivaciones ocultas, de percibir lo que otros intentan ocultar.
+This placement brings natural psychological insight and emotional intensity. There's an ability to see beneath surfaces, to understand hidden motivations, to perceive what others try to hide.
 
-La naturaleza de Escorpio es apasionada y decidida. Cuando se comprometen con algo, lo hacen por completo. Su lealtad es feroz y su capacidad de transformación notable.
+The Scorpio nature is passionate and determined. When they commit to something, they do so completely. Their loyalty is fierce, and their capacity for transformation is remarkable.
 
-Pueden surgir desafíos relacionados con el control, los celos o la dificultad para dejarse ir. La intensidad a veces puede convertirse en obsesión. Aprender a confiar y liberarse es parte de su crecimiento.
+Challenges may arise around control, jealousy, or difficulty letting go. The intensity can sometimes become obsession. Learning to trust and release is part of their growth.
 
-En las relaciones, Escorpio aporta profundidad y pasión. Necesitan socios que puedan manejar la intensidad y que no tengan miedo de la verdad emocional. Las conexiones superficiales no tienen ningún interés.
+In relationships, Scorpio brings depth and passion. They need partners who can handle intensity and aren't afraid of emotional truth. Surface connections hold no interest.
 
-Esta alma está aquí para enseñar a otros sobre el poder de la transformación y el coraje para enfrentar la oscuridad. Nos recuerdan que de la muerte viene el renacimiento.`,
-        strengths: ["Percepción", "Determinación", "Pasión", "Poder transformador"],
-        challenges: ["Celos", "Problemas de control", "Sigilo", "Intensidad"]
+This soul is here to teach others about the power of transformation and the courage to face darkness. They remind us that from death comes rebirth.`,
+        strengths: ["Perception", "Determination", "Passion", "Transformative power"],
+        challenges: ["Jealousy", "Control issues", "Secretiveness", "Intensity"]
     },
     
     Sagittarius: {
         symbol: "♐",
-        element: "Fuego",
-        ruling: "Júpiter",
-        keywords: ["Aventura", "Filosofía", "Libertad", "Optimismo"],
-        summary: "Aventurero, filosófico y eternamente optimista.",
-        reading: `Nacida bajo el signo del Arquero, esta alma lleva la energía del eterno buscador: aventurero, filosófico y siempre apuntando a algo más elevado. La energía de Sagitario tiene que ver con la expansión, la verdad y la alegría del viaje.
+        element: "Fire",
+        ruling: "Jupiter",
+        keywords: ["Adventure", "Philosophy", "Freedom", "Optimism"],
+        summary: "Adventurous, philosophical, and eternally optimistic.",
+        reading: `Born under the sign of the Archer, this soul carries the energy of the eternal seeker - adventurous, philosophical, and always aiming for something higher. Sagittarius energy is about expansion, truth, and the joy of the journey.
 
-Esta ubicación aporta optimismo natural y amor por la aventura. Hay una curiosidad insaciable por el mundo, una necesidad de explorar tanto territorios físicos como reinos del pensamiento.
+This placement brings natural optimism and a love of adventure. There's an insatiable curiosity about the world, a need to explore both physical territories and realms of thought.
 
-La naturaleza de Sagitario es honesta y entusiasta. Dicen lo que quieren decir y quieren decir lo que dicen. Su fe en las posibilidades de la vida es contagiosa.
+The Sagittarius nature is honest and enthusiastic. They say what they mean and mean what they say. Their faith in life's possibilities is contagious.
 
-Pueden surgir desafíos relacionados con la inquietud, la falta de tacto o la dificultad con el compromiso. El amor a la libertad a veces puede significar evitar la responsabilidad. Aprender a equilibrar la aventura con la estabilidad es parte de su crecimiento.
+Challenges may arise around restlessness, tactlessness, or difficulty with commitment. The love of freedom can sometimes mean avoiding responsibility. Learning to balance adventure with stability is part of their growth.
 
-En las relaciones, Sagitario trae diversión y crecimiento. Necesitan socios que compartan su amor por la aventura y puedan brindarles espacio para explorar. El amor debería ampliar horizontes.
+In relationships, Sagittarius brings fun and growth. They need partners who share their love of adventure and can give them space to explore. Love should expand horizons.
 
-Esta alma está aquí para enseñar a otros sobre el gozo de la búsqueda y la importancia de la fe. Nos recuerdan que la vida es una aventura que hay que abrazar.`,
-        strengths: ["Optimismo", "Honestidad", "Aventura", "Mente filosófica"],
-        challenges: ["Inquietud", "Falta de tacto", "Cuestiones de compromiso", "demasiado prometedor"]
+This soul is here to teach others about the joy of seeking and the importance of faith. They remind us that life is an adventure meant to be embraced.`,
+        strengths: ["Optimism", "Honesty", "Adventure", "Philosophical mind"],
+        challenges: ["Restlessness", "Tactlessness", "Commitment issues", "Over-promising"]
     },
     
     Capricorn: {
         symbol: "♑",
-        element: "Tierra",
-        ruling: "Saturno",
-        keywords: ["Ambición", "Disciplina", "Responsabilidad", "Logro"],
-        summary: "Ambicioso, disciplinado y construido para el éxito.",
-        reading: `Nacida bajo el signo de la Cabra Marina, esta alma lleva la energía del maestro triunfador: ambicioso, disciplinado y decidido a alcanzar la cima. La energía de Capricornio tiene que ver con la estructura, la responsabilidad y las recompensas del esfuerzo persistente.
+        element: "Earth",
+        ruling: "Saturn",
+        keywords: ["Ambition", "Discipline", "Responsibility", "Achievement"],
+        summary: "Ambitious, disciplined, and built for success.",
+        reading: `Born under the sign of the Sea-Goat, this soul carries the energy of the master achiever - ambitious, disciplined, and determined to reach the summit. Capricorn energy is about structure, responsibility, and the rewards of persistent effort.
 
-Esta colocación aporta habilidades organizativas naturales y una sólida ética de trabajo. Se comprende que el éxito se logra con la dedicación y que los atajos rara vez conducen a logros duraderos.
+This placement brings natural organizational abilities and a strong work ethic. There's an understanding that success comes through dedication and that shortcuts rarely lead to lasting achievement.
 
-La naturaleza de Capricornio es responsable y madura. Se toman en serio sus compromisos y se puede contar con que los cumplirán. Su paciencia para los objetivos a largo plazo es notable.
+The Capricorn nature is responsible and mature. They take their commitments seriously and can be counted on to deliver. Their patience for long-term goals is remarkable.
 
-Pueden surgir desafíos en torno a la adicción al trabajo, el pesimismo o la dificultad para relajarse. Centrarse en los logros a veces puede significar descuidar otros aspectos de la vida. Aprender a equilibrar el trabajo con el juego es parte de su crecimiento.
+Challenges may arise around workaholism, pessimism, or difficulty relaxing. The focus on achievement can sometimes mean neglecting other aspects of life. Learning to balance work with play is part of their growth.
 
-En las relaciones, Capricornio aporta estabilidad y compromiso. Necesitan socios que aprecien su dedicación y compartan sus valores en torno a la construcción de un futuro seguro. El amor se demuestra a través de la confiabilidad.
+In relationships, Capricorn brings stability and commitment. They need partners who appreciate their dedication and share their values around building a secure future. Love is demonstrated through reliability.
 
-Esta alma está aquí para enseñar a otros sobre el valor de la disciplina y la satisfacción del éxito obtenido. Nos recuerdan que las montañas se escalan paso a paso.`,
-        strengths: ["Disciplina", "Ambición", "Fiabilidad", "Paciencia"],
-        challenges: ["Adicción al trabajo", "Pesimismo", "Rigidez", "reserva emocional"]
+This soul is here to teach others about the value of discipline and the satisfaction of earned success. They remind us that mountains are climbed one step at a time.`,
+        strengths: ["Discipline", "Ambition", "Reliability", "Patience"],
+        challenges: ["Workaholism", "Pessimism", "Rigidity", "Emotional reserve"]
     },
     
     Aquarius: {
         symbol: "♒",
-        element: "Aire",
-        ruling: "Urano",
-        keywords: ["Innovación", "Humanidad", "Independencia", "Originalidad"],
-        summary: "Innovador, humanitario y deliciosamente poco convencional.",
-        reading: `Nacida bajo el signo del Portador de Agua, esta alma lleva la energía del visionario: innovadora, humanitaria y sin miedo a ser diferente. La energía de Acuario tiene que ver con el progreso, la comunidad y el coraje de pensar fuera de lo común.
+        element: "Air",
+        ruling: "Uranus",
+        keywords: ["Innovation", "Humanity", "Independence", "Originality"],
+        summary: "Innovative, humanitarian, and delightfully unconventional.",
+        reading: `Born under the sign of the Water Bearer, this soul carries the energy of the visionary - innovative, humanitarian, and unafraid to be different. Aquarius energy is about progress, community, and the courage to think outside the box.
 
-Esta ubicación aporta inventiva natural y preocupación por la humanidad. Existe la capacidad de ver posibilidades futuras y un deseo genuino de hacer que el mundo sea mejor para todos.
+This placement brings natural inventiveness and a concern for humanity. There's an ability to see future possibilities and a genuine desire to make the world better for everyone.
 
-La naturaleza de Acuario es independiente y original. Marchan al son de su propio tambor e inspiran a otros a cuestionar las convenciones. Sus amistades abarcan diversos grupos y orígenes.
+The Aquarius nature is independent and original. They march to their own drum and inspire others to question convention. Their friendships span diverse groups and backgrounds.
 
-Pueden surgir desafíos en torno al desapego emocional, la rebeldía o las dificultades con la intimidad. Centrarse en la humanidad a veces puede significar descuidar las relaciones individuales. Aprender a equilibrar lo universal con lo personal es parte de su crecimiento.
+Challenges may arise around emotional detachment, rebelliousness, or difficulty with intimacy. The focus on humanity can sometimes mean neglecting individual relationships. Learning to balance the universal with the personal is part of their growth.
 
-En las relaciones, Acuario aporta amistad y estimulación intelectual. Necesitan socios que respeten su independencia y compartan sus ideales. El amor debe sentirse como un encuentro de mentes.
+In relationships, Aquarius brings friendship and intellectual stimulation. They need partners who respect their independence and share their ideals. Love should feel like a meeting of minds.
 
-Esta alma está aquí para enseñar a otros sobre el poder de la innovación y la importancia de la comunidad. Nos recuerdan que el progreso requiere personas dispuestas a ser diferentes.`,
-        strengths: ["Innovación", "humanitarismo", "Independencia", "Originalidad"],
-        challenges: ["Desapego emocional", "rebeldía", "Imprevisibilidad", "distanciamiento"]
+This soul is here to teach others about the power of innovation and the importance of community. They remind us that progress requires those willing to be different.`,
+        strengths: ["Innovation", "Humanitarianism", "Independence", "Originality"],
+        challenges: ["Emotional detachment", "Rebelliousness", "Unpredictability", "Aloofness"]
     },
     
     Pisces: {
         symbol: "♓",
-        element: "Agua",
-        ruling: "Neptuno",
-        keywords: ["Intuición", "Compasión", "Creatividad", "Espiritualidad"],
-        summary: "Intuitivo, compasivo y profundamente espiritual.",
-        reading: `Nacida bajo el signo del Pez, esta alma lleva la energía del místico: intuitiva, compasiva y conectada con reinos más allá de lo físico. La energía de Piscis tiene que ver con la trascendencia, la creatividad y la disolución de los límites.
+        element: "Water",
+        ruling: "Neptune",
+        keywords: ["Intuition", "Compassion", "Creativity", "Spirituality"],
+        summary: "Intuitive, compassionate, and deeply spiritual.",
+        reading: `Born under the sign of the Fish, this soul carries the energy of the mystic - intuitive, compassionate, and connected to realms beyond the physical. Pisces energy is about transcendence, creativity, and the dissolution of boundaries.
 
-Esta ubicación aporta sensibilidad psíquica natural y habilidades artísticas. Existe una línea directa con el inconsciente colectivo, una capacidad de acceder a sentimientos universales y expresarlos a través del trabajo creativo.
+This placement brings natural psychic sensitivity and artistic abilities. There's a direct line to the collective unconscious, an ability to tap into universal feelings and express them through creative work.
 
-La naturaleza de Piscis es gentil y empática. Sienten el dolor de los demás como propio y tienen un deseo natural de sanar y consolar. Su imaginación no tiene límites.
+The Pisces nature is gentle and empathetic. They feel others' pain as their own and have a natural desire to heal and comfort. Their imagination knows no bounds.
 
-Pueden surgir desafíos en torno a los límites, el escapismo o las dificultades con cuestiones prácticas. La sensibilidad a veces puede llegar a ser abrumadora. Aprender a proteger su energía mientras se mantiene abierto es parte de su crecimiento.
+Challenges may arise around boundaries, escapism, or difficulty with practical matters. The sensitivity can sometimes become overwhelming. Learning to protect their energy while staying open is part of their growth.
 
-En las relaciones, Piscis aporta romance y conexión espiritual. Necesitan socios que aprecien su sensibilidad y puedan ayudarlos a concretar sus sueños. El amor debe sentirse trascendente.
+In relationships, Pisces brings romance and spiritual connection. They need partners who appreciate their sensitivity and can help ground their dreams. Love should feel transcendent.
 
-Esta alma está aquí para enseñar a otros sobre la compasión y la realidad del mundo invisible. Nos recuerdan que todos estamos conectados de formas que van más allá de nuestra comprensión.`,
-        strengths: ["Intuición", "Compasión", "Creatividad", "Conciencia espiritual"],
-        challenges: ["Evasión", "Problemas de límites", "hipersensibilidad", "Impracticabilidad"]
+This soul is here to teach others about compassion and the reality of the unseen world. They remind us that we are all connected in ways beyond our understanding.`,
+        strengths: ["Intuition", "Compassion", "Creativity", "Spiritual awareness"],
+        challenges: ["Escapism", "Boundary issues", "Over-sensitivity", "Impracticality"]
     }
 };
 
@@ -513,195 +513,195 @@ Esta alma está aquí para enseñar a otros sobre la compasión y la realidad de
 
 var CHINESE_ZODIAC_READINGS = {
     Rat: {
-        element: "Agua",
-        yin_yang: "yang",
-        keywords: ["Inteligente", "ingenioso", "Ingenioso", "Versátil"],
-        summary: "Inteligente y adaptable, con encanto natural.",
-        reading: `Nacida en el Año de la Rata, esta alma lleva la energía del superviviente inteligente: ingenioso, ingenioso y naturalmente encantador. La Rata es el primer animal del zodíaco chino y simboliza nuevos comienzos e iniciativa.
+        element: "Water",
+        yin_yang: "Yang",
+        keywords: ["Clever", "Quick-witted", "Resourceful", "Versatile"],
+        summary: "Intelligent and adaptable, with natural charm.",
+        reading: `Born in the Year of the Rat, this soul carries the energy of the clever survivor - quick-witted, resourceful, and naturally charming. The Rat is the first animal in the Chinese zodiac, symbolizing new beginnings and initiative.
 
-La energía de la rata aporta inteligencia natural y adaptabilidad. Existe la capacidad de encontrar oportunidades donde otros ven obstáculos, de aprovechar al máximo cualquier situación mediante el ingenio y el ingenio.
+Rat energy brings natural intelligence and adaptability. There's an ability to find opportunities where others see obstacles, to make the most of any situation through wit and resourcefulness.
 
-Los nacidos bajo este signo suelen tener éxito en situaciones sociales y comerciales. Tienen un encanto natural que abre puertas y una mente rápida que detecta oportunidades. Sus instintos de supervivencia y éxito son fuertes.
+Those born under this sign are often successful in business and social situations. They have a natural charm that opens doors and a quick mind that spots opportunities. Their instincts for survival and success are strong.
 
-En las relaciones, las Ratas se dedican a la familia y a los amigos cercanos. Pueden tener un círculo social amplio, pero reservan su lealtad más profunda para su círculo íntimo. Necesitan socios que aprecien su inteligencia y puedan mantener sus mentes activas.`,
-        strengths: ["Inteligencia", "Adaptabilidad", "Encanto", "Inventiva"],
-        challenges: ["Oportunismo", "Inquietud", "Testarudez", "Naturaleza crítica"]
+In relationships, Rats are devoted to family and close friends. They may have a wide social circle but reserve their deepest loyalty for their inner circle. They need partners who appreciate their cleverness and can keep up with their active minds.`,
+        strengths: ["Intelligence", "Adaptability", "Charm", "Resourcefulness"],
+        challenges: ["Opportunism", "Restlessness", "Stubbornness", "Critical nature"]
     },
     
     Ox: {
-        element: "Tierra",
+        element: "Earth",
         yin_yang: "Yin",
-        keywords: ["Diligente", "Confiable", "Fuerte", "Determinado"],
-        summary: "Trabajador y confiable, con fuerza silenciosa.",
-        reading: `Nacida en el Año del Buey, esta alma lleva la energía del trabajador inquebrantable: diligente, confiable y poseedor de una fuerza silenciosa. El Buey representa el valor del trabajo duro y la recompensa de la paciencia.
+        keywords: ["Diligent", "Dependable", "Strong", "Determined"],
+        summary: "Hardworking and reliable, with quiet strength.",
+        reading: `Born in the Year of the Ox, this soul carries the energy of the steadfast worker - diligent, dependable, and possessed of quiet strength. The Ox represents the value of hard work and the rewards of patience.
 
-La energía del buey aporta determinación y confiabilidad naturales. Existe la capacidad de trabajar de manera constante para alcanzar metas sin necesidad de reconocimiento o elogios. El éxito se consigue gracias al esfuerzo persistente, no a la suerte o a los atajos.
+Ox energy brings natural determination and reliability. There's an ability to work steadily toward goals without needing recognition or praise. Success comes through persistent effort rather than luck or shortcuts.
 
-Los nacidos bajo este signo suelen ser la columna vertebral de cualquier organización o familia. Se puede contar con ellos para que se presenten y hagan lo que sea necesario. Su fuerza es silenciosa pero inmensa.
+Those born under this sign are often the backbone of any organization or family. They can be counted on to show up and do what needs to be done. Their strength is quiet but immense.
 
-En las relaciones, los Bueyes son leales y devotos. Puede que no sean los más expresivos, pero su compromiso es profundo. Necesitan parejas que aprecien su carácter estable y que no confundan la tranquilidad con la falta de sentimiento.`,
-        strengths: ["Fiabilidad", "Paciencia", "Fortaleza", "Determinación"],
-        challenges: ["Testarudez", "Rigidez", "Dificultad para expresar emociones.", "Resistencia al cambio"]
+In relationships, Oxen are loyal and devoted. They may not be the most expressive, but their commitment runs deep. They need partners who appreciate their steady nature and don't mistake quietness for lack of feeling.`,
+        strengths: ["Reliability", "Patience", "Strength", "Determination"],
+        challenges: ["Stubbornness", "Rigidity", "Difficulty expressing emotions", "Resistance to change"]
     },
     
     Tiger: {
-        element: "Madera",
-        yin_yang: "yang",
-        keywords: ["Corajudo", "Competitivo", "Seguro", "Carismático"],
-        summary: "Audaz y magnético, con un liderazgo natural.",
-        reading: `Nacida en el Año del Tigre, esta alma lleva la energía del líder intrépido: valiente, competitivo y naturalmente magnético. El Tigre representa coraje, poder y voluntad de correr riesgos.
+        element: "Wood",
+        yin_yang: "Yang",
+        keywords: ["Brave", "Competitive", "Confident", "Charismatic"],
+        summary: "Bold and magnetic, with natural leadership.",
+        reading: `Born in the Year of the Tiger, this soul carries the energy of the fearless leader - brave, competitive, and naturally magnetic. The Tiger represents courage, power, and the willingness to take risks.
 
-La energía del tigre aporta confianza y carisma naturales. Existe la capacidad de inspirar a otros y predicar con el ejemplo. Se siente miedo, pero no se permite que impida la acción.
+Tiger energy brings natural confidence and charisma. There's an ability to inspire others and lead by example. Fear is felt but not allowed to prevent action.
 
-Los nacidos bajo este signo suelen ocupar puestos de liderazgo o perseguir objetivos ambiciosos. Tienen una presencia que exige atención y respeto. Su entusiasmo es contagioso.
+Those born under this sign are often found in leadership positions or pursuing ambitious goals. They have a presence that commands attention and respect. Their enthusiasm is contagious.
 
-En las relaciones, los Tigres son apasionados y protectores. Necesitan socios que puedan manejar su intensidad y apreciar su necesidad de independencia. El amor con un tigre nunca es aburrido.`,
-        strengths: ["Coraje", "Confianza", "Liderazgo", "Pasión"],
-        challenges: ["Impulsividad", "Arrogancia", "Inquietud", "Dificultad con la autoridad."]
+In relationships, Tigers are passionate and protective. They need partners who can handle their intensity and appreciate their need for independence. Love with a Tiger is never boring.`,
+        strengths: ["Courage", "Confidence", "Leadership", "Passion"],
+        challenges: ["Impulsiveness", "Arrogance", "Restlessness", "Difficulty with authority"]
     },
     
     Rabbit: {
-        element: "Madera",
+        element: "Wood",
         yin_yang: "Yin",
-        keywords: ["Amable", "Elegante", "Alerta", "Compasivo"],
-        summary: "Graciosa y amable, con una sensibilidad refinada.",
-        reading: `Nacida en el Año del Conejo, esta alma lleva la energía del diplomático gentil: elegante, alerta y naturalmente compasivo. El Conejo representa la gracia, la buena fortuna y el poder de la gentileza.
+        keywords: ["Gentle", "Elegant", "Alert", "Compassionate"],
+        summary: "Graceful and kind, with refined sensibilities.",
+        reading: `Born in the Year of the Rabbit, this soul carries the energy of the gentle diplomat - elegant, alert, and naturally compassionate. The Rabbit represents grace, good fortune, and the power of gentleness.
 
-La energía del conejo aporta refinamiento natural y gracia social. Existe la capacidad de navegar situaciones sociales complejas con facilidad y crear armonía dondequiera que vayan.
+Rabbit energy brings natural refinement and social grace. There's an ability to navigate complex social situations with ease and to create harmony wherever they go.
 
-Los nacidos bajo este signo suelen tener un gusto excelente y un aprecio por la belleza. Prefieren ambientes pacíficos y relaciones armoniosas. Su amabilidad atrae a otros hacia ellos.
+Those born under this sign often have excellent taste and an appreciation for beauty. They prefer peaceful environments and harmonious relationships. Their kindness draws others to them.
 
-En las relaciones, los Conejos son devotos y románticos. Necesitan socios que aprecien su naturaleza amable y puedan brindarles la seguridad que anhelan. El amor debe sentirse seguro y hermoso.`,
-        strengths: ["Diplomacia", "Elegancia", "Compasión", "Intuición"],
-        challenges: ["hipersensibilidad", "Indecisión", "Evitar conflictos", "Pesimismo"]
+In relationships, Rabbits are devoted and romantic. They need partners who appreciate their gentle nature and can provide the security they crave. Love should feel safe and beautiful.`,
+        strengths: ["Diplomacy", "Elegance", "Compassion", "Intuition"],
+        challenges: ["Over-sensitivity", "Indecision", "Avoiding conflict", "Pessimism"]
     },
     
     Dragon: {
-        element: "Tierra",
-        yin_yang: "yang",
-        keywords: ["Poderoso", "Afortunado", "Ambicioso", "Valiente"],
-        summary: "Magnífico y afortunado, destinado a la grandeza.",
-        reading: `Nacida en el Año del Dragón, esta alma lleva la energía de la bestia mítica: poderosa, afortunada y destinada a cosas extraordinarias. El Dragón es el signo más auspicioso de la astrología china y representa poder, suerte y éxito.
+        element: "Earth",
+        yin_yang: "Yang",
+        keywords: ["Powerful", "Lucky", "Ambitious", "Fearless"],
+        summary: "Magnificent and fortunate, destined for greatness.",
+        reading: `Born in the Year of the Dragon, this soul carries the energy of the mythical beast - powerful, fortunate, and destined for remarkable things. The Dragon is the most auspicious sign in Chinese astrology, representing power, luck, and success.
 
-La energía del dragón aporta magnetismo natural y ambición. Hay una expectativa de éxito y una confianza que a menudo se vuelve autocumplida. Los dragones parecen atraer la buena fortuna.
+Dragon energy brings natural magnetism and ambition. There's an expectation of success and a confidence that often becomes self-fulfilling. Dragons seem to attract good fortune.
 
-Los nacidos bajo este signo suelen lograr cosas notables. Tienen grandes sueños y el coraje para perseguirlos. Su presencia es imponente y su potencial parece ilimitado.
+Those born under this sign often achieve remarkable things. They have big dreams and the courage to pursue them. Their presence is commanding and their potential seems limitless.
 
-En las relaciones, los Dragones son apasionados y generosos. Necesitan socios que puedan igualar su energía y apreciar su necesidad de admiración. El amor con un dragón es una aventura.`,
-        strengths: ["Confianza", "Ambición", "Suerte", "Carisma"],
-        challenges: ["Arrogancia", "Impaciencia", "Intolerancia", "Expectativas poco realistas"]
+In relationships, Dragons are passionate and generous. They need partners who can match their energy and appreciate their need for admiration. Love with a Dragon is an adventure.`,
+        strengths: ["Confidence", "Ambition", "Luck", "Charisma"],
+        challenges: ["Arrogance", "Impatience", "Intolerance", "Unrealistic expectations"]
     },
     
     Snake: {
-        element: "Fuego",
+        element: "Fire",
         yin_yang: "Yin",
-        keywords: ["Inteligente", "Intuitivo", "Elegante", "Misterioso"],
-        summary: "Sabio y enigmático, con profunda intuición.",
-        reading: `Nacida en el Año de la Serpiente, esta alma lleva la energía del sabio: intuitiva, elegante y deliciosamente misteriosa. La Serpiente representa la sabiduría, la intuición y el poder de la transformación.
+        keywords: ["Wise", "Intuitive", "Elegant", "Mysterious"],
+        summary: "Wise and enigmatic, with deep intuition.",
+        reading: `Born in the Year of the Snake, this soul carries the energy of the wise sage - intuitive, elegant, and delightfully mysterious. The Snake represents wisdom, intuition, and the power of transformation.
 
-La energía de la serpiente aporta sabiduría natural y percepción psicológica. Existe la capacidad de ver debajo de las superficies y comprender motivaciones ocultas. Las serpientes a menudo saben cosas sin que se las digan.
+Snake energy brings natural wisdom and psychological insight. There's an ability to see beneath surfaces and understand hidden motivations. Snakes often know things without being told.
 
-Los nacidos bajo este signo suelen sentirse atraídos por la filosofía, la psicología o las actividades espirituales. Tienen gustos refinados y aprecian las cosas buenas de la vida. Su misterio es parte de su encanto.
+Those born under this sign are often drawn to philosophy, psychology, or spiritual pursuits. They have refined tastes and appreciate the finer things in life. Their mystery is part of their charm.
 
-En las relaciones, las Serpientes son devotas pero reservadas. Necesitan socios que respeten su necesidad de espacio y puedan apreciar su profundidad. El amor con una Serpiente es intenso y transformador.`,
-        strengths: ["Sabiduría", "Intuición", "Elegancia", "Determinación"],
-        challenges: ["Celos", "Sospecha", "Sigilo", "Posesividad"]
+In relationships, Snakes are devoted but private. They need partners who respect their need for space and can appreciate their depth. Love with a Snake is intense and transformative.`,
+        strengths: ["Wisdom", "Intuition", "Elegance", "Determination"],
+        challenges: ["Jealousy", "Suspicion", "Secretiveness", "Possessiveness"]
     },
     
     Horse: {
-        element: "Fuego",
-        yin_yang: "yang",
-        keywords: ["Energético", "Independiente", "Aventurero", "Cálido"],
-        summary: "De espíritu libre y cálido, con una energía ilimitada.",
-        reading: `Nacida en el Año del Caballo, esta alma lleva la energía del semental salvaje: enérgico, independiente y siempre listo para la aventura. El Caballo representa la libertad, los viajes y la alegría del movimiento.
+        element: "Fire",
+        yin_yang: "Yang",
+        keywords: ["Energetic", "Independent", "Adventurous", "Warm"],
+        summary: "Free-spirited and warm, with boundless energy.",
+        reading: `Born in the Year of the Horse, this soul carries the energy of the wild stallion - energetic, independent, and always ready for adventure. The Horse represents freedom, travel, and the joy of movement.
 
-La energía del caballo aporta entusiasmo y calidez naturales. Hay un amor por la libertad y la aventura que no se puede contener. Los caballos necesitan espacio para correr.
+Horse energy brings natural enthusiasm and warmth. There's a love of freedom and adventure that cannot be contained. Horses need room to run.
 
-Los nacidos bajo este signo a menudo se encuentran viajando, explorando o llevando estilos de vida activos. Tienen una calidez que atrae a los demás y una energía que parece inagotable.
+Those born under this sign are often found traveling, exploring, or pursuing active lifestyles. They have a warmth that draws others to them and an energy that seems inexhaustible.
 
-En las relaciones, los caballos son apasionados pero necesitan independencia. Necesitan socios que puedan darles espacio y al mismo tiempo proporcionarles una base de operaciones. El amor debe sentirse como libertad, no como una jaula.`,
-        strengths: ["Energía", "Independencia", "Calor", "Adaptabilidad"],
-        challenges: ["Impaciencia", "Inquietud", "Cuestiones de compromiso", "Egocentrismo"]
+In relationships, Horses are passionate but need independence. They need partners who can give them space while still providing a home base. Love should feel like freedom, not a cage.`,
+        strengths: ["Energy", "Independence", "Warmth", "Adaptability"],
+        challenges: ["Impatience", "Restlessness", "Commitment issues", "Self-centeredness"]
     },
     
     Goat: {
-        element: "Tierra",
+        element: "Earth",
         yin_yang: "Yin",
-        keywords: ["Amable", "Creativo", "Amable", "Pacífico"],
-        summary: "Artístico y gentil, con un carácter pacífico.",
-        reading: `Nacida en el año de la Cabra (u Oveja), esta alma lleva la energía del artista gentil: creativo, amable y naturalmente pacífico. La Cabra representa la creatividad, la compasión y la belleza de la gentileza.
+        keywords: ["Gentle", "Creative", "Kind", "Peaceful"],
+        summary: "Artistic and gentle, with a peaceful nature.",
+        reading: `Born in the Year of the Goat (or Sheep), this soul carries the energy of the gentle artist - creative, kind, and naturally peaceful. The Goat represents creativity, compassion, and the beauty of gentleness.
 
-La energía de la cabra aporta habilidades artísticas naturales y una disposición pacífica. Hay un aprecio por la belleza en todas sus formas y una bondad genuina que llega a todos los que conocen.
+Goat energy brings natural artistic abilities and a peaceful disposition. There's an appreciation for beauty in all forms and a genuine kindness that touches everyone they meet.
 
-Los nacidos bajo este signo suelen sentirse atraídos por actividades creativas o profesiones de ayuda. Tienen una presencia calmante y la capacidad de ver la belleza donde otros la pasan por alto.
+Those born under this sign are often drawn to creative pursuits or helping professions. They have a calming presence and an ability to see beauty where others miss it.
 
-En las relaciones, las Cabras son devotas y románticas. Necesitan socios que aprecien su naturaleza amable y puedan brindarles seguridad. El amor debe ser enriquecedor y seguro.`,
-        strengths: ["Creatividad", "Amabilidad", "Tranquilidad", "talento artístico"],
-        challenges: ["Indecisión", "hipersensibilidad", "Pesimismo", "Dependencia"]
+In relationships, Goats are devoted and romantic. They need partners who appreciate their gentle nature and can provide security. Love should feel nurturing and safe.`,
+        strengths: ["Creativity", "Kindness", "Peacefulness", "Artistic talent"],
+        challenges: ["Indecision", "Over-sensitivity", "Pessimism", "Dependency"]
     },
     
     Monkey: {
         element: "Metal",
-        yin_yang: "yang",
-        keywords: ["Inteligente", "Curioso", "Juguetón", "Inventivo"],
-        summary: "Brillante y juguetón, con una curiosidad infinita.",
-        reading: `Nacida en el Año del Mono, esta alma lleva la energía del astuto embaucador: brillante, curioso e infinitamente juguetón. El Mono representa la inteligencia, el ingenio y la alegría de resolver problemas.
+        yin_yang: "Yang",
+        keywords: ["Clever", "Curious", "Playful", "Inventive"],
+        summary: "Brilliant and playful, with endless curiosity.",
+        reading: `Born in the Year of the Monkey, this soul carries the energy of the clever trickster - brilliant, curious, and endlessly playful. The Monkey represents intelligence, wit, and the joy of problem-solving.
 
-La energía del mono aporta inteligencia y curiosidad naturales. Tienen la capacidad de encontrar soluciones a cualquier problema y una alegría que hace la vida más divertida para todos los que los rodean.
+Monkey energy brings natural cleverness and curiosity. There's an ability to find solutions to any problem and a playfulness that makes life more fun for everyone around them.
 
-Los nacidos bajo este signo suelen tener éxito en campos que requieren rapidez de pensamiento y creatividad. Tienen el don de ver posibilidades y un encanto que abre puertas.
+Those born under this sign are often successful in fields requiring quick thinking and creativity. They have a gift for seeing possibilities and a charm that opens doors.
 
-En las relaciones, los monos son divertidos y estimulantes. Necesitan socios que puedan seguir el ritmo de sus mentes rápidas y apreciar su naturaleza juguetona. El amor nunca debería ser aburrido.`,
-        strengths: ["Inteligencia", "Creatividad", "Adaptabilidad", "Encanto"],
-        challenges: ["Inquietud", "Malicia", "Oportunismo", "Arrogancia"]
+In relationships, Monkeys are fun and stimulating. They need partners who can keep up with their quick minds and appreciate their playful nature. Love should never be boring.`,
+        strengths: ["Intelligence", "Creativity", "Adaptability", "Charm"],
+        challenges: ["Restlessness", "Mischievousness", "Opportunism", "Arrogance"]
     },
     
     Rooster: {
         element: "Metal",
         yin_yang: "Yin",
-        keywords: ["Observante", "Trabajo duro", "Seguro", "Honesto"],
-        summary: "Orgulloso y capaz, con aguda observación.",
-        reading: `Nacida en el Año del Gallo, esta alma lleva la energía del orgulloso heraldo: observador, trabajador y confiadamente honesto. El Gallo representa la diligencia, la observación y el coraje de decir la verdad.
+        keywords: ["Observant", "Hardworking", "Confident", "Honest"],
+        summary: "Proud and capable, with keen observation.",
+        reading: `Born in the Year of the Rooster, this soul carries the energy of the proud herald - observant, hardworking, and confidently honest. The Rooster represents diligence, observation, and the courage to speak truth.
 
-La energía del gallo aporta confianza natural y atención al detalle. Existe la capacidad de ver lo que otros pasan por alto y la voluntad de hablar sobre ello. Los gallos no rehuyen el centro de atención.
+Rooster energy brings natural confidence and attention to detail. There's an ability to see what others miss and a willingness to speak up about it. Roosters don't shy away from the spotlight.
 
-Los nacidos bajo este signo suelen tener éxito en campos que requieren precisión y presentación. Tienen altos estándares y no tienen miedo de expresar sus opiniones.
+Those born under this sign are often successful in fields requiring precision and presentation. They have high standards and aren't afraid to express their opinions.
 
-En las relaciones, los Gallos son leales y honestos. Necesitan socios que aprecien su franqueza y puedan manejar sus altos estándares. El amor debe construirse sobre la verdad.`,
-        strengths: ["Observación", "Confianza", "Honestidad", "Trabajo duro"],
-        challenges: ["Naturaleza crítica", "perfeccionismo", "Jactancia", "Inflexibilidad"]
+In relationships, Roosters are loyal and honest. They need partners who appreciate their directness and can handle their high standards. Love should be built on truth.`,
+        strengths: ["Observation", "Confidence", "Honesty", "Hard work"],
+        challenges: ["Critical nature", "Perfectionism", "Boastfulness", "Inflexibility"]
     },
     
     Dog: {
-        element: "Tierra",
-        yin_yang: "yang",
-        keywords: ["Leal", "Honesto", "Protector", "Confiable"],
-        summary: "Fieles y verdaderos, con lealtad inquebrantable.",
-        reading: `Nacida en el Año del Perro, esta alma lleva la energía del fiel guardián: leal, honesto y naturalmente protector. El Perro representa la lealtad, la justicia y el valor de la verdadera amistad.
+        element: "Earth",
+        yin_yang: "Yang",
+        keywords: ["Loyal", "Honest", "Protective", "Reliable"],
+        summary: "Faithful and true, with unwavering loyalty.",
+        reading: `Born in the Year of the Dog, this soul carries the energy of the faithful guardian - loyal, honest, and naturally protective. The Dog represents loyalty, justice, and the value of true friendship.
 
-La energía del perro aporta lealtad natural y un fuerte sentido del bien y del mal. Existe el instinto de proteger a los seres queridos y defender lo que es justo. Los perros son los amigos que todo el mundo necesita.
+Dog energy brings natural loyalty and a strong sense of right and wrong. There's an instinct to protect loved ones and stand up for what's fair. Dogs are the friends everyone needs.
 
-Los nacidos bajo este signo a menudo desempeñan roles en los que pueden ayudar o proteger a otros. Tienen una honestidad directa y una confiabilidad que los hace invaluables.
+Those born under this sign are often found in roles where they can help or protect others. They have a straightforward honesty and a reliability that makes them invaluable.
 
-En las relaciones, los perros son devotos y protectores. Necesitan socios que valoren la lealtad y en los que se pueda confiar plenamente. El amor debe sentirse seguro y verdadero.`,
-        strengths: ["Lealtad", "Honestidad", "Fiabilidad", "Protección"],
-        challenges: ["Ansiedad", "Pesimismo", "Testarudez", "dificultad para confiar"]
+In relationships, Dogs are devoted and protective. They need partners who value loyalty and can be trusted completely. Love should feel safe and true.`,
+        strengths: ["Loyalty", "Honesty", "Reliability", "Protectiveness"],
+        challenges: ["Anxiety", "Pessimism", "Stubbornness", "Difficulty trusting"]
     },
     
     Pig: {
-        element: "Agua",
+        element: "Water",
         yin_yang: "Yin",
-        keywords: ["Generoso", "Compasivo", "Diligente", "Sincero"],
-        summary: "De buen corazón y generoso, con genuina amabilidad.",
-        reading: `Nacida en el Año del Cerdo, esta alma lleva la energía del generoso benefactor: afectuoso, compasivo y genuinamente amable. El Cerdo representa la generosidad, la sinceridad y la alegría de dar.
+        keywords: ["Generous", "Compassionate", "Diligent", "Sincere"],
+        summary: "Warm-hearted and generous, with genuine kindness.",
+        reading: `Born in the Year of the Pig, this soul carries the energy of the generous benefactor - warm-hearted, compassionate, and genuinely kind. The Pig represents generosity, sincerity, and the joy of giving.
 
-La energía del cerdo aporta calidez y generosidad naturales. Existe un deseo genuino de ayudar a los demás y compartir la buena suerte. Los cerdos creen en la bondad de las personas.
+Pig energy brings natural warmth and generosity. There's a genuine desire to help others and share good fortune. Pigs believe in the goodness of people.
 
-Los nacidos bajo este signo suelen tener éxito gracias a su sinceridad y trabajo duro. Tienen una manera de hacer que los demás se sientan cómodos y valorados.
+Those born under this sign are often successful through their sincerity and hard work. They have a way of making others feel comfortable and valued.
 
-En las relaciones, los Cerdos son devotos y generosos. Necesitan socios que aprecien su naturaleza generosa y que no se aprovechen de su amabilidad. El amor debe sentirse abundante y cálido.`,
-        strengths: ["Generosidad", "Sinceridad", "Compasión", "Diligencia"],
-        challenges: ["Ingenuidad", "Abuso", "Candidez", "Materialismo"]
+In relationships, Pigs are devoted and generous. They need partners who appreciate their giving nature and won't take advantage of their kindness. Love should feel abundant and warm.`,
+        strengths: ["Generosity", "Sincerity", "Compassion", "Diligence"],
+        challenges: ["Naivety", "Over-indulgence", "Gullibility", "Materialism"]
     }
 };
 
@@ -710,124 +710,124 @@ En las relaciones, los Cerdos son devotos y generosos. Necesitan socios que apre
 // ============================================
 
 var MOON_PHASE_READINGS = {
-    'Luna nueva': {
+    'New Moon': {
         icon: '🌑',
-        keywords: ["Nuevos comienzos", "Potencial", "Introspección", "Plantar semillas"],
-        summary: "Nacido al inicio de un nuevo ciclo, lleno de potencial.",
-        reading: `Nacida bajo la Luna Nueva, esta alma llegó al comienzo de un ciclo lunar: una época de nuevos comienzos, nuevos comienzos y potencial ilimitado. La Luna Nueva representa la semilla antes de que brote, llena de posibilidades pero aún no visible.
+        keywords: ["New Beginnings", "Potential", "Introspection", "Planting Seeds"],
+        summary: "Born at the start of a new cycle, full of potential.",
+        reading: `Born under the New Moon, this soul arrived at the beginning of a lunar cycle - a time of new beginnings, fresh starts, and unlimited potential. The New Moon represents the seed before it sprouts, full of possibility but not yet visible.
 
-Este momento de nacimiento sugiere un alma que está aquí para iniciar cosas nuevas. Existe una afinidad natural por los comienzos, por plantar semillas que crecerán con el tiempo. El potencial es enorme, aunque no sea evidente de inmediato.
+This birth timing suggests a soul who is here to initiate new things. There's a natural affinity for beginnings, for planting seeds that will grow over time. The potential is enormous, even if it's not immediately apparent.
 
-Las almas de Luna Nueva suelen tener una vida interior fuerte y pueden necesitar tiempo a solas para recargarse. Son introspectivos por naturaleza y pueden tardar un tiempo en revelarse plenamente al mundo. Al igual que la luna oscura, su luz crece con el tiempo.
+New Moon souls often have a strong inner life and may need time alone to recharge. They are naturally introspective and may take time to reveal their full selves to the world. Like the dark moon, their light grows over time.
 
-En la vida, estas personas a menudo experimentan una sensación de empezar de nuevo, de estar al principio de algo importante. Pueden ser pioneros en sus campos o familias, iniciando cambios que otros continuarán.`,
-        strengths: ["Nueva perspectiva", "Potencial", "Introspección", "Iniciativa"],
-        challenges: ["Incertidumbre", "Necesidad de validación", "comienzos lentos", "dudas sobre uno mismo"]
+In life, these individuals often experience a sense of starting fresh, of being at the beginning of something important. They may be pioneers in their fields or families, initiating changes that others will continue.`,
+        strengths: ["Fresh perspective", "Potential", "Introspection", "Initiative"],
+        challenges: ["Uncertainty", "Need for validation", "Slow starts", "Self-doubt"]
     },
     
-    'Media luna creciente': {
+    'Waxing Crescent': {
         icon: '🌒',
-        keywords: ["Crecimiento", "Intención", "Determinación", "Fe"],
-        summary: "Nacido en una época de crecimiento y determinación emergentes.",
-        reading: `Nacida bajo la Luna Creciente Creciente, esta alma llegó durante una época de crecimiento emergente, cuando aparece el primer rayo de luz después de la oscuridad. Esta fase representa intención, determinación y coraje para seguir adelante a pesar de la incertidumbre.
+        keywords: ["Growth", "Intention", "Determination", "Faith"],
+        summary: "Born in a time of emerging growth and determination.",
+        reading: `Born under the Waxing Crescent Moon, this soul arrived during a time of emerging growth - when the first sliver of light appears after the darkness. This phase represents intention, determination, and the courage to move forward despite uncertainty.
 
-Este momento de nacimiento sugiere un alma que está aquí para superar obstáculos y manifestar intenciones hacia la realidad. Hay una determinación natural y una fe en que las cosas saldrán bien, incluso cuando la evidencia es escasa.
+This birth timing suggests a soul who is here to push through obstacles and manifest intentions into reality. There's a natural determination and faith that things will work out, even when evidence is scarce.
 
-Las almas de la Media Luna Creciente a menudo tienen un espíritu pionero y no tienen miedo de dar los primeros pasos en un camino no transitado. Entienden que el crecimiento requiere esfuerzo y están dispuestos a esforzarse.
+Waxing Crescent souls often have a pioneering spirit and aren't afraid to take the first steps on an untrodden path. They understand that growth requires effort and are willing to put in the work.
 
-En la vida, estos individuos a menudo experimentan una sensación de que están ganando impulso, de que las cosas se van uniendo gradualmente a través de un esfuerzo persistente. Ellos son los que siguen adelante cuando otros se dan por vencidos.`,
-        strengths: ["Determinación", "Fe", "Coraje", "Persistencia"],
-        challenges: ["Impaciencia", "Frustración por el lento progreso", "dudas sobre uno mismo", "Abrumar"]
+In life, these individuals often experience a sense of building momentum, of things gradually coming together through persistent effort. They are the ones who keep going when others give up.`,
+        strengths: ["Determination", "Faith", "Courage", "Persistence"],
+        challenges: ["Impatience", "Frustration with slow progress", "Self-doubt", "Overwhelm"]
     },
     
-    'Primer trimestre': {
+    'First Quarter': {
         icon: '🌓',
-        keywords: ["Acción", "Decisión", "Desafío", "Compromiso"],
-        summary: "Nace en un momento de acción decisiva y compromiso.",
-        reading: `Nacida bajo el primer cuarto de luna, esta alma llegó a un punto de inflexión crítico: cuando la luna está medio iluminada y se deben tomar decisiones. Esta fase representa acción, desafío y el compromiso de seguir adelante.
+        keywords: ["Action", "Decision", "Challenge", "Commitment"],
+        summary: "Born at a time of decisive action and commitment.",
+        reading: `Born under the First Quarter Moon, this soul arrived at a critical turning point - when the moon is half-illuminated and decisions must be made. This phase represents action, challenge, and the commitment to move forward.
 
-Este momento de nacimiento sugiere un alma que está aquí para tomar medidas decisivas y superar obstáculos. Existe una capacidad natural para tomar decisiones difíciles y comprometerse plenamente con el camino elegido.
+This birth timing suggests a soul who is here to take decisive action and overcome obstacles. There's a natural ability to make tough decisions and commit fully to a chosen path.
 
-Las almas del primer cuarto a menudo se encuentran en encrucijadas a lo largo de la vida, enfrentando desafíos que requieren coraje y compromiso. Son solucionadores de problemas naturales y prosperan bajo presión.
+First Quarter souls often find themselves at crossroads throughout life, facing challenges that require courage and commitment. They are natural problem-solvers who thrive under pressure.
 
-En la vida, estas personas a menudo experimentan momentos cruciales que les exigen elegir y comprometerse. Son ellos los que actúan cuando otros dudan.`,
-        strengths: ["Decisión", "Coraje", "resolución de problemas", "Compromiso"],
-        challenges: ["Impulsividad", "Conflicto", "Testarudez", "Orientación a la crisis"]
+In life, these individuals often experience pivotal moments that require them to choose and commit. They are the ones who take action when others hesitate.`,
+        strengths: ["Decisiveness", "Courage", "Problem-solving", "Commitment"],
+        challenges: ["Impulsiveness", "Conflict", "Stubbornness", "Crisis orientation"]
     },
     
-    'Gibosa creciente': {
+    'Waxing Gibbous': {
         icon: '🌔',
-        keywords: ["Refinamiento", "Análisis", "Ajuste", "Preparación"],
-        summary: "Nacido en una época de refinamiento y preparación.",
-        reading: `Nacida bajo la Luna Gibosa Creciente, esta alma llegó durante una época de refinamiento, cuando la luna está casi llena y se están haciendo los ajustes finales. Esta fase representa análisis, mejora y preparación para la culminación.
+        keywords: ["Refinement", "Analysis", "Adjustment", "Preparation"],
+        summary: "Born in a time of refinement and preparation.",
+        reading: `Born under the Waxing Gibbous Moon, this soul arrived during a time of refinement - when the moon is almost full and final adjustments are being made. This phase represents analysis, improvement, and preparation for culmination.
 
-Este momento de nacimiento sugiere un alma que está aquí para perfeccionar y refinar. Hay un ojo natural para los detalles y un deseo de mejorar las cosas. Nunca nada es lo suficientemente bueno: siempre hay margen de mejora.
+This birth timing suggests a soul who is here to perfect and refine. There's a natural eye for detail and a desire to make things better. Nothing is ever quite good enough - there's always room for improvement.
 
-Las almas menguantes en crecimiento a menudo tienen altos estándares y mentes analíticas. Se destacan por ver lo que necesita ajustes y realizar los cambios necesarios.
+Waxing Gibbous souls often have high standards and analytical minds. They excel at seeing what needs adjustment and making the necessary changes.
 
-En la vida, estos individuos a menudo experimentan una sensación de estar casi allí, de estar al borde de algo significativo. Son ellos quienes hacen el esfuerzo final para asegurar el éxito.`,
-        strengths: ["Mente analítica", "Atención al detalle", "Enfoque de mejora", "Preparación"],
-        challenges: ["perfeccionismo", "Sobreanálisis", "Ansiedad", "Nunca sentirte listo"]
+In life, these individuals often experience a sense of almost-there, of being on the verge of something significant. They are the ones who put in the final effort to ensure success.`,
+        strengths: ["Analytical mind", "Attention to detail", "Improvement focus", "Preparation"],
+        challenges: ["Perfectionism", "Over-analysis", "Anxiety", "Never feeling ready"]
     },
     
-    'Luna llena': {
+    'Full Moon': {
         icon: '🌕',
-        keywords: ["Iluminación", "Cumplimiento", "Claridad", "Culminación"],
-        summary: "Nacido en la cima del ciclo lunar, completamente iluminado.",
-        reading: `Nacida bajo la Luna Llena, esta alma llegó a la cima del ciclo lunar, cuando la luna está completamente iluminada y todo se revela. Esta fase representa plenitud, claridad y culminación de esfuerzos.
+        keywords: ["Illumination", "Fulfillment", "Clarity", "Culmination"],
+        summary: "Born at the peak of the lunar cycle, fully illuminated.",
+        reading: `Born under the Full Moon, this soul arrived at the peak of the lunar cycle - when the moon is fully illuminated and everything is revealed. This phase represents fulfillment, clarity, and the culmination of efforts.
 
-Este momento de nacimiento sugiere un alma que está aquí para brillar y ser vista. Hay un magnetismo natural y una vida que tiende hacia logros y reconocimientos significativos.
+This birth timing suggests a soul who is here to shine brightly and be seen. There's a natural magnetism and a life that tends toward significant achievements and recognition.
 
-Las almas de Luna Llena suelen tener personalidades fuertes y no temen ser el centro de atención. Tienen una habilidad natural para completar las cosas y estar presentes en los momentos importantes.
+Full Moon souls often have strong personalities and aren't afraid to be in the spotlight. They have a natural ability to bring things to completion and to be present at important moments.
 
-En la vida, estas personas suelen experimentar emociones intensas y acontecimientos importantes. Ellos son los que viven la vida plenamente y no tienen miedo de ser vistos.`,
-        strengths: ["Claridad", "Magnetismo", "Logro", "Conciencia emocional"],
-        challenges: ["Intensidad emocional", "Necesidad de reconocimiento", "Enfoque de relación", "Abrumar"]
+In life, these individuals often experience heightened emotions and significant events. They are the ones who live life fully and aren't afraid to be seen.`,
+        strengths: ["Clarity", "Magnetism", "Achievement", "Emotional awareness"],
+        challenges: ["Emotional intensity", "Need for recognition", "Relationship focus", "Overwhelm"]
     },
     
-    'Gibosa menguante': {
+    'Waning Gibbous': {
         icon: '🌖',
-        keywords: ["Intercambio", "Enseñanza", "Gratitud", "Distribución"],
-        summary: "Nacido en una época de compartir sabiduría y gratitud.",
-        reading: `Nacida bajo la Luna Gibosa Menguante, esta alma llegó durante un tiempo de compartir, cuando la luna llena comienza a disminuir y su luz se distribuye. Esta fase representa la enseñanza, la gratitud y el intercambio de sabiduría.
+        keywords: ["Sharing", "Teaching", "Gratitude", "Distribution"],
+        summary: "Born in a time of sharing wisdom and gratitude.",
+        reading: `Born under the Waning Gibbous Moon, this soul arrived during a time of sharing - when the full moon begins to decrease and its light is distributed. This phase represents teaching, gratitude, and the sharing of wisdom.
 
-Este momento de nacimiento sugiere un alma que está aquí para compartir lo que ha aprendido con los demás. Existe una capacidad de enseñanza natural y un deseo de retribuir.
+This birth timing suggests a soul who is here to share what they've learned with others. There's a natural teaching ability and a desire to give back.
 
-Las almas menguantes a menudo encuentran satisfacción al ser mentoras, enseñar o compartir sus experiencias. Entienden que la sabiduría debe transmitirse.
+Waning Gibbous souls often find fulfillment in mentoring, teaching, or sharing their experiences. They understand that wisdom is meant to be passed on.
 
-En la vida, estas personas suelen experimentar la sensación de tener algo valioso que compartir. Son ellos quienes ayudan a otros a aprender de sus experiencias.`,
-        strengths: ["Capacidad de enseñanza", "Generosidad", "Sabiduría", "Gratitud"],
-        challenges: ["Dar demasiado", "dificultad para recibir", "Predicación", "dejar ir"]
+In life, these individuals often experience a sense of having something valuable to share. They are the ones who help others learn from their experiences.`,
+        strengths: ["Teaching ability", "Generosity", "Wisdom", "Gratitude"],
+        challenges: ["Over-giving", "Difficulty receiving", "Preachiness", "Letting go"]
     },
     
-    'Último trimestre': {
+    'Last Quarter': {
         icon: '🌗',
-        keywords: ["Liberar", "Reflexión", "Transición", "dejar ir"],
-        summary: "Nacido en un momento de liberación y transición.",
-        reading: `Nacida bajo el último cuarto de luna, esta alma llegó a otro punto de inflexión crítico: cuando la luna vuelve a estar medio iluminada pero ahora está disminuyendo. Esta fase representa liberación, reflexión y el coraje de dejarse llevar.
+        keywords: ["Release", "Reflection", "Transition", "Letting Go"],
+        summary: "Born at a time of release and transition.",
+        reading: `Born under the Last Quarter Moon, this soul arrived at another critical turning point - when the moon is half-illuminated again but now decreasing. This phase represents release, reflection, and the courage to let go.
 
-Este momento de nacimiento sugiere un alma que está aquí para ayudar con las transiciones y los finales. Existe una capacidad natural para liberar lo que ya no sirve y ayudar a otros a hacer lo mismo.
+This birth timing suggests a soul who is here to help with transitions and endings. There's a natural ability to release what no longer serves and to help others do the same.
 
-Las almas del último cuarto a menudo se encuentran ayudando a otros a través de cambios y transiciones. Entienden que los finales son necesarios para nuevos comienzos.
+Last Quarter souls often find themselves helping others through changes and transitions. They understand that endings are necessary for new beginnings.
 
-En la vida, estas personas a menudo experimentan transiciones importantes y pueden servir como guías para otras personas que atraviesan cambios. Ellos son los que entienden que dejar ir es a veces la elección más valiente.`,
-        strengths: ["Sabiduría", "Capacidad de dejarse llevar", "Guía de transición", "Reflexión"],
-        challenges: ["Dificultad con nuevos comienzos.", "Nostalgia", "Orientación a la crisis", "Resistencia"]
+In life, these individuals often experience significant transitions and may serve as guides for others going through changes. They are the ones who understand that letting go is sometimes the bravest choice.`,
+        strengths: ["Wisdom", "Ability to let go", "Transition guidance", "Reflection"],
+        challenges: ["Difficulty with new beginnings", "Nostalgia", "Crisis orientation", "Resistance"]
     },
     
-    'Media Luna Menguante': {
+    'Waning Crescent': {
         icon: '🌘',
-        keywords: ["Descansar", "Rendirse", "Terminación", "Preparación"],
-        summary: "Nacido en una época de descanso y preparación espiritual.",
-        reading: `Nacida bajo la Luna Creciente Menguante, esta alma llegó durante la fase final del ciclo lunar, cuando la luna apenas es visible y se prepara para renovarse. Esta fase representa descanso, entrega y preparación espiritual.
+        keywords: ["Rest", "Surrender", "Completion", "Preparation"],
+        summary: "Born in a time of rest and spiritual preparation.",
+        reading: `Born under the Waning Crescent Moon, this soul arrived during the final phase of the lunar cycle - when the moon is barely visible and preparing for renewal. This phase represents rest, surrender, and spiritual preparation.
 
-Este momento de nacimiento sugiere un alma que está aquí para completar ciclos y prepararse para otros nuevos. Hay una espiritualidad natural y una comprensión de la importancia del descanso y la reflexión.
+This birth timing suggests a soul who is here to complete cycles and prepare for new ones. There's a natural spirituality and an understanding of the importance of rest and reflection.
 
-Las almas de la Media Luna Menguante a menudo tienen una fuerte intuición y pueden sentirse atraídas por el trabajo espiritual o curativo. Entienden que el descanso no es pereza sino preparación.
+Waning Crescent souls often have strong intuition and may be drawn to spiritual or healing work. They understand that rest is not laziness but preparation.
 
-En la vida, estas personas a menudo experimentan la sensación de haber completado algo importante y prepararse para lo que sigue. Son ellos quienes comprenden el valor de la pausa antes del nuevo comienzo.`,
-        strengths: ["Intuición", "Espiritualidad", "capacidad de finalización", "Apreciación del descanso"],
-        challenges: ["Energía baja", "dificultad para empezar", "Evasión", "Retiro"]
+In life, these individuals often experience a sense of completing something important and preparing for what's next. They are the ones who understand the value of the pause before the new beginning.`,
+        strengths: ["Intuition", "Spirituality", "Completion ability", "Rest appreciation"],
+        challenges: ["Low energy", "Difficulty starting", "Escapism", "Withdrawal"]
     }
 };
 
@@ -837,436 +837,436 @@ En la vida, estas personas a menudo experimentan la sensación de haber completa
 
 var MERCURY_SIGN_READINGS = {
     Aries: {
-        keywords: ["Pensador rápido", "Directo", "Impulsivo", "Atrevido"],
-        summary: "Comunicación rápida y directa con una ventaja competitiva.",
-        reading: `Mercurio en Aries crea una mente rápida y decisiva que piensa y habla con audacia. El estilo de comunicación es directo, a veces directo y siempre enérgico. Esta ubicación indica alguien que piensa con rapidez y no tiene miedo de expresar sus opiniones primero. Las ideas surgen rápidamente y hay poca paciencia para una deliberación lenta. El desafío es aprender a escuchar además de hablar, y considerar las perspectivas de los demás antes de sacar conclusiones.`,
-        strengths: ["pensamiento rápido", "Decisivo", "Orador valiente", "Inicia ideas"],
-        challenges: ["Impaciencia", "Interrumpir", "Detalles faltantes", "Discutidor"]
+        keywords: ["Quick Thinker", "Direct", "Impulsive", "Bold"],
+        summary: "Fast, direct communication with a competitive edge.",
+        reading: `Mercury in Aries creates a quick, decisive mind that thinks and speaks with boldness. Communication style is direct, sometimes blunt, and always energetic. This placement indicates someone who thinks on their feet and isn't afraid to voice opinions first. Ideas come rapidly, and there's little patience for slow deliberation. The challenge is learning to listen as well as speak, and to consider others' perspectives before charging ahead with conclusions.`,
+        strengths: ["Quick thinking", "Decisive", "Courageous speaker", "Initiates ideas"],
+        challenges: ["Impatience", "Interrupting", "Missing details", "Argumentative"]
     },
     Taurus: {
-        keywords: ["Adrede", "Práctico", "Confiable", "Exhaustivo"],
-        summary: "Pensamiento metódico con enfoque en resultados prácticos.",
-        reading: `Mercurio en Tauro aporta un enfoque deliberado y fundamentado al pensamiento y la comunicación. Las ideas se procesan lenta pero minuciosamente, con énfasis en la aplicación práctica. Esta ubicación indica alguien que piensa detenidamente antes de hablar y valora el sentido común por encima de la teoría abstracta. La memoria es fuerte, especialmente para los detalles sensoriales. El desafío es permanecer abierto a nuevas ideas y no volverse mentalmente rígido.`,
-        strengths: ["Sabiduría práctica", "Buen recuerdo", "Información confiable", "Aprendizaje del paciente"],
-        challenges: ["terquedad mental", "Lento para adaptarse", "Resistencia a nuevas ideas", "Cavilaciones"]
+        keywords: ["Deliberate", "Practical", "Reliable", "Thorough"],
+        summary: "Methodical thinking with a focus on practical outcomes.",
+        reading: `Mercury in Taurus brings a deliberate, grounded approach to thinking and communication. Ideas are processed slowly but thoroughly, with an emphasis on practical application. This placement indicates someone who thinks things through before speaking and values common sense over abstract theory. Memory is strong, especially for sensory details. The challenge is remaining open to new ideas and not becoming mentally rigid.`,
+        strengths: ["Practical wisdom", "Good memory", "Reliable information", "Patient learning"],
+        challenges: ["Mental stubbornness", "Slow to adapt", "Resistance to new ideas", "Overthinking"]
     },
     Gemini: {
-        keywords: ["Versátil", "Curioso", "Articular", "ingenioso"],
-        summary: "Comunicación brillante y adaptable con una curiosidad infinita.",
-        reading: `Mercurio en Géminis está en su signo natal, lo que crea una mente brillante y versátil. La comunicación fluye con facilidad y existe un don natural para el lenguaje, la escritura y la conexión de ideas. Esta ubicación indica alguien que aprende rápidamente, disfruta de la variedad y puede discutir casi cualquier tema. La mente es inquieta y curiosa, siempre busca nueva información. El desafío es desarrollar el enfoque y seguir las ideas en lugar de pasar constantemente a lo siguiente.`,
-        strengths: ["Excelente comunicación", "Aprendizaje rápido", "Versatilidad", "ingenio y humor"],
-        challenges: ["Pensamiento disperso", "Superficialidad", "Nerviosismo", "Inconsecuencia"]
+        keywords: ["Versatile", "Curious", "Articulate", "Quick-witted"],
+        summary: "Brilliant, adaptable communication with endless curiosity.",
+        reading: `Mercury in Gemini is in its home sign, creating a brilliant, versatile mind. Communication flows easily, and there's a natural gift for language, writing, and connecting ideas. This placement indicates someone who learns quickly, enjoys variety, and can discuss almost any topic. The mind is restless and curious, always seeking new information. The challenge is developing focus and following through on ideas rather than constantly moving to the next thing.`,
+        strengths: ["Excellent communication", "Quick learning", "Versatility", "Wit and humor"],
+        challenges: ["Scattered thinking", "Superficiality", "Nervousness", "Inconsistency"]
     },
     Cancer: {
-        keywords: ["Intuitivo", "Retentivo", "Emocional", "Criando"],
-        summary: "Inteligencia emocional con memoria poderosa.",
-        reading: `Mercurio en Cáncer aporta profundidad emocional al pensamiento y la comunicación. Las ideas se procesan a través de los sentimientos y la memoria está coloreada por asociaciones emocionales. Esta ubicación indica alguien que se comunica con sensibilidad y recuerda cómo le hicieron sentir las cosas. Existe una capacidad natural para comprender las necesidades emocionales de los demás. El desafío es separar el pensamiento objetivo de las reacciones emocionales y no tomar las críticas demasiado personalmente.`,
-        strengths: ["Inteligencia emocional", "Memoria poderosa", "Comunicación intuitiva", "Oyente comprensivo"],
-        challenges: ["pensamiento subjetivo", "El mal humor afecta la lógica.", "Reacciones defensivas", "Dificultad con la crítica."]
+        keywords: ["Intuitive", "Retentive", "Emotional", "Nurturing"],
+        summary: "Emotional intelligence with powerful memory.",
+        reading: `Mercury in Cancer brings emotional depth to thinking and communication. Ideas are processed through feelings, and memory is colored by emotional associations. This placement indicates someone who communicates with sensitivity and remembers how things made them feel. There's a natural ability to understand others' emotional needs. The challenge is separating objective thinking from emotional reactions and not taking criticism too personally.`,
+        strengths: ["Emotional intelligence", "Powerful memory", "Intuitive communication", "Supportive listener"],
+        challenges: ["Subjective thinking", "Moodiness affecting logic", "Defensive reactions", "Difficulty with criticism"]
     },
     Leo: {
-        keywords: ["Dramático", "Creativo", "Seguro", "Expresivo"],
-        summary: "Expresión audaz y creativa con autoridad natural.",
-        reading: `Mercurio en Leo aporta calidez, creatividad y estilo dramático a la comunicación. Las ideas se expresan con confianza y estilo, a menudo con una habilidad natural para contar historias. Esta ubicación indica alguien que habla con autoridad y disfruta ser escuchado. Existe un enfoque creativo para la resolución de problemas y un don para inspirar a otros a través de las palabras. El desafío es permanecer abierto a las ideas de los demás y no dominar las conversaciones.`,
-        strengths: ["hablar con confianza", "Ideas creativas", "comunicación inspiradora", "Liderazgo a través de las palabras"],
-        challenges: ["Arrogancia", "Necesidad de atención", "dificultad para escuchar", "Testarudez"]
+        keywords: ["Dramatic", "Creative", "Confident", "Expressive"],
+        summary: "Bold, creative expression with natural authority.",
+        reading: `Mercury in Leo brings warmth, creativity, and dramatic flair to communication. Ideas are expressed with confidence and style, often with natural storytelling ability. This placement indicates someone who speaks with authority and enjoys being heard. There's a creative approach to problem-solving and a gift for inspiring others through words. The challenge is remaining open to others' ideas and not dominating conversations.`,
+        strengths: ["Confident speaking", "Creative ideas", "Inspiring communication", "Leadership through words"],
+        challenges: ["Arrogance", "Need for attention", "Difficulty listening", "Stubbornness"]
     },
     Virgo: {
-        keywords: ["Analítico", "Preciso", "Crítico", "Práctico"],
-        summary: "Pensamiento preciso y analítico con atención al detalle.",
-        reading: `Mercurio en Virgo está en su otro signo natal, lo que crea una mente excepcionalmente analítica y precisa. La comunicación es detallada, organizada y centrada en cuestiones prácticas. Esta ubicación indica alguien que se da cuenta de lo que otros pasan por alto y se destaca en resolver problemas complejos. Existe un don para editar, organizar y mejorar sistemas. El desafío es no volverse demasiado crítico ni perderse en los detalles a expensas del panorama general.`,
-        strengths: ["Mente analítica", "Atención al detalle", "Resolución práctica de problemas", "Organización"],
-        challenges: ["Sobrecrítica", "perfeccionismo", "Preocuparse", "Extrañando el bosque en busca de árboles"]
+        keywords: ["Analytical", "Precise", "Critical", "Practical"],
+        summary: "Precise, analytical thinking with attention to detail.",
+        reading: `Mercury in Virgo is in its other home sign, creating an exceptionally analytical and precise mind. Communication is detailed, organized, and focused on practical matters. This placement indicates someone who notices what others miss and excels at breaking down complex problems. There's a gift for editing, organizing, and improving systems. The challenge is not becoming overly critical or getting lost in details at the expense of the big picture.`,
+        strengths: ["Analytical mind", "Attention to detail", "Practical problem-solving", "Organization"],
+        challenges: ["Over-criticism", "Perfectionism", "Worry", "Missing the forest for trees"]
     },
     Libra: {
-        keywords: ["Diplomático", "Justo", "Encantador", "Indeciso"],
-        summary: "Comunicación elegante con don de armonía.",
-        reading: `Mercurio en Libra aporta diplomacia, justicia y encanto al pensamiento y la comunicación. Las ideas se sopesan cuidadosamente desde múltiples perspectivas antes de sacar conclusiones. Esta ubicación indica alguien que se comunica con gracia y tiene una habilidad natural para mediar y encontrar puntos en común. Hay un aprecio por el lenguaje hermoso y la expresión artística. El desafío es tomar decisiones y expresar opiniones sin excesivas reservas.`,
-        strengths: ["discurso diplomático", "imparcial", "comunicación encantadora", "Habilidades de mediación"],
-        challenges: ["Indecisión", "complacer a la gente", "Evita la confrontación", "Amabilidad superficial"]
+        keywords: ["Diplomatic", "Fair", "Charming", "Indecisive"],
+        summary: "Graceful communication with a gift for harmony.",
+        reading: `Mercury in Libra brings diplomacy, fairness, and charm to thinking and communication. Ideas are weighed carefully from multiple perspectives before conclusions are drawn. This placement indicates someone who communicates with grace and has a natural ability to mediate and find common ground. There's an appreciation for beautiful language and artistic expression. The challenge is making decisions and stating opinions without excessive hedging.`,
+        strengths: ["Diplomatic speech", "Fair-minded", "Charming communication", "Mediation skills"],
+        challenges: ["Indecision", "People-pleasing", "Avoids confrontation", "Superficial agreeableness"]
     },
     Scorpio: {
-        keywords: ["Penetrante", "Estratégico", "Reservado", "Intenso"],
-        summary: "Mente profunda e inquisitiva que ve debajo de la superficie.",
-        reading: `Mercurio en Escorpio crea una mente penetrante e investigadora que naturalmente ve debajo de la superficie. La comunicación es intensa, estratégica y, a menudo, revela motivaciones ocultas en los demás. Esta ubicación indica alguien que piensa profundamente y no se contenta con explicaciones superficiales. Tiene un don para la investigación, la psicología y el descubrimiento de secretos. El desafío es confiar lo suficiente en los demás como para compartir pensamientos abiertamente y no utilizar el conocimiento como poder.`,
-        strengths: ["Mente investigadora", "Pensamiento estratégico", "Perspicacia psicológica", "Determinación"],
-        challenges: ["Sospecha", "Sigilo", "Manipulación", "pensamiento obsesivo"]
+        keywords: ["Penetrating", "Strategic", "Secretive", "Intense"],
+        summary: "Deep, probing mind that sees beneath the surface.",
+        reading: `Mercury in Scorpio creates a penetrating, investigative mind that naturally sees beneath the surface. Communication is intense, strategic, and often reveals hidden motivations in others. This placement indicates someone who thinks deeply and isn't satisfied with superficial explanations. There's a gift for research, psychology, and uncovering secrets. The challenge is trusting others enough to share thoughts openly and not using knowledge as power.`,
+        strengths: ["Investigative mind", "Strategic thinking", "Psychological insight", "Determination"],
+        challenges: ["Suspicion", "Secretiveness", "Manipulation", "Obsessive thinking"]
     },
     Sagittarius: {
-        keywords: ["Filosófico", "Optimista", "Desafilado", "Expansivo"],
-        summary: "Pensamiento global con profundidad filosófica.",
-        reading: `Mercurio en Sagitario aporta un pensamiento filosófico expansivo y una comunicación honesta, a veces directa. Las ideas se centran en el significado, la verdad y el panorama general, más que en los detalles. Esta ubicación indica alguien que piensa en las cuestiones más importantes de la vida y se comunica con entusiasmo y optimismo. Hay un amor por aprender, especialmente sobre culturas, filosofía y viajes. El desafío es prestar atención a los detalles y ser diplomático cuando la honestidad puede resultar perjudicial.`,
-        strengths: ["Pensamiento visionario", "Honestidad", "Optimismo", "Profundidad filosófica"],
-        challenges: ["Falta de tacto", "Pasando por alto los detalles", "demasiado prometedor", "Sermoneador"]
+        keywords: ["Philosophical", "Optimistic", "Blunt", "Expansive"],
+        summary: "Big-picture thinking with philosophical depth.",
+        reading: `Mercury in Sagittarius brings expansive, philosophical thinking and honest, sometimes blunt communication. Ideas focus on meaning, truth, and the big picture rather than details. This placement indicates someone who thinks about life's larger questions and communicates with enthusiasm and optimism. There's a love of learning, especially about cultures, philosophy, and travel. The challenge is attending to details and being diplomatic when honesty might hurt.`,
+        strengths: ["Visionary thinking", "Honesty", "Optimism", "Philosophical depth"],
+        challenges: ["Tactlessness", "Overlooking details", "Over-promising", "Preachy"]
     },
     Capricorn: {
-        keywords: ["Estructurado", "Ambicioso", "Grave", "Práctico"],
-        summary: "Pensamiento disciplinado centrado en el logro.",
-        reading: `Mercurio en Capricornio aporta estructura, disciplina y practicidad al pensamiento y la comunicación. Las ideas son organizadas, ambiciosas y centradas en resultados a largo plazo. Esta ubicación indica alguien que piensa estratégicamente sobre su carrera y sus logros. La comunicación es seria y autoritaria. Tiene un don para planificar y organizar proyectos complejos. El desafío es aclarar y no descartar ideas que no tienen un valor práctico obvio.`,
-        strengths: ["Planificación estratégica", "Pensamiento disciplinado", "Autoridad", "Visión a largo plazo"],
-        challenges: ["Pesimismo", "Rigidez", "Desdeñoso de la diversión", "demasiado serio"]
+        keywords: ["Structured", "Ambitious", "Serious", "Practical"],
+        summary: "Disciplined thinking focused on achievement.",
+        reading: `Mercury in Capricorn brings structure, discipline, and practicality to thinking and communication. Ideas are organized, ambitious, and focused on long-term results. This placement indicates someone who thinks strategically about career and achievement. Communication is serious and authoritative. There's a gift for planning and organizing complex projects. The challenge is lightening up and not dismissing ideas that don't have obvious practical value.`,
+        strengths: ["Strategic planning", "Disciplined thinking", "Authority", "Long-term vision"],
+        challenges: ["Pessimism", "Rigidity", "Dismissive of fun", "Too serious"]
     },
     Aquarius: {
-        keywords: ["Innovador", "Humanitario", "Poco convencional", "Objetivo"],
-        summary: "Pensamiento original con perspectiva humanitaria.",
-        reading: `Mercurio en Acuario crea una mente innovadora y poco convencional que piensa por delante de su tiempo. La comunicación es objetiva y a menudo se centra en ideas que benefician a la humanidad o desafían las convenciones. Esta ubicación indica alguien que piensa de forma independiente y, a menudo, tiene ideas brillantes y originales. Existe una comprensión natural de la tecnología y los sistemas. El desafío es conectar las ideas con la realidad emocional y no volverse demasiado distante o contrario.`,
-        strengths: ["Pensamiento original", "Objetividad", "Innovación", "Enfoque humanitario"],
-        challenges: ["Desapego emocional", "contrario", "Obstinadamente poco convencional", "Ideas poco prácticas"]
+        keywords: ["Innovative", "Humanitarian", "Unconventional", "Objective"],
+        summary: "Original thinking with a humanitarian perspective.",
+        reading: `Mercury in Aquarius creates an innovative, unconventional mind that thinks ahead of its time. Communication is objective, often focused on ideas that benefit humanity or challenge conventions. This placement indicates someone who thinks independently and often has brilliant, original ideas. There's a natural understanding of technology and systems. The challenge is connecting ideas to emotional reality and not becoming too detached or contrary.`,
+        strengths: ["Original thinking", "Objectivity", "Innovation", "Humanitarian focus"],
+        challenges: ["Emotional detachment", "Contrarian", "Stubbornly unconventional", "Impractical ideas"]
     },
     Pisces: {
-        keywords: ["Imaginativo", "Intuitivo", "Poético", "Soñador"],
-        summary: "Comunicación intuitiva e imaginativa a través del sentimiento.",
-        reading: `Mercurio en Piscis aporta imaginación, intuición y sensibilidad poética al pensamiento y la comunicación. Las ideas fluyen del sentimiento y la imaginación más que de la lógica. Esta ubicación indica alguien que piensa en imágenes, metáforas y posibilidades. Existe un don natural para la escritura creativa, la música y la comprensión de lo tácito. El desafío es organizar los pensamientos con claridad y no perderse en la fantasía o la confusión.`,
-        strengths: ["Imaginación", "Intuición", "Expresión artística", "Comprensión empática"],
-        challenges: ["Confusión", "Desorganización", "Evasión", "dificultad con los hechos"]
+        keywords: ["Imaginative", "Intuitive", "Poetic", "Dreamy"],
+        summary: "Intuitive, imaginative communication through feeling.",
+        reading: `Mercury in Pisces brings imagination, intuition, and poetic sensibility to thinking and communication. Ideas flow from feeling and imagination rather than logic. This placement indicates someone who thinks in images, metaphors, and possibilities. There's a natural gift for creative writing, music, and understanding the unspoken. The challenge is organizing thoughts clearly and not getting lost in fantasy or confusion.`,
+        strengths: ["Imagination", "Intuition", "Artistic expression", "Empathetic understanding"],
+        challenges: ["Confusion", "Disorganization", "Escapism", "Difficulty with facts"]
     }
 };
 
 var VENUS_SIGN_READINGS = {
     Aries: {
-        keywords: ["Apasionado", "Impulsivo", "Independiente", "Emocionante"],
-        summary: "Un amor audaz y apasionante que se nutre de la pasión y el desafío.",
-        reading: `Venus en Aries ama con pasión, entusiasmo e independencia. El romance se persigue con audacia y hay una atracción por el desafío y la conquista. Esta ubicación indica alguien que se enamora rápida e intensamente, atraído por la emoción y la novedad. El lenguaje del amor es acción directa y búsqueda apasionada. El desafío es desarrollar la paciencia y fomentar relaciones a largo plazo más allá del entusiasmo inicial.`,
-        strengths: ["Apasionado", "directo en el amor", "socio emocionante", "Corazón Valiente"],
-        challenges: ["Impaciencia", "Se aburre fácilmente", "Egoísta enamorado", "Demasiado competitivo"]
+        keywords: ["Passionate", "Impulsive", "Independent", "Exciting"],
+        summary: "Bold, exciting love that thrives on passion and challenge.",
+        reading: `Venus in Aries loves with passion, excitement, and independence. Romance is pursued boldly, and there's an attraction to challenge and conquest. This placement indicates someone who falls in love quickly and intensely, drawn to excitement and novelty. Love language is direct action and passionate pursuit. The challenge is developing patience and nurturing long-term relationships beyond the initial excitement.`,
+        strengths: ["Passionate", "Direct in love", "Exciting partner", "Brave heart"],
+        challenges: ["Impatience", "Easily bored", "Selfish in love", "Too competitive"]
     },
     Taurus: {
-        keywords: ["Sensual", "Leal", "Dedicado", "Posesivo"],
-        summary: "Amor profundo y sensual que valora la seguridad y el placer.",
-        reading: `Venus en Tauro está en su signo natal, lo que crea un enfoque del amor profundamente sensual, leal y devoto. El romance involucra los sentidos: buena comida, bello entorno, afecto físico. Esta ubicación indica alguien que ama profunda y consistentemente, valorando la seguridad y la comodidad en las relaciones. El lenguaje del amor es contacto físico y regalos. El desafío es evitar la posesividad y permanecer abierto al cambio.`,
-        strengths: ["Devoción leal", "expresión sensual", "Estabilidad", "Apreciación de la belleza"],
-        challenges: ["Posesividad", "Testarudez", "Materialismo", "Resistencia al cambio"]
+        keywords: ["Sensual", "Loyal", "Devoted", "Possessive"],
+        summary: "Deep, sensual love that values security and pleasure.",
+        reading: `Venus in Taurus is in its home sign, creating a deeply sensual, loyal, and devoted approach to love. Romance involves the senses - good food, beautiful surroundings, physical affection. This placement indicates someone who loves deeply and consistently, valuing security and comfort in relationships. Love language is physical touch and gifts. The challenge is avoiding possessiveness and remaining open to change.`,
+        strengths: ["Loyal devotion", "Sensual expression", "Stability", "Appreciation of beauty"],
+        challenges: ["Possessiveness", "Stubbornness", "Materialism", "Resistance to change"]
     },
     Gemini: {
-        keywords: ["Juguetón", "Coqueto", "Comunicativo", "Búsqueda de variedad"],
-        summary: "Amor ligero y juguetón que se nutre de la conexión mental.",
-        reading: `Venus en Géminis aporta un enfoque del amor lúdico, curioso y comunicativo. El romance es intelectual, ingenioso y requiere estimulación mental constante. Esta ubicación indica alguien que se enamora de las mentes y necesita conversación y variedad en las relaciones. El lenguaje del amor son palabras e intereses compartidos. El desafío es desarrollar profundidad emocional y coherencia más allá de las conexiones superficiales.`,
-        strengths: ["Encantador", "Gran conversador", "Adaptable", "amante de la diversión"],
-        challenges: ["Superficial", "Inconsistente", "Frívolo", "Miedo a la profundidad"]
+        keywords: ["Playful", "Flirtatious", "Communicative", "Variety-seeking"],
+        summary: "Light, playful love that thrives on mental connection.",
+        reading: `Venus in Gemini brings a playful, curious, and communicative approach to love. Romance is intellectual, witty, and requires constant mental stimulation. This placement indicates someone who falls in love with minds and needs conversation and variety in relationships. Love language is words and shared interests. The challenge is developing emotional depth and consistency beyond surface-level connections.`,
+        strengths: ["Charming", "Great conversationalist", "Adaptable", "Fun-loving"],
+        challenges: ["Superficial", "Inconsistent", "Flighty", "Fear of depth"]
     },
     Cancer: {
-        keywords: ["Criando", "Protector", "Emocional", "Dedicado"],
-        summary: "Amor enriquecedor y devoto que crea seguridad emocional.",
-        reading: `Venus en Cáncer aporta una profunda sensibilidad emocional y una nutrida devoción al amor. El romance implica crear seguridad, cuidar a los seres queridos y construir juntos un hogar. Esta ubicación indica alguien que ama con devoción protectora y recuerda cada detalle emocional. El lenguaje del amor son actos de cuidado y apoyo emocional. El desafío es no volverse pegajoso ni permitir que las heridas del pasado impidan nuevas conexiones.`,
-        strengths: ["Amor nutritivo", "Profundidad emocional", "Lealtad", "Cuidado protector"],
-        challenges: ["apego", "Mal humor", "Miedo al rechazo", "Viviendo en el pasado"]
+        keywords: ["Nurturing", "Protective", "Emotional", "Devoted"],
+        summary: "Nurturing, devoted love that creates emotional security.",
+        reading: `Venus in Cancer brings deep emotional sensitivity and nurturing devotion to love. Romance involves creating security, caring for loved ones, and building a home together. This placement indicates someone who loves with protective devotion and remembers every emotional detail. Love language is acts of care and emotional support. The challenge is not becoming clingy or letting past hurts prevent new connections.`,
+        strengths: ["Nurturing love", "Emotional depth", "Loyalty", "Protective care"],
+        challenges: ["Clinginess", "Moodiness", "Fear of rejection", "Living in the past"]
     },
     Leo: {
-        keywords: ["Romántico", "Generoso", "Dramático", "Leal"],
-        summary: "Amor grande y generoso que celebra y adora.",
-        reading: `Venus en Leo aporta calidez, romance y estilo dramático al amor. El romance es grandioso, generoso y requiere admiración mutua. Esta ubicación indica alguien que ama con todo su corazón y quiere ser adorado a cambio. El lenguaje del amor son elogios, obsequios y tiempo de calidad juntos. El desafío es compartir escenario y no requerir una validación constante.`,
-        strengths: ["amante generoso", "gestos romanticos", "corazón leal", "Calor"],
-        challenges: ["Necesidad de atención", "Drama", "Orgullo", "Demandante"]
+        keywords: ["Romantic", "Generous", "Dramatic", "Loyal"],
+        summary: "Grand, generous love that celebrates and adores.",
+        reading: `Venus in Leo brings warmth, romance, and dramatic flair to love. Romance is grand, generous, and requires mutual admiration. This placement indicates someone who loves with their whole heart and wants to be adored in return. Love language is praise, gifts, and quality time in the spotlight together. The challenge is sharing the stage and not requiring constant validation.`,
+        strengths: ["Generous lover", "Romantic gestures", "Loyal heart", "Warmth"],
+        challenges: ["Need for attention", "Drama", "Pride", "Demanding"]
     },
     Virgo: {
-        keywords: ["Dedicado", "Práctico", "Útil", "Modesto"],
-        summary: "Amor devoto y práctico expresado a través del servicio.",
-        reading: `Venus en Virgo aporta un enfoque del amor dedicado, práctico y útil. El romance se muestra a través de actos de servicio: arreglar cosas, ayudar con problemas, recordar detalles. Esta ubicación indica alguien que ama siendo útil y aprecia a los socios que notan sus esfuerzos. El lenguaje del amor son actos de servicio y tiempo de calidad. El desafío es no ser demasiado crítico ni esperar la perfección.`,
-        strengths: ["Servicio dedicado", "Fiabilidad", "Atención a las necesidades", "Apoyo práctico"],
-        challenges: ["Crítico", "Preocuparse por los defectos", "Dificultad para expresar afecto.", "perfeccionismo"]
+        keywords: ["Devoted", "Practical", "Helpful", "Modest"],
+        summary: "Devoted, practical love expressed through service.",
+        reading: `Venus in Virgo brings a devoted, practical, and helpful approach to love. Romance is shown through acts of service - fixing things, helping with problems, remembering details. This placement indicates someone who loves by being useful and appreciates partners who notice their efforts. Love language is acts of service and quality time. The challenge is not being overly critical or expecting perfection.`,
+        strengths: ["Devoted service", "Reliability", "Attention to needs", "Practical support"],
+        challenges: ["Critical", "Worry about flaws", "Difficulty expressing affection", "Perfectionism"]
     },
     Libra: {
-        keywords: ["Romántico", "Armonioso", "Encantador", "Orientado a la asociación"],
-        summary: "Amor elegante y armonioso que busca una verdadera asociación.",
-        reading: `Venus en Libra está en su otro signo natal, lo que crea un enfoque del amor naturalmente romántico y armonioso. El romance es elegante, equilibrado y centrado en una verdadera asociación. Esta ubicación indica alguien que prospera en las relaciones y tiene el don de crear armonía y belleza. El lenguaje del amor es tiempo de calidad y palabras de afirmación. El desafío es mantener la individualidad y no perderse en las relaciones.`,
-        strengths: ["Romántico natural", "agraciado en el amor", "busca armonía", "Compañero encantador"],
-        challenges: ["Codependencia", "Indecisión", "Evita conflictos", "Se pierde en los demás"]
+        keywords: ["Romantic", "Harmonious", "Charming", "Partnership-oriented"],
+        summary: "Graceful, harmonious love that seeks true partnership.",
+        reading: `Venus in Libra is in its other home sign, creating a naturally romantic, harmonious approach to love. Romance is elegant, balanced, and focused on true partnership. This placement indicates someone who thrives in relationships and has a gift for creating harmony and beauty. Love language is quality time and words of affirmation. The challenge is maintaining individuality and not losing oneself in relationships.`,
+        strengths: ["Natural romantic", "Graceful in love", "Seeks harmony", "Charming partner"],
+        challenges: ["Codependency", "Indecision", "Avoids conflict", "Loses self in others"]
     },
     Scorpio: {
-        keywords: ["Intenso", "Apasionado", "Profundo", "Transformador"],
-        summary: "Amor intenso y transformador que exige todo o nada.",
-        reading: `Venus en Escorpio aporta al amor una energía intensa, apasionada y transformadora. El romance es todo o nada: profundo, absorbente y transformador. Esta ubicación indica alguien que ama con intensidad obsesiva y busca conexiones profundas del alma. El lenguaje del amor es intimidad física y verdad emocional. El desafío es confiar en la pareja y no utilizar el amor como control.`,
-        strengths: ["Profunda devoción", "Intensidad apasionada", "Lealtad", "Amor transformador"],
-        challenges: ["Celos", "Posesividad", "Problemas de control", "dificultad para confiar"]
+        keywords: ["Intense", "Passionate", "Deep", "Transformative"],
+        summary: "Intense, transformative love that demands all or nothing.",
+        reading: `Venus in Scorpio brings intense, passionate, and transformative energy to love. Romance is all or nothing - deep, consuming, and life-changing. This placement indicates someone who loves with obsessive intensity and seeks profound soul connections. Love language is physical intimacy and emotional truth. The challenge is trusting partners and not using love as control.`,
+        strengths: ["Deep devotion", "Passionate intensity", "Loyalty", "Transformative love"],
+        challenges: ["Jealousy", "Possessiveness", "Control issues", "Difficulty trusting"]
     },
     Sagittarius: {
-        keywords: ["Aventurero", "De espíritu libre", "Optimista", "Honesto"],
-        summary: "Amor aventurero y de espíritu libre que amplía horizontes.",
-        reading: `Venus en Sagitario trae aventura, optimismo y libertad para amar. El romance implica exploración, viajes y ampliar horizontes juntos. Esta ubicación indica alguien que se enamora con entusiasmo pero que necesita libertad y crecimiento. El lenguaje del amor son aventuras compartidas y comunicación honesta. El desafío es el compromiso y estar presente en lugar de buscar siempre el próximo horizonte.`,
-        strengths: ["espíritu aventurero", "Optimismo", "Honestidad", "Orientado al crecimiento"],
-        challenges: ["Cuestiones de compromiso", "Falta de tacto", "Inquietud", "Evita la profundidad"]
+        keywords: ["Adventurous", "Free-spirited", "Optimistic", "Honest"],
+        summary: "Adventurous, free-spirited love that expands horizons.",
+        reading: `Venus in Sagittarius brings adventure, optimism, and freedom to love. Romance involves exploration, travel, and expanding horizons together. This placement indicates someone who falls in love with enthusiasm but needs freedom and growth. Love language is shared adventures and honest communication. The challenge is commitment and being present rather than always seeking the next horizon.`,
+        strengths: ["Adventurous spirit", "Optimism", "Honesty", "Growth-oriented"],
+        challenges: ["Commitment issues", "Tactlessness", "Restlessness", "Avoids depth"]
     },
     Capricorn: {
-        keywords: ["Comprometido", "Ambicioso", "Reservado", "Leal"],
-        summary: "Amor serio y comprometido que construye alianzas duraderas.",
-        reading: `Venus en Capricornio aporta un enfoque del amor serio, comprometido y ambicioso. El romance se desarrolla lentamente pero construye algo duradero. Esta ubicación indica alguien que se toma en serio el amor y elige cuidadosamente a sus parejas. El lenguaje del amor son actos de compromiso y construcción juntos. El desafío es expresar calidez y no permitir que la ambición eclipse las necesidades emocionales.`,
-        strengths: ["Compromiso", "Fiabilidad", "Visión a largo plazo", "amor practico"],
-        challenges: ["reserva emocional", "Demasiado practico", "Consciente del estatus", "Dificultad con la vulnerabilidad"]
+        keywords: ["Committed", "Ambitious", "Reserved", "Loyal"],
+        summary: "Serious, committed love that builds lasting partnerships.",
+        reading: `Venus in Capricorn brings a serious, committed, and ambitious approach to love. Romance develops slowly but builds something lasting. This placement indicates someone who takes love seriously and chooses partners carefully. Love language is acts of commitment and building together. The challenge is expressing warmth and not letting ambition overshadow emotional needs.`,
+        strengths: ["Commitment", "Reliability", "Long-term vision", "Practical love"],
+        challenges: ["Emotional reserve", "Too practical", "Status-conscious", "Difficulty with vulnerability"]
     },
     Aquarius: {
-        keywords: ["Poco convencional", "Amigable", "Independiente", "Idealista"],
-        summary: "Amor poco convencional, basado en la amistad, que valora la libertad.",
-        reading: `Venus en Acuario aporta un enfoque del amor poco convencional y basado en la amistad. El romance comienza con una conexión intelectual e ideales compartidos. Esta ubicación indica alguien que necesita espacio e independencia incluso en el amor, y que aborda las relaciones como un encuentro entre iguales. El lenguaje del amor es tiempo de calidad y respeto por la individualidad. El desafío es la intimidad emocional y no estar demasiado desapegado.`,
-        strengths: ["De mente abierta", "Respeta la individualidad", "Amigo-amante leal", "Idealista"],
-        challenges: ["Desapego emocional", "Demasiado independiente", "Imprevisible", "Dificultad con la intimidad."]
+        keywords: ["Unconventional", "Friendly", "Independent", "Idealistic"],
+        summary: "Unconventional, friendship-based love that values freedom.",
+        reading: `Venus in Aquarius brings an unconventional, friendship-based approach to love. Romance begins with intellectual connection and shared ideals. This placement indicates someone who needs space and independence even in love, and who approaches relationships as a meeting of equals. Love language is quality time and respect for individuality. The challenge is emotional intimacy and not being too detached.`,
+        strengths: ["Open-minded", "Respects individuality", "Loyal friend-lover", "Idealistic"],
+        challenges: ["Emotional detachment", "Too independent", "Unpredictable", "Difficulty with intimacy"]
     },
     Pisces: {
-        keywords: ["Romántico", "Compasivo", "Intuitivo", "Soñador"],
-        summary: "Amor romántico y compasivo que trasciende fronteras.",
-        reading: `Venus en Piscis está exaltado, creando el enfoque más romántico, compasivo e intuitivo del amor. El romance es idealizado, trascendente y busca una conexión profunda del alma. Esta ubicación indica alguien que ama incondicionalmente y ve lo mejor en sus parejas. El lenguaje del amor es sintonía emocional y conexión espiritual. El desafío es mantener los límites y no perderse en la fantasía o en parejas inadecuadas.`,
-        strengths: ["amor incondicional", "Compasión profunda", "alma romantica", "Conexión intuitiva"],
-        challenges: ["Idealización", "Problemas de límites", "Evasión", "tendencias mártires"]
+        keywords: ["Romantic", "Compassionate", "Intuitive", "Dreamy"],
+        summary: "Romantic, compassionate love that transcends boundaries.",
+        reading: `Venus in Pisces is exalted, creating the most romantic, compassionate, and intuitive approach to love. Romance is idealized, transcendent, and seeks soul-deep connection. This placement indicates someone who loves unconditionally and sees the best in partners. Love language is emotional attunement and spiritual connection. The challenge is maintaining boundaries and not losing oneself in fantasy or unsuitable partners.`,
+        strengths: ["Unconditional love", "Deep compassion", "Romantic soul", "Intuitive connection"],
+        challenges: ["Idealization", "Boundary issues", "Escapism", "Martyr tendencies"]
     }
 };
 
 var MARS_SIGN_READINGS = {
     Aries: {
-        keywords: ["Agresivo", "Directo", "Competitivo", "Pionero"],
-        summary: "Energía pura y directa que toma acción inmediata.",
-        reading: `Marte en Aries está en su signo natal, creando la expresión más directa y poderosa de impulso y ambición. La energía es explosiva, competitiva y orientada a la acción. Esta ubicación indica alguien que actúa primero y piensa después, con coraje natural y liderazgo en conflictos. La energía física es alta y necesita salidas regulares. El desafío es la paciencia y no agotarse ni crear conflictos innecesarios.`,
-        strengths: ["Coraje", "acción rápida", "Impulso competitivo", "Liderazgo"],
-        challenges: ["Agresión", "Impaciencia", "Imprudencia", "temperamento rápido"]
+        keywords: ["Aggressive", "Direct", "Competitive", "Pioneering"],
+        summary: "Pure, direct energy that takes immediate action.",
+        reading: `Mars in Aries is in its home sign, creating the most direct and powerful expression of drive and ambition. Energy is explosive, competitive, and action-oriented. This placement indicates someone who acts first and thinks later, with natural courage and leadership in conflict. Physical energy is high and needs regular outlets. The challenge is patience and not burning out or creating unnecessary conflicts.`,
+        strengths: ["Courage", "Quick action", "Competitive drive", "Leadership"],
+        challenges: ["Aggression", "Impatience", "Recklessness", "Quick temper"]
     },
     Taurus: {
-        keywords: ["Persistente", "Estable", "Sensual", "Determinado"],
-        summary: "Fuerza lenta y constante que avanza hacia los objetivos sin descanso.",
-        reading: `Marte en Tauro aporta un enfoque de acción lento, persistente y sensual. La energía es constante en lugar de explosiva y avanza hacia objetivos con determinación implacable. Esta ubicación indica alguien a quien es difícil comenzar pero imposible detener una vez comprometido. La energía física está conectada con el confort y la sensualidad. El desafío es empezar y no quedarse estancado o perezoso.`,
-        strengths: ["Persistencia", "Resistencia", "Determinación", "Esfuerzo constante"],
-        challenges: ["Testarudez", "Pereza", "lento para actuar", "ira posesiva"]
+        keywords: ["Persistent", "Steady", "Sensual", "Determined"],
+        summary: "Slow, steady force that builds toward goals relentlessly.",
+        reading: `Mars in Taurus brings a slow-burning, persistent, and sensual approach to action. Energy is steady rather than explosive, building toward goals with relentless determination. This placement indicates someone who is hard to start but impossible to stop once committed. Physical energy is connected to comfort and sensuality. The challenge is getting started and not becoming stuck or lazy.`,
+        strengths: ["Persistence", "Endurance", "Determination", "Steady effort"],
+        challenges: ["Stubbornness", "Laziness", "Slow to act", "Possessive anger"]
     },
     Gemini: {
-        keywords: ["Versátil", "Rápido", "Disperso", "Comunicativo"],
-        summary: "Energía rápida y versátil que lucha con palabras e ingenio.",
-        reading: `Marte en Géminis aporta energía rápida, versátil e intelectualmente impulsada. La acción es más mental que física y los conflictos se combaten con palabras e ideas. Esta ubicación indica a alguien que puede hacer malabarismos con múltiples proyectos y usa el ingenio y la información como armas. La energía física es nerviosa y necesita variedad. El desafío es concentrar la energía y dar seguimiento a los proyectos.`,
-        strengths: ["agilidad mental", "habilidades verbales", "Versatilidad", "pensamiento rápido"],
-        challenges: ["Energía dispersa", "discutiendo", "Nerviosismo", "Falta de seguimiento"]
+        keywords: ["Versatile", "Quick", "Scattered", "Communicative"],
+        summary: "Quick, versatile energy that fights with words and wit.",
+        reading: `Mars in Gemini brings quick, versatile, and intellectually-driven energy. Action is mental rather than physical, and conflicts are fought with words and ideas. This placement indicates someone who can juggle multiple projects and uses wit and information as weapons. Physical energy is nervous and needs variety. The challenge is focusing energy and following through on projects.`,
+        strengths: ["Mental agility", "Verbal skills", "Versatility", "Quick thinking"],
+        challenges: ["Scattered energy", "Arguing", "Nervousness", "Lack of follow-through"]
     },
     Cancer: {
-        keywords: ["Protector", "Indirecto", "Tenaz", "Emocional"],
-        summary: "Energía protectora que defiende el hogar y los seres queridos.",
-        reading: `Marte en Cáncer aporta energía protectora impulsada emocionalmente que defiende ferozmente a sus seres queridos. La acción es indirecta, intuitiva y está conectada con la seguridad emocional. Esta ubicación indica alguien cuya energía fluctúa según su estado de ánimo y que lucha más duro por la familia y el hogar. La energía física está conectada con el estado emocional. El desafío es la confrontación directa y no ser pasivo-agresivo.`,
-        strengths: ["Instintos protectores", "Tenacidad", "impulso emocional", "Fuerza defensiva"],
-        challenges: ["agresión pasiva", "Mal humor", "ira indirecta", "Manipulación"]
+        keywords: ["Protective", "Indirect", "Tenacious", "Emotional"],
+        summary: "Protective energy that defends home and loved ones.",
+        reading: `Mars in Cancer brings protective, emotionally-driven energy that defends loved ones fiercely. Action is indirect, intuitive, and connected to emotional security. This placement indicates someone whose energy fluctuates with moods and who fights hardest for family and home. Physical energy is connected to emotional state. The challenge is direct confrontation and not being passive-aggressive.`,
+        strengths: ["Protective instincts", "Tenacity", "Emotional drive", "Defensive strength"],
+        challenges: ["Passive-aggression", "Moodiness", "Indirect anger", "Manipulation"]
     },
     Leo: {
-        keywords: ["Seguro", "Dramático", "Creativo", "Orgulloso"],
-        summary: "Energía segura y dramática que busca reconocimiento.",
-        reading: `Marte en Leo aporta energía segura, dramática y creativa. La acción es audaz, a menudo teatral, y busca reconocimiento y aplauso. Esta ubicación indica alguien que se enorgullece de sus esfuerzos y quiere ser admirado por sus acciones. La energía física es cálida y necesita salidas creativas. El desafío es no dejar que el orgullo se interponga en su camino ni exigir atención constante.`,
-        strengths: ["Confianza", "Liderazgo", "impulso creativo", "Calor"],
-        challenges: ["Orgullo", "Drama", "Necesidad de atención", "Testarudez"]
+        keywords: ["Confident", "Dramatic", "Creative", "Proud"],
+        summary: "Confident, dramatic energy that seeks recognition.",
+        reading: `Mars in Leo brings confident, dramatic, and creative energy. Action is bold, often theatrical, and seeks recognition and applause. This placement indicates someone who takes pride in their efforts and wants to be admired for their actions. Physical energy is warm and needs creative outlets. The challenge is not letting pride get in the way or demanding constant attention.`,
+        strengths: ["Confidence", "Leadership", "Creative drive", "Warmth"],
+        challenges: ["Pride", "Drama", "Need for attention", "Stubbornness"]
     },
     Virgo: {
-        keywords: ["Preciso", "Analítico", "Útil", "Crítico"],
-        summary: "Energía precisa, orientada al servicio y enfocada a la mejora.",
-        reading: `Marte en Virgo aporta energía precisa, analítica y orientada al servicio. La acción es metódica, detallada y enfocada a la mejora y la eficiencia. Esta ubicación indica alguien que trabaja duro en los detalles y se enorgullece de hacer las cosas correctamente. La energía física es nerviosa y necesita salidas productivas. El desafío es no volverse demasiado crítico ni ansioso por las imperfecciones.`,
-        strengths: ["Precisión", "Trabajo duro", "Servicio", "Eficiencia"],
-        challenges: ["Sobrecrítica", "Ansiedad", "perfeccionismo", "energía nerviosa"]
+        keywords: ["Precise", "Analytical", "Helpful", "Critical"],
+        summary: "Precise, service-oriented energy focused on improvement.",
+        reading: `Mars in Virgo brings precise, analytical, and service-oriented energy. Action is methodical, detailed, and focused on improvement and efficiency. This placement indicates someone who works hard on details and takes pride in doing things correctly. Physical energy is nervous and needs productive outlets. The challenge is not becoming overly critical or anxious about imperfections.`,
+        strengths: ["Precision", "Hard work", "Service", "Efficiency"],
+        challenges: ["Over-criticism", "Anxiety", "Perfectionism", "Nervous energy"]
     },
     Libra: {
-        keywords: ["Diplomático", "Indeciso", "Equilibrado", "Pasivo"],
-        summary: "Energía diplomática que busca soluciones justas.",
-        reading: `Marte en Libra aporta energía diplomática y orientada a la asociación que busca soluciones equilibradas. La acción a menudo requiere un compañero u oponente contra el cual reaccionar. Esta ubicación indica alguien que lucha por la equidad y la justicia, pero que puede tener dificultades con la confrontación directa. La energía física es social y estética. El desafío es actuar de forma independiente y no dejarse paralizar por la indecisión.`,
-        strengths: ["Diplomacia", "Justicia", "Pensamiento estratégico", "Encanto"],
-        challenges: ["Indecisión", "agresión pasiva", "Dependencia", "Evita conflictos"]
+        keywords: ["Diplomatic", "Indecisive", "Balanced", "Passive"],
+        summary: "Diplomatic energy that seeks fair solutions.",
+        reading: `Mars in Libra brings diplomatic, partnership-oriented energy that seeks balanced solutions. Action often requires a partner or opponent to react against. This placement indicates someone who fights for fairness and justice but may struggle with direct confrontation. Physical energy is social and aesthetic. The challenge is taking action independently and not being paralyzed by indecision.`,
+        strengths: ["Diplomacy", "Fairness", "Strategic thinking", "Charm"],
+        challenges: ["Indecision", "Passive-aggression", "Dependency", "Avoids conflict"]
     },
     Scorpio: {
-        keywords: ["Intenso", "Estratégico", "Poderoso", "Determinado"],
-        summary: "Poder intenso y estratégico que nunca olvida.",
-        reading: `Marte en Escorpio está en su signo natal tradicional, creando energía intensa, estratégica y poderosa. La acción es calculada, paciente y devastadoramente efectiva cuando se desata. Esta ubicación indica alguien con una tremenda fuerza de voluntad y la capacidad de transformarse a través de una crisis. La energía física es intensa y necesita salidas para la pasión. El desafío es el perdón y no usar el poder de manera destructiva.`,
-        strengths: ["Fuerza de voluntad", "Mente estratégica", "Intensidad", "Resiliencia"],
-        challenges: ["Vengativo", "Obsesionante", "Controlador", "Destructivo"]
+        keywords: ["Intense", "Strategic", "Powerful", "Determined"],
+        summary: "Intense, strategic power that never forgets.",
+        reading: `Mars in Scorpio is in its traditional home sign, creating intense, strategic, and powerful energy. Action is calculated, patient, and devastatingly effective when unleashed. This placement indicates someone with tremendous willpower and the ability to transform through crisis. Physical energy is intense and needs outlets for passion. The challenge is forgiveness and not using power destructively.`,
+        strengths: ["Willpower", "Strategic mind", "Intensity", "Resilience"],
+        challenges: ["Vengeful", "Obsessive", "Controlling", "Destructive"]
     },
     Sagittarius: {
-        keywords: ["Aventurero", "Entusiasta", "Inquieto", "Filosófico"],
-        summary: "Energía aventurera y entusiasta que busca nuevos horizontes.",
-        reading: `Marte en Sagitario aporta energía aventurera, entusiasta y expansiva. La acción está impulsada por los ideales, la aventura y el deseo de significado. Esta ubicación indica alguien que actúa según sus creencias y busca ampliar horizontes a través de la acción. La energía física es atlética y necesita aventura. El desafío es centrarse y comprometerse en lugar de avanzar constantemente.`,
-        strengths: ["Entusiasmo", "Aventura", "Optimismo", "Idealismo"],
-        challenges: ["Inquietud", "demasiado prometedor", "Falta de tacto", "Disperso"]
+        keywords: ["Adventurous", "Enthusiastic", "Restless", "Philosophical"],
+        summary: "Adventurous, enthusiastic energy seeking new horizons.",
+        reading: `Mars in Sagittarius brings adventurous, enthusiastic, and expansive energy. Action is driven by ideals, adventure, and the desire for meaning. This placement indicates someone who acts on beliefs and seeks to expand horizons through action. Physical energy is athletic and needs adventure. The challenge is focus and commitment rather than constantly moving on.`,
+        strengths: ["Enthusiasm", "Adventure", "Optimism", "Idealism"],
+        challenges: ["Restlessness", "Over-promising", "Tactlessness", "Scattered"]
     },
     Capricorn: {
-        keywords: ["Ambicioso", "Disciplinado", "Estratégico", "Persistente"],
-        summary: "Energía ambiciosa y disciplinada ascendiendo hacia el éxito.",
-        reading: `Marte en Capricornio está exaltado, creando la energía más disciplinada, estratégica y orientada a los logros. La acción está calculada para el éxito a largo plazo, paciente pero implacable. Esta ubicación indica alguien con una ambición excepcional y la disciplina para lograrla. La energía física es duradera y enfocada en objetivos. El desafío es el equilibrio y no sacrificarlo todo por el logro.`,
-        strengths: ["Disciplina", "Ambición", "Estrategia", "Persistencia"],
-        challenges: ["Adicción al trabajo", "Frialdad", "crueldad", "Rígido"]
+        keywords: ["Ambitious", "Disciplined", "Strategic", "Persistent"],
+        summary: "Ambitious, disciplined energy climbing toward success.",
+        reading: `Mars in Capricorn is exalted, creating the most disciplined, strategic, and achievement-oriented energy. Action is calculated for long-term success, patient but relentless. This placement indicates someone with exceptional ambition and the discipline to achieve it. Physical energy is enduring and focused on goals. The challenge is balance and not sacrificing everything for achievement.`,
+        strengths: ["Discipline", "Ambition", "Strategy", "Persistence"],
+        challenges: ["Workaholism", "Coldness", "Ruthlessness", "Rigid"]
     },
     Aquarius: {
-        keywords: ["Poco convencional", "Rebelde", "Innovador", "Separado"],
-        summary: "Energía innovadora y rebelde que lucha por el cambio.",
-        reading: `Marte en Acuario aporta energía poco convencional, innovadora y rebelde. La acción está dirigida al cambio, al progreso y a liberarse de las limitaciones. Esta ubicación indica alguien que lucha por causas y utiliza enfoques originales. La energía física es errática y necesita libertad. El desafío es actuar consecuentemente y no ser contrarios por el simple hecho de hacerlo.`,
-        strengths: ["Innovación", "Independencia", "Impulso humanitario", "Originalidad"],
-        challenges: ["Rebelde", "Imprevisible", "Separado", "Obstinadamente contrario"]
+        keywords: ["Unconventional", "Rebellious", "Innovative", "Detached"],
+        summary: "Innovative, rebellious energy fighting for change.",
+        reading: `Mars in Aquarius brings unconventional, innovative, and rebellious energy. Action is directed toward change, progress, and breaking free from limitations. This placement indicates someone who fights for causes and uses original approaches. Physical energy is erratic and needs freedom. The challenge is consistent action and not being contrary just for the sake of it.`,
+        strengths: ["Innovation", "Independence", "Humanitarian drive", "Originality"],
+        challenges: ["Rebellious", "Unpredictable", "Detached", "Stubbornly contrary"]
     },
     Pisces: {
-        keywords: ["Intuitivo", "Pasivo", "Creativo", "Indirecto"],
-        summary: "Energía intuitiva y creativa que fluye sorteando obstáculos.",
-        reading: `Marte en Piscis aporta energía intuitiva, creativa y fluida que evita la confrontación directa. La acción está inspirada por los sueños, la compasión y los impulsos espirituales. Esta ubicación indica alguien que actúa según la intuición y utiliza enfoques indirectos. La energía física es variable y está conectada a estados emocionales y espirituales. El desafío es la acción directa y no escapar a través de la fantasía.`,
-        strengths: ["Acción intuitiva", "Creatividad", "Compasión", "Adaptabilidad"],
-        challenges: ["Pasividad", "Evasión", "Confusión", "Mentalidad de víctima"]
+        keywords: ["Intuitive", "Passive", "Creative", "Indirect"],
+        summary: "Intuitive, creative energy that flows around obstacles.",
+        reading: `Mars in Pisces brings intuitive, creative, and flowing energy that avoids direct confrontation. Action is inspired by dreams, compassion, and spiritual impulses. This placement indicates someone who acts on intuition and uses indirect approaches. Physical energy is variable and connected to emotional and spiritual states. The challenge is direct action and not escaping through fantasy.`,
+        strengths: ["Intuitive action", "Creativity", "Compassion", "Adaptability"],
+        challenges: ["Passivity", "Escapism", "Confusion", "Victim mentality"]
     }
 };
 
 var JUPITER_SIGN_READINGS = {
     Aries: {
-        keywords: ["Pionero", "Atrevido", "Independiente", "Entusiasta"],
-        summary: "Suerte a través de la iniciativa, el coraje y la acción audaz.",
-        reading: `Júpiter en Aries se expande mediante acciones pioneras, independencia e iniciativas audaces. El crecimiento se logra tomando riesgos y siendo el primero. Esta ubicación indica alguien que encuentra oportunidades a través del coraje y la acción, y la suerte favorece a los valientes. La abundancia llega cuando se lidera e innova. El desafío es tener paciencia y no extenderse demasiado mediante una expansión impulsiva.`,
-        strengths: ["suerte emprendedora", "El coraje atrae oportunidades", "Crecimiento del liderazgo", "Iniciativa premiada"],
-        challenges: ["Expansión impulsiva", "Exceso de seguridad", "Impaciencia", "adicción al riesgo"]
+        keywords: ["Pioneering", "Bold", "Independent", "Enthusiastic"],
+        summary: "Luck through initiative, courage, and bold action.",
+        reading: `Jupiter in Aries expands through pioneering action, independence, and bold initiative. Growth comes through taking risks and being first. This placement indicates someone who finds opportunities through courage and action, with luck favoring the brave. Abundance comes when leading and innovating. The challenge is patience and not overextending through impulsive expansion.`,
+        strengths: ["Entrepreneurial luck", "Courage attracts opportunity", "Leadership growth", "Initiative rewarded"],
+        challenges: ["Impulsive expansion", "Overconfidence", "Impatience", "Risk addiction"]
     },
     Taurus: {
-        keywords: ["Próspero", "Práctico", "Sensual", "Estable"],
-        summary: "Suerte a través de la paciencia, la perseverancia y la sabiduría material.",
-        reading: `Júpiter en Tauro se expande mediante la paciencia, la sabiduría práctica y la apreciación del mundo físico. El crecimiento se logra mediante un esfuerzo constante y la construcción de algo duradero. Esta ubicación indica alguien que encuentra oportunidades a través de confiabilidad e inversiones sensatas. La abundancia llega cuando estamos castigados y somos pacientes. El desafío es no volverse complacientes ni centrarse demasiado en la seguridad material.`,
-        strengths: ["Sabiduría financiera", "Crecimiento constante", "apreciación sensorial", "Abundancia práctica"],
-        challenges: ["Materialismo", "Abuso", "Complacencia", "Creencias obstinadas"]
+        keywords: ["Prosperous", "Practical", "Sensual", "Steady"],
+        summary: "Luck through patience, persistence, and material wisdom.",
+        reading: `Jupiter in Taurus expands through patience, practical wisdom, and appreciation of the physical world. Growth comes through steady effort and building something lasting. This placement indicates someone who finds opportunities through reliability and sensible investments. Abundance comes when grounded and patient. The challenge is not becoming complacent or overly focused on material security.`,
+        strengths: ["Financial wisdom", "Steady growth", "Sensory appreciation", "Practical abundance"],
+        challenges: ["Materialism", "Overindulgence", "Complacency", "Stubborn beliefs"]
     },
     Gemini: {
-        keywords: ["Curioso", "Comunicativo", "Versátil", "Social"],
-        summary: "Suerte a través de la comunicación, el aprendizaje y las conexiones.",
-        reading: `Júpiter en Géminis se expande a través de la comunicación, el aprendizaje y la creación de conexiones. El crecimiento se produce a través de la curiosidad y el intercambio de ideas. Esta ubicación indica alguien que encuentra oportunidades a través de la creación de redes, la educación y la versatilidad. La abundancia llega al comunicarse y aprender. El desafío es profundidad versus amplitud y no dispersar demasiado las energías.`,
-        strengths: ["suerte en la comunicacion", "Oportunidades de aprendizaje", "Expansión social", "Crecimiento versátil"],
-        challenges: ["Enfoque disperso", "conocimiento superficial", "demasiado prometedor", "Inquietud mental"]
+        keywords: ["Curious", "Communicative", "Versatile", "Social"],
+        summary: "Luck through communication, learning, and connections.",
+        reading: `Jupiter in Gemini expands through communication, learning, and making connections. Growth comes through curiosity and sharing ideas. This placement indicates someone who finds opportunities through networking, education, and versatility. Abundance comes when communicating and learning. The challenge is depth versus breadth and not scattering energies too widely.`,
+        strengths: ["Communication luck", "Learning opportunities", "Social expansion", "Versatile growth"],
+        challenges: ["Scattered focus", "Superficial knowledge", "Over-promising", "Mental restlessness"]
     },
     Cancer: {
-        keywords: ["Criando", "Protector", "Intuitivo", "Doméstico"],
-        summary: "Suerte a través de la crianza, la familia y la inteligencia emocional.",
-        reading: `Júpiter en Cáncer está exaltado, creando gran abundancia a través de la crianza, la familia y la sabiduría emocional. El crecimiento se logra cuidando a los demás y creando seguridad. Esta ubicación indica alguien que encuentra oportunidades a través de la inteligencia emocional y las conexiones familiares. La abundancia llega al crear hogar y pertenencia. El desafío no es limitar el crecimiento a lo familiar.`,
-        strengths: ["bendiciones familiares", "Sabiduría emocional", "Cultivando la abundancia", "suerte intuitiva"],
-        challenges: ["sobreprotector", "Aferrándose a la seguridad", "Exceso emocional", "Miedo al crecimiento"]
+        keywords: ["Nurturing", "Protective", "Intuitive", "Domestic"],
+        summary: "Luck through nurturing, family, and emotional intelligence.",
+        reading: `Jupiter in Cancer is exalted, creating great abundance through nurturing, family, and emotional wisdom. Growth comes through caring for others and creating security. This placement indicates someone who finds opportunities through emotional intelligence and family connections. Abundance comes when creating home and belonging. The challenge is not limiting growth to the familiar.`,
+        strengths: ["Family blessings", "Emotional wisdom", "Nurturing abundance", "Intuitive luck"],
+        challenges: ["Over-protective", "Clinging to security", "Emotional excess", "Fear of growth"]
     },
     Leo: {
-        keywords: ["Generoso", "Creativo", "Seguro", "Dramático"],
-        summary: "Suerte a través de la creatividad, la generosidad y la autoexpresión.",
-        reading: `Júpiter en Leo se expande a través de la creatividad, la generosidad y la autoexpresión segura. El crecimiento se logra compartiendo talentos e inspirando a otros. Esta ubicación indica alguien que encuentra oportunidades a través del trabajo creativo y el liderazgo natural. La abundancia llega cuando se expresa el yo auténtico. El desafío es la inflación del ego y no necesitar un reconocimiento constante.`,
-        strengths: ["Abundancia creativa", "suerte generosa", "La confianza atrae", "Presencia inspiradora"],
-        challenges: ["Arrogancia", "orgullo excesivo", "Drama", "Derecho"]
+        keywords: ["Generous", "Creative", "Confident", "Dramatic"],
+        summary: "Luck through creativity, generosity, and self-expression.",
+        reading: `Jupiter in Leo expands through creativity, generosity, and confident self-expression. Growth comes through sharing talents and inspiring others. This placement indicates someone who finds opportunities through creative work and natural leadership. Abundance comes when expressing authentic self. The challenge is ego inflation and not needing constant recognition.`,
+        strengths: ["Creative abundance", "Generous luck", "Confidence attracts", "Inspiring presence"],
+        challenges: ["Arrogance", "Excessive pride", "Drama", "Entitlement"]
     },
     Virgo: {
-        keywords: ["Analítico", "Útil", "Práctico", "Modesto"],
-        summary: "Suerte a través del servicio, habilidad y atención al detalle.",
-        reading: `Júpiter en Virgo se expande a través del servicio, las habilidades prácticas y la atención al detalle. El crecimiento pasa por ser útil y perfeccionar el oficio. Esta ubicación indica alguien que encuentra oportunidades a través de la competencia y ayudando a los demás. La abundancia llega cuando se aplican las habilidades de manera práctica. El desafío no es limitar el crecimiento mediante críticas excesivas o perfeccionismo.`,
-        strengths: ["Abundancia de servicios", "Desarrollo de habilidades", "Sabiduría práctica", "Conciencia de salud"],
-        challenges: ["Sobrecrítica", "El perfeccionismo limita el crecimiento", "Preocuparse", "Falta el panorama general"]
+        keywords: ["Analytical", "Helpful", "Practical", "Modest"],
+        summary: "Luck through service, skill, and attention to detail.",
+        reading: `Jupiter in Virgo expands through service, practical skills, and attention to detail. Growth comes through being useful and perfecting craft. This placement indicates someone who finds opportunities through competence and helping others. Abundance comes when applying skills practically. The challenge is not limiting growth through excessive criticism or perfectionism.`,
+        strengths: ["Service abundance", "Skill development", "Practical wisdom", "Health consciousness"],
+        challenges: ["Over-criticism", "Perfectionism limiting growth", "Worry", "Missing big picture"]
     },
     Libra: {
-        keywords: ["Diplomático", "Artístico", "Orientado a la asociación", "Justo"],
-        summary: "Suerte a través de asociaciones, belleza y armonía.",
-        reading: `Júpiter en Libra se expande a través de asociaciones, actividades artísticas y la creación de armonía. El crecimiento se produce a través de la colaboración y el trato justo. Esta ubicación indica alguien que encuentra oportunidades a través de las relaciones y la sensibilidad estética. La abundancia llega cuando se asocia con otros. El desafío es la excesiva dependencia de otros para el crecimiento.`,
-        strengths: ["suerte de asociación", "Abundancia artística", "Crecimiento diplomático", "Recompensas justas"],
-        challenges: ["Indecisión", "dependiente de otros", "armonía superficial", "Evita el conflicto necesario"]
+        keywords: ["Diplomatic", "Artistic", "Partnership-oriented", "Fair"],
+        summary: "Luck through partnerships, beauty, and harmony.",
+        reading: `Jupiter in Libra expands through partnerships, artistic pursuits, and creating harmony. Growth comes through collaboration and fair dealing. This placement indicates someone who finds opportunities through relationships and aesthetic sensibility. Abundance comes when partnering with others. The challenge is over-dependence on others for growth.`,
+        strengths: ["Partnership luck", "Artistic abundance", "Diplomatic growth", "Fair rewards"],
+        challenges: ["Indecision", "Dependent on others", "Superficial harmony", "Avoids necessary conflict"]
     },
     Scorpio: {
-        keywords: ["Transformador", "Intenso", "Ingenioso", "Profundo"],
-        summary: "Suerte a través de la transformación, la profundidad y los recursos compartidos.",
-        reading: `Júpiter en Escorpio se expande a través de la transformación, la comprensión profunda y los recursos compartidos. El crecimiento se produce a través de la crisis, la intimidad y la regeneración. Esta ubicación indica alguien que encuentra oportunidades a través del conocimiento psicológico y la gestión de los recursos de los demás. La abundancia llega al aceptar el cambio. El desafío no es manipular ni utilizar el poder de manera destructiva.`,
-        strengths: ["Suerte transformadora", "Sabiduría profunda", "Gestión de recursos", "Crecimiento regenerativo"],
-        challenges: ["Exceso de intensidad", "Manipulación de poder", "Obsesión", "Secreto"]
+        keywords: ["Transformative", "Intense", "Resourceful", "Deep"],
+        summary: "Luck through transformation, depth, and shared resources.",
+        reading: `Jupiter in Scorpio expands through transformation, deep understanding, and shared resources. Growth comes through crisis, intimacy, and regeneration. This placement indicates someone who finds opportunities through psychological insight and managing others' resources. Abundance comes when embracing change. The challenge is not manipulating or using power destructively.`,
+        strengths: ["Transformative luck", "Deep wisdom", "Resource management", "Regenerative growth"],
+        challenges: ["Intensity excess", "Power manipulation", "Obsession", "Secrecy"]
     },
     Sagittarius: {
-        keywords: ["Optimista", "Aventurero", "Filosófico", "Expansivo"],
-        summary: "Suerte a través de la aventura, el aprendizaje y la fe.",
-        reading: `Júpiter en Sagitario está en su signo natal, lo que crea la mayor suerte y expansión naturales. El crecimiento se logra a través de la aventura, la educación superior y la fe en la vida. Esta ubicación indica alguien que encuentra oportunidades a través de los viajes, la filosofía y el optimismo. La abundancia llega al seguir creencias. El desafío es la expansión excesiva y el incumplimiento de grandes promesas.`,
-        strengths: ["suerte natural", "Crecimiento optimista", "abundancia aventurera", "Fe recompensada"],
-        challenges: ["Sobreexpansión", "demasiado prometedor", "Exceso", "Optimismo imprudente"]
+        keywords: ["Optimistic", "Adventurous", "Philosophical", "Expansive"],
+        summary: "Luck through adventure, learning, and faith.",
+        reading: `Jupiter in Sagittarius is in its home sign, creating the greatest natural luck and expansion. Growth comes through adventure, higher education, and faith in life. This placement indicates someone who finds opportunities through travel, philosophy, and optimism. Abundance comes when following beliefs. The challenge is overexpansion and not following through on big promises.`,
+        strengths: ["Natural luck", "Optimistic growth", "Adventurous abundance", "Faith rewarded"],
+        challenges: ["Overexpansion", "Over-promising", "Excess", "Reckless optimism"]
     },
     Capricorn: {
-        keywords: ["Ambicioso", "Disciplinado", "Paciente", "Estructurado"],
-        summary: "Suerte a través de la disciplina, el trabajo duro y la paciencia.",
-        reading: `Júpiter en Capricornio se expande a través de la disciplina, la estructura y la ambición paciente. El crecimiento se logra mediante el trabajo duro y el cumplimiento de las reglas. Esta ubicación indica alguien que encuentra oportunidades a través de la competencia y la autoridad. La abundancia llega cuando se construye algo duradero. El desafío no es limitar el crecimiento mediante una excesiva cautela o pesimismo.`,
-        strengths: ["Crecimiento disciplinado", "abundancia ganada", "suerte de autoridad", "Expansión estructurada"],
-        challenges: ["Optimismo limitado", "Trabajar antes de jugar", "Crecimiento lento", "Centrado en el estado"]
+        keywords: ["Ambitious", "Disciplined", "Patient", "Structured"],
+        summary: "Luck through discipline, hard work, and patience.",
+        reading: `Jupiter in Capricorn expands through discipline, structure, and patient ambition. Growth comes through hard work and playing by the rules. This placement indicates someone who finds opportunities through competence and authority. Abundance comes when building something lasting. The challenge is not limiting growth through excessive caution or pessimism.`,
+        strengths: ["Disciplined growth", "Earned abundance", "Authority luck", "Structured expansion"],
+        challenges: ["Limited optimism", "Work before play", "Slow growth", "Status-focused"]
     },
     Aquarius: {
-        keywords: ["Innovador", "Humanitario", "Progresivo", "Independiente"],
-        summary: "Suerte a través de la innovación, la comunidad y el pensamiento progresista.",
-        reading: `Júpiter en Acuario se expande a través de la innovación, los esfuerzos humanitarios y el pensamiento progresista. El crecimiento se logra a través de la originalidad y el servicio a la humanidad. Esta ubicación indica alguien que encuentra oportunidades a través de grupos, tecnología y rompiendo convenciones. La abundancia llega al ayudar al colectivo. El desafío es permanecer firme mientras se persiguen ideales.`,
-        strengths: ["suerte innovadora", "Crecimiento comunitario", "abundancia progresiva", "Recompensas humanitarias"],
-        challenges: ["Ideales poco prácticos", "demasiado distante", "Rebelde sin causa", "Visión dispersa"]
+        keywords: ["Innovative", "Humanitarian", "Progressive", "Independent"],
+        summary: "Luck through innovation, community, and progressive thinking.",
+        reading: `Jupiter in Aquarius expands through innovation, humanitarian efforts, and progressive thinking. Growth comes through originality and serving humanity. This placement indicates someone who finds opportunities through groups, technology, and breaking conventions. Abundance comes when helping the collective. The challenge is remaining grounded while pursuing ideals.`,
+        strengths: ["Innovative luck", "Community growth", "Progressive abundance", "Humanitarian rewards"],
+        challenges: ["Impractical ideals", "Too detached", "Rebel without cause", "Scattered vision"]
     },
     Pisces: {
-        keywords: ["Compasivo", "Intuitivo", "Espiritual", "Creativo"],
-        summary: "Suerte a través de la fe, la compasión y la conexión espiritual.",
-        reading: `Júpiter en Piscis está en su signo natal tradicional, creando gran abundancia a través de la compasión, la imaginación y la fe espiritual. El crecimiento se logra confiando en la intuición y ayudando a los demás desinteresadamente. Esta ubicación indica alguien que encuentra oportunidades a través de la creatividad y la conexión espiritual. La abundancia llega al seguir los sueños. El desafío es el discernimiento y no dejarse aprovechar.`,
-        strengths: ["suerte espiritual", "Abundancia creativa", "Crecimiento compasivo", "Guía intuitiva"],
-        challenges: ["Evasión", "Sobreidealismo", "Falta de límites", "tendencias mártires"]
+        keywords: ["Compassionate", "Intuitive", "Spiritual", "Creative"],
+        summary: "Luck through faith, compassion, and spiritual connection.",
+        reading: `Jupiter in Pisces is in its traditional home sign, creating great abundance through compassion, imagination, and spiritual faith. Growth comes through trusting intuition and helping others selflessly. This placement indicates someone who finds opportunities through creativity and spiritual connection. Abundance comes when following dreams. The challenge is discernment and not being taken advantage of.`,
+        strengths: ["Spiritual luck", "Creative abundance", "Compassionate growth", "Intuitive guidance"],
+        challenges: ["Escapism", "Over-idealism", "Lack of boundaries", "Martyr tendencies"]
     }
 };
 
 var SATURN_SIGN_READINGS = {
     Aries: {
-        keywords: ["Acción disciplinada", "Energía controlada", "Liderazgo del paciente", "Autoridad ganada"],
-        summary: "Aprender disciplina a través de la paciencia con la acción y la aserción.",
-        reading: `Saturno en Aries trae lecciones sobre acción, afirmación y liderazgo. Puede haber obstáculos iniciales a la hora de tomar la iniciativa o expresar enojo, lo que requiere el desarrollo de un coraje disciplinado. Esta ubicación indica que alguien está aprendiendo a equilibrar la impulsividad con la acción paciente. La maestría se obtiene al ganarse el derecho a liderar. La recompensa es convertirse en un líder disciplinado que actúa con confianza.`,
-        strengths: ["Acción disciplinada", "coraje paciente", "Liderazgo ganado", "afirmación controlada"],
-        challenges: ["Energía frustrada", "Miedo a la acción", "Ira reprimida", "Luchas de identidad"]
+        keywords: ["Disciplined Action", "Controlled Energy", "Patient Leadership", "Earned Authority"],
+        summary: "Learning discipline through patience with action and assertion.",
+        reading: `Saturn in Aries brings lessons around action, assertion, and leadership. There may be initial blocks around taking initiative or expressing anger, requiring the development of disciplined courage. This placement indicates someone learning to balance impulsiveness with patient action. Mastery comes through earning the right to lead. The reward is becoming a disciplined leader who acts with considered confidence.`,
+        strengths: ["Disciplined action", "Patient courage", "Earned leadership", "Controlled assertion"],
+        challenges: ["Frustrated energy", "Fear of action", "Suppressed anger", "Identity struggles"]
     },
     Taurus: {
-        keywords: ["Lecciones financieras", "Seguridad ganada", "Valores disciplinados", "Edificio de pacientes"],
-        summary: "Aprender disciplina a través de la paciencia con la seguridad y los recursos.",
-        reading: `Saturno en Tauro trae lecciones sobre seguridad, recursos y autoestima. Puede haber desafíos financieros iniciales o escasez que enseñen el valor de la construcción paciente. Esta ubicación indica que alguien está aprendiendo a desarrollar una verdadera seguridad mediante un esfuerzo constante. El dominio se logra mediante la construcción de valor duradero. La recompensa se está convirtiendo en un pilar de estabilidad material y emocional.`,
-        strengths: ["Sabiduría financiera", "edificio estable", "Seguridad ganada", "Persistencia del paciente"],
-        challenges: ["Miedos financieros", "Mentalidad de escasez", "Resistencia tenaz", "Problemas de autoestima"]
+        keywords: ["Financial Lessons", "Earned Security", "Disciplined Values", "Patient Building"],
+        summary: "Learning discipline through patience with security and resources.",
+        reading: `Saturn in Taurus brings lessons around security, resources, and self-worth. There may be initial financial challenges or scarcity that teach the value of patient building. This placement indicates someone learning to develop true security through steady effort. Mastery comes through building lasting value. The reward is becoming a pillar of material and emotional stability.`,
+        strengths: ["Financial wisdom", "Steady building", "Earned security", "Patient persistence"],
+        challenges: ["Financial fears", "Scarcity mentality", "Stubborn resistance", "Self-worth issues"]
     },
     Gemini: {
-        keywords: ["Mente disciplinada", "Comunicación cuidadosa", "Aprendizaje estructurado", "Enfoque mental"],
-        summary: "Aprender disciplina a través del enfoque en el pensamiento y la comunicación.",
-        reading: `Saturno en Géminis trae lecciones sobre comunicación, aprendizaje y concentración mental. Puede haber desafíos iniciales con la expresión o la educación, que requieran el desarrollo de un pensamiento disciplinado. Esta ubicación indica que alguien está aprendiendo a concentrar la energía mental dispersa. El dominio se logra mediante un estudio cuidadoso y una comunicación precisa. La recompensa es convertirse en un pensador y comunicador respetado.`,
-        strengths: ["Mente enfocada", "discurso cuidadoso", "Aprendizaje exhaustivo", "Disciplina mental"],
-        challenges: ["Bloques de comunicación", "dificultades de aprendizaje", "Ansiedad mental", "Enfoque disperso"]
+        keywords: ["Disciplined Mind", "Careful Communication", "Structured Learning", "Mental Focus"],
+        summary: "Learning discipline through focus in thinking and communication.",
+        reading: `Saturn in Gemini brings lessons around communication, learning, and mental focus. There may be initial challenges with expression or education, requiring the development of disciplined thinking. This placement indicates someone learning to focus scattered mental energy. Mastery comes through careful study and precise communication. The reward is becoming a respected thinker and communicator.`,
+        strengths: ["Focused mind", "Careful speech", "Thorough learning", "Mental discipline"],
+        challenges: ["Communication blocks", "Learning difficulties", "Mental anxiety", "Scattered focus"]
     },
     Cancer: {
-        keywords: ["Disciplina Emocional", "Responsabilidad familiar", "Límites protectores", "Seguridad ganada"],
-        summary: "Aprender la disciplina a través de la madurez emocional y los deberes familiares.",
-        reading: `Saturno en Cáncer trae lecciones sobre las emociones, la familia y la seguridad interior. Puede haber restricciones emocionales iniciales o responsabilidades familiares que enseñen la autosuficiencia. Esta ubicación indica que alguien está aprendiendo a proporcionar su propia base emocional. La maestría surge al convertirse en la propia fuente de seguridad. La recompensa se está convirtiendo en una roca de estabilidad emocional para uno mismo y para los demás.`,
-        strengths: ["Madurez emocional", "Autosuficiencia", "Fuerza protectora", "Responsabilidad familiar"],
-        challenges: ["Restricción emocional", "Cargas familiares", "Miedo a la vulnerabilidad", "Defensa fría"]
+        keywords: ["Emotional Discipline", "Family Responsibility", "Protective Boundaries", "Earned Security"],
+        summary: "Learning discipline through emotional maturity and family duties.",
+        reading: `Saturn in Cancer brings lessons around emotions, family, and inner security. There may be initial emotional restrictions or family responsibilities that teach self-reliance. This placement indicates someone learning to provide their own emotional foundation. Mastery comes through becoming one's own source of security. The reward is becoming a rock of emotional stability for self and others.`,
+        strengths: ["Emotional maturity", "Self-reliance", "Protective strength", "Family responsibility"],
+        challenges: ["Emotional restriction", "Family burdens", "Fear of vulnerability", "Cold defense"]
     },
     Leo: {
-        keywords: ["Creatividad disciplinada", "Liderazgo humilde", "Reconocimiento ganado", "Expresión del paciente"],
-        summary: "Aprender disciplina a través de la humildad en la autoexpresión y la creatividad.",
-        reading: `Saturno en Leo trae lecciones sobre el ego, la creatividad y el reconocimiento. Puede haber bloqueos iniciales en torno a la autoexpresión o a recibir atención, lo que requiere el desarrollo de una confianza humilde. Esta ubicación indica que alguien está aprendiendo a brillar sin arrogancia. La maestría viene de ganar reconocimiento a través del mérito. La recompensa es convertirse en una autoridad creativa respetada.`,
-        strengths: ["Humilde confianza", "Creatividad disciplinada", "Respeto ganado", "Autoexpresión madura"],
-        challenges: ["Bloques creativos", "Miedo a ser el centro de atención", "Luchas de reconocimiento", "Desafíos del ego"]
+        keywords: ["Disciplined Creativity", "Humble Leadership", "Earned Recognition", "Patient Expression"],
+        summary: "Learning discipline through humility in self-expression and creativity.",
+        reading: `Saturn in Leo brings lessons around ego, creativity, and recognition. There may be initial blocks around self-expression or receiving attention, requiring the development of humble confidence. This placement indicates someone learning to shine without arrogance. Mastery comes through earning recognition through merit. The reward is becoming a respected creative authority.`,
+        strengths: ["Humble confidence", "Disciplined creativity", "Earned respect", "Mature self-expression"],
+        challenges: ["Creative blocks", "Fear of spotlight", "Recognition struggles", "Ego challenges"]
     },
     Virgo: {
-        keywords: ["Servicio disciplinado", "Dominio perfeccionista", "Conciencia de salud", "Trabajo humilde"],
-        summary: "Aprender disciplina a través del servicio, la salud y la atención al detalle.",
-        reading: `Saturno en Virgo trae lecciones sobre el servicio, la salud y el perfeccionismo. Puede haber desafíos de salud iniciales o cargas laborales que enseñen el valor de las rutinas disciplinadas. Esta ubicación indica que alguien está aprendiendo a servir sin martirio. El dominio se logra a través del desarrollo de habilidades expertas. La recompensa es convertirse en un respetado artesano y sanador.`,
-        strengths: ["Habilidades expertas", "dominio de la salud", "Dedicación al servicio", "Trabajo detallado"],
-        challenges: ["Ansiedad por perfeccionismo", "Preocupaciones de salud", "Sobrecrítica", "Carga laboral"]
+        keywords: ["Disciplined Service", "Perfectionist Mastery", "Health Consciousness", "Humble Work"],
+        summary: "Learning discipline through service, health, and attention to detail.",
+        reading: `Saturn in Virgo brings lessons around service, health, and perfectionism. There may be initial health challenges or work burdens that teach the value of disciplined routines. This placement indicates someone learning to serve without martyrdom. Mastery comes through expert skill development. The reward is becoming a respected craftsperson and healer.`,
+        strengths: ["Expert skills", "Health mastery", "Service dedication", "Detailed work"],
+        challenges: ["Perfectionism anxiety", "Health worries", "Over-criticism", "Work burden"]
     },
     Libra: {
-        keywords: ["Sabiduría de las relaciones", "Dominio del compromiso", "Trato justo", "Lecciones de asociación"],
-        summary: "Aprender disciplina a través del compromiso y el equilibrio en las relaciones.",
-        reading: `Saturno en Libra está exaltado y aporta dominio en las relaciones, justicia y equilibrio. Las lecciones se obtienen a través de un compromiso serio y el aprendizaje de un trato justo. Esta ubicación indica alguien que se toma en serio las asociaciones y desarrolla la sabiduría en las relaciones. La maestría viene a través de un compromiso maduro. La recompensa es convertirse en un socio confiable y un juez justo.`,
-        strengths: ["Sabiduría en las relaciones", "Fuerza del compromiso", "Juicio justo", "Maestría diplomática"],
-        challenges: ["Miedo a la soledad", "Sobredependiente", "Carga de la relación", "Asociación retrasada"]
+        keywords: ["Relationship Wisdom", "Commitment Mastery", "Fair Dealing", "Partnership Lessons"],
+        summary: "Learning discipline through commitment and balance in relationships.",
+        reading: `Saturn in Libra is exalted, bringing mastery in relationships, justice, and balance. Lessons come through serious commitment and learning fair dealing. This placement indicates someone who takes partnerships seriously and develops relationship wisdom. Mastery comes through mature commitment. The reward is becoming a trusted partner and fair judge.`,
+        strengths: ["Relationship wisdom", "Commitment strength", "Fair judgment", "Diplomatic mastery"],
+        challenges: ["Fear of loneliness", "Over-dependent", "Relationship burden", "Delayed partnership"]
     },
     Scorpio: {
-        keywords: ["Dominio emocional", "Disciplina de poder", "Control de Transformación", "Sabiduría profunda"],
-        summary: "Aprender disciplina a través de la profundidad emocional y el manejo del poder.",
-        reading: `Saturno en Escorpio trae lecciones sobre el poder, la intimidad y la transformación. Puede haber experiencias intensas que enseñen el dominio emocional y el uso responsable del poder. Esta ubicación indica que alguien está aprendiendo a ejercer su influencia sabiamente. La maestría se logra a través de sobrevivir a las transformaciones con integridad. La recompensa es convertirte en un guía sabio a través de la oscuridad.`,
-        strengths: ["Dominio emocional", "Sabiduría de poder", "Fuerza transformadora", "Comprensión profunda"],
-        challenges: ["Problemas de control", "Dificultades de confianza", "Miedo intenso", "carga secreta"]
+        keywords: ["Emotional Mastery", "Power Discipline", "Transformation Control", "Deep Wisdom"],
+        summary: "Learning discipline through emotional depth and power management.",
+        reading: `Saturn in Scorpio brings lessons around power, intimacy, and transformation. There may be intense experiences that teach emotional mastery and the responsible use of power. This placement indicates someone learning to wield influence wisely. Mastery comes through surviving transformations with integrity. The reward is becoming a wise guide through darkness.`,
+        strengths: ["Emotional mastery", "Power wisdom", "Transformative strength", "Deep understanding"],
+        challenges: ["Control issues", "Trust difficulties", "Intense fear", "Secretive burden"]
     },
     Sagittarius: {
-        keywords: ["Fe disciplinada", "Filosofía práctica", "Sabiduría ganada", "Creencias fundamentadas"],
-        summary: "Aprender disciplina a través de la fe y las creencias fundamentadas.",
-        reading: `Saturno en Sagitario trae lecciones sobre creencia, fe y verdad. Puede haber desafíos al optimismo que enseñen la diferencia entre las ilusiones y la sabiduría adquirida. Esta ubicación indica que alguien está aprendiendo a basar su filosofía en la realidad. La maestría se logra a través de probar y comprobar las creencias. La recompensa es convertirse en un maestro respetado y un buscador de la verdad.`,
-        strengths: ["Sabiduría fundamentada", "Fe práctica", "Creencias probadas", "verdad ganada"],
-        challenges: ["Crisis de fe", "duda pesimista", "Rigidez dogmática", "Miedo a la aventura"]
+        keywords: ["Disciplined Faith", "Practical Philosophy", "Earned Wisdom", "Grounded Beliefs"],
+        summary: "Learning discipline through grounding faith and beliefs.",
+        reading: `Saturn in Sagittarius brings lessons around belief, faith, and truth. There may be challenges to optimism that teach the difference between wishful thinking and earned wisdom. This placement indicates someone learning to ground their philosophy in reality. Mastery comes through testing and proving beliefs. The reward is becoming a respected teacher and truth-seeker.`,
+        strengths: ["Grounded wisdom", "Practical faith", "Tested beliefs", "Earned truth"],
+        challenges: ["Faith crises", "Pessimistic doubt", "Dogmatic rigidity", "Adventure fear"]
     },
     Capricorn: {
-        keywords: ["Autoridad", "Logro", "Disciplina", "Estructura"],
-        summary: "Dominio máximo a través de la paciencia, la disciplina y los logros obtenidos.",
-        reading: `Saturno en Capricornio está en su signo natal, creando la expresión más poderosa de disciplina y logro. Las lecciones tratan de asumir plena responsabilidad por la propia vida y lograr un éxito duradero. Esta ubicación indica alguien destinado a lograr logros significativos mediante un esfuerzo sostenido. El dominio se logra a través del compromiso total con las metas a largo plazo. La recompensa es convertirse en una autoridad respetada por sus logros genuinos.`,
-        strengths: ["autoridad natural", "Logro disciplinado", "Dominio del paciente", "Éxito duradero"],
-        challenges: ["Seriedad excesiva", "Adicción al trabajo", "Frialdad emocional", "Obsesión por el estatus"]
+        keywords: ["Authority", "Achievement", "Discipline", "Structure"],
+        summary: "Ultimate mastery through patience, discipline, and earned achievement.",
+        reading: `Saturn in Capricorn is in its home sign, creating the most powerful expression of discipline and achievement. Lessons are about taking full responsibility for one's life and building lasting success. This placement indicates someone destined for significant achievement through sustained effort. Mastery comes through total commitment to long-term goals. The reward is becoming an authority respected for genuine accomplishment.`,
+        strengths: ["Natural authority", "Disciplined achievement", "Patient mastery", "Lasting success"],
+        challenges: ["Excessive seriousness", "Workaholism", "Emotional coldness", "Status obsession"]
     },
     Aquarius: {
-        keywords: ["Innovación disciplinada", "Libertad responsable", "Progreso estructurado", "Compromiso comunitario"],
-        summary: "Aprender disciplina a través de la innovación responsable y el servicio comunitario.",
-        reading: `Saturno en Acuario está en su signo natal tradicional, lo que aporta dominio en la innovación, las estructuras sociales y el pensamiento progresista. Las lecciones se obtienen al equilibrar la individualidad con la responsabilidad comunitaria. Esta ubicación indica que alguien está aprendiendo a crear un cambio duradero a través de una reforma paciente. La maestría se logra a través del servicio comprometido con el progreso colectivo. La recompensa es convertirse en un respetado reformador y constructor de comunidades.`,
-        strengths: ["Innovación disciplinada", "Reforma responsable", "Dedicación comunitaria", "Progreso estructurado"],
-        challenges: ["Frialdad desapegada", "Rigidez rebelde", "Carga grupal", "Miedo a la libertad"]
+        keywords: ["Disciplined Innovation", "Responsible Freedom", "Structured Progress", "Community Commitment"],
+        summary: "Learning discipline through responsible innovation and community service.",
+        reading: `Saturn in Aquarius is in its traditional home sign, bringing mastery in innovation, social structures, and progressive thinking. Lessons come through balancing individuality with community responsibility. This placement indicates someone learning to create lasting change through patient reform. Mastery comes through committed service to collective progress. The reward is becoming a respected reformer and community builder.`,
+        strengths: ["Disciplined innovation", "Responsible reform", "Community dedication", "Structured progress"],
+        challenges: ["Detached coldness", "Rebellious rigidity", "Group burden", "Freedom fear"]
     },
     Pisces: {
-        keywords: ["Disciplina Espiritual", "Dominio de la compasión", "Estructura creativa", "Sueños fundamentados"],
-        summary: "Aprender disciplina a través de la espiritualidad y la compasión.",
-        reading: `Saturno en Piscis trae lecciones sobre la fe, la compasión y la práctica espiritual. Puede haber desafíos que enseñen la diferencia entre escape y trascendencia. Esta ubicación indica que alguien está aprendiendo a fundamentar los dones espirituales en el servicio práctico. La maestría se logra a través de la práctica espiritual disciplinada. La recompensa es convertirse en un sabio sanador y guía espiritual.`,
-        strengths: ["Disciplina espiritual", "Compasión práctica", "Dominio creativo", "Intuición fundamentada"],
-        challenges: ["Disolución de la fe", "Fatiga por compasión", "Confusión de límites", "Martirio"]
+        keywords: ["Spiritual Discipline", "Compassion Mastery", "Creative Structure", "Grounded Dreams"],
+        summary: "Learning discipline through grounding spirituality and compassion.",
+        reading: `Saturn in Pisces brings lessons around faith, compassion, and spiritual practice. There may be challenges that teach the difference between escape and transcendence. This placement indicates someone learning to ground spiritual gifts in practical service. Mastery comes through disciplined spiritual practice. The reward is becoming a wise healer and spiritual guide.`,
+        strengths: ["Spiritual discipline", "Practical compassion", "Creative mastery", "Grounded intuition"],
+        challenges: ["Faith dissolution", "Compassion fatigue", "Boundary confusion", "Martyrdom"]
     }
 };
 
@@ -1276,166 +1276,166 @@ var SATURN_SIGN_READINGS = {
 
 var CHIRON_SIGN_READINGS = {
     Aries: {
-        keywords: ["Herida de identidad", "Curación del liderazgo", "Recuperación de coraje", "Autodescubrimiento"],
-        reading: `Quirón en Aries indica una herida central en torno a la identidad, la autoafirmación y el derecho a existir y ocupar un espacio. Las primeras experiencias pueden haber desafiado el sentido de uno mismo o la capacidad de afirmar sus necesidades con confianza. El viaje de curación implica reclamar el derecho a ser un individuo y liderar. El don que surge es la capacidad de ayudar a otros a encontrar su coraje y su auténtica autoexpresión.`
+        keywords: ["Identity Wound", "Leadership Healing", "Courage Recovery", "Self-Discovery"],
+        reading: `Chiron in Aries indicates a core wound around identity, self-assertion, and the right to exist and take up space. Early experiences may have challenged the sense of self or the ability to assert needs confidently. The healing journey involves reclaiming the right to be an individual and to lead. The gift that emerges is the ability to help others find their courage and authentic self-expression.`
     },
     Taurus: {
-        keywords: ["Vale la pena herir", "Curación de valores", "Recuperación de seguridad", "Viaje de autoestima"],
-        reading: `Quirón en Tauro indica una herida central en torno a la autoestima, los recursos y la seguridad física. Las primeras experiencias pueden haber creado sentimientos de no ser lo suficientemente valioso o miedo a no tener lo suficiente. El viaje de curación implica desarrollar una verdadera autoestima independientemente de las posesiones. El don que surge es la capacidad de ayudar a otros a reconocer su valor inherente.`
+        keywords: ["Worth Wound", "Value Healing", "Security Recovery", "Self-Worth Journey"],
+        reading: `Chiron in Taurus indicates a core wound around self-worth, resources, and physical security. Early experiences may have created feelings of not being valuable enough or fear of not having enough. The healing journey involves developing true self-worth independent of possessions. The gift that emerges is the ability to help others recognize their inherent value.`
     },
     Gemini: {
-        keywords: ["Herida de comunicación", "Aprendiendo a sanar", "Recuperación de voz", "Claridad mental"],
-        reading: `Quirón en Géminis indica una herida central en torno a la comunicación, el aprendizaje y el ser escuchado. Las experiencias tempranas pueden haber desafiado la capacidad de expresar pensamientos o haber creado dificultades de aprendizaje. El viaje de curación implica encontrar la propia voz auténtica. El don que surge es la capacidad de ayudar a otros a comunicarse y aprender con confianza.`
+        keywords: ["Communication Wound", "Learning Healing", "Voice Recovery", "Mental Clarity"],
+        reading: `Chiron in Gemini indicates a core wound around communication, learning, and being heard. Early experiences may have challenged the ability to express thoughts or created learning difficulties. The healing journey involves finding one's authentic voice. The gift that emerges is the ability to help others communicate and learn with confidence.`
     },
     Cancer: {
-        keywords: ["Herida nutritiva", "Curación de pertenencia", "Recuperación del hogar", "Seguridad emocional"],
-        reading: `Quirón en Cáncer indica una herida central en torno a la crianza, la pertenencia y la seguridad emocional. Las primeras experiencias pueden haber creado sentimientos de no pertenencia o de no recibir el cuidado adecuado. El viaje de curación implica crear seguridad interior y autocuidado. El don que surge es la capacidad de ayudar a otros a sanar las heridas familiares y crear una verdadera pertenencia.`
+        keywords: ["Nurturing Wound", "Belonging Healing", "Home Recovery", "Emotional Security"],
+        reading: `Chiron in Cancer indicates a core wound around nurturing, belonging, and emotional security. Early experiences may have created feelings of not belonging or not being properly cared for. The healing journey involves creating inner security and self-nurturing. The gift that emerges is the ability to help others heal family wounds and create true belonging.`
     },
     Leo: {
-        keywords: ["Herida de reconocimiento", "Sanación Creativa", "Recuperación del corazón", "Recuperación de alegría"],
-        reading: `Quirón en Leo indica una herida central en torno al reconocimiento, la creatividad y el derecho a ser especial. Las experiencias tempranas pueden haber suprimido la autoexpresión o haber creado vergüenza por buscar atención. El viaje de curación implica recuperar la alegría creativa y el derecho a brillar. El don que surge es la capacidad de ayudar a otros a expresar sus dones únicos sin vergüenza.`
+        keywords: ["Recognition Wound", "Creative Healing", "Heart Recovery", "Joy Reclamation"],
+        reading: `Chiron in Leo indicates a core wound around recognition, creativity, and the right to be special. Early experiences may have suppressed self-expression or created shame around seeking attention. The healing journey involves reclaiming creative joy and the right to shine. The gift that emerges is the ability to help others express their unique gifts without shame.`
     },
     Virgo: {
-        keywords: ["Herida de perfección", "Servicio de curación", "Recuperación de la salud", "Autoaceptación"],
-        reading: `Quirón en Virgo indica una herida central en torno a la perfección, la utilidad y la salud. Las primeras experiencias pueden haber creado sentimientos de no ser nunca lo suficientemente bueno o ansiedades en torno a la imperfección. El viaje de curación implica aceptar la imperfección como algo humano. El don que surge es la capacidad de ayudar a otros a aceptarse a sí mismos mientras siguen creciendo.`
+        keywords: ["Perfection Wound", "Service Healing", "Health Recovery", "Self-Acceptance"],
+        reading: `Chiron in Virgo indicates a core wound around perfection, usefulness, and health. Early experiences may have created feelings of never being good enough or anxieties around imperfection. The healing journey involves accepting imperfection as human. The gift that emerges is the ability to help others accept themselves while still growing.`
     },
     Libra: {
-        keywords: ["Herida de relación", "Equilibrio curativo", "Recuperación de la asociación", "Buscando armonía"],
-        reading: `Quirón en Libra indica una herida central en torno a las relaciones, la justicia y ser verdaderamente visto por los demás. Las primeras experiencias pueden haber creado patrones de relación de pérdida de uno mismo o de trato injusto. El viaje de curación implica encontrar el equilibrio entre uno mismo y los demás. El don que surge es la capacidad de ayudar a otros a crear relaciones sanas y equilibradas.`
+        keywords: ["Relationship Wound", "Balance Healing", "Partnership Recovery", "Harmony Seeking"],
+        reading: `Chiron in Libra indicates a core wound around relationships, fairness, and being truly seen by others. Early experiences may have created relationship patterns of losing oneself or unfair treatment. The healing journey involves finding balance between self and other. The gift that emerges is the ability to help others create healthy, balanced relationships.`
     },
     Scorpio: {
-        keywords: ["Herida de confianza", "Poder curativo", "Recuperación de la intimidad", "Transformación"],
-        reading: `Quirón en Escorpio indica una herida central en torno a la confianza, el poder y la intimidad profunda. Las primeras experiencias pueden haber implicado traición, abuso o pérdida profunda. El viaje de curación implica aprender a confiar nuevamente y a usar el poder sabiamente. El don que surge es la capacidad de ayudar a otros a transformar sus heridas más profundas en sabiduría.`
+        keywords: ["Trust Wound", "Power Healing", "Intimacy Recovery", "Transformation"],
+        reading: `Chiron in Scorpio indicates a core wound around trust, power, and deep intimacy. Early experiences may have involved betrayal, abuse, or profound loss. The healing journey involves learning to trust again and use power wisely. The gift that emerges is the ability to help others transform their deepest wounds into wisdom.`
     },
     Sagittarius: {
-        keywords: ["Herida de fe", "Significado curación", "Recuperación de la verdad", "Restauración de creencias"],
-        reading: `Quirón en Sagitario indica una herida central en torno al significado, la fe y la verdad. Las primeras experiencias pueden haber destrozado creencias o creado cinismo sobre el significado de la vida. El viaje de curación implica encontrar la auténtica verdad personal. El don que surge es la capacidad de ayudar a otros a encontrar significado y restaurar una fe sana.`
+        keywords: ["Faith Wound", "Meaning Healing", "Truth Recovery", "Belief Restoration"],
+        reading: `Chiron in Sagittarius indicates a core wound around meaning, faith, and truth. Early experiences may have shattered beliefs or created cynicism about life's meaning. The healing journey involves finding authentic personal truth. The gift that emerges is the ability to help others find meaning and restore healthy faith.`
     },
     Capricorn: {
-        keywords: ["Herida de autoridad", "Curación por logros", "Recuperación de Estructuras", "Autodominio"],
-        reading: `Quirón en Capricornio indica una herida central en torno a la autoridad, el logro y el éxito. Las primeras experiencias pueden haber involucrado figuras de autoridad duras o sentimientos de fracaso. El viaje de curación implica convertirse en la propia autoridad saludable. El don que surge es la capacidad de ayudar a otros a alcanzar sus objetivos con sabiduría e integridad.`
+        keywords: ["Authority Wound", "Achievement Healing", "Structure Recovery", "Self-Mastery"],
+        reading: `Chiron in Capricorn indicates a core wound around authority, achievement, and success. Early experiences may have involved harsh authority figures or feelings of failure. The healing journey involves becoming one's own healthy authority. The gift that emerges is the ability to help others achieve their goals with wisdom and integrity.`
     },
     Aquarius: {
-        keywords: ["Herida perteneciente", "Sanación de la individualidad", "Recuperación comunitaria", "Yo auténtico"],
-        reading: `Quirón en Acuario indica una herida central en torno a la pertenencia, la individualidad y el ser diferente. Las primeras experiencias pueden haber creado sentimientos de ser un outsider o de tener que ocultar su singularidad. El viaje de curación implica abrazar la individualidad y al mismo tiempo encontrar una verdadera comunidad. El don que surge es la capacidad de ayudar a otros a celebrar su singularidad.`
+        keywords: ["Belonging Wound", "Individuality Healing", "Community Recovery", "Authentic Self"],
+        reading: `Chiron in Aquarius indicates a core wound around belonging, individuality, and being different. Early experiences may have created feelings of being an outsider or having to hide uniqueness. The healing journey involves embracing individuality while finding true community. The gift that emerges is the ability to help others celebrate their uniqueness.`
     },
     Pisces: {
-        keywords: ["Herida espiritual", "Sanación de unidad", "Recuperación de límites", "Conexión Divina"],
-        reading: `Quirón en Piscis indica una herida central en torno a la espiritualidad, los límites y la conexión con algo más grande. Las primeras experiencias pueden haber implicado confusión espiritual, adicción o una sensibilidad abrumadora. El viaje de curación implica una espiritualidad y límites saludables. El don que surge es la capacidad de ayudar a otros a encontrar una conexión espiritual mientras se mantienen firmes.`
+        keywords: ["Spiritual Wound", "Unity Healing", "Boundary Recovery", "Divine Connection"],
+        reading: `Chiron in Pisces indicates a core wound around spirituality, boundaries, and connection to something greater. Early experiences may have involved spiritual confusion, addiction, or overwhelming sensitivity. The healing journey involves healthy spirituality and boundaries. The gift that emerges is the ability to help others find spiritual connection while staying grounded.`
     }
 };
 
 var LILITH_SIGN_READINGS = {
     Aries: {
-        keywords: ["Rabia reprimida", "guerrero oculto", "Independencia en la sombra", "Poder recuperado"],
-        reading: `Black Moon Lilith en Aries representa la ira, la independencia y la energía guerrera reprimidas o rechazadas. Puede haber un poder oculto en torno a una asertividad que fue avergonzada o castigada. El trabajo en la sombra implica reclamar el derecho a estar enojado y a luchar por uno mismo. El don de la integración se está convirtiendo en un protector feroz que utiliza la ira de manera constructiva.`
+        keywords: ["Suppressed Rage", "Hidden Warrior", "Shadow Independence", "Reclaimed Power"],
+        reading: `Black Moon Lilith in Aries represents suppressed or rejected anger, independence, and warrior energy. There may be hidden power around assertiveness that was shamed or punished. The shadow work involves reclaiming the right to be angry and to fight for oneself. The gift of integration is becoming a fierce protector who uses anger constructively.`
     },
     Taurus: {
-        keywords: ["Deseo reprimido", "Sensualidad oculta", "Valor de la sombra", "Cuerpo recuperado"],
-        reading: `Black Moon Lilith en Tauro representa la sensualidad, el deseo y la autoestima reprimidos o rechazados. Puede haber un poder oculto en torno al placer físico o las necesidades materiales del que se avergonzó. El trabajo en la sombra implica reclamar el derecho a desear y disfrutar. El don de la integración es sentirse cómodo con el propio cuerpo y valorarse a uno mismo sin pedir disculpas.`
+        keywords: ["Suppressed Desire", "Hidden Sensuality", "Shadow Worth", "Reclaimed Body"],
+        reading: `Black Moon Lilith in Taurus represents suppressed or rejected sensuality, desire, and self-worth. There may be hidden power around physical pleasure or material needs that was shamed. The shadow work involves reclaiming the right to desire and enjoy. The gift of integration is becoming comfortable in one's body and unapologetically valuing oneself.`
     },
     Gemini: {
-        keywords: ["Voz suprimida", "Verdades ocultas", "Intelecto de las Sombras", "Expresión recuperada"],
-        reading: `Black Moon Lilith en Géminis representa comunicación, pensamientos y verdades reprimidos o rechazados. Puede haber un poder oculto en decir lo que otros no quieren oír. El trabajo en la sombra implica decir verdades incómodas. El don de la integración se está convirtiendo en una voz de lo que es necesario decir pero rara vez se dice.`
+        keywords: ["Suppressed Voice", "Hidden Truths", "Shadow Intellect", "Reclaimed Expression"],
+        reading: `Black Moon Lilith in Gemini represents suppressed or rejected communication, thoughts, and truths. There may be hidden power around saying what others don't want to hear. The shadow work involves speaking uncomfortable truths. The gift of integration is becoming a voice for what needs to be said but rarely is.`
     },
     Cancer: {
-        keywords: ["Necesidades reprimidas", "Emociones ocultas", "Madre sombra", "Crianza recuperada"],
-        reading: `Black Moon Lilith en Cáncer representa necesidades emocionales e instintos de crianza reprimidos o rechazados. Puede haber un poder oculto en torno a la madre oscura o sentimientos maternos complejos. El trabajo de la sombra implica reconocer todas las emociones, incluidas las incómodas. El don de la integración es auténtica expresión emocional y cuidado sin martirio.`
+        keywords: ["Suppressed Needs", "Hidden Emotions", "Shadow Mother", "Reclaimed Nurturing"],
+        reading: `Black Moon Lilith in Cancer represents suppressed or rejected emotional needs and nurturing instincts. There may be hidden power around the dark mother or complex maternal feelings. The shadow work involves acknowledging all emotions, including the uncomfortable ones. The gift of integration is authentic emotional expression and nurturing without martyrdom.`
     },
     Leo: {
-        keywords: ["Creatividad reprimida", "Yo oculto", "reina de las sombras", "Foco recuperado"],
-        reading: `Black Moon Lilith en Leo representa el poder creativo reprimido o rechazado y la necesidad de reconocimiento. Puede haber un poder oculto en torno a la ambición o el deseo de atención que fue avergonzado. El trabajo de la sombra implica reclamar el derecho a brillar intensamente. El don de la integración irradia auténtico poder creativo sin disculpas.`
+        keywords: ["Suppressed Creativity", "Hidden Ego", "Shadow Queen", "Reclaimed Spotlight"],
+        reading: `Black Moon Lilith in Leo represents suppressed or rejected creative power and need for recognition. There may be hidden power around ambition or desire for attention that was shamed. The shadow work involves reclaiming the right to shine brightly. The gift of integration is radiating authentic creative power without apology.`
     },
     Virgo: {
-        keywords: ["Crítica reprimida", "Perfección oculta", "Sanador de las Sombras", "Discernimiento recuperado"],
-        reading: `Black Moon Lilith en Virgo representa la capacidad crítica y los instintos curativos reprimidos o rechazados. Puede haber un poder oculto al ver defectos que otros pasan por alto. El trabajo en la sombra implica poseer discernimiento sin autocastigo. El don de la integración es convertirse en un sanador que ve lo que necesita mejorar sin vergüenza.`
+        keywords: ["Suppressed Criticism", "Hidden Perfection", "Shadow Healer", "Reclaimed Discernment"],
+        reading: `Black Moon Lilith in Virgo represents suppressed or rejected critical ability and healing instincts. There may be hidden power around seeing flaws that others miss. The shadow work involves owning discernment without self-punishment. The gift of integration is becoming a healer who sees what needs improvement without shame.`
     },
     Libra: {
-        keywords: ["Conflicto reprimido", "Deseos ocultos", "Socio en la sombra", "Límites recuperados"],
-        reading: `Black Moon Lilith en Libra representa deseos personales reprimidos o rechazados en las relaciones. Puede haber un poder oculto en torno a aceptar en lugar de ceder siempre en las asociaciones. El trabajo en la sombra implica reconocer necesidades egoístas en las relaciones. El regalo de la integración son relaciones equilibradas donde las propias necesidades importan por igual.`
+        keywords: ["Suppressed Conflict", "Hidden Desires", "Shadow Partner", "Reclaimed Boundaries"],
+        reading: `Black Moon Lilith in Libra represents suppressed or rejected personal desires in relationships. There may be hidden power around taking rather than always giving in partnerships. The shadow work involves acknowledging selfish needs in relationships. The gift of integration is balanced relationships where own needs matter equally.`
     },
     Scorpio: {
-        keywords: ["Poder suprimido", "Oscuridad oculta", "Transformador de sombras", "Profundidad recuperada"],
-        reading: `Black Moon Lilith en Escorpio representa la profundidad total del poder reprimido, la sexualidad y el tabú. Puede haber un poder oculto en torno a la muerte, el sexo y la transformación que la sociedad teme. El trabajo de las sombras implica abrazar lo femenino oscuro en todo su poder. El don de la integración se está convirtiendo en un transformador que no teme a la oscuridad.`
+        keywords: ["Suppressed Power", "Hidden Darkness", "Shadow Transformer", "Reclaimed Depth"],
+        reading: `Black Moon Lilith in Scorpio represents the full depth of suppressed power, sexuality, and the taboo. There may be hidden power around death, sex, and transformation that society fears. The shadow work involves embracing the dark feminine in all her power. The gift of integration is becoming a transformer who is unafraid of darkness.`
     },
     Sagittarius: {
-        keywords: ["Verdad reprimida", "Lo salvaje escondido", "Buscador de sombras", "Libertad recuperada"],
-        reading: `Black Moon Lilith en Sagitario representa la libertad salvaje reprimida o rechazada y las verdades incómodas. Puede haber un poder oculto en torno a creencias que desafían el consenso. El trabajo en la sombra implica decir la verdad sin importar las consecuencias. El don de la integración se está convirtiendo en un dicho de la verdad que no puede ser silenciado ni domesticado.`
+        keywords: ["Suppressed Truth", "Hidden Wildness", "Shadow Seeker", "Reclaimed Freedom"],
+        reading: `Black Moon Lilith in Sagittarius represents suppressed or rejected wild freedom and inconvenient truths. There may be hidden power around beliefs that challenge consensus. The shadow work involves speaking truth regardless of consequences. The gift of integration is becoming a truth-teller who cannot be silenced or tamed.`
     },
     Capricorn: {
-        keywords: ["Ambición reprimida", "Autoridad oculta", "reina de las sombras", "Poder recuperado"],
-        reading: `Black Moon Lilith en Capricornio representa la ambición y la autoridad reprimidas o rechazadas. Puede haber un poder oculto en torno al éxito mundano que especialmente a las mujeres se les enseñó a ocultar. El trabajo en la sombra implica poseer ambición sin vergüenza. El don de la integración se está convirtiendo en una figura de autoridad que usa el poder sabiamente.`
+        keywords: ["Suppressed Ambition", "Hidden Authority", "Shadow Queen", "Reclaimed Power"],
+        reading: `Black Moon Lilith in Capricorn represents suppressed or rejected ambition and authority. There may be hidden power around worldly success that women especially were taught to hide. The shadow work involves owning ambition without shame. The gift of integration is becoming an authority figure who uses power wisely.`
     },
     Aquarius: {
-        keywords: ["Rebelión reprimida", "Genio oculto", "Revolucionario de la sombra", "Originalidad recuperada"],
-        reading: `Black Moon Lilith en Acuario representa el pensamiento y el genio revolucionarios reprimidos o rechazados. Puede haber un poder oculto en torno a ideas demasiado radicales para ser aceptadas. El trabajo de la sombra implica abrazar el interior rebelde y visionario. El don de la integración es convertirse en un innovador que cambia el mundo a través del pensamiento radical.`
+        keywords: ["Suppressed Rebellion", "Hidden Genius", "Shadow Revolutionary", "Reclaimed Originality"],
+        reading: `Black Moon Lilith in Aquarius represents suppressed or rejected revolutionary thinking and genius. There may be hidden power around ideas too radical for acceptance. The shadow work involves embracing inner rebel and visionary. The gift of integration is becoming an innovator who changes the world through radical thinking.`
     },
     Pisces: {
-        keywords: ["Intuición reprimida", "Psíquico Oculto", "místico de las sombras", "Espiritualidad recuperada"],
-        reading: `Black Moon Lilith en Piscis representa habilidades psíquicas y dones espirituales suprimidos o rechazados. Puede haber un poder oculto en torno a experiencias místicas que fueron descartadas o temidas. El trabajo en la sombra implica confiar y desarrollar dones intuitivos. El don de la integración se está convirtiendo en un místico que une mundos sin perderse.`
+        keywords: ["Suppressed Intuition", "Hidden Psychic", "Shadow Mystic", "Reclaimed Spirituality"],
+        reading: `Black Moon Lilith in Pisces represents suppressed or rejected psychic abilities and spiritual gifts. There may be hidden power around mystical experiences that were dismissed or feared. The shadow work involves trusting and developing intuitive gifts. The gift of integration is becoming a mystic who bridges worlds without losing oneself.`
     }
 };
 
 var NORTH_NODE_READINGS = {
     Aries: {
-        keywords: ["Independencia", "Coraje", "Autoenfoque", "Iniciativa"],
-        summary: "Crecimiento del alma mediante el desarrollo de la independencia y la autoafirmación.",
-        reading: `El Nodo Norte en Aries indica un viaje del alma hacia la independencia, el coraje y la autoafirmación. Los patrones de vidas pasadas (Nodo Sur en Libra) implicaban centrarse en los demás, buscar la armonía y evitar el conflicto. Esta vida requiere desarrollar el coraje para ponerse a uno mismo en primer lugar, tomar medidas independientes y hacer valer las necesidades individuales. El crecimiento se logra aprendiendo a actuar sin buscar permiso o aprobación, abrazando un egoísmo saludable y desarrollando energía guerrera.`
+        keywords: ["Independence", "Courage", "Self-Focus", "Initiative"],
+        summary: "Soul growth through developing independence and self-assertion.",
+        reading: `The North Node in Aries indicates a soul journey toward independence, courage, and self-assertion. Past life patterns (South Node in Libra) involved focusing on others, seeking harmony, and avoiding conflict. This lifetime calls for developing the courage to put oneself first, take independent action, and assert individual needs. Growth comes through learning to act without seeking permission or approval, embracing healthy selfishness, and developing warrior energy.`
     },
     Taurus: {
-        keywords: ["Estabilidad", "Autoestima", "Sencillez", "Paciencia"],
-        summary: "Crecimiento del alma mediante la construcción de estabilidad y autosuficiencia.",
-        reading: `El Nodo Norte en Tauro indica un viaje del alma hacia la estabilidad, la autoestima y los placeres simples. Los patrones de vidas pasadas (Nodo Sur en Escorpio) implicaban intensidad, crisis y dependencia de los recursos de los demás. Esta vida exige desarrollar la seguridad interior, construir los propios recursos y encontrar la paz en la simplicidad. El crecimiento se logra a través de la paciencia, el esfuerzo constante y el aprendizaje de valorarse a uno mismo de forma independiente.`
+        keywords: ["Stability", "Self-Worth", "Simplicity", "Patience"],
+        summary: "Soul growth through building stability and self-reliance.",
+        reading: `The North Node in Taurus indicates a soul journey toward stability, self-worth, and simple pleasures. Past life patterns (South Node in Scorpio) involved intensity, crisis, and depending on others' resources. This lifetime calls for developing inner security, building one's own resources, and finding peace in simplicity. Growth comes through patience, steady effort, and learning to value oneself independently.`
     },
     Gemini: {
-        keywords: ["Aprendiendo", "Comunicación", "Curiosidad", "Flexibilidad"],
-        summary: "Crecimiento del alma a través de la comunicación y la curiosidad.",
-        reading: `El Nodo Norte en Géminis indica un viaje del alma hacia el aprendizaje, la comunicación y la flexibilidad mental. Los patrones de vidas pasadas (Nodo Sur en Sagitario) implicaban conocer las respuestas, predicar la verdad y la certeza. Esta vida exige mantener la curiosidad, hacer preguntas y estar dispuesto a aprender de todos. El crecimiento se logra escuchando más que hablando, reuniendo información antes de concluir y aceptando el no saber.`
+        keywords: ["Learning", "Communication", "Curiosity", "Flexibility"],
+        summary: "Soul growth through communication and staying curious.",
+        reading: `The North Node in Gemini indicates a soul journey toward learning, communication, and mental flexibility. Past life patterns (South Node in Sagittarius) involved knowing the answers, preaching truth, and certainty. This lifetime calls for staying curious, asking questions, and being willing to learn from everyone. Growth comes through listening more than speaking, gathering information before concluding, and embracing not knowing.`
     },
     Cancer: {
-        keywords: ["Criando", "Seguridad emocional", "Hogar", "Vulnerabilidad"],
-        summary: "Crecimiento del alma a través de la conexión emocional y la crianza.",
-        reading: `El Nodo Norte en Cáncer indica un viaje del alma hacia la seguridad emocional, la crianza y la creación de un hogar. Los patrones de vidas pasadas (Nodo Sur en Capricornio) involucraban enfoque profesional, autoridad y supresión emocional. Esta vida exige desarrollar la inteligencia emocional, crear un entorno enriquecedor y permitir la vulnerabilidad. El crecimiento se produce a través de la conexión con la familia y los sentimientos, más que a través de los logros.`
+        keywords: ["Nurturing", "Emotional Security", "Home", "Vulnerability"],
+        summary: "Soul growth through emotional connection and nurturing.",
+        reading: `The North Node in Cancer indicates a soul journey toward emotional security, nurturing, and creating home. Past life patterns (South Node in Capricorn) involved career focus, authority, and emotional suppression. This lifetime calls for developing emotional intelligence, creating a nurturing environment, and allowing vulnerability. Growth comes through connecting with family and feelings rather than achievement.`
     },
     Leo: {
-        keywords: ["Autoexpresión", "Creatividad", "Alegría", "Vida centrada en el corazón"],
-        summary: "Crecimiento del alma a través de la expresión creativa y siguiendo el corazón.",
-        reading: `El Nodo Norte en Leo indica un viaje del alma hacia la autoexpresión, la creatividad y una vida centrada en el corazón. Los patrones de vidas pasadas (Nodo Sur en Acuario) implicaban concentración grupal, desapego y supresión de necesidades individuales. Esta vida exige desarrollar talentos creativos, expresar dones únicos y seguir el corazón. El crecimiento se logra al ser visto, apreciado y sin tener miedo de brillar individualmente.`
+        keywords: ["Self-Expression", "Creativity", "Joy", "Heart-Centered Living"],
+        summary: "Soul growth through creative expression and following the heart.",
+        reading: `The North Node in Leo indicates a soul journey toward self-expression, creativity, and heart-centered living. Past life patterns (South Node in Aquarius) involved group focus, detachment, and suppressing individual needs. This lifetime calls for developing creative talents, expressing unique gifts, and following the heart. Growth comes through being seen, appreciated, and unafraid to shine individually.`
     },
     Virgo: {
-        keywords: ["Servicio", "Discernimiento", "Habilidades prácticas", "Salud"],
-        summary: "Crecimiento del alma a través del servicio práctico y la superación personal.",
-        reading: `El Nodo Norte en Virgo indica un viaje del alma hacia el servicio práctico, el discernimiento y la superación personal. Los patrones de vidas pasadas (Nodo Sur en Piscis) implicaban escapismo, mentalidad de víctima y evitación de la realidad práctica. Esta vida exige desarrollar habilidades útiles, servir de manera concreta y cuidar la salud. El crecimiento se produce a través de la discriminación, la rutina y el servicio humilde.`
+        keywords: ["Service", "Discernment", "Practical Skills", "Health"],
+        summary: "Soul growth through practical service and self-improvement.",
+        reading: `The North Node in Virgo indicates a soul journey toward practical service, discernment, and self-improvement. Past life patterns (South Node in Pisces) involved escapism, victim mentality, and avoiding practical reality. This lifetime calls for developing useful skills, serving in concrete ways, and taking care of health. Growth comes through discrimination, routine, and humble service.`
     },
     Libra: {
-        keywords: ["Asociación", "Balance", "Diplomacia", "Cooperación"],
-        summary: "Crecimiento del alma a través de las relaciones y la cooperación.",
-        reading: `El Nodo Norte en Libra indica un viaje del alma hacia la asociación, el equilibrio y la cooperación. Los patrones de vidas pasadas (Nodo Sur en Aries) implicaban independencia, competencia y ponerse a uno mismo en primer lugar. Esta vida exige desarrollar habilidades para relacionarse, considerar las necesidades de los demás y encontrar el equilibrio. El crecimiento se produce a través de una verdadera asociación, la diplomacia y el aprendizaje del compromiso.`
+        keywords: ["Partnership", "Balance", "Diplomacy", "Cooperation"],
+        summary: "Soul growth through relationships and cooperation.",
+        reading: `The North Node in Libra indicates a soul journey toward partnership, balance, and cooperation. Past life patterns (South Node in Aries) involved independence, competition, and putting self first. This lifetime calls for developing relationship skills, considering others' needs, and finding balance. Growth comes through true partnership, diplomacy, and learning to compromise.`
     },
     Scorpio: {
-        keywords: ["Transformación", "Intimidad", "Recursos compartidos", "Profundidad"],
-        summary: "Crecimiento del alma a través de una profunda transformación e intimidad.",
-        reading: `El Nodo Norte en Escorpio indica un viaje del alma hacia la transformación, la intimidad y los recursos compartidos. Los patrones de vidas pasadas (Nodo Sur en Tauro) implicaban búsqueda de seguridad, autosuficiencia y resistencia al cambio. Esta vida exige abrazar la transformación, desarrollar una intimidad profunda y aprender a fusionar recursos. El crecimiento se produce a través de la crisis como catalizador y de un valiente autoexamen.`
+        keywords: ["Transformation", "Intimacy", "Shared Resources", "Depth"],
+        summary: "Soul growth through deep transformation and intimacy.",
+        reading: `The North Node in Scorpio indicates a soul journey toward transformation, intimacy, and shared resources. Past life patterns (South Node in Taurus) involved security seeking, self-reliance, and resisting change. This lifetime calls for embracing transformation, developing deep intimacy, and learning to merge resources. Growth comes through crisis as catalyst and fearless self-examination.`
     },
     Sagittarius: {
-        keywords: ["Fe", "Aventura", "Aprendizaje Superior", "Búsqueda de la verdad"],
-        summary: "Crecimiento del alma a través de la fe, la aventura y la búsqueda de la verdad.",
-        reading: `El Nodo Norte en Sagitario indica un viaje del alma hacia la fe, la aventura y la verdad superior. Los patrones de vidas pasadas (Nodo Sur en Géminis) implicaban recopilar información, permanecer local y evitar comprometerse con creencias. Esta vida exige desarrollar la fe, buscar la sabiduría y ampliar horizontes. El crecimiento se logra a través de los viajes, la educación superior y la confianza en el significado de la vida.`
+        keywords: ["Faith", "Adventure", "Higher Learning", "Truth-Seeking"],
+        summary: "Soul growth through faith, adventure, and truth-seeking.",
+        reading: `The North Node in Sagittarius indicates a soul journey toward faith, adventure, and higher truth. Past life patterns (South Node in Gemini) involved gathering information, staying local, and avoiding commitment to beliefs. This lifetime calls for developing faith, seeking wisdom, and expanding horizons. Growth comes through travel, higher education, and trusting life's meaning.`
     },
     Capricorn: {
-        keywords: ["Logro", "Responsabilidad", "Autoridad", "Maestría"],
-        summary: "Crecimiento del alma a través del logro y la autoridad responsable.",
-        reading: `El Nodo Norte en Capricornio indica un viaje del alma hacia el logro, la responsabilidad y la maestría. Los patrones de vidas pasadas (Nodo Sur en Cáncer) implicaban dependencia emocional, concentración familiar y evitación de responsabilidades mundanas. Esta vida exige desarrollar competencias, construir una carrera y convertirse en una autoridad. El crecimiento se produce a través de la disciplina, la contribución pública y la madurez emocional.`
+        keywords: ["Achievement", "Responsibility", "Authority", "Mastery"],
+        summary: "Soul growth through achievement and responsible authority.",
+        reading: `The North Node in Capricorn indicates a soul journey toward achievement, responsibility, and mastery. Past life patterns (South Node in Cancer) involved emotional dependency, family focus, and avoiding worldly responsibility. This lifetime calls for developing competence, building career, and becoming an authority. Growth comes through discipline, public contribution, and emotional maturity.`
     },
     Aquarius: {
-        keywords: ["Servicio Humanitario", "Innovación", "Comunidad", "Independencia"],
-        summary: "Crecimiento del alma sirviendo a la humanidad y honrando la individualidad.",
-        reading: `El Nodo Norte en Acuario indica un viaje del alma hacia el servicio humanitario, la innovación y el honor a la individualidad. Los patrones de vidas pasadas (Nodo Sur en Leo) involucraban ego, drama y necesidad de reconocimiento personal. Esta vida exige servir al colectivo, abrazar ideas progresistas y valorar a todas las personas por igual. El crecimiento se produce a través de la contribución comunitaria y el desapego de las necesidades del ego.`
+        keywords: ["Humanitarian Service", "Innovation", "Community", "Independence"],
+        summary: "Soul growth through serving humanity and honoring individuality.",
+        reading: `The North Node in Aquarius indicates a soul journey toward humanitarian service, innovation, and honoring individuality. Past life patterns (South Node in Leo) involved ego, drama, and need for personal recognition. This lifetime calls for serving the collective, embracing progressive ideas, and valuing all people equally. Growth comes through community contribution and detachment from ego needs.`
     },
     Pisces: {
-        keywords: ["Espiritualidad", "Compasión", "Rendirse", "Unidad"],
-        summary: "Crecimiento del alma a través de la conexión espiritual y el servicio compasivo.",
-        reading: `El Nodo Norte en Piscis indica un viaje del alma hacia la espiritualidad, la compasión y la entrega a algo más grande. Los patrones de vidas pasadas (Nodo Sur en Virgo) implicaban perfeccionismo, crítica y centrarse en los defectos. Esta vida exige desarrollar la fe, practicar la compasión y confiar en el universo. El crecimiento se produce a través de la meditación, la expresión artística y el servicio sin expectativas.`
+        keywords: ["Spirituality", "Compassion", "Surrender", "Unity"],
+        summary: "Soul growth through spiritual connection and compassionate service.",
+        reading: `The North Node in Pisces indicates a soul journey toward spirituality, compassion, and surrender to something greater. Past life patterns (South Node in Virgo) involved perfectionism, criticism, and focusing on flaws. This lifetime calls for developing faith, practicing compassion, and trusting the universe. Growth comes through meditation, artistic expression, and service without expectation.`
     }
 };
 
@@ -1445,845 +1445,845 @@ var NORTH_NODE_READINGS = {
 
 var BIRTHDAY_NUMBER_READINGS = {
     1: { 
-        title: "El líder", 
-        reading: `El primer cumpleaños trae liderazgo natural, originalidad y espíritu pionero a esta vida. Esta alma vino sabiendo iniciar, ser primera, abrir nuevos caminos.
+        title: "The Leader", 
+        reading: `Birthday 1 brings natural leadership, originality, and pioneering spirit into this life. This soul came in knowing how to initiate, to be first, to forge new paths.
 
-El día del nacimiento imparte un don especial para la independencia y la iniciativa propia. Incluso en la infancia, existe el deseo de hacer las cosas a su manera, de liderar en lugar de seguir, de ser originales en lugar de imitadores.
+The day of birth imparts a special gift for independence and self-starting. Even in childhood, there's a desire to do things their own way, to lead rather than follow, to be original rather than imitative.
 
-Es alguien que inspira a otros con su ejemplo, que puede hacerse cargo cuando sea necesario y que prospera cuando se le da autonomía. Su talento especial es el coraje de empezar lo que otros sólo sueñan.
+This is someone who inspires others by example, who can take charge when needed, and who thrives when given autonomy. Their special talent is the courage to begin what others only dream about.
 
-Para niños que cumplen 1 año: Bríndeles oportunidades de liderazgo desde temprano. Permítales tomar decisiones y experimentar las consecuencias. Su independencia es un regalo: cuídala.`
+For children with Birthday 1: Give them leadership opportunities early. Let them make decisions and experience consequences. Their independence is a gift — nurture it.`
     },
     2: { 
-        title: "El diplomático", 
-        reading: `El segundo cumpleaños trae a esta vida sensibilidad natural, cooperación y dones diplomáticos. Esta alma llegó en sintonía con los sentimientos de los demás y hábil para crear armonía.
+        title: "The Diplomat", 
+        reading: `Birthday 2 brings natural sensitivity, cooperation, and diplomatic gifts into this life. This soul came in attuned to others' feelings and skilled at creating harmony.
 
-El día del nacimiento imparte un regalo especial de colaboración y apoyo. Ya en la infancia hay conciencia de las emociones de los demás y un deseo de ayudar, de mediar, de unir a las personas.
+The day of birth imparts a special gift for partnership and support. Even in childhood, there's awareness of others' emotions and a desire to help, to mediate, to bring people together.
 
-Es alguien que sobresale en las asociaciones, que puede sentir lo que otros necesitan antes de que lo pidan y que crea paz dondequiera que vaya. Su talento especial es la capacidad de escuchar y comprender verdaderamente.
+This is someone who excels in partnerships, who can sense what others need before they ask, and who creates peace wherever they go. Their special talent is the ability to truly listen and understand.
 
-Para niños que cumplen 2 años: Honre su sensibilidad: es su superpoder. Crea ambientes armoniosos. Permítales apoyar a los demás, pero asegúrese de que también reciban apoyo.`
+For children with Birthday 2: Honor their sensitivity — it's their superpower. Create harmonious environments. Let them support others but ensure they also receive support.`
     },
     3: { 
-        title: "el animador", 
-        reading: `El tercer cumpleaños trae creatividad natural, autoexpresión y alegría a esta vida. Esta alma llegó lista para crear, comunicar y elevar a través de su presencia.
+        title: "The Entertainer", 
+        reading: `Birthday 3 brings natural creativity, self-expression, and joy into this life. This soul came in ready to create, to communicate, and to uplift through their presence.
 
-El día del nacimiento imparte un don especial para inspirar y entretener a los demás. Incluso en la infancia, hay una chispa creativa, una habilidad con las palabras y la capacidad de hacer sonreír a los rostros.
+The day of birth imparts a special gift for inspiring and entertaining others. Even in childhood, there's a creative spark, a way with words, and an ability to bring smiles to faces.
 
-Es alguien que ilumina las habitaciones, que puede expresar lo que a otros les cuesta articular y que hace la vida más bella a través de su creatividad. Su talento especial es difundir alegría.
+This is someone who lights up rooms, who can express what others struggle to articulate, and who makes life more beautiful through their creativity. Their special talent is spreading joy.
 
-Para niños que cumplen 3 años: proporcione abundantes salidas creativas. Celebre su autoexpresión. Su alegría debe ser compartida: no apagues su luz.`
+For children with Birthday 3: Provide creative outlets abundantly. Celebrate their self-expression. Their joy is meant to be shared — don't dim their light.`
     },
     4: { 
-        title: "el constructor", 
-        reading: `El cuarto cumpleaños trae a esta vida estabilidad natural, practicidad y una sólida ética de trabajo. Esta alma llegó sabiendo construir, organizar y crear estructuras duraderas.
+        title: "The Builder", 
+        reading: `Birthday 4 brings natural stability, practicality, and strong work ethic into this life. This soul came in knowing how to build, to organize, and to create lasting structures.
 
-El día del nacimiento imparte un don especial para los logros prácticos. Incluso en la niñez, hay amor por el orden, paciencia para el trabajo detallado y satisfacción por los resultados tangibles.
+The day of birth imparts a special gift for practical accomplishment. Even in childhood, there's a love of order, a patience for detailed work, and satisfaction in tangible results.
 
-Es alguien en quien se puede confiar absolutamente, que construye cosas para que duren y que encuentra satisfacción en el trabajo duro y bien hecho. Su talento especial es convertir los sueños en realidad.
+This is someone who can be relied upon absolutely, who builds things to last, and who finds satisfaction in hard work done well. Their special talent is turning dreams into solid reality.
 
-Para niños con cumpleaños 4: Dales proyectos con resultados visibles. Honre su necesidad de rutina y orden. Su confiabilidad es un don poco común; no la confunda con rigidez.`
+For children with Birthday 4: Give them projects with visible results. Honor their need for routine and order. Their reliability is a rare gift — don't mistake it for rigidity.`
     },
     5: { 
-        title: "El amante de la libertad", 
-        reading: `El quinto cumpleaños trae a esta vida versatilidad natural, amor por la libertad y adaptabilidad. Esta alma llegó lista para experimentarlo todo, para cambiar y crecer, para vivir plenamente.
+        title: "The Freedom Lover", 
+        reading: `Birthday 5 brings natural versatility, love of freedom, and adaptability into this life. This soul came in ready to experience everything, to change and grow, to live fully.
 
-El día del nacimiento imparte un don especial para la adaptación y el cambio. Incluso en la infancia, hay inquietud, curiosidad por todo y necesidad de variedad y aventura.
+The day of birth imparts a special gift for adaptation and change. Even in childhood, there's restlessness, curiosity about everything, and a need for variety and adventure.
 
-Es alguien que disfruta de nuevas experiencias, que puede adaptarse a cualquier situación y que inspira a otros a aceptar el cambio. Su talento especial es hacer de la vida una aventura.
+This is someone who thrives on new experiences, who can adjust to any situation, and who inspires others to embrace change. Their special talent is making life an adventure.
 
-Para niños con cumpleaños 5: Brinde variedad y nuevas experiencias. No restrinjas demasiado: necesitan espacio para explorar. Canaliza su inquietud en aventuras positivas.`
+For children with Birthday 5: Provide variety and new experiences. Don't over-restrict — they need room to explore. Channel their restlessness into positive adventures.`
     },
     6: { 
-        title: "El cuidador", 
-        reading: `El sexto cumpleaños trae a esta vida responsabilidad natural, amor y armonía doméstica. Esta alma llegó sabiendo cómo cuidar, nutrir y crear espacios hermosos.
+        title: "The Nurturer", 
+        reading: `Birthday 6 brings natural responsibility, love, and domestic harmony into this life. This soul came in knowing how to care, to nurture, and to create beautiful spaces.
 
-El día del nacimiento imparte un don especial para cuidar y embellecer. Ya en la infancia hay preocupación por la familia, atención a la estética y deseo de ayudar a los necesitados.
+The day of birth imparts a special gift for caretaking and beautifying. Even in childhood, there's concern for family, attention to aesthetics, and a desire to help those in need.
 
-Es alguien que crea armonía dondequiera que vaya, que se toma en serio la responsabilidad y que hace que los demás se sientan cuidados. Su talento especial es fomentar el amor en todo.
+This is someone who creates harmony wherever they go, who takes responsibility seriously, and who makes others feel cared for. Their special talent is nurturing love into everything.
 
-Para niños que cumplen 6 años: déjeles ayudar con las tareas de cuidado. Crea hermosos ambientes. Absorben la dinámica familiar y se aseguran de que experimenten amor y armonía.`
+For children with Birthday 6: Let them help with caring tasks. Create beautiful environments. They absorb family dynamics — ensure they experience love and harmony.`
     },
     7: { 
-        title: "El buscador", 
-        reading: `El séptimo cumpleaños trae sabiduría natural, capacidad analítica y profundidad espiritual a esta vida. Esta alma llegó como una buscadora, una interrogadora, una descubridora de verdades ocultas.
+        title: "The Seeker", 
+        reading: `Birthday 7 brings natural wisdom, analytical ability, and spiritual depth into this life. This soul came in as a seeker, a questioner, a finder of hidden truths.
 
-El día del nacimiento imparte un don especial para la investigación y la comprensión. Incluso en la niñez, hay pensamientos profundos, cuestionamientos y una preferencia por la calidad sobre la cantidad en las relaciones.
+The day of birth imparts a special gift for investigation and understanding. Even in childhood, there's deep thinking, questioning, and a preference for quality over quantity in relationships.
 
-Es alguien que ve debajo de las superficies, que comprende lo que otros pasan por alto y que se conecta con un significado más profundo de la vida. Su talento especial es encontrar la verdad.
+This is someone who sees beneath surfaces, who understands what others miss, and who connects with deeper meaning in life. Their special talent is finding truth.
 
-Para niños que cumplen 7 años: responda sus preguntas con atención: perciben cuando les está dando respuestas superficiales. Proporcionar soledad y oportunidades de aprendizaje profundo. Su sabiduría es real.`
+For children with Birthday 7: Answer their questions thoughtfully — they sense when you're giving surface answers. Provide solitude and deep learning opportunities. Their wisdom is real.`
     },
     8: { 
-        title: "El triunfador", 
-        reading: `El octavo cumpleaños trae a esta vida ambición natural, autoridad y dominio material. Esta alma llegó con capacidad para lograr logros y éxitos significativos.
+        title: "The Achiever", 
+        reading: `Birthday 8 brings natural ambition, authority, and material mastery into this life. This soul came in with capability for significant achievement and success.
 
-El día del nacimiento imparte un don especial para la organización y los logros. Incluso en la infancia, hay ambición, comprensión de la dinámica del poder y deseo de triunfar.
+The day of birth imparts a special gift for organization and accomplishment. Even in childhood, there's ambition, understanding of power dynamics, and drive to succeed.
 
-Es alguien que puede lograr metas importantes, que comprende el dinero y el poder y que inspira a otros a través de sus logros. Su talento especial está manifestando el éxito.
+This is someone who can achieve significant goals, who understands money and power, and who inspires others through their accomplishments. Their special talent is manifesting success.
 
-Para niños que cumplen 8 años: permítales experimentar logros a través de metas y recompensas. Enseñar una relación sana con el dinero y el poder. Su ambición está destinada a lograr grandes cosas.`
+For children with Birthday 8: Let them experience achievement through goals and rewards. Teach healthy relationship with money and power. Their ambition is meant to accomplish great things.`
     },
     9: { 
-        title: "El humanitario", 
-        reading: `El cumpleaños 9 trae compasión natural, sabiduría y amor universal a esta vida. Esta alma llegó preocupándose por el mundo y queriendo contribuir al bien mayor.
+        title: "The Humanitarian", 
+        reading: `Birthday 9 brings natural compassion, wisdom, and universal love into this life. This soul came in caring about the world and wanting to contribute to the greater good.
 
-El día del nacimiento imparte un don especial para inspirar y sanar a otros. Incluso en la niñez, hay conciencia del sufrimiento, deseo de ayudar y una cualidad de alma vieja.
+The day of birth imparts a special gift for inspiring and healing others. Even in childhood, there's awareness of suffering, desire to help, and an old-soul quality.
 
-Es alguien que ve el panorama general, que se preocupa profundamente por la humanidad y que inspira a otros a ser mejores. Su talento especial es la curación a través de la presencia.
+This is someone who sees the big picture, who cares deeply about humanity, and who inspires others to be better. Their special talent is healing through presence.
 
-Para niños con cumpleaños 9: involúcrelos en actividades benéficas. Su empatía es enorme: enséñeles que es un regalo y al mismo tiempo les enseña a cuidarse a sí mismos. Están aquí para servir a la humanidad.`
+For children with Birthday 9: Involve them in charitable activities. Their empathy is vast — teach them it's a gift while also teaching self-care. They're here to serve humanity.`
     },
     10: { 
-        title: "El pionero", 
-        reading: `El cumpleaños 10 (1+0=1) combina liderazgo con integridad y adaptabilidad. Esta alma llegó con energía pionera y la capacidad de reinventarse.
+        title: "The Pioneer", 
+        reading: `Birthday 10 (1+0=1) combines leadership with wholeness and adaptability. This soul came in with pioneering energy and the ability to reinvent themselves.
 
-El día del nacimiento imparte dones especiales para iniciar en múltiples direcciones. La presencia del cero amplifica y purifica la energía del liderazgo, añadiendo flexibilidad a la originalidad.
+The day of birth imparts special gifts for initiating in multiple directions. The presence of zero amplifies and purifies the leadership energy, adding flexibility to originality.
 
-Se trata de alguien que puede liderar repetidamente en nuevas direcciones, que se reinventa sin perder su esencia y que es pionero en el cambio con sabiduría. Su talento especial son los nuevos comienzos.
+This is someone who can lead in new directions repeatedly, who reinvents without losing core self, and who pioneers change with wisdom. Their special talent is fresh beginnings.
 
-Para niños con cumpleaños 10: Combinan independencia con adaptabilidad. Que prueben muchas cosas. Su identidad se desarrolla a través de la exploración y el liderazgo.`
+For children with Birthday 10: They combine independence with adaptability. Let them try many things. Their identity develops through exploration and leadership.`
     },
     11: { 
-        title: "El iluminador", 
-        reading: `El cumpleaños 11 es un número maestro que aporta una mayor intuición, inspiración y visión espiritual a esta vida. Esta alma llegó como un canal para una sabiduría superior.
+        title: "The Illuminator", 
+        reading: `Birthday 11 is a Master Number bringing heightened intuition, inspiration, and spiritual insight into this life. This soul came in as a channel for higher wisdom.
 
-El día del nacimiento imparte dones extraordinarios para una percepción más allá de lo común. Incluso en la infancia hay una sensibilidad inusual, una posible conciencia psíquica y una cualidad iluminada.
+The day of birth imparts extraordinary gifts for perception beyond the ordinary. Even in childhood, there's unusual sensitivity, possible psychic awareness, and an illuminated quality.
 
-Es alguien que inspira a través de su presencia, que recibe ideas que benefician a los demás y que tiende un puente entre lo espiritual y lo físico. Su talento especial es iluminar la verdad.
+This is someone who inspires through presence, who receives insights that benefit others, and who bridges the spiritual and physical. Their special talent is illuminating truth.
 
-Para niños que cumplen 11 años: son muy sensibles y están espiritualmente en sintonía. Protege su sistema nervioso mientras nutres sus dones. Sus intuiciones son reales: valídalas.`
+For children with Birthday 11: They are highly sensitive and spiritually attuned. Protect their nervous system while nurturing their gifts. Their intuitions are real — validate them.`
     },
     12: { 
-        title: "El comunicador creativo", 
-        reading: `El cumpleaños 12 (1+2=3) trae a esta vida creatividad dinámica, dones sociales y capacidad expresiva. Esta alma llegó lista para crear, conectarse y comunicarse.
+        title: "The Creative Communicator", 
+        reading: `Birthday 12 (1+2=3) brings dynamic creativity, social gifts, and expressive ability into this life. This soul came in ready to create, connect, and communicate.
 
-El día del nacimiento imparte dones especiales para combinar la iniciativa (1) con la sensibilidad (2) en la expresión creativa (3). Hay un encanto natural y la capacidad de inspirar a través de la comunicación.
+The day of birth imparts special gifts for combining initiative (1) with sensitivity (2) into creative expression (3). There's natural charm and ability to inspire through communication.
 
-Es alguien que puede expresar ideas de manera que lleguen a las personas, que crea con independencia y conciencia de la audiencia, y que eleva a través del arte. Su talento especial es la comunicación inspiradora.
+This is someone who can express ideas in ways that reach people, who creates with both independence and awareness of audience, and who uplifts through artistry. Their special talent is inspiring communication.
 
-Para niños con cumpleaños 12: Tienen liderazgo y sensibilidad. Proporcionar salidas creativas y oportunidades sociales. Su expresión está destinada a alcanzar e inspirar a otros.`
+For children with Birthday 12: They have both leadership and sensitivity. Provide creative outlets and social opportunities. Their expression is meant to reach and inspire others.`
     },
     13: { 
-        title: "El constructor de cimientos", 
-        reading: `El cumpleaños 13 (1+3=4) trae determinación y capacidad para transformar los desafíos en bases sólidas. Esta alma llegó sabiendo que la fuerza viene de la lucha.
+        title: "The Builder of Foundations", 
+        reading: `Birthday 13 (1+3=4) brings determination and ability to transform challenges into solid foundations. This soul came in knowing that strength comes through struggle.
 
-El día del nacimiento imparte dones especiales para construir mediante la transformación. Hay resiliencia, creatividad práctica y la capacidad de crear estructuras a partir del caos.
+The day of birth imparts special gifts for building through transformation. There's resilience, practical creativity, and the ability to create structure from chaos.
 
-Es alguien que se fortalece a través de los desafíos, que construye cosas que duran precisamente porque ha trabajado muy duro y que transforma las dificultades en cimientos. Su talento especial es convertir las pruebas en triunfos.
+This is someone who gets stronger through challenges, who builds things that last precisely because they've worked so hard, and who transforms difficulty into foundation. Their special talent is turning trials into triumphs.
 
-Para niños que cumplen 13 años: no los proteja de todos los desafíos: ellos crecen superándolos. Ayúdelos a ver las dificultades como materiales de construcción. Su resiliencia es notable.`
+For children with Birthday 13: Don't shield them from all challenges — they grow through overcoming. Help them see difficulties as building materials. Their resilience is remarkable.`
     },
     14: { 
-        title: "El comunicador versátil", 
-        reading: `El cumpleaños 14 (1+4=5) trae a esta vida adaptabilidad, habilidades de comunicación y amor por la variedad. Esta alma llegó lista para experimentar y compartir muchas cosas.
+        title: "The Versatile Communicator", 
+        reading: `Birthday 14 (1+4=5) brings adaptability, communication skills, and love of variety into this life. This soul came in ready to experience and share many things.
 
-El día del nacimiento imparte dones especiales para conectar diversas ideas y personas. Hay iniciativa combinada con disciplina, expresada a través de la versatilidad y la comunicación.
+The day of birth imparts special gifts for connecting diverse ideas and people. There's initiative combined with discipline, expressed through versatility and communication.
 
-Es alguien que puede adaptar su mensaje a cualquier audiencia, que se nutre de la variedad manteniendo su identidad central y que enseña a través de la experiencia. Su talento especial es la sabiduría versátil.
+This is someone who can adapt their message to any audience, who thrives on variety while maintaining core identity, and who teaches through experience. Their special talent is versatile wisdom.
 
-Para niños que cumplen 14 años: proporcione variedad dentro de la estructura. Necesitan libertad y fundamento. Sus habilidades comunicativas se desarrollan a través de diversas experiencias.`
+For children with Birthday 14: Provide variety within structure. They need both freedom and foundation. Their communication skills develop through diverse experiences.`
     },
     15: { 
-        title: "El sanador magnético", 
-        reading: `El cumpleaños 15 (1+5=6) trae magnetismo personal, capacidad curativa y poder nutritivo a esta vida. Esta alma entró con fuerza atractiva y corazón bondadoso.
+        title: "The Magnetic Healer", 
+        reading: `Birthday 15 (1+5=6) brings personal magnetism, healing ability, and nurturing power into this life. This soul came in with attractive force and caring heart.
 
-El día del nacimiento imparte dones especiales para atraer a otros y sanarlos. Hay liderazgo y libertad expresados ​​a través del amor y la responsabilidad.
+The day of birth imparts special gifts for drawing others in and healing them. There's leadership and freedom expressed through love and responsibility.
 
-Se trata de alguien cuya presencia cura, que atrae personas y oportunidades, y que lidera mediante el cariño. Su talento especial es el amor magnético.
+This is someone whose presence heals, who attracts people and opportunities, and who leads through nurturing. Their special talent is magnetic love.
 
-Para niños que cumplen 15 años: atraen a los demás fácilmente; enséñeles discernimiento. Su naturaleza protectora es poderosa. Ayúdelos a mantener los límites mientras comparte su presencia sanadora.`
+For children with Birthday 15: They attract others easily — teach them discernment. Their nurturing nature is powerful. Help them maintain boundaries while sharing their healing presence.`
     },
     16: { 
-        title: "El analista introspectivo", 
-        reading: `El cumpleaños 16 (1+6=7) trae a esta vida una profunda introspección, búsqueda espiritual y capacidad analítica. Esta alma vino cuestionando profundamente y buscando la verdad.
+        title: "The Introspective Analyst", 
+        reading: `Birthday 16 (1+6=7) brings deep introspection, spiritual seeking, and analytical ability into this life. This soul came in questioning deeply and seeking truth.
 
-El día del nacimiento imparte dones especiales para descubrir patrones ocultos y verdades espirituales. Hay liderazgo y responsabilidad expresados ​​a través de la investigación y la sabiduría.
+The day of birth imparts special gifts for uncovering hidden patterns and spiritual truths. There's leadership and responsibility expressed through investigation and wisdom.
 
-Es alguien que piensa profundamente, que encuentra la verdad que otros pasan por alto y que desarrolla sabiduría a través de la soledad y el estudio. Su talento especial es la perspicacia.
+This is someone who thinks deeply, who finds truth others miss, and who develops wisdom through solitude and study. Their special talent is penetrating insight.
 
-Para niños que cumplen 16 años: Necesitan soledad para procesar sus pensamientos profundos. No descartes su introspección como retraimiento. Sus dones espirituales analíticos necesitan un desarrollo silencioso.`
+For children with Birthday 16: They need solitude to process their deep thoughts. Don't dismiss their introspection as withdrawal. Their analytical spiritual gifts need quiet development.`
     },
     17: { 
-        title: "El triunfador espiritual", 
-        reading: `El cumpleaños 17 (1+7=8) trae a esta vida perspicacia para los negocios combinada con profundidad espiritual. Esta alma llegó capaz de lograr logros en el mundo material mientras mantenía la conciencia espiritual.
+        title: "The Spiritual Achiever", 
+        reading: `Birthday 17 (1+7=8) brings business acumen combined with spiritual depth into this life. This soul came in able to achieve in the material world while maintaining spiritual awareness.
 
-El día del nacimiento imparte dones especiales para un éxito significativo. Hay liderazgo y sabiduría expresados ​​a través del logro y la autoridad.
+The day of birth imparts special gifts for meaningful success. There's leadership and wisdom expressed through achievement and authority.
 
-Se trata de alguien que triunfa en aspectos importantes, que genera riqueza y poder con fines más allá del ego y que lidera con base espiritual. Su talento especial es el logro decidido.
+This is someone who succeeds in ways that matter, who builds wealth and power for purposes beyond ego, and who leads with spiritual foundation. Their special talent is purposeful achievement.
 
-Para niños que cumplen 17 años: ayúdelos a comprender que el éxito material puede servir a propósitos espirituales. Su impulso para lograr logros debe ser significativo. Guía su poder hacia el bien.`
+For children with Birthday 17: Help them understand that material success can serve spiritual purposes. Their drive to achieve is meant to be meaningful. Guide their power toward good.`
     },
     18: { 
-        title: "El líder humanitario", 
-        reading: `El cumpleaños 18 (1+8=9) trae a esta vida liderazgo al servicio de la humanidad. Esta alma vino a liderar por un bien mayor, para lograr el beneficio de todos.
+        title: "The Humanitarian Leader", 
+        reading: `Birthday 18 (1+8=9) brings leadership in service of humanity into this life. This soul came in to lead for the greater good, to achieve for the benefit of all.
 
-El día del nacimiento imparte dones especiales para inspirar el cambio global. Hay iniciativa pionera y dominio material expresados ​​a través de una visión humanitaria.
+The day of birth imparts special gifts for inspiring global change. There's pioneering initiative and material mastery expressed through humanitarian vision.
 
-Es alguien que lidera movimientos, que logra algo más que un beneficio personal y que inspira a otros a preocuparse por el mundo. Su talento especial es liderar para la humanidad.
+This is someone who leads movements, who achieves for more than personal gain, and who inspires others to care about the world. Their special talent is leading for humanity.
 
-Para niños que cumplen 18 años: Su preocupación por el mundo es real y poderosa. Ayúdalos a canalizarlo de manera constructiva. Están aquí para liderar los esfuerzos humanitarios y fomentar este propósito.`
+For children with Birthday 18: Their concern for the world is real and powerful. Help them channel it constructively. They're here to lead humanitarian efforts — nurture this purpose.`
     },
     19: { 
-        title: "El humanitario independiente", 
-        reading: `El cumpleaños 19 (1+9=10=1) trae independencia combinada con conciencia universal a esta vida. Esta alma llegó como una pionera que sirve a la humanidad a través de su propio camino.
+        title: "The Independent Humanitarian", 
+        reading: `Birthday 19 (1+9=10=1) brings independence combined with universal consciousness into this life. This soul came in as a pioneer who serves humanity through their own path.
 
-El día del nacimiento imparte dones especiales por el servicio independiente. Hay doble energía de liderazgo (1 que aparece dos veces) con finalización humanitaria (9).
+The day of birth imparts special gifts for independent service. There's double leadership energy (1 appearing twice) with humanitarian completion (9).
 
-Se trata de alguien que ayuda al mundo a su manera, que lidera de forma independiente mientras sirve al conjunto y que es pionero para todos. Su talento especial es la contribución individual a lo universal.
+This is someone who helps the world in their own unique way, who leads independently while serving the whole, and who pioneers for all. Their special talent is individual contribution to the universal.
 
-Para niños que cumplen 19 años: Marchan al son de su propio tambor pero se preocupan por todos. Permítales encontrar su forma única de servir. Su independencia tiene un propósito humanitario.`
+For children with Birthday 19: They march to their own drum but care about everyone. Let them find their unique way to serve. Their independence has humanitarian purpose.`
     },
     20: { 
-        title: "El diplomático sensible", 
-        reading: `El cumpleaños 20 (2+0=2) trae a esta vida una mayor sensibilidad, intuición y dones diplomáticos. Esta alma llegó como una pacificadora y defensora amplificada.
+        title: "The Sensitive Diplomat", 
+        reading: `Birthday 20 (2+0=2) brings heightened sensitivity, intuition, and diplomatic gifts into this life. This soul came in as an amplified peacemaker and supporter.
 
-El día del nacimiento imparte dones especiales para percibir y armonizar. El cero amplifica y purifica la energía sensible y cooperativa, añadiendo una dimensión espiritual a los dones de asociación.
+The day of birth imparts special gifts for perceiving and harmonizing. The zero amplifies and purifies the sensitive, cooperative energy, adding spiritual dimension to partnership gifts.
 
-Se trata de alguien cuya sensibilidad es casi psíquica, que crea armonía instintivamente y que apoya a los demás con una percepción inusual. Su talento especial es la diplomacia sensible.
+This is someone whose sensitivity is almost psychic, who creates harmony instinctively, and who supports others with unusual perception. Their special talent is sensitive diplomacy.
 
-Para niños que cumplen 20 años: pueden ser extremadamente sensibles: cree ambientes pacíficos. Su intuición se intensifica. Ayúdelos a desarrollar confianza junto con su naturaleza de apoyo natural.`
+For children with Birthday 20: They may be extremely sensitive — create peaceful environments. Their intuition is heightened. Help them develop confidence alongside their natural supporting nature.`
     },
     21: { 
-        title: "La mariposa social", 
-        reading: `El cumpleaños 21 (2+1=3) trae a esta vida dones sociales excepcionales, encanto y expresión creativa. Esta alma llegó sabiendo cómo conectarse, crear e inspirar alegría.
+        title: "The Social Butterfly", 
+        reading: `Birthday 21 (2+1=3) brings exceptional social gifts, charm, and creative expression into this life. This soul came in knowing how to connect, create, and inspire joy.
 
-El día del nacimiento imparte dones especiales para la creatividad social. La asociación y el liderazgo se combinan en una energía expresiva y conectora que une a las personas.
+The day of birth imparts special gifts for social creativity. Partnership and leadership combine into expressive, connecting energy that draws people together.
 
-Se trata de alguien que establece contactos de forma natural, que crea de maneras que unen a las personas y que inspira a través de su arte social. Su talento especial es la conexión creativa.
+This is someone who networks naturally, who creates in ways that bring people together, and who inspires through their social artistry. Their special talent is creative connection.
 
-Para niños que cumplen 21 años: prosperan en entornos sociales. Proporcionar oportunidades para la colaboración creativa. Su encanto es genuino: ayúdalos a usarlo para el bien.`
+For children with Birthday 21: They thrive in social settings. Provide opportunities for creative collaboration. Their charm is genuine — help them use it for good.`
     },
     22: { 
-        title: "El maestro constructor", 
-        reading: `El cumpleaños 22 es un número maestro que brinda una capacidad excepcional para manifestar grandes visiones en realidad. Esta alma llegó como arquitecta de sueños con maestría práctica.
+        title: "The Master Builder", 
+        reading: `Birthday 22 is a Master Number bringing exceptional ability to manifest large visions into reality. This soul came in as an architect of dreams with practical mastery.
 
-El día del nacimiento imparte dones extraordinarios para construir a gran escala. La energía de la doble asociación crea una capacidad de maestro constructor, capaz de manifestar visiones que sirven a muchos.
+The day of birth imparts extraordinary gifts for building on a grand scale. Double partnership energy creates master builder capacity — able to manifest visions that serve many.
 
-Se trata de alguien que ve enormes posibilidades y tiene las habilidades prácticas para hacerlas realidad, que construye estructuras duraderas que benefician a la humanidad. Su talento especial es manifestar lo imposible.
+This is someone who sees huge possibilities and has the practical skills to make them real, who builds lasting structures that benefit humanity. Their special talent is manifesting the impossible.
 
-Para niños que cumplen 22 años: pueden parecer increíblemente ambiciosos; no descartes sus sueños. Necesitan habilidades prácticas para manifestar visiones. Son Maestros Constructores con un potencial extraordinario.`
+For children with Birthday 22: They may seem impossibly ambitious — don't dismiss their dreams. They need practical skills to manifest visions. They are Master Builders with extraordinary potential.`
     },
     23: { 
-        title: "El comunicador versátil", 
-        reading: `El cumpleaños 23 (2+3=5) trae a esta vida dones de comunicación, adaptabilidad y expresión influyente. Esta alma llegó capaz de llegar a las personas a través de una comunicación versátil.
+        title: "The Versatile Communicator", 
+        reading: `Birthday 23 (2+3=5) brings communication gifts, adaptability, and influential expression into this life. This soul came in able to reach people through versatile communication.
 
-El día del nacimiento imparte dones especiales para conectarse a través de las palabras. La colaboración y la creatividad se combinan en libertad y variedad, expresadas a través de una comunicación que se adapta a cualquier público.
+The day of birth imparts special gifts for connecting through words. Partnership and creativity combine into freedom and variety, expressed through communication that adapts to any audience.
 
-Se trata de alguien que puede influir a través de las palabras, que adapta su mensaje sin perder la verdad y que enseña a través de la experiencia y la expresión. Su talento especial es la comunicación influyente.
+This is someone who can influence through words, who adapts their message without losing truth, and who teaches through experience and expression. Their special talent is influential communication.
 
-Para niños con cumpleaños 23: Aprenden a través de la variedad y se comunican de forma natural. Proporcionar diversas experiencias y salidas expresivas. Sus palabras tienen poder; ayúdelos a usarlas sabiamente.`
+For children with Birthday 23: They learn through variety and communicate naturally. Provide diverse experiences and expressive outlets. Their words carry power — help them use it wisely.`
     },
     24: { 
-        title: "El consejero devoto", 
-        reading: `El cumpleaños 24 (2+4=6) trae a esta vida instintos cariñosos, capacidad de asesoramiento y atención devota. Esta alma llegó sabiendo apoyar, aconsejar y sanar a través del amor.
+        title: "The Devoted Counselor", 
+        reading: `Birthday 24 (2+4=6) brings nurturing instincts, counseling ability, and devoted care into this life. This soul came in knowing how to support, advise, and heal through love.
 
-El día del nacimiento imparte dones especiales para armonizar y guiar. La asociación y la estabilidad se combinan en responsabilidad y amor que sirve profundamente a los demás.
+The day of birth imparts special gifts for harmonizing and guiding. Partnership and stability combine into responsibility and love that serves others deeply.
 
-Es alguien que naturalmente aconseja a los demás, que crea armonía a través de una atención devota y que sana a través de una presencia constante y amorosa. Su talento especial es el asesoramiento dedicado.
+This is someone who naturally counsels others, who creates harmony through devoted attention, and who heals through consistent, loving presence. Their special talent is devoted counseling.
 
-Para niños que cumplen 24 años: naturalmente, cuidan de los demás; asegúrese de que ellos también sean cuidados. Sus dotes de asesoramiento surgen temprano. Cree un dar y un recibir equilibrados.`
+For children with Birthday 24: They naturally take care of others — make sure they're also cared for. Their counseling gifts emerge early. Create balanced giving and receiving.`
     },
     25: { 
-        title: "El sabio intuitivo", 
-        reading: `El cumpleaños 25 (2+5=7) trae a esta vida una mente analítica combinada con dones intuitivos. Esta alma llegó capaz de percibir verdades ocultas tanto a través de la lógica como de la intuición.
+        title: "The Wise Intuitive", 
+        reading: `Birthday 25 (2+5=7) brings analytical mind combined with intuitive gifts into this life. This soul came in able to perceive hidden truths through both logic and intuition.
 
-El día del nacimiento imparte dones especiales para la percepción sabia. La asociación y la libertad se combinan en una introspección que utiliza tanto la cabeza como el corazón para encontrar la verdad.
+The day of birth imparts special gifts for wise perception. Partnership and freedom combine into introspection that uses both head and heart to find truth.
 
-Es alguien que analiza e intuye simultáneamente, que encuentra verdades que otros pasan por alto a través de la percepción dual y que desarrolla sabiduría a través de la experiencia y la reflexión. Su talento especial es el conocimiento integrado.
+This is someone who analyzes and intuits simultaneously, who finds truths others miss through dual perception, and who develops wisdom through experience and reflection. Their special talent is integrated knowing.
 
-Para niños que cumplen 25 años: Procesan tanto intelectual como intuitivamente. Honra ambas formas de saber. Sus conocimientos llegan a través de múltiples canales: confíe en sus percepciones.`
+For children with Birthday 25: They process both intellectually and intuitively. Honor both ways of knowing. Their insights come through multiple channels — trust their perceptions.`
     },
     26: { 
-        title: "El visionario práctico", 
-        reading: `El cumpleaños 26 (2+6=8) trae a esta vida habilidades comerciales combinadas con un enfoque de asociación. Esta alma llegó capaz de lograr el éxito material a través de la colaboración.
+        title: "The Practical Visionary", 
+        reading: `Birthday 26 (2+6=8) brings business skills combined with partnership focus into this life. This soul came in able to achieve material success through collaboration.
 
-El día del nacimiento imparte dones especiales para generar riqueza y poder con y para los demás. La asociación y la responsabilidad se combinan en logros que sirven a las relaciones.
+The day of birth imparts special gifts for building wealth and power with and for others. Partnership and responsibility combine into achievement that serves relationships.
 
-Se trata de alguien que triunfa en asociación, que genera riqueza a través de la cooperación y que utiliza el poder para beneficiar a sus seres queridos. Su talento especial es el logro colaborativo.
+This is someone who succeeds in partnership, who builds wealth through cooperation, and who uses power to benefit those they care about. Their special talent is collaborative achievement.
 
-Para niños que cumplen 26 años: ayúdelos a comprender la asociación en el logro. Su éxito debe ser compartido. Guíe su creciente poder hacia el beneficio de los demás.`
+For children with Birthday 26: Help them understand partnership in achievement. Their success is meant to be shared. Guide their growing power toward benefiting others.`
     },
     27: { 
-        title: "El líder compasivo", 
-        reading: `El cumpleaños 27 (2+7=9) trae a esta vida liderazgo en causas humanitarias combinado con sabiduría espiritual. Esta alma vino para inspirar a través de la compasión y la comprensión.
+        title: "The Compassionate Leader", 
+        reading: `Birthday 27 (2+7=9) brings leadership in humanitarian causes combined with spiritual wisdom into this life. This soul came in to inspire through compassion and understanding.
 
-El día del nacimiento imparte dones especiales para una influencia sabia y compasiva. La asociación y la introspección se combinan en una realización humanitaria que sirve a través de una profunda sabiduría.
+The day of birth imparts special gifts for wise, compassionate influence. Partnership and introspection combine into humanitarian completion that serves through deep wisdom.
 
-Es alguien que lidera con suavidad pero poderosamente, que inspira a través de la compasión en lugar de la fuerza, y que sirve a la humanidad a través de la comprensión espiritual. Su talento especial es la sabia compasión.
+This is someone who leads gently but powerfully, who inspires through compassion rather than force, and who serves humanity through spiritual understanding. Their special talent is wise compassion.
 
-Para niños que cumplen 27 años: su empatía es profunda y su sabiduría real. Ayúdalos a liderar sin agotarse. Sirven a la humanidad a través de la comprensión: nutren ambos dones.`
+For children with Birthday 27: Their empathy is deep and their wisdom real. Help them lead without depleting themselves. They serve humanity through understanding — nurture both gifts.`
     },
     28: { 
-        title: "El diplomático independiente", 
-        reading: `El cumpleaños 28 (2+8=10=1) trae a esta vida capacidad de liderazgo combinada con sensibilidad de asociación. Esta alma llegó capaz de liderar sin dejar de ser consciente de las necesidades de los demás.
+        title: "The Independent Diplomat", 
+        reading: `Birthday 28 (2+8=10=1) brings leadership ability combined with partnership sensitivity into this life. This soul came in able to lead while remaining aware of others' needs.
 
-El día del nacimiento imparte dones especiales para un liderazgo equilibrado. La asociación y el poder se combinan en una iniciativa independiente que permanece conectada con los demás.
+The day of birth imparts special gifts for balanced leadership. Partnership and power combine into independent initiative that stays connected to others.
 
-Es alguien que lidera con sensibilidad, que logra manteniendo relaciones y que es pionero sin perder la conciencia colaborativa. Su talento especial es el liderazgo conectado.
+This is someone who leads with sensitivity, who achieves while maintaining relationships, and who pioneers without losing collaborative awareness. Their special talent is connected leadership.
 
-Para niños que cumplen 28 años: pueden liderar y cooperar; ayúdelos a equilibrar ambos. Su independencia incluye a los demás. Guíe su creciente autoridad para que permanezcan conscientes de las relaciones.`
+For children with Birthday 28: They can lead and cooperate — help them balance both. Their independence includes others. Guide their growing authority to remain relationship-aware.`
     },
     29: { 
-        title: "El pacificador visionario", 
-        reading: `El cumpleaños 29 (2+9=11) trae a esta vida la sensibilidad del Número Maestro combinada con una visión humanitaria. Esta alma llegó como un puente entre mundos, un diplomático visionario.
+        title: "The Visionary Peacemaker", 
+        reading: `Birthday 29 (2+9=11) brings Master Number sensitivity combined with humanitarian vision into this life. This soul came in as a bridge between worlds, a visionary diplomat.
 
-El día del nacimiento imparte dones excepcionales para una pacificación inspirada. La asociación y la realización se combinan en una iluminación maestra que sirve a través de la visión y la sensibilidad.
+The day of birth imparts exceptional gifts for inspired peacemaking. Partnership and completion combine into master illumination that serves through vision and sensitivity.
 
-Se trata de alguien cuya intuición abarca mundos, que crea paz a través de la visión espiritual y que tiende un puente entre lo terrenal y lo divino. Su talento especial es la pacificación iluminada.
+This is someone whose intuition spans worlds, who creates peace through spiritual vision, and who bridges the earthly and divine. Their special talent is illuminated peacemaking.
 
-Para niños que cumplen 29 años: son inusualmente sensibles y visionarios. Crear ambientes que apoyen su sensibilidad. Su pacificación proviene de la percepción espiritual: hónrenla.`
+For children with Birthday 29: They are unusually sensitive and visionary. Create environments that support their sensitivity. Their peacemaking comes from spiritual perception — honor it.`
     },
     30: { 
-        title: "El visionario creativo", 
-        reading: `El cumpleaños 30 (3+0=3) trae creatividad, expresión y alegría amplificadas a esta vida. Esta alma llegó como una poderosa creadora y comunicadora.
+        title: "The Creative Visionary", 
+        reading: `Birthday 30 (3+0=3) brings amplified creativity, expression, and joy into this life. This soul came in as a powerful creator and communicator.
 
-El día del nacimiento imparte dones especiales para la creación inspirada. La creatividad se amplifica y purifica en cero, añadiendo una dimensión espiritual a la autoexpresión y la alegría.
+The day of birth imparts special gifts for inspired creation. Creativity is amplified and purified by zero, adding spiritual dimension to self-expression and joy.
 
-Se trata de alguien cuya creatividad canaliza algo más allá de lo personal, que se expresa de maneras que inspiran y elevan, y que crea una belleza que toca las almas. Su talento especial es la creación inspirada.
+This is someone whose creativity channels something beyond personal, who expresses in ways that inspire and uplift, and who creates beauty that touches souls. Their special talent is inspired creation.
 
-Para niños que cumplen 30 años: su creatividad tiene una profundidad inusual. Proporcionar abundantes salidas creativas. Su expresión tiene algo especial: ayúdelo a desarrollarse sin presiones.`
+For children with Birthday 30: Their creativity has unusual depth. Provide abundant creative outlets. Their expression carries something special — help it develop without pressure.`
     },
     31: { 
-        title: "El Creador disciplinado", 
-        reading: `El cumpleaños 31 (3+1=4) trae creatividad combinada con disciplina práctica a esta vida. Esta alma llegó capaz de manifestar visiones artísticas en una realidad sólida.
+        title: "The Disciplined Creator", 
+        reading: `Birthday 31 (3+1=4) brings creativity combined with practical discipline into this life. This soul came in able to manifest artistic visions into solid reality.
 
-El día del nacimiento imparte dones especiales para desarrollar visiones creativas. La creatividad y el liderazgo se combinan en una estabilidad que produce obras artísticas duraderas.
+The day of birth imparts special gifts for building creative visions. Creativity and leadership combine into stability that produces lasting artistic works.
 
-Es alguien que crea con disciplina, que convierte visiones artísticas en formas tangibles y que combina la inspiración con la transpiración. Su talento especial es la creatividad manifestada.
+This is someone who creates with discipline, who builds artistic visions into tangible form, and who combines inspiration with perspiration. Their special talent is manifested creativity.
 
-Para niños que cumplen 31 años: Crean con un seguimiento inusual. Apoye tanto su creatividad como su disciplina. Su arte tiene una base práctica: ayúdelos a desarrollar ambos aspectos.`
+For children with Birthday 31: They create with unusual follow-through. Support both their creativity and their discipline. Their art has practical foundation — help them develop both aspects.`
     }
 };
 
 var PERSONAL_YEAR_READINGS = {
     1: {
-        title: "Nuevos comienzos",
-        keywords: ["Nuevo comienzo", "Iniciativa", "Independencia", "Plantar semillas"],
-        reading: `El Año 1 personal marca el comienzo de un nuevo ciclo de 9 años. Este es un año poderoso para nuevos comienzos, nuevos comienzos y para plantar semillas para el futuro. La energía apoya la independencia, la iniciativa y el avance de nuevos caminos. Actúe sobre los sueños que han estado esperando. Inicie proyectos, tome decisiones y asuma el liderazgo. Lo que se inicia este año marca la pauta para los próximos nueve años. Concéntrese en uno mismo, la ambición y las nuevas direcciones.`
+        title: "New Beginnings",
+        keywords: ["Fresh Start", "Initiative", "Independence", "Planting Seeds"],
+        reading: `Personal Year 1 marks the beginning of a new 9-year cycle. This is a powerful year for new beginnings, fresh starts, and planting seeds for the future. Energy supports independence, initiative, and pioneering new paths. Take action on dreams that have been waiting. Start projects, make decisions, and step into leadership. What is initiated this year sets the tone for the next nine years. Focus on self, ambition, and new directions.`
     },
     2: {
-        title: "Paciencia y asociación",
-        keywords: ["Cooperación", "Paciencia", "Relaciones", "Detalles"],
-        reading: `El segundo año personal es un año de paciencia, cooperación y atención a los detalles. Después de la acción del Año 1, este año requiere reducir el ritmo y trabajar con otros. La energía respalda las asociaciones, la diplomacia y el trabajo entre bastidores. Fomente las relaciones y las semillas plantadas el año pasado. Practique la paciencia ya que el crecimiento ocurre lentamente. Este no es un año para grandes acciones independientes, sino para la cooperación y la espera del momento adecuado.`
+        title: "Patience & Partnership",
+        keywords: ["Cooperation", "Patience", "Relationships", "Details"],
+        reading: `Personal Year 2 is a year of patience, cooperation, and attention to details. After the action of Year 1, this year requires slowing down and working with others. Energy supports partnerships, diplomacy, and behind-the-scenes work. Nurture relationships and the seeds planted last year. Practice patience as growth happens slowly. This is not a year for major independent action but for cooperation and waiting for right timing.`
     },
     3: {
-        title: "Creatividad y Expresión",
-        keywords: ["Alegría", "Creatividad", "Social", "Expresión"],
-        reading: `El tercer año personal trae una explosión de energía creativa, alegría y oportunidades sociales. Después de la paciencia del Año 2, este año premia la autoexpresión y la comunicación. La energía respalda proyectos creativos, conexiones sociales y una expansión optimista. Exprésate a través del arte, la escritura, la conversación o cualquier salida creativa. Socialice, establezca contactos y disfrute más de la vida. Esté atento a la energía dispersa y termine lo que empiece.`
+        title: "Creativity & Expression",
+        keywords: ["Joy", "Creativity", "Social", "Expression"],
+        reading: `Personal Year 3 brings a burst of creative energy, joy, and social opportunity. After the patience of Year 2, this year rewards self-expression and communication. Energy supports creative projects, social connections, and optimistic expansion. Express yourself through art, writing, speaking, or any creative outlet. Socialize, network, and enjoy life more. Watch for scattered energy and finish what you start.`
     },
     4: {
-        title: "Construcción y cimientos",
-        keywords: ["Trabajar", "Base", "Disciplina", "Estructura"],
-        reading: `El cuarto año personal es un año de arduo trabajo, construcción de cimientos y creación de estructuras. Después de la expansión del Año 3, este año requiere disciplina y esfuerzo práctico. La energía apoya la construcción de algo duradero a través del trabajo constante. Concéntrese en la carrera, el hogar, la salud y cualquier área que necesite una base sólida. Espere trabajar duro pero también ver resultados tangibles. Las limitaciones pueden resultar frustrantes, pero tienen un propósito importante.`
+        title: "Building & Foundation",
+        keywords: ["Work", "Foundation", "Discipline", "Structure"],
+        reading: `Personal Year 4 is a year of hard work, building foundations, and creating structure. After the expansion of Year 3, this year requires discipline and practical effort. Energy supports building something lasting through steady work. Focus on career, home, health, and any area needing solid foundation. Expect to work hard but also to see tangible results. Limitations may feel frustrating but serve important purpose.`
     },
     5: {
-        title: "Cambio y libertad",
-        keywords: ["Cambiar", "Libertad", "Aventura", "Versatilidad"],
-        reading: `El quinto año personal trae cambios significativos, libertad y nuevas aventuras. Después del arduo trabajo del año 4, este año ofrece expansión y liberación. La energía apoya los viajes, las nuevas experiencias y la liberación de limitaciones. Espere lo inesperado y acepte el cambio en lugar de resistirse a él. Este es un año de transición y variedad. Demasiada rutina te resultará sofocante. Asuma riesgos calculados y amplíe horizontes.`
+        title: "Change & Freedom",
+        keywords: ["Change", "Freedom", "Adventure", "Versatility"],
+        reading: `Personal Year 5 brings significant change, freedom, and new adventures. After the hard work of Year 4, this year offers expansion and liberation. Energy supports travel, new experiences, and breaking free from limitations. Expect the unexpected and embrace change rather than resisting it. This is a year of transition and variety. Too much routine will feel stifling. Take calculated risks and expand horizons.`
     },
     6: {
-        title: "Amor y Responsabilidad",
-        keywords: ["Familia", "Responsabilidad", "Amar", "Hogar"],
-        reading: `Personal Year 6 se centra en el amor, la responsabilidad, la familia y el hogar. Después de los cambios del Año 5, este año vuelve la atención al ámbito doméstico. La energía apoya las relaciones, los asuntos familiares y embellece el ambiente del hogar. Acepte las responsabilidades de buena gana ya que traen recompensas. Puede ocurrir matrimonio, expansión familiar o compra de vivienda. Concéntrese en el servicio a sus seres queridos y en crear armonía. También se favorece la belleza y el arte.`
+        title: "Love & Responsibility",
+        keywords: ["Family", "Responsibility", "Love", "Home"],
+        reading: `Personal Year 6 focuses on love, responsibility, family, and home. After the changes of Year 5, this year brings attention back to domestic sphere. Energy supports relationships, family matters, and beautifying home environment. Accept responsibilities willingly as they bring rewards. Marriage, family expansion, or home purchase may occur. Focus on service to loved ones and creating harmony. Beauty and art are also favored.`
     },
     7: {
-        title: "Reflexión y crecimiento interior",
-        keywords: ["Introspección", "Espiritualidad", "Descansar", "Estudiar"],
-        reading: `El séptimo año personal es un año de introspección, crecimiento espiritual y desarrollo interior. Después de la responsabilidad de Year 6, este año ofrece tiempo para la reflexión y el descanso. La energía apoya el estudio, la meditación, la soledad y la búsqueda de un significado más profundo. El progreso externo puede disminuir a medida que el progreso interno se acelera. Tómese un tiempo a solas para procesar e integrarse. Las prácticas espirituales y de salud son importantes. Confía en la intuición y desarrolla la sabiduría.`
+        title: "Reflection & Inner Growth",
+        keywords: ["Introspection", "Spirituality", "Rest", "Study"],
+        reading: `Personal Year 7 is a year of introspection, spiritual growth, and inner development. After the responsibility of Year 6, this year offers time for reflection and rest. Energy supports study, meditation, solitude, and seeking deeper meaning. External progress may slow as inner progress accelerates. Take time alone to process and integrate. Health and spiritual practices are important. Trust intuition and develop wisdom.`
     },
     8: {
-        title: "Poder y logros",
-        keywords: ["Éxito", "Dinero", "Fuerza", "Logro"],
-        reading: `Personal Year 8 se centra en el poder, el dinero, los logros y el éxito material. Después del trabajo interior del Año 7, este año ofrece cosecha y reconocimiento. La energía respalda los negocios, el avance profesional y el aumento financiero. El karma se acelera: lo construido será recompensado o se desmoronará. Asuma la autoridad y reclame sus logros. Los asuntos legales y financieros favorecen la acción. Utilice el poder de forma sabia y ética.`
+        title: "Power & Achievement",
+        keywords: ["Success", "Money", "Power", "Achievement"],
+        reading: `Personal Year 8 brings focus to power, money, achievement, and material success. After the inner work of Year 7, this year offers harvest and recognition. Energy supports business, career advancement, and financial increase. Karma accelerates - what has been built will be rewarded or fall apart. Step into authority and claim achievements. Legal and financial matters favor action. Use power wisely and ethically.`
     },
     9: {
-        title: "Finalización y lanzamiento",
-        keywords: ["Terminaciones", "Terminación", "Liberar", "Preparación"],
-        reading: `El Año Personal 9 trae la culminación, el final y la liberación de lo que ya no sirve. Este es el último año del ciclo de 9 años, preparándonos para nuevos comienzos el próximo año. La energía apoya el dejar ir, terminar proyectos y despejar el camino a seguir. Las relaciones, trabajos o situaciones que han seguido su curso terminarán. Libera con gratitud en lugar de aferrarte. Se favorecen el servicio humanitario y la expresión creativa. Prepárese para el nuevo comienzo que se avecina.`
+        title: "Completion & Release",
+        keywords: ["Endings", "Completion", "Release", "Preparation"],
+        reading: `Personal Year 9 brings completion, endings, and release of what no longer serves. This is the final year of the 9-year cycle, preparing for new beginnings next year. Energy supports letting go, finishing projects, and clearing the way forward. Relationships, jobs, or situations that have run their course will end. Release with gratitude rather than clinging. Humanitarian service and creative expression are favored. Prepare for the fresh start ahead.`
     }
 };
 
 var PINNACLE_NUMBER_READINGS = {
     1: { 
-        title: "El pináculo pionero",
-        reading: `Este Pináculo de 1 abre un poderoso capítulo de independencia, liderazgo y nuevos comienzos. El universo exige valentía, autosuficiencia y voluntad de ser pioneros.
+        title: "The Pioneer Pinnacle",
+        reading: `This Pinnacle of 1 opens a powerful chapter of independence, leadership, and new beginnings. The universe is calling for courage, self-reliance, and the willingness to pioneer.
 
-<strong>La Energía:</strong> Este período enfatiza la individualidad, la originalidad y el coraje de estar solo. Las circunstancias de la vida requerirán iniciativa, capacidad de iniciativa propia y confianza para liderar en lugar de seguir.
+<strong>The Energy:</strong> This period emphasizes individuality, originality, and the courage to stand alone. Life circumstances will require initiative, self-starting ability, and the confidence to lead rather than follow.
 
-<strong>Las oportunidades:</strong> iniciar nuevas empresas, asumir el liderazgo, desarrollar la identidad personal y tomar decisiones independientes. Este es el momento de empezar cosas, no de esperar a otras. Se favorecen las ideas originales.
+<strong>The Opportunities:</strong> Starting new ventures, stepping into leadership, developing personal identity, and making independent decisions. This is the time to begin things, not wait for others. Original ideas are favored.
 
-<strong>Los desafíos:</strong> Aprender a liderar sin dominar, a tener confianza sin arrogancia y a estar solo sin aislamiento. Equilibrar el enfoque en uno mismo con la conciencia de los demás.
+<strong>The Challenges:</strong> Learning to lead without dominating, to be confident without arrogance, and to stand alone without isolation. Balancing self-focus with awareness of others.
 
-<strong>El crecimiento:</strong> Al final de este Pinnacle, espere emerger con una identidad propia más fuerte, habilidades de liderazgo comprobadas y el conocimiento de que puede iniciar y completar cosas en sus propios términos.`
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with stronger self-identity, proven leadership abilities, and the knowledge that you can initiate and complete things on your own terms.`
     },
     2: { 
-        title: "El pináculo de la asociación",
-        reading: `Este Pinnacle of 2 abre un poderoso capítulo de asociación, paciencia y cooperación. El universo exige diplomacia, sensibilidad y capacidad de trabajar en armonía con los demás.
+        title: "The Partnership Pinnacle",
+        reading: `This Pinnacle of 2 opens a powerful chapter of partnership, patience, and cooperation. The universe is calling for diplomacy, sensitivity, and the ability to work harmoniously with others.
 
-<strong>La Energía:</strong> Este período enfatiza las relaciones, la colaboración y el arte sutil de dar y recibir. Las circunstancias de la vida requerirán paciencia, tacto y la capacidad de apoyar en lugar de liderar.
+<strong>The Energy:</strong> This period emphasizes relationships, collaboration, and the subtle art of give-and-take. Life circumstances will require patience, tact, and the ability to support rather than lead.
 
-<strong>Las oportunidades:</strong> Profundizar asociaciones, desarrollar habilidades diplomáticas, encontrar armonía en las relaciones y aprender a recibir y dar. Este es el momento de la colaboración y el trabajo en equipo.
+<strong>The Opportunities:</strong> Deepening partnerships, developing diplomatic skills, finding harmony in relationships, and learning to receive as well as give. This is the time for collaboration and teamwork.
 
-<strong>Los desafíos:</strong> Mantener la identidad mientras se asocia, desarrollar paciencia con el progreso lento y manejar la sensibilidad que viene con esta vibración. Evitando tanto el felpudo como los extremos lejanos.
+<strong>The Challenges:</strong> Maintaining identity while partnering, developing patience with slow progress, and handling the sensitivity that comes with this vibration. Avoiding both doormat and distant extremes.
 
-<strong>El crecimiento:</strong> Al final de este Pinnacle, espere emerger con habilidades de relación refinadas, una inteligencia emocional más profunda y el conocimiento de que algunas metas se logran mejor juntos.`
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with refined relationship skills, deeper emotional intelligence, and the knowledge that some goals are best achieved together.`
     },
     3: { 
-        title: "El pináculo creativo",
-        reading: `Este Pináculo de 3 abre un poderoso capítulo de creatividad, autoexpresión y alegría. El universo pide comunicación, expresión artística y la voluntad de compartir tus dones únicos.
+        title: "The Creative Pinnacle",
+        reading: `This Pinnacle of 3 opens a powerful chapter of creativity, self-expression, and joy. The universe is calling for communication, artistic expression, and the willingness to share your unique gifts.
 
-<strong>La Energía:</strong> Este período enfatiza la creatividad, la conexión social y el poder de las palabras. Las circunstancias de la vida fomentarán la autoexpresión, las actividades artísticas y el compromiso alegre con la vida.
+<strong>The Energy:</strong> This period emphasizes creativity, social connection, and the power of words. Life circumstances will encourage self-expression, artistic pursuits, and joyful engagement with life.
 
-<strong>Las Oportunidades:</strong> Proyectos creativos, emprendimientos de comunicación, expansión social y cualquier forma de autoexpresión. Este es el momento de escribir, hablar, crear y compartir su perspectiva única.
+<strong>The Opportunities:</strong> Creative projects, communication ventures, social expansion, and any form of self-expression. This is the time to write, speak, create, and share your unique perspective.
 
-<strong>Los desafíos:</strong> Energía dispersa, superficialidad y dudas sobre las habilidades creativas. Aprender a concentrar la energía creativa y completar lo iniciado.
+<strong>The Challenges:</strong> Scattered energy, superficiality, and self-doubt about creative abilities. Learning to focus creative energy and complete what is started.
 
-<strong>El crecimiento:</strong> Al final de este Pinnacle, espere emerger con habilidades creativas desarrolladas, habilidades de comunicación más sólidas y la confianza para expresarse auténticamente.`
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with developed creative abilities, stronger communication skills, and the confidence to express yourself authentically.`
     },
     4: { 
-        title: "El pináculo del constructor",
-        reading: `Este Pináculo de 4 abre un poderoso capítulo de construcción, disciplina y creación de bases duraderas. El universo exige trabajo duro, organización y compromiso con el logro práctico.
+        title: "The Builder Pinnacle",
+        reading: `This Pinnacle of 4 opens a powerful chapter of building, discipline, and creating lasting foundations. The universe is calling for hard work, organization, and commitment to practical achievement.
 
-<strong>La Energía:</strong> Este período enfatiza la estructura, la disciplina y el progreso metódico. Las circunstancias de la vida requerirán un esfuerzo constante, atención a los detalles y paciencia para construir algo que dure.
+<strong>The Energy:</strong> This period emphasizes structure, discipline, and methodical progress. Life circumstances will require steady effort, attention to detail, and the patience to build something that lasts.
 
-<strong>Las oportunidades:</strong> Establecer bases, desarrollar una carrera o un negocio, crear sistemas y lograr logros mediante un esfuerzo persistente. Este es el momento de realizar un trabajo práctico que cree valor duradero.
+<strong>The Opportunities:</strong> Establishing foundations, building career or business, creating systems, and achieving through persistent effort. This is the time for practical work that creates lasting value.
 
-<strong>Los desafíos:</strong> Pensamiento rígido, exceso de trabajo y frustración por el progreso lento. Aprender a trabajar duro sin convertirse en un caballo de batalla y a crear estructuras sin rigidez.
+<strong>The Challenges:</strong> Rigid thinking, overwork, and frustration with slow progress. Learning to work hard without becoming a workhorse, and to create structure without rigidity.
 
-<strong>El crecimiento:</strong> Al final de este Pinnacle, espere emerger con algo sólido, una ética de trabajo comprobada y el conocimiento de que el esfuerzo paciente crea resultados duraderos.`
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with something solid built, proven work ethic, and the knowledge that patient effort creates lasting results.`
     },
     5: { 
-        title: "El pináculo de la libertad",
-        reading: `Este Pinnacle of 5 abre un poderoso capítulo de cambio, libertad y aventura. El universo exige adaptabilidad, coraje para abrazar lo desconocido y voluntad de ampliar horizontes.
+        title: "The Freedom Pinnacle",
+        reading: `This Pinnacle of 5 opens a powerful chapter of change, freedom, and adventure. The universe is calling for adaptability, courage to embrace the unknown, and willingness to expand horizons.
 
-<strong>La Energía:</strong> Este período enfatiza la variedad, el movimiento y el cambio. Las circunstancias de la vida requerirán flexibilidad, espíritu aventurero y la capacidad de prosperar en medio de la incertidumbre.
+<strong>The Energy:</strong> This period emphasizes variety, movement, and change. Life circumstances will require flexibility, adventurous spirit, and the ability to thrive amidst uncertainty.
 
-<strong>Las Oportunidades:</strong> Viajes, nuevas experiencias, cambios importantes en la vida, aprender cosas nuevas y liberarse de situaciones limitantes. Este es el momento de la expansión y la exploración.
+<strong>The Opportunities:</strong> Travel, new experiences, major life changes, learning new things, and breaking free from limiting situations. This is the time for expansion and exploration.
 
-<strong>Los Desafíos:</strong> Inquietud, inestabilidad y tentación hacia el exceso. Aprender a aceptar el cambio sin crear caos y a ser libre sin ser irresponsable.
+<strong>The Challenges:</strong> Restlessness, instability, and temptation toward excess. Learning to embrace change without creating chaos, and to be free without being irresponsible.
 
-<strong>El crecimiento:</strong> Al final de este Pinnacle, espere emerger más adaptable, con horizontes ampliados y con el conocimiento de que el cambio no es el enemigo sino la esencia del crecimiento.`
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge more adaptable, with expanded horizons, and the knowledge that change is not the enemy but the essence of growth.`
     },
     6: { 
-        title: "El pináculo del amor",
-        reading: `Este Pináculo del 6 abre un poderoso capítulo de amor, responsabilidad y familia. El universo exige cariño, servicio a los seres queridos y creación de armonía en las relaciones cercanas.
+        title: "The Love Pinnacle",
+        reading: `This Pinnacle of 6 opens a powerful chapter of love, responsibility, and family. The universe is calling for nurturing, service to loved ones, and creating harmony in close relationships.
 
-<strong>La Energía:</strong> Este período enfatiza el hogar, la familia y la responsabilidad hacia los demás. Las circunstancias de la vida requerirán cuidar, crear belleza y atender las necesidades de sus seres queridos.
+<strong>The Energy:</strong> This period emphasizes home, family, and responsibility for others. Life circumstances will require caretaking, creating beauty, and attending to the needs of those you love.
 
-<strong>Las Oportunidades:</strong> Matrimonio, expansión familiar, establecimiento de hogar y cualquier trabajo que implique servicio a los demás. Este es el momento de comprometerse, cuidar y crear ambientes amorosos.
+<strong>The Opportunities:</strong> Marriage, family expansion, home establishment, and any work involving service to others. This is the time for commitment, nurturing, and creating loving environments.
 
-<strong>Los desafíos:</strong> Exceso de responsabilidad, perfeccionismo y patrones de mártir. Aprender a cuidar de los demás manteniendo el autocuidado y a ayudar sin controlar.
+<strong>The Challenges:</strong> Over-responsibility, perfectionism, and martyr patterns. Learning to care for others while maintaining self-care, and to help without controlling.
 
-<strong>El Crecimiento:</strong> Al final de este Pináculo, espere emerger con una capacidad más profunda para amar, una comprensión de la responsabilidad saludable y la satisfacción de haber nutrido lo que importa.`
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with deepened capacity for love, understanding of healthy responsibility, and the satisfaction of having nurtured what matters.`
     },
     7: { 
-        title: "El pináculo de la sabiduría",
-        reading: `Este Pináculo del 7 abre un poderoso capítulo de crecimiento espiritual, estudio y desarrollo interior. El universo exige introspección, búsqueda de la verdad y desarrollo de la sabiduría a través de la reflexión.
+        title: "The Wisdom Pinnacle",
+        reading: `This Pinnacle of 7 opens a powerful chapter of spiritual growth, study, and inner development. The universe is calling for introspection, seeking truth, and developing wisdom through reflection.
 
-<strong>La Energía:</strong> Este período enfatiza la vida interior: estudio, meditación, análisis y desarrollo espiritual. Las circunstancias de la vida requerirán soledad, pensamiento profundo y fe en realidades invisibles.
+<strong>The Energy:</strong> This period emphasizes the inner life—study, meditation, analysis, and spiritual development. Life circumstances will require solitude, deep thinking, and faith in unseen realities.
 
-<strong>Las oportunidades:</strong> Educación, investigación, práctica espiritual, escritura y cualquier actividad que requiera profundidad sobre amplitud. Este es el momento de profundizar en lugar de profundizar.
+<strong>The Opportunities:</strong> Education, research, spiritual practice, writing, and any pursuit requiring depth over breadth. This is the time for going deep rather than wide.
 
-<strong>Los desafíos:</strong> Aislamiento, pensamiento excesivo y dificultades con los asuntos materiales. Aprender a equilibrar la soledad con la conexión y el intelecto con la intuición.
+<strong>The Challenges:</strong> Isolation, overthinking, and difficulty with material matters. Learning to balance solitude with connection, and intellect with intuition.
 
-<strong>El crecimiento:</strong> Al final de este Pináculo, espere emerger con una sabiduría genuina, una intuición desarrollada y la paz que proviene de conocer las respuestas importantes.`
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with genuine wisdom, developed intuition, and the peace that comes from knowing the answers that matter.`
     },
     8: { 
-        title: "El pináculo del poder",
-        reading: `Este Pináculo del 8 abre un poderoso capítulo de logros, autoridad y dominio material. El universo exige asumir el poder, generar riqueza y aceptar la responsabilidad del éxito.
+        title: "The Power Pinnacle",
+        reading: `This Pinnacle of 8 opens a powerful chapter of achievement, authority, and material mastery. The universe is calling for stepping into power, building wealth, and accepting the responsibility of success.
 
-<strong>La Energía:</strong> Este período enfatiza los negocios, el dinero, el poder y los logros visibles. Las circunstancias de la vida requerirán capacidad ejecutiva, ambición y voluntad de hacerse cargo.
+<strong>The Energy:</strong> This period emphasizes business, money, power, and visible achievement. Life circumstances will require executive ability, ambition, and willingness to take charge.
 
-<strong>Las oportunidades:</strong> Avance profesional, éxito empresarial, crecimiento financiero y posiciones de liderazgo. Este es el momento de metas ambiciosas y logros materiales.
+<strong>The Opportunities:</strong> Career advancement, business success, financial growth, and leadership positions. This is the time for ambitious goals and material achievement.
 
-<strong>Los desafíos:</strong> Adicción al trabajo, materialismo y abuso de poder. Aprender a lograr logros sin comprometer los valores y a usar el poder sabiamente.
+<strong>The Challenges:</strong> Workaholism, materialism, and misuse of power. Learning to achieve without compromising values, and to use power wisely.
 
-<strong>El crecimiento:</strong> Al final de este Pináculo, espere emerger con autoridad ganada, éxito material y el conocimiento de que el poder bien utilizado es un regalo para el mundo.`
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with earned authority, material success, and the knowledge that power used well is a gift to the world.`
     },
     9: { 
-        title: "El pináculo humanitario",
-        reading: `Este Pináculo del 9 abre un poderoso capítulo de servicio humanitario, plenitud y amor universal. El universo pide expandir la compasión, dejar ir lo que está terminado y servir a algo más grande que uno mismo.
+        title: "The Humanitarian Pinnacle",
+        reading: `This Pinnacle of 9 opens a powerful chapter of humanitarian service, completion, and universal love. The universe is calling for expanding compassion, letting go of what's finished, and serving something larger than self.
 
-<strong>La Energía:</strong> Este período enfatiza el servicio, la liberación y la conciencia universal. Las circunstancias de la vida requerirán dejarse llevar, perdonar y extender la compasión más allá de la esfera personal.
+<strong>The Energy:</strong> This period emphasizes service, release, and universal consciousness. Life circumstances will require letting go, forgiving, and extending compassion beyond personal sphere.
 
-<strong>Las Oportunidades:</strong> Trabajo humanitario, logros artísticos, enseñanza, curación y cualquier servicio que beneficie a muchos. Este es el momento de retribuir y completar capítulos importantes de la vida.
+<strong>The Opportunities:</strong> Humanitarian work, artistic achievement, teaching, healing, and any service that benefits many. This is the time for giving back and completing major life chapters.
 
-<strong>Los desafíos:</strong> Dificultad con los finales, relaciones impersonales y compasión dispersa. Aprender a dejarse llevar con gracia y a servir sin agotarse.
+<strong>The Challenges:</strong> Difficulty with endings, impersonal relationships, and scattered compassion. Learning to let go gracefully and to serve without depleting.
 
-<strong>El Crecimiento:</strong> Al final de este Pináculo, espere emerger con una compasión ampliada, ciclos importantes completados y la paz que proviene de saber que ha contribuido al bien mayor.`
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with expanded compassion, completed major cycles, and the peace that comes from knowing you've contributed to the greater good.`
     },
     11: { 
-        title: "El pináculo de la iluminación",
-        reading: `Este Pináculo Maestro del 11 abre un poderoso capítulo de iluminación espiritual, inspiración y liderazgo a través de una conciencia superior. El universo exige pensamiento visionario, desarrollo intuitivo e inspirar a otros hacia el despertar.
+        title: "The Illumination Pinnacle",
+        reading: `This Master Pinnacle of 11 opens a powerful chapter of spiritual illumination, inspiration, and leadership through higher consciousness. The universe is calling for visionary thinking, intuitive development, and inspiring others toward awakening.
 
-<strong>La Energía:</strong> Este período enfatiza la intuición, la inspiración y el liderazgo espiritual. Las circunstancias de la vida requerirán confiar en una guía interior, canalizar verdades más elevadas y estar dispuestos a iluminar el camino de los demás.
+<strong>The Energy:</strong> This period emphasizes intuition, inspiration, and spiritual leadership. Life circumstances will require trusting inner guidance, channeling higher truths, and being willing to illuminate paths for others.
 
-<strong>Las Oportunidades:</strong> Enseñanza espiritual, inspiración artística, desarrollo psíquico y cualquier rol donde la intuición guíe el liderazgo. Este es el momento del trabajo visionario.
+<strong>The Opportunities:</strong> Spiritual teaching, artistic inspiration, psychic development, and any role where intuition guides leadership. This is the time for visionary work.
 
-<strong>Los desafíos:</strong> La tensión nerviosa, la impracticabilidad y el peso de la alta sensibilidad. Aprender a fundamentar las ideas espirituales en la realidad práctica.
+<strong>The Challenges:</strong> Nervous tension, impracticality, and the weight of high sensitivity. Learning to ground spiritual insights in practical reality.
 
-<strong>El Crecimiento:</strong> Al final de este Pináculo, espere emerger con habilidades intuitivas desarrolladas, capacidad comprobada para inspirar y el conocimiento de que puede ser un canal para la verdad superior.`
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with developed intuitive abilities, proven ability to inspire, and the knowledge that you can be a channel for higher truth.`
     },
     22: { 
-        title: "El pináculo del maestro constructor",
-        reading: `Este Pináculo Maestro del 22 abre un capítulo poderoso en el que se manifiestan grandes visiones y se construye algo de significado duradero. El universo exige idealismo práctico, logros a gran escala y convertir los sueños en realidad.
+        title: "The Master Builder Pinnacle",
+        reading: `This Master Pinnacle of 22 opens a powerful chapter of manifesting grand visions and building something of lasting significance. The universe is calling for practical idealism, large-scale achievement, and turning dreams into reality.
 
-<strong>La Energía:</strong> Este período enfatiza la construcción a gran escala, la manifestación práctica de la visión y la creación de estructuras que sirvan a muchos. Las circunstancias de la vida requerirán combinar el idealismo con la capacidad práctica.
+<strong>The Energy:</strong> This period emphasizes building on a large scale, practical manifestation of vision, and creating structures that serve many. Life circumstances will require combining idealism with practical ability.
 
-<strong>Las Oportunidades:</strong> Grandes proyectos, servicio comunitario, liderazgo organizacional y cualquier esfuerzo que sirva al colectivo. Este es el momento de construir algo que dure más que el esfuerzo individual.
+<strong>The Opportunities:</strong> Large projects, community service, organizational leadership, and any endeavor that serves the collective. This is the time for building something that outlasts individual effort.
 
-<strong>Los desafíos:</strong> Abrumamiento desde el alcance de la visión, tensión nerviosa y dificultad con los detalles. Aprendiendo a manifestar la gran visión paso a paso.
+<strong>The Challenges:</strong> Overwhelm from the scope of vision, nervous tension, and difficulty with details. Learning to manifest the grand vision step by step.
 
-<strong>El Crecimiento:</strong> Al final de este Pináculo, espere emerger con una capacidad demostrada para manifestar una visión, un idealismo práctico comprobado y la satisfacción de haber construido algo significativo.`
+<strong>The Growth:</strong> By the end of this Pinnacle, expect to emerge with demonstrated ability to manifest vision, proven practical idealism, and the satisfaction of having built something significant.`
     }
 };
 
 var CHALLENGE_NUMBER_READINGS = {
     0: { 
-        title: "El desafío de la elección",
-        reading: `El Desafío de 0 es quizás el más complejo: representa el desafío de no tener un solo desafío obvio, lo que paradójicamente puede ser el más difícil de todos.
+        title: "The Choice Challenge",
+        reading: `The Challenge of 0 is perhaps the most complex—it represents the challenge of having no single obvious challenge, which paradoxically can be the most difficult of all.
 
-<strong>La Naturaleza:</strong> Sin un obstáculo claro que superar, no hay una dirección clara hacia la cual crecer. El desafío es desarrollar el propósito y la dirección desde la total libertad: encontrar el propio camino sin resistencia externa que empujar.
+<strong>The Nature:</strong> Without a clear obstacle to overcome, there's no clear direction to grow toward. The challenge is developing purpose and direction from complete freedom—finding one's own path without external resistance to push against.
 
-<strong>La lección:</strong> Aprender a crear estructuras desde la libertad, a elegir la dirección sin ser forzado y a desarrollar la motivación interior cuando nada externo lo exige. El Reto 0 te pide que te conviertas en tu propio maestro.
+<strong>The Lesson:</strong> Learning to create structure from freedom, to choose direction without being forced, and to develop inner motivation when nothing external demands it. The 0 Challenge asks you to become your own teacher.
 
-<strong>La Maestría:</strong> Cuando se enfrenta este desafío, la capacidad de dirigir su propia vida con sabiduría, de encontrar un propósito sin presión externa y de estar genuinamente motivado se convierte en un regalo profundo.`
+<strong>The Mastery:</strong> When this challenge is met, the ability to direct your own life with wisdom, to find purpose without external pressure, and to be genuinely self-motivated becomes a profound gift.`
     },
     1: { 
-        title: "El desafío de la independencia",
-        reading: `El Desafío del 1 implica lecciones sobre la independencia, la autosuficiencia y el uso adecuado de la voluntad.
+        title: "The Independence Challenge",
+        reading: `The Challenge of 1 involves lessons around independence, self-reliance, and the proper use of will.
 
-<strong>La Naturaleza:</strong> Este desafío puede manifestarse como dificultad para mantenerse solo, miedo al liderazgo o su opuesto: ego y dominación excesivos. Está en juego el equilibrio entre uno mismo y los demás.
+<strong>The Nature:</strong> This challenge may manifest as difficulty standing alone, fear of leadership, or its opposite—excessive ego and domination. The balance between self and others is at stake.
 
-<strong>La lección:</strong> Aprender a liderar sin dominar, a tener confianza sin arrogancia y a estar solo cuando sea necesario sin aislamiento. Desarrollar una auténtica autosuficiencia sin dejar de estar conectado con los demás.
+<strong>The Lesson:</strong> Learning to lead without dominating, to be confident without arrogance, and to stand alone when necessary without isolation. Developing authentic self-reliance while remaining connected to others.
 
-<strong>La Maestría:</strong> Cuando se supera este desafío, la capacidad de ser genuinamente independiente mientras se mantienen relaciones saludables y de liderar con confianza y humildad se convierte en una fortaleza.`
+<strong>The Mastery:</strong> When this challenge is met, the ability to be genuinely independent while maintaining healthy relationships, and to lead with confidence and humility, becomes a strength.`
     },
     2: { 
-        title: "El desafío de la sensibilidad",
-        reading: `El Desafío de 2 implica lecciones sobre sensibilidad, cooperación y límites emocionales.
+        title: "The Sensitivity Challenge",
+        reading: `The Challenge of 2 involves lessons around sensitivity, cooperation, and emotional boundaries.
 
-<strong>La Naturaleza:</strong> Este desafío puede manifestarse como hipersensibilidad a las críticas, dificultad para hacer valer las necesidades o miedo al conflicto. El equilibrio entre uno mismo y los demás está en juego de una manera diferente que en el Desafío 1: aquí se trata de recibir y establecer límites.
+<strong>The Nature:</strong> This challenge may manifest as hypersensitivity to criticism, difficulty asserting needs, or fear of conflict. The balance between self and others is at stake in a different way than Challenge 1—here it's about receiving and boundaries.
 
-<strong>La lección:</strong> Aprender a cooperar sin perderse, a ser sensible sin sentirse abrumado y a hacer valer las necesidades manteniendo la armonía. Desarrollar la paciencia sin volverse pasivo.
+<strong>The Lesson:</strong> Learning to cooperate without losing self, to be sensitive without being overwhelmed, and to assert needs while maintaining harmony. Developing patience without becoming passive.
 
-<strong>La Maestría:</strong> Cuando se supera este desafío, la capacidad de ser profundamente sensible manteniendo límites saludables y de cooperar sin perder la identidad se convierte en un regalo.`
+<strong>The Mastery:</strong> When this challenge is met, the ability to be deeply sensitive while maintaining healthy boundaries, and to cooperate without losing identity, becomes a gift.`
     },
     3: { 
-        title: "El desafío de la expresión",
-        reading: `El Desafío de 3 implica lecciones sobre la autoexpresión, la creatividad y la comunicación auténtica.
+        title: "The Expression Challenge",
+        reading: `The Challenge of 3 involves lessons around self-expression, creativity, and authentic communication.
 
-<strong>La Naturaleza:</strong> Este desafío puede manifestarse como creatividad reprimida, miedo a ser visto, dificultad para comunicarse auténticamente o su opuesto: superficialidad y expresión dispersa. La voz está en juego.
+<strong>The Nature:</strong> This challenge may manifest as suppressed creativity, fear of being seen, difficulty communicating authentically, or its opposite—superficiality and scattered expression. The voice is at stake.
 
-<strong>La lección:</strong> Aprender a expresarse de forma auténtica sin miedo a ser juzgado, a crear sin necesidad de perfección y a comunicarse desde el corazón. Superar las dudas sobre las capacidades creativas y expresivas.
+<strong>The Lesson:</strong> Learning to express authentic self without fear of judgment, to create without needing perfection, and to communicate from the heart. Overcoming self-doubt about creative and expressive abilities.
 
-<strong>La Maestría:</strong> Cuando se supera este desafío, la capacidad de expresarse con alegría y autenticidad, de crear sin autocensura y de comunicarse con el corazón y el poder se convierte en un regalo.`
+<strong>The Mastery:</strong> When this challenge is met, the ability to express joyfully and authentically, to create without self-censorship, and to communicate with heart and power becomes a gift.`
     },
     4: { 
-        title: "El desafío de la disciplina",
-        reading: `El Desafío de 4 implica lecciones sobre disciplina, trabajo y aceptación de las limitaciones necesarias.
+        title: "The Discipline Challenge",
+        reading: `The Challenge of 4 involves lessons around discipline, work, and accepting necessary limitations.
 
-<strong>La Naturaleza:</strong> Este desafío puede manifestarse como resistencia al trabajo duro, dificultad con la estructura o su opuesto: volverse rígido y adicto al trabajo. Está en juego la relación con el esfuerzo y la estructura.
+<strong>The Nature:</strong> This challenge may manifest as resistance to hard work, difficulty with structure, or its opposite—becoming rigid and workaholic. The relationship with effort and structure is at stake.
 
-<strong>La lección:</strong> Aprender a construir de manera constante sin resentimiento, a aceptar las restricciones necesarias sin sentirse aprisionado y a desarrollar paciencia con el proceso. Encontrar sentido al trabajo metódico.
+<strong>The Lesson:</strong> Learning to build steadily without resentment, to accept necessary restrictions without feeling imprisoned, and to develop patience with process. Finding meaning in methodical work.
 
-<strong>La Maestría:</strong> Cuando se supera este desafío, la capacidad de trabajar eficazmente sin exceso de trabajo, de crear una estructura sin rigidez y de lograr logros a través del esfuerzo paciente se convierte en una fortaleza.`
+<strong>The Mastery:</strong> When this challenge is met, the ability to work effectively without overwork, to create structure without rigidity, and to achieve through patient effort becomes a strength.`
     },
     5: { 
-        title: "El desafío de la libertad",
-        reading: `El Desafío de 5 implica lecciones sobre la libertad, el cambio y el uso adecuado de la variedad.
+        title: "The Freedom Challenge",
+        reading: `The Challenge of 5 involves lessons around freedom, change, and the proper use of variety.
 
-<strong>La Naturaleza:</strong> Este desafío puede manifestarse como miedo al cambio, inquietud excesiva, tendencias adictivas o incapacidad para comprometerse. Está en juego la relación con la libertad y la responsabilidad.
+<strong>The Nature:</strong> This challenge may manifest as fear of change, excessive restlessness, addictive tendencies, or inability to commit. The relationship with freedom and responsibility is at stake.
 
-<strong>La lección:</strong> Aprender a aceptar el cambio sin crear caos, a ser adaptable sin estar disperso y a encontrar la libertad a través de la responsabilidad en lugar de escapar. Moderation in pleasures.
+<strong>The Lesson:</strong> Learning to embrace change without creating chaos, to be adaptable without being scattered, and to find freedom through responsibility rather than escape. Moderation in pleasures.
 
-<strong>La Maestría:</strong> Cuando se supera este desafío, la capacidad de cambiar con gracia, disfrutar de la libertad de manera responsable y permanecer adaptable mientras se permanece centrado se convierte en un regalo.`
+<strong>The Mastery:</strong> When this challenge is met, the ability to change gracefully, to enjoy freedom responsibly, and to remain adaptable while staying centered becomes a gift.`
     },
     6: { 
-        title: "El desafío de la responsabilidad",
-        reading: `El Desafío de 6 implica lecciones sobre responsabilidad, perfeccionismo y el equilibrio entre servicio y autocuidado.
+        title: "The Responsibility Challenge",
+        reading: `The Challenge of 6 involves lessons around responsibility, perfectionism, and the balance between service and self-care.
 
-<strong>La Naturaleza:</strong> Este desafío puede manifestarse como responsabilidad excesiva, perfeccionismo, cuidado controlador o su opuesto: evitar la responsabilidad por completo. Está en juego la relación con el servicio.
+<strong>The Nature:</strong> This challenge may manifest as excessive responsibility, perfectionism, controlling caretaking, or its opposite—avoiding responsibility entirely. The relationship with service is at stake.
 
-<strong>La lección:</strong> Aprender a ayudar sin controlar, a servir sin martirizar y a aceptar la imperfección en uno mismo y en los demás. Encontrar el equilibrio entre el cuidado de los demás y el cuidado de uno mismo.
+<strong>The Lesson:</strong> Learning to help without controlling, to serve without martyring, and to accept imperfection in self and others. Finding the balance between caring for others and caring for self.
 
-<strong>La Maestría:</strong> Cuando se enfrenta este desafío, la capacidad de amar sin sofocar, de servir sin agotar y de mantener límites saludables sin dejar de ser devoto se convierte en un regalo.`
+<strong>The Mastery:</strong> When this challenge is met, the ability to love without smothering, to serve without depleting, and to maintain healthy boundaries while remaining devoted becomes a gift.`
     },
     7: { 
-        title: "El desafío de la fe",
-        reading: `El Desafío de 7 implica lecciones sobre la fe, el análisis y el equilibrio entre el intelecto y la intuición.
+        title: "The Faith Challenge",
+        reading: `The Challenge of 7 involves lessons around faith, analysis, and the balance between intellect and intuition.
 
-<strong>La Naturaleza:</strong> Este desafío puede manifestarse como un análisis excesivo, dificultad para confiar en la intuición, aislamiento o duda espiritual. Está en juego la relación con lo invisible y con el conocimiento interior.
+<strong>The Nature:</strong> This challenge may manifest as excessive analysis, difficulty trusting intuition, isolation, or spiritual doubt. The relationship with the unseen and with inner knowing is at stake.
 
-<strong>La lección:</strong> Aprender a confiar en la intuición junto con el intelecto, a conectarse con los demás a pesar de la necesidad de soledad y a desarrollar la fe en lo que no se puede probar. Equilibrando mente y espíritu.
+<strong>The Lesson:</strong> Learning to trust intuition alongside intellect, to connect with others despite need for solitude, and to develop faith in what cannot be proven. Balancing mind and spirit.
 
-<strong>La Maestría:</strong> Cuando se supera este desafío, la capacidad de pensar profundamente mientras se confía en la guía interior, de estar solo sin sentirse solo y de tener fe en lo invisible se convierte en un regalo.`
+<strong>The Mastery:</strong> When this challenge is met, the ability to think deeply while trusting inner guidance, to be alone without being lonely, and to have faith in the unseen becomes a gift.`
     },
     8: { 
-        title: "El desafío del poder",
-        reading: `El Desafío del 8 implica lecciones sobre el poder, el dinero y la autoridad: el uso adecuado de la fuerza material.
+        title: "The Power Challenge",
+        reading: `The Challenge of 8 involves lessons around power, money, and authority—the proper use of material force.
 
-<strong>La Naturaleza:</strong> Este desafío puede manifestarse como miedo al poder, problemas de dinero, abuso de autoridad o sentimiento de impotencia en el mundo material. La relación con el éxito y el poder está en juego.
+<strong>The Nature:</strong> This challenge may manifest as fear of power, money issues, misuse of authority, or feeling powerless in the material world. The relationship with success and power is at stake.
 
-<strong>La lección:</strong> Aprender a usar el poder de manera ética, equilibrar lo material y lo espiritual, y reclamar el éxito sin comprometer los valores. Sentirse cómodo con la autoridad y la abundancia.
+<strong>The Lesson:</strong> Learning to use power ethically, to balance material and spiritual, and to claim success without compromising values. Becoming comfortable with authority and abundance.
 
-<strong>La Maestría:</strong> Cuando se supera este desafío, la capacidad de lograr logros en el mundo material sin perder el alma, usar el poder sabiamente y manifestar abundancia éticamente se convierte en un regalo.`
+<strong>The Mastery:</strong> When this challenge is met, the ability to achieve in the material world without losing soul, to use power wisely, and to manifest abundance ethically becomes a gift.`
     }
 };
 
 var KARMIC_DEBT_READINGS = {
     13: {
-        title: "Deuda Kármica 13/4",
-        reading: `La deuda kármica 13 (que se reduce a 4) indica un mal uso de la ética laboral en vidas pasadas o pereza a expensas de los demás. En esta vida, puede parecer que el trabajo duro produce menos recompensa de la esperada y los atajos no funcionan. La lección es desarrollar una disciplina genuina y aceptar que un logro significativo requiere un esfuerzo sostenido. El éxito se consigue mediante el trabajo honesto y persistente, sin intentar tomar el camino fácil. Una vez que se domina esta lección, la capacidad de lograr grandes cosas mediante un esfuerzo dedicado se convierte en una fortaleza.`
+        title: "Karmic Debt 13/4",
+        reading: `Karmic Debt 13 (which reduces to 4) indicates past life misuse of work ethic or laziness at others' expense. In this life, hard work may seem to bring less reward than expected, and shortcuts don't work. The lesson is developing genuine discipline and accepting that meaningful achievement requires sustained effort. Success comes through honest, persistent work without trying to take the easy way. Once this lesson is mastered, the ability to accomplish great things through dedicated effort becomes a strength.`
     },
     14: {
-        title: "Deuda Kármica 14/5",
-        reading: `La deuda kármica 14 (que se reduce a 5) indica abuso de la libertad o exceso de indulgencia en vidas pasadas que dañaron a otros o a uno mismo. En esta vida, la libertad puede verse restringida hasta que se aprenda a utilizarla responsablemente. La lección es desarrollar el autocontrol y el compromiso manteniendo una libertad saludable. Las claves son la moderación en lugar del exceso y el compromiso en lugar de la evasión. Una vez dominada, la capacidad de disfrutar la vida plenamente sin dejar de ser responsable se convierte en un regalo.`
+        title: "Karmic Debt 14/5",
+        reading: `Karmic Debt 14 (which reduces to 5) indicates past life abuse of freedom or overindulgence that harmed others or self. In this life, freedom may be restricted until its responsible use is learned. The lesson is developing self-control and commitment while maintaining healthy freedom. Moderation rather than excess, and commitment rather than escape, are the keys. Once mastered, the ability to enjoy life fully while remaining responsible becomes a gift.`
     },
     16: {
-        title: "Deuda Kármica 16/7",
-        reading: `La deuda kármica 16 (que se reduce a 7) indica un mal uso del amor, el ego o los dones espirituales en vidas pasadas para beneficio personal. En esta vida, el ego puede verse humillado por los desafíos o la pérdida de una relación. La lección es desarrollar una humildad genuina y una conexión espiritual más allá de las necesidades del ego. La caída que a menudo sobreviene es necesaria para reconstruir sobre cimientos más verdaderos. Una vez dominado, la profunda sabiduría espiritual y el auténtico autoconocimiento emergen de las cenizas de la destrucción del ego.`
+        title: "Karmic Debt 16/7",
+        reading: `Karmic Debt 16 (which reduces to 7) indicates past life misuse of love, ego, or spiritual gifts for personal gain. In this life, the ego may be humbled through relationship challenges or loss. The lesson is developing genuine humility and spiritual connection beyond ego needs. The fall that often comes is necessary for rebuilding on a truer foundation. Once mastered, deep spiritual wisdom and authentic self-knowledge emerge from the ashes of ego destruction.`
     },
     19: {
-        title: "Deuda Kármica 19/1",
-        reading: `La deuda kármica 19 (que se reduce a 1) indica abuso de poder en vidas pasadas, egoísmo a expensas de los demás o negarse a ayudar cuando sea posible. En esta vida, puede haber dificultades para recibir ayuda o estar solo cuando se necesita apoyo. La lección es aprender que la verdadera independencia incluye la interdependencia y que el liderazgo significa ayudar a los demás. Una vez dominada, la capacidad de ser autosuficiente y conectarse con gracia con los demás surge como un don poderoso.`
+        title: "Karmic Debt 19/1",
+        reading: `Karmic Debt 19 (which reduces to 1) indicates past life abuse of power, selfishness at others' expense, or refusing to help when able. In this life, there may be difficulty receiving help or standing alone when support is needed. The lesson is learning that true independence includes interdependence, and that leadership means lifting others. Once mastered, the ability to be both self-reliant and gracefully connected to others emerges as a powerful gift.`
     }
 };
 
 var SOUL_URGE_READINGS = {
     1: { 
-        title: "Deseo de independencia", 
-        reading: `Soul Urge 1 anhela independencia, liderazgo y ser el primero. En el nivel más profundo, esta alma necesita sentirse original, pionera y autosuficiente.
+        title: "Desire for Independence", 
+        reading: `Soul Urge 1 craves independence, leadership, and being first. At the deepest level, this soul needs to feel original, pioneering, and self-reliant.
 
-Este impulso interno a menudo crea a alguien que debe hacer las cosas a su manera, incluso cuando hay un camino más fácil. Que te digan qué hacer se siente como una incomodidad a nivel del alma. El liderazgo no es sólo una preferencia: es una necesidad.
+This inner drive often creates someone who must do things their own way, even when there's an easier path. Being told what to do feels like soul-level discomfort. Leadership isn't just a preference — it's a need.
 
-La satisfacción más profunda proviene de ser pionero en un nuevo territorio, comenzar algo original y expresar una individualidad única. Esta alma se siente más viva cuando está al frente, cuando traza su propio rumbo, cuando es reconocida por su contribución original.
+Deepest fulfillment comes from pioneering new territory, starting something original, and expressing unique individuality. This soul feels most alive when standing at the front, when charting their own course, when being recognized for original contribution.
 
-Para los niños con este impulso del alma: permítales liderar en contextos seguros. No hagas todo por ellos: necesitan demostrarse a sí mismos su capacidad. Honre su necesidad de ser el primero y de resolver las cosas de forma independiente.`
+For children with this Soul Urge: Let them lead in safe contexts. Don't do everything for them — they need to prove their capability to themselves. Honor their need to be first and to figure things out independently.`
     },
     2: { 
-        title: "Deseo de armonía", 
-        reading: `Soul Urge 2 anhela paz, asociación y una conexión emocional profunda. En el nivel más profundo, esta alma necesita sentirse amada, incluida y parte de relaciones significativas.
+        title: "Desire for Harmony", 
+        reading: `Soul Urge 2 craves peace, partnership, and deep emotional connection. At the deepest level, this soul needs to feel loved, included, and part of meaningful relationships.
 
-Este impulso interior crea alguien que es exquisitamente sensible a las emociones y necesidades de los demás. El conflicto se siente físicamente incómodo. La armonía no es una preferencia: es esencial para el bienestar.
+This inner drive creates someone who is exquisitely sensitive to others' emotions and needs. Conflict feels physically uncomfortable. Harmony isn't a preference — it's essential to wellbeing.
 
-La satisfacción más profunda proviene de una verdadera asociación, de ser el apoyo detrás del éxito, de crear paz y belleza en las relaciones. Esta alma se siente más viva cuando está profundamente conectada, cuando alguien realmente la ve, cuando fluye la armonía.
+Deepest fulfillment comes from true partnership, from being the support behind success, from creating peace and beauty in relationships. This soul feels most alive when deeply connected, when someone truly sees them, when harmony flows.
 
-Para niños con este impulso del alma: cree ambientes hogareños pacíficos. Validar su sensibilidad emocional. Nunca descartes su necesidad de conexión como "pegajosa": es su alma la que habla.`
+For children with this Soul Urge: Create peaceful home environments. Validate their emotional sensitivity. Never dismiss their need for connection as "clingy" — it's their soul speaking.`
     },
     3: { 
-        title: "Deseo de expresión", 
-        reading: `Soul Urge 3 anhela la autoexpresión creativa y la alegría. En el nivel más profundo, esta alma necesita comunicarse, crear y traer belleza al mundo.
+        title: "Desire for Expression", 
+        reading: `Soul Urge 3 craves creative self-expression and joy. At the deepest level, this soul needs to communicate, create, and bring beauty into the world.
 
-Este impulso interior crea a alguien que debe expresarse a través del arte, las palabras, la música o la personalidad. La creatividad reprimida se siente como una asfixia espiritual. La autoexpresión no es opcional: es supervivencia.
+This inner drive creates someone who must express themselves — through art, words, music, or personality. Suppressed creativity feels like spiritual suffocation. Self-expression isn't optional — it's survival.
 
-La satisfacción más profunda proviene de la creación artística, de inspirar a otros y de difundir alegría. Esta alma se siente más viva cuando crea, cuando hace reír a los demás, cuando se escucha y celebra su voz única.
+Deepest fulfillment comes from artistic creation, inspiring others, and spreading joy. This soul feels most alive when creating, when making others laugh, when their unique voice is heard and celebrated.
 
-Para los niños con este impulso del alma: proporcione salidas creativas: materiales de arte, instrumentos, diarios, escenarios. Celebre su autoexpresión sin críticas. Su alegría debe ser compartida con el mundo.`
+For children with this Soul Urge: Provide creative outlets — art supplies, instruments, journals, stages. Celebrate their self-expression without criticism. Their joy is meant to be shared with the world.`
     },
     4: { 
-        title: "Deseo de seguridad", 
-        reading: `Soul Urge 4 anhela estabilidad, orden y logros tangibles. En el nivel más profundo, esta alma necesita construir algo duradero y crear una seguridad que perdure.
+        title: "Desire for Security", 
+        reading: `Soul Urge 4 craves stability, order, and tangible accomplishment. At the deepest level, this soul needs to build something lasting and create security that endures.
 
-Este impulso interno crea alguien que valora el trabajo duro, la confiabilidad y los resultados concretos. El caos y la inestabilidad se sienten amenazantes. La estructura no es rigidez: es un fundamento sagrado.
+This inner drive creates someone who values hard work, reliability, and concrete results. Chaos and instability feel threatening. Structure isn't rigidity — it's sacred foundation.
 
-La satisfacción más profunda proviene de construir algo sólido, de ser absolutamente confiable, de crear orden a partir del caos. Esta alma se siente más viva cuando su trabajo produce resultados tangibles, cuando puede ver los cimientos que ha construido.
+Deepest fulfillment comes from building something solid, from being utterly reliable, from creating order out of chaos. This soul feels most alive when their work produces tangible results, when they can see the foundation they've built.
 
-Para niños con este impulso del alma: cree rutinas consistentes y cumpla sus promesas. Permítales completar proyectos para ver resultados tangibles. Valide su necesidad de estabilidad: es sabiduría, no miedo.`
+For children with this Soul Urge: Create consistent routines and follow through on promises. Let them complete projects to see tangible results. Validate their need for stability — it's wisdom, not fear.`
     },
     5: { 
-        title: "Deseo de libertad", 
-        reading: `Soul Urge 5 anhela aventura, variedad y libertad personal. En el nivel más profundo, esta alma necesita experimentar la vida plenamente, sin restricciones ni limitaciones.
+        title: "Desire for Freedom", 
+        reading: `Soul Urge 5 craves adventure, variety, and personal freedom. At the deepest level, this soul needs to experience life fully without restriction or limitation.
 
-Este impulso interno crea una persona que se siente confinada por la rutina y las restricciones. La igualdad se siente como una muerte lenta. La libertad no es rebelión, es oxígeno.
+This inner drive creates someone who feels confined by routine and restriction. Sameness feels like slow death. Freedom isn't rebellion — it's oxygen.
 
-La satisfacción más profunda proviene de nuevas experiencias, de la variedad y el cambio, de la emoción de lo inesperado. Esta alma se siente más viva cuando explora, cuando la próxima aventura la llama, cuando la vida se siente expansiva e ilimitada.
+Deepest fulfillment comes from new experiences, from variety and change, from the thrill of the unexpected. This soul feels most alive when exploring, when the next adventure beckons, when life feels expansive and limitless.
 
-Para niños con este impulso del alma: Bríndeles variedad y nuevas experiencias. No restrinjas demasiado: necesitan espacio para explorar. Canalice su necesidad de libertad hacia aventuras positivas en lugar de una rebelión arriesgada.`
+For children with this Soul Urge: Provide variety and new experiences. Don't over-restrict — they need room to explore. Channel their need for freedom into positive adventures rather than risky rebellion.`
     },
     6: { 
-        title: "Deseo de amor", 
-        reading: `Soul Urge 6 anhela el amor, la familia y las relaciones enriquecedoras. En el nivel más profundo, esta alma necesita cuidar de los demás y crear un hogar hermoso y armonioso.
+        title: "Desire for Love", 
+        reading: `Soul Urge 6 craves love, family, and nurturing relationships. At the deepest level, this soul needs to care for others and create a beautiful, harmonious home.
 
-Este impulso interior crea a alguien que antepone a la familia y a sus seres queridos. Un hogar sin armonía se siente como un fracaso personal. La crianza no es un rol, es un llamado.
+This inner drive creates someone who puts family and loved ones first. An unharmonious home feels like personal failure. Nurturing isn't a role — it's a calling.
 
-La satisfacción más profunda proviene de cuidar a los seres queridos, de crear belleza y armonía, de ser necesitado y valorado por la familia. Esta alma se siente más viva cuando su hogar está en paz, cuando todos se sienten cuidados, cuando el amor fluye libremente.
+Deepest fulfillment comes from caring for loved ones, from creating beauty and harmony, from being needed and valued by family. This soul feels most alive when their home is peaceful, when everyone feels cared for, when love flows freely.
 
-Para los niños con este impulso del alma: permítales ayudar con tareas de crianza (cuidar plantas, mascotas, hermanos menores). Cree un ambiente hogareño hermoso y armonioso. Se hacen cargo de las emociones de los demás y les enseñan límites saludables.`
+For children with this Soul Urge: Let them help with nurturing tasks (caring for plants, pets, younger siblings). Create a beautiful, harmonious home environment. They take on others' emotions — teach them healthy boundaries.`
     },
     7: { 
-        title: "Deseo de comprensión", 
-        reading: `Soul Urge 7 anhela conocimiento, sabiduría y verdad espiritual. En el nivel más profundo, esta alma necesita comprender el significado más profundo detrás de todo.
+        title: "Desire for Understanding", 
+        reading: `Soul Urge 7 craves knowledge, wisdom, and spiritual truth. At the deepest level, this soul needs to understand the deeper meaning behind everything.
 
-Este impulso interior crea a alguien que cuestiona, analiza y busca la verdad sin descanso. Las explicaciones superficiales resultan insatisfactorias. Comprender no es curiosidad, es propósito.
+This inner drive creates someone who questions, analyzes, and seeks truth relentlessly. Surface-level explanations feel unsatisfying. Understanding isn't curiosity — it's purpose.
 
-La satisfacción más profunda proviene del descubrimiento de misterios, de momentos de percepción genuina, de la conexión con la verdad espiritual. Esta alma se siente más viva cuando estudia profundamente, cuando está a solas con sus pensamientos, cuando toca lo trascendente.
+Deepest fulfillment comes from uncovering mysteries, from moments of genuine insight, from connecting with spiritual truth. This soul feels most alive when studying deeply, when alone with thoughts, when touching the transcendent.
 
-Para niños con este impulso del alma: proporcione espacio para la soledad y el pensamiento profundo. Responda sus preguntas con atención: ellos perciben cuando les está dando respuestas superficiales. Honra su naturaleza espiritual desde una edad temprana.`
+For children with this Soul Urge: Provide space for solitude and deep thinking. Answer their questions thoughtfully — they sense when you're giving surface answers. Honor their spiritual nature from a young age.`
     },
     8: { 
-        title: "Deseo de logro", 
-        reading: `Soul Urge 8 anhela el éxito, el reconocimiento y el dominio material. En el nivel más profundo, esta alma necesita lograr algo significativo y ser reconocida por ello.
+        title: "Desire for Achievement", 
+        reading: `Soul Urge 8 craves success, recognition, and material mastery. At the deepest level, this soul needs to achieve something significant and be recognized for it.
 
-Este impulso interior crea a alguien que se siente atraído por el poder, el éxito y la abundancia material. Sentirse impotente es desgarrador. El logro no es ego, es cumplimiento de propósito.
+This inner drive creates someone who is drawn to power, success, and material abundance. Feeling powerless is soul-crushing. Achievement isn't ego — it's purpose fulfillment.
 
-La satisfacción más profunda proviene de alcanzar metas, de generar riqueza y autoridad, de ser respetado y reconocido por sus logros. Esta alma se siente más viva cuando gana, cuando construye algo impresionante, cuando se reconoce su poder.
+Deepest fulfillment comes from reaching goals, from building wealth and authority, from being respected and recognized for accomplishment. This soul feels most alive when winning, when building something impressive, when their power is acknowledged.
 
-Para los niños con este impulso del alma: permítales experimentar logros a través de metas y recompensas. Enseñar una relación sana con el dinero y el poder. Valide su ambición: está destinada a lograr grandes cosas.`
+For children with this Soul Urge: Let them experience achievement through goals and rewards. Teach healthy relationship with money and power. Validate their ambition — it's meant to accomplish great things.`
     },
     9: { 
-        title: "Deseo de servir", 
-        reading: `Soul Urge 9 anhela retribuir, sanar y servir a la humanidad. En el nivel más profundo, esta alma necesita contribuir con algo significativo para un bien mayor.
+        title: "Desire to Serve", 
+        reading: `Soul Urge 9 craves to give back, heal, and serve humanity. At the deepest level, this soul needs to contribute something meaningful to the greater good.
 
-Este impulso interior crea a alguien que se preocupa profundamente por el mundo y se siente llamado a mejorarlo. La vida egoísta se siente vacía. El servicio no es sacrificio, es satisfacción.
+This inner drive creates someone who cares deeply about the world and feels called to make it better. Selfish living feels empty. Service isn't sacrifice — it's fulfillment.
 
-La satisfacción más profunda proviene de ayudar a los demás, de contribuir a causas más importantes que uno mismo, de dejar el mundo mejor de lo que lo encontramos. Esta alma se siente más viva cuando sirve, cuando ve su impacto en la vida de los demás, cuando está conectada con la humanidad.
+Deepest fulfillment comes from helping others, from contributing to causes larger than self, from leaving the world better than found. This soul feels most alive when serving, when they see their impact on others' lives, when connected to humanity.
 
-Para niños con este impulso del alma: involúcrelos en actividades caritativas. Ayúdelos a comprender su lugar en la familia humana más amplia. Su empatía es enorme: enséñeles que es un regalo y al mismo tiempo les enseña a cuidarse a sí mismos.`
+For children with this Soul Urge: Involve them in charitable activities. Help them understand their place in the larger human family. Their empathy is vast — teach them it's a gift while also teaching self-care.`
     },
     11: { 
-        title: "Deseo de inspirar", 
-        reading: `Soul Urge 11 anhela inspirar, iluminar y canalizar una sabiduría superior. En el nivel más profundo, esta alma necesita ser un recipiente de inspiración y luz espiritual.
+        title: "Desire to Inspire", 
+        reading: `Soul Urge 11 craves to inspire, illuminate, and channel higher wisdom. At the deepest level, this soul needs to be a vessel for spiritual light and inspiration.
 
-Este impulso interno crea a alguien que es muy intuitivo y que a menudo recibe ideas que parecen venir del más allá. La vida ordinaria se siente insuficiente. La inspiración no es ambición, es un llamado.
+This inner drive creates someone who is highly intuitive, often receiving insights that seem to come from beyond. Ordinary life feels insufficient. Inspiration isn't ambition — it's calling.
 
-La realización más profunda proviene de iluminar la verdad para los demás, de canalizar la inspiración, de vivir como un puente entre mundos. Esta alma se siente más viva cuando está profundamente conectada con lo espiritual, cuando inspira a otros, cuando la verdad fluye a través de ellos.
+Deepest fulfillment comes from illuminating truth for others, from channeling inspiration, from living as a bridge between worlds. This soul feels most alive when deeply connected to the spiritual, when inspiring others, when truth flows through them.
 
-Para niños con este impulso del alma: son muy sensibles y están espiritualmente en sintonía. Protege su sistema nervioso mientras nutres sus dones. Valide sus intuiciones: están recibiendo información real.`
+For children with this Soul Urge: They are highly sensitive and spiritually attuned. Protect their nervous system while nurturing their gifts. Validate their intuitions — they are receiving real information.`
     },
     22: { 
-        title: "Deseo de construir sueños", 
-        reading: `Soul Urge 22 anhela manifestar grandes visiones en realidad. En el nivel más profundo, esta alma necesita construir algo que sirva a la humanidad a gran escala.
+        title: "Desire to Build Dreams", 
+        reading: `Soul Urge 22 craves to manifest grand visions into reality. At the deepest level, this soul needs to build something that serves humanity on a large scale.
 
-Este impulso interno crea alguien que ve enormes posibilidades y se siente obligado a hacerlas realidad. Los proyectos pequeños parecen un potencial desperdiciado. Construir no es ambición, es un propósito sagrado.
+This inner drive creates someone who sees huge possibilities and feels compelled to make them real. Small projects feel like wasted potential. Building isn't ambition — it's sacred purpose.
 
-La satisfacción más profunda proviene de ver que las visiones se hacen realidad, de construir estructuras duraderas que beneficien a muchos, de dejar un legado que perdure. Esta alma se siente más viva cuando trabaja en algo grandioso, cuando las piezas se juntan, cuando su construcción cambia el mundo.
+Deepest fulfillment comes from seeing visions become reality, from building lasting structures that benefit many, from leaving a legacy that endures. This soul feels most alive when working on something grand, when the pieces come together, when their building changes the world.
 
-Para los niños con este impulso del alma: pueden parecer increíblemente ambiciosos; no descarten sus sueños. Ayúdelos a aprender habilidades prácticas para manifestar visiones. Son maestros constructores y necesitan apoyo para aprovechar su enorme potencial.`
+For children with this Soul Urge: They may seem impossibly ambitious — don't dismiss their dreams. Help them learn practical skills to manifest visions. They are Master Builders and need support for their huge potential.`
     },
     33: { 
-        title: "Deseo de sanar", 
-        reading: `Soul Urge 33 anhela sanar a través del amor incondicional. En el nivel más profundo, esta alma necesita encarnar e irradiar amor puro y sanador al mundo.
+        title: "Desire to Heal", 
+        reading: `Soul Urge 33 craves to heal through unconditional love. At the deepest level, this soul needs to embody and radiate pure, healing love into the world.
 
-Este impulso interno crea a alguien que siente profundamente el dolor de los demás y quiere curarlo. Cualquier cosa que no sea amor incondicional se siente como un fracaso. La curación no es una carrera, es identidad.
+This inner drive creates someone who feels others' pain deeply and wants to heal it. Anything less than unconditional love feels like failure. Healing isn't a career — it's identity.
 
-La realización más profunda proviene del servicio desinteresado, de la enseñanza mediante el ejemplo, de ser amor en acción. Esta alma se siente más viva cuando ayuda a otros a sanar, cuando el amor fluye sin condiciones, cuando su presencia trae paz.
+Deepest fulfillment comes from selfless service, from teaching through example, from being love in action. This soul feels most alive when helping others heal, when love flows without condition, when their presence brings peace.
 
-Para los niños con este impulso del alma: Tienen una enorme responsabilidad espiritual; no los carguen más. Que sean niños primero. Sus dones curativos surgirán de forma natural. Protégelos para que no absorban demasiado del dolor de los demás.`
+For children with this Soul Urge: They carry enormous spiritual responsibility — don't burden them further. Let them be children first. Their healing gifts will emerge naturally. Protect them from absorbing too much of others' pain.`
     }
 };
 
 var PERSONALITY_NUMBER_READINGS = {
     1: { 
-        title: "Liderazgo de Proyectos", 
-        reading: `La personalidad número 1 proyecta confianza, independencia y liderazgo. Otros ven a alguien capaz y seguro de sí mismo que puede hacerse cargo y marcar el camino.
+        title: "Projects Leadership", 
+        reading: `Personality Number 1 projects confidence, independence, and leadership. Others see someone capable and self-assured who can take charge and lead the way.
 
-El yo exterior parece pionero, original y asertivo. Las primeras impresiones implican fuerza, independencia y capacidad. Incluso antes de hablar, esta energía exige atención y respeto.
+The outer self appears pioneering, original, and assertive. First impressions involve strength, independence, and capability. Even before speaking, this energy commands attention and respect.
 
-Esta proyección atrae oportunidades de liderazgo y situaciones que requieren iniciativa. La gente instintivamente mira a esta persona para que se haga cargo o comience algo nuevo.
+This projection attracts opportunities for leadership and situations requiring initiative. People instinctively look to this person to take charge or start something new.
 
-Sin embargo, esta proyección puede intimidar a algunas personas o hacerlas parecer inaccesibles. Aprender a suavizarse cuando sea apropiado ayuda a equilibrar el aura de liderazgo natural.`
+However, this projection may intimidate some people or make them seem unapproachable. Learning to soften when appropriate helps balance the natural leadership aura.`
     },
     2: { 
-        title: "Proyectos Gentileza", 
-        reading: `La personalidad número 2 proyecta gentileza, cooperación y sensibilidad. Otros ven a alguien diplomático y solidario que trabaja maravillosamente con los demás.
+        title: "Projects Gentleness", 
+        reading: `Personality Number 2 projects gentleness, cooperation, and sensitivity. Others see someone diplomatic and supportive who works beautifully with others.
 
-El yo exterior parece amable, receptivo y armonioso. Las primeras impresiones implican calidez, escucha e interés genuino en los demás. Esta energía atrae a las personas y las hace sentir cómodas.
+The outer self appears kind, receptive, and harmonious. First impressions involve warmth, listening, and genuine interest in others. This energy draws people in and makes them feel comfortable.
 
-Esta proyección atrae asociaciones, roles de apoyo y situaciones que requieren diplomacia. La gente instintivamente comparte sus sentimientos con esta persona y busca su consejo.
+This projection attracts partnerships, supportive roles, and situations requiring diplomacy. People instinctively share their feelings with this person and seek their counsel.
 
-Sin embargo, esta proyección a veces puede subestimarse o pasarse por alto. Aprender a hacer valer cuando sea necesario ayuda a equilibrar el aura de apoyo natural.`
+However, this projection may sometimes be underestimated or overlooked. Learning to assert when necessary helps balance the natural supportive aura.`
     },
     3: { 
-        title: "Creatividad en Proyectos", 
-        reading: `La personalidad número 3 proyecta creatividad, encanto y optimismo. Otros ven a alguien expresivo y entretenido que les trae alegría allá donde van.
+        title: "Projects Creativity", 
+        reading: `Personality Number 3 projects creativity, charm, and optimism. Others see someone expressive and entertaining who brings joy wherever they go.
 
-El yo exterior parece artístico, sociable y edificante. Las primeras impresiones implican brillo, calidez y energía creativa. Esta energía ilumina las habitaciones y levanta el ánimo.
+The outer self appears artistic, sociable, and uplifting. First impressions involve sparkle, warmth, and creative energy. This energy lights up rooms and lifts moods.
 
-Esta proyección atrae oportunidades creativas, invitaciones sociales y situaciones que requieren comunicación. La gente instintivamente quiere estar cerca de esta persona y compartir su energía positiva.
+This projection attracts creative opportunities, social invitations, and situations requiring communication. People instinctively want to be around this person and share in their positive energy.
 
-Sin embargo, esta proyección a veces puede parecer demasiado ligera o poco seria. Aprender a mostrar profundidad cuando sea apropiado ayuda a equilibrar el aura alegre natural.`
+However, this projection may sometimes seem too light or not serious enough. Learning to show depth when appropriate helps balance the natural joyful aura.`
     },
     4: { 
-        title: "Confiabilidad de Proyectos", 
-        reading: `La personalidad número 4 proyecta confiabilidad, practicidad y disciplina. Otros ven a alguien confiable y trabajador con quien se puede contar para hacer las cosas.
+        title: "Projects Reliability", 
+        reading: `Personality Number 4 projects reliability, practicality, and discipline. Others see someone dependable and hardworking who can be counted on to get things done.
 
-El yo exterior parece estable, organizado y competente. Las primeras impresiones implican confiabilidad, capacidad y una base sólida. Esta energía inspira seguridad y confianza.
+The outer self appears stable, organized, and competent. First impressions involve trustworthiness, capability, and solid grounding. This energy inspires confidence and trust.
 
-Esta proyección atrae responsabilidad, confianza y situaciones que requieren soluciones prácticas. La gente instintivamente asigna a esta persona tareas importantes y confía en que las lleve a cabo.
+This projection attracts responsibility, trust, and situations requiring practical solutions. People instinctively give this person important tasks and rely on their follow-through.
 
-Sin embargo, esta proyección a veces puede parecer rígida o aburrida. Aprender a mostrar espontaneidad cuando sea apropiado ayuda a equilibrar el aura natural y confiable.`
+However, this projection may sometimes seem rigid or boring. Learning to show spontaneity when appropriate helps balance the natural reliable aura.`
     },
     5: { 
-        title: "Versatilidad de proyectos", 
-        reading: `La personalidad número 5 proyecta versatilidad, energía y atractivo. Otros ven a alguien aventurero y dinámico que aporta emoción a cualquier situación.
+        title: "Projects Versatility", 
+        reading: `Personality Number 5 projects versatility, energy, and attractiveness. Others see someone adventurous and dynamic who brings excitement to any situation.
 
-El yo exterior parece magnético, cambiante y lleno de vida. Las primeras impresiones implican energía, encanto y un toque de imprevisibilidad. Esta energía atrae a la gente y crea entusiasmo.
+The outer self appears magnetic, changeable, and full of life. First impressions involve energy, charm, and a hint of unpredictability. This energy draws people in and creates excitement.
 
-Esta proyección atrae aventuras, variedad y situaciones que requieren adaptabilidad. La gente instintivamente quiere acompañar las aventuras de esta persona y experimentar su energía.
+This projection attracts adventure, variety, and situations requiring adaptability. People instinctively want to go along on this person's adventures and experience their energy.
 
-Sin embargo, esta proyección a veces puede parecer poco fiable o dispersa. Aprender a mostrar coherencia cuando sea apropiado ayuda a equilibrar el aura dinámica natural.`
+However, this projection may sometimes seem unreliable or scattered. Learning to show consistency when appropriate helps balance the natural dynamic aura.`
     },
     6: { 
-        title: "Calidez de proyectos", 
-        reading: `La personalidad número 6 proyecta calidez, responsabilidad y cariño. Otros ven a alguien cariñoso y confiable que crea armonía y hace que la gente se sienta como en casa.
+        title: "Projects Warmth", 
+        reading: `Personality Number 6 projects warmth, responsibility, and nurturing care. Others see someone caring and dependable who creates harmony and makes people feel at home.
 
-El yo exterior parece amoroso, doméstico y responsable. Las primeras impresiones implican comodidad, cuidado y calidez natural. Esta energía hace que las personas se sientan cuidadas y bienvenidas.
+The outer self appears loving, domestic, and responsible. First impressions involve comfort, care, and natural warmth. This energy makes people feel cared for and welcome.
 
-Esta proyección atrae roles familiares, responsabilidades de cuidado y situaciones que requieren armonía. La gente instintivamente le trae sus problemas a esta persona y busca su presencia cariñosa.
+This projection attracts family roles, caregiving responsibilities, and situations requiring harmony. People instinctively bring their problems to this person and seek their nurturing presence.
 
-Sin embargo, esta proyección a veces puede parecer demasiado centrada en los demás o en la maternidad. Aprender a mantener los límites ayuda a equilibrar el aura natural y enriquecedora.`
+However, this projection may sometimes seem too focused on others or mothering. Learning to maintain boundaries helps balance the natural nurturing aura.`
     },
     7: { 
-        title: "Proyectos Misterio", 
-        reading: `La personalidad número 7 proyecta misterio, inteligencia y profundidad. Otros ven a alguien reflexivo y reservado que tiene una profunda sabiduría interior.
+        title: "Projects Mystery", 
+        reading: `Personality Number 7 projects mystery, intelligence, and depth. Others see someone thoughtful and reserved who has profound inner wisdom.
 
-El yo exterior parece analítico, espiritual y algo enigmático. Las primeras impresiones implican inteligencia, profundidad y un aire de misterio. Esta energía intriga y atrae mentes curiosas.
+The outer self appears analytical, spiritual, and somewhat enigmatic. First impressions involve intelligence, depth, and an air of mystery. This energy intrigues and draws curious minds.
 
-Esta proyección atrae oportunidades de investigación, buscadores espirituales y situaciones que requieren un análisis profundo. La gente instintivamente respeta el conocimiento de esta persona y busca su sabiduría.
+This projection attracts research opportunities, spiritual seekers, and situations requiring deep analysis. People instinctively respect this person's knowledge and seek their wisdom.
 
-Sin embargo, esta proyección a veces puede parecer distante o inaccesible. Aprender a mostrar calidez cuando sea apropiado ayuda a equilibrar el aura misteriosa natural.`
+However, this projection may sometimes seem aloof or unapproachable. Learning to show warmth when appropriate helps balance the natural mysterious aura.`
     },
     8: { 
-        title: "Proyectos Poder", 
-        reading: `La personalidad número 8 proyecta poder, éxito y autoridad. Otros ven a alguien realizado y confiado que puede lograr resultados significativos.
+        title: "Projects Power", 
+        reading: `Personality Number 8 projects power, success, and authority. Others see someone accomplished and confident who can achieve significant results.
 
-El yo exterior parece profesional, autoritario y capaz de lograr un gran éxito. Las primeras impresiones implican competencia, autoridad y dominio material. Esta energía impone respeto y abre puertas.
+The outer self appears professional, commanding, and capable of great success. First impressions involve competence, authority, and material mastery. This energy commands respect and opens doors.
 
-Esta proyección atrae oportunidades de negocios, roles de liderazgo y situaciones que requieren poder y decisión. La gente instintivamente ve a esta persona como capaz de asumir grandes responsabilidades.
+This projection attracts business opportunities, leadership roles, and situations requiring power and decisiveness. People instinctively see this person as capable of handling big responsibilities.
 
-Sin embargo, esta proyección a veces puede parecer intimidante o materialista. Aprender a mostrar humildad cuando sea apropiado ayuda a equilibrar el aura poderosa natural.`
+However, this projection may sometimes seem intimidating or materialistic. Learning to show humility when appropriate helps balance the natural powerful aura.`
     },
     9: { 
-        title: "Proyectos Sabiduría", 
-        reading: `La personalidad número 9 proyecta sabiduría, compasión y sofisticación. Otros ven a alguien culto y humanitario que realmente se preocupa por el mundo.
+        title: "Projects Wisdom", 
+        reading: `Personality Number 9 projects wisdom, compassion, and sophistication. Others see someone cultured and humanitarian who genuinely cares about the world.
 
-El yo exterior parece sabio, caritativo y mundano. Las primeras impresiones implican profundidad, compasión y una perspectiva evolucionada. Esta energía inspira y eleva.
+The outer self appears wise, charitable, and worldly. First impressions involve depth, compassion, and evolved perspective. This energy inspires and uplifts.
 
-Esta proyección atrae oportunidades humanitarias, roles docentes y situaciones que requieren sabiduría y una perspectiva amplia. La gente confía instintivamente en el consejo de esta persona sobre asuntos importantes.
+This projection attracts humanitarian opportunities, teaching roles, and situations requiring wisdom and broad perspective. People instinctively trust this person's counsel on important matters.
 
-Sin embargo, esta proyección a veces puede parecer demasiado distante o por encima de todo. Aprender a permanecer firme cuando sea apropiado ayuda a equilibrar el aura sabia natural.`
+However, this projection may sometimes seem too detached or above it all. Learning to stay grounded when appropriate helps balance the natural wise aura.`
     },
     11: { 
-        title: "Inspiración de proyectos", 
-        reading: `La personalidad número 11 proyecta inspiración, intuición y conciencia espiritual. Otros ven a alguien perspicaz y visionario que siente cosas más allá de la superficie.
+        title: "Projects Inspiration", 
+        reading: `Personality Number 11 projects inspiration, intuition, and spiritual awareness. Others see someone insightful and visionary who senses things beyond the surface.
 
-El yo exterior aparece iluminado, sensible y espiritualmente en sintonía. Las primeras impresiones implican profundidad, intuición y percepción inusual. Esta energía inspira y a veces asombra.
+The outer self appears illuminated, sensitive, and spiritually attuned. First impressions involve depth, intuition, and unusual perception. This energy inspires and sometimes awes.
 
-Esta proyección atrae buscadores espirituales, oportunidades creativas y situaciones que requieren visión e inspiración. La gente instintivamente siente que esta persona tiene acceso a algo más allá de lo común.
+This projection attracts spiritual seekers, creative opportunities, and situations requiring vision and inspiration. People instinctively sense that this person has access to something beyond ordinary.
 
-Sin embargo, esta proyección a veces puede parecer demasiado sensible o poco práctica. Aprender a mostrar firmeza cuando sea apropiado ayuda a equilibrar el aura de inspiración natural.`
+However, this projection may sometimes seem too sensitive or impractical. Learning to show groundedness when appropriate helps balance the natural inspirational aura.`
     },
     22: { 
-        title: "Visión de Proyectos", 
-        reading: `La personalidad número 22 proyecta visión, capacidad y dominio. Otros ven a alguien que puede lograr grandes cosas y construir estructuras duraderas.
+        title: "Projects Vision", 
+        reading: `Personality Number 22 projects vision, capability, and mastery. Others see someone who can accomplish great things and build structures that last.
 
-El yo exterior parece poderoso, visionario y capaz de manifestar sueños a gran escala. Las primeras impresiones implican una capacidad impresionante y un gran potencial. Esta energía impone respeto e inspira ambición.
+The outer self appears powerful, visionary, and capable of manifesting large-scale dreams. First impressions involve impressive capability and grand potential. This energy commands respect and inspires ambition.
 
-Esta proyección atrae grandes oportunidades, proyectos de construcción y situaciones que requieren visión combinada con dominio práctico. La gente instintivamente ve a esta persona como capaz de lograr lo excepcional.
+This projection attracts major opportunities, building projects, and situations requiring vision combined with practical mastery. People instinctively see this person as capable of achieving the exceptional.
 
-Sin embargo, esta proyección a veces puede parecer abrumadora o intimidante. Aprender a ser accesible ayuda a equilibrar el aura natural del maestro constructor.`
+However, this projection may sometimes seem overwhelming or intimidating. Learning to be approachable helps balance the natural master builder aura.`
     }
 };
 
@@ -2293,141 +2293,141 @@ Sin embargo, esta proyección a veces puede parecer abrumadora o intimidante. Ap
 
 var STELLIUM_READINGS = {
     Aries: {
-        title: "La concentración guerrera",
+        title: "The Warrior Concentration",
         symbol: "🔥",
-        reading: `Con múltiples planetas concentrados en Aries, esta alma lleva una extraordinaria cantidad de energía de fuego pionera. Este stellium crea un poderoso impulso para iniciar, liderar y abrir nuevos caminos.
+        reading: `With multiple planets concentrated in Aries, this soul carries an extraordinary amount of pioneering fire energy. This stellium creates a powerful drive to initiate, lead, and break new ground.
 
-Esta concentración amplifica el coraje, la independencia y el instinto de actuar con decisión. La vida llamará repetidamente a esta persona a dar un paso adelante como líder, incluso cuando se sienta incómoda. Nacieron para iniciar cosas: movimientos, negocios, conversaciones que otros temen iniciar.
+This concentration amplifies courage, independence, and the instinct to act decisively. Life will repeatedly call this person to step forward as a leader, even when it feels uncomfortable. They were born to start things - movements, businesses, conversations that others fear to begin.
 
-El desafío con tanta energía de Aries es aprender a tener paciencia y perseverar. La necesidad de iniciar nuevas empresas puede eclipsar la necesidad de completar las existentes. La impulsividad puede crear situaciones que requieran una limpieza posterior.
+The challenge with this much Aries energy is learning patience and follow-through. The urge to begin new ventures can overshadow the need to complete existing ones. Impulsivity may create situations that require later cleanup.
 
-Este stellium dota de un espíritu casi guerrero. Cuando se canaliza adecuadamente, crea a alguien capaz de realizar extraordinarias hazañas de coraje e iniciativa. La clave es aprender a atemperar el fuego sin apagarlo.`
+This stellium gifts an almost warrior-like spirit. When properly channeled, it creates someone capable of extraordinary feats of courage and initiative. The key is learning to temper the fire without extinguishing it.`
     },
     Taurus: {
-        title: "La concentración de la abundancia",
+        title: "The Abundance Concentration",
         symbol: "🌿",
-        reading: `Con múltiples planetas concentrados en Tauro, esta alma lleva una extraordinaria cantidad de energía estabilizadora de la Tierra. Este stellium crea un poderoso impulso hacia la seguridad, la belleza y el dominio material.
+        reading: `With multiple planets concentrated in Taurus, this soul carries an extraordinary amount of earth-stabilizing energy. This stellium creates a powerful drive toward security, beauty, and material mastery.
 
-Esta concentración amplifica la determinación, la sensualidad y la capacidad de generar valor duradero. La vida llamará repetidamente a esta persona a crear cosas de valor duradero, ya sean posesiones físicas, negocios o relaciones construidas para durar.
+This concentration amplifies determination, sensuality, and the ability to build lasting value. Life will repeatedly call this person to create things of enduring worth - whether physical possessions, businesses, or relationships built to last.
 
-El desafío con tanta energía de Tauro es evitar el estancamiento y el apego excesivo a la comodidad. La resistencia al cambio, si bien proporciona estabilidad, también puede impedir el crecimiento y la evolución necesarios.
+The challenge with this much Taurus energy is avoiding stagnation and over-attachment to comfort. Resistance to change, while providing stability, can also prevent necessary growth and evolution.
 
-Este stellium presenta una relación casi magnética con la abundancia. Cuando se canaliza adecuadamente, crea a alguien capaz de manifestar un éxito material notable y crear ambientes de belleza y comodidad. La clave es permanecer abierto al cambio respetando al mismo tiempo la necesidad de seguridad.`
+This stellium gifts an almost magnetic relationship with abundance. When properly channeled, it creates someone capable of manifesting remarkable material success and creating environments of beauty and comfort. The key is remaining open to change while honoring the need for security.`
     },
     Gemini: {
-        title: "La concentración del mensajero",
+        title: "The Messenger Concentration",
         symbol: "💨",
-        reading: `Con múltiples planetas concentrados en Géminis, esta alma lleva una extraordinaria cantidad de energía de aire mental. Este stellium crea un poderoso impulso para comunicar, aprender y conectar ideas y personas.
+        reading: `With multiple planets concentrated in Gemini, this soul carries an extraordinary amount of mental air energy. This stellium creates a powerful drive to communicate, learn, and connect ideas and people.
 
-Esta concentración amplifica la curiosidad, la versatilidad y la capacidad de ver múltiples perspectivas simultáneamente. La vida llamará repetidamente a esta persona para que sirva de puente entre mundos diferentes, traduciendo ideas complejas en formas accesibles.
+This concentration amplifies curiosity, versatility, and the ability to see multiple perspectives simultaneously. Life will repeatedly call this person to serve as a bridge between different worlds, translating complex ideas into accessible forms.
 
-El desafío con tanta energía de Géminis es encontrar enfoque y profundidad. La mente puede correr en múltiples direcciones a la vez, lo que dificulta comprometerse con un solo camino o dominar un tema a fondo.
+The challenge with this much Gemini energy is finding focus and depth. The mind may race in multiple directions at once, making it difficult to commit to a single path or master one subject thoroughly.
 
-Este stellium posee una habilidad casi sobrenatural con las palabras y las ideas. Cuando se canaliza adecuadamente, crea a alguien capaz de lograr logros intelectuales y avances comunicativos notables. La clave es desarrollar la concentración sin perder el don de la versatilidad.`
+This stellium gifts an almost supernatural ability with words and ideas. When properly channeled, it creates someone capable of remarkable intellectual achievements and communication breakthroughs. The key is developing focus without losing the gift of versatility.`
     },
     Cancer: {
-        title: "La concentración del cuidador",
+        title: "The Nurturer Concentration",
         symbol: "🌙",
-        reading: `Con múltiples planetas concentrados en Cáncer, esta alma lleva una extraordinaria cantidad de energía emocional lunar. Este stellium crea un poderoso impulso para nutrir, proteger y crear seguridad emocional.
+        reading: `With multiple planets concentrated in Cancer, this soul carries an extraordinary amount of lunar emotional energy. This stellium creates a powerful drive to nurture, protect, and create emotional security.
 
-Esta concentración amplifica la intuición, la empatía y la capacidad de crear espacios sagrados de pertenencia. La vida llamará repetidamente a esta persona para que sirva como cuidador, ya sea de personas, lugares, tradiciones o recuerdos.
+This concentration amplifies intuition, empathy, and the ability to create sacred spaces of belonging. Life will repeatedly call this person to serve as a caretaker, whether of people, places, traditions, or memories.
 
-El desafío con tanta energía de Cáncer es manejar la sensibilidad emocional y evitar la sobreprotección. La necesidad de cuidar de los demás puede volverse asfixiante o las heridas emocionales pueden tardar más en sanar.
+The challenge with this much Cancer energy is managing emotional sensitivity and avoiding over-protection. The urge to care for others may become smothering, or emotional wounds may take longer to heal.
 
-Este stellium dota de un nivel casi psíquico de inteligencia emocional. Cuando se canaliza adecuadamente, crea a alguien capaz de realizar un trabajo de curación profunda y crear entornos donde los demás se sienten realmente vistos y seguros. La clave es desarrollar límites emocionales manteniendo el corazón abierto.`
+This stellium gifts an almost psychic level of emotional intelligence. When properly channeled, it creates someone capable of profound healing work and creating environments where others feel truly seen and safe. The key is developing emotional boundaries while keeping the heart open.`
     },
     Leo: {
-        title: "La concentración de resplandor",
+        title: "The Radiance Concentration",
         symbol: "☀️",
-        reading: `Con múltiples planetas concentrados en Leo, esta alma lleva una extraordinaria cantidad de energía solar creativa. Este stellium crea un poderoso impulso para brillar, crear e inspirar a través de la expresión personal.
+        reading: `With multiple planets concentrated in Leo, this soul carries an extraordinary amount of solar creative energy. This stellium creates a powerful drive to shine, create, and inspire through personal expression.
 
-Esta concentración amplifica el carisma, la creatividad y la capacidad natural de liderar a través de una presencia magnética. La vida llamará repetidamente a esta persona a ser el centro de atención, lo busque o no.
+This concentration amplifies charisma, creativity, and the natural ability to lead through magnetic presence. Life will repeatedly call this person to step into the spotlight, whether they seek it or not.
 
-El desafío con tanta energía Leo es equilibrar la confianza con la humildad. La necesidad de reconocimiento puede volverse excesiva o el ego puede resistirse a la retroalimentación y al crecimiento necesarios.
+The challenge with this much Leo energy is balancing confidence with humility. The need for recognition may become excessive, or the ego may resist necessary feedback and growth.
 
-Este stellium presenta una cualidad casi real de presencia y poder creativo. Cuando se canaliza adecuadamente, crea a alguien capaz de inspirar a millones y crear obras de importancia artística duradera. La clave es utilizar el foco para iluminar a los demás, no sólo a uno mismo.`
+This stellium gifts an almost royal quality of presence and creative power. When properly channeled, it creates someone capable of inspiring millions and creating works of lasting artistic significance. The key is using the spotlight to illuminate others, not just oneself.`
     },
     Virgo: {
-        title: "La concentración de analistas",
+        title: "The Analyst Concentration",
         symbol: "🌾",
-        reading: `Con múltiples planetas concentrados en Virgo, esta alma lleva una extraordinaria cantidad de energía que refina la tierra. Este stellium crea un poderoso impulso para analizar, mejorar y perfeccionar.
+        reading: `With multiple planets concentrated in Virgo, this soul carries an extraordinary amount of earth-refining energy. This stellium creates a powerful drive to analyze, improve, and perfect.
 
-Esta concentración amplifica el discernimiento, el desarrollo de habilidades y la capacidad de ver cómo se pueden mejorar las cosas. La vida llamará repetidamente a esta persona a servir a través de experiencia práctica y atención al detalle.
+This concentration amplifies discernment, skill-building, and the ability to see how things can be made better. Life will repeatedly call this person to serve through practical expertise and attention to detail.
 
-El desafío con tanta energía de Virgo es gestionar el perfeccionismo y la autocrítica. La búsqueda de la mejora puede convertirse en una persecución interminable que impide apreciar lo que ya es.
+The challenge with this much Virgo energy is managing perfectionism and self-criticism. The pursuit of improvement may become an endless chase that prevents appreciation of what already is.
 
-Este stellium presenta una atención casi sobrenatural al detalle y una capacidad de maestría. Cuando se canaliza adecuadamente, crea a alguien capaz de ofrecer un trabajo y un servicio extraordinarios. La clave es aprender cuándo lo suficientemente bueno es realmente lo suficientemente bueno.`
+This stellium gifts an almost supernatural attention to detail and capacity for mastery. When properly channeled, it creates someone capable of extraordinary craftsmanship and service. The key is learning when good enough is truly good enough.`
     },
     Libra: {
-        title: "La concentración armonizadora",
+        title: "The Harmonizer Concentration",
         symbol: "⚖️",
-        reading: `Con múltiples planetas concentrados en Libra, esta alma lleva una extraordinaria cantidad de energía que equilibra el aire. Este stellium crea un poderoso impulso hacia la belleza, la asociación y la justicia.
+        reading: `With multiple planets concentrated in Libra, this soul carries an extraordinary amount of air-balancing energy. This stellium creates a powerful drive toward beauty, partnership, and justice.
 
-Esta concentración amplifica la diplomacia, el sentido estético y la capacidad de armonizar fuerzas opuestas. La vida llamará repetidamente a esta persona para que actúe como mediadora, embellecedora o defensora de la justicia.
+This concentration amplifies diplomacy, aesthetic sense, and the ability to bring opposing forces into harmony. Life will repeatedly call this person to serve as a mediator, beautifier, or advocate for fairness.
 
-El desafío con tanta energía de Libra es tomar decisiones y mantener límites personales. El deseo de complacer a todos puede llevar a perderse en las necesidades y opiniones de los demás.
+The challenge with this much Libra energy is making decisions and maintaining personal boundaries. The desire to please everyone may lead to losing oneself in others' needs and opinions.
 
-Este stellium tiene una capacidad casi mágica para crear belleza y armonía en cualquier entorno. Cuando se canaliza adecuadamente, crea a alguien capaz de lograr asociaciones y logros estéticos notables. La clave es desarrollar una brújula interior fuerte y al mismo tiempo mantener el don de ver todos los lados.`
+This stellium gifts an almost magical ability to create beauty and harmony in any environment. When properly channeled, it creates someone capable of remarkable partnerships and aesthetic achievements. The key is developing a strong inner compass while maintaining the gift of seeing all sides.`
     },
     Scorpio: {
-        title: "La concentración del transformador",
+        title: "The Transformer Concentration",
         symbol: "🦂",
-        reading: `Con múltiples planetas concentrados en Escorpio, esta alma lleva una extraordinaria cantidad de energía transformadora del agua. Este stellium crea un poderoso impulso hacia la profundidad, la verdad y la transformación completa.
+        reading: `With multiple planets concentrated in Scorpio, this soul carries an extraordinary amount of water-transforming energy. This stellium creates a powerful drive toward depth, truth, and complete transformation.
 
-Esta concentración amplifica la intensidad, el conocimiento psicológico y la capacidad de navegar por los territorios más oscuros de la experiencia humana. La vida llamará repetidamente a esta persona para que sirva como sanador, investigador o agente de cambio profundo.
+This concentration amplifies intensity, psychological insight, and the ability to navigate the darkest territories of human experience. Life will repeatedly call this person to serve as a healer, investigator, or agent of profound change.
 
-El desafío con tanta energía de Escorpio es controlar la intensidad y la tendencia a la obsesión. El impulso de profundizar puede resultar agotador y los problemas de confianza pueden complicar las relaciones.
+The challenge with this much Scorpio energy is managing intensity and the tendency toward obsession. The drive to go deep may become consuming, and trust issues may complicate relationships.
 
-Este stellium posee una capacidad casi sobrenatural para ver debajo de las superficies y facilitar la curación. Cuando se canaliza adecuadamente, crea a alguien capaz de lograr avances psicológicos notables y un trabajo transformador. La clave es aprender cuándo salir a la superficie desde las profundidades.`
+This stellium gifts an almost supernatural ability to see beneath surfaces and facilitate healing. When properly channeled, it creates someone capable of remarkable psychological breakthroughs and transformative work. The key is learning when to surface from the depths.`
     },
     Sagittarius: {
-        title: "La concentración de exploradores",
+        title: "The Explorer Concentration",
         symbol: "🏹",
-        reading: `Con múltiples planetas concentrados en Sagitario, esta alma lleva una extraordinaria cantidad de energía que expande el fuego. Este stellium crea un poderoso impulso hacia la aventura, la sabiduría y la expansión de horizontes.
+        reading: `With multiple planets concentrated in Sagittarius, this soul carries an extraordinary amount of fire-expanding energy. This stellium creates a powerful drive toward adventure, wisdom, and the expansion of horizons.
 
-Esta concentración amplifica el optimismo, el pensamiento filosófico y la necesidad de libertad y significado. La vida llamará repetidamente a esta persona para que sirva como maestro, aventurero o buscador de la verdad.
+This concentration amplifies optimism, philosophical thinking, and the need for freedom and meaning. Life will repeatedly call this person to serve as a teacher, adventurer, or seeker of truth.
 
-El desafío con tanta energía de Sagitario es mantener el enfoque y el seguimiento. La búsqueda constante de nuevos horizontes puede impedir que se formen raíces profundas, y la brusquedad puede herir involuntariamente a otros.
+The challenge with this much Sagittarius energy is maintaining focus and follow-through. The constant seeking of new horizons may prevent deep roots from forming, and bluntness may unintentionally wound others.
 
-Este stellium tiene una capacidad casi profética para inspirar esperanza e iluminar el significado. Cuando se canaliza adecuadamente, crea a alguien capaz de enseñar de manera extraordinaria e inspirar a otros hacia sus propias expansiones. La clave es aprender a encontrar el infinito en lo inmediato.`
+This stellium gifts an almost prophetic ability to inspire hope and illuminate meaning. When properly channeled, it creates someone capable of remarkable teaching and inspiring others toward their own expansions. The key is learning to find the infinite in the immediate.`
     },
     Capricorn: {
-        title: "La concentración del triunfador",
+        title: "The Achiever Concentration",
         symbol: "🏔️",
-        reading: `Con múltiples planetas concentrados en Capricornio, esta alma lleva una extraordinaria cantidad de energía constructora de la Tierra. Este stellium crea un poderoso impulso hacia el logro, el dominio y un legado duradero.
+        reading: `With multiple planets concentrated in Capricorn, this soul carries an extraordinary amount of earth-building energy. This stellium creates a powerful drive toward achievement, mastery, and lasting legacy.
 
-Esta concentración amplifica la ambición, la disciplina y la capacidad de jugar a largo plazo. La vida llamará repetidamente a esta persona a construir estructuras, ya sean empresas, instituciones u otras obras destinadas a resistir el paso del tiempo.
+This concentration amplifies ambition, discipline, and the ability to play the long game. Life will repeatedly call this person to build structures - whether businesses, institutions, or other works meant to stand the test of time.
 
-El desafío con tanta energía de Capricornio es evitar la adicción al trabajo y la frialdad emocional. El impulso de logro puede eclipsar las relaciones personales y la necesidad de descansar y jugar.
+The challenge with this much Capricorn energy is avoiding workaholism and emotional coldness. The drive for achievement may overshadow personal relationships and the need for rest and play.
 
-Este stellium dota de un sentido casi antiguo de sabiduría y capacidad. Cuando se canaliza adecuadamente, crea a alguien capaz de lograr logros notables y dejar una huella duradera en el mundo. La clave es recordar que el viaje importa tanto como el destino.`
+This stellium gifts an almost ancient sense of wisdom and capability. When properly channeled, it creates someone capable of remarkable achievements and leaving a lasting mark on the world. The key is remembering that the journey matters as much as the destination.`
     },
     Aquarius: {
-        title: "La concentración visionaria",
+        title: "The Visionary Concentration",
         symbol: "⚡",
-        reading: `Con múltiples planetas concentrados en Acuario, esta alma lleva una extraordinaria cantidad de energía innovadora en el aire. Este stellium crea un poderoso impulso hacia la originalidad, la comunidad y el cambio revolucionario.
+        reading: `With multiple planets concentrated in Aquarius, this soul carries an extraordinary amount of air-innovating energy. This stellium creates a powerful drive toward originality, community, and revolutionary change.
 
-Esta concentración amplifica la singularidad, el pensamiento humanitario y la capacidad de imaginar futuros que otros aún no pueden ver. La vida llamará repetidamente a esta persona para que sirva como innovador, activista o voz para el progreso colectivo.
+This concentration amplifies uniqueness, humanitarian thinking, and the ability to envision futures that others cannot yet see. Life will repeatedly call this person to serve as an innovator, activist, or voice for collective progress.
 
-El desafío con tanta energía de Acuario es mantener la conexión y evitar el desapego emocional. El enfoque en lo colectivo puede ocurrir a expensas de las relaciones íntimas, y la necesidad de ser diferente puede convertirse en su propia forma de conformidad.
+The challenge with this much Aquarius energy is maintaining connection and avoiding emotional detachment. The focus on the collective may come at the expense of intimate relationships, and the need to be different may become its own form of conformity.
 
-Este stellium tiene una capacidad casi profética para ver las tendencias e innovaciones futuras. Cuando se canaliza adecuadamente, crea a alguien capaz de realizar contribuciones notables al progreso humano y la construcción de comunidades. La clave es permanecer conectado con los corazones individuales mientras se trabaja por el bien colectivo.`
+This stellium gifts an almost prophetic ability to see coming trends and innovations. When properly channeled, it creates someone capable of remarkable contributions to human progress and community building. The key is staying connected to individual hearts while working for collective good.`
     },
     Pisces: {
-        title: "La concentración mística",
+        title: "The Mystic Concentration",
         symbol: "🌊",
-        reading: `Con múltiples planetas concentrados en Piscis, esta alma lleva una extraordinaria cantidad de energía que disuelve el agua. Este stellium crea un poderoso impulso hacia la trascendencia, la compasión y la conexión espiritual.
+        reading: `With multiple planets concentrated in Pisces, this soul carries an extraordinary amount of water-dissolving energy. This stellium creates a powerful drive toward transcendence, compassion, and spiritual connection.
 
-Esta concentración amplifica la intuición, la creatividad y la capacidad de sentir lo que se encuentra más allá de la percepción ordinaria. La vida llamará repetidamente a esta persona para que sirva como artista, sanador o guía espiritual.
+This concentration amplifies intuition, creativity, and the ability to sense what lies beyond ordinary perception. Life will repeatedly call this person to serve as an artist, healer, or spiritual guide.
 
-El desafío con tanta energía de Piscis es mantener los límites y mantenerse firme. La tendencia natural a fusionarse puede generar confusión acerca de dónde termina uno y dónde comienzan los demás, y el escapismo puede resultar tentador.
+The challenge with this much Pisces energy is maintaining boundaries and staying grounded. The natural tendency toward merging may lead to confusion about where self ends and others begin, and escapism may become tempting.
 
-Este stellium otorga un nivel casi sobrenatural de compasión e imaginación creativa. Cuando se canaliza adecuadamente, crea a alguien capaz de lograr logros artísticos y espirituales notables. La clave es desarrollar anclas prácticas y al mismo tiempo honrar el llamado a la trascendencia.`
+This stellium gifts an almost supernatural level of compassion and creative imagination. When properly channeled, it creates someone capable of remarkable artistic and spiritual achievements. The key is developing practical anchors while honoring the call to transcendence.`
     }
 };
 
 // Export for use in other files
-if (typeof module !== 'indefinido' && module.exports) {
+if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         LIFE_PATH_READINGS,
         SUN_SIGN_READINGS,
@@ -2458,135 +2458,135 @@ if (typeof module !== 'indefinido' && module.exports) {
 
 var SOUTH_NODE_READINGS = {
     Aries: {
-        keywords: ["Independencia pasada", "Energía guerrera", "Autoenfoque", "Coraje"],
-        summary: "Regalos de independencia, coraje y autoafirmación de vidas pasadas.",
-        reading: `El Nodo Sur en Aries indica dominio de la independencia, el coraje y la autoafirmación en vidas pasadas. Esta alma ha sido una guerrera, una pionera y una líder en encarnaciones anteriores. Llegan a esta vida con una confianza natural y la capacidad de actuar de forma independiente.
+        keywords: ["Past Independence", "Warrior Energy", "Self-Focus", "Courage"],
+        summary: "Past life gifts of independence, courage, and self-assertion.",
+        reading: `The South Node in Aries indicates past life mastery of independence, courage, and self-assertion. This soul has been a warrior, a pioneer, and a leader in previous incarnations. They come into this life with natural confidence and the ability to act independently.
 
-Estos dones incluyen la valentía en nuevas empresas, la capacidad de mantenerse solo cuando sea necesario e instintos naturales de liderazgo. Sin embargo, el crecimiento del alma ahora requiere equilibrar estas fortalezas con la conciencia de los demás y la cooperación.
+These gifts include fearlessness in new ventures, the ability to stand alone when necessary, and natural leadership instincts. However, the soul's growth now requires balancing these strengths with awareness of others and cooperation.
 
-El desafío no es volver a caer en patrones puramente centrados en uno mismo, sino utilizar la valentía del pasado para servir a propósitos más elevados que incluyen a los demás. El don es la capacidad natural de iniciar y liderar cuando sea necesario.`,
-        strengths: ["coraje natural", "Acción independiente", "capacidad de liderazgo", "Confianza en sí mismo"],
-        challenges: ["Egoísmo", "Impaciencia con los demás.", "Independencia excesiva", "Orientación al conflicto"]
+The challenge is not falling back into purely self-focused patterns but using past courage to serve higher purposes that include others. The gift is the natural ability to initiate and lead when needed.`,
+        strengths: ["Natural courage", "Independent action", "Leadership ability", "Self-confidence"],
+        challenges: ["Selfishness", "Impatience with others", "Excessive independence", "Conflict orientation"]
     },
     Taurus: {
-        keywords: ["Estabilidad pasada", "Dominio de materiales", "Regalos sensuales", "Paciencia"],
-        summary: "Dones de vidas pasadas de dominio material, sensualidad y construcción.",
-        reading: `El Nodo Sur en Tauro indica dominio de la seguridad material, placer sensual y construcción paciente en vidas pasadas. Esta alma ha sido constructora, artista y administradora de recursos en encarnaciones anteriores. Vienen a esta vida con un aprecio natural por la belleza y la capacidad de crear estabilidad.
+        keywords: ["Past Stability", "Material Mastery", "Sensual Gifts", "Patience"],
+        summary: "Past life gifts of material mastery, sensuality, and building.",
+        reading: `The South Node in Taurus indicates past life mastery of material security, sensual pleasure, and patient building. This soul has been a builder, an artist, and a steward of resources in previous incarnations. They come into this life with natural appreciation for beauty and the ability to create stability.
 
-Estos dones incluyen sabiduría práctica, sensibilidad artística y la capacidad de manifestar abundancia material. Sin embargo, el crecimiento del alma ahora requiere ir más allá del apego a la seguridad y la comodidad para abrazar la transformación y los recursos compartidos.
+These gifts include practical wisdom, artistic sensibility, and the ability to manifest material abundance. However, the soul's growth now requires moving beyond attachment to security and comfort to embrace transformation and shared resources.
 
-El desafío no es quedarse atrapado en el materialismo o la resistencia al cambio. El don es la capacidad de crear valor duradero y apreciar los placeres físicos de la vida.`,
-        strengths: ["Sabiduría material", "Sensibilidad artística", "edificio de pacientes", "Conciencia sensual"],
-        challenges: ["Fijación de materiales", "Resistencia al cambio", "Posesividad", "Testarudez"]
+The challenge is not becoming stuck in materialism or resistance to change. The gift is the ability to create lasting value and appreciate life's physical pleasures.`,
+        strengths: ["Material wisdom", "Artistic sensibility", "Patient building", "Sensual awareness"],
+        challenges: ["Material attachment", "Resistance to change", "Possessiveness", "Stubbornness"]
     },
     Gemini: {
-        keywords: ["Comunicación pasada", "Agilidad mental", "Versatilidad", "Curiosidad"],
-        summary: "Dones de vidas pasadas de comunicación, aprendizaje y flexibilidad mental.",
-        reading: `El Nodo Sur en Géminis indica dominio de la comunicación, el aprendizaje y la agilidad mental en vidas pasadas. Esta alma ha sido maestra, escritora y recopiladora de información en encarnaciones anteriores. Llegan a esta vida con una curiosidad natural y la capacidad de conectarse con personas diversas.
+        keywords: ["Past Communication", "Mental Agility", "Versatility", "Curiosity"],
+        summary: "Past life gifts of communication, learning, and mental flexibility.",
+        reading: `The South Node in Gemini indicates past life mastery of communication, learning, and mental agility. This soul has been a teacher, a writer, and a gatherer of information in previous incarnations. They come into this life with natural curiosity and the ability to connect with diverse people.
 
-Estos dones incluyen el aprendizaje rápido, la fluidez verbal y la capacidad de ver múltiples perspectivas. Sin embargo, el crecimiento del alma ahora requiere ir más allá de la recopilación de información y desarrollar la sabiduría y el compromiso con la verdad.
+These gifts include quick learning, verbal fluency, and the ability to see multiple perspectives. However, the soul's growth now requires moving beyond gathering information to developing wisdom and commitment to truth.
 
-El desafío no es volverse dispersos o superficiales en busca de variedad. El don es la capacidad de comunicarse y conectarse con cualquier persona sobre cualquier tema.`,
-        strengths: ["Aprendizaje rápido", "fluidez verbal", "Versatilidad", "Adaptabilidad social"],
-        challenges: ["Dispersión mental", "Superficialidad", "dificultad con la profundidad", "Inquietud"]
+The challenge is not becoming scattered or superficial in pursuit of variety. The gift is the ability to communicate and connect with anyone about anything.`,
+        strengths: ["Quick learning", "Verbal fluency", "Versatility", "Social adaptability"],
+        challenges: ["Mental scatteredness", "Superficiality", "Difficulty with depth", "Restlessness"]
     },
     Cancer: {
-        keywords: ["Crianza pasada", "Profundidad emocional", "Inicio Enfoque", "Protección"],
-        summary: "Regalos de vidas pasadas de crianza, inteligencia emocional y creación de un hogar.",
-        reading: `El Nodo Sur en Cáncer indica el dominio de vidas pasadas en materia de crianza, cuidado emocional y creación de santuario. Esta alma ha sido madre, sanadora y protectora en encarnaciones anteriores. Vienen a esta vida con una sensibilidad emocional natural y la capacidad de cuidar de los demás.
+        keywords: ["Past Nurturing", "Emotional Depth", "Home Focus", "Protection"],
+        summary: "Past life gifts of nurturing, emotional intelligence, and creating home.",
+        reading: `The South Node in Cancer indicates past life mastery of nurturing, emotional care, and creating sanctuary. This soul has been a mother, a healer, and a protector in previous incarnations. They come into this life with natural emotional sensitivity and the ability to care for others.
 
-Estos dones incluyen una profunda empatía, una comprensión intuitiva de las necesidades y la capacidad de crear seguridad emocional. Sin embargo, el crecimiento del alma ahora requiere ir más allá de la dependencia emocional y el enfoque familiar para desarrollar logros públicos y madurez emocional.
+These gifts include deep empathy, intuitive understanding of needs, and the ability to create emotional safety. However, the soul's growth now requires moving beyond emotional dependency and family focus to develop public achievement and emotional maturity.
 
-El desafío es no volverse demasiado protector ni dependiente de la seguridad emocional. El don es la capacidad de nutrir y crear pertenencia dondequiera que vayan.`,
-        strengths: ["Empatía profunda", "capacidad de crianza", "Inteligencia emocional", "Instinto protector"],
-        challenges: ["Dependencia emocional", "Sobreprotección", "Dificultad con los límites", "Viviendo en el pasado"]
+The challenge is not becoming overly protective or dependent on emotional security. The gift is the ability to nurture and create belonging wherever they go.`,
+        strengths: ["Deep empathy", "Nurturing ability", "Emotional intelligence", "Protective instinct"],
+        challenges: ["Emotional dependency", "Over-protection", "Difficulty with boundaries", "Living in the past"]
     },
     Leo: {
-        keywords: ["Creatividad pasada", "Autoexpresión", "Liderazgo", "Generosidad"],
-        summary: "Dones de creatividad, autoexpresión y liderazgo natural de vidas pasadas.",
-        reading: `El Nodo Sur en Leo indica dominio de la creatividad, la autoexpresión y la atención en vidas pasadas. Esta alma ha sido intérprete, líder y creadora en encarnaciones anteriores. Llegan a esta vida con un carisma natural y la capacidad de brillar.
+        keywords: ["Past Creativity", "Self-Expression", "Leadership", "Generosity"],
+        summary: "Past life gifts of creativity, self-expression, and natural leadership.",
+        reading: `The South Node in Leo indicates past life mastery of creativity, self-expression, and commanding attention. This soul has been a performer, a leader, and a creator in previous incarnations. They come into this life with natural charisma and the ability to shine.
 
-Estos dones incluyen talento creativo, presencia de liderazgo y la capacidad de inspirar a otros. Sin embargo, el crecimiento del alma ahora requiere ir más allá de las necesidades del ego y el reconocimiento personal para servir al colectivo y abrazar la igualdad.
+These gifts include creative talent, leadership presence, and the ability to inspire others. However, the soul's growth now requires moving beyond ego needs and personal recognition to serve the collective and embrace equality.
 
-El desafío no es volverse adicto a la atención ni permitir que el orgullo bloquee el crecimiento. El don es la capacidad de expresar auténticamente e inspirar a través del ejemplo.`,
-        strengths: ["talento creativo", "carisma natural", "Presencia de liderazgo", "espíritu generoso"],
-        challenges: ["Necesidad de atención", "apego al ego", "Reacciones dramáticas", "Egocentrismo"]
+The challenge is not becoming addicted to attention or allowing pride to block growth. The gift is the ability to express authentically and inspire through example.`,
+        strengths: ["Creative talent", "Natural charisma", "Leadership presence", "Generous spirit"],
+        challenges: ["Need for attention", "Ego attachment", "Dramatic reactions", "Self-centeredness"]
     },
     Virgo: {
-        keywords: ["Servicio pasado", "Habilidad analítica", "Perfección", "Salud"],
-        summary: "Dones de servicio, análisis y habilidades prácticas de vidas pasadas.",
-        reading: `El Nodo Sur en Virgo indica dominio del servicio, análisis y perfección práctica en vidas pasadas. Esta alma ha sido sanadora, artesana y sirvienta devota en encarnaciones anteriores. Llegan a esta vida con una atención natural al detalle y la capacidad de mejorar los sistemas.
+        keywords: ["Past Service", "Analytical Skill", "Perfection", "Health"],
+        summary: "Past life gifts of service, analysis, and practical skills.",
+        reading: `The South Node in Virgo indicates past life mastery of service, analysis, and practical perfection. This soul has been a healer, a craftsperson, and a devoted servant in previous incarnations. They come into this life with natural attention to detail and the ability to improve systems.
 
-Estos dones incluyen precisión analítica, habilidades prácticas y un deseo genuino de ayudar. Sin embargo, el crecimiento del alma ahora requiere ir más allá del perfeccionismo y la crítica para abrazar la plenitud y la conexión espiritual.
+These gifts include analytical precision, practical skills, and genuine desire to be of service. However, the soul's growth now requires moving beyond perfectionism and criticism to embrace wholeness and spiritual connection.
 
-El desafío es no quedar atrapado en la autocrítica o el análisis excesivo. El don es la capacidad de ver lo que necesita mejorar y mejorarlo.`,
-        strengths: ["Precisión analítica", "Habilidades practicas", "Orientación al servicio", "Conciencia de salud"],
-        challenges: ["perfeccionismo", "Autocrítica", "Sobreanálisis", "Preocuparse"]
+The challenge is not becoming trapped in self-criticism or over-analysis. The gift is the ability to see what needs improvement and make it better.`,
+        strengths: ["Analytical precision", "Practical skills", "Service orientation", "Health consciousness"],
+        challenges: ["Perfectionism", "Self-criticism", "Over-analysis", "Worry"]
     },
     Libra: {
-        keywords: ["Asociación anterior", "Diplomacia", "Armonía", "Justicia"],
-        summary: "Dones de vidas pasadas de asociación, diplomacia y creación de armonía.",
-        reading: `El Nodo Sur en Libra indica el dominio de la asociación, la diplomacia y la creación de belleza en vidas pasadas. Esta alma ha sido diplomática, artista y experta en relaciones en encarnaciones anteriores. Vienen a esta vida con un encanto natural y la capacidad de crear armonía.
+        keywords: ["Past Partnership", "Diplomacy", "Harmony", "Fairness"],
+        summary: "Past life gifts of partnership, diplomacy, and creating harmony.",
+        reading: `The South Node in Libra indicates past life mastery of partnership, diplomacy, and creating beauty. This soul has been a diplomat, an artist, and a relationship expert in previous incarnations. They come into this life with natural charm and the ability to create harmony.
 
-Estos dones incluyen habilidad diplomática, sensibilidad estética y un cuidado genuino por la justicia. Sin embargo, el crecimiento del alma ahora requiere ir más allá del agrado de las personas y la dependencia de las relaciones para desarrollar una identidad independiente y una acción decisiva.
+These gifts include diplomatic skill, aesthetic sensibility, and genuine care for fairness. However, the soul's growth now requires moving beyond people-pleasing and dependence on relationships to develop independent identity and decisive action.
 
-El desafío no es perderse en las relaciones ni evitar los conflictos necesarios. El don es la capacidad de crear belleza y armonía en cualquier situación.`,
-        strengths: ["habilidad diplomática", "Sentido estético", "Imparcialidad", "Capacidad de asociación"],
-        challenges: ["complacer a la gente", "Indecisión", "Evitación de conflictos", "Perderse en los demás"]
+The challenge is not losing oneself in relationships or avoiding necessary conflict. The gift is the ability to create beauty and harmony in any situation.`,
+        strengths: ["Diplomatic skill", "Aesthetic sense", "Fair-mindedness", "Partnership ability"],
+        challenges: ["People-pleasing", "Indecision", "Conflict avoidance", "Losing self in others"]
     },
     Scorpio: {
-        keywords: ["Poder pasado", "Transformación", "Profundidad", "Intensidad"],
-        summary: "Dones de vidas pasadas de poder, transformación y profundidad emocional.",
-        reading: `El Nodo Sur en Escorpio indica dominio del poder, la transformación y la intensidad emocional en vidas pasadas. Esta alma ha sido una sanadora, una mística y una portadora de poder en encarnaciones anteriores. Vienen a esta vida con profundidad natural y la capacidad de transformarse.
+        keywords: ["Past Power", "Transformation", "Depth", "Intensity"],
+        summary: "Past life gifts of power, transformation, and emotional depth.",
+        reading: `The South Node in Scorpio indicates past life mastery of power, transformation, and emotional intensity. This soul has been a healer, a mystic, and a wielder of power in previous incarnations. They come into this life with natural depth and the ability to transform.
 
-Estos dones incluyen intensidad emocional, perspicacia psicológica y la capacidad de afrontar crisis. Sin embargo, el crecimiento del alma ahora requiere ir más allá de las luchas de poder y el drama emocional para abrazar la simplicidad y la estabilidad.
+These gifts include emotional intensity, psychological insight, and the ability to navigate crisis. However, the soul's growth now requires moving beyond power struggles and emotional drama to embrace simplicity and stability.
 
-El desafío no es quedar atrapado en la obsesión ni utilizar el poder de manera destructiva. El don es la capacidad de transformar y sanar en los niveles más profundos.`,
-        strengths: ["Profundidad emocional", "Perspicacia psicológica", "Poder transformador", "Navegación de crisis"],
-        challenges: ["Obsesión por el poder", "drama emocional", "Problemas de control", "Dificultad para dejar ir"]
+The challenge is not becoming trapped in obsession or using power destructively. The gift is the ability to transform and heal at the deepest levels.`,
+        strengths: ["Emotional depth", "Psychological insight", "Transformative power", "Crisis navigation"],
+        challenges: ["Power obsession", "Emotional drama", "Control issues", "Difficulty letting go"]
     },
     Sagittarius: {
-        keywords: ["Sabiduría pasada", "Aventura", "Fe", "Enseñanza"],
-        summary: "Dones de vidas pasadas de sabiduría, aventura y búsqueda espiritual.",
-        reading: `El Nodo Sur en Sagitario indica dominio de la sabiduría, la aventura y la verdad espiritual en vidas pasadas. Esta alma ha sido maestra, filósofa y buscadora en encarnaciones anteriores. Llegan a esta vida con un optimismo natural y la capacidad de inspirar fe.
+        keywords: ["Past Wisdom", "Adventure", "Faith", "Teaching"],
+        summary: "Past life gifts of wisdom, adventure, and spiritual seeking.",
+        reading: `The South Node in Sagittarius indicates past life mastery of wisdom, adventure, and spiritual truth. This soul has been a teacher, a philosopher, and a seeker in previous incarnations. They come into this life with natural optimism and the ability to inspire faith.
 
-Estos dones incluyen profundidad filosófica, espíritu aventurero y la capacidad de ver el panorama general. Sin embargo, el crecimiento del alma ahora requiere ir más allá de las creencias dogmáticas y la búsqueda inquieta para desarrollar habilidades prácticas y atención al detalle.
+These gifts include philosophical depth, adventurous spirit, and the ability to see the big picture. However, the soul's growth now requires moving beyond dogmatic beliefs and restless seeking to develop practical skills and attention to detail.
 
-El desafío no es sermonear ni evitar el compromiso mediante el movimiento constante. El don es la capacidad de inspirar y ampliar los horizontes de los demás.`,
-        strengths: ["Profundidad filosófica", "espíritu aventurero", "Presencia inspiradora", "Visión general"],
-        challenges: ["Dogmatismo", "Inquietud", "demasiado prometedor", "Evitando detalles"]
+The challenge is not becoming preachy or avoiding commitment through constant movement. The gift is the ability to inspire and expand others' horizons.`,
+        strengths: ["Philosophical depth", "Adventurous spirit", "Inspiring presence", "Big picture vision"],
+        challenges: ["Dogmatism", "Restlessness", "Over-promising", "Avoiding details"]
     },
     Capricorn: {
-        keywords: ["Logro pasado", "Autoridad", "Disciplina", "Responsabilidad"],
-        summary: "Dones de logros, autoridad y dominio práctico de vidas pasadas.",
-        reading: `El Nodo Sur en Capricornio indica dominio de logros, autoridad y éxito práctico en vidas pasadas. Esta alma ha sido un líder, un constructor de instituciones y una figura de autoridad en encarnaciones anteriores. Vienen a esta vida con una ambición natural y la capacidad de triunfar.
+        keywords: ["Past Achievement", "Authority", "Discipline", "Responsibility"],
+        summary: "Past life gifts of achievement, authority, and practical mastery.",
+        reading: `The South Node in Capricorn indicates past life mastery of achievement, authority, and practical success. This soul has been a leader, a builder of institutions, and an authority figure in previous incarnations. They come into this life with natural ambition and the ability to succeed.
 
-Estos dones incluyen habilidad organizativa, paciencia para objetivos a largo plazo y la capacidad de asumir responsabilidades. Sin embargo, el crecimiento del alma ahora requiere ir más allá de la obsesión profesional y la supresión emocional para desarrollar conexiones familiares y conciencia emocional.
+These gifts include organizational skill, patience for long-term goals, and the ability to handle responsibility. However, the soul's growth now requires moving beyond career obsession and emotional suppression to develop family connections and emotional awareness.
 
-El desafío no es convertirse en un adicto al trabajo ni sacrificar las relaciones por el logro. El don es la capacidad de construir estructuras duraderas y lograr metas significativas.`,
-        strengths: ["Habilidad organizacional", "Paciencia", "Responsabilidad", "capacidad de logro"],
-        challenges: ["Adicción al trabajo", "Supresión emocional", "Obsesión por el estatus", "Controlar la naturaleza"]
+The challenge is not becoming a workaholic or sacrificing relationships for achievement. The gift is the ability to build lasting structures and achieve meaningful goals.`,
+        strengths: ["Organizational skill", "Patience", "Responsibility", "Achievement ability"],
+        challenges: ["Workaholism", "Emotional suppression", "Status obsession", "Controlling nature"]
     },
     Aquarius: {
-        keywords: ["Innovación pasada", "humanitarismo", "Independencia", "Visión"],
-        summary: "Dones de vidas pasadas de innovación, servicio humanitario y pensamiento progresista.",
-        reading: `El Nodo Sur en Acuario indica dominio de la innovación, el servicio humanitario y los ideales progresistas en vidas pasadas. Esta alma ha sido reformadora, inventora y líder comunitaria en encarnaciones anteriores. Vienen a esta vida con originalidad natural y preocupación por la humanidad.
+        keywords: ["Past Innovation", "Humanitarianism", "Independence", "Vision"],
+        summary: "Past life gifts of innovation, humanitarian service, and progressive thinking.",
+        reading: `The South Node in Aquarius indicates past life mastery of innovation, humanitarian service, and progressive ideals. This soul has been a reformer, an inventor, and a community leader in previous incarnations. They come into this life with natural originality and concern for humanity.
 
-Estos dones incluyen pensamiento innovador, valores humanitarios y la capacidad de visualizar el futuro. Sin embargo, el crecimiento del alma ahora requiere ir más allá del desapego y el enfoque grupal para desarrollar la expresión creativa individual y la conexión centrada en el corazón.
+These gifts include innovative thinking, humanitarian values, and the ability to envision the future. However, the soul's growth now requires moving beyond detachment and group focus to develop individual creative expression and heart-centered connection.
 
-El desafío es no volverse demasiado distante o contrario por sí mismo. El don es la capacidad de ver posibilidades que otros pasan por alto y trabajar por el progreso colectivo.`,
-        strengths: ["Pensamiento innovador", "Valores humanitarios", "Habilidad visionaria", "Independencia"],
-        challenges: ["Desapego emocional", "Contrariedad", "Dependencia grupal", "distanciamiento"]
+The challenge is not becoming too detached or contrary for its own sake. The gift is the ability to see possibilities others miss and work for collective progress.`,
+        strengths: ["Innovative thinking", "Humanitarian values", "Visionary ability", "Independence"],
+        challenges: ["Emotional detachment", "Contrariness", "Group dependency", "Aloofness"]
     },
     Pisces: {
-        keywords: ["Espiritualidad pasada", "Compasión", "Imaginación", "Unidad"],
-        summary: "Dones de vidas pasadas de espiritualidad, compasión y sensibilidad artística.",
-        reading: `El Nodo Sur en Piscis indica dominio de la espiritualidad, la compasión y la conexión mística en vidas pasadas. Esta alma ha sido una mística, una artista y una sanadora espiritual en encarnaciones anteriores. Vienen a esta vida con una sensibilidad natural y una conexión con lo invisible.
+        keywords: ["Past Spirituality", "Compassion", "Imagination", "Unity"],
+        summary: "Past life gifts of spirituality, compassion, and artistic sensitivity.",
+        reading: `The South Node in Pisces indicates past life mastery of spirituality, compassion, and mystical connection. This soul has been a mystic, an artist, and a spiritual healer in previous incarnations. They come into this life with natural sensitivity and connection to the unseen.
 
-Estos dones incluyen una profunda empatía, sensibilidad artística y conciencia espiritual. Sin embargo, el crecimiento del alma ahora requiere ir más allá del escapismo y la disolución de límites para desarrollar habilidades prácticas y límites saludables.
+These gifts include profound empathy, artistic sensitivity, and spiritual awareness. However, the soul's growth now requires moving beyond escapism and boundary dissolution to develop practical skills and healthy boundaries.
 
-El desafío es no perderse en la fantasía o en la conciencia de víctima. El don es la capacidad de conectar con lo divino y expresar la belleza trascendente.`,
-        strengths: ["Conciencia espiritual", "Sensibilidad artística", "Compasión profunda", "capacidad intuitiva"],
-        challenges: ["Evasión", "Problemas de límites", "Mentalidad de víctima", "Confusión"]
+The challenge is not becoming lost in fantasy or victim consciousness. The gift is the ability to connect with the divine and express transcendent beauty.`,
+        strengths: ["Spiritual awareness", "Artistic sensitivity", "Deep compassion", "Intuitive ability"],
+        challenges: ["Escapism", "Boundary issues", "Victim mentality", "Confusion"]
     }
 };

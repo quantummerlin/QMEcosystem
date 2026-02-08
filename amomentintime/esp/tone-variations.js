@@ -13,56 +13,56 @@
  */
 var TONE_SUBSTITUTIONS = {
     // Pronouns and references
-    "Esta persona": { feminine: "Ella", masculine: "Él", neutral: "Esta alma" },
-    "esta persona": { feminine: "ella", masculine: "él", neutral: "esta alma" },
-    "Esta alma": { feminine: "Ella", masculine: "Él", neutral: "Esta alma" },
-    "esta alma": { feminine: "ella", masculine: "él", neutral: "esta alma" },
-    "Ellos son": { feminine: "Ella es", masculine: "Él es", neutral: "Ellos son" },
-    "ellos son": { feminine: "ella es", masculine: "él es", neutral: "ellos son" },
-    "Ellos tienen": { feminine: "Ella tiene", masculine: "Él tiene", neutral: "Ellos tienen" },
-    "ellos tienen": { feminine: "ella tiene", masculine: "él tiene", neutral: "ellos tienen" },
-    "Ellos serán": { feminine: "Ella será", masculine: "Él será", neutral: "Ellos serán" },
-    "ellos serán": { feminine: "ella será", masculine: "él será", neutral: "ellos serán" },
-    "Su": { feminine: "Su", masculine: "Su", neutral: "Su" },
-    "su": { feminine: "su", masculine: "su", neutral: "su" },
-    "ellos": { feminine: "ella", masculine: "él", neutral: "ellos" },
-    "ellos mismos": { feminine: "ella misma", masculine: "él mismo", neutral: "ellos mismos" },
+    "This individual": { feminine: "She", masculine: "He", neutral: "This soul" },
+    "this individual": { feminine: "she", masculine: "he", neutral: "this soul" },
+    "This soul": { feminine: "She", masculine: "He", neutral: "This soul" },
+    "this soul": { feminine: "she", masculine: "he", neutral: "this soul" },
+    "They are": { feminine: "She is", masculine: "He is", neutral: "They are" },
+    "they are": { feminine: "she is", masculine: "he is", neutral: "they are" },
+    "They have": { feminine: "She has", masculine: "He has", neutral: "They have" },
+    "they have": { feminine: "she has", masculine: "he has", neutral: "they have" },
+    "They will": { feminine: "She will", masculine: "He will", neutral: "They will" },
+    "they will": { feminine: "she will", masculine: "he will", neutral: "they will" },
+    "Their": { feminine: "Her", masculine: "His", neutral: "Their" },
+    "their": { feminine: "her", masculine: "his", neutral: "their" },
+    "them": { feminine: "her", masculine: "him", neutral: "them" },
+    "themselves": { feminine: "herself", masculine: "himself", neutral: "themselves" },
     
     // Descriptive adjustments
-    "fortaleza": { feminine: "fortaleza interior", masculine: "fortaleza", neutral: "fortaleza" },
-    "poderoso": { feminine: "profundamente poderoso", masculine: "poderoso", neutral: "poderoso" },
-    "valentía": { feminine: "valentía serena", masculine: "valentía audaz", neutral: "valentía" },
-    "guerrero": { feminine: "espíritu guerrero", masculine: "guerrero", neutral: "guerrero" },
-    "gentil": { feminine: "gentil", masculine: "sutilmente fuerte", neutral: "gentil" },
-    "sensible": { feminine: "sensible", masculine: "perceptivo", neutral: "sensible" },
-    "nutridor": { feminine: "nutridor", masculine: "apoyo", neutral: "nutridor" },
-    "protector": { feminine: "protector", masculine: "protector", neutral: "protector" },
-    "ambicioso": { feminine: "discretamente ambicioso", masculine: "ambicioso", neutral: "ambicioso" },
-    "impulsado": { feminine: "impulsado con propósito", masculine: "impulsado", neutral: "impulsado" },
-    "líder": { feminine: "líder y guía", masculine: "líder", neutral: "líder" },
-    "luchador": { feminine: "defensor", masculine: "luchador", neutral: "campeón" },
-    "conquistar": { feminine: "superar", masculine: "conquistar", neutral: "superar" },
-    "dominar": { feminine: "destacar en", masculine: "dominar", neutral: "maestría" },
-    "agresivo": { feminine: "asertivo", masculine: "agresivo", neutral: "asertivo" },
-    "tierno": { feminine: "tierno", masculine: "considerado", neutral: "cariñoso" },
-    "intuición": { feminine: "intuición", masculine: "instinto", neutral: "intuición" },
-    "emocional": { feminine: "sintonía emocional", masculine: "inteligencia emocional", neutral: "conciencia emocional" },
-    "sentimientos": { feminine: "sentimientos", masculine: "mundo interior", neutral: "emociones" },
-    "corazón": { feminine: "corazón", masculine: "núcleo", neutral: "corazón" }
+    "strength": { feminine: "inner strength", masculine: "strength", neutral: "strength" },
+    "powerful": { feminine: "deeply powerful", masculine: "powerful", neutral: "powerful" },
+    "courage": { feminine: "quiet courage", masculine: "bold courage", neutral: "courage" },
+    "warrior": { feminine: "warrior spirit", masculine: "warrior", neutral: "warrior" },
+    "gentle": { feminine: "gentle", masculine: "quietly strong", neutral: "gentle" },
+    "sensitive": { feminine: "sensitive", masculine: "perceptive", neutral: "sensitive" },
+    "nurturing": { feminine: "nurturing", masculine: "supportive", neutral: "nurturing" },
+    "protective": { feminine: "protective", masculine: "protective", neutral: "protective" },
+    "ambitious": { feminine: "quietly ambitious", masculine: "ambitious", neutral: "ambitious" },
+    "driven": { feminine: "purposefully driven", masculine: "driven", neutral: "driven" },
+    "leader": { feminine: "leader and guide", masculine: "leader", neutral: "leader" },
+    "fighter": { feminine: "advocate", masculine: "fighter", neutral: "champion" },
+    "conquer": { feminine: "overcome", masculine: "conquer", neutral: "overcome" },
+    "dominate": { feminine: "excel in", masculine: "dominate", neutral: "master" },
+    "aggressive": { feminine: "assertive", masculine: "aggressive", neutral: "assertive" },
+    "tender": { feminine: "tender", masculine: "thoughtful", neutral: "caring" },
+    "intuition": { feminine: "intuition", masculine: "instinct", neutral: "intuition" },
+    "emotional": { feminine: "emotionally attuned", masculine: "emotionally intelligent", neutral: "emotionally aware" },
+    "feelings": { feminine: "feelings", masculine: "inner world", neutral: "emotions" },
+    "heart": { feminine: "heart", masculine: "core", neutral: "heart" }
 };
 
 /**
  * Phrase-level substitutions for more natural reading
  */
 var PHRASE_SUBSTITUTIONS = {
-    "destinado a liderar": { feminine: "destinada a inspirar y liderar", masculine: "destinado a liderar", neutral: "destinado a guiar" },
-    "nacido para luchar": { feminine: "nacida para defender", masculine: "nacido para luchar", neutral: "nacido para impulsar" },
-    "líder nato": { feminine: "líder nata y cuidadora", masculine: "líder nato", neutral: "guía natural" },
-    "conquistando desafíos": { feminine: "transformando desafíos", masculine: "conquistando desafíos", neutral: "superando desafíos" },
-    "determinación feroz": { feminine: "determinación serena", masculine: "determinación feroz", neutral: "determinación silenciosa" },
-    "luchar su camino": { feminine: "abrirse paso", masculine: "luchar su camino", neutral: "encontrar su camino" },
-    "presencia dominante": { feminine: "presencia imponente", masculine: "presencia dominante", neutral: "presencia notable" },
-    "enfoque agresivo": { feminine: "enfoque asertivo", masculine: "enfoque agresivo", neutral: "enfoque directo" }
+    "destined to lead": { feminine: "destined to inspire and lead", masculine: "destined to lead", neutral: "destined to guide" },
+    "born to fight": { feminine: "born to advocate", masculine: "born to fight", neutral: "born to champion" },
+    "natural-born leader": { feminine: "natural-born leader and nurturer", masculine: "natural-born leader", neutral: "natural guide" },
+    "conquering challenges": { feminine: "transforming challenges", masculine: "conquering challenges", neutral: "overcoming challenges" },
+    "fierce determination": { feminine: "graceful determination", masculine: "fierce determination", neutral: "quiet determination" },
+    "battle their way": { feminine: "navigate their way", masculine: "battle their way", neutral: "find their way" },
+    "dominating presence": { feminine: "commanding presence", masculine: "dominating presence", neutral: "notable presence" },
+    "aggressive approach": { feminine: "assertive approach", masculine: "aggressive approach", neutral: "direct approach" }
 };
 
 /**

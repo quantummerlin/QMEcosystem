@@ -10,69 +10,69 @@ const BRAND_CONFIG = {
     // BRAND IDENTITY
     // ============================================
     brandName: "Stranger Patterns",
-    tagline: "El oráculo del Upside Down",
-    subTagline: "58 lecturas • Perfil completo del sujeto • Tu plano de Hawkins",
+    tagline: "The Upside Down Oracle",
+    subTagline: "58 Readings • Complete Subject Profile • Your Hawkins Blueprint",
     
     // Who is this reading for?
     subjectType: "person",
-    subjectLabel: "Sujeto",
-    subjectLabelPlural: "Sujetos",
+    subjectLabel: "Subject",
+    subjectLabelPlural: "Subjects",
     
     // ============================================
     // COPY & LANGUAGE
     // ============================================
     inputLabels: {
-        name: "Nombre del sujeto",
-        namePlaceholder: "Ingresa tu nombre",
-        nameHelper: "Tu identidad en esta dimensión",
+        name: "Subject Name",
+        namePlaceholder: "Enter your name",
+        nameHelper: "Your identity in this dimension",
         
-        birthDate: "Fecha de manifestación",
-        birthDateHelper: "Cuando entraste en esta dimensión",
+        birthDate: "Date of Manifestation",
+        birthDateHelper: "When you entered this dimension",
         
-        birthTime: "Hora de manifestación",
-        birthTimeHelper: "Para una alineación dimensional precisa",
+        birthTime: "Time of Manifestation",
+        birthTimeHelper: "For accurate dimensional alignment",
         
-        birthPlace: "Lugar de origen",
-        birthPlacePlaceholder: "Ciudad, país",
-        birthPlaceHelper: "Donde comenzó tu historia"
+        birthPlace: "Location of Origin",
+        birthPlacePlaceholder: "City, Country",
+        birthPlaceHelper: "Where your story began"
     },
     
-    ctaButton: "🔮 Abrir el portal",
-    loadingMessage: "Accediendo al Upside Down...",
+    ctaButton: "🔮 Open the Gate",
+    loadingMessage: "Accessing the Upside Down...",
     
     // Result page copy
-    resultTitle: "Análisis del sujeto completado",
-    resultSubtitle: "Perfil dimensional de",
-    generatedBy: "Transmitido por Stranger Patterns",
+    resultTitle: "Subject Analysis Complete",
+    resultSubtitle: "Dimensional Profile of",
+    generatedBy: "Transmitted from Stranger Patterns",
     
     // ============================================
     // SECTION NAMES - Stranger Things Themed
     // ============================================
     sections: {
         celestial: {
-            name: "Anomalías celestiales",
+            name: "Celestial Anomalies",
             icon: "🔮",
-            description: "Tus influencias planetarias desde más allá del portal"
+            description: "Your planetary influences from beyond the gate"
         },
         numbers: {
-            name: "Números ocultos",
+            name: "Hidden Numbers",
             icon: "011",
-            description: "Los patrones numerológicos en tu código dimensional"
+            description: "The numerological patterns in your dimensional code"
         },
         soul: {
-            name: "Misión psíquica",
+            name: "Psychic Mission",
             icon: "⚡",
-            description: "Tu propósito profundo y dones sobrenaturales"
+            description: "Your deeper purpose and supernatural gifts"
         },
         forecasts: {
-            name: "Portales dimensionales",
+            name: "Dimensional Portals",
             icon: "🌀",
-            description: "Lo que el Upside Down revela sobre tu futuro"
+            description: "What the Upside Down reveals about your future"
         },
         cycles: {
-            name: "Cambios temporales",
+            name: "Temporal Shifts",
             icon: "⏳",
-            description: "Fases clave de tu viaje dimensional"
+            description: "Key phases in your dimensional journey"
         }
     },
     
@@ -80,34 +80,34 @@ const BRAND_CONFIG = {
     // READING TITLES - Stranger Things Themed
     // ============================================
     readingTitles: {
-        sunSign: "Signo solar - Tu frecuencia esencial",
-        moonSign: "Signo lunar - Tu sombra",
-        risingSign: "Signo ascendente - Tu máscara dimensional",
-        mercurySign: "Mercurio - Tu comunicación psíquica",
-        venusSign: "Venus - La dimensión de tu corazón",
-        marsSign: "Marte - Tu energía de lucha",
-        jupiterSign: "Júpiter - Tu portal de expansión",
-        saturnSign: "Saturno - Tus lecciones dimensionales",
-        chineseZodiac: "Animal espiritual - Tu guía de criaturas",
-        moonPhase: "Fase lunar al nacer - Tu energía de manifestación",
+        sunSign: "Sun Sign - Your Core Frequency",
+        moonSign: "Moon Sign - Your Shadow Self",
+        risingSign: "Rising Sign - Your Dimensional Mask",
+        mercurySign: "Mercury - Your Psychic Communication",
+        venusSign: "Venus - Your Heart's Dimension",
+        marsSign: "Mars - Your Fighting Energy",
+        jupiterSign: "Jupiter - Your Expansion Portal",
+        saturnSign: "Saturn - Your Dimensional Lessons",
+        chineseZodiac: "Spirit Animal - Your Creature Guide",
+        moonPhase: "Birth Moon Phase - Your Manifestation Energy",
         
-        lifePath: "Camino de vida - Tu número de sujeto",
-        destiny: "Número de destino - Tu código de misión",
-        soulUrge: "Impulso del alma - Tu frecuencia oculta",
-        personality: "Número de personalidad - Tu patrón superficial",
-        birthday: "Número de cumpleaños - Tu fuente de poder",
-        maturity: "Número de madurez - Tu forma final",
+        lifePath: "Life Path - Your Subject Number",
+        destiny: "Destiny Number - Your Mission Code",
+        soulUrge: "Soul Urge - Your Hidden Frequency",
+        personality: "Personality Number - Your Surface Pattern",
+        birthday: "Birthday Number - Your Power Source",
+        maturity: "Maturity Number - Your Final Form",
         
-        personalYear: "Ciclo dimensional actual",
-        pinnacle: "Cúspides de vida - Aperturas de portales",
-        challenge: "Desafíos - Lecciones del Demogorgon",
+        personalYear: "Current Dimensional Cycle",
+        pinnacle: "Life Pinnacles - Major Gate Openings",
+        challenge: "Challenges - Demogorgon Lessons",
         
-        northNode: "Nodo norte - Tu portal del destino",
-        southNode: "Nodo sur - Tu dimensión pasada",
-        lifeLesson: "Lección dimensional central",
+        northNode: "North Node - Your Destiny Gate",
+        southNode: "South Node - Your Past Dimension",
+        lifeLesson: "Core Dimensional Lesson",
         
-        yearAhead: "Pronóstico de esta temporada",
-        firstYear: "Energía del año de origen"
+        yearAhead: "This Season's Forecast",
+        firstYear: "Origin Year Energy"
     },
     
     // ============================================
@@ -158,7 +158,7 @@ const BRAND_CONFIG = {
     // ============================================
     sharing: {
         hashtags: ["StrangerPatterns", "UpsideDown", "StrangerThings", "Hawkins"],
-        defaultMessage: "¡Acabo de descubrir mi perfil dimensional! 🔮 El Upside Down reveló...",
+        defaultMessage: "I just discovered my dimensional profile! 🔮 The Upside Down revealed...",
         twitterHandle: "@strangerpattern"
     },
     
@@ -169,10 +169,10 @@ const BRAND_CONFIG = {
         enabled: false,
         price: "$11.11",
         features: [
-            "Descarga en PDF",
-            "Sin anuncios",
-            "Formato imprimible",
-            "Compatibilidad con personaje"
+            "PDF Download",
+            "No Ads",
+            "Printable Format",
+            "Character Match"
         ]
     },
     
@@ -181,11 +181,11 @@ const BRAND_CONFIG = {
     // ============================================
     footer: {
         copyright: "© 2025 Stranger Patterns",
-        disclaimer: "Solo con fines de entretenimiento. No estamos afiliados a Netflix ni a Stranger Things. ¡Los amigos no mienten! 🧇",
+        disclaimer: "For entertainment purposes only. Not affiliated with Netflix or Stranger Things. Friends don't lie! 🧇",
         links: [
-            { text: "Política de privacidad", url: "/privacy.html" },
-            { text: "Términos de servicio", url: "/terms.html" },
-            { text: "Contacto", url: "/contact.html" }
+            { text: "Privacy Policy", url: "/privacy.html" },
+            { text: "Terms of Service", url: "/terms.html" },
+            { text: "Contact", url: "/contact.html" }
         ]
     },
     
@@ -193,9 +193,9 @@ const BRAND_CONFIG = {
     // SEO
     // ============================================
     seo: {
-        title: "Stranger Patterns - El oráculo del Upside Down | Numerología Stranger Things",
-        description: "Descubre tu perfil dimensional con 58 lecturas personalizadas. Encuentra tu personaje de Stranger Things, habilidades psíquicas y destino en Hawkins. Plano sobrenatural gratuito.",
-        keywords: "personalidad stranger things, oráculo upside down, numerología hawkins, astrología stranger things, poderes de Eleven, demogorgon, stranger patterns"
+        title: "Stranger Patterns - The Upside Down Oracle | Stranger Things Numerology",
+        description: "Discover your dimensional profile with 58 personalized readings! Find your Stranger Things character match, psychic abilities, and Hawkins destiny. Free supernatural blueprint.",
+        keywords: "stranger things personality, upside down oracle, hawkins numerology, stranger things astrology, eleven powers, demogorgon, stranger patterns"
     }
 };
 

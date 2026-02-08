@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3480541530392777" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Moment in Time | Lectura Cósmica Compartida – Quantum Merlin</title>
-    <meta name="description" content="Ve una lectura cósmica personalizada con más de 65 insights de astrología y numerología. Comparte tu análisis único de carta natal.">
-    <meta name="keywords" content="lectura cósmica, carta natal, insights astrológicos, lectura numerológica, compartir horóscopo, A Moment in Time">
-    <link rel="canonical" href="https://quantummerlin.com/amomentintime/esp/view.html">
+    <title>Soul Blueprint | Shared Cosmic Reading – Quantum Merlin</title>
+    <meta name="description" content="View a personalized Soul Blueprint cosmic reading. Birth chart astrology and numerology insights shared with you.">
     <meta name="theme-color" content="#FF69B4">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
@@ -19,9 +17,9 @@
     </script>
     
     <!-- Open Graph for sharing -->
-    <meta property="og:title" content="A Moment in Time - Lectura cósmica">
-    <meta property="og:description" content="Una lectura cósmica personalizada con más de 65 insights">
-    <meta property="og:image" content="/amomentintime/Amomentintime.jpg">
+    <meta property="og:title" content="Soul Blueprint | Shared Cosmic Reading – Quantum Merlin">
+    <meta property="og:description" content="View a personalized Soul Blueprint with 65+ cosmic insights. Birth chart astrology and numerology.">
+    <meta property="og:image" content="/soulblueprint/Amomentintime.jpg">
     <meta property="og:type" content="website">
     
     <!-- PWA -->
@@ -1197,36 +1195,36 @@
         <!-- Loading State -->
         <div id="loading" class="loading">
             <div class="loading-spinner"></div>
-            <p>Cargando tu lectura cósmica...</p>
+            <p>Loading your cosmic reading...</p>
         </div>
         
         <!-- Error State (hidden by default) -->
         <div id="error" class="error-container" style="display: none;">
             <div class="error-icon">✨</div>
-            <h1>Lectura no encontrada</h1>
-            <p id="error-message">Esta lectura puede haber expirado o haber sido eliminada.</p>
-            <a href="/amomentintime/" class="btn">Crear tu propia lectura</a>
+            <h1>Reading Not Found</h1>
+            <p id="error-message">This reading may have expired or been removed.</p>
+            <a href="/soulblueprint/" class="btn">Create Your Own Reading</a>
         </div>
         
         <!-- Reading Content (hidden until loaded) -->
         <div id="reading-wrapper" style="display: none;">
             <header class="gift-header">
                 <h1 id="reading-title">A Moment in Time</h1>
-                <p class="subtitle">Tu diseño celestial revelado</p>
+                <p class="subtitle">Your Celestial Design Revealed</p>
                 <p class="birth-info" id="birth-info"></p>
             </header>
             
             <div class="gift-message" id="gift-message" style="display: none;">
-                <h2 id="gift-from">Con amor</h2>
+                <h2 id="gift-from">With Love</h2>
                 <p id="gift-text"></p>
                 <p class="gifted-signature" id="gift-signature"></p>
             </div>
             
             <div class="actions-bar">
-                <button class="action-btn" onclick="saveToHomescreen()">📱 Guardar en pantalla de inicio</button>
-                <button class="action-btn secondary" onclick="downloadReading()">⬇️ Descargar</button>
-                <button class="action-btn secondary" onclick="printReading()">🖨️ Imprimir</button>
-                <button class="action-btn secondary" onclick="shareReading()">📤 Compartir</button>
+                <button class="action-btn" onclick="saveToHomescreen()">📱 Save to Homescreen</button>
+                <button class="action-btn secondary" onclick="downloadReading()">⬇️ Download</button>
+                <button class="action-btn secondary" onclick="printReading()">🖨️ Print</button>
+                <button class="action-btn secondary" onclick="shareReading()">📤 Share</button>
             </div>
             
             <div id="reading-content">
@@ -1236,22 +1234,22 @@
             <!-- Create Your Own Invitation -->
             <div class="create-invitation">
                 <span class="invite-icon">✨</span>
-                <h3>Descubre tu propia historia cósmica</h3>
-                <p>¿Te encantó esta lectura? Cada alma tiene un diseño celestial único esperando ser revelado. Crea lecturas personalizadas para ti, tu familia o alguien especial.</p>
-                <a href="/amomentintime/" class="cta-btn">Crear una lectura gratis</a>
-                <p class="invite-note">Más de 65 insights personalizados • Totalmente gratis • Toma 30 segundos</p>
+                <h3>Discover Your Own Cosmic Story</h3>
+                <p>Loved this reading? Every soul has a unique celestial design waiting to be revealed. Create personalized readings for yourself, your family, or anyone special in your life.</p>
+                <a href="/soulblueprint/" class="cta-btn">Create a Free Reading</a>
+                <p class="invite-note">65+ personalized insights • Completely free • Takes 30 seconds</p>
             </div>
             
             <footer class="gift-footer">
-                <p class="love">Hecho con amor ✨</p>
-                <p class="brand">Generado por A Moment in Time de Quantum Merlin</p>
+                <p class="love">Made with love ✨</p>
+                <p class="brand">Generated by A Moment in Time by Quantum Merlin</p>
                 <div class="expiry-notice" id="expiry-notice"></div>
                 <div class="footer-links">
-                    <a href="/amomentintime/">Crear lectura</a>
+                    <a href="/soulblueprint/">Create Reading</a>
                     <span>•</span>
                     <a href="/">Quantum Merlin</a>
                     <span>•</span>
-                    <a href="/amomentintime/privacy.html">Privacidad</a>
+                    <a href="/soulblueprint/privacy.html">Privacy</a>
                 </div>
             </footer>
         </div>
@@ -1474,7 +1472,7 @@
         
         // Register service worker for offline support
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/amomentintime/sw.js')
+            navigator.serviceWorker.register('/soulblueprint/sw.js')
                 .then(reg => console.log('Service Worker registered'))
                 .catch(err => console.log('Service Worker registration failed:', err));
         }

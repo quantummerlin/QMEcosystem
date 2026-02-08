@@ -178,8 +178,8 @@ var BRAND_CONFIG = {
         copyright: "© 2026 A Moment in Time",
         disclaimer: "For entertainment and reflection purposes. Every person is unique and will grow in their own beautiful way.",
         links: [
-            { text: "Privacy Policy", url: "/amomentintime/privacy.html" },
-            { text: "Terms of Service", url: "/amomentintime/terms.html" },
+            { text: "Privacy Policy", url: "/soulblueprint/privacy.html" },
+            { text: "Terms of Service", url: "/soulblueprint/terms.html" },
             { text: "Contact", url: "/contact.html" }
         ]
     },

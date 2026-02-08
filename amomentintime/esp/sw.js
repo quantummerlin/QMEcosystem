@@ -1,20 +1,20 @@
 // A Moment in Time - Service Worker
-const CACHE_NAME = 'moment-in-time-v36';
+const CACHE_NAME = 'moment-in-time-v35';
 const ASSETS_TO_CACHE = [
-    '/amomentintime/',
-    '/amomentintime/index.html',
-    '/amomentintime/view.html',
-    '/amomentintime/config.js',
-    '/amomentintime/calculations.js',
-    '/amomentintime/readings.js',
-    '/amomentintime/house-readings.js',
-    '/amomentintime/aspect-readings.js',
-    '/amomentintime/advanced-readings.js',
-    '/amomentintime/love-blueprint.js',
-    '/amomentintime/tone-variations.js',
-    '/amomentintime/save-share.js',
-    '/amomentintime/manifest.json',
-    '/amomentintime/Amomentintime.jpg'
+    '/soulblueprint/',
+    '/soulblueprint/index.html',
+    '/soulblueprint/view.html',
+    '/soulblueprint/config.js',
+    '/soulblueprint/calculations.js',
+    '/soulblueprint/readings.js',
+    '/soulblueprint/house-readings.js',
+    '/soulblueprint/aspect-readings.js',
+    '/soulblueprint/advanced-readings.js',
+    '/soulblueprint/love-blueprint.js',
+    '/soulblueprint/tone-variations.js',
+    '/soulblueprint/save-share.js',
+    '/soulblueprint/manifest.json',
+    '/soulblueprint/Amomentintime.jpg'
 ];
 
 // Cache for shared readings (stored separately for offline access)
@@ -67,11 +67,11 @@ self.addEventListener('fetch', (event) => {
         return;
     }
     
-    // Special handling for shared reading pages /amomentintime/r/*
-    if (url.pathname.match(/\/amomentintime\/r\//)) {
+    // Special handling for shared reading pages /soulblueprint/r/*
+    if (url.pathname.match(/\/soulblueprint\/r\//)) {
         event.respondWith(
             fetch(event.request)
-                .catch(() => caches.match('/amomentintime/view.html'))
+                .catch(() => caches.match('/soulblueprint/view.html'))
         );
         return;
     }
@@ -104,7 +104,7 @@ self.addEventListener('fetch', (event) => {
                     .catch(() => {
                         // Offline fallback for HTML pages
                         if (event.request.headers.get('accept')?.includes('text/html')) {
-                            return caches.match('/amomentintime/index.html');
+                            return caches.match('/soulblueprint/index.html');
                         }
                     });
             })

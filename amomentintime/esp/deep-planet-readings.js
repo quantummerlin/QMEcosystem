@@ -5,315 +5,315 @@
 
 var DEEP_MERCURY_READINGS = {
     Aries: {
-        title: "La mente relámpago",
-        hook: "Una mente que se mueve a la velocidad del propio fuego.",
-        coreNature: `Mercurio en Aries crea una mente construida para la velocidad, la decisión y la innovación mental. Esta alma piensa con trazos audaces en lugar de detalles cuidadosos. Las ideas llegan como relámpagos: repentinas, esclarecedoras y exigen una expresión inmediata. No hay ningún comité en esta cabeza; Las decisiones se toman rápidamente, a menudo antes de que otros hayan terminado de considerar las opciones.
+        title: "The Lightning Mind",
+        hook: "A mind that moves at the speed of fire itself.",
+        coreNature: `Mercury in Aries creates a mind built for speed, decisiveness, and mental pioneering. This soul thinks in bold strokes rather than careful details. Ideas arrive like lightning bolts—sudden, illuminating, and demanding immediate expression. There's no committee in this head; decisions are made quickly, often before others have finished considering the options.
 
-Esta es la mente del iniciador. Mientras otros todavía están recopilando datos, Mercurio en Aries ya se ha formado una opinión y ha comenzado a actuar en consecuencia. Esto no es impulsividad (aunque pueda parecerlo): es una relación diferente con el tiempo. Esta alma confía en que el primer instinto muchas veces es el correcto.`,
+This is the mind of the initiator. While others are still gathering data, Mercury in Aries has already formed an opinion and begun to act on it. This isn't impulsiveness (though it can look like it)—it's a different relationship with time. This soul trusts that the first instinct is often the right one.`,
         
-        communication: `El estilo de comunicación es directo, a veces sorprendentemente. Este niño dirá lo que piensa, cuando lo piense; la diplomacia es una habilidad que se aprende más tarde, en todo caso. Hay una honestidad refrescante aquí, incluso cuando duele. Pasan de las sutilezas sociales al meollo del asunto.
+        communication: `Communication style is direct, sometimes startlingly so. This child will say what they think, when they think it—diplomacy being a skill learned later, if at all. There's refreshing honesty here, even when it stings. They cut through social niceties to the heart of the matter.
 
-Las discusiones se presentan con entusiasmo en lugar de evitarlas. El debate se siente como un juego. Esta mente disfruta del choque de ideas y puede buscar peleas intelectuales sólo por el estímulo. Están aprendiendo que no todo el mundo encuentra estimulante el conflicto.`,
+Arguments are entered with enthusiasm rather than avoided. Debate feels like play. This mind enjoys the clash of ideas and may pick intellectual fights just for the stimulation. They're learning that not everyone finds conflict energizing.`,
         
-        learning: `El aprendizaje ocurre mejor a través de la acción y la competencia. Sentarse quieto con los libros puede resultar frustrante a menos que haya una meta que alcanzar. Captan conceptos rápidamente pero pueden saltarse pasos, confiando en la intuición para llenar los vacíos. Lectura rápida, absorción rápida, aprender haciendo: estos son sus métodos.
+        learning: `Learning happens best through action and competition. Sitting still with books may frustrate unless there's a goal to achieve. They grasp concepts quickly but may skip steps, trusting intuition to fill gaps. Speed reading, rapid absorption, learning by doing—these are their methods.
 
-La capacidad de atención es corta pero intensa. Se sumergen profundamente rápidamente, extraen lo que necesitan y siguen adelante. Obligarlos a detenerse en el material dominado crea aburrimiento y frustración. Necesitan nuevos desafíos mentales constantemente.`,
+The attention span is short but intense. They dive deep quickly, extract what they need, and move on. Forcing them to linger on mastered material creates boredom and frustration. They need new mental challenges constantly.`,
         
-        challenges: `La sombra de esta colocación es la impaciencia y la tendencia a interrumpir. Es posible que terminen las frases de otros, no por mala educación sino por una mente que ya ha avanzado. Escuchar es una habilidad que deben desarrollar conscientemente.
+        challenges: `The shadow of this placement is impatience and a tendency to interrupt. They may finish others' sentences, not from rudeness but from a mind that's already leaped ahead. Listening is a skill they must consciously develop.
 
-También pueden tener dificultades con los detalles y el seguimiento. El comienzo de las ideas les excita más que el desarrollo o el final. Aprender a reducir la velocidad para lograr precisión, corregir, considerar antes de hablar: estas son lecciones para toda la vida.`,
+They may also struggle with details and follow-through. The beginning of ideas excites them more than the middle or end. Learning to slow down for accuracy, to proofread, to consider before speaking—these are lifetime lessons.`,
         
-        parentGuidance: `Dale a este niño desafíos mentales y carreras. Matemáticas rápidas, cuestionarios rápidos, actividades cronometradas: la competencia con ellos mismos o con los demás enciende el compromiso. No castigue su franqueza; enséñeles cuándo ayuda y cuándo duele.
+        parentGuidance: `Give this child mental challenges and races. Speed math, quick quizzes, timed activities—competition with themselves or others ignites engagement. Don't punish their directness; teach them when it helps and when it hurts.
 
-Canalizar los argumentos hacia el debate. Su espíritu de lucha no es malo; necesita una salida constructiva. Enséñeles que escuchar es una forma de fortaleza, no de debilidad. Elogie su coraje al decir la verdad, mientras les muestra amablemente que el tiempo es importante.`,
+Channel arguments into debate. Their fighting spirit isn't bad—it needs a constructive outlet. Teach them that listening is a form of strength, not weakness. Praise their courage in speaking truth, while gently showing them timing matters.`,
         
-        affirmation: "Mi mente rápida es un regalo. Digo mi verdad con valentía y amabilidad."
+        affirmation: "My quick mind is a gift. I speak my truth with both courage and kindness."
     },
     
     Taurus: {
-        title: "El pensador fundamentado",
-        hook: "Una mente que piensa en formas sólidas y duraderas.",
-        coreNature: `Mercurio en Tauro crea una mente metódica y práctica que piensa las cosas completamente antes de hablar. Esta alma no toma atajos mentales: cada pensamiento es examinado, pesado y probado para determinar su valor práctico. Lo que surge es sólido, confiable y duradero.
+        title: "The Grounded Thinker",
+        hook: "A mind that thinks in solid, lasting forms.",
+        coreNature: `Mercury in Taurus creates a methodical, practical mind that thinks things through completely before speaking. This soul doesn't do mental shortcuts—every thought is examined, weighed, and tested for practical value. What emerges is rock-solid, reliable, and enduring.
 
-Esta es la mente del constructor. Las ideas deben tener una aplicación tangible para mantener el interés. La teoría abstracta por sí misma parece inútil; la comprensión debe conducir a la creación. Cuando esta mente finalmente habla, las palabras tienen peso porque han sido elegidas cuidadosamente.`,
+This is the mind of the builder. Ideas must have tangible application to hold interest. Abstract theory for its own sake feels pointless; understanding must lead to creation. When this mind finally speaks, the words carry weight because they've been carefully chosen.`,
         
-        communication: `El estilo de comunicación es deliberado y tranquilo. Hablan cuando tienen algo importante que decir, creando una impresión de sabiduría superior a su edad. La voz suele tener una cualidad agradable y tranquilizadora. Eligen palabras tanto por su belleza como por su significado.
+        communication: `Communication style is deliberate and calm. They speak when they have something substantial to say, creating an impression of wisdom beyond their years. The voice often has a pleasant, soothing quality. They choose words for their beauty as well as their meaning.
 
-Es posible que respondan más lentamente que sus compañeros y necesiten tiempo para formular pensamientos. No confunda esto con confusión: están siendo minuciosos. Apresurarlos produce un silencio obstinado. Con el tiempo, sus respuestas suelen ser las más reveladoras de la sala.`,
+They may be slower to respond than peers, needing time to formulate thoughts. Don't mistake this for confusion—they're being thorough. Rushing them produces stubborn silence. Given time, their responses are often the most insightful in the room.`,
         
-        learning: `El aprendizaje se produce a través de la repetición, la experiencia sensorial y la aplicación práctica. Necesitan tocar, saborear y experimentar conceptos físicamente cuando sea posible. La memoria es excelente, especialmente para los detalles sensoriales y las cosas aprendidas a través del cuerpo.
+        learning: `Learning happens through repetition, sensory experience, and practical application. They need to touch, taste, and experience concepts physically when possible. Memory is excellent, especially for sensory details and things learned through the body.
 
-La paciencia es su superpoder en el aprendizaje. Puede que les lleve más tiempo comprender algo al principio, pero una vez aprendido, se aprende para siempre. Construyen entendimiento ladrillo a ladrillo hasta que la estructura es inquebrantable. Abarrotar no funciona; un estudio constante y consistente sí lo hace.`,
+Patience is their superpower in learning. They may take longer to grasp something initially, but once learned, it's learned forever. They build understanding brick by brick until the structure is unshakeable. Cramming doesn't work; steady, consistent study does.`,
         
-        challenges: `La sombra de esta ubicación es la terquedad mental. Una vez que se forma una opinión, cambiarla requiere evidencia y tiempo significativos. Es posible que se mantengan intelectualmente firmes incluso cuando la flexibilidad les vendría mejor.
+        challenges: `The shadow of this placement is mental stubbornness. Once an opinion forms, changing it requires significant evidence and time. They may dig in their heels intellectually even when flexibility would serve better.
 
-También pueden resistirse a nuevas ideas simplemente porque son nuevas. La comodidad con lo familiar puede convertirse en una excusa para evitar el crecimiento mental. Aprender a aceptar el cambio como una oportunidad y no como una amenaza es una lección para toda la vida.`,
+They may also resist new ideas simply because they're new. Comfort with the familiar can become an excuse to avoid mental growth. Learning to embrace change as an opportunity rather than a threat is a lifetime lesson.`,
         
-        parentGuidance: `Ofrezca a este niño experiencias prácticas de aprendizaje. Construcción, jardinería, cocina, artesanía: cualquier cosa que haga tangibles los conceptos abstractos. No los apresure con el material; La profundidad importa más que la velocidad.
+        parentGuidance: `Give this child hands-on learning experiences. Building, gardening, cooking, crafting—anything that makes abstract concepts tangible. Don't rush them through material; depth matters more than speed.
 
-Respete su ritmo mientras los expone suavemente a nuevas ideas. Planta semillas de nuevos conceptos y déjalas crecer gradualmente. Evite las luchas de poder intelectual: le sobrevivirán. En su lugar, ofrezca pruebas y tiempo para su consideración.`,
+Respect their pace while gently exposing them to new ideas. Plant seeds of new concepts and let them grow gradually. Avoid intellectual power struggles—they'll outlast you. Instead, offer evidence and time for consideration.`,
         
-        affirmation: "Mi mente reflexiva construye una comprensión duradera. Me tomo el tiempo que necesito para pensar las cosas."
+        affirmation: "My thoughtful mind builds understanding that lasts. I take the time I need to think things through."
     },
     
     Gemini: {
-        title: "La mente de mercurio",
-        hook: "Una mente que baila entre mundos, viendo conexiones en todas partes.",
-        coreNature: `Mercurio en Géminis es Mercurio en casa: la mente opera en su forma más natural y versátil. Esta alma piensa en redes en lugar de líneas, y ve conexiones que otros pasan por alto por completo. Múltiples corrientes de pensamiento funcionan simultáneamente, lo que hace que esta mente sea extraordinariamente ágil y curiosa.
+        title: "The Quicksilver Mind",
+        hook: "A mind that dances between worlds, seeing connections everywhere.",
+        coreNature: `Mercury in Gemini is Mercury at home—the mind operating at its most natural and versatile. This soul thinks in webs rather than lines, seeing connections that others miss entirely. Multiple thought streams run simultaneously, making this mind extraordinarily agile and curious.
 
-Esta es la mente del mensajero. La información quiere moverse a través de ellos, entrando y saliendo, fluyendo constantemente. Son traductores naturales entre diferentes mundos, diferentes idiomas, diferentes formas de pensar. El aburrimiento es su enemigo; la variedad es su oxígeno.`,
+This is the mind of the messenger. Information wants to move through them—in and out, constantly flowing. They're natural translators between different worlds, different languages, different ways of thinking. Boredom is their enemy; variety is their oxygen.`,
         
-        communication: `La comunicación es su forma de arte. Las palabras surgen con facilidad, en abundancia y, a veces, de manera abrumadora. Pueden discutir casi cualquier cosa con casi cualquier persona, adaptando instintivamente su lenguaje a su audiencia. El ingenio, los juegos de palabras y la destreza verbal son dones naturales.
+        communication: `Communication is their art form. Words come easily, abundantly, sometimes overwhelmingly. They can discuss almost anything with almost anyone, adapting their language to their audience instinctively. Wit, wordplay, and verbal dexterity are natural gifts.
 
-Pueden hablar para pensar y desarrollar ideas en tiempo real a través de la conversación. El silencio no significa que no esté sucediendo nada, pero por lo general, sí se habla. Es posible que dominen las conversaciones sin darse cuenta, simplemente porque las palabras fluyen con mucha libertad.`,
+They may talk to think, working out ideas in real-time through conversation. Silence doesn't mean nothing is happening—but usually, talking is happening. They might dominate conversations without realizing it, simply because words flow so freely.`,
         
-        learning: `El aprendizaje es constante y en todas partes. Para esta mente, todo es interesante, al menos al principio. Absorben información rápidamente, a menudo hojeando múltiples fuentes en lugar de profundizar en una. La amplitud suele triunfar sobre la profundidad, aunque esto puede equilibrarse con el estímulo.
+        learning: `Learning is constant and everywhere. Everything is interesting to this mind, at least initially. They absorb information rapidly, often skimming multiple sources rather than diving deep into one. Breadth typically trumps depth, though this can be balanced with encouragement.
 
-Aprenden mejor a través de la variedad, la discusión y haciendo conexiones entre diferentes temas. Les entusiasma la polinización cruzada de ideas de diferentes campos. La memorización mediante la repetición les aburre; la comprensión a través de las relaciones los involucra.`,
+They learn best through variety, discussion, and making connections between different subjects. Cross-pollinating ideas from different fields excites them. Memorization through repetition bores them; understanding through relationships engages them.`,
         
-        challenges: `La sombra de esta ubicación es un foco disperso. Hay tantas cosas interesantes que resulta difícil prestar atención sostenida a una sola cosa. Es posible que sepan un poco sobre muchas cosas, pero les cueste desarrollar experiencia.
+        challenges: `The shadow of this placement is scattered focus. So many things are interesting that sustained attention on any single thing becomes difficult. They may know a little about many things but struggle to develop expertise.
 
-También pueden usar palabras para desviar en lugar de revelar, volviéndose tan hábiles en agilidad verbal que pierden contacto con verdades más profundas. Aprender a profundizar, a sentarse con la incomodidad en lugar de hablar de ella, es un crecimiento esencial.`,
+They may also use words to deflect rather than reveal, becoming so skilled at verbal agility that they lose touch with deeper truths. Learning to go deep, to sit with discomfort rather than talk around it, is essential growth.`,
         
-        parentGuidance: `Alimente ampliamente la curiosidad de este niño mientras fomenta suavemente la profundidad. Permítales explorar muchos intereses, pero ayúdelos a completar al menos algunos proyectos. La conversación es conexión para ellos: hable con ellos sobre todo.
+        parentGuidance: `Feed this child's curiosity broadly while gently encouraging depth. Let them explore many interests, but help them complete at least some projects. Conversation is connection for them—talk with them about everything.
 
-Proporcione libros, rompecabezas, juegos de palabras y diversas experiencias de aprendizaje. Permítales enseñarle lo que están aprendiendo; la explicación consolida su comprensión. Ayúdalos a ver que el silencio y la profundidad tienen sus propios dones junto con la amplitud y las palabras.`,
+Provide books, puzzles, word games, and diverse learning experiences. Let them teach you what they're learning—explaining cements their understanding. Help them see that silence and depth have their own gifts alongside breadth and words.`,
         
-        affirmation: "Mi mente curiosa conecta ideas de maneras mágicas. Recojo sabiduría de dondequiera que voy."
+        affirmation: "My curious mind connects ideas in magical ways. I gather wisdom from everywhere I go."
     },
     
     Cancer: {
-        title: "La mente emocional",
-        hook: "Una mente que piensa a través del corazón.",
-        coreNature: `Mercurio en Cáncer crea una mente donde los pensamientos y sentimientos están profundamente entrelazados. Esta alma piensa en recuerdos, imágenes y asociaciones emocionales en lugar de en pura lógica. El pasado vive vívidamente en su mente, accesible e influyente en cada momento presente.
+        title: "The Feeling Mind",
+        hook: "A mind that thinks through the heart.",
+        coreNature: `Mercury in Cancer creates a mind where thoughts and feelings are deeply intertwined. This soul thinks in memories, images, and emotional associations rather than pure logic. The past lives vividly in their mind, accessible and influential in every present moment.
 
-Esta es la mente del portero. Recuerdan lo que le importa a la gente y guardan detalles que otros olvidan. Su pensamiento es protector: de ellos mismos, de sus seres queridos, de sus recuerdos y tradiciones. Comprender cómo se sienten las personas es más importante que el razonamiento abstracto.`,
+This is the mind of the keeper. They remember what matters to people, storing away details that others forget. Their thinking is protective—of themselves, of loved ones, of memories and traditions. Understanding how people feel matters more than abstract reasoning.`,
         
-        communication: `La comunicación fluye a través de canales emocionales. Pueden tener dificultades para expresar pensamientos sin los sentimientos asociados, lo que los convierte en maravillosos narradores de historias, pero a veces se ven desafiados por problemas de pura lógica. Sienten las corrientes emocionales subyacentes en cada conversación.
+        communication: `Communication flows through emotional channels. They may struggle to express thoughts without the feelings attached, making them wonderful storytellers but sometimes challenged by pure logic problems. They sense the emotional undercurrents in every conversation.
 
-Pueden comunicarse indirectamente, especialmente cuando son vulnerables. Pistas, implicaciones y subtexto emocional transmiten sus mensajes. Aprender a expresar las necesidades directamente es una ventaja para el crecimiento. Necesitan sentirse seguros antes de compartir lo que realmente piensan.`,
+They may communicate indirectly, especially when vulnerable. Hints, implications, and emotional subtext carry their messages. Learning to state needs directly is a growth edge. They need to feel safe before sharing what they really think.`,
         
-        learning: `El aprendizaje está profundamente influenciado por el estado emocional. Cuando se sienten seguros y conectados, lo absorben maravillosamente. Cuando estamos ansiosos o emocionalmente perturbados, el aprendizaje se vuelve casi imposible. El entorno emocional importa tanto como el material.
+        learning: `Learning is deeply influenced by emotional state. When they feel safe and connected, they absorb beautifully. When anxious or emotionally disrupted, learning becomes nearly impossible. The emotional environment matters as much as the material.
 
-La memoria es excepcional, especialmente para información emocionalmente significativa. Es posible que recuerden exactamente cómo algo los hizo sentir décadas después. Las historias, la historia familiar y el material personalmente significativo los involucran más profundamente.`,
+Memory is exceptional, especially for emotionally significant information. They may remember exactly how something made them feel decades later. Stories, family history, and personally meaningful material engage them most deeply.`,
         
-        challenges: `La sombra de esta ubicación es permitir que los estados de ánimo abrumen el pensamiento. En los días oscuros, los pensamientos se vuelven oscuros; La claridad lógica se ve empañada por el clima emocional. Es posible que se aferren a ideas obsoletas porque se sienten familiares y seguras.
+        challenges: `The shadow of this placement is letting moods overwhelm thinking. On dark days, thoughts turn dark; logical clarity becomes clouded by emotional weather. They may hold onto outdated ideas because they feel familiar and safe.
 
-También pueden ponerse a la defensiva respecto de sus opiniones y experimentar el desacuerdo intelectual como un rechazo personal. Aprender a separar las ideas de la identidad y permanecer abierto cuando se activan los sentimientos es un crecimiento esencial.`,
+They may also be defensive about their opinions, experiencing intellectual disagreement as personal rejection. Learning to separate ideas from identity, and to stay open when feelings are activated, is essential growth.`,
         
-        parentGuidance: `Crear seguridad emocional para el aprendizaje de este niño. No se abrirán intelectualmente hasta que se sientan emocionalmente seguros. Conecte los nuevos aprendizajes con historias, familias y significados emocionales siempre que sea posible.
+        parentGuidance: `Create emotional safety for this child's learning. They won't open up intellectually until they feel emotionally secure. Connect new learning to stories, family, and emotional meaning whenever possible.
 
-Respeta su memoria y no descartes sus sentimientos sobre las ideas. Ayúdelos a comprender que los estados de ánimo influyen en los pensamientos, pero no es necesario controlarlos. Enséñeles a identificar cuándo las emociones ayudan y cuándo obstaculizan su pensamiento.`,
+Respect their memory and don't dismiss their feelings about ideas. Help them understand that moods color thoughts but don't have to control them. Teach them to identify when emotions are helping versus hindering their thinking.`,
         
-        affirmation: "Mi corazón hace sabia mi mente. Siento mi camino hacia la comprensión."
+        affirmation: "My heart makes my mind wise. I feel my way to understanding."
     },
     
     Leo: {
-        title: "La mente creativa",
-        hook: "Una mente que piensa en color, dramatismo y expresión audaz.",
-        coreNature: `Mercurio en Leo crea una mente que piensa creativamente y se expresa dramáticamente. Esta alma no sólo tiene ideas: tiene visiones. Cada pensamiento quiere convertirse en una historia, una actuación, una creación que pueda ser compartida y apreciada.
+        title: "The Creative Mind",
+        hook: "A mind that thinks in color, drama, and bold expression.",
+        coreNature: `Mercury in Leo creates a mind that thinks creatively and expresses dramatically. This soul doesn't just have ideas—they have visions. Every thought wants to become a story, a performance, a creation that can be shared and appreciated.
 
-Esta es la mente del creador. Las ideas deben ser originales, especiales y dignas de atención. El pensamiento ordinario se siente por debajo de ellos. Naturalmente, dramatizan y embellecen, no por deshonestidad sino por una mente que ve todo en términos más allá de la vida.`,
+This is the mind of the creator. Ideas must be original, special, and worthy of attention. Ordinary thinking feels beneath them. They naturally dramatize and embellish, not from dishonesty but from a mind that sees everything in larger-than-life terms.`,
         
-        communication: `La comunicación es arte escénico. Hablan con estilo natural, atrayendo a los demás con entusiasmo y confianza. La voz tiende a ser fuerte y cálida. Llaman la atención no exigiéndola sino siendo genuinamente convincentes.
+        communication: `Communication is performance art. They speak with natural flair, drawing others in with enthusiasm and confidence. The voice tends to be strong and warm. They command attention not by demanding it but by being genuinely compelling.
 
-Pueden exagerar para lograr un efecto, agregando color a historias que ya eran interesantes. Esto no es mentira, es mejora. Son excelentes presentadores, animadores natos y nacidos para hablar en público. La timidez a la hora de compartir ideas es rara.`,
+They may exaggerate for effect, adding color to stories that were already interesting. This isn't lying—it's enhancement. They're excellent presenters, natural entertainers, and born to speak publicly. Shyness about sharing ideas is rare.`,
         
-        learning: `El aprendizaje ocurre mejor cuando se siente especial y cuando se reconoce el esfuerzo. Los enfoques de enseñanza genéricos parecen insultos; necesitan saber que merecen atención individual. Los proyectos creativos, las presentaciones y las oportunidades para brillar son los que más los atraen.
+        learning: `Learning happens best when it feels special and when effort is recognized. Generic teaching approaches feel like insults; they need to know they're worth individual attention. Creative projects, presentations, and opportunities to shine engage them most.
 
-Tienen un orgullo intelectual genuino y trabajarán duro para demostrar su valor mental. La competencia motiva cuando creen que pueden ganar. Necesitan estímulo para persistir cuando el aprendizaje les resulta difícil y poco atractivo.`,
+They have genuine intellectual pride and will work hard to prove their mental worth. Competition motivates when they believe they can win. They need encouragement to persist when learning feels hard and unglamorous.`,
         
-        challenges: `La sombra de esta ubicación es la arrogancia intelectual. Es posible que descarten las ideas de los demás demasiado rápidamente, convencidos de su propia superioridad. Cuando el orgullo resulta herido, es posible que se cierren en lugar de permanecer abiertos al aprendizaje.
+        challenges: `The shadow of this placement is intellectual arrogance. They may dismiss others' ideas too quickly, convinced of their own superiority. When pride is wounded, they may shut down rather than stay open to learning.
 
-También pueden tener dificultades con el trabajo detrás de escena que no recibe reconocimiento. No todos los pensamientos necesitan una audiencia, pero pueden actuar como si la necesitaran. Aprender la humildad y la perseverancia sin elogios es un crecimiento esencial.`,
+They may also struggle with behind-the-scenes work that gets no recognition. Not every thought needs an audience, but they may act as if it does. Learning humility and persistence without praise is essential growth.`,
         
-        parentGuidance: `Dale a este niño escenarios y audiencias. Presentaciones, mostrar y contar, proyectos creativos, enseñar a los niños más pequeños: déjelos brillar a través de sus ideas. Los elogios genuinos los atraen; adulación vacía que eventualmente verán.
+        parentGuidance: `Give this child stages and audiences. Presentations, show-and-tell, creative projects, teaching younger children—let them shine through their ideas. Genuine praise engages them; empty flattery they'll eventually see through.
 
-Desafía su arrogancia con suavidad. Ayúdelos a ver que escuchar a los demás no es debilidad. Enséñeles que algunos de los mejores trabajos suceden sin ser vistos y que la perseverancia importa más que los aplausos. Celebre el esfuerzo, no solo los resultados.`,
+Challenge their arrogance gently. Help them see that listening to others isn't weakness. Teach them that some of the best work happens unseen, and that persistence matters more than applause. Celebrate effort, not just results.`,
         
-        affirmation: "Mi mente crea luz que otros pueden ver. Comparto mis ideas con alegría y confianza."
+        affirmation: "My mind creates light that others can see. I share my ideas with joy and confidence."
     },
     
     Virgo: {
-        title: "La mente precisa",
-        hook: "Una mente que ve los detalles que otros pasan por alto.",
-        coreNature: `Mercurio en Virgo es el otro hogar de Mercurio, lo que crea una mente de precisión, análisis e inteligencia práctica excepcionales. Esta alma piensa en sistemas, notando cada componente y cómo encaja en el todo. Nada escapa a su mirada observadora.
+        title: "The Precise Mind",
+        hook: "A mind that sees the details others miss.",
+        coreNature: `Mercury in Virgo is Mercury's other home, creating a mind of exceptional precision, analysis, and practical intelligence. This soul thinks in systems, noticing every component and how it fits the whole. Nothing escapes their observant eye.
 
-Esta es la mente del analista. La mejora es su objetivo constante: ¿cómo podría ser esto mejor, más limpio y más eficiente? Son editores naturales de la vida y refinan todo lo que tocan. Su pensamiento tiene un propósito; la especulación ociosa parece un desperdicio.`,
+This is the mind of the analyst. Improvement is their constant lens—how could this be better, cleaner, more efficient? They're natural editors of life, refining everything they touch. Their thinking serves a purpose; idle speculation feels wasteful.`,
         
-        communication: `La comunicación es precisa e informativa. Eligen las palabras con cuidado y prefieren la precisión a la impresión. Puede que hablen menos que otros, pero dicen más sobre el fondo. Las preguntas que hacen van al meollo del asunto.
+        communication: `Communication is precise and informative. They choose words carefully, preferring accuracy over impression. They may speak less than others but say more of substance. Questions they ask cut to the heart of the matter.
 
-Es más fácil criticar que elogiar, viendo lo que hay que arreglar antes que lo que ya es bueno. Esto no es negatividad; es cómo funciona naturalmente su mente. Aprender a equilibrar la crítica con el aprecio es una ventaja para el crecimiento.`,
+They may critique more easily than compliment, seeing what needs fixing before what's already good. This isn't negativity—it's how their mind naturally works. Learning to balance critique with appreciation is a growth edge.`,
         
-        learning: `El aprendizaje es sistemático y exhaustivo. Quieren comprender cada detalle antes de seguir adelante. Las instrucciones paso a paso funcionan a la perfección; la exploración aleatoria los frustra. Necesitan conocer el método antes de poder relajarse y dominarlo.
+        learning: `Learning is systematic and thorough. They want to understand every detail before moving on. Step-by-step instruction works beautifully; random exploration frustrates them. They need to know the method before they can relax into mastery.
 
-Son estudiantes natos y aman genuinamente el proceso de mejorar en las cosas. Pueden ser duros consigo mismos cuando el aprendizaje les parece lento y establecer estándares increíblemente altos. El permiso para cometer errores mientras se aprende es esencial.`,
+They're natural students, genuinely loving the process of becoming better at things. They may be hard on themselves when learning feels slow, setting impossibly high standards. Permission to make mistakes while learning is essential.`,
         
-        challenges: `La sombra de esta ubicación es la parálisis del análisis. Ver tantos detalles, tantos problemas potenciales, puede congelar la toma de decisiones. Es posible que nunca se sientan preparados, que nunca sientan que las cosas van lo suficientemente bien.
+        challenges: `The shadow of this placement is analysis paralysis. Seeing so many details, so many potential problems, can freeze decision-making. They may never feel ready, never feel things are good enough.
 
-La preocupación es su hábito mental. El mismo poder analítico que resuelve problemas puede crearlos de la nada. Aprender a aceptar lo "suficientemente bueno", tolerar la imperfección, acallar al crítico interno: éstas son lecciones para toda la vida.`,
+Worry is their mental habit. The same analytical power that solves problems can create them out of nothing. Learning to accept "good enough," to tolerate imperfection, to quiet the inner critic—these are lifetime lessons.`,
         
-        parentGuidance: `Dale a este niño sistemas para aprender y mejorar. Que organicen, categoricen y perfeccionen las cosas. Su necesidad de orden no es rigidez: es la forma en que su mente le da sentido al mundo.
+        parentGuidance: `Give this child systems to learn and improve. Let them organize, categorize, and perfect things. Their need for order isn't rigidity—it's how their mind makes sense of the world.
 
-No aumente su autocrítica; Ya son más duros consigo mismos de lo que tú podrías ser. Celebre el esfuerzo y la mejora sobre la perfección. Enséñeles que preocuparse no es preparación y que a veces "lo suficientemente bueno" realmente lo es.`,
+Don't add to their self-criticism; they're already harder on themselves than you could be. Celebrate effort and improvement over perfection. Teach them that worrying is not preparation, and that sometimes "good enough" truly is.`,
         
-        affirmation: "Mi mente cuidadosa crea excelencia. Estoy aprendiendo a amar el progreso, no sólo la perfección."
+        affirmation: "My careful mind creates excellence. I am learning to love progress, not just perfection."
     },
     
     Libra: {
-        title: "La mente equilibrada",
-        hook: "Una mente que ve todos los lados y busca la armonía en el pensamiento.",
-        coreNature: `Mercurio en Libra crea una mente naturalmente orientada hacia el equilibrio, la justicia y la visión de múltiples perspectivas. Esta alma piensa en comparaciones, siempre sopesando esto contra aquello. Cada idea tiene un contrapunto; cada argumento tiene otro lado.
+        title: "The Balanced Mind",
+        hook: "A mind that sees all sides and seeks harmony in thought.",
+        coreNature: `Mercury in Libra creates a mind naturally oriented toward balance, fairness, and seeing multiple perspectives. This soul thinks in comparisons, always weighing this against that. Every idea has a counterpoint; every argument has another side.
 
-Esta es la mente del diplomático. Entienden genuinamente que la verdad a menudo se encuentra entre los extremos. Su proceso de pensamiento implica considerar los puntos de vista de los demás hasta encontrar un justo término medio. La justicia no es sólo un concepto: es cómo piensan.`,
+This is the mind of the diplomat. They genuinely understand that truth often lies between extremes. Their thinking process involves considering others' viewpoints until they've found the fair middle ground. Justice isn't just a concept—it's how they think.`,
         
-        communication: `La comunicación es elegante y considerada. Naturalmente, ajustan su expresión a la de su audiencia, suavizando las asperezas antes de compartir. La armonía en la conversación importa tanto como el contenido. Hacen que los demás se sientan escuchados y validados.
+        communication: `Communication is graceful and considerate. They naturally adjust their expression to their audience, smoothing rough edges before sharing. Harmony in conversation matters as much as content. They make others feel heard and validated.
 
-Es posible que les cueste expresar opiniones directamente, recurriendo a "por otro lado" y "pero también". Esto no es debilidad: es una conciencia genuina de la complejidad. Aprender cuándo la franqueza sirve mejor que la diplomacia es una ventaja para el crecimiento.`,
+They may struggle to state opinions directly, hedging with "on the other hand" and "but also." This isn't weakness—it's genuine awareness of complexity. Learning when directness serves better than diplomacy is a growth edge.`,
         
-        learning: `El aprendizaje ocurre mejor a través de la discusión y la comparación. Los formatos de debate, los compañeros de estudio y la exploración de ideas a través de la conversación los involucran profundamente. A menudo aclaran su propio pensamiento expresándolo a los demás.
+        learning: `Learning happens best through discussion and comparison. Debate formats, study partners, and exploring ideas through conversation engage them deeply. They often clarify their own thinking by articulating it to others.
 
-Se sienten atraídos por temas que involucran relaciones, arte y justicia: psicología, derecho, estética. Los temas puramente técnicos pueden parecer incompletos sin el elemento humano. Necesitan belleza en su entorno de aprendizaje.`,
+They're drawn to subjects involving relationships, art, and fairness—psychology, law, aesthetics. Pure technical subjects may feel incomplete without the human element. They need beauty in their learning environment.`,
         
-        challenges: `La sombra de esta ubicación es la indecisión crónica. Ver todos los lados significa que ningún lado parece claramente mejor. Es posible que aplacen decisiones indefinidamente, esperando una certeza que nunca llega.
+        challenges: `The shadow of this placement is chronic indecision. Seeing all sides means no side seems clearly best. They may defer decisions indefinitely, waiting for a certainty that never comes.
 
-También pueden estar tan concentrados en lo que piensan los demás que pierden contacto con su propia opinión. Evitar conflictos puede convertirse en un hábito mental, en el que ni siquiera se permite que se formen pensamientos desagradables. Aprender a mantener firmemente su propia posición es un crecimiento esencial.`,
+They may also be so focused on what others think that they lose touch with their own opinion. Conflict avoidance can become a mental habit, where disagreeable thoughts aren't even allowed to form. Learning to hold their own position firmly is essential growth.`,
         
-        parentGuidance: `Dele a este niño práctica para tomar decisiones y cumplirlas. Empiece poco a poco: déjeles elegir y experimentar los resultados sin ser rescatados. Ayúdelos a ver que decidir de manera imperfecta es mejor que no decidir.
+        parentGuidance: `Give this child practice making decisions and sticking with them. Start small—let them choose and experience the results without rescue. Help them see that deciding imperfectly is better than not deciding.
 
-Honre su justicia mientras les enseña que a veces un lado es realmente mejor. No todas las cuestiones tienen un punto medio razonable. Ayúdelos a desarrollar sus propias opiniones antes de preguntar qué piensan los demás.`,
+Honor their fairness while teaching them that sometimes one side really is better. Not every issue has a reasonable middle ground. Help them develop their own opinions before asking what others think.`,
         
-        affirmation: "Mi mente equilibrada crea justicia y belleza. Puedo ver todos los lados y aun así conocer el mío."
+        affirmation: "My balanced mind creates fairness and beauty. I can see all sides and still know my own."
     },
     
     Scorpio: {
-        title: "La mente profunda",
-        hook: "Una mente que ve debajo de cada superficie.",
-        coreNature: `Mercurio en Escorpio crea una mente de profundidad, penetración y poder de investigación excepcionales. Esta alma no piensa en la superficie; cada idea debe ser examinada en busca de lo que hay debajo. Son psicólogos naturales que ven motivos y dinámicas ocultas que otros pasan por alto.
+        title: "The Deep Mind",
+        hook: "A mind that sees beneath every surface.",
+        coreNature: `Mercury in Scorpio creates a mind of exceptional depth, penetration, and investigative power. This soul doesn't do surface thinking—every idea must be examined for what lies beneath. They're natural psychologists, seeing motives and hidden dynamics that others miss.
 
-Esta es la mente del detective. El por qué es sólo el comienzo de sus preguntas. Necesitan comprender la causa fundamental, el patrón subyacente, la verdad secreta. Las respuestas a medias los frustran; Cavarán hasta llegar al lecho de roca.`,
+This is the mind of the detective. Why is only the beginning of their questions. They need to understand the root cause, the underlying pattern, the secret truth. Half-answers frustrate them; they'll dig until they reach bedrock.`,
         
-        communication: `La comunicación es intensa y decidida. No desperdician palabras en pequeñas conversaciones; cada intercambio tiene significado. Es posible que guarden silencio hasta que tengan algo importante que decir y luego hablen con una percepción penetrante que sorprenda a los demás.
+        communication: `Communication is intense and purposeful. They don't waste words on small talk; every exchange has meaning. They may be quiet until they have something significant to say, then speak with penetrating insight that takes others aback.
 
-Son excelentes guardando secretos, propios y ajenos. Entienden que la información es poder y no la comparten descuidadamente. Esto puede hacer que parezcan misteriosos o reservados; son simplemente selectivos.`,
+They're excellent at keeping secrets—their own and others'. They understand that information is power and don't share carelessly. This can make them seem mysterious or secretive; they're simply selective.`,
         
-        learning: `El aprendizaje debe ser profundo o no satisface. Prefieren entender una cosa completamente que saber un poco sobre muchas cosas. La investigación, la investigación y el descubrimiento de información oculta los involucran de forma natural.
+        learning: `Learning must go deep or it doesn't satisfy. They'd rather understand one thing completely than know a little about many things. Research, investigation, and uncovering hidden information engage them naturally.
 
-Se sienten atraídos por los temas tabú, por lo oculto o prohibido. La psicología, los misterios, la ciencia y todo lo que implique transformación atraen su atención. Pueden volverse obsesivamente concentrados cuando están realmente comprometidos.`,
+They're drawn to taboo subjects, to what's hidden or forbidden. Psychology, mysteries, science, and anything involving transformation holds their attention. They can become obsessively focused when truly engaged.`,
         
-        challenges: `La sombra de esta ubicación es la sospecha que se convierte en paranoia. Al ver tantas cosas ocultas en el mundo, es posible que las vean incluso donde no existen. La confianza se vuelve difícil cuando sabes cuánto oculta la gente.
+        challenges: `The shadow of this placement is suspicion becoming paranoia. Seeing so much hidden in the world, they may see it even where it doesn't exist. Trust becomes difficult when you know how much people conceal.
 
-También pueden utilizar el conocimiento como poder y control en lugar de comprensión. La información se convierte en un arma cuando se sienten amenazados. Aprender a compartir ideas con generosidad, a confiar a pesar de conocer las sombras de las personas, es un crecimiento esencial.`,
+They may also use knowledge as power and control rather than understanding. Information becomes a weapon when they feel threatened. Learning to share insights generously, to trust despite knowing people's shadows, is essential growth.`,
         
-        parentGuidance: `Déle permiso a este niño para que haga preguntas profundas. No descartes sus preguntas inquisitivas ni les digas que están pensando demasiado. Ayúdelos a encontrar salidas constructivas para su naturaleza investigadora: proyectos de investigación, misterios, psicología.
+        parentGuidance: `Give this child permission to question deeply. Don't dismiss their probing questions or tell them they're thinking too much. Help them find constructive outlets for their investigative nature—research projects, mysteries, psychology.
 
-Genere confianza siendo honesto con ellos; detectarán la deshonestidad y la recordarán. Enséñeles que la vulnerabilidad no es debilidad, que compartir pensamientos no les da a los demás poder sobre ellos. Ayúdelos a utilizar sus conocimientos para ayudar en lugar de controlar.`,
+Build trust by being honest with them; they'll detect dishonesty and remember it. Teach them that vulnerability isn't weakness, that sharing thoughts doesn't give others power over them. Help them use their insights to help rather than control.`,
         
-        affirmation: "Mi mente profunda ve la verdad en todas las cosas. Utilizo mis conocimientos para comprender y sanar."
+        affirmation: "My deep mind sees the truth in all things. I use my insights to understand and heal."
     },
     
     Sagittarius: {
-        title: "La mente buscadora",
-        hook: "Una mente que siempre busca horizontes más amplios.",
-        coreNature: `Mercurio en Sagitario crea una mente orientada hacia el significado, la verdad y el panorama general. Esta alma piensa filosóficamente, siempre preguntando "¿por qué" y "¿qué significa?" Los detalles los aburren; quieren entender el gran patrón.
+        title: "The Seeker Mind",
+        hook: "A mind always reaching toward larger horizons.",
+        coreNature: `Mercury in Sagittarius creates a mind oriented toward meaning, truth, and the big picture. This soul thinks philosophically, always asking "why" and "what does it mean?" Details bore them; they want to understand the grand pattern.
 
-Esta es la mente del filósofo. Cada idea se conecta con preguntas más amplias sobre la vida, el propósito y la verdad. Piensan con optimismo y, naturalmente, ven posibilidades más que limitaciones. Su entusiasmo por las ideas es contagioso.`,
+This is the mind of the philosopher. Every idea connects to larger questions about life, purpose, and truth. They think optimistically, naturally seeing possibility rather than limitation. Their enthusiasm for ideas is contagious.`,
         
-        communication: `La comunicación es entusiasta y expansiva. Hablan con grandes declaraciones, pintando con grandes pinceladas. Las calificaciones y los matices pueden perderse en la prisa por compartir la información esencial. Inspiran a través del optimismo y la visión.
+        communication: `Communication is enthusiastic and expansive. They speak in grand statements, painting with broad strokes. Qualifications and nuances may get lost in their rush to share the essential insight. They inspire through optimism and vision.
 
-Pueden ser directos hasta el punto de carecer de tacto y decir la verdad sin considerar el impacto. No tienen la intención de hacer daño; simplemente valoran la honestidad por encima de la diplomacia. Aprender a cronometrar y enmarcar la verdad con amabilidad es una ventaja para el crecimiento.`,
+They may be blunt to the point of tactlessness, speaking truth without considering impact. They don't mean to hurt—they just value honesty over diplomacy. Learning to time and frame truth kindly is a growth edge.`,
         
-        learning: `Aprender es una aventura. Quieren comprender culturas, filosofías y grandes ideas. Los viajes (físicos o mentales) les excitan. Aprenden mejor cuando pueden ver el propósito y el significado detrás de la información.
+        learning: `Learning is an adventure. They want to understand cultures, philosophies, and big ideas. Travel (physical or mental) excites them. They learn best when they can see the purpose and meaning behind information.
 
-Es posible que tengan dificultades con los detalles, la precisión y las instrucciones paso a paso. "¿Por qué necesito saber esto?" es su pregunta constante. Conecte el aprendizaje con un significado más amplio y participarán con entusiasmo.`,
+They may struggle with details, precision, and step-by-step instruction. "Why do I need to know this?" is their constant question. Connect learning to larger meaning and they'll engage enthusiastically.`,
         
-        challenges: `La sombra de esta ubicación es la generalización excesiva y la arrogancia intelectual. Pueden pensar que comprenden las cosas de manera más completa de lo que lo hacen, y se pierden detalles cruciales en su carrera hacia el panorama general.
+        challenges: `The shadow of this placement is overgeneralization and intellectual arrogance. They may think they understand things more completely than they do, missing crucial details in their rush to the big picture.
 
-También pueden ser sermoneadores, estar tan convencidos de su verdad que no pueden escuchar a los demás. La línea entre enseñar y dar conferencias desaparece. Aprender la humildad intelectual, que su verdad no es toda la verdad, es un crecimiento esencial.`,
+They may also be preachy, so convinced of their truth that they can't hear others. The line between teaching and lecturing disappears. Learning intellectual humility, that their truth isn't the whole truth, is essential growth.`,
         
-        parentGuidance: `Dale a este niño significado y contexto para todo. "Porque yo lo digo" nunca los satisfará; Explique el por qué detrás de las reglas y lecciones. Alimente su curiosidad sobre el mundo, las culturas y las grandes ideas.
+        parentGuidance: `Give this child meaning and context for everything. "Because I said so" will never satisfy them; explain the why behind rules and lessons. Feed their curiosity about the world, cultures, and big ideas.
 
-Ayúdelos a apreciar los detalles y a dar seguimiento sin arruinar su pensamiento general. Enséñeles que escuchar es tan importante como hablar, que los demás también tienen verdades. Canalice su instinto de enseñanza hacia situaciones en las que sea bienvenido.`,
+Help them appreciate details and follow-through without crushing their big-picture thinking. Teach them that listening matters as much as speaking, that others have truths too. Channel their teaching instinct into situations where it's welcomed.`,
         
-        affirmation: "Mi mente expansiva busca la verdad en todas partes. Comparto mi sabiduría sin dejar de estar abierto al aprendizaje."
+        affirmation: "My expansive mind seeks truth everywhere. I share my wisdom while remaining open to learning."
     },
     
     Capricorn: {
-        title: "La mente estratégica",
-        hook: "Una mente construida para el logro y la contribución duradera.",
-        coreNature: `Mercurio en Capricornio crea una mente orientada hacia la practicidad, los logros y el pensamiento a largo plazo. Esta alma piensa estratégicamente, siempre considerando las consecuencias y planificando varios pasos por delante. Las ideas se evalúan por su utilidad en el mundo real.
+        title: "The Strategic Mind",
+        hook: "A mind built for achievement and lasting contribution.",
+        coreNature: `Mercury in Capricorn creates a mind oriented toward practicality, achievement, and long-term thinking. This soul thinks strategically, always considering consequences and planning several moves ahead. Ideas are evaluated for their real-world utility.
 
-Esta es la mente del ejecutivo. La organización, la estructura y los objetivos claros centran su pensamiento. Naturalmente crean jerarquías de importancia, descartando lo que no sirve a sus objetivos. La disciplina mental es algo natural.`,
+This is the mind of the executive. Organization, structure, and clear goals focus their thinking. They naturally create hierarchies of importance, discarding what doesn't serve their objectives. Mental discipline comes naturally.`,
         
-        communication: `La comunicación es mesurada y autoritaria. No hablan descuidadamente; cada palabra tiene un propósito. Pueden parecer mayores de su edad y hablan con una seriedad y madurez inusuales. Las conversaciones triviales y los chismes tienen poco interés.
+        communication: `Communication is measured and authoritative. They don't speak carelessly; every word serves a purpose. They may seem older than their years, speaking with unusual seriousness and maturity. Small talk and gossip hold little interest.
 
-Quizás sean demasiado serios, demasiado concentrados en los problemas para apreciar el momento. La ligereza y el juego pueden parecer frívolos. Aprender que no todo tiene que ser productivo es una ventaja para el crecimiento.`,
+They may be too serious, too focused on problems to appreciate the moment. Lightness and play can feel frivolous. Learning that not everything needs to be productive is a growth edge.`,
         
-        learning: `El aprendizaje ocurre mejor con una estructura y un propósito claros. Quieren saber exactamente qué se espera, cómo serán evaluados y cómo se verán los logros. Las tareas vagas y abiertas les frustran.
+        learning: `Learning happens best with clear structure and purpose. They want to know exactly what's expected, how they'll be evaluated, and what achievement looks like. Vague, open-ended assignments frustrate them.
 
-Son estudiantes pacientes y dispuestos a dominar material difícil mediante un esfuerzo sostenido. Respetan la autoridad y los métodos tradicionales. Es posible que tengan dificultades con una creatividad que no tiene una "respuesta correcta" ni un resultado claro.`,
+They're patient learners, willing to master difficult material through sustained effort. They respect authority and traditional methods. They may struggle with creativity that has no "right answer" or clear outcome.`,
         
-        challenges: `La sombra de esta ubicación es la rigidez mental y el pesimismo. Ven los obstáculos con claridad (a veces con demasiada claridad) y pueden descartar las posibilidades como poco realistas sin una consideración adecuada.
+        challenges: `The shadow of this placement is mental rigidity and pessimism. They see obstacles clearly—sometimes too clearly—and may dismiss possibilities as unrealistic without proper consideration.
 
-También pueden identificarse excesivamente con los logros mentales y sentirse inútiles cuando fracasan intelectualmente. Aprender a separar su valor de sus logros, a valorar el juego y la presencia junto con la productividad, es un crecimiento esencial.`,
+They may also over-identify with mental achievement, feeling worthless when they fail intellectually. Learning to separate their worth from their accomplishments, to value play and presence alongside productivity, is essential growth.`,
         
-        parentGuidance: `Dele a este niño metas claras y reconocimiento por sus logros. Son ambiciosos por naturaleza y necesitan que se reconozcan sus esfuerzos. Ayúdelos a crear planes y a llevarlos a cabo; esto satisface su naturaleza estratégica.
+        parentGuidance: `Give this child clear goals and recognition for achievement. They're naturally ambitious and need their efforts acknowledged. Help them create plans and follow through—this satisfies their strategic nature.
 
-Equilibre su seriedad con el juego. Ayúdelos a ver que no todo debe tener un propósito. Enséñales a tolerar la incertidumbre y a valorar el viaje junto al destino. Elogie el esfuerzo y el crecimiento, no solo los resultados.`,
+Balance their seriousness with play. Help them see that not everything must serve a purpose. Teach them to tolerate uncertainty and to value the journey alongside the destination. Praise effort and growth, not just results.`,
         
-        affirmation: "Mi mente enfocada construye logros duraderos. Equilibro la ambición con la presencia y la alegría."
+        affirmation: "My focused mind builds achievements that last. I balance ambition with presence and joy."
     },
     
     Aquarius: {
-        title: "La mente revolucionaria",
-        hook: "Una mente que piensa más allá de lo que existe actualmente.",
-        coreNature: `Mercurio en Acuario crea una mente orientada hacia la innovación, la originalidad y las posibilidades de futuro. Esta alma piensa diferente, no por rebelión, sino porque realmente ve ángulos que otros pasan por alto. La convención es un punto de partida, nunca una conclusión.
+        title: "The Revolutionary Mind",
+        hook: "A mind that thinks beyond what currently exists.",
+        coreNature: `Mercury in Aquarius creates a mind oriented toward innovation, originality, and future possibilities. This soul thinks differently—not for rebellion's sake but because they genuinely see angles others miss. Convention is a starting point, never a conclusion.
 
-Ésta es la mente del inventor. Naturalmente, sienten curiosidad por saber cómo funcionan las cosas y cómo podrían funcionar mejor. Las ideas que otros descartan como imposibles son las que más les intrigan. Piensan para la humanidad, considerando naturalmente lo colectivo.`,
+This is the mind of the inventor. They're naturally curious about how things work and how they could work better. Ideas that others dismiss as impossible intrigue them most. They think for humanity, naturally considering the collective.`,
         
-        communication: `La comunicación es original y a veces sorprendente. Dicen cosas que a nadie más se le ocurriría decir. Sus observaciones pueden ser brillantemente esclarecedoras o confusamente abstractas (a veces ambas cosas). Asumen que otros pueden seguir sus pasos lógicos.
+        communication: `Communication is original and sometimes startling. They say things no one else would think to say. Their observations can be brilliantly insightful or confusingly abstract—sometimes both. They assume others can follow their leaps of logic.
 
-Pueden parecer distantes y comunicarse sobre sus emociones en lugar de hacerlo a partir de ellas. Esto no es frialdad: es objetividad. Están aprendiendo que la lógica no es la única forma válida de inteligencia.`,
+They may seem detached, communicating about emotions rather than from them. This isn't coldness—it's objectivity. They're learning that logic isn't the only valid form of intelligence.`,
         
-        learning: `El aprendizaje ocurre mejor cuando pueden innovar y cuestionar. La memorización de memoria parece inútil; necesitan comprender los sistemas para poder mejorarlos. Se sienten atraídos por la tecnología, la ciencia y los sistemas sociales.
+        learning: `Learning happens best when they can innovate and question. Rote memorization feels pointless; they need to understand systems so they can improve them. They're drawn to technology, science, and social systems.
 
-Es posible que rechacen los métodos de enseñanza tradicionales por principio y necesiten encontrar su propio enfoque. Dales libertad para aprender de manera diferente. A menudo aprenden mejor enseñándose a sí mismos.`,
+They may reject traditional teaching methods on principle, needing to find their own approach. Give them latitude to learn differently. They often learn best through teaching themselves.`,
         
-        challenges: `La sombra de esta ubicación es el contrarianismo: no estar de acuerdo simplemente para ser diferentes, no porque tengan una idea mejor. Ser poco convencional puede convertirse en su propia conformidad.
+        challenges: `The shadow of this placement is contrarianism—disagreeing just to be different, not because they have a better idea. Being unconventional can become its own conformity.
 
-También pueden estar tan concentrados en posibilidades futuras abstractas que pasan por alto las realidades presentes y las conexiones personales. Aprender a basar sus ideas en aplicaciones prácticas y a valorar la inteligencia emocional e intelectual es un crecimiento esencial.`,
+They may also be so focused on abstract future possibilities that they miss present realities and personal connections. Learning to ground their ideas in practical application, and to value emotional as well as intellectual intelligence, is essential growth.`,
         
-        parentGuidance: `Dale a este niño la libertad de pensar diferente. No castigues las ideas inusuales; explorarlos juntos. Proporcionar acceso a tecnología, ciencia y sistemas que puedan analizar y mejorar.
+        parentGuidance: `Give this child freedom to think differently. Don't punish unusual ideas; explore them together. Provide access to technology, science, and systems they can analyze and improve.
 
-Ayúdelos a conectar sus ideas con la aplicación práctica y las emociones humanas. Enséñeles que ser comprendido es tan importante como ser original. Fomente la colaboración junto con el pensamiento independiente.`,
+Help them connect their ideas to practical application and human emotion. Teach them that being understood matters as much as being original. Encourage collaboration alongside independent thinking.`,
         
-        affirmation: "Mi mente original ve posibilidades que otros pasan por alto. Innovo para un futuro mejor para todos."
+        affirmation: "My original mind sees possibilities others miss. I innovate for a better future for all."
     },
     
     Pisces: {
-        title: "La mente imaginativa",
-        hook: "Una mente que piensa en sueños, imágenes y posibilidades infinitas.",
-        coreNature: `Mercurio en Piscis crea una mente que opera a través de la imaginación, la intuición y los sentimientos en lugar de la lógica pura. Esta alma piensa en imágenes, metáforas e impresiones. La frontera entre pensamiento y sentimiento, realidad y fantasía, está bellamente desdibujada.
+        title: "The Imaginative Mind",
+        hook: "A mind that thinks in dreams, images, and infinite possibility.",
+        coreNature: `Mercury in Pisces creates a mind that operates through imagination, intuition, and feeling rather than pure logic. This soul thinks in images, metaphors, and impressions. The boundary between thought and feeling, fact and fantasy, is beautifully blurred.
 
-Esta es la mente del artista. Las ideas llegan como un todo más que como una parte, como una visión más que como un argumento. Entienden cosas que nunca podrían explicar, saben cosas que nunca aprendieron. La lógica es un lenguaje entre muchos.`,
+This is the mind of the artist. Ideas arrive as wholes rather than parts, as visions rather than arguments. They understand things they could never explain, know things they never learned. Logic is one language among many.`,
         
-        communication: `La comunicación fluye a través de canales creativos. Se expresan mejor a través de historias, arte, música y metáforas. El discurso directo y literal puede parecer inadecuado para lo que intentan transmitir. Necesitan espacio para dar vueltas alrededor del significado en lugar de expresarlo directamente.
+        communication: `Communication flows through creative channels. They express best through story, art, music, and metaphor. Direct, literal speech can feel inadequate for what they're trying to convey. They need room to circle around meaning rather than state it directly.
 
-Absorben la energía mental de los demás, a veces pensando que tienen sus propios pensamientos cuando reciben los de los demás. Aprender a discernir sobre de quién son los pensamientos de quién es una habilidad para toda la vida.`,
+They absorb others' mental energy, sometimes thinking they're having their own thoughts when they're receiving others'. Learning discernment about whose thoughts are whose is a lifetime skill.`,
         
-        learning: `El aprendizaje ocurre mejor a través de la imaginación y el compromiso emocional. Los hechos secos sin contexto ni sentimiento se escapan; Las historias e imágenes significativas permanecen para siempre. Aprenden tanto del ambiente de un aula como de su contenido.
+        learning: `Learning happens best through imagination and emotional engagement. Dry facts without context or feeling slip away; meaningful stories and images stay forever. They learn as much from the mood of a classroom as from its content.
 
-Pueden tener dificultades con temas lineales y lógicos a menos que puedan encontrar la poesía en ellos. Las matemáticas pueden convertirse en música; La ciencia puede convertirse en magia. Necesitan profesores que hablen con su imaginación.`,
+They may struggle with linear, logical subjects unless they can find the poetry in them. Math can become music; science can become magic. They need teachers who speak to their imagination.`,
         
-        challenges: `La sombra de esta ubicación es la confusión mental y el escapismo. El rico mundo interior puede llegar a ser preferible a la realidad exterior. Pueden tener dificultades para organizar los pensamientos con claridad o para distinguir la imaginación de los hechos.
+        challenges: `The shadow of this placement is mental confusion and escapism. The rich inner world can become preferable to external reality. They may struggle to organize thoughts clearly or to distinguish imagination from fact.
 
-También pueden ser tan impresionables que pierden su propia voz mental, absorbiendo las ideas de los demás sin darse cuenta. Aprender la base, el pensamiento claro y los límites mentales es un crecimiento esencial.`,
+They may also be so impressionable that they lose their own mental voice, absorbing others' ideas without realizing it. Learning groundedness, clear thinking, and mental boundaries is essential growth.`,
         
-        parentGuidance: `Dele a este niño salidas creativas para su imaginación. La historia, el arte, la música y los juegos de simulación son la forma en que procesan y expresan su mundo interior. No descarte su pensamiento imaginativo como poco práctico.
+        parentGuidance: `Give this child creative outlets for their imagination. Story, art, music, and pretend play are how they process and express their inner world. Don't dismiss their imaginative thinking as impractical.
 
-Ayúdelos a fundamentar sus ideas en una expresión práctica. Enséñeles a organizar pensamientos sin aplastar la creatividad. Protéjalos del agobio mental: necesitan tiempo de tranquilidad para procesar. Celebre su forma única de saber mientras desarrolla suavemente habilidades lógicas.`,
+Help them ground their ideas in practical expression. Teach them to organize thoughts without crushing creativity. Protect them from mental overwhelm—they need quiet time to process. Celebrate their unique way of knowing while gently building logical skills.`,
         
-        affirmation: "Mi mente imaginativa ve magia en todas partes. Confío en mi intuición mientras aprendo a expresarla con claridad."
+        affirmation: "My imaginative mind sees magic everywhere. I trust my intuition while learning to express it clearly."
     }
 };
 
@@ -323,315 +323,315 @@ Ayúdelos a fundamentar sus ideas en una expresión práctica. Enséñeles a org
 
 var DEEP_VENUS_READINGS = {
     Aries: {
-        title: "El corazón guerrero",
-        hook: "Una naturaleza amorosa que persigue y conquista.",
-        coreNature: `Venus en Aries ama con la pasión del fuego mismo. Esta alma aborda las relaciones con entusiasmo, franqueza y una honestidad refrescante. No juegan ni esperan a ser elegidos: persiguen lo que quieren con valentía y confianza.
+        title: "The Warrior Heart",
+        hook: "A love nature that pursues and conquers.",
+        coreNature: `Venus in Aries loves with the passion of fire itself. This soul approaches relationships with enthusiasm, directness, and refreshing honesty. They don't play games or wait to be chosen—they go after what they want with courage and confidence.
 
-El amor les parece una aventura. La persecución los excita, la conquista los emociona y la relación nunca debe volverse aburrida o rutinaria. Aportan emoción, energía e impulso a cada conexión.`,
+Love feels like adventure to them. The chase excites them, the conquest thrills them, and the relationship must never become boring or routine. They bring excitement, energy, and forward momentum to every connection.`,
         
-        loveStyle: `Muestran amor a través de la acción y la iniciativa. Grandes gestos, aventuras espontáneas y tomar la iniciativa en la creación de experiencias juntos. Quieren ser el héroe, protector y mayor campeón de su pareja.
+        loveStyle: `They show love through action and initiative. Grand gestures, spontaneous adventures, and taking the lead in creating experiences together. They want to be their partner's hero, protector, and biggest champion.
 
-Se enamoran rápida e intensamente, a veces antes de haber considerado plenamente el objeto de su afecto. Su corazón toma decisiones que su cabeza toma después. Esto crea tanto una hermosa espontaneidad como la posibilidad de tomar decisiones apresuradas.`,
+They fall in love quickly and intensely, sometimes before they've fully considered the object of their affection. Their heart makes decisions their head catches up with later. This creates both beautiful spontaneity and potential for hasty choices.`,
         
-        needs: `Necesitan independencia dentro de la relación. La posesividad o los intentos de limitar su libertad desencadenan resistencia. Aman más apasionadamente cuando lo eligen libremente, no cuando se sienten obligados.
+        needs: `They need independence within relationship. Possessiveness or attempts to limit their freedom trigger resistance. They love most passionately when they freely choose it, not when they feel obligated.
 
-Necesitan emoción y desafío. Una vez que termina la persecución, necesitan que la relación les proporcione nuevas montañas que escalar juntos. La rutina y la previsibilidad agotan su pasión. Prosperan con una pareja que los mantiene alerta.`,
+They need excitement and challenge. Once the chase ends, they need the relationship to provide new mountains to climb together. Routine and predictability drain their passion. They thrive with a partner who keeps them on their toes.`,
         
-        challenges: `La sombra de esta ubicación es la impaciencia y el egocentrismo. Pueden priorizar sus deseos sobre las necesidades de su pareja, no por crueldad sino por una orientación natural hacia sí mismos. Aprender a esperar, hacer concesiones y considerar a los demás es crecimiento.
+        challenges: `The shadow of this placement is impatience and self-focus. They may prioritize their desires over their partner's needs, not from cruelty but from a natural orientation toward self. Learning to wait, compromise, and consider others is growth.
 
-También pueden confundir la emoción del nuevo amor con el amor mismo, persiguiendo constantemente lo alto de los comienzos en lugar de construir profundidad con el tiempo.`,
+They may also mistake the excitement of new love for love itself, constantly chasing the high of beginnings rather than building depth over time.`,
         
-        parentGuidance: `Este niño muestra amor físicamente: a través de abrazos, juegos bruscos y haciendo cosas juntos. Puede que no expresen afecto, pero lo demuestran mediante la acción y la protección.
+        parentGuidance: `This child shows love physically—through hugs, roughhousing, and doing things together. They may not articulate affection but demonstrate it through action and protection.
 
-Enséñeles que el amor incluye paciencia y consideración. Ayúdelos a aprender que los momentos amables importan tanto como los emocionantes. Modele que la vulnerabilidad es valiente, no débil.`,
+Teach them that love includes patience and consideration. Help them learn that the gentle moments matter as much as the exciting ones. Model that vulnerability is brave, not weak.`,
         
-        affirmation: "Amo con audacia y valentía. Aprendo a tener paciencia mientras mantengo viva la pasión."
+        affirmation: "I love boldly and courageously. I learn patience while keeping passion alive."
     },
     
     Taurus: {
-        title: "El corazón devoto",
-        hook: "Una naturaleza de amor que nutre y perdura.",
-        coreNature: `Venus en Tauro es Venus en casa: el amor se expresa en su forma más natural, sensual y comprometida. Esta alma ama con todo su ser, cuerpo y alma, y ​​ama para siempre. Una vez que dan su corazón, no lo retiran fácilmente.
+        title: "The Devoted Heart",
+        hook: "A love nature that nurtures and endures.",
+        coreNature: `Venus in Taurus is Venus at home—love expressing in its most natural, sensual, and committed form. This soul loves with their whole being, body and soul, and loves for keeps. Once they give their heart, they don't easily take it back.
 
-Para ellos el amor es como la tierra: sólido, confiable y destinado a durar. Construyen relaciones como construyen todo: lentamente, con cuidado, con materiales de calidad destinados a perdurar. La lealtad no es un principio, es su naturaleza.`,
+Love feels like earth to them—solid, reliable, and meant to last. They build relationships like they build everything: slowly, carefully, with quality materials meant to endure. Loyalty isn't a principle—it's their nature.`,
         
-        loveStyle: `Muestran amor a través de la presencia física, el tacto y la creación de consuelo. Buena comida, hermosos alrededores, afecto físico: estos son sus lenguajes de amor. Te hacen sentir atendido de manera tangible y sensorial.
+        loveStyle: `They show love through physical presence, touch, and creating comfort. Good food, beautiful surroundings, physical affection—these are their love languages. They make you feel cared for in tangible, sensory ways.
 
-Les toma tiempo enamorarse, pero una vez que lo hacen, es profundo y permanente. No les interesan las conexiones casuales; Quieren algo real. Su paciencia en el amor es un regalo: dan tiempo a las relaciones para que se desarrollen de forma natural.`,
+They take time to fall in love, but once they do, it's deep and permanent. They're not interested in casual connections; they want the real thing. Their patience in love is a gift—they give relationships time to develop naturally.`,
         
-        needs: `Necesitan estabilidad y confiabilidad. Las parejas impredecibles crean una ansiedad que agota su amor. Prosperan con alguien que se presenta constantemente y con quien se puede contar.
+        needs: `They need stability and reliability. Unpredictable partners create anxiety that drains their love. They thrive with someone who shows up consistently, who can be counted on.
 
-Necesitan afecto físico y placer sensorial. Una relación sin contacto, sin comidas compartidas, sin espacios cómodos les parece incompleta. Expresan y reciben amor a través del cuerpo.`,
+They need physical affection and sensory pleasure. A relationship without touch, without shared meals, without comfortable spaces feels incomplete to them. They express and receive love through the body.`,
         
-        challenges: `La sombra de esta ubicación es la posesividad. Pueden aferrarse con demasiada fuerza y ​​tratar a sus seres queridos como posesiones en lugar de seres libres. Aprender que el amor prospera en la libertad es un crecimiento esencial.
+        challenges: `The shadow of this placement is possessiveness. They can grip too tightly, treating loved ones like possessions rather than free beings. Learning that love thrives in freedom is essential growth.
 
-También pueden resistirse a los cambios necesarios en las relaciones y permanecer cómodos más allá del punto de salud. Su lealtad puede convertirse en terquedad, su estabilidad puede convertirse en estancamiento.`,
+They may also resist necessary change in relationships, staying comfortable past the point of health. Their loyalty can become stubbornness, their stability can become stagnation.`,
         
-        parentGuidance: `Este niño necesita mucho afecto físico: abrazos, mimos y presencia física. Se sienten amados a través de la comodidad y la estabilidad. En realidad, la rutina los tranquiliza en lugar de aburrirlos.
+        parentGuidance: `This child needs lots of physical affection—hugs, cuddles, and physical presence. They feel loved through comfort and stability. Routine actually reassures them rather than boring them.
 
-Enséñeles que el cambio en las relaciones es natural y saludable. Ayúdelos a expresar los celos y los sentimientos posesivos de manera constructiva en lugar de reprimirlos o actuar de manera destructiva.`,
+Teach them that change in relationships is natural and healthy. Help them express jealousy and possessive feelings constructively rather than suppressing or acting on them destructively.`,
         
-        affirmation: "Amo profunda y duraderamente. Sostengo el amor con dulzura, sabiendo que la libertad lo hace más fuerte."
+        affirmation: "I love deeply and lastingly. I hold love gently, knowing freedom makes it stronger."
     },
     
     Gemini: {
-        title: "El corazón curioso",
-        hook: "Una naturaleza de amor que conecta a través de la mente y la palabra.",
-        coreNature: `Venus en Géminis ama a través de la curiosidad, la comunicación y el descubrimiento sin fin. Esta alma necesita conexión mental tanto como conexión con el corazón; se enamoran tanto de las mentes como de las personas. La conversación es su juego previo; las ideas son su intimidad.
+        title: "The Curious Heart",
+        hook: "A love nature that connects through mind and word.",
+        coreNature: `Venus in Gemini loves through curiosity, communication, and endless discovery. This soul needs mental connection as much as heart connection—they fall in love with minds as much as people. Conversation is their foreplay; ideas are their intimacy.
 
-Para ellos, el amor es como un juego: ligero, divertido y siempre en movimiento. Aportan ingenio, variedad y estimulación intelectual a cada conexión. Una relación aburrida es peor que ninguna relación con ellos.`,
+Love feels like play to them—light, fun, and always moving. They bring wit, variety, and intellectual stimulation to every connection. A boring relationship is worse than no relationship to them.`,
         
-        loveStyle: `Muestran amor a través de la comunicación, la atención y el aprendizaje compartido. Largas conversaciones, mensajes de texto inteligentes, aprendizaje juntos y una curiosidad infinita sobre el mundo interior de su pareja. Te hacen sentir interesante y apreciado.
+        loveStyle: `They show love through communication, attention, and shared learning. Long conversations, clever texts, learning together, and endless curiosity about their partner's inner world. They make you feel interesting and appreciated.
 
-Pueden amar a varias personas simultáneamente, aunque no necesariamente de forma romántica: su corazón tiene muchas cámaras. Necesitan variedad en sus conexiones y pueden tener dificultades con la exclusividad emocional de la monogamia tradicional.`,
+They may love several people simultaneously, though not necessarily romantically—their heart has many chambers. They need variety in connection and may struggle with traditional monogamy's emotional exclusivity.`,
         
-        needs: `Necesitan estimulación mental y libertad para explorar. Una pareja que no pueda seguir el ritmo intelectualmente o que intente restringir su vida social los perderá. Prosperan con alguien que es infinitamente interesante y que los encuentra iguales.
+        needs: `They need mental stimulation and freedom to explore. A partner who can't keep up intellectually or who tries to restrict their social life will lose them. They thrive with someone who is endlessly interesting and who finds them the same.
 
-Necesitan ligereza y juego. Las pesadas exigencias emocionales los agotan rápidamente. Procesan sentimientos hablando y pensando, no a través de una comunión emocional silenciosa. Deles espacio para verbalizar lo que están experimentando.`,
+They need lightness and play. Heavy emotional demands drain them quickly. They process feelings through talking and thinking, not through silent emotional communion. Give them space to verbalize what they're experiencing.`,
         
-        challenges: `La sombra de esta ubicación es la superficialidad. Pueden rozar la superficie de muchas conexiones sin profundizar en ninguna. La profundidad emocional requiere desaceleración, lo cual no es algo natural.
+        challenges: `The shadow of this placement is superficiality. They may skim the surface of many connections without diving deep into any. Emotional depth requires slowing down, which doesn't come naturally.
 
-También pueden usar palabras para desviar en lugar de conectar, volviéndose tan hábiles en la expresión verbal que pierden contacto con lo que realmente sienten. Aprender a profundizar, a permanecer presente cuando termina la conversación, es un crecimiento esencial.`,
+They may also use words to deflect rather than connect, becoming so skilled at verbal expression that they lose touch with what they actually feel. Learning to go deeper, to stay present when conversation ends, is essential growth.`,
         
-        parentGuidance: `Este niño se conecta mediante la conversación y los intereses compartidos. Demuestran amor queriendo hablar de todo contigo, compartiendo descubrimientos, haciéndote infinitas preguntas sobre ti.
+        parentGuidance: `This child connects through talking and shared interests. They show love by wanting to discuss everything with you, by sharing discoveries, by asking endless questions about you.
 
-Enséñeles que el amor incluye silencio, profundidad y presencia emocional, no sólo palabras e ideas. Ayúdelos a mantenerse conectados cuando las cosas se vuelvan emocionalmente complejas en lugar de intelectualizar la salida.`,
+Teach them that love includes silence, depth, and emotional presence—not just words and ideas. Help them stay connected when things get emotionally complex rather than intellectualizing their way out.`,
         
-        affirmation: "Me conecto a través de la mente y el corazón juntos. Aprendo a amar profundamente sin dejar de ser curioso."
+        affirmation: "I connect through mind and heart together. I learn to love deeply while staying curious."
     },
     
     Cancer: {
-        title: "El corazón nutritivo",
-        hook: "Una naturaleza amorosa que protege, recuerda y cuida.",
-        coreNature: `Venus en Cáncer ama con la profundidad del océano y la ternura de la luz de la luna. Esta alma forma profundos vínculos emocionales que duran toda la vida. Aman cuidando, protegiendo y creando seguridad emocional para sus seres queridos.
+        title: "The Nurturing Heart",
+        hook: "A love nature that protects, remembers, and cares.",
+        coreNature: `Venus in Cancer loves with the depth of the ocean and the tenderness of moonlight. This soul forms profound emotional attachments that last a lifetime. They love through nurturing, protecting, and creating emotional safety for those they care about.
 
-Para ellos, el amor se siente como en casa. Quieren construir nidos con sus seres queridos, crear mundos privados de memoria compartida e intimidad emocional. Aman la persona que fuiste, eres y serás; llevan toda la línea de tiempo de una relación en su corazón.`,
+Love feels like home to them. They want to build nests with their loved ones, to create private worlds of shared memory and emotional intimacy. They love the person you were, are, and will become—they carry the whole timeline of a relationship in their heart.`,
         
-        loveStyle: `Muestran amor a través del cuidado, el recuerdo y la sintonía emocional. Se dan cuenta de lo que necesitas antes de que lo digas. Recuerdan tus historias, tus preferencias, tus heridas. Te hacen sentir sostenido y conocido.
+        loveStyle: `They show love through care, remembering, and emotional attunement. They notice what you need before you say it. They remember your stories, your preferences, your wounds. They make you feel held and known.
 
-Pueden amar con cautela, dando vueltas antes de comprometerse, probando la seguridad antes de abrir su tierno corazón. Una vez que confían, su devoción es oceánica. Se entregan por completo a quienes se ganan su amor.`,
+They may love cautiously, circling before committing, testing safety before opening their tender heart. Once they trust, their devotion is oceanic. They give themselves completely to those who earn their love.`,
         
-        needs: `Necesitan seguridad emocional y lealtad. La inconsistencia o la indisponibilidad emocional los hiere profundamente. Prosperan con socios presentes, confiables y dispuestos a profundizar emocionalmente.
+        needs: `They need emotional safety and loyalty. Inconsistency or emotional unavailability wounds them deeply. They thrive with partners who are present, reliable, and willing to go deep emotionally.
 
-Necesitan ser necesarios. Cuidar a sus seres queridos no es una carga: es la forma en que se conectan. Una relación sin cuidado mutuo les parece incompleta. Necesitan dar tanto como recibir.`,
+They need to be needed. Taking care of loved ones isn't burden—it's how they connect. A relationship without mutual nurturing feels incomplete to them. They need to give as much as receive.`,
         
-        challenges: `La sombra de esta ubicación es el apego y la vida en el pasado. Es posible que se aferren con demasiada fuerza por miedo a perder, creando la asfixia que temen. Aprender a amar con las manos abiertas es un crecimiento esencial.
+        challenges: `The shadow of this placement is clinginess and living in the past. They may grip too tightly out of fear of loss, creating the suffocation they fear. Learning to love with open hands is essential growth.
 
-También pueden aferrarse a sus heridas para siempre, trayendo antiguos agravios a sus relaciones actuales. Su notable memoria para los detalles emocionales puede convertirse en una trampa si no pueden perdonar y liberarse.`,
+They may also hold onto hurts forever, bringing ancient grievances into present relationships. Their remarkable memory for emotional detail can become a trap if they can't forgive and release.`,
         
-        parentGuidance: `Este niño ama a través del cuidado y la presencia emocional. Pueden ser madres de sus animales de peluche, mascotas o hermanos menores. Se sienten amados a través de la sintonía emocional y el confort físico.
+        parentGuidance: `This child loves through caretaking and emotional presence. They may mother their stuffed animals, pets, or younger siblings. They feel loved through emotional attunement and physical comfort.
 
-Enséñeles límites saludables en el cuidado: que pueden amar a las personas sin perderse a sí mismos. Ayúdelos a procesar y liberar viejas heridas en lugar de almacenarlas para siempre. Modelo de que es seguro amar sin garantías.`,
+Teach them healthy boundaries in caring—that they can love people without losing themselves. Help them process and release old hurts rather than storing them forever. Model that it's safe to love without guarantees.`,
         
-        affirmation: "Mi corazón cariñoso crea un hogar dondequiera que amo. Me cuido sin perderme."
+        affirmation: "My caring heart creates home wherever I love. I nurture without losing myself."
     },
     
     Leo: {
-        title: "El corazón radiante",
-        hook: "Una naturaleza amorosa que brilla, celebra y adora.",
-        coreNature: `Venus en Leo ama con la calidez y generosidad del propio sol. Esta alma da amor de manera abundante, dramática y con alegría de todo corazón. Quieren adorar y ser adorados, celebrar el amor como la mayor aventura de la vida.
+        title: "The Radiant Heart",
+        hook: "A love nature that shines, celebrates, and adores.",
+        coreNature: `Venus in Leo loves with the warmth and generosity of the sun itself. This soul gives love lavishly, dramatically, and with whole-hearted joy. They want to adore and be adored, to celebrate love as the grandest adventure of life.
 
-El amor les parece realeza. Tratan a sus seres queridos como si fueran un tesoro y esperan el mismo trato a cambio. No hay nada pequeño o sutil en cómo aman: es grandioso, visible y sin vergüenza.`,
+Love feels like royalty to them. They treat their loved ones like treasure and expect the same treatment in return. There's nothing small or subtle about how they love—it's grand, visible, and unashamed.`,
         
-        loveStyle: `Muestran amor a través de la celebración, la generosidad y la lealtad. Grandes gestos, declaraciones públicas y hacer sentir a sus seres queridos como el centro del universo. Son la pareja que nunca olvida un aniversario.
+        loveStyle: `They show love through celebration, generosity, and loyalty. Grand gestures, public declarations, and making their loved ones feel like the center of the universe. They're the partner who never forgets an anniversary.
 
-Dan con notable generosidad, pero necesitan que su donación sea notada y apreciada. El amor no reconocido los hiere. Se entregan al amor y necesitan que ese amor se refleje.`,
+They give with remarkable generosity but need their giving to be noticed and appreciated. Unacknowledged love wounds them. They pour themselves into loving and need that pouring to be reflected back.`,
         
-        needs: `Necesitan aprecio y admiración. Una pareja que los da por sentado o no expresa admiración poco a poco matará de hambre su corazón. Prosperan con alguien que se deleita abiertamente en ellos.
+        needs: `They need appreciation and admiration. A partner who takes them for granted or fails to express admiration will slowly starve their heart. They thrive with someone who delights in them openly.
 
-Necesitan romance y especialidad. La rutina sin celebración se siente como si el amor muriera. Necesitan que su pareja haga un esfuerzo, que siga cortejándolos, que recuerde que el amor debe ser una ocasión, no sólo un acuerdo.`,
+They need romance and specialness. Routine without celebration feels like love dying. They need their partner to make an effort, to keep courting, to remember that love should be an occasion, not just an arrangement.`,
         
-        challenges: `La sombra de esta ubicación es el orgullo y el drama. Pueden crear escenas en las que la atención disminuye o requieren tranquilidad constante que agota a la pareja. Aprender que el amor fluye sin una afirmación constante es crecimiento.
+        challenges: `The shadow of this placement is pride and drama. They may create scenes when attention wanes, or require constant reassurance that drains partners. Learning that love flows without constant affirmation is growth.
 
-También pueden tener dificultades cuando no son el centro del mundo de su pareja. Pueden surgir celos hacia los hijos, las carreras o los amigos. Aprender a compartir protagonismo, a apoyar el brillo de su pareja, es madurez esencial.`,
+They may also struggle when they're not the center of their partner's world. Jealousy of children, careers, or friends can arise. Learning to share the spotlight, to support their partner's shine, is essential maturity.`,
         
-        parentGuidance: `A este niño le encanta que lo celebren y celebra el amor abiertamente. Pueden ser dramáticos en cuanto al afecto: grandes abrazos, declaraciones de amor, celos cuando la atención se va a otra parte. Esto no es manipulación; es su naturaleza.
+        parentGuidance: `This child loves being celebrated and celebrates love openly. They may be dramatic about affection—big hugs, declarations of love, jealousy when attention goes elsewhere. This isn't manipulation; it's their nature.
 
-Enséñeles que el amor incluye estar en segundo plano a veces, que apoyar el brillo de los demás también es amar. Ayúdalos a recibir amor en momentos tranquilos, no sólo en los grandiosos. Celébrelos genuinamente mientras desarrolla su capacidad de autovalidarse.`,
+Teach them that love includes being background sometimes, that supporting others' shine is also loving. Help them receive love in quiet moments, not just grand ones. Celebrate them genuinely while building their ability to self-validate.`,
         
-        affirmation: "Mi corazón generoso hace del amor una celebración. Hago brillar mi amor mientras dejo que los demás también brillen."
+        affirmation: "My generous heart makes love a celebration. I shine my love while letting others shine too."
     },
     
     Virgo: {
-        title: "El corazón devoto",
-        hook: "Una naturaleza de amor que sirve, mejora y atiende.",
-        coreNature: `Venus en Virgo ama a través del servicio, la atención al detalle y la devoción práctica. Esta alma muestra amor haciendo: ayudando, reparando, mejorando y haciendo la vida mejor para aquellos a quienes les importa. Se dan cuenta de lo que se necesita y lo proporcionan en silencio.
+        title: "The Devoted Heart",
+        hook: "A love nature that serves, improves, and attends.",
+        coreNature: `Venus in Virgo loves through service, attention to detail, and practical devotion. This soul shows love by doing—by helping, fixing, improving, and making life better for those they care about. They notice what's needed and quietly provide it.
 
-El amor les parece un arte. Trabajan en las relaciones, refinando y mejorando continuamente. Aman a la persona real, incluidos sus defectos, no a una fantasía idealizada. Su amor se basa en la realidad.`,
+Love feels like craft to them. They work at relationships, refining and improving continuously. They love the real person, flaws included, not an idealized fantasy. Their love is grounded in reality.`,
         
-        loveStyle: `Demuestran amor a través de actos de servicio y atención esmerada. Recordar preferencias, anticipar necesidades, resolver problemas y hacer la vida diaria más fluida. Puede que no digan "te amo" con frecuencia, pero lo demuestran constantemente.
+        loveStyle: `They show love through acts of service and careful attention. Remembering preferences, anticipating needs, solving problems, and making daily life smoother. They may not say "I love you" often, but they show it constantly.
 
-Pueden tener dificultades para expresar el amor de forma romántica o dramática y se sienten más cómodos con ayuda práctica que con afecto verbal. Su lenguaje de amor es el servicio; se sienten amados cuando su servicio es notado y apreciado.`,
+They may struggle to express love romantically or dramatically, more comfortable with practical help than verbal affection. Their love language is service; they feel loved when their service is noticed and appreciated.`,
         
-        needs: `Necesitan sentirse útiles y apreciados. Una pareja que descarta su ayuda o no se da cuenta de sus esfuerzos, poco a poco agotará su amor. Prosperan cuando su servicio es realmente valorado.
+        needs: `They need to feel useful and appreciated. A partner who dismisses their help or fails to notice their efforts will slowly drain their love. They thrive when their service is genuinely valued.
 
-Necesitan confiabilidad y esfuerzo. Los grandes gestos significan menos que un cuidado diario y constante. Respetan a las parejas que también hacen el trabajo de la relación, que no les dejan todo.`,
+They need reliability and effort. Grand gestures mean less than consistent, daily care. They respect partners who also do the work of relationship, who don't leave everything to them.`,
         
-        challenges: `La sombra de esta ubicación es la crítica y la retención. Es posible que se concentren tanto en lo que necesita mejorar que se olviden de apreciar lo que ya es bueno. Sus altos estándares pueden hacer que los socios se sientan inadecuados.
+        challenges: `The shadow of this placement is criticism and withholding. They may focus so much on what needs improvement that they forget to appreciate what's already good. Their high standards can make partners feel inadequate.
 
-También pueden tener dificultades para recibir amor y se sienten más cómodos dando que aceptando. La vulnerabilidad parece poco práctica. Aprender a ser servido, a relajar sus normas, a aceptar el amor imperfecto, es un crecimiento esencial.`,
+They may also struggle to receive love, more comfortable giving than accepting. Vulnerability feels impractical. Learning to be served, to relax their standards, to accept imperfect love, is essential growth.`,
         
-        parentGuidance: `Este niño muestra amor ayudando y haciendo. Pueden ser críticos porque se preocupan lo suficiente como para querer mejorar las cosas. Su ayuda es su corazón que habla.
+        parentGuidance: `This child shows love through helping and doing. They may be critical because they care enough to want to improve things. Their help is their heart speaking.
 
-Enséñeles a expresar afecto directamente, no sólo a través del servicio. Ayúdelos a recibir amor y cuidado sin sentir que deben ganárselo. Modele la aceptación de la imperfección en usted mismo y en su relación: la perfección no es el objetivo; el amor es.`,
+Teach them to express affection directly, not just through service. Help them receive love and care without feeling they must earn it. Model accepting imperfection in yourself and in relationship—perfection isn't the goal; love is.`,
         
-        affirmation: "Mi corazón atento muestra amor a través del cuidado y el servicio. Acepto el amor tan libremente como lo doy."
+        affirmation: "My attentive heart shows love through care and service. I accept love as freely as I give it."
     },
     
     Libra: {
-        title: "El corazón armonioso",
-        hook: "Una naturaleza amorosa que busca la belleza, el equilibrio y la asociación.",
-        coreNature: `Venus en Libra es Venus en casa de una manera diferente: el amor se expresa a través de la belleza, la asociación y el arte de la relación. Esta alma nace para la asociación y se encuentra más plenamente a través de la conexión con el otro.
+        title: "The Harmonious Heart",
+        hook: "A love nature that seeks beauty, balance, and partnership.",
+        coreNature: `Venus in Libra is Venus at home in a different way—love expressing through beauty, partnership, and the art of relationship. This soul is born for partnership, finding themselves most fully through connection with another.
 
-Para ellos, el amor es como un arte: una hermosa creación hecha por dos personas juntas. Aportan gracia, justicia y sensibilidad estética a cada relación. Naturalmente crean armonía dondequiera que aman.`,
+Love feels like art to them—a beautiful creation made by two people together. They bring grace, fairness, and aesthetic sensitivity to every relationship. They naturally create harmony wherever they love.`,
         
-        loveStyle: `Muestran amor a través del aprecio, la justicia y la creación conjunta de belleza. Gestos reflexivos, bellos entornos y una consideración infinita por la experiencia de su pareja. Hacen que su pareja se sienta vista y valorada.
+        loveStyle: `They show love through appreciation, fairness, and creating beauty together. Thoughtful gestures, beautiful environments, and endless consideration for their partner's experience. They make their partner feel seen and valued.
 
-Se enamoran de la elegancia: de mente, espíritu o forma. Se sienten atraídos por la belleza en todas sus expresiones. Su amor a menudo comienza con una apreciación estética y se profundiza en algo más.`,
+They fall in love with elegance—of mind, spirit, or form. They're drawn to beauty in all its expressions. Their love often begins with aesthetic appreciation and deepens into something more.`,
         
-        needs: `Necesitan asociación y armonía. Estar soltero les parece incompleto, no por desesperación sino por una orientación genuina hacia la pareja. Florecen en la relación.
+        needs: `They need partnership and harmony. Being single feels incomplete to them, not from desperation but from a genuine orientation toward couplehood. They bloom in relationship.
 
-Necesitan justicia y consideración. Las relaciones en las que dan más de lo que reciben o se sienten despreciados los agotan gradualmente. Necesitan un socio que corresponda a su consideración.`,
+They need fairness and consideration. Relationships where they give more than they receive, or feel unappreciated, gradually drain them. They need a partner who reciprocates their thoughtfulness.`,
         
-        challenges: `La sombra de esta ubicación es la de perderse en la relación. Es posible que se concentren tanto en su pareja que olviden sus propias necesidades, opiniones e identidad. Aprender a mantenerse dentro de la asociación es esencial.
+        challenges: `The shadow of this placement is losing themselves in relationship. They may become so focused on their partner that they forget their own needs, opinions, and identity. Learning to maintain themselves within partnership is essential.
 
-También pueden evitar conflictos necesarios, manteniendo la paz superficial a expensas de una verdadera resolución. Su miedo a la falta de armonía puede impedir la expresión honesta que requieren las relaciones.`,
+They may also avoid necessary conflict, keeping surface peace at the expense of true resolution. Their fear of disharmony can prevent the honest expression that relationships require.`,
         
-        parentGuidance: `Este niño anhela la conexión y puede tener dificultades para pasar tiempo a solas. Están naturalmente orientados hacia las relaciones y la justicia. Se sienten amados a través del aprecio y las hermosas experiencias compartidas.
+        parentGuidance: `This child craves connection and may struggle with alone time. They're naturally oriented toward relationship and fairness. They feel loved through appreciation and beautiful shared experiences.
 
-Enséñeles que están completamente solos, que la asociación los mejora pero no los completa. Ayúdelos a expresar sus necesidades directamente incluso cuando exista riesgo de conflicto. Modele que el desacuerdo puede ser amoroso, que la paz no es lo mismo que la armonía.`,
+Teach them that they're whole alone, that partnership enhances but doesn't complete them. Help them express needs directly even when it risks conflict. Model that disagreement can be loving, that peace isn't the same as harmony.`,
         
-        affirmation: "Mi corazón amoroso crea hermosas conexiones. Estoy completamente solo y enriquecido juntos."
+        affirmation: "My loving heart creates beautiful connections. I am whole alone and enriched together."
     },
     
     Scorpio: {
-        title: "El corazón intenso",
-        hook: "Una naturaleza de amor que transforma, consume y sana.",
-        coreNature: `Venus en Escorpio ama con una intensidad devastadora. Esta alma no es casual: cada conexión importa completamente o no importa en absoluto. Aman con la profundidad del océano y el poder de transformación mismo.
+        title: "The Intense Heart",
+        hook: "A love nature that transforms, consumes, and heals.",
+        coreNature: `Venus in Scorpio loves with devastating intensity. This soul doesn't do casual—every connection either matters completely or doesn't matter at all. They love with the depth of the ocean and the power of transformation itself.
 
-Para ellos el amor es como muerte y renacimiento. El verdadero amor los cambia, los transforma, los desarma y los vuelve a unir de otra manera. Quieren un amor que importe, que cueste algo, que llegue al alma.`,
+Love feels like death and rebirth to them. True love changes them, transforms them, takes them apart and puts them back together differently. They want love that matters, that costs something, that reaches the soul.`,
         
-        loveStyle: `Muestran amor a través de la intensidad, la lealtad y la profundidad emocional. Quieren saber tus secretos, tus sombras, tus lugares escondidos. Ofrecen el mismo acceso a sí mismos: ser verdaderamente conocidos, no sólo apreciados.
+        loveStyle: `They show love through intensity, loyalty, and emotional depth. They want to know your secrets, your shadows, your hidden places. They offer the same access to themselves—to be truly known, not just appreciated.
 
-Aman exclusivamente y esperan lo mismo. La relación debe ser especial, aparte, diferente de cualquier otra conexión. No comparten bien y luchan cuando no son claramente la prioridad.`,
+They love exclusively and expect the same. The relationship must be special, set apart, different from any other connection. They don't share well and struggle when they're not clearly the priority.`,
         
-        needs: `Necesitan profundidad y autenticidad. La conexión de superficie no les parece nada. Necesitan un compañero dispuesto a llegar a lo más profundo, a enfrentarse a la sombra, a ser completamente honesto.
+        needs: `They need depth and authenticity. Surface connection feels like nothing to them. They need a partner willing to go to the depths, to face the shadow, to be completely honest.
 
-Necesitan seguridad emocional para abrir su corazón cauteloso. La confianza lo es todo; una vez roto, es casi imposible reconstruirlo. Necesitan coherencia y lealtad demostrada antes de mostrar su vulnerabilidad.`,
+They need emotional safety to open their guarded heart. Trust is everything; once broken, it's nearly impossible to rebuild. They need consistency and demonstrated loyalty before they'll show their vulnerability.`,
         
-        challenges: `La sombra de esta ubicación son los celos y el control. Pueden utilizar la intensidad como manipulación, crear drama para poner a prueba la lealtad o protegerse con tanta fiereza que alejan el amor.
+        challenges: `The shadow of this placement is jealousy and control. They may use intensity as manipulation, create drama to test loyalty, or guard so fiercely that they push love away.
 
-También pueden tener dificultades para perdonar la traición y aferrarse a las heridas para siempre. Su intenso recuerdo de las heridas emocionales puede envenenar relaciones que de otro modo podrían sanar.`,
+They may also struggle to forgive betrayal, holding onto hurts forever. Their intense memory for emotional wounds can poison relationships that might otherwise heal.`,
         
-        parentGuidance: `Este niño ama intensamente desde el principio. Pueden sentir celos de sus hermanos, ser posesivos con sus padres y sentirse profundamente afectados por cualquier percepción de abandono. Sus emociones son profundas.
+        parentGuidance: `This child loves intensely from the start. They may be jealous of siblings, possessive of parents, and deeply affected by any perceived abandonment. Their emotions run deep.
 
-Enséñeles que se puede recuperar la confianza después de una decepción. Ayúdelos a expresar los celos y la posesividad con palabras en lugar de acciones. Modele que el amor incluye el perdón y que la vulnerabilidad no significa debilidad.`,
+Teach them that trust can be rebuilt after disappointment. Help them express jealousy and possessiveness in words rather than actions. Model that love includes forgiveness and that vulnerability doesn't mean weakness.`,
         
-        affirmation: "Mi corazón profundo se transforma a través del amor. Confío en el amor mientras libero el control."
+        affirmation: "My deep heart transforms through love. I trust love while releasing control."
     },
     
     Sagittarius: {
-        title: "El corazón aventurero",
-        hook: "Una naturaleza amorosa que se expande, explora e inspira.",
-        coreNature: `Venus en Sagitario ama con espíritu de aventura y alegría de descubrimiento. Esta alma busca expansión a través de las relaciones: nuevos horizontes, nueva comprensión, nuevas experiencias compartidas con alguien especial.
+        title: "The Adventurous Heart",
+        hook: "A love nature that expands, explores, and inspires.",
+        coreNature: `Venus in Sagittarius loves with the spirit of adventure and the joy of discovery. This soul seeks expansion through relationship—new horizons, new understanding, new experiences shared with someone special.
 
-El amor les parece libertad. La relación correcta abre puertas en lugar de cerrarlas. Quieren un compañero de aventuras, un coexplorador de las posibilidades de la vida.`,
+Love feels like freedom to them. The right relationship opens doors rather than closing them. They want a partner-in-adventure, a co-explorer of life's possibilities.`,
         
-        loveStyle: `Muestran amor a través del entusiasmo, la honestidad y la aventura compartida. Planificar viajes, explorar ideas juntos y mantener la sensación de descubrimiento que caracterizó el inicio. Mantienen vivo el amor a través del crecimiento constante.
+        loveStyle: `They show love through enthusiasm, honesty, and shared adventure. Planning trips, exploring ideas together, and maintaining the sense of discovery that characterized the beginning. They keep love alive through constant growth.
 
-Pueden amar más de las perspectivas de una persona, más de la forma de ser de una cultura, más de una filosofía de vida. Su corazón es cosmopolita y reúne belleza de todas partes.`,
+They may love more than one person's perspectives, more than one culture's way of being, more than one philosophy of life. Their heart is cosmopolitan, gathering beauty from everywhere.`,
         
-        needs: `Necesitan libertad y espacio para ser ellos mismos. Una pareja que restringe su movimiento o exige una unión constante desencadenará su instinto de huida. Aman más cuando eligen libremente regresar.
+        needs: `They need freedom and space to be themselves. A partner who restricts their movement or demands constant togetherness will trigger their flight instinct. They love most when they freely choose to return.
 
-Necesitan significado y crecimiento. Una relación que se estanca, que deja de evolucionar, que se vuelve meramente rutinaria, poco a poco los perderá. Necesitan sentir que juntos van a algún lugar.`,
+They need meaning and growth. A relationship that stagnates, that stops evolving, that becomes merely routine will slowly lose them. They need to feel they're going somewhere together.`,
         
-        challenges: `La sombra de esta ubicación es la fobia al compromiso. Es posible que equiparen el compromiso con el encierro, manteniendo siempre un ojo puesto en la salida. Aprender que la libertad existe dentro del compromiso es un crecimiento esencial.
+        challenges: `The shadow of this placement is commitment-phobia. They may equate commitment with confinement, always keeping one eye on the exit. Learning that freedom exists within commitment is essential growth.
 
-También pueden ser honestos y sin tacto, compartiendo verdades que hieren sin considerar el momento o la entrega. Su compromiso con la honestidad puede anular la bondad.`,
+They may also be tactlessly honest, sharing truths that wound without considering timing or delivery. Their commitment to honesty can override kindness.`,
         
-        parentGuidance: `Este niño muestra amor compartiendo aventuras e ideas. Pueden resistirse a las exigencias de cercanía mientras aman profundamente a su manera. Necesitan espacio para explorar.
+        parentGuidance: `This child shows love through sharing adventures and ideas. They may resist demands for closeness while deeply loving in their own way. They need space to explore.
 
-Enséñeles que el compromiso crea libertad de un tipo diferente: la libertad de construir profundamente. Ayúdelos a considerar los sentimientos de los demás cuando compartan sus observaciones honestas. Modele que quedarse puede ser tan valiente como irse.`,
+Teach them that commitment creates freedom of a different kind—the freedom to build deeply. Help them consider others' feelings when sharing their honest observations. Model that staying can be as brave as going.`,
         
-        affirmation: "Mi corazón aventurero se expande a través del amor. Crezco con mis seres queridos sin perder mi libertad."
+        affirmation: "My adventurous heart expands through love. I grow with my loved ones without losing my freedom."
     },
     
     Capricorn: {
-        title: "El corazón comprometido",
-        hook: "Una naturaleza de amor que construye, perdura y logra.",
-        coreNature: `Venus en Capricornio ama con la seriedad y visión a largo plazo del maestro de obras. Esta alma aborda el amor como una importante inversión en la vida, a la que no se debe acceder a la ligera o casualmente. Cuando se comprometen, lo hacen a largo plazo.
+        title: "The Committed Heart",
+        hook: "A love nature that builds, endures, and achieves.",
+        coreNature: `Venus in Capricorn loves with the seriousness and long-term vision of the master builder. This soul approaches love as a significant life investment, not to be entered lightly or casually. When they commit, they commit for the long haul.
 
-Para ellos, el amor es una construcción. Quieren crear algo duradero con su pareja: una vida, un legado, un logro compartido que resista la prueba del tiempo.`,
+Love feels like building to them. They want to create something lasting with their partner—a life, a legacy, a shared achievement that stands the test of time.`,
         
-        loveStyle: `Muestran amor a través del compromiso, la confiabilidad y la generosidad. Puede que no sean emocionalmente expresivos, pero sus acciones hablan con claridad. Aparecen, cumplen y construyen la vida que prometen.
+        loveStyle: `They show love through commitment, reliability, and providing. They may not be emotionally expressive, but their actions speak clearly. They show up, they follow through, they build the life they promise.
 
-Es posible que les guste evaluar lenta y cautelosamente antes de abrir su corazón. Esto no es frialdad, es preocupación. Se toman el amor lo suficientemente en serio como para tener cuidado con él.`,
+They may love slowly, cautiously evaluating before opening their heart. This isn't coldness—it's care. They take love seriously enough to be careful about it.`,
         
-        needs: `Necesitan respeto y reconocimiento. Una pareja que no aprecia sus esfuerzos, que da por sentado su apoyo, poco a poco cerrará su corazón. Prosperan con alguien que valora lo que construyen.
+        needs: `They need respect and recognition. A partner who doesn't appreciate their efforts, who takes their providing for granted, will slowly close their heart. They thrive with someone who values what they build.
 
-Necesitan una asociación que tenga sentido. El amor por sí solo puede no ser suficiente: necesitan objetivos compatibles, una visión compartida y una alineación práctica. Su amor es sabio, no meramente romántico.`,
+They need partnership that makes sense. Love alone may not be enough—they need compatible goals, shared vision, and practical alignment. Their love is wise, not merely romantic.`,
         
-        challenges: `La sombra de esta ubicación es la frialdad emocional y la conciencia de estatus. Pueden elegir parejas por razones prácticas más que por motivos cardíacos, o reprimir las emociones para mantener el control.
+        challenges: `The shadow of this placement is emotional coldness and status consciousness. They may choose partners for practical reasons rather than heart reasons, or suppress emotion to maintain control.
 
-También pueden utilizar la provisión material como sustituto de la presencia emocional. Aprender que el amor requiere vulnerabilidad, no sólo confiabilidad, es un crecimiento esencial.`,
+They may also use material provision as a substitute for emotional presence. Learning that love requires vulnerability, not just reliability, is essential growth.`,
         
-        parentGuidance: `Este niño muestra amor a través de los logros y siendo adulto. Es posible que asuman responsabilidades desde el principio y quieran ayudar y contribuir. Se sienten amados cuando se reconocen sus esfuerzos.
+        parentGuidance: `This child shows love through achievement and being grown-up. They may take on responsibility early, wanting to help and contribute. They feel loved when their efforts are recognized.
 
-Enséñeles que la vulnerabilidad no es debilidad y que el amor incluye el juego, no sólo el trabajo. Ayúdelos a expresar emociones directamente en lugar de a través de logros. Modele que ser amado no es algo que se gana.`,
+Teach them that vulnerability isn't weakness and that love includes play, not just work. Help them express emotions directly rather than through accomplishment. Model that being loved isn't something you earn.`,
         
-        affirmation: "Mi corazón devoto construye un amor duradero. Abro mi corazón mientras construyo mi vida."
+        affirmation: "My devoted heart builds love that lasts. I open my heart while building my life."
     },
     
     Aquarius: {
-        title: "El corazón poco convencional",
-        hook: "Una naturaleza de amor que libera, amistad y revoluciona.",
-        coreNature: `Venus en Acuario ama con la libertad del aire y la originalidad del relámpago. Esta alma aborda el amor de manera poco convencional y necesita espacio, amistad y conexión intelectual tanto como romance.
+        title: "The Unconventional Heart",
+        hook: "A love nature that liberates, befriends, and revolutionizes.",
+        coreNature: `Venus in Aquarius loves with the freedom of air and the originality of lightning. This soul approaches love unconventionally, needing space, friendship, and intellectual connection as much as romance.
 
-Para ellos, el amor es como una amistad: una amistad profunda, una amistad del alma, pero amistad al fin y al cabo. Quieren agradar a su pareja tanto como amarla, respetarla tanto como desearla.`,
+Love feels like friendship to them—deep friendship, soul friendship, but friendship nonetheless. They want to like their partner as much as love them, to respect them as much as desire them.`,
         
-        loveStyle: `Muestran amor a través de la aceptación, el compromiso intelectual y el respeto a la libertad. No intentan cambiar ni poseer a sus parejas; las aprecian por su personalidad única. Te hacen sentir libre de ser quien seas.
+        loveStyle: `They show love through acceptance, intellectual engagement, and respecting freedom. They don't try to change or possess their partners—they appreciate them for their unique selves. They make you feel free to be whoever you are.
 
-Es posible que se amen en acuerdos poco convencionales: a larga distancia, abiertos o simplemente diferentes de la norma. No están tratando de ser rebeldes; están tratando de encontrar lo que realmente funciona.`,
+They may love in unconventional arrangements—long distance, open, or simply different from the norm. They're not trying to be rebellious; they're trying to find what actually works.`,
         
-        needs: `Necesitan libertad y espacio, no sólo física sino emocionalmente. Las demandas de una fusión emocional constante se sienten asfixiantes. Prosperan con socios que tienen sus propias vidas y no necesitan estar juntos constantemente.
+        needs: `They need freedom and space, not just physically but emotionally. Demands for constant emotional fusion feel suffocating. They thrive with partners who have their own lives and don't need constant togetherness.
 
-Necesitan respeto intelectual. Un socio que no puede concentrarse o que descarta sus ideas perderá el interés. Se enamoran de las mentes y las perspectivas.`,
+They need intellectual respect. A partner who can't engage their mind or who dismisses their ideas will lose their interest. They fall in love with minds and perspectives.`,
         
-        challenges: `La sombra de esta ubicación es el desapego emocional. Pueden utilizar la intelectualización para evitar la profundidad emocional o mantener la distancia para mantener la seguridad. Aprender a dejar que los sentimientos abrumen a la razón a veces es crecimiento.
+        challenges: `The shadow of this placement is emotional detachment. They may use intellectualization to avoid emotional depth, or keep distance to maintain safety. Learning to let feelings overwhelm reason sometimes is growth.
 
-También pueden estar tan concentrados en lo poco convencional que pasan por alto la belleza de las formas de relación tradicionales. No es necesario romper todas las normas.`,
+They may also be so focused on unconventionality that they miss the beauty in traditional relationship forms. Not all norms need to be broken.`,
         
-        parentGuidance: `Este niño muestra amor a través de la aceptación y el trato como a un igual. Pueden resistirse a las expresiones tradicionales de afecto mientras aman profundamente a su manera. Dales espacio.
+        parentGuidance: `This child shows love through acceptance and treating you as an equal. They may resist traditional expressions of affection while deeply loving in their own way. Give them space.
 
-Enséñeles que la expresión emocional no es debilidad ni conformidad. Ayúdelos a conectarse tanto con sentimientos como con ideas. Modele que la independencia y la intimidad pueden coexistir.`,
+Teach them that emotional expression isn't weakness or conformity. Help them connect with feelings as well as ideas. Model that independence and intimacy can coexist.`,
         
-        affirmation: "Mi corazón único ama a su manera. Me conecto profundamente mientras honro la libertad."
+        affirmation: "My unique heart loves in its own way. I connect deeply while honoring freedom."
     },
     
     Pisces: {
-        title: "El corazón sin límites",
-        hook: "Una naturaleza de amor que disuelve, trasciende y sana.",
-        coreNature: `Venus en Piscis ama con la profundidad del océano y la infinidad del espíritu. Esta alma ama sin límites, fusionándose con su amado de maneras que trascienden la conexión ordinaria. El amor es una experiencia espiritual.
+        title: "The Boundless Heart",
+        hook: "A love nature that dissolves, transcends, and heals.",
+        coreNature: `Venus in Pisces loves with the depth of the ocean and the infinity of spirit. This soul loves without boundaries, merging with their beloved in ways that transcend ordinary connection. Love is spiritual experience.
 
-Para ellos, el amor es como regresar a lo divino. Buscan la unión, la trascendencia, la disolución de donde termina una persona y comienza otra. Su amor es incondicional en formas que pueden ser a la vez hermosas y problemáticas.`,
+Love feels like coming home to the divine to them. They seek union, transcendence, the dissolution of where one person ends and another begins. Their love is unconditional in ways that can be both beautiful and problematic.`,
         
-        loveStyle: `Muestran amor a través de la empatía, el sacrificio y la conexión espiritual. Sienten lo que siente su pareja, a veces más que su pareja. Dan sin llevar cuentas, aman sin condiciones.
+        loveStyle: `They show love through empathy, sacrifice, and spiritual connection. They feel what their partner feels, sometimes more than their partner does. They give without keeping score, love without conditions.
 
-Es posible que les gusten las versiones idealizadas de sus parejas y vean el potencial con más claridad que la realidad presente. Su capacidad de amor incondicional puede ser transformadora o puede atraparlos con personas que se aprovechan de ello.`,
+They may love idealized versions of partners, seeing potential more clearly than present reality. Their capacity for unconditional love can be transformative—or can trap them with people who take advantage.`,
         
-        needs: `Necesitan conexión del alma y profundidad emocional. Las relaciones superficiales les parecen vacías. Necesitan tocar algo trascendente en su pareja, sentir lo divino en la conexión.
+        needs: `They need soul connection and emotional depth. Surface relationships feel empty to them. They need to touch something transcendent in their partner, to sense the divine in the connection.
 
-Necesitan gentileza y protección. Su sensibilidad los hace vulnerables a la dureza. Prosperan con parejas que son amables, que protegen su ternura y que no se aprovechan de su naturaleza indulgente.`,
+They need gentleness and protection. Their sensitivity makes them vulnerable to harshness. They thrive with partners who are kind, who protect their tenderness, who don't take advantage of their forgiving nature.`,
         
-        challenges: `La sombra de esta colocación es perderse en el amor. Puede que sacrifiquen tanto que no quede nada de ellos. Es posible que permanezcan en relaciones dañinas porque pueden ver el potencial o porque han perdido el contacto con sus propias necesidades.
+        challenges: `The shadow of this placement is losing themselves in love. They may sacrifice so much that nothing remains of them. They may stay in damaging relationships because they can see the potential or because they've lost touch with their own needs.
 
-También pueden escapar a fantasías románticas en lugar de construir una relación real. Aprender a amar con límites, a ver a la pareja con claridad y a protegerse a sí mismos es un crecimiento esencial.`,
+They may also escape into romantic fantasy rather than building real relationship. Learning to love with boundaries, to see partners clearly, to protect themselves—this is essential growth.`,
         
-        parentGuidance: `Este niño ama sin límites y puede que no distinga sus sentimientos de los de los demás. Son profundamente sensibles y absorben la atmósfera emocional que los rodea. Necesitan gentileza.
+        parentGuidance: `This child loves boundlessly and may not distinguish their feelings from others'. They're deeply sensitive and absorb the emotional atmosphere around them. They need gentleness.
 
-Enséñeles que el amor incluye protegerse a sí mismos, que los límites también son amor. Ayúdelos a mantenerse arraigados en la realidad mientras honra su sensibilidad espiritual. Modele que pueden ser compasivos sin consumirse.`,
+Teach them that love includes protecting themselves, that boundaries are loving too. Help them stay grounded in reality while honoring their spiritual sensitivity. Model that they can be compassionate without being consumed.`,
         
-        affirmation: "Mi corazón compasivo ama sin límites. Me conservo mientras me entrego al amor."
+        affirmation: "My compassionate heart loves without limits. I keep myself while giving myself to love."
     }
 };
 
@@ -641,315 +641,315 @@ Enséñeles que el amor incluye protegerse a sí mismos, que los límites tambi�
 
 var DEEP_MARS_READINGS = {
     Aries: {
-        title: "El espíritu guerrero",
-        hook: "Fuego puro que se expresa a través de la acción y el coraje.",
-        coreNature: `Marte en Aries es Marte en casa: la voluntad y la energía se expresan en su forma más directa y poderosa. Esta alma actúa primero y piensa después, confiando completamente en sus instintos. No hay nada vacilante o incierto sobre cómo se mueven por el mundo.
+        title: "The Warrior Spirit",
+        hook: "Pure fire expressing through action and courage.",
+        coreNature: `Mars in Aries is Mars at home—will and energy expressing in their most direct, powerful form. This soul acts first and thinks later, trusting their instincts completely. There's nothing tentative or uncertain about how they move through the world.
 
-Son luchadores natos, no necesariamente en un sentido agresivo, sino en términos de fuerza vital. Atacan los desafíos directamente, enfrentan los obstáculos de frente y no saben cómo rendirse. La rendición no está en su vocabulario.`,
+They are born fighters, not necessarily in an aggressive sense, but in terms of life force. They attack challenges directly, face obstacles head-on, and don't know how to quit. Surrender isn't in their vocabulary.`,
         
-        energy: `Su energía es explosiva e inmediata. Pueden pasar de cero a máxima potencia en un instante cuando están motivados. El esfuerzo sostenido a lo largo del tiempo puede resultar más desafiante que las ráfagas intensas. Son velocistas, no corredores de maratón.
+        energy: `Their energy is explosive and immediate. They can go from zero to full power in an instant when motivated. Sustained effort over time may be more challenging than intense bursts. They're sprinters, not marathon runners.
 
-Necesitan salidas físicas para su tremendo impulso. Deportes, competiciones, desafíos físicos: sin estas salidas, la energía puede volverse destructiva o contraproducente.`,
+They need physical outlets for their tremendous drive. Sports, competition, physical challenges—without these outlets, the energy can turn destructive or self-defeating.`,
         
-        willAndDrive: `Saben lo que quieren y van tras ello directamente. La paciencia para el proceso los frustra; Quieren resultados ahora. Su franqueza es refrescante, pero puede atropellar a personas que se mueven más lentamente.
+        willAndDrive: `They know what they want and go after it directly. Patience for process frustrates them; they want results now. Their directness is refreshing but can run over slower-moving people.
 
-El liderazgo es algo natural: son los primeros en actuar y los demás les siguen. Pero es posible que prefieran trabajar solos, ya que les resulta más rápido hacer las cosas por sí mismos que coordinarse con otros.`,
+Leadership comes naturally—they're the first to act, and others follow. But they may prefer to work alone, finding it faster to do things themselves than to coordinate with others.`,
         
-        challenges: `La sombra de esta ubicación es la impulsividad y la ira destructiva. Cuando se sienten frustrados, pueden arremeter o tomar decisiones apresuradas que requerirán una limpieza más adelante.
+        challenges: `The shadow of this placement is impulsiveness and destructive anger. When frustrated, they may lash out or make hasty decisions that require cleanup later.
 
-También pueden quemar puentes si presionan demasiado fuerte y demasiado rápido. Aprender que algunas metas requieren paciencia, estrategia y cooperación es un trabajo de toda la vida.`,
+They may also burn bridges by pushing too hard, too fast. Learning that some goals require patience, strategy, and cooperation is lifetime work.`,
         
-        parentGuidance: `Canalizar la energía de este niño hacia la actividad física y la competición sana. Las artes marciales son especialmente valiosas para enseñar control junto con poder. No intentes apagar su fuego; redirigelo.
+        parentGuidance: `Channel this child's energy into physical activity and healthy competition. Martial arts are especially valuable for teaching control alongside power. Don't try to suppress their fire—redirect it.
 
-Enséñeles a hacer una pausa antes de reaccionar, a considerar las consecuencias antes de actuar. Ayúdelos a ver que la paciencia no es debilidad y que algunas victorias requieren estrategia, no sólo fuerza.`,
+Teach them to pause before reacting, to consider consequences before acting. Help them see that patience isn't weakness and that some victories require strategy, not just force.`,
         
-        affirmation: "Mi espíritu poderoso guía con valentía. Canalizo mi fuego hacia metas dignas."
+        affirmation: "My powerful spirit leads with courage. I channel my fire toward worthy goals."
     },
     
     Taurus: {
-        title: "La fuerza duradera",
-        hook: "Fuerza inamovible que se expresa a través de la perseverancia.",
-        coreNature: `Marte en Tauro es la fuerza irresistible convertida en objeto inamovible. Esta alma no se mueve rápido, pero una vez que se mueve, nada puede detenerla. Su poder está en su persistencia, su negativa a darse por vencido, su paciente acumulación de progreso.
+        title: "The Enduring Force",
+        hook: "Immovable strength expressing through persistence.",
+        coreNature: `Mars in Taurus is the irresistible force made immovable object. This soul doesn't move fast, but once moving, nothing can stop them. Their power is in their persistence, their refusal to quit, their patient accumulation of progress.
 
-Construyen en lugar de conquistar. Sus ambiciones son materiales y prácticas: crear algo tangible y duradero. Quieren ver y tocar los resultados de sus esfuerzos.`,
+They build rather than conquer. Their ambitions are material and practical—creating something tangible and lasting. They want to see and touch the results of their efforts.`,
         
-        energy: `Su energía es lenta y constante, como un río que excava un cañón. Pueden tardar un poco en ponerse en marcha, pero una vez en movimiento mantienen el esfuerzo indefinidamente. Son corredores de maratón, no velocistas.
+        energy: `Their energy is slow and steady, like a river carving a canyon. They may take a while to get started, but once in motion, they maintain effort indefinitely. They're marathon runners, not sprinters.
 
-La comodidad física les importa. Trabajan duro pero también necesitan disfrutar de los placeres físicos que les proporciona el trabajo. El cuerpo es su motor; necesita combustible y descanso adecuados.`,
+Physical comfort matters to them. They work hard but also need to enjoy the physical pleasures that work provides. The body is their engine; it needs proper fuel and rest.`,
         
-        willAndDrive: `Una vez que deciden un objetivo, son imparables. Seguirán trabajando para lograrlo mucho después de que otros se hayan rendido. Su determinación es legendaria y su terquedad incomparable.
+        willAndDrive: `Once they decide on a goal, they're unstoppable. They'll keep working toward it long after others have given up. Their determination is legendary, their stubbornness unmatched.
 
-Los motiva la seguridad y la comodidad: construir una buena vida, adquirir cosas hermosas y crear valor duradero. Las metas abstractas no les dan energía como lo hacen las tangibles.`,
+They're motivated by security and comfort—building a good life, acquiring beautiful things, creating lasting value. Abstract goals don't energize them like tangible ones do.`,
         
-        challenges: `La sombra de esta situación es la tenaz resistencia al cambio necesario. Es posible que sigan esforzándose por alcanzar objetivos que ya no son relevantes o que se nieguen a adaptarse cuando la adaptación es claramente necesaria.
+        challenges: `The shadow of this placement is stubborn resistance to necessary change. They may keep pushing toward goals that are no longer relevant, or refuse to adapt when adaptation is clearly required.
 
-Su ira, cuando surge, tarda en desarrollarse, pero es volcánica cuando estalla. Es esencial aprender a liberar la frustración gradualmente en lugar de dejar que se acumule.`,
+Their anger, when it comes, is slow to build but volcanic when it erupts. Learning to release frustration gradually rather than letting it accumulate is essential.`,
         
-        parentGuidance: `Respete el ritmo de este niño: llegará allí, pero en su propio cronograma. Apresurarlos crea resistencia, no velocidad. Deles tareas físicas y déjeles ver resultados tangibles.
+        parentGuidance: `Respect this child's pace—they'll get there, but on their own timeline. Rushing them creates resistance, not speed. Give them physical tasks and let them see tangible results.
 
-Enséñeles flexibilidad respetando su perseverancia. Ayúdelos a reconocer cuando una meta ha pasado y se necesita una nueva dirección. Canalice su terquedad hacia proyectos dignos de largo plazo.`,
+Teach them flexibility while honoring their persistence. Help them recognize when a goal has passed and a new direction is needed. Channel their stubbornness toward worthy long-term projects.`,
         
-        affirmation: "Mi fuerza constante construye lo que dura. Persisto con el propósito y me adapto cuando la sabiduría me llama."
+        affirmation: "My steady strength builds what lasts. I persist with purpose and adapt when wisdom calls."
     },
     
     Gemini: {
-        title: "El golpe rápido",
-        hook: "Múltiples direcciones, múltiples estrategias, todo a la vez.",
-        coreNature: `Marte en Géminis es acción que se expresa a través de la mente. Esta alma lucha con palabras, es más astuta que dominante y puede perseguir múltiples objetivos simultáneamente. Son el estratega, el multitarea, el que gana gracias a su astucia.
+        title: "The Quick Strike",
+        hook: "Multiple directions, multiple strategies, all at once.",
+        coreNature: `Mars in Gemini is action expressing through the mind. This soul fights with words, outsmarts rather than overpowers, and can pursue multiple goals simultaneously. They're the strategist, the multitasker, the one who wins through cleverness.
 
-Sus armas son el ingenio, la comunicación y la agilidad mental. Pueden defender cualquier posición, ver cualquier ángulo y adaptar su enfoque instantáneamente a las circunstancias cambiantes.`,
+Their weapons are wit, communication, and mental agility. They can argue any position, see any angle, and adapt their approach instantly to changing circumstances.`,
         
-        energy: `Su energía es nerviosa, rápida y dispersa. Pueden iniciar muchos proyectos, moviéndose entre ellos sin descanso. Centrarse en una sola tarea durante períodos prolongados los desafía; la variedad energiza.
+        energy: `Their energy is nervous, quick, and scattered. They may start many projects, moving between them restlessly. Focus on a single task for extended periods challenges them; variety energizes.
 
-Se cansan rápidamente de la rutina. Necesitan estimulación mental junto con actividad física. El ejercicio repetitivo les aburre; Las actividades variables, parecidas a juegos, los atraen.`,
+They tire of routine quickly. They need mental stimulation alongside physical activity. Repetitive exercise bores them; variable, game-like activities engage them.`,
         
-        willAndDrive: `Los motiva la curiosidad y la variedad. La búsqueda de múltiples intereses simultáneamente parece natural, incluso necesaria. Es posible que logren más mediante esfuerzos paralelos que con un enfoque secuencial.
+        willAndDrive: `They're motivated by curiosity and variety. The pursuit of multiple interests simultaneously feels natural, even necessary. They may accomplish more through parallel efforts than sequential focus.
 
-Se destacan en objetivos basados ​​en la comunicación: escribir, hablar, vender, negociar. Cualquier ámbito donde la agilidad mental importe es su territorio.`,
+They excel at communication-based goals—writing, speaking, selling, negotiating. Any arena where mental agility matters is their territory.`,
         
-        challenges: `La sombra de esta colocación son energías dispersas y proyectos inacabados. Empezar es su fuerte; terminar requiere un esfuerzo consciente. Pueden extenderse tanto que nada reciba la atención adecuada.
+        challenges: `The shadow of this placement is scattered energy and unfinished projects. Starting is their strength; finishing requires conscious effort. They may spread themselves so thin that nothing gets adequate attention.
 
-También pueden utilizar las palabras como armas destructivas: comentarios cortantes, argumentos para ganar, manipulación verbal.`,
+They may also use words as weapons destructively—cutting remarks, arguments for the sake of winning, verbal manipulation.`,
         
-        parentGuidance: `Acepte que este niño tendrá múltiples intereses y necesitará variedad. No fuerces la concentración; ayúdelos a aprender a completar algunas cosas mientras exploran muchas.
+        parentGuidance: `Accept that this child will have multiple interests and need variety. Don't force single-minded focus; help them learn to complete some things while exploring many.
 
-Canalice su energía verbal hacia el debate, la escritura o los juegos verbales. Enséñeles que las palabras tienen poder y que el poder requiere responsabilidad. Ayúdelos a reconocer cuándo las ganancias rápidas no valen el costo a largo plazo.`,
+Channel their verbal energy into debate, writing, or verbal games. Teach them that words have power and that power requires responsibility. Help them recognize when quick wins aren't worth the long-term cost.`,
         
-        affirmation: "Mi energía versátil persigue muchos objetivos. Completo lo que importa mientras exploro libremente."
+        affirmation: "My versatile energy pursues many goals. I complete what matters while exploring freely."
     },
     
     Cancer: {
-        title: "La fuerza protectora",
-        hook: "Poder defensivo que se expresa a través de la fuerza emocional.",
-        coreNature: `Marte en Cáncer es el guerrero defensivo, la madre osa que protege a sus cachorros. El poder de esta alma se activa más plenamente en defensa del hogar, la familia y sus seres queridos. Su espíritu de lucha, aunque indirecto, es formidable.
+        title: "The Protective Force",
+        hook: "Defensive power expressing through emotional strength.",
+        coreNature: `Mars in Cancer is the defensive warrior, the mother bear protecting cubs. This soul's power activates most fully in defense of home, family, and those they love. Their fighting spirit, though indirect, is formidable.
 
-Luchan por la seguridad: emocional, financiera y familiar. Sus ambiciones se centran en crear seguridad y cuidar a quienes están bajo su cuidado. Construyen en lugar de conquistar, protegen en lugar de atacar.`,
+They fight for security—emotional, financial, familial. Their ambitions center on creating safety and nurturing those in their care. They build rather than conquer, protect rather than attack.`,
         
-        energy: `Su energía fluctúa con las mareas emocionales. Cuando se sienten seguros y apoyados, pueden lograr cosas tremendas. Cuando se altera emocionalmente, la energía se agota rápidamente. El estado interior afecta la capacidad exterior.
+        energy: `Their energy fluctuates with emotional tides. When they feel safe and supported, they can accomplish tremendous things. When emotionally disrupted, energy drains rapidly. The inner state affects the outer capacity.
 
-La energía física está ligada a las necesidades emocionales. Comer reconfortante, descansar como retiro y utilizar el cuerpo para procesar los sentimientos son naturales. Necesitan sentirse emocionalmente bien antes de poder actuar físicamente.`,
+Physical energy is tied to emotional needs. Comfort eating, rest as retreat, and using the body to process feelings are natural. They need to feel emotionally right before they can act physically.`,
         
-        willAndDrive: `Les motiva la seguridad emocional y el bienestar familiar. Las metas que sirven a sus seres queridos les dan más energía que las ambiciones puramente personales. Trabajan más duro para los demás.
+        willAndDrive: `They're motivated by emotional security and family welfare. Goals that serve loved ones energize them more than purely personal ambitions. They work hardest for others.
 
-Su enfoque es indirecto: rodean los obstáculos en lugar de enfrentarlos de frente. Esto no es debilidad; es estrategia. Encuentran el camino de menor resistencia mientras mantienen la perseverancia hacia la meta.`,
+Their approach is indirect—they circle around obstacles rather than confronting them head-on. This isn't weakness; it's strategy. They find the path of least resistance while maintaining persistence toward the goal.`,
         
-        challenges: `La sombra de esta ubicación es la agresión pasiva y la manipulación emocional. Es posible que no peleen directamente, sino que expresen su enojo de manera indirecta: enfurruñados, retraídos, haciendo que los demás se sientan culpables.
+        challenges: `The shadow of this placement is passive-aggression and emotional manipulation. They may not fight directly but express anger sideways—sulking, withdrawing, making others feel guilty.
 
-También pueden dejar que las heridas emocionales se pudran, arrastrando resentimientos que envenenan la acción. Aprender a expresar la ira directamente en lugar de contenerla o expresarla de lado es un crecimiento esencial.`,
+They may also let emotional wounds fester, carrying resentments that poison action. Learning to express anger directly rather than holding it or expressing it sideways is essential growth.`,
         
-        parentGuidance: `Crea seguridad emocional para que la energía de este niño fluya. No pueden actuar cuando se sienten inseguros. Valide sus instintos protectores mientras les enseña a expresarse directamente.
+        parentGuidance: `Create emotional safety for this child's energy to flow. They can't perform when feeling insecure. Validate their protective instincts while teaching them direct expression.
 
-Ayúdelos a reconocer y expresar la ira directamente y no de lado. Enséñeles que su enfoque indirecto es una fortaleza, no una debilidad, cuando se usa conscientemente.`,
+Help them recognize and express anger directly rather than sideways. Teach them that their indirect approach is a strength, not a weakness, when used consciously.`,
         
-        affirmation: "Mi fuerza protectora crea seguridad. Expreso mi poder directamente cuando me llaman."
+        affirmation: "My protective strength creates safety. I express my power directly when called to."
     },
     
     Leo: {
-        title: "La fuerza creativa",
-        hook: "Poder que se expresa a través del corazón y la autoexpresión.",
-        coreNature: `Marte en Leo es el artista guerrero que lucha por la expresión creativa y el reconocimiento. El poder de esta alma fluye a través de su corazón: actúan con pasión, coraje y estilo dramático. Quieren que sus esfuerzos sean vistos y apreciados.
+        title: "The Creative Force",
+        hook: "Power expressing through heart and self-expression.",
+        coreNature: `Mars in Leo is the warrior artist, fighting for creative expression and recognition. This soul's power flows through their heart—they act with passion, courage, and dramatic flair. They want their efforts to be seen and appreciated.
 
-Son líderes naturales que inspiran con el ejemplo. No sólo lo logran: lo logran con estilo. Cómo hacen las cosas importa tanto como lo que logran.`,
+They are natural leaders who inspire through example. They don't just achieve—they achieve with style. How they do things matters as much as what they accomplish.`,
         
-        energy: `Su energía es cálida, consistente y centrada en el resultado. Necesitan crear, expresar, dejar su sello en el mundo. El estancamiento y el anonimato los agotan; la expresión creativa y el reconocimiento energizan.
+        energy: `Their energy is warm, consistent, and output-focused. They need to create, to express, to put their stamp on the world. Stagnation and anonymity drain them; creative expression and recognition energize.
 
-La presencia física les importa. Se mueven con confianza natural y pueden disfrutar de actividades en las que puedan brillar: artes escénicas, deportes, cualquier cosa con una audiencia.`,
+Physical presence matters to them. They move with natural confidence and may enjoy activities where they can shine—performing arts, sports, anything with an audience.`,
         
-        willAndDrive: `Los motiva el reconocimiento, la expresión creativa y el orgullo por su trabajo. Quieren ser los mejores en lo que hacen y ser reconocidos por ello. El reconocimiento externo alimenta su fuego interno.
+        willAndDrive: `They're motivated by recognition, creative expression, and pride in their work. They want to be the best at what they do and to be acknowledged for it. External recognition fuels their internal fire.
 
-Apuntan alto y no están dispuestos a conformarse con la mediocridad. Sus ambiciones son grandes y tienen el coraje de perseguirlas. El miedo a la vergüenza puede ser su mayor obstáculo: prefieren no intentarlo que intentarlo y que les vean fracasar.`,
+They aim high, unwilling to settle for mediocrity. Their ambitions are grand, and they have the courage to pursue them. Fear of embarrassment may be their biggest obstacle—they'd rather not try than try and be seen failing.`,
         
-        challenges: `La sombra de esta ubicación es la acción impulsada por el ego y la incapacidad de aceptar críticas. Es posible que busquen el reconocimiento más que el logro real, o colapsar cuando el orgullo se ve herido.
+        challenges: `The shadow of this placement is ego-driven action and inability to accept criticism. They may pursue recognition more than actual achievement, or collapse when pride is wounded.
 
-También pueden tener dificultades con el trabajo en equipo y prefieren el crédito individual al éxito compartido. Es importante aprender que la colaboración puede mejorar, en lugar de disminuir, su contribución.`,
+They may also struggle with teamwork, preferring solo credit to shared success. Learning that collaboration can enhance rather than diminish their contribution is important.`,
         
-        parentGuidance: `Dele a este niño etapas y aprecio por sus esfuerzos. Necesitan brillar y suprimir esa necesidad crea problemas. Canalizar su impulso hacia la expresión creativa y el liderazgo.
+        parentGuidance: `Give this child stages and appreciation for their efforts. They need to shine, and suppressing that need creates problems. Channel their drive toward creative expression and leadership.
 
-Enséñeles que el fracaso es parte del éxito, que la valentía incluye intentarlo incluso cuando ganar no está garantizado. Ayúdelos a compartir el crédito y a disfrutar también de los logros de los demás.`,
+Teach them that failure is part of success, that courage includes trying even when winning isn't guaranteed. Help them share credit and find joy in others' achievements too.`,
         
         affirmation: "My courageous heart powers my actions. I shine my light while celebrating others' brightness too."
     },
     
     Virgo: {
-        title: "La fuerza precisa",
-        hook: "Poder expresado a través de la habilidad y el servicio.",
-        coreNature: `Marte en Virgo es el maestro artesano, que aplica la energía con precisión y propósito. Esta alma actúa metódicamente, trabajando eficientemente hacia objetivos prácticos. Nada se desperdicia; cada esfuerzo tiene un propósito.
+        title: "The Precise Force",
+        hook: "Power expressing through skill and service.",
+        coreNature: `Mars in Virgo is the master craftsman, applying energy with precision and purpose. This soul acts methodically, working efficiently toward practical goals. Nothing is wasted; every effort serves a purpose.
 
-Luchan por mejorar: mejorar las cosas, resolver problemas, perfeccionar hasta alcanzar la excelencia. Su poder reside en su atención al detalle y su incansable ética de trabajo.`,
+They fight for improvement—making things better, solving problems, refining until excellence is achieved. Their power lies in their attention to detail and their tireless work ethic.`,
         
-        energy: `Su energía es nerviosa, precisa y centrada en la eficiencia. Pueden inquietarse o preocuparse cuando no están involucrados productivamente. El estar ocupado en sí mismo puede convertirse en la expresión de su energía: necesitan estar haciendo algo útil.
+        energy: `Their energy is nervous, precise, and efficiency-focused. They may fidget or worry when not productively engaged. Busy-ness itself can become their energy's expression—they need to be doing something useful.
 
-La salud física y la rutina son muy importantes. Su cuerpo es una herramienta que debe mantenerse adecuadamente. El ejercicio a menudo tiene un propósito práctico más allá del simple ejercicio físico.`,
+Physical health and routine matter greatly. Their body is a tool to be maintained properly. Exercise often has a practical purpose beyond just fitness.`,
         
-        willAndDrive: `Están motivados por la utilidad y la mejora. Saber que su trabajo es importante, ver resultados tangibles y sentirse competente en sus tareas: esto los motiva. El trabajo vacío y ajetreado los agota.
+        willAndDrive: `They're motivated by usefulness and improvement. Knowing their work matters, seeing tangible results, and feeling competent at their tasks—these drive them. Empty busy-work drains them.
 
-Se destacan en habilidades técnicas, trabajo detallado y cualquier cosa que requiera precisión. Puede que no inspiren con una gran visión, pero brindan resultados mediante un esfuerzo persistente y cuidadoso.`,
+They excel at technical skills, detailed work, and anything requiring precision. They may not inspire with grand vision, but they deliver results through persistent, careful effort.`,
         
-        challenges: `La sombra de esta ubicación es la parálisis del perfeccionismo y la energía crítica. Es posible que no puedan actuar hasta que las condiciones sean perfectas, o que utilicen su energía criticando en lugar de crear.
+        challenges: `The shadow of this placement is perfectionism paralysis and critical energy. They may be unable to act until conditions are perfect, or use their energy criticizing rather than creating.
 
-También pueden agotarse debido al exceso de trabajo, conduciéndose implacablemente sin un descanso adecuado. Es esencial aprender que lo suficientemente bueno a veces es lo suficientemente bueno y que el descanso es productivo.`,
+They may also burn out through overwork, driving themselves relentlessly without adequate rest. Learning that good enough is sometimes good enough, and that rest is productive, is essential.`,
         
-        parentGuidance: `Dele a este niño tareas útiles y reconocimiento por su ayuda. Se sienten valiosos al contribuir. No acumule críticas: ellos ya son más duros consigo mismos de lo que usted podría ser.
+        parentGuidance: `Give this child useful tasks and recognition for their helpfulness. They feel valuable when contributing. Don't pile on criticism—they're already harder on themselves than you could be.
 
-Enséñeles que la acción imperfecta vence a la inacción perfecta. Ayúdelos a celebrar la finalización, no sólo la mejora. Modele tomar descansos y aceptar las limitaciones sin vergüenza.`,
+Teach them that imperfect action beats perfect inaction. Help them celebrate completion, not just improvement. Model taking breaks and accepting limitations without shame.`,
         
-        affirmation: "Mi energía precisa crea excelencia. Sirvo con habilidad aceptando mis límites humanos."
+        affirmation: "My precise energy creates excellence. I serve with skill while accepting my human limits."
     },
     
     Libra: {
-        title: "La fuerza estratégica",
-        hook: "Poder expresado a través de la asociación y la diplomacia.",
-        coreNature: `Marte en Libra es el guerrero diplomático que lucha por la justicia y logra logros a través de la asociación. El poder de esta alma fluye a través de las relaciones: logran más con aliados que solos y luchan más ferozmente por la justicia.
+        title: "The Strategic Force",
+        hook: "Power expressing through partnership and diplomacy.",
+        coreNature: `Mars in Libra is the diplomat warrior, fighting for fairness and achieving through partnership. This soul's power flows through relationship—they accomplish more with allies than alone and fight most fiercely for justice.
 
-Son mediadores y negociadores naturales. Usan el encanto, la persuasión y forman coaliciones donde otros podrían usar la fuerza. Su enfoque puede ser indirecto, pero suele ser más eficaz.`,
+They are natural mediators and negotiators. They use charm, persuasion, and coalition-building where others might use force. Their approach may be indirect, but it's often more effective.`,
         
-        energy: `Su energía es social y colaborativa. Puede que les cueste actuar solos, pero se vuelven poderosos cuando trabajan con otros. La energía que es plana en el aislamiento surge en la colaboración.
+        energy: `Their energy is social and partnered. They may struggle to act alone but become powerful when working with others. Energy that's flat in isolation surges in collaboration.
 
-El equilibrio es importante para su energía. Necesitan descanso para equilibrar el trabajo y tiempo social para equilibrar el tiempo a solas. Los extremos de cualquier tipo los agotan.`,
+Balance matters to their energy. They need rest to balance work, social time to balance alone time. Extremes of any kind drain them.`,
         
-        willAndDrive: `Están motivados por la justicia, la asociación y los resultados hermosos. Quieren soluciones beneficiosas para todos y trabajarán incansablemente para encontrarlas. La competencia pura sin relación se siente vacía.
+        willAndDrive: `They're motivated by fairness, partnership, and beautiful outcomes. They want win-win solutions and will work tirelessly to find them. Pure competition without relationship feels empty.
 
-Se destacan en cualquier ámbito que requiera diplomacia, negociación o coordinación de equipos. El liderazgo a través de la creación de consenso es su estilo natural.`,
+They excel in any arena requiring diplomacy, negotiation, or team coordination. Leadership through consensus-building is their natural style.`,
         
-        challenges: `La sombra de esta ubicación es la indecisión y la evitación de conflictos que se convierten en creación de conflictos. Es posible que tengan tanto miedo a la confrontación directa que creen problemas mayores al evitarla.
+        challenges: `The shadow of this placement is indecision and conflict avoidance that becomes conflict creation. They may be so afraid of direct confrontation that they create bigger problems through avoidance.
 
-También pueden volverse pasivo-agresivos, expresando enojo de lado porque la expresión directa les parece demasiado poco armoniosa. Aprender que un conflicto saludable sirve a las relaciones es crucial.`,
+They may also become passive-aggressive, expressing anger sideways because direct expression feels too unharmonious. Learning that healthy conflict serves relationships is crucial.`,
         
-        parentGuidance: `Asóciese con este niño en lugar de darle órdenes. Responden a la justicia y la negociación, no a demandas unilaterales. Ayúdelos a experimentar conflictos saludables y a ver que las relaciones sobreviven al desacuerdo.
+        parentGuidance: `Partner with this child rather than commanding them. They respond to fairness and negotiation, not to unilateral demands. Help them experience healthy conflict and see that relationships survive disagreement.
 
-Enséñeles a actuar con decisión cuando sea necesario, incluso si están solos. Canalice sus instintos estratégicos en juegos y negociaciones donde puedan desarrollar habilidades. Honre su impulso por la justicia.`,
+Teach them to act decisively when needed, even alone. Channel their strategic instincts into games and negotiations where they can develop skills. Honor their drive for fairness.`,
         
-        affirmation: "Mi energía equilibrada crea resultados justos. Actúo con decisión cuando es necesario y actúo con fuerza cuando es posible."
+        affirmation: "My balanced energy creates fair outcomes. I act decisively when needed, partner powerfully when possible."
     },
     
     Scorpio: {
-        title: "La fuerza transformadora",
-        hook: "Poder que se expresa a través de la intensidad y la regeneración.",
-        coreNature: `Marte en Escorpio es la potencia y expresa energía con intensidad devastadora y precisión estratégica. Esta alma no hace nada a medias: se compromete por completo, persigue sin descanso y nunca olvida un desaire o una meta.
+        title: "The Transformative Force",
+        hook: "Power expressing through intensity and regeneration.",
+        coreNature: `Mars in Scorpio is the powerhouse, expressing energy with devastating intensity and strategic precision. This soul doesn't do anything halfway—they commit completely, pursue relentlessly, and never forget a slight or a goal.
 
-Son estrategas natos, dispuestos a jugar partidas largas y esperar el momento perfecto. Cuando atacan, lo hacen para ganar. No hay nada casual en su enfoque hacia cualquier objetivo.`,
+They are natural strategists, willing to play long games and wait for the perfect moment. When they strike, they strike to win. There's nothing casual about their approach to any goal.`,
         
-        energy: `Su energía es más profunda que amplia. Pueden mantener un enfoque intenso en un solo objetivo de forma indefinida. Se regeneran a partir del agotamiento de maneras que parecen imposibles, aprovechando reservas que otros no tienen.
+        energy: `Their energy runs deep rather than broad. They can sustain intense focus on a single target indefinitely. They regenerate from exhaustion in ways that seem impossible, drawing on reserves others don't have.
 
-La energía reprimida se vuelve peligrosa. Necesitan salidas para su intensidad o se vuelve destructiva, hacia los demás o hacia ellos mismos.`,
+Suppressed energy becomes dangerous. They need outlets for their intensity or it turns destructive—toward others or themselves.`,
         
-        willAndDrive: `Están motivados por el poder, la profundidad y la transformación. Quieren ir donde otros temen ir, lograr lo que parece imposible, transformarse a sí mismos y a sus circunstancias por completo.
+        willAndDrive: `They're motivated by power, depth, and transformation. They want to go where others are afraid to go, to achieve what seems impossible, to transform themselves and their circumstances completely.
 
-Sobresalen en cualquier cosa que requiera intensidad, investigación, investigación o conocimiento psicológico. Ven lo que está oculto y persiguen lo que otros han abandonado.`,
+They excel in anything requiring intensity, research, investigation, or psychological insight. They see what's hidden and pursue what others have given up on.`,
         
-        challenges: `La sombra de esta ubicación es la obsesión y la venganza. Pueden perseguir objetivos o rencores más allá de lo razonable, incapaces de liberarse incluso cuando aferrarse a ellos es claramente destructivo.
+        challenges: `The shadow of this placement is obsession and vengeance. They may pursue goals or grudges past the point of reason, unable to release even when holding on is clearly destructive.
 
-Su intensidad puede intimidar o abrumar a los demás. Aprender a modular su poder, a utilizarlo apropiadamente y no al máximo, es un crecimiento esencial.`,
+Their intensity can intimidate or overwhelm others. Learning to modulate their power, to use it appropriately rather than maximally, is essential growth.`,
         
-        parentGuidance: `Respete la intensidad de este niño, no intente diluirla. Canalízalo hacia metas dignas. Dales misterios que resolver, profundidades que explorar, transformaciones que lograr.
+        parentGuidance: `Respect this child's intensity—don't try to dilute it. Channel it toward worthy goals. Give them mysteries to solve, depths to explore, transformations to accomplish.
 
-Enséñeles que dejar ir es a veces el mayor poder. Ayúdelos a reconocer cuando la intensidad se convierte en obsesión. Modele la expresión saludable de emociones difíciles.`,
+Teach them that letting go is sometimes the greatest power. Help them recognize when intensity becomes obsession. Model healthy expression of difficult emotions.`,
         
-        affirmation: "Mi intenso poder transforma lo que toco. Ejerzo mi fuerza con sabiduría y liberación."
+        affirmation: "My intense power transforms what I touch. I wield my strength with wisdom and release."
     },
     
     Sagittarius: {
-        title: "La fuerza aventurera",
-        hook: "Poder expresado a través de la expansión y la inspiración.",
-        coreNature: `Marte en Sagitario es el cruzado y actúa con entusiasmo, optimismo y convicción moral. Esta alma lucha por la verdad, la libertad y la posibilidad. Su energía inspira a otros y los empuja hacia horizontes en constante expansión.
+        title: "The Adventurous Force",
+        hook: "Power expressing through expansion and inspiration.",
+        coreNature: `Mars in Sagittarius is the crusader, acting with enthusiasm, optimism, and moral conviction. This soul fights for truth, freedom, and possibility. Their energy inspires others and pushes toward ever-expanding horizons.
 
-Son aventureros natos, incapaces de dejarse contener por los límites que otros aceptan. Ven posibilidades donde otros ven muros y tienen el coraje de perseguir visiones que parecen poco prácticas.`,
+They are natural adventurers, unable to be contained by limits others accept. They see possibility where others see walls, and they have the courage to pursue visions that seem impractical.`,
         
-        energy: `Su energía es entusiasta, inquieta y orientada a la expansión. Necesitan espacio para moverse, física y mentalmente. El confinamiento de cualquier tipo los agota; la libertad energiza.
+        energy: `Their energy is enthusiastic, restless, and expansion-oriented. They need room to move, physically and mentally. Confinement of any kind drains them; freedom energizes.
 
-Les atrae la actividad física con un propósito: senderismo, exploración, deportes de aventura. El ejercicio debe ser como ir a algún lugar, no simplemente repetir movimientos.`,
+Physical activity with purpose appeals to them—hiking, exploring, adventure sports. Exercise needs to feel like going somewhere, not just repeating movements.`,
         
-        willAndDrive: `Están motivados por el significado, la libertad y la expansión. Los objetivos que parecen significativos, que se conectan con propósitos más amplios, que los llevan a un lugar nuevo, los encienden.
+        willAndDrive: `They're motivated by meaning, freedom, and expansion. Goals that feel significant, that connect to larger purposes, that take them somewhere new—these fire them up.
 
-Se destacan por inspirar a otros, por perseguir metas distantes y por encontrar posibilidades en situaciones aparentemente desesperadas. Su optimismo es en sí mismo una fuente de poder.`,
+They excel at inspiring others, at pursuing distant goals, at finding possibility in seemingly hopeless situations. Their optimism is itself a source of power.`,
         
-        challenges: `La sombra de esta ubicación es un exceso de confianza imprudente y una incapacidad para concentrarse. Es posible que asuman demasiado, sobreestimen sus capacidades o abandonen proyectos cuando se vuelven rutinarios.
+        challenges: `The shadow of this placement is reckless overconfidence and inability to focus. They may take on too much, overestimate their capacities, or abandon projects when they become routine.
 
-Su franca honestidad puede herir y su certeza moral puede volverse moralista. Es importante aprender que no todas las batallas son suyas y que las verdades de los demás también son válidas.`,
+Their blunt honesty can wound, and their moral certainty can become self-righteous. Learning that not every battle is theirs to fight, and that others' truths are also valid, is important.`,
         
-        parentGuidance: `Dale a este niño aventuras y libertad para explorar. No restrinja demasiado: se rebelarán y, de todos modos, necesitarán aprender a través de la experiencia. Canalice su energía hacia metas significativas.
+        parentGuidance: `Give this child adventures and freedom to explore. Don't over-restrict—they'll rebel, and they need to learn through experience anyway. Channel their energy toward meaningful goals.
 
-Enséñales a terminar lo que empiezan, al menos algunas veces. Ayúdelos a ver que otros también tienen perspectivas válidas. Equilibre su optimismo con comprobaciones prácticas de la realidad sin aplastar su espíritu.`,
+Teach them to finish what they start, at least sometimes. Help them see that others have valid perspectives too. Balance their optimism with practical reality checks without crushing their spirit.`,
         
         affirmation: "My adventurous energy expands horizons. I inspire with my fire while respecting others' paths."
     },
     
     Capricorn: {
-        title: "La fuerza del logro",
-        hook: "Poder expresado a través de la disciplina y el dominio.",
-        coreNature: `Marte en Capricornio es el ejecutivo y aplica energía estratégicamente hacia logros a largo plazo. Esta alma juega a largo plazo, dispuesta a trabajar persistentemente hacia metas que pueden tardar años en lograrse. Su poder está en su disciplina.
+        title: "The Achieving Force",
+        hook: "Power expressing through discipline and mastery.",
+        coreNature: `Mars in Capricorn is the executive, applying energy strategically toward long-term achievement. This soul plays the long game, willing to work persistently toward goals that may take years to achieve. Their power is in their discipline.
 
-Son autoridades naturales y se ganan el respeto demostrando competencia en lugar de exigirlo. Entienden que el verdadero poder proviene del dominio, no sólo de la ambición.`,
+They are natural authorities, earning respect through demonstrated competence rather than demanding it. They understand that real power comes from mastery, not just ambition.`,
         
-        energy: `Su energía es controlada, constante y centrada en el resultado. No desperdician esfuerzos en lo que no sirve a sus objetivos. La eficiencia y la eficacia importan más que el flash.
+        energy: `Their energy is controlled, steady, and output-focused. They don't waste effort on what doesn't serve their goals. Efficiency and effectiveness matter more than flash.
 
-Pueden mantener el esfuerzo durante largos períodos, pero pueden tener dificultades con la espontaneidad y el juego. Aprender a actuar sin un objetivo, sólo por alegría, es una ventaja para el crecimiento.`,
+They can sustain effort over long periods, but may struggle with spontaneity and play. Learning to act without a goal, just for joy, is a growth edge.`,
         
-        willAndDrive: `Los motivan los logros, el reconocimiento y el éxito duradero. Quieren construir algo que importe, que perdure y que se gane respeto. Las victorias a corto plazo no satisfacen tanto como los logros duraderos.
+        willAndDrive: `They're motivated by achievement, recognition, and lasting success. They want to build something that matters, that endures, that earns respect. Short-term wins don't satisfy as much as lasting accomplishment.
 
-Destacan en entornos estructurados con jerarquías claras y resultados mensurables. Les convienen las empresas, las organizaciones y los sistemas que premian la perseverancia.`,
+They excel in structured environments with clear hierarchies and measurable outcomes. Business, organizations, and systems that reward persistence suit them.`,
         
-        challenges: `La sombra de esta ubicación es la fría ambición y el uso instrumental de los demás. Es posible que estén tan concentrados en el objetivo que se olviden de la humanidad de quienes los rodean.
+        challenges: `The shadow of this placement is cold ambition and using others instrumentally. They may be so focused on the goal that they forget the humanity of those around them.
 
-También es posible que no puedan relajarse, disfrutar lo que han logrado y dejar de escalar. Aprender que ser importa tanto como hacer es un trabajo de toda la vida.`,
+They may also be unable to relax, to enjoy what they've achieved, to stop climbing. Learning that being matters as much as doing is lifetime work.`,
         
-        parentGuidance: `Respete la ambición de este niño y ayúdelo a establecer metas significativas. Necesitan lograr algo y canalizarlo hacia objetivos dignos. Deles responsabilidades que puedan dominar.
+        parentGuidance: `Respect this child's ambition and help them set meaningful goals. They need to achieve—channel this toward worthy pursuits. Give them responsibilities they can master.
 
-Enséñeles que el descanso no es debilidad y que el juego tiene valor. Ayúdelos a conectarse con los sentimientos que subyacen a su impulso. Modele que las relaciones importan tanto como los logros.`,
+Teach them that rest isn't weakness and that play has value. Help them connect with feelings beneath their drive. Model that relationships matter as much as achievements.`,
         
-        affirmation: "Mi poder disciplinado genera logros duraderos. Alcanzo mis objetivos mientras saboreo el viaje."
+        affirmation: "My disciplined power builds lasting achievement. I reach my goals while savoring the journey."
     },
     
     Aquarius: {
-        title: "La fuerza revolucionaria",
-        hook: "Poder expresado a través de la innovación y la acción colectiva.",
-        coreNature: `Marte en Acuario es el revolucionario que aplica energía para transformar sistemas y servir a la humanidad. Esta alma lucha por el futuro, por el progreso, por el bienestar colectivo por encima del beneficio individual. Su poder sirve a algo más grande que ellos mismos.
+        title: "The Revolutionary Force",
+        hook: "Power expressing through innovation and collective action.",
+        coreNature: `Mars in Aquarius is the revolutionary, applying energy to transform systems and serve humanity. This soul fights for the future, for progress, for collective wellbeing over individual gain. Their power serves something larger than themselves.
 
-Son innovadores y disruptores naturales, incapaces de aceptar las cosas como son cuando podrían ser mejores. Ven posibilidades que el pensamiento convencional pasa por alto.`,
+They are natural innovators and disruptors, unable to accept things as they are when they could be better. They see possibilities that conventional thinking misses.`,
         
-        energy: `Su energía es errática, inventiva y está impulsada por una causa. Pueden estar intensamente activos cuando están inspirados y luego quedarse quietos repentinamente cuando la motivación se desvanece. Los ritmos convencionales no los contienen.
+        energy: `Their energy is erratic, inventive, and cause-driven. They may be intensely active when inspired, then suddenly still when motivation fades. Conventional rhythms don't contain them.
 
-Necesitan compromiso intelectual junto con actividad física. El ejercicio puramente físico puede aburrirlos; agregue un desafío mental o una causa y estarán comprometidos.`,
+They need intellectual engagement alongside physical activity. Exercise that's purely physical may bore them; add a mental challenge or a cause and they're engaged.`,
         
-        willAndDrive: `Están motivados por el progreso, la innovación y el beneficio colectivo. La ambición personal por sí sola no los sostiene: necesitan sentir que están contribuyendo a algo más grande.
+        willAndDrive: `They're motivated by progress, innovation, and collective benefit. Personal ambition alone doesn't sustain them—they need to feel they're contributing to something larger.
 
-Se destacan por pensar fuera de lo establecido, por encontrar nuevos enfoques para viejos problemas y por movilizar a la gente en torno a causas.`,
+They excel at thinking outside boxes, at finding new approaches to old problems, at rallying people around causes.`,
         
-        challenges: `La sombra de esta ubicación es la rebelión contraria y el desapego emocional. Pueden luchar contra las cosas más que a favor de ellas, o desconectarse tanto de la motivación personal que se agotan.
+        challenges: `The shadow of this placement is contrarian rebellion and emotional detachment. They may fight against things more than for them, or disconnect so far from personal motivation that they burn out.
 
-Su enfoque poco convencional puede alejar a quienes podrían ser aliados. Es importante aprender a trabajar dentro de los sistemas mientras los transforma, en lugar de simplemente contra ellos.`,
+Their unconventional approach may alienate those who could be allies. Learning to work within systems while transforming them, rather than just against them, is important.`,
         
-        parentGuidance: `Apoye el pensamiento y las causas originales de este niño. Necesitan sentir que están marcando una diferencia. No exija enfoques convencionales; ayúdelos a encontrar enfoques no convencionales que sean eficaces.
+        parentGuidance: `Support this child's original thinking and causes. They need to feel they're making a difference. Don't demand conventional approaches—help them find effective unconventional ones.
 
-Enséñeles que algunas normas existen por una buena razón, incluso animándolos a cuestionarlas. Ayúdelos a conectar su enfoque colectivo con las relaciones personales y las necesidades individuales.`,
+Teach them that some norms exist for good reason, even while encouraging them to question. Help them connect their collective focus to personal relationships and individual needs.`,
         
-        affirmation: "Mi poder innovador sirve al futuro. Transformo sistemas mientras me mantengo conectado con las personas."
+        affirmation: "My innovative power serves the future. I transform systems while staying connected to people."
     },
     
     Pisces: {
-        title: "La fuerza inspirada",
-        hook: "Poder expresado a través de la imaginación y la compasión.",
-        coreNature: `Marte en Piscis es el guerrero místico que actúa desde la inspiración, la imaginación y la motivación espiritual. Esta alma lucha por lo que cree, pero sus batallas suelen ser tanto internas como externas. Su poder proviene de algún lugar más allá de la voluntad ordinaria.
+        title: "The Inspired Force",
+        hook: "Power expressing through imagination and compassion.",
+        coreNature: `Mars in Pisces is the mystic warrior, acting from inspiration, imagination, and spiritual motivation. This soul fights for what they believe in, but their battles are as often internal as external. Their power comes from somewhere beyond ordinary will.
 
-Son artistas y sanadores naturales que canalizan energía a través de una expresión creativa y compasiva. Su enfoque es indirecto pero puede resultar sorprendentemente eficaz.`,
+They are natural artists and healers, channeling energy through creative and compassionate expression. Their approach is indirect but can be surprisingly effective.`,
         
-        energy: `Su energía es variable, impresionista y está influenciada por lo invisible. Pueden funcionar en ráfagas de inspiración seguidas de períodos de deriva. Forzar una producción consistente va en contra de su naturaleza.
+        energy: `Their energy is variable, impressionistic, and influenced by the unseen. They may work in bursts of inspiration followed by periods of drift. Forcing consistent output works against their nature.
 
-La energía física está ligada al estado espiritual y emocional. Cuando están inspirados, pueden lograr enormes logros. Cuando se agota, el descanso no es opcional: es necesario para la regeneración.`,
+Physical energy is tied to spiritual and emotional state. When inspired, they can accomplish tremendously. When depleted, rest isn't optional—it's required for regeneration.`,
         
-        willAndDrive: `Están motivados por la inspiración, la compasión y el significado trascendente. Las metas puramente materiales no los sustentan; necesitan sentirse conectados con algo sagrado.
+        willAndDrive: `They're motivated by inspiration, compassion, and transcendent meaning. Purely material goals don't sustain them; they need to feel connected to something sacred.
 
-Se destacan en el trabajo creativo, las profesiones curativas y cualquier ámbito donde la imaginación y la empatía importen más que la fuerza.`,
+They excel at creative work, healing professions, and any arena where imagination and empathy matter more than force.`,
         
-        challenges: `La sombra de esta ubicación es la deriva pasiva y el escapismo. Pueden soñar más que actuar, o huir a la fantasía cuando la realidad se vuelve exigente.
+        challenges: `The shadow of this placement is passive drifting and escapism. They may dream more than act, or flee into fantasy when reality becomes demanding.
 
-Sus límites en torno a la acción pueden ser débiles: asumen las batallas de otros, disipan energía en demasiadas direcciones o se dejan utilizar.`,
+Their boundaries around action may be weak—they take on others' battles, dissipate energy in too many directions, or let themselves be used.`,
         
-        parentGuidance: `Honre la naturaleza creativa y espiritual de este niño mientras le enseña acciones prácticas. Necesitan inspiración más que disciplina, es decir, más que estructura.
+        parentGuidance: `Honor this child's creative and spiritual nature while teaching practical action. They need inspiration more than discipline, meaning more than structure.
 
-Ayúdelos a canalizar su energía imaginativa hacia una creación tangible. Enséñeles los límites en torno a sus donaciones y su energía. Modele que los sueños necesitan acción para volverse realidad.`,
+Help them channel their imaginative energy into tangible creation. Teach them boundaries around their giving and their energy. Model that dreams need action to become real.`,
         
-        affirmation: "Mi energía inspirada crea curación y belleza. Canalizo la imaginación en acción."
+        affirmation: "My inspired energy creates healing and beauty. I channel imagination into action."
     }
 };
 

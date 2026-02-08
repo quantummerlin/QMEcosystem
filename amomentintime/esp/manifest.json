@@ -1,14 +1,14 @@
 {
-  "name": "A Moment in Time - Lectura Cósmica",
-  "short_name": "A Moment in Time",
-  "description": "Obtén más de 65 insights personalizados de astrología y numerología basados en tu momento de nacimiento. Lectura cósmica gratuita con signo solar, lunar, ascendente y número de camino de vida.",
-  "start_url": "/amomentintime/esp/",
-  "id": "/amomentintime/esp/",
+  "name": "Soul Blueprint - Cosmic Reading",
+  "short_name": "Soul Blueprint",
+  "description": "Discover your Soul Blueprint with 65+ personalized cosmic readings. Birth chart astrology, numerology insights, and spiritual guidance.",
+  "start_url": "/soulblueprint/",
+  "lang": "en",
+  "id": "soul-blueprint-cosmic-reading",
   "display": "standalone",
   "background_color": "#0a1628",
   "theme_color": "#c9a6ff",
   "orientation": "portrait-primary",
-  "lang": "es",
   "icons": [
     {
       "src": "Amomentintime.jpg?v=1",
@@ -31,7 +31,7 @@
   ],
   "screenshots": [],
   "categories": ["lifestyle", "entertainment"],
-  "lang": "es",
+  "lang": "en",
   "dir": "ltr",
   "prefer_related_applications": false
 }
