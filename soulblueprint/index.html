@@ -6574,17 +6574,17 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 if (chartTensions && chartTensions.length > 0) {
                     const tensionHeader = document.createElement('div');
                     tensionHeader.className = 'section-divider';
-                    tensionHeader.innerHTML = '<h3>⚡ Creative Tensions</h3><p>Opposing energies in your chart and how to integrate them</p>';
+                    tensionHeader.innerHTML = '<h3>Creative Tensions</h3><p>Opposing energies in your chart and how to integrate them</p>';
                     celestialSection.appendChild(tensionHeader);
                     
                     chartTensions.forEach(tension => {
                         let tensionContent = `<p>Your chart holds significant energy on both sides of the <strong>${tension.pole1.name}</strong> vs <strong>${tension.pole2.name}</strong> spectrum. This isn't a flaw - it's a creative tension that, once integrated, becomes your greatest strength.</p>`;
                         
-                        tensionContent += `<p><strong>🌅 Daily Rhythm:</strong><br>${tension.resolution.daily}</p>`;
-                        tensionContent += `<p><strong>📅 Weekly Rhythm:</strong><br>${tension.resolution.weekly}</p>`;
-                        tensionContent += `<p><strong>🗓️ Yearly Rhythm:</strong><br>${tension.resolution.yearly}</p>`;
-                        tensionContent += `<p><strong>🌀 Life Rhythm:</strong><br>${tension.resolution.life}</p>`;
-                        tensionContent += `<p><strong>✨ The Integration:</strong><br>${tension.resolution.integration}</p>`;
+                        tensionContent += `<p><strong>Daily Rhythm:</strong><br>${tension.resolution.daily}</p>`;
+                        tensionContent += `<p><strong>Weekly Rhythm:</strong><br>${tension.resolution.weekly}</p>`;
+                        tensionContent += `<p><strong>Yearly Rhythm:</strong><br>${tension.resolution.yearly}</p>`;
+                        tensionContent += `<p><strong>Life Rhythm:</strong><br>${tension.resolution.life}</p>`;
+                        tensionContent += `<p><strong>The Integration:</strong><br>${tension.resolution.integration}</p>`;
                         
                         celestialSection.appendChild(createReadingCard(
                             tension.title,

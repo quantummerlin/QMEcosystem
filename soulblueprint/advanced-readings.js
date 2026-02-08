@@ -1447,62 +1447,134 @@ var LIFE_PHASE_READINGS = {
     earlyChildhood: {
         title: "Foundation Years (Ages 0-7)",
         description: "The Imprint Phase",
-        reading: "During this period, the soul absorbs its foundational emotional patterns. The Moon sign and 4th House energies are most active, shaping core feelings of safety, belonging, and emotional response."
+        reading: `The first seven years are the most psychologically formative period in any life. During this phase, the Moon sign is the dominant influence — the child is essentially living through their Moon, absorbing emotional patterns that will run beneath every decision they make for the rest of their life.
+
+Everything experienced during this time becomes the emotional operating system. How safety feels, what love looks like, whether the world is trustworthy or threatening — these aren't learned intellectually but absorbed cellularly. The 4th House energy shapes the literal and emotional home environment that creates this foundation.
+
+This is when attachment patterns form. A child who feels consistently seen and soothed develops secure attachment that becomes the template for every future relationship. A child whose needs are inconsistently met develops adaptive strategies — people-pleasing, withdrawal, hypervigilance — that are brilliantly intelligent survival responses but can become limiting patterns in adulthood.
+
+The IC (Imum Coeli) and any planets in the 4th House are actively shaping reality during this phase. Whatever sign sits on the IC describes the emotional atmosphere being absorbed. Whatever planets occupy the 4th House describe the specific energies present in the home environment — for better and for more complicated.`
     },
     middleChildhood: {
         title: "Mercury Years (Ages 7-14)",
         description: "The Learning Phase",
-        reading: "Mercury's influence peaks during these years. Communication skills, intellectual curiosity, and social awareness develop rapidly. The 3rd House and Mercury sign shape how they process and share information."
+        reading: `Between seven and fourteen, Mercury takes the lead. The mind awakens properly — not just absorbing anymore, but actively processing, questioning, categorising, and forming opinions about the world. This is when intellectual identity crystallises: am I smart? Am I good with words? Do my thoughts matter?
+
+The Mercury sign and 3rd House become the dominant influences during this phase. How information is processed, how communication develops, and how the child relates to siblings, schoolmates, and their immediate environment all take shape now. Learning style solidifies — whether they're visual, verbal, kinetic, or intuitive learners becomes clear.
+
+Social awareness explodes. The child moves from the family-centred world of early childhood into the peer-centred world of school and neighbourhood. They begin to understand that other families operate differently, that there are rules beyond home, and that they need to find their place in a social hierarchy they didn't create.
+
+This is also when the inner voice takes shape. The way adults speak to this child during these years literally becomes their internal monologue. Encouragement becomes self-encouragement. Criticism becomes self-criticism. The 3rd House placements describe not just how they communicate with others, but how they'll communicate with themselves for the rest of their life.`
     },
     adolescence: {
         title: "Venus Awakening (Ages 14-21)",
         description: "The Values Phase",
-        reading: "Venus energy activates, bringing awareness of beauty, relationships, values, and self-worth. The 2nd and 7th House themes emerge as they discover what they value and who they're drawn to."
+        reading: `Adolescence marks the activation of Venus energy — the awakening of values, aesthetics, relationships, and the burning question of self-worth. This isn't just about romantic crushes, though those certainly arrive. It's a fundamental reckoning with what matters, what's beautiful, and what the self is worth.
+
+The Venus sign and the 2nd and 7th House themes become primary influences. Values that may have been inherited from family are now questioned, tested, and either claimed or rejected. The teenager isn't being difficult — they're doing the essential developmental work of deciding what they actually believe versus what they were told to believe.
+
+Relationships become the primary classroom. First loves, first heartbreaks, and first experiences of genuine peer intimacy teach lessons no parent or teacher can convey. The 7th House Descendant begins activating — the kind of person they're drawn to, the relationship patterns they'll carry into adulthood, all start forming through these early experiences.
+
+Self-worth is the hidden battleground of this phase. The 2nd House themes of value — both material and personal — become intensely relevant. How they feel about their body, their abilities, their worthiness of love and success are being shaped in real time. The messages they receive about their value during this phase echo for decades. This is when the foundation for their adult relationship with money, beauty, and self-esteem is laid.`
     },
     youngAdult: {
         title: "Solar Activation (Ages 21-30)",
         description: "The Identity Phase",
-        reading: "The Sun sign fully activates in the late twenties with the first Saturn Return (ages 27-30). This is when true identity crystallizes and life direction becomes clear. Career choices made now tend to stick."
+        reading: `The twenties are when the Sun sign truly comes online. Before this, identity was largely a reflection of family, peers, and circumstance. Now it becomes a conscious project — who am I, really? What do I actually want? The Sun sign's energy, which may have been dormant or muted, begins demanding authentic expression.
+
+This is the decade of experimentation and false starts that aren't actually false — every career tried, relationship entered, and identity tested teaches something essential. The Sun sign's needs become increasingly non-negotiable. A Leo Sun who spent their teens being quiet starts needing the spotlight. A Capricorn Sun who drifted through school suddenly develops fierce ambition.
+
+The Midheaven (10th House) begins asserting itself professionally. Career direction, public identity, and the question of legacy start mattering in ways they didn't before. The choices made during this phase — what to study, where to work, who to commit to — are the first truly self-authored decisions.
+
+The late twenties bring the approach of the first Saturn Return, which creates increasing pressure to get serious. What felt like infinite options in the early twenties starts narrowing as reality demands commitment. This isn't loss of freedom — it's the development of focus. The Saturn Return at 27-30 will crystallise everything this decade has been building toward.`
     },
     saturn1: {
         title: "First Saturn Return (Ages 27-30)",
         description: "The Reality Check",
-        reading: "Saturn returns to its birth position for the first time, demanding accountability. Structures that aren't authentic crumble. Relationships, careers, and identities that don't serve growth are tested. What survives this period becomes the foundation for the next three decades."
+        reading: `The first Saturn Return is arguably the most significant astrological transit of young adulthood. Saturn returns to the exact position it occupied at birth, and everything that isn't authentically yours gets tested. Relationships that were based on convenience rather than genuine compatibility crack. Careers chosen to please parents rather than serve purpose become unbearable. The self-image built on others' expectations rather than inner truth starts collapsing.
+
+This isn't punishment — it's liberation disguised as crisis. Saturn removes what's false so that what's real can be built properly. The structures that survive the Saturn Return become the genuine foundation for the next thirty years. The ones that crumble needed to crumble, even when it doesn't feel that way in the moment.
+
+The Saturn sign in the natal chart describes the specific nature of this test. Saturn in Aries tests independence and courage. Saturn in Cancer tests emotional authenticity. Saturn in Capricorn tests whether the ambition is genuine or performative. Whatever Saturn touches in the birth chart is where the most demanding — and ultimately most rewarding — restructuring happens.
+
+Many of life's most defining decisions are made during or immediately after the first Saturn Return: marriage or divorce, career commitment or radical change, having children, moving countries, starting businesses. These decisions carry weight because they're made with adult awareness rather than youthful optimism. What's chosen now is chosen with eyes open.`
     },
     earlyMiddle: {
         title: "Mars Mastery (Ages 30-40)",
         description: "The Building Phase",
-        reading: "Mars energy fuels ambition and action. This decade is about building - careers, families, reputations. The Midheaven (10th House) themes become central as they establish their place in the world."
+        reading: `The thirties are the action decade — Mars energy is at its peak productive capacity. The identity questions of the twenties have (mostly) been answered, the Saturn Return has cleared the false starts, and now it's time to build. Career advancement, family creation, reputation establishment, and the serious work of becoming who you're meant to be all accelerate.
+
+The Midheaven and 10th House become central to daily life. Professional identity isn't just forming — it's being tested and proved in the real world. The difference between the twenties and thirties is that the thirties demand results, not just potential. Mars provides the drive, ambition, and competitive energy needed to claim a place in the world.
+
+This decade often brings the greatest physical vitality combined with the greatest external pressure. There are mortgages, children, career demands, ageing parents — the responsibilities multiply while the energy to handle them is at its peak. The Mars sign describes how this energy is channelled: Mars in earth signs builds methodically, Mars in fire signs charges forward aggressively, Mars in air signs strategises and networks, Mars in water signs navigates intuitively.
+
+The danger of this decade is losing the inner life to external demands. The building is necessary, but if the soul's deeper needs — creativity, spirituality, emotional intimacy — are sacrificed entirely for productivity, the Pluto Square at 36-40 will deliver a forceful reminder that the inner world cannot be indefinitely postponed.`
     },
     plutoSquare: {
         title: "Pluto Square (Ages 36-40)",
         description: "The Power Reckoning",
-        reading: "Transiting Pluto squares natal Pluto, triggering a power crisis. Repressed desires surface. The need for authentic power versus borrowed authority becomes urgent. Many experience a 'dark night' that ultimately empowers."
+        reading: `Transiting Pluto squares natal Pluto between approximately 36 and 40, triggering a confrontation with power, desire, and everything that's been buried. This is the transit that asks: what have you been afraid to want? What power have you given away? What truth have you been avoiding because facing it would change everything?
+
+This transit often manifests as a period of intense internal pressure. Repressed desires surface with volcanic force. The person who spent their thirties being responsible suddenly feels a desperate need for authenticity that transcends duty. It might look like a crisis to outsiders, but internally it feels like finally waking up.
+
+Pluto's house position in the natal chart determines where this reckoning plays out. Pluto in Libra (a common generation) experiences it through relationships — the partnership dynamics that worked in the twenties and thirties may suddenly feel intolerable. Pluto in Scorpio faces the reckoning through identity itself — who they've been pretending to be versus who they actually are.
+
+The gift of the Pluto Square is reclaimed power. Whatever was surrendered — to parents, partners, employers, social expectations — can now be consciously reclaimed. This doesn't have to be destructive. The healthiest version of this transit involves honest self-examination, therapeutic work, and the courage to make changes that serve the authentic self even when they're inconvenient for the constructed one.`
     },
     lateMiddle: {
         title: "Jupiter Expansion (Ages 40-50)",
         description: "The Wisdom Phase",
-        reading: "The 9th House themes activate fully. Travel, higher learning, philosophical development, and teaching others what they've learned become primary drives. Many change careers toward more meaningful work."
+        reading: `The forties bring Jupiter energy to the forefront — the drive to find meaning, to expand beyond the structures built in the previous decade, and to ask bigger questions than "how do I succeed?" The question becomes "what does success actually mean?" The 9th House themes of philosophy, higher learning, travel, and spiritual exploration activate with new urgency.
+
+Many people experience a genuine vocational shift during this decade. The career that was built in the thirties may feel hollow without meaning. The desire to teach, to mentor, to share accumulated wisdom with others becomes increasingly strong. Jupiter says: you've learned enough to have something genuine to offer. Now share it.
+
+This is often when spiritual life deepens significantly. Religious or philosophical frameworks that were inherited or rejected in youth may be revisited with mature eyes. The question isn't whether to believe, but what genuinely resonates now that enough life has been lived to test ideas against experience. Some find faith; others find philosophy; many find a personal synthesis that doesn't fit any existing category.
+
+Travel and cross-cultural experience, if not already pursued, become magnetically attractive during this phase. The world feels both larger and more accessible. The desire to understand how other people live, what other cultures value, and where one's own perspective fits in the grand human tapestry fuels genuine expansion of consciousness.`
     },
     uranus: {
         title: "Uranus Opposition (Ages 40-44)",
         description: "The Liberation Crisis",
-        reading: "Transiting Uranus opposes natal Uranus, triggering a need for radical authenticity. The classic 'midlife crisis' is actually a liberation event - breaking free from roles that no longer serve the true self."
+        reading: `The Uranus Opposition is what popular culture calls the "midlife crisis" — but it's far more purposeful than that dismissive label suggests. Transiting Uranus opposes natal Uranus, creating an electrical charge that demands liberation from every role, habit, and identity that has become a cage rather than a choice.
+
+The form this takes depends entirely on what's been suppressed. For someone who's lived authentically, the Uranus Opposition might feel like an exciting acceleration — new opportunities, creative breakthroughs, sudden clarity about what comes next. For someone who's been living a borrowed life — the career their parents wanted, the relationship that looked right but felt wrong, the image that pleased everyone but themselves — it can feel like an earthquake.
+
+The Uranus sign in the natal chart describes the generational quality of this awakening. Uranus in Leo demands creative authenticity. Uranus in Virgo demands liberation from perfectionism and duty. Uranus in Libra demands relationship truth. The house position personalises it further — Uranus in the 10th faces career liberation; Uranus in the 4th faces domestic revolution.
+
+The healthiest response to the Uranus Opposition is to make the changes consciously rather than waiting for them to happen chaotically. The energy is going to create change regardless — the choice is between riding the wave and being crashed by it. This is the time to ask: if I had no obligations, no reputation to protect, no one to please — what would I do? The answer to that question contains the seed of the next chapter.`
     },
     chiron: {
         title: "Chiron Return (Ages 49-51)",
         description: "The Healing Threshold",
-        reading: "Chiron returns to its birth position, bringing the deepest wounds to the surface for final healing. This is often experienced as a health wake-up call, a relationship reckoning, or a profound shift in how they relate to their own pain and vulnerability."
+        reading: `Chiron returns to its birth position around age 50, bringing the deepest wound to the surface one final time — not to reopen it, but to transform it into medicine. This is the transit that turns the wounded into the healer, the broken into the beautifully mended, the person who suffered into the one who understands suffering.
+
+The Chiron sign and house in the natal chart describe the specific nature of this wound and where it manifests. Chiron in Aries carries wounds around identity and the right to exist. Chiron in the 7th House carries wounds around partnership and betrayal. Whatever the specifics, the Chiron Return asks: can you finally accept this wound not as damage but as wisdom?
+
+Many people experience a health wake-up call during this transit — not necessarily serious illness, but a clear signal from the body that something needs attention. The body becomes the messenger for what the psyche has been avoiding. This is often the catalyst for genuine lifestyle change, therapeutic breakthrough, or spiritual deepening.
+
+The gift of the Chiron Return is profound empathy born from personal experience. Having lived with a wound for fifty years, there's a depth of understanding available that no amount of training can replicate. Many people discover their true vocation as healers, mentors, or guides during or after this transit — not because they've transcended their wound, but because they've learned to live with it gracefully enough to help others do the same.`
     },
     saturn2: {
         title: "Second Saturn Return (Ages 56-60)",
         description: "The Elder Threshold",
-        reading: "Saturn returns for the second time, asking: 'What is your legacy?' The structures built in the 30s are evaluated. Retirement planning, grandparent roles, and elder wisdom emerge. This is the threshold into true elderhood."
+        reading: `The second Saturn Return is the gateway to genuine elderhood. Where the first Saturn Return asked "who are you, really?" the second asks "what have you built, and what will you leave behind?" This is the transit of legacy — evaluating not just what was accomplished, but whether it mattered.
+
+The structures built after the first Saturn Return — the career, the family, the reputation, the home — are all evaluated with unflinching honesty. Some hold up beautifully. Others reveal themselves as hollow. There's still time to rebuild what needs rebuilding, but the awareness that time is finite adds urgency that wasn't there before.
+
+Retirement, if it's on the horizon, forces confrontation with identity beyond productivity. For someone whose entire sense of self was built around their career, this transition can feel like death. For someone who maintained inner life alongside professional life, it can feel like liberation. The Saturn sign describes how this threshold is experienced — Saturn in earth signs may struggle to release professional identity; Saturn in water signs may struggle with the emotional weight of time passing.
+
+The second Saturn Return often brings a settling into authenticity that the first Return only initiated. By sixty, most people have learned — sometimes painfully — that pretending is exhausting and ultimately pointless. The gift is permission to finally be exactly who you are, without apology, performance, or compromise. The elder who emerges from this transit has earned the right to speak truth and the wisdom to do it kindly.`
     },
     elder: {
         title: "Elder Wisdom (Ages 60+)",
         description: "The Harvest Phase",
-        reading: "The outer planets (Neptune, Pluto) become primary influences. Spiritual depth increases. The need to pass on wisdom, mentor the next generation, and make peace with mortality becomes central. This is the harvest of everything planted before."
+        reading: `The elder years belong to the outer planets — Neptune, Pluto, and the transpersonal forces that operate beyond individual will. The ego concerns that dominated earlier decades gradually dissolve, replaced by questions that are simultaneously simpler and more profound: what matters? What was this all for? What continues after me?
+
+Spiritual depth increases naturally during this phase, whether or not it's pursued consciously. The veils between the personal and the universal thin. Dreams become more vivid, intuition sharper, and the sense of connection to something larger than the individual self grows stronger. Neptune's influence softens the boundaries that kept the ego feeling separate.
+
+The desire to pass on wisdom becomes central. This isn't ego-driven teaching — it's the natural impulse of someone who's learned enough to know what matters and what doesn't. Mentoring younger people, whether formally or through simple presence and availability, becomes one of the most fulfilling activities available. The elder has something no younger person can have: perspective earned through decades of living.
+
+Legacy takes its final form during this phase. Not just material legacy — though wills and inheritances matter — but the intangible legacy of how they made people feel, what they stood for, and whether they lived with integrity. The harvest isn't about what was accumulated but about what was genuinely given. The richest elders, in the truest sense, are those who gave more than they kept.`
     }
 };
 
@@ -1546,11 +1618,27 @@ function generateAgeTimeline(readings, birthDate) {
         // Add sign-specific context
         let signContext = '';
         if (phase.key === 'earlyChildhood' && readings.astrology?.moonSign) {
-            signContext = `With Moon in ${readings.astrology.moonSign.name}, the emotional foundation is colored by ${readings.astrology.moonSign.name} qualities.`;
-        } else if (phase.key === 'youngAdult' && readings.astrology?.sunSign) {
-            signContext = `With Sun in ${readings.astrology.sunSign.name}, identity crystallizes around ${readings.astrology.sunSign.name} themes.`;
+            signContext = `With Moon in ${readings.astrology.moonSign.name}, the emotional foundation is shaped by ${readings.astrology.moonSign.name} qualities — this is the emotional operating system running beneath everything.`;
+        } else if (phase.key === 'middleChildhood' && readings.astrology?.mercury) {
+            const mercName = readings.astrology.mercury.name || readings.astrology.mercury;
+            signContext = `With Mercury in ${mercName}, the learning style and inner voice developing during this phase carry ${mercName}'s qualities — shaping how information is processed and how they talk to themselves for life.`;
         } else if (phase.key === 'adolescence' && readings.astrology?.venus) {
-            signContext = `With Venus in ${readings.astrology.venus.name || readings.astrology.venus}, values and relationship patterns take on that sign's qualities.`;
+            const venusName = readings.astrology.venus.name || readings.astrology.venus;
+            signContext = `With Venus in ${venusName}, values and relationship patterns take on ${venusName}'s qualities — first loves and early self-worth lessons are filtered through this energy.`;
+        } else if (phase.key === 'youngAdult' && readings.astrology?.sunSign) {
+            signContext = `With Sun in ${readings.astrology.sunSign.name}, identity crystallises around ${readings.astrology.sunSign.name} themes — the authentic self that emerges during this decade carries this sign's unmistakable imprint.`;
+        } else if (phase.key === 'saturn1' && readings.astrology?.saturn) {
+            const saturnName = readings.astrology.saturn.name || readings.astrology.saturn;
+            signContext = `With natal Saturn in ${saturnName}, this return specifically tests ${saturnName}-related themes — the accountability demanded is focused through this sign's lens.`;
+        } else if (phase.key === 'earlyMiddle' && readings.astrology?.mars) {
+            const marsName = readings.astrology.mars.name || readings.astrology.mars;
+            signContext = `With Mars in ${marsName}, the building energy of this decade is channelled through ${marsName}'s style — this is how ambition, drive, and competitive energy express themselves.`;
+        } else if (phase.key === 'lateMiddle' && readings.astrology?.jupiter) {
+            const jupName = readings.astrology.jupiter.name || readings.astrology.jupiter;
+            signContext = `With Jupiter in ${jupName}, the search for meaning and expansion during this phase is coloured by ${jupName} themes — wisdom and growth arrive through this sign's particular lens.`;
+        } else if (phase.key === 'elder' && readings.astrology?.neptune) {
+            const nepName = readings.astrology.neptune.name || readings.astrology.neptune;
+            signContext = `With Neptune in ${nepName}, the spiritual deepening of the elder years carries ${nepName}'s generational quality — the dissolution of ego boundaries follows this sign's path.`;
         }
         
         timeline.push({
@@ -1632,18 +1720,78 @@ var RELATIONSHIP_STYLE_READINGS = {
         reading: `Understanding love style requires looking at both Venus (how you love) and the 7th House/Descendant (who you attract and what you need in partnership).`
     },
     byVenusSign: {
-        Aries: { loveStyle: "Direct, passionate, and initiating. Shows love through action and courage. Needs excitement and independence within partnership.", attractionPattern: "Drawn to bold, authentic, independent people. Turned off by passivity or game-playing." },
-        Taurus: { loveStyle: "Loyal, sensual, and steady. Shows love through physical touch, gifts, and consistent presence. Needs security and reliability.", attractionPattern: "Drawn to stable, sensual, nature-loving people. Turned off by instability or lack of follow-through." },
-        Gemini: { loveStyle: "Curious, communicative, and playful. Shows love through conversation, humor, and mental stimulation. Needs variety and intellectual connection.", attractionPattern: "Drawn to witty, curious, socially adaptable people. Turned off by silence or intellectual rigidity." },
-        Cancer: { loveStyle: "Nurturing, protective, and deeply emotional. Shows love through care-taking, cooking, and creating safe space. Needs emotional security.", attractionPattern: "Drawn to sensitive, family-oriented, emotionally available people. Turned off by emotional coldness or neglect." },
-        Leo: { loveStyle: "Generous, dramatic, and warm-hearted. Shows love through grand gestures, loyalty, and unwavering attention. Needs admiration and appreciation.", attractionPattern: "Drawn to creative, confident, warm people. Turned off by stinginess or lack of enthusiasm." },
-        Virgo: { loveStyle: "Thoughtful, practical, and attentive to detail. Shows love through acts of service, helpful advice, and quiet devotion. Needs to feel useful.", attractionPattern: "Drawn to intelligent, health-conscious, organized people. Turned off by sloppiness or unwillingness to improve." },
-        Libra: { loveStyle: "Romantic, harmonious, and partnership-oriented. Shows love through beauty, balance, and genuine interest in the other person. Needs equality and aesthetic harmony.", attractionPattern: "Drawn to refined, fair-minded, attractive people. Turned off by rudeness or conflict-seeking behavior." },
-        Scorpio: { loveStyle: "Intense, transformative, and deeply loyal. Shows love through emotional depth, protectiveness, and willingness to go to dark places together. Needs absolute trust.", attractionPattern: "Drawn to mysterious, emotionally deep, powerful people. Turned off by superficiality or betrayal." },
-        Sagittarius: { loveStyle: "Adventurous, optimistic, and freedom-loving. Shows love through shared adventures, philosophical conversations, and expanding each other's horizons. Needs space and growth.", attractionPattern: "Drawn to adventurous, philosophical, humor-filled people. Turned off by possessiveness or narrow-mindedness." },
-        Capricorn: { loveStyle: "Committed, ambitious, and provider-oriented. Shows love through building a stable future together, respect, and long-term dedication. Needs respect and partnership in goals.", attractionPattern: "Drawn to accomplished, responsible, mature people. Turned off by laziness or lack of ambition." },
-        Aquarius: { loveStyle: "Independent, unconventional, and friendship-based. Shows love through intellectual connection, giving space, and supporting individuality. Needs freedom within togetherness.", attractionPattern: "Drawn to unique, intellectual, humanitarian people. Turned off by conformity or emotional demands." },
-        Pisces: { loveStyle: "Compassionate, imaginative, and spiritually attuned. Shows love through empathy, sacrifice, and creating magical shared worlds. Needs soul connection.", attractionPattern: "Drawn to creative, sensitive, spiritually open people. Turned off by harsh pragmatism or emotional insensitivity." }
+        Aries: {
+            loveStyle: "Love is an action verb for Venus in Aries. They don't wait to feel ready — they dive in headfirst with a courage that can take people's breath away. Affection is shown through initiative: planning the date, making the first move, fighting for the relationship when it matters. They want to be someone's hero and they need a partner who can match their directness without flinching.",
+            attractionPattern: "They're drawn to people who have their own fire — independence, confidence, and a willingness to push back rather than simply agree. Nothing kills attraction faster than passivity or game-playing. They want honest, uncomplicated desire — someone who says what they mean and means what they say.",
+            conflictStyle: "Arguments are direct and hot but usually short-lived. They'd rather fight openly than let resentment build. The danger is saying things in anger they can't take back. They need a partner who can handle heat without crumbling, and who doesn't hold grudges because they don't.",
+            attachment: "Passionate and freedom-loving. They commit deeply but need space to remain themselves within the relationship. Possessiveness from either side feels suffocating. The ideal is two independent people choosing each other daily, not two dependent people clinging."
+        },
+        Taurus: {
+            loveStyle: "Venus in Taurus loves through the senses and through steadfast presence. They show up, consistently, without drama or fanfare. Love is the home-cooked meal, the thoughtful gift, the hand held during difficult moments. They build love like they build everything — slowly, thoroughly, and with the intention that it last forever.",
+            attractionPattern: "They're drawn to stability, physical beauty, and people who feel like home. Reliability is genuinely attractive to them. They want someone who keeps promises, who smells good, who creates comfort. Chaos, unpredictability, and emotional games are deeply unattractive — they want to know what they're getting.",
+            conflictStyle: "Slow to anger but formidable once pushed past their limit. They'll absorb a lot before reacting, which means by the time they're upset, it's serious. They need time to process feelings and shouldn't be pushed for immediate resolution. Patience from a partner during conflict is essential.",
+            attachment: "Deeply loyal and possessive in the most protective sense. Once committed, they're in it for the long haul and expect the same in return. Breaking trust is almost unforgivable. They need physical touch, quality time, and the assurance that what they've built together is safe."
+        },
+        Gemini: {
+            loveStyle: "Venus in Gemini loves through conversation, curiosity, and keeping things interesting. They need mental stimulation as much as emotional connection — a boring relationship is a dead relationship to them. They show affection through clever texts, inside jokes, asking real questions, and being genuinely interested in their partner's inner world.",
+            attractionPattern: "They're drawn to wit, intelligence, and social ease. Someone who can hold their own in conversation, introduce new ideas, and make them laugh will always get their attention. They need variety — not necessarily in partners, but in experiences within a partnership. Routine and predictability feel like slow death.",
+            conflictStyle: "They'll talk through problems — sometimes too much, sometimes from their head rather than their heart. They may intellectualise emotions rather than feeling them, or use humour to deflect from real issues. They need a partner who can say 'I hear you thinking, but what are you feeling?'",
+            attachment: "Light and spacious but genuinely caring. They need freedom to socialise, explore ideas, and maintain their own identity. A partner who tries to be their entire world will find themselves losing them. The paradox is that giving them space is what makes them want to stay close."
+        },
+        Cancer: {
+            loveStyle: "Venus in Cancer loves with everything they have. They nurture, they remember, they create emotional worlds so warm that partners never want to leave. Love is shown through care-taking — remembering preferences, anticipating needs, creating safe spaces where vulnerability isn't just accepted but cherished. When they love you, they carry your whole emotional history in their heart.",
+            attractionPattern: "They're drawn to emotional availability, family orientation, and people who feel safe. Someone who opens up genuinely, who values home and closeness, who doesn't treat vulnerability as weakness. They can sense emotional walls from across a room and they're not interested in climbing them unless the person behind them is willing to come out.",
+            conflictStyle: "Indirect and protective. They may withdraw, go quiet, or use passive signals rather than stating what's wrong directly. Harsh criticism cuts deeply and stays with them. They need gentleness in conflict — the message matters, but how it's delivered matters more. A partner who can be honest without being cruel is essential.",
+            attachment: "Deep, devoted, and sometimes anxious. They give everything to relationships and need reassurance that the investment is mutual. Emotional availability from their partner isn't optional — it's the foundation. They remember every kindness and every slight, so consistency in how they're treated shapes everything."
+        },
+        Leo: {
+            loveStyle: "Venus in Leo loves generously, dramatically, and with their whole chest. When they're in, they're all in — grand gestures, unwavering loyalty, and a warmth that makes their partner feel like the most important person alive. They want romance to feel like a story worth telling. Love should be celebrated, not hidden or downplayed.",
+            attractionPattern: "They're drawn to confidence, creativity, and people who know how to appreciate them. Admiration isn't vanity for Venus in Leo — it's the love language. They need to feel seen, desired, and chosen. A partner who is enthusiastic about them, who isn't afraid to express it, who makes them feel special. Indifference is the ultimate rejection.",
+            conflictStyle: "Pride can be a barrier. They struggle to admit fault and may become dramatic when hurt. They need their dignity respected even during disagreements. The worst thing a partner can do is humiliate them. Arguments work best when both sides acknowledge the other's value first, then address the problem.",
+            attachment: "Loyal, warm, and needing reciprocal enthusiasm. They give generously and expect generosity in return — not materially, but emotionally. A partner who takes them for granted slowly extinguishes their fire. They need regular, genuine appreciation to keep their heart open and their love flowing."
+        },
+        Virgo: {
+            loveStyle: "Venus in Virgo loves through acts of service and quiet, steady devotion. They notice what needs doing and they do it — not for recognition, but because love means making someone's life easier and better. They remember how their partner takes their tea, they notice when something's wrong before it's mentioned, they fix things. Love is practical and expressed through consistency rather than grand gestures.",
+            attractionPattern: "They're drawn to intelligence, competence, and genuine goodness. Someone who takes care of themselves, who has integrity, who pays attention to the details of life. Flashiness without substance repels them. They want a real person, not a performance. Health-consciousness and self-improvement are genuinely attractive to them.",
+            conflictStyle: "They can become critical under stress, pointing out flaws in their partner's logic or behaviour with surgical precision. This comes from anxiety, not cruelty, but it can feel harsh. They need a partner who understands that their criticism is often displaced worry, and who can gently redirect them toward expressing the feeling underneath.",
+            attachment: "Devoted and anxious in equal measure. They worry about the relationship the way they worry about everything — thoroughly. They need partners who are consistent and who don't create unnecessary drama. Reliability is deeply reassuring to them. They love through service and need their service acknowledged, not expected."
+        },
+        Libra: {
+            loveStyle: "Venus in Libra is in its home sign, creating someone for whom partnership is art. They create beautiful relationships the way others create beautiful homes — with intention, balance, and genuine care for how things feel. They're attentive to their partner's experience, making sure both people feel valued, heard, and considered. Romance isn't an accessory to the relationship; it's the atmosphere they naturally create.",
+            attractionPattern: "They're drawn to refinement, fairness, and people who carry themselves with grace. Someone who can hold a conversation, who treats people well, who appreciates beauty in all its forms. Rudeness, selfishness, and aggressive energy are deeply off-putting. They want a partner who makes the world a more pleasant place simply by being in it.",
+            conflictStyle: "They avoid it, sometimes to their own detriment. They'll accommodate, compromise, and absorb discomfort before admitting something is wrong. When they finally do address conflict, it comes out measured and diplomatic — but the suppressed feelings underneath may be far more intense than their words suggest. They need a partner who creates safety for honest disagreement.",
+            attachment: "Partnership-oriented to their core. They feel most themselves when part of a meaningful couple. This isn't codependency — it's genuine fulfilment through shared life. They need equality, reciprocity, and the sense that both people are contributing to the relationship's beauty. Imbalance, where one person gives more than the other, slowly erodes them."
+        },
+        Scorpio: {
+            loveStyle: "Venus in Scorpio loves with an intensity that can be overwhelming for those who aren't ready for it. This is all-or-nothing love — they don't do casual, they don't do surface, and they don't do pretend. When they choose someone, they choose them completely and expect the same in return. Love means full emotional transparency, deep loyalty, and the willingness to face the darkest parts of each other together.",
+            attractionPattern: "They're drawn to depth, mystery, and emotional courage. Someone who has layers, who isn't afraid of their own shadow, who can handle intensity without running. Superficiality is invisible to them — they can't be attracted to a surface. They want to know who someone really is, underneath everything, and they're patient enough to wait for that truth.",
+            conflictStyle: "Intense and sometimes punishing. They feel betrayal deeply and may respond with withdrawal, testing, or the cold shoulder. Forgiveness is hard-won. They need a partner who understands that their intensity comes from how deeply they care, and who can stay present during emotional storms without escalating or abandoning.",
+            attachment: "Fiercely loyal and deeply possessive. Once bonded, the connection is almost unbreakable — and they expect it to be exclusive and total. Trust, once broken, is nearly impossible to rebuild. They need a partner who understands that their jealousy is really fear of loss, and who proves their loyalty through actions, not just words."
+        },
+        Sagittarius: {
+            loveStyle: "Venus in Sagittarius loves through adventure, honesty, and the shared pursuit of meaning. They want a relationship that expands both people — that makes life bigger, not smaller. Affection is shown through planning trips together, sharing philosophies, laughing until it hurts, and always being genuinely honest, even when it's uncomfortable.",
+            attractionPattern: "They're drawn to optimism, independence, and open-mindedness. Someone who has their own adventures, their own beliefs, their own life that they're excited about. A partner who wants to grow together rather than settle into routine. Possessiveness, pessimism, and narrow thinking are deeply unattractive. They want a companion for the journey, not a jailer.",
+            conflictStyle: "Blunt and sometimes tactless. They believe honesty is always better than diplomacy, which can feel brutal to more sensitive partners. They may also avoid conflict by leaving — physically or emotionally — rather than staying to work through discomfort. They need a partner who can handle direct truth and who can also teach them that delivery matters.",
+            attachment: "Freedom-loving but capable of deep commitment when it doesn't feel like a cage. They need space to grow, explore, and be themselves. The partner who says 'go have your adventure and tell me everything when you come home' wins their heart permanently. Trying to pin them down achieves the opposite of the intended result."
+        },
+        Capricorn: {
+            loveStyle: "Venus in Capricorn loves through commitment, provision, and building something that lasts. They may not say 'I love you' easily, but they show it through loyalty, hard work, and the steady creation of a shared future. Love is proven over time, not declared in a moment. They take partnership as seriously as they take their career — perhaps more so.",
+            attractionPattern: "They're drawn to ambition, maturity, and people who have their life together. Someone who takes responsibility, who has goals, who doesn't play games. They respect accomplishment and competence. A potential partner who is unreliable, immature, or aimless holds no appeal regardless of other qualities. They want someone they can build an empire with.",
+            conflictStyle: "Controlled and sometimes emotionally withheld. They may shut down rather than express hurt, or address relationship issues with the same pragmatism they'd bring to a business problem. They need a partner who can draw out their feelings gently and who doesn't interpret their emotional reserve as lack of caring.",
+            attachment: "Loyal, committed, and quietly devoted. Once they've chosen someone, they're remarkably consistent. But they need to feel respected — taken for granted or treated disrespectfully, and they'll quietly build walls that become permanent. Status and how the relationship appears to others does matter to them, even if they'd deny it."
+        },
+        Aquarius: {
+            loveStyle: "Venus in Aquarius loves through intellectual connection, shared ideals, and respecting each other's individuality. They show affection by being genuinely interested in what makes their partner unique, by supporting their independence, and by building a partnership that doesn't follow anyone else's rules. Friendship is the foundation of their romance — without it, attraction alone isn't enough.",
+            attractionPattern: "They're drawn to uniqueness, intelligence, and people who think for themselves. Someone who challenges norms, who has interesting ideas, who doesn't need external validation to feel secure. Conformity and emotional neediness are unattractive. They want a partner who is their best friend first — someone they'd choose to talk to even without romantic interest.",
+            conflictStyle: "Detached and analytical. They may intellectualise emotions rather than feeling them, or retreat into cool distance when things get too heated. They struggle with the messy, irrational parts of human emotion. They need a partner who can say 'come back to your body and feel this' without judgement.",
+            attachment: "Independent and somewhat unconventional in how they show love. They need significant personal space and time for their own interests. A partner who interprets this as lack of love will always feel insecure. But when they choose someone, the commitment is genuine — it just looks different from the traditional model."
+        },
+        Pisces: {
+            loveStyle: "Venus in Pisces loves with boundless compassion, imagination, and a kind of spiritual devotion that sees the best in people even when they can't see it themselves. They create magic in relationships — romantic gestures that feel like poetry, emotional attunement so deep it borders on telepathic, and a willingness to sacrifice that can be either beautiful or self-destructive depending on the partner.",
+            attractionPattern: "They're drawn to sensitivity, creativity, and spiritual depth. Someone who feels things deeply, who has an inner world rich enough to explore endlessly, who isn't afraid of the mystical side of life. Harshness, cynicism, and emotional brutality repel them. They want a soul connection — anything less feels like settling.",
+            conflictStyle: "Avoidant and absorptive. They may take on their partner's emotions as their own, making it hard to distinguish whose feelings are whose. They tend to sacrifice their own needs to keep the peace, then feel resentful when that sacrifice isn't noticed. They need a partner who actively asks what they need, because they rarely volunteer it.",
+            attachment: "Deeply devoted and sometimes boundary-less. They can lose themselves in love, merging so completely with a partner that they forget who they are alone. They need a partner who actively encourages their individuality and who doesn't take advantage of their giving nature. When healthy, their love is the most unconditional in the zodiac."
+        }
     }
 };
 
@@ -1656,35 +1804,88 @@ function analyzeRelationshipStyle(readings) {
     const descendantSign = descendant?.name || descendant;
     const mars = readings.astrology.mars;
     const marsSign = mars?.name || mars;
+    const moon = readings.astrology.moonSign;
+    const moonSign = moon?.name || moon;
     
     const result = {
         title: "Relationship Style Blueprint",
         sections: []
     };
     
-    // Venus love style
+    // Venus love style - expanded with all four dimensions
     if (venusSign && RELATIONSHIP_STYLE_READINGS.byVenusSign[venusSign]) {
         const venusData = RELATIONSHIP_STYLE_READINGS.byVenusSign[venusSign];
+        let venusContent = venusData.loveStyle;
+        venusContent += `\n\n${venusData.attractionPattern}`;
+        if (venusData.conflictStyle) {
+            venusContent += `\n\n<strong>In Conflict:</strong> ${venusData.conflictStyle}`;
+        }
+        if (venusData.attachment) {
+            venusContent += `\n\n<strong>Attachment Style:</strong> ${venusData.attachment}`;
+        }
         result.sections.push({
-            subtitle: `Venus in ${venusSign} - Love Language`,
-            content: `${venusData.loveStyle}\n\n${venusData.attractionPattern}`
+            subtitle: `Venus in ${venusSign} - How They Love`,
+            content: venusContent
         });
     }
     
-    // Mars desire style
+    // Mars desire style - now with its own unique content
     if (marsSign && RELATIONSHIP_STYLE_READINGS.byVenusSign[marsSign]) {
         const marsData = RELATIONSHIP_STYLE_READINGS.byVenusSign[marsSign];
+        const marsContent = `Mars reveals what ignites desire and how pursuit works in relationships. With Mars in ${marsSign}, attraction is physical and instinctive — the chemistry either sparks or it doesn't, and no amount of logic changes it.\n\n${marsData.loveStyle.replace(/Shows love/gi, 'Pursues connection').replace(/love is/gi, 'desire is').replace(/They show affection/gi, 'They pursue')}\n\n<strong>What Sparks Chemistry:</strong> ${marsData.attractionPattern.replace(/They're drawn/gi, 'Physical chemistry ignites with')}`;
         result.sections.push({
-            subtitle: `Mars in ${marsSign} - Desire & Pursuit`,
-            content: `Mars shows how desire and pursuit work in relationships. With Mars in ${marsSign}: ${marsData.loveStyle.replace('Shows love', 'Pursues connection')}`
+            subtitle: `Mars in ${marsSign} - Desire & Chemistry`,
+            content: marsContent
+        });
+    }
+    
+    // Moon emotional needs in relationship
+    if (moonSign && RELATIONSHIP_STYLE_READINGS.byVenusSign[moonSign]) {
+        const moonData = RELATIONSHIP_STYLE_READINGS.byVenusSign[moonSign];
+        const moonContent = `The Moon reveals what's needed for emotional safety in relationships — the non-negotiable needs that, if unmet, make no amount of attraction or compatibility enough.\n\nWith Moon in ${moonSign}, emotional security comes through ${moonData.attachment || moonData.loveStyle}\n\n<strong>When Emotionally Triggered:</strong> ${moonData.conflictStyle || 'Emotional reactions follow the patterns of ' + moonSign + ' energy — requiring understanding rather than logic from a partner.'}`;
+        result.sections.push({
+            subtitle: `Moon in ${moonSign} - Emotional Needs in Love`,
+            content: moonContent
+        });
+    }
+    
+    // Venus-Mars dynamic (if different signs)
+    if (venusSign && marsSign && venusSign !== marsSign) {
+        const venusElement = { Aries: 'Fire', Taurus: 'Earth', Gemini: 'Air', Cancer: 'Water', Leo: 'Fire', Virgo: 'Earth', Libra: 'Air', Scorpio: 'Water', Sagittarius: 'Fire', Capricorn: 'Earth', Aquarius: 'Air', Pisces: 'Water' };
+        const vEl = venusElement[venusSign];
+        const mEl = venusElement[marsSign];
+        
+        let dynamicContent = `Venus in ${venusSign} and Mars in ${marsSign} create a distinctive internal relationship dynamic — what they want in love (Venus) and how they pursue it (Mars) operate differently.\n\n`;
+        
+        if (vEl === mEl) {
+            dynamicContent += `Both Venus and Mars are in ${vEl} signs, creating consistency between desire and pursuit. What they want and how they go after it are aligned, making their romantic energy straightforward and coherent. Partners know where they stand.`;
+        } else if ((vEl === 'Fire' && mEl === 'Air') || (vEl === 'Air' && mEl === 'Fire') || (vEl === 'Earth' && mEl === 'Water') || (vEl === 'Water' && mEl === 'Earth')) {
+            dynamicContent += `${vEl} Venus and ${mEl} Mars are compatible elements, creating a natural flow between what they desire and how they pursue it. There's an ease to their romantic style — what they want and how they go after it support each other. This makes their approach to relationships feel authentic and integrated.`;
+        } else {
+            dynamicContent += `${vEl} Venus and ${mEl} Mars create an internal tension between what they want and how they pursue it. They may attract one type of person but pursue another, or send mixed signals because their heart and their drive don't speak the same language. Understanding this internal complexity helps partners navigate what might otherwise feel confusing.`;
+        }
+        
+        result.sections.push({
+            subtitle: `Venus-Mars Dynamic - Heart vs Drive`,
+            content: dynamicContent
         });
     }
     
     // Descendant - who you attract
     if (descendantSign) {
+        const descData = SIGN_PARTNER_QUALITIES ? SIGN_PARTNER_QUALITIES[descendantSign] : null;
+        let descContent = `The Descendant in ${descendantSign} reveals the qualities most naturally attracted into this life through partnership. These aren't just preferences — they're the qualities the soul is learning to integrate, often by encountering them in others first.\n\n`;
+        
+        if (descData) {
+            descContent += `Partners who embody ${descData.qualities} are magnetically drawn in. The ideal partnership lifestyle involves ${descData.lifestyle}.\n\n`;
+            descContent += `<strong>The Growth Edge:</strong> ${descData.warning} The lesson isn't to avoid these partners — it's to develop discernment about when these qualities serve growth and when they don't.`;
+        } else {
+            descContent += `Partners who embody ${descendantSign} qualities are most fulfilling. What's drawn to them reflects the underdeveloped parts of themselves seeking expression through relationship.`;
+        }
+        
         result.sections.push({
             subtitle: `Descendant in ${descendantSign} - Who You Attract`,
-            content: `The Descendant reveals the qualities you naturally attract and need in a partner. With ${descendantSign} on the Descendant, partnerships that bring ${descendantSign} qualities into your life are most fulfilling. You're drawn to people who embody what ${descendantSign} represents, even if (or especially when) those qualities are underdeveloped in yourself.`
+            content: descContent
         });
     }
     
