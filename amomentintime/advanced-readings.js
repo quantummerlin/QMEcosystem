@@ -1899,18 +1899,18 @@ function analyzeRelationshipStyle(readings) {
 // ============================================
 
 var HOUSE_CAREER_THEMES = {
-    1: { domain: "Personal Branding & Leadership", paths: ["Personal coaching", "Fitness or image consulting", "Entrepreneurship", "Influencing or public-facing roles"], verb: "leading by personal example" },
-    2: { domain: "Finance & Value Creation", paths: ["Financial advising or planning", "Real estate investment", "Luxury goods or curation", "Art dealing or appraisal"], verb: "building and managing resources" },
-    3: { domain: "Communication & Media", paths: ["Writing, blogging, or journalism", "Social media management", "Teaching or tutoring", "Podcasting or broadcasting"], verb: "communicating and connecting ideas" },
-    4: { domain: "Home & Family Services", paths: ["Interior design or real estate", "Family therapy or counseling", "Hospitality or food industry", "Property management or renovation"], verb: "creating safe, nurturing spaces" },
-    5: { domain: "Creative Arts & Entertainment", paths: ["Performing arts or music", "Content creation or filmmaking", "Children's education or entertainment", "Game design or recreational programming"], verb: "creative expression and inspiring joy" },
-    6: { domain: "Health & Service Industries", paths: ["Healthcare or nutrition", "Veterinary services or animal care", "Quality assurance or consulting", "Wellness coaching or holistic health"], verb: "improving systems and serving others" },
-    7: { domain: "Partnership & Mediation", paths: ["Law or mediation", "Couples counseling", "Diplomatic or PR roles", "Business partnership ventures"], verb: "creating harmony between people" },
-    8: { domain: "Transformation & Shared Resources", paths: ["Psychology or therapy", "Financial management of others' assets", "Research or investigation", "Crisis management or hospice work"], verb: "facilitating deep transformation" },
-    9: { domain: "Education & Expansion", paths: ["Higher education or university teaching", "Travel industry or cross-cultural work", "Publishing or thought leadership", "Spiritual or philosophical teaching"], verb: "expanding horizons and sharing wisdom" },
-    10: { domain: "Executive Leadership & Legacy", paths: ["Corporate leadership or management", "Government or politics", "Architecture or urban planning", "Executive coaching or mentoring"], verb: "building lasting public achievement" },
-    11: { domain: "Technology & Humanitarian Work", paths: ["Tech innovation or software development", "Nonprofit leadership", "Community organizing", "Social entrepreneurship"], verb: "innovating for collective benefit" },
-    12: { domain: "Spirituality & Behind-the-Scenes", paths: ["Spiritual counseling or ministry", "Institutional care (hospitals, retreats)", "Music, art, or film production", "Research or archival work"], verb: "working with unseen dimensions" }
+    1: { domain: "Personal Branding & Leadership", paths: ["Life coach or personal development speaker", "Fitness trainer or image consultant", "Solo entrepreneur or startup founder", "YouTube creator, influencer, or personal brand builder", "Sports athlete or competitive performer"], verb: "leading by personal example", specific: "They thrive when THEY are the product — their presence, story, or expertise. Self-employment, content creation, and any role where personal magnetism drives success." },
+    2: { domain: "Finance & Value Creation", paths: ["Financial planner or wealth management advisor", "Real estate investor or property developer", "Art dealer, antiques appraiser, or luxury curator", "Accountant, banker, or investment analyst", "Chef, sommelier, or artisan food producer"], verb: "building and managing resources", specific: "Careers that involve building tangible value, evaluating worth, and creating beautiful or valuable things from raw materials." },
+    3: { domain: "Communication & Media", paths: ["Journalist, editor, or news correspondent", "Social media strategist or content marketer", "Podcast host, radio presenter, or broadcaster", "Copywriter, technical writer, or translator", "Primary school teacher or tutor"], verb: "communicating and connecting ideas", specific: "They excel wherever information must be gathered, synthesised, and communicated clearly — media, education, marketing, and digital content." },
+    4: { domain: "Home & Family Services", paths: ["Interior designer or home stager", "Real estate agent or property manager", "Family therapist or child psychologist", "Hotel manager or Airbnb host", "Baker, caterer, or family restaurant owner"], verb: "creating safe, nurturing spaces", specific: "Careers rooted in creating comfort, nurturing others, and building spaces where people feel at home and cared for." },
+    5: { domain: "Creative Arts & Entertainment", paths: ["Actor, musician, or performing artist", "Film director, screenwriter, or content creator", "Children's book author or youth programme director", "Game designer or creative director", "Event planner or entertainment promoter"], verb: "creative expression and inspiring joy", specific: "They need a stage — literal or metaphorical. Any career where creativity, performance, and the ability to bring joy is valued." },
+    6: { domain: "Health & Service Industries", paths: ["Nurse, paramedic, or occupational therapist", "Nutritionist, dietitian, or wellness coach", "Veterinarian or animal behaviourist", "Data analyst or quality assurance engineer", "Office manager, executive assistant, or operations lead"], verb: "improving systems and serving others", specific: "Careers where meticulous attention to detail, service orientation, and the drive to improve processes create tangible results." },
+    7: { domain: "Partnership & Mediation", paths: ["Lawyer, mediator, or arbitrator", "Marriage and couples therapist", "Diplomat, public relations director, or lobbyist", "Business development manager or partnership broker", "Wedding planner or relationship coach"], verb: "creating harmony between people", specific: "They excel in roles that require balancing competing interests, building alliances, and creating win-win outcomes between parties." },
+    8: { domain: "Transformation & Shared Resources", paths: ["Psychologist, depth therapist, or trauma counsellor", "Insurance underwriter, estate planner, or forensic accountant", "Detective, criminal profiler, or investigative journalist", "Surgeon, oncologist, or hospice worker", "Debt restructuring specialist or crisis manager"], verb: "facilitating deep transformation", specific: "Careers involving life-and-death stakes, other people's resources, hidden information, and the courage to face what others avoid." },
+    9: { domain: "Education & Expansion", paths: ["University professor or academic researcher", "Travel guide, cultural consultant, or study-abroad coordinator", "Publisher, literary agent, or thought leadership author", "Philosopher, theologian, or interfaith minister", "International development worker or foreign correspondent"], verb: "expanding horizons and sharing wisdom", specific: "They thrive in careers that combine learning, teaching, travel, and the communication of ideas that change how people see the world." },
+    10: { domain: "Executive Leadership & Legacy", paths: ["CEO, managing director, or C-suite executive", "Politician, city councillor, or government administrator", "Architect, urban planner, or civil engineer", "Executive coach or organisational consultant", "Judge, magistrate, or senior civil servant"], verb: "building lasting public achievement", specific: "They're built for positions of authority and public responsibility — careers where reputation, discipline, and long-term impact matter." },
+    11: { domain: "Technology & Humanitarian Work", paths: ["Software engineer, UX designer, or AI researcher", "Nonprofit director or social enterprise founder", "Community organiser or political campaign strategist", "Environmental scientist or sustainability consultant", "Network engineer or open-source developer"], verb: "innovating for collective benefit", specific: "Careers at the intersection of technology, community, and social progress — building systems that serve the many, not just the few." },
+    12: { domain: "Spirituality & Behind-the-Scenes", paths: ["Psychotherapist, hypnotherapist, or dream analyst", "Chaplain, spiritual director, or retreat facilitator", "Film editor, music producer, or ghostwriter", "Medical researcher or pharmaceutical scientist", "Archivist, librarian, or museum conservator"], verb: "working with unseen dimensions", specific: "Careers that operate behind the scenes, in solitude, or at the boundary between the visible and invisible — healing, research, and creative production done in private." }
 };
 
 var SIGN_CAREER_FLAVORS = {
@@ -1978,12 +1978,14 @@ function analyzeCareerSynthesis(readings) {
         if (!theme) return;
         const planets = houseDetails[h] || [];
 
-        // Create primary scenario
+        // Create primary scenario with specific job titles
+        const topPaths = theme.paths.slice(0, 3).join(', ');
         const scenario = {
             title: theme.paths[0],
             domain: theme.domain,
-            why: `${planets.join(', ')} in House ${h} creates natural talent for ${theme.verb}`,
-            signNote: `Their ${signFlavor.style} approach means this works best ${signFlavor.modifier}`
+            why: `${planets.join(', ')} in House ${h} creates natural talent for ${theme.verb}. ${theme.specific}`,
+            signNote: `Their ${signFlavor.style} approach means this works best ${signFlavor.modifier}`,
+            examples: `Top career matches: ${topPaths}`
         };
         scenarios.push(scenario);
     });
@@ -1993,11 +1995,15 @@ function analyzeCareerSynthesis(readings) {
         const h1 = HOUSE_CAREER_THEMES[primaryHouses[0]];
         const h2 = HOUSE_CAREER_THEMES[primaryHouses[1]];
         if (h1 && h2) {
+            // Generate specific cross-domain career suggestions
+            const comboPaths = [];
+            if (h1.paths[1] && h2.paths[0]) comboPaths.push(`${h1.paths[1]} meets ${h2.paths[0]}`);
             scenarios.push({
                 title: `${h1.domain} × ${h2.domain} Fusion`,
                 domain: "Cross-Domain Innovation",
-                why: `The rare combination of House ${primaryHouses[0]} (${h1.verb}) and House ${primaryHouses[1]} (${h2.verb}) creates a unique career sweet spot`,
-                signNote: `Best expressed ${signFlavor.modifier}`
+                why: `The rare combination of House ${primaryHouses[0]} (${h1.verb}) and House ${primaryHouses[1]} (${h2.verb}) creates a unique career sweet spot that few people can fill`,
+                signNote: `Best expressed ${signFlavor.modifier}`,
+                examples: comboPaths.length > 0 ? `Think: ${comboPaths[0]}` : ''
             });
         }
     }
@@ -2109,7 +2115,7 @@ function analyzeIdealPartner(readings) {
         });
     }
 
-    // 5. Composite ideal profile
+    // 5. Vivid Composite Partner Persona
     const keySignals = [descendantSign, moonSign, venusSign].filter(Boolean);
     const elements = keySignals.map(s => ELEMENT_MAP[s]).filter(Boolean);
     const elementCounts = {};
@@ -2123,9 +2129,35 @@ function analyzeIdealPartner(readings) {
         .split(', ');
     const uniqueQualities = [...new Set(idealQualities)].slice(0, 6);
 
+    // Build a vivid persona paragraph
+    const ELEMENT_VIBES = {
+        Fire: { energy: "warm and dynamic", date: "an adventurous day out — hiking, live music, or spontaneous road trips", home: "lively and full of laughter, with plenty of passion and directness" },
+        Earth: { energy: "grounded and steady", date: "a beautifully cooked meal, a walk in nature, or a quiet evening at home", home: "comfortable and stable, with sensory pleasures — good food, soft fabrics, peaceful routines" },
+        Air: { energy: "intellectually stimulating and socially engaging", date: "a thought-provoking conversation over coffee, a gallery opening, or a lively debate", home: "buzzing with ideas, books everywhere, and plenty of freedom for both partners" },
+        Water: { energy: "emotionally deep and intuitively connected", date: "a quiet evening sharing feelings, a sunset walk by water, or a meaningful creative experience", home: "emotionally safe, deeply intimate, and rich with unspoken understanding" }
+    };
+
+    const vibe = ELEMENT_VIBES[dominantElement] || ELEMENT_VIBES.Water;
+    const descLifestyle = descendantSign ? SIGN_PARTNER_QUALITIES[descendantSign]?.lifestyle : '';
+    const moonLifestyle = moonSign ? SIGN_PARTNER_QUALITIES[moonSign]?.lifestyle?.split(',')[0] : '';
+
+    let personaContent = `<strong>Picture this person:</strong> Someone whose energy is ${vibe.energy}. They walk into a room and you notice something ${uniqueQualities.slice(0, 2).join(' and ')} about them immediately. A perfect date looks like ${vibe.date}. At home together, life feels ${vibe.home}.\n\n`;
+
+    personaContent += `They embody a blend of ${uniqueQualities.join(', ')} — qualities that ${descendantSign ? `your ${descendantSign} Descendant is specifically coded to attract` : 'your chart naturally draws in'}. `;
+
+    if (descendantSign) {
+        personaContent += `A partner with ${descendantSign} Sun or Rising would strongly activate this magnetic pull. `;
+    }
+    if (moonSign) {
+        personaContent += `Emotionally, a ${moonSign} Moon or ${SIGN_COMPLEMENTS[moonSign] || 'compatible'} Moon provides the deepest feeling of coming home. `;
+    }
+
+    personaContent += `\n\nThe relationship thrives when both partners honour each other's need for ${keySignals.map(s => SIGN_PARTNER_QUALITIES[s]?.lifestyle?.split(',')[0]).filter(Boolean).join(', ')}. `;
+    personaContent += `This isn't about finding a perfect person — it's about recognising the qualities your soul is specifically wired to grow alongside.`;
+
     result.sections.push({
-        title: "Composite Ideal Partner Profile",
-        content: `Combining all relationship indicators, the ideal partner carries a strong ${dominantElement} element emphasis with qualities including: ${uniqueQualities.join(', ')}. ${descendantSign ? `A partner with ${descendantSign} Sun or Rising would strongly activate the Descendant.` : ''} ${moonSign ? `A ${moonSign} Moon or ${SIGN_COMPLEMENTS[moonSign] || 'compatible'} Moon provides the deepest emotional security.` : ''} The relationship thrives when both partners honour each other's need for ${keySignals.map(s => SIGN_PARTNER_QUALITIES[s]?.lifestyle?.split(',')[0]).filter(Boolean).join(', ')}.`
+        title: "Your Ideal Partner — A Portrait",
+        content: personaContent
     });
 
     // 6. Red flags

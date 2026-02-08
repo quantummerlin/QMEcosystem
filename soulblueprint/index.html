@@ -4773,8 +4773,11 @@
             root.style.setProperty('--font-heading', config.fonts.heading);
             root.style.setProperty('--font-body', config.fonts.body);
             
-            // Apply text content
-            document.getElementById('brandName').textContent = config.brandName;
+            // Apply text content (preserve animated dots spans)
+            const brandEl = document.getElementById('brandName');
+            const dotsSpan = brandEl.querySelector('.title-dots');
+            brandEl.textContent = config.brandName;
+            if (dotsSpan) brandEl.appendChild(dotsSpan);
             document.getElementById('tagline').textContent = config.tagline;
             document.getElementById('subTagline').textContent = config.subTagline;
             
@@ -5904,6 +5907,26 @@ When integrated, this configuration produces someone with unusual range and dept
                         houseReading.challenges || []
                     ));
                 }
+                
+                // Outer Planets in Houses (Uranus, Neptune, Pluto)
+                const outerPlanets = [
+                    { key: 'uranus', name: 'Uranus', label: 'Uranus' },
+                    { key: 'neptune', name: 'Neptune', label: 'Neptune' },
+                    { key: 'pluto', name: 'Pluto', label: 'Pluto' }
+                ];
+                outerPlanets.forEach(planet => {
+                    if (planetHouses[planet.key] && HOUSE_READINGS[planet.name] && HOUSE_READINGS[planet.name][planetHouses[planet.key]]) {
+                        const houseReading = HOUSE_READINGS[planet.name][planetHouses[planet.key]];
+                        celestialSection.appendChild(createReadingCard(
+                            houseReading.title,
+                            `${planet.label} in House ${planetHouses[planet.key]}`,
+                            houseReading.keywords,
+                            houseReading.reading.replace(/this child/gi, userData.name),
+                            houseReading.strengths || [],
+                            houseReading.challenges || []
+                        ));
+                    }
+                });
             } else {
                 // Show birth time required message for House Placements
                 const housesHeader = document.createElement('div');
@@ -6523,6 +6546,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                         careerContent += `<p><strong>${idx + 1}. ${scenario.title}</strong><br>`;
                         careerContent += `<em>Domain:</em> ${scenario.domain}<br>`;
                         careerContent += `<em>Why it works:</em> ${scenario.why}<br>`;
+                        if (scenario.examples) careerContent += `<em>${scenario.examples}</em><br>`;
                         careerContent += `<em>Best approach:</em> ${scenario.signNote}</p>`;
                     });
                     
